@@ -1,0 +1,11 @@
+# Build output
+/server
+/bin/
+
+# Test & coverage artifacts
+coverage.out
+coverage.html
+*.test
+
+# Editor/OS noise
+.DS_Store
