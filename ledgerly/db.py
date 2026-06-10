@@ -98,21 +98,22 @@ QBO_ACCOUNTS = [
     ("Pensacola sale proceeds", "savings", 36_000_000),
 ]
 
-# Starting zero-based plan for June 2026 — the first post-house-sale month.
-# Income: Hope's take-home pay ($3,000/week after taxes ≈ $13,000/month)
-# plus ~$1,200/month of interest on the parked Pensacola sale proceeds.
-# Expenses mirror recent actuals with the mortgage gone and the cards
-# assumed paid off from proceeds; the surplus is assigned to retirement,
-# the emergency fund and sinking funds so the plan lands on exactly $0.
+# Starting zero-based plan for June 2026, the first post-Pensacola-sale month.
+# Income: Hope's take-home ($3,000/week ≈ $13,000/month) + Robert's $6,000
+# take-home incl. bonus + ~$1,200/month interest on the parked sale proceeds.
+# Housing carries the Truist mortgage payment on the Raleigh house
+# (~$2,460/month incl. escrow, per the June 2026 statement); the household
+# has no other debt. The surplus is assigned to retirement, the emergency
+# fund and sinking funds so the plan lands on exactly $0.
 DEFAULT_BUDGET_MONTH = "2026-06"
 DEFAULT_BUDGET = [
-    ("Income", "Paycheck", 1_300_000),
+    ("Income", "Paycheck", 1_900_000),
     ("Income", "Other income", 120_000),
     ("Giving", "Charity", 150_000),
-    ("Savings", "Emergency fund", 150_000),
-    ("Savings", "Retirement", 350_000),
-    ("Savings", "Sinking funds", 100_000),
-    ("Housing", "Mortgage/Rent", 250_000),
+    ("Savings", "Emergency fund", 300_000),
+    ("Savings", "Retirement", 600_000),
+    ("Savings", "Sinking funds", 304_000),
+    ("Housing", "Mortgage/Rent", 246_000),
     ("Housing", "Utilities", 45_000),
     ("Housing", "Maintenance", 30_000),
     ("Transportation", "Gas & fuel", 35_000),
