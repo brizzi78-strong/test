@@ -116,10 +116,10 @@ DEFAULT_BUDGET = [
     ("Giving", "Charity", 166_700),  # $20,000/year
     ("Savings", "Emergency fund", 300_000),
     ("Savings", "Retirement", 150_000),
-    ("Savings", "Investing (brokerage)", 383_300),
+    ("Savings", "Investing (brokerage)", 368_300),
     ("Savings", "Sinking funds", 150_000),
     ("Housing", "Mortgage/Rent", 460_000),  # Truist payment incl. escrow
-    ("Housing", "Utilities", 45_000),
+    ("Housing", "Utilities", 60_000),
     ("Housing", "Maintenance", 30_000),
     ("Transportation", "Gas & fuel", 35_000),
     ("Transportation", "Auto insurance", 20_000),
