@@ -112,11 +112,11 @@ QBO_ACCOUNTS = [
 DEFAULT_BUDGET_MONTH = "2026-06"
 DEFAULT_BUDGET = [
     ("Income", "Paycheck", 1_800_000),  # Hope $12k (4 checks) + Robert $6k
-    ("Income", "Other income", 120_000),
+    ("Income", "Other income", 230_000),  # Hope's mom $1,100 + ~$1,200 interest
     ("Giving", "Charity", 166_700),  # $20,000/year
     ("Savings", "Emergency fund", 300_000),
     ("Savings", "Retirement", 150_000),
-    ("Savings", "Investing (brokerage)", 273_300),
+    ("Savings", "Investing (brokerage)", 383_300),
     ("Savings", "Sinking funds", 150_000),
     ("Housing", "Mortgage/Rent", 460_000),  # Truist payment incl. escrow
     ("Housing", "Utilities", 45_000),
