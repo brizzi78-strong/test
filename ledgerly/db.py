@@ -69,8 +69,9 @@ DEFAULT_GROUPS = [
     ("Debt", 0, ["Credit card payment", "Loan payment"]),
 ]
 
-# The user's real accounts and balances, as reported by their QuickBooks
-# balance sheet (Blue Ridge Financial Coaching LLC, as of 2026-05-31).
+# The user's real accounts and balances. Bank/card balances come from the
+# QuickBooks balance sheet (Blue Ridge Financial Coaching LLC, 2026-05-31);
+# investment balances from the user's investment-tracking app (2026-06-10).
 # Credit-card balances are stored negative so net worth sums correctly.
 QBO_ACCOUNTS = [
     ("Main Checking (9318)", "checking", 4_624_490),
@@ -79,12 +80,20 @@ QBO_ACCOUNTS = [
     ("EMERGENCY (7772)", "savings", 100),
     ("Home (3951)", "savings", 11),
     ("PayPal", "checking", 0),  # QBO balance/deposit pair nets to $0
-    ("Robinhood individual (0540)", "investment", 94_393),
     ("Cash on hand", "cash", -804_418),  # negative in QBO; needs cleanup there
     ("American Express Gold Card (5002)", "credit", -215_053),
     ("Blue Business Plus Card (2009)", "credit", -260_744),
     ("Spark Cash Select (0356)", "credit", -26_154),
     ("Visa (0114)", "credit", -1_800),
+    # Investments (QBO had Robinhood individual at a stale $943.93).
+    ("Robinhood traditional IRA (1859)", "investment", 42_605_700),
+    ("Fidelity", "investment", 11_000_000),
+    ("Robinhood individual (0540)", "investment", 9_615_400),
+    ("401(k) Savings Plan (Schwab)", "investment", 9_195_700),
+    ("Money Purchase Pension Plan (Schwab)", "investment", 7_415_100),
+    ("Hope Publix", "investment", 1_300_000),
+    ("Robinhood Crypto (8625)", "investment", 484_800),
+    ("IRRA-Edge XZA-X7544", "investment", 19_000),
 ]
 
 DEFAULT_RULES = [
