@@ -96,6 +96,17 @@ def test_dashboard_shows_real_accounts(client):
     assert "Main Checking (9318)" in page
 
 
+def test_seeded_june_budget_is_zero_based(client):
+    from ledgerly.db import DEFAULT_BUDGET
+
+    income = sum(c for g, _, c in DEFAULT_BUDGET if g == "Income")
+    expenses = sum(c for g, _, c in DEFAULT_BUDGET if g != "Income")
+    assert income == expenses == 1_420_000  # $14,200 in, $14,200 assigned
+
+    page = client.get("/budget?month=2026-06").get_data(as_text=True)
+    assert "zero-based budget" in page
+
+
 def test_budget_page_renders_groups(client):
     page = client.get("/budget?month=2026-06").get_data(as_text=True)
     for group in ("Income", "Giving", "Housing", "Food", "Debt"):

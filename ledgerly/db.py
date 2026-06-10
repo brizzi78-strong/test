@@ -98,6 +98,36 @@ QBO_ACCOUNTS = [
     ("Pensacola sale proceeds", "savings", 36_000_000),
 ]
 
+# Starting zero-based plan for June 2026 — the first post-house-sale month.
+# Income: Hope's take-home pay ($3,000/week after taxes ≈ $13,000/month)
+# plus ~$1,200/month of interest on the parked Pensacola sale proceeds.
+# Expenses mirror recent actuals with the mortgage gone and the cards
+# assumed paid off from proceeds; the surplus is assigned to retirement,
+# the emergency fund and sinking funds so the plan lands on exactly $0.
+DEFAULT_BUDGET_MONTH = "2026-06"
+DEFAULT_BUDGET = [
+    ("Income", "Paycheck", 1_300_000),
+    ("Income", "Other income", 120_000),
+    ("Giving", "Charity", 150_000),
+    ("Savings", "Emergency fund", 150_000),
+    ("Savings", "Retirement", 350_000),
+    ("Savings", "Sinking funds", 100_000),
+    ("Housing", "Mortgage/Rent", 250_000),
+    ("Housing", "Utilities", 45_000),
+    ("Housing", "Maintenance", 30_000),
+    ("Transportation", "Gas & fuel", 35_000),
+    ("Transportation", "Auto insurance", 20_000),
+    ("Transportation", "Repairs", 15_000),
+    ("Food", "Groceries", 80_000),
+    ("Food", "Restaurants", 30_000),
+    ("Lifestyle", "Entertainment", 20_000),
+    ("Lifestyle", "Subscriptions", 10_000),
+    ("Lifestyle", "Personal", 40_000),
+    ("Lifestyle", "Health", 25_000),
+    ("Insurance & Tax", "Insurance", 50_000),
+    ("Insurance & Tax", "Taxes & licenses", 20_000),
+]
+
 DEFAULT_RULES = [
     ("mortgage", "Housing", "Mortgage/Rent"),
     ("rent", "Housing", "Mortgage/Rent"),
@@ -163,6 +193,20 @@ def seed_defaults(db: sqlite3.Connection) -> None:
             "INSERT OR IGNORE INTO accounts(name, type, opening_cents) VALUES (?,?,?)",
             (name, type_, opening),
         )
+
+    if not db.execute("SELECT 1 FROM budgets LIMIT 1").fetchone():
+        for group, cat, planned in DEFAULT_BUDGET:
+            row = db.execute(
+                "SELECT c.id FROM categories c JOIN category_groups g ON g.id=c.group_id"
+                " WHERE g.name=? AND c.name=?",
+                (group, cat),
+            ).fetchone()
+            if row:
+                db.execute(
+                    "INSERT OR IGNORE INTO budgets(month, category_id, planned_cents)"
+                    " VALUES (?,?,?)",
+                    (DEFAULT_BUDGET_MONTH, row["id"], planned),
+                )
 
     for pattern, group, cat in DEFAULT_RULES:
         row = db.execute(
