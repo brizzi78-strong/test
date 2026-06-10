@@ -60,7 +60,7 @@ CREATE INDEX IF NOT EXISTS idx_txn_category ON transactions(category_id);
 DEFAULT_GROUPS = [
     ("Income", 1, ["Paycheck", "Business income", "Other income"]),
     ("Giving", 0, ["Charity", "Tithes"]),
-    ("Savings", 0, ["Emergency fund", "Retirement", "Sinking funds"]),
+    ("Savings", 0, ["Emergency fund", "Retirement", "Investing (brokerage)", "Sinking funds"]),
     ("Housing", 0, ["Mortgage/Rent", "Utilities", "Maintenance"]),
     ("Transportation", 0, ["Gas & fuel", "Auto insurance", "Repairs"]),
     ("Food", 0, ["Groceries", "Restaurants"]),
@@ -103,16 +103,22 @@ QBO_ACCOUNTS = [
 # take-home incl. bonus + ~$1,200/month interest on the parked sale proceeds.
 # Housing carries the Truist mortgage payment on the Raleigh house
 # (~$2,460/month incl. escrow, per the June 2026 statement); the household
-# has no other debt. The surplus is assigned to retirement, the emergency
-# fund and sinking funds so the plan lands on exactly $0.
+# has no other debt.
+#
+# Tax-advantaged retirement happens at payroll, BEFORE take-home pay:
+# $20,000/yr Roth 401(k) + $8,500/yr HSA ≈ $2,375/month. The take-home
+# budgeted here is net of those, so the in-budget Savings lines are ON TOP:
+# extra retirement (e.g. backdoor Roth IRAs), brokerage investing, the
+# emergency fund and sinking funds — assigned so the plan lands on exactly $0.
 DEFAULT_BUDGET_MONTH = "2026-06"
 DEFAULT_BUDGET = [
     ("Income", "Paycheck", 1_900_000),
     ("Income", "Other income", 120_000),
     ("Giving", "Charity", 150_000),
     ("Savings", "Emergency fund", 300_000),
-    ("Savings", "Retirement", 600_000),
-    ("Savings", "Sinking funds", 304_000),
+    ("Savings", "Retirement", 150_000),
+    ("Savings", "Investing (brokerage)", 604_000),
+    ("Savings", "Sinking funds", 150_000),
     ("Housing", "Mortgage/Rent", 246_000),
     ("Housing", "Utilities", 45_000),
     ("Housing", "Maintenance", 30_000),
