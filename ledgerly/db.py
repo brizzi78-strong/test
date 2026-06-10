@@ -111,12 +111,12 @@ QBO_ACCOUNTS = [
 # emergency fund and sinking funds — assigned so the plan lands on exactly $0.
 DEFAULT_BUDGET_MONTH = "2026-06"
 DEFAULT_BUDGET = [
-    ("Income", "Paycheck", 1_900_000),
+    ("Income", "Paycheck", 1_800_000),  # Hope $12k (4 checks) + Robert $6k
     ("Income", "Other income", 120_000),
     ("Giving", "Charity", 166_700),  # $20,000/year
     ("Savings", "Emergency fund", 300_000),
     ("Savings", "Retirement", 150_000),
-    ("Savings", "Investing (brokerage)", 373_300),
+    ("Savings", "Investing (brokerage)", 273_300),
     ("Savings", "Sinking funds", 150_000),
     ("Housing", "Mortgage/Rent", 460_000),  # Truist payment incl. escrow
     ("Housing", "Utilities", 45_000),

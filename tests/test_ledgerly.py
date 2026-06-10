@@ -101,7 +101,7 @@ def test_seeded_june_budget_is_zero_based(client):
 
     income = sum(c for g, _, c in DEFAULT_BUDGET if g == "Income")
     expenses = sum(c for g, _, c in DEFAULT_BUDGET if g != "Income")
-    assert income == expenses == 2_020_000  # $20,200 in, $20,200 assigned
+    assert income == expenses == 1_920_000  # $19,200 in, $19,200 assigned
 
     page = client.get("/budget?month=2026-06").get_data(as_text=True)
     assert "zero-based budget" in page
