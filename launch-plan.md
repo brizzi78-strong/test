@@ -167,6 +167,19 @@ business books).
 
 ---
 
+## Sequencing: Toolkit first
+
+1. **Toolkit + free Resource Guide** (60–90 days) — fastest to finish,
+   easiest first talks to book ("Navigating Care for Aging Parents" at
+   senior centers/churches/libraries), feeds the hospice channel
+   immediately, and builds the email list the book launches into.
+2. **Adult book** — launches into the audience the Toolkit built, with
+   gate #1's talk calendar already proven.
+3. **Kids book** — after gate #2 validation; rides the established
+   table and institutional relationships.
+
+---
+
 ## This week
 
 - [ ] Truist: pay $9,400.47, set autopay
