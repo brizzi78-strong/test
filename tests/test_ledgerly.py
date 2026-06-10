@@ -124,13 +124,14 @@ def test_plan_and_zero_based_banner(client):
                 " WHERE g.name=? AND c.name=?", (group, name),
             ).fetchone()["id"]
 
+    # Use July: June already carries the seeded default budget.
     client.post("/budget/plan", data={
-        "month": "2026-06", "category_id": cid("Income", "Paycheck"), "planned": "1000",
+        "month": "2026-07", "category_id": cid("Income", "Paycheck"), "planned": "1000",
     })
     client.post("/budget/plan", data={
-        "month": "2026-06", "category_id": cid("Food", "Groceries"), "planned": "1,000.00",
+        "month": "2026-07", "category_id": cid("Food", "Groceries"), "planned": "1,000.00",
     })
-    page = client.get("/budget?month=2026-06").get_data(as_text=True)
+    page = client.get("/budget?month=2026-07").get_data(as_text=True)
     assert "zero-based budget" in page
 
 
