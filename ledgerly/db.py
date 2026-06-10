@@ -111,10 +111,12 @@ QBO_ACCOUNTS = [
 # emergency fund and sinking funds — assigned so the plan lands on exactly $0.
 DEFAULT_BUDGET_MONTH = "2026-06"
 DEFAULT_BUDGET = [
-    ("Income", "Paycheck", 1_200_000),  # Hope's take-home, 4 checks/month
-    # Book sales + speaking via Blue Ridge Financial Coaching LLC
-    # (d/b/a The Cardinal's Promise), net of the ~25-30% tax set-aside.
-    ("Income", "Business income", 600_000),
+    # Hope's take-home (4 checks) + Robert's W-2 take-home incl. bonus.
+    # Book/speaking revenue via Blue Ridge Financial Coaching LLC d/b/a
+    # The Cardinal's Promise is variable upside: it is NOT planned here —
+    # give it a job in the month it actually arrives (after a ~30-35%
+    # tax set-aside, since it stacks on top of the W-2 bracket).
+    ("Income", "Paycheck", 1_800_000),
     ("Income", "Other income", 230_000),  # Hope's mom $1,100 + ~$1,200 interest
     ("Giving", "Charity", 166_700),  # $20,000/year
     ("Savings", "Emergency fund", 300_000),
