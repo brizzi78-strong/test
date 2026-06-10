@@ -114,10 +114,10 @@ DEFAULT_BUDGET_MONTH = "2026-06"
 DEFAULT_BUDGET = [
     ("Income", "Paycheck", 1_900_000),
     ("Income", "Other income", 120_000),
-    ("Giving", "Charity", 150_000),
+    ("Giving", "Charity", 166_700),  # $20,000/year
     ("Savings", "Emergency fund", 300_000),
     ("Savings", "Retirement", 150_000),
-    ("Savings", "Investing (brokerage)", 604_000),
+    ("Savings", "Investing (brokerage)", 587_300),
     ("Savings", "Sinking funds", 150_000),
     ("Housing", "Mortgage/Rent", 246_000),
     ("Housing", "Utilities", 45_000),
