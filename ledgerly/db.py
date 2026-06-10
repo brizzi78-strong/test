@@ -102,8 +102,7 @@ QBO_ACCOUNTS = [
 # Income: Hope's take-home ($3,000/week ≈ $13,000/month) + Robert's $6,000
 # take-home incl. bonus + ~$1,200/month interest on the parked sale proceeds.
 # Housing carries the Truist mortgage payment on the Raleigh house
-# (~$2,460/month incl. escrow, per the June 2026 statement); the household
-# has no other debt.
+# ($4,600/month incl. escrow); the household has no other debt.
 #
 # Tax-advantaged retirement happens at payroll, BEFORE take-home pay:
 # $20,000/yr Roth 401(k) + $8,500/yr HSA ≈ $2,375/month. The take-home
@@ -117,9 +116,9 @@ DEFAULT_BUDGET = [
     ("Giving", "Charity", 166_700),  # $20,000/year
     ("Savings", "Emergency fund", 300_000),
     ("Savings", "Retirement", 150_000),
-    ("Savings", "Investing (brokerage)", 587_300),
+    ("Savings", "Investing (brokerage)", 373_300),
     ("Savings", "Sinking funds", 150_000),
-    ("Housing", "Mortgage/Rent", 246_000),
+    ("Housing", "Mortgage/Rent", 460_000),  # Truist payment incl. escrow
     ("Housing", "Utilities", 45_000),
     ("Housing", "Maintenance", 30_000),
     ("Transportation", "Gas & fuel", 35_000),
