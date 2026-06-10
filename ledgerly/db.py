@@ -61,7 +61,7 @@ DEFAULT_GROUPS = [
     ("Income", 1, ["Paycheck", "Business income", "Other income"]),
     ("Giving", 0, ["Charity", "Tithes"]),
     ("Savings", 0, ["Emergency fund", "Retirement", "Investing (brokerage)", "Sinking funds"]),
-    ("Housing", 0, ["Mortgage/Rent", "Utilities", "Maintenance"]),
+    ("Housing", 0, ["Mortgage/Rent", "HOA fee", "Utilities", "Maintenance"]),
     ("Transportation", 0, ["Gas & fuel", "Auto insurance", "Repairs"]),
     ("Food", 0, ["Groceries", "Restaurants"]),
     ("Lifestyle", 0, ["Entertainment", "Subscriptions", "Personal", "Health"]),
@@ -116,9 +116,10 @@ DEFAULT_BUDGET = [
     ("Giving", "Charity", 166_700),  # $20,000/year
     ("Savings", "Emergency fund", 300_000),
     ("Savings", "Retirement", 150_000),
-    ("Savings", "Investing (brokerage)", 368_300),
+    ("Savings", "Investing (brokerage)", 347_400),
     ("Savings", "Sinking funds", 150_000),
     ("Housing", "Mortgage/Rent", 460_000),  # Truist payment incl. escrow
+    ("Housing", "HOA fee", 20_900),
     ("Housing", "Utilities", 60_000),
     ("Housing", "Maintenance", 30_000),
     ("Transportation", "Gas & fuel", 35_000),
