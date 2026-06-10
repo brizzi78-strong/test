@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Ledgerly{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="{{ url_for('ledgerly.dashboard') }}">💚 Ledgerly</a>
+    <nav>
+      <a href="{{ url_for('ledgerly.dashboard') }}">Home</a>
+      <a href="{{ url_for('ledgerly.budget') }}">Budget</a>
+      <a href="{{ url_for('ledgerly.transactions') }}">Transactions</a>
+      <a href="{{ url_for('ledgerly.import_csv') }}">Import</a>
+      <a href="{{ url_for('ledgerly.accounts') }}">Accounts</a>
+      <a href="{{ url_for('ledgerly.rules') }}">Auto-sort</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  {% with messages = get_flashed_messages() %}
+    {% for m in messages %}<div class="flash">{{ m }}</div>{% endfor %}
+  {% endwith %}
+  {% block content %}{% endblock %}
+</main>
+<footer class="wrap foot">Your money, in plain English. No debits, no credits, no jargon.</footer>
+</body>
+</html>

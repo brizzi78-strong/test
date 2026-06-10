@@ -3,14 +3,14 @@ requires = ["setuptools>=61"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "finalyst"
+name = "ledgerly"
 version = "0.1.0"
-description = "A command-line financial analysis toolkit (statement ratios + return/risk metrics)."
+description = "A friendly personal-finance app: zero-based budgeting, card/account tracking, CSV import. Includes the finalyst CLI analysis toolkit."
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.9"
 license = { text = "MIT" }
-keywords = ["finance", "ratios", "cli", "returns", "analysis"]
-dependencies = []
+keywords = ["finance", "budget", "zero-based", "mint", "everydollar", "ratios", "cli"]
+dependencies = ["flask>=3"]
 
 [project.optional-dependencies]
 dev = ["pytest>=7"]
@@ -19,7 +19,7 @@ dev = ["pytest>=7"]
 finalyst = "finalyst.cli:main"
 
 [tool.setuptools.packages.find]
-include = ["finalyst*"]
+include = ["ledgerly*", "finalyst*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

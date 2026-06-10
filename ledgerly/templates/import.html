@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Import · Ledgerly{% endblock %}
+{% block content %}
+<h1>Import a statement</h1>
+<p>Download a CSV from your bank or card website, pick the account it belongs to,
+and drop it here. We'll read the date, description and amount columns automatically
+and sort what we can using your <a href="{{ url_for('ledgerly.rules') }}">auto-sort rules</a>.</p>
+
+<form method="post" enctype="multipart/form-data" class="grid-form narrow">
+  <label>Account
+    <select name="account_id" required>
+      {% for a in accounts %}<option value="{{ a.id }}">{{ a.name }}</option>{% endfor %}
+    </select>
+  </label>
+  <label>CSV file <input type="file" name="file" accept=".csv,text/csv" required></label>
+  <label class="check">
+    <input type="checkbox" name="flip">
+    Flip the signs (use this if your card export shows purchases as positive numbers)
+  </label>
+  <button class="btn">Import</button>
+</form>
+
+<h2>What the file should look like</h2>
+<pre>Date,Description,Amount
+2026-06-01,KROGER #123,-84.20
+2026-06-02,PAYROLL ACME INC,2500.00</pre>
+<p class="muted">Headers like <code>Transaction Date</code>, <code>Merchant</code>,
+<code>Posted Date</code> work too. Money out is negative, money in is positive —
+tick "flip the signs" if your export does it the other way around.</p>
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block title %}Budget · Ledgerly{% endblock %}
+{% block content %}
+<div class="month-nav">
+  <a href="{{ url_for('ledgerly.budget', month=prev_month) }}">← {{ prev_month }}</a>
+  <h1>{{ month_label }}</h1>
+  <a href="{{ url_for('ledgerly.budget', month=next_month) }}">{{ next_month }} →</a>
+</div>
+
+{% if summary.planned_income_cents == 0 and summary.planned_expense_cents == 0 %}
+  <div class="banner">
+    <strong>Fresh month.</strong> Plan your income first, then give every dollar a job below —
+    or
+    <form class="inline" method="post" action="{{ url_for('ledgerly.budget_copy') }}">
+      <input type="hidden" name="month" value="{{ month }}">
+      <button class="link-btn">copy last month's budget</button>
+    </form>.
+  </div>
+{% elif summary.is_zero_based %}
+  <div class="banner ok"><strong>It's a zero-based budget ✓</strong> — every dollar has a job.</div>
+{% elif summary.left_to_budget_cents > 0 %}
+  <div class="banner warn">
+    <strong>{{ summary.left_to_budget_cents | money }} left to budget.</strong>
+    Give those dollars a job until this hits $0.
+  </div>
+{% else %}
+  <div class="banner bad">
+    <strong>You've planned {{ (-summary.left_to_budget_cents) | money }} more than your income.</strong>
+    Trim some lines below to get back to $0.
+  </div>
+{% endif %}
+
+{% for g in groups %}
+<section class="budget-group">
+  <h2>{{ g.name }}
+    <span class="muted small">
+      planned {{ g.planned_cents | money }} ·
+      {{ 'received' if g.is_income else 'spent' }} {{ g.actual_cents | money }}
+    </span>
+  </h2>
+  <table class="budget">
+    <tr class="head">
+      <th>Category</th><th>Planned</th><th>{{ 'Received' if g.is_income else 'Spent' }}</th>
+      <th>{{ 'Still expected' if g.is_income else 'Left' }}</th><th></th>
+    </tr>
+    {% for line in g.lines %}
+    <tr>
+      <td>{{ line.category }}</td>
+      <td class="planned">
+        <form method="post" action="{{ url_for('ledgerly.budget_plan') }}">
+          <input type="hidden" name="month" value="{{ month }}">
+          <input type="hidden" name="category_id" value="{{ line.category_id }}">
+          <input class="plan-input" name="planned" inputmode="decimal"
+                 value="{{ '%.2f' | format(line.planned_cents / 100) if line.planned_cents else '' }}"
+                 placeholder="0.00">
+          <button class="small-btn">save</button>
+        </form>
+      </td>
+      <td class="amount">{{ line.actual_cents | money }}</td>
+      <td class="amount {{ 'neg' if line.over }}">{{ line.remaining_cents | money }}</td>
+      <td class="progress-cell">
+        <div class="progress"><div class="progress-fill {{ 'over' if line.over }}"
+             style="width: {{ line.progress_pct }}%"></div></div>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+</section>
+{% endfor %}
+{% endblock %}

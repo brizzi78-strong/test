@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% block title %}Home · Ledgerly{% endblock %}
+{% block content %}
+<h1>{{ month_label }}</h1>
+
+<div class="cards">
+  <div class="card">
+    <div class="card-label">Net worth</div>
+    <div class="card-big {{ 'neg' if net_worth < 0 }}">{{ net_worth | money }}</div>
+    <div class="card-sub">everything you own minus what you owe</div>
+  </div>
+  <div class="card">
+    <div class="card-label">Card balances</div>
+    <div class="card-big {{ 'neg' if card_debt > 0 }}">{{ card_debt | money }}</div>
+    <div class="card-sub">across your credit cards</div>
+  </div>
+  <div class="card">
+    <div class="card-label">Left to budget</div>
+    {% if summary.planned_income_cents == 0 %}
+      <div class="card-big">—</div>
+      <div class="card-sub"><a href="{{ url_for('ledgerly.budget') }}">Start this month's budget →</a></div>
+    {% elif summary.is_zero_based %}
+      <div class="card-big ok">$0.00 ✓</div>
+      <div class="card-sub">every dollar has a job</div>
+    {% else %}
+      <div class="card-big warn">{{ summary.left_to_budget_cents | money }}</div>
+      <div class="card-sub"><a href="{{ url_for('ledgerly.budget') }}">give every dollar a job →</a></div>
+    {% endif %}
+  </div>
+  <div class="card">
+    <div class="card-label">Safe to spend</div>
+    <div class="card-big">{{ summary.safe_to_spend_cents | money }}</div>
+    <div class="card-sub">planned this month and not yet spent</div>
+  </div>
+</div>
+
+<div class="cols">
+  <section>
+    <h2>Spending so far</h2>
+    {% if spend_by_group %}
+      <table class="bars">
+        {% for g in spend_by_group %}
+        <tr>
+          <td class="bar-label">{{ g.name }}</td>
+          <td class="bar-cell">
+            <div class="bar" style="width: {{ (100 * g.spent_cents / max_spend) | round(0) }}%"></div>
+          </td>
+          <td class="bar-amount">{{ g.spent_cents | money }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    {% else %}
+      <p class="empty">No spending recorded yet this month.
+         <a href="{{ url_for('ledgerly.import_csv') }}">Import a card statement</a> to get started.</p>
+    {% endif %}
+
+    <h2>Your accounts</h2>
+    <table class="list">
+      {% for a in accounts %}
+      <tr>
+        <td>{{ a.name }}</td>
+        <td class="muted">{{ a.type }}</td>
+        <td class="amount {{ 'neg' if a.balance_cents < 0 }}">{{ a.balance_cents | money }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </section>
+
+  <section>
+    <h2>Recent activity</h2>
+    {% if recent %}
+    <table class="list">
+      {% for t in recent %}
+      <tr>
+        <td class="muted">{{ t.date }}</td>
+        <td>{{ t.payee }}<div class="muted small">{{ t.category or 'needs a category' }}</div></td>
+        <td class="amount {{ 'neg' if t.amount_cents < 0 }}">{{ t.amount_cents | money }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    {% else %}
+      <p class="empty">Nothing yet — add a transaction or import a statement and it shows up here.</p>
+    {% endif %}
+  </section>
+</div>
+{% endblock %}
