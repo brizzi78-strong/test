@@ -94,6 +94,8 @@ QBO_ACCOUNTS = [
     ("Hope Publix", "investment", 1_300_000),
     ("Robinhood Crypto (8625)", "investment", 484_800),
     ("IRRA-Edge XZA-X7544", "investment", 19_000),
+    # Net proceeds from the sale of the Pensacola house (June 2026).
+    ("Pensacola sale proceeds", "savings", 36_000_000),
 ]
 
 DEFAULT_RULES = [
