@@ -34,17 +34,17 @@ line that depends on it is marked ⚠️.
 
 | Liability | Balance |
 |---|---:|
-| Truist mortgage (Raleigh) ⚠️ estimate | ~$580,000 |
+| Truist mortgage (Raleigh), confirmed | $617,000 |
 | Credit cards (Amex Gold, Blue Biz, Spark, Visa) | $5,038 |
-| **Total liabilities** | **~$585,038** |
+| **Total liabilities** | **$622,038** |
 
 ### Net worth
 
 | | |
 |---|---:|
 | Investable net worth (ex-home) | **~$1,210,476** |
-| Home equity ⚠️ ($650K − ~$580K) | ~$70,000 |
-| **Total net worth** ⚠️ | **~$1,280,476** |
+| Home equity ($650K − $617K) | ~$33,000 |
+| **Total net worth** | **~$1,243,476** |
 
 ---
 
@@ -101,14 +101,22 @@ line that depends on it is marked ⚠️.
 - $360K liquid optionality + strong earned-income engine
 - Written plan: zero-based budget, 5-year goals, launch gates, IP
 
+**House numbers (confirmed June 2026): $650K value, $617K principal →
+~$33K equity, 94.9% LTV.**
+- PMI removal needs ~$97K paydown to reach 80% LTV → **skip it**
+  (~8.5% "return" loses to the Roth ladder; let it auto-end at 78%).
+- Recast still viable (~$250) if you want a lower payment.
+- Refi to 15yr: hold for the trigger (rate ≤ current−1.25% or ≤4.5%).
+
 **Watch-items**
-- ⚠️ Mortgage principal unconfirmed — drives equity, PMI, refi, recast
 - Truist **$9,400.47 past due** — pay before late fee, set autopay
 - QBO books messy (sign-flipped expenses, −$8,044 cash artifact, stale
   Robinhood balance, personal items in business)
 - Wills & beneficiary designations — at $1.28M this is the top gap
 - Pensacola gain: §121 exclusion + home-office depreciation recapture
-- Low home equity (~11%) → PMI + no cheap-appraisal escape (house flat)
+- Low home equity (~5%, 94.9% LTV) → PMI paydown not worth it; the
+  house is the household's thinnest spot, but the portfolio more than
+  offsets it
 
 ---
 
@@ -135,5 +143,5 @@ line that depends on it is marked ⚠️.
 
 **Confidence note:** bank/card/investment balances are real (QBO +
 tracking app); home value is a flat-market estimate off the $650K listing;
-**mortgage principal is the one true unknown.** Everything marked ⚠️
-firms up the moment you read the principal and rate off the Truist statement.
+mortgage principal is now confirmed at $617K (June 2026). All prior ⚠️ items
+are resolved; only the rate remains to optimize the refi trigger.
