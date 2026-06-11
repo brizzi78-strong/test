@@ -67,8 +67,12 @@ Roth gradually:
 ### 4. The house (decision by end of 2026)
 
 - Catch up Truist ($9,400.47), autopay, immediately.
-- Get principal + rate → **kill PMI** (paydown to 20% equity if needed)
-  and **evaluate recast** (~$250 fee, lowers the $4,600 payment).
+- Get principal + rate → **check PMI removal the cheap way**: ask
+  Truist for current LTV + removal requirements; if appreciation has us
+  near 20% equity, one appraisal (~$300–600) kills $123/mo ($1,482/yr).
+  **Do NOT spend big capital just to remove PMI** — if the gap is large,
+  skip it (the Roth ladder outearns it) and let it auto-terminate at 78%
+  LTV. Also **evaluate recast** (~$250 fee, lowers the $4,600 payment).
 - With a 15+ year FI horizon and mortgage rates vs. expected returns,
   **don't race to pay off the house** — kill PMI, recast if it helps
   cash flow, let the brokerage compound. Revisit at year 5.
