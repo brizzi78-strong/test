@@ -1,8 +1,9 @@
 # Brizzi Household — Full Financial Picture
 
-**As of June 2026.** All figures from this session's work. The mortgage
-principal is an **estimate (~$580K)** pending the Truist statement — every
-line that depends on it is marked ⚠️.
+**As of June 2026.** All figures from this session's work. Mortgage
+principal confirmed at **$617,000**; home value is a flat-market estimate
+off the $650K listing. Only the mortgage *rate* remains to be confirmed
+(it tunes the refi trigger).
 
 ---
 
@@ -96,7 +97,7 @@ line that depends on it is marked ⚠️.
 ## 4. Strengths / watch-items
 
 **Strengths**
-- Net worth ~$1.28M, only debt is the mortgage
+- Net worth ~$1.24M, only debt is the mortgage
 - 46% savings rate; dual income; HSA maxed and (should be) invested
 - $360K liquid optionality + strong earned-income engine
 - Written plan: zero-based budget, 5-year goals, launch gates, IP
@@ -112,7 +113,7 @@ line that depends on it is marked ⚠️.
 - Truist **$9,400.47 past due** — pay before late fee, set autopay
 - QBO books messy (sign-flipped expenses, −$8,044 cash artifact, stale
   Robinhood balance, personal items in business)
-- Wills & beneficiary designations — at $1.28M this is the top gap
+- Wills & beneficiary designations — at $1.24M this is the top gap
 - Pensacola gain: §121 exclusion + home-office depreciation recapture
 - Low home equity (~5%, 94.9% LTV) → PMI paydown not worth it; the
   house is the household's thinnest spot, but the portfolio more than
