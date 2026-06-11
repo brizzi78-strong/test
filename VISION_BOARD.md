@@ -36,7 +36,11 @@ _Collect moments, not things._
 
 _Build things I'm proud of, with people I respect._
 
+### 🎯 Headline metric
+> **25 hospice referrals per month** — steady, every month. The floor, not the ceiling.
+
 ### 12-month goals
+- [ ] Hit and hold **25 hospice referrals/month** — build the relationships that sustain it
 - [ ] Ship one project end-to-end that I fully own
 - [ ] Develop a deep skill (pick one and go deep, not five shallow)
 - [ ] Grow my network with 12 genuine conversations — one a month
