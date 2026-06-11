@@ -94,6 +94,27 @@ _A story about love that stays._
 
 ---
 
+## 📣 Marketing Plan — On Point
+
+_Turn the brand into trust, and trust into referrals._
+
+### Four pillars
+| Pillar | The move |
+|--------|----------|
+| **Brand** | One cardinal, one promise — *love that stays.* Consistent on every cover, card, and conversation. |
+| **Relationships** | Discharge planners, social workers, physicians, facilities — show up, follow up, be the name they trust. |
+| **Toolkit as door-opener** | Lead with value: gift the *Toolkit* to caregivers and partners. The book opens the door referrals walk through. |
+| **Reach & reviews** | Email list, social presence, caregiver workshops, and real testimonials that prove the promise. |
+
+### The funnel
+```
+Awareness  →  Trust (the books)  →  Relationship  →  25 referrals / month
+```
+
+**The truth:** marketing isn't louder — it's more useful. Give first, and the referrals follow.
+
+---
+
 ## 🌱 Health & Wellness
 
 _Energy is the foundation everything else stands on._

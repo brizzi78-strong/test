@@ -220,6 +220,55 @@
     filter: drop-shadow(0 6px 12px rgba(178, 34, 34, 0.28));
   }
   .c-edu     { background: linear-gradient(155deg, #e2f3f1, #c4e7e2); color: #1c5d57; }
+  .c-mktg    { background: linear-gradient(150deg, #fff1ec, #ffd9cc); color: #8a2f1c; }
+
+  /* marketing plan layout */
+  .pillars {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin: 6px 0 16px;
+  }
+  .pillar {
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 14px;
+    padding: 14px 16px;
+  }
+  .pillar h3 {
+    font-family: ui-sans-serif, "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    opacity: 0.7;
+  }
+  .pillar p { font-size: 0.98rem; line-height: 1.4; }
+  .funnel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    font-family: ui-sans-serif, "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.82rem;
+    letter-spacing: 0.04em;
+  }
+  .funnel .step {
+    padding: 7px 14px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.6);
+    border: 1px solid rgba(138,47,28,0.18);
+    font-weight: 600;
+  }
+  .funnel .arrow { opacity: 0.5; font-size: 1.1rem; }
+  .funnel .goal {
+    padding: 7px 14px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #d24d3e, #c0397e);
+    color: #fff;
+    font-weight: 700;
+  }
+  @media (max-width: 760px) { .pillars { grid-template-columns: 1fr 1fr; } }
 
   /* metric callout (e.g. monthly target) */
   .metric {
@@ -437,6 +486,41 @@
         <li>Build the Cardinal brand: cover to cover, one shelf, one reader at a time</li>
       </ul>
       <p class="mantra">The cardinal is the promise that love stays. These books are how I keep it.</p>
+    </section>
+
+    <!-- Marketing Plan — the engine that connects books to referrals -->
+    <section class="card c-mktg span-12">
+      <div class="emoji">📣</div>
+      <h2>Marketing Plan — On Point</h2>
+      <div class="tag">Turn the brand into trust, and trust into referrals</div>
+      <div class="pillars">
+        <div class="pillar">
+          <h3>Brand</h3>
+          <p>One cardinal, one promise — love that stays. Consistent on every cover, card, and conversation.</p>
+        </div>
+        <div class="pillar">
+          <h3>Relationships</h3>
+          <p>Discharge planners, social workers, physicians, facilities — show up, follow up, be the name they trust.</p>
+        </div>
+        <div class="pillar">
+          <h3>The Toolkit as door-opener</h3>
+          <p>Lead with value: gift the <i>Toolkit</i> to caregivers and partners. The book opens the door referrals walk through.</p>
+        </div>
+        <div class="pillar">
+          <h3>Reach &amp; reviews</h3>
+          <p>Email list, social presence, caregiver workshops, and real testimonials that prove the promise.</p>
+        </div>
+      </div>
+      <div class="funnel">
+        <span class="step">Awareness</span>
+        <span class="arrow">→</span>
+        <span class="step">Trust (the books)</span>
+        <span class="arrow">→</span>
+        <span class="step">Relationship</span>
+        <span class="arrow">→</span>
+        <span class="goal">25 referrals / month</span>
+      </div>
+      <p class="mantra">Marketing isn't louder — it's more useful. Give first, and the referrals follow.</p>
     </section>
 
     <!-- Health -->
