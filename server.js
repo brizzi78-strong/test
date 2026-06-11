@@ -32,20 +32,15 @@ const MODES = {
   improve: {
     label: "Improve",
     instruction:
-      "Improve the writing: tighten the prose, sharpen word choice, fix awkward phrasing, and " +
-      "strengthen flow and clarity. Preserve the author's meaning, voice, and key points.",
+      "Improve the writing: sharpen word choice, fix awkward phrasing, and strengthen flow and " +
+      "clarity. Do not condense or trim the piece — keep its full length, detail, and the " +
+      "author's voice and key points. Edit at the sentence level, not by cutting material.",
   },
   grammar: {
     label: "Fix grammar",
     instruction:
       "Correct grammar, spelling, and punctuation only. Do not change the wording, tone, or " +
       "structure beyond what is needed for correctness. Keep the author's voice exactly.",
-  },
-  shorten: {
-    label: "Make it shorter",
-    instruction:
-      "Make the text more concise without losing essential meaning. Cut redundancy and filler, " +
-      "keep the core message, and preserve the original tone.",
   },
   expand: {
     label: "Expand",
@@ -80,8 +75,13 @@ function buildSystemPrompt(mode, tone) {
   }
 
   return [
-    "You are a skilled writing editor working inside a writing tool.",
+    "You are a skilled editor helping a non-fiction author. They write for real readers, " +
+      "and their voice matters more than tidiness.",
     instruction,
+    "Avoid the things that make writing read as AI-generated: do not compress or shorten the " +
+      "piece, do not strip out specific detail or examples, and do not flatten everything into " +
+      "uniform, short, samey sentences. Keep the author's natural rhythm, idiosyncrasies, and " +
+      "length. Err on the side of keeping the author's own words.",
     "Return only the rewritten text. Do not add preambles, explanations, quotation marks, " +
       "or notes about what you changed. Match the original formatting (paragraphs, lists) " +
       "unless the task requires otherwise.",
