@@ -167,6 +167,42 @@ business books).
 
 ---
 
+## IP protection
+
+**The gap:** purely AI-generated images are not copyrightable (no human
+authorship) — the concept art cannot be owned or protected. It stays
+**internal brief material only**; the public never sees it as "the art."
+The first public images of The Cardinal's Promise are the ones the LLC
+legally owns.
+
+**Checklist:**
+
+- [ ] **Illustrator contract with copyright assignment** ("work made for
+      hire" / all-rights assignment to Blue Ridge Financial Coaching LLC
+      on payment) — covering final art AND the character designs of Rob
+      and Lou. One-time attorney review of the template; reuse forever.
+      Without this clause the illustrator owns the art by default.
+- [ ] **Copyright registration** (copyright.gov, $45–65/work) for each
+      finished book — text + final art as a unit. Registration is what
+      enables statutory damages ($750–30K/work, $150K willful);
+      automatic copyright alone only gets provable actual losses.
+- [ ] **Trademark "The Cardinal's Promise" + cardinal mark** as a
+      series/brand (USPTO, ~$250–350/class). Titles can't be
+      copyrighted; the trademark is what protects the three-product
+      brand line. Strongest moat in this list.
+- [ ] **Notice everywhere:** `© 2026 Rob Brizzi / Blue Ridge Financial
+      Coaching LLC. All rights reserved.` — copyright pages, back of the
+      free guide, website footer.
+- [ ] **Posting rules:** low-res only (≤1000px), corner credit
+      ("© Rob Brizzi · TheCardinalsPromise.com" — markets while it
+      protects), never print-resolution files or full interior spreads.
+- [ ] **Embed IPTC/EXIF creator + copyright metadata** in every released
+      image file.
+- [ ] **Keep provenance:** sketches, drafts, contract, payments — the
+      paper trail that wins "that's mine."
+
+---
+
 ## Sequencing: Toolkit first
 
 1. **Toolkit + free Resource Guide** (60–90 days) — fastest to finish,
