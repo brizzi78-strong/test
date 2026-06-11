@@ -9,16 +9,17 @@ voice and avoid the tells that make writing read as AI-generated — no
 compressing the piece, no stripping detail, no flattening everything into
 uniform short sentences.
 
-![mode chips: Humanize · Improve · Fix grammar · Expand · Adjust tone](https://img.shields.io/badge/modes-5-7c9cff)
+![mode chips: Humanize · Improve · Show, don't tell · Fix grammar · Expand · Adjust tone](https://img.shields.io/badge/modes-6-7c9cff)
 
 ## What it does
 
-Five one-click modes:
+Six one-click modes:
 
 | Mode | What Claude does |
 | --- | --- |
 | **Humanize** | Strips robotic, AI-sounding phrasing and gives the text a natural human voice |
 | **Improve** | Sharpens word choice and flow at the sentence level — without trimming length or detail |
+| **Show, don't tell** | Turns abstract claims and judgments into concrete specifics, examples, and evidence |
 | **Fix grammar** | Corrects grammar/spelling/punctuation only — voice untouched |
 | **Expand** | Develops the ideas with relevant detail and examples |
 | **Adjust tone** | Rewrites in a tone you choose (professional, friendly, persuasive, …) |

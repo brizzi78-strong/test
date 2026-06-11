@@ -36,6 +36,16 @@ const MODES = {
       "clarity. Do not condense or trim the piece — keep its full length, detail, and the " +
       "author's voice and key points. Edit at the sentence level, not by cutting material.",
   },
+  show: {
+    label: "Show, don't tell",
+    instruction:
+      "Rewrite so the piece shows rather than tells. Turn abstract claims, judgments, and " +
+      "generalizations into concrete specifics: plain nouns and verbs, examples, evidence, " +
+      "numbers, and detail that is already implied by the text. Replace words that assert a " +
+      "conclusion (important, powerful, difficult, amazing) with the particulars that let the " +
+      "reader reach it themselves. Do not invent facts — where a specific isn't available, make " +
+      "the language concrete without fabricating. Keep the author's voice and full length.",
+  },
   grammar: {
     label: "Fix grammar",
     instruction:
