@@ -17,7 +17,7 @@ Six one-click modes:
 
 | Mode | What Claude does |
 | --- | --- |
-| **Humanize** | Strips robotic, AI-sounding phrasing and gives the text a natural human voice |
+| **Humanize** | Light pass that fixes only what clearly reads as AI, keeping your original words |
 | **Improve** | Sharpens word choice and flow at the sentence level — without trimming length or detail |
 | **Show, don't tell** | Turns abstract claims and judgments into concrete specifics, examples, and evidence |
 | **Fix grammar** | Corrects grammar/spelling/punctuation only — voice untouched |

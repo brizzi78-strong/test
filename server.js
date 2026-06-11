@@ -24,10 +24,10 @@ const MODES = {
   humanize: {
     label: "Humanize",
     instruction:
-      "Rewrite the text so it reads like it was written by a thoughtful human, not an AI. " +
-      "Remove robotic phrasing, filler, and hedging. Vary sentence length and rhythm, prefer " +
-      "concrete words over abstractions, and let a natural voice come through. Keep the author's " +
-      "original meaning, facts, and intent intact.",
+      "Touch only what clearly reads as AI: robotic phrasing, filler, hedging, and stock " +
+      "transitions. Fix those in place and leave everything else exactly as the author wrote " +
+      "it. This is a light pass, not a rewrite — keep as many of the author's original words, " +
+      "sentences, and rhythm as possible. If a sentence already sounds human, do not touch it.",
   },
   improve: {
     label: "Improve",
