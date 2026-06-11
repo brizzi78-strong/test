@@ -270,6 +270,43 @@
   }
   @media (max-width: 760px) { .pillars { grid-template-columns: 1fr 1fr; } }
 
+  /* 90-day action calendar */
+  .c-plan { background: linear-gradient(150deg, #f3effa, #e4dcf6); color: #3a2a63; }
+  .phases {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 8px;
+  }
+  .phase {
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 16px;
+    padding: 18px 18px 20px;
+    position: relative;
+  }
+  .phase .days {
+    font-family: ui-sans-serif, "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.66rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    opacity: 0.6;
+  }
+  .phase .pname {
+    font-size: 1.18rem;
+    font-weight: 600;
+    margin: 4px 0 12px;
+  }
+  .phase ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+  .phase li { position: relative; padding-left: 20px; font-size: 0.95rem; line-height: 1.4; }
+  .phase li::before {
+    content: "";
+    position: absolute; left: 0; top: 0.5em;
+    width: 8px; height: 8px; border-radius: 50%;
+    background: linear-gradient(120deg, #7b5ad6, #c0397e);
+  }
+  @media (max-width: 760px) { .phases { grid-template-columns: 1fr; } }
+
   /* metric callout (e.g. monthly target) */
   .metric {
     display: flex;
@@ -521,6 +558,46 @@
         <span class="goal">25 referrals / month</span>
       </div>
       <p class="mantra">Marketing isn't louder — it's more useful. Give first, and the referrals follow.</p>
+    </section>
+
+    <!-- 90-Day Action Calendar -->
+    <section class="card c-plan span-12">
+      <div class="emoji">🗓️</div>
+      <h2>The First 90 Days</h2>
+      <div class="tag">From plan to motion — three sprints to launch and referrals</div>
+      <div class="phases">
+        <div class="phase">
+          <div class="days">Days 1–30</div>
+          <div class="pname">Foundation</div>
+          <ul>
+            <li>Finalize the 2026 <i>Toolkit</i> — proof, print, ready to hand out</li>
+            <li>Lock brand assets: cards, one-pager, email signature, simple site</li>
+            <li>Build the target list — facilities, discharge planners, physician offices</li>
+            <li>Start the email list and a 3-email welcome for caregivers</li>
+          </ul>
+        </div>
+        <div class="phase">
+          <div class="days">Days 31–60</div>
+          <div class="pname">Outreach</div>
+          <ul>
+            <li>Gift the <i>Toolkit</i> to 10 partners — lead with value, no ask</li>
+            <li>5 relationship touches a week; track every conversation</li>
+            <li>Book the first caregiver workshop or lunch-and-learn</li>
+            <li>Collect 3 testimonials that prove the promise</li>
+          </ul>
+        </div>
+        <div class="phase">
+          <div class="days">Days 61–90</div>
+          <div class="pname">Momentum</div>
+          <ul>
+            <li>Host a launch event for the 2026 <i>Toolkit</i></li>
+            <li>Stand up a simple referral loop — easy to send, fast to thank</li>
+            <li>Measure against <b>25/month</b>; double down on what's working</li>
+            <li>Set the cadence that makes 25 the floor, not the ceiling</li>
+          </ul>
+        </div>
+      </div>
+      <p class="mantra">Ninety days of small, consistent moves beats one big launch every time.</p>
     </section>
 
     <!-- Health -->

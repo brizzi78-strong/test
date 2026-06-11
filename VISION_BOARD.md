@@ -115,6 +115,32 @@ Awareness  →  Trust (the books)  →  Relationship  →  25 referrals / month
 
 ---
 
+## 🗓️ The First 90 Days
+
+_From plan to motion — three sprints to launch and referrals._
+
+### Days 1–30 · Foundation
+- [ ] Finalize the 2026 *Toolkit* — proof, print, ready to hand out
+- [ ] Lock brand assets: cards, one-pager, email signature, simple site
+- [ ] Build the target list — facilities, discharge planners, physician offices
+- [ ] Start the email list and a 3-email welcome for caregivers
+
+### Days 31–60 · Outreach
+- [ ] Gift the *Toolkit* to 10 partners — lead with value, no ask
+- [ ] 5 relationship touches a week; track every conversation
+- [ ] Book the first caregiver workshop or lunch-and-learn
+- [ ] Collect 3 testimonials that prove the promise
+
+### Days 61–90 · Momentum
+- [ ] Host a launch event for the 2026 *Toolkit*
+- [ ] Stand up a simple referral loop — easy to send, fast to thank
+- [ ] Measure against **25/month**; double down on what's working
+- [ ] Set the cadence that makes 25 the floor, not the ceiling
+
+**The truth:** ninety days of small, consistent moves beats one big launch every time.
+
+---
+
 ## 🌱 Health & Wellness
 
 _Energy is the foundation everything else stands on._
