@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vision Board 2026</title>
+<style>
+  :root {
+    --ink: #1d1b29;
+    --muted: #6c6880;
+    --paper: #faf7f2;
+    --line: rgba(29, 27, 41, 0.10);
+    --shadow: 0 10px 30px -12px rgba(29, 27, 41, 0.28);
+    --shadow-lift: 0 22px 48px -16px rgba(29, 27, 41, 0.38);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+    color: var(--ink);
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #fde9d2 0%, transparent 55%),
+      radial-gradient(1000px 700px at 95% 0%, #e3ecff 0%, transparent 50%),
+      radial-gradient(900px 600px at 50% 120%, #f6e0ef 0%, transparent 55%),
+      var(--paper);
+    background-attachment: fixed;
+    line-height: 1.55;
+    padding: clamp(20px, 5vw, 64px);
+  }
+
+  .board { max-width: 1180px; margin: 0 auto; }
+
+  /* ---- Header ---- */
+  header { text-align: center; margin-bottom: clamp(28px, 5vw, 56px); }
+  .kicker {
+    font-family: ui-sans-serif, "Helvetica Neue", Arial, sans-serif;
+    letter-spacing: 0.42em;
+    text-transform: uppercase;
+    font-size: 0.72rem;
+    color: var(--muted);
+    margin-bottom: 14px;
+  }
+  h1 {
+    font-size: clamp(2.6rem, 8vw, 5.2rem);
+    line-height: 0.98;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    background: linear-gradient(120deg, #b5651d, #c0397e 45%, #4f5bd5 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .subtitle {
+    font-style: italic;
+    color: var(--muted);
+    margin-top: 16px;
+    font-size: clamp(1rem, 2.6vw, 1.25rem);
+  }
+  .word-of-year {
+    margin: 26px auto 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 22px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(6px);
+    font-family: ui-sans-serif, "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+  }
+  .word-of-year b {
+    font-size: 1.05rem;
+    letter-spacing: 0.22em;
+    background: linear-gradient(120deg, #b5651d, #4f5bd5);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+
+  /* ---- Mosaic grid ---- */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: clamp(14px, 2vw, 22px);
+  }
+
+  .card {
+    position: relative;
+    border-radius: 22px;
+    padding: clamp(20px, 2.4vw, 30px);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+  }
+  .card:hover { transform: translateY(-6px) rotate(-0.4deg); box-shadow: var(--shadow-lift); }
+
+  .card .emoji {
+    font-size: 2.2rem;
+    line-height: 1;
+    margin-bottom: 14px;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,.15));
+  }
+  .card h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin-bottom: 4px;
+  }
+  .card .tag {
+    font-family: ui-sans-serif, "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    opacity: 0.72;
+    margin-bottom: 16px;
+  }
+  .card ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .card li {
+    position: relative;
+    padding-left: 26px;
+    font-size: 1.02rem;
+  }
+  .card li::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 0.55em;
+    width: 13px; height: 13px;
+    border-radius: 5px;
+    border: 1.5px solid currentColor;
+    opacity: 0.55;
+  }
+  .card .mantra {
+    margin-top: auto;
+    padding-top: 18px;
+    font-style: italic;
+    font-size: 0.98rem;
+    opacity: 0.82;
+  }
+
+  /* color themes */
+  .c-travel  { background: linear-gradient(155deg, #fff4e0, #ffe2c2); color: #7a4410; }
+  .c-career  { background: linear-gradient(155deg, #e7eeff, #d4ddff); color: #2c357a; }
+  .c-health  { background: linear-gradient(155deg, #e3f7ec, #c9efd9); color: #1f6b45; }
+  .c-people  { background: linear-gradient(155deg, #fde6f1, #f9d2e6); color: #8a2a5e; }
+  .c-author  {
+    background:
+      radial-gradient(600px 200px at 100% 0%, rgba(197,160,84,0.35), transparent 60%),
+      linear-gradient(150deg, #2a2235, #43324f);
+    color: #f3ead6;
+  }
+  .c-author h2, .c-author .emoji { color: #e9c878; }
+  .c-author .tag { color: #d8c9a4; opacity: 1; }
+  .c-quote   {
+    background: linear-gradient(140deg, #1d1b29, #3a2a52);
+    color: #f4eef9;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* spans */
+  .span-7 { grid-column: span 7; }
+  .span-5 { grid-column: span 5; }
+  .span-6 { grid-column: span 6; }
+  .span-12 { grid-column: span 12; }
+
+  .c-quote .big {
+    font-size: clamp(1.3rem, 3vw, 1.9rem);
+    font-style: italic;
+    line-height: 1.35;
+  }
+  .c-quote .by {
+    margin-top: 14px;
+    font-family: ui-sans-serif, sans-serif;
+    letter-spacing: 0.2em;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    opacity: 0.65;
+  }
+
+  /* rhythm strip */
+  .rhythm {
+    margin-top: clamp(24px, 4vw, 44px);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(14px, 2vw, 22px);
+  }
+  .rhythm .beat {
+    background: rgba(255,255,255,0.62);
+    backdrop-filter: blur(6px);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 22px 24px;
+  }
+  .rhythm .beat span {
+    font-family: ui-sans-serif, sans-serif;
+    font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--muted);
+  }
+  .rhythm .beat p { margin-top: 8px; font-size: 1rem; }
+
+  footer {
+    text-align: center;
+    margin-top: clamp(28px, 5vw, 52px);
+    color: var(--muted);
+    font-style: italic;
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 760px) {
+    .span-7, .span-5, .span-6, .span-12 { grid-column: span 12; }
+    .rhythm { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="board">
+
+  <header>
+    <div class="kicker">A year, drafted on purpose</div>
+    <h1>Vision Board 2026</h1>
+    <p class="subtitle">Where I'm headed — and the kind of person I'm becoming on the way there.</p>
+    <div class="word-of-year">
+      <span>Word of the year</span>
+      <b>INTENTION</b>
+    </div>
+  </header>
+
+  <main class="grid">
+
+    <section class="card c-quote span-12">
+      <p class="big">"You do not rise to the level of your goals.<br>You fall to the level of your systems."</p>
+      <p class="by">The board is the dream · the habits are the engine</p>
+    </section>
+
+    <!-- Travel -->
+    <section class="card c-travel span-7">
+      <div class="emoji">✈️</div>
+      <h2>Travel &amp; Experiences</h2>
+      <div class="tag">Collect moments, not things</div>
+      <ul>
+        <li>Stand under the northern lights, somewhere far north and quiet</li>
+        <li>Walk a multi-day trail — Dolomites, Patagonia, or the Kumano Kodo</li>
+        <li>Take one trip with no itinerary and let the days decide</li>
+        <li>Learn a dish from a local in the place it belongs to</li>
+      </ul>
+      <p class="mantra">Chasing the feeling of awe, space, and the good kind of tired.</p>
+    </section>
+
+    <!-- Career -->
+    <section class="card c-career span-5">
+      <div class="emoji">💼</div>
+      <h2>Career &amp; Growth</h2>
+      <div class="tag">Build things I'm proud of</div>
+      <ul>
+        <li>Own one project end to end — start to ship</li>
+        <li>Go deep on a single skill instead of wide on five</li>
+        <li>Twelve real conversations — one a month</li>
+        <li>Ask for the stretch instead of waiting to be handed it</li>
+      </ul>
+      <p class="mantra">Work that's challenging, meaningful, and leaves room for a life.</p>
+    </section>
+
+    <!-- Published Author — the headline dream -->
+    <section class="card c-author span-12">
+      <div class="emoji">📖</div>
+      <h2>Become a Published Author</h2>
+      <div class="tag">The dream with my name on the spine</div>
+      <ul>
+        <li>Finish the manuscript — a complete first draft, badly written is fine</li>
+        <li>Write most days, even if it's only 300 words before the world wakes up</li>
+        <li>Revise with a real reader's eyes; share pages and survive the feedback</li>
+        <li>Query agents or publish it myself — but get it into readers' hands</li>
+        <li>Hold the finished book. See it on one shelf that isn't mine.</li>
+      </ul>
+      <p class="mantra">A writer is just someone who didn't quit. The only failure is the unwritten page.</p>
+    </section>
+
+    <!-- Health -->
+    <section class="card c-health span-6">
+      <div class="emoji">🌱</div>
+      <h2>Health &amp; Wellness</h2>
+      <div class="tag">The foundation everything stands on</div>
+      <ul>
+        <li>Move four times a week — in a way I actually enjoy</li>
+        <li>Guard sleep like it's the appointment it is</li>
+        <li>Cook more than I order in</li>
+        <li>Ten minutes of stillness, daily and unskippable</li>
+      </ul>
+      <p class="mantra">Success looks like waking up rested and showing up steady.</p>
+    </section>
+
+    <!-- People -->
+    <section class="card c-people span-6">
+      <div class="emoji">❤️</div>
+      <h2>Personal &amp; Relationships</h2>
+      <div class="tag">The people and the place I come home to</div>
+      <ul>
+        <li>Call the people I love more often than feels efficient</li>
+        <li>Host the gathering instead of waiting for an invitation</li>
+        <li>Make my space feel like mine — light, plants, order</li>
+        <li>Automate the savings; spend the rest on people and experiences</li>
+      </ul>
+      <p class="mantra">Building a life that's grounded, generous, and unhurried.</p>
+    </section>
+
+  </main>
+
+  <section class="rhythm">
+    <div class="beat">
+      <span>Monthly</span>
+      <p>Read the board. What moved, what stalled — then adjust one thing.</p>
+    </div>
+    <div class="beat">
+      <span>Quarterly</span>
+      <p>Celebrate a win out loud. Retire the goals that no longer fit.</p>
+    </div>
+    <div class="beat">
+      <span>Year-end</span>
+      <p>Rewrite it all. Growth means the dreams are allowed to change.</p>
+    </div>
+  </section>
+
+  <footer>
+    Started June 11, 2026 · A draft of a life, not a contract — edit boldly.
+  </footer>
+
+</div>
+</body>
+</html>

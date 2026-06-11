@@ -51,6 +51,29 @@ _Build things I'm proud of, with people I respect._
 
 ---
 
+## 📖 Become a Published Author
+
+_The dream with my name on the spine._
+
+### The path
+- [ ] Finish the manuscript — a complete first draft (badly written is fine)
+- [ ] Write most days, even if it's only 300 words before the world wakes up
+- [ ] Revise with a real reader's eyes — share pages and survive the feedback
+- [ ] Query agents or self-publish — but get it into readers' hands
+- [ ] Hold the finished book; see it on one shelf that isn't mine
+
+### Milestones to celebrate
+| Stage | Done when… |
+|-------|------------|
+| Draft | The words "The End" exist |
+| Revision | A second draft a stranger could read |
+| Out the door | Queries sent / publish button pressed |
+| In the world | First reader who isn't a friend |
+
+**The truth:** a writer is just someone who didn't quit. The only failure is the unwritten page.
+
+---
+
 ## 🌱 Health & Wellness
 
 _Energy is the foundation everything else stands on._
