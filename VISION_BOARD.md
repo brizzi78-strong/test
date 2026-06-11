@@ -66,26 +66,24 @@ _Earn the credentials, become the leader._
 
 ---
 
-## 📖 Become a Published Author
+## 📖 Published Author — The Cardinal Series
 
-_The dream with my name on the spine._
+_A story about love that stays._
+
+### Release roadmap
+| Year | Book | What it is |
+|------|------|------------|
+| **2026** | The Cardinal's Toolkit *(white cover)* | Caregiver's guide **for the aging parent** |
+| **2027** | The Cardinal's Toolkit *(blue cover)* | Companion guide **for the caregiver** |
+| **2028** | The Cardinal's Promise *(kids book)* | A children's story about love that stays |
 
 ### The path
-- [ ] Finish the manuscript — a complete first draft (badly written is fine)
-- [ ] Write most days, even if it's only 300 words before the world wakes up
-- [ ] Revise with a real reader's eyes — share pages and survive the feedback
-- [ ] Query agents or self-publish — but get it into readers' hands
-- [ ] Hold the finished book; see it on one shelf that isn't mine
+- [ ] **2026:** Finish and publish the white *Toolkit* — get it into caregivers' hands
+- [ ] **2027:** Release the blue *Toolkit* — the companion for the caregiver
+- [ ] **2028:** Bring *The Cardinal's Promise* into the world — the picture book
+- [ ] Build the Cardinal brand: cover to cover, one shelf, one reader at a time
 
-### Milestones to celebrate
-| Stage | Done when… |
-|-------|------------|
-| Draft | The words "The End" exist |
-| Revision | A second draft a stranger could read |
-| Out the door | Queries sent / publish button pressed |
-| In the world | First reader who isn't a friend |
-
-**The truth:** a writer is just someone who didn't quit. The only failure is the unwritten page.
+**The truth:** the cardinal is the promise that love stays — these books are how I keep it.
 
 ---
 

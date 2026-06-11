@@ -154,6 +154,36 @@
   }
   .c-author h2, .c-author .emoji { color: #e9c878; }
   .c-author .tag { color: #d8c9a4; opacity: 1; }
+  .c-author li::before { color: #e9c878; }
+
+  /* book shelf inside the author card */
+  .shelf {
+    display: flex;
+    gap: clamp(14px, 2.4vw, 26px);
+    margin: 6px 0 22px;
+    flex-wrap: wrap;
+  }
+  .book {
+    flex: 1 1 150px;
+    max-width: 210px;
+    text-align: center;
+    transition: transform .35s cubic-bezier(.2,.8,.2,1);
+  }
+  .book:hover { transform: translateY(-8px) rotate(0.6deg); }
+  .book img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 14px 30px -10px rgba(0,0,0,0.6), 0 2px 0 rgba(255,255,255,0.08) inset;
+    display: block;
+  }
+  .book .cap {
+    margin-top: 10px;
+    font-family: ui-sans-serif, "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #d8c9a4;
+  }
   .c-edu     { background: linear-gradient(155deg, #e2f3f1, #c4e7e2); color: #1c5d57; }
   .c-quote   {
     background: linear-gradient(140deg, #1d1b29, #3a2a52);
@@ -280,19 +310,32 @@
       <p class="mantra">Education is the one investment that compounds for life — and can't be taken back.</p>
     </section>
 
-    <!-- Published Author — the headline dream -->
+    <!-- Published Author — the Cardinal series -->
     <section class="card c-author span-12">
       <div class="emoji">📖</div>
-      <h2>Become a Published Author</h2>
-      <div class="tag">The dream with my name on the spine</div>
+      <h2>Published Author — The Cardinal Series</h2>
+      <div class="tag">A story about love that stays</div>
+      <div class="shelf">
+        <figure class="book">
+          <img src="images/cardinals-toolkit-aging-parent.png" alt="The Cardinal's Toolkit — Guide for the Aging Parent">
+          <figcaption class="cap">2026 · Toolkit for the Aging Parent</figcaption>
+        </figure>
+        <figure class="book">
+          <img src="images/cardinals-toolkit-caregiver.png" alt="The Cardinal's Toolkit — Guide to the Caregiver for the Aging Parent">
+          <figcaption class="cap">2027 · Toolkit for the Caregiver</figcaption>
+        </figure>
+        <figure class="book">
+          <img src="images/cardinals-promise.png" alt="The Cardinal's Promise — A Story About Love That Stays">
+          <figcaption class="cap">2028 · The Cardinal's Promise</figcaption>
+        </figure>
+      </div>
       <ul>
-        <li>Finish the manuscript — a complete first draft, badly written is fine</li>
-        <li>Write most days, even if it's only 300 words before the world wakes up</li>
-        <li>Revise with a real reader's eyes; share pages and survive the feedback</li>
-        <li>Query agents or publish it myself — but get it into readers' hands</li>
-        <li>Hold the finished book. See it on one shelf that isn't mine.</li>
+        <li><b>2026</b> — Release the white <i>Toolkit</i>: a caregiver's guide for the aging parent</li>
+        <li><b>2027</b> — Release the blue <i>Toolkit</i>: the companion guide for the caregiver</li>
+        <li><b>2028</b> — Release <i>The Cardinal's Promise</i>: the children's book, a story about love that stays</li>
+        <li>Build the Cardinal brand: cover to cover, one shelf, one reader at a time</li>
       </ul>
-      <p class="mantra">A writer is just someone who didn't quit. The only failure is the unwritten page.</p>
+      <p class="mantra">The cardinal is the promise that love stays. These books are how I keep it.</p>
     </section>
 
     <!-- Health -->
