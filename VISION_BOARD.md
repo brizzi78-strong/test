@@ -39,6 +39,9 @@ _Build things I'm proud of, with people I respect._
 ### 🎯 Headline metric
 > **25 hospice referrals per month** — steady, every month. The floor, not the ceiling.
 
+**This month:** `18 / 25` — `███████████████░░░░░` 72%
+_(Update the count as referrals come in.)_
+
 ### 12-month goals
 - [ ] Hit and hold **25 hospice referrals/month** — build the relationships that sustain it
 - [ ] Ship one project end-to-end that I fully own

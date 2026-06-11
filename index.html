@@ -246,6 +246,23 @@
     line-height: 1.3;
     opacity: 0.85;
   }
+
+  /* monthly referrals tracker */
+  .tracker { margin: 0 0 16px; }
+  .tracker-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: ui-sans-serif, "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+    opacity: 0.85;
+  }
+  .tracker-head b { font-size: 1.05rem; }
+  .progress.dark { background: rgba(44, 53, 122, 0.16); }
+  .progress.dark > span { background: linear-gradient(90deg, #4f5bd5, #c0397e); }
   .c-quote   {
     background: linear-gradient(140deg, #1d1b29, #3a2a52);
     color: #f4eef9;
@@ -356,6 +373,13 @@
       <div class="metric">
         <b>25</b>
         <span>hospice referrals<br>every month</span>
+      </div>
+      <div class="tracker">
+        <div class="tracker-head">
+          <span>This month</span>
+          <span><b>18</b> / 25</span>
+        </div>
+        <div class="progress dark"><span style="width:72%"></span></div>
       </div>
       <ul>
         <li>Build the relationships that make 25/month the floor, not the ceiling</li>
