@@ -67,6 +67,22 @@ return must show a profit motive (marketing, pricing, pipeline). These
 aren't in conflict — a mission-driven business can still intend to profit
 — but the documentation has to say so.
 
+**Myth check — "you can't lose money in the first two years":** false.
+There is no rule barring early startup losses; they're expected and
+deductible against W-2 income. The real rules:
+- **§183(d) safe harbor:** profit in **3 of any 5 consecutive years** →
+  IRS *presumes* a for-profit business (burden shifts to them). Missing
+  it isn't fatal — burden just shifts to us to show profit motive via
+  the 9-factor test (which the launch-plan documentation supports).
+- **Form 5213:** can elect to make the IRS *wait* until 5 years have
+  passed before challenging — buys time, doesn't impose a 2-year limit.
+- **§195 startup costs:** only **$5,000** deductible in year 1; the rest
+  **amortized over 15 years**. So some pre-launch spend is capitalized,
+  not an immediate loss — likely the source of the "two years" myth.
+- **Plan:** lose money early (normal), aim for 3 profitable years out of
+  5 (reachable once speaking fees + bulk Toolkit orders land), and keep
+  profit-motive documentation throughout.
+
 ---
 
 ## 4. Pensacola sale (carryover item)
@@ -95,3 +111,5 @@ the price of admission for the LLC deductions and any vehicle write-off.
 3. Tesla — model, business-use %, depreciation method, hobby-loss exposure
 4. Confirm base AGI, charitable floor, and full itemized total
 5. QBO cleanup sign-off before any business deductions are claimed
+6. Startup-cost treatment (§195 $5k + amortization) and §183 3-of-5
+   profit path / Form 5213 election decision
