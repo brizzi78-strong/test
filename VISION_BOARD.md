@@ -51,6 +51,21 @@ _Build things I'm proud of, with people I respect._
 
 ---
 
+## 🎓 Education & Mastery
+
+_Earn the credentials, become the leader._
+
+### The credentials
+- [ ] Earn an **MBA** — sharpen the business mind, build the network, think at scale
+- [ ] Pursue an **Ed.D. in Educational Leadership** — the doctorate, all the way to "Dr."
+- [ ] Research, shortlist, and apply — program fit, funding, and a realistic timeline
+- [ ] Turn the dissertation into work that changes how people learn and lead
+
+### Why it matters
+> Not credentials on a wall, but capability in the room. Education is the one investment that compounds for life — and can't be taken back.
+
+---
+
 ## 📖 Become a Published Author
 
 _The dream with my name on the spine._
