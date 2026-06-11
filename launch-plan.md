@@ -180,8 +180,13 @@ legally owns.
 - [ ] **Illustrator contract with copyright assignment** ("work made for
       hire" / all-rights assignment to Blue Ridge Financial Coaching LLC
       on payment) — covering final art AND the character designs of Rob
-      and Lou. One-time attorney review of the template; reuse forever.
-      Without this clause the illustrator owns the art by default.
+      and Lou. Without this clause the illustrator owns the art by default.
+      **Use LegalShield**: verify the plan covers LLC/business matters
+      (may need the Small Business tier), then (a) document review of the
+      illustrator contract, (b) request a reusable IP-assignment /
+      contractor template (also for editor, designer, videographer),
+      (c) trademark consult (+~25% member discount if the firm files).
+      DIY the copyright registrations — save consult time for contracts.
 - [ ] **Copyright registration** (copyright.gov, $45–65/work) for each
       finished book — text + final art as a unit. Registration is what
       enables statutory damages ($750–30K/work, $150K willful);
