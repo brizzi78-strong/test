@@ -72,6 +72,12 @@ Roth gradually:
 - With a 15+ year FI horizon and mortgage rates vs. expected returns,
   **don't race to pay off the house** — kill PMI, recast if it helps
   cash flow, let the brokerage compound. Revisit at year 5.
+- **Refinance trigger (15-year):** refi when rate ≤ current − 1.25%, or
+  whenever closing costs break even within 24 months — whichever fires
+  first. **4.5% = automatic yes.** Until then, itemize the interest
+  (real for us at $20K charity + interest), but remember the deduction
+  only refunds ~28¢/dollar — it softens the wait, it doesn't pay for it.
+  PMI removal and recast proceed now, independent of rates.
 
 ### 5. The Cardinal's Promise — mission-first (Years 1–5)
 
