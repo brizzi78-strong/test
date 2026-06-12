@@ -17,18 +17,18 @@ A living map of where I'm headed. Created **June 11, 2026**. Revisit monthly, ad
 _Collect moments, not things._
 
 ### Bucket list
-- [ ] **🇵🇹 Portugal** — Lisbon's tiled streets, Porto's riverfront, the Algarve coast
-- [ ] **🇪🇬 Egypt** — the pyramids of Giza, a Nile cruise, the temples of Luxor
+- [ ] **2027 · 🇵🇹 Portugal** — Lisbon's tiled streets, Porto's riverfront, the Algarve coast
+- [ ] **2028 · 🇪🇬 Egypt** — the pyramids of Giza, a Nile cruise, the temples of Luxor
 - [ ] Watch the northern lights from a glass igloo
 - [ ] Hike a multi-day trail (Dolomites, Torres del Paine, or Kumano Kodo)
 - [ ] Spend a slow week somewhere with no itinerary
 - [ ] Learn to cook one dish from a place I visit, taught by a local
 
-### This year's trips
-| When | Where | Why it matters |
+### Trip roadmap
+| Year | Where | Why it matters |
 |------|-------|----------------|
-| Q2 | 🇵🇹 Portugal | Coast, culture, and an easy pace |
-| Q4 | 🇪🇬 Egypt | A lifelong bucket-list wonder |
+| **2027** | 🇵🇹 Portugal | Coast, culture, and an easy pace |
+| **2028** | 🇪🇬 Egypt | A lifelong bucket-list wonder |
 | TBD | _A slow week, no itinerary_ | Reset and disconnect |
 
 **Feeling I'm chasing:** awe, spaciousness, the good kind of tired.
