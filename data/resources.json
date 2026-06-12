@@ -1,0 +1,150 @@
+{
+  "categories": [
+    { "id": "all", "label": "All resources" },
+    { "id": "crisis", "label": "Crisis & urgent support" },
+    { "id": "grief", "label": "Grief & bereavement" },
+    { "id": "caregiving", "label": "Caregiving practical help" },
+    { "id": "hospice", "label": "Hospice & end of life" },
+    { "id": "selfcare", "label": "Caregiver self-care" },
+    { "id": "financial", "label": "Financial & legal" },
+    { "id": "children", "label": "Helping children grieve" }
+  ],
+  "resources": [
+    {
+      "title": "988 Suicide & Crisis Lifeline",
+      "category": "crisis",
+      "type": "Hotline",
+      "region": "United States",
+      "url": "https://988lifeline.org/",
+      "description": "Free, confidential support 24/7 for anyone in emotional distress. Call or text 988."
+    },
+    {
+      "title": "Crisis Text Line",
+      "category": "crisis",
+      "type": "Text line",
+      "region": "US / UK / Canada / Ireland",
+      "url": "https://www.crisistextline.org/",
+      "description": "Text HOME to 741741 to reach a trained crisis counselor any time, day or night."
+    },
+    {
+      "title": "Eldercare Locator",
+      "category": "caregiving",
+      "type": "Directory",
+      "region": "United States",
+      "url": "https://eldercare.acl.gov/",
+      "description": "A public service connecting older adults and caregivers to local services: meals, transportation, home care, and respite."
+    },
+    {
+      "title": "Family Caregiver Alliance",
+      "category": "caregiving",
+      "type": "Organization",
+      "region": "United States",
+      "url": "https://www.caregiver.org/",
+      "description": "Fact sheets, a services-by-state navigator, and support for families managing long-term care at home."
+    },
+    {
+      "title": "GriefShare",
+      "category": "grief",
+      "type": "Support group",
+      "region": "International",
+      "url": "https://www.griefshare.org/",
+      "description": "Faith-based grief recovery support groups that meet locally and online, with a daily encouragement email."
+    },
+    {
+      "title": "The Dougy Center",
+      "category": "children",
+      "type": "Organization",
+      "region": "International",
+      "url": "https://www.dougy.org/",
+      "description": "Guidance and peer support for grieving children, teens, and their families, with free downloadable resources."
+    },
+    {
+      "title": "National Hospice and Palliative Care Organization — CaringInfo",
+      "category": "hospice",
+      "type": "Guides",
+      "region": "United States",
+      "url": "https://www.caringinfo.org/",
+      "description": "Plain-language guides on advance directives, choosing hospice, and serious-illness decisions, including free state forms."
+    },
+    {
+      "title": "Respite Care Locator (ARCH National Respite Network)",
+      "category": "selfcare",
+      "type": "Directory",
+      "region": "United States",
+      "url": "https://archrespite.org/respitelocator",
+      "description": "Find short-term, temporary relief so caregivers can rest, run errands, or simply breathe."
+    },
+    {
+      "title": "What's Your Grief",
+      "category": "grief",
+      "type": "Articles & courses",
+      "region": "Online",
+      "url": "https://whatsyourgrief.com/",
+      "description": "Practical, compassionate articles and worksheets on coping with loss, written by two mental-health professionals."
+    },
+    {
+      "title": "Caregiver Action Network — Family Caregiver Toolbox",
+      "category": "caregiving",
+      "type": "Toolkit",
+      "region": "United States",
+      "url": "https://www.caregiveraction.org/family-caregiver-toolbox",
+      "description": "Checklists and a peer help desk for everyday caregiving questions, from medication tracking to talking with doctors."
+    },
+    {
+      "title": "National Academy of Elder Law Attorneys (NAELA)",
+      "category": "financial",
+      "type": "Directory",
+      "region": "United States",
+      "url": "https://www.naela.org/",
+      "description": "Find an attorney for wills, powers of attorney, guardianship, and planning for long-term care costs."
+    },
+    {
+      "title": "BenefitsCheckUp (National Council on Aging)",
+      "category": "financial",
+      "type": "Screening tool",
+      "region": "United States",
+      "url": "https://benefitscheckup.org/",
+      "description": "Confidential screening that finds programs to help pay for medications, food, utilities, and care."
+    },
+    {
+      "title": "Hospice Foundation of America",
+      "category": "hospice",
+      "type": "Education",
+      "region": "United States",
+      "url": "https://hospicefoundation.org/",
+      "description": "Webinars, podcasts, and grief resources to help families understand and make the most of hospice care."
+    },
+    {
+      "title": "Sesame Workshop — Grief resources for young children",
+      "category": "children",
+      "type": "Activities",
+      "region": "Online",
+      "url": "https://sesameworkshop.org/topics/grief/",
+      "description": "Gentle videos, storybooks, and printable activities to help young children name and move through big feelings."
+    },
+    {
+      "title": "Modern Loss",
+      "category": "grief",
+      "type": "Community",
+      "region": "Online",
+      "url": "https://modernloss.com/",
+      "description": "Candid stories and a warm community for the long, messy, unscripted reality of life after loss."
+    },
+    {
+      "title": "Well Spouse Association",
+      "category": "selfcare",
+      "type": "Peer support",
+      "region": "United States",
+      "url": "https://wellspouse.org/",
+      "description": "Support specifically for spousal caregivers, including peer forums and local support groups."
+    },
+    {
+      "title": "PREPARE for Your Care",
+      "category": "hospice",
+      "type": "Planning tool",
+      "region": "United States",
+      "url": "https://prepareforyourcare.org/",
+      "description": "An easy, step-by-step program to think through medical wishes and document them with free advance-directive forms."
+    }
+  ]
+}
