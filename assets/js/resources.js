@@ -15,7 +15,7 @@
   var state = { category: "all", query: "" };
 
   // Resolve the data path relative to the site root so it works from /resources/.
-  var dataUrl = new URL("../data/resources.json", document.currentScript ? document.currentScript.src : location.href).href;
+  var dataUrl = new URL("../../data/resources.json", document.currentScript ? document.currentScript.src : location.href).href;
 
   function esc(s) {
     return String(s).replace(/[&<>"']/g, function (c) {
