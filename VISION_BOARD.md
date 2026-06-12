@@ -31,6 +31,8 @@ _Collect moments, not things._
 | **2028** | 🇪🇬 Egypt | A lifelong bucket-list wonder |
 | TBD | _A slow week, no itinerary_ | Reset and disconnect |
 
+> ✅ **Book it:** lock flights & stays — Portugal by early 2027, Egypt by early 2028.
+
 **Feeling I'm chasing:** awe, spaciousness, the good kind of tired.
 
 ---
