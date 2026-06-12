@@ -8,6 +8,11 @@ from .client import (
     Purpose,
     Strength,
 )
+from .batch import (
+    split_into_chunks,
+    humanize_document,
+    humanize_file,
+)
 
 __all__ = [
     "UndetectableAIClient",
@@ -16,6 +21,9 @@ __all__ = [
     "Readability",
     "Purpose",
     "Strength",
+    "split_into_chunks",
+    "humanize_document",
+    "humanize_file",
 ]
 
 __version__ = "0.1.0"
