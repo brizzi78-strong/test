@@ -19,6 +19,7 @@ _Collect moments, not things._
 ### Bucket list
 - [ ] **2027 · 🇵🇹 Portugal** — Lisbon's tiled streets, Porto's riverfront, the Algarve coast
 - [ ] **2028 · 🇪🇬 Egypt** — the pyramids of Giza, a Nile cruise, the temples of Luxor
+- [ ] **🏔️ Alaska** — glaciers, the northern lights, and the last great wilderness
 - [ ] Watch the northern lights from a glass igloo
 - [ ] Hike a multi-day trail (Dolomites, Torres del Paine, or Kumano Kodo)
 - [ ] Spend a slow week somewhere with no itinerary
