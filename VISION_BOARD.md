@@ -122,6 +122,12 @@ _Turn the brand into trust, and trust into referrals._
 Awareness  →  Trust (the books)  →  Relationship  →  25 referrals / month
 ```
 
+### 📚💼 Book tour = write-off
+Readings & signings at libraries, senior centers, and hospices market the series — and the travel, lodging, and materials can be a legitimate **business expense**.
+- [ ] Map a tour route around the 2026 *Toolkit* launch
+- [ ] Keep every receipt; log mileage and event costs
+- [ ] Confirm what's deductible with an accountant
+
 **The truth:** marketing isn't louder — it's more useful. Give first, and the referrals follow.
 
 ---
