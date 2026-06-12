@@ -69,13 +69,13 @@ _(Update the count as referrals come in.)_
 _Earn the credentials, become the leader._
 
 ### The credentials
-- [ ] Earn an **MBA** — sharpen the business mind, build the network, think at scale
+- [ ] Earn an **MBA at LSU** — sharpen the business mind, build the network, think at scale
 - [ ] Pursue an **Ed.D. in Educational Leadership** — the doctorate, all the way to "Dr."
 - [ ] Research, shortlist, and apply — program fit, funding, and a realistic timeline
 - [ ] Turn the dissertation into work that changes how people learn and lead
 
 ### Study & exam-prep plan
-1. **Pick the path & test** — GMAT/GRE for the MBA; confirm Ed.D. admissions requirements
+1. **Pick the path & test** — GMAT/GRE for the LSU MBA; confirm Ed.D. admissions requirements
 2. **Study cadence** — 1 focused hour on weekdays, one longer block on weekends
 3. **Practice, not just review** — timed mock exams monthly; chase the weak sections
 4. **Apply** — essays, recommendations, and a realistic start term
