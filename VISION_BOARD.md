@@ -80,6 +80,8 @@ _Earn the credentials, become the leader._
 3. **Practice, not just review** — timed mock exams monthly; chase the weak sections
 4. **Apply** — essays, recommendations, and a realistic start term
 
+**LSU enrollment:** Student ID `R2500441` · `brizzi41@lsus.edu`
+
 ### Why it matters
 > Not credentials on a wall, but capability in the room. Education is the one investment that compounds for life — and can't be taken back.
 
