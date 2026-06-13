@@ -18,6 +18,18 @@
 > requirements; have an attorney review before filing. Many consumer-protection
 > attorneys take § 75-1.1 cases on contingency because the statute awards fees.
 
+> **If Tesla refuses to participate in arbitration:** it cannot simply "opt out"
+> of a clause it drafted and already agreed to. If you file with the AAA and
+> Tesla refuses to participate or to pay its share of the AAA fees, the AAA may
+> close the case for non-payment — and a company's refusal to pay arbitration
+> fees is widely treated by courts as a **waiver of its right to compel
+> arbitration.** That waiver typically frees you to file the same claims in **NC
+> District/Superior Court**, where the trebled $22,500 + attorney's fees is **not**
+> subject to the small-claims cap. In short, Tesla refusing arbitration does not
+> trap you — it opens the courthouse. (And regardless, **small claims court
+> remains available** for the $7,500 + interest; see
+> `tesla-small-claims-statement.md`.)
+
 ---
 
 ## How to file (AAA)

@@ -59,12 +59,16 @@ the IRS credit can be reinstated.
 
 **Track 2 — Recover from Tesla (fallback), and sue for more if ignored.** If
 Tesla refuses to file:
-- **Quick path:** small claims court (NC magistrate, ≤ $10,000) for the $7,500 +
-  interest.
-- **"Sue for more" path:** AAA arbitration (required by the Order Agreement
-  unless opted out) claiming the $7,500 **trebled to $22,500** plus attorney's
-  fees under NC UDTPA (N.C. Gen. Stat. §§ 75-1.1, 75-16, 75-16.1), plus interest.
-  Drafted in `tesla-arbitration-demand.md`. Civil action already initiated.
+- **Dodge-proof path:** small claims court (NC magistrate, Wake County ≤ $10,000)
+  for the $7,500 + interest. The Order Agreement's arbitration clause **expressly
+  preserves small claims**, so Tesla cannot force this into arbitration.
+  Drafted in `tesla-small-claims-statement.md`.
+- **"Sue for more" path:** AAA arbitration claiming the $7,500 **trebled to
+  $22,500** plus attorney's fees under NC UDTPA (N.C. Gen. Stat. §§ 75-1.1,
+  75-16, 75-16.1), plus interest. Drafted in `tesla-arbitration-demand.md`.
+- **If Tesla refuses to arbitrate / won't pay AAA fees:** that typically **waives**
+  the arbitration clause, freeing a filing in **NC District/Superior Court** for
+  the full trebled amount (no small-claims cap). Civil action already initiated.
 
 **In parallel — protect IRS rights.** File the CP23 disagreement (certified mail)
 before August 7, 2026 regardless of Tesla's response, requesting reinstatement,
