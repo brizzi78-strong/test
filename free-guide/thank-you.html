@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your checklist is ready — The Cardinal Companion</title>
+  <meta name="description" content="Thank you for joining. Your free Caregiver's First-Week Checklist is ready to read, print, or save." />
+  <meta name="robots" content="noindex" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%90%A6%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="../index.html"><span class="mark">🐦</span> The Cardinal Companion</a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">☰</button>
+      <ul class="nav-links">
+        <li><a href="../books/promise.html">The Promise</a></li>
+        <li><a href="../books/toolkit.html">The Toolkit</a></li>
+        <li><a href="../resources/index.html">Resource Library</a></li>
+        <li><a href="../newsletter/index.html">Newsletter</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container narrow center">
+        <div class="hero-art" style="max-width:140px;margin:0 auto 1.5rem;aspect-ratio:1;border-radius:50%;">
+          <span class="bird">🐦</span>
+        </div>
+        <p class="eyebrow">You're in</p>
+        <h1>Your checklist is ready.</h1>
+        <p class="lead">Thank you for trusting us with your inbox. Here's your free
+          <strong>Caregiver's First-Week Checklist</strong> — read it now, or print it for the fridge.</p>
+        <div class="btn-row" style="justify-content:center;">
+          <a class="btn btn-primary" href="caregivers-first-week-checklist.html">Open the checklist</a>
+          <a class="btn btn-ghost" href="caregivers-first-week-checklist.html" onclick="sessionStorage.setItem('print','1')">Print / save as PDF</a>
+        </div>
+        <p class="form-note">If you also asked to be emailed a copy, check your inbox (and spam
+          folder) in the next few minutes. <span class="placeholder">Confirm delivery in your email
+          provider.</span></p>
+      </div>
+    </section>
+
+    <section class="section-alt">
+      <div class="container narrow center">
+        <p class="eyebrow">While you're here</p>
+        <h2>A few more ways we can help</h2>
+        <div class="grid grid-3" style="margin-top:1.5rem;text-align:left;">
+          <a class="card link-card" href="../books/toolkit.html"><span class="icon">🧰</span><h3>The full Toolkit</h3><p>Every script, checklist, and ritual in one book.</p></a>
+          <a class="card link-card" href="../resources/index.html"><span class="icon">📚</span><h3>Resource library</h3><p>Trusted help, searchable by what you need.</p></a>
+          <a class="card link-card" href="../guides/index.html"><span class="icon">💬</span><h3>Discussion guides</h3><p>For your support group or quiet reflection.</p></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border:none;">
+        <span>© <span data-year>2026</span> The Cardinal Companion.</span>
+        <span><a href="../index.html">Back to home</a> · Crisis support: call or text <strong>988</strong> (US).</span>
+      </div>
+    </div>
+  </footer>
+  <script src="../assets/js/main.js"></script>
+  <script>
+    // If the visitor chose "print", honor it on the checklist page.
+    if (sessionStorage.getItem('print') === '1') { sessionStorage.removeItem('print'); }
+  </script>
+</body>
+</html>

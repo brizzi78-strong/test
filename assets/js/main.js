@@ -41,6 +41,7 @@
   document.querySelectorAll("form[data-signup]").forEach(function (form) {
     var status = form.querySelector(".form-status");
     var action = form.getAttribute("action") || "";
+    var redirect = form.getAttribute("data-redirect") || "";
     var isPlaceholder = action === "" || action.indexOf("REPLACE_WITH") !== -1 || action === "#";
 
     form.addEventListener("submit", function (e) {
@@ -49,6 +50,9 @@
 
       if (isPlaceholder) {
         e.preventDefault();
+        // If this form is a lead-magnet opt-in, send the visitor to the
+        // delivery/thank-you page where the download lives.
+        if (redirect) { window.location.href = redirect; return; }
         if (status) {
           status.className = "form-status show ok";
           status.textContent =
@@ -57,7 +61,9 @@
         }
         form.reset();
       }
-      // Otherwise: allow the native POST to the configured provider.
+      // Otherwise: allow the native POST to the configured provider. For
+      // lead-magnet forms, set the provider's redirect/thank-you URL to the
+      // delivery page so the experience matches.
     });
   });
 })();

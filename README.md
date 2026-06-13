@@ -28,7 +28,24 @@ people who understand. This repo builds the connective tissue for that pipeline.
 | Discussion Guides | `guides/index.html` | Questions for book clubs, support groups, self-reflection. |
 | Resource Library | `resources/index.html` | Searchable, filterable caregiver/grief/crisis directory. |
 | Newsletter | `newsletter/index.html` | Signup form + welcome-series outline + provider setup. |
+| Support | `support/index.html` | Proceeds pledge, donations, gift-a-book (no sellable token). |
+| Free guide (lead magnet) | `free-guide/` | Email-capture funnel: opt-in → thank-you/delivery → printable checklist. |
 | Not found | `404.html` | Friendly fallback. |
+
+### Email-capture funnel (`free-guide/`)
+
+A lead-magnet funnel to grow the newsletter list:
+
+1. `free-guide/index.html` — opt-in landing page offering the free **Caregiver's
+   First-Week Checklist**.
+2. `free-guide/thank-you.html` — delivery / confirmation page (noindexed).
+3. `free-guide/caregivers-first-week-checklist.html` — the printable lead magnet
+   itself (print-to-PDF styled).
+
+The opt-in form uses `data-redirect="thank-you.html"`: until a provider is
+connected it sends visitors straight to the delivery page. To go live, set the
+form `action` to your provider's endpoint and point the provider's post-signup
+redirect at `thank-you.html`. A hidden `lead_magnet` field tags the source.
 
 ### Shared assets
 
