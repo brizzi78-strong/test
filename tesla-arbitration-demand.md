@@ -77,7 +77,7 @@ interest, attorney's fees, and costs.
    plus interest against Claimant.
 
 6. Claimant notified Respondent in writing (March 26–27, 2026 and again on
-   [DATE]). Respondent gave three inconsistent explanations (income too high —
+   June 13, 2026). Respondent gave three inconsistent explanations (income too high —
    false; "Head of Household" entered — not Claimant's filing status; new-employee
    error), refused to provide the internal documentation it relied on, and has
    neither filed the report nor reimbursed Claimant.
@@ -126,6 +126,6 @@ license.
 
 ---
 
-*Prepared as a working draft. Fill in `[DATE]` fields, attach the signed Form
-15400, IRS Notice CP23, the Order Agreement, and the March 2026 correspondence,
-and have counsel review before filing.*
+*Prepared as a working draft. Attach the signed Form 15400, IRS Notice CP23, the
+Order Agreement, and the March/June 2026 correspondence, and have counsel review
+before filing.*

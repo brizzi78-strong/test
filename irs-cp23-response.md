@@ -10,12 +10,12 @@
 Robert L. & Tabitha H. Brizzi
 5220 Crescent Square St
 Raleigh, NC 27616-4340
-[PHONE]
-[EMAIL]
+(850) 221-7443
+brizzi78@icloud.com
 
-TIN (primary): XXX-XX-[LAST 4]
+TIN (primary): XXX-XX-7652
 
-Date: [DATE]
+Date: June 13, 2026
 
 Internal Revenue Service
 Kansas City, MO 64999-0010
@@ -24,7 +24,7 @@ Kansas City, MO 64999-0010
 Sent via Certified Mail, Return Receipt Requested
 
 **RE: Formal disagreement with Notice CP23, Tax Year 2025, Form 1040 (notice dated June 8, 2026)**
-**Taxpayers: Robert L. & Tabitha H. Brizzi | TIN (primary): XXX-XX-[LAST 4] | Filing status: Married Filing Jointly**
+**Taxpayers: Robert L. & Tabitha H. Brizzi | TIN (primary): XXX-XX-7652 | Filing status: Married Filing Jointly**
 
 To Whom It May Concern:
 

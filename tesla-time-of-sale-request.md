@@ -10,9 +10,9 @@
 ---
 
 To: resolutions@tesla.com
-Cc: [the Tesla addresses you used on 3/26–3/27/2026]
-From: Robert Brizzi <[EMAIL]>
-Date: [DATE]
+Cc: Raleigh_Service@tesla.com; NorthAmericaSales@tesla.com; DeliveryOperations@tesla.com; support@tesla.com
+From: Robert Brizzi <brizzi78@icloud.com>
+Date: June 13, 2026
 
 **RE: FORMAL ESCALATION — Tesla's failure to file the Clean Vehicle Seller
 Report (IRS Form 15400) for VIN 7SAYGDEE6TA451515 — Order No. RN125485754**
@@ -70,6 +70,6 @@ Please confirm in writing which action Tesla will take.
 Sincerely,
 
 Robert Brizzi
-[PHONE]
-[EMAIL]
+(850) 221-7443
+brizzi78@icloud.com
 Order No. RN125485754 | VIN: 7SAYGDEE6TA451515

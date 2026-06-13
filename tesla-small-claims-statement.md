@@ -23,17 +23,20 @@
 ## Parties
 
 **Plaintiff:** Robert L. Brizzi, 5220 Crescent Square St, Raleigh, NC 27616-4340,
-[PHONE]
+(850) 221-7443
 
 **Defendant:** Tesla, Inc.
-- Serve its **NC Registered Agent**: [CONFIRM CURRENT AGENT via NC Secretary of
-  State Business Search — sosnc.gov — as of filing]
+- Serve its **NC Registered Agent**: look up "Tesla, Inc." at the NC Secretary of
+  State business search (https://www.sosnc.gov/online_services/search/by_title/_Business_Registration)
+  and copy the registered agent's exact name and address **on the day you file** —
+  registered agents change, and serving the wrong one can get the case dismissed.
 - Business location: 2641 Sumner Blvd, Raleigh, NC 27616
 
 ## Amount claimed
 
-**$[7,500 + IRS interest to date]** (not to exceed the $10,000 magistrate limit),
-plus court costs and post-judgment interest.
+**$7,520.58** (the $7,500 credit plus $20.58 IRS interest assessed as of the
+June 8, 2026 notice; interest continues to accrue — update before filing), not to
+exceed the $10,000 magistrate limit, plus court costs and post-judgment interest.
 
 ## Statement of claim (the "Complaint for Money Owed" narrative)
 
@@ -61,7 +64,7 @@ plus court costs and post-judgment interest.
    Plaintiff.
 
 6. Plaintiff notified Defendant in writing (March 26–27, 2026 and again on
-   [DATE]). Defendant gave inconsistent explanations, refused to provide the
+   June 13, 2026). Defendant gave inconsistent explanations, refused to provide the
    documentation it relied on, and has neither filed the report nor reimbursed
    Plaintiff.
 
@@ -71,8 +74,9 @@ plus court costs and post-judgment interest.
 
 ## Relief requested
 
-Judgment against Defendant for **$[7,500 + interest]**, plus court costs and
-post-judgment interest. In the alternative, an order that Defendant submit the
+Judgment against Defendant for **$7,520.58** (plus interest accruing since the
+June 8, 2026 notice), plus court costs and post-judgment interest. In the
+alternative, an order that Defendant submit the
 late time-of-sale report for VIN 7SAYGDEE6TA451515 and reimburse the interest
 Plaintiff incurred.
 
