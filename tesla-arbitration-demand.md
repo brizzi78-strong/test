@@ -64,7 +64,7 @@ interest, attorney's fees, and costs.
 
 3. At delivery, Respondent prepared and **furnished Claimant a signed Clean
    Vehicle Seller Report (IRS Form 15400)**, executed under penalties of perjury
-   by Respondent's General Manager, certifying Claimant's original-use delivery
+   by Respondent's General Manager (Dan Ansari), certifying Claimant's original-use delivery
    and a maximum allowable credit of $7,500.
 
 4. Despite issuing that signed certification, **Respondent never transmitted the

@@ -30,8 +30,8 @@ Jointly; modified AGI $212,363, under the $300,000 cap; vehicle under the $80,00
 SUV MSRP cap).
 
 At delivery, Tesla furnished me a Clean Vehicle Seller Report (IRS Form 15400),
-signed under penalties of perjury by Tesla's General Manager (Dan Ansari, General
-Manager), certifying my eligibility and a maximum credit of $7,500. Despite
+signed under penalties of perjury by Tesla's General Manager, Dan Ansari,
+certifying my eligibility and a maximum credit of $7,500. Despite
 issuing that signed certification, Tesla never transmitted the corresponding
 time-of-sale report through the IRS Energy Credits Online portal — the filing
 that creates the IRS record needed to claim the credit.

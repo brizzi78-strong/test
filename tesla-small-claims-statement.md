@@ -51,7 +51,7 @@ exceed the $10,000 magistrate limit, plus court costs and post-judgment interest
 
 3. At delivery, Defendant prepared and **furnished Plaintiff a signed Clean
    Vehicle Seller Report (IRS Form 15400)**, executed under penalties of perjury
-   by Defendant's General Manager, certifying Plaintiff's original-use delivery
+   by Defendant's General Manager (Dan Ansari), certifying Plaintiff's original-use delivery
    and a maximum allowable credit of $7,500.
 
 4. To make that credit claimable, Defendant was required to transmit the

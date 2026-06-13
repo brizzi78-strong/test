@@ -49,7 +49,7 @@ service August 21, 2025 from the Raleigh, NC Tesla location). As a sport utility
 vehicle, its MSRP limit is $80,000; the vehicle's price ($51,630 total) is below
 that cap. **Tesla, Inc. furnished us a signed Clean Vehicle Seller Report (IRS
 Form 15400), dated August 21, 2025 and signed under penalties of perjury by
-Tesla's General Manager, certifying that the vehicle was placed in service for
+Tesla's General Manager (Dan Ansari), certifying that the vehicle was placed in service for
 original use by the buyer and that the maximum credit allowable is $7,500
 (Form 15400, line 11).** A copy is enclosed.
 

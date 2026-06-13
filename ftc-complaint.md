@@ -28,9 +28,9 @@ Vehicle Credit under IRC § 30D, and I meet all eligibility requirements
 (Married Filing Jointly, modified AGI $212,363 — under the $300,000 limit).
 
 At delivery, Tesla furnished me a Clean Vehicle Seller Report (IRS Form 15400),
-signed under penalties of perjury by Tesla's General Manager, certifying that the
-vehicle was placed in service for my original use and that the maximum credit
-allowable is $7,500.
+signed under penalties of perjury by Tesla's General Manager, Dan Ansari,
+certifying that the vehicle was placed in service for my original use and that
+the maximum credit allowable is $7,500.
 
 However, Tesla never transmitted the corresponding time-of-sale report through
 the IRS Energy Credits Online portal, which is the step that creates the IRS

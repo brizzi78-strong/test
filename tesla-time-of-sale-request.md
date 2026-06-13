@@ -26,8 +26,8 @@ from your Raleigh, NC location.
 
 **The problem.** At delivery, Tesla furnished me a signed Clean Vehicle Seller
 Report (IRS Form 15400), dated August 21, 2025 and signed under penalties of
-perjury by your General Manager, certifying that I qualify for the maximum
-$7,500 credit. **However, Tesla never transmitted the corresponding time-of-sale
+perjury by your General Manager, Dan Ansari, certifying that I qualify for the
+maximum $7,500 credit. **However, Tesla never transmitted the corresponding time-of-sale
 report through the IRS Energy Credits Online (ECO) portal.** Furnishing me the
 paper form is not the same as filing it with the IRS. Because the electronic
 submission was never completed, the IRS has no record of the sale to match
