@@ -10,13 +10,7 @@ He pulls me out of the car anyway.
 
 It is not a prison — it is a holding cell, a building I could not have found on a map if you put a gun to my head.
 
-The smell hits before the door closes behind me.
-
-Sewer.
-
-Vomit.
-
-Mold.
+The smell hits before the door closes behind me. It smells like a combination of sewer, vomit, and mold.
 
 Dark.
 
