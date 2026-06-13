@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Human + AI Writing Tool</title>
+    <meta
+      name="description"
+      content="A human + AI writing assistant — humanize, refine, reshape, and retone your writing with Claude."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark">✺</span>
+        <div>
+          <h1>Human <span class="plus">+</span> AI Writing Tool</h1>
+          <p class="tagline">You write it. Claude helps you make it sing.</p>
+        </div>
+      </div>
+      <span class="model-badge" id="modelBadge" title="Model in use"></span>
+    </header>
+
+    <main class="workspace">
+      <section class="panel" aria-label="Your draft">
+        <div class="panel-head">
+          <h2>Your draft</h2>
+          <span class="counter" id="inputCounter">0 chars</span>
+        </div>
+        <textarea
+          id="input"
+          class="editor"
+          placeholder="Paste or write your draft here, pick what you want, then let Claude refine it…"
+          spellcheck="true"
+        ></textarea>
+      </section>
+
+      <section class="panel result-panel" aria-label="Result">
+        <div class="panel-head">
+          <h2>Result</h2>
+          <div class="result-actions">
+            <button id="copyBtn" class="ghost" disabled>Copy</button>
+            <button id="useBtn" class="ghost" disabled title="Send result back to your draft">
+              Use as draft
+            </button>
+          </div>
+        </div>
+        <div id="output" class="editor output" aria-live="polite">
+          <span class="placeholder">Your refined text will appear here.</span>
+        </div>
+      </section>
+    </main>
+
+    <footer class="controls">
+      <div class="control-group">
+        <label class="control-label">What should Claude do?</label>
+        <div id="modes" class="chips" role="group" aria-label="Rewrite mode"></div>
+      </div>
+
+      <div class="control-group tone-group" id="toneGroup" hidden>
+        <label class="control-label" for="tone">Tone</label>
+        <select id="tone" class="select"></select>
+      </div>
+
+      <button id="runBtn" class="run">
+        <span class="run-label">Rewrite</span>
+        <span class="spinner" hidden></span>
+      </button>
+    </footer>
+
+    <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>
