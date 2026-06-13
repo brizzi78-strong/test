@@ -57,10 +57,14 @@ Form 15400 for this VIN through Energy Credits Online (the portal remains open t
 registered sellers; Tesla is registered). Once the seller report is on record,
 the IRS credit can be reinstated.
 
-**Track 2 — Recover from Tesla (fallback).** If Tesla refuses to file, pursue the
-$7,500 + interest from Tesla as damages via small claims court (permitted by the
-Order Agreement's arbitration clause) or AAA arbitration. Civil action already
-initiated.
+**Track 2 — Recover from Tesla (fallback), and sue for more if ignored.** If
+Tesla refuses to file:
+- **Quick path:** small claims court (NC magistrate, ≤ $10,000) for the $7,500 +
+  interest.
+- **"Sue for more" path:** AAA arbitration (required by the Order Agreement
+  unless opted out) claiming the $7,500 **trebled to $22,500** plus attorney's
+  fees under NC UDTPA (N.C. Gen. Stat. §§ 75-1.1, 75-16, 75-16.1), plus interest.
+  Drafted in `tesla-arbitration-demand.md`. Civil action already initiated.
 
 **In parallel — protect IRS rights.** File the CP23 disagreement (certified mail)
 before August 7, 2026 regardless of Tesla's response, requesting reinstatement,

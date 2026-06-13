@@ -54,12 +54,16 @@ address auto-replied that it was "paused," and the matter was never resolved.
 2. **Compensate me directly for $7,500**, plus the IRS interest that has accrued
    because of this error.
 
-**If neither occurs**, I will pursue all available remedies, including a claim in
-small claims court (expressly permitted under the arbitration provision of my
-Order Agreement) or arbitration before the AAA, and complaints to the Federal
-Trade Commission, the North Carolina Attorney General's Consumer Protection
-Division, and the IRS Taxpayer Advocate Service. This letter also serves as my
-written dispute notice under the Order Agreement.
+**If neither occurs**, I will pursue all available remedies. That includes
+arbitration before the AAA (or small claims court, as permitted by the
+arbitration provision of my Order Agreement) seeking **not only the $7,500 but
+treble damages and attorney's fees** under North Carolina's Unfair and Deceptive
+Trade Practices Act (N.C. Gen. Stat. §§ 75-1.1, 75-16, 75-16.1), plus the IRS
+interest your failure has caused — and complaints to the Federal Trade
+Commission, the North Carolina Attorney General's Consumer Protection Division,
+and the IRS Taxpayer Advocate Service. This letter also serves as my written
+dispute notice under the Order Agreement, starting the 60-day period before
+arbitration.
 
 Please confirm in writing which action Tesla will take.
 
