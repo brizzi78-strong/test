@@ -20,14 +20,18 @@ Report (IRS Form 15400) for VIN 7SAYGDEE6TA451515 — Order No. RN125485754**
 To Tesla, Inc. Resolutions:
 
 This is a formal escalation of an unresolved dispute. I am the purchaser of a new
-2025 Tesla Model Y Long Range All-Wheel Drive, **VIN 7SAYGDEE6TA451515**, Order
-No. RN125485754, delivered **August 21, 2025** from the Raleigh, NC location.
+2026 model-year Tesla Model Y Long Range All-Wheel Drive, **VIN
+7SAYGDEE6TA451515**, Order No. RN125485754, placed in service **August 21, 2025**
+from your Raleigh, NC location.
 
-**The problem.** Tesla, as the seller, was required under IRC § 30D and Rev. Proc.
-2023-33 to submit a Clean Vehicle Seller Report (IRS Form 15400) for my vehicle
-through the IRS Energy Credits Online (ECO) portal at the time of sale. **Tesla
-did not file this report.** Because no seller report exists, the IRS has no VIN on
-record to match against my return.
+**The problem.** At delivery, Tesla furnished me a signed Clean Vehicle Seller
+Report (IRS Form 15400), dated August 21, 2025 and signed under penalties of
+perjury by your General Manager, certifying that I qualify for the maximum
+$7,500 credit. **However, Tesla never transmitted the corresponding time-of-sale
+report through the IRS Energy Credits Online (ECO) portal.** Furnishing me the
+paper form is not the same as filing it with the IRS. Because the electronic
+submission was never completed, the IRS has no record of the sale to match
+against my return.
 
 **The consequence.** On June 8, 2026 the IRS issued Notice CP23 disallowing the
 $7,500 New Clean Vehicle Credit on my 2025 return, citing a VIN that "did not

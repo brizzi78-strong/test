@@ -42,22 +42,27 @@ modified adjusted gross income of $212,363 is well under the $300,000 MFJ
 threshold under § 30D, and it was under the threshold in both 2025 and the
 preceding year. Income is not a basis for disallowance.
 
-**2. The vehicle qualifies.** I purchased a new 2025 Tesla Model Y Long Range
-All-Wheel Drive (VIN 7SAYGDEE6TA451515; Order No. RN125485754, ordered
-August 12, 2025; delivered August 21, 2025 from the Raleigh, NC Tesla location).
-As a sport utility vehicle, its MSRP limit is $80,000; the vehicle's price (base
-$48,990) is far below that cap. It is a qualifying manufacturer's clean vehicle
-and was purchased for personal use, not resale.
+**2. The vehicle qualifies — and the seller certified as much.** We purchased a
+new 2026 model-year Tesla Model Y Long Range All-Wheel Drive (VIN
+7SAYGDEE6TA451515; Order No. RN125485754, ordered August 12, 2025; placed in
+service August 21, 2025 from the Raleigh, NC Tesla location). As a sport utility
+vehicle, its MSRP limit is $80,000; the vehicle's price ($51,630 total) is below
+that cap. **Tesla, Inc. furnished us a signed Clean Vehicle Seller Report (IRS
+Form 15400), dated August 21, 2025 and signed under penalties of perjury by
+Tesla's General Manager, certifying that the vehicle was placed in service for
+original use by the buyer and that the maximum credit allowable is $7,500
+(Form 15400, line 11).** A copy is enclosed.
 
-**3. The VIN discrepancy originates with the seller's failure to file, not my
-eligibility.** Under § 30D, the seller (Tesla, Inc.) was required to submit a
-Clean Vehicle Seller Report (IRS Form 15400) through the IRS Energy Credits
-Online (ECO) portal identifying my VIN. I have confirmed that Tesla did not
-submit this report for my vehicle. That is why no VIN is on record to match
-against my return. The omission is the seller's; I met every eligibility
-requirement. Tesla is a registered dealer in the Energy Credits Online system and
-is able to submit a late seller report for this VIN, and I am actively pressing
-Tesla to do so (formal written demand enclosed).
+**3. The discrepancy is the seller's failure to transmit the report — not my
+eligibility.** Although Tesla furnished us the signed Form 15400, Tesla did not
+submit the corresponding time-of-sale report through the IRS Energy Credits
+Online (ECO) portal. Because that electronic submission was never completed, the
+IRS has no seller report on record to match against our Form 8936 — which is why
+the notice reports a VIN that "did not match IRS records." The failure is the
+seller's administrative omission, not any ineligibility on our part. Tesla
+remains a registered dealer in the Energy Credits Online system and is able to
+submit this report now; we are pressing Tesla to do so (formal written demand
+enclosed).
 
 **4. Requested relief.** I ask that the IRS (a) reinstate the $7,500 New Clean
 Vehicle Credit once the seller's Form 15400 is on record; (b) hold or suspend
@@ -77,7 +82,8 @@ Robert Brizzi
 
 **Enclosures:**
 - Copy of Notice CP23 (Tax Year 2025, dated June 8, 2026)
-- Form 8936 as filed with my 2025 return
+- **Signed Tesla Clean Vehicle Seller Report (IRS Form 15400), dated 08/21/2025**
+- Form 8936 as filed with our 2025 return
 - Tesla Motor Vehicle Order Agreement (Order No. RN125485754)
 - Final Price Sheet / delivery documents showing the VIN
-- Copy of correspondence to Tesla requesting the time-of-sale report
+- Copy of correspondence to Tesla regarding the unfiled time-of-sale report
