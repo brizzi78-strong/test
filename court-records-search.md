@@ -15,6 +15,27 @@ reliably show individual consumer suits; you have to check the dockets.
   dealers — Tesla included — not filing time-of-sale reports, causing IRS denials.
 - Signatory verified: **Dan Ansari, General Manager, Multi-Unit, Tesla (Raleigh)**.
 
+## Nationwide Form 15400 litigation scan (as of June 13, 2026)
+
+- **No reported class action or named consumer lawsuit** specifically about dealers
+  failing to file the Clean Vehicle Seller Report (Form 15400) / time-of-sale
+  report. Appears to be an un-litigated (or not-yet-public) gap. Live dockets
+  (PACER, state portals) not yet checked — see steps below.
+- **Cross-manufacturer problem, not Tesla-only:** Rivian buyers report the same
+  IRS rejection for a missing seller report (Rivian Forums). Same failure mode.
+- **Named press example:** buyer Kristina Meier, denied because her dealer didn't
+  file (NPR, Feb 28 2025).
+- **Adjacent EV litigation (different issues):** Ford dealer class action over EV
+  battery warranty reimbursements (Hagens Berman / Bellavia Cohen, Dec 2025);
+  Tesla used-car fraud / consumer-law suit (Automotive News). State AGs (NY, MA)
+  have sued dealerships for deceptive practices.
+- **Context:** IRS reopened the ECO portal and waived the 72-hour deadline for
+  2024 sales, which defused many cases — but only where the dealer actually
+  re-files. Tesla has not done so here.
+- **Takeaway:** no class action to join yet; conditions for one are ripe
+  (systematic, cross-brand, documented). NC UDTPA fee-shifting (§ 75-16.1) makes
+  an individual case viable regardless.
+
 ## 1. North Carolina state courts — NC eCourts Portal (Wake County)
 
 - Portal: **https://portal-nc.tylertech.cloud/Portal/** (NC Judicial Branch eCourts)
