@@ -36,6 +36,21 @@ reliably show individual consumer suits; you have to check the dockets.
   (systematic, cross-brand, documented). NC UDTPA fee-shifting (§ 75-16.1) makes
   an individual case viable regardless.
 
+## Corroborating complaint pattern — Raleigh Tesla (context, not proof)
+
+Anecdotal online reviews/forums show a consistent pattern of poor service and
+non-responsiveness at the Raleigh Tesla locations (2641 Sumner Blvd; 7101 Glenwood
+Ave) — recurring themes of being "ghosted," poor communication, and unresolved
+issues. Sources: Tesla Motors Club ("Raleigh… Google reviews, mostly BAD"; "Bad
+Experience at Tesla Service Center Raleigh"), Tesla Owners Online, Yelp. BBB lists
+Tesla as **not accredited / "Not Rated"** with a complaint backlog.
+
+- **Use:** supports the UDTPA "unfair practices / course of conduct" framing and
+  the NC AG complaint (claimant is not an isolated incident).
+- **Caveat:** these are unverified consumer reviews, not court records or the same
+  Form 15400 issue. Context only.
+- Location phones: Sumner Blvd (984) 275-6247 · Glenwood Ave (919) 420-0280.
+
 ## 1. North Carolina state courts — NC eCourts Portal (Wake County)
 
 - Portal: **https://portal-nc.tylertech.cloud/Portal/** (NC Judicial Branch eCourts)
