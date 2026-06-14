@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Cardinal's Toolkit — A calm guide through the aging-parent years</title>
+<meta name="description" content="The Cardinal's Toolkit gives families a warm, step-by-step guide through caregiving, hospice, and the conversations that matter most.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#faf6ef;
+    --surface:#ffffff;
+    --ink:#1b2438;
+    --muted:#5c6478;
+    --red:#c0392b;
+    --red-deep:#9c2a1e;
+    --gold:#c5a052;
+    --line:rgba(27,36,56,.10);
+    --shadow-sm:0 1px 2px rgba(27,36,56,.06), 0 8px 24px -16px rgba(27,36,56,.30);
+    --shadow-md:0 24px 60px -28px rgba(27,36,56,.40);
+    --radius:18px;
+    --maxw:1140px;
+    --pad-section:clamp(76px,10vw,132px);
+    --gap:clamp(18px,2.4vw,28px);
+    --nav-h:68px;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 12px)}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+  body{
+    font-family:"Inter",system-ui,-apple-system,sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  h1,h2,h3{font-family:"Fraunces",Georgia,serif;line-height:1.05;letter-spacing:-0.02em;font-weight:600}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,5vw,40px)}
+
+  section{padding:var(--pad-section) 0}
+  .eyebrow{
+    font-size:.78rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--red);margin-bottom:16px;
+  }
+  .section-head{max-width:640px;margin:0 auto clamp(40px,5vw,64px);text-align:center}
+  .section-head h2{font-size:clamp(2rem,4.2vw,3rem)}
+  .section-head p{margin-top:18px;font-size:1.12rem;color:var(--muted)}
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;
+    font-family:"Inter",sans-serif;font-weight:600;font-size:.98rem;
+    padding:13px 24px;border-radius:999px;border:1px solid transparent;
+    cursor:pointer;text-decoration:none;white-space:nowrap;
+    transition:transform .25s ease, box-shadow .25s ease, background .25s ease;
+  }
+  .btn-primary{background:var(--red);color:#fff;box-shadow:0 10px 24px -10px rgba(192,57,43,.6)}
+  .btn-primary:hover{background:var(--red-deep);transform:translateY(-2px);box-shadow:0 16px 30px -12px rgba(192,57,43,.7)}
+  .btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+  .btn-ghost:hover{transform:translateY(-2px);border-color:var(--ink);background:rgba(27,36,56,.03)}
+  .btn-sm{padding:10px 18px;font-size:.9rem}
+
+  /* ---------- Nav ---------- */
+  header.nav{
+    position:sticky;top:0;z-index:50;height:var(--nav-h);
+    background:rgba(250,246,239,.82);
+    backdrop-filter:saturate(140%) blur(12px);
+    -webkit-backdrop-filter:saturate(140%) blur(12px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:100%}
+  .brand{display:flex;align-items:center;gap:10px;font-family:"Fraunces",serif;font-weight:600;font-size:1.12rem;color:var(--ink);text-decoration:none}
+  .brand svg{flex:0 0 auto}
+  .nav-links{display:flex;align-items:center;gap:30px}
+  .nav-links a{color:var(--muted);text-decoration:none;font-size:.95rem;font-weight:500;transition:color .2s}
+  .nav-links a:hover{color:var(--ink)}
+  .nav-cta{display:flex;align-items:center;gap:14px}
+  .menu-toggle{display:none}
+  @media (max-width:860px){
+    .nav-links{display:none}
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{position:relative;padding:clamp(90px,12vw,150px) 0 clamp(80px,10vw,120px);overflow:hidden}
+  .mesh{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+  .blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;will-change:transform}
+  .blob.b1{width:46vw;height:46vw;background:#e8b4ac;top:-12vw;left:-8vw;animation:drift1 22s ease-in-out infinite}
+  .blob.b2{width:38vw;height:38vw;background:#f0d9a8;top:-6vw;right:-6vw;animation:drift2 26s ease-in-out infinite}
+  .blob.b3{width:40vw;height:40vw;background:#cfe0d3;bottom:-16vw;left:18vw;animation:drift3 30s ease-in-out infinite}
+  .blob.b4{width:30vw;height:30vw;background:#d8a7a0;bottom:-10vw;right:6vw;opacity:.4;animation:drift1 28s ease-in-out infinite reverse}
+  @keyframes drift1{0%,100%{transform:translate(0,0)}50%{transform:translate(4vw,3vw)}}
+  @keyframes drift2{0%,100%{transform:translate(0,0)}50%{transform:translate(-3vw,4vw)}}
+  @keyframes drift3{0%,100%{transform:translate(0,0)}50%{transform:translate(3vw,-3vw)}}
+  @media (prefers-reduced-motion:reduce){.blob{animation:none}}
+
+  .hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(28px,5vw,60px);align-items:center}
+  .hero-card{
+    background:rgba(255,255,255,.62);
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,.7);
+    border-radius:26px;padding:clamp(28px,4vw,48px);
+    box-shadow:var(--shadow-md);
+  }
+  .hero-card .eyebrow{display:flex;align-items:center;gap:8px;justify-content:flex-start}
+  .hero h1{font-size:clamp(2.7rem,6vw,4.4rem);font-weight:600}
+  .hero h1 em{font-style:italic;color:var(--red);font-weight:500}
+  .hero p.lead{margin-top:22px;font-size:1.18rem;color:#3c4456;max-width:46ch}
+  .hero-actions{margin-top:32px;display:flex;flex-wrap:wrap;gap:14px}
+  .hero-aside{position:relative}
+  .quote-card{
+    background:var(--ink);color:#f3eee4;border-radius:22px;padding:clamp(26px,3vw,38px);
+    box-shadow:var(--shadow-md);position:relative;overflow:hidden;
+  }
+  .quote-card .bird{position:absolute;top:-10px;right:-6px;opacity:.16}
+  .quote-card p{font-family:"Fraunces",serif;font-size:1.32rem;line-height:1.4;font-weight:500;position:relative}
+  .quote-card .who{margin-top:18px;font-family:"Inter",sans-serif;font-size:.9rem;color:#c9b894;letter-spacing:.02em}
+  @media (max-width:860px){
+    .hero-inner{grid-template-columns:1fr}
+    .hero-aside{order:-1;max-width:440px}
+  }
+
+  /* ---------- Trust badges ---------- */
+  .trust{padding:clamp(36px,5vw,52px) 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}
+  .trust-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:clamp(20px,4vw,40px)}
+  .badge{display:flex;align-items:center;gap:11px;color:var(--muted);font-size:.95rem;font-weight:500}
+  .badge svg{color:var(--red);flex:0 0 auto}
+  .badge strong{color:var(--ink);font-weight:600}
+  @media (max-width:860px){.trust-row{justify-content:center;text-align:center}}
+
+  /* ---------- Benefits ---------- */
+  .benefits-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap)}
+  .benefit{
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    padding:clamp(26px,3vw,36px);box-shadow:var(--shadow-sm);
+    transition:transform .3s ease, box-shadow .3s ease;
+  }
+  .benefit:hover{transform:translateY(-6px);box-shadow:var(--shadow-md)}
+  .benefit .ico{
+    width:54px;height:54px;border-radius:14px;display:grid;place-items:center;
+    background:rgba(192,57,43,.09);color:var(--red);margin-bottom:22px;
+  }
+  .benefit h3{font-size:1.4rem;margin-bottom:12px}
+  .benefit p{color:var(--muted)}
+  @media (max-width:860px){.benefits-grid{grid-template-columns:1fr}}
+
+  /* ---------- Testimonials ---------- */
+  .stories{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .stories-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap)}
+  .story{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(24px,3vw,32px)}
+  .stars{color:var(--gold);letter-spacing:2px;margin-bottom:14px;font-size:.95rem}
+  .story p{font-size:1.06rem}
+  .story .who{margin-top:18px;display:flex;align-items:center;gap:12px}
+  .avatar{width:42px;height:42px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-family:"Fraunces",serif;font-weight:600;font-size:1rem;flex:0 0 auto}
+  .story .who b{display:block;font-size:.95rem}
+  .story .who span{font-size:.85rem;color:var(--muted)}
+  @media (max-width:860px){.stories-grid{grid-template-columns:1fr}}
+
+  /* ---------- FAQ ---------- */
+  .faq-list{max-width:760px;margin:0 auto}
+  details.faq{border:1px solid var(--line);border-radius:14px;background:var(--surface);margin-bottom:14px;overflow:hidden}
+  details.faq summary{
+    list-style:none;cursor:pointer;padding:22px 26px;font-family:"Fraunces",serif;
+    font-size:1.18rem;font-weight:600;display:flex;justify-content:space-between;align-items:center;gap:16px;
+  }
+  details.faq summary::-webkit-details-marker{display:none}
+  details.faq summary .plus{flex:0 0 auto;width:22px;height:22px;position:relative;transition:transform .3s}
+  details.faq summary .plus::before,details.faq summary .plus::after{content:"";position:absolute;background:var(--red);border-radius:2px}
+  details.faq summary .plus::before{top:10px;left:0;width:22px;height:2px}
+  details.faq summary .plus::after{left:10px;top:0;width:2px;height:22px;transition:transform .3s}
+  details.faq[open] summary .plus::after{transform:rotate(90deg);opacity:0}
+  details.faq .ans{padding:0 26px 24px;color:var(--muted)}
+
+  /* ---------- Form / CTA ---------- */
+  .cta{position:relative;overflow:hidden}
+  .cta-card{
+    background:var(--ink);color:#f3eee4;border-radius:28px;
+    padding:clamp(34px,5vw,64px);box-shadow:var(--shadow-md);position:relative;overflow:hidden;
+  }
+  .cta-card .bird{position:absolute;top:-20px;right:-10px;opacity:.12}
+  .cta-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,56px);position:relative;z-index:1;align-items:center}
+  .cta-card h2{font-size:clamp(2rem,4vw,2.8rem);color:#fff}
+  .cta-card .eyebrow{color:#e9b9b0}
+  .cta-card p{color:#c9c2b4;margin-top:16px;font-size:1.08rem}
+  .cta-list{margin-top:24px;list-style:none;display:flex;flex-direction:column;gap:12px}
+  .cta-list li{display:flex;gap:12px;align-items:flex-start;color:#ded7c8;font-size:.98rem}
+  .cta-list svg{color:var(--gold);flex:0 0 auto;margin-top:3px}
+  form{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:clamp(22px,3vw,30px)}
+  .field{margin-bottom:16px}
+  .field label{display:block;font-size:.85rem;font-weight:600;margin-bottom:7px;color:#e7e0d2}
+  .field input,.field select,.field textarea{
+    width:100%;padding:12px 14px;border-radius:10px;border:1px solid rgba(255,255,255,.16);
+    background:rgba(255,255,255,.95);color:var(--ink);font-family:"Inter",sans-serif;font-size:.96rem;
+  }
+  .field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--red);outline-offset:1px}
+  .field textarea{resize:vertical;min-height:84px}
+  form .btn-primary{width:100%;justify-content:center;margin-top:6px}
+  .form-note{font-size:.8rem;color:#a8a193;margin-top:14px;text-align:center}
+  .form-ok{display:none;background:rgba(255,255,255,.95);color:var(--ink);border-radius:14px;padding:28px;text-align:center}
+  .form-ok h3{font-size:1.4rem;margin-bottom:8px;color:var(--red-deep)}
+  @media (max-width:860px){.cta-grid{grid-template-columns:1fr}}
+
+  /* ---------- Footer ---------- */
+  footer.site{padding:clamp(40px,6vw,64px) 0;text-align:center;color:var(--muted)}
+  footer.site .brand{justify-content:center;margin-bottom:14px}
+  footer.site p{font-size:.92rem}
+  footer.site .fnav{margin:18px 0;display:flex;gap:22px;justify-content:center;flex-wrap:wrap}
+  footer.site .fnav a{color:var(--muted);text-decoration:none;font-size:.92rem}
+  footer.site .fnav a:hover{color:var(--ink)}
+
+  /* ---------- Reveal animation (progressive enhancement) ---------- */
+  .reveal{opacity:1;transform:none}
+  .js .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1)}
+  .js .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+
+<!-- cardinal logo mark, reused -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="cardinal" viewBox="0 0 48 48">
+    <path fill="currentColor" d="M37 11c-3-1-5.5 0-7.3 1.5.9-2.9.4-5.8-2-7.7-.6 2.4-2.4 3.9-4.4 5.3-3.4 2.4-5.8 5.3-6.3 9.6-3.4.5-6.3 2.4-8.2 5.3-1.4 2.4-1.9 5.3-1.4 8.2 1.4-1.4 3.4-2.4 5.3-2.9-1.4 1.9-1.9 4.3-1.4 6.7 1.9-1.4 3.4-3.4 3.9-5.8.5 3.4 2.4 6.3 5.3 8.2.5-2.9 0-5.8-1.4-8.2 2.9 1.4 6.3 1.4 9.2 0 4.3-1.9 7.2-6.3 7.7-11 .5-4.3-.5-8.6-3.4-12 1.9-.5 3.9-.5 5.8.5.5-2.4 0-4.8-1.4-7.2z"/>
+  </symbol>
+</svg>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="brand"><svg width="26" height="26" style="color:var(--red)"><use href="#cardinal"/></svg> The Cardinal&rsquo;s Toolkit</a>
+    <nav class="nav-links">
+      <a href="#why">Why it helps</a>
+      <a href="#how">What you get</a>
+      <a href="#stories">Stories</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#get" class="btn btn-primary btn-sm">Get the Toolkit</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="mesh" aria-hidden="true">
+      <span class="blob b1"></span><span class="blob b2"></span>
+      <span class="blob b3"></span><span class="blob b4"></span>
+    </div>
+    <div class="wrap hero-inner">
+      <div class="hero-card reveal">
+        <div class="eyebrow"><svg width="16" height="16"><use href="#cardinal"/></svg> A story about love that stays</div>
+        <h1>Care for your aging parent with a steady hand &mdash; and a <em>full heart</em>.</h1>
+        <p class="lead">The Cardinal&rsquo;s Toolkit walks families through caregiving, hospice, and the hard conversations &mdash; one calm, gentle step at a time.</p>
+        <div class="hero-actions">
+          <a href="#get" class="btn btn-primary">Get the Toolkit</a>
+          <a href="#how" class="btn btn-ghost">See what&rsquo;s inside</a>
+        </div>
+      </div>
+      <div class="hero-aside reveal">
+        <div class="quote-card">
+          <svg class="bird" width="120" height="120"><use href="#cardinal"/></svg>
+          <p>&ldquo;It turned the worst week of our lives into something we could actually carry.&rdquo;</p>
+          <div class="who">&mdash; Maria L., daughter &amp; caregiver</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <section class="trust" style="padding-top:clamp(36px,5vw,52px);padding-bottom:clamp(36px,5vw,52px)">
+    <div class="wrap trust-row reveal">
+      <div class="badge"><svg width="22" height="22"><use href="#cardinal"/></svg> Written by <strong>Rob Brizzi</strong></div>
+      <div class="badge"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 15.6 6.8 18.1l1-5.8L3.5 8.2l5.9-.9z" stroke-linejoin="round"/></svg> <strong>Used by hospice teams</strong> at intake</div>
+      <div class="badge"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.9" stroke-linecap="round" stroke-linejoin="round"/></svg> For <strong>10,000+ families</strong></div>
+      <div class="badge"><span class="stars" style="margin:0">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <strong>Loved by caregivers</strong></div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section id="why">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Why it helps</div>
+        <h2>Less guessing. Less alone. More presence.</h2>
+        <p>Caregiving is hard enough. The Toolkit takes the overwhelm off your shoulders so you can focus on what matters.</p>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit reveal">
+          <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z" stroke-linejoin="round"/></svg></div>
+          <h3>Always know the next step</h3>
+          <p>From the first hard conversation to hospice and beyond, clear checklists meet you in every stage &mdash; so you&rsquo;re never staring into the unknown.</p>
+        </div>
+        <div class="benefit reveal">
+          <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 8.6a5 5 0 0 0-7.1-7L12 3.3l-1.7-1.7a5 5 0 0 0-7.1 7L12 19l8.8-10.4z" stroke-linejoin="round"/></svg></div>
+          <h3>Carry the load together</h3>
+          <p>Keep documents, decisions, and care details in one shared place the whole family can see &mdash; so the weight isn&rsquo;t all on one person.</p>
+        </div>
+        <div class="benefit reveal">
+          <div class="ico"><svg width="26" height="26"><use href="#cardinal"/></svg></div>
+          <h3>Be present for what matters</h3>
+          <p>Spend less time on paperwork and logistics, and more time simply being there. That&rsquo;s the promise the cardinal keeps.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT YOU GET (how) -->
+  <section id="how" class="stories">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">What you get</div>
+        <h2>A complete companion for the journey</h2>
+        <p>Two workbooks and a story &mdash; built to be used, not shelved.</p>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit reveal" style="background:var(--paper)">
+          <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h11a3 3 0 0 1 3 3v13a2.5 2.5 0 0 0-2.5-2.5H4z" stroke-linejoin="round"/><path d="M4 4v13.5"/></svg></div>
+          <h3>The Toolkit for the Aging Parent</h3>
+          <p>Your day-one guide: what to ask, what to gather, and how to plan ahead with calm instead of panic.</p>
+        </div>
+        <div class="benefit reveal" style="background:var(--paper)">
+          <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.4-9.2-9A5.2 5.2 0 0 1 12 6a5.2 5.2 0 0 1 9.2 6c-2.2 4.6-9.2 9-9.2 9z" stroke-linejoin="round"/></svg></div>
+          <h3>The Toolkit for the Caregiver</h3>
+          <p>The companion guide for you &mdash; protecting your energy, your boundaries, and your own well-being along the way.</p>
+        </div>
+        <div class="benefit reveal" style="background:var(--paper)">
+          <div class="ico"><svg width="26" height="26"><use href="#cardinal"/></svg></div>
+          <h3>The Cardinal&rsquo;s Promise</h3>
+          <p>An illustrated story to read together &mdash; a gentle way to talk about love, memory, and letting go, across generations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORIES -->
+  <section id="stories">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Stories</div>
+        <h2>Families and care teams trust it</h2>
+      </div>
+      <div class="stories-grid">
+        <div class="story reveal">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>&ldquo;I wish I&rsquo;d had this the day Dad&rsquo;s diagnosis came. It turned panic into a plan I could actually follow.&rdquo;</p>
+          <div class="who"><span class="avatar">M</span><div><b>Maria L.</b><span>Daughter &amp; caregiver</span></div></div>
+        </div>
+        <div class="story reveal">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>&ldquo;We hand the Toolkit to every family at intake. It carries them through the hardest weeks with grace.&rdquo;</p>
+          <div class="who"><span class="avatar">D</span><div><b>Denise R.</b><span>Hospice social worker</span></div></div>
+        </div>
+        <div class="story reveal">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>&ldquo;Honest, warm, and genuinely useful &mdash; not another binder that just sits on a shelf collecting dust.&rdquo;</p>
+          <div class="who"><span class="avatar">J</span><div><b>James P.</b><span>Son &amp; primary caregiver</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="stories">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Questions</div>
+        <h2>Good to know</h2>
+      </div>
+      <div class="faq-list reveal">
+        <details class="faq" open>
+          <summary>What&rsquo;s actually inside the Toolkit?<span class="plus"></span></summary>
+          <div class="ans">Two guided workbooks (one for the aging parent, one for the caregiver) plus the illustrated story <em>The Cardinal&rsquo;s Promise</em>. You&rsquo;ll find checklists, conversation starters, document trackers, and gentle prompts for each stage of care.</div>
+        </details>
+        <details class="faq">
+          <summary>Who is it for?<span class="plus"></span></summary>
+          <div class="ans">Any family caring for an aging parent &mdash; whether you&rsquo;re just noticing changes, deep in daily caregiving, or walking the hospice road. It meets you wherever you are.</div>
+        </details>
+        <details class="faq">
+          <summary>I&rsquo;m a care professional &mdash; can I use it with families?<span class="plus"></span></summary>
+          <div class="ans">Absolutely. Hospices, senior-living communities, and discharge teams use the Toolkit as an intake resource. Ask about partner and bulk options when you request a copy.</div>
+        </details>
+        <details class="faq">
+          <summary>What formats does it come in?<span class="plus"></span></summary>
+          <div class="ans">A printed workbook set and a digital edition you can fill in on any device. The printed set is the favorite &mdash; families like keeping it on the kitchen table.</div>
+        </details>
+        <details class="faq">
+          <summary>How do I get started?<span class="plus"></span></summary>
+          <div class="ans">Fill out the short request form below. We&rsquo;ll follow up with availability, formats, and pricing for your situation &mdash; family or organization.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / FORM -->
+  <section id="get" class="cta">
+    <div class="wrap">
+      <div class="cta-card reveal">
+        <svg class="bird" width="200" height="200"><use href="#cardinal"/></svg>
+        <div class="cta-grid">
+          <div>
+            <div class="eyebrow">Get the Toolkit</div>
+            <h2>Start with a calmer next step.</h2>
+            <p>Tell us a little about your situation. We&rsquo;ll reply within two business days with formats, pricing, and the right starting point &mdash; no pressure, ever.</p>
+            <ul class="cta-list">
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> For families and care professionals alike</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Printed and digital editions available</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Partner &amp; bulk options for organizations</li>
+            </ul>
+          </div>
+          <div>
+            <form id="getForm" novalidate>
+              <div class="field">
+                <label for="name">Your name</label>
+                <input id="name" name="name" type="text" placeholder="Maria Lewis" required>
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" required>
+              </div>
+              <div class="field">
+                <label for="role">I am a&hellip;</label>
+                <select id="role" name="role">
+                  <option>Family caregiver</option>
+                  <option>Care professional / organization</option>
+                  <option>Just exploring</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="msg">Anything we should know? (optional)</label>
+                <textarea id="msg" name="msg" placeholder="Where you are in the journey, formats you prefer&hellip;"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Send my request</button>
+              <p class="form-note">This is a demo form &mdash; it doesn&rsquo;t send anywhere yet. Connect it to your email or form service to go live.</p>
+            </form>
+            <div class="form-ok" id="formOk">
+              <h3>Thank you &mdash; request received</h3>
+              <p>We&rsquo;ll be in touch soon. The cardinal&rsquo;s on its way. &#128144;</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <a href="#top" class="brand"><svg width="24" height="24" style="color:var(--red)"><use href="#cardinal"/></svg> The Cardinal&rsquo;s Toolkit</a>
+    <div class="fnav">
+      <a href="#why">Why it helps</a>
+      <a href="#how">What you get</a>
+      <a href="#stories">Stories</a>
+      <a href="#faq">FAQ</a>
+      <a href="#get">Get the Toolkit</a>
+    </div>
+    <p>A story about love that stays. &copy; 2026 Rob Brizzi. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  // Progressive enhancement only — page is fully usable without JS.
+  document.documentElement.classList.add('js');
+
+  // Fade-up reveals
+  (function(){
+    var els = document.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target);} });
+    },{threshold:0.12, rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(e){io.observe(e)});
+  })();
+
+  // Demo form handler
+  var form = document.getElementById('getForm');
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      if(!form.checkValidity()){form.reportValidity();return;}
+      form.style.display='none';
+      document.getElementById('formOk').style.display='block';
+    });
+  }
+</script>
+</body>
+</html>
