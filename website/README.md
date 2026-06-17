@@ -28,17 +28,28 @@ python3 -m http.server 8000
 - **Netlify / Vercel / Cloudflare Pages:** drag-and-drop the `website/` folder,
   or connect the repo and set the publish directory to `website`.
 
-## Connect the newsletter signup
+## Newsletter signup — already wired to Kit
 
-The signup form is currently a front-end placeholder. To collect real emails,
-replace the `<form>` in `index.html` with your provider's embed:
+The signup form **posts directly to your Kit account**, to the form named
+**"Cardinal's Promise-Homepage"** (form id `9344249`,
+`https://app.kit.com/forms/9344249/subscriptions`). Submitting an email adds the
+subscriber in Kit, which handles the confirmation email.
 
-- **Kit (ConvertKit):** paste your form's HTML/action URL.
-- **Mailchimp:** use the embedded form action + hidden fields.
-- **Buttondown / MailerLite / etc.:** set `action` to the provider's POST URL
-  and keep the `name="email_address"` (or rename to the provider's field).
+To point it at a different Kit form, change the form's `action`, `data-sv-form`,
+and `data-uid` in `index.html` (get these from Kit → the form → Embed → HTML).
+To switch providers entirely (Mailchimp, Buttondown, etc.), replace the
+`action` URL and keep an `<input name="email_address">` (or the provider's field
+name).
 
-Then remove the `onsubmit="return handleSignup(event)"` placeholder.
+## Other files
+
+- `favicon.svg` — browser tab icon (cardinal mark).
+- `robots.txt`, `sitemap.xml` — SEO; update the domain in both when you have one.
+- `assets/` — drop real cover art, author photo, and the `og-image.png` social
+  preview here (see `assets/README.md`).
+- SEO: `index.html` includes canonical, Open Graph/Twitter tags, and Book
+  structured data (JSON-LD). Update the `thecardinalspromise.com` placeholder
+  URLs once your domain is set.
 
 ## Content notes
 
@@ -46,7 +57,7 @@ Then remove the `onsubmit="return handleSignup(event)"` placeholder.
   manuscript and is **intended as a public marketing sample**. The rest of the
   book is not included here.
 - The author bio is a draft generated from the manuscript — edit it to taste.
-- Add real **buy links** (Amazon, Bookshop, etc.) to the call-to-action buttons
-  once the book is published.
+- Add real **buy links** (Amazon, Bookshop, etc.) in the "Get the Book" section
+  of `index.html` once the book is published (currently marked "coming soon").
 - Replace the CSS book-cover mockup and the author avatar with real artwork /
   a photo when you have them.

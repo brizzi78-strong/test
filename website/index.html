@@ -5,9 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Cardinal's Promise — A Memoir by Rob Brizzi</title>
   <meta name="description" content="The Cardinal's Promise by Rob Brizzi — a memoir of immigration, addiction, recovery, fatherhood, and the kind of wisdom earned only by living through what most people spend their lives avoiding." />
+  <link rel="canonical" href="https://thecardinalspromise.com/" />
+  <meta name="theme-color" content="#b3271e" />
+  <meta name="author" content="Rob Brizzi" />
+  <!-- Open Graph / social sharing -->
   <meta property="og:title" content="The Cardinal's Promise — A Memoir by Rob Brizzi" />
   <meta property="og:description" content="A boy from Mexico, an addict, a son. A memoir about loss, recovery, and purpose." />
   <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://thecardinalspromise.com/" />
+  <meta property="og:image" content="assets/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Cardinal's Promise — A Memoir by Rob Brizzi" />
+  <meta name="twitter:description" content="A boy from Mexico, an addict, a son. A memoir about loss, recovery, and purpose." />
+  <meta name="twitter:image" content="assets/og-image.png" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <!-- Structured data: Book -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "The Cardinal's Promise",
+    "alternativeHeadline": "A boy from Mexico, an addict, a son",
+    "author": { "@type": "Person", "name": "Rob Brizzi" },
+    "inLanguage": "en",
+    "bookFormat": "https://schema.org/EBook",
+    "genre": ["Memoir", "Recovery", "Inspirational"],
+    "description": "A memoir of immigration, addiction, recovery, fatherhood, and the wisdom earned only by living through what most people spend their lives avoiding."
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -154,6 +179,21 @@
     </div>
   </section>
 
+  <!-- GET THE BOOK -->
+  <section id="book-buy" class="alt">
+    <div class="narrow" style="text-align:center;">
+      <span class="eyebrow">Get the Book</span>
+      <h2 style="font-size:clamp(2rem,4vw,2.9rem); margin:10px 0 14px;">Bring The Cardinal's Promise home</h2>
+      <p class="lede" style="max-width:48ch; margin:0 auto 30px;">The full memoir is on its way. Add your buy links below once it's published &mdash; until then, join the list to be the first to know.</p>
+      <div class="cta-row" style="justify-content:center;">
+        <!-- Replace href="#" with real retailer links when published -->
+        <a class="btn" href="#signup">Notify me on release</a>
+        <a class="btn ghost" href="#" aria-disabled="true">Amazon &mdash; coming soon</a>
+        <a class="btn ghost" href="#" aria-disabled="true">Bookshop.org &mdash; coming soon</a>
+      </div>
+    </div>
+  </section>
+
   <!-- NEWSLETTER -->
   <section id="signup">
     <div class="container">
@@ -161,13 +201,13 @@
         <span class="eyebrow" style="color:var(--gold);">The Newsletter</span>
         <h2>Keep showing up.</h2>
         <p>Join the reader list for reflections from the book, notes for caregivers and those in recovery, and news about The Cardinal's Promise.</p>
-        <!-- Connect this form to your email provider (Kit, Mailchimp, etc.). See website/README.md -->
-        <form action="#" method="post" onsubmit="return handleSignup(event)">
+        <!-- Wired to Kit form "Cardinal's Promise-Homepage" (id 9344249). Submitting
+             posts the email to Kit, which handles confirmation. See website/README.md. -->
+        <form action="https://app.kit.com/forms/9344249/subscriptions" method="post" data-sv-form="9344249" data-uid="b891bd6f22">
           <input type="email" name="email_address" placeholder="your@email.com" required aria-label="Email address" />
           <button class="btn" type="submit">Join</button>
         </form>
         <p class="fineprint">No spam. Unsubscribe anytime.</p>
-        <p class="fineprint" id="signup-msg" role="status"></p>
       </div>
     </div>
   </section>
