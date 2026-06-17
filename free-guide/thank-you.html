@@ -35,9 +35,10 @@
         <p class="lead">Thank you for trusting us with your inbox. Here's
           <strong id="ty-name">your guide</strong> — read it now, or print it to keep.</p>
         <div class="btn-row" style="justify-content:center;">
-          <a class="btn btn-primary" id="ty-open" href="caregivers-first-week-checklist.html">Open it now</a>
-          <a class="btn btn-ghost" href="library.html">See all free downloads</a>
+          <a class="btn btn-primary" id="ty-pdf" href="../assets/pdf/caregivers-first-week-checklist.pdf" download>⬇ Download the PDF</a>
+          <a class="btn btn-ghost" id="ty-open" href="caregivers-first-week-checklist.html">Read online</a>
         </div>
+        <p class="muted" style="margin-top:.8rem;font-size:.9rem;"><a href="library.html">See all free downloads →</a></p>
         <p class="form-note">If you also asked to be emailed a copy, check your inbox (and spam
           folder) in the next few minutes. <span class="placeholder">Confirm delivery in your email
           provider.</span></p>
@@ -70,15 +71,16 @@
     // Show the right download based on ?m=<slug>. Falls back to the checklist.
     (function () {
       var magnets = {
-        checklist: { name: "the Caregiver's First-Week Checklist", file: "caregivers-first-week-checklist.html", emoji: "✅" },
-        grief:     { name: "The First 30 Days of Grief", file: "first-30-days-of-grief.html", emoji: "🕯️" },
-        children:  { name: "Helping a Child Through Grief", file: "helping-children-grieve.html", emoji: "🧸" }
+        checklist: { name: "the Caregiver's First-Week Checklist", file: "caregivers-first-week-checklist.html", pdf: "../assets/pdf/caregivers-first-week-checklist.pdf", emoji: "✅" },
+        grief:     { name: "The First 30 Days of Grief", file: "first-30-days-of-grief.html", pdf: "../assets/pdf/first-30-days-of-grief.pdf", emoji: "🕯️" },
+        children:  { name: "Helping a Child Through Grief", file: "helping-children-grieve.html", pdf: "../assets/pdf/helping-children-grieve.pdf", emoji: "🧸" }
       };
       var slug = new URLSearchParams(location.search).get("m");
       var m = magnets[slug] || magnets.checklist;
       document.getElementById("ty-name").textContent = m.name;
       document.getElementById("ty-emoji").textContent = m.emoji;
       document.getElementById("ty-open").setAttribute("href", m.file);
+      document.getElementById("ty-pdf").setAttribute("href", m.pdf);
       document.getElementById("ty-title").textContent = "Your copy of “" + m.name + "” is ready.";
       document.title = m.name + " — ready to download";
     })();

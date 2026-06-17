@@ -55,6 +55,10 @@ reusable delivery page, plus a hub that lists them:
 - The printables share styles in `assets/css/styles.css` (`.sheet`, `.check`,
   print media query) and are also listed in the resource library so they're
   discoverable by category.
+- **Real PDF downloads.** Each magnet also has a branded, cover-paged PDF in
+  `assets/pdf/`, offered as the primary "Download the PDF" button on the delivery
+  and printable pages. Regenerate them with `python3 tools/build_pdfs.py`
+  (see `tools/README.md`).
 
 ### Shared assets
 
