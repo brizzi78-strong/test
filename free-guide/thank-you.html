@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your checklist is ready — The Cardinal Companion</title>
-  <meta name="description" content="Thank you for joining. Your free Caregiver's First-Week Checklist is ready to read, print, or save." />
+  <title>Your free guide is ready — The Cardinal Companion</title>
+  <meta name="description" content="Thank you for joining. Your free guide is ready to read, print, or save." />
   <meta name="robots" content="noindex" />
   <link rel="stylesheet" href="../assets/css/styles.css" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%90%A6%3C/text%3E%3C/svg%3E" />
@@ -28,15 +28,15 @@
     <section class="hero">
       <div class="container narrow center">
         <div class="hero-art" style="max-width:140px;margin:0 auto 1.5rem;aspect-ratio:1;border-radius:50%;">
-          <span class="bird">🐦</span>
+          <span class="bird" id="ty-emoji">🐦</span>
         </div>
         <p class="eyebrow">You're in</p>
-        <h1>Your checklist is ready.</h1>
-        <p class="lead">Thank you for trusting us with your inbox. Here's your free
-          <strong>Caregiver's First-Week Checklist</strong> — read it now, or print it for the fridge.</p>
+        <h1 id="ty-title">Your free guide is ready.</h1>
+        <p class="lead">Thank you for trusting us with your inbox. Here's
+          <strong id="ty-name">your guide</strong> — read it now, or print it to keep.</p>
         <div class="btn-row" style="justify-content:center;">
-          <a class="btn btn-primary" href="caregivers-first-week-checklist.html">Open the checklist</a>
-          <a class="btn btn-ghost" href="caregivers-first-week-checklist.html" onclick="sessionStorage.setItem('print','1')">Print / save as PDF</a>
+          <a class="btn btn-primary" id="ty-open" href="caregivers-first-week-checklist.html">Open it now</a>
+          <a class="btn btn-ghost" href="library.html">See all free downloads</a>
         </div>
         <p class="form-note">If you also asked to be emailed a copy, check your inbox (and spam
           folder) in the next few minutes. <span class="placeholder">Confirm delivery in your email
@@ -67,8 +67,21 @@
   </footer>
   <script src="../assets/js/main.js"></script>
   <script>
-    // If the visitor chose "print", honor it on the checklist page.
-    if (sessionStorage.getItem('print') === '1') { sessionStorage.removeItem('print'); }
+    // Show the right download based on ?m=<slug>. Falls back to the checklist.
+    (function () {
+      var magnets = {
+        checklist: { name: "the Caregiver's First-Week Checklist", file: "caregivers-first-week-checklist.html", emoji: "✅" },
+        grief:     { name: "The First 30 Days of Grief", file: "first-30-days-of-grief.html", emoji: "🕯️" },
+        children:  { name: "Helping a Child Through Grief", file: "helping-children-grieve.html", emoji: "🧸" }
+      };
+      var slug = new URLSearchParams(location.search).get("m");
+      var m = magnets[slug] || magnets.checklist;
+      document.getElementById("ty-name").textContent = m.name;
+      document.getElementById("ty-emoji").textContent = m.emoji;
+      document.getElementById("ty-open").setAttribute("href", m.file);
+      document.getElementById("ty-title").textContent = "Your copy of “" + m.name + "” is ready.";
+      document.title = m.name + " — ready to download";
+    })();
   </script>
 </body>
 </html>

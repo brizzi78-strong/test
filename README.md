@@ -29,23 +29,32 @@ people who understand. This repo builds the connective tissue for that pipeline.
 | Resource Library | `resources/index.html` | Searchable, filterable caregiver/grief/crisis directory. |
 | Newsletter | `newsletter/index.html` | Signup form + welcome-series outline + provider setup. |
 | Support | `support/index.html` | Proceeds pledge, donations, gift-a-book (no sellable token). |
-| Free guide (lead magnet) | `free-guide/` | Email-capture funnel: opt-in → thank-you/delivery → printable checklist. |
+| Free downloads (lead magnets) | `free-guide/` | Segmented email-capture funnels + a downloads hub. |
 | Not found | `404.html` | Friendly fallback. |
 
-### Email-capture funnel (`free-guide/`)
+### Email-capture funnels (`free-guide/`)
 
-A lead-magnet funnel to grow the newsletter list:
+Three segmented lead magnets, each with its own opt-in landing, all sharing one
+reusable delivery page, plus a hub that lists them:
 
-1. `free-guide/index.html` — opt-in landing page offering the free **Caregiver's
-   First-Week Checklist**.
-2. `free-guide/thank-you.html` — delivery / confirmation page (noindexed).
-3. `free-guide/caregivers-first-week-checklist.html` — the printable lead magnet
-   itself (print-to-PDF styled).
+| Audience | Opt-in | Printable | Slug |
+| --- | --- | --- | --- |
+| Caregivers | `index.html` | `caregivers-first-week-checklist.html` | `checklist` |
+| Grief | `grief.html` | `first-30-days-of-grief.html` | `grief` |
+| Families | `children.html` | `helping-children-grieve.html` | `children` |
 
-The opt-in form uses `data-redirect="thank-you.html"`: until a provider is
-connected it sends visitors straight to the delivery page. To go live, set the
-form `action` to your provider's endpoint and point the provider's post-signup
-redirect at `thank-you.html`. A hidden `lead_magnet` field tags the source.
+- **Hub:** `library.html` — a "free downloads" index linking all three opt-ins.
+- **Delivery:** `thank-you.html` (noindexed) reads `?m=<slug>` and shows the
+  matching download. Add a magnet by adding one entry to the `magnets` map in
+  that page's script.
+- **Form wiring:** each opt-in uses `data-redirect="thank-you.html?m=<slug>"`, so
+  the funnel works end-to-end before a provider is connected. To go live, set the
+  form `action` to your provider's endpoint and point its post-signup redirect at
+  the matching `thank-you.html?m=<slug>`. Hidden `lead_magnet` and `interest`
+  fields tag the source/segment.
+- The printables share styles in `assets/css/styles.css` (`.sheet`, `.check`,
+  print media query) and are also listed in the resource library so they're
+  discoverable by category.
 
 ### Shared assets
 

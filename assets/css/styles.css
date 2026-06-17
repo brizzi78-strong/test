@@ -257,3 +257,20 @@ section { padding: clamp(2.5rem, 6vw, 4.5rem) 0; }
 .mt-2 { margin-top: 2rem; } .mb-0 { margin-bottom: 0; }
 .skip-link { position: absolute; left: -999px; }
 .skip-link:focus { left: 1rem; top: .5rem; background: #fff; padding: .5rem 1rem; border-radius: 8px; z-index: 100; }
+
+/* ---------- Printable lead magnets (the "sheet") ---------- */
+.sheet { max-width: 760px; margin: 2.5rem auto; background: #fff; border: 1px solid var(--line);
+  border-radius: var(--radius); padding: clamp(1.5rem, 5vw, 3rem); box-shadow: var(--shadow); }
+.check { list-style: none; padding: 0; margin: 0 0 1.5rem; }
+.check li { position: relative; padding: .4rem 0 .4rem 2rem; border-bottom: 1px dashed var(--line); color: var(--ink); }
+.check li::before { content: ""; position: absolute; left: 0; top: .55rem; width: 1.1rem; height: 1.1rem;
+  border: 2px solid var(--sage); border-radius: 4px; }
+.sheet h2 { margin-top: 2rem; padding-top: 1rem; border-top: 2px solid var(--surface-alt); }
+.sheet h2:first-of-type { border-top: none; }
+.print-bar { max-width: 760px; margin: 0 auto; display: flex; gap: .8rem; flex-wrap: wrap; justify-content: center; }
+@media print {
+  .site-header, .site-footer, .print-bar, .skip-link, .promo { display: none !important; }
+  body { background: #fff; }
+  .sheet { box-shadow: none; border: none; margin: 0; max-width: none; }
+  a { color: #000; text-decoration: none; }
+}

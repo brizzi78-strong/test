@@ -11,6 +11,30 @@
   ],
   "resources": [
     {
+      "title": "Free: The Caregiver's First-Week Checklist",
+      "category": "caregiving",
+      "type": "Free printable",
+      "region": "From the Toolkit",
+      "url": "../free-guide/index.html",
+      "description": "A one-page checklist for the first overwhelming week of caregiving — free when you join the list."
+    },
+    {
+      "title": "Free: The First 30 Days of Grief",
+      "category": "grief",
+      "type": "Free printable",
+      "region": "From the Promise",
+      "url": "../free-guide/grief.html",
+      "description": "A gentle, printable companion for the first month after a loss — free when you join the list."
+    },
+    {
+      "title": "Free: Helping a Child Through Grief",
+      "category": "children",
+      "type": "Free printable",
+      "region": "From the Toolkit",
+      "url": "../free-guide/children.html",
+      "description": "Simple words and small ways to help a grieving child — a free, printable one-pager."
+    },
+    {
       "title": "988 Suicide & Crisis Lifeline",
       "category": "crisis",
       "type": "Hotline",
