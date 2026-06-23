@@ -23,7 +23,8 @@ payment options, with the site's call-to-action buttons pointing to it.
   PayPal and card. This also fixes the blog-post CTAs, which funnel through the
   homepage.
 
-### Follow-up (optional)
-- A duplicate Pre-Order page exists at `/pre-order-2/` (page id 225). It is now
-  unused; consider trashing it to avoid confusion (left in place pending
-  confirmation, in case it is referenced by the site navigation menu).
+### Cleanup
+- Trashed the duplicate Pre-Order page at `/pre-order-2/` (page id 225). The
+  site navigation is an automatic Page List block, so the duplicate menu entry
+  disappeared on its own — no manual nav edit needed. The page is recoverable
+  from WordPress admin (Pages → Trash) for 30 days if needed.
