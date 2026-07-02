@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Hardhat build output
+artifacts/
+cache/
+types/
+typechain-types/
+
+# Ignition deployment journals (keep committed deployments if you prefer)
+ignition/deployments/
+
+# Coverage
+coverage/
+coverage.json
+
+# Environment
+.env
+.env.*
