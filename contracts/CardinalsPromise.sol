@@ -14,8 +14,8 @@ contract CardinalsPromise {
     string public constant symbol = "CARD";
     uint8 public constant decimals = 18;
 
-    /// @notice Hard cap: 1 billion CARD. No mint can ever exceed this.
-    uint256 public constant MAX_SUPPLY = 1_000_000_000 * 10 ** 18;
+    /// @notice Hard cap: 250 million CARD. No mint can ever exceed this.
+    uint256 public constant MAX_SUPPLY = 250_000_000 * 10 ** 18;
 
     // ---------------------------------------------------------------------
     // State

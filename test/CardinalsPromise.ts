@@ -4,8 +4,8 @@ import { network } from "hardhat";
 const { ethers } = await network.getOrCreate();
 
 const UNITS = 10n ** 18n;
-const INITIAL_SUPPLY = 250_000_000n * UNITS;
-const MAX_SUPPLY = 1_000_000_000n * UNITS;
+const INITIAL_SUPPLY = 100_000_000n * UNITS;
+const MAX_SUPPLY = 250_000_000n * UNITS;
 
 describe("CardinalsPromise", function () {
   async function deploy() {

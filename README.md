@@ -9,13 +9,13 @@ An ERC-20 token on Ethereum, built with [Hardhat 3](https://hardhat.org) and Sol
 | Name | Cardinals Promise |
 | Symbol | CARD |
 | Decimals | 18 |
-| Max supply | 1,000,000,000 CARD (hard cap, enforced on-chain) |
-| Default initial supply | 250,000,000 CARD minted to the deployer |
+| Max supply | 250,000,000 CARD (hard cap, enforced on-chain) |
+| Default initial supply | 250,000,000 CARD minted to the deployer (the full supply) |
 
 ### Features
 
 - **Standard ERC-20** (EIP-20): `transfer`, `approve`, `transferFrom`, `balanceOf`, `allowance`, `totalSupply`, plus `Transfer`/`Approval` events.
-- **Capped minting** — the owner can mint new tokens, but the total supply can never exceed 1 billion CARD.
+- **Capped minting** — the owner can mint new tokens, but the total supply can never exceed 250 million CARD. With the default deployment the full supply is minted up front, so no further minting is possible.
 - **Burning** — any holder can `burn` their own tokens, or `burnFrom` another account with an allowance. Burns reduce `totalSupply`.
 - **Infinite allowance** — an allowance of `type(uint256).max` is never decremented (gas-friendly for routers/AMMs).
 - **Ownership controls** — `transferOwnership` hands minting rights to a new address; `renounceOwnership` permanently freezes the supply.
@@ -55,11 +55,12 @@ npx hardhat keystore set SEPOLIA_PRIVATE_KEY
 npx hardhat ignition deploy ignition/modules/CardinalsPromise.ts --network sepolia
 ```
 
-To override the initial supply (value in wei units, 18 decimals):
+To override the initial supply (value in wei units, 18 decimals — e.g. mint
+only 100M up front and leave the rest mintable by the owner):
 
 ```bash
 npx hardhat ignition deploy ignition/modules/CardinalsPromise.ts \
-  --parameters '{"CardinalsPromiseModule":{"initialSupply":"500000000000000000000000000"}}'
+  --parameters '{"CardinalsPromiseModule":{"initialSupply":"100000000000000000000000000"}}'
 ```
 
 ## Project layout
