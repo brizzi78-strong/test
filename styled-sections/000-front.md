@@ -76,7 +76,7 @@ Chapter 21: Finding Papa75
 
 Chapter 22: The Line77
 
-Chapter 23: The Mirador78
+Chapter 23: The Salmon Palace78
 
 Chapter 24: The Offer80
 

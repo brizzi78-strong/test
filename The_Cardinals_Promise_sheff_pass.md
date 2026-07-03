@@ -76,7 +76,7 @@ Chapter 21: Finding Papa75
 
 Chapter 22: The Line77
 
-Chapter 23: The Mirador78
+Chapter 23: The Salmon Palace78
 
 Chapter 24: The Offer80
 
@@ -1275,14 +1275,14 @@ I left shaken. That line forced a choice I couldn't hand off. Go back to that wo
 
 **CHAPTER 23**
 
-## **The Mirador**
+## **The Salmon Palace**
 
 *"Except the LORD build the house, they labour in vain that build it."*
 *— Psalm 127:1*
 
 I didn't buy it because it made sense. On paper it didn't. An association fee. Seven hundred sixty-five square feet, one bedroom, one bath, but it was all I needed. It was a condo carved out of a building called the Mirador, Spanish stucco with a Spanish tile roof, a place that looked like it belonged in Southern California or Mexico and somehow held its ground in Pensacola. My unit had its own balcony over the pool. To this day it's the proudest I have ever been of a place I lived.
 
-The color was impossible to ignore. Salmon. Warm and defiant. It sat up off the road like a little castle on a hill. For years I drove past it on my way home from meetings. At first I barely noticed it. Then I noticed it every time. Then I was slowing down, then parking across the street to sit and stare. I couldn't imagine ever living there. So I did the thing they teach you. I pictured it anyway, owning it one day, a kind of prayer I didn't have the nerve to say out loud. Something in me recognized the place.
+The color was impossible to ignore. Salmon. Warm and defiant. It sat up off the road like a little castle on a hill, and everybody who knew me came to call it the Salmon Palace. The deed said the Mirador. Both were true. For years I drove past it on my way home from meetings. At first I barely noticed it. Then I noticed it every time. Then I was slowing down, then parking across the street to sit and stare. I couldn't imagine ever living there. So I did the thing they teach you. I pictured it anyway, owning it one day, a kind of prayer I didn't have the nerve to say out loud. Something in me recognized the place.
 
 By then I was doing well again, quietly. Home health had stabilized my life. Sober, paying bills, still carrying debt but no longer running from it. I wasn't looking for more. I was looking for mine. The realtor showed me the sensible options first, places near the railroad tracks, starter homes with neutral paint, the kind that say be grateful this is all you can afford. None of them felt right. When I asked about the Mirador she raised an eyebrow. That one's different, she said. I know, I said.
 
@@ -1292,7 +1292,7 @@ The market was down hard in 2014, which is the only reason a place like that eve
 
 When I got the keys I stood in the middle of that small living room longer than I expected. Nothing about it was impressive, and that was the point. I'd earned it through repetition. For four years the Mirador was my world. I woke up there, prayed there, paid down debt there, stayed sober there. Went to work, came home, did it again. Nobody applauded. That was the miracle. I was becoming someone who kept promises.
 
-Friends joked about the color. Visitors asked when I'd upgrade. Real estate logic said flip it, leverage it, move on. I didn't. That place held the first version of me that wasn't running. Years later, when Hope walked through that door the first time, she didn't say a word about the size. She noticed how it felt. We sold it in 2019, a hundred thousand in equity, put down on a house we built together. That's what four years of showing up quietly can do.
+Friends joked about the color, that's where the Salmon Palace name came from. Visitors asked when I'd upgrade. Real estate logic said flip it, leverage it, move on. I didn't. That place held the first version of me that wasn't running. Years later, when Hope walked through that door the first time, she didn't say a word about the size. She noticed how it felt. We sold it in 2019, a hundred thousand in equity, put down on a house we built together. That's what four years of showing up quietly can do.
 
 **CHAPTER 24**
 
