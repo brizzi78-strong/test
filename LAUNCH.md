@@ -1,5 +1,16 @@
 # Cardinals Promise (CARD) — Launch Runbook
 
+## Decided launch parameters
+
+| Decision | Value |
+| --- | --- |
+| Supply | Mint all 250M at deploy, `renounceOwnership()` immediately after verification |
+| Uniswap pool | 200M CARD (80%) paired with 2–5 ETH |
+| Treasury | 50M CARD (20%) in a publicly announced wallet |
+| LP tokens | Locked 12 months (Team Finance or UNCX) |
+| Timeline | Week 0: Sepolia rehearsal → Weeks 1–2: independent audit + legal consult → Week 3: mainnet |
+| Before mainnet | Publish the one-page site (`site/`) explaining what the promise is |
+
 Status of each step on the road to mainnet. Items marked ✅ are done in this
 repo; items marked 🔑 need something only the project owner can provide
 (keys, funds, signatures, legal engagement).
