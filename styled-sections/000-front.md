@@ -43,7 +43,7 @@ Printed in the United States of America.
 
 **CONTENTS**
 
-Prologue: The Cardinal
+Prologue
 
 Foreword
 

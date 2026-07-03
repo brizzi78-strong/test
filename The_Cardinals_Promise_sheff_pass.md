@@ -43,7 +43,7 @@ Printed in the United States of America.
 
 **CONTENTS**
 
-Prologue: The Cardinal
+Prologue
 
 Foreword
 
@@ -119,24 +119,17 @@ About the Author
 
 Photographs
 
-# **PROLOGUE: THE CARDINAL**
+# **PROLOGUE**
 
-*"I will not leave you orphans. I will come to you."*
-*— John 14:18*
+His hands were around my throat before I understood he had crossed the cell. A small man, wired, moving too fast, meth or something close to it, his eyes too wide and his whole body ready to fly apart. Somebody called him Rico. His face came an inch from mine, and the only English he had came out in a rasp. "Gringo. Gringo. Money."
 
-**January 9, 2026**
+"No tengo dinero," I told him. The words came out thin. They had taken everything hours before I reached that door — my watch, my bag, whatever was in my pockets.
 
-The cardinal landed on my driver's side mirror fifteen days after my father died.
+"Money. Money." The fingers pressed, eased, pressed again. His breath was sour and chemical. Then the hands dropped. He muttered something, backed to the wall, and the dark took him.
 
-I was in a parking lot in Raleigh, outside a skilled nursing facility, a cup of coffee going cold in the holder. I had just left a family still deciding whether to place their mother on hospice. A gray January morning, the space between one call and the next. I was seventeen years sober, to the day.
+That is where the worst night of my life had set me down: a concrete floor in a Mexican holding cell. Nobody was coming, because nobody knew where I was. Not my father. Not my brother. Not my mother.
 
-The bird landed close. Close enough to see individual feathers, red against all that gray. It looked at me through the glass like it had arrived with a purpose and was content to wait.
-
-I know what a coincidence is. I've sat in enough church basements and enough last rooms to know what grief does with birds and pennies and songs on the radio. I'm not asking you to believe anything yet. I'm telling you what happened. It landed, and it stayed, and it looked at me, and I said a name out loud in an empty car.
-
-I took one picture. Then it lifted off the mirror, sat a moment in a nearby tree, and was gone.
-
-To explain a bird on a mirror, I have to explain the man. And to explain the man, I have to start with a boy carried out of Mexico City with his mother's hand around his, and how far down that boy went before he understood what the man had been teaching him all along.
+I had been carried out of Mexico City as a child, to be given a better life. Somehow I had found my way back to a concrete floor inside it, with everything I'd built somewhere far away. This is the story of how I got there, and how I got out.
 
 # **FOREWORD**
 
@@ -936,9 +929,7 @@ The smell reached me before the door shut. Sewer and vomit and mold, sweat over 
 
 The men spoke Spanish faster than I could follow. It had been my first language once. Mexico was where I started. By now it was buried far enough down that I could hear it without holding it, and the words moved past me in pieces.
 
-Some of the men were gone in the head, rocking, laughing, talking to no one. Others sat with their backs to the wall and their eyes empty. A few just watched me. I didn't belong there, and they knew it.
-
-One of them was a small man, wired, moving too fast, meth or something close to it, his eyes too wide and his whole body ready to fly apart. Somebody called him Rico. His hands were around my throat before I understood he had crossed the cell. His face came an inch from mine, and the only English he had came out in a rasp. Gringo. Gringo. Money. No tengo dinero, I told him. The words came out thin. There was nothing left to give him; the cop had seen to that hours before. Money. Money. The fingers pressed, eased, pressed again. His breath was sour and chemical. Then the hands dropped. He muttered something, backed to the wall, and the dark took him.
+Some of the men were gone in the head, rocking, laughing, talking to no one. Others sat with their backs to the wall and their eyes empty. A few just watched me. I didn't belong there, and they knew it. Rico was one of them, the wired little man who would come across the cell for my throat. You already know how that went.
 
 My throat burned. I wanted to put a hand to it and didn't. I wasn't going to let the room see it. I slid down the wall instead and sat, knees to my chest, the concrete cold through my clothes, my forehead down. I knew the position. My body found it before my mind caught up. Get small, stay quiet, don't hold anyone's eye, don't give the room a reason to pick you. It was the same shape I'd folded into as a boy when the yelling started.
 
@@ -1788,9 +1779,13 @@ This is his story. Told by the son who almost didn't make it. For every father w
 
 A cardinal lands on the driver's side mirror of my car.
 
-You've seen this moment. It's the one I opened this book with, back when you didn't know the man, or the boy, or what it cost to get either of them to this parking lot. Now you know all of it. So let me finish what I started.
+Close. So close I can see individual feathers. It looks at me through the glass like it arrived with a purpose and is content to wait. It doesn't move. Bright red against the gray.
 
-January 9, 2026. Seventeen years sober to the day, and fifteen days after my father died. The parking lot of Peak Resources Skilled Nursing Facility in Raleigh, just out of a visit with a family still deciding whether to place their mother on hospice. I'd sat with them, answered their questions, stayed until the staying was done. The coffee going cold. The space between one call and the next. And the cardinal on the mirror, close enough to touch through the glass, looking at me like it arrived with a purpose and is content to wait.
+Let me tell you how I got to this parking lot.
+
+January 9, 2026. Seventeen years sober to the day, and fifteen days after my father died. I'm in my car in the parking lot of Peak Resources Skilled Nursing Facility in Raleigh, coffee in my hand, just out of a visit with a family still deciding whether to place their mother on hospice. I'd sat with them, answered their questions, stayed until the staying was done. A gray January morning, the coffee going cold, the space between one call and the next.
+
+And then it lands, the cardinal, on the mirror, close enough to touch through the glass.
 
 Seventeen years from West Palm Beach, from the apartment with the blinds drawn and the refrigerator in the hallway, from the morning I opened the door and found Lou standing there. Seventeen, the same number as the age I won the county championship. He'd been in the third row that day. He was always in the third row.
 

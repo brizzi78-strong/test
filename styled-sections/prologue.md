@@ -1,18 +1,11 @@
-# **PROLOGUE: THE CARDINAL**
+# **PROLOGUE**
 
-*"I will not leave you orphans. I will come to you."*
-*— John 14:18*
+His hands were around my throat before I understood he had crossed the cell. A small man, wired, moving too fast, meth or something close to it, his eyes too wide and his whole body ready to fly apart. Somebody called him Rico. His face came an inch from mine, and the only English he had came out in a rasp. "Gringo. Gringo. Money."
 
-**January 9, 2026**
+"No tengo dinero," I told him. The words came out thin. They had taken everything hours before I reached that door — my watch, my bag, whatever was in my pockets.
 
-The cardinal landed on my driver's side mirror fifteen days after my father died.
+"Money. Money." The fingers pressed, eased, pressed again. His breath was sour and chemical. Then the hands dropped. He muttered something, backed to the wall, and the dark took him.
 
-I was in a parking lot in Raleigh, outside a skilled nursing facility, a cup of coffee going cold in the holder. I had just left a family still deciding whether to place their mother on hospice. A gray January morning, the space between one call and the next. I was seventeen years sober, to the day.
+That is where the worst night of my life had set me down: a concrete floor in a Mexican holding cell. Nobody was coming, because nobody knew where I was. Not my father. Not my brother. Not my mother.
 
-The bird landed close. Close enough to see individual feathers, red against all that gray. It looked at me through the glass like it had arrived with a purpose and was content to wait.
-
-I know what a coincidence is. I've sat in enough church basements and enough last rooms to know what grief does with birds and pennies and songs on the radio. I'm not asking you to believe anything yet. I'm telling you what happened. It landed, and it stayed, and it looked at me, and I said a name out loud in an empty car.
-
-I took one picture. Then it lifted off the mirror, sat a moment in a nearby tree, and was gone.
-
-To explain a bird on a mirror, I have to explain the man. And to explain the man, I have to start with a boy carried out of Mexico City with his mother's hand around his, and how far down that boy went before he understood what the man had been teaching him all along.
+I had been carried out of Mexico City as a child, to be given a better life. Somehow I had found my way back to a concrete floor inside it, with everything I'd built somewhere far away. This is the story of how I got there, and how I got out.
