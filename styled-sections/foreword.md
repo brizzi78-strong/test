@@ -22,4 +22,8 @@ So here is the invitation Rob extends to you in these pages. What would it look 
 
 This book will help you do exactly that. I am grateful it exists, and I am grateful you are holding it.
 
-*Sincerely,Dave MeyerVirginia Tech quarterback and 2001 Gator Bowl winner, later an NFL quarterback and a college coach under Nick Saban at LSU*
+*Sincerely,*
+
+*Dave Meyer*
+
+*Virginia Tech quarterback and 2001 Gator Bowl winner; later an NFL quarterback and college coach under Nick Saban at LSU*
