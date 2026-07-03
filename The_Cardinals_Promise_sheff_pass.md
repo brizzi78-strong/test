@@ -104,15 +104,17 @@ Chapter 35: The Days After111
 
 Who Stays. Who Goes.115
 
-Chapter 36: What Grief Taught the Job116
+Chapter 36: The First Honest Mile116
 
-Tyler and Jaye117
+Chapter 37: What Grief Taught the Job117
 
-Chapter 37: The Round Table119
+Tyler and Jaye118
 
-Chapter 38: The Table120
+Chapter 38: The Round Table119
 
-Chapter 39: The Floor122
+Chapter 39: The Table120
+
+Chapter 40: The Floor122
 
 What He Didn't Owe123
 
@@ -1710,10 +1712,10 @@ I sat in my car one afternoon thinking, am I becoming someone else? The answer c
 
 **CHAPTER 36**
 
-## **What Grief Taught the Job**
+## **The First Honest Mile**
 
-*"Death ends a life, not a relationship."*
-*— Morrie Schwartz, in Mitch Albom's Tuesdays with Morrie*
+*"Blessed are they that mourn: for they shall be comforted."*
+*— Matthew 5:4*
 
 I took one day off after my father died, then put on a tie and went back. He'd worn one for forty years, and he'd have gone back the next day, so I did too. Not to avoid the grief. Because the next thing he'd have done was show up, and so would I. The tie was the same idea.
 
@@ -1726,6 +1728,13 @@ She watched it get worse before I did. I got into a couple of fender benders, my
 And I was mean. That scared me more than a craving would have. I lashed out at the people carrying the same loss I was, short and sharp over nothing, hearing myself do it and doing it anyway. Part of it was this book. I was writing my way through the loss, and in that fog it felt like the family didn't believe in what I was doing, didn't want the story told, and I used that as a reason to push them further away. Looking back, I don't think it was fair to them. Grief reads indifference into everything. At the time it felt like proof.
 
 Seventeen years sober, and I had hit a rock bottom again, an emotional one this time. The disease doesn't need a bottle to run the old plays, isolation, anger, the closed door. The difference was that this time I had to feel it all the way through. And this time I knew what to do with a bottom. I went back to meetings, more of them than I'd been to in years. I got a therapist. The morning calls with Mager got longer. I said out loud, in the rooms and on the phone, that I was not okay, because that is the whole technology of the thing: you say it before it becomes something worse. And I went back to the people I'd been sharp with and said sorry, plainly. Seventeen years in, I was back on the first honest mile. That isn't failure. That's how it works. Sobriety was never a wall grief couldn't get through. It's the set of things I do when it gets through anyway.
+
+**CHAPTER 37**
+
+## **What Grief Taught the Job**
+
+*"Death ends a life, not a relationship."*
+*— Morrie Schwartz, in Mitch Albom's Tuesdays with Morrie*
 
 Here is the part I can only admit now. Before I lost him, I was good at this job, but there was a gap in it. I would sit with a family and say the right things, nod at the right moments, and look like a man who understood exactly what they were feeling. Inside, I didn't. I hadn't lost the one I loved most yet. I was fluent in the words and a step removed from the weight. Losing my dad closed that gap. Now when I walk into a room where someone is losing the person they love most, I'm not performing understanding. I have it. I know the specific shape of it. It made me more compassionate, and it made me better at the work, which is a hard thing to be grateful for, and I am grateful for it anyway.
 
@@ -1755,7 +1764,7 @@ His neck broke at C5 and C6. He couldn't move anything below it. His eight-year-
 
 That's where Tyler's life divided in two. After it came the hospital bed in the living room, the ramps, the accessible shower, the morning routines that take hours, and his sister Jaye, Hope's cousin too, moving in to help carry him back toward some independence, a husband and two daughters and a career of her own set down so she could stay. I've said elsewhere that I learned to notice the caregiver. This is one of the places I learned it. Tyler is still fighting, and Jaye is still showing up.
 
-**CHAPTER 37**
+**CHAPTER 38**
 
 ## **The Round Table**
 
@@ -1770,7 +1779,7 @@ Then I told her my dad had passed three days earlier. Her face changed. You coul
 
 It was no longer about work. Two people at a round table, one of them grieving and the other choosing to stay in the room for it. We hugged. I gave her a kiss on the cheek. From that day on I look forward to the days I get to see Linda. Not because of the facility. Because of the human being. The other staff joke about it, oh, you always come in and kiss Linda on the cheek. They don't know the background, don't know what was shared at that table three days after Christmas. That's fine. Not every connection needs an audience. Here's the part people might not expect: as a rep, I'm the one who's supposed to bring the chocolate and the goodies. When I go see Linda, I'm the one who feels taken care of. She gives me cookies. She checks in. The relationship runs backwards from the job description. Linda gave me a moment, three days in, at a round table at Brookdale, to stop holding it together. I'll carry that.
 
-**CHAPTER 38**
+**CHAPTER 39**
 
 ## **The Table**
 
@@ -1793,7 +1802,7 @@ After my dad died the center had gone, and the rest of us felt it loosen. Lisa d
 
 I think about the meatloaf sometimes, that night when she was barely old enough to drive and cooked a meal for two boys who didn't make it easy. She's still standing at the counter. Still opening the door. The last time I was there for Thanksgiving I stood in her kitchen a minute before we sat down. I didn't say anything. I just watched, and thought about how the people who hold families together don't usually get thanked for it. They just keep doing it. Year after year. We sat down. Someone said grace. The food was passed. And for a few hours everything had a center again. Lisa made sure of that.
 
-**CHAPTER 39**
+**CHAPTER 40**
 
 ## **The Floor**
 

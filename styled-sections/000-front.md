@@ -104,15 +104,17 @@ Chapter 35: The Days After111
 
 Who Stays. Who Goes.115
 
-Chapter 36: What Grief Taught the Job116
+Chapter 36: The First Honest Mile116
 
-Tyler and Jaye117
+Chapter 37: What Grief Taught the Job117
 
-Chapter 37: The Round Table119
+Tyler and Jaye118
 
-Chapter 38: The Table120
+Chapter 38: The Round Table119
 
-Chapter 39: The Floor122
+Chapter 39: The Table120
+
+Chapter 40: The Floor122
 
 What He Didn't Owe123
 
