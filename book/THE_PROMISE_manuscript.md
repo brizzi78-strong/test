@@ -159,10 +159,10 @@ holding an elderly patient's hand.
 
 > Now it's my turn.
 >
-> I pick others.
 > I sit down. I show up. I stay.
 >
-> I hold hands that once held someone else's whole world —
+> I hold hands that once held
+> someone else's whole world —
 >
 > because love is a verb,
 > and the promise is still being kept.
@@ -275,10 +275,13 @@ in the water beside him, the boy smiling up at him.
 | `cardinals-promise-cover-A.jpeg` | *The Cardinal's Promise* cover, interior view | ✅ companion book |
 | `cardinals-promise-cover-B.jpeg` | *The Cardinal's Promise* cover, through-window view | ✅ companion book |
 
-**Still needed at full resolution** (currently only inside chat screenshots):
-"The Promise" page (grown man, green plaid, arm around the elder), the
-hospice bedside scene, and the swimming turning-point spread. Save each from
-the Grok chat (tap image → save) and drop them into `illustrations/`.
+| `07-the-promise-elder-lowres.jpeg` | "The Promise" (page 7) | ⚠️ low-res crop from screenshot |
+| `08-hospice-lowres.jpeg` | Hospice bedside (page 8) | ⚠️ low-res crop from screenshot |
+| `09-swimming-spread-lowres.jpeg` | Swimming turning point (bonus spread) | ⚠️ low-res crop, app buttons visible |
+
+**For print:** the three `-lowres` files are crops from chat screenshots —
+good enough for the mockup, not for KDP. Save each original from the Grok
+chat (tap image → save) and replace them in `illustrations/`.
 
 ## Production checklist (KDP)
 
