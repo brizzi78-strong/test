@@ -1195,7 +1195,7 @@ And there is an apology I owe him too. For most of my life the distance was some
 
 He called every Wednesday at seven, right on time, until I stopped answering.
 
-He still calls once a year, on my birthday, the day I made him a father. I don't always pick up. But the phone rings, every year, from the man who never moved on, who still goes out to a borrowed line to reach the son who left him the way he was once left. He keeps calling. It took me a long time to understand that the calling was the love.
+There has been nothing since. The unanswered call and the friend requests were the last of it. It took me a long time to understand that all of it, the Wednesday calls at seven from a borrowed line, the birthday calls, even the friend requests to people he had never met, was the love. I understood it. I still couldn't answer it.
 
 **CHAPTER 21**
 
