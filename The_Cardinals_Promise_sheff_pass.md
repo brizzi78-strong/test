@@ -128,17 +128,24 @@ About the Author131
 
 Photographs132
 
-# **PROLOGUE**
+# **PROLOGUE: THE CARDINAL**
 
-His hands were around my throat before I understood he had crossed the cell. A small man, wired, moving too fast, meth or something close to it, his eyes too wide and his whole body ready to fly apart. Somebody called him Rico. His face came an inch from mine, and the only English he had came out in a rasp. "Gringo. Gringo. Money."
+*"I will not leave you orphans. I will come to you."*
+*— John 14:18*
 
-"No tengo dinero," I told him. The words came out thin. They had taken everything hours before I reached that door — my watch, my bag, whatever was in my pockets.
+**January 9, 2026**
 
-"Money. Money." The fingers pressed, eased, pressed again. His breath was sour and chemical. Then the hands dropped. He muttered something, backed to the wall, and the dark took him.
+The cardinal landed on my driver's side mirror fifteen days after my father died.
 
-That is where the worst night of my life had set me down: a concrete floor in a Mexican holding cell. Nobody was coming, because nobody knew where I was. Not my father. Not my brother. Not my mother.
+I was in a parking lot in Raleigh, outside a skilled nursing facility, a cup of coffee going cold in the holder. I had just left a family still deciding whether to place their mother on hospice. A gray January morning, the space between one call and the next. I was seventeen years sober, to the day.
 
-I had been carried out of Mexico City as a child, to be given a better life. Somehow I had found my way back to a concrete floor inside it, with everything I'd built somewhere far away. This is the story of how I got there, and how I got out.
+The bird landed close. Close enough to see individual feathers, red against all that gray. It looked at me through the glass like it had arrived with a purpose and was content to wait.
+
+I know what a coincidence is. I've sat in enough church basements and enough last rooms to know what grief does with birds and pennies and songs on the radio. I'm not asking you to believe anything yet. I'm telling you what happened. It landed, and it stayed, and it looked at me, and I said a name out loud in an empty car.
+
+I took one picture. Then it lifted off the mirror, sat a moment in a nearby tree, and was gone.
+
+To explain a bird on a mirror, I have to explain the man. And to explain the man, I have to start with a boy carried out of Mexico City with his mother's hand around his, and how far down that boy went before he understood what the man had been teaching him all along.
 
 # **FOREWORD**
 
@@ -221,6 +228,11 @@ So pull up a chair. Let me tell you how I know. It begins in a country I haven't
 **CHAPTER 1**
 
 ## **Mexico City — The Escape**
+
+*"The LORD shall preserve thy going out and thy coming in from this time forth, and even for evermore."*
+*— Psalm 121:8*
+
+**Mexico City, 1982**
 
 That summer, my mother was obsessed with E.T.
 
@@ -314,6 +326,9 @@ Then her hand closed around mine. That was all I had. Her hand, and what she'd t
 
 ## **New Jersey: Survival**
 
+*"Strength and honour are her clothing; and she shall rejoice in time to come."*
+*— Proverbs 31:25*
+
 Two weeks became the rest of my life, and I held her hand and didn't know it yet.
 
 The first thing New Jersey took from me was the noise. In Mexico City, sound had been the texture of every day: radios through the windows, vendors before sunrise, music out of the cars, the neighbors' whole lives coming through the walls. My grandparents' house in West Paterson had none of it. The quiet there was on purpose, and the house ran on a schedule: dinner at the same time, lights out at the same time, conversation that never wandered past what could be handled politely. It wasn't unkind, only contained. After where I'd come from, contained felt close to safe.
@@ -356,6 +371,9 @@ What I love now is how close my mother and her sisters have become, she and Nanc
 
 ## **The Man Who Didn't Have To**
 
+*"A father of the fatherless... is God in his holy habitation."*
+*— Psalm 68:5*
+
 He asked my mother out and she said no. He asked again and she said no again. So he kept showing up, week after week, until she finally saw his charm and his maturity. That was how Lou Brizzi decided to stay.
 
 My grandparents gave us a soft landing pad. The man who decided to stay came a little later. Lou Brizzi met my mother in a bar in West Paterson in 1984. He was in his forties, a man who'd already lived a complicated life and decided he was ready to do the next part right. My mother was twenty-eight, back from Mexico with two small boys and not much else, staying with her parents and taking whatever work she could find. She'd learned to be careful about who she let near her children, and a charming man in a bar wasn't going to be the exception. That was why she said no, and why his coming back meant something.
@@ -396,6 +414,9 @@ I understand it now in a way I couldn't then. I see it in every room I walk into
 
 ## **Lou's Kids**
 
+*"God setteth the solitary in families."*
+*— Psalm 68:6*
+
 Overnight, I had a big sister and two big brothers I hadn't even known to hope for. Lou chose us, and that choice came with a family already in place. He had three children of his own long before he ever met my mother: Lisa, Joel, and Jon. When he chose Chris and me, that was his decision to make. What his kids did was something else. They didn't have to make room for two boys from Mexico City who showed up attached to their father's new marriage. They made room anyway. They treated us like brothers.
 
 For the first time in my life I felt like part of a whole family, on the inside of something instead of looking in from the edge. It could not have been easy for them. Lou wasn't a great father to his first three. He'd had all three by the time he was twenty-two, he worked all the time, and the dad who hit me a hundred fly balls and drove me to every match was not the dad they got growing up. They had every reason to resent the do-over. Instead they folded Chris and me in. They were older, and they were essential, as much a part of raising us as anyone.
@@ -415,6 +436,9 @@ That's the part that still gets me. Lou chose Chris and me. But Lisa and Joel an
 **CHAPTER 5**
 
 ## **Claudio and Rob**
+
+*"I have called thee by thy name; thou art mine."*
+*— Isaiah 43:1*
 
 I wasn't given to Lou. I chose him.
 
@@ -445,6 +469,9 @@ There was one thing they couldn't change, and I held onto it like a railing. Bri
 **CHAPTER 6**
 
 ## **The Man Who Raised Me**
+
+*"Let us not love in word, neither in tongue; but in deed and in truth."*
+*— 1 John 3:18*
 
 "I love you as much as I love my own kids." He said it to me one day when I was undone in front of him, and he held my eyes until I believed it. I carried his name before I understood what was behind it. What Lou taught me about being a man comes down to a few things, and none of them were speeches.
 
@@ -481,6 +508,9 @@ He taught me to show up. Then he spent his whole life showing me how.
 **CHAPTER 7**
 
 ## **The Wrestler**
+
+*"And Jacob was left alone; and there wrestled a man with him until the breaking of the day."*
+*— Genesis 32:24*
 
 Before the mat, there was the lunch table. Sixth grade in Ramsey, and I was the new kid with the wrong name and dark skin in a town that had almost none of either. The field was one room and the cafeteria was another, and the cafeteria I could not win.
 
@@ -618,6 +648,9 @@ The wrestling years left marks I still feel. For a long time my body didn't feel
 
 ## **The Suit**
 
+*"Drudgery is the touchstone of character."*
+*— Oswald Chambers*
+
 A recruiter looked at my father across a desk and told him to dye the gray out of his hair. Nobody would hire him otherwise. He went home and did it, and never said a word about it. What it cost him I understood only later, when the money got tight. By then he was around forty-five and we were living in Ramsey. I was starting high school — old enough to notice tension, too young to know its price.
 
 From the outside our life looked stable. A house. Cars in the driveway. Dinner on the table, wrestling practice, the bills paid, the routine holding. You don't see how much of a life like that is held up by one man getting out of bed every morning. Not until something cracks.
@@ -645,6 +678,9 @@ I can still see him at the front door. Dyed hair, pressed shirt, tie pulled tigh
 **CHAPTER 9**
 
 ## **Lou's World**
+
+*"A man that hath friends must shew himself friendly: and there is a friend that sticketh closer than a brother."*
+*— Proverbs 18:24*
 
 Some of my dad's closest buddies had gold records hanging on their walls, and he never once thought it was worth mentioning.
 
@@ -714,6 +750,11 @@ Lou died on Christmas Day, 2025. The man who adopted me. The man who drove me to
 
 ## **Oxford**
 
+*"The LORD is nigh unto them that are of a broken heart."*
+*— Psalm 34:18*
+
+**Oxford, Ohio, fall 1996**
+
 The lowest stretch of my college years ended with a waitress running into a parking lot in Ohio to hand me her phone number, and my father walking beside me, eyes straight ahead, swearing he'd had nothing to do with it. He took that one to the grave. But I'm getting ahead of myself.
 
 Lou's world had made me. Then it sent me off to build one of my own.
@@ -746,6 +787,9 @@ On the way out, a waitress ran into the parking lot after us and handed me her p
 
 ## **MTV**
 
+*"I have seen all the works that are done under the sun; and, behold, all is vanity and vexation of spirit."*
+*— Ecclesiastes 1:14*
+
 I was chatting with Eminem when somebody suggested a photo. He turned to the camera, flipped it off, and that was the shot. C'mon, man, I said, I wanted to show that to my grandma. He didn't say a word. He just walked off.
 
 That was the week MTV put my face on national television, and I still don't entirely know how it happened. Let me back up.
@@ -771,6 +815,9 @@ Miami changed my life, and the man who made it possible was sharing a rental in 
 **CHAPTER 12**
 
 ## **My Brother's Keeper**
+
+*"Am I my brother's keeper?"*
+*— Genesis 4:9*
 
 I once handed my eighteen-year-old brother my birth certificate and sent him to the DMV to become me. He walked out as Robert Brizzi, twenty-one, and we both thought we'd solved a problem instead of committing a federal crime. That's the worst thing my brother and I have ever done together, and you need to know him, because he is in every part of what came next. I can only tell it now because I'm fairly sure the statute of limitations has run out. If it hasn't, this paragraph is going to make for an interesting conversation with a lawyer.
 
@@ -811,6 +858,9 @@ That's my brother. The DMV, India, the Bahamas, the ultimatum that saved my life
 **CHAPTER 13**
 
 ## **The Performance Trap**
+
+*"Selfishness — self-centeredness! That, we think, is the root of our troubles."*
+*— Bill Wilson, Alcoholics Anonymous*
 
 My friend Angela called me from Chicago. You're not going to believe this, she said. I'm standing in the Abercrombie & Fitch on Michigan Avenue, I looked up at the screen, and there you are. Your commercial. For about a minute that felt like arriving. Then it passed straight through me, the way everything did back then, and the hunger underneath was still there.
 
@@ -900,6 +950,9 @@ She helped me find work through local connections, and for a while, in her quiet
 
 ## **The Cell**
 
+*"He brought me up also out of an horrible pit, out of the miry clay, and set my feet upon a rock, and established my goings."*
+*— Psalm 40:2*
+
 The cell was the end of that night. It started as something ordinary, back in my San Diego years, before Florida. A work day, a Tuesday, and when I was done I crossed into Tijuana. I'd crossed enough times to think I understood how it worked, and that was the problem. Do something dangerous often enough and it starts to feel like an errand.
 
 This time a cop saw the watch.
@@ -912,7 +965,9 @@ The smell reached me before the door shut. Sewer and vomit and mold, sweat over 
 
 The men spoke Spanish faster than I could follow. It had been my first language once. Mexico was where I started. By now it was buried far enough down that I could hear it without holding it, and the words moved past me in pieces.
 
-Some of the men were gone in the head, rocking, laughing, talking to no one. Others sat with their backs to the wall and their eyes empty. A few just watched me. I didn't belong there, and they knew it. Rico was one of them, the wired little man who would come across the cell for my throat. You already know how that went.
+Some of the men were gone in the head, rocking, laughing, talking to no one. Others sat with their backs to the wall and their eyes empty. A few just watched me. I didn't belong there, and they knew it.
+
+One of them was a small man, wired, moving too fast, meth or something close to it, his eyes too wide and his whole body ready to fly apart. Somebody called him Rico. His hands were around my throat before I understood he had crossed the cell. His face came an inch from mine, and the only English he had came out in a rasp. Gringo. Gringo. Money. No tengo dinero, I told him. The words came out thin. There was nothing left to give him; the cop had seen to that hours before. Money. Money. The fingers pressed, eased, pressed again. His breath was sour and chemical. Then the hands dropped. He muttered something, backed to the wall, and the dark took him.
 
 My throat burned. I wanted to put a hand to it and didn't. I wasn't going to let the room see it. I slid down the wall instead and sat, knees to my chest, the concrete cold through my clothes, my forehead down. I knew the position. My body found it before my mind caught up. Get small, stay quiet, don't hold anyone's eye, don't give the room a reason to pick you. It was the same shape I'd folded into as a boy when the yelling started.
 
@@ -935,6 +990,9 @@ I never told anyone. Not my father, my brother, my mother, my wife. Not a sponso
 **CHAPTER 15**
 
 ## **Checking Boxes**
+
+*"Man looketh on the outward appearance, but the LORD looketh on the heart."*
+*— 1 Samuel 16:7*
 
 My biological father handed me ten thousand dollars in cash and called me fat in the same weekend, and I spent the money on pills before I left town. That was the reunion my therapist thought would heal me. But a cell didn't stop me, and neither did a courtroom. The first rehab was court-ordered. I want that up front, because it matters. I didn't walk in because I was ready. I walked in because a judge told me to.
 
@@ -969,6 +1027,9 @@ Because I had Lou. Ensenada clarified something I'd always known without being a
 **CHAPTER 16**
 
 ## **Kim**
+
+*"There is a way which seemeth right unto a man, but the end thereof are the ways of death."*
+*— Proverbs 14:12*
 
 By then I was back in South Florida, and I met Kim in DUI classes. I had to attend seventy-six of them.
 
@@ -1030,6 +1091,9 @@ I wasn't falling apart. I was functioning, which felt like the same thing as bei
 
 ## **West Palm Beach**
 
+*"But when he was yet a great way off, his father saw him, and had compassion, and ran."*
+*— Luke 15:20*
+
 My father rented a U-Haul and drove to West Palm Beach to bring home a dead man. The dead man was me. I just hadn't finished the job yet. Before I tell you about the morning he showed up at my door, I have to show you the room he found me in.
 
 The apartment was about six hundred and fifty square feet on a high floor in CityPlace, carpet underfoot, a balcony that looked out over West Palm Beach. From up there the city looked like something I belonged to. PF Chang's and the Cheesecake Factory were right downstairs. I almost never went down to either. I almost never went anywhere.
@@ -1070,6 +1134,9 @@ But I think about it all the time now. What did he owe me at that point, a grown
 
 ## **New Orleans**
 
+*"Out of the belly of hell cried I, and thou heardest my voice."*
+*— Jonah 2:2*
+
 There was a night I almost slept under a bridge.
 
 The rescue had bought me time, and I used it to get worse. It was Christmas, December 2008, and I went down to New Orleans to spend it with my mom.
@@ -1102,6 +1169,9 @@ It was a few weeks before everything came to a head. Before Chris called. Before
 
 ## **Chumuckla**
 
+*"Half measures availed us nothing. We stood at the turning point."*
+*— Bill Wilson, Alcoholics Anonymous*
+
 I am powerless. I am powerless over alcohol, over the pills, over the man I became when I had either one in me. They are the hardest words I have ever said out loud, and the first time I said them and meant them was at a farmhouse called Chumuckla.
 
 January 9, 2009. That's the date I count from. The night before, Lou took me to Carrabba's. My last meal as a drinking man, one last glass of wine. He didn't make a ceremony of it and he didn't lecture me. He sat across from me while I drank it, the way he sat across from every hard thing in my life, not trying to fix the part that couldn't be fixed in a restaurant.
@@ -1130,6 +1200,9 @@ The day I got out wasn't the day I was saved. It was the day I was handed the ch
 
 ## **The Quiet Years**
 
+*"It is not so true that 'prayer changes things' as that prayer changes me and I change things."*
+*— Oswald Chambers*
+
 Nothing happened. That's what made it hard.
 
 After the second rehab there was no turnaround, no doors swinging open. Just time, without applause, without shortcuts. I stayed in Pensacola, close to Lou and Lynda, in the same routines long enough that they stopped feeling temporary.
@@ -1149,6 +1222,9 @@ People asked why I did all of it. The meetings, the volunteering, the running, t
 **CHAPTER 21**
 
 ## **Finding Papa**
+
+*"For if ye forgive men their trespasses, your heavenly Father will also forgive you."*
+*— Matthew 6:14*
 
 He never remarried. No second family, no one after my mother. He stayed in the same spot we left him in and loved her for the rest of his life.
 
@@ -1184,6 +1260,9 @@ He still calls once a year, on my birthday, the day I made him a father. I don't
 
 ## **The Line**
 
+*"Keep thy heart with all diligence; for out of it are the issues of life."*
+*— Proverbs 4:23*
+
 "Rob, if you relapse, I'm going to have to wash my hands of you." No emotion. No threat. My father said it the way he stated facts, and it was the kindest hard thing anyone ever told me. I'd learned to hold a line with Horacio. The harder one was the line I had to hold with myself. Sobriety didn't erase desire. That surprised me. I'd imagined that once I stopped drinking the urge would lift. It didn't. What sobriety gave me was time. What it took away was the anesthesia, and without it I could feel everything, the hunger included. The disease doesn't leave when you put the drink down. It moves to the back of the room and waits, patient, for a hard week or a good excuse.
 
 By late 2010 I was restless in a way I couldn't name. Sober, working, going to meetings, living clean, and underneath it something in me still wanted out. An opportunity came across my radar, medical device sales, Stryker. A name that promises money and momentum. A fast way back to the version of me that knew how to win. The thought hit like adrenaline: this is how I get back. Then a quieter one, more honest: I don't know if I can stay sober there.
@@ -1197,6 +1276,9 @@ I left shaken. That line forced a choice I couldn't hand off. Go back to that wo
 **CHAPTER 23**
 
 ## **The Mirador**
+
+*"Except the LORD build the house, they labour in vain that build it."*
+*— Psalm 127:1*
 
 I didn't buy it because it made sense. On paper it didn't. An association fee. Seven hundred sixty-five square feet, one bedroom, one bath, but it was all I needed. It was a condo carved out of a building called the Mirador, Spanish stucco with a Spanish tile roof, a place that looked like it belonged in Southern California or Mexico and somehow held its ground in Pensacola. My unit had its own balcony over the pool. To this day it's the proudest I have ever been of a place I lived.
 
@@ -1216,6 +1298,9 @@ Friends joked about the color. Visitors asked when I'd upgrade. Real estate logi
 
 ## **The Offer**
 
+*"Old things are passed away; behold, all things are become new."*
+*— 2 Corinthians 5:17*
+
 When the recruiter asked what I'd been doing for the last five years, I could have framed it, moved past it. Instead I told the truth. I've been working as a lifeguard, I said. And I've been in recovery. I'm sober now. The call that led to that answer came on an ordinary day. By 2011 ordinary days were the whole texture of my life. The sharp edges were gone. Work, meetings, lifeguard shifts, dinners with Lou and Lynda, early mornings that looked exactly like the ones before. When the phone rang that afternoon I almost let it go to voicemail.
 
 A recruiter. Someone who knew someone, the way it happens in a town like Pensacola. We're looking for someone to build relationships for a home health company, nursing, PT, OT, patients who can't get to clinics. We need someone who can develop referral sources. Healthcare. The word landed with weight. Not excitement. Something quieter.
@@ -1234,6 +1319,9 @@ Four days. I went to work, went to meetings, had dinner, slept, did it again. On
 
 ## **They Gave Me a Chance**
 
+*"No matter how far down the scale we have gone, we will see how our experience can benefit others."*
+*— Bill Wilson, Alcoholics Anonymous*
+
 Miss Jane was seventy-eight, recovering from hip surgery, and she apologized for the mess in a spotless house. Then she told me she used to dance, every Friday night for forty years, like it was a confession. That was the job. The work didn't feel heroic, which surprised me. I half-expected the new job to arrive with meaning baked in. Day one was paperwork. Compliance modules. Acronyms I half-remembered from a former life, HIPAA, OASIS. Intake forms and more modules. Caroline didn't give me a speech. She showed me how things worked. This is a long game, she said. You don't force referrals. You earn trust.
 
 Home health wasn't selling, not the way I'd done it. It was assisted livings and living rooms, oxygen tanks humming in the corner, family members exhausted in ways sleep doesn't fix. I walked into homes where time had slowed down.
@@ -1250,6 +1338,9 @@ The days were long, doctors' offices, nursing homes, assisted livings, back road
 
 ## **Getting Square**
 
+*"First be reconciled to thy brother, and then come and offer thy gift."*
+*— Matthew 5:24*
+
 $113,000. That was the number when I finally added it up in ink on a yellow legal pad, every credit card and collection account and legal fee, no rounding. I'd spent years not looking at it. Steady work meant I could finally face the wreckage I'd been outrunning, and my sponsor Mager was the one who walked me into it. He didn't rush me. He offered patience that refused to participate in my performance. He let silence do the work. I could narrate recovery convincingly, still controlling the version of me in the room. Mager didn't interrupt. He listened in a way that made clear he was hearing more than I was saying, and eventually, with nowhere for the performance to land, it fell apart on its own.
 
 I got stuck on the amends step. Not in theory. In the concrete requirement to account for everything, without narrative, without softening. One night after a meeting Mager slid a yellow legal pad across the table. Write it down, he said. I knew what he meant.
@@ -1263,6 +1354,9 @@ The debt didn't disappear fast. The progress was slow, sometimes barely visible.
 **CHAPTER 27**
 
 ## **Gulf Breeze**
+
+*"Iron sharpeneth iron; so a man sharpeneth the countenance of his friend."*
+*— Proverbs 27:17*
 
 Years later, Quint Studer stood in front of some of the top business leaders in the region, paused, and said my father's name into the room. Lou Brizzi, great guy. But before Quint there were the rooms. Paying down the debt was one kind of work. Another kind was happening at the same time. There are seasons in sobriety when the victory is staying sober. Early on the work is obvious: work the steps, clean up the wreckage, rebuild trust slowly, one day at a time.
 
@@ -1287,6 +1381,9 @@ The morning after my father died, all these years later, Quint was the first per
 **CHAPTER 28**
 
 ## **The People You Meet When You Stop Drinking**
+
+*"Two are better than one... for if they fall, the one will lift up his fellow."*
+*— Ecclesiastes 4:9-10*
 
 One of the men I got sober alongside had been homeless with a tenth-grade education, and a few years later he had a Hollywood actor sleeping in his guest room. His name is Matt. Quint showed me what was possible, but he wasn't the first one God put in front of me. The others came earlier, when I couldn't yet see any of it.
 
@@ -1315,6 +1412,9 @@ I started sober thinking mediocrity was the ceiling. Then I met Andy, Bob, Mager
 **CHAPTER 29**
 
 ## **Hope**
+
+*"Hope deferred maketh the heart sick: but when the desire cometh, it is a tree of life."*
+*— Proverbs 13:12*
 
 The most important person I would meet sober didn't come from a meeting room. She came from a dating profile that told me not to write to her. By the time I opened Match.com I wasn't looking for anything. I'd been single a while, settled into my little life, my little condo, okay with it. I got on anyway. And there was this profile. The name on it: Please Read My Profile. She was tired of guys messaging without reading a word she wrote. Blonde, beautiful, a pharmacist. Ten years younger than me, right at the edge of what I'd consider. The profile said she was studying for the boards and planning to move to Colorado. Don't message me if you're local in Pensacola.
 
@@ -1400,6 +1500,9 @@ In a short time we worked like a team. We paid off over a hundred thousand dolla
 
 ## **The Pictures Never Tell the Whole Story**
 
+*"We are not saints... We claim spiritual progress rather than spiritual perfection."*
+*— Bill Wilson, Alcoholics Anonymous*
+
 If you look at our Paris photos, we look great. What you can't see is the day before, Hope on her knees in a Brussels hotel room, scraping spilled hair fiber out of my socks and the lining of a suitcase so I'd feel okay standing in front of that camera. That gap, between the picture and the day before it, is the whole point. The trips Hope and I took were some of the best times of my life. They were also a long string of small disasters, and the disasters are where we got strong. You don't learn what you have with someone when the plan works. You learn it when the plan falls apart and you are both still standing there, figuring it out together.
 
 It was like that from the first trip. Before the passports and the overseas flights, we went to Ocean Springs, Mississippi, to a place we still call the Ugly Green House. The key was waiting under a trophy out front. It was not much to look at, and it did not need to be. The place was covered in dog hair, five of us were sharing a single half bath, and we made it special anyway. Hope had forgotten her ID and wanted to be able to order a drink, so I got up before light, drove us back to Pensacola to get it, and drove us straight back. It didn't feel like a sacrifice. It felt like the thing you do for someone when you're glad it is you doing it. Her father heard about that drive, and he told me later it was the moment he knew I was the one for her. We were together and we were going somewhere, and that was the whole appeal, then and now. We loved the museums most, even the little ones in towns most people drive straight past.
@@ -1424,6 +1527,9 @@ Lou died on Christmas Day, 2025. I think about those trips differently now, not 
 
 ## **Blessings**
 
+*"His compassions fail not. They are new every morning: great is thy faithfulness."*
+*— Lamentations 3:22-23*
+
 When Lou poured coffee that day, he poured it for himself and for Hope. Not for me. I noticed, and I understood it was the closest thing to a blessing he was going to give.
 
 Before any of that, before the wedding, there was the day she met Lou. I was nervous. Not the wrestling-match kind. Not the holding-cell kind. This was precise, like one wrong word, one moment of performance instead of presence, would miss the point.
@@ -1439,6 +1545,9 @@ Later he looked at me. You're steady, he said. Then: she is too. That was it. No
 **CHAPTER 32**
 
 ## **The Weight That Stays**
+
+*"Blessed are they that mourn: for they shall be comforted."*
+*— Matthew 5:4*
 
 The first death that stayed with me wasn't a patient, and it came years before hospice was ever my job. It was Bob.
 
@@ -1459,6 +1568,9 @@ I talked to Lou about Bob one evening. I don't know why this is hitting me so ha
 **CHAPTER 33**
 
 ## **The Detour**
+
+*"For my thoughts are not your thoughts, neither are your ways my ways, saith the LORD."*
+*— Isaiah 55:8*
 
 The man who mentored me at the next job lost his twenty-year-old son and was back at work inside a month, holding the rest of the team together. His name was Dave, and he taught me how to read a sign when it came. But I'm ahead of the story. After ten years in home health, one of the reps for the company that sells Ozempic started noticing me in offices, asking around about who'd make a good partner. When a position opened she kept calling. You want to apply? No, I said, I'm happy where I'm at. But my friend Keith said, give it a shot. So I interviewed, and I got the job. It was hard to leave. Ten years. Brenda Jahn had been an amazing manager. But I saw it as a chance to learn. When I started at Novo Nordisk I didn't know the difference between Type 1 and Type 2 diabetes. Through the training and the home study I got good at it. Really good.
 
@@ -1483,6 +1595,9 @@ I told people I was going to take some time off. Be there for my dad. Be there f
 **CHAPTER 34**
 
 ## **Five Weeks**
+
+*"Yea, though I walk through the valley of the shadow of death, I will fear no evil: for thou art with me."*
+*— Psalm 23:4*
 
 Five weeks after I started the hospice job, my father started to die. The beginning of the work I was built for, and the beginning of the end of the man who built me, five weeks apart. We moved to Raleigh because life was expanding. Hope had been a pharmacist for eight years. Raleigh made sense, jobs, community, a church that felt like ours. Leaving Pensacola meant leaving roots. Hope never wavered. That's who she is. Not blindly optimistic; she sees clearly and asks hard questions. But under all of it is a bedrock belief that God has a plan for us to be of service. When the hospice opportunity showed up, it felt like a room I'd been circling for years with the door finally open. No debate. No spreadsheet. Just recognition that this was where I was most needed.
 
@@ -1533,6 +1648,11 @@ He got pneumonia on December 23. His immune system had nothing left to fight wit
 **CHAPTER 35**
 
 ## **The Days After**
+
+*"Jesus wept."*
+*— John 11:35*
+
+**December 2025**
 
 When we pulled up to the funeral home, his truck was parked out front, NJERZ on the Florida plates. A man who moved all the way to the Gulf and still made his truck say Jersey. That's what undid me, not the building, not the door. The plates. But before any of it, there was a breakfast.
 
@@ -1594,6 +1714,9 @@ I sat in my car one afternoon thinking, am I becoming someone else? The answer c
 
 ## **What Grief Taught the Job**
 
+*"...that we may be able to comfort them which are in any trouble, by the comfort wherewith we ourselves are comforted of God."*
+*— 2 Corinthians 1:4*
+
 I took one day off after my father died, then put on a tie and went back. He'd worn one for forty years, and he'd have gone back the next day, so I did too. It felt strange. Not hard in the crushing way I feared. Strange.
 
 I didn't take that day off to avoid grief. I took it because the next thing he'd have done was show up, and so would I. The tie was the same idea.
@@ -1628,6 +1751,9 @@ That's where Tyler's life divided in two. After it came the hospital bed in the 
 
 ## **The Round Table**
 
+*"Bear ye one another's burdens, and so fulfil the law of Christ."*
+*— Galatians 6:2*
+
 Three days after my father died, I cried in the office of a nurse I'd known for an hour. She didn't reach for a phrase or try to fix it. She just stayed in the room with me. You never know when the grief is going to hit, or who's going to be standing there when it does.
 
 That morning I walked into Brookdale for a routine visit. Linda was at the round table near the nurses' station. She'd been a nurse a long time, you could see it in how she carried herself. Compassionate, but not someone who let everybody in. A steadiness I recognized. We started talking. She was from the Buffalo area, upstate New York, had strong opinions about politics and didn't hide them. We agreed on most of it. We joked. It felt easy in a way things hadn't in days.
@@ -1639,6 +1765,9 @@ It was no longer about work. Two people at a round table, one of them grieving a
 **CHAPTER 38**
 
 ## **The Table**
+
+*"Behold, how good and how pleasant it is for brethren to dwell together in unity!"*
+*— Psalm 133:1*
 
 My father was the gravity that held the family together. When he died, that gravity went with him, and I waited for everything to fly apart. My sister Lisa didn't fracture. She set the table.
 
@@ -1657,6 +1786,9 @@ I think about the meatloaf sometimes, that night when she was barely old enough 
 **CHAPTER 39**
 
 ## **The Floor**
+
+*"And what doth the LORD require of thee, but to do justly, and to love mercy, and to walk humbly with thy God?"*
+*— Micah 6:8*
 
 People ask me where God was in all of it, and the honest answer is that He was never the one who left. I was.
 
@@ -1694,15 +1826,14 @@ This is his story. Told by the son who almost didn't make it. For every father w
 
 # **EPILOGUE: THE CARDINAL'S PROMISE**
 
+*"We shall be with you in the Fellowship of the Spirit, and you will surely meet some of us as you trudge the Road of Happy Destiny."*
+*— Bill Wilson, Alcoholics Anonymous*
+
 A cardinal lands on the driver's side mirror of my car.
 
-Close. So close I can see individual feathers. It looks at me through the glass like it arrived with a purpose and is content to wait. It doesn't move. Bright red against the gray.
+You've seen this moment. It's the one I opened this book with, back when you didn't know the man, or the boy, or what it cost to get either of them to this parking lot. Now you know all of it. So let me finish what I started.
 
-Let me tell you how I got to this parking lot.
-
-January 9, 2026. Seventeen years sober to the day, and fifteen days after my father died. I'm in my car in the parking lot of Peak Resources Skilled Nursing Facility in Raleigh, coffee in my hand, just out of a visit with a family still deciding whether to place their mother on hospice. I'd sat with them, answered their questions, stayed until the staying was done. A gray January morning, the coffee going cold, the space between one call and the next.
-
-And then it lands, the cardinal, on the mirror, close enough to touch through the glass.
+January 9, 2026. Seventeen years sober to the day, and fifteen days after my father died. The parking lot of Peak Resources Skilled Nursing Facility in Raleigh, just out of a visit with a family still deciding whether to place their mother on hospice. I'd sat with them, answered their questions, stayed until the staying was done. The coffee going cold. The space between one call and the next. And the cardinal on the mirror, close enough to touch through the glass, looking at me like it arrived with a purpose and is content to wait.
 
 Seventeen years from West Palm Beach, from the apartment with the blinds drawn and the refrigerator in the hallway, from the morning I opened the door and found Lou standing there. Seventeen, the same number as the age I won the county championship. He'd been in the third row that day. He was always in the third row.
 

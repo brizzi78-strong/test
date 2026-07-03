@@ -1,14 +1,13 @@
 # **EPILOGUE: THE CARDINAL'S PROMISE**
 
+*"We shall be with you in the Fellowship of the Spirit, and you will surely meet some of us as you trudge the Road of Happy Destiny."*
+*— Bill Wilson, Alcoholics Anonymous*
+
 A cardinal lands on the driver's side mirror of my car.
 
-Close. So close I can see individual feathers. It looks at me through the glass like it arrived with a purpose and is content to wait. It doesn't move. Bright red against the gray.
+You've seen this moment. It's the one I opened this book with, back when you didn't know the man, or the boy, or what it cost to get either of them to this parking lot. Now you know all of it. So let me finish what I started.
 
-Let me tell you how I got to this parking lot.
-
-January 9, 2026. Seventeen years sober to the day, and fifteen days after my father died. I'm in my car in the parking lot of Peak Resources Skilled Nursing Facility in Raleigh, coffee in my hand, just out of a visit with a family still deciding whether to place their mother on hospice. I'd sat with them, answered their questions, stayed until the staying was done. A gray January morning, the coffee going cold, the space between one call and the next.
-
-And then it lands, the cardinal, on the mirror, close enough to touch through the glass.
+January 9, 2026. Seventeen years sober to the day, and fifteen days after my father died. The parking lot of Peak Resources Skilled Nursing Facility in Raleigh, just out of a visit with a family still deciding whether to place their mother on hospice. I'd sat with them, answered their questions, stayed until the staying was done. The coffee going cold. The space between one call and the next. And the cardinal on the mirror, close enough to touch through the glass, looking at me like it arrived with a purpose and is content to wait.
 
 Seventeen years from West Palm Beach, from the apartment with the blinds drawn and the refrigerator in the hallway, from the morning I opened the door and found Lou standing there. Seventeen, the same number as the age I won the county championship. He'd been in the third row that day. He was always in the third row.
 
