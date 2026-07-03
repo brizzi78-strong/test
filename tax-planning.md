@@ -43,19 +43,24 @@ business return → a loss flows to offset W-2 income → also lowers AGI,
 which *shrinks* the charitable 0.5% floor and widens SALT headroom.
 They stack on top of itemizing (different schedule).
 
-**Tesla depreciation — RESOLVED (June 2026): use the standard mileage
-rate.** Facts settled: Model Y, **under 6,000 lbs GVWR** (no heavy-vehicle
-exception), year 2 of ownership, 66% business use. Consequences:
-- No §179, no bonus — personal-to-business conversion excludes both, and
-  the GVWR kills the heavy exception regardless.
-- Conversion MACRS would run on lesser of cost/FMV × 66% ≈ ~$4,200 yr 1,
-  declining — LESS than the mileage rate and with recapture risk.
-- **Decision: standard mileage (~70¢/mi), ~8,000 business mi/yr ≈
-  $5,600/yr.** No recapture, audit-simple, keeps a luxury-EV schedule
-  off a young business's return.
-- **Requirement: contemporaneous mileage log — running from today.**
-- CPA in December: confirm method election; four gates below still apply
-  to all other LLC deductions.
+**Tesla depreciation — RESOLVED (June 2026): actual-expense method,
+locked in.** Facts: Model Y, **under 6,000 lbs GVWR** (luxury-auto caps
+apply), 66% business use, **depreciation already taken in year 1** —
+which permanently bars the standard mileage rate for this vehicle
+(actual→mileage switch is never allowed).
+- **Year 2:** MACRS 32% × remaining basis (under the ~$19,800 yr-2 cap)
+  × 66% ≈ **~$6,250**, plus 66% of actual operating costs (insurance,
+  charging, tires, repairs) ≈ ~$2,400 → **~$8,600 total** — beats what
+  mileage would have paid. Years 3+: 19.2% / 11.5% / 5.8%, declining.
+- **Rule 1 — recapture risk:** business use must stay **>50% every year**
+  of the recovery period, or accelerated depreciation (incl. year-1
+  bonus) recaptures as income. The **contemporaneous mileage log** is
+  what proves the 66% — mandatory, running from today.
+- **Rule 2 — actual costs need records:** insurance, tires, repairs,
+  registration, and charging (Tesla app kWh × utility rate, captured
+  monthly).
+- CPA in December: verify year-1 basis/bonus figures and the year-2
+  computation; confirm business-use substantiation.
 
 **Original four gates (kept for reference and future vehicles):**
 1. **Model decides the size.** <6,000 lbs (Model 3/Y/S) = "luxury auto,"
