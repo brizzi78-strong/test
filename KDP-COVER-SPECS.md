@@ -35,7 +35,10 @@ Notes for the designer:
 > **The cardinal landed on his mirror fifteen days after his father died. This book
 > is what it took to understand why.**
 >
-> Rob Brizzi was four years old when his mother carried him out of Mexico City to
+> Rob Brizzi's face ran on MTV eight times a day. Three years later he was starving
+> in a dark apartment, running the refrigerator off an extension cord in the hallway.
+>
+> He was four years old when his mother carried him out of Mexico City to
 > start over with nothing. He was thirty when his adoptive father, Lou, rented a
 > U-Haul and drove to West Palm Beach to bring home a son who was dying by inches.
 > And he was seventeen years sober, sitting in a parking lot between hospice
