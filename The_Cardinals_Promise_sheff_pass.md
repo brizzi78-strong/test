@@ -1028,8 +1028,8 @@ Because I had Lou. Ensenada clarified something I'd always known without being a
 
 ## **Kim**
 
-*"There is a way which seemeth right unto a man, but the end thereof are the ways of death."*
-*— Proverbs 14:12*
+*"I loved the way drink made me feel, and I loved its special power of deflection."*
+*— Caroline Knapp, Drinking: A Love Story*
 
 By then I was back in South Florida, and I met Kim in DUI classes. I had to attend seventy-six of them.
 
@@ -1546,8 +1546,8 @@ Later he looked at me. You're steady, he said. Then: she is too. That was it. No
 
 ## **The Weight That Stays**
 
-*"Blessed are they that mourn: for they shall be comforted."*
-*— Matthew 5:4*
+*"Our ultimate goal, after all, is not a good death but a good life to the very end."*
+*— Atul Gawande, Being Mortal*
 
 The first death that stayed with me wasn't a patient, and it came years before hospice was ever my job. It was Bob.
 
@@ -1596,8 +1596,8 @@ I told people I was going to take some time off. Be there for my dad. Be there f
 
 ## **Five Weeks**
 
-*"Yea, though I walk through the valley of the shadow of death, I will fear no evil: for thou art with me."*
-*— Psalm 23:4*
+*"Don't give up. Don't ever give up."*
+*— Jim Valvano*
 
 Five weeks after I started the hospice job, my father started to die. The beginning of the work I was built for, and the beginning of the end of the man who built me, five weeks apart. We moved to Raleigh because life was expanding. Hope had been a pharmacist for eight years. Raleigh made sense, jobs, community, a church that felt like ours. Leaving Pensacola meant leaving roots. Hope never wavered. That's who she is. Not blindly optimistic; she sees clearly and asks hard questions. But under all of it is a bedrock belief that God has a plan for us to be of service. When the hospice opportunity showed up, it felt like a room I'd been circling for years with the door finally open. No debate. No spreadsheet. Just recognition that this was where I was most needed.
 
@@ -1714,8 +1714,8 @@ I sat in my car one afternoon thinking, am I becoming someone else? The answer c
 
 ## **What Grief Taught the Job**
 
-*"...that we may be able to comfort them which are in any trouble, by the comfort wherewith we ourselves are comforted of God."*
-*— 2 Corinthians 1:4*
+*"Death ends a life, not a relationship."*
+*— Morrie Schwartz, in Mitch Albom's Tuesdays with Morrie*
 
 I took one day off after my father died, then put on a tie and went back. He'd worn one for forty years, and he'd have gone back the next day, so I did too. It felt strange. Not hard in the crushing way I feared. Strange.
 
@@ -1779,6 +1779,8 @@ That table has seen every version of me. For years, in active addiction, I'd sho
 
 And every year there was the Turkey Bowl, Auburn against Alabama, her house split right down the middle, a room full of people who loved each other hollering at the same screen for opposite reasons. That was the table too, the whole loud, divided, forgiving thing of it.
 
+It wasn't only Lisa's table. In our family, food was the language love spoke when it didn't trust words. My mother outside the weigh-ins with Wendy's chicken sandwiches the second I made weight. Nancey in Boca Raton, keeping whipped cream in the house because banana cream pie was my favorite, making me chicken parm for no occasion at all, feeding a nephew who'd shown up at her door with nowhere better to go and not asking him anything a pie couldn't answer. I have eaten my way back to belonging at more tables than I can count, and not one of them ever handed me a bill.
+
 After my dad died the center had gone, and the rest of us felt it loosen. Lisa did what she's always done. She kept the table set.
 
 I think about the meatloaf sometimes, that night when she was barely old enough to drive and cooked a meal for two boys who didn't make it easy. She's still standing at the counter. Still opening the door. The last time I was there for Thanksgiving I stood in her kitchen a minute before we sat down. I didn't say anything. I just watched, and thought about how the people who hold families together don't usually get thanked for it. They just keep doing it. Year after year. We sat down. Someone said grace. The food was passed. And for a few hours everything had a center again. Lisa made sure of that.
@@ -1790,6 +1792,8 @@ I think about the meatloaf sometimes, that night when she was barely old enough 
 *"And what doth the LORD require of thee, but to do justly, and to love mercy, and to walk humbly with thy God?"*
 *— Micah 6:8*
 
+Almost every morning for fifteen years, my phone has rung early and it's Mager, or I've called him first, and we pray. A few plain sentences to start the day pointed the right way. Nothing eloquent. Two sober men on a phone line, saying thank you, asking for help, hanging up, going to work.
+
 People ask me where God was in all of it, and the honest answer is that He was never the one who left. I was.
 
 I let Him into my heart at thirteen, in a church my parents made non-negotiable, and I meant it as much as a kid can mean anything. Then I spent my twenties proving I didn't need Him, or anyone. The using years weren't godless so much as God-ignoring. I knew the door was there. I just stopped walking through it. That is the quiet way faith goes for a lot of us. Not a dramatic loss. A slow stopping.
@@ -1798,7 +1802,7 @@ In that holding cell in Mexico I wanted to pray and couldn't, and I've thought a
 
 It took a clear sky raining on a bonfire in Chumuckla before I could believe He was in the room with me again, not as a Sunday idea but as a plain fact. I've told you that night already. What I didn't say is what it started. From then on I stopped trying to think my way to God and started just showing up to Him, the way I showed up to meetings, the way Lou showed up to everything. Faith turned out to be less a feeling I had to summon and more a thing I did, over and over, until it held.
 
-I had help learning that. My mother put me in the pew before I could choose it, and that foundation was the floor I stood on when everything else gave way. Dave Meyer and Jeff Middleton showed me what it looks like in a grown man. Diabetes Dave taught me to recognize a sign when it lands, which is the only reason I knew what the cardinal was when it came. And Mager and I have prayed together on the phone almost every morning for fifteen years, a few plain sentences to start the day pointed the right way.
+I had help learning that. My mother put me in the pew before I could choose it, and that foundation was the floor I stood on when everything else gave way. Dave Meyer and Jeff Middleton showed me what it looks like in a grown man. Diabetes Dave taught me to recognize a sign when it lands, which is the only reason I knew what the cardinal was when it came. And Mager, on the phone, morning after morning, year after year.
 
 I still can't explain God on paper, and I've stopped trying. What I can tell you is that every time I hit the bottom of myself, something I had not put there was holding the floor. Today my faith doesn't look like certainty. It looks like that morning prayer with Mager. A red bird on a mirror. Walking into a dying stranger's room with nothing useful in my hands and trusting that presence is its own kind of prayer. I stopped needing the theology airtight. I just needed to keep showing up, and to let myself be shown up for. That, as much as anything, is what got me here.
 
