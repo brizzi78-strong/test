@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "hardhat test",
-    "build": "hardhat compile"
+    "build": "hardhat compile",
+    "rehearse": "hardhat run scripts/rehearse-launch.ts",
+    "deploy:sepolia": "hardhat ignition deploy ignition/modules/CardinalsPromise.ts --network sepolia",
+    "deploy:mainnet": "hardhat ignition deploy ignition/modules/CardinalsPromise.ts --network mainnet"
   },
   "repository": {
     "type": "git",
