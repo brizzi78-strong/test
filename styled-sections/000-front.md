@@ -100,7 +100,6 @@ A Note to the One Who Loves an Addict
 30. The Days After
 31. The First Honest Mile
 32. What Grief Taught the Job
-Tyler and Jaye
 33. The Table
 
 What He Didn't Owe
