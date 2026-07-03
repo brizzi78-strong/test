@@ -1185,7 +1185,7 @@ Then one call, it turned. He told me he had never moved on after my mother left.
 
 I sat with that. In a way, I felt sorry for him. I couldn't imagine what it must have done to him to lose his children and the woman he loved in the same leaving, and then to just stay there, in that spot, for the rest of his life. I had built a whole life since Mexico. He had stayed where we left him.
 
-Then life got busy. That's the honest, ordinary way it happened, no blowup, no slammed door. I let the calls slip. He kept going out to that VoIP line. I was the one who stopped picking up the other end. He wanted to come to Pensacola, and I felt my boundaries start to bend, and I pulled back. I told myself I'd pick it up again when things settled down. I didn't. We haven't spoken in years.
+Then life got busy. That's the honest, ordinary way it happened, no blowup, no slammed door. I let the calls slip. He kept going out to that VoIP line. I was the one who stopped picking up the other end. He wanted to come to Pensacola, and I felt my boundaries start to bend, and I pulled back. Pensacola was Lou's. I couldn't do that to him. I told myself I'd pick it up again when things settled down. I didn't. We haven't spoken in years.
 
 He called again in 2019, before my wedding. I didn't answer. Then he went around me. He found Lou's family and mine on Facebook, friend requests going out to people in my life he had never met. I understood the loneliness underneath it. It was still a boundary, and he had crossed it.
 
