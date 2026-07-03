@@ -1326,7 +1326,7 @@ The morning after my father died, all these years later, Quint was the first per
 
 One of the men I got sober alongside had been homeless with a tenth-grade education, and a few years later he had a Hollywood actor sleeping in his guest room. His name is Matt. Quint showed me what was possible, but he wasn't the first one God put in front of me. The others came earlier, when I couldn't yet see any of it.
 
-Early in sobriety your brain is rewiring itself. You walk around in a fog, not drunk, not high, just flat. I was depressed, living with my parents, going to meetings, trying to figure out what came next, and I kept landing on the same thought: I'd never build something real again. Not somebody like me.
+Early in sobriety your brain is rewiring itself. You walk around in a fog, not drunk, not high, just flat. I was depressed, living with my parents, going to meetings, trying to figure out what came next, and I kept landing on the same thought: I'd never build something real again. Not somebody like me. Somewhere in there I heard a stat: one in ten stays sober. I never looked it up. When you're new, you don't hear a number like that as information. You look around the room and wonder which one of you it's going to be.
 
 I needed a sponsor. So I picked a guy named Andy. Andy's whole vibe was Eeyore, a low-grade heaviness over him like a cloud that never moved. Not angry, just down, like the world had worn him out long ago and he'd made peace with being tired. I'm looking at my sponsor thinking: is this what the long term looks like? If this is sober after fifteen years, I don't know what I signed up for.
 
