@@ -16,6 +16,8 @@
   "license": "MIT",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-mocha-ethers": "^3.0.7",
+    "@uniswap/v2-core": "^1.0.1",
+    "@uniswap/v2-periphery": "^1.1.0-beta.0",
     "hardhat": "^3.9.1",
     "solc": "^0.8.28",
     "typescript": "^6.0.3"

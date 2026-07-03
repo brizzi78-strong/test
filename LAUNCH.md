@@ -17,6 +17,7 @@ repo; items marked 🔑 need something only the project owner can provide
 | Etherscan verification config | `hardhat.config.ts` (`verify.etherscan`) |
 | Uniswap V2 liquidity script | `scripts/add-liquidity.ts` |
 | Logo (SVG + 256px/32px PNG) and token metadata | `assets/` |
+| **Full launch dress rehearsal** — real Uniswap V2 stack deployed locally; deploy → seed 10M CARD/100 ETH pool → buyer swap (price verified incl. 0.3% fee) → renounceOwnership, all green | `scripts/rehearse-launch.ts` |
 
 ### Reproducing the Slither run
 
@@ -26,6 +27,19 @@ pair into one file with the Hardhat 2 keys (`input`, `output`,
 `solcVersion`), strip the `project/` source-name prefix, ensure
 `settings.optimizer` exists, and run
 `slither . --compile-force-framework hardhat --ignore-compile`.
+
+## ⚠️ Where the remaining steps must run
+
+The sandboxed environment this repo was built in blocks all outbound network
+traffic except package registries — no Ethereum RPC endpoint is reachable, so
+steps 2–6 cannot execute from it. Run them either:
+
+- **on your own machine** — clone the repo, `npm install`, follow the
+  commands below; or
+- **in a Claude Code session** whose environment network policy allows
+  outbound traffic (configurable when creating the environment at
+  https://code.claude.com/docs/en/claude-code-on-the-web) — then Claude can
+  run the Sepolia rehearsal for you once a funded key is in the keystore.
 
 ## 🔑 Step 1 — Keys and wallets (owner)
 
