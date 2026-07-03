@@ -9,6 +9,26 @@
 
 CARDINAL PROMISE PRESS
 
+# **COPYRIGHT**
+
+THE CARDINAL'S PROMISE. Copyright © 2026 by Rob Brizzi. All rights reserved.
+
+No part of this book may be reproduced in any form or by any electronic or mechanical means, including information storage and retrieval systems, without written permission from the publisher, except by a reviewer, who may quote brief passages in a review.
+
+Published by Cardinal Promise Press, Raleigh, North Carolina.
+
+First edition, 2026.
+
+Paperback ISBN: [to be assigned]
+
+Ebook ISBN: [to be assigned]
+
+This is a work of memoir. It reflects the author's present recollections of experiences over time. Some names and identifying details have been changed, some dialogue has been reconstructed, and some events are rendered as composites, as described in the Author's Note.
+
+Cover design: [credit]
+
+Printed in the United States of America.
+
 *For anyone who has struggled with addiction or loved someone who has*
 
 *In memory of Lou Brizzi*
