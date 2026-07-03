@@ -268,6 +268,7 @@ in the water beside him, the boy smiling up at him.
 | `03-yankee-stadium.jpeg` | Yankee Stadium (page 3) | ✅ final art (crop of full spread) |
 | `04-backyard-catch.jpeg` | Backyard catch (page 4) | ✅ final art (crop of full spread) |
 | `05-a-name-to-grow-into.jpeg` | "A Name to Grow Into" (page 5) | ✅ final art with typeset text |
+| `05b-fist-bump.jpeg` | The Fist Bump, right page (insert after page 5) | ✅ final art |
 | `06-mom-look-a-cardinal.jpeg` | Mom & boy, cardinal tie-in (optional) | ✅ final art |
 | `07-wedding.jpeg` | The wedding (optional) | ✅ final art |
 | `08-soccer-alt-style.jpeg` | Soccer spread | ⚠️ different (3D) style |
