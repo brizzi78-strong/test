@@ -2,7 +2,7 @@ import SwiftUI
 
 @main
 struct CardinalPressApp: App {
-    @StateObject private var store = BookStore()
+    @StateObject private var store = CompanionStore()
 
     var body: some Scene {
         WindowGroup {

@@ -3,24 +3,24 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            CatalogView()
+            TodayView()
                 .tabItem {
-                    Label("Catalog", systemImage: "books.vertical")
+                    Label("Today", systemImage: "sunrise.fill")
                 }
 
-            NewsView()
+            ToolsView()
                 .tabItem {
-                    Label("News", systemImage: "newspaper")
+                    Label("Tools", systemImage: "leaf.fill")
                 }
 
-            ReadingListView()
+            JournalView()
                 .tabItem {
-                    Label("Reading List", systemImage: "bookmark")
+                    Label("Journal", systemImage: "book.closed.fill")
                 }
 
-            AboutView()
+            ResourcesView()
                 .tabItem {
-                    Label("About", systemImage: "bird")
+                    Label("Resources", systemImage: "lifepreserver")
                 }
         }
     }
@@ -28,6 +28,6 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-        .environmentObject(BookStore())
+        .environmentObject(CompanionStore())
         .tint(Theme.cardinal)
 }
