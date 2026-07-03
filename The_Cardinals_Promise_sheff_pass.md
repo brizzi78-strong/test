@@ -308,7 +308,7 @@ My mom had called Papa when we landed and told him the truth. We weren't coming 
 
 I didn't know we were never going back. My grandfather was strict, and he'd never approved of my mother. But he let us in. We paid him eight hundred a month. He was hard on her and soft on us, and my grandmother took on most of the days. I missed my father. My mom started over with no degree and no one to catch her, and she worked. That's her story to tell, in her own voice, and I hope she does. This book is here because of her. She picked us.
 
-Then her hand closed around mine. That was all I had. Her hand, and what she'd told me, and my belief that we'd be back soon.
+Then her hand closed around mine. That was all I had. Her hand, and what she'd told me, and my belief that we'd be back soon. I was wrong about soon. But Mexico wasn't done with me.
 
 **CHAPTER 2**
 
@@ -736,7 +736,7 @@ So I had to figure out what I was doing there. I transferred into the Richard T.
 
 Kappa Sigma did something I didn't expect. After the standard rush, they came back for me. Not a form letter — a specific ask. I knew the feeling. The thin envelope from the coach. Lou walking into my mother's life and not leaving. I joined. For the first time I wasn't the wrestler. I was just Rob, still working out what that meant.
 
-I drank. I won't glamorize it, but the parties were great — the fun you know won't last, which is part of why it mattered. Junior year I lived in the fraternity house. Underneath it all was an insecurity I couldn't shake. The wrestling, the fraternity, the friends, and still some part of me didn't believe any of it was real.
+I drank. Everybody drank; that was the cover. It would be years before I understood that not everyone drank the way I did. I won't glamorize it, but the parties were great — the fun you know won't last, which is part of why it mattered. Junior year I lived in the fraternity house. Underneath it all was an insecurity I couldn't shake. The wrestling, the fraternity, the friends, and still some part of me didn't believe any of it was real.
 
 I fell into a depression. Not dramatic, not announced. Gray. Lou heard it in my voice on the phone. He didn't ask follow-up questions. He got in his car in New Jersey and drove ten hours to Ohio. Didn't call ahead to confirm I needed him. Took me to a doctor, got me seen, then to a chain restaurant. Laminated menus, free refills, nothing to it but food and a booth and him across from me.
 
@@ -766,7 +766,7 @@ He worked two jobs in those years, and one of them was at a garden center, plant
 
 They don't make men like him anymore. If he was in pain he wouldn't use the word. At the very end the nurse had to work around it. Are you in pain? No. Are you uncomfortable in that area? Yes. Okay, you're in pain. He wouldn't give himself even the language of suffering.
 
-Miami changed my life, and the man who made it possible was sharing a rental in Mahwah, paying back loans for years, never once making the cost feel like something I owed him. I graduated in May 2000, Lou and my mom in the crowd, tracking the sea of identical caps until they found mine. The car was pointed west. California was waiting.
+Miami changed my life, and the man who made it possible was sharing a rental in Mahwah, paying back loans for years, never once making the cost feel like something I owed him. I graduated in May 2000, Lou and my mom in the crowd, tracking the sea of identical caps until they found mine. The car was pointed west. California was waiting. I had everything I needed and no idea what I was carrying.
 
 **CHAPTER 12**
 
