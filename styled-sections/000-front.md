@@ -101,9 +101,7 @@ A Note to the One Who Loves an Addict
 31. The First Honest Mile
 32. What Grief Taught the Job
 Tyler and Jaye
-33. The Round Table
-34. The Table
-35. The Floor
+33. The Table
 
 What He Didn't Owe
 

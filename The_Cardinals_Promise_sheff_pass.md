@@ -101,9 +101,7 @@ A Note to the One Who Loves an Addict
 31. The First Honest Mile
 32. What Grief Taught the Job
 Tyler and Jaye
-33. The Round Table
-34. The Table
-35. The Floor
+33. The Table
 
 What He Didn't Owe
 
@@ -1693,10 +1691,10 @@ That's where Tyler's life divided in two. After it came the hospital bed in the 
 
 **CHAPTER 33**
 
-## **The Round Table**
+## **The Table**
 
-*"Bear ye one another's burdens, and so fulfil the law of Christ."*
-*— Galatians 6:2*
+*"Thou preparest a table before me in the presence of mine enemies: thou anointest my head with oil; my cup runneth over."*
+*— Psalm 23:5*
 
 Three days after my father died, I cried in the office of a nurse I'd known for an hour. She didn't reach for a phrase or try to fix it. She just stayed in the room with me. You never know when the grief is going to hit, or who's going to be standing there when it does.
 
@@ -1706,12 +1704,7 @@ Then I told her my dad had passed three days earlier. Her face changed. You coul
 
 It was no longer about work. Two people at a round table, one of them grieving and the other choosing to stay in the room for it. We hugged. I gave her a kiss on the cheek. From that day on I look forward to the days I get to see Linda. Not because of the facility. Because of the human being. The other staff joke about it, oh, you always come in and kiss Linda on the cheek. They don't know the background, don't know what was shared at that table three days after Christmas. That's fine. Not every connection needs an audience. Here's the part people might not expect: as a rep, I'm the one who's supposed to bring the chocolate and the goodies. When I go see Linda, I'm the one who feels taken care of. She gives me cookies. She checks in. The relationship runs backwards from the job description. Linda gave me a moment, three days in, at a round table at Brookdale, to stop holding it together. I'll carry that.
 
-**CHAPTER 34**
-
-## **The Table**
-
-*"Behold, how good and how pleasant it is for brethren to dwell together in unity!"*
-*— Psalm 133:1*
+### *Lisa's Table*
 
 My father was the gravity that held the family together. When he died, that gravity went with him, and I waited for everything to fly apart. My sister Lisa didn't fracture. She set the table.
 
@@ -1729,12 +1722,7 @@ After my dad died the center had gone, and the rest of us felt it loosen. Lisa d
 
 I think about the meatloaf sometimes, that night when she was barely old enough to drive and cooked a meal for two boys who didn't make it easy. She's still standing at the counter. Still opening the door. The last time I was there for Thanksgiving I stood in her kitchen a minute before we sat down. I didn't say anything. I just watched, and thought about how the people who hold families together don't usually get thanked for it. They just keep doing it. Year after year. We sat down. Someone said grace. The food was passed. And for a few hours everything had a center again. Lisa made sure of that.
 
-**CHAPTER 35**
-
-## **The Floor**
-
-*"And what doth the LORD require of thee, but to do justly, and to love mercy, and to walk humbly with thy God?"*
-*— Micah 6:8*
+### *The Floor*
 
 Almost every morning for fifteen years, my phone has rung early and it's Mager, or I've called him first, and we pray. A few plain sentences to start the day pointed the right way. Nothing eloquent. Two sober men on a phone line, saying thank you, asking for help, hanging up, going to work.
 
