@@ -1195,7 +1195,7 @@ And there is an apology I owe him too. For most of my life the distance was some
 
 He called every Wednesday at seven, right on time, until I stopped answering.
 
-There has been nothing since. The unanswered call and the friend requests were the last of it. It took me a long time to understand that all of it, the Wednesday calls at seven from a borrowed line, the birthday calls, even the friend requests to people he had never met, was the love. I understood it. I still couldn't answer it.
+I haven't answered since. It took me a long time to understand that all of it, the Wednesday calls at seven from a borrowed line, the birthday calls, even the friend requests to people he had never met, was the love. I understood it. I still couldn't answer it. It hasn't stopped him from trying.
 
 **CHAPTER 21**
 
