@@ -86,7 +86,7 @@ A Note to the One Who Loves an Addict
 22. The Salmon Palace
 23. The Offer
 24. They Gave Me a Chance
-25. Getting Square
+25. Making Amends
 26. Gulf Breeze
 27. The People You Meet When You Stop Drinking
 
