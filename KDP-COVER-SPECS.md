@@ -7,17 +7,17 @@ spine math below moves with it — rerun before ordering the wrap).
 
 | Paper | Formula | 230 pages |
 |---|---|---|
-| White (recommended for text-only) | pages × 0.002252" | 0.518" |
-| Cream | pages × 0.0025" | 0.575" |
+| White (recommended for text-only) | pages × 0.002252" | 0.498" |
+| Cream | pages × 0.0025" | 0.553" |
 
 ## Full wrap dimensions (includes 0.125" bleed on all outside edges)
 
 | Paper | Width | Height |
 |---|---|---|
-| White | 0.125 + 6 + 0.518 + 6 + 0.125 = **12.768"** | 9 + 0.25 = **9.25"** |
-| Cream | 0.125 + 6 + 0.575 + 6 + 0.125 = **12.825"** | **9.25"** |
+| White | 0.125 + 6 + 0.498 + 6 + 0.125 = **12.748"** | 9 + 0.25 = **9.25"** |
+| Cream | 0.125 + 6 + 0.553 + 6 + 0.125 = **12.803"** | **9.25"** |
 
-At 300 DPI (white): 3830 × 2775 px.
+At 300 DPI (white): 3824 × 2775 px.
 
 Notes for the designer:
 - Keep text 0.25" inside trim edges; nothing critical in the 0.125" bleed zone.
