@@ -187,6 +187,26 @@ what to tell them.
 
 ---
 
+### Page 10 — THE RED BIRD
+
+On the day you drove me home,
+a red bird sat outside the car window.
+
+You said it meant
+somebody who loved me was near.
+
+You were right.
+
+It was you.
+
+> *Illustration to come: the boy in the red shirt sitting in the car, face
+> to the window, and outside — close, bright against the gray sky — a red
+> cardinal. Use `art/the-cardinals-promise-cover-reference.jpeg` as the
+> reference for the bird. This page is the bridge to the companion book,*
+> The Cardinal's Promise.
+
+---
+
 ### Dedication (back page)
 
 *For the man who picked me —
@@ -198,7 +218,15 @@ and staying.*
 
 ## Production notes
 
-- **Fully illustrated.** All nine finished illustrations live in `art/`
+- **Art still needed:** page 10 (The Red Bird) — the boy in the car seeing
+  the red cardinal through the window. The realistic cardinal from the
+  memoir cover (`the-cardinals-promise-cover-reference.jpeg`) is the color
+  and posture reference; render the bird in the book's soft
+  watercolor-and-ink style.
+- **The cardinal is the bridge.** Page 10 links this book to the companion
+  memoir *The Cardinal's Promise* — same bird, same promise, told for
+  children here and for adults there.
+- **Nine finished illustrations** live in `art/`
   (`father-and-boy.jpeg`, `the-day-you-picked-me.jpeg`,
   `the-name-mirror.jpeg`, `bleachers.jpeg`, `the-hard-years-waiting.jpeg`,
   `grown-the-coat-fits.jpeg`, `the-work-i-do-now.jpeg`, `the-promise.jpeg`,
