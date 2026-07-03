@@ -68,7 +68,7 @@ And again.
 
 ---
 
-### Page 4 — WHAT STAYING LOOKS LIKE
+### Page 4 — WHAT STAYING LOOKS LIKE — [existing art: `art/bleachers-ramsey.jpeg`]
 
 Sitting in the bleachers.
 Sitting in the waiting room.
@@ -80,8 +80,9 @@ You never fixed it from the doorway.
 You always came in
 and sat down.
 
-> *Illustration: Three small panels — bleachers, waiting room, edge of the
-> bed — the father in the same posture in each: sitting, close, unhurried.*
+> *The father and the boy side by side in the bleachers, his arm around him,
+> the name **Ramsey** stitched across the father's shirt — the name the boy
+> is growing into, right there where he can see it.*
 
 ---
 
@@ -193,12 +194,16 @@ and staying.*
 
 ## Production notes
 
-- **Existing art:** four finished illustrations live in `art/`
-  (`father-and-boy.jpeg`, `the-name-mirror.jpeg`, `the-work-i-do-now.jpeg`,
-  `the-promise.jpeg`). The cover composition (title panel over the
-  father-and-boy image) already exists in the original generation session and
-  can be re-exported at print resolution.
-- **Art still needed:** pages 1, 4, 5, 6, and 9 — five new images in the
+- **Existing art:** five finished illustrations live in `art/`
+  (`father-and-boy.jpeg`, `the-name-mirror.jpeg`, `bleachers-ramsey.jpeg`,
+  `the-work-i-do-now.jpeg`, `the-promise.jpeg`). The cover composition (title
+  panel over the father-and-boy image) already exists in the original
+  generation session and can be re-exported at print resolution.
+- **The name is Ramsey.** The bleachers art shows it stitched on the father's
+  shirt. The text never says the name out loud — the art carries it — but if
+  you want it spoken, the natural place is page 2 ("You gave me your name.
+  *Ramsey.*").
+- **Art still needed:** pages 1, 5, 6, and 9 — four new images in the
   same style (soft watercolor-and-ink, warm cream backgrounds, the same two
   characters aging across the book; the red shirt and the blue coat are the
   recurring visual anchors — the coat is the blue of the father's shirt).
