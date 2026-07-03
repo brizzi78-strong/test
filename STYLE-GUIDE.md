@@ -84,6 +84,25 @@ That is the weight of this pass: most paragraphs lose a phrase or a sentence; a 
 re-rhythmed; openings get sharpened only when flat; nothing gets padded. Expect the
 output to be the same length or slightly SHORTER than the input. Never longer.
 
+## Ghostwriter engine notes (borrow the structure, protect the voice)
+
+From the author's ghostwriter style notes — the working rule is "he builds the road,
+you bleed on the pavement":
+
+- **Chapter engine to borrow where it fits:** meaning/scripture epigraph → date stamp →
+  normal life first (quiet house, nothing dramatic) → then the call comes → dialogue
+  carries the scene → evidence stacks one detail at a time until the reader sees the
+  truth before the narrator does.
+- **Rob's humor is blunt honesty, not bits:** "I had been called a lot of things in my
+  life. Responsible was not usually one of them." / "By then, I had become very good at
+  sounding fine." Never borrowed treatment-center shtick.
+- **The danger is smooth.** Professional recovery-memoir polish reads generic. The book
+  needs rough bark — lines only Rob could write ("Lou did not save me because I deserved
+  it. He saved me because he was my father. And fathers, the good ones, keep walking
+  toward the wreck."). When an edit makes a line smoother but less his, revert it.
+- **Never let structure replace:** Lou, the immigrant story, the adoption wound, the
+  hospice voice, the sobriety truth, the short emotional punches.
+
 ## Output format
 
 For each assigned section file, write the fully edited section to the output path you are
