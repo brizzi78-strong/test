@@ -38,7 +38,7 @@ On purpose.
 
 ---
 
-### Page 2 — THE NAME
+### Page 2 — THE NAME — [existing art: `art/the-name-mirror.jpeg`]
 
 You gave me your name.
 
@@ -48,8 +48,8 @@ like your coat.
 "Don't worry," you said.
 "It's a name to grow into."
 
-> *Illustration: The boy swallowed up in the father's coat, sleeves past his
-> hands, both of them grinning at the mirror.*
+> *The boy swallowed up in the father's blue coat, sleeves past his hands,
+> both of them beaming into the standing mirror.*
 
 ---
 
@@ -193,15 +193,15 @@ and staying.*
 
 ## Production notes
 
-- **Existing art:** three finished illustrations live in `art/`
-  (`father-and-boy.jpeg`, `the-work-i-do-now.jpeg`, `the-promise.jpeg`).
-  The cover composition (title panel over the father-and-boy image) already
-  exists in the original generation session and can be re-exported at print
-  resolution.
-- **Art still needed:** pages 1, 2, 4, 5, 6, and 9 — six new images in the
+- **Existing art:** four finished illustrations live in `art/`
+  (`father-and-boy.jpeg`, `the-name-mirror.jpeg`, `the-work-i-do-now.jpeg`,
+  `the-promise.jpeg`). The cover composition (title panel over the
+  father-and-boy image) already exists in the original generation session and
+  can be re-exported at print resolution.
+- **Art still needed:** pages 1, 4, 5, 6, and 9 — five new images in the
   same style (soft watercolor-and-ink, warm cream backgrounds, the same two
-  characters aging across the book; the red shirt and the coat are the
-  recurring visual anchors).
+  characters aging across the book; the red shirt and the blue coat are the
+  recurring visual anchors — the coat is the blue of the father's shirt).
 - **Page 5** is the pivot for adult readers. The text stays child-safe —
   "lost" is all a young reader needs — while carrying the full weight of the
   rescue for anyone who lived it.
