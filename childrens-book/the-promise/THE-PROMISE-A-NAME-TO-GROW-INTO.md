@@ -69,7 +69,7 @@ And again.
 
 ---
 
-### Page 4 — WHAT STAYING LOOKS LIKE — [existing art: `art/bleachers-ramsey.jpeg`]
+### Page 4 — WHAT STAYING LOOKS LIKE — [existing art: `art/bleachers.jpeg`]
 
 Sitting in the bleachers.
 Sitting in the waiting room.
@@ -82,8 +82,9 @@ You always came in
 and sat down.
 
 > *The father and the boy side by side in the bleachers, his arm around him,
-> the name **Ramsey** stitched across the father's shirt — the name the boy
-> is growing into, right there where he can see it.*
+> the family name **Brizzi** stitched across the father's shirt — the name
+> the boy is growing into, right there where he can see it. (The current
+> art reads "Ramsey" — regenerate with "Brizzi"; see production notes.)*
 
 ---
 
@@ -199,23 +200,27 @@ and staying.*
 
 - **Existing art:** eight finished illustrations live in `art/`
   (`father-and-boy.jpeg`, `the-day-you-picked-me.jpeg`,
-  `the-name-mirror.jpeg`, `bleachers-ramsey.jpeg`,
+  `the-name-mirror.jpeg`, `bleachers.jpeg`,
   `grown-the-coat-fits.jpeg`, `the-work-i-do-now.jpeg`, `the-promise.jpeg`,
   `family-portrait.jpeg`). The cover composition (title panel over the
   father-and-boy image) already exists in the original generation session
   and can be re-exported at print resolution.
-- **The name is Ramsey.** The bleachers art shows it stitched on the father's
-  shirt. The text never says the name out loud — the art carries it — but if
-  you want it spoken, the natural place is page 2 ("You gave me your name.
-  *Ramsey.*").
+- **The name is Brizzi.** The bleachers art carries it stitched on the
+  father's shirt. The text never says the name out loud — the art carries
+  it — but if you want it spoken, the natural place is page 2 ("You gave me
+  your name. *Brizzi.*").
 - **Art still needed:** only page 5 (The Hard Years) — the long road at
   dusk, headlights, the father's silhouette stepping out of the truck. Same
   style: soft watercolor-and-ink, warm cream backgrounds; the red shirt and
   the blue coat are the recurring visual anchors (the coat is the blue of
   the father's shirt, and page 6 shows it worn and patched).
-- **Retouch before print:** the woman's t-shirt in the page 9 family portrait
-  reads "FREEDO" — a generation artifact. Regenerate or retouch it (plain
-  shirt, or the intended word) at print resolution.
+- **Retouch before print:**
+  - The father's shirt in the page 4 bleachers art reads "Ramsey" — the
+    family name is **Brizzi**. Regenerate the image with "Brizzi" stitched
+    on the shirt (or retouch the lettering).
+  - The woman's t-shirt in the page 9 family portrait reads "FREEDO" — a
+    generation artifact. Regenerate or retouch it (plain shirt, or the
+    intended word) at print resolution.
 - **Visual rhyme to preserve:** the narrator's open hand on page 9 repeats
   the father's open hand on page 1 — the picking gesture, passed on. Any
   regeneration of either page should keep it.
