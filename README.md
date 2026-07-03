@@ -98,3 +98,7 @@ Verification submits the sources to `etherscan.io`; compilation beforehand
 fetches the compiler from `binaries.soliditylang.org` (unless using the
 bundled fallback above), so those are the two hosts the toolchain needs to
 reach.
+
+If the API route isn't available, `verification/` contains a ready-to-upload
+standard JSON input and instructions for verifying manually through
+Etherscan's web form — see [verification/README.md](verification/README.md).
