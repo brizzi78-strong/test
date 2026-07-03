@@ -1,6 +1,10 @@
 # Cardinals Promise (CARD)
 
+[![CI](https://github.com/brizzi78-strong/test/actions/workflows/ci.yml/badge.svg)](https://github.com/brizzi78-strong/test/actions/workflows/ci.yml)
+
 An ERC-20 token on Ethereum, built with [Hardhat 3](https://hardhat.org) and Solidity 0.8.28.
+
+**Launching for real? Follow the step-by-step [launch runbook](LAUNCH.md).**
 
 ## Token overview
 
@@ -69,8 +73,18 @@ npx hardhat ignition deploy ignition/modules/CardinalsPromise.ts \
 contracts/CardinalsPromise.sol        # the token contract
 test/CardinalsPromise.ts              # mocha + ethers test suite (19 tests)
 ignition/modules/CardinalsPromise.ts  # deployment module
+scripts/add-liquidity.ts              # create/seed a Uniswap V2 CARD/ETH pool
+assets/                               # logo (SVG + PNG) and token metadata
 hardhat.config.ts                     # Hardhat 3 configuration
+LAUNCH.md                             # step-by-step launch runbook
 ```
+
+## Security
+
+- 19-test suite runs in CI on every push (`.github/workflows/ci.yml`).
+- Slither v0.11.5 static analysis: 0 findings across all 101 detectors
+  (see LAUNCH.md for how to reproduce the run against Hardhat 3 artifacts).
+- The contract still needs a professional audit before holding real value.
 
 ## Disclaimer
 
