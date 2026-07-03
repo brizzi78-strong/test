@@ -85,6 +85,46 @@ little uniform, green backyard.
 
 ---
 
+## Insert — "The Fist Bump" spread (between pages 5 and 6)
+
+*The struggle-and-stay beat: the wobble before the embrace. Written in
+first person to match the rest of the book.*
+
+**Left page illustration:** Golden-hour sunset on a baseball field. The boy
+(8, dark hair) holds a ball and a slightly-too-big glove, looking up at
+Grandpa (Yankees cap, mustache) with wide, trusting eyes. Grandpa leans
+down, warm and proud — the look that says *I see you exactly as you are.*
+Long shadows, warm oranges and yellows. A small red cardinal perches on the
+fence in the background, watching quietly.
+
+> I didn't always get it right.
+>
+> Some days the ball missed my glove,
+> and the promise felt too big for me —
+> like everything else I was growing into.
+
+**Right page illustration:** Close-up on the fist bump, centered, low
+three-quarter angle. The glove slightly too big; Grandpa's hand steady and
+kind. The cardinal has moved closer — now on the back of the bench, glowing
+in the golden light.
+
+> But Grandpa stayed right there.
+>
+> He didn't fix it.
+> He didn't rush it.
+> He just stayed —
+>
+> and bumped his fist against mine,
+> soft as a promise.
+
+**Craft notes (kept from the draft):** golden-hour warmth = hope and
+safety; cardinal's red as the strongest accent; cardinal moves from
+background (left page) to foreground (right page) to show growing hope;
+left page sets up the struggle, right page resolves it; the too-big glove
+echoes the too-big cap from the name page.
+
+---
+
 ## Page 6 — Close-Up Embrace
 
 **Illustration:** The living heart of the story — the tender embrace,
