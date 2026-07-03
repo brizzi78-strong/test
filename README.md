@@ -9,10 +9,12 @@ A hybrid smart-contract project skeleton that works with **both** toolchains:
   so there is one set of dependencies for both tools.
 
 The sample contract is `CardToken` (CARD), the fixed-supply ERC-20 described in
-the token launch strategy (`TOKEN_LAUNCH_STRATEGY.md`, PR #18): the full
-250,000,000 supply is minted to the deployer at construction, and the contract
-has no owner, no mint function, and no pause/blocklist — supply can never change
-and there is no privileged role to renounce.
+the token launch strategy (`TOKEN_LAUNCH_STRATEGY.md`): the full 250,000,000
+supply is minted to the deployer at construction, with no mint function and no
+pause/blocklist — supply can never change. `Ownable` is inherited solely so
+that `renounceOwnership()` can be executed as a public, verifiable launch step
+(see `LAUNCH_DAY_CHECKLIST.md`); no function is owner-gated, so ownership
+grants no power even before it is renounced.
 
 ## Layout
 

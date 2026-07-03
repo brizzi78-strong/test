@@ -14,9 +14,24 @@ contract CardTokenTest is Test {
     }
 
     function test_Metadata() public view {
-        assertEq(token.name(), "Cardinal");
+        assertEq(token.name(), "CARD");
         assertEq(token.symbol(), "CARD");
         assertEq(token.decimals(), 18);
+    }
+
+    function test_OwnerIsDeployer() public view {
+        assertEq(token.owner(), address(this));
+    }
+
+    function test_RenounceOwnershipSetsOwnerToZero() public {
+        token.renounceOwnership();
+        assertEq(token.owner(), address(0));
+    }
+
+    function test_TransfersStillWorkAfterRenounce() public {
+        token.renounceOwnership();
+        token.transfer(alice, 1_000e18);
+        assertEq(token.balanceOf(alice), 1_000e18);
     }
 
     function test_FullSupplyMintedToDeployer() public view {

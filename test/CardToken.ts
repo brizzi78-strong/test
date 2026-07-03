@@ -23,7 +23,7 @@ describe("CardToken", async function () {
   it("has the expected metadata", async function () {
     const token = await viem.deployContract("CardToken");
 
-    assert.equal(await token.read.name(), "Cardinal");
+    assert.equal(await token.read.name(), "CARD");
     assert.equal(await token.read.symbol(), "CARD");
     assert.equal(await token.read.decimals(), 18);
   });
@@ -49,6 +49,17 @@ describe("CardToken", async function () {
       amount,
     );
     assert.equal(await token.read.totalSupply(), TOTAL_SUPPLY);
+  });
+
+  it("renounces ownership to the zero address", async function () {
+    const token = await viem.deployContract("CardToken");
+
+    await token.write.renounceOwnership();
+
+    assert.equal(
+      BigInt(await token.read.owner()),
+      0n,
+    );
   });
 
   it("reverts when transferring more than the sender's balance", async function () {
