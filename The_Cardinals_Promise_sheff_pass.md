@@ -396,7 +396,7 @@ I understand it now in a way I couldn't then. I see it in every room I walk into
 
 ## **Lou's Kids**
 
-Overnight, I had a big sister and two big brothers I had never asked for, and who had never asked for me. Lou chose us, and that choice came with a family already in place. He had three children of his own long before he ever met my mother, Lisa, Joel, and Jon. When he chose Chris and me, that was his decision to make. What his kids did was something else. They didn't have to make room for two boys from Mexico City who showed up attached to their father's new marriage. They made room anyway. They treated us like brothers.
+Overnight, I had a big sister and two big brothers I hadn't even known to hope for. Lou chose us, and that choice came with a family already in place. He had three children of his own long before he ever met my mother, Lisa, Joel, and Jon. When he chose Chris and me, that was his decision to make. What his kids did was something else. They didn't have to make room for two boys from Mexico City who showed up attached to their father's new marriage. They made room anyway. They treated us like brothers.
 
 For the first time in my life I felt like part of a whole family, on the inside of something instead of looking in from the edge. It could not have been easy for them. Lou wasn't a great father to his first three. He'd had all three by the time he was twenty-two, he worked all the time, and the dad who hit me a hundred fly balls and drove me to every match was not the dad they got growing up. They had every reason to resent the do-over. Instead they folded Chris and me in. They were older, and they were essential, as much a part of raising us as anyone.
 
