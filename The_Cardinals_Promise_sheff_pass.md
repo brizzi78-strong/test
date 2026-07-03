@@ -917,18 +917,6 @@ That's when my dad stepped in. He'd remarried years earlier, Lynda, a nurse, the
 
 The Florida license felt like a loophole I'd found in the universe. Their system didn't talk to California's, so I passed the test, smiled for the camera, and walked out with a clean one, laminated proof that I'd beaten the system. I told myself everything would be different here. But a geographic cure only works if you leave the problem behind, and my problem had a driver's license now, clean and ready to take it anywhere. One night before Dad and Lynda made it down, I went out, and I drove home drunk. At a red light I looked left, and there was a cop. I looked right. Another cop. A drunk man on a suspended license, boxed in on both sides, holding his breath at a light in a town where nobody knew him yet. The light changed. They rolled on. By the grace of God I wasn't pulled over, not that night, not ever. People in the rooms talk about the moment of clarity. That red light was mine. I didn't get sober that night, and I didn't slow down for long. But I never forgot what that box felt like. The old patterns came back like muscle memory, the late nights, the mornings that turned into afternoons, the resume I kept updating and never sent. I'd drive past Dad and Lynda's house, see him in the driveway washing his car, and think about stopping in. But that meant questions about interviews and the leads I hadn't followed, so it was easier to wave and keep driving. The jobs were gone, and Pensacola without work started to feel like a place I was hiding rather than rebuilding. So when my Aunt Nancey called and said come stay with me, I went.
 
-### *Boca Raton*
-
-Nancey lived in Boca Raton. She'd always been the one who showed up, wrestling matches, graduations, every moment that mattered. But this was the first time it was just the two of us. No Mom, no Chris, no occasion. Just me at her door with nowhere better to go.
-
-She knew my favorite foods were banana cream pie and chicken parm, so there was always whipped cream in the house and she made me banana cream pies. Not once. Regularly.
-
-Nancey didn't drink. I wasn't either, not at that point, still on medication, still not where I needed to be, but not in freefall yet. We'd get together with sober friends sometimes, not because she needed to, but because she knew I did and wasn't going to make me go alone. Most nights we just sat on the couch. That's what I remember most. We're both people who don't need to be in constant motion. We watched Dateline, Forensic Files, 20/20, for hours, laughing at the things people do, and it was the most normal I'd felt in a long time. Not performing anything. Two people who loved each other, on a couch, with nowhere to be.
-
-She knew I was in a dark place. She didn't try to fix it. Didn't ask me to explain it or show measurable improvement. She just loved me where I was and sat with me until I was ready.
-
-She helped me find work through local connections, and for a while, in her quiet orbit, I started to find my feet again.
-
 **CHAPTER 12**
 
 ## **The Cell**
@@ -1006,6 +994,18 @@ I drove back to California with pills in my system and cash in my pocket and the
 These days I don't carry anger toward Horacio. I did for a while. What I know now is that I was a broken person meeting another broken person, and neither of us had the tools to give the other what they needed. But Ensenada gave me something I didn't recognize for years: contrast.
 
 Because I had Lou. Ensenada clarified something I'd always known without being able to say it. Lou Brizzi was my father. Not because of a birth certificate. Because he chose it. Every day. Without keeping score. Horacio gave me ten thousand dollars and I spent it on pills. Lou gave me his last twenty and never told me until years later. That's the difference.
+
+### *Boca Raton*
+
+Nancey lived in Boca Raton. She'd always been the one who showed up, wrestling matches, graduations, every moment that mattered. But this was the first time it was just the two of us. No Mom, no Chris, no occasion. Just me at her door with nowhere better to go.
+
+She knew my favorite foods were banana cream pie and chicken parm, so there was always whipped cream in the house and she made me banana cream pies. Not once. Regularly.
+
+Nancey didn't drink. I wasn't either, not at that point, still on medication, still not where I needed to be, but not in freefall yet. We'd get together with sober friends sometimes, not because she needed to, but because she knew I did and wasn't going to make me go alone. Most nights we just sat on the couch. That's what I remember most. We're both people who don't need to be in constant motion. We watched Dateline, Forensic Files, 20/20, for hours, laughing at the things people do, and it was the most normal I'd felt in a long time. Not performing anything. Two people who loved each other, on a couch, with nowhere to be.
+
+She knew I was in a dark place. She didn't try to fix it. Didn't ask me to explain it or show measurable improvement. She just loved me where I was and sat with me until I was ready.
+
+She helped me find work through local connections, and for a while, in her quiet orbit, I started to find my feet again.
 
 **CHAPTER 14**
 
