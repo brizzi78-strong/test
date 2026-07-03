@@ -1,14 +1,15 @@
-|  |
-| :-: |
-| \*"I wouldn't want anyone else to be there for my patients."\*— DR. HUETA MEMOIR\*\*The Cardinal's Promise\*\*\*A Practical Guide for Families Facing\*\*Addiction, Illness, or Loss\*\*\*ROB BRIZZI\*\*CARDINAL PROMISE PRESS |
+# **THE CARDINAL'S PROMISE**
 
-  
+*A Memoir*
+
+**ROB BRIZZI**
+
+*"I wouldn't want anyone else to be there for my patients."*
+*— Dr. Huet*
+
+CARDINAL PROMISE PRESS
 
 *For anyone who has struggled with addiction or loved someone who has*
-
-*A Memoir by Rob Brizzi*
-
-  
 
 *In memory of Lou Brizzi*
 
@@ -16,117 +17,94 @@
 
 *For Hope, who tilted her head and said "We?"*
 
-  
-
 *Those we love don't go away,*
 
 *they walk beside us every day.*
 
 **CONTENTS**
 
-Prologue5
+Prologue: The Cardinal
 
-Foreword6
+Foreword
 
-Sobriety Was Not the Finish Line8
+Sobriety Was Not the Finish Line
 
-A Note to the One Who Loves an Addict10
+A Note to the One Who Loves an Addict
 
-Chapter 1: Mexico City — The Escape11
+**Part One — The Escape**
 
-Chapter 2: New Jersey: Survival16
+1. Mexico City — The Escape
+2. New Jersey: Survival
+3. The Man Who Didn't Have To
+4. Lou's Kids
+5. Claudio and Rob
+6. The Man Who Raised Me
 
-Chapter 3: The Man Who Didn't Have To19
+**Part Two — The Mat**
 
-Chapter 4: Lou's Kids22
+7. The Wrestler
+8. The Suit
+9. Lou's World
+10. Oxford
+11. MTV
 
-Chapter 5: Claudio and Rob24
+**Part Three — The Fall**
 
-Chapter 6: The Man Who Raised Me26
+12. My Brother's Keeper
+13. The Performance Trap
+14. The Cell
+15. Checking Boxes
+16. West Palm Beach
+17. New Orleans
 
-Chapter 7: The Wrestler28
+**Part Four — Getting Square**
 
-Chapter 8: The Suit37
+18. Chumuckla
+19. The Quiet Years
+20. Horacio
+21. The Line
+22. The Salmon Palace
+23. The Offer
+24. They Gave Me a Chance
+25. Getting Square
+26. Gulf Breeze
+27. The People You Meet When You Stop Drinking
 
-Chapter 9: Lou's World39
+**Part Five — Hope**
 
-Chapter 10: Oxford44
+28. Hope
+29. The Pictures Never Tell the Whole Story
+30. Blessings
+31. Sobriety Meets Hospice
 
-Chapter 11: MTV47
+**Part Six — The Last Chapter**
 
-Chapter 12: My Brother's Keeper49
+32. The Detour
+33. Five Weeks
+34. The Days After
+Who Stays. Who Goes.
+35. The First Honest Mile
+36. What Grief Taught the Job
+Tyler and Jaye
+37. The Round Table
+38. The Table
+39. The Floor
 
-Chapter 13: The Performance Trap53
+What He Didn't Owe
 
-Chapter 14: The Cell59
+Epilogue: The Cardinal's Promise
 
-Chapter 15: Checking Boxes61
+The Promise
 
-Chapter 16: West Palm Beach67
+What I'm Asking You to Do
 
-Chapter 17: New Orleans70
+Author's Note
 
-Chapter 18: Chumuckla71
+Resources
 
-Chapter 19: The Quiet Years73
+About the Author
 
-Chapter 20: Horacio75
-
-Chapter 21: The Line77
-
-Chapter 22: The Salmon Palace78
-
-Chapter 23: The Offer80
-
-Chapter 24: They Gave Me a Chance82
-
-Chapter 25: Getting Square84
-
-Chapter 26: Gulf Breeze85
-
-Chapter 27: The People You Meet When You Stop Drinking87
-
-Chapter 28: Hope90
-
-Chapter 29: The Pictures Never Tell the Whole Story98
-
-Chapter 30: Blessings101
-
-Chapter 31: Sobriety Meets Hospice102
-
-Chapter 32: The Detour104
-
-Chapter 33: Five Weeks106
-
-Chapter 34: The Days After111
-
-Who Stays. Who Goes.115
-
-Chapter 35: The First Honest Mile116
-
-Chapter 36: What Grief Taught the Job117
-
-Tyler and Jaye118
-
-Chapter 37: The Round Table119
-
-Chapter 38: The Table120
-
-Chapter 39: The Floor122
-
-What He Didn't Owe123
-
-Epilogue: The Cardinal's Promise125
-
-The Promise127
-
-What I'm Asking You to Do128
-
-Resources129
-
-About the Author131
-
-Photographs132
+Photographs
 
 # **PROLOGUE: THE CARDINAL**
 
@@ -224,6 +202,10 @@ Years later I would learn that this is also the whole of hospice. You cannot cur
 What you can do is stay. Not fix, not control, not cure. Stay. Set the boundary that keeps you whole, leave the door open a crack, and keep showing up in the ways that don't cost you your own life. That is not a small thing.
 
 So pull up a chair. Let me tell you how I know. It begins in a country I haven't seen since I was four years old.
+
+PART ONE
+
+# **THE ESCAPE**
 
 **CHAPTER 1**
 
@@ -497,11 +479,15 @@ I broke down in front of him once. I don't remember anymore what had pushed me t
 
 "I love you as much as I love my own kids."
 
-For as long as I could remember I'd carried a quiet question, whether I was really his, whether being chosen was the same as belonging. He answered it in one sentence. As much as his own. He didn't soften it. He held my eyes until I believed it. And I did.
+For as long as I could remember I'd carried a quiet question, whether I was really his, whether being chosen was the same as belonging. He answered it in one sentence. As much as his own. He didn't soften it. And I believed it.
 
 It took me years to see what he had handed me. I make my living showing up. I walk into rooms other people can't bring themselves to enter, and I stay. I don't always know what to say. But I know how to be there, and I learned it from a man who drove me up to tournaments in upstate New York, and an hour out of his way for White Castle because I asked. Everything I do at a bedside, I first learned in his car.
 
 He taught me to show up. Then he spent his whole life showing me how.
+
+PART TWO
+
+# **THE MAT**
 
 **CHAPTER 7**
 
@@ -806,6 +792,10 @@ They don't make men like him anymore. If he was in pain he wouldn't use the word
 
 Miami changed my life, and the man who made it possible was sharing a rental in Mahwah, paying back loans for years, never once making the cost feel like something I owed him. I graduated in May 2000, Lou and my mom in the crowd, tracking the sea of identical caps until they found mine. The car was pointed west. California was waiting. I had everything I needed and no idea what I was carrying.
 
+PART THREE
+
+# **THE FALL**
+
 **CHAPTER 12**
 
 ## **My Brother's Keeper**
@@ -1098,6 +1088,10 @@ I tried to brush it off. Tried to change the subject. But she saw it. I think th
 
 It was a few weeks before everything came to a head. Before Chris called. Before my dad drove me out to a farmhouse in the panhandle and signed the paperwork himself.
 
+PART FOUR
+
+# **GETTING SQUARE**
+
 **CHAPTER 18**
 
 ## **Chumuckla**
@@ -1175,7 +1169,7 @@ Mostly we talked about sports. That was the easy ground between us. He loved bas
 
 For a couple of months it was easy. Two men on the phone, talking about games.
 
-Then one call, it turned. He told me he had never moved on after my mother left. He never remarried. There were no other kids, no second family, no one after us. He said he was still in love with her, all these years later.
+Then one call, it turned. He told me he had never moved on after my mother left. He said he was still in love with her, all these years later.
 
 I sat with that. In a way, I felt sorry for him. I couldn't imagine what it must have done to him to lose his children and the woman he loved in the same leaving, and then to just stay there, in that spot, for the rest of his life. I had built a whole life since Mexico. He had stayed where we left him.
 
@@ -1204,7 +1198,7 @@ By late 2010 I was restless in a way I couldn't name. Sober, working, going to m
 
 That scared me. I drove to see Lou. He didn't ask why I'd come; he rarely did. He listened while I talked in circles, opportunity, timing, readiness, fear. Eventually the truth slipped out. I still want to drink, I said. The words just hung there. Accurate.
 
-He didn't react the way I expected. No anger, no lecture, no disappointment. He looked at me the way he had when I was losing badly on a mat and he was deciding whether I could recover. Then he said it. Rob, if you relapse, I'm going to have to wash my hands of you. No emotion, no threat, just a boundary. It landed harder than any consequence I'd faced, not because it was cruel but because it was clean. He'd done what he could do, and he wasn't going to stand by and watch me die slowly while pretending that watching helped.
+He didn't react the way I expected. No anger, no lecture, no disappointment. He looked at me the way he had when I was losing badly on a mat and he was deciding whether I could recover. Then he said it. Just a boundary. It landed harder than any consequence I'd faced, not because it was cruel but because it was clean. He'd done what he could do, and he wasn't going to stand by and watch me die slowly while pretending that watching helped.
 
 I left shaken. That line forced a choice I couldn't hand off. Go back to that world too soon and I wouldn't be returning, I'd be relapsing with a resume. I didn't take the job. It didn't feel brave. It felt like trusting that staying alive mattered more than looking successful. For the first time I chose sobriety over momentum.
 
@@ -1280,7 +1274,7 @@ $113,000. That was the number when I finally added it up in ink on a yellow lega
 
 I got stuck on the amends step. Not in theory. In the concrete requirement to account for everything, without narrative, without softening. One night after a meeting Mager slid a yellow legal pad across the table. Write it down, he said. I knew what he meant.
 
-Money had never been something I related to honestly. It had been a scorecard. This was about what it had cost. I started listing. Credit cards, multiple, run up over years of buying the appearance of success with borrowed money. Medical bills. Legal fees. Collections accounts I hadn't looked at directly in months. Each line in ink. No rounding. When I finished I added it up slowly. $113,000. I waited for the spiral. It didn't come. What came was clarity. The real number doesn't move. It just sits there, and because it sits there, you can work with it.
+Money had never been something I related to honestly. It had been a scorecard. This was about what it had cost. I started listing. Credit cards, multiple, run up over years of buying the appearance of success with borrowed money. Medical bills. Legal fees. Collections accounts I hadn't looked at directly in months. When I finished I added it up slowly. $113,000. I waited for the spiral. It didn't come. What came was clarity. The real number doesn't move. It just sits there, and because it sits there, you can work with it.
 
 Mager looked at the pad. Didn't soften it, didn't minimize it. Okay, he said. Now we know. We kept it basic: use the money you actually have, pay what you can, don't borrow, don't hide, open the envelopes, answer the calls, always know where you stand. At one point I reached for the future. Once I make more. Mager stopped me. Use the money you actually have. That's how trust gets rebuilt.
 
@@ -1345,6 +1339,10 @@ We got to know each other well. He was at Jason's Deli making maybe ten dollars 
 He became a salesman at Honda, and then the best they'd ever seen. The guy who'd been homeless, who couldn't write, who made ten dollars an hour at a deli, started making three hundred thousand a year. Went back and got his GED. Met Rebecca, an amazing woman. Reconnected with his daughter Aubrey. Had a son, Xander. We all started going to church together, Matt, Rebecca, the kids, Mager, me, a whole crew whose lives had been rebuilt from wreckage, sitting in a pew on Sunday like the most normal thing in the world. And Matt didn't stop. He'd always had a dream of acting. He got an acting coach, went to auditions, never gave it up. Things started happening. He connected with people in the industry, got to know actors like Jeremy London. The guy who'd been homeless a few years earlier now has a Hollywood actor sleeping in his guest room. Matt became a producer. When I told him about this book he connected me with a guy he works with out in Hollywood, and they both decided they wanted to be part of it, documentary, trailer, eventually maybe a movie. I talked to Matt's friend on the phone. He listened to the story the same way I'm telling it to you, and when I was done he said: There's nobody else. Nobody who could play you. Nobody else is going to share the conviction you have for your own story. You're going to play yourself. I'm still sitting with that one.
 
 I started sober thinking mediocrity was the ceiling. Then I met Andy, Bob, Mager, and Matt. These are the people you meet when you stop drinking. Not the ones you expected, the ones God put in front of you. I thought I was too far gone for any of it. So did they, once. They walked into the room anyway, and so did I, and that turned out to be the whole thing. The best one was still ahead of me, and she didn't come from a meeting at all.
+
+PART FIVE
+
+# **HOPE**
 
 **CHAPTER 28**
 
@@ -1502,6 +1500,10 @@ Around that same stretch the recognition I'd chased my whole life finally showed
 
 I talked to Lou about Bob one evening. I don't know why this is hitting me so hard, I said. I did everything right. He didn't hesitate. That's not why it's bothering you. He was right. Bob hadn't needed me to fix anything. He'd needed me in the room. I was being let into places where presence was the only thing left to offer, and something in me already knew how to do that. Not as a technique. As a practice. An old man dying sober at eighty-one showed me that the most you can do at that edge is refuse to leave. Years later, that became the whole job.
 
+PART SIX
+
+# **THE LAST CHAPTER**
+
 **CHAPTER 32**
 
 ## **The Detour**
@@ -1517,7 +1519,7 @@ They called him Diabetes Dave in Panama City. Not behind his back. To his face. 
 
 I needed that more than I let on. For ten years I'd been the top guy in home health, the one people called, and I'd walked into Novo Nordisk a nobody in an industry I didn't understand, starting over at the bottom of the learning curve in my forties. That's a quiet humbling, going from the name everybody knows to the new guy who doesn't know Type 1 from Type 2. Dave never let me feel it alone. He sat with me, walked me through what I didn't know, and made sure I always had somebody in my corner. I'm not sure I'd have made that jump without him.
 
-About a year in, Dave lost his son Garrett. He was twenty-one, working at a pizza shop, and he was riding his bike home through the neighborhood when a car struck him. He didn't make it. People came from all over the company for the funeral, just to be there for Dave. He wasn't out of work a month before he came back. I've never seen someone with as much faith. Coming back at all would have been enough. He did more. He was a rock for the rest of the team.
+About a year in, Dave lost his son Garrett. He was twenty-one, working at a pizza shop, and he was riding his bike home through the neighborhood when a car struck him. He didn't make it. People came from all over the company for the funeral, just to be there for Dave. I've never seen someone with as much faith. Coming back at all would have been enough. He did more.
 
 About two years in we had a national sales convention in Las Vegas. Dave and I had a routine when we traveled, breakfast, a little prayer, a mini Bible study, talk. One morning he started talking about Garrett. He said, sometimes I wonder. I know he was in the church. I know he had a relationship with Christ. But I worried about whether he was saved. And then he said, one day a bird landed. His son's favorite bird. And he knew. It was a sign. Garrett was okay. Later that trip, while most of the team was out doing whatever people do in Vegas, Dave and I went to the Bellagio, played a couple of slot machines, then got ice cream. I got cookie dough, and opened up. I told him about the DUIs, about Mexico, about the path I'd traveled. He shared some of his, and I'll keep that between us. We prayed right there, ice cream melting in the cups, slot machines going off in the distance.
 
@@ -1556,7 +1558,7 @@ I wasn't there for the very end. By the time it came, there were tubes in Melvin
 
 ### *Five Weeks*
 
-My father started declining about five weeks after I started the job. It wasn't dramatic at first, less energy in his voice on the phone, conversations that used to run long wrapping up faster, with less of the texture that made them his. I knew how to read it. I'd just spent five weeks learning to read exactly this. I was walking into strangers' homes explaining what hospice was and wasn't, and the whole time my own father was crossing the same line I'd been describing to families all week. I didn't tell them my dad was dying too. I didn't need to.
+The decline wasn't dramatic at first, less energy in his voice on the phone, conversations that used to run long wrapping up faster, with less of the texture that made them his. I knew how to read it. I'd just spent five weeks learning to read exactly this. I was walking into strangers' homes explaining what hospice was and wasn't, and the whole time my own father was crossing the same line I'd been describing to families all week. I didn't tell them my dad was dying too. I didn't need to.
 
 ### *We Said Everything*
 
