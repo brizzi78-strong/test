@@ -1173,7 +1173,7 @@ I was twenty-six the next time I saw him, in person. I was in active addiction m
 
 What I couldn't do was become the son he wanted. He was looking for a relationship I didn't have in me to give. It took me years to understand that those were two different things, that you can forgive a man completely and still not be able to hand him your life.
 
-In 2015 I reached for him again. I called him Horacio. We talked every week for a couple of months.
+In 2015 I reached for him again. I was thirty-six and sober, and part of the reaching was amends, my side of the street, the years of anger, the silence. I made them. I called him Horacio. We talked every week for a couple of months.
 
 He didn't have a phone that could reach the States. So every Wednesday he would go out to a place that had a VoIP line, and at seven o'clock my phone would ring. He had to leave his home just to hear my voice.
 
