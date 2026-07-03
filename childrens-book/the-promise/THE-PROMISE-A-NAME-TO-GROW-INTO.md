@@ -182,8 +182,9 @@ what to tell them.
 
 > *The family now: the narrator with his hand open toward the reader — the
 > same gesture his father used in the hallway on page 1 — his father beside
-> him in the green plaid, and his wife holding their little dog in a red
-> sweater. The red shirt, passed on to the smallest member of the family.*
+> him in the green plaid, and his wife, her shirt reading FREEDOM, holding
+> their little dog in a red sweater. The red shirt, passed on to the
+> smallest member of the family.*
 
 ---
 
@@ -238,9 +239,9 @@ and staying.*
   - The father's shirt in the page 4 bleachers art reads "Ramsey" — the
     family name is **Brizzi**. Regenerate the image with "Brizzi" stitched
     on the shirt (or retouch the lettering).
-  - The woman's t-shirt in the page 9 family portrait reads "FREEDO" — a
-    generation artifact. Regenerate or retouch it (plain shirt, or the
-    intended word) at print resolution.
+  - The woman's t-shirt in the page 9 family portrait is meant to read
+    **"FREEDOM"** — the generation clipped it to "FREEDO". Regenerate or
+    retouch so the full word shows at print resolution.
 - **Visual rhyme to preserve:** the narrator's open hand on page 9 repeats
   the father's open hand on page 1 — the picking gesture, passed on. Any
   regeneration of either page should keep it.
