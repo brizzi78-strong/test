@@ -1,6 +1,6 @@
 # **THE CARDINAL'S PROMISE**
 
-*A Memoir*
+*A Memoir of the Father Who Stayed*
 
 **ROB BRIZZI**
 
@@ -56,65 +56,58 @@ A Note to the One Who Loves an Addict
 1. Mexico City — The Escape
 2. New Jersey: Survival
 3. The Man Who Didn't Have To
-4. Lou's Kids
-5. Claudio and Rob
-6. The Man Who Raised Me
+4. Chosen
+5. The Man Who Raised Me
 
 **Part Two — The Mat**
 
-7. The Wrestler
-8. The Suit
-9. Lou's World
-10. Oxford
-11. MTV
+6. The Wrestler
+7. The Suit
+8. Oxford
+9. MTV
 
 **Part Three — The Fall**
 
-12. My Brother's Keeper
-13. The Performance Trap
-14. The Cell
-15. Checking Boxes
-16. West Palm Beach
-17. New Orleans
+10. My Brother's Keeper
+11. The Performance Trap
+12. The Cell
+13. Checking Boxes
+14. West Palm Beach
+15. New Orleans
 
 **Part Four — Getting Square**
 
-18. Chumuckla
-19. The Quiet Years
-20. Horacio
-21. The Line
-22. The Salmon Palace
-23. The Offer
-24. They Gave Me a Chance
-25. Making Amends
-26. Gulf Breeze
-27. The People You Meet When You Stop Drinking
+16. Chumuckla
+17. The Quiet Years
+18. Horacio
+19. The Line
+20. The Salmon Palace
+21. The Offer
+22. They Gave Me a Chance
+23. Making Amends
+24. Gulf Breeze
+25. The People You Meet When You Stop Drinking
 
 **Part Five — Hope**
 
-28. Hope
-29. The Pictures Never Tell the Whole Story
-30. Blessings
-31. Sobriety Meets Hospice
+26. Hope
+27. Sobriety Meets Hospice
 
 **Part Six — The Last Chapter**
 
-32. The Detour
-33. Five Weeks
-34. The Days After
-Who Stays. Who Goes.
-35. The First Honest Mile
-36. What Grief Taught the Job
+28. The Detour
+29. Five Weeks
+30. The Days After
+31. The First Honest Mile
+32. What Grief Taught the Job
 Tyler and Jaye
-37. The Round Table
-38. The Table
-39. The Floor
+33. The Round Table
+34. The Table
+35. The Floor
 
 What He Didn't Owe
 
 Epilogue: The Cardinal's Promise
-
-The Promise
 
 What I'm Asking You to Do
 

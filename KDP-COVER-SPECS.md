@@ -26,6 +26,9 @@ Notes for the designer:
   zone clear or upload your own ISBN barcode.
 - The front panel is the existing navy/cardinal art. Back panel: navy continued,
   copy below, cardinal branch motif optional.
+- SUBTITLE CHANGE (designer task): the cover currently reads "A Practical Guide for
+  Families Facing Addiction, Illness, or Loss." Replace with the memoir-forward
+  subtitle: "A Memoir of the Father Who Stayed" (matches the interior title page).
 
 ## Draft back-cover copy (~170 words)
 
