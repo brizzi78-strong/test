@@ -241,7 +241,7 @@ Rosa María and Armando lived next door. A clothesline ran between our balconies
 
 My mother taught English at a little preschool called Cascabelito. Little Bells. Because she worked there, I got to go for free. In the afternoons she'd put on music and dance around the kitchen while making tacos, rice, and beans. She would scoop my little brother, Chris, up on her hip and sing along to "The Locomotion," and I'd dance right next to her because she was happy. That was all the reason I needed.
 
-Her name was Becky. She was twenty-seven, a blonde girl from Cedar Grove, New Jersey, the oldest of three sisters, daughters of Bob and Jan Pontier. Somehow she had ended up building a new life in the middle of Mexico City. She had followed a man there for love, but she was also running from something else. I didn't understand either of those things back then.
+Her name was Becky. She was twenty-seven, a blonde girl from Cedar Grove, New Jersey, the oldest of three sisters, daughters of Bob and Jan Pontier. Somehow she had ended up building a new life in the middle of Mexico City. She had followed a man there for love. I didn't understand that kind of love back then.
 
 Kids don't know what their parents are surviving. They just know the shape of the rooms, the smell of dinner, the music playing in the kitchen, and the hand reaching down to hold theirs.
 
