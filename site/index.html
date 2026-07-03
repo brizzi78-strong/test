@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Cardinal's Toolkit — A calm guide through the aging-parent years</title>
+<meta name="description" content="A warm, step-by-step companion for families caring for an aging parent.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#faf6ef; --surface:#fff; --ink:#1b2438; --muted:#5c6478;
+    --red:#c0392b; --red-deep:#9c2a1e; --gold:#c5a052; --line:rgba(27,36,56,.10);
+    --shadow:0 1px 2px rgba(27,36,56,.05), 0 20px 50px -30px rgba(27,36,56,.35);
+    --maxw:960px; --pad:clamp(72px,10vw,120px);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:80px}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{font-family:"Inter",system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3{font-family:"Fraunces",Georgia,serif;line-height:1.08;letter-spacing:-.02em;font-weight:600}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,5vw,32px)}
+  section{padding:var(--pad) 0}
+  .eyebrow{font-size:.78rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--red);margin-bottom:14px}
+
+  /* buttons */
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:.98rem;padding:13px 24px;border-radius:999px;border:1px solid transparent;cursor:pointer;text-decoration:none;transition:transform .25s,background .25s,box-shadow .25s}
+  .btn-primary{background:var(--red);color:#fff;box-shadow:0 10px 24px -12px rgba(192,57,43,.6)}
+  .btn-primary:hover{background:var(--red-deep);transform:translateY(-2px)}
+  .btn-sm{padding:10px 18px;font-size:.9rem}
+
+  /* nav */
+  header.nav{position:sticky;top:0;z-index:50;height:64px;background:rgba(250,246,239,.82);backdrop-filter:saturate(140%) blur(12px);-webkit-backdrop-filter:saturate(140%) blur(12px);border-bottom:1px solid var(--line)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:100%}
+  .brand{display:flex;align-items:center;gap:9px;font-family:"Fraunces",serif;font-weight:600;font-size:1.08rem;color:var(--ink);text-decoration:none}
+
+  /* hero */
+  .hero{position:relative;padding:clamp(84px,12vw,140px) 0;text-align:center;overflow:hidden}
+  .hero .glow{position:absolute;inset:0;z-index:0;pointer-events:none}
+  .hero .glow::before,.hero .glow::after{content:"";position:absolute;border-radius:50%;filter:blur(80px);opacity:.5}
+  .hero .glow::before{width:44vw;height:44vw;background:#e8b4ac;top:-14vw;left:-6vw}
+  .hero .glow::after{width:38vw;height:38vw;background:#f0d9a8;top:-8vw;right:-6vw}
+  .hero-inner{position:relative;z-index:1;max-width:720px;margin:0 auto}
+  .hero .eyebrow{display:inline-flex;align-items:center;gap:8px}
+  .hero h1{font-size:clamp(2.6rem,6.5vw,4.2rem)}
+  .hero h1 em{font-style:italic;color:var(--red);font-weight:500}
+  .hero p{margin:22px auto 0;font-size:1.18rem;color:#3c4456;max-width:52ch}
+  .hero .btn{margin-top:32px}
+
+  /* benefits */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.4vw,26px)}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:clamp(24px,3vw,32px);text-align:center;transition:transform .3s,box-shadow .3s}
+  .card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+  .card .ico{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:rgba(192,57,43,.09);color:var(--red);margin:0 auto 20px}
+  .card h3{font-size:1.3rem;margin-bottom:10px}
+  .card p{color:var(--muted);font-size:1rem}
+
+  /* quote */
+  .quote{text-align:center}
+  .quote .stars{color:var(--gold);letter-spacing:3px;margin-bottom:18px}
+  .quote blockquote{font-family:"Fraunces",serif;font-size:clamp(1.5rem,3.4vw,2.1rem);font-weight:500;line-height:1.35;max-width:20ch;margin:0 auto;max-width:640px}
+  .quote .who{margin-top:22px;color:var(--muted);font-size:.98rem}
+
+  /* contact */
+  .contact .card-lg{background:var(--ink);color:#f3eee4;border-radius:24px;padding:clamp(32px,5vw,56px);text-align:center;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+  .contact .bird{position:absolute;top:-24px;right:-16px;opacity:.12}
+  .contact .eyebrow{color:#e9b9b0}
+  .contact h2{font-size:clamp(1.9rem,4vw,2.6rem);color:#fff;position:relative}
+  .contact p{color:#c9c2b4;margin-top:14px;position:relative}
+  form{position:relative;z-index:1;margin:28px auto 0;max-width:440px;display:flex;flex-direction:column;gap:14px}
+  form .row{display:flex;gap:12px}
+  form input{flex:1;padding:13px 16px;border-radius:10px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.96);color:var(--ink);font-family:"Inter",sans-serif;font-size:.96rem}
+  form input:focus{outline:2px solid var(--red);outline-offset:1px}
+  form .btn-primary{justify-content:center}
+  .form-note{font-size:.8rem;color:#a8a193;margin-top:4px}
+  .form-ok{display:none;position:relative;z-index:1;margin-top:20px;font-family:"Fraunces",serif;font-size:1.3rem;color:#fff}
+  @media (max-width:760px){.grid{grid-template-columns:1fr}form .row{flex-direction:column}}
+
+  footer.site{padding:48px 0;text-align:center;color:var(--muted);font-size:.9rem}
+  footer.site .brand{justify-content:center;margin-bottom:12px}
+
+  .reveal{opacity:1;transform:none}
+  .js .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+  .js .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body id="top">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="cardinal" viewBox="0 0 48 48"><path fill="currentColor" d="M37 11c-3-1-5.5 0-7.3 1.5.9-2.9.4-5.8-2-7.7-.6 2.4-2.4 3.9-4.4 5.3-3.4 2.4-5.8 5.3-6.3 9.6-3.4.5-6.3 2.4-8.2 5.3-1.4 2.4-1.9 5.3-1.4 8.2 1.4-1.4 3.4-2.4 5.3-2.9-1.4 1.9-1.9 4.3-1.4 6.7 1.9-1.4 3.4-3.4 3.9-5.8.5 3.4 2.4 6.3 5.3 8.2.5-2.9 0-5.8-1.4-8.2 2.9 1.4 6.3 1.4 9.2 0 4.3-1.9 7.2-6.3 7.7-11 .5-4.3-.5-8.6-3.4-12 1.9-.5 3.9-.5 5.8.5.5-2.4 0-4.8-1.4-7.2z"/></symbol>
+</svg>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="brand"><svg width="24" height="24" style="color:var(--red)"><use href="#cardinal"/></svg> The Cardinal&rsquo;s Toolkit</a>
+    <a href="#get" class="btn btn-primary btn-sm">Get the Toolkit</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="glow" aria-hidden="true"></div>
+    <div class="wrap hero-inner reveal">
+      <div class="eyebrow"><svg width="16" height="16" style="color:var(--red)"><use href="#cardinal"/></svg> A story about love that stays</div>
+      <h1>Care for your aging parent with a steady hand &mdash; and a <em>full heart</em>.</h1>
+      <p>A warm, step-by-step companion through caregiving, hospice, and the conversations that matter most.</p>
+      <a href="#get" class="btn btn-primary">Get the Toolkit</a>
+    </div>
+  </section>
+
+  <section id="why">
+    <div class="wrap">
+      <div class="grid">
+        <div class="card reveal">
+          <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z" stroke-linejoin="round"/></svg></div>
+          <h3>Know the next step</h3>
+          <p>Clear checklists meet you at every stage &mdash; so you&rsquo;re never staring into the unknown.</p>
+        </div>
+        <div class="card reveal">
+          <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 8.6a5 5 0 0 0-7.1-7L12 3.3l-1.7-1.7a5 5 0 0 0-7.1 7L12 19l8.8-10.4z" stroke-linejoin="round"/></svg></div>
+          <h3>Carry it together</h3>
+          <p>Keep documents and decisions in one shared place &mdash; so the weight isn&rsquo;t all on you.</p>
+        </div>
+        <div class="card reveal">
+          <div class="ico"><svg width="26" height="26"><use href="#cardinal"/></svg></div>
+          <h3>Be present</h3>
+          <p>Less paperwork, more presence. That&rsquo;s the promise the cardinal keeps.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote">
+    <div class="wrap reveal">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <blockquote>&ldquo;It turned the worst week of our lives into something we could actually carry.&rdquo;</blockquote>
+      <div class="who">&mdash; Maria L., daughter &amp; caregiver</div>
+    </div>
+  </section>
+
+  <section id="get" class="contact">
+    <div class="wrap">
+      <div class="card-lg reveal">
+        <svg class="bird" width="180" height="180"><use href="#cardinal"/></svg>
+        <div class="eyebrow">Get the Toolkit</div>
+        <h2>Start with a calmer next step.</h2>
+        <p>Leave your details and we&rsquo;ll follow up with formats and pricing &mdash; no pressure, ever.</p>
+        <form id="getForm" novalidate>
+          <div class="row">
+            <input id="name" name="name" type="text" placeholder="Your name" required aria-label="Your name">
+            <input id="email" name="email" type="email" placeholder="you@example.com" required aria-label="Email">
+          </div>
+          <button type="submit" class="btn btn-primary">Send my request</button>
+          <p class="form-note">Demo form &mdash; connect it to your email or form service to go live.</p>
+        </form>
+        <div class="form-ok" id="formOk">Thank you &mdash; the cardinal&rsquo;s on its way. &#128144;</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <a href="#top" class="brand"><svg width="22" height="22" style="color:var(--red)"><use href="#cardinal"/></svg> The Cardinal&rsquo;s Toolkit</a>
+    <p>A story about love that stays. &copy; 2026 Rob Brizzi.</p>
+  </div>
+</footer>
+
+<script>
+  document.documentElement.classList.add('js');
+  (function(){
+    var els=document.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(e){io.observe(e)});
+  })();
+  var f=document.getElementById('getForm');
+  if(f){f.addEventListener('submit',function(e){e.preventDefault();if(!f.checkValidity()){f.reportValidity();return;}f.style.display='none';document.getElementById('formOk').style.display='block';});}
+</script>
+</body>
+</html>
