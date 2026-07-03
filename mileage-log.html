@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mileage Log — Blue Ridge Financial Coaching LLC</title>
+<style>
+  :root{
+    --bg:#0b1220; --card:#152037; --line:#243352; --ink:#e7ecf5; --muted:#93a1bd;
+    --gold:#d4a13c; --gold-soft:#e5c37e; --green:#34d399; --red:#f87171; --navy-deep:#0a0f1c;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);background:var(--bg);line-height:1.5}
+  .wrap{max-width:980px;margin:0 auto;padding:0 18px 60px}
+  header{background:linear-gradient(150deg,#0a0f1c,#1b2b4d);padding:26px 0 20px;
+    border-bottom:3px solid var(--gold);margin-bottom:20px}
+  header h1{margin:0;font-size:22px;color:var(--gold-soft)}
+  header .sub{font-size:13px;color:var(--muted);margin-top:3px}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:16px 0}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 14px}
+  .stat .n{font-size:21px;font-weight:700}
+  .stat .l{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+  .stat .n.ok{color:var(--green)} .stat .n.bad{color:var(--red)} .stat .n.gold{color:var(--gold-soft)}
+  .banner{border-radius:10px;padding:9px 14px;font-size:13.5px;margin:10px 0;border:1px solid}
+  .banner.ok{background:#0d2b22;border-color:#1d4d3c;color:#a7f3d0}
+  .banner.bad{background:#331414;border-color:#5c2222;color:#fecaca}
+  form{background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:14px 16px;display:grid;gap:10px;grid-template-columns:repeat(6,1fr);align-items:end}
+  @media(max-width:820px){form{grid-template-columns:repeat(2,1fr)}}
+  label{display:grid;gap:3px;font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+  input,select{padding:8px 9px;border:1px solid var(--line);border-radius:7px;font-size:14px;
+    background:var(--navy-deep);color:var(--ink)}
+  input:focus,select:focus{outline:2px solid var(--gold);outline-offset:-1px}
+  .btn{background:var(--gold);color:var(--navy-deep);border:none;border-radius:8px;
+    padding:10px 16px;font-size:14px;font-weight:700;cursor:pointer}
+  .btn:hover{background:var(--gold-soft)}
+  .btn.ghost{background:transparent;color:var(--gold-soft);border:1px solid var(--gold)}
+  .toolbar{display:flex;gap:8px;margin:16px 0 8px;flex-wrap:wrap;align-items:center}
+  .toolbar .spacer{flex:1}
+  table{width:100%;border-collapse:collapse;font-size:13.5px;background:var(--card);
+    border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  th,td{padding:8px 10px;text-align:left;border-top:1px solid var(--line)}
+  thead th{background:#1b2b4d;color:var(--gold-soft);border-top:none;font-size:11px;
+    text-transform:uppercase;letter-spacing:.05em}
+  .num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .pill{font-size:10.5px;padding:2px 8px;border-radius:999px;font-weight:700}
+  .pill.b{background:#0d2b22;color:#a7f3d0} .pill.p{background:#3a2a10;color:var(--gold-soft)}
+  .del{background:none;border:none;color:var(--muted);cursor:pointer;font-size:14px}
+  .del:hover{color:var(--red)}
+  .empty{color:var(--muted);text-align:center;padding:26px;border:1px dashed var(--line);
+    border-radius:10px;margin-top:8px;font-size:14px}
+  .note{font-size:12px;color:var(--muted);margin-top:14px}
+  @media print{
+    body{background:#fff;color:#12203c}
+    header{background:#12203c!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .stat,form,table{background:#fff;border-color:#c9d4e8;color:#12203c}
+    thead th{background:#eef2fa;color:#7a5a10}
+    input,select{background:#fff;color:#12203c}
+    form,.toolbar,.del-col{display:none}
+    .stat .l,.note{color:#5b6b8c}
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap" style="padding-bottom:0">
+    <h1>🚗 Mileage Log — Tesla Model Y</h1>
+    <div class="sub">Blue Ridge Financial Coaching LLC d/b/a The Cardinal's Promise ·
+    contemporaneous business-use record · actual-expense method (66% target, must stay &gt;50%)</div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div id="banner"></div>
+
+  <div class="stats">
+    <div class="stat"><div class="n gold" id="s-bmiles">0</div><div class="l">Business miles (YTD)</div></div>
+    <div class="stat"><div class="n" id="s-pmiles">0</div><div class="l">Personal miles (YTD)</div></div>
+    <div class="stat"><div class="n" id="s-pct">—</div><div class="l">Business use %</div></div>
+    <div class="stat"><div class="n gold" id="s-trips">0</div><div class="l">Trips logged</div></div>
+  </div>
+
+  <form id="f">
+    <label>Date <input type="date" id="f-date" required></label>
+    <label>From → To <input id="f-route" placeholder="Home → St. Mark's, Cary" required></label>
+    <label>Purpose <input id="f-purpose" placeholder="Grief talk / client / printer run" required></label>
+    <label>Miles <input type="number" id="f-miles" min="0.1" step="0.1" placeholder="24.6" required></label>
+    <label>Type
+      <select id="f-type"><option value="B">Business</option><option value="P">Personal</option></select>
+    </label>
+    <button class="btn" type="submit">Log trip</button>
+  </form>
+
+  <div class="toolbar">
+    <button class="btn ghost" id="export">Export CSV (for the CPA)</button>
+    <button class="btn ghost" onclick="window.print()">Print</button>
+    <span class="spacer"></span>
+    <span class="note" id="storage-note"></span>
+  </div>
+
+  <div id="list"></div>
+
+  <p class="note">Why this exists: depreciation was taken in year 1, so this vehicle is on the
+  actual-expense method permanently. The log substantiates the business-use percentage —
+  if business use drops to 50% or below in any year of the recovery period, accelerated
+  depreciation (including year-1 bonus) recaptures as income. Log every trip, both kinds;
+  the personal miles are what make the business percentage credible. Data stays in this
+  browser (localStorage) — export a CSV backup monthly.</p>
+</div>
+
+<script>
+(function(){
+  const KEY="brizzi-mileage-log-v1";
+  const load=()=>{try{return JSON.parse(localStorage.getItem(KEY))||[]}catch(e){return[]}};
+  const save=t=>localStorage.setItem(KEY,JSON.stringify(t));
+  let trips=load();
+
+  const $=id=>document.getElementById(id);
+  const fmt=n=>n.toLocaleString(undefined,{maximumFractionDigits:1});
+
+  function render(){
+    const yr=new Date().getFullYear();
+    const ytd=trips.filter(t=>t.date.startsWith(String(yr)));
+    const b=ytd.filter(t=>t.type==="B").reduce((s,t)=>s+t.miles,0);
+    const p=ytd.filter(t=>t.type==="P").reduce((s,t)=>s+t.miles,0);
+    const pct=(b+p)>0?100*b/(b+p):null;
+    $("s-bmiles").textContent=fmt(b);
+    $("s-pmiles").textContent=fmt(p);
+    $("s-trips").textContent=trips.length;
+    const pctEl=$("s-pct");
+    pctEl.textContent=pct===null?"—":pct.toFixed(1)+"%";
+    pctEl.className="n "+(pct===null?"":(pct>50?"ok":"bad"));
+    const banner=$("banner");
+    if(pct!==null&&(b+p)>=100){
+      banner.innerHTML=pct>50
+        ?'<div class="banner ok">✓ Business use is above the 50% recapture line'+(pct<60?' — but the margin is thin; watch it.':'.')+'</div>'
+        :'<div class="banner bad">⚠ Business use is AT/BELOW 50% — if the year ends here, year-1 accelerated depreciation recaptures as income. Log business trips or talk to the CPA.</div>';
+    } else banner.innerHTML="";
+
+    const sorted=[...trips].sort((a,b2)=>b2.date.localeCompare(a.date)||b2.id-a.id);
+    $("list").innerHTML=sorted.length===0
+      ?'<div class="empty">No trips yet. The first drive to a talk is a ~$25 deduction waiting to be logged.</div>'
+      :'<table><thead><tr><th>Date</th><th>From → To</th><th>Purpose</th><th class="num">Miles</th><th>Type</th><th class="del-col"></th></tr></thead><tbody>'
+       +sorted.map(t=>`<tr><td>${t.date}</td><td>${esc(t.route)}</td><td>${esc(t.purpose)}</td>
+         <td class="num">${fmt(t.miles)}</td>
+         <td><span class="pill ${t.type==="B"?"b":"p"}">${t.type==="B"?"BUSINESS":"personal"}</span></td>
+         <td class="del-col"><button class="del" data-id="${t.id}" title="delete">✕</button></td></tr>`).join("")
+       +'</tbody></table>';
+    $("storage-note").textContent=trips.length?`${trips.length} trips stored locally`:"";
+  }
+  function esc(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
+
+  $("f").addEventListener("submit",e=>{
+    e.preventDefault();
+    trips.push({id:Date.now(),date:$("f-date").value,route:$("f-route").value.trim(),
+      purpose:$("f-purpose").value.trim(),miles:parseFloat($("f-miles").value),type:$("f-type").value});
+    save(trips);
+    $("f-route").value=$("f-purpose").value=$("f-miles").value="";
+    render();
+  });
+  document.addEventListener("click",e=>{
+    if(e.target.matches(".del")){
+      if(confirm("Delete this trip?")){
+        trips=trips.filter(t=>t.id!==Number(e.target.dataset.id));
+        save(trips);render();
+      }
+    }
+  });
+  $("export").addEventListener("click",()=>{
+    const rows=[["Date","From-To","Purpose","Miles","Type"]]
+      .concat([...trips].sort((a,b)=>a.date.localeCompare(b.date))
+      .map(t=>[t.date,t.route,t.purpose,t.miles,t.type==="B"?"Business":"Personal"]));
+    const csv=rows.map(r=>r.map(c=>`"${String(c).replace(/"/g,'""')}"`).join(",")).join("\n");
+    const a=document.createElement("a");
+    a.href=URL.createObjectURL(new Blob([csv],{type:"text/csv"}));
+    a.download="mileage-log-"+new Date().toISOString().slice(0,10)+".csv";
+    a.click();
+  });
+  $("f-date").value=new Date().toISOString().slice(0,10);
+  render();
+})();
+</script>
+</body>
+</html>

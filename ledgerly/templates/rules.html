@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Auto-sort · Ledgerly{% endblock %}
+{% block content %}
+<h1>Auto-sort rules</h1>
+<p class="muted">When a transaction's description contains one of these words, it gets
+sorted into that category automatically — on import and when you add by hand.
+The most specific (longest) match wins.</p>
+
+<h2>Add a rule</h2>
+<form method="post" action="{{ url_for('ledgerly.rule_add') }}" class="grid-form narrow">
+  <label>If the description contains <input name="pattern" placeholder="e.g. whole foods" required></label>
+  <label>Sort it into
+    <select name="category_id" required>
+      {% for c in categories %}<option value="{{ c.id }}">{{ c.grp }} · {{ c.name }}</option>{% endfor %}
+    </select>
+  </label>
+  <button class="btn">Add rule</button>
+</form>
+
+<h2>Your rules</h2>
+<table class="list">
+  <tr class="head"><th>Contains</th><th>Goes to</th><th></th></tr>
+  {% for r in rules %}
+  <tr>
+    <td><code>{{ r.pattern }}</code></td>
+    <td>{{ r.grp }} · {{ r.category }}</td>
+    <td>
+      <form method="post" action="{{ url_for('ledgerly.rule_delete', rule_id=r.id) }}">
+        <button class="small-btn danger">✕</button>
+      </form>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

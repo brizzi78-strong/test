@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Brizzi Financial Plan</title>
+<style>
+  :root{
+    --bg:#0b1220; --panel:#111a2e; --card:#152037; --line:#243352;
+    --ink:#e7ecf5; --muted:#93a1bd; --gold:#d4a13c; --gold-soft:#e5c37e;
+    --green:#34d399; --red:#f87171; --navy-deep:#0a0f1c;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Georgia,"Times New Roman",serif;color:var(--ink);
+    background:var(--bg);line-height:1.65}
+  .sans{font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  .wrap{max-width:860px;margin:0 auto;padding:0 22px 60px}
+  header{background:linear-gradient(150deg,#0a0f1c 0%,#16233f 60%,#1b2b4d 100%);
+    color:#fff;padding:52px 0 42px;text-align:center;
+    border-bottom:3px solid var(--gold)}
+  header h1{margin:0;font-size:34px;letter-spacing:.02em;font-weight:700;color:var(--gold-soft)}
+  header .who{opacity:.85;font-size:15px;margin-top:8px;font-style:italic}
+  .heroline{display:flex;justify-content:center;flex-wrap:wrap;gap:26px;margin-top:26px}
+  .heroline div{text-align:center}
+  .heroline .n{font-size:26px;font-weight:700;font-family:-apple-system,Segoe UI,Roboto,sans-serif;color:#fff}
+  .heroline .l{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--gold-soft)}
+  h2{font-size:22px;margin:44px 0 6px;border-bottom:2px solid var(--gold);
+    padding-bottom:6px;color:var(--gold-soft)}
+  .lead{font-size:17px;margin:14px 0}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:18px 22px;margin:14px 0}
+  table{width:100%;border-collapse:collapse;font-size:15px}
+  td,th{padding:7px 6px;text-align:left;border-top:1px solid var(--line);vertical-align:top}
+  tr:first-child td,tr:first-child th{border-top:none}
+  .amt{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;
+    font-family:-apple-system,Segoe UI,Roboto,sans-serif}
+  .tot td{border-top:2px solid var(--gold);font-weight:700}
+  .muted{color:var(--muted)} .pos{color:var(--green);font-weight:700}
+  .move{display:flex;gap:16px;margin:18px 0;align-items:flex-start}
+  .move .badge{flex:0 0 44px;height:44px;border-radius:50%;background:var(--gold);
+    color:var(--navy-deep);display:flex;align-items:center;justify-content:center;
+    font-size:20px;font-weight:700;font-family:-apple-system,Segoe UI,Roboto,sans-serif}
+  .move h3{margin:0 0 4px;font-size:17px;color:#fff}
+  .move p{margin:0;font-size:15px}
+  .move .doc{font-size:12.5px;color:var(--muted);font-style:italic;margin-top:4px}
+  ul.check{list-style:none;padding:0;margin:8px 0;columns:2;-webkit-columns:2}
+  ul.check li{padding:5px 0 5px 30px;position:relative;font-size:15px;break-inside:avoid}
+  ul.check li:before{content:"☐";position:absolute;left:4px;color:var(--gold);font-size:17px}
+  @media(max-width:640px){ul.check{columns:1}}
+  .risk td:first-child{font-weight:600;width:38%;color:var(--gold-soft)}
+  .docs td:first-child{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;color:var(--gold-soft)}
+  .pull{border-left:4px solid var(--gold);padding:12px 18px;margin:22px 0;
+    font-size:17px;font-style:italic;background:var(--panel);border-radius:0 10px 10px 0;
+    color:var(--gold-soft)}
+  b{color:#fff}
+  footer{text-align:center;color:var(--muted);font-size:12.5px;margin-top:48px;
+    font-family:-apple-system,Segoe UI,Roboto,sans-serif}
+  @media print{
+    :root{--bg:#fff;--panel:#f4f6fa;--card:#fff;--line:#c9d4e8;
+      --ink:#12203c;--muted:#5b6b8c;--gold:#8a6512;--gold-soft:#7a5a10;
+      --green:#15803d;--red:#b91c1c;--navy-deep:#12203c}
+    body{background:#fff}
+    header{background:#12203c !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .move h3,b{color:#12203c}
+    .heroline .n{color:#fff}
+    .card,.move{break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap" style="padding-bottom:0">
+    <h1>The Brizzi Financial Plan</h1>
+    <div class="who">Robert &amp; Hope Brizzi · Raleigh, North Carolina · June 2026</div>
+    <div class="heroline sans">
+      <div><div class="n">~$1.24M</div><div class="l">Net worth</div></div>
+      <div><div class="n">46%</div><div class="l">Savings rate</div></div>
+      <div><div class="n">1</div><div class="l">Debt (mortgage)</div></div>
+      <div><div class="n">~$2.1M</div><div class="l">Projected 2031</div></div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <h2>Where We Are</h2>
+  <div class="card sans">
+    <table>
+      <tr><td>Investable assets <span class="muted">($592K retirement · $224K taxable · $399K cash)</span></td><td class="amt">$1,210,476</td></tr>
+      <tr><td>Home <span class="muted">($650K value − $617K mortgage @ 6.49%)</span></td><td class="amt">$33,000</td></tr>
+      <tr><td>Cards <span class="muted">(clearing from proceeds)</span></td><td class="amt">−$5,038</td></tr>
+      <tr class="tot"><td>Total net worth</td><td class="amt pos">~$1,243,476</td></tr>
+      <tr><td>Household income <span class="muted">(take-home, + payroll retirement on top)</span></td><td class="amt">$20,300/mo</td></tr>
+      <tr><td>Saved &amp; invested monthly</td><td class="amt">~$11,000</td></tr>
+    </table>
+  </div>
+
+  <h2>Where We're Going</h2>
+  <p class="lead">Financial independence on a <b>15+ year horizon</b> — projected
+  <b>~$2.0–2.2M investable by 2031</b> (about 90% of "work optional"), funded by
+  the savings rate alone. The mission — <i>The Cardinal's Promise</i> — rides on
+  top: break-even is success, and any profit simply accelerates the plan.</p>
+
+  <h2>The Five Moves</h2>
+
+  <div class="move">
+    <div class="badge">1</div>
+    <div>
+      <h3>Deploy the $360K — now</h3>
+      <p>$50K emergency fund → clear the cards → $25K launch reserve → ~$60K
+      Roth-tax fund → <b>~$220K to brokerage</b>, dollar-cost averaged over 9
+      months into 65% US / 25% international / 10% treasuries.</p>
+      <div class="doc">investment-plan.md</div>
+    </div>
+  </div>
+
+  <div class="move">
+    <div class="badge">2</div>
+    <div>
+      <h3>Run the Roth conversion ladder — every December, 2026–2032</h3>
+      <p>Convert $60–80K/year of the $426K traditional IRA, filling the 24%
+      bracket, staying under the $505K SALT cliff, taxes paid from cash. Ends
+      with the IRA fully Roth — tax-free forever, no RMDs.
+      <b>The single highest-value move in this plan.</b></p>
+      <div class="doc">financial-goals-2026-2031.md</div>
+    </div>
+  </div>
+
+  <div class="move">
+    <div class="badge">3</div>
+    <div>
+      <h3>Keep the machine automatic — always</h3>
+      <p>Zero-based budget (Ledgerly), payroll Roth 401(k) + invested HSA,
+      $20K/year giving via appreciated shares, one December meeting each year:
+      rebalance, convert, review.</p>
+      <div class="doc">ledgerly/ · tax-planning.md</div>
+    </div>
+  </div>
+
+  <div class="move">
+    <div class="badge">4</div>
+    <div>
+      <h3>Manage the house — don't serve it</h3>
+      <p>Catch up Truist and set autopay (this week). PMI: not worth capital,
+      auto-ends at 78% LTV. Refinance to a 15-year on trigger — rate ≤ 5.24%
+      or break-even under 24 months; ≤ 4.5% is automatic. Don't race the
+      payoff: the after-tax rate is ~4.4% and the portfolio outearns it.
+      The Tesla stays: paid off, past the depreciation cliff, tour vehicle,
+      live tax option.</p>
+    </div>
+  </div>
+
+  <div class="move">
+    <div class="badge">5</div>
+    <div>
+      <h3>Fund the mission, gated — 2026–2027</h3>
+      <p><i>The Cardinal's Promise</i>: Toolkit first → adult book → kids book
+      (Rob &amp; Lou). $25K cap, three-talks gate, eight validation calls,
+      written kill criteria. Tax deductions follow real revenue and clean
+      books — never precede them.</p>
+      <div class="doc">launch-plan.md</div>
+    </div>
+  </div>
+
+  <div class="pull">Every dollar has a job. Every project has a gate.
+  Every December, the ladder climbs one rung.</div>
+
+  <h2>Risk &amp; Protection</h2>
+  <div class="card sans">
+    <table class="risk">
+      <tr><td>Emergency fund</td><td>$50K — six months of the $7.7K survival number</td></tr>
+      <tr><td>Income resilience</td><td>Survives losing either W-2 — verified against the budget</td></tr>
+      <tr><td>Estate</td><td>Wills + beneficiary designations via LegalShield — <b>the top open gap</b></td></tr>
+      <tr><td>Intellectual property</td><td>Illustrator copyright assignment · registrations · brand trademark</td></tr>
+      <tr><td>Discipline rails</td><td>IPS rules (no leverage, 5% position cap, 30-day cooling-off) · paper-trading gate · launch kill criteria</td></tr>
+    </table>
+  </div>
+
+  <h2>This Quarter</h2>
+  <div class="card sans">
+    <ul class="check">
+      <li>Truist: pay $9,400.47 · autopay · confirm rate</li>
+      <li>Move $50K → EMERGENCY · clear cards</li>
+      <li>Start the $24K/mo DCA</li>
+      <li>Book December CPA meeting</li>
+      <li>Wills &amp; beneficiaries (LegalShield)</li>
+      <li>8 validation calls · book 3 talks</li>
+      <li>Write the Toolkit</li>
+      <li>Reply to Scott (coaching, $2.5–4K)</li>
+    </ul>
+  </div>
+
+  <h2>The Documents</h2>
+  <div class="card sans">
+    <table class="docs">
+      <tr><td>FINANCIAL-PLAN.md</td><td>This plan (master)</td></tr>
+      <tr><td>financial-picture.md</td><td>Full net worth &amp; cash-flow statement</td></tr>
+      <tr><td>financial-goals-2026-2031.md</td><td>5-year goals + Roth ladder detail</td></tr>
+      <tr><td>investment-plan.md</td><td>Allocation, DCA, IPS, paper-trading protocol</td></tr>
+      <tr><td>tax-planning.md</td><td>Itemizing, SALT × Roth, vehicle, CPA agenda</td></tr>
+      <tr><td>launch-plan.md</td><td>The Cardinal's Promise venture</td></tr>
+      <tr><td>dashboard.html · mind-map.png</td><td>One-screen dashboard · visual overview</td></tr>
+      <tr><td>ledgerly/</td><td>The budgeting app — real accounts, June budget</td></tr>
+    </table>
+  </div>
+
+  <footer>Prepared June 2026 from the full household analysis · estimates noted
+  in the detail documents · not tax or legal advice — the December CPA meeting
+  and LegalShield consults execute the professional pieces.</footer>
+</div>
+</body>
+</html>

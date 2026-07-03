@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brizzi Household — Financial Dashboard</title>
+<style>
+  :root{
+    --ink:#1f2937; --muted:#6b7280; --line:#e5e7eb; --bg:#f4f6f9; --card:#fff;
+    --green:#16a34a; --green-d:#15803d; --red:#dc2626; --amber:#d97706;
+    --blue:#2563eb; --navy:#1e293b; --gold:#b45309;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);background:var(--bg);line-height:1.5}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 20px 60px}
+  header{background:linear-gradient(135deg,#15803d,#1e293b);color:#fff;padding:32px 0 28px}
+  header .wrap{padding-bottom:0}
+  h1{margin:0;font-size:26px;font-weight:700}
+  .sub{opacity:.85;font-size:14px;margin-top:4px}
+  .hero{display:flex;flex-wrap:wrap;gap:14px;margin-top:20px}
+  .hero .stat{background:rgba(255,255,255,.12);border-radius:12px;padding:12px 18px;backdrop-filter:blur(4px)}
+  .hero .num{font-size:24px;font-weight:700}
+  .hero .lbl{font-size:12px;opacity:.85;text-transform:uppercase;letter-spacing:.04em}
+  h2{font-size:18px;margin:34px 0 12px;display:flex;align-items:center;gap:8px}
+  h2 .dot{width:10px;height:10px;border-radius:3px;display:inline-block}
+  .grid{display:grid;gap:16px}
+  .g2{grid-template-columns:1fr 1fr}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  @media(max-width:760px){.g2,.g3{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+  .card h3{margin:0 0 10px;font-size:14px;text-transform:uppercase;letter-spacing:.03em;color:var(--muted)}
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  td,th{padding:6px 4px;text-align:left;border-top:1px solid var(--line)}
+  tr:first-child td,tr:first-child th{border-top:none}
+  .amt{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .tot td{border-top:2px solid var(--ink);font-weight:700}
+  .neg{color:var(--red)} .pos{color:var(--green-d)} .muted{color:var(--muted)}
+  .pill{display:inline-block;font-size:11px;padding:2px 8px;border-radius:999px;font-weight:600}
+  .pill.ok{background:#ecfdf5;color:#065f46} .pill.warn{background:#fffbeb;color:#92400e}
+  .bar{height:22px;border-radius:5px;display:flex;overflow:hidden;margin:6px 0 2px}
+  .seg{height:100%}
+  .legend{display:flex;flex-wrap:wrap;gap:10px 16px;font-size:12px;color:var(--muted);margin-top:6px}
+  .legend i{width:10px;height:10px;border-radius:2px;display:inline-block;margin-right:5px;vertical-align:middle}
+  ul.clean{margin:6px 0;padding-left:18px} ul.clean li{margin:4px 0;font-size:14px}
+  .check li{list-style:none;padding-left:26px;position:relative}
+  .check li:before{content:"☐";position:absolute;left:0;font-size:16px;color:var(--green-d)}
+  .note{font-size:12px;color:var(--muted);margin-top:8px}
+  .flag{font-size:14px;margin:4px 0}
+  .flag.w:before{content:"⚠️ ";} .flag.s:before{content:"✅ ";}
+  footer{text-align:center;color:var(--muted);font-size:12px;margin-top:40px}
+  @media print{body{background:#fff}.card{break-inside:avoid}header{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Brizzi Household — Financial Dashboard</h1>
+    <div class="sub">As of June 2026 · prepared from the full financial analysis</div>
+    <div class="hero">
+      <div class="stat"><div class="num">~$1.24M</div><div class="lbl">Net worth</div></div>
+      <div class="stat"><div class="num">$20,300</div><div class="lbl">Income / mo</div></div>
+      <div class="stat"><div class="num">~46%</div><div class="lbl">Savings rate</div></div>
+      <div class="stat"><div class="num">$617k</div><div class="lbl">Only debt: mortgage</div></div>
+      <div class="stat"><div class="num">~$2.1M</div><div class="lbl">Projected 2031</div></div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <!-- NET WORTH -->
+  <h2><span class="dot" style="background:var(--green)"></span>Net Worth</h2>
+  <div class="grid g2">
+    <div class="card">
+      <h3>Assets — ~$1.87M</h3>
+      <table>
+        <tr><td>Retirement <span class="muted">(IRA, 401k, pension)</span></td><td class="amt">$591,937</td></tr>
+        <tr><td>Taxable investments</td><td class="amt">$224,420</td></tr>
+        <tr><td>Pensacola proceeds <span class="pill warn">deploy</span></td><td class="amt">$360,000</td></tr>
+        <tr><td>Bank cash</td><td class="amt">$39,157</td></tr>
+        <tr><td>Home <span class="muted">(5220 Crescent Square)</span></td><td class="amt">$650,000</td></tr>
+        <tr class="tot"><td>Total assets</td><td class="amt">$1,865,514</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <h3>Liabilities & net worth</h3>
+      <table>
+        <tr><td>Mortgage <span class="muted">6.49%</span></td><td class="amt neg">$617,000</td></tr>
+        <tr><td>Credit cards</td><td class="amt neg">$5,038</td></tr>
+        <tr class="tot"><td>Total debt</td><td class="amt neg">$622,038</td></tr>
+        <tr><td>Investable net worth <span class="muted">(ex-home)</span></td><td class="amt">$1,210,476</td></tr>
+        <tr><td>Home equity <span class="muted">(5%)</span></td><td class="amt">$33,000</td></tr>
+        <tr class="tot"><td>Total net worth</td><td class="amt pos">$1,243,476</td></tr>
+      </table>
+      <div class="note">⚠️ Concentration: the $426k traditional IRA is 35% of investable wealth — the Roth ladder de-risks it.</div>
+    </div>
+  </div>
+
+  <!-- CASH FLOW -->
+  <h2><span class="dot" style="background:var(--blue)"></span>Monthly Cash Flow — zero-based <span class="pill ok">$0 left ✓</span></h2>
+  <div class="grid g2">
+    <div class="card">
+      <h3>Income — $20,300/mo</h3>
+      <table>
+        <tr><td>Hope — W-2 (4 checks)</td><td class="amt">$12,000</td></tr>
+        <tr><td>Robert — W-2 incl. bonus</td><td class="amt">$6,000</td></tr>
+        <tr><td>Mom — family cost-share</td><td class="amt">$1,100</td></tr>
+        <tr><td>Proceeds interest</td><td class="amt">$1,200</td></tr>
+      </table>
+      <div class="note">+ ~$2,375/mo retirement at payroll (Roth 401k + HSA), before take-home. Cardinal's Promise = unplanned upside.</div>
+    </div>
+    <div class="card">
+      <h3>Where every dollar goes</h3>
+      <div class="bar">
+        <div class="seg" style="width:42%;background:var(--green)"></div>
+        <div class="seg" style="width:28%;background:var(--navy)"></div>
+        <div class="seg" style="width:8%;background:var(--gold)"></div>
+        <div class="seg" style="width:5%;background:#0891b2"></div>
+        <div class="seg" style="width:5%;background:#7c3aed"></div>
+        <div class="seg" style="width:6%;background:var(--muted)"></div>
+      </div>
+      <div class="legend">
+        <span><i style="background:var(--green)"></i>Savings 42%</span>
+        <span><i style="background:var(--navy)"></i>Housing 28%</span>
+        <span><i style="background:var(--gold)"></i>Giving 8%</span>
+        <span><i style="background:#0891b2"></i>Food 5%</span>
+        <span><i style="background:#7c3aed"></i>Lifestyle 5%</span>
+        <span><i style="background:var(--muted)"></i>Other 6%</span>
+      </div>
+      <div class="note">Total savings incl. payroll ≈ $11,000/mo (~46%). Survives losing either W-2 without touching savings.</div>
+    </div>
+  </div>
+
+  <!-- GOALS -->
+  <h2><span class="dot" style="background:var(--gold)"></span>5-Year Goals — FI horizon 15+ yrs</h2>
+  <div class="grid g3">
+    <div class="card">
+      <h3>Deploy the $360k</h3>
+      <ul class="clean">
+        <li>$50k emergency fund</li>
+        <li>Clear $5k cards</li>
+        <li>$25k launch reserve</li>
+        <li>~$60k Roth-tax fund</li>
+        <li>~$220k → brokerage (DCA)</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Roth conversion ladder ★</h3>
+      <ul class="clean">
+        <li>Convert ~$60–80k/yr</li>
+        <li>Fill the 24% bracket</li>
+        <li>Tax paid from cash</li>
+        <li>Empties the IRA by ~2032</li>
+        <li>Tax-free, no RMDs ever</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Trajectory</h3>
+      <table>
+        <tr><td>Investable today</td><td class="amt">$1.21M</td></tr>
+        <tr><td>Projected 2031</td><td class="amt pos">~$2.1M</td></tr>
+      </table>
+      <div class="note">~90% to "work-optional" by 2031 — without any business upside.</div>
+    </div>
+  </div>
+
+  <!-- TAX -->
+  <h2><span class="dot" style="background:var(--red)"></span>Tax Planning <span class="muted" style="font-size:13px;font-weight:400">— December CPA agenda</span></h2>
+  <div class="grid g2">
+    <div class="card">
+      <h3>Itemized deductions ~$75.5k</h3>
+      <table>
+        <tr><td>Mortgage interest</td><td class="amt">$40,000</td></tr>
+        <tr><td>Charitable <span class="muted">(0.5% AGI floor)</span></td><td class="amt">$18,500</td></tr>
+        <tr><td>SALT <span class="muted">(cap now $40,400)</span></td><td class="amt">$17,000</td></tr>
+        <tr><td>PMI <span class="muted">(over income phaseout)</span></td><td class="amt">$0</td></tr>
+        <tr class="tot"><td>vs. $32,300 standard</td><td class="amt pos">~$13k saved</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <h3>Watch-items</h3>
+      <div class="flag w">SALT cap claws back above ~$505k MAGI — size Roth conversions under the cliff</div>
+      <div class="flag w">Tesla depreciation: hobby-loss risk vs. $345 revenue — need real income + clean books first</div>
+      <div class="flag w">Pensacola gain: §121 exclusion + home-office depreciation recapture</div>
+      <div class="flag s">Early startup losses ARE deductible — aim for profit 3 of 5 yrs</div>
+    </div>
+  </div>
+
+  <!-- CARDINAL'S PROMISE -->
+  <h2><span class="dot" style="background:#be123c"></span>The Cardinal's Promise <span class="muted" style="font-size:13px;font-weight:400">— mission-first, cap $25k</span></h2>
+  <div class="grid g3">
+    <div class="card">
+      <h3>The product line</h3>
+      <ul class="clean">
+        <li><b>Toolkit</b> — caregiver workbook (ships first)</li>
+        <li><b>Resource guide</b> — free, for the stacks</li>
+        <li><b>Adult book</b> — credibility engine</li>
+        <li><b>Kids book</b> — Rob &amp; Lou, "Love That Stays"</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Gates &amp; guardrails</h3>
+      <ul class="clean">
+        <li>Book 3 talks before launch</li>
+        <li>8 validation calls (kids book)</li>
+        <li>Kill criteria if &lt;3 paid gigs/6mo</li>
+        <li>Break-even = success</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Protect it</h3>
+      <ul class="clean">
+        <li>Illustrator copyright assignment</li>
+        <li>Register works ($45–65 ea)</li>
+        <li>Trademark the brand</li>
+        <li>Route via LegalShield</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- DO FIRST -->
+  <h2><span class="dot" style="background:var(--navy)"></span>Do First</h2>
+  <div class="card">
+    <ul class="clean check" style="columns:2;-webkit-columns:2">
+      <li>Truist: pay $9,400.47 before late fee, set autopay</li>
+      <li>Book December CPA meeting (Pensacola + Roth + Tesla)</li>
+      <li>Wills &amp; beneficiary designations <span class="pill warn">top gap</span></li>
+      <li>Move $50k → emergency fund; clear cards</li>
+      <li>8 validation calls to bereavement coordinators</li>
+      <li>Clean up the QuickBooks books</li>
+      <li>Write the Toolkit (first product to ship)</li>
+      <li>Deploy ~$220k proceeds into brokerage (DCA)</li>
+    </ul>
+  </div>
+
+  <footer>
+    Generated from the financial analysis · companion to financial-picture.md,
+    financial-goals-2026-2031.md, tax-planning.md, launch-plan.md ·
+    Estimates where noted; not tax or legal advice.
+  </footer>
+</div>
+</body>
+</html>

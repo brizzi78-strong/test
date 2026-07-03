@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Accounts · Ledgerly{% endblock %}
+{% block content %}
+<h1>Accounts</h1>
+<p class="muted">Your checking, savings, cash, cards and investments — bank and card
+balances from your QuickBooks books (May 31, 2026), investment balances from your
+tracking app (June 10, 2026), plus anything you've recorded here since.</p>
+
+<table class="list">
+  <tr class="head"><th>Account</th><th>Type</th><th>Balance</th></tr>
+  {% for a in accounts %}
+  <tr>
+    <td>{{ a.name }}</td>
+    <td class="muted">{{ a.type }}</td>
+    <td class="amount {{ 'neg' if a.balance_cents < 0 }}">{{ a.balance_cents | money }}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+<h2>Add an account</h2>
+<form method="post" action="{{ url_for('ledgerly.account_add') }}" class="grid-form narrow">
+  <label>Name <input name="name" placeholder="e.g. Vacation savings" required></label>
+  <label>Type
+    <select name="type">
+      <option value="checking">checking</option>
+      <option value="savings">savings</option>
+      <option value="cash">cash</option>
+      <option value="credit">credit card</option>
+      <option value="investment">investment</option>
+    </select>
+  </label>
+  <label>Starting balance <input name="opening" inputmode="decimal" placeholder="0.00"></label>
+  <button class="btn">Add account</button>
+</form>
+{% endblock %}

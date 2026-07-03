@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ledgerly"
+version = "0.1.0"
+description = "A friendly personal-finance app: zero-based budgeting, card/account tracking, CSV import. Includes the finalyst CLI analysis toolkit."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+keywords = ["finance", "budget", "zero-based", "mint", "everydollar", "ratios", "cli"]
+dependencies = ["flask>=3"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+finalyst = "finalyst.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["ledgerly*", "finalyst*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
