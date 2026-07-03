@@ -1,0 +1,3 @@
+PART FIVE
+
+# **HOPE**

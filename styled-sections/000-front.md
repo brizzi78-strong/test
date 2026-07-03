@@ -1,14 +1,15 @@
-|  |
-| :-: |
-| \*"I wouldn't want anyone else to be there for my patients."\*— DR. HUETA MEMOIR\*\*The Cardinal's Promise\*\*\*A Practical Guide for Families Facing\*\*Addiction, Illness, or Loss\*\*\*ROB BRIZZI\*\*CARDINAL PROMISE PRESS |
+# **THE CARDINAL'S PROMISE**
 
-  
+*A Memoir*
+
+**ROB BRIZZI**
+
+*"I wouldn't want anyone else to be there for my patients."*
+*— Dr. Huet*
+
+CARDINAL PROMISE PRESS
 
 *For anyone who has struggled with addiction or loved someone who has*
-
-*A Memoir by Rob Brizzi*
-
-  
 
 *In memory of Lou Brizzi*
 
@@ -16,114 +17,91 @@
 
 *For Hope, who tilted her head and said "We?"*
 
-  
-
 *Those we love don't go away,*
 
 *they walk beside us every day.*
 
 **CONTENTS**
 
-Prologue5
+Prologue: The Cardinal
 
-Foreword6
+Foreword
 
-Sobriety Was Not the Finish Line8
+Sobriety Was Not the Finish Line
 
-A Note to the One Who Loves an Addict10
+A Note to the One Who Loves an Addict
 
-Chapter 1: Mexico City — The Escape11
+**Part One — The Escape**
 
-Chapter 2: New Jersey: Survival16
+1. Mexico City — The Escape
+2. New Jersey: Survival
+3. The Man Who Didn't Have To
+4. Lou's Kids
+5. Claudio and Rob
+6. The Man Who Raised Me
 
-Chapter 3: The Man Who Didn't Have To19
+**Part Two — The Mat**
 
-Chapter 4: Lou's Kids22
+7. The Wrestler
+8. The Suit
+9. Lou's World
+10. Oxford
+11. MTV
 
-Chapter 5: Claudio and Rob24
+**Part Three — The Fall**
 
-Chapter 6: The Man Who Raised Me26
+12. My Brother's Keeper
+13. The Performance Trap
+14. The Cell
+15. Checking Boxes
+16. West Palm Beach
+17. New Orleans
 
-Chapter 7: The Wrestler28
+**Part Four — Getting Square**
 
-Chapter 8: The Suit37
+18. Chumuckla
+19. The Quiet Years
+20. Horacio
+21. The Line
+22. The Salmon Palace
+23. The Offer
+24. They Gave Me a Chance
+25. Getting Square
+26. Gulf Breeze
+27. The People You Meet When You Stop Drinking
 
-Chapter 9: Lou's World39
+**Part Five — Hope**
 
-Chapter 10: Oxford44
+28. Hope
+29. The Pictures Never Tell the Whole Story
+30. Blessings
+31. Sobriety Meets Hospice
 
-Chapter 11: MTV47
+**Part Six — The Last Chapter**
 
-Chapter 12: My Brother's Keeper49
+32. The Detour
+33. Five Weeks
+34. The Days After
+Who Stays. Who Goes.
+35. The First Honest Mile
+36. What Grief Taught the Job
+Tyler and Jaye
+37. The Round Table
+38. The Table
+39. The Floor
 
-Chapter 13: The Performance Trap53
+What He Didn't Owe
 
-Chapter 14: The Cell59
+Epilogue: The Cardinal's Promise
 
-Chapter 15: Checking Boxes61
+The Promise
 
-Chapter 16: West Palm Beach67
+What I'm Asking You to Do
 
-Chapter 17: New Orleans70
+Author's Note
 
-Chapter 18: Chumuckla71
+Resources
 
-Chapter 19: The Quiet Years73
+About the Author
 
-Chapter 20: Horacio75
-
-Chapter 21: The Line77
-
-Chapter 22: The Salmon Palace78
-
-Chapter 23: The Offer80
-
-Chapter 24: They Gave Me a Chance82
-
-Chapter 25: Getting Square84
-
-Chapter 26: Gulf Breeze85
-
-Chapter 27: The People You Meet When You Stop Drinking87
-
-Chapter 28: Hope90
-
-Chapter 29: The Pictures Never Tell the Whole Story98
-
-Chapter 30: Blessings101
-
-Chapter 31: Sobriety Meets Hospice102
-
-Chapter 32: The Detour104
-
-Chapter 33: Five Weeks106
-
-Chapter 34: The Days After111
-
-Who Stays. Who Goes.115
-
-Chapter 35: The First Honest Mile116
-
-Chapter 36: What Grief Taught the Job117
-
-Tyler and Jaye118
-
-Chapter 37: The Round Table119
-
-Chapter 38: The Table120
-
-Chapter 39: The Floor122
-
-What He Didn't Owe123
-
-Epilogue: The Cardinal's Promise125
-
-The Promise127
-
-What I'm Asking You to Do128
-
-Resources129
-
-About the Author131
-
-Photographs132
+Photographs
