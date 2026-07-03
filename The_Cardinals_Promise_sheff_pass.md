@@ -651,7 +651,7 @@ The wrestling years left marks I still feel. For a long time my body didn't feel
 *"Drudgery is the touchstone of character."*
 *— Oswald Chambers*
 
-A recruiter looked at my father across a desk and told him to dye the gray out of his hair. Nobody would hire him otherwise. He went home and did it, and never said a word about it. What it cost him I understood only later, when the money got tight. By then he was around forty-five and we were living in Ramsey. I was starting high school — old enough to notice tension, too young to know its price.
+A recruiter looked at my father across a desk and told him to dye the gray out of his hair. Nobody would hire him otherwise. He went home and did it, and never said a word about it. What it cost him I understood only later, when the money got tight. By then he was in his early fifties and we were living in Ramsey. I was starting high school — old enough to notice tension, too young to know its price.
 
 From the outside our life looked stable. A house. Cars in the driveway. Dinner on the table, wrestling practice, the bills paid, the routine holding. You don't see how much of a life like that is held up by one man getting out of bed every morning. Not until something cracks.
 
@@ -1683,7 +1683,7 @@ Families would say, I'm terrified I won't be there when it happens. What I offer
 
 I could tell you a hundred versions of the same room. The details change. The room doesn't. A husband answering every question directed at his wife, because he has been her voice since the diagnosis, going quiet only when I ask what he'll do with his mornings. A daughter who flew in from three time zones away and won't sit down, because sitting down feels like agreeing to it. A Bible on the nightstand with a rubber band around it, fat with decades of funeral programs pressed inside. And at some point, out in the hallway, the question underneath every other question: how long? What they're really asking is how long they have to say the thing they've been saving. I used to answer with the clinical ranges. Now I answer the real question. Don't wait for the right day. This is the right day. Then I go back into the room with them, and we stay.
 
-My father always made a big deal of my sobriety anniversary. Every January 9th. My first year, he came to Gulf Breeze Hospital to hear me speak, sat in that room and listened to his son talk about staying sober for one year. He told me once, quietly, that there wasn't a time he mentioned my name where, if the person knew me, they wouldn't say, he's the best. That's what he built. Lou spent eighty-three years showing up without needing to know exactly where he was going. I'm trying to do the same.
+My father always made a big deal of my sobriety anniversary. Every January 9th. My first year, he came to Gulf Breeze Hospital to hear me speak, sat in that room and listened to his son talk about staying sober for one year. He told me once, quietly, that there wasn't a time he mentioned my name where, if the person knew me, they wouldn't say, he's the best. That's what he built. Lou spent eighty-four years showing up without needing to know exactly where he was going. I'm trying to do the same.
 
 # **TYLER AND JAYE**
 
