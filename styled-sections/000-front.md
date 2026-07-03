@@ -111,6 +111,8 @@ What I'm Asking You to Do
 
 Author's Note
 
+A Reader's Guide
+
 Resources
 
 About the Author
