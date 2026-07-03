@@ -12,7 +12,7 @@ re-run to regenerate. These PDFs are the "deepened" canonical version of the
 printable web guides under free-guide/.
 """
 import os
-from reportlab.lib.pagesizes import LETTER
+from reportlab.lib.pagesizes import LETTER, A4
 from reportlab.lib.units import inch
 from reportlab.pdfgen import canvas
 
@@ -36,6 +36,13 @@ PAGE_W, PAGE_H = LETTER
 M = 0.9 * inch                      # content margin
 CONTENT_W = PAGE_W - 2 * M
 BOTTOM = 1.0 * inch                 # bottom limit before page break
+
+
+def set_page(size):
+    """Set the module page-size globals (LETTER or A4) before a build."""
+    global PAGE_W, PAGE_H, CONTENT_W
+    PAGE_W, PAGE_H = size
+    CONTENT_W = PAGE_W - 2 * M
 
 
 def wrap(c, text, font, size, max_w):
@@ -239,8 +246,9 @@ class Doc:
         self.y = PAGE_H - M
 
 
-def build(meta, out_path):
-    c = canvas.Canvas(out_path, pagesize=LETTER)
+def build(meta, out_path, pagesize=LETTER):
+    set_page(pagesize)
+    c = canvas.Canvas(out_path, pagesize=pagesize)
     c.setTitle(meta["title"])
     c.setAuthor("The Cardinal Companion")
     c.setSubject(meta["source"])
@@ -429,9 +437,10 @@ def main():
     out_dir = os.path.join(here, "assets", "pdf")
     os.makedirs(out_dir, exist_ok=True)
     for m in MAGNETS:
-        path = os.path.join(out_dir, m["out"])
-        build(m, path)
-        print("wrote", os.path.relpath(path, here), "(%d bytes)" % os.path.getsize(path))
+        for size, suffix in ((LETTER, ""), (A4, "-a4")):
+            path = os.path.join(out_dir, m["out"].replace(".pdf", suffix + ".pdf"))
+            build(m, path, pagesize=size)
+            print("wrote", os.path.relpath(path, here), "(%d bytes)" % os.path.getsize(path))
 
 
 if __name__ == "__main__":

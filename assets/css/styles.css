@@ -267,8 +267,23 @@ section { padding: clamp(2.5rem, 6vw, 4.5rem) 0; }
   border: 2px solid var(--sage); border-radius: 4px; }
 .sheet h2 { margin-top: 2rem; padding-top: 1rem; border-top: 2px solid var(--surface-alt); }
 .sheet h2:first-of-type { border-top: none; }
-.print-bar { max-width: 760px; margin: 0 auto; display: flex; gap: .8rem; flex-wrap: wrap; justify-content: center; }
+.print-bar { max-width: 760px; margin: 0 auto; display: flex; gap: .8rem; flex-wrap: wrap; justify-content: center; align-items: center; }
+.print-bar .alt { font-size: .9rem; color: var(--ink-soft); }
+
+/* Cover-art hero for the printable guides — matches the PDF cover & social card */
+.magnet-hero { max-width: 760px; margin: 0 auto 0; background: var(--cardinal);
+  border-radius: var(--radius) var(--radius) 0 0; padding: 2.2rem 1.5rem 1.6rem;
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  border-top: 5px solid var(--gold); }
+.magnet-hero .medallion { width: 108px; height: 108px; margin-bottom: 1rem;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,.22)); }
+.magnet-hero .eyebrow { color: #f4d9a6; letter-spacing: .1em; margin: 0 0 .5em; }
+.magnet-hero h1 { color: #fff; margin: 0; font-size: clamp(1.6rem, 4.5vw, 2.4rem); }
+.magnet-hero p.sub { color: #f7e9dd; font-family: var(--serif); font-style: italic;
+  margin: .7rem 0 0; max-width: 34rem; }
+.magnet-hero + .sheet { border-radius: 0 0 var(--radius) var(--radius); margin-top: 0; }
 @media print {
+  .magnet-hero { display: none !important; }
   .site-header, .site-footer, .print-bar, .skip-link, .promo { display: none !important; }
   body { background: #fff; }
   .sheet { box-shadow: none; border: none; margin: 0; max-width: none; }
