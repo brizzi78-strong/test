@@ -70,7 +70,7 @@ Chapter 18: Chumuckla71
 
 Chapter 19: The Quiet Years73
 
-Chapter 20: Finding Papa75
+Chapter 20: Horacio75
 
 Chapter 21: The Line77
 
@@ -1160,7 +1160,7 @@ People asked why I did all of it. The meetings, the volunteering, the running, t
 
 **CHAPTER 20**
 
-## **Finding Papa**
+## **Horacio**
 
 *"For if ye forgive men their trespasses, your heavenly Father will also forgive you."*
 *— Matthew 6:14*
