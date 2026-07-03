@@ -43,7 +43,21 @@ business return → a loss flows to offset W-2 income → also lowers AGI,
 which *shrinks* the charitable 0.5% floor and widens SALT headroom.
 They stack on top of itemizing (different schedule).
 
-**Tesla depreciation — four gates:**
+**Tesla depreciation — RESOLVED (June 2026): use the standard mileage
+rate.** Facts settled: Model Y, **under 6,000 lbs GVWR** (no heavy-vehicle
+exception), year 2 of ownership, 66% business use. Consequences:
+- No §179, no bonus — personal-to-business conversion excludes both, and
+  the GVWR kills the heavy exception regardless.
+- Conversion MACRS would run on lesser of cost/FMV × 66% ≈ ~$4,200 yr 1,
+  declining — LESS than the mileage rate and with recapture risk.
+- **Decision: standard mileage (~70¢/mi), ~8,000 business mi/yr ≈
+  $5,600/yr.** No recapture, audit-simple, keeps a luxury-EV schedule
+  off a young business's return.
+- **Requirement: contemporaneous mileage log — running from today.**
+- CPA in December: confirm method election; four gates below still apply
+  to all other LLC deductions.
+
+**Original four gates (kept for reference and future vehicles):**
 1. **Model decides the size.** <6,000 lbs (Model 3/Y/S) = "luxury auto,"
    capped ~$20,400 first year. >6,000 lbs (Model X / Cybertruck) =
    "heavy" exception, up to **100% of business-use cost** (OBBBA restored
