@@ -1,0 +1,3 @@
+# **AUTHOR'S NOTE**
+
+This is a true story, told from memory. Dialogue has been reconstructed as faithfully as memory allows; it keeps the substance of what was said, if not always the exact words. Some names and identifying details have been changed to protect privacy, above all those of hospice patients and their families, whose hardest days deserve protection, not exposure. A few of the rooms I describe from my work are composites of many rooms, for the same reason. Nothing in these pages was invented to sharpen the story. My mother, who is all over this book, checked more of these memories than anyone. Whatever I still got wrong is mine.
