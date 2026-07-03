@@ -1534,7 +1534,7 @@ When Lou poured coffee that day, he poured it for himself and for Hope. Not for 
 
 Before any of that, before the wedding, there was the day she met Lou. I was nervous. Not the wrestling-match kind. Not the holding-cell kind. This was precise, like one wrong word, one moment of performance instead of presence, would miss the point.
 
-We drove to Pensacola together. Lou was sitting when we walked in. He stood when he saw us, not as ceremony, as regard. He shook Hope's hand, looked her in the eye, and said: nice to finally meet you. Not good to meet you. Finally.
+We drove over together. Lou was sitting when we walked in. He stood when he saw us, not as ceremony, as regard. He shook Hope's hand, looked her in the eye, and said: nice to finally meet you. Not good to meet you. Finally.
 
 They talked easily. He asked where she was from, what her work involved. He wasn't screening a resume. He was watching how she held herself, whether she held his gaze, whether she said what she meant. At one point he said, Rob's had a complicated road. Hope nodded. I know. Not I've heard. I know. Lou sat with it, then smiled, small and private. He'd been looking for something and found it.
 
