@@ -1,5 +1,14 @@
 import hardhatToolboxViemPlugin from "@nomicfoundation/hardhat-toolbox-viem";
 import { configVariable, defineConfig } from "hardhat/config";
+import { fileURLToPath } from "node:url";
+
+// Use the solc WASM build bundled in the `solc` npm package instead of
+// downloading a native binary from binaries.soliditylang.org. This keeps
+// builds hermetic and working behind restricted networks; the npm package
+// version pins the compiler version.
+const solcPath = fileURLToPath(
+  new URL("./node_modules/solc/soljson.js", import.meta.url),
+);
 
 export default defineConfig({
   plugins: [hardhatToolboxViemPlugin],
@@ -7,9 +16,11 @@ export default defineConfig({
     profiles: {
       default: {
         version: "0.8.28",
+        path: solcPath,
       },
       production: {
         version: "0.8.28",
+        path: solcPath,
         settings: {
           optimizer: {
             enabled: true,
