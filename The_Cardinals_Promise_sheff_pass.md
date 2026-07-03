@@ -1,6 +1,6 @@
 # **THE CARDINAL'S PROMISE**
 
-*A Memoir*
+*A Memoir of the Father Who Stayed*
 
 **ROB BRIZZI**
 
@@ -56,65 +56,58 @@ A Note to the One Who Loves an Addict
 1. Mexico City — The Escape
 2. New Jersey: Survival
 3. The Man Who Didn't Have To
-4. Lou's Kids
-5. Claudio and Rob
-6. The Man Who Raised Me
+4. Chosen
+5. The Man Who Raised Me
 
 **Part Two — The Mat**
 
-7. The Wrestler
-8. The Suit
-9. Lou's World
-10. Oxford
-11. MTV
+6. The Wrestler
+7. The Suit
+8. Oxford
+9. MTV
 
 **Part Three — The Fall**
 
-12. My Brother's Keeper
-13. The Performance Trap
-14. The Cell
-15. Checking Boxes
-16. West Palm Beach
-17. New Orleans
+10. My Brother's Keeper
+11. The Performance Trap
+12. The Cell
+13. Checking Boxes
+14. West Palm Beach
+15. New Orleans
 
 **Part Four — Getting Square**
 
-18. Chumuckla
-19. The Quiet Years
-20. Horacio
-21. The Line
-22. The Salmon Palace
-23. The Offer
-24. They Gave Me a Chance
-25. Making Amends
-26. Gulf Breeze
-27. The People You Meet When You Stop Drinking
+16. Chumuckla
+17. The Quiet Years
+18. Horacio
+19. The Line
+20. The Salmon Palace
+21. The Offer
+22. They Gave Me a Chance
+23. Making Amends
+24. Gulf Breeze
+25. The People You Meet When You Stop Drinking
 
 **Part Five — Hope**
 
-28. Hope
-29. The Pictures Never Tell the Whole Story
-30. Blessings
-31. Sobriety Meets Hospice
+26. Hope
+27. Sobriety Meets Hospice
 
 **Part Six — The Last Chapter**
 
-32. The Detour
-33. Five Weeks
-34. The Days After
-Who Stays. Who Goes.
-35. The First Honest Mile
-36. What Grief Taught the Job
+28. The Detour
+29. Five Weeks
+30. The Days After
+31. The First Honest Mile
+32. What Grief Taught the Job
 Tyler and Jaye
-37. The Round Table
-38. The Table
-39. The Floor
+33. The Round Table
+34. The Table
+35. The Floor
 
 What He Didn't Owe
 
 Epilogue: The Cardinal's Promise
-
-The Promise
 
 What I'm Asking You to Do
 
@@ -254,8 +247,6 @@ We lived in Bosque de Aragón, in a two-story brick row house on a dead-end stre
 
 Rosa María and Armando lived next door. A clothesline ran between our balconies, always full of sheets drying stiff under the hot sun. Every morning started the same way: my mother put a pot of beans on the stove, and the whole house filled with the smell. Beans, onions, sugar, and the warm bread she bought from the bakery on the corner.
 
-That was the entire universe to me. When you're a kid, your neighborhood is the world.
-
 My mother taught English at a little preschool called Cascabelito. Little Bells. Because she worked there, I got to go for free. In the afternoons she'd put on music and dance around the kitchen while making tacos, rice, and beans. She would scoop my little brother, Chris, up on her hip and sing along to "The Locomotion," and I'd dance right next to her because she was happy. That was all the reason I needed.
 
 Her name was Becky. She was twenty-seven, a blonde girl from Cedar Grove, New Jersey, the oldest of three sisters, daughters of Bob and Jan Pontier. Somehow she had ended up building a new life in the middle of Mexico City. She had followed a man there for love, but she was also running from something else. I didn't understand either of those things back then.
@@ -266,7 +257,7 @@ The man was my papa, Horacio. She had met him in Acapulco around 1974, on a trip
 
 My mother's father, the man I'd grow up calling Grandpa Bob, didn't approve of the marriage. Papa's father was the one who insisted on it, and his brothers, who were lawyers, pushed for it too. My parents had already married in Mexico, and in 1977 they did it again in Cedar Grove, New Jersey, with mariachis. My grandfather came around to Papa over the years, but he never got over how far away she lived.
 
-My mother always does what she wants. She always has. In her twenties she picked up and moved to a country where she didn't speak the language and built a life there. She loved my dad. Chris and I came from that.
+My mother always does what she wants. She always has. She loved my dad. Chris and I came from that.
 
 My papa was a proud man. He worked for the Secretary of Commerce, and every morning he left the house in pressed clothes. He took me to the park and the movies, mostly. He'd take off running and I'd come after him and we'd race. He always got there first. Then he'd turn around with a grin and say, "Wow, you're fast today." And I'd yell, "I'm fast!" I believed him every time.
 
@@ -274,7 +265,7 @@ He bought me my own record player, a Fisher Price like the neighbor's. One day h
 
 At night he told me a story, his voice low, like every word mattered. The rabbit in the moon. He said a long time ago a god came down and walked the earth as a tired old man, hungry, and the only one who shared what little he had was a small rabbit. To thank him, the god lifted the rabbit up and pressed his shape into the moon, so anyone who looked up would remember. Look, he'd say. He's still up there. I'd ask him to tell it again. Just the two of us in the dark, and I never wanted it to end.
 
-But there was another side to Papa. He'd sit in cafés after work, playing chess, drinking coffee, not coming home. Some weekends he slept straight through, and his own father had to come and wake him. I never felt close to that grandfather. He was serious, and he wasn't friendly. One Thanksgiving my mom cooked the whole dinner, and Papa never got up for it. Other times he left for work and didn't come back. A day. Then two. Then three. Then he'd walk in worn out, his eyes gone somewhere, go straight to the bedroom, lock the door, and shut the house out.
+But there was another side to Papa. He'd sit in cafés after work, playing chess, drinking coffee, not coming home. Some weekends he slept straight through, and his own father had to come and wake him. One Thanksgiving my mom cooked the whole dinner, and Papa never got up for it. Other times he left for work and didn't come back. A day. Then two. Then three. Then he'd walk in worn out, his eyes gone somewhere, go straight to the bedroom, lock the door, and shut the house out.
 
 I'd push the door open a crack and look in. He was always asleep. The air in that room was different from the rest of the house. I couldn't have told you how. A kid just knows it. Sometimes I heard him crying through the door.
 
@@ -288,8 +279,6 @@ There's a black-and-white picture of me from back then. A little kid in a Mickey
 
 After my mom, I loved Ricardo, my older cousin, my dad's brother's son. A few years ahead of me, which at that age is a whole generation, and I followed him everywhere. One day he took me to the market for gum. He walked me down the rows, naming things, while I looked at all of it. The gum came in big wrappers in every color, and there was one flavor every kid in the neighborhood wanted. We found it. I walked home with a piece of it in my cheek.
 
-At his birthday I saw my first piñata. It came apart and the candy went everywhere.
-
 My mom was pregnant with Chris when I was two, and I was almost three by the time he was born. The week before, I wouldn't let my mother put me down. I'd grab her hips while she walked and let her drag me along the floor. "Let me down," she kept saying. I didn't want down. I wanted to be carried. She told me she couldn't carry me anymore because there was going to be another baby. I asked if the baby could be mine. She said yes.
 
 When she came through the door with him I climbed up on the couch next to her. "Is that my baby? Can I hold him?" She put him in my arms. He let out a thin little cry and I didn't know what to do with it. "Okay," I said. "I'll try again later." And I handed him back.
@@ -302,7 +291,7 @@ After several years of marriage my mother had seen enough. She loved my father. 
 
 Papa stood in the hallway with a folded newspaper under his arm. "I'll see you in two weeks," he said. He believed it too. My mother kissed him. "I love you," she said. I hugged him goodbye. I think I had the Mickey Mouse shirt on.
 
-Chris was about a year and a half when we left Mexico. He was adorable. Hazel eyes, light skin. Not like me.
+Chris was about a year and a half when we left Mexico. Hazel eyes, light skin. Not like me.
 
 Then the airport. My mother carried a suitcase and Chris while I dragged a little red suitcase behind me. I'd never seen a plane up close. The engines came up through the floor and the seat and into me. When we started down the runway something pushed me back into my seat. I looked out the window. The houses and the streets slid by, slow and then fast, until they ran together and dropped away under the clouds.
 
@@ -333,7 +322,7 @@ Then her hand closed around mine. That was all I had. Her hand, and what she'd t
 
 Two weeks became the rest of my life, and I held her hand and didn't know it yet.
 
-The first thing New Jersey took from me was the noise. In Mexico City, sound had been the texture of every day: radios through the windows, vendors before sunrise, music out of the cars, the neighbors' whole lives coming through the walls. My grandparents' house in West Paterson had none of it. The quiet there was on purpose, and the house ran on a schedule: dinner at the same time, lights out at the same time, conversation that never wandered past what could be handled politely. It wasn't unkind, only contained. After where I'd come from, contained felt close to safe.
+The first thing New Jersey took from me was the noise. In Mexico City, sound had been the texture of every day. My grandparents' house in West Paterson had none of it. The quiet there was on purpose, and the house ran on a schedule: dinner at the same time, lights out at the same time, conversation that never wandered past what could be handled politely. It wasn't unkind, only contained. After where I'd come from, contained felt close to safe.
 
 Before long I had friends on the street, Frank and Jason, and I'd run to find them and be outside all day. English came fast because there was no other way, and my Spanish went quiet sooner than I expected, a word here, a phrase there, then one day I caught myself translating in my head, and not long after I'd stopped translating. School confused me. I understood more than I could say, so I watched the other kids for cues, when to talk, when to laugh, how to stand, and learned it was safer to take a room in than to announce myself. My name was Claudio Balderas, and in a class of John Smiths and Erik Thomases nobody could say it, so they landed on Cloudio and that stuck.
 
@@ -349,7 +338,7 @@ The phone would ring once, maybe twice, and I'd grab it before it woke the house
 
 I always said yes, and she always knew the order before I gave it. Two double cheeseburgers, no mustard, no onion, fries, and a vanilla shake. She'd brought it home a hundred times. Then the car door, the bag crinkling, the smell of it before I even saw her, and her face, worn all the way down, watching me eat. A woman who had spent the whole night feeding strangers, coming home to feed her kid one more time before she slept. People ask me how I knew my mother loved me. That's how.
 
-And it never stopped once I grew up. I moved more times than I can count, and every time, she made the new place a home. She must have set up seven or eight of them for me over the years. She would go to TJ Maxx and fill a cart, and a bare apartment I had just landed in would turn into somewhere that felt like mine. In college she even bought me a Jenny McCarthy poster and hung it on my wall, because making a place mine meant making it feel like me, right down to the parts a mother would rather not picture. I felt loved. It tasted like a vanilla shake at midnight, and it looked like a lamp from TJ Maxx she'd picked out so I wouldn't have to walk into an empty room.
+And it never stopped once I grew up. I moved more times than I can count, and every time, she made the new place a home. She would go to TJ Maxx and fill a cart, and a bare apartment I had just landed in would turn into somewhere that felt like mine. In college she even bought me a Jenny McCarthy poster and hung it on my wall, because making a place mine meant making it feel like me, right down to the parts a mother would rather not picture. I felt loved. It tasted like a vanilla shake at midnight, and it looked like a lamp from TJ Maxx she'd picked out so I wouldn't have to walk into an empty room.
 
 Chris took to New Jersey without trouble. He hadn't lost a country, he'd gained one. I'd done both at once.
 
@@ -357,7 +346,7 @@ At night I thought about Horacio, not with anger, with confusion, half-expecting
 
 My grandparents gave me what they had, which was steadiness, a house that stayed where it was, meals that came when they were supposed to. Not the warmth my mother gave, but reliable, and that counts for a lot when the ground has just moved.
 
-My grandfather was a high school history teacher. At home he was a simple man, and I loved him for it. He was devoted to Wendy's, the Frosties most of all, and told me once, dead serious, that the one thing missing from his life was that Wendy's wouldn't sell hot dogs. He and my nana drank port wine every night out of paper cups, from a jug they kept. He swore by Ivory soap for every part of a man, no shampoo needed, and said it like classified information. He kept Windex around for reasons I never learned, and put ketchup on everything, a habit I took whole, the kind of man who puts ketchup on his ketchup. He took me to the railroad tracks once and showed me how to lay a quarter on the rail, run off, and come back after the train to find it flattened smooth. My mother didn't agree when she found out, and he never saw the problem. We played UNO and war and checkers, and Chris took up chess with him, but chess was never mine, and UNO was enough. The games were simple and so were the days.
+My grandfather was a high school history teacher. At home he was a simple man, and I loved him for it. He was devoted to Wendy's, the Frosties most of all, and told me once, dead serious, that the one thing missing from his life was that Wendy's wouldn't sell hot dogs. He and my nana drank port wine every night out of paper cups, from a jug they kept. He swore by Ivory soap for every part of a man, no shampoo needed, and said it like classified information. He put ketchup on everything, a habit I took whole, the kind of man who puts ketchup on his ketchup. He took me to the railroad tracks once and showed me how to lay a quarter on the rail, run off, and come back after the train to find it flattened smooth. My mother didn't agree when she found out, and he never saw the problem. We played UNO and war and checkers, and Chris took up chess with him, but chess was never mine, and UNO was enough.
 
 My grandfather had a hard childhood, harder than he ever let on. His own father was an alcoholic who died passed out on a railroad track, hit by a train. My grandfather and his brother Jack joined the army at sixteen, lying about their age, and sent their pay home to their mother. He met my grandmother at Hope Church in Michigan when they were both in college, where she played the organ. For a man who taught for a living, he never pushed my mother or her sisters, Terry and Nancey, toward college. The way they tell it, he'd say they were all pretty and would find good husbands. That just wasn't the expectation in their house.
 
@@ -378,7 +367,7 @@ What I love now is how close my mother and her sisters have become, she and Nanc
 
 He asked my mother out and she said no. He asked again and she said no again. So he kept showing up, week after week, until she finally saw his charm and his maturity. That was how Lou Brizzi decided to stay.
 
-My grandparents gave us a soft landing pad. The man who decided to stay came a little later. Lou Brizzi met my mother in a bar in West Paterson in 1984. He was in his forties, a man who'd already lived a complicated life and decided he was ready to do the next part right. My mother was twenty-nine, back from Mexico with two small boys and not much else, staying with her parents and taking whatever work she could find. She'd learned to be careful about who she let near her children, and a charming man in a bar wasn't going to be the exception. That was why she said no, and why his coming back meant something.
+Lou Brizzi met my mother in a bar in West Paterson in 1984. He was in his forties, a man who'd already lived a complicated life and decided he was ready to do the next part right. My mother was twenty-nine, back from Mexico with two small boys and not much else, staying with her parents and taking whatever work she could find. She'd learned to be careful about who she let near her children, and a charming man in a bar wasn't going to be the exception. That was why she said no, and why his coming back meant something.
 
 I was six the first time I met him. He came over to my grandparents' place in West Paterson, where we were living, and Nana and Grandpa had him to dinner. Most of that night is gone now. What I remember is that he brought Tootsie Rolls for Chris and me. Two boys who weren't his, and he walked in with something in his pocket just for us. Before he ever decided we were his, he was already treating us like we were.
 
@@ -402,45 +391,40 @@ Then I asked him something he hadn't planned for. Whether I could take Lou's nam
 
 When I was six he taught me to swim by carrying me to the edge of the pool and putting me in. I came up coughing and furious, my arms going the way arms go when a body has decided it isn't going to drown, and I reached the wall and pulled myself out. Lou stood there watching, not laughing, just paying attention the way a man does when he's handed his kid something he'll need. He didn't make a speech. I got back in the water the next time, and the time after that.
 
-His whole hobby was us. Saturday mornings at the batting cages in Woodridge, his hands on my shoulders fixing my stance, not because I was ever going to play ball but because he believed doing a thing right was a habit worth building. Bowling alleys. Soccer fields in the New Jersey cold, Lou on the sideline in a coat he didn't need to be wearing, watching me play a sport I was no good at. I took it for granted, which is what a child is supposed to do with a childhood.
+His whole hobby was us. Saturday mornings at the batting cages in Woodridge, his hands on my shoulders fixing my stance, not because I was ever going to play ball but because he believed doing a thing right was a habit worth building. Soccer fields in the New Jersey cold, Lou on the sideline in a coat he didn't need to be wearing, watching me play a sport I was no good at. I took it for granted, which is what a child is supposed to do with a childhood.
 
 Part of what he built was the church. He and my mother decided early that Chris and I would be raised in church, and it wasn't up for discussion. Sunday mornings, confirmation, and at thirteen I let God into my heart, the way you do when the adults around you have earned enough trust that the invitation means something. I'd lose the thread of it for a long time, the drinking years, California, the stretch when I was too busy performing a life to remember what mine was built on, but it never went anywhere. It waited.
 
-We moved to Ramsey when I was in sixth grade. Bigger house, new school, a town where the kids had known each other since before I showed up, and I came in as the new boy with dark olive skin and features that didn't match the rest of Bergen County. Middle school is not a gentle place for a kid who's a little different. But I had Lou, who understood that a boy who comes home quiet in the wrong way doesn't need to be interrogated, he needs someone there. He couldn't fix the cafeteria for me. He was just home when I got there, and that turned out to be the whole thing.
+We moved to Ramsey when I was in sixth grade. Bigger house, new school, a town where the kids had known each other since before I showed up, and I came in as the new boy with dark olive skin and features that didn't match the rest of Bergen County. But I had Lou, who understood that a boy who comes home quiet in the wrong way doesn't need to be interrogated, he needs someone there. He couldn't fix the cafeteria for me. He was just home when I got there, and that turned out to be the whole thing.
 
 My mother, Becky, and Lou divorced in 1996, the year I turned eighteen. The divorce handed him an easy way out and every social permission to take it. We were grown, or close to it, and the marriage that had tied him to us was finished. He stayed anyway, a plain fact he never bothered to announce: we were his, and that didn't come undone because the marriage had. The first time he chose us, it was a handful of Tootsie Rolls at my grandparents' dinner table. This time it was a divorce he could have walked away from clean, and he stayed. The same decision, made twelve years apart.
 
-I understand it now in a way I couldn't then. I see it in every room I walk into for work, in every family around a bed, in every grown son or daughter holding a hand that's getting cooler and trying to add up what one person's steady presence meant across thirty years of ordinary days. That was Lou's kind of love. It didn't announce itself. It showed up on a Saturday with a bucket of baseballs and a patient set of hands. For a kid who'd already been left once, that wasn't small. It was everything.
+I understand it now in a way I couldn't then. I see it in every room I walk into for work, in every family around a bed, in every grown son or daughter holding a hand that's getting cooler and trying to add up what one person's steady presence meant across thirty years of ordinary days. That was Lou's kind of love. It showed up on a Saturday with a bucket of baseballs and a patient set of hands. For a kid who'd already been left once, that wasn't small. It was everything.
 
 **CHAPTER 4**
 
-## **Lou's Kids**
+## **Chosen**
 
-*"God setteth the solitary in families."*
-*— Psalm 68:6*
+*"I have called thee by thy name; thou art mine."*
+*— Isaiah 43:1*
 
 Overnight, I had a big sister and two big brothers I hadn't even known to hope for. Lou chose us, and that choice came with a family already in place. He had three children of his own long before he ever met my mother: Lisa, Joel, and Jon. When he chose Chris and me, that was his decision to make. What his kids did was something else. They didn't have to make room for two boys from Mexico City who showed up attached to their father's new marriage. They made room anyway. They treated us like brothers.
 
-For the first time in my life I felt like part of a whole family, on the inside of something instead of looking in from the edge. It could not have been easy for them. Lou wasn't a great father to his first three. He'd had all three by the time he was twenty-two, he worked all the time, and the dad who hit me a hundred fly balls and drove me to every match was not the dad they got growing up. They had every reason to resent the do-over. Instead they folded Chris and me in. They were older, and they were essential, as much a part of raising us as anyone.
+For the first time in my life I felt like part of a whole family, on the inside of something instead of looking in from the edge. It could not have been easy for them. Lou wasn't a great father to his first three. He'd had all three by the time he was twenty-two, he worked all the time, and the dad who hit me a hundred fly balls and drove me to every match was not the dad they got growing up. They had every reason to resent the do-over. Instead they folded Chris and me in.
 
 Lisa is the oldest. She babysat Chris and me when we were small, looked after two boys who were not always easy to look after, and did it without making a thing of it. She is the one who still hosts Thanksgiving every year, who keeps the table set the way our grandmother did. You'll meet her again later, at that table.
 
 Joel was good to us from the start. Steady. He showed up and didn't need credit for it. Whatever Chris and I needed growing up, Joel was around for it.
 
-He is also the family's keeper of stories about me, the ones from when I'd just come back from Mexico and barely spoke English, back when my mom was dating Lou. He still tells them. There's the night at a Chinese restaurant when somebody asked what I wanted to eat and I said, with total confidence, taco. He has never let me live it down. There's the ferry from New Jersey to New York, the family car rolling on to cross the water, and me asking if we could put the car on the boat. All these years later Joel will still drop either one into a conversation just to watch me brace for it. That's its own kind of love, the teasing you only get once you're truly in.
+He is also the family's keeper of stories about me, the ones from when I'd just come back from Mexico and barely spoke English, back when my mom was dating Lou. He still tells them. There's the night at a Chinese restaurant when somebody asked what I wanted to eat and I said, with total confidence, taco. There's the ferry from New Jersey to New York, the family car rolling on to cross the water, and me asking if we could put the car on the boat. All these years later Joel will still drop either one into a conversation just to watch me brace for it. That's its own kind of love, the teasing you only get once you're truly in.
 
 Jon and I found each other through wrestling. His stepkids wrestled, I had wrestled, and that was the bridge. There is a shorthand between wrestling people. You don't have to explain the weight cuts, or the losing, or what it takes to walk back out for the next period. Jon understood it without my having to say it. He is also one of the quietest overachievers I know. He started out at Juniata College getting C's and finished as a partner at a major software company. More reserved than the rest of us, but kind all the way through. His story rhymes with Chris's, the underdog who becomes the success. Lou's people don't stay down.
 
-The moment I felt closest to him came years later, both of us grown. He was a partner at the software company by then, successful, getting close to retirement. I was up in New Jersey for a work training, and I took an hour-and-a-half Uber ride just to go see him. We ended up walking, the two of us, and he told me about a guy he'd mentored at his company, how grateful the man was for the chance, how grateful the man's whole family was for what it had done for them. The way Jon told it, the thing he was proud of wasn't the success. It was having been of use to somebody. That was a side of him I'd only seen in pieces, the part that just wanted to show up and matter to people. That day I got the whole of it.
+The moment I felt closest to him came years later, both of us grown. He was a partner at the software company by then, successful, getting close to retirement. I was up in New Jersey for a work training, and I took an hour-and-a-half Uber ride just to go see him. We ended up walking, the two of us, and he told me about a guy he'd mentored at his company, how grateful the man was for the chance, how grateful the man's whole family was for what it had done for them. The way Jon told it, the thing he was proud of wasn't the success. It was having been of use to somebody. That was a side of him I'd only seen in pieces. That day I got the whole of it.
 
 That's the part that still gets me. Lou chose Chris and me. But Lisa and Joel and Jon chose us too. They could have kept us at the edge of the family, at a small distance that never quite closes. They never drew that line. We were brothers. We still are.
 
-**CHAPTER 5**
-
-## **Claudio and Rob**
-
-*"I have called thee by thy name; thou art mine."*
-*— Isaiah 43:1*
+### *Claudio and Rob*
 
 I wasn't given to Lou. I chose him.
 
@@ -468,7 +452,7 @@ I'd take my eraser and rub the name out until the paper went soft and gray, and 
 
 There was one thing they couldn't change, and I held onto it like a railing. Brizzi still started with a B. When the teacher lined us up alphabetically, I landed near the front, right about where Balderas used to put me. My country was gone. My first father was gone. My name was gone. But I still stood in the same place in that line, and some mornings that one small thing was the only proof I had that any part of the old me had made the trip.
 
-**CHAPTER 6**
+**CHAPTER 5**
 
 ## **The Man Who Raised Me**
 
@@ -489,8 +473,6 @@ Chris and Dad kept a phrase between them. After the big moments, a school, a har
 
 And it wasn't only the big things. One time I asked for White Castle, and the nearest one was an hour away. He drove me. An hour there for a sack of little burgers, because his kid had a taste for them. When I needed a root canal, he showed up for that too. Big or small, fun or painful, if it was mine, he was there.
 
-I never once heard him feel sorry for himself. He worked in a way that barely makes sense when I lay it out now, and he never made it sound like a burden. Complaining wasn't in him. Neither was blame. When a thing was hard, he did it anyway, and he did it without an audience.
-
 And once, it was far bigger than a tournament or a sack of burgers. I was in Oxford, Ohio, in college, and I was in a dark place, the kind where you can't find your way out, where it finally takes everything you have just to admit you need help. I needed to get on medication for depression. Dad got in the car and drove to Ohio. He showed up the way he always had, except this time it wasn't for a game.
 
 And then there was West Palm Beach. By then I wasn't a kid with a stolen Walkman. I was a grown man dying by inches, deep in addiction, out of road. Dad drove down and pulled his dying son out of it. He didn't shame me. He showed up one more time, when showing up meant saving my life.
@@ -509,7 +491,7 @@ PART TWO
 
 # **THE MAT**
 
-**CHAPTER 7**
+**CHAPTER 6**
 
 ## **The Wrestler**
 
@@ -524,21 +506,21 @@ And I kept sitting with them. That's the part I sit with now. Every day they did
 
 Kris and Kyle Swanson were the most popular kids in the grade, and they sat there too, and they never once joined in. They didn't stop it. They just left me alone, and being left alone by the popular kids was as close to safe as that room got. I remembered their names for thirty years. I never remembered the ones who did it. Years later we landed at Miami of Ohio together and became friends, the easy kind, because they were the ones who had kept their hands clean.
 
-It went on the rest of middle school. By the end the joke had moved into ink. Somebody wrote have fun chokin' the chicken in my yearbook, the book you're supposed to keep, the one that's supposed to hold the good stuff.
+It went on the rest of middle school. By the end the joke had moved into ink. Somebody wrote have fun chokin' the chicken in my yearbook, the book you're supposed to keep.
 
-I crossed it out before my mom could see it. That is the part that tells you who I already was. She had carried two boys out of one country and built us a life in another with no degree and no one to catch her. She had given up everything for us. I wasn't going to hand her this too. So I took a pen to my own yearbook and scratched the line out, alone, so she would never have to feel it. I was twelve. I didn't have the word for it yet. I was already a caretaker.
+I crossed it out before my mom could see it. That is the part that tells you who I already was. She had carried two boys out of one country and built us a life in another with no degree and no one to catch her. I wasn't going to hand her this too. So I took a pen to my own yearbook and scratched the line out, alone, so she would never have to feel it. I was twelve. I didn't have the word for it yet. I was already a caretaker.
 
-I couldn't fix the cafeteria. There was no move that made it stop, nothing I was good at that changed where I sat. But there was one place in that town where nobody got to rank me, where there was no table and no lineup and no committee deciding what I was worth. One body against one body, and whatever I'd been handed, I got to settle it myself.
+I couldn't fix the cafeteria. But there was one place in that town where nobody got to rank me, where there was no table and no lineup and no committee deciding what I was worth. One body against one body, and whatever I'd been handed, I got to settle it myself.
 
 The first place I had to learn to show up for myself, with Lou watching from the stands, was a wrestling mat. I was twelve when wrestling first came up, and it came up between Charlie and my dad. The two of them talked it over, talked wrestling, before anybody said a word to me. It wasn't a read on any talent. I didn't have any. I was awkward, undersized, the kid picked somewhere in the middle in gym class, not last, which would've been a story, just middle. It was a hunch, the way people point a kid at something because nothing else has stuck.
 
-Charlie was Aunt Nancey's husband, and he changed the temperature of a room by walking into it. He laughed easily. He looked at you, even as a kid, like what you were saying was the most interesting thing he'd heard all day. He loved my aunt, and she loved him in a way she's never tried to replace. I talked to Nancey recently and she said it plain: there will never be another man like Charlie. She hasn't dated in years.
+Charlie was Aunt Nancey's husband, and he changed the temperature of a room by walking into it. He laughed easily. He looked at you, even as a kid, like what you were saying was the most interesting thing he'd heard all day. He loved my aunt, and she loved him. I talked to Nancey recently and she said it plain: there will never be another man like Charlie. She hasn't dated in years.
 
 That one sentence rerouted my life. No Charlie, no wrestling room, no county title at seventeen, no mat to teach me how to stay when everything in me wanted to leave.
 
 Before Charlie ever came over to make his case to Chris and me, my dad sat me down and asked if it was something I wanted to do. He didn't sign me up. He asked. Then he said, we'll try it, the way he said that about a lot of things, not with any heat, just the quiet of a man who figured most things give way to showing up. So I showed up.
 
-That first year, before I'd won anything, my dad took me to watch the County tournament. I was twelve, brand new to it, sitting up in the bleachers looking down at the mats. A kid from Ramsey won a single match the whole tournament, and around our town that counted as a big deal. There were forty-eight names on every bracket, a wall of them, and getting your hand raised even once in a crowd like that meant something. My dad looked down at the mats, then over at me, and said it plain, like a fact he already had. One day you're going to win a match here. I was a kid who got picked in the middle in gym class. I didn't believe him for a second. He did.
+That first year, before I'd won anything, my dad took me to watch the County tournament. I was twelve, brand new to it, sitting up in the bleachers looking down at the mats. A kid from Ramsey won a single match the whole tournament, and around our town that counted as a big deal. There were forty-eight names on every bracket, a wall of them, and getting your hand raised even once in a crowd like that meant something. My dad looked down at the mats, then over at me, and said it plain, like a fact he already had. One day you're going to win a match here. I didn't believe him for a second. He did.
 
 The wrestling room ran warmer than the rest of the building. Years of work had soaked into the mats and the walls, and it hit me at the door, rubber and sweat and something chemical underneath. I loved that room. Not because it was comfortable. Because it was the one place I didn't have to figure out who to be. I just had to work, and work I understood.
 
@@ -546,7 +528,7 @@ Wrestling is the loneliest sport there is. You step on the mat and nobody can he
 
 Practice was the same every day. Running first, then drills, shots, sprawls, stand-ups, until the moves lived below thinking. My legs knew when to change levels; my hands knew where to find a wrist. Then Coach called live and it was full speed. Drop into stance, knees bent, hands out, eyes between his shoulders and hips. The whistle, and we'd close, foreheads together, hands fighting for position, the work happening in adjustments too small to read from the bleachers. On the mat you felt all of it, every shift of weight, every half-second of hesitation. You couldn't hide. Everywhere else I could build the version of myself the room wanted. Not there.
 
-The mental game was the real opponent. On the mat you stood alone. Six minutes stretched forever while your lungs burned and your mind offered every excuse to quit. Fear rode right there with you, fear of getting taken down in front of everyone, fear of gassing out, fear that the new kid from Mexico who had already lost one father would never belong. The trick wasn't pretending the fear wasn't there. The trick was making it sit in the corner while you stayed present. Breathe, level change, hands ready. The whistle blows and the world narrows to the circle and the boy trying to put you on your back. Every hesitation cost you. Every time you stayed composed after a bad shot, you got the edge. Wrestling taught me the body quits when the mind gives it permission. So I learned to tell my mind no. Stay. Fight the wrist. Explode up. The mat didn't care about my story or the questions inside me. It only cared that I kept showing up.
+The mental game was the real opponent. Six minutes stretched forever while your lungs burned and your mind offered every excuse to quit. Fear rode right there with you, fear of getting taken down in front of everyone, fear of gassing out, fear that the new kid from Mexico who had already lost one father would never belong. The trick wasn't pretending the fear wasn't there. The trick was making it sit in the corner while you stayed present. Breathe, level change, hands ready. Wrestling taught me the body quits when the mind gives it permission. So I learned to tell my mind no. Stay. Fight the wrist. Explode up. The mat didn't care about my story or the questions inside me. It only cared that I kept showing up.
 
 Making weight was its own war inside the bigger one. I dropped pounds fast, sweating in trash bags, spitting into cups, skipping meals, anything to hit the number. The scale ruled everything. Mornings I stepped on it with my heart in my throat, willing it down. Hunger clawed at me all the time. My head went foggy, my temper short, my thoughts mean. One extra bite and I'd feel I had failed the team, failed myself, failed the work we all put in. Part of me was proud of the discipline. Part of me was ashamed of what I'd do to my body to prove I belonged. After weigh-ins the relief crashed in and I'd binge hard, then hate myself for it. Cutting weight taught me I could sit with discomfort and choose the harder thing. It also showed me the line between discipline and destruction, a line I would cross years later with worse things than food.
 
@@ -602,7 +584,7 @@ Freshman year I lost the matches that mattered. Early sophomore season I drew th
 
 I won the District at 119 that year, sophomore season, 1994. The recognition came fast after that. One afternoon Mr. Molino pulled me out of class, and I walked down the hall sure I was in trouble, running through everything I might have done. Instead he told me I'd been named Athlete of the Month for Ramsey. They put my name on the front lawn of the school for thirty days. They painted it on the wall in the old gym, and I was the first sophomore they had ever done that for.
 
-I couldn't take any of it in. That's the part I didn't understand until much later. The gap between who everyone suddenly said I was and who I believed I was was too wide to cross. The achievement was real. The sense that I had earned it wasn't there, and it wouldn't be for years. I'd feel the same thing later, on MTV with cameras pointed at me, the same quiet question running underneath it all: who am I to be anybody? It would take a long time, and losing nearly everything, before I could stand in a room and believe I belonged in it.
+I couldn't take any of it in. The gap between who everyone suddenly said I was and who I believed I was was too wide to cross. The achievement was real. The sense that I had earned it wasn't there, and it wouldn't be for years. I'd feel the same thing later, on MTV with cameras pointed at me, the same quiet question running underneath it all: who am I to be anybody? It would take a long time, and losing nearly everything, before I could stand in a room and believe I belonged in it.
 
 ### *Junior Year*
 
@@ -616,7 +598,7 @@ I won my semi, lost a close one in the finals, still went to States. Finished 18
 
 I was about sixteen when I got the news about Charlie. He and Nancey had separated and he'd drifted somewhere harder to reach. The disease had him, the same one that came for me a decade later, though I didn't know that yet. My dad was the one who went and got him, found him alone in his apartment the way you find someone who's stopped being able to take care of himself. Charlie died about four years after that.
 
-I loved him, and that's hard to explain to people who think grief needs proximity. I hadn't talked to him in years. I was sixteen, buried in wrestling and school. But I'd loved him, and when he died something opened in me I didn't have a name for. Nobody validated it. I wasn't his son, we weren't close anymore. He was the first person I loved who was just gone.
+I loved him, and that's hard to explain to people who think grief needs proximity. I hadn't talked to him in years. I was sixteen, buried in wrestling and school. But I'd loved him, and when he died something opened in me I didn't have a name for. Nobody validated it. He was the first person I loved who was just gone.
 
 Here's what stays with me now: Lou walked into that apartment before he ever walked into mine. When he drove to West Palm Beach years later and found me in the dark, it wasn't his first time doing it. He'd already gone into a room where someone he loved was losing, and it hadn't been enough. He came for me anyway, knowing how it can end.
 
@@ -648,7 +630,7 @@ When I threw up in a match, he didn't see weakness. When I got pinned in ninetee
 
 The wrestling years left marks I still feel. For a long time my body didn't feel like my own. It was something to manage, a number to beat, proof I deserved my place. Mirrors became scales. Food stayed complicated, some meals were cheat meals, others I ate lean. The voice that once whispered drop the pounds or you don't belong found new language when life felt out of control. The same drive that made me cut nineteen pounds and walk onto the mat later tried to numb everything with other things. Control felt safer than surrender. It took years, and the steady love of people who saw me past the scale, Lou telling me, flat out, as much as his own kids, my mother's quiet meals, before I could begin to rest in a body that didn't have to earn its place. The mat gave me strength. The family gave me grace. Together they taught me I could let the machine rest and just be a man who is enough. Some days I still have to choose that on purpose. The choice gets easier every year.
 
-**CHAPTER 8**
+**CHAPTER 7**
 
 ## **The Suit**
 
@@ -663,24 +645,19 @@ He had a good job. Good enough that the lights stayed on, the mortgage got paid,
 
 Nobody sat me down and explained it. No family meeting, no speech, no panic I can remember. That wasn't him. But I felt it. The house got quieter. My mother's voice got softer. Adults paused half a second too long before answering simple questions. My dad got more focused, not less. Deliberate. Like a switch had been thrown and every move mattered now.
 
-He'd taken on a family that didn't start with him. A wife who waited tables. Two boys who weren't his by blood. A mortgage, car payments, credit card debt. Two kids with big personalities and bigger needs. He never once acted like any of it was somebody else's problem. He owned all of it.
+He'd taken on a family that didn't start with him. A wife who waited tables. Two boys who weren't his by blood. A mortgage, car payments, credit card debt. He never once acted like any of it was somebody else's problem. He owned all of it.
 
-The recruiter had put it to him straight, the way you tell a man something for his own good. You want a real shot, he said, you've got to dye the gray. They're going to look at you and see an old man. A grown man, a husband, a father, told he had to look younger than he was to be worth a chance. He could have been offended. The next time I saw him the gray was gone. That detail has never left me.
+The recruiter had put it to him straight, the way you tell a man something for his own good. You want a real shot, he said, you've got to dye the gray. They're going to look at you and see an old man. A grown man, a husband, a father, told he had to look younger than he was to be worth a chance. The next time I saw him the gray was gone. That detail has never left me.
 
 Every day he put on a suit. Every single day, even when there was no interview on the calendar, nowhere definite to go. He shaved, tied the tie, polished his shoes, and walked out the door like a man with somewhere to be. He treated looking for work as work.
 
-I don't know how many interviews there were. In my memory it felt endless — double digits at least. Enough that rejection could have turned personal. Enough that another man might have come home bitter, or loud, or ashamed. He never did. Things were tense, of course. The mortgage didn't care that he was trying. The credit card companies didn't care that he wore a suit. But he never made us feel like we were too expensive to raise. Wrestling lessons never felt selfish. We never felt guilty for needing rides, or food, or hope.
+I don't know how many interviews there were. In my memory it felt endless — double digits at least. Enough that rejection could have turned personal. Enough that another man might have come home bitter, or loud, or ashamed. He never did. The mortgage didn't care that he was trying. The credit card companies didn't care that he wore a suit. But he never made us feel like we were too expensive to raise. Wrestling lessons never felt selfish. We never felt guilty for needing rides, or food, or hope.
 
 Love is easy to admire when it's spoken. This was the other kind — a man rejected fifteen times, knotting his tie on the sixteenth morning. He wasn't loud about what he carried. He carried it. Eventually he found work. A man like that was never going to stay down.
 
 I can still see him at the front door. Dyed hair, pressed shirt, tie pulled tight, shoes shined. That's what a father does while he's waiting. He keeps showing up.
 
-**CHAPTER 9**
-
-## **Lou's World**
-
-*"A man that hath friends must shew himself friendly: and there is a friend that sticketh closer than a brother."*
-*— Proverbs 18:24*
+### *Lou's World*
 
 Some of my dad's closest buddies had gold records hanging on their walls, and he never once thought it was worth mentioning.
 
@@ -698,7 +675,7 @@ I shook my head.
 
 I had no idea. I was seven. They were my dad's friends with shiny things on the wall and plants in the yard.
 
-But that was Lou. The Rascals — Rock and Roll Hall of Famers, one of the biggest bands of the sixties — were his buddies. They came to his eightieth birthday. They came to his wedding. He never made a thing of it. Never name-dropped.
+But that was Lou. The Rascals — Rock and Roll Hall of Famers, one of the biggest bands of the sixties — were his buddies. They came to his eightieth birthday. They came to his wedding.
 
 Years later we're at my sister Lisa's place in Sarasota, walking into breakfast at Another Broken Egg, and my dad spots a guy outside. His face lights up. Dickie V! The guy turns and it's Dick Vitale. They went to high school together. My dad went to high school with Dick Vitale and never once thought to mention it.
 
@@ -712,9 +689,9 @@ I won't use the name of the guy who hired me. Very Italian name. Bad toupee, dro
 
 First they sent me out with a guy named Sal to train me. Everywhere we went, people knew him. Hey Sal, what's up Sal, big handshakes, big smiles. Three days of that, and in three days Sal didn't teach me one thing. Not what to look for, not what auditing even meant, not a single page. Then he told me he had to get out of the area. His exact words. I was nineteen. I didn't know what that meant. I still don't. But Sal was gone, and now it was just me.
 
-Nineteen, fake glasses, a suit, driving into neighborhoods I had no business in, walking into union offices and asking to see the books. They'd sit me down with these giant ledgers and I'd flip pages like I knew what I was doing. They were always nice about it. You want coffee, cake, donuts? I'd say no, flip pages for an hour, leave.
+They'd sit me down with these giant ledgers and I'd flip pages like I knew what I was doing. They were always nice about it. You want coffee, cake, donuts? I'd say no, flip pages for an hour, leave.
 
-After a few weeks the boss calls and says I'm leaving too early. I said, I don't know what I'm doing, I don't know what I'm looking at. He said — I'll never forget it — it doesn't matter, I get paid by the hour, just sit in there and punch numbers into the calculator. That's when it landed. Whatever this was, it wasn't accounting. A nineteen-year-old in fake glasses auditing union books for a guy with a toupee and a Buick who didn't care whether I audited anything. I left him a note and went back to construction. Didn't even quit in person.
+After a few weeks the boss calls and says I'm leaving too early. I said, I don't know what I'm doing, I don't know what I'm looking at. He said — I'll never forget it — it doesn't matter, I get paid by the hour, just sit in there and punch numbers into the calculator. That's when it landed. Whatever this was, it wasn't accounting. I left him a note and went back to construction. Didn't even quit in person.
 
 That job came out of my dad's world. A conversation at a bar in Mahwah, a handshake, a phone call, and his nineteen-year-old son is driving the five boroughs in fake glasses pretending to audit the mob.
 
@@ -740,13 +717,13 @@ Some afternoons he'd tape a Yankee game that had already played, then put it on 
 
 He bought a goat. To cut the grass. The man ran a landscaping business, fifty lawns a week, and decided the back yard would be handled by a goat. No discussion, no warning. One day there was a goat back there eating the grass, because in Lou's mind that was the most efficient solution available.
 
-And everything was a surprise. What are we watching, Dad? It's a surprise. Where are we going? It's a surprise. It was usually Clint Eastwood on the screen. He loved Eastwood — the squint, the quiet, the man who didn't say much and didn't have to. Looking back, of course he did. That was Lou's hero, and a fair description of Lou himself. He got more joy out of the not-telling than the telling.
+And everything was a surprise. What are we watching, Dad? It's a surprise. Where are we going? It's a surprise. It was usually Clint Eastwood on the screen. He loved Eastwood — the squint, the quiet, the man who didn't say much and didn't have to. That was Lou's hero, and a fair description of Lou himself. He got more joy out of the not-telling than the telling.
 
 My brother and I called him the most interesting man in the world. It started as a joke, the guy from the Dos Equis commercials. Stay thirsty, my friends. Then we realized we weren't joking. He was. Not for who he knew. For who he was in a kitchen on an ordinary night, keeping a straight face, waiting for you to fall for it.
 
 Lou died on Christmas Day, 2025. The man who adopted me. The man who drove me to rehab and stopped at Carrabba's on the way so I could have a last glass of wine. The man who never talked about himself, never needed you to know who he knew, and never once acted like any of it was special. When your dad's alive you think you have time, that the stories will keep coming. Then one day they stop. I got to live in his world for a while.
 
-**CHAPTER 10**
+**CHAPTER 8**
 
 ## **Oxford**
 
@@ -759,11 +736,11 @@ The lowest stretch of my college years ended with a waitress running into a park
 
 Lou's world had made me. Then it sent me off to build one of my own.
 
-Before I ever set foot on campus, there was a party in New Jersey. Tricia Hart hosted it, a mixer for kids heading to Miami that fall. Tricia doesn't love being known as Melissa Joan Hart's sister — her mom produced Sabrina the Teenage Witch and Clarissa Explains It All — but she's her own person, sharp-eyed, comfortable in a room full of strangers long before college. That night I met Dean Ferrera from Hawthorne and Missy Dunlop and people who'd matter for years. I liked going to a school in Ohio already knowing a few faces. Dean became one of my best friends. He's a cardiologist outside Chicago now.
+Before I ever set foot on campus, there was a party in New Jersey. Tricia Hart hosted it, a mixer for kids heading to Miami that fall. That night I met Dean Ferrera from Hawthorne and people who'd matter for years. I liked going to a school in Ohio already knowing a few faces. Dean became one of my best friends. He's a cardiologist outside Chicago now.
 
 My mom and dad dropped me off in the fall of 1996. Partial wrestling scholarship, financial aid, Lou covering the rest. That was how it got paid for. My mom cried when she left me there. The woman who had carried two kids out of a country without flinching stood in a dorm parking lot in Ohio and couldn't stop the tears. I didn't feel like I'd chosen Miami so much as it had chosen me first — a letter from a coach with my name on it. Later I saw it in Newsweek, "best schools for your money," number four. The Ivy of the Midwest.
 
-My dorm was Stanton Hall. My roommate was Kevin Malone, and the first thing I saw was the cheesehead on his shelf. I didn't know what a cheesehead was. I'm from New Jersey. Packers fan from Wisconsin, with the accent to prove it. Good kid, smart, kind. Next door was Jason Huet, six-five, a high school basketball player who'd wanted Chapel Hill and was sore his parents made him come to Miami. Hard shell, didn't let everybody in, but once he did he didn't take it lightly. He's a pulmonologist in Charleston now. He texted recently: you want to come see me for Memorial Day? That's a friendship that just holds. There were also the Swanson twins from Ramsey, Kris and Kyle, the coolest kids in our town. When they heard I was going to Miami, one of them said, isn't he a nerd? My friend Dave said, he's actually cool now. They became good friends too.
+My dorm was Stanton Hall, my roommate a good-natured Packers fan from Wisconsin with a cheesehead on his shelf and the accent to prove it. I didn't know what a cheesehead was. I'm from New Jersey. Next door was Jason Huet, six-five, a high school basketball player who'd wanted Chapel Hill and was sore his parents made him come to Miami. Hard shell, didn't let everybody in, but once he did he didn't take it lightly. He's a pulmonologist in Charleston now. He texted recently: you want to come see me for Memorial Day? That's a friendship that just holds. There were also the Swanson twins from Ramsey, Kris and Kyle, the coolest kids in our town. When they heard I was going to Miami, one of them said, isn't he a nerd? My friend Dave said, he's actually cool now. They became good friends too.
 
 That was the version of me I was building at Miami. Not Claudio. Rob — county wrestling champion, Miami student, American. Nobody here knew who I'd been before I arrived. Being the darker-skinned kid on a mostly white-bread campus gave me something, a little spice, and I connected in ways that hadn't come as easily in high school.
 
@@ -783,7 +760,7 @@ I fell into a depression. Not dramatic, not announced. Gray. Lou heard it in my 
 
 On the way out, a waitress ran into the parking lot after us and handed me her phone number. I looked at Lou. He kept walking, eyes straight ahead. I asked if he'd said something, left a big tip, set the whole thing up. He denied it flat. Didn't miss a beat. I never believed him. He took it to the grave. That might be my favorite thing about him.
 
-**CHAPTER 11**
+**CHAPTER 9**
 
 ## **MTV**
 
@@ -796,13 +773,13 @@ That was the week MTV put my face on national television, and I still don't enti
 
 Junior year Dave Nesser, a college buddy of mine, said we were going to Cancun for Spring Break. Three hundred people from Miami. MTV. The beach. Ten days at the center of the known universe. A scout stopped me with a Polaroid, took my picture, said stay near your phone. That night the hotel phone rang. Dean answered, then handed it to me with a look I'd never seen on his face. It's MTV.
 
-The lineup was NSYNC, 98 Degrees, Busta Rhymes, Eminem. Justin Timberlake was ten feet behind me and better looking than anyone on that stage. Same VIP pass as Timberlake, same access as Eminem. I sat next to Niki Taylor and got a picture. The thing with Eminem you already heard. Later Carson Daly was at a club telling us about all the celebrities he knew, and we'd just been on his network. We laughed about that for days.
+The lineup was NSYNC, 98 Degrees, Busta Rhymes, Eminem, and for ten days I carried the same VIP pass they did. The thing with Eminem you already heard. Later Carson Daly was at a club telling us about all the celebrities he knew, and we'd just been on his network. We laughed about that for days.
 
 The show aired eight times a day for three months. Back in Oxford, cars slowed, people pointed, strangers at parties turned toward us with a warmth I hadn't been on the receiving end of before. I got the reach of it through Chris: a girl in his high school was watching one night, called him over, said there's someone on here who looks exactly like your brother. That is my brother, Chris said. She looked at the screen, looked at him, said, yeah right.
 
 That feeling, the one that hadn't come after the county championship, or the wrestling room, or Kappa Sig, came in Cancun, ten feet from Timberlake with cameras pointed my way. The trouble with finally finding the feeling is that now you know exactly what you're chasing.
 
-Senior year I lived with Dave Nesser, Dean Ferrera, and Jason Huet in a condo downtown. Absolute pigs. We destroyed that place. We held onto those months because we knew they wouldn't last. We were about to scatter.
+Senior year I lived with Dave Nesser, Dean Ferrera, and Jason Huet in a condo downtown. Absolute pigs. We destroyed that place. We were about to scatter.
 
 I think about those four years and I thank God for my dad. Lou could have sent me to community college, a local school, a hundred cheaper options. Instead he let me go to Miami and took out loans to do it. After the divorce he was living in Mahwah, splitting a rental house with his friend Roger, who'd been through a divorce of his own, and Lou's room was the small one upstairs. Chris and I would visit and you could read it in his body when things were weighing on him. He never put it on us. He carried it, quietly, the way he carried everything.
 
@@ -816,7 +793,7 @@ PART THREE
 
 # **THE FALL**
 
-**CHAPTER 12**
+**CHAPTER 10**
 
 ## **My Brother's Keeper**
 
@@ -831,13 +808,13 @@ Here's the part that still gets me: we look nothing alike. Chris has green eyes 
 
 Back at Penn he became a legend. Bouncers would hold the ID up to the light, look at the child standing in front of them, and say there's no way you're twenty-one. And Chris, cool as anything, would tell them: run it in the system. And it came back clean. Every time. Because it was real, my actual identity, in the actual New Jersey database. The only counterfeit item in the whole transaction was my brother's face.
 
-If the DMV didn't prove we had no concept of consequences, there's the night he got arrested at my college. I was a junior at Miami of Ohio, living in the fraternity house. Chris drove out from Jersey with my cousin John, technically my stepbrother's stepson, but in our family that's close enough, the two of them listening to the Jerky Boys the entire way, which tells you the mood they arrived in. We went to the bars. My fake ID said I was from Hawaii, which was not exactly airtight, given that the number of Hawaiians enrolled at Miami of Ohio was, at that time, one. The bouncers took one look at Chris, made a call, and all three of us got arrested. Booked, processed, the whole tour.
+If the DMV didn't prove we had no concept of consequences, there's the night he got arrested at my college. I was a junior at Miami of Ohio, living in the fraternity house. Chris drove out from Jersey with my cousin John, the two of them listening to the Jerky Boys the entire way. We went to the bars. My fake ID said I was from Hawaii, which was not exactly airtight, given that the number of Hawaiians enrolled at Miami of Ohio was, at that time, one. The bouncers took one look at Chris, made a call, and all three of us got arrested. Booked, processed, the whole tour.
 
 They release us and I do the responsible-older-brother thing. That's it, I announce. We got arrested. We're staying in tonight. Chris and John look at me like I've started speaking another language. Screw that, we're going out. They had driven eight hours with the Jerky Boys for this weekend and they were not about to spend it watching me sulk. So we went back out, to a different fraternity, where, as luck would have it, I'd been dating one of the brothers' girlfriends, and a cop walked in. We came within a hair of getting arrested twice in one night, same campus. My mother found out about the first arrest and I heard about it for a year: how could you let your brother get arrested at your school? I never did tell her how close we came to a sequel.
 
 Chris and I have never had a falling out. Not once. You'd assume my addiction would have detonated us, and it strained plenty when I was at my worst in California, but it never broke. Not even the night he sat me down and gave me the ultimatum: admit you have a problem, or admit you have mental health issues. Pick one. I wasn't angry. I respected him too much to be angry. He loved me enough to tell me the truth when everyone else had run out of it. Through all the pills and the lies and the wreckage, I always knew my brother was trying to save my life. He may be the only person who could have said that sentence and had me actually hear it.
 
-After I got sober I talked him into taking a manager job in Pensacola, so for once we were in the same city. Chris is a workaholic, and I don't mean a guy who works hard, I mean the clinical definition. I'd call him to come out, I've got people I want you to meet, and he'd say no, I've got to work. Every time. But every so often he'd surface, and when he did he was generous to a fault. Let's take a trip, he'd say, and the next thing I knew I was in Costa Rica. We did Colombia with a couple of his friends. Trips that make your hometown feel small.
+After I got sober I talked him into taking a manager job in Pensacola, so for once we were in the same city. Chris is a workaholic, and I don't mean a guy who works hard, I mean the clinical definition. I'd call him to come out, I've got people I want you to meet, and he'd say no, I've got to work. Every time. But every so often he'd surface, and when he did he was generous to a fault. Let's take a trip, he'd say, and the next thing I knew I was in Costa Rica.
 
 And then there was India.
 
@@ -849,17 +826,17 @@ Every photograph of Chris from that trip is taken from behind. Every single one.
 
 One afternoon our cab driver gets into a genuine fistfight, out of the car, in the middle of the street, with another man, while Chris and I sit in the back seat like it's a stop on the tour. I do what any reasonable person would do and start filming. Later, back near the hotel, Chris has run out of the prednisone for his palsy, so we duck into a little pharmacy. The pharmacist comes out from the back. It's him. The man our driver was throwing punches at twenty minutes earlier is now standing behind the counter holding my brother's prescription. He looks at me. He looks at my phone. Give me your phone, he says. You were recording me. Delete it. I deleted it on the spot, because he had the prednisone, which meant he had all the leverage in the room. He fills the prescription, slides it across, and then nods at my head and says: I love your hat. It was a hat from a 5K. You give me your hat, he says, and I will give you anything in this pharmacy. I told him I was good, and I kept my hat. So somewhere in my memory is the picture of me negotiating with a street fighter over a road-race hat while my brother stands next to me with half a face.
 
-I made one more error in judgment at that hotel. I asked the front desk if anyone could give me a massage. They said no. Then, somehow, they found someone. A man appears at my door, and I am fairly confident he was the landscaper, or possibly just a man who happened to be in the building when somebody said go upstairs. He had no idea what he was doing. The table had no headrest, so my neck was bent up against the end of it at a right angle, like I was being disciplined. Whatever he poured on me was not massage oil. Olive oil, I think. Possibly Crisco. It was the worst massage of my life, and when I finally stood up you could see the grease through my pants. I went and found Chris and said the only thing there was to say: you are not going to believe what just happened to me.
+I made one more error in judgment at that hotel. I asked the front desk if anyone could give me a massage. They said no. Then, somehow, they found someone. A man appears at my door, and I am fairly confident he was the landscaper. He had no idea what he was doing. The table had no headrest, so my neck was bent up against the end of it at a right angle, like I was being disciplined. Whatever he poured on me was not massage oil. Olive oil, I think. Possibly Crisco. It was the worst massage of my life, and when I finally stood up you could see the grease through my pants. I went and found Chris and said the only thing there was to say: you are not going to believe what just happened to me.
 
-When Chris got engaged to Nisha, I was the best man, that part was never in doubt. The bachelor party was another story. I don't drink, everyone was scattered across the country, and I was not exactly setting a blistering planning pace. Then a couple of his buddies, Brian Buffington and DiBiase, called to tell me it was handled: the Grand Baha Mar, in the Bahamas. Three, four thousand dollars a night. I offered to split a room, which is how my mom's boyfriend Gary and I ended up roommates at a resort like that, an experience all its own.
+When Chris got engaged to Nisha, I was the best man, that part was never in doubt. The bachelor party was another story. I don't drink, everyone was scattered across the country, and I was not exactly setting a blistering planning pace. Then a couple of his buddies, Brian Buffington and DiBiase, called to tell me it was handled: the Grand Baha Mar, in the Bahamas. Three, four thousand dollars a night. I offered to split a room, which is how my mom's boyfriend Gary and I ended up roommates at a resort like that.
 
-Chris's friends operate at a level I can only call cinematic. That's the crowd. One morning I'm in the gym and there's a guy on the treadmill I know I recognize but can't place, and then it lands. Are you the head coach of Clemson? It was Dabo Swinney. We took a picture. I saw him again later and, unable to help myself, asked shouldn't you be out recruiting this week? Non-recruit week, he said. I asked what brought him here. His son was getting married. So I told him he had to be either a very cool dad or a very rich dad to get an invite to a wedding like this, and he laughed. Then I pushed my luck and asked when he was going to hire Saban as his assistant, and got a noticeably more polite laugh. I have never quite known when to stop.
+Chris's friends operate at a level I can only call cinematic. That's the crowd. One morning there was a guy on the gym treadmill I couldn't place, and then it landed: Dabo Swinney, the head coach of Clemson, in town for a wedding. I asked him when he was going to hire Saban as his assistant, and got a noticeably polite laugh. I have never quite known when to stop.
 
 The whole weekend ran on gambling, which is an interesting thing to be sober in the middle of at a bachelor party in the Bahamas. Chris parked me at the craps table and said, just do exactly what I tell you. Roll the dice. I'll handle the rest. So there I am, rolling dice with no earthly idea what's happening, Chris calling every bet, and people keep winning. The table is losing its mind. At one point a complete stranger reaches over and presses a thousand-dollar chip into my hand. Thank you, he says. You just made me so much money. A thousand dollars from a man I'd never met, for throwing dice while my brother told me what to do. Which is the truest thing I can tell you about us. Chris sees what I can't, and when I stop arguing and do what he says, it works out in ways I never would have bet on.
 
 That's my brother. The DMV, India, the Bahamas, the ultimatum that saved my life. My best friend.
 
-**CHAPTER 13**
+**CHAPTER 11**
 
 ## **The Performance Trap**
 
@@ -868,19 +845,19 @@ That's my brother. The DMV, India, the Bahamas, the ultimatum that saved my life
 
 My friend Angela called me from Chicago. You're not going to believe this, she said. I'm standing in the Abercrombie & Fitch on Michigan Avenue, I looked up at the screen, and there you are. Your commercial. For about a minute that felt like arriving. Then it passed straight through me, the way everything did back then, and the hunger underneath was still there.
 
-After Oxford I pointed the car west and drove it straight at the only thing I knew how to do, which was win. My first real job out of college was managing an Abercrombie & Fitch in San Diego. I had one speed, the same one that got me through weight cuts and 6 a.m. practices, and I brought it to folding polo shirts in a mall. I outworked everyone on staff, learned the inventory numbers cold, caught problems before the managers did and fixed them without being asked. It wasn't ambition exactly. I just didn't know another way to exist in a job. Put a scoreboard in front of me and I was going to be at the top of it.
+After Oxford I pointed the car west and drove it straight at the only thing I knew how to do, which was win. My first real job out of college was managing an Abercrombie & Fitch in San Diego. I had one speed, the same one that got me through weight cuts and 6 a.m. practices, and I brought it to folding polo shirts in a mall. I outworked everyone on staff, learned the inventory numbers cold, caught problems before the managers did and fixed them without being asked. Put a scoreboard in front of me and I was going to be at the top of it.
 
 Nesser filmed me doing a bio — wakeboarding in Islamorada, Florida, out on the water, being myself — and the tape brought an A&F talent scout to the store. It went to Abercrombie & Fitch TV, the in-store channel that played in every location in the country, and I got picked. That was the commercial Angela had called me about. The kid from Mexico City who'd needed speech therapy for a lisp was now the face on a loop in one of the biggest retail brands in the country. Underneath it I still felt less than.
 
-The hunger stayed. One slip from being found out, no matter how many screens my face was on. I transferred to the highest-grossing Abercrombie in the country, in Newport Beach. Then a sales job. Then medical device sales. By twenty-four I was clearing six figures, and none of it touched the thing underneath.
+The hunger stayed. I transferred to the highest-grossing Abercrombie in the country, in Newport Beach. Then a sales job. Then medical device sales. By twenty-four I was clearing six figures, and none of it touched the thing underneath.
 
 ### *The Fraud Feeling*
 
-Here is what the screen couldn't show. I walked into every room sure that everyone else in it was the real thing and I was the only fake. They belonged. I was getting away with something. Once you believe that, it stops being about whether people like you. It becomes about not getting caught. The bar slides from approval to survival, and you spend your energy guarding the secret instead of living a life.
+Here is what the screen couldn't show. I walked into every room sure that everyone else in it was the real thing and I was the only fake. They belonged. I was getting away with something. Once you believe that, the bar slides from approval to survival, and you spend your energy guarding the secret instead of living a life.
 
 The secret was older than California. Under every mask there is a part of you that got buried, and mine went back to a four-year-old who was carried out of one country and set down in another. Somewhere in the years that followed, in the new name I had to print at the top of my homework, the dark skin that didn't match the other kids, the lisp they sent me to therapy to fix, I made a decision I didn't have the words for. This part of me is not welcome here. Claudio wasn't safe. So Claudio went quiet.
 
-What you build in his place is a character, and you build him well. Smoother. Funnier. More needed than he is. The hard part to admit is that it works. People respond to him. They like him. Every time they do, it proves the trade was right, and the real one underneath gets a little quieter, learns to stay down where it's safe.
+What you build in his place is a character, and you build him well. Smoother. Funnier. More needed than he is. The hard part to admit is that it works. People respond to him. Every time they do, it proves the trade was right, and the real one underneath gets a little quieter, learns to stay down where it's safe.
 
 Then it stacks. Performance on top of performance, year after year, until the buried kid is so far down you forget he is there at all. By the time I was folding polo shirts in San Diego I had worn the costume so long I couldn't have told you what was under it. I thought the costume was me.
 
@@ -904,7 +881,7 @@ Taking one before a workday, I told myself it was practical. Here's what a pill 
 
 That's the trap. Not that the pills felt good, plenty of things feel good and don't ruin you. The trap was that they made me better at the thing I most needed to be better at, with money attached, in real time. I didn't see it as using. I saw it as competing.
 
-By then I had a full prescription of my own in California, the bottle right there, no more rationing what I had. The easy access didn't satisfy the chase. It amplified it. What I didn't see was the arithmetic underneath. You take more to get the same effect. The baseline shifts. Monday's edge is Tuesday's normal and Wednesday you're already reaching for it. The math runs one direction and doesn't reverse. When California ran dry I started crossing into Tijuana to resupply, an hour from San Diego, a Saturday errand, back before anyone noticed. Six figures a year, crossing the border for pills, because the machine I'd built couldn't run without fuel.
+By then I had a full prescription of my own in California, the bottle right there, no more rationing what I had. The easy access didn't satisfy the chase. It amplified it. What I didn't see was the arithmetic underneath. You take more to get the same effect. The baseline shifts. Monday's edge is Tuesday's normal and Wednesday you're already reaching for it. When California ran dry I started crossing into Tijuana to resupply, an hour from San Diego, a Saturday errand, back before anyone noticed. Six figures a year, crossing the border for pills, because the machine I'd built couldn't run without fuel.
 
 Alcohol came in alongside. Pills to ramp up in the day, drinks to come down at night. From the first time I drank I was a blackout drinker, not giggly after two beers, just gone, piecing the night together off other people's faces in the morning. On the outside I projected a confidence that read as arrogance. Inside I was the same scared kid who needed to prove he belonged in whatever room he'd walked into.
 
@@ -944,7 +921,7 @@ The Florida license felt like a loophole I'd found in the universe. Their system
 
 Nancey lived in Boca Raton. She'd always been the one who showed up, wrestling matches, graduations, every moment that mattered. But this was the first time it was just the two of us. No Mom, no Chris, no occasion. Just me at her door with nowhere better to go.
 
-She knew my favorite foods were banana cream pie and chicken parm, so there was always whipped cream in the house and she made me banana cream pies. Not once. Regularly. A woman who understood that love sometimes looks like knowing what's in someone's refrigerator and making sure it's there.
+She knew my favorite foods were banana cream pie and chicken parm, so there was always whipped cream in the house and she made me banana cream pies. Not once. Regularly.
 
 Nancey didn't drink. I wasn't either, not at that point, still on medication, still not where I needed to be, but not in freefall yet. We'd get together with sober friends sometimes, not because she needed to, but because she knew I did and wasn't going to make me go alone. Most nights we just sat on the couch. That's what I remember most. We're both people who don't need to be in constant motion. We watched Dateline, Forensic Files, 20/20, for hours, laughing at the things people do, and it was the most normal I'd felt in a long time. Not performing anything. Two people who loved each other, on a couch, with nowhere to be.
 
@@ -952,7 +929,7 @@ She knew I was in a dark place. She didn't try to fix it. Didn't ask me to expla
 
 She helped me find work through local connections, and for a while, in her quiet orbit, I started to find my feet again.
 
-**CHAPTER 14**
+**CHAPTER 12**
 
 ## **The Cell**
 
@@ -993,7 +970,7 @@ It wasn't the moment I changed. I was scared, and fear isn't surrender; fear wea
 
 I never told anyone. Not my father, my brother, my mother, my wife. Not a sponsor, not a priest. I carried it out of shame, and because once you hide a thing long enough, the hiding starts to feel like part of who you are.
 
-**CHAPTER 15**
+**CHAPTER 13**
 
 ## **Checking Boxes**
 
@@ -1002,9 +979,9 @@ I never told anyone. Not my father, my brother, my mother, my wife. Not a sponso
 
 My biological father handed me ten thousand dollars in cash and called me fat in the same weekend, and I spent the money on pills before I left town. That was the reunion my therapist thought would heal me. But a cell didn't stop me, and neither did a courtroom. The first rehab was court-ordered. I want that up front, because it matters. I didn't walk in because I was ready. I walked in because a judge told me to.
 
-Laguna Beach, still in California. If you're going to be forced into rehab, you could do worse. High-end, the place Hollywood people land when their publicists run out of excuses. Beautiful grounds, ocean nearby. The clientele was a mix, retired grandfathers who'd been passing out in the garage next to younger guys who'd burned through their twenties faster than they expected. People who'd been somebody before they ended up there.
+Laguna Beach, still in California. If you're going to be forced into rehab, you could do worse. High-end, the place Hollywood people land when their publicists run out of excuses. Beautiful grounds, ocean nearby. The clientele was a mix, retired grandfathers who'd been passing out in the garage next to younger guys who'd burned through their twenties faster than they expected.
 
-I made friends with a guy named Tristan. He'd been on a soap opera, Passions, I think. A little younger than me, good-looking in that California way, an absolute lunatic. He'd been doing a lot of cocaine and hit a wall. We hit it off, both from lives that looked good from the outside and were rotting inside. We'd hang out between sessions, talk about nothing, crack jokes. It felt more like summer camp than rehab. That was the problem.
+I made friends with a guy named Tristan. He'd been on a soap opera, Passions, I think. An absolute lunatic. He'd been doing a lot of cocaine and hit a wall. We hit it off, both from lives that looked good from the outside and were rotting inside. We'd hang out between sessions, talk about nothing, crack jokes. It felt more like summer camp than rehab. That was the problem.
 
 I wasn't there to get better. I was there to get through it. Checking boxes, not surrendering. I went to the sessions, sat in the circles, said the things that sounded like progress, filled out the worksheets. From the outside it probably looked like work. Inside I was already planning what came next, not in recovery, in using. The pills hadn't let go of me, or I hadn't let go of them. Same thing.
 
@@ -1012,9 +989,9 @@ Every day I kept telling my therapist: I can't get off the pills, I need them, I
 
 The therapist had an idea. She said I needed to get in touch with my birth father. Horacio. The man I'd left in Mexico City at four. I hadn't spoken to him in years and barely had a memory of him that wasn't assembled from other people's stories and my own four-year-old fragments. She thought part of what I was carrying was unresolved grief about being left. Maybe she was right. What I know is I agreed to try, because agreeing to try was another box to check.
 
-I called my mom. She had a cousin who might track him down, a family network that works across borders and decades through phone calls and favors. They found him. We decided to meet not in Mexico City but closer to the California border. Ensenada.
+I called my mom. She had a cousin who might track him down. They found him. We decided to meet not in Mexico City but closer to the California border. Ensenada.
 
-Horacio was charming. The first thing I noticed was the energy, fun, engaging, a man a room adjusts to when he walks in. Warmth that drew you in before you decided whether you wanted to be. But under the charm something felt off. The best word I have is slippery. Like he was always performing. Charming in a way that makes you check your pockets afterward, not because he took anything, but because you feel like he could have. To be fair, I was in no shape to evaluate anybody. Fresh out of a rehab I'd half-assed, still craving pills, meeting the biological father I hadn't seen since I was four.
+Horacio was charming. The first thing I noticed was the energy, fun, engaging, a man a room adjusts to when he walks in. But under the charm something felt off. The best word I have is slippery. Like he was always performing. Charming in a way that makes you check your pockets afterward, not because he took anything, but because you feel like he could have. To be fair, I was in no shape to evaluate anybody. Fresh out of a rehab I'd half-assed, still craving pills, meeting the biological father I hadn't seen since I was four.
 
 He was generous. He gave me ten thousand dollars. Cash. Just handed it over. Ten thousand dollars to a guy who'd just come out of rehab and was still telling his therapist he couldn't live without pills. That money was lighter fluid on a fire that hadn't gone out. The moment it was in my hand something shifted, not toward healing, toward planning. I could feel the disease doing its math. I made an excuse, said I was going to buy him a gift, and left. I bought pills. With money my biological father had given me at a reunion that was supposed to be about healing. That's what addiction does.
 
@@ -1030,7 +1007,7 @@ These days I don't carry anger toward Horacio. I did for a while. What I know no
 
 Because I had Lou. Ensenada clarified something I'd always known without being able to say it. Lou Brizzi was my father. Not because of a birth certificate. Because he chose it. Every day. Without keeping score. Horacio gave me ten thousand dollars and I spent it on pills. Lou gave me his last twenty and never told me until years later. That's the difference.
 
-**CHAPTER 16**
+**CHAPTER 14**
 
 ## **West Palm Beach**
 
@@ -1041,9 +1018,9 @@ My father rented a U-Haul and drove to West Palm Beach to bring home a dead man.
 
 The apartment was about six hundred and fifty square feet on a high floor in CityPlace, carpet underfoot, a balcony that looked out over West Palm Beach. From up there the city looked like something I belonged to. PF Chang's and the Cheesecake Factory were right downstairs. I almost never went down to either. I almost never went anywhere.
 
-The walls were covered in Post-it notes. Yellow squares stuck to the paint in clusters, ideas, plans, schemes, businesses I was going to start, money I was going to make, the whole next version of my life mapped out in ballpoint on adhesive paper. It looked like the wall in the movie about the man losing his mind, the one who covers a room in string and clippings and calls it genius. Up close it wasn't genius. It was a man who couldn't finish a thought, papering a room with the evidence.
+The walls were covered in Post-it notes. Yellow squares stuck to the paint in clusters, ideas, plans, schemes, businesses I was going to start, money I was going to make, the whole next version of my life mapped out in ballpoint on adhesive paper. It wasn't genius. It was a man who couldn't finish a thought, papering a room with the evidence.
 
-I'd stopped paying for things. The condo fees lapsed. The utilities lapsed. The power got shut off, so I ran an extension cord from the refrigerator out to an outlet in the building hallway and let it pull its electricity from the common area, stealing it, really, because I couldn't, or wouldn't, pay the bill. There were maybe a couple of yogurts in that fridge. That was the food in the apartment. What money came in went to pills and the strip club, and when it ran out I shoplifted electronics to turn back into more. I told myself the extension cord was clever. It was just the disease finding one more way to keep running.
+I'd stopped paying for things. The condo fees lapsed. The utilities lapsed. The power got shut off, so I ran an extension cord from the refrigerator out to an outlet in the building hallway and let it pull its electricity from the common area, stealing it, really, because I couldn't, or wouldn't, pay the bill. There were maybe a couple of yogurts in that fridge. That was the food in the apartment. What money came in went to pills and the strip club, and when it ran out I shoplifted electronics to turn back into more.
 
 My mother sent me money in those years. She told herself it was for rent, for food, for getting back on my feet. I used it for drugs and alcohol. That is the part of the disease I can barely stand to write down. It takes the people who love you most and turns their love into one more thing to use.
 
@@ -1073,7 +1050,7 @@ Because here's the part I have to be honest about: this wasn't the moment I got 
 
 But I think about it all the time now. What did he owe me at that point, a grown man he'd adopted, who'd burned through everything, living off stolen electricity in a tower of Post-it notes, praying on a balcony to disappear? Nothing. He owed me nothing. And he slept on my floor, and bought me a bagel, and rented the truck, and found Marcus, and drove me home, and pointed at a bird and told me my grandmother was watching out for us. That's the man. That was always the man.
 
-**CHAPTER 17**
+**CHAPTER 15**
 
 ## **New Orleans**
 
@@ -1112,7 +1089,7 @@ PART FOUR
 
 # **GETTING SQUARE**
 
-**CHAPTER 18**
+**CHAPTER 16**
 
 ## **Chumuckla**
 
@@ -1127,11 +1104,11 @@ The next morning we drove out to a farmhouse in the panhandle. Chumuckla. The na
 
 Ron didn't waste time. He saw through whatever I was still performing. By the first day the guys were calling me Corporate Rob, slacks, polo, haircut, the version of myself I'd assembled to convince the world I was fine. Ron wasn't impressed. That was what I needed.
 
-About a dozen of us were in that house. Dan was one of the therapists, a man who'd been where I was and come out the other side. Joe was another guy working the program, quiet and solid. There was the gymnast, nineteen, Olympic-level in his sport before addiction pulled him off the edge of it. Funny, kind, light in a way you don't expect from somebody that young in a room that heavy. There was Mike, one of those people you meet once and think about the rest of your life, quiet, steady, been through things and didn't need to explain any of it. He looked out for me in the small ways that matter when you're new and raw. In 2018 I got the call that Mike was gone. And there was Chad, forty-three, a bodybuilder, a chef, a crack addict, all of it living in the same frame. Chad made me laugh. Chad told me the truth. Later I found out Chad and the gymnast died together. An overdose. Two of the people who got me through those ninety days, gone the same day. That's what this disease does. It picks people off.
+About a dozen of us were in that house. Dan was one of the therapists, a man who'd been where I was and come out the other side. There was the gymnast, nineteen, Olympic-level in his sport before addiction pulled him off the edge of it. Funny, kind, light in a way you don't expect from somebody that young in a room that heavy. There was Mike, one of those people you meet once and think about the rest of your life, quiet, steady. He looked out for me in the small ways that matter when you're new and raw. In 2018 I got the call that Mike was gone. And there was Chad, forty-three, a bodybuilder, a chef, a crack addict, all of it living in the same frame. Chad made me laugh. Chad told me the truth. Later I found out Chad and the gymnast died together. An overdose. Two of the people who got me through those ninety days, gone the same day. That's what this disease does. It picks people off.
 
-The first week I couldn't look at myself in the bathroom mirror. I'd brush my teeth staring at the faucet, because if I raised my head and caught my own eyes I'd break. Thirty years old and I couldn't face my own reflection. That was the condition Lou had delivered me in.
+The first week I couldn't look at myself in the bathroom mirror. I'd brush my teeth staring at the faucet, because if I raised my head and caught my own eyes I'd break. That was the condition Lou had delivered me in.
 
-One night they had a bonfire outside. Stars overhead, the air cold the way North Florida can surprise you in January. We stood around the fire and I wasn't performing recovery, wasn't pretending, just standing there with a ring of strangers who'd ended up in the same dirt yard for the same reason. And I prayed. Not out loud. Inside. God, if you're real, give me a sign. I don't know what I'm doing. Show me something. The sky was clear. I remember that specifically. No clouds.
+One night they had a bonfire outside. Stars overhead, the air cold the way North Florida can surprise you in January. We stood around the fire and I wasn't performing recovery, wasn't pretending, just standing there with a ring of strangers who'd ended up in the same dirt yard for the same reason. And I prayed. Not out loud. Inside. God, if you're real, give me a sign. I don't know what I'm doing. Show me something. The sky was clear. I remember that specifically.
 
 Then it started raining. Not a storm, not weather moving in. Rain out of a clear sky, on the fire, on my face, on the other guys. It lasted maybe a minute, then stopped. I stood there with rain on my face and something that had been sealed shut for years broke open. Say what you want about coincidence. I know what the sky did. That was the first night I believed God was in the room with me, not in theory, not in a Sunday-morning way. In a muddy field in Chumuckla.
 
@@ -1143,7 +1120,7 @@ Lou picked me up. Same truck, same calm. He didn't ask me to prove anything or w
 
 The day I got out wasn't the day I was saved. It was the day I was handed the chance to be, and what came next was a long line of ordinary mornings I had to learn how to fill.
 
-**CHAPTER 19**
+**CHAPTER 17**
 
 ## **The Quiet Years**
 
@@ -1154,7 +1131,7 @@ Nothing happened. That's what made it hard.
 
 After the second rehab there was no turnaround, no doors swinging open. Just time, without applause, without shortcuts. I stayed in Pensacola, close to Lou and Lynda, in the same routines long enough that they stopped feeling temporary.
 
-I worked as a lifeguard again, watching the water at the UWF pool. I was thirty-two on a stand where everyone else working was nineteen. I felt old. I also felt good. Three rounds of P90X had me in the best shape I'd been in years, and there's something to sitting up there at thirty-two having earned the body the hard way. The job was simple. Scan faces, count heads, make sure everyone got home safe. Stop paying attention and someone could die. I liked that. Lifeguarding was presence. You stood watch, shift after shift, and most days nothing happened. That was the point. One day a mom asked if I'd give her kid swimming lessons. I'm pretty sure the lessons weren't really about the kid. I said maybe and went back to watching the water. The old me would have turned it into something. The new me could let a moment stay small.
+I worked as a lifeguard again, watching the water at the UWF pool. I was thirty-two on a stand where everyone else working was nineteen. I felt old. I also felt good. Three rounds of P90X had me in the best shape I'd been in years. The job was simple. Scan faces, count heads, make sure everyone got home safe. Stop paying attention and someone could die. I liked that. Lifeguarding was presence. You stood watch, shift after shift, and most days nothing happened. That was the point. One day a mom asked if I'd give her kid swimming lessons. I'm pretty sure the lessons weren't really about the kid. I said maybe and went back to watching the water. The old me would have turned it into something. The new me could let a moment stay small.
 
 The confidence came back too, the real kind this time, not the chemical kind. I went to an Auburn game with a friend and said out loud, that's the best looking girl in the stadium. An hour later I had her number and an invitation to come visit. For years I couldn't look at myself in a mirror. Now I could walk across a room again.
 
@@ -1166,7 +1143,7 @@ I sat beside a lot of unwell people in those years, many of them still in rehab.
 
 People asked why I did all of it. The meetings, the volunteering, the running, the calls at midnight. I only ever had one answer. It kept me sober. That was enough. By 2010 I was becoming someone who could be trusted. Not because of talent or drive. Because of repetition. In the quiet years, staying sober wasn't the boring part. It was the whole victory.
 
-**CHAPTER 20**
+**CHAPTER 18**
 
 ## **Horacio**
 
@@ -1185,7 +1162,7 @@ In 2015 I reached for him again. I was thirty-six and sober, and part of the rea
 
 He didn't have a phone that could reach the States. So every Wednesday he would go out to a place that had a VoIP line, and at seven o'clock my phone would ring. He had to leave his home just to hear my voice.
 
-Mostly we talked about sports. That was the easy ground between us. He loved baseball, so we would go back and forth about games and players, who was hot and who was washed up. He liked to go to the sports book and put small bets down on whatever was on, nothing big, just enough to make the afternoon matter. Soccer was his real love, though. He would get going on it and the stories would come, matches he had seen, players he swore by, games that had meant something to him long before I was born.
+Mostly we talked about sports. That was the easy ground between us. He loved baseball, so we would go back and forth about games and players, who was hot and who was washed up. Soccer was his real love, though. He would get going on it and the stories would come, matches he had seen, players he swore by, games that had meant something to him long before I was born.
 
 For a couple of months it was easy. Two men on the phone, talking about games.
 
@@ -1197,7 +1174,7 @@ Then life got busy. That's the honest, ordinary way it happened, no blowup, no s
 
 He called again in 2019, before my wedding. I didn't answer. Then he went around me. He found Lou's family and mine on Facebook, friend requests going out to people in my life he had never met. I understood the loneliness underneath it. It was still a boundary, and he had crossed it.
 
-I felt bad about it. I still do, a little. But I had a full life, and there is only so much room in it. I forgive him. I just couldn't give him more than that, and I have had to make peace with the size of what I had to give.
+I felt bad about it. I still do, a little. I forgive him. I just couldn't give him more than that, and I have had to make peace with the size of what I had to give.
 
 And there is an apology I owe him too. For most of my life the distance was something done to me. I see now it ran both ways. My silence on the other end of that line, the calls I let ring out, those hurt him the way his leaving once hurt me. I'm sorry for that. And I'm grateful I got healthy enough to feel it at all instead of only carrying the ache.
 
@@ -1205,14 +1182,14 @@ He called every Wednesday at seven, right on time, until I stopped answering.
 
 I haven't answered since. It took me a long time to understand that all of it, the Wednesday calls at seven from a borrowed line, the birthday calls, even the friend requests to people he had never met, was the love. I understood it. I still couldn't answer it. It hasn't stopped him from trying. There was never anyone else to try for. Chris and me. That's what he has. Do I have closure? I don't know. It's complicated, and I've stopped needing it not to be. What's simple is this: I honor Lou. One father kept calling. The other one kept coming.
 
-**CHAPTER 21**
+**CHAPTER 19**
 
 ## **The Line**
 
 *"Keep thy heart with all diligence; for out of it are the issues of life."*
 *— Proverbs 4:23*
 
-"Rob, if you relapse, I'm going to have to wash my hands of you." No emotion. No threat. My father said it the way he stated facts, and it was the kindest hard thing anyone ever told me. I'd learned to hold a line with Horacio. The harder one was the line I had to hold with myself. Sobriety didn't erase desire. That surprised me. I'd imagined that once I stopped drinking the urge would lift. It didn't. What sobriety gave me was time. What it took away was the anesthesia, and without it I could feel everything, the hunger included. The disease doesn't leave when you put the drink down. It moves to the back of the room and waits, patient, for a hard week or a good excuse.
+"Rob, if you relapse, I'm going to have to wash my hands of you." No emotion. No threat. My father said it the way he stated facts, and it was the kindest hard thing anyone ever told me. I'd learned to hold a line with Horacio. The harder one was the line I had to hold with myself. Sobriety didn't erase desire. That surprised me. What sobriety gave me was time. What it took away was the anesthesia, and without it I could feel everything, the hunger included. The disease doesn't leave when you put the drink down. It moves to the back of the room and waits, patient, for a hard week or a good excuse.
 
 By late 2010 I was restless in a way I couldn't name. Sober, working, going to meetings, living clean, and underneath it something in me still wanted out. An opportunity came across my radar, medical device sales, Stryker. A name that promises money and momentum. A fast way back to the version of me that knew how to win. The thought hit like adrenaline: this is how I get back. Then a quieter one, more honest: I don't know if I can stay sober there.
 
@@ -1222,7 +1199,7 @@ He didn't react the way I expected. No anger, no lecture, no disappointment. He 
 
 I left shaken. That line forced a choice I couldn't hand off. Go back to that world too soon and I wouldn't be returning, I'd be relapsing with a resume. I didn't take the job. It didn't feel brave. It felt like trusting that staying alive mattered more than looking successful. For the first time I chose sobriety over momentum.
 
-**CHAPTER 22**
+**CHAPTER 20**
 
 ## **The Salmon Palace**
 
@@ -1231,7 +1208,7 @@ I left shaken. That line forced a choice I couldn't hand off. Go back to that wo
 
 I didn't buy it because it made sense. On paper it didn't. An association fee. Seven hundred sixty-five square feet, one bedroom, one bath, but it was all I needed. It was a condo carved out of a building called the Mirador, Spanish stucco with a Spanish tile roof, a place that looked like it belonged in Southern California or Mexico and somehow held its ground in Pensacola. My unit had its own balcony over the pool. To this day it's the proudest I have ever been of a place I lived.
 
-The color was impossible to ignore. Salmon. Warm and defiant. It sat up off the road like a little castle on a hill, and that is exactly why my friends named it the Salmon Palace. A castle, in that color — what else do you call it? They said it proud. The deed said the Mirador. Both were true. For years I drove past it on my way home from meetings. At first I barely noticed it. Then I noticed it every time. Then I was slowing down, then parking across the street to sit and stare. I couldn't imagine ever living there. So I did the thing they teach you. I pictured it anyway, owning it one day, a kind of prayer I didn't have the nerve to say out loud. Something in me recognized the place.
+The color was impossible to ignore. Salmon. Warm and defiant. It sat up off the road like a little castle on a hill, and that is exactly why my friends named it the Salmon Palace. They said it proud. The deed said the Mirador. Both were true. For years I drove past it on my way home from meetings. At first I barely noticed it. Then I noticed it every time. Then I was slowing down, then parking across the street to sit and stare. I couldn't imagine ever living there. So I did the thing they teach you. I pictured it anyway, owning it one day, a kind of prayer I didn't have the nerve to say out loud. Something in me recognized the place.
 
 By then I was doing well again, quietly. Home health had stabilized my life. Sober, paying bills, still carrying debt but no longer running from it. I wasn't looking for more. I was looking for mine. The realtor showed me the sensible options first, places near the railroad tracks, starter homes with neutral paint, the kind that say be grateful this is all you can afford. None of them felt right. When I asked about the Mirador she raised an eyebrow. That one's different, she said. I know, I said.
 
@@ -1241,9 +1218,9 @@ The market was down hard in 2014, which is the only reason a place like that eve
 
 When I got the keys I stood in the middle of that small living room longer than I expected. Nothing about it was impressive, and that was the point. I'd earned it through repetition. For four years the Mirador was my world. I woke up there, prayed there, paid down debt there, stayed sober there. Went to work, came home, did it again. Nobody applauded. That was the miracle. I was becoming someone who kept promises.
 
-My friends were proud of me, and the Salmon Palace was how they said it. Visitors asked when I'd upgrade. Real estate logic said flip it, leverage it, move on. I didn't. That place held the first version of me that wasn't running. Years later, when Hope walked through that door the first time, she didn't say a word about the size. She noticed how it felt. We'd take a devotional out to the pool, or down to the dock, and read it together. The rhythm we still fall back into, the one that's just part of the house now, started there. We sold it in 2019, a hundred thousand in equity, and put it down on the home Hope and I built together in East Hill, an incredible one, the kind I'd never let myself imagine from across the street. From a one-bedroom salmon castle to a house we built from the ground up. That's what four years of showing up quietly can do.
+Visitors asked when I'd upgrade. Real estate logic said flip it, leverage it, move on. I didn't. That place held the first version of me that wasn't running. Years later, when Hope walked through that door the first time, she didn't say a word about the size. She noticed how it felt. We'd take a devotional out to the pool, or down to the dock, and read it together. The rhythm we still fall back into, the one that's just part of the house now, started there. We sold it in 2019, a hundred thousand in equity, and put it down on the home Hope and I built together in East Hill, the kind I'd never let myself imagine from across the street. From a one-bedroom salmon castle to a house we built from the ground up. That's what four years of showing up quietly can do.
 
-**CHAPTER 23**
+**CHAPTER 21**
 
 ## **The Offer**
 
@@ -1264,14 +1241,14 @@ She called three days later. I need to talk to you about something from your bac
 
 Four days. I went to work, went to meetings, had dinner, slept, did it again. On the fifth day Caroline called. How does a November first start date sound? I didn't answer right away. I sat in my car in Lou's driveway and let it settle. Not adrenaline. Gratitude. Someone had looked at who I was and decided it was enough. I called Lou. I got the job. She knew about the DUIs. HR wanted to pull the offer. She fought for me. A pause. That's a blessing, he said. I'm proud of you. After we hung up I sat there a long time. This wasn't a comeback. Comeback means something to go back to. This was confirmation. Showing up quietly and consistently had made me someone capable of the next thing.
 
-**CHAPTER 24**
+**CHAPTER 22**
 
 ## **They Gave Me a Chance**
 
 *"No matter how far down the scale we have gone, we will see how our experience can benefit others."*
 *— Bill Wilson, Alcoholics Anonymous*
 
-Miss Jane was seventy-eight, recovering from hip surgery, and she apologized for the mess in a spotless house. Then she told me she used to dance, every Friday night for forty years, like it was a confession. That was the job. The work didn't feel heroic, which surprised me. I half-expected the new job to arrive with meaning baked in. Day one was paperwork. Compliance modules. Acronyms I half-remembered from a former life, HIPAA, OASIS. Intake forms and more modules. Caroline didn't give me a speech. She showed me how things worked. This is a long game, she said. You don't force referrals. You earn trust.
+Miss Jane was seventy-eight, recovering from hip surgery, and she apologized for the mess in a spotless house. Then she told me she used to dance, every Friday night for forty years, like it was a confession. That was the job. The work didn't feel heroic, which surprised me. I half-expected the new job to arrive with meaning baked in. Day one was paperwork. Compliance modules. Acronyms I half-remembered from a former life, HIPAA, OASIS. Caroline didn't give me a speech. She showed me how things worked. This is a long game, she said. You don't force referrals. You earn trust.
 
 Home health wasn't selling, not the way I'd done it. It was assisted livings and living rooms, oxygen tanks humming in the corner, family members exhausted in ways sleep doesn't fix. I walked into homes where time had slowed down.
 
@@ -1283,14 +1260,14 @@ It was familiar. I knew what it was like to need help and not want it, to be ash
 
 The days were long, doctors' offices, nursing homes, assisted livings, back roads. At night I still went to meetings, still called my sponsor. There was a moment, small and almost forgettable, sitting in my car after a visit with paperwork on the steering wheel, when I realized I wasn't waiting for something else anymore. This was enough. They gave me a chance, and I stayed ten years. There were sales awards in there; they mattered less than what they measured, that I'd finally found work I could do without performing. My manager Brenda Jahn was one of the best I ever worked for. She believed in me and pushed me, and that prepared me for everything that came next.
 
-**CHAPTER 25**
+**CHAPTER 23**
 
 ## **Making Amends**
 
 *"First be reconciled to thy brother, and then come and offer thy gift."*
 *— Matthew 5:24*
 
-$113,000. That was the number when I finally added it up in ink on a yellow legal pad, every credit card and collection account and legal fee, no rounding. I'd spent years not looking at it. Steady work meant I could finally face the wreckage I'd been outrunning, and my sponsor Mager was the one who walked me into it. He didn't rush me. He offered patience that refused to participate in my performance. He let silence do the work. I could narrate recovery convincingly, still controlling the version of me in the room. Mager didn't interrupt. He listened in a way that made clear he was hearing more than I was saying, and eventually, with nowhere for the performance to land, it fell apart on its own.
+$113,000. That was the number when I finally added it up in ink on a yellow legal pad, every credit card and collection account and legal fee, no rounding. I'd spent years not looking at it. Steady work meant I could finally face the wreckage I'd been outrunning, and my sponsor Mager was the one who walked me into it. He didn't rush me. He offered patience that refused to participate in my performance. I could narrate recovery convincingly, still controlling the version of me in the room. Mager didn't interrupt. He listened in a way that made clear he was hearing more than I was saying, and eventually, with nowhere for the performance to land, it fell apart on its own.
 
 I got stuck on the amends step. Not in theory. In the concrete requirement to account for everything, without narrative, without softening. One night after a meeting Mager slid a yellow legal pad across the table. Write it down, he said. I knew what he meant.
 
@@ -1298,18 +1275,18 @@ Money had never been something I related to honestly. It had been a scorecard. T
 
 Mager looked at the pad. Didn't soften it, didn't minimize it. Okay, he said. Now we know. We kept it basic: use the money you actually have, pay what you can, don't borrow, don't hide, open the envelopes, answer the calls, always know where you stand. At one point I reached for the future. Once I make more. Mager stopped me. Use the money you actually have. That's how trust gets rebuilt.
 
-The debt didn't disappear fast. The progress was slow, sometimes barely visible. But I stopped flinching when bills came. I started answering calls from numbers I didn't recognize. My past stopped feeling like it was following me, not because it was gone, but because it was being addressed. Not redemption. Nothing was being erased. Responsibility. One payment, one opened envelope, one answered call at a time.
+The debt didn't disappear fast. But I stopped flinching when bills came. I started answering calls from numbers I didn't recognize. My past stopped feeling like it was following me, not because it was gone, but because it was being addressed. Not redemption. Nothing was being erased. Responsibility. One payment, one opened envelope, one answered call at a time.
 
 The courts came last. In 2013, four years sober, I wrote to the court myself and petitioned to have the cases dismissed. No lawyer this time. In 2002 that work had taken the Taylor firm and ten thousand dollars. In 2013 it took a letter from a sober man who had done everything the court asked. The dismissals came through. No record at all.
 
-**CHAPTER 26**
+**CHAPTER 24**
 
 ## **Gulf Breeze**
 
 *"Iron sharpeneth iron; so a man sharpeneth the countenance of his friend."*
 *— Proverbs 27:17*
 
-Years later, Quint Studer stood in front of some of the top business leaders in the region, paused, and said my father's name into the room. Lou Brizzi, great guy. But before Quint there were the rooms. Paying down the debt was one kind of work. Another kind was happening at the same time. There are seasons in sobriety when the victory is staying sober. Early on the work is obvious: work the steps, clean up the wreckage, rebuild trust slowly, one day at a time.
+Years later, Quint Studer stood in front of some of the top business leaders in the region, paused, and said my father's name into the room. Lou Brizzi, great guy. But before Quint there were the rooms. Paying down the debt was one kind of work. Another kind was happening at the same time. Early on the work is obvious: work the steps, clean up the wreckage, rebuild trust slowly, one day at a time.
 
 I saw things in those rooms that never leave you. Young people dying from drugs and alcohol. Not old men at the end of long lives, young people with everything ahead of them. I sponsored people who went back out. Many of them died. Some went to jail. You pour yourself into someone, walk alongside them, answer the phone at midnight, and then one day you get the call that they didn't make it.
 
@@ -1319,19 +1296,19 @@ But eventually something else happens. You look around and realize sobriety by i
 
 If you're not from the Gulf Coast, the name may not mean much. In Pensacola it's on the ballpark. Quint had run Baptist Hospital, the same hospital where my dad worked, then built one of the most respected healthcare consulting firms in the country, teaching hospitals across America the thing my father practiced nightly for free: treat people right, every time, whether anybody's watching or not. When he sold the firm he didn't buy an island. He and his wife Rishy bought the minor-league ballpark, put the stadium on the water, and went about rebuilding downtown Pensacola block by block. A man like that could sit anywhere he wanted. He sat in the rooms, in the same chairs as the rest of us, one more sober man saying his name out loud.
 
-I first met Quint at a meeting connected to Gulf Breeze Hospital. What struck me was how he carried himself, a steadiness, a calm that didn't feel like ego. When he spoke, people listened, not because he demanded it but because he'd earned it. Over time he'd talk with me after meetings, look me directly in the eye. He encouraged me with a quiet belief that says, I see something in you.
+I first met Quint at a meeting connected to Gulf Breeze Hospital. What struck me was how he carried himself, a steadiness, a calm that didn't feel like ego. When he spoke, people listened. Over time he'd talk with me after meetings, look me directly in the eye. He encouraged me with a quiet belief that says, I see something in you.
 
 He always had a way of lifting a person up. I had one of his books, and one day I asked him to sign it. He wrote four words. You make people better. I've thought about that line more than he could know. It stopped being a compliment and turned into an assignment. I don't think he ever realized what he did with that pen. He made me want to do more than stay sober. He made me want to become the thing he'd written down.
 
-He told a story once about speaking at a meeting in New York. He'd been sharing a while, maybe longer than he realized, and someone in the back finally said one word. Next. He laughed telling it. No offense taken. Nobody gets special treatment in those rooms. Over time we became friends, real friends, the kind with an easy rapport, at his birthday party, at my wedding, anywhere we ended up in the same room. If I was having a bad day, I knew I could pick up the phone and call him.
+He told a story once about speaking at a meeting in New York. He'd been sharing a while, maybe longer than he realized, and someone in the back finally said one word. Next. He laughed telling it. No offense taken. Nobody gets special treatment in those rooms. Over time we became friends, real friends, at his birthday party, at my wedding, anywhere we ended up in the same room. If I was having a bad day, I knew I could pick up the phone and call him.
 
 The moment at EntreCon, the business conference Quint built for the city, came years into that friendship. He was speaking, and he paused and looked out into the crowd. Lou Brizzi, great guy. Chris and Rob, you know them? Hearing my father's name in a room like that stopped me. My dad worked at Baptist Hospital for decades, showed up, did the job well, treated people right, stayed until he was eighty-three. Quint saying his name in a room full of leaders meant something. Not because it elevated us. Because it honored the life my father believed in.
 
-Quint has been sober for decades. He built one of the most respected healthcare consulting firms in the country, wrote books, moved whole hospital cultures toward something better, and still found time to check in on a kid from New Jersey trying to figure out how to stay sober. He treated me like I mattered before I'd given him a single reason to believe I'd amount to anything. That isn't a management philosophy. It's character. Lou would have loved him. They were cut from the same cloth, men who led by example, who didn't need applause, who showed up the same whether the room was full or empty. When I asked him to put his name on this book, he said yes. He also handed me one of the great friendships of my life. His nephew Mike moved down from Chicago to Pensacola, and we've been close ever since, one of my closest confidants to this day.
+Quint has been sober for decades. He wrote books, moved whole hospital cultures toward something better, and still found time to check in on a kid from New Jersey trying to figure out how to stay sober. He treated me like I mattered before I'd given him a single reason to believe I'd amount to anything. That isn't a management philosophy. It's character. Lou would have loved him. They were cut from the same cloth, men who led by example, who didn't need applause, who showed up the same whether the room was full or empty. When I asked him to put his name on this book, he said yes. He also handed me one of the great friendships of my life. His nephew Mike moved down from Chicago to Pensacola, and we've been close ever since.
 
 The morning after my father died, all these years later, Quint was the first person to reach me. Your dad was a great man, his text said. Of everyone who would reach out in those days, he got there first, and he said the truest thing. Sometimes God places someone in your life not to rescue you but to show you what's possible. For the first time since getting sober, I believed staying alive wasn't the finish line. It was the starting point.
 
-**CHAPTER 27**
+**CHAPTER 25**
 
 ## **The People You Meet When You Stop Drinking**
 
@@ -1350,15 +1327,15 @@ Then there was Detroit Bob. About seventy-five when I met him, sober a long time
 
 We'd go to the diner together, me at thirty-one, him at seventy-five, the most unlikely pair in the place, and crack up. He'd tell stories that had no business being that funny, and whatever mess I was in he'd make smaller just by laughing at it. Not at me. With me. Bob knew the difference.
 
-Jeff Mager was about ten years older than me. I met him at a meeting called Harbor Town in Gulf Breeze and knew within thirty seconds he was different. If I'm a five on the energy scale, Mager is a twelve. No off switch. He walked up like he'd known me his whole life, big smile, firm handshake, a close talker, growling in your face like every conversation is the most important one he's ever had. Good-looking, high charisma, natural salesman. I looked at him and thought: this guy has it going on. Wife, three kids, life dialed in. And sober. It was the first time I looked at someone in recovery and thought maybe this could be more than survival. Maybe you can thrive.
+Jeff Mager was about ten years older than me. I met him at a meeting called Harbor Town in Gulf Breeze and knew within thirty seconds he was different. If I'm a five on the energy scale, Mager is a twelve. No off switch. He walked up like he'd known me his whole life, big smile, firm handshake, a close talker, growling in your face like every conversation is the most important one he's ever had. I looked at him and thought: this guy has it going on. Wife, three kids, life dialed in. And sober. It was the first time I looked at someone in recovery and thought maybe this could be more than survival. Maybe you can thrive.
 
-Mager became my sponsor and taught me more than I could list, but one thing stuck hardest. You want to know what kind of program somebody's working? Don't listen to them at the podium. Talk to the people in their life. Their wife, their kids, their boss. The person at the podium is performing. The people at home are telling the truth. Mager and I talk on the phone every morning. Every single one. We do a short prayer together, a way to start the day right. Going on fifteen years of that. And he didn't treat sobriety like a ceiling, he treated it like a floor: three kids, a wife, one of the most intense careers in medical device sales, and he decides to train for an Ironman. First one at about forty-six, a race that takes fourteen hours. Then another. Qualified for Paris, raced one in France. Qualified for Hawaii. An absolute machine. That's what recovery looks like when you refuse to put a lid on it. God's sense of humor: my brother Chris was running the Gulf Coast territory for Intuitive Surgical and needed a rep in Pensacola. I told Chris, you've got to interview my sponsor, this guy's a maniac, never sold devices, but trust me. Mager still works with Chris to this day, different company now.
+Mager became my sponsor and taught me more than I could list, but one thing stuck hardest. You want to know what kind of program somebody's working? Don't listen to them at the podium. Talk to the people in their life. Their wife, their kids, their boss. The person at the podium is performing. The people at home are telling the truth. Mager and I talk on the phone every morning. Every single one. We do a short prayer together, a way to start the day right. Going on fifteen years of that. And he didn't treat sobriety like a ceiling, he treated it like a floor: one of the most intense careers in medical device sales, and he decides to train for an Ironman. First one at about forty-six, a race that takes fourteen hours. Then another. Qualified for Paris, raced one in France. Qualified for Hawaii. An absolute machine. That's what recovery looks like when you refuse to put a lid on it. God's sense of humor: my brother Chris was running the Gulf Coast territory for Intuitive Surgical and needed a rep in Pensacola. I told Chris, you've got to interview my sponsor, this guy's a maniac, never sold devices, but trust me. Mager still works with Chris to this day, different company now.
 
-The last one I need to tell you about is Matt Campbell. If you want to know what's possible when somebody does the next right thing over and over for long enough, Matt is the answer. He lived in Tallahassee when I met him, just sober, had been homeless before that, maybe a tenth-grade education. He'll tell you himself he couldn't write well. No family money, no degree to dust off. Matt had nothing but the program, and I think that's exactly what he needed.
+The last one I need to tell you about is Matt Campbell. If you want to know what's possible when somebody does the next right thing over and over for long enough, Matt is the answer. He lived in Tallahassee when I met him, just sober. He'll tell you himself he couldn't write well. No family money, no degree to dust off. Matt had nothing but the program, and I think that's exactly what he needed.
 
-We got to know each other well. He was at Jason's Deli making maybe ten dollars an hour, calling me about work, money, life on ten dollars an hour, the same stuff I'd called Andy about, a different version. Then he got an admin job at a Honda dealership, and one day they were short a guy on the floor. Somebody called in sick. Hey Matt, you want to try? Matt went out and sold three cars his first day. The guys who'd been selling for years looked at him like, how did this kid just do that? Because Matt could connect. Whatever makes a great salesperson, the thing you can't teach, Matt had it. He just never had a chance to use it.
+He was at Jason's Deli making maybe ten dollars an hour, calling me about work, money, life on ten dollars an hour, the same stuff I'd called Andy about, a different version. Then he got an admin job at a Honda dealership, and one day they were short a guy on the floor. Somebody called in sick. Hey Matt, you want to try? Matt went out and sold three cars his first day. The guys who'd been selling for years looked at him like, how did this kid just do that? Because Matt could connect. Whatever makes a great salesperson, the thing you can't teach, Matt had it. He just never had a chance to use it.
 
-He became a salesman at Honda, and then the best they'd ever seen. The guy who'd been homeless, who couldn't write, who made ten dollars an hour at a deli, started making three hundred thousand a year. Went back and got his GED. Met Rebecca, an amazing woman. Reconnected with his daughter Aubrey. Had a son, Xander. We all started going to church together, Matt, Rebecca, the kids, Mager, me, a whole crew whose lives had been rebuilt from wreckage, sitting in a pew on Sunday like the most normal thing in the world. And Matt didn't stop. He'd always had a dream of acting. He got an acting coach, went to auditions, never gave it up. Things started happening. He connected with people in the industry, got to know actors like Jeremy London. The guy who'd been homeless a few years earlier now has a Hollywood actor sleeping in his guest room. Matt became a producer. When I told him about this book he connected me with a guy he works with out in Hollywood, and they both decided they wanted to be part of it, documentary, trailer, eventually maybe a movie. I talked to Matt's friend on the phone. He listened to the story the same way I'm telling it to you, and when I was done he said: There's nobody else. Nobody who could play you. Nobody else is going to share the conviction you have for your own story. You're going to play yourself. I'm still sitting with that one.
+He became a salesman at Honda, and then the best they'd ever seen. The guy who'd been homeless, who couldn't write, who made ten dollars an hour at a deli, started making three hundred thousand a year. Went back and got his GED. Met Rebecca, an amazing woman. Reconnected with his daughter Aubrey. Had a son, Xander. We all started going to church together, Matt, Rebecca, the kids, Mager, me, a whole crew whose lives had been rebuilt from wreckage, sitting in a pew on Sunday like the most normal thing in the world. And Matt didn't stop. He'd always had a dream of acting. He got an acting coach, went to auditions, never gave it up. He connected with people in the industry, got to know actors like Jeremy London. The guy who'd been homeless a few years earlier now has a Hollywood actor sleeping in his guest room. Matt became a producer. When I told him about this book he connected me with a guy he works with out in Hollywood, and they both decided they wanted to be part of it, documentary, trailer, eventually maybe a movie. I talked to Matt's friend on the phone. He listened to the story the same way I'm telling it to you, and when I was done he said: There's nobody else. Nobody who could play you. Nobody else is going to share the conviction you have for your own story. You're going to play yourself. I'm still sitting with that one.
 
 I started sober thinking mediocrity was the ceiling. Then I met Andy, Bob, Mager, and Matt. These are the people you meet when you stop drinking. Not the ones you expected, the ones God put in front of you. I thought I was too far gone for any of it. So did they, once. They walked into the room anyway, and so did I, and that turned out to be the whole thing. The best one was still ahead of me, and she didn't come from a meeting at all.
 
@@ -1366,7 +1343,7 @@ PART FIVE
 
 # **HOPE**
 
-**CHAPTER 28**
+**CHAPTER 26**
 
 ## **Hope**
 
@@ -1381,7 +1358,7 @@ She got in the car shier than I expected, hair half over her face. Five foot not
 
 She told me about Eclectic, Alabama. Small town, good parents, divorced when she was in middle school. Her dad Jeff is one of the gentlest people I've ever met. Her mom Rhonda is a free spirit, warm, would do anything for her kids. We got into my story, and when I told her about the addiction she said she'd dated a guy with a problem before and that it was impressive I'd stayed sober. She didn't flinch.
 
-By the end of dinner I couldn't wait to kiss her. I walked her to the car, opened the door, leaned in. First kiss. Worth every wrong turn that led to it. Took her back to my place, no intentions, just to show her where I lived, and we talked until it got late, the easy kind of talk that doesn't check the clock. We both had an early morning ahead. I drove her home and could have kept driving all night.
+By the end of dinner I couldn't wait to kiss her. I walked her to the car, opened the door, leaned in. First kiss. Worth every wrong turn that led to it. Took her back to my place, no intentions, just to show her where I lived, and we talked until it got late, the easy kind of talk that doesn't check the clock. I drove her home and could have kept driving all night.
 
 The next morning was the McGuire's 5K, eight thousand people. I had a pull to find her in the crowd, and we made our way to each other. She showed up in a little green outfit, adorable. A friend from the gym had a bulldog puppy, and I carried it over and said, that's the kind of dog we need to get. She looked at me. We? It just came out. Sudden, and right. One dinner in, and some part of me had already decided.
 
@@ -1427,7 +1404,7 @@ We picked Live Oak Plantation in Beulah, just outside Pensacola. About a hundred
 
 Hope's parents divorced when she was twelve, and she carries some abandonment from it, the quiet kind that doesn't announce itself. I didn't understand it at first. I do now. Most of what looks like quirk in her runs back to that. Early on she was a little codependent, and I'll be honest, it felt good. I'd spent my whole life trying to feel chosen, trying to be enough for somebody. Here was a person who needed me. Two people with the same wound from opposite ends, hers being left, mine wondering if I was worth keeping, and for a while we filled each other's holes. We've both grown past the worst of it. But I understand now why we fit so fast.
 
-She needs a plan. Change overwhelms her. She maps it all out, the trip, the week, the grocery run, and when something moves the pieces she feels it in her body. Early on I tried to talk her out of it. Now I help her rebuild the plan instead. She needs things to look forward to, too, something good out ahead on the calendar she can walk toward. A person who was left once needs to know what's coming.
+She needs a plan. Change overwhelms her. She maps it all out, the trip, the week, the grocery run, and when something moves the pieces she feels it in her body. Early on I tried to talk her out of it. Now I help her rebuild the plan instead. A person who was left once needs to know what's coming.
 
 When we met she was twenty-nine, just finishing her doctorate, and she had never worked a full-time job in her life. There was an innocence to her I wasn't used to, and she was more appreciative of the simple things than anyone I'd ever dated.
 
@@ -1435,34 +1412,27 @@ The first proof of that was small. I brought her leftovers one night. Not flower
 
 Her steadiest act of love is quieter than that. She doesn't judge me for my character defects, and I have a few. I'm messy. I'm inconsistent. She has watched me leave things undone and start things I don't finish, and she has never once held it over me. Being loved without being graded was new to me. I kept waiting for the bill. It never came.
 
-She changed me in small ways, and the dishwasher is the one I think about. She is particular about how the dirty dishes go in. For a long time I didn't get it and didn't try to. Then she explained why it mattered to her, not the rule, the reason underneath it, and once I understood it was important to her, it became important to me. That's how she works on me. She doesn't nag me into things. She lets me understand her.
-
 When Hope decides she wants something, she has to have it. There's no slow drift toward it. In Pensacola she decided she wanted a horse. She never got it. We moved, and we needed the money for the house, so she let the horse go. She can want a thing with her whole chest and still set it down when it matters. Now she wants a hairless cat. I've learned not to fight the wanting. I stay open to her ideas, all of them.
 
 Our first fight wasn't about money or the future. It was crab meat. We were in Orange Beach, at a seafood and bar place, on our way to a Matchbox Twenty concert. Hope wanted me to try it. I wouldn't take a bite. Not one. It turned into a real argument right there at the table, and it ended with me drawing a line. Hope, I said no, and I'm not going to bring it up again. She let it go. We've never fought about food since. Boundaries kept me alive in recovery. Turns out they work over a plate of crab too.
 
-The hardest stretch we hit came with the move to Raleigh, when we were carrying two mortgages, the East Hill house wouldn't sell until this year, 2026, and money became the thing we kept circling back to. We talked about money a lot, and for a while it was a point of contention. Part of that was on me. Early on I'd make a big decision on my own and tell her after it was already done. For a woman who needs to see the pieces before they move, it was never really about the money. It was about being left out of something that was ours. Being left out is the oldest wound she has. Hope isn't a fighter, and she didn't yell. She went quiet, and the quiet lasted, which was harder than being yelled at. When she finally came to me she wasn't cruel about it. She said the only thing she needed to: no more impulse decisions. I haven't made one on my own since. In a marriage, that's not how you do things. The big calls are ours, not mine.
+The hardest stretch we hit came with the move to Raleigh, when we were carrying two mortgages, the East Hill house wouldn't sell until this year, 2026, and money became the thing we kept circling back to. We talked about money a lot, and for a while it was a point of contention. Part of that was on me. Early on I'd make a big decision on my own and tell her after it was already done. For a woman who needs to see the pieces before they move, it was never really about the money. It was about being left out of something that was ours. Hope isn't a fighter, and she didn't yell. She went quiet, and the quiet lasted, which was harder than being yelled at. When she finally came to me she wasn't cruel about it. She said the only thing she needed to: no more impulse decisions. I haven't made one on my own since. In a marriage, that's not how you do things. The big calls are ours, not mine.
 
 Her faith runs through the ordinary hours. She has her podcasts going, a lot of them Christian leaders she trusts. We'll get into a rhythm of reading a devotional together, and then life gets loud and it drops off for a while, and then we find our way back to it. It isn't performed. It's just part of the house.
 
-For all of that, her love shows up most as a yes. She'll support me in anything. When we first met I was dealing with a health condition, something that could have scared someone off early, before they'd invested anything. I gave her the out without saying so. She didn't take it. It doesn't faze me, she said. I'll go to every appointment with you, no matter how much it costs. The woman who tightens at an unexpected expense told me up front she'd spend whatever it took on me, before she had a single reason to. She backed the hair transplant in Jordan when my one real insecurity was my hair, and instead of telling me it didn't matter, which never helps, she flew across the world for it and spent the trip making sure I felt okay while my head healed. She let me write this book at three in the morning and never once told me to stop. That's Hope. She doesn't dismiss the thing you carry. She helps you carry it. The girl whose family came apart when she was twelve grew into the woman who refuses to leave.
+For all of that, her love shows up most as a yes. She'll support me in anything. When we first met I was dealing with a health condition, something that could have scared someone off early, before they'd invested anything. I gave her the out without saying so. She didn't take it. It doesn't faze me, she said. I'll go to every appointment with you, no matter how much it costs. The woman who tightens at an unexpected expense told me up front she'd spend whatever it took on me, before she had a single reason to. She let me write this book at three in the morning and never once told me to stop. That's Hope. She doesn't dismiss the thing you carry. She helps you carry it. The girl whose family came apart when she was twelve grew into the woman who refuses to leave.
 
-She is ten years younger than me and has taken care of herself in a way that puts me to shame, beautiful hair, beautiful skin, fit, and she makes it look easy. And she loves to laugh, the real kind that takes her all the way over and pulls the whole room in with her. But under all of it, what she is to me is my best friend. We feel safe with each other, and because we feel safe, we are sometimes harder on each other than we should be. That is the cost of letting your guard all the way down with the one person you are sure won't leave. She is that person. I didn't know you could keep falling in love with the same woman years into a marriage. You can.
+She loves to laugh, the real kind that takes her all the way over and pulls the whole room in with her. But under all of it, what she is to me is my best friend. We feel safe with each other, and because we feel safe, we are sometimes harder on each other than we should be. That is the cost of letting your guard all the way down with the one person you are sure won't leave. She is that person. I didn't know you could keep falling in love with the same woman years into a marriage. You can.
 
 ### *The Journey*
 
 In a short time we worked like a team. We paid off over a hundred thousand dollars in student loans and built a life with margin in it instead of debt, a home, a little security, the quiet kind I'd never had back when I looked successful. Recovery taught me the same thing about money it taught me about everything else: you keep the small promises, every day, and they add up to a life. We moved to Raleigh and built something real, grounded in faith, aligned on what matters. We never had children, and we never planned to. What we built was the two of us, and a life with room in it to show up for other people. These days that includes Hope's mother. Rhonda lives under our roof now, which is not a sentence anyone says lightly, and getting to know her and love her has been one of the quiet gifts of this stretch. She hasn't had the easiest life. What I didn't see coming was watching Hope and her mom grow close, slowly, over years, until Hope started calling her her best friend. None of the good things happen overnight. We take trips together, the Outer Banks and others, and somewhere in the ordinary days under one roof a lot of healing has happened, the kind you don't engineer, you just keep showing up for. I get to witness it. Hope is my rock. It isn't always smooth, no honest marriage is, but she's never stopped believing in what we're building. I wouldn't have become this man without Lou. And the love I found with Hope is what prepared me for what came later: hospice, sitting in rooms where people are losing the person they love most. That's my love story. It started with a stubborn message on Match.com to a girl who told me not to write. Best rule I ever broke.
 
-**CHAPTER 29**
-
-## **The Pictures Never Tell the Whole Story**
-
-*"We are not saints... We claim spiritual progress rather than spiritual perfection."*
-*— Bill Wilson, Alcoholics Anonymous*
+### *The Pictures Never Tell the Whole Story*
 
 If you look at our Paris photos, we look great. What you can't see is the day before, Hope on her knees in a Brussels hotel room, scraping spilled hair fiber out of my socks and the lining of a suitcase so I'd feel okay standing in front of that camera. That gap, between the picture and the day before it, is the whole point. The trips Hope and I took were some of the best times of my life. They were also a long string of small disasters, and the disasters are where we got strong. You don't learn what you have with someone when the plan works. You learn it when the plan falls apart and you are both still standing there, figuring it out together.
 
-It was like that from the first trip. Before the passports and the overseas flights, we went to Ocean Springs, Mississippi, to a place we still call the Ugly Green House. The key was waiting under a trophy out front. It was not much to look at, and it did not need to be. The place was covered in dog hair, five of us were sharing a single half bath, and we made it special anyway. Hope had forgotten her ID and wanted to be able to order a drink, so I got up before light, drove us back to Pensacola to get it, and drove us straight back. It didn't feel like a sacrifice. It felt like the thing you do for someone when you're glad it is you doing it. Her father heard about that drive, and he told me later it was the moment he knew I was the one for her. We were together and we were going somewhere, and that was the whole appeal, then and now. We loved the museums most, even the little ones in towns most people drive straight past.
+It was like that from the first trip. Before the passports and the overseas flights, we went to Ocean Springs, Mississippi, to a place we still call the Ugly Green House. The key was waiting under a trophy out front. It was not much to look at, and it did not need to be. The place was covered in dog hair, five of us were sharing a single half bath, and we made it special anyway. Hope had forgotten her ID and wanted to be able to order a drink, so I got up before light, drove us back to Pensacola to get it, and drove us straight back. It didn't feel like a sacrifice. It felt like the thing you do for someone when you're glad it is you doing it. Her father heard about that drive, and he told me later it was the moment he knew I was the one for her. We were together and we were going somewhere, and that was the whole appeal, then and now.
 
 Sometimes the camera does catch it. For Hope's thirtieth birthday I took her to Disney. We stayed at the Goofy resort, nothing fancy, and the first room they gave us stunk. I called the front desk. Like what, they said. Like BO, I said. They moved us, and from there the whole thing was perfect. But the part I keep is her face the first time she saw Disney. A grown woman, thirty years old, lit up like a kid who had just been handed the whole world for a day. She told me she wished she could be a pharmacist right there inside the little village, so she would never have to leave. No problem to solve, nothing going sideways, just Hope happy all the way through, and me happy watching her be that happy. That one the pictures got right.
 
@@ -1480,12 +1450,7 @@ Ireland was the one I couldn't fully meet her on. We'd planned it long before, b
 
 Lou died on Christmas Day, 2025. I think about those trips differently now, not as time I should have spent some other way, but as time I'm grateful we took, every messy minute of it. The pictures never tell the whole story. They can't. They only catch the second we were smiling. Everything that earned the smile happened off camera, and most of it was Hope.
 
-**CHAPTER 30**
-
-## **Blessings**
-
-*"His compassions fail not. They are new every morning: great is thy faithfulness."*
-*— Lamentations 3:22-23*
+### *Blessings*
 
 When Lou poured coffee that day, he poured it for himself and for Hope. Not for me. I noticed, and I understood it was the closest thing to a blessing he was going to give.
 
@@ -1499,7 +1464,7 @@ They went into the kitchen together while I stayed in the living room. I could h
 
 Later he looked at me. You're steady, he said. Then: she is too. That was it. No formal blessing, no speech. He saw two people steady in the same direction and noted it.
 
-**CHAPTER 31**
+**CHAPTER 27**
 
 ## **Sobriety Meets Hospice**
 
@@ -1518,7 +1483,7 @@ Near the end I went to see him, and it was the first time I had ever been in a r
 
 I was in the room when he passed, in 2016. I had been around a lot by then, but not that, not the actual leaving. I watched it happen, and afterward I stayed for his wife, a woman I loved, because there was nothing left to do but be there and not go. That was the first time I felt the weight. Not the sadness, the weight. Bob was gone. There was no fixing it, no deal to close, no right answer that would have bought him one more minute.
 
-Around that same stretch the recognition I'd chased my whole life finally showed up at work, and it barely registered. Someone forwarded an internal article. A colleague congratulated me in passing. I skimmed it once and closed the screen. It mattered. It didn't define me. Lou noticed, the way he noticed everything. You're successful again, he said once. I guess, I said. You don't sound like it matters. That's because it doesn't, I said. Not the way it used to. He nodded. That nod was the approval.
+Around that same stretch the recognition I'd chased my whole life finally showed up at work, and it barely registered. Someone forwarded an internal article. A colleague congratulated me in passing. I skimmed it once and closed the screen. Lou noticed, the way he noticed everything. You're successful again, he said once. I guess, I said. You don't sound like it matters. That's because it doesn't, I said. Not the way it used to. He nodded. That nod was the approval.
 
 I talked to Lou about Bob one evening. I don't know why this is hitting me so hard, I said. I did everything right. He didn't hesitate. That's not why it's bothering you. He was right. Bob hadn't needed me to fix anything. He'd needed me in the room. I was being let into places where presence was the only thing left to offer, and something in me already knew how to do that. Not as a technique. As a practice. An old man dying sober at eighty-one showed me that the most you can do at that edge is refuse to leave. Years later, that became the whole job.
 
@@ -1526,7 +1491,7 @@ PART SIX
 
 # **THE LAST CHAPTER**
 
-**CHAPTER 32**
+**CHAPTER 28**
 
 ## **The Detour**
 
@@ -1537,9 +1502,9 @@ The man who mentored me at the next job lost his twenty-one-year-old son and was
 
 ### *Diabetes Dave*
 
-They called him Diabetes Dave in Panama City. Not behind his back. To his face. Because he'd been doing what he does so long and is just that good at it. He doesn't even go to the front door. He goes to the back. Everyone knows him. High character, strong Christian, an all-around good person. Dave was my mentor, honing me in on what to look for, making sure I checked the boxes. He took the time.
+They called him Diabetes Dave in Panama City. Not behind his back. To his face. Because he'd been doing what he does so long and is just that good at it. He doesn't even go to the front door. He goes to the back. Everyone knows him. High character, strong Christian, an all-around good person. Dave was my mentor. He took the time.
 
-I needed that more than I let on. For ten years I'd been the top guy in home health, the one people called, and I'd walked into Novo Nordisk a nobody in an industry I didn't understand, starting over at the bottom of the learning curve in my forties. That's a quiet humbling, going from the name everybody knows to the new guy who doesn't know Type 1 from Type 2. Dave never let me feel it alone. He sat with me, walked me through what I didn't know, and made sure I always had somebody in my corner. I'm not sure I'd have made that jump without him.
+I needed that more than I let on. For ten years I'd been the top guy in home health, the one people called, and I'd walked into Novo Nordisk a nobody in an industry I didn't understand, starting over at the bottom of the learning curve in my forties. Dave never let me feel it alone. He sat with me, walked me through what I didn't know, and made sure I always had somebody in my corner. I'm not sure I'd have made that jump without him.
 
 About a year in, Dave lost his son Garrett. He was twenty-one, working at a pizza shop, and he was riding his bike home through the neighborhood when a car struck him. He didn't make it. People came from all over the company for the funeral, just to be there for Dave. I've never seen someone with as much faith. Coming back at all would have been enough. He did more.
 
@@ -1553,7 +1518,7 @@ The hardest part of leaving Novo wasn't the job. It was leaving that relationshi
 
 I told people I was going to take some time off. Be there for my dad. Be there for my mom. Be present the way I'd been telling hospice families to be present, while there was still time. That was the plan. It's not what happened. What happened was I retreated into myself. The time I'd set aside became something else, a depression I didn't see coming and couldn't name from inside it. I was grieving what was already happening and what was coming, and the weight kept me from doing the thing I'd left my career to do. I wasn't working. I wasn't fully showing up for my parents. I was stuck in a version of myself that couldn't move in any direction. I don't say that for sympathy. I say it because it's the truth, and this book doesn't work if I only tell the parts where I got it right. Hospice, when it came, wasn't a pivot. It was a return, to the rooms I'd been thinking about since the home health years, to the weight I'd learned how to carry. It pulled me out of that in-between place and gave me direction again.
 
-**CHAPTER 33**
+**CHAPTER 29**
 
 ## **Five Weeks**
 
@@ -1566,13 +1531,13 @@ Five weeks after I started the hospice job, my father started to die. The beginn
 
 Hospice didn't show up all at once. It came the way hard things usually do, a little at a time, like a knock I kept deciding I hadn't heard.
 
-The rooms felt familiar. I recognized the posture the work required. You don't rush in. You don't fill silence with hollow reassurance. You sit, you listen, you stay. Every family carries history you know nothing about. A lot of families wait to place their loved one on hospice. They're not ready. They can't let go yet. Most of those reasons are just love, expressed imperfectly under impossible pressure.
+The rooms felt familiar. I recognized the posture the work required. You don't rush in. You don't fill silence with hollow reassurance. You sit, you listen, you stay. A lot of families wait to place their loved one on hospice. They're not ready. They can't let go yet. Most of those reasons are just love, expressed imperfectly under impossible pressure.
 
 I met with a family once. I'll call the daughter Mary. Her mother was ninety-five, couldn't get out of bed, couldn't stand more than thirty seconds. The family had misgivings. They always do. So I didn't lead with information. I led with a question. How is seeing her like this affecting you? The room shifted. One by one they started talking, the hospitalizations, the rehab stays, the hope that kept arriving and retreating, the exhaustion they hadn't given themselves permission to name. At some point we prayed. When we were done the family made the decision together. Someone had finally asked them how they were carrying it. Hospice is not giving up. I'm not there to decide. I'm there to stay.
 
 Another room has stayed with me, and I'll keep it vague out of respect. Two men, and it took about a minute to see that whatever was between them was the deepest thing in either of their lives. But when one of them spoke about the other, the word he used was best friend. They were partners, and they had spent a lifetime keeping a careful distance in public, and even here, even at the end, the habit held. The love was real. The showing of it still had to be hidden. I didn't name it. It wasn't mine to name. What I remember most is the sense that the one who could still leave needed to get home, to the one place the two of them had ever been free to love out loud. I have never forgotten that. Part of this work is noticing the love that has had to live in code, and making room for it without making a thing of it.
 
-In one room I was talking with the patient, an easy back-and-forth, and somewhere in it I told him a little of my own story, the addiction, the years I lost, the long road back. I've learned that when I open that door even a crack, people walk through it. His wife had come in partway through, and when I finished she went quiet, then asked me something that had nothing to do with her husband and everything to do with what she was actually carrying. Her son was thirty-eight, living at home, drinking himself under. He had a little girl of his own, and she lay awake wondering whether he could take care of her. Did rehab work, she wanted to know. What could she do. Was there anything she could do. I gave her what I had, the truth as I'd lived it, no dressing it up. But mostly I understood that I'd walked into that room to sit with a dying man and ended up holding his wife's other grief, the living one. That happens more than you'd think. Addiction doesn't wait outside the hospice door. It's already in half the rooms, and because I came back from it, families hand me that fear too. I take it. It's the same job. You sit with people in the thing they can't fix, and you stay.
+In one room I was talking with the patient, an easy back-and-forth, and somewhere in it I told him a little of my own story, the addiction, the years I lost, the long road back. I've learned that when I open that door even a crack, people walk through it. His wife had come in partway through, and when I finished she went quiet, then asked me something that had nothing to do with her husband and everything to do with what she was actually carrying. Her son was thirty-eight, living at home, drinking himself under. He had a little girl of his own, and she lay awake wondering whether he could take care of her. Did rehab work, she wanted to know. What could she do. Was there anything she could do. I gave her what I had, the truth as I'd lived it, no dressing it up. But mostly I understood that I'd walked into that room to sit with a dying man and ended up holding his wife's other grief, the living one. Addiction doesn't wait outside the hospice door. It's already in half the rooms, and because I came back from it, families hand me that fear too. I take it.
 
 And there was a pastor I'll call Melvin. His wife was a pastor's daughter who had sworn she would never marry a pastor and gone off and earned her own doctorate, and somewhere in there married one anyway. What struck me was how she loved him. Not for the way he loved her, exactly, but for the whole life they had built, the full accumulation of it stacked up in the room with them. His son was there, and his grandson, and his wife, all of them knowing he could go at any moment, all of them staying.
 
@@ -1588,13 +1553,13 @@ The relationship between my father and me was not perfect. Nothing in this story
 
 ### *Vigils*
 
-Lou was diagnosed with stomach and esophageal cancer in the spring of 2015. He was seventy-three. He called me on a Tuesday, no preamble. Got some news, he said. Surgery. And holistic stuff. No chemo. I'm not doing chemo. I knew better than to argue. Okay, I said, which meant, I hear you, and I'll show up for whatever comes next. The surgery was brutal. Lynda was there every day. I believe it's because of Lynda that my father lived another ten years. She was a nurse; she understood his body in ways the rest of us didn't. She loved him completely and he loved her. About twenty-five years married. My relationship with Lynda was always centered on my dad. She was good to me, always. She's a complex person, with a controlling nature expressed in the sweetest, most Southern way imaginable. I don't mean that as criticism. Who she is was exactly what Lou needed. The season ahead will be hard for her, because her life was organized completely around his. You lose the person, and you lose the purpose that was built around them. I worry about her. I pray for her.
+Lou was diagnosed with stomach and esophageal cancer in the spring of 2015. He was seventy-three. He called me on a Tuesday, no preamble. Got some news, he said. Surgery. And holistic stuff. No chemo. I'm not doing chemo. I knew better than to argue. Okay, I said, which meant, I hear you, and I'll show up for whatever comes next. The surgery was brutal. Lynda was there every day. I believe it's because of Lynda that my father lived another ten years. She was a nurse; she understood his body in ways the rest of us didn't. She loved him completely and he loved her. About twenty-five years married. My relationship with Lynda was always centered on my dad. She was good to me, always. She's a complex person, with a controlling nature expressed in the sweetest, most Southern way imaginable. I don't mean that as criticism. Who she is was exactly what Lou needed. The season ahead will be hard for her, because her life was organized completely around his. I worry about her. I pray for her.
 
 Lou came through the surgery. By December the scans were clean. Eight years of remission followed. He was at my wedding in April 2019. He was there when Chris married Nisha in February 2024. He was there when Chris and Nisha's daughter, Priya, was born in July 2025. He held her. Eight years that looked, from the inside, like a permanent gift. They weren't.
 
 In January 2024 the cancer came back. Stage 4. Lungs and lymph nodes. Lou was eighty-two. He told Lynda. He told Lisa. He told no one else. I noticed it before I knew what I was noticing, his mood a little off, something in the quality of him I couldn't name. Chris was getting married in February, and Lou had decided, quietly and completely, that his son's wedding wasn't going to be about his diagnosis. So he showed up. He danced. He celebrated. Nisha's father had passed the year before, and the wedding was a big Indian celebration in Fort Lauderdale, joyful and carrying grief as well as love. Lou understood that. He held it inside and let the day be what it was supposed to be. He kept the secret until March or April. The cancer's back, he said. January. I didn't want to say anything because of Chris's wedding.
 
-Lisa and I talked. We knew he had to do something. Chris was the one who got through to him, researched, found a surgeon in Birmingham through connections from a previous job, got him an appointment. The surgeon looked at him and said, stage 4, your age, no surgeon is going to operate on you. We were distraught. Surgery had worked the first time; we thought it was the answer again. It was too late for that. Immunotherapy came up, not as hard on the body as chemo or radiation. Lou agreed to try. He was choosing to try. Not for himself. For us.
+Lisa and I talked. We knew he had to do something. Chris was the one who got through to him, researched, found a surgeon in Birmingham through connections from a previous job, got him an appointment. The surgeon looked at him and said, stage 4, your age, no surgeon is going to operate on you. We were distraught. Surgery had worked the first time; we thought it was the answer again. Immunotherapy came up, not as hard on the body as chemo or radiation. Lou agreed to try. He was choosing to try. Not for himself. For us.
 
 ### *The Treatment*
 
@@ -1606,7 +1571,7 @@ That spring, Hope and I told him we were moving to Raleigh. I could tell he was 
 
 He got pneumonia on December 23. His immune system had nothing left to fight with. They put him on a drip. Lynda had been calling, and I could hear in her voice what she was trying to tell me without saying it. My mother was in Raleigh visiting, she'd made the trip from Lantana with Parkinson's making every mile harder than it used to be. I thought I could do both: go down Saturday, have time with her, still get there in time. I was wrong about the timeline. I stayed.
 
-**CHAPTER 34**
+**CHAPTER 30**
 
 ## **The Days After**
 
@@ -1617,7 +1582,7 @@ He got pneumonia on December 23. His immune system had nothing left to fight wit
 
 When we pulled up to the funeral home, his truck was parked out front, NJERZ on the Florida plates. A man who moved all the way to the Gulf and still made his truck say Jersey. That's what undid me, not the building, not the door. The plates. But before any of it, there was a breakfast.
 
-Hope and I went to church that morning and ate before we drove up to Raleigh. Dad had beaten cancer three times by then. This last round looked like another miracle, and with him, miracles had started to feel ordinary. He had nearly died in 2015. He fought it again after that. In 2024 he was knocking on death's door, and walked back out. You stop bracing for the end with a man like that. You start to believe he can't lose.
+Hope and I went to church that morning and ate before we drove up to Raleigh. Dad had beaten cancer three times by then. This last round looked like another miracle, and with him, miracles had started to feel ordinary. He had nearly died in 2015. He fought it again after that. In 2024 he was knocking on death's door, and walked back out.
 
 I wasn't happy in my job. There was an opening in hospice, at a company I had already given ten years to. At the table that morning, Dad told me what he always told me. Listen to your boss. Work hard. He had put that in me a long time ago, and he said it again like it was the first time.
 
@@ -1639,7 +1604,7 @@ The days in between blurred together. Then it was January 3rd, 2026, the service
 
 We pulled up to the funeral home, and there was the truck, parked right out front. Joel had driven it over. I lost it. I couldn't hold the tears back, and I didn't try.
 
-It was an odd feeling, being there, in the place where my father's body was. This was the exact thing I had spent the worst of that week not wanting to face. Now my last memory of him would be here, like this. But I had to see him. I couldn't not. So I went in.
+It was an odd feeling, being there, in the place where my father's body was. Now my last memory of him would be here, like this. But I had to see him. I couldn't not. So I went in.
 
 Pastor Levi Gardner officiated. He had been Dad's pastor for years, and he opened by praying that Lou, raised with Christ, would know the strength of His presence and rejoice in His glory. Then he read the 23rd Psalm, the whole thing. The Lord is my shepherd. I had heard those words at a lot of bedsides over the years. I had never once heard them land on me the way they did that day.
 
@@ -1661,7 +1626,7 @@ The patriarch was gone, and nothing seemed to flow the same. Lou had been the on
 
 We drove home the way we had come, talking about Lou the whole way, the real one, the complicated one, the man whose truck said Jersey in a Florida parking lot. The grief rode with us. It rides with me still. I've stopped wishing it away. It's the weight of having been loved like that, and I'd rather carry it than have nothing to carry.
 
-# **WHO STAYS. WHO GOES.**
+### *Who Stays. Who Goes.*
 
 It wasn't a fight. No big moment, no explosion. Just a quiet realization that I couldn't be around certain people anymore. They didn't do anything terrible. They just didn't know how to sit in it, and I didn't have the energy to explain it.
 
@@ -1669,7 +1634,7 @@ Grief changes your tolerance. Comments that used to roll past you land wrong now
 
 I sat in my car one afternoon thinking, am I becoming someone else? The answer came back quiet. No. You're becoming someone who can't pretend anymore. Everyone grieves differently. You extend grace, and you trust that love, given enough time, finds its way back.
 
-**CHAPTER 35**
+**CHAPTER 31**
 
 ## **The First Honest Mile**
 
@@ -1688,7 +1653,7 @@ And I was mean. That scared me more than a craving would have. I lashed out at t
 
 Seventeen years sober, and I had hit a rock bottom again, an emotional one this time. The disease doesn't need a bottle to run the old plays, isolation, anger, the closed door. The difference was that this time I had to feel it all the way through. And this time I knew what to do with a bottom. I went back to meetings, more of them than I'd been to in years. I got a therapist. The morning calls with Mager got longer. I said out loud, in the rooms and on the phone, that I was not okay. I went back to the people I'd been sharp with and said sorry, plainly. Seventeen years in, I was back on the first honest mile.
 
-**CHAPTER 36**
+**CHAPTER 32**
 
 ## **What Grief Taught the Job**
 
@@ -1700,6 +1665,16 @@ Here is the part I can only admit now. Before I lost him, I was good at this job
 Families would say, I'm terrified I won't be there when it happens. What I offered was what I knew to be true: presence is cumulative. You build it in the ordinary. Lou gave me everything I needed for the rooms I walk into now, and in those rooms, with the silences that need holding rather than filling, I carry him.
 
 I could tell you a hundred versions of the same room. The details change. The room doesn't. A husband answering every question directed at his wife, because he has been her voice since the diagnosis, going quiet only when I ask what he'll do with his mornings. A daughter who flew in from three time zones away and won't sit down, because sitting down feels like agreeing to it. A Bible on the nightstand with a rubber band around it, fat with decades of funeral programs pressed inside. And at some point, out in the hallway, the question underneath every other question: how long? What they're really asking is how long they have to say the thing they've been saving. I used to answer with the clinical ranges. Now I answer the real question. Don't wait for the right day. This is the right day. Then I go back into the room with them, and we stay.
+
+Put one of those rooms together and it goes like this. A living room with a hospital bed where the dining table used to be. The husband's chair has been turned to face the bed. Three grown kids: one on the couch, one standing in the kitchen doorway, one who flew in last night and hasn't taken her coat off. The television is on with the sound down. Nobody has eaten. I introduce myself, and nobody really hears the name, because to them I'm not a name. I'm the word hospice, standing in their mother's living room in a tie.
+
+The one in the doorway says it before I can sit down. We're not ready to give up on her.
+
+I don't argue. Arguing with that sentence is how you lose the room, and I'm not there to win. I sit down where the husband can see me and ask the only question I ever open with. Tell me about her. Not the diagnosis. Her.
+
+The room changes. The husband starts talking, and the daughter in the coat finally sits down. Somebody laughs at a thing their mother said forty years ago, and somebody else cries at the same sentence. For twenty minutes the woman in the bed is not a diagnosis. She is the reason everyone in that room exists. And somewhere in those twenty minutes, hospice stops meaning giving up and starts meaning the way her people intend to love her through what's coming.
+
+They didn't sign anything that day. Sometimes they don't. But when I stood to go, the husband walked me to the door, which cost him something with his knees, and shook my hand at the threshold. That's how I knew. Not ready isn't a no. It's a doorway, and somebody has to be willing to stand in it first.
 
 My father always made a big deal of my sobriety anniversary. Every January 9th. My first year, he came to Gulf Breeze Hospital to hear me speak, sat in that room and listened to his son talk about staying sober for one year. He told me once, quietly, that there wasn't a time he mentioned my name where, if the person knew me, they wouldn't say, he's the best. That's what he built. Lou spent eighty-four years showing up without needing to know exactly where he was going. I'm trying to do the same.
 
@@ -1723,7 +1698,7 @@ His neck broke at C5 and C6. He couldn't move anything below it. His eight-year-
 
 That's where Tyler's life divided in two. After it came the hospital bed in the living room, the ramps, the accessible shower, the morning routines that take hours, and his sister Jaye, Hope's cousin too, moving in to help carry him back toward some independence, a husband and two daughters and a career of her own set down so she could stay. I've said elsewhere that I learned to notice the caregiver. This is one of the places I learned it. Tyler is still fighting, and Jaye is still showing up.
 
-**CHAPTER 37**
+**CHAPTER 33**
 
 ## **The Round Table**
 
@@ -1732,13 +1707,13 @@ That's where Tyler's life divided in two. After it came the hospital bed in the 
 
 Three days after my father died, I cried in the office of a nurse I'd known for an hour. She didn't reach for a phrase or try to fix it. She just stayed in the room with me. You never know when the grief is going to hit, or who's going to be standing there when it does.
 
-That morning I walked into Brookdale for a routine visit. Linda was at the round table near the nurses' station. She'd been a nurse a long time, you could see it in how she carried herself. Compassionate, but not someone who let everybody in. A steadiness I recognized. We started talking. She was from the Buffalo area, upstate New York, had strong opinions about politics and didn't hide them. We agreed on most of it. We joked. It felt easy in a way things hadn't in days.
+That morning I walked into Brookdale for a routine visit. Linda was at the round table near the nurses' station. She'd been a nurse a long time, you could see it in how she carried herself. Compassionate, but not someone who let everybody in. A steadiness I recognized. We started talking. She was from the Buffalo area, upstate New York. We joked. It felt easy in a way things hadn't in days.
 
 Then I told her my dad had passed three days earlier. Her face changed. You could tell she felt it. She just sat there with me. And I let myself go. I wouldn't call it a breakdown, but I cried in her office, that raw in front of someone I barely knew, and I don't know whether you're supposed to cry in front of a nurse you just met at a facility you're calling on for work. But in that moment I felt something I can only call spiritual, a sense that God had put this person in my path. Not for referrals or business. For this.
 
 It was no longer about work. Two people at a round table, one of them grieving and the other choosing to stay in the room for it. We hugged. I gave her a kiss on the cheek. From that day on I look forward to the days I get to see Linda. Not because of the facility. Because of the human being. The other staff joke about it, oh, you always come in and kiss Linda on the cheek. They don't know the background, don't know what was shared at that table three days after Christmas. That's fine. Not every connection needs an audience. Here's the part people might not expect: as a rep, I'm the one who's supposed to bring the chocolate and the goodies. When I go see Linda, I'm the one who feels taken care of. She gives me cookies. She checks in. The relationship runs backwards from the job description. Linda gave me a moment, three days in, at a round table at Brookdale, to stop holding it together. I'll carry that.
 
-**CHAPTER 38**
+**CHAPTER 34**
 
 ## **The Table**
 
@@ -1749,7 +1724,7 @@ My father was the gravity that held the family together. When he died, that grav
 
 A stranger had set a place for me at one table. There was another, older one waiting back home. Lisa has Thanksgiving at her house every year. Every year. She sets the table, cooks the meal, opens the door, the way my grandmother did it, same recipes, same dishes. There's a stubbornness required to keep a tradition alive when the person who started it is gone.
 
-Hope and I can't make it every year. We come from two divorced families and splitting the holidays is brutal. You try to be everywhere and end up feeling like you're not fully anywhere. But the table is always there. That's Lisa.
+Hope and I can't make it every year. We come from two divorced families and splitting the holidays is brutal. But the table is always there. That's Lisa.
 
 That table has seen every version of me. For years, in active addiction, I'd show up to Thanksgiving and end up passed out on her couch, dead to the world, sprawled across the whole thing so nobody else could lie down. It turned into a running joke that outlived the using, get to the couch before Rob does. I can laugh at it now because of how she handled it then. Lisa never shamed me for it. She set a plate for the worst version of me and loved me anyway, no lecture, just a place at the table and a couch I'd hog. She always told me I had a place to come to, no matter what. In those years there weren't many people left in my corner. She was one of them. She stayed proud to call me her brother long before I could see why. I've been back plenty of sober years since, no passing out, but the joke stuck, the way the good ones do.
 
@@ -1761,7 +1736,7 @@ After my dad died the center had gone, and the rest of us felt it loosen. Lisa d
 
 I think about the meatloaf sometimes, that night when she was barely old enough to drive and cooked a meal for two boys who didn't make it easy. She's still standing at the counter. Still opening the door. The last time I was there for Thanksgiving I stood in her kitchen a minute before we sat down. I didn't say anything. I just watched, and thought about how the people who hold families together don't usually get thanked for it. They just keep doing it. Year after year. We sat down. Someone said grace. The food was passed. And for a few hours everything had a center again. Lisa made sure of that.
 
-**CHAPTER 39**
+**CHAPTER 35**
 
 ## **The Floor**
 
@@ -1831,61 +1806,29 @@ If you're reading this in recovery, from addiction, from loss, from a version of
 
 The cardinal flew off into the gray. The promise remains. It was never in the bird. It was in what Lou built in me, across thirty years of chosen love and stubborn presence. Now it's my turn. Keep showing up. Keep choosing love.
 
-# **THE PROMISE**
-
-If you do the work, get honest, get sober, do the next right thing one day at a time, here is what I can promise you, because it happened to me.
-
-A freedom you had stopped believing you'd get to feel.
-
-A past you can look at without flinching, close enough to keep you humble, far enough that you never move back into it.
-
-Quiet. Real quiet, the kind that doesn't need anything to happen to stay.
-
-Proof that the worst chapter of your story is the one that ends up helping somebody else.
-
-The end of self-pity, and the end of feeling useless.
-
-Less of your time spent on yourself, more on the people right in front of you.
-
-The day you stop performing your life and start living it.
-
-The fear of people, of money, of being found out, loosening its grip, finger by finger.
-
-Knowing what to say in the rooms that used to leave you speechless: the meeting, the hospital, the bedside of someone you love at the end.
-
-The slow realization that something bigger than you has been carrying you the whole time.
-
-And one the old list doesn't have, but I'll add because I've lived it: a red bird on a gray morning, to remind you that the ones who carried you are still carrying you, and now it's your turn to carry someone else.
-
 # **WHAT I'M ASKING YOU TO DO**
 
-I told you at the start I'd make you a promise, and I've tried to tell you the truth the whole way through. Here is the part that belongs to you.
+I told you at the start I'd make you a promise, and I've tried to tell you the truth the whole way through. Here is the part that belongs to you — the one who loves someone you can't fix, the one sitting in a parking lot afraid to walk into the room, the one still carrying the words you never got to say. I was guided through the dark by a man who would not leave. His name was Lou. Now it's my turn to hand you the map and point you at the door.
 
-You are the one this book was for. The one who loves someone you can't fix. The one sitting in a parking lot afraid to walk into the room. The one who has already lost someone and is still carrying the words you never got to say. I was guided through the dark by a man who would not leave. His name was Lou. Now it's my turn to do for you what he did for me, which is hand you the map and point you at the door.
-
-So here is the plan. It's short on purpose.
+The plan is short on purpose.
 
 Show up. You do not have to be ready.
 
-Say the words now. I love you. I'm sorry. Thank you. I forgive you. Don't wait for a better time, because there isn't one.
+Say the words now. I love you. I'm sorry. Thank you. I forgive you. There is no better time coming.
 
 Put the person in the bed first, not what's easiest for you.
 
 Stay. You cannot save anyone. You can be there, and being there is the whole thing.
 
-Catch with two hands. Leave the door open a crack. Keep coming back.
+Leave the door open a crack. Keep coming back.
 
-And if the fight is yours, if it's the disease that has you, walk into the room with the folding chairs and the bad coffee, and then keep walking in. You do not do this alone.
+And if the fight is yours, if it's the disease that has you, walk into the room with the folding chairs and the bad coffee, and then keep walking in. Do that, one day at a time, and I can promise you what happened to me: a past you can look at without flinching, the day you stop performing your life and start living it, and the slow realization that something bigger than you has been carrying you the whole time.
 
-Here is the invitation. Not someday. Today.
-
-If you love someone who is dying, go sit with them. If you don't know where to begin, the National Hospice and Palliative Care Organization, at nhpco.org, will help you find care and find the words.
-
-If you or someone you love is drowning in addiction, call the SAMHSA National Helpline at 1-800-662-4357. It is free, it is confidential, and someone is there.
+If you love someone who is dying, go sit with them. If you don't know where to begin, the National Hospice and Palliative Care Organization, at nhpco.org, will help you find care and find the words. If you or someone you love is drowning in addiction, call the SAMHSA National Helpline at 1-800-662-4357. It is free, it is confidential, and someone is there.
 
 Then do the smallest brave thing in front of you. Make the call. Cross the parking lot. Open the door.
 
-That is the cardinal's promise. Love shows up where it's needed, not where it's earned. It was done for me. Now go and do it for somebody else.
+Love shows up where it's needed, not where it's earned. That is the cardinal's promise. It was done for me. Now go and do it for somebody else.
 
 # **AUTHOR'S NOTE**
 
