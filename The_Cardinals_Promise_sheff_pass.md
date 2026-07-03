@@ -1152,6 +1152,8 @@ People asked why I did all of it. The meetings, the volunteering, the running, t
 
 He never remarried. No second family, no one after my mother. He stayed in the same spot we left him in and loved her for the rest of his life.
 
+When I was small, he called me his good luck charm. I think about that now. Whatever luck I was, it got on a plane when I was four, and he stayed where it left him.
+
 The first time I heard from him after he left, I was fifteen. The phone rang at the house and it was him, the first contact since I was barely school age. Just his voice undid me, tears before I could get a word out. He was gentle about it. It's okay, he said. Don't cry. Be happy. There was a hole in me where he had been, an ache carried so long I'd stopped noticing it, and his voice opened it right back up. Years of something close to hatred had grown in that empty space, and even so, looking back, I can't lay it at anyone's feet. It was nobody's fault.
 
 I was twenty-six the next time I saw him, in person. I was in active addiction myself by then, though I wouldn't have said those words. I went back to the man who had been at the center of my first life, and I wasn't a boy looking up at him anymore. I could see him as he was, his circumstance, the things that had made him the father who locked the door. Maybe I saw it so clearly because I was closer to it than I wanted to know. Up close, the anger I had carried for so long turned into something quieter. I forgave him.
