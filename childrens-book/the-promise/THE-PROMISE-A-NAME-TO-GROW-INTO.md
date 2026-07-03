@@ -83,8 +83,7 @@ and sat down.
 
 > *The father and the boy side by side in the bleachers, his arm around him,
 > the family name **Brizzi** stitched across the father's shirt — the name
-> the boy is growing into, right there where he can see it. (The current
-> art reads "Ramsey" — regenerate with "Brizzi"; see production notes.)*
+> the boy is growing into, right there where he can see it.*
 
 ---
 
@@ -235,13 +234,11 @@ and staying.*
   father's shirt. The text never says the name out loud — the art carries
   it — but if you want it spoken, the natural place is page 2 ("You gave me
   your name. *Brizzi.*").
-- **Retouch before print:**
-  - The father's shirt in the page 4 bleachers art reads "Ramsey" — the
-    family name is **Brizzi**. Regenerate the image with "Brizzi" stitched
-    on the shirt (or retouch the lettering).
-  - The woman's t-shirt in the page 9 family portrait is meant to read
-    **"FREEDOM"** — the generation clipped it to "FREEDO". Regenerate or
-    retouch so the full word shows at print resolution.
+- **Lettering retouches (done digitally):** the page 4 shirt was retouched
+  from "Ramsey" to **Brizzi** (gold serif italic), and the page 9 portrait
+  was replaced with the regenerated version, its tee retouched from
+  "freeedom" to **freedom**. Both read cleanly at book size; for print,
+  optionally regenerate at full resolution with the correct words baked in.
 - **Visual rhyme to preserve:** the narrator's open hand on page 9 repeats
   the father's open hand on page 1 — the picking gesture, passed on. Any
   regeneration of either page should keep it.
