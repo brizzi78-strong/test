@@ -21,7 +21,7 @@ the finished pages. The remaining pages are written to match.
 
 ---
 
-### Page 1 — THE DAY YOU PICKED ME
+### Page 1 — THE DAY YOU PICKED ME — [existing art: `art/the-day-you-picked-me.jpeg`]
 
 Some kids come to their fathers
 the ordinary way.
@@ -33,8 +33,9 @@ and you picked me.
 
 On purpose.
 
-> *Illustration: The man crouched to a small boy's eye level, hand out,
-> the boy deciding. Front hallway light.*
+> *The front hallway, door open to the yard. The father bent down to the
+> boy's level, hand open toward him. The boy in the red shirt, deciding.
+> Family photos on the wall behind them.*
 
 ---
 
@@ -104,7 +105,7 @@ On purpose.
 
 ---
 
-### Page 6 — GROWN
+### Page 6 — GROWN — [existing art: `art/grown-the-coat-fits.jpeg`]
 
 One day the coat fit.
 
@@ -115,8 +116,9 @@ that you hadn't just given me a name.
 
 You'd shown me what to do with it.
 
-> *Illustration: The narrator, grown now, in the blue shirt, wearing the old
-> coat. It fits. The father, gray at the temples, watching him.*
+> *The narrator grown, in the red shirt with the old blue coat over it —
+> worn, patched, and fitting at last. The father, gray at the temples now,
+> hand on his son's shoulder.*
 
 ---
 
@@ -165,7 +167,7 @@ is still being kept.
 
 ---
 
-### Page 9 — A NAME TO GROW INTO
+### Page 9 — A NAME TO GROW INTO — [existing art: `art/family-portrait.jpeg`]
 
 Someday, somebody small
 might get my name.
@@ -177,9 +179,10 @@ That's all right.
 I know exactly
 what to tell them.
 
-> *Illustration: The narrator's hand resting on an empty chair beside a
-> bed — or, gentler, holding the old coat out toward the reader. Open,
-> hopeful, unfinished on purpose.*
+> *The family now: the narrator with his hand open toward the reader — the
+> same gesture his father used in the hallway on page 1 — his father beside
+> him in the green plaid, and his wife holding their little dog in a red
+> sweater. The red shirt, passed on to the smallest member of the family.*
 
 ---
 
@@ -194,19 +197,28 @@ and staying.*
 
 ## Production notes
 
-- **Existing art:** five finished illustrations live in `art/`
-  (`father-and-boy.jpeg`, `the-name-mirror.jpeg`, `bleachers-ramsey.jpeg`,
-  `the-work-i-do-now.jpeg`, `the-promise.jpeg`). The cover composition (title
-  panel over the father-and-boy image) already exists in the original
-  generation session and can be re-exported at print resolution.
+- **Existing art:** eight finished illustrations live in `art/`
+  (`father-and-boy.jpeg`, `the-day-you-picked-me.jpeg`,
+  `the-name-mirror.jpeg`, `bleachers-ramsey.jpeg`,
+  `grown-the-coat-fits.jpeg`, `the-work-i-do-now.jpeg`, `the-promise.jpeg`,
+  `family-portrait.jpeg`). The cover composition (title panel over the
+  father-and-boy image) already exists in the original generation session
+  and can be re-exported at print resolution.
 - **The name is Ramsey.** The bleachers art shows it stitched on the father's
   shirt. The text never says the name out loud — the art carries it — but if
   you want it spoken, the natural place is page 2 ("You gave me your name.
   *Ramsey.*").
-- **Art still needed:** pages 1, 5, 6, and 9 — four new images in the
-  same style (soft watercolor-and-ink, warm cream backgrounds, the same two
-  characters aging across the book; the red shirt and the blue coat are the
-  recurring visual anchors — the coat is the blue of the father's shirt).
+- **Art still needed:** only page 5 (The Hard Years) — the long road at
+  dusk, headlights, the father's silhouette stepping out of the truck. Same
+  style: soft watercolor-and-ink, warm cream backgrounds; the red shirt and
+  the blue coat are the recurring visual anchors (the coat is the blue of
+  the father's shirt, and page 6 shows it worn and patched).
+- **Retouch before print:** the woman's t-shirt in the page 9 family portrait
+  reads "FREEDO" — a generation artifact. Regenerate or retouch it (plain
+  shirt, or the intended word) at print resolution.
+- **Visual rhyme to preserve:** the narrator's open hand on page 9 repeats
+  the father's open hand on page 1 — the picking gesture, passed on. Any
+  regeneration of either page should keep it.
 - **Page 5** is the pivot for adult readers. The text stays child-safe —
   "lost" is all a young reader needs — while carrying the full weight of the
   rescue for anyone who lived it.
