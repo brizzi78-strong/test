@@ -1290,6 +1290,8 @@ Mager looked at the pad. Didn't soften it, didn't minimize it. Okay, he said. No
 
 The debt didn't disappear fast. The progress was slow, sometimes barely visible. But I stopped flinching when bills came. I started answering calls from numbers I didn't recognize. My past stopped feeling like it was following me, not because it was gone, but because it was being addressed. Not redemption. Nothing was being erased. Responsibility. One payment, one opened envelope, one answered call at a time.
 
+The courts came last. In 2013, four years sober, I wrote to the court myself and petitioned to have the cases dismissed. No lawyer this time. In 2002 that work had taken the Taylor firm and ten thousand dollars. In 2013 it took a letter from a sober man who had done everything the court asked. The dismissals came through. No record at all.
+
 **CHAPTER 26**
 
 ## **Gulf Breeze**
