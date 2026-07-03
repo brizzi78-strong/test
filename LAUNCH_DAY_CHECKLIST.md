@@ -26,7 +26,9 @@ and don't announce anything until every box in sections 1–6 is checked.
 
 ## 2. Verify source
 
-- [ ] Verify contract source on Etherscan (exact compiler version + settings used to deploy)
+- [ ] Verify contract source on Etherscan (exact compiler version + settings used to deploy):
+      `npx hardhat verify --network mainnet <token-address>` (needs `ETHERSCAN_API_KEY`
+      in the keystore — see README "Etherscan verification")
 - [ ] Confirm the "Contract" tab shows readable code with a green check
 
 ## 3. Treasury transfer

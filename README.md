@@ -40,6 +40,15 @@ npx hardhat test          # runs Solidity AND TypeScript tests
 npx hardhat build         # compile
 ```
 
+On first build Hardhat downloads the native `solc` binary from
+`binaries.soliditylang.org`. If that host is unreachable (restricted/offline
+networks), compile with the WASM build bundled in the `solc` npm package
+instead — same compiler version, identical bytecode:
+
+```bash
+HARDHAT_BUNDLED_SOLC=1 npx hardhat test
+```
+
 ### Foundry (optional)
 
 With [Foundry](https://getfoundry.sh) installed, the same Solidity tests run
@@ -64,3 +73,28 @@ npx hardhat ignition deploy ignition/modules/CardToken.ts --network sepolia
 A `mainnet` network is pre-wired the same way (`MAINNET_RPC_URL`,
 `MAINNET_PRIVATE_KEY`) for when the launch checklist in
 `TOKEN_LAUNCH_STRATEGY.md` is ready to execute.
+
+## Etherscan verification
+
+Source verification (step 2 of `LAUNCH_DAY_CHECKLIST.md`) goes through
+`hardhat-verify`, which ships with the toolbox. Store an
+[Etherscan API key](https://etherscan.io/apis) the same way as the RPC
+secrets, then verify the deployed address — `CardToken` takes no constructor
+arguments:
+
+```bash
+npx hardhat keystore set ETHERSCAN_API_KEY
+npx hardhat verify --network sepolia <deployed-address>
+```
+
+Deployments made with Ignition can be verified in one step from the recorded
+deployment instead:
+
+```bash
+npx hardhat ignition verify chain-11155111   # sepolia deployment id
+```
+
+Verification submits the sources to `etherscan.io`; compilation beforehand
+fetches the compiler from `binaries.soliditylang.org` (unless using the
+bundled fallback above), so those are the two hosts the toolchain needs to
+reach.
