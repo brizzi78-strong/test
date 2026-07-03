@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://thecardinalcompanion.com/sitemap.xml
+Sitemap: https://cp17.org/sitemap.xml

@@ -81,7 +81,7 @@ def render(out, eyebrow, title, subtitle):
     ff = B.font("sans-bold", 28)
     d.text((PAD, H - fh + 24), "THE CARDINAL COMPANION", font=ff, fill=B.WHITE)
     uf = B.font("sans", 24)
-    tag = "thecardinalcompanion.com"
+    tag = "cp17.org"
     d.text((W - PAD - d.textlength(tag, font=uf), H - fh + 26), tag, font=uf, fill=B.CREAM)
 
     img.save(out, "PNG")
