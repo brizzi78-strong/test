@@ -256,7 +256,7 @@ That was the entire universe to me. When you're a kid, your neighborhood is the 
 
 My mother taught English at a little preschool called Cascabelito. Little Bells. Because she worked there, I got to go for free. In the afternoons she'd put on music and dance around the kitchen while making tacos, rice, and beans. She would scoop my little brother, Chris, up on her hip and sing along to "The Locomotion," and I'd dance right next to her because she was happy. That was all the reason I needed.
 
-Her name was Becky. She was twenty-six, a blonde girl from Cedar Grove, New Jersey, the oldest of three sisters, daughters of Bob and Jan Pontier. Somehow she had ended up building a new life in the middle of Mexico City. She had followed a man there for love, but she was also running from something else. I didn't understand either of those things back then.
+Her name was Becky. She was twenty-seven, a blonde girl from Cedar Grove, New Jersey, the oldest of three sisters, daughters of Bob and Jan Pontier. Somehow she had ended up building a new life in the middle of Mexico City. She had followed a man there for love, but she was also running from something else. I didn't understand either of those things back then.
 
 Kids don't know what their parents are surviving. They just know the shape of the rooms, the smell of dinner, the music playing in the kitchen, and the hand reaching down to hold theirs.
 
@@ -376,7 +376,7 @@ What I love now is how close my mother and her sisters have become, she and Nanc
 
 He asked my mother out and she said no. He asked again and she said no again. So he kept showing up, week after week, until she finally saw his charm and his maturity. That was how Lou Brizzi decided to stay.
 
-My grandparents gave us a soft landing pad. The man who decided to stay came a little later. Lou Brizzi met my mother in a bar in West Paterson in 1984. He was in his forties, a man who'd already lived a complicated life and decided he was ready to do the next part right. My mother was twenty-eight, back from Mexico with two small boys and not much else, staying with her parents and taking whatever work she could find. She'd learned to be careful about who she let near her children, and a charming man in a bar wasn't going to be the exception. That was why she said no, and why his coming back meant something.
+My grandparents gave us a soft landing pad. The man who decided to stay came a little later. Lou Brizzi met my mother in a bar in West Paterson in 1984. He was in his forties, a man who'd already lived a complicated life and decided he was ready to do the next part right. My mother was twenty-nine, back from Mexico with two small boys and not much else, staying with her parents and taking whatever work she could find. She'd learned to be careful about who she let near her children, and a charming man in a bar wasn't going to be the exception. That was why she said no, and why his coming back meant something.
 
 I was six the first time I met him. He came over to my grandparents' place in West Paterson, where we were living, and Nana and Grandpa had him to dinner. Most of that night is gone now. What I remember is that he brought Tootsie Rolls for Chris and me. Two boys who weren't his, and he walked in with something in his pocket just for us. Before he ever decided we were his, he was already treating us like we were.
 
