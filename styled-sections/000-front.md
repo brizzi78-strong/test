@@ -62,59 +62,57 @@ Chapter 14: The Cell59
 
 Chapter 15: Checking Boxes61
 
-Chapter 16: Kim64
+Chapter 16: West Palm Beach67
 
-Chapter 17: West Palm Beach67
+Chapter 17: New Orleans70
 
-Chapter 18: New Orleans70
+Chapter 18: Chumuckla71
 
-Chapter 19: Chumuckla71
+Chapter 19: The Quiet Years73
 
-Chapter 20: The Quiet Years73
+Chapter 20: Finding Papa75
 
-Chapter 21: Finding Papa75
+Chapter 21: The Line77
 
-Chapter 22: The Line77
+Chapter 22: The Salmon Palace78
 
-Chapter 23: The Salmon Palace78
+Chapter 23: The Offer80
 
-Chapter 24: The Offer80
+Chapter 24: They Gave Me a Chance82
 
-Chapter 25: They Gave Me a Chance82
+Chapter 25: Getting Square84
 
-Chapter 26: Getting Square84
+Chapter 26: Gulf Breeze85
 
-Chapter 27: Gulf Breeze85
+Chapter 27: The People You Meet When You Stop Drinking87
 
-Chapter 28: The People You Meet When You Stop Drinking87
+Chapter 28: Hope90
 
-Chapter 29: Hope90
+Chapter 29: The Pictures Never Tell the Whole Story98
 
-Chapter 30: The Pictures Never Tell the Whole Story98
+Chapter 30: Blessings101
 
-Chapter 31: Blessings101
+Chapter 31: The Weight That Stays102
 
-Chapter 32: The Weight That Stays102
+Chapter 32: The Detour104
 
-Chapter 33: The Detour104
+Chapter 33: Five Weeks106
 
-Chapter 34: Five Weeks106
-
-Chapter 35: The Days After111
+Chapter 34: The Days After111
 
 Who Stays. Who Goes.115
 
-Chapter 36: The First Honest Mile116
+Chapter 35: The First Honest Mile116
 
-Chapter 37: What Grief Taught the Job117
+Chapter 36: What Grief Taught the Job117
 
 Tyler and Jaye118
 
-Chapter 38: The Round Table119
+Chapter 37: The Round Table119
 
-Chapter 39: The Table120
+Chapter 38: The Table120
 
-Chapter 40: The Floor122
+Chapter 39: The Floor122
 
 What He Didn't Owe123
 

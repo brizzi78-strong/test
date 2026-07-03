@@ -62,59 +62,57 @@ Chapter 14: The Cell59
 
 Chapter 15: Checking Boxes61
 
-Chapter 16: Kim64
+Chapter 16: West Palm Beach67
 
-Chapter 17: West Palm Beach67
+Chapter 17: New Orleans70
 
-Chapter 18: New Orleans70
+Chapter 18: Chumuckla71
 
-Chapter 19: Chumuckla71
+Chapter 19: The Quiet Years73
 
-Chapter 20: The Quiet Years73
+Chapter 20: Finding Papa75
 
-Chapter 21: Finding Papa75
+Chapter 21: The Line77
 
-Chapter 22: The Line77
+Chapter 22: The Salmon Palace78
 
-Chapter 23: The Salmon Palace78
+Chapter 23: The Offer80
 
-Chapter 24: The Offer80
+Chapter 24: They Gave Me a Chance82
 
-Chapter 25: They Gave Me a Chance82
+Chapter 25: Getting Square84
 
-Chapter 26: Getting Square84
+Chapter 26: Gulf Breeze85
 
-Chapter 27: Gulf Breeze85
+Chapter 27: The People You Meet When You Stop Drinking87
 
-Chapter 28: The People You Meet When You Stop Drinking87
+Chapter 28: Hope90
 
-Chapter 29: Hope90
+Chapter 29: The Pictures Never Tell the Whole Story98
 
-Chapter 30: The Pictures Never Tell the Whole Story98
+Chapter 30: Blessings101
 
-Chapter 31: Blessings101
+Chapter 31: The Weight That Stays102
 
-Chapter 32: The Weight That Stays102
+Chapter 32: The Detour104
 
-Chapter 33: The Detour104
+Chapter 33: Five Weeks106
 
-Chapter 34: Five Weeks106
-
-Chapter 35: The Days After111
+Chapter 34: The Days After111
 
 Who Stays. Who Goes.115
 
-Chapter 36: The First Honest Mile116
+Chapter 35: The First Honest Mile116
 
-Chapter 37: What Grief Taught the Job117
+Chapter 36: What Grief Taught the Job117
 
 Tyler and Jaye118
 
-Chapter 38: The Round Table119
+Chapter 37: The Round Table119
 
-Chapter 39: The Table120
+Chapter 38: The Table120
 
-Chapter 40: The Floor122
+Chapter 39: The Floor122
 
 What He Didn't Owe123
 
@@ -1028,69 +1026,6 @@ Because I had Lou. Ensenada clarified something I'd always known without being a
 
 **CHAPTER 16**
 
-## **Kim**
-
-*"I loved the way drink made me feel, and I loved its special power of deflection."*
-*— Caroline Knapp, Drinking: A Love Story*
-
-By then I was back in South Florida, and I met Kim in DUI classes. I had to attend seventy-six of them.
-
-Same room. Same folding chairs. Same fluorescent lights buzzing overhead. We learned how to talk about responsibility in the abstract while quietly counting the minutes until we could leave.
-
-Kim was a tall brunette, about fifteen years older than me. Recently divorced. Recently arrested in California. We sat a few chairs apart at first, exchanging glances that said you too before either of us spoke. Two broken people serving the same sentence.
-
-We started talking during breaks. We compared notes. We laughed a little too hard at things that weren't funny. Outside the classroom it turned into dinner. Then drinks. Then a routine that felt stable because it repeated. She lived in a beautiful condo near Las Olas and drove a brand-new Range Rover, a life that looks settled from the outside even when it isn't.
-
-After a few months she asked me to move in. At the time it felt practical and comfortable, a soft place to land. I told myself that was enough. It wasn't.
-
-After about a year, I lined up my own place, a condo at CityPlace in West Palm Beach. Kim knew. We talked about it openly. There was no drama in it. Something between us had reached its limit. She was ready for someone who wasn't stuck, and I wasn't ready to stop being stuck.
-
-Before I left, we still went out together sometimes, dinners with her friends, restaurants where the wine list had no prices and the appetizers arrived automatically, like they were required. I'd sit there in my one good shirt, nodding along to conversations about vacation homes and private school tuition, feeling like an impostor.
-
-Kim never made me feel small. She included me. She asked my opinion. She laughed at my jokes like they were actually funny.
-
-"You fit in better than you think," she'd say.
-
-I didn't fit in at all. But I was getting good at pretending. I told myself I had it under control. I told myself this was different, different from Pensacola, from all the other times I'd convinced myself I was fine. I told myself a lot of things.
-
-Kim noticed the shift before I could name it. We'd be sitting on the couch watching TV, and she would reach for my hand. I'd let her hold it, but there was no warmth in it, just two hands occupying the same space.
-
-"Where do you go?" she asked one night.
-
-"What do you mean?"
-
-"When you're here but not really here. Where does your mind go?"
-
-I didn't have an answer. Or maybe I had too many. Back to Pensacola. Back to the jobs that evaporated. Back to the version of myself I used to be before I became this.
-
-"I'm right here," I said.
-
-"No," she said gently. "You're not."
-
-She wasn't accusing me. She was naming something we could both feel. I cared about her, deeply, but caring wasn't the same as being available. The wall between us was built from everything I couldn't say out loud, the stalled plans, the unanswered emails, the way effort felt heavier every day. The way I woke up some mornings already tired.
-
-We talked about it on her balcony. Of course we did.
-
-"I don't think this is working," she said.
-
-I nodded. Relief and shame arrived together. Relief that she'd said what we both knew. Shame that I'd needed her to.
-
-"You're not a bad person," she said. "You're just not moving."
-
-She was right. She wanted someone who could meet her where she was, someone moving forward instead of circling the same questions, and I was finally honest enough to admit that person wasn't me. Below us, a yacht drifted past.
-
-We didn't fight. We didn't bargain. There was no promise to check in, no plan to stay friends. She knew I was getting the condo at CityPlace. She knew I needed to leave. We said goodbye like two people who understood the truth at the same time, and we didn't keep in touch.
-
-It just closed, and that was enough.
-
-Leaving Kim felt like progress. I had a lease, a set of keys, a condo at CityPlace in West Palm Beach with clean lines and a view that suggested momentum. From the outside, it looked like the next right step. Boxes stacked neatly, furniture chosen carefully, everything in its place. Motion without direction still feels like motion when you're desperate enough.
-
-I told myself this was forward. I told myself the hard part was over. CityPlace was loud and bright and full of people who looked like they knew where they were going, and I blended in easily. Too easily.
-
-I wasn't falling apart. I was functioning, which felt like the same thing as being okay, until it wasn't. At night the condo was quiet in a way that made thinking unavoidable. No one asking where my mind went. No one noticing when I wasn't fully there. Just me and the hum of the air conditioner. West Palm Beach didn't save me. It just gave me better lighting for the same questions.
-
-**CHAPTER 17**
-
 ## **West Palm Beach**
 
 *"But when he was yet a great way off, his father saw him, and had compassion, and ran."*
@@ -1132,7 +1067,7 @@ Because here's the part I have to be honest about: this wasn't the moment I got 
 
 But I think about it all the time now. What did he owe me at that point, a grown man he'd adopted, who'd burned through everything, living off stolen electricity in a tower of Post-it notes, praying on a balcony to disappear? Nothing. He owed me nothing. And he slept on my floor, and bought me a bagel, and rented the truck, and found Marcus, and drove me home, and pointed at a bird and told me my grandmother was watching out for us. That's the man. That was always the man.
 
-**CHAPTER 18**
+**CHAPTER 17**
 
 ## **New Orleans**
 
@@ -1167,7 +1102,7 @@ I tried to brush it off. Tried to change the subject. But she saw it. I think th
 
 It was a few weeks before everything came to a head. Before Chris called. Before my dad drove me out to a farmhouse in the panhandle and signed the paperwork himself.
 
-**CHAPTER 19**
+**CHAPTER 18**
 
 ## **Chumuckla**
 
@@ -1198,7 +1133,7 @@ Lou picked me up. Same truck, same calm. He didn't ask me to prove anything or w
 
 The day I got out wasn't the day I was saved. It was the day I was handed the chance to be, and what came next was a long line of ordinary mornings I had to learn how to fill.
 
-**CHAPTER 20**
+**CHAPTER 19**
 
 ## **The Quiet Years**
 
@@ -1221,7 +1156,7 @@ I sat beside a lot of unwell people in those years, many of them still in rehab.
 
 People asked why I did all of it. The meetings, the volunteering, the running, the calls at midnight. I only ever had one answer. It kept me sober. That was enough. By 2010 I was becoming someone who could be trusted. Not because of talent or drive. Because of repetition. In the quiet years, staying sober wasn't the boring part. It was the whole victory.
 
-**CHAPTER 21**
+**CHAPTER 20**
 
 ## **Finding Papa**
 
@@ -1258,7 +1193,7 @@ He called every Wednesday at seven, right on time, until I stopped answering.
 
 He still calls once a year, on my birthday, the day I made him a father. I don't always pick up. But the phone rings, every year, from the man who never moved on, who still goes out to a borrowed line to reach the son who left him the way he was once left. He keeps calling. It took me a long time to understand that the calling was the love.
 
-**CHAPTER 22**
+**CHAPTER 21**
 
 ## **The Line**
 
@@ -1275,7 +1210,7 @@ He didn't react the way I expected. No anger, no lecture, no disappointment. He 
 
 I left shaken. That line forced a choice I couldn't hand off. Go back to that world too soon and I wouldn't be returning, I'd be relapsing with a resume. I didn't take the job. It didn't feel brave. It felt like trusting that staying alive mattered more than looking successful. For the first time I chose sobriety over momentum.
 
-**CHAPTER 23**
+**CHAPTER 22**
 
 ## **The Salmon Palace**
 
@@ -1296,7 +1231,7 @@ When I got the keys I stood in the middle of that small living room longer than 
 
 My friends were proud of me, and the Salmon Palace was how they said it. Visitors asked when I'd upgrade. Real estate logic said flip it, leverage it, move on. I didn't. That place held the first version of me that wasn't running. Years later, when Hope walked through that door the first time, she didn't say a word about the size. She noticed how it felt. We'd take a devotional out to the pool, or down to the dock, and read it together. The rhythm we still fall back into, the one that's just part of the house now, started there. We sold it in 2019, a hundred thousand in equity, and put it down on the home Hope and I built together in East Hill, an incredible one, the kind I'd never let myself imagine from across the street. From a one-bedroom salmon castle to a house we built from the ground up. That's what four years of showing up quietly can do.
 
-**CHAPTER 24**
+**CHAPTER 23**
 
 ## **The Offer**
 
@@ -1317,7 +1252,7 @@ She called three days later. I need to talk to you about something from your bac
 
 Four days. I went to work, went to meetings, had dinner, slept, did it again. On the fifth day Caroline called. How does a November first start date sound? I didn't answer right away. I sat in my car in Lou's driveway and let it settle. Not adrenaline. Gratitude. Someone had looked at who I was and decided it was enough. I called Lou. I got the job. She knew about the DUIs. HR wanted to pull the offer. She fought for me. A pause. That's a blessing, he said. I'm proud of you. After we hung up I sat there a long time. This wasn't a comeback. Comeback means something to go back to. This was confirmation. Showing up quietly and consistently had made me someone capable of the next thing.
 
-**CHAPTER 25**
+**CHAPTER 24**
 
 ## **They Gave Me a Chance**
 
@@ -1336,7 +1271,7 @@ It was familiar. I knew what it was like to need help and not want it, to be ash
 
 The days were long, doctors' offices, nursing homes, assisted livings, back roads. At night I still went to meetings, still called my sponsor. There was a moment, small and almost forgettable, sitting in my car after a visit with paperwork on the steering wheel, when I realized I wasn't waiting for something else anymore. This was enough. They gave me a chance, and I stayed ten years. There were sales awards in there; they mattered less than what they measured, that I'd finally found work I could do without performing. My manager Brenda Jahn was one of the best I ever worked for. She believed in me and pushed me, and that prepared me for everything that came next.
 
-**CHAPTER 26**
+**CHAPTER 25**
 
 ## **Getting Square**
 
@@ -1353,7 +1288,7 @@ Mager looked at the pad. Didn't soften it, didn't minimize it. Okay, he said. No
 
 The debt didn't disappear fast. The progress was slow, sometimes barely visible. But I stopped flinching when bills came. I started answering calls from numbers I didn't recognize. My past stopped feeling like it was following me, not because it was gone, but because it was being addressed. Not redemption. Nothing was being erased. Responsibility. One payment, one opened envelope, one answered call at a time.
 
-**CHAPTER 27**
+**CHAPTER 26**
 
 ## **Gulf Breeze**
 
@@ -1380,7 +1315,7 @@ Quint has been sober for decades. He built one of the most respected healthcare 
 
 The morning after my father died, all these years later, Quint was the first person to reach me. Your dad was a great man, his text said. Of everyone who would reach out in those days, he got there first, and he said the truest thing. Sometimes God places someone in your life not to rescue you but to show you what's possible. For the first time since getting sober, I believed staying alive wasn't the finish line. It was the starting point.
 
-**CHAPTER 28**
+**CHAPTER 27**
 
 ## **The People You Meet When You Stop Drinking**
 
@@ -1411,7 +1346,7 @@ He became a salesman at Honda, and then the best they'd ever seen. The guy who'd
 
 I started sober thinking mediocrity was the ceiling. Then I met Andy, Bob, Mager, and Matt. These are the people you meet when you stop drinking. Not the ones you expected, the ones God put in front of you. I thought I was too far gone for any of it. So did they, once. They walked into the room anyway, and so did I, and that turned out to be the whole thing. The best one was still ahead of me, and she didn't come from a meeting at all.
 
-**CHAPTER 29**
+**CHAPTER 28**
 
 ## **Hope**
 
@@ -1498,7 +1433,7 @@ She is ten years younger than me and has taken care of herself in a way that put
 
 In a short time we worked like a team. We paid off over a hundred thousand dollars in student loans and built a life with margin in it instead of debt, a home, a little security, the quiet kind I'd never had back when I looked successful. Recovery taught me the same thing about money it taught me about everything else: you keep the small promises, every day, and they add up to a life. We moved to Raleigh and built something real, grounded in faith, aligned on what matters. We never had children, and we never planned to. What we built was the two of us, and a life with room in it to show up for other people. These days that includes Hope's mother. Rhonda lives under our roof now, which is not a sentence anyone says lightly, and getting to know her and love her has been one of the quiet gifts of this stretch. She hasn't had the easiest life. What I didn't see coming was watching Hope and her mom grow close, slowly, over years, until Hope started calling her her best friend. None of the good things happen overnight. We take trips together, the Outer Banks and others, and somewhere in the ordinary days under one roof a lot of healing has happened, the kind you don't engineer, you just keep showing up for. I get to witness it. Hope is my rock. It isn't always smooth, no honest marriage is, but she's never stopped believing in what we're building. I wouldn't have become this man without Lou. And the love I found with Hope is what prepared me for what came later: hospice, sitting in rooms where people are losing the person they love most. That's my love story. It started with a stubborn message on Match.com to a girl who told me not to write. Best rule I ever broke.
 
-**CHAPTER 30**
+**CHAPTER 29**
 
 ## **The Pictures Never Tell the Whole Story**
 
@@ -1525,7 +1460,7 @@ Ireland was the one I couldn't fully meet her on. We'd planned it long before, b
 
 Lou died on Christmas Day, 2025. I think about those trips differently now, not as time I should have spent some other way, but as time I'm grateful we took, every messy minute of it. The pictures never tell the whole story. They can't. They only catch the second we were smiling. Everything that earned the smile happened off camera, and most of it was Hope.
 
-**CHAPTER 31**
+**CHAPTER 30**
 
 ## **Blessings**
 
@@ -1544,7 +1479,7 @@ They went into the kitchen together while I stayed in the living room. I could h
 
 Later he looked at me. You're steady, he said. Then: she is too. That was it. No formal blessing, no speech. He saw two people steady in the same direction and noted it.
 
-**CHAPTER 32**
+**CHAPTER 31**
 
 ## **The Weight That Stays**
 
@@ -1567,7 +1502,7 @@ Around that same stretch the recognition I'd chased my whole life finally showed
 
 I talked to Lou about Bob one evening. I don't know why this is hitting me so hard, I said. I did everything right. He didn't hesitate. That's not why it's bothering you. He was right. Bob hadn't needed me to fix anything. He'd needed me in the room. I was being let into places where presence was the only thing left to offer, and something in me already knew how to do that. Not as a technique. As a practice. An old man dying sober at eighty-one showed me that the most you can do at that edge is refuse to leave. Years later, that became the whole job.
 
-**CHAPTER 33**
+**CHAPTER 32**
 
 ## **The Detour**
 
@@ -1594,7 +1529,7 @@ The hardest part of leaving Novo wasn't the job. It was leaving that relationshi
 
 I told people I was going to take some time off. Be there for my dad. Be there for my mom. Be present the way I'd been telling hospice families to be present, while there was still time. That was the plan. It's not what happened. What happened was I retreated into myself. The time I'd set aside became something else, a depression I didn't see coming and couldn't name from inside it. I was grieving what was already happening and what was coming, and the weight kept me from doing the thing I'd left my career to do. I wasn't working. I wasn't fully showing up for my parents. I was stuck in a version of myself that couldn't move in any direction. I don't say that for sympathy. I say it because it's the truth, and this book doesn't work if I only tell the parts where I got it right. Hospice, when it came, wasn't a pivot. It was a return, to the rooms I'd been thinking about since the home health years, to the weight I'd learned how to carry. It pulled me out of that in-between place and gave me direction again.
 
-**CHAPTER 34**
+**CHAPTER 33**
 
 ## **Five Weeks**
 
@@ -1647,7 +1582,7 @@ That spring, Hope and I told him we were moving to Raleigh. I could tell he was 
 
 He got pneumonia on December 23. His immune system had nothing left to fight with. They put him on a drip. Lynda had been calling, and I could hear in her voice what she was trying to tell me without saying it. My mother was in Raleigh visiting, she'd made the trip from Lantana with Parkinson's making every mile harder than it used to be. I thought I could do both: go down Saturday, have time with her, still get there in time. I was wrong about the timeline. I stayed.
 
-**CHAPTER 35**
+**CHAPTER 34**
 
 ## **The Days After**
 
@@ -1710,7 +1645,7 @@ Grief changes your tolerance. Comments that used to roll past you land wrong now
 
 I sat in my car one afternoon thinking, am I becoming someone else? The answer came back quiet. No. You're becoming someone who can't pretend anymore. Everyone grieves differently. You extend grace, and you trust that love, given enough time, finds its way back.
 
-**CHAPTER 36**
+**CHAPTER 35**
 
 ## **The First Honest Mile**
 
@@ -1729,7 +1664,7 @@ And I was mean. That scared me more than a craving would have. I lashed out at t
 
 Seventeen years sober, and I had hit a rock bottom again, an emotional one this time. The disease doesn't need a bottle to run the old plays, isolation, anger, the closed door. The difference was that this time I had to feel it all the way through. And this time I knew what to do with a bottom. I went back to meetings, more of them than I'd been to in years. I got a therapist. The morning calls with Mager got longer. I said out loud, in the rooms and on the phone, that I was not okay. I went back to the people I'd been sharp with and said sorry, plainly. Seventeen years in, I was back on the first honest mile.
 
-**CHAPTER 37**
+**CHAPTER 36**
 
 ## **What Grief Taught the Job**
 
@@ -1764,7 +1699,7 @@ His neck broke at C5 and C6. He couldn't move anything below it. His eight-year-
 
 That's where Tyler's life divided in two. After it came the hospital bed in the living room, the ramps, the accessible shower, the morning routines that take hours, and his sister Jaye, Hope's cousin too, moving in to help carry him back toward some independence, a husband and two daughters and a career of her own set down so she could stay. I've said elsewhere that I learned to notice the caregiver. This is one of the places I learned it. Tyler is still fighting, and Jaye is still showing up.
 
-**CHAPTER 38**
+**CHAPTER 37**
 
 ## **The Round Table**
 
@@ -1779,7 +1714,7 @@ Then I told her my dad had passed three days earlier. Her face changed. You coul
 
 It was no longer about work. Two people at a round table, one of them grieving and the other choosing to stay in the room for it. We hugged. I gave her a kiss on the cheek. From that day on I look forward to the days I get to see Linda. Not because of the facility. Because of the human being. The other staff joke about it, oh, you always come in and kiss Linda on the cheek. They don't know the background, don't know what was shared at that table three days after Christmas. That's fine. Not every connection needs an audience. Here's the part people might not expect: as a rep, I'm the one who's supposed to bring the chocolate and the goodies. When I go see Linda, I'm the one who feels taken care of. She gives me cookies. She checks in. The relationship runs backwards from the job description. Linda gave me a moment, three days in, at a round table at Brookdale, to stop holding it together. I'll carry that.
 
-**CHAPTER 39**
+**CHAPTER 38**
 
 ## **The Table**
 
@@ -1802,7 +1737,7 @@ After my dad died the center had gone, and the rest of us felt it loosen. Lisa d
 
 I think about the meatloaf sometimes, that night when she was barely old enough to drive and cooked a meal for two boys who didn't make it easy. She's still standing at the counter. Still opening the door. The last time I was there for Thanksgiving I stood in her kitchen a minute before we sat down. I didn't say anything. I just watched, and thought about how the people who hold families together don't usually get thanked for it. They just keep doing it. Year after year. We sat down. Someone said grace. The food was passed. And for a few hours everything had a center again. Lisa made sure of that.
 
-**CHAPTER 40**
+**CHAPTER 39**
 
 ## **The Floor**
 
