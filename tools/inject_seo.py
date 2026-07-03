@@ -40,6 +40,13 @@ PAGE_OG = {
 }
 DEFAULT_OG = "default"
 
+# rel -> (site-absolute image path, width, height): use real cover art instead of
+# the generic OG card for these pages.
+OG_IMAGE_OVERRIDE = {
+    "books/promise.html": ("/assets/img/cover-promise.jpg", 1320, 1921),
+    "books/toolkit.html": ("/assets/img/cover-toolkit.jpg", 1024, 1536),
+}
+
 # og:type article for the readable guides
 ARTICLE_PAGES = {
     "free-guide/caregivers-first-week-checklist.html",
@@ -93,12 +100,17 @@ def jsonld(rel, url, title, desc, og_url):
 
 
 def build_block(rel):
-    og = PAGE_OG.get(rel, DEFAULT_OG)
-    og_url = "%s/assets/og/%s.png" % (BASE, og)
+    if rel in OG_IMAGE_OVERRIDE:
+        path, ogw, ogh = OG_IMAGE_OVERRIDE[rel]
+        og_url = BASE + path
+    else:
+        og = PAGE_OG.get(rel, DEFAULT_OG)
+        og_url = "%s/assets/og/%s.png" % (BASE, og)
+        ogw, ogh = 1200, 630
     url = canonical(rel)
     otype = "article" if rel in ARTICLE_PAGES else "website"
     robots = "noindex,follow" if rel in NOINDEX else "index,follow"
-    return og_url, url, otype, robots
+    return og_url, ogw, ogh, url, otype, robots
 
 
 def inject(path, rel):
@@ -110,7 +122,7 @@ def inject(path, rel):
     dm = re.search(r'<meta\s+name="description"\s+content="(.*?)"\s*/?>', html, re.S)
     desc = dm.group(1).strip() if dm else ""
 
-    og_url, url, otype, robots = build_block(rel)
+    og_url, ogw, ogh, url, otype, robots = build_block(rel)
     og_title = title
     lines = [
         MARK_START,
@@ -122,8 +134,8 @@ def inject(path, rel):
         '  <meta property="og:description" content="%s" />' % esc(desc),
         '  <meta property="og:url" content="%s" />' % url,
         '  <meta property="og:image" content="%s" />' % og_url,
-        '  <meta property="og:image:width" content="1200" />',
-        '  <meta property="og:image:height" content="630" />',
+        '  <meta property="og:image:width" content="%d" />' % ogw,
+        '  <meta property="og:image:height" content="%d" />' % ogh,
         '  <meta property="og:image:alt" content="%s" />' % esc(og_title),
         '  <meta name="twitter:card" content="summary_large_image" />',
         '  <meta name="twitter:title" content="%s" />' % esc(og_title),
