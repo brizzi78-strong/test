@@ -88,7 +88,7 @@ and sat down.
 
 ---
 
-### Page 5 — THE HARD YEARS
+### Page 5 — THE HARD YEARS — [existing art: `art/the-hard-years-waiting.jpeg`]
 
 I got lost for a while.
 Most people would have stopped looking.
@@ -100,9 +100,9 @@ Like the first time.
 
 On purpose.
 
-> *Illustration: A long road at dusk. Headlights. The father's silhouette
-> stepping out of the truck. Kept simple and unspecific — the child reader
-> sees "lost"; the grown reader will know.*
+> *The father alone by the window in his Yankees cap, worried but not
+> giving up. The page shows the one who kept looking, not the one who was
+> lost — the child reader sees "waiting"; the grown reader will know.*
 
 ---
 
@@ -198,9 +198,9 @@ and staying.*
 
 ## Production notes
 
-- **Existing art:** eight finished illustrations live in `art/`
+- **Fully illustrated.** All nine finished illustrations live in `art/`
   (`father-and-boy.jpeg`, `the-day-you-picked-me.jpeg`,
-  `the-name-mirror.jpeg`, `bleachers.jpeg`,
+  `the-name-mirror.jpeg`, `bleachers.jpeg`, `the-hard-years-waiting.jpeg`,
   `grown-the-coat-fits.jpeg`, `the-work-i-do-now.jpeg`, `the-promise.jpeg`,
   `family-portrait.jpeg`). The cover composition (title panel over the
   father-and-boy image) already exists in the original generation session
@@ -209,11 +209,6 @@ and staying.*
   father's shirt. The text never says the name out loud — the art carries
   it — but if you want it spoken, the natural place is page 2 ("You gave me
   your name. *Brizzi.*").
-- **Art still needed:** only page 5 (The Hard Years) — the long road at
-  dusk, headlights, the father's silhouette stepping out of the truck. Same
-  style: soft watercolor-and-ink, warm cream backgrounds; the red shirt and
-  the blue coat are the recurring visual anchors (the coat is the blue of
-  the father's shirt, and page 6 shows it worn and patched).
 - **Retouch before print:**
   - The father's shirt in the page 4 bleachers art reads "Ramsey" — the
     family name is **Brizzi**. Regenerate the image with "Brizzi" stitched
