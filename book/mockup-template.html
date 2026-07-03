@@ -1,0 +1,225 @@
+<title>The Promise: A Name to Grow Into — Book Mockup</title>
+<style>
+  :root { --cream:#faf5ea; --navy:#1f3a5f; --ink:#3a3226; --rust:#8c2f2f; }
+  html,body { background:#e8e0d0; margin:0; padding:0; }
+  body { font-family: Georgia, 'Times New Roman', serif; color:var(--ink); }
+  .book { max-width:720px; margin:0 auto; padding:24px 12px 80px; }
+  .page {
+    background:var(--cream); border-radius:6px; margin:28px 0;
+    padding:36px 32px; box-shadow:0 3px 14px rgba(60,45,20,.25);
+    text-align:center; position:relative;
+  }
+  .pagenum { position:absolute; bottom:10px; right:16px; font-size:12px; color:#b0a58c; }
+  .label { font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:#a0937a; margin-bottom:18px; }
+  .titleband { background:var(--navy); color:#f2ecdd; padding:26px 20px; border-radius:4px; margin-bottom:24px; }
+  .titleband h1 { margin:0; font-size:34px; letter-spacing:.10em; font-weight:normal; }
+  .titleband p { margin:8px 0 0; font-size:16px; font-style:italic; color:#cfd8e6; }
+  .page img { max-width:100%; border-radius:8px; display:block; margin:0 auto; }
+  .byline { margin-top:18px; font-size:15px; }
+  .imprint { font-size:12px; color:#a0937a; }
+  .story { font-size:19px; line-height:1.75; max-width:480px; margin:22px auto 0; }
+  .story em { color:var(--rust); }
+  .bigname { font-size:30px; letter-spacing:.06em; color:var(--rust); margin:10px 0; }
+  .dedication { font-style:italic; font-size:20px; line-height:2; padding:70px 0; }
+  .placeholder {
+    border:2px dashed #c9bfa4; border-radius:8px; padding:60px 20px;
+    color:#a0937a; font-style:italic; font-size:15px; background:#f5efdf;
+  }
+  .note { font-size:14px; color:#8a7d63; font-style:italic; margin-top:14px; }
+  .section { text-align:center; margin:54px 0 6px; color:#7d7053; font-size:13px; letter-spacing:.22em; text-transform:uppercase; }
+  .duo { display:flex; gap:14px; flex-wrap:wrap; justify-content:center; }
+  .duo > div { flex:1 1 260px; max-width:330px; }
+  .authorsnote { text-align:left; font-size:16.5px; line-height:1.8; max-width:520px; margin:10px auto; }
+  .cardinal { color:var(--rust); font-size:22px; }
+</style>
+
+<div class="book">
+
+  <!-- PAGE 1 — COVER -->
+  <div class="page">
+    <div class="titleband">
+      <h1>THE PROMISE</h1>
+      <p>A Name to Grow Into</p>
+    </div>
+    <img src="{{IMG:01-cover-embrace.jpeg}}" alt="Grandfather holding grandson">
+    <p class="byline">Rob Brizzi</p>
+    <p class="imprint">Brizzi House Publishing · 2026</p>
+  </div>
+
+  <!-- PAGE 2 — DEDICATION -->
+  <div class="page">
+    <div class="label">Dedication</div>
+    <div class="dedication">
+      For Lou.<br><br>
+      You gave me your name —<br>
+      and a lifetime of showing me how to wear it.
+    </div>
+    <div class="cardinal">&#10047;</div>
+    <div class="pagenum">2</div>
+  </div>
+
+  <!-- PAGE 3 — YANKEE STADIUM -->
+  <div class="page">
+    <img src="{{IMG:03-yankee-stadium.jpeg}}" alt="Grandfather and grandson at Yankee Stadium">
+    <p class="story">
+      It started with a ballpark, big as the whole sky.<br><br>
+      Grandpa held my hand and said,<br>
+      &ldquo;Watch close, kiddo.
+      The best players aren&rsquo;t the loudest ones.
+      They&rsquo;re the ones who <em>show up</em> — every single game.&rdquo;
+    </p>
+    <div class="pagenum">3</div>
+  </div>
+
+  <!-- PAGE 4 — BACKYARD CATCH -->
+  <div class="page">
+    <img src="{{IMG:04-backyard-catch.jpeg}}" alt="Backyard catch">
+    <p class="story">
+      After that, we didn&rsquo;t need a stadium.<br><br>
+      The backyard was enough —
+      one ball, two gloves,
+      and a hundred summer evenings of catch.<br><br>
+      &ldquo;Being there,&rdquo; Grandpa said,
+      &ldquo;is most of what love is.&rdquo;
+    </p>
+    <div class="pagenum">4</div>
+  </div>
+
+  <!-- PAGE 5 — A NAME TO GROW INTO -->
+  <div class="page">
+    <img src="{{IMG:05-a-name-to-grow-into.jpeg}}" alt="A Name to Grow Into page">
+    <p class="story">
+      You gave me your name.
+      <span class="bigname">Brizzi.</span>
+      I was just a little boy when I got it,
+      and it fit like a cap two sizes too big.<br><br>
+      &ldquo;Don&rsquo;t worry,&rdquo; you smiled.
+      &ldquo;It&rsquo;s a name to grow into.&rdquo;<br><br>
+      I never stopped trying to grow into it.
+    </p>
+    <div class="pagenum">5</div>
+  </div>
+
+  <!-- PAGE 6 — EMBRACE -->
+  <div class="page">
+    <img src="{{IMG:01-cover-embrace.jpeg}}" alt="The embrace">
+    <p class="story">
+      Some promises don&rsquo;t need words.<br><br>
+      Some are made in a hug that says:<br>
+      <em>I&rsquo;m here. I&rsquo;ll stay. I&rsquo;ve got you.</em>
+    </p>
+    <div class="pagenum">6</div>
+  </div>
+
+  <!-- PAGE 7 — THE PROMISE -->
+  <div class="page">
+    <div class="placeholder">
+      Art: &ldquo;The Promise&rdquo; — the grown man (green plaid) with his arm
+      around the elder.<br>Save the full-resolution image from the Grok chat
+      and drop it in <b>illustrations/</b>.
+    </div>
+    <p class="story">
+      You held me once, when I was small
+      and my whole life fit in your arms.<br><br>
+      Now my arm is around you.<br><br>
+      The promise didn&rsquo;t get old when we did.
+      It just got stronger.
+    </p>
+    <div class="pagenum">7</div>
+  </div>
+
+  <!-- PAGE 8 — HOSPICE -->
+  <div class="page">
+    <div class="placeholder">
+      Art: the hospice bedside scene (badge, held hand).<br>
+      Save the full-resolution image from the Grok chat and drop it in
+      <b>illustrations/</b>.
+    </div>
+    <p class="story">
+      Now it&rsquo;s my turn.<br><br>
+      I pick others.
+      I sit down. I show up. I stay.<br><br>
+      I hold hands that once held someone else&rsquo;s whole world —<br><br>
+      because <em>love is a verb</em>,
+      and the promise is still being kept.
+    </p>
+    <div class="pagenum">8</div>
+  </div>
+
+  <!-- PAGE 9 — AUTHOR'S NOTE -->
+  <div class="page">
+    <div class="label">Author&rsquo;s Note</div>
+    <div class="authorsnote">
+      Lou gave me more than his name. He gave me a way of being in the
+      world: show up, stay close, keep your word. I learned it at Yankee
+      Stadium and in the backyard, one game of catch at a time.
+      <br><br>
+      Today I carry that promise into hospice rooms, where showing up is
+      the whole job and staying is the whole gift. This little book is my
+      way of saying the promise was received — and it is still being kept.
+      <br><br>
+      — Rob Brizzi
+    </div>
+    <div class="pagenum">9</div>
+  </div>
+
+  <!-- PAGE 10 — BACK COVER -->
+  <div class="page">
+    <div class="dedication">
+      Some gifts are wrapped in paper.<br>
+      The best ones are wrapped in a name.
+    </div>
+    <div class="cardinal">&#10047;</div>
+    <p class="imprint">Brizzi House Publishing · 2026</p>
+    <div class="pagenum">10</div>
+  </div>
+
+  <div class="section">Optional / additional moments</div>
+
+  <div class="page">
+    <div class="label">The Wedding</div>
+    <img src="{{IMG:07-wedding.jpeg}}" alt="The wedding">
+    <p class="story">
+      I wore a tiny tux the day I learned
+      what a promise sounds like out loud.<br><br>
+      &ldquo;You say it once,&rdquo; Grandpa told me,
+      &ldquo;and then you spend your whole life keeping it.&rdquo;
+    </p>
+  </div>
+
+  <div class="page">
+    <div class="label">Look — a Cardinal</div>
+    <img src="{{IMG:06-mom-look-a-cardinal.jpeg}}" alt="Mom and boy spotting a cardinal">
+    <p class="story">
+      &ldquo;Look,&rdquo; Mom whispered. &ldquo;A cardinal.&rdquo;<br><br>
+      We always knew who it was.
+      Some people show up so often,
+      you learn to look for them everywhere.
+    </p>
+  </div>
+
+  <div class="page">
+    <div class="label">Any Game Counts</div>
+    <img src="{{IMG:08-soccer-alt-style.jpeg}}" alt="Soccer in the park">
+    <p class="story">
+      Some days it was soccer instead of baseball.<br><br>
+      The game never mattered.
+      The showing up did.
+    </p>
+    <p class="note">Note: this art is in a different (3D) style — redraw in the
+    book&rsquo;s watercolor style to match, or save it for a separate project.</p>
+  </div>
+
+  <div class="section">Companion book — The Cardinal&rsquo;s Promise</div>
+
+  <div class="page">
+    <div class="duo">
+      <div><img src="{{IMG:cardinals-promise-cover-A.jpeg}}" alt="Cardinal's Promise cover A"></div>
+      <div><img src="{{IMG:cardinals-promise-cover-B.jpeg}}" alt="Cardinal's Promise cover B"></div>
+    </div>
+    <p class="note">Two cover concepts for <i>The Cardinal&rsquo;s Promise</i>.
+    <b>The Promise: A Name to Grow Into</b> is its shorter, more visual companion —
+    the same core truth: love is a verb, and the promise is still being kept.</p>
+  </div>
+
+</div>
