@@ -92,7 +92,7 @@ Chapter 29: The Pictures Never Tell the Whole Story98
 
 Chapter 30: Blessings101
 
-Chapter 31: The Weight That Stays102
+Chapter 31: Sobriety Meets Hospice102
 
 Chapter 32: The Detour104
 
@@ -1481,7 +1481,7 @@ Later he looked at me. You're steady, he said. Then: she is too. That was it. No
 
 **CHAPTER 31**
 
-## **The Weight That Stays**
+## **Sobriety Meets Hospice**
 
 *"Our ultimate goal, after all, is not a good death but a good life to the very end."*
 *— Atul Gawande, Being Mortal*
