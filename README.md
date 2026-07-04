@@ -19,12 +19,16 @@ grants no power even before it is renounced.
 ## Layout
 
 ```
-contracts/CardToken.sol       # the token
-contracts/CardToken.t.sol     # Foundry-style Solidity tests (forge-std)
-test/CardToken.ts             # TypeScript tests (node:test + viem)
-ignition/modules/CardToken.ts # Hardhat Ignition deployment module
-hardhat.config.ts             # Hardhat 3 config
-foundry.toml + remappings.txt # Foundry config (deps resolved from node_modules)
+contracts/CardToken.sol             # the token
+contracts/CardToken.t.sol           # Foundry-style Solidity tests (forge-std)
+contracts/CardTokenInvariants.t.sol # stateful fuzz/invariant suite (handler-based)
+test/CardToken.ts                   # TypeScript tests (node:test + viem)
+verification/claims.json            # launch-claims registry (claim → evidence)
+scripts/verify-claims.mjs           # claims verifier (run via `npm run verify`)
+docs/AI_VERIFICATION_GAP.md         # why the claims ledger exists, and the pattern behind it
+ignition/modules/CardToken.ts       # Hardhat Ignition deployment module
+hardhat.config.ts                   # Hardhat 3 config
+foundry.toml + remappings.txt       # Foundry config (deps resolved from node_modules)
 ```
 
 ## Getting started
@@ -39,6 +43,19 @@ npm install
 npx hardhat test          # runs Solidity AND TypeScript tests
 npx hardhat build         # compile
 ```
+
+### Verify launch claims
+
+Every trust claim made in `TOKEN_LAUNCH_STRATEGY.md` (no mint, no tax, no
+blacklist, no pause, ownership grants no power, renounce works) is recorded in
+`verification/claims.json` and mapped to executable evidence — ABI-level
+structural checks, example tests, and stateful fuzz invariants:
+
+```bash
+npm run verify            # fails if any launch claim loses its backing
+```
+
+See `docs/AI_VERIFICATION_GAP.md` for the reasoning behind this setup.
 
 ### Foundry (optional)
 
