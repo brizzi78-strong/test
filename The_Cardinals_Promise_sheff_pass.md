@@ -1491,8 +1491,8 @@ Later he looked at me. You're steady, he said. Then: she is too. That was it. No
 
 ## **Sobriety Meets Hospice**
 
-*"Our ultimate goal, after all, is not a good death but a good life to the very end."*
-*— Atul Gawande, Being Mortal*
+*"Blessed are they that mourn: for they shall be comforted."*
+*— Matthew 5:4*
 
 The first death that stayed with me wasn't a patient, and it came years before hospice was ever my job. It was Bob.
 
@@ -1547,8 +1547,8 @@ I told people I was going to take some time off. Be there for my dad. Be there f
 
 ## **Five Weeks**
 
-*"Don't give up. Don't ever give up."*
-*— Jim Valvano*
+*"They that wait upon the LORD shall renew their strength; they shall mount up with wings as eagles."*
+*— Isaiah 40:31*
 
 Five weeks after I started the hospice job, my father started to die. The beginning of the work I was built for, and the beginning of the end of the man who built me, five weeks apart. We moved to Raleigh because life was expanding. Hope had been a pharmacist for eight years. Raleigh made sense, jobs, community, a church that felt like ours. Leaving Pensacola meant leaving roots. Hope never wavered. That's who she is. Not blindly optimistic; she sees clearly and asks hard questions. But under all of it is a bedrock belief that God has a plan for us to be of service. When the hospice opportunity came, it felt like a room I'd been circling for years with the door finally open. No debate. No spreadsheet. Just recognition that this was where I was most needed.
 
@@ -1682,8 +1682,8 @@ Seventeen years sober, and I had hit a rock bottom again, an emotional one this 
 
 ## **What Grief Taught the Job**
 
-*"Death ends a life, not a relationship."*
-*— Morrie Schwartz, in Mitch Albom's Tuesdays with Morrie*
+*"Weeping may endure for a night, but joy cometh in the morning."*
+*— Psalm 30:5*
 
 Here is the part I can only admit now. Before I lost him, I was good at this job, but there was a gap in it. I would sit with a family and say the right things, nod at the right moments, and look like a man who understood exactly what they were feeling. Inside, I didn't. I hadn't lost the one I loved most yet. I was fluent in the words and a step removed from the weight. Losing my dad closed that gap. Now when I walk into a room where someone is losing the person they love most, I'm not performing understanding. I have it. I know the specific shape of it. It made me more compassionate, and it made me better at the work, which is a hard thing to be grateful for, and I am grateful for it anyway.
 

@@ -15,7 +15,15 @@ against printed editions before press.
   29, and the Epilogue ("Road of Happy Destiny"). First-edition text is public
   domain in the US. (*ch 18 = "Half measures availed us nothing.")
 
-## Needs permission — or swap to the public-domain alternative
+## RESOLVED — public-domain swaps applied (July 2026)
+
+All three copyrighted epigraphs below were replaced in the manuscript with
+their public-domain alternatives. The book is now 100% clear for KDP with no
+permissions needed. If a permission is ever granted (the V Foundation for the
+Valvano line is the one worth pursuing), the original can be restored in a
+revised edition.
+
+## Previously flagged (now swapped)
 
 | Ch | Current epigraph | Rights holder | Proposed PD swap |
 |---|---|---|---|
