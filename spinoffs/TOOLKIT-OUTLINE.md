@@ -1,0 +1,89 @@
+# The Cardinal's Toolkit — Outline (companion workbook)
+
+**Working title:** The Cardinal's Toolkit: A Practical Companion for Families
+Facing Addiction, Illness, or Loss
+**Format:** 8.5 x 11 workbook (room to write), ~90 pages, $14.99–16.99
+**Position:** The memoir tells the story; the Toolkit hands you the tools. Every
+tool in it was used in a real room. Bulk channel: hospices, treatment centers,
+churches, grief groups.
+
+## Structure — four parts, matching the reader's situation
+
+### Part One: If You Love Someone Who Is Addicted
+1. The Three Lies the Disease Tells the Family (I can fix them / It's my fault /
+   Loving them means never upsetting them)
+2. Boundaries That Are Love — the difference between helping and carrying,
+   with the U-Haul as the model: rescue the person, not the addiction
+3. What to Say and What Not to Say — scripts, side by side
+4. The First Call — how to research treatment in one afternoon (SAMHSA line,
+   questions to ask a facility)
+5. Worksheet: What I Can Control / What I Cannot
+6. For the ones in year one: the First Year Survival pages — what's normal
+   (raw emotions, money shame, identity loss), what's a warning sign, how to
+   be useful without hovering. Drawn from ch. 17–18 of the memoir.
+
+### Part Two: If Someone You Love Is Dying
+7. What Hospice Actually Is (and the myth that it means giving up)
+8. The First Week on Hospice — a plain checklist of who shows up and when
+9. "Tell Me About Her" — how to bring the person back into the room
+10. The How-Long Question — what you're really asking, and the answer that
+    matters: don't wait for the right day; this is the right day
+11. Scripts for the Hard Conversations — saying the great things while they
+    can still hear you; the five things (thank you / forgive me / I forgive
+    you / I love you / goodbye)
+12. Presence Is Cumulative — the Sunday-phone-call worksheet: build the
+    ordinary now
+13. What to Do in the Last Hours — sit close, keep talking, they hear you
+
+### Part Three: After
+14. The First Honest Mile — grief that arrives sideways (driving, isolating,
+    the garage door); when to get help; what a therapist did that meetings
+    couldn't
+15. Who Stays, Who Goes — grace for the people who grieve differently
+16. Signs — permission to receive them. The cardinal. What Diabetes Dave
+    taught: a sign is love using the language you'll understand.
+17. Worksheet: The Letter You Didn't Get to Send
+
+### Part Four: The Promise
+18. The Promise page — a signable commitment: show up, stay, do it for
+    somebody else. "It was done for me. Now go and do it for somebody else."
+19. Resources (mirrors the memoir's Resources section: SAMHSA, CaringInfo,
+    Alliance for Care at Home, AA/Al-Anon)
+
+## Sample section (finished draft) — #10, The How-Long Question
+
+Every family asks me the same question in the hallway, out of earshot of the
+bed. How long?
+
+Here is the truth: nobody knows. Doctors guess in ranges and the ranges are
+wrong all the time, in both directions. But after years in those hallways I can
+tell you what the question actually is, because it is almost never about the
+calendar. What you are really asking is: how long do I have to say the thing I
+have been saving?
+
+So let me answer that one instead. You have today. That is the only answer
+anyone can stand behind.
+
+Don't wait for the right day. The right day looks exactly like this one: too
+ordinary, too busy, the person too tired, you too unready. Say the great things
+while they can still hear you. On a Tuesday. At dinner. On a phone call that
+feels ordinary. If you need somewhere to start, start with one of these five,
+and say it plainly:
+
+Thank you. Forgive me. I forgive you. I love you. Goodbye.
+
+You do not have to say all five today. But write down, right now, on the lines
+below, which one you have been saving — and who it belongs to.
+
+_________________________________________________
+
+_________________________________________________
+
+Then go say it. This is the right day.
+
+## Production notes
+- Uses ISBN #3 (paperback) and optionally #4 (ebook/PDF edition) from the block.
+- Cover: same navy + cardinal system as the memoir; "Toolkit" in the same type
+  as the memoir title so the two books read as a set on a table.
+- Cross-sell: last page of the memoir and the toolkit each point to the other.
+- Bundle at talks: memoir + toolkit $30.
