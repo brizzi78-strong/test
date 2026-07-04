@@ -8,6 +8,7 @@ and don't announce anything until every box in sections 1–6 is checked.
 
 - [ ] Contract code finalized: OpenZeppelin ERC-20, fixed 250M supply, no tax/blacklist/mint
 - [ ] Contract deployed and tested on a testnet (Sepolia) end-to-end, including the renounce
+      — copy-paste walkthrough in `SEPOLIA_DRY_RUN.md`
 - [ ] Deployer wallet is a fresh address with no unrelated history
 - [ ] Treasury wallet created (separate address; ideally a Safe multisig) and its purpose
       written down for the announcement

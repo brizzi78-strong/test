@@ -74,6 +74,12 @@ A `mainnet` network is pre-wired the same way (`MAINNET_RPC_URL`,
 `MAINNET_PRIVATE_KEY`) for when the launch checklist in
 `TOKEN_LAUNCH_STRATEGY.md` is ready to execute.
 
+## Sepolia dry run
+
+`SEPOLIA_DRY_RUN.md` is a copy-paste walkthrough of the whole launch sequence
+on the Sepolia testnet — deploy, verify, fund the treasury, simulate the
+pool, renounce — so the real launch day has no first-time steps in it.
+
 ## Launch-day scripts
 
 Helpers for the transaction steps in `LAUNCH_DAY_CHECKLIST.md`. Fill in
