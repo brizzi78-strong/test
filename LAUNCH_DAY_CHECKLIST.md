@@ -14,8 +14,8 @@ and don't announce anything until every box in sections 1–6 is checked.
 - [ ] Enough ETH in the deployer wallet: 2–5 ETH for liquidity **plus** ~0.05–0.15 ETH
       buffer for gas across all steps, plus the LP locker's fee (check Team Finance/UNCX
       current pricing — some charge a flat fee, some a %)
-- [ ] Announcement post drafted with placeholders for the three proof links
-      (renounce tx, LP lock, treasury address)
+- [x] Announcement post drafted with placeholders for the three proof links
+      (renounce tx, LP lock, treasury address) — see `ANNOUNCEMENT.md`
 - [ ] Pick a low-gas window (weekend/off-peak US hours; check a gas tracker)
 
 ## 1. Deploy
@@ -64,8 +64,9 @@ pool live and trading, LP locked. After this, nothing about the contract can eve
 
 ## 7. Announce
 
-- [ ] Fill the three proof links into the drafted post: renounce tx, LP lock URL,
-      treasury address
+- [ ] Fill the six `{{...}}` placeholders in `ANNOUNCEMENT.md` (renounce tx, LP lock URL,
+      treasury address + funding tx, token address, pool link); search for `{{` to
+      confirm none were missed
 - [ ] State the token address prominently (scammers deploy fake lookalikes — tell people
       to trust only this address)
 - [ ] State the treasury's purpose and the "all spends announced" policy
