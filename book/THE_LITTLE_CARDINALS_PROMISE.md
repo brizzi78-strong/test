@@ -32,6 +32,8 @@ every single time.
 
 > *Illustration: Grandpa + young Rob lap hug – warm mustache dad + boy in red shirt image*
 
+![Young Rob in a red shirt on Dad's lap](illustrations/lap-hug-back-cover.jpeg)
+
 ## [Pages 7–8]
 
 He came to the games Rob won,
@@ -40,6 +42,8 @@ Always in the third row.
 Blue shirt. Arms crossed. Watching. Proud.
 
 > *Illustration: Ramsey bleachers – arm-around-shoulder, "Ramsey" shirt (IMG_3926)*
+
+![Dad with his arm around Rob on the Ramsey bleachers](illustrations/ramsey-bleachers.jpeg)
 
 ## [Pages 9–10]
 
@@ -50,6 +54,10 @@ kneeling in the grass with that proud smile.
 
 > *Illustration: Doorway serious talk – red shirt boy + open-palm Dad (IMG_3927) + small Yankees cap inset*
 
+![Dad kneeling with an open palm, talking with Rob in the doorway](illustrations/doorway-talk.jpeg)
+
+![Inset: Dad in his Yankees cap](illustrations/dad-yankees-cap.jpeg)
+
 ## [Pages 11–12]
 
 Dad made one promise, and only one.
@@ -58,6 +66,8 @@ Dad made one promise, and only one.
 
 > *Illustration: Mirror hug – boy in blue coat, Dad beaming behind (IMG_3925)*
 
+![Rob in the big blue coat, Dad beaming behind him in the mirror](illustrations/mirror-hug.jpeg)
+
 ## [New spread – torn jacket image]
 
 Dad's old blue shirt was too big…
@@ -65,6 +75,8 @@ but Rob wore it anyway.
 It still smelled like Saturday mornings.
 
 > *Illustration: Torn jacket scene – frayed blue jacket with Dad smiling behind*
+
+![Adult Rob holding the frayed blue jacket, Dad smiling behind](illustrations/torn-jacket.jpeg)
 
 ## [Pages 13–14]
 
@@ -76,6 +88,8 @@ you're mine, and I'm glad.
 
 > *Illustration: Hospital bedside – adult Rob holding Dad's hand, badge visible (IMG_3948)*
 
+![Adult Rob at Dad's bedside, holding his hand](illustrations/hospital-bedside.jpeg)
+
 ## [Pages 15–16]
 
 "Then who will show up for me?" Rob asked.
@@ -84,6 +98,8 @@ Dad heard him. He held out his hand.
 "I keep my promises."
 
 > *Illustration: Car window + glowing cardinal – full bleed with strong red halo (IMG_3934)*
+
+![The glowing cardinal at the car window](illustrations/car-window-cardinal.jpeg)
 
 ## [Pages 17–18]
 
@@ -129,6 +145,8 @@ and her eyes went shiny.
 
 > *Illustration: Mama kneeling with Rob at window*
 
+![Mama holding young Rob as he points toward the window](illustrations/mama-and-young-rob.jpeg)
+
 ## [Pages 27–28]
 
 Rob put his hand against the cold glass.
@@ -159,6 +177,10 @@ watch the windows.
 Red keeps its promises.
 
 > *Illustration: Full family group with chihuahua ("freedoom" shirt) + adult Rob, older Dad, blonde woman, dog + flying cardinal overhead (group photo image)*
+
+![Full family group with the chihuahua and older Dad](illustrations/family-group.jpeg)
+
+![Detail: adult Rob and older Dad together](illustrations/adult-rob-and-dad.jpeg)
 
 ## [Pages 31–32]
 
@@ -191,6 +213,12 @@ And when a red bird lands, let it be a comfort without being a test. The point w
 The true story of the cardinal is told in the author's memoir, *The Cardinal's Promise*.
 
 > *Small red cardinal illustration at bottom*
+
+---
+
+## Additional artwork (not yet placed)
+
+![Wedding day – Dad in a tux, the bride, and young Rob as ring bearer](illustrations/wedding-day.jpeg)
 
 ---
 
