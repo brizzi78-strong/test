@@ -23,6 +23,10 @@ Cardinal Press • First edition, 2026
 
 For the ones watching the windows.
 
+> **[Illustration: Family-album wedding memory – Dad in a tux, the bride, and young Rob as ring bearer]**
+
+![Wedding day – Dad in a tux, the bride, and young Rob as ring bearer](illustrations/wedding-day.jpeg)
+
 ## [Pages 5–6]
 
 Rob's dad was the kind of dad
@@ -182,6 +186,18 @@ tap. Tap-tap.
 
 *(artwork pending)*
 
+## [Added spread – family, now]
+
+Now, when the world feels too quiet…
+watch the windows.
+Red keeps its promises.
+
+> **[Illustration: Full family group with chihuahua ("Freedom" shirt) – adult Rob, older Dad, blonde woman, dog + flying cardinal overhead]**
+
+![Full family group with the chihuahua](illustrations/family-group.jpeg)
+
+![Detail: adult Rob and older Dad together](illustrations/adult-rob-and-dad.jpeg)
+
 ## [Pages 31–32]
 
 And when the cardinal came,
@@ -217,16 +233,6 @@ And when a red bird lands, let it be a comfort without being a test. The point w
 The true story of the cardinal is told in the author's memoir, *The Cardinal's Promise*.
 
 > *Small red cardinal illustration at bottom*
-
----
-
-## Additional artwork (not placed in this layout)
-
-![Full family group with the chihuahua – adult Rob, older Dad, blonde woman, dog ("Freedom" shirt)](illustrations/family-group.jpeg)
-
-![Detail: adult Rob and older Dad together](illustrations/adult-rob-and-dad.jpeg)
-
-![Wedding day – Dad in a tux, the bride, and young Rob as ring bearer](illustrations/wedding-day.jpeg)
 
 ---
 
