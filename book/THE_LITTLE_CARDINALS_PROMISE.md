@@ -30,7 +30,7 @@ who showed up —
 in his blue shirt, arms open,
 every single time.
 
-> *Illustration: Grandpa + young Rob lap hug – warm mustache dad + boy in red shirt image*
+> **[Illustration: Grandpa + young Rob lap hug (uploaded warm family portrait with mustache dad + boy in red shirt)]**
 
 ![Young Rob in a red shirt on Dad's lap](illustrations/lap-hug-back-cover.jpeg)
 
@@ -41,7 +41,7 @@ and the games Rob lost.
 Always in the third row.
 Blue shirt. Arms crossed. Watching. Proud.
 
-> *Illustration: Ramsey bleachers – arm-around-shoulder, "Ramsey" shirt (IMG_3926)*
+> **[Illustration: Ramsey bleachers – arm around shoulder, "Ramsey" shirt (IMG_3926)]**
 
 ![Dad with his arm around Rob on the Ramsey bleachers](illustrations/ramsey-bleachers.jpeg)
 
@@ -52,7 +52,7 @@ A hundred of them, then a hundred more.
 "One more," Dad always said,
 kneeling in the grass with that proud smile.
 
-> *Illustration: Doorway serious talk – red shirt boy + open-palm Dad (IMG_3927) + small Yankees cap inset*
+> **[Illustration: Doorway serious talk (red shirt boy + open-palm Dad – IMG_3927) + small Yankees cap inset]**
 
 ![Dad kneeling with an open palm, talking with Rob in the doorway](illustrations/doorway-talk.jpeg)
 
@@ -64,17 +64,17 @@ Dad made one promise, and only one.
 "No matter what," he said, kneeling with the ball,
 "I will always show up for you."
 
-> *Illustration: Mirror hug – boy in blue coat, Dad beaming behind (IMG_3925)*
+> **[Illustration: Mirror hug – boy in blue coat, Dad beaming behind (IMG_3925)]**
 
 ![Rob in the big blue coat, Dad beaming behind him in the mirror](illustrations/mirror-hug.jpeg)
 
-## [New spread – torn jacket image]
+## [Added spread – torn jacket memory]
 
 Dad's old blue shirt was too big…
 but Rob wore it anyway.
 It still smelled like Saturday mornings.
 
-> *Illustration: Torn jacket scene – frayed blue jacket with Dad smiling behind*
+> **[Illustration: Torn jacket scene (frayed blue jacket with Dad smiling behind)]**
 
 ![Adult Rob holding the frayed blue jacket, Dad smiling behind](illustrations/torn-jacket.jpeg)
 
@@ -86,7 +86,7 @@ But when Rob sat beside him,
 Dad still smiled the smile that meant:
 you're mine, and I'm glad.
 
-> *Illustration: Hospital bedside – adult Rob holding Dad's hand, badge visible (IMG_3948)*
+> **[Illustration: Hospital bedside (adult Rob holding Dad's hand – IMG_3948)]**
 
 ![Adult Rob at Dad's bedside, holding his hand](illustrations/hospital-bedside.jpeg)
 
@@ -97,7 +97,7 @@ Dad heard him. He held out his hand.
 "Watch for me," Dad whispered.
 "I keep my promises."
 
-> *Illustration: Car window + glowing cardinal – full bleed with strong red halo (IMG_3934)*
+> **[Illustration: Car window + glowing cardinal (full bleed – IMG_3934 with strong red glow)]**
 
 ![The glowing cardinal at the car window](illustrations/car-window-cardinal.jpeg)
 
@@ -109,20 +109,26 @@ Rob didn't want breakfast.
 He didn't want fly balls.
 He didn't want anything at all.
 
-> *Illustration: Snowy truck + house with red truck detail*
+> **[Illustration Prompt (generate in same style): "Snowy winter scene, red pickup truck parked outside a quiet dark house with one warm yellow window glowing, light snow falling, melancholic but hopeful mood, same warm illustrated style as previous family scenes, red truck matches earlier truck image, subtle small silhouette of boy at window, soft emotional children's book illustration"]**
+
+*(artwork pending)*
 
 ## [Pages 19–20]
 
 The quiet stayed a long time.
 
-> *Illustration: Empty snowy bleachers with faint cardinal shadow*
+> **[Illustration Prompt: "Empty wooden bleachers covered in fresh snow during winter day, soft snow falling, faint glowing red cardinal perched on top bench as subtle symbol of hope, empty space conveys loss but with gentle warmth, same style as Ramsey bleachers image, children's picture book illustration"]**
+
+*(artwork pending)*
 
 ## [Pages 21–22]
 
 One cold morning, Rob heard a tap.
 Tap. Tap-tap.
 
-> *Illustration: Boy at table looking toward window*
+> **[Illustration Prompt: "Young dark-haired Rob sitting alone at kitchen table, looking toward snowy window with hopeful expression, untouched breakfast plate, warm interior lighting contrasting cool window, same character design and style as previous Rob illustrations, gentle emotional children's book art"]**
+
+*(artwork pending)*
 
 ## [Pages 23–24]
 
@@ -132,7 +138,9 @@ A bright red bird. Red as Dad's truck.
 It looked right at Rob.
 And it stayed.
 
-> *Illustration: Red cardinal on snowy windowsill (close-up red bird)*
+> **[Illustration Prompt: "Vibrant bright red cardinal perched on snowy windowsill, looking directly at viewer with kind expression, soft glowing aura, snow falling outside, young Rob's face partially visible inside, highly detailed emotional close-up in the same style as previous cardinal images, warm children's book illustration"]**
+
+*(artwork pending)*
 
 ## [Pages 25–26]
 
@@ -143,7 +151,7 @@ and her eyes went shiny.
 "You know what some people say about red birds," she said.
 "They say a cardinal is how love shows up… after."
 
-> *Illustration: Mama kneeling with Rob at window*
+> **[Illustration: Mama kneeling with Rob at window (use uploaded family/mama-style images)]**
 
 ![Mama holding young Rob as he points toward the window](illustrations/mama-and-young-rob.jpeg)
 
@@ -156,7 +164,9 @@ The cardinal tipped its head —
 the exact way Dad did
 when he was proud and didn't say so.
 
-> *Illustration: Hand on glass + cardinal (split-panel style)*
+> **[Illustration Prompt: "Young Rob's hand pressed against cold window glass touching the bright red cardinal on the other side, snow outside, Rob's face full of wonder and love, soft glowing light from cardinal, emotional, matching hand/car cardinal style, warm children's book illustration"]**
+
+*(artwork pending)*
 
 ## [Pages 29–30]
 
@@ -168,19 +178,9 @@ On days when Rob missed Dad
 so much his chest hurt —
 tap. Tap-tap.
 
-> *Illustration: Three-panel cardinals (table, bleachers, window)*
+> **[Illustration Prompt: "Three vertical panels in one spread: 1) Cardinal on kitchen table with Rob watching 2) Cardinal on snow-covered bleachers 3) Cardinal on rainy window sill, vibrant red glowing cardinal in each, hopeful and consistent with previous cardinal images, same warm illustrated style"]**
 
-## [New spread – family group image]
-
-Now, when the world feels too quiet…
-watch the windows.
-Red keeps its promises.
-
-> *Illustration: Full family group with chihuahua ("Freedom" shirt) + adult Rob, older Dad, blonde woman, dog + flying cardinal overhead (group photo image)*
-
-![Full family group with the chihuahua and older Dad](illustrations/family-group.jpeg)
-
-![Detail: adult Rob and older Dad together](illustrations/adult-rob-and-dad.jpeg)
+*(artwork pending)*
 
 ## [Pages 31–32]
 
@@ -191,7 +191,9 @@ Because love that shows up
 never stops showing up.
 It just changes where it sits.
 
-> *Illustration: Boy looking up at cardinal on tree branch*
+> **[Illustration Prompt: "Young Rob standing in green field looking up at bare tree branch where a bright red cardinal is perched looking down at him, soft hopeful sunlight, simple beautiful composition, same character design and warm emotional style as previous spreads"]**
+
+*(artwork pending)*
 
 ## [Pages 33–34]
 
@@ -200,7 +202,9 @@ watch the windows.
 Watch the fences and the branches and the snow.
 Red keeps its promises.
 
-> *Illustration: Flying cardinal at sunset sky*
+> **[Illustration Prompt: "Hopeful ending spread: bright red cardinal flying across beautiful pink and gold sunset sky above dark house silhouettes, warm glowing light, feeling of continued love and promise kept, full-bleed emotional illustration matching glowing cardinal style"]**
+
+*(artwork pending)*
 
 ## [Page 35 – Author Note]
 
@@ -216,10 +220,14 @@ The true story of the cardinal is told in the author's memoir, *The Cardinal's P
 
 ---
 
-## Additional artwork (not yet placed)
+## Additional artwork (not placed in this layout)
+
+![Full family group with the chihuahua – adult Rob, older Dad, blonde woman, dog ("Freedom" shirt)](illustrations/family-group.jpeg)
+
+![Detail: adult Rob and older Dad together](illustrations/adult-rob-and-dad.jpeg)
 
 ![Wedding day – Dad in a tux, the bride, and young Rob as ring bearer](illustrations/wedding-day.jpeg)
 
 ---
 
-Rob Brizzi • Brizzi House Publishing • 2026
+Rob Brizzi • 2026
