@@ -26,4 +26,4 @@ This book will help you do exactly that. I am grateful it exists, and I am grate
 
 *Dave Meyer*
 
-*Virginia Tech quarterback and 2001 Gator Bowl winner; later an NFL quarterback and college coach under Nick Saban at LSU*
+*Former NFL quarterback*
