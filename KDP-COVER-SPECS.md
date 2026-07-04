@@ -1,23 +1,23 @@
 # KDP Cover-Wrap Specs — The Cardinal's Promise
 
-Trim size: 6" x 9". Interior page count: 225 (current typeset; the
+Trim size: 6" x 9". Interior page count: 228 (current typeset; the
 spine math below moves with it — rerun before ordering the wrap).
 
 ## Spine width
 
-| Paper | Formula | 225 pages |
+| Paper | Formula | 228 pages |
 |---|---|---|
-| White (recommended for text-only) | pages × 0.002252" | 0.507" |
-| Cream | pages × 0.0025" | 0.563" |
+| White (recommended for text-only) | pages × 0.002252" | 0.513" |
+| Cream | pages × 0.0025" | 0.570" |
 
 ## Full wrap dimensions (includes 0.125" bleed on all outside edges)
 
 | Paper | Width | Height |
 |---|---|---|
-| White | 0.125 + 6 + 0.507 + 6 + 0.125 = **12.757"** | 9 + 0.25 = **9.25"** |
-| Cream | 0.125 + 6 + 0.563 + 6 + 0.125 = **12.813"** | **9.25"** |
+| White | 0.125 + 6 + 0.513 + 6 + 0.125 = **12.763"** | 9 + 0.25 = **9.25"** |
+| Cream | 0.125 + 6 + 0.570 + 6 + 0.125 = **12.820"** | **9.25"** |
 
-At 300 DPI (white): 3827 × 2775 px.
+At 300 DPI (white): 3829 × 2775 px.
 
 Notes for the designer:
 - Keep text 0.25" inside trim edges; nothing critical in the 0.125" bleed zone.
