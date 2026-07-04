@@ -1,5 +1,12 @@
 # The Ultimate Book Marketing Plan
 
+> **Read [BOOK_SALES_THESIS.md](BOOK_SALES_THESIS.md) first.** It is the evidence-based
+> argument — built from the documented success of prior top-selling nonfiction — for
+> *why* this plan is sequenced the way it is, and it defines the measurable launch
+> gates (G1–G5) that decide when this plan is ready to execute. For nonfiction, the
+> thesis re-weights this plan: platform-building and the earned-media tour lead;
+> ads and retail mechanics support.
+
 A complete, execution-ready plan to maximize book sales. Work it in order: positioning
 first, assets second, launch third, then the long game. Most books fail at step 1 and
 try to fix it with ads at step 4 — money spent on marketing a badly positioned book is
