@@ -25,13 +25,18 @@ Notes for the designer:
 - KDP prints its barcode bottom-right of the back cover (2" × 1.2") — leave that
   zone clear or upload your own ISBN barcode.
 - The front panel is the existing navy/cardinal art. Back panel: navy continued,
-  copy below, cardinal branch motif optional.
+  copy below, cardinal branch motif optional. The comp line ("For readers of...")
+  sits at the top of the back panel, small italic, set apart from the body copy.
+  It is a comparison, NOT an endorsement — never style it as a quote or attribute
+  it to anyone.
 - SUBTITLE CHANGE (designer task): the cover currently reads "A Practical Guide for
   Families Facing Addiction, Illness, or Loss." Replace with the memoir-forward
   subtitle: "A Memoir of the Father Who Stayed" (matches the interior title page).
 
 ## Draft back-cover copy (~170 words)
 
+> *For readers of* Beautiful Boy *and* Tuesdays with Morrie.
+>
 > **The cardinal landed on his mirror fifteen days after his father died. This book
 > is what it took to understand why.**
 >
