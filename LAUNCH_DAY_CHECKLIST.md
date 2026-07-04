@@ -13,8 +13,10 @@ and don't announce anything until every box in sections 1–6 is checked.
 - [ ] Treasury wallet created (separate address; ideally a Safe multisig) and its purpose
       written down for the announcement
 - [ ] Enough ETH in the deployer wallet: 2–5 ETH for liquidity **plus** ~0.05–0.15 ETH
-      buffer for gas across all steps, plus the LP locker's fee (check Team Finance/UNCX
-      current pricing — some charge a flat fee, some a %)
+      buffer for gas across all steps, plus the LP locker's fee. As of Jul 2026
+      (re-check before launch): Team Finance = $150 flat in ETH + gas, keeps 100% of
+      LP locked; UNCX = 0.1 ETH flat **+ 1% of the LP tokens** (so the lock shows 99%,
+      not 100%). Team Finance fits the "100% locked" claim in the announcement.
 - [x] Announcement post drafted with placeholders for the three proof links
       (renounce tx, LP lock, treasury address) — see `ANNOUNCEMENT.md`
 - [ ] Pick a low-gas window (weekend/off-peak US hours; check a gas tracker)
