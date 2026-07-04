@@ -13,7 +13,7 @@ January 9, 2026. Seventeen years sober to the day, and fifteen days after my fat
 
 And then it lands, the cardinal, on the mirror, close enough to touch through the glass.
 
-Seventeen years from West Palm Beach, from the apartment with the blinds drawn and the refrigerator in the hallway, from the morning I opened the door and found Lou standing there. Seventeen, the same number as the age I won the county championship. He'd been in the third row that day. He was always in the third row.
+Seventeen years from West Palm Beach, from the apartment with the blinds drawn and the refrigerator in the hallway, from the morning I opened the door and found Lou standing there. Seventeen, the age I was when I won the county championship. He'd been in the third row that day. He was always in the third row.
 
 Dad, I say out loud. Alone in the car. Just his name. And then the thing I should have said a hundred more times when he was alive to hear it. I love you. The cardinal doesn't move. Dad, I love you. I know you're watching out for me.
 
