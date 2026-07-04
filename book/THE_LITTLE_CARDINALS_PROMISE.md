@@ -45,9 +45,9 @@ and the games Rob lost.
 Always in the third row.
 Blue shirt. Arms crossed. Watching. Proud.
 
-> **[Illustration: Ramsey bleachers – arm around shoulder, "Ramsey" shirt (IMG_3926)]**
+> **[Illustration: Bleachers – arm around shoulder, "Brizzi" shirt (corrected print-res version from the companion interior; earlier "Ramsey" draft kept at illustrations/ramsey-bleachers.jpeg)]**
 
-![Dad with his arm around Rob on the Ramsey bleachers](illustrations/ramsey-bleachers.jpeg)
+![Dad in his Brizzi shirt with his arm around Rob on the bleachers](illustrations/print/bleachers-brizzi.jpeg)
 
 ## [Pages 9–10]
 
@@ -192,9 +192,9 @@ Now, when the world feels too quiet…
 watch the windows.
 Red keeps its promises.
 
-> **[Illustration: Full family group with chihuahua ("Freedom" shirt) – adult Rob, older Dad, blonde woman, dog + flying cardinal overhead]**
+> **[Illustration: Full family group with chihuahua ("freedom" shirt) – adult Rob, older Dad, blonde woman, dog + flying cardinal overhead (corrected print-res version from the companion interior)]**
 
-![Full family group with the chihuahua](illustrations/family-group.jpeg)
+![Full family group with the chihuahua](illustrations/print/family-group-freedom.jpeg)
 
 ![Detail: adult Rob and older Dad together](illustrations/adult-rob-and-dad.jpeg)
 
