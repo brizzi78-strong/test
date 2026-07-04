@@ -22,6 +22,9 @@ and don't announce anything until every box in sections 1–6 is checked.
 
 - [ ] Deploy the token contract; full 250M mints to deployer
 - [ ] Record: contract address, deploy tx hash
+- [ ] Fill `launch.json` (network, token address, treasury address) — the helper
+      scripts below read it. Run `npx hardhat run scripts/launch-check.ts` between
+      steps whenever you want a PASS/FAIL readout of where things stand.
 - [ ] Sanity-check on Etherscan: total supply = 250,000,000, deployer balance = 250,000,000
 
 ## 2. Verify source
@@ -33,7 +36,9 @@ and don't announce anything until every box in sections 1–6 is checked.
 
 ## 3. Treasury transfer
 
-- [ ] Send 50,000,000 CARD to the treasury wallet
+- [ ] Send 50,000,000 CARD to the treasury wallet:
+      `npx hardhat run scripts/transfer-treasury.ts` (sends exactly 50M; refuses to
+      run twice or if any balance is off)
 - [ ] Record the tx hash (this is a proof link)
 - [ ] Confirm balances: deployer 200M, treasury 50M
 
@@ -58,7 +63,9 @@ and don't announce anything until every box in sections 1–6 is checked.
 ⚠️ Point of no return. Before clicking, confirm: source verified, treasury funded,
 pool live and trading, LP locked. After this, nothing about the contract can ever change.
 
-- [ ] Call `renounceOwnership()` from the deployer
+- [ ] Add the pool address to `launch.json`, then run
+      `npx hardhat run scripts/renounce.ts` — it re-checks the abort criteria
+      on-chain, makes you type "renounce forever", and only then sends
 - [ ] Confirm on Etherscan that owner is now the zero address (0x000…000)
 - [ ] Record the tx hash (this is a proof link)
 

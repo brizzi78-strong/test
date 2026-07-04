@@ -74,6 +74,23 @@ A `mainnet` network is pre-wired the same way (`MAINNET_RPC_URL`,
 `MAINNET_PRIVATE_KEY`) for when the launch checklist in
 `TOKEN_LAUNCH_STRATEGY.md` is ready to execute.
 
+## Launch-day scripts
+
+Helpers for the transaction steps in `LAUNCH_DAY_CHECKLIST.md`. Fill in
+`launch.json` (network, token address, treasury address; pool address once it
+exists), then:
+
+```bash
+npx hardhat run scripts/launch-check.ts       # read-only: which step you're on + abort-criteria check
+npx hardhat run scripts/transfer-treasury.ts  # step 3: sends exactly 50M to the treasury, once
+npx hardhat run scripts/renounce.ts           # step 6: guarded renounce — verifies state, asks for confirmation
+```
+
+Each script verifies the on-chain state before doing anything and stops with
+an explanation instead of proceeding when something doesn't match the plan.
+`scripts/smoke-test-local.ts` runs the whole sequence against the in-process
+network to prove the guardrails work — no real network or funds involved.
+
 ## Etherscan verification
 
 Source verification (step 2 of `LAUNCH_DAY_CHECKLIST.md`) goes through
