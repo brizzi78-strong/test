@@ -176,7 +176,7 @@ Now, when the world feels too quiet…
 watch the windows.
 Red keeps its promises.
 
-> *Illustration: Full family group with chihuahua ("freedoom" shirt) + adult Rob, older Dad, blonde woman, dog + flying cardinal overhead (group photo image)*
+> *Illustration: Full family group with chihuahua ("Freedom" shirt) + adult Rob, older Dad, blonde woman, dog + flying cardinal overhead (group photo image)*
 
 ![Full family group with the chihuahua and older Dad](illustrations/family-group.jpeg)
 
