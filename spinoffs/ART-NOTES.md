@@ -15,14 +15,21 @@ well — keep using the same reference images when generating new spreads.
 | rob-cardinal-car-window.jpeg | Grown Rob + cardinal at car window | Cardinal book final spread; brand key art; memoir epilogue image |
 | promise-book-cover-mock.jpeg | Full cover spread mock, "THE PROMISE — A Name to Grow Into" | Promise book cover |
 
-## Fix list before print
+## Fix list — status
 
-1. TRADEMARK: the Yankees "NY" logo (lou-older-yankees-cap) is MLB property —
-   regenerate with a plain navy cap or generic "N". Logos are policed hard.
-2. TEXT IN ART: "freeedom" shirt typo (family portrait) — AI garbles in-image
-   text; keep shirts/signs blank and set any text in layout.
-3. CARDINAL PLACEMENT: regenerate the car scene with the bird ON the
-   driver's-side mirror (not the window edge) — the mirror is the true detail
-   and the title image of the whole line.
-4. IMPRINT: cover mock says "Brizzi House Publishing"; memoir says Cardinal
-   Promise Press. Pick one imprint for the whole catalog.
+1. DONE — NY logo removed (plain navy cap) in the interior PDF page 14 and in
+   lou-older-yankees-cap.jpeg.
+2. DONE — garbled shirt text removed; "Hope" set on Hope's shirt in
+   family-portrait-v2.jpeg; garbled badge text blanked (heart kept) on interior
+   page 18. Still garbled in concept files not used in the interior
+   (hospice-bedside-vertical badge, cover mock) — clean before any print use.
+3. OPEN — cardinal-on-mirror image needs a fresh generation. Ready-to-paste
+   prompt: "Same man as reference image (dark wavy hair, red polo), seen from
+   outside his parked car in a hospital parking lot on a gray January morning.
+   A brilliant red cardinal perched ON the driver's-side wing mirror, inches
+   from his face, both making eye contact through the open window. Pixar-style
+   warm illustration, soft light breaking through clouds, no text anywhere in
+   the image."
+4. DONE — imprint unified to CARDINAL PRESS across the memoir title/copyright
+   pages, the kids-book interior (rebuilt), and the docs. Cover mock still says
+   Brizzi House — update at next art pass.

@@ -1,6 +1,6 @@
 # Publishing & Distribution Plan — The Cardinal's Promise
 
-Rob owns both ISBNs and publishes as Cardinal Promise Press (Raleigh, NC).
+Rob owns both ISBNs and publishes as Cardinal Press (Raleigh, NC).
 All channels below are nonexclusive and free to enter. The one rule: NEVER
 enroll the ebook in KDP Select — its exclusivity clause would forbid every
 non-Amazon ebook channel and direct EPUB sales.
@@ -30,7 +30,7 @@ non-Amazon ebook channel and direct EPUB sales.
 
 - Google and Apple validate EPUBs strictly — run EPUBCheck on the final file
   before upload (ask Claude; ten-minute job against the final build).
-- KDP: choose "Use my own ISBN"; imprint field = Cardinal Promise Press.
+- KDP: choose "Use my own ISBN"; imprint field = Cardinal Press.
 - Barcode: with own ISBN, either supply a barcode on the wrap or let KDP print
   its own bottom-right of the back cover (zone already reserved in the specs).
 - Pre-press checklist lives across: KDP-COVER-SPECS.md, EPIGRAPH-PERMISSIONS.md,

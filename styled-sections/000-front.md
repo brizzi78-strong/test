@@ -4,7 +4,7 @@
 
 **ROB BRIZZI**
 
-CARDINAL PROMISE PRESS
+CARDINAL PRESS
 
 # **COPYRIGHT**
 
@@ -12,7 +12,7 @@ THE CARDINAL'S PROMISE. Copyright © 2026 by Rob Brizzi. All rights reserved.
 
 No part of this book may be reproduced in any form or by any electronic or mechanical means, including information storage and retrieval systems, without written permission from the publisher, except by a reviewer, who may quote brief passages in a review.
 
-Published by Cardinal Promise Press, Raleigh, North Carolina.
+Published by Cardinal Press, Raleigh, North Carolina.
 
 First edition, 2026.
 
