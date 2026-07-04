@@ -14,4 +14,4 @@ Years later I would learn that this is also the whole of hospice. You cannot cur
 
 What you can do is stay. Not fix, not control, not cure. Stay. Set the boundary that keeps you whole, leave the door open a crack, and keep showing up in the ways that don't cost you your own life. That is not a small thing.
 
-So pull up a chair. Let me tell you how I know. It begins in a country I haven't seen since I was four years old.
+So pull up a chair. Let me tell you how I know. I'll make you one promise before we start: I will tell you the truth the whole way through. It begins in a country I left when I was four years old.

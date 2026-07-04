@@ -4,9 +4,6 @@
 
 **ROB BRIZZI**
 
-*"I wouldn't want anyone else to be there for my patients."*
-*— Dr. Huet*
-
 CARDINAL PROMISE PRESS
 
 # **COPYRIGHT**

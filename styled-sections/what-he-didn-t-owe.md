@@ -1,8 +1,8 @@
 # **WHAT HE DIDN'T OWE**
 
-Lou Brizzi didn't adopt me as a baby. He didn't adopt me with his wife. He married my mom when I was a toddler and chose to stay when he had every reason not to.
+Lou Brizzi didn't adopt me as a baby, half of a couple planning a family. He married my mom when I was a boy and chose to stay when he had every reason not to.
 
-Look at who you see as stepdads, the ones who marry a woman with kids. Even the ones still present, still married, still in those kids' lives, most treat the child a little differently. Not cruelly. Just a small distance that never fully closes. Lou never drew that line.
+Look at who you see as stepdads, the ones who marry a woman with kids. Even the ones still present, still married, still in those kids' lives, most treat the child a little differently. Not cruelly. Just a gap that never fully closes. Lou never drew that line.
 
 When he adopted me and Chris in that courthouse, he didn't take it lightly. He looked at two boys from Mexico City and decided they were his. Then my mom left, pursued another life. The pain of a twelve-year relationship ending, the divorce, the aftermath, it would have been enough for any man to say, I don't owe them anything. Society would have told him that. His friends might have. The world would have understood if Lou had quietly stepped back from two boys who weren't his by blood, whose mother had moved on, and who, let's be honest, weren't always the most grateful kids.
 
@@ -12,7 +12,7 @@ What did Lou owe Claudio Balderas at that point? Nothing. You've read what he di
 
 That's what this book is about. Adoption, addiction, recovery, hospice, those are just the chapters. It's about a man who chose two boys who weren't his and never stopped choosing them. Who stayed after the marriage ended. Who came after the DUIs. Who drove a U-Haul to Florida when the world would have told him he'd done plenty.
 
-My goal in writing this is simple. I want to change the norm. I want men to read this and understand that what Lou did is possible, that you can choose a child who isn't yours and love them without condition, without a line you won't cross. There can be more men like Lou. I have to believe that, because if what he did was unrepeatable, then his life was a miracle and nothing more. And Lou wasn't a miracle. He was a man who made a decision and honored it every day for the rest of his life. That's not supernatural. That's available to anyone willing to do it.
+I want men to read this and understand that what Lou did is possible, that you can choose a child who isn't yours and love them without condition, without a line you won't cross. There can be more men like Lou. I have to believe that, because if what he did was unrepeatable, then his life was a miracle and nothing more. And Lou wasn't a miracle. He was a man who made a decision and honored it every day for the rest of his life. That's not supernatural. That's available to anyone willing to do it.
 
 Till the day I die I'll think about the man who drove that U-Haul. I understand now what it cost him, every time, and he never once sent me the bill.
 

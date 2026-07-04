@@ -16,7 +16,7 @@
 
 7. Rob's mother wired money she told herself was for rent. The book says the disease "takes the people who love you most and turns their love into one more thing to use." Where is the line between loving an addict and enabling one? Did the book change where you'd draw it?
 
-8. After seventeen years sober, grief drove Rob into "an emotional rock bottom" — the first one he ever had to feel all the way through. How is the sober breakdown after Lou's death different from his using-era bottoms? How is it the same?
+8. After seventeen years sober, grief drove Rob into an emotional rock bottom, the first one he ever had to feel all the way through. How is the sober breakdown after Lou's death different from his using-era bottoms? How is it the same?
 
 9. Hope's oldest wound is being left; Rob's is wondering whether he was worth keeping. How do those two wounds fit together in their marriage — and when does the fit help, and when does it hurt?
 
