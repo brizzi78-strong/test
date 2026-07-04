@@ -100,3 +100,31 @@ it in any format. Thank you either way — your book kept me honest about my own
 Sincerely,
 Rob Brizzi
 [phone] · [email]
+
+---
+
+## 4. Randy Grimes (Off Center) — WARM PATH, ask first
+
+Shared ghostwriter = the introduction. Send the ghostwriter note first; the
+direct note goes only after the intro is made. This is likely the fastest yes
+on the list, and it covers the recovery-credibility lane the way Sheff covers
+the literary lane.
+
+### To the ghostwriter
+
+Could I ask a favor? Would you introduce me to Randy Grimes? My memoir The
+Cardinal's Promise is finished — 52,000 words, seventeen years sober, the
+adoptive father who drove a U-Haul to come get me, and the hospice work I do
+now. I think Randy would recognize every page of the addiction arc, and a line
+from him would mean a lot on the cover. Happy to send him the PDF the moment
+he's open to it.
+
+### To Randy, once introduced
+
+Randy, thank you for being open to this. [Ghostwriter's name] can vouch that we
+bled on the same pages. My book is the wrestling version of yours — the body as
+the career, the pills, the family that wouldn't quit, and the work on the other
+side; I'm seventeen years sober and I sit with hospice families now. If The
+Cardinal's Promise earns a sentence from you, it would carry real weight with
+the readers who need this book most. PDF attached — no deadline, no pressure,
+and thank you for Off Center either way.
