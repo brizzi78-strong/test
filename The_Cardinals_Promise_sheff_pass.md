@@ -162,7 +162,7 @@ This book will help you do exactly that. I am grateful it exists, and I am grate
 
 # **SOBRIETY WAS NOT THE FINISH LINE**
 
-I really thought sobriety was it.
+I really thought sobriety was it. One more finish line to cross, one more way to earn my place back.
 
 Get sober. Stay sober. Live honestly and hope I don't mess up. Make a living on my own. Wake up without shame already sitting in the room. Stop making my family afraid every time the phone rang.
 
@@ -352,7 +352,7 @@ There's a story from those years. My mother always wore red nail polish, my aunt
 
 And there was Nancey, my mother's youngest sister, who treated Chris and me as her own from the start. She was at the games and the matches, always in our corner. Early twenties when we came back from Mexico, years before she met Charlie, who would become her husband. She told me not long ago that no matter how old I get she'll always see the same little kid, and I know the one she means: the boy in the backseat too scared to get out of the car.
 
-What I love now is how close my mother and her sisters have become, she and Nancey and Terry, a closeness that deepened after they lost their own mother. Watching my nana go was hard. The dementia took her in pieces, the person still in the room while the line kept dropping. That slow disappearing stayed with me. Years later I earned my Certified Dementia Practitioner credential. I was thinking of her when I did.
+What I love now is how close my mother and her sisters have become, she and Nancey and Terry, a closeness that deepened after they lost their own mother. Watching my nana go was hard. The dementia took her in pieces, the person still in the room while the line kept dropping. That slow disappearing stayed with me. Years later I earned my Certified Dementia Practitioner credential. I was thinking of her when I did. But that was decades ahead. Back then I was still a boy with a father-shaped space nobody named, and I didn't know a man was about to walk into it.
 
 **CHAPTER 3**
 
@@ -578,7 +578,7 @@ When Dave became varsity starting quarterback sophomore year, the whole social w
 
 I had one real slip-up in high school. Junior prom. The group asked what I wanted to drink. I knew my parents drank Absolut Citron, so I said it without flinching, don't mix it, just the fifth. I chugged straight vodka for the first time in my life. Two hours later I was throwing up in the limo. Four hours later they carried me into prom like Weekend at Bernie's. The principal called my mom and she picked me up. I'd rarely seen her that disappointed. I got suspended, and my first thought was whether I was still captain of the wrestling team. I muscled my way back on track. The signs were all there. I was seventeen and didn't want to know what they meant.
 
-After Ramsey, Dave got recruited, Syracuse, Virginia Tech, Wake Forest. He chose Virginia Tech, where Michael Vick showed up and made the playbook obsolete. Dave mentored him, and was on the team that beat Clemson 41-20 in the 2001 Gator Bowl, Vick's last college game. When the dogfighting scandal broke years later he didn't pile on: the guy's in over his head, he'll get a chance to redeem himself. Dave went on to the NFL, third-string behind Peyton Manning at the Colts, then Brett Favre at the Packers, then into coaching, an opportunity at LSU the year Saban won it there. Then he did one of the bravest things I've watched a man do: went to China as a missionary, learned full Mandarin, taught the Bible for years. Those were my active-addiction years; we talked, but not often. The last couple years we've reconnected like no time passed. Dave wrote the foreword to this book. That tells you who he is.
+After Ramsey, Dave got recruited, Syracuse, Virginia Tech, Wake Forest. He chose Virginia Tech, where Michael Vick showed up and made the playbook obsolete. Dave mentored him, and was on the team that beat Clemson 41-20 in the 2001 Gator Bowl, Vick's last college game. When the dogfighting scandal broke years later he didn't pile on: the guy's in over his head, he'll get a chance to redeem himself. Dave went on to the NFL, third-string behind Peyton Manning at the Colts, then Brett Favre at the Packers, then into coaching, an opportunity at LSU the year Saban won it there. Then he did one of the bravest things I've watched a man do: went to China as a missionary, learned full Mandarin, taught the Bible for years. Those were my active-addiction years; we talked, but not often. The last couple years we've reconnected like no time passed. Dave wrote the foreword to this book. That tells you who he is. Dave never had to earn a room; I was still negotiating, and the mat was where the negotiating got settled.
 
 **CHAPTER 7**
 
@@ -1553,7 +1553,7 @@ PART SIX
 *"For my thoughts are not your thoughts, neither are your ways my ways, saith the LORD."*
 *— Isaiah 55:8*
 
-The man who mentored me at the next job lost his twenty-one-year-old son and was back at work inside a month, holding the rest of the team together. His name was Dave, and he taught me how to read a sign when it came. But I'm ahead of the story. After ten years in home health, one of the reps for the company that sells Ozempic started noticing me in offices, asking around about who'd make a good partner. When a position opened she kept calling. You want to apply? No, I said, I'm happy where I'm at. But my friend Keith said, give it a shot. So I interviewed, and I got the job. It was hard to leave. Ten years. Brenda Jahn had been an amazing manager. But I saw it as a chance to learn. When I started at Novo Nordisk I didn't know the difference between Type 1 and Type 2 diabetes. Through the training and the home study I got good at it. Really good.
+The man who mentored me at the next job lost his twenty-one-year-old son and was back at work inside a month, holding the rest of the team together. His name was Dave, and he taught me how to read a sign when it came. But I'm ahead of the story. The recognition I'd stopped chasing had a way of finding me anyway. After ten years in home health, one of the reps for the company that sells Ozempic started noticing me in offices, asking around about who'd make a good partner. When a position opened she kept calling. You want to apply? No, I said, I'm happy where I'm at. But my friend Keith said, give it a shot. So I interviewed, and I got the job. It was hard to leave. Ten years. Brenda Jahn had been an amazing manager. But I saw it as a chance to learn. When I started at Novo Nordisk I didn't know the difference between Type 1 and Type 2 diabetes. Through the training and the home study I got good at it. Really good.
 
 ### *Diabetes Dave*
 
@@ -1800,7 +1800,7 @@ That's what this book is about. Adoption, addiction, recovery, hospice, those ar
 
 I want men to read this and understand that what Lou did is possible, that you can choose a child who isn't yours and love them without condition, without a line you won't cross. There can be more men like Lou. I have to believe that, because if what he did was unrepeatable, then his life was a miracle and nothing more. And Lou wasn't a miracle. He was a man who made a decision and honored it every day for the rest of his life. That's not supernatural. That's available to anyone willing to do it.
 
-Till the day I die I'll think about the man who drove that U-Haul. I understand now what it cost him, every time, and he never once sent me the bill.
+Till the day I die I'll think about the man who drove that U-Haul. I understand now what it cost him, every time, and he never once sent me the bill. And I have one more story to tell you, because I've come to believe he still shows up, even now.
 
 This is his story. Told by the son who almost didn't make it. For every father who stayed when he didn't have to.
 

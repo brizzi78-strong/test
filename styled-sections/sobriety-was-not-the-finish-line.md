@@ -1,6 +1,6 @@
 # **SOBRIETY WAS NOT THE FINISH LINE**
 
-I really thought sobriety was it.
+I really thought sobriety was it. One more finish line to cross, one more way to earn my place back.
 
 Get sober. Stay sober. Live honestly and hope I don't mess up. Make a living on my own. Wake up without shame already sitting in the room. Stop making my family afraid every time the phone rang.
 

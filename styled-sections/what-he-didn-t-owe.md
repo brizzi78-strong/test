@@ -14,7 +14,7 @@ That's what this book is about. Adoption, addiction, recovery, hospice, those ar
 
 I want men to read this and understand that what Lou did is possible, that you can choose a child who isn't yours and love them without condition, without a line you won't cross. There can be more men like Lou. I have to believe that, because if what he did was unrepeatable, then his life was a miracle and nothing more. And Lou wasn't a miracle. He was a man who made a decision and honored it every day for the rest of his life. That's not supernatural. That's available to anyone willing to do it.
 
-Till the day I die I'll think about the man who drove that U-Haul. I understand now what it cost him, every time, and he never once sent me the bill.
+Till the day I die I'll think about the man who drove that U-Haul. I understand now what it cost him, every time, and he never once sent me the bill. And I have one more story to tell you, because I've come to believe he still shows up, even now.
 
 This is his story. Told by the son who almost didn't make it. For every father who stayed when he didn't have to.
 
