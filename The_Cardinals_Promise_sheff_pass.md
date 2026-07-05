@@ -118,6 +118,8 @@ Photographs
 
 # **PROLOGUE**
 
+**Tijuana, Mexico. 2005.**
+
 His hands were around my throat before I understood he had crossed the cell. A small man, wired, moving too fast, meth or something close to it, his eyes too wide and his whole body ready to fly apart. Somebody called him Rico. His face came an inch from mine, and the only English he had came out in a rasp. "Gringo. Gringo. Money."
 
 "No tengo dinero," I told him. The words came out thin. They had taken everything hours before I reached that door — my watch, my bag, whatever was in my pockets.
@@ -931,6 +933,8 @@ The Florida license felt like a loophole I'd found in the universe. Their comput
 *"He brought me up also out of an horrible pit, out of the miry clay, and set my feet upon a rock, and established my goings."*
 *— Psalm 40:2*
 
+**Tijuana, 2005**
+
 The cell was the end of that night. It started as something ordinary, back in my San Diego years, before Florida. A workday, a Tuesday, and when I was done I crossed into Tijuana. I'd crossed enough times to think I understood how it worked, and that was the problem. Do something dangerous often enough and it starts to feel like an errand.
 
 This time a cop saw the watch.
@@ -1018,6 +1022,8 @@ She helped me find work through local connections, and for a while, in her quiet
 
 *"But when he was yet a great way off, his father saw him, and had compassion, and ran."*
 *— Luke 15:20*
+
+**West Palm Beach, fall 2008**
 
 My father rented a U-Haul and drove to West Palm Beach to bring home a dead man. The dead man was me. I just hadn't finished the job yet. Before I tell you about the morning he showed up at my door, I have to show you the room he found me in.
 
@@ -1226,6 +1232,8 @@ I left shaken. That line forced a choice I couldn't hand off. Go back to that wo
 
 *"Except the LORD build the house, they labour in vain that build it."*
 *— Psalm 127:1*
+
+**Pensacola, 2014**
 
 I didn't buy it because it made sense. On paper it didn't. An association fee. Seven hundred sixty-five square feet, one bedroom, one bath, but it was all I needed. It was a condo carved out of a building called the Mirador, Spanish stucco with a Spanish tile roof, a place that looked like it belonged in Southern California or Mexico and somehow held its ground in Pensacola. My unit had its own balcony over the pool. To this day it's the proudest I have ever been of a place I lived.
 
