@@ -926,6 +926,8 @@ Four years sit between those two arrests, and on paper they were the best four y
 
 The second came in 2006, and it landed inside the window. I'd been drinking all night and was sleeping it off on a buddy's couch. I woke up hungry, still half in a blackout, and got in the car to go find food. I hit a little green car in the Del Taco parking lot at 1:43 in the morning, and I left. Then I got pulled over for swerving. Not for the car I'd hit, the cop knew nothing about that. I was just driving that badly. I was eating the nachos when the lights came on. He put me through the field sobriety test, and when it was over I asked him, how did I do? Terrible, the cop said. That's the arrest that ended my career: a man too drunk to know he was drunk, out for something to eat, asking a cop for his score. Different cops, same kind of holding cell, same lawyer, and this time nothing in his voice was reassuring. Second offense is harder to manage, he told me. This will follow you. He was right. There was no pleading this one down. The five years weren't up, so the wet reckless counted as a DUI, exactly as he'd warned, and the new one was sentenced as my second. A license suspension and the threat of jail time. I lost my license, and with it my career, because you can't do medical device sales without driving. The six figures, the trajectory, the identity, gone overnight. Two DUIs and a Tijuana jail in four years. That was the real scorecard.
 
+**Pensacola, 2007**
+
 That's when my dad stepped in. He'd remarried years earlier, Lynda, a nurse, the woman he'd stay married to for the rest of his life, and the two of them had just bought a house in Pensacola. They said they were thinking about relocating and asked if I'd like to come along. I knew what it really was, a rescue mission disguised as a real estate decision. Come down here, he said. Stay at home, figure it out. So I left California and moved to Pensacola in 2007, no active driver's license to my name, a couple months before they arrived, still drinking, still managing, still sure I could outwork the damage. My mom drove my car from California to Pensacola, because her son couldn't legally drive it. I let her. Until Dad and Lynda arrived I had the house to myself, and I slept on the couch. While I waited for them I got real interest from Boston Scientific and Schering-Plough, good money, jobs that could have restarted everything. Then they pulled my driving record. End of that. When your career runs on being in a car, a suspended license isn't a setback, it's a wall.
 
 The Florida license felt like a loophole I'd found in the universe. Their computers didn't talk to California's, so I passed the test, smiled for the camera, and walked out with a clean one, laminated proof that I'd beaten the system. I told myself everything would be different here. But a geographic cure only works if you leave the problem behind, and my problem had a driver's license now, clean and ready to take it anywhere. One night before Dad and Lynda made it down, I went out, and I drove home drunk. At a red light I looked left, and there was a cop. I looked right. Another cop. A drunk man on a suspended license, boxed in on both sides, holding his breath at a light in a town where nobody knew him yet. The light changed. They rolled on. By the grace of God I wasn't pulled over, not that night, not ever. People in the rooms talk about the moment of clarity. That red light was mine. I didn't get sober that night, and I didn't slow down for long. But I never forgot what that box felt like. The old patterns came back like muscle memory, the late nights, the mornings that turned into afternoons, the résumé I kept updating and never sent. I'd drive past Dad and Lynda's house, see him in the driveway washing his car, and think about stopping in. But that meant questions about interviews and the leads I hadn't followed, so it was easier to wave and keep driving. The jobs were gone, and Pensacola without work started to feel like a place I was hiding rather than rebuilding. So when my Aunt Nancey called and said come stay with me, I went.
@@ -1010,6 +1012,8 @@ Because I had Lou. Ensenada clarified something I'd always known without being a
 
 ### *Boca Raton*
 
+**Boca Raton, 2008**
+
 Nancey lived in Boca Raton. She'd always been the one who showed up, wrestling matches, graduations, every moment that mattered. But this was the first time it was just the two of us. No Mom, no Chris, no occasion. Just me at her door with nowhere better to go.
 
 She knew my favorite foods were banana cream pie and chicken parm, so there was always whipped cream in the house and she made me the pies. Not once. Regularly.
@@ -1027,7 +1031,7 @@ She helped me find work through local connections, and for a while, in her quiet
 *"But when he was yet a great way off, his father saw him, and had compassion, and ran."*
 *— Luke 15:20*
 
-**West Palm Beach, fall 2008**
+**West Palm Beach, November 2008**
 
 My father rented a U-Haul and drove to West Palm Beach to bring home a dead man. The dead man was me. I just hadn't finished the job yet. Before I tell you about the morning he showed up at my door, I have to show you the room he found me in.
 
