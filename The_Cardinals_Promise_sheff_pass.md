@@ -216,6 +216,8 @@ PART ONE
 
 # **THE ESCAPE**
 
+*Before I chose anything else, I chose a father.*
+
 **CHAPTER 1**
 
 ## **Mexico City — The Escape**
@@ -492,6 +494,8 @@ It took me years to see what he had handed me. I make my living showing up. I wa
 PART TWO
 
 # **THE MAT**
+
+*Love came free at home. Everywhere else, I thought you had to win it.*
 
 **CHAPTER 6**
 
@@ -804,6 +808,8 @@ PART THREE
 
 # **THE FALL**
 
+*Everything I'd built was borrowed. This is what the repo man looks like.*
+
 **CHAPTER 11**
 
 ## **My Brother's Keeper**
@@ -1110,6 +1116,8 @@ PART FOUR
 
 # **GETTING SQUARE**
 
+*You can't pay back a man who never sent a bill. You can pass it on.*
+
 **CHAPTER 17**
 
 ## **Chumuckla**
@@ -1384,6 +1392,8 @@ PART FIVE
 
 # **HOPE**
 
+*She said, I will love you no matter what. I'd heard that sentence once before — proved, not spoken.*
+
 **CHAPTER 27**
 
 ## **Hope**
@@ -1545,6 +1555,8 @@ Jason Huet has seen both halves of my life. Next door in Stanton Hall at eightee
 PART SIX
 
 # **THE LAST CHAPTER**
+
+*Presence, repeated, until the end. His, then mine.*
 
 **CHAPTER 29**
 
