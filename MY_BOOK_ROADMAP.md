@@ -1,5 +1,11 @@
 # My Book Roadmap — Memoir, Finished Manuscript, Zero Audience
 
+> **Update:** the book is *The Cardinals Promise* (caregiving memoir dedicated to Dad),
+> with a companion practical guide, *The Cardinals Toolkit*. The theme work, hook
+> framings, reader magnet, and pitch lanes that were placeholders below are now
+> resolved in [CARDINALS_STRATEGY.md](CARDINALS_STRATEGY.md) — read it alongside
+> this roadmap; the phases and schedule here still govern.
+
 The [thesis](BOOK_SALES_THESIS.md) applied to this specific situation. Profile:
 
 | Fact | Implication |
