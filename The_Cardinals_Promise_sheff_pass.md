@@ -776,6 +776,8 @@ On the way out, a waitress ran into the parking lot after us and handed me her p
 *"I have seen all the works that are done under the sun; and, behold, all is vanity and vexation of spirit."*
 *— Ecclesiastes 1:14*
 
+**Cancun, spring 1999**
+
 I was chatting with Eminem when somebody suggested a photo. He turned to the camera, flipped it off, and that was the shot. C'mon, man, I said, I wanted to show that to my grandma. He didn't say a word. He just walked off.
 
 That was the week MTV put my face on national television, and I still don't entirely know how it happened. Let me back up.
