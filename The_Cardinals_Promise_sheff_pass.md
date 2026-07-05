@@ -1076,6 +1076,8 @@ But I think about it all the time now. What did he owe me at that point, a grown
 *"Out of the belly of hell cried I, and thou heardest my voice."*
 *— Jonah 2:2*
 
+**New Orleans, Christmas 2008**
+
 There was a night I almost slept under a bridge.
 
 The rescue had bought me time, and I used it to get worse. It was Christmas, December 2008, and I went down to New Orleans to spend it with my mom.
