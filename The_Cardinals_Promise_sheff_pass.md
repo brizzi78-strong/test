@@ -854,6 +854,8 @@ That's my brother. The DMV, India, the Bahamas, the ultimatum that saved my life
 *"Selfishness — self-centeredness! That, we think, is the root of our troubles."*
 *— Bill Wilson, Alcoholics Anonymous*
 
+**San Diego, 2002**
+
 My friend Angela called me from Chicago. You're not going to believe this, she said. I'm standing in the Abercrombie & Fitch on Michigan Avenue, I looked up at the screen, and there you are. Your commercial. For about a minute that felt like arriving. Then it passed straight through me, the way everything did back then, and the hunger underneath was still there.
 
 After Oxford I pointed the car west and drove it straight at the only thing I knew how to do, which was win. My first real job out of college was managing an Abercrombie & Fitch in San Diego. I had one speed, the same one that got me through weight cuts and 6 a.m. practices, and I brought it to folding polo shirts in a mall. I outworked everyone on staff, learned the inventory numbers cold, caught problems before the managers did and fixed them without being asked. Put a scoreboard in front of me and I was going to be at the top of it.
@@ -1382,6 +1384,8 @@ PART FIVE
 
 *"Hope deferred maketh the heart sick: but when the desire cometh, it is a tree of life."*
 *— Proverbs 13:12*
+
+**Pensacola, 2017**
 
 The most important person I would meet sober didn't come from a meeting room. She came from a dating profile that told me not to write to her. By the time I opened Match.com I wasn't looking for anything. I'd been single a while, settled into my little life, my little condo, okay with it. I got on anyway. And there was this profile. The name on it: Please Read My Profile. She was tired of guys messaging without reading a word she wrote. Blonde, beautiful, a pharmacist. Ten years younger than me, right at the edge of what I'd consider. The profile said she was studying for the boards and planning to move to Colorado. Don't message me if you're local in Pensacola.
 
