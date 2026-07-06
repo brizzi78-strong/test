@@ -1,0 +1,81 @@
+{
+  "$comment": "Machine-checkable security claims for CardToken. Every trust claim made in TOKEN_LAUNCH_STRATEGY.md and the contract natspec must appear here, mapped to executable evidence. Run `npm run verify` — it fails if any claim's evidence is missing, stale, or failing. Do not edit a claim without editing the code/tests that back it, and vice versa.",
+  "contract": "CardToken",
+  "artifact": "artifacts/contracts/CardToken.sol/CardToken.json",
+  "claims": [
+    {
+      "id": "fixed-supply",
+      "statement": "Total supply is exactly 250,000,000 CARD, minted once at deployment to the deployer.",
+      "source": "TOKEN_LAUNCH_STRATEGY.md § Token Parameters",
+      "evidence": [
+        { "type": "solidity-test", "file": "contracts/CardToken.t.sol", "name": "test_FullSupplyMintedToDeployer" },
+        { "type": "node-test", "file": "test/CardToken.ts", "title": "mints the full fixed supply to the deployer" },
+        { "type": "invariant", "file": "contracts/CardTokenInvariants.t.sol", "name": "invariant_TotalSupplyConstant" }
+      ]
+    },
+    {
+      "id": "supply-immutable",
+      "statement": "No code path can ever increase or decrease the supply: there is no mint, burn, or rebase function.",
+      "source": "CardToken.sol natspec; TOKEN_LAUNCH_STRATEGY.md § Launch Sequence step 1",
+      "evidence": [
+        { "type": "abi-absent", "patterns": ["mint", "burn", "issue", "rebase"] },
+        { "type": "invariant", "file": "contracts/CardTokenInvariants.t.sol", "name": "invariant_TotalSupplyConstant" },
+        { "type": "invariant", "file": "contracts/CardTokenInvariants.t.sol", "name": "invariant_BalancesSumToTotalSupply" }
+      ]
+    },
+    {
+      "id": "no-pause",
+      "statement": "Transfers can never be paused or frozen.",
+      "source": "CardToken.sol natspec",
+      "evidence": [
+        { "type": "abi-absent", "patterns": ["pause", "freeze"] }
+      ]
+    },
+    {
+      "id": "no-blacklist",
+      "statement": "No address can be blacklisted or blocked from transferring.",
+      "source": "CardToken.sol natspec; TOKEN_LAUNCH_STRATEGY.md § Launch Sequence step 1",
+      "evidence": [
+        { "type": "abi-absent", "patterns": ["blacklist", "blocklist", "denylist", "ban"] }
+      ]
+    },
+    {
+      "id": "no-transfer-tax",
+      "statement": "Transfers move exactly the requested amount; there is no tax, fee, or skim.",
+      "source": "CardToken.sol natspec; TOKEN_LAUNCH_STRATEGY.md § Launch Sequence step 1",
+      "evidence": [
+        { "type": "solidity-test", "file": "contracts/CardToken.t.sol", "name": "test_Transfer" },
+        { "type": "invariant", "file": "contracts/CardTokenInvariants.t.sol", "name": "invariant_BalancesSumToTotalSupply" }
+      ],
+      "notes": "The CardTokenHandler additionally asserts exact-amount deltas inside every fuzzed transfer/transferFrom sequence."
+    },
+    {
+      "id": "owner-powerless",
+      "statement": "Ownership grants no power over the token: the only state-changing functions are the standard ERC-20 surface plus the two Ownable handover functions, none of which touch balances or supply.",
+      "source": "CardToken.sol natspec",
+      "evidence": [
+        { "type": "abi-write-surface", "allowed": ["approve", "transfer", "transferFrom", "renounceOwnership", "transferOwnership"] },
+        { "type": "solidity-test", "file": "contracts/CardToken.t.sol", "name": "test_TransfersStillWorkAfterRenounce" }
+      ]
+    },
+    {
+      "id": "renounce-works",
+      "statement": "renounceOwnership() sets the owner to the zero address, permanently and verifiably on-chain.",
+      "source": "TOKEN_LAUNCH_STRATEGY.md § Launch Sequence step 6",
+      "evidence": [
+        { "type": "solidity-test", "file": "contracts/CardToken.t.sol", "name": "test_RenounceOwnershipSetsOwnerToZero" },
+        { "type": "node-test", "file": "test/CardToken.ts", "title": "renounces ownership to the zero address" },
+        { "type": "invariant", "file": "contracts/CardTokenInvariants.t.sol", "name": "invariant_RenounceIsPermanent" }
+      ]
+    },
+    {
+      "id": "balance-enforced",
+      "statement": "A transfer exceeding the sender's balance always reverts.",
+      "source": "ERC-20 baseline behavior",
+      "evidence": [
+        { "type": "solidity-test", "file": "contracts/CardToken.t.sol", "name": "test_RevertWhen_TransferExceedsBalance" },
+        { "type": "node-test", "file": "test/CardToken.ts", "title": "reverts when transferring more than the sender's balance" }
+      ]
+    }
+  ]
+}

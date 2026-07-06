@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "build": "hardhat build",
-    "test": "hardhat test"
+    "test": "hardhat test",
+    "verify": "node scripts/verify-claims.mjs"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-ignition": "^3.1.8",
