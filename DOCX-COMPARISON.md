@@ -42,7 +42,7 @@ interviews and remains the manuscript of record.
 6. The Tuesday group at the round table in a Methodist church basement.
 
 UPDATE (July 5, 2026): Rob confirmed items 1-6 are all real. All six are now
-woven into the manuscript: the E.T. story opens ch 1; the brothers are in ch 3;
+woven into the manuscript: the E.T. story opens ch 1; the brothers were added to ch 3 and then removed at Rob's request (July 6);
 the Gulf Breeze routine and the round table are in ch 18; the 2011 bay walk
 closes ch 20; the gray suit closes ch 31. Only the confirmed memory cores were
 used - surrounding docx prose (bench cat, pelicans, wedding-suit linkage,
