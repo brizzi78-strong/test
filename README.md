@@ -1,5 +1,7 @@
 # CARD Token — Foundry/Hardhat Skeleton
 
+[![verify-claims](https://github.com/brizzi78-strong/test/actions/workflows/verify.yml/badge.svg)](https://github.com/brizzi78-strong/test/actions/workflows/verify.yml)
+
 A hybrid smart-contract project skeleton that works with **both** toolchains:
 
 - **Hardhat 3** — TypeScript tests (`node:test` + viem) and Foundry-compatible
