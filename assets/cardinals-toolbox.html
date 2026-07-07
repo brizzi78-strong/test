@@ -1,0 +1,552 @@
+<title>The Cardinal's Toolbox</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root {
+    --paper: #FAF7F2;
+    --sheet: #FFFFFF;
+    --ink: #2A231E;
+    --muted: #70645A;
+    --cardinal: #B3222B;
+    --cardinal-deep: #8E1B22;
+    --line: #D9CFC3;
+    --line-soft: #E8E1D7;
+    --fill-line: #C9BEB1;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #211B17;
+      --sheet: #2A231E;
+      --ink: #EDE6DD;
+      --muted: #A79A8E;
+      --cardinal: #E0575E;
+      --cardinal-deep: #E87A80;
+      --line: #4A4038;
+      --line-soft: #3A322B;
+      --fill-line: #55483E;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #211B17;
+    --sheet: #2A231E;
+    --ink: #EDE6DD;
+    --muted: #A79A8E;
+    --cardinal: #E0575E;
+    --cardinal-deep: #E87A80;
+    --line: #4A4038;
+    --line-soft: #3A322B;
+    --fill-line: #55483E;
+  }
+  :root[data-theme="light"] {
+    --paper: #FAF7F2;
+    --sheet: #FFFFFF;
+    --ink: #2A231E;
+    --muted: #70645A;
+    --cardinal: #B3222B;
+    --cardinal-deep: #8E1B22;
+    --line: #D9CFC3;
+    --line-soft: #E8E1D7;
+    --fill-line: #C9BEB1;
+  }
+
+  html { background: var(--paper); }
+  body {
+    margin: 0;
+    color: var(--ink);
+    font-family: Charter, "Bitstream Charter", Georgia, Cambria, serif;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 44rem; margin: 0 auto; padding: 3rem 1.25rem 5rem; }
+
+  /* ---------- header ---------- */
+  .masthead { text-align: left; padding-bottom: 2.25rem; border-bottom: 3px solid var(--cardinal); margin-bottom: 2.5rem; }
+  .eyebrow {
+    font-family: ui-sans-serif, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: .72rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--cardinal); margin: 0 0 .8rem;
+  }
+  .masthead h1 { font-size: clamp(2.1rem, 6vw, 3rem); line-height: 1.08; margin: 0 0 .9rem; font-weight: 700; text-wrap: balance; }
+  .masthead .tagline { font-size: 1.15rem; font-style: italic; color: var(--muted); margin: 0; max-width: 32rem; }
+  .masthead .from { font-family: ui-sans-serif, system-ui, sans-serif; font-size: .8rem; color: var(--muted); margin-top: 1.4rem; }
+
+  /* ---------- intro / how it works ---------- */
+  .howto { margin: 0 0 3rem; }
+  .howto p { margin: 0 0 1rem; max-width: 38rem; }
+  .toc {
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    gap: .4rem 1.5rem; padding: 1.25rem 1.4rem; margin-top: 1.5rem;
+    background: var(--sheet); border: 1px solid var(--line); border-radius: 4px;
+    font-size: .9rem; list-style: none; counter-reset: tool;
+  }
+  .toc li { counter-increment: tool; }
+  .toc a { color: var(--ink); text-decoration: none; }
+  .toc a::before { content: counter(tool, decimal-leading-zero) "  "; color: var(--cardinal); font-weight: 600; font-variant-numeric: tabular-nums; }
+  .toc a:hover { color: var(--cardinal); }
+
+  /* ---------- the recurring toolbox box ---------- */
+  .toolbox-box {
+    border: 1.5px solid var(--cardinal);
+    border-left-width: 6px;
+    border-radius: 3px;
+    padding: .95rem 1.15rem;
+    margin: 0 0 1.75rem;
+    background: color-mix(in srgb, var(--cardinal) 5%, var(--sheet));
+  }
+  .toolbox-box .tb-label {
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: .7rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase;
+    color: var(--cardinal); display: flex; align-items: center; gap: .5rem; margin-bottom: .35rem;
+  }
+  .tb-mark { width: .85em; height: .7em; display: inline-block; position: relative; }
+  .tb-mark::before { content: ""; position: absolute; inset: 30% 0 0 0; background: var(--cardinal); border-radius: 1px; }
+  .tb-mark::after { content: ""; position: absolute; top: 0; left: 28%; right: 28%; height: 34%; border: 1.5px solid var(--cardinal); border-bottom: none; border-radius: 2px 2px 0 0; }
+  .toolbox-box .tb-use { font-style: italic; margin: 0; font-size: .98rem; }
+
+  /* ---------- sheets ---------- */
+  .sheet {
+    background: var(--sheet); border: 1px solid var(--line); border-radius: 4px;
+    padding: 2rem 2rem 2.25rem; margin: 0 0 2.5rem;
+  }
+  .sheet h2 { font-size: 1.6rem; margin: 0 0 .4rem; line-height: 1.15; text-wrap: balance; }
+  .sheet .lead { color: var(--muted); margin: 0 0 1.5rem; font-size: .98rem; max-width: 36rem; }
+
+  .sheet h3 {
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--cardinal-deep); margin: 1.75rem 0 .75rem;
+    padding-bottom: .35rem; border-bottom: 1px solid var(--line-soft);
+  }
+  .sheet h3:first-of-type { margin-top: 0; }
+
+  /* fill-in fields */
+  .fields { display: flex; flex-direction: column; gap: 1.05rem; font-family: ui-sans-serif, system-ui, sans-serif; }
+  .field .q { font-size: .92rem; font-weight: 600; margin: 0 0 .45rem; font-family: Charter, Georgia, serif; font-weight: 700; }
+  .lines { display: flex; flex-direction: column; gap: 1.5rem; }
+  .lines > span { display: block; border-bottom: 1px solid var(--fill-line); height: 1px; }
+  .lines.h2 { padding-top: 1.4rem; }
+  .lines.h3 { padding-top: 1.4rem; } .lines.h3 > span:first-child { margin-top: 0; }
+
+  /* checklists */
+  .checks { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: .6rem; font-family: ui-sans-serif, system-ui, sans-serif; font-size: .95rem; }
+  .checks li { display: flex; gap: .7rem; align-items: baseline; }
+  .checks .box { flex: none; width: .85rem; height: .85rem; border: 1.5px solid var(--muted); border-radius: 2px; transform: translateY(.12rem); }
+  .checks .blank { border-bottom: 1px solid var(--fill-line); flex: 1; align-self: flex-end; height: 1.1rem; min-width: 6rem; }
+  .checks-2col { columns: 2; column-gap: 2.5rem; }
+  .checks-2col li { break-inside: avoid; margin-bottom: .6rem; }
+  @media (max-width: 540px) { .checks-2col { columns: 1; } }
+
+  /* tables */
+  .tablewrap { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; font-family: ui-sans-serif, system-ui, sans-serif; font-size: .88rem; }
+  th { text-align: left; font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); font-weight: 600; padding: .4rem .6rem; border-bottom: 2px solid var(--line); }
+  td { border-bottom: 1px solid var(--line-soft); padding: 1.15rem .6rem .35rem; }
+  td:first-child, th:first-child { padding-left: 0; }
+
+  .note { font-size: .88rem; color: var(--muted); font-style: italic; margin-top: 1.5rem; }
+
+  /* footer */
+  .colophon { text-align: center; color: var(--muted); font-style: italic; margin-top: 3.5rem; }
+  .colophon .rule { width: 3rem; height: 3px; background: var(--cardinal); margin: 0 auto 1.2rem; }
+
+  /* ---------- print ---------- */
+  @media print {
+    :root { --paper: #fff; --sheet: #fff; --ink: #000; --muted: #444; --cardinal: #8E1B22; --cardinal-deep: #8E1B22; --line: #999; --line-soft: #ccc; --fill-line: #777; }
+    html, body { background: #fff; }
+    .wrap { max-width: none; padding: 0; }
+    .toc { display: none; }
+    .sheet { border: none; border-radius: 0; padding: 0; margin: 0; break-before: page; }
+    .masthead, .howto { break-after: page; border-color: #8E1B22; }
+    .toolbox-box { background: #fff; }
+    a { color: inherit; text-decoration: none; }
+  }
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="eyebrow">Aging Parent, Caregiver Hero</p>
+    <h1>The Cardinal&rsquo;s Toolbox</h1>
+    <p class="tagline">Practical tools to help you stay organized and prepared.</p>
+    <p class="from">Rob Brizzi, CDP &middot; The Cardinal Toolkit &middot; Cardinal Promise Press</p>
+  </header>
+
+  <section class="howto">
+    <p>The chapters of this book are the guidance — the calm voice, the education, the decisions. These pages are the clipboard. When you don&rsquo;t know what to do, stop spinning, write it down, and take the next step.</p>
+    <p>Every toolbox page opens with the same red box. When you see it, you&rsquo;re not reading anymore — you&rsquo;re acting.</p>
+
+    <div class="toolbox-box" role="note">
+      <p class="tb-label"><span class="tb-mark" aria-hidden="true"></span>The Cardinal&rsquo;s Toolbox</p>
+      <p class="tb-use">Use this page when you need one clear next step.</p>
+    </div>
+
+    <ol class="toc" aria-label="The ten tools">
+      <li><a href="#quick-start">Quick Start Guide</a></li>
+      <li><a href="#action-checklists">Action Checklists</a></li>
+      <li><a href="#fall-log">Fall Log</a></li>
+      <li><a href="#medication-list">Medication List</a></li>
+      <li><a href="#doctor-questions">Doctor Questions</a></li>
+      <li><a href="#hospital-bag">Hospital Bag List</a></li>
+      <li><a href="#facility-tour">Facility Tour Checklist</a></li>
+      <li><a href="#hospice-questions">Hospice Questions</a></li>
+      <li><a href="#important-contacts">Important Contacts</a></li>
+      <li><a href="#family-meeting">Family Meeting Notes</a></li>
+    </ol>
+  </section>
+
+  <!-- 01 QUICK START -->
+  <article class="sheet" id="quick-start">
+    <div class="toolbox-box">
+      <p class="tb-label"><span class="tb-mark" aria-hidden="true"></span>The Cardinal&rsquo;s Toolbox</p>
+      <p class="tb-use">Use this page when you don&rsquo;t know where to begin.</p>
+    </div>
+    <h2>Quick Start Guide</h2>
+    <p class="lead">Something changed and your head is spinning. Answer these four questions, in order. That&rsquo;s the whole job right now.</p>
+    <div class="fields">
+      <div class="field">
+        <p class="q">1. What is happening, in one sentence?</p>
+        <div class="lines"><span></span><span></span></div>
+      </div>
+      <div class="field">
+        <p class="q">2. Is anyone unsafe today? (If yes — call the doctor or 911 first. The rest of this page can wait.)</p>
+        <div class="lines"><span></span></div>
+      </div>
+      <div class="field">
+        <p class="q">3. Who is the next phone call?</p>
+        <div class="lines"><span></span></div>
+      </div>
+      <div class="field">
+        <p class="q">4. What are the first three steps — small ones count?</p>
+        <div class="lines"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+    <p class="note">You don&rsquo;t have to do this perfectly. You have to do the next thing.</p>
+  </article>
+
+  <!-- 02 ACTION CHECKLISTS -->
+  <article class="sheet" id="action-checklists">
+    <div class="toolbox-box">
+      <p class="tb-label"><span class="tb-mark" aria-hidden="true"></span>The Cardinal&rsquo;s Toolbox</p>
+      <p class="tb-use">Use this page when a big moment just happened and you need to know what&rsquo;s next.</p>
+    </div>
+    <h2>Action Checklists</h2>
+    <p class="lead">Three of the moments that start the caregiving road. Check what&rsquo;s done. Circle what&rsquo;s stuck.</p>
+
+    <h3>After a new diagnosis</h3>
+    <ul class="checks">
+      <li><span class="box"></span>Ask the doctor: What does this mean for daily life in the next 6 months?</li>
+      <li><span class="box"></span>Get a copy of the visit summary before you leave</li>
+      <li><span class="box"></span>Start the Medication List (page in this toolbox)</li>
+      <li><span class="box"></span>Ask who coordinates care — get a name and a direct number</li>
+      <li><span class="box"></span>Tell one family member today; schedule a family meeting this week</li>
+    </ul>
+
+    <h3>Before a hospital discharge</h3>
+    <ul class="checks">
+      <li><span class="box"></span>Ask for the discharge plan in writing — don&rsquo;t leave without it</li>
+      <li><span class="box"></span>Confirm every medication change against your list</li>
+      <li><span class="box"></span>Ask: What would send us back to the ER, and what do we do instead?</li>
+      <li><span class="box"></span>Ask about home health, therapy, or equipment orders — who arranges them, and when</li>
+      <li><span class="box"></span>Book the follow-up appointment before you leave the building</li>
+    </ul>
+
+    <h3>New to caregiving</h3>
+    <ul class="checks">
+      <li><span class="box"></span>Locate the important papers: insurance cards, ID, medication bottles</li>
+      <li><span class="box"></span>Ask about (or start) a durable power of attorney and health care proxy</li>
+      <li><span class="box"></span>Fill in Important Contacts (page in this toolbox)</li>
+      <li><span class="box"></span>Pick one person who can relieve you for two hours a week</li>
+      <li><span class="box"></span>Write down what Mom or Dad says they want — in their words</li>
+    </ul>
+  </article>
+
+  <!-- 03 FALL LOG -->
+  <article class="sheet" id="fall-log">
+    <div class="toolbox-box">
+      <p class="tb-label"><span class="tb-mark" aria-hidden="true"></span>The Cardinal&rsquo;s Toolbox</p>
+      <p class="tb-use">Use this page every time there is a fall — even a small one nobody wants to mention.</p>
+    </div>
+    <h2>Fall Log</h2>
+    <p class="lead">Falls whisper before they shout. A pattern on paper is what turns &ldquo;Mom slipped again&rdquo; into a doctor taking action.</p>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th style="width:18%">Date &amp; time</th><th style="width:22%">Where it happened</th><th style="width:30%">What happened</th><th style="width:15%">Injury?</th><th style="width:15%">Doctor told?</th></tr>
+        </thead>
+        <tbody>
+          <tr><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="fields" style="margin-top:1.5rem">
+      <div class="field">
+        <p class="q">What changed after the falls? (rugs removed, grab bars, walker, medication review&hellip;)</p>
+        <div class="lines"><span></span><span></span></div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 04 MEDICATION LIST -->
+  <article class="sheet" id="medication-list">
+    <div class="toolbox-box">
+      <p class="tb-label"><span class="tb-mark" aria-hidden="true"></span>The Cardinal&rsquo;s Toolbox</p>
+      <p class="tb-use">Use this page at every appointment, every ER visit, every discharge. Keep it current; keep a copy in your phone.</p>
+    </div>
+    <h2>Medication List</h2>
+    <p class="lead">One page that answers the question every doctor and nurse will ask. Include vitamins and over-the-counter medicines — they count.</p>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th style="width:24%">Medication</th><th style="width:14%">Dose</th><th style="width:18%">When taken</th><th style="width:22%">Prescribed by</th><th style="width:22%">What it&rsquo;s for</th></tr>
+        </thead>
+        <tbody>
+          <tr><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="fields" style="margin-top:1.5rem">
+      <div class="field">
+        <p class="q">Allergies and bad reactions:</p>
+        <div class="lines"><span></span></div>
+      </div>
+      <div class="field">
+        <p class="q">Pharmacy name &amp; phone:</p>
+        <div class="lines"><span></span></div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 05 DOCTOR QUESTIONS -->
+  <article class="sheet" id="doctor-questions">
+    <div class="toolbox-box">
+      <p class="tb-label"><span class="tb-mark" aria-hidden="true"></span>The Cardinal&rsquo;s Toolbox</p>
+      <p class="tb-use">Use this page the night before the appointment — and in the parking lot right after.</p>
+    </div>
+    <h2>Doctor Questions</h2>
+    <p class="lead">Fifteen minutes goes fast. Walk in with your top three questions and walk out with answers written down.</p>
+
+    <h3>Before the visit</h3>
+    <div class="fields">
+      <div class="field">
+        <p class="q">My top three questions (put the scariest one first — don&rsquo;t save it for the doorknob):</p>
+        <div class="lines"><span></span><span></span><span></span></div>
+      </div>
+      <div class="field">
+        <p class="q">What&rsquo;s changed since last visit? (sleep, appetite, memory, mood, falls)</p>
+        <div class="lines"><span></span><span></span></div>
+      </div>
+    </div>
+
+    <h3>During the visit — ask these in plain words</h3>
+    <ul class="checks">
+      <li><span class="box"></span>What is the most important thing for us to watch at home?</li>
+      <li><span class="box"></span>Is anything on the medication list working against something else?</li>
+      <li><span class="box"></span>What would make you say it&rsquo;s time for more help at home?</li>
+      <li><span class="box"></span>Can you say that again in plain language? (You&rsquo;re allowed to ask twice.)</li>
+    </ul>
+
+    <h3>After the visit</h3>
+    <div class="fields">
+      <div class="field">
+        <p class="q">What the doctor said, in my own words:</p>
+        <div class="lines"><span></span><span></span></div>
+      </div>
+      <div class="field">
+        <p class="q">What changes now (medications, appointments, watch-fors):</p>
+        <div class="lines"><span></span><span></span></div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 06 HOSPITAL BAG -->
+  <article class="sheet" id="hospital-bag">
+    <div class="toolbox-box">
+      <p class="tb-label"><span class="tb-mark" aria-hidden="true"></span>The Cardinal&rsquo;s Toolbox</p>
+      <p class="tb-use">Use this page before you need it. Pack the bag now; keep it by the door.</p>
+    </div>
+    <h2>Hospital Bag List</h2>
+    <p class="lead">ER trips don&rsquo;t make appointments. A packed bag turns a panicked scramble into picking something up on the way out.</p>
+
+    <h3>For your parent</h3>
+    <ul class="checks checks-2col">
+      <li><span class="box"></span>Photo ID &amp; insurance cards (copies)</li>
+      <li><span class="box"></span>Medication List (from this toolbox)</li>
+      <li><span class="box"></span>Copy of POA / health care proxy / DNR if one exists</li>
+      <li><span class="box"></span>Glasses, hearing aids &amp; batteries, dentures case</li>
+      <li><span class="box"></span>Comfortable change of clothes &amp; slip-proof socks</li>
+      <li><span class="box"></span>Sweater (hospitals are cold)</li>
+      <li><span class="box"></span>Toothbrush &amp; toiletries</li>
+      <li><span class="box"></span>Phone charger (long cable)</li>
+      <li><span class="box"></span>A comfort item — photo, small blanket</li>
+    </ul>
+
+    <h3>For you, the caregiver</h3>
+    <ul class="checks checks-2col">
+      <li><span class="box"></span>Your own charger &amp; snacks</li>
+      <li><span class="box"></span>Notebook &amp; pen — write down every name and every instruction</li>
+      <li><span class="box"></span>Important Contacts page (from this toolbox)</li>
+      <li><span class="box"></span>Water bottle</li>
+      <li><span class="box"></span>Any of your own daily medications</li>
+      <li><span class="box"></span>Something to read — waiting is the job</li>
+    </ul>
+  </article>
+
+  <!-- 07 FACILITY TOUR -->
+  <article class="sheet" id="facility-tour">
+    <div class="toolbox-box">
+      <p class="tb-label"><span class="tb-mark" aria-hidden="true"></span>The Cardinal&rsquo;s Toolbox</p>
+      <p class="tb-use">Use this page on every tour — same questions, every facility, so you can compare honestly.</p>
+    </div>
+    <h2>Facility Tour Checklist</h2>
+    <p class="lead">Be an informed buyer. The lobby is staged; lunch on a Tuesday is not. Trust your eyes and your nose, and write it down before you drive away.</p>
+    <div class="fields">
+      <div class="field">
+        <p class="q">Facility name / date of tour:</p>
+        <div class="lines"><span></span></div>
+      </div>
+    </div>
+
+    <h3>Ask them</h3>
+    <ul class="checks">
+      <li><span class="box"></span>What&rsquo;s the staff-to-resident ratio — days, nights, and weekends?</li>
+      <li><span class="box"></span>What exactly is included in the base rate, and what costs extra?</li>
+      <li><span class="box"></span>What happens when care needs increase? What would make you ask us to leave?</li>
+      <li><span class="box"></span>How do you communicate with families — and how fast after an incident?</li>
+      <li><span class="box"></span>May I see the most recent state inspection report?</li>
+    </ul>
+
+    <h3>Watch for yourself</h3>
+    <ul class="checks">
+      <li><span class="box"></span>Do staff greet residents by name?</li>
+      <li><span class="box"></span>Are residents out of their rooms, engaged — or parked in hallways?</li>
+      <li><span class="box"></span>How does it smell — honestly?</li>
+      <li><span class="box"></span>Would Mom or Dad actually eat this food?</li>
+    </ul>
+
+    <div class="fields" style="margin-top:1.5rem">
+      <div class="field">
+        <p class="q">Gut feeling when I walked out (write it now, not later):</p>
+        <div class="lines"><span></span><span></span></div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 08 HOSPICE QUESTIONS -->
+  <article class="sheet" id="hospice-questions">
+    <div class="toolbox-box">
+      <p class="tb-label"><span class="tb-mark" aria-hidden="true"></span>The Cardinal&rsquo;s Toolbox</p>
+      <p class="tb-use">Use this page when someone says the word &ldquo;hospice&rdquo; — before fear fills in the blanks.</p>
+    </div>
+    <h2>Hospice Questions</h2>
+    <p class="lead">Hospice is not giving up. It is choosing comfort, presence, and support — for the person and for you. These questions help you choose well.</p>
+
+    <h3>Ask the hospice team</h3>
+    <ul class="checks">
+      <li><span class="box"></span>What does hospice actually provide — visits, equipment, medications, and how often?</li>
+      <li><span class="box"></span>Who do we call at 2 a.m., and who shows up?</li>
+      <li><span class="box"></span>What support is there for the family — counseling, respite, chaplain, bereavement?</li>
+      <li><span class="box"></span>What will you help us understand about what&rsquo;s coming, so nothing surprises us?</li>
+      <li><span class="box"></span>What does Medicare cover, and is there anything we would ever be billed for?</li>
+      <li><span class="box"></span>If things improve, can we pause or leave hospice? (Yes — ask them to explain how.)</li>
+    </ul>
+
+    <h3>Ask each other</h3>
+    <div class="fields">
+      <div class="field">
+        <p class="q">What matters most to Mom or Dad now — comfort, home, people, quiet?</p>
+        <div class="lines"><span></span><span></span></div>
+      </div>
+      <div class="field">
+        <p class="q">What do we want to make sure gets said, while it can still be said?</p>
+        <div class="lines"><span></span><span></span></div>
+      </div>
+    </div>
+    <p class="note">You don&rsquo;t have to be unafraid. You have to walk in anyway. That&rsquo;s the whole promise.</p>
+  </article>
+
+  <!-- 09 IMPORTANT CONTACTS -->
+  <article class="sheet" id="important-contacts">
+    <div class="toolbox-box">
+      <p class="tb-label"><span class="tb-mark" aria-hidden="true"></span>The Cardinal&rsquo;s Toolbox</p>
+      <p class="tb-use">Use this page so the right number is never a frantic search. Post a copy on the refrigerator.</p>
+    </div>
+    <h2>Important Contacts</h2>
+    <p class="lead">Fill it in once, update it when anything changes, and give a copy to every sibling.</p>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th style="width:34%">Who</th><th style="width:33%">Name</th><th style="width:33%">Phone</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Primary doctor</td><td></td><td></td></tr>
+          <tr><td>Specialist</td><td></td><td></td></tr>
+          <tr><td>Pharmacy</td><td></td><td></td></tr>
+          <tr><td>Care coordinator / case manager</td><td></td><td></td></tr>
+          <tr><td>Home health / hospice agency</td><td></td><td></td></tr>
+          <tr><td>Insurance (Medicare / Medicaid / supplement)</td><td></td><td></td></tr>
+          <tr><td>Power of attorney</td><td></td><td></td></tr>
+          <tr><td>Attorney / elder-law</td><td></td><td></td></tr>
+          <tr><td>Neighbor with a key</td><td></td><td></td></tr>
+          <tr><td>Family — first call</td><td></td><td></td></tr>
+          <tr><td>Family — second call</td><td></td><td></td></tr>
+          <tr><td>Faith community / chaplain</td><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </article>
+
+  <!-- 10 FAMILY MEETING NOTES -->
+  <article class="sheet" id="family-meeting">
+    <div class="toolbox-box">
+      <p class="tb-label"><span class="tb-mark" aria-hidden="true"></span>The Cardinal&rsquo;s Toolbox</p>
+      <p class="tb-use">Use this page when the family needs to stop guessing and get aligned.</p>
+    </div>
+    <h2>Family Meeting Notes</h2>
+    <p class="lead">One page, five questions, everyone in the room or on the phone. Disagreement is allowed; leaving without a next step is not.</p>
+    <div class="fields">
+      <div class="field">
+        <p class="q">Date / who&rsquo;s here:</p>
+        <div class="lines"><span></span></div>
+      </div>
+      <div class="field">
+        <p class="q">What changed?</p>
+        <div class="lines"><span></span><span></span></div>
+      </div>
+      <div class="field">
+        <p class="q">What are we worried about?</p>
+        <div class="lines"><span></span><span></span></div>
+      </div>
+      <div class="field">
+        <p class="q">What does Mom/Dad want most?</p>
+        <div class="lines"><span></span><span></span></div>
+      </div>
+      <div class="field">
+        <p class="q">What decision needs to be made now?</p>
+        <div class="lines"><span></span><span></span></div>
+      </div>
+      <div class="field">
+        <p class="q">Who is responsible for the next step?</p>
+        <div class="lines"><span></span><span></span></div>
+      </div>
+    </div>
+    <p class="note">Next meeting date before anyone hangs up: ____________________</p>
+  </article>
+
+  <footer class="colophon">
+    <div class="rule"></div>
+    <p>Story, then toolbox, then the next right action.<br>From <em>The Cardinal Toolkit</em> &mdash; Rob Brizzi, CDP &middot; Cardinal Promise Press</p>
+  </footer>
+
+</div>
