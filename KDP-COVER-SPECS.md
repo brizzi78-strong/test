@@ -31,7 +31,7 @@ Notes for the designer:
   it to anyone.
 - SUBTITLE CHANGE (designer task): the cover currently reads "A Practical Guide for
   Families Facing Addiction, Illness, or Loss." Replace with the memoir-forward
-  subtitle: "A Memoir of the Father Who Stayed" (matches the interior title page).
+  subtitle: "A Memoir for Families Facing Addiction, Illness, and Loss" (matches the interior title page and cover).
 
 ## Draft back-cover copy (~170 words)
 
