@@ -26,6 +26,8 @@ Years later, hospice would teach me the rest.
 
 I would walk into rooms where families were scared, guilty, angry, silent, and running out of time. I would see the same look I had once seen in my father's eyes: someone trying to love a person they cannot save by force.
 
+I used to think healing meant I would finally feel good. Recovery taught me that healing meant I could function well even when I didn't. Hospice showed me the same truth at the bedside. A family may not feel good when someone they love is dying, but they can still love well. They can tell the truth. They can forgive. They can make the next right decision. They can be present. That is not happiness. It is something deeper.
+
 That is when I began to understand.
 
 Sobriety was not the finish line.
