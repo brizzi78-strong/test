@@ -17,6 +17,10 @@ nurse. Between the two of them, healthcare was not a foreign language. They
 knew the words. They knew the systems. They knew what illness looked like from
 the professional side.
 
+John was also twelve years sober. He had already done the hardest thing most
+people can imagine, one day at a time, for over a decade. Recovery had taught
+him how to live. It had not taught him how to let go.
+
 But when illness came for Joan, healthcare stopped being professional. It
 became personal.
 
@@ -124,10 +128,9 @@ _________________________________________________
 Then go say it. This is the right day.
 
 ## Production notes
-- PRIVACY (resolve before publication): if John and Joan are a real hospice
-  family, their names and identifying details must be changed (and a "names
-  and details have been changed" line added to the copyright page), or written
-  permission obtained. Same standard the memoir applies to patient rooms.
+- PRIVACY (resolved): "John" and "Joan" are changed names, confirmed by Rob.
+  Add a "some names and identifying details have been changed" line to the
+  toolkit's copyright page.
 - Uses ISBN #3 (paperback) and optionally #4 (ebook/PDF edition) from the block.
 - Cover: same navy + cardinal system as the memoir; "Toolkit" in the same type
   as the memoir title so the two books read as a set on a table.
