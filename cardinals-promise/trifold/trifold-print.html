@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Aging Parent Cardinal's Toolkit — Trifold Crisis Companion</title>
+<style>
+  /*
+    Print-ready US Letter landscape trifold (roll fold), two sheets:
+      Sheet 1 (OUTSIDE): fold-in flap | back cover | front cover
+      Sheet 2 (INSIDE):  inside flap  | inside center | inside right
+    Print at 100% scale, borderless if available, flip on short edge.
+  */
+  @page { size: 11in 8.5in; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --cardinal: #a51c30;
+    --cardinal-dark: #7d1524;
+    --ink: #1f2328;
+    --soft: #f6f1ec;
+    --rule: #d9cec4;
+  }
+  html, body { background: #888; }
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .sheet {
+    width: 11in; height: 8.5in;
+    background: #fff;
+    display: flex;
+    margin: 0.25in auto;
+    page-break-after: always;
+    overflow: hidden;
+  }
+  @media print { .sheet { margin: 0; } html, body { background: #fff; } }
+  .panel {
+    width: 3.6667in; height: 8.5in;
+    padding: 0.45in 0.38in;
+    border-right: 1px dashed var(--rule); /* fold guides; remove for final press run */
+    display: flex; flex-direction: column;
+  }
+  .panel:last-child { border-right: none; }
+
+  h2 {
+    font-size: 15pt; line-height: 1.15;
+    color: var(--cardinal);
+    text-transform: uppercase; letter-spacing: 0.04em;
+    margin-bottom: 0.12in;
+  }
+  .kicker {
+    font-size: 8.5pt; font-weight: 700; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--cardinal-dark);
+    margin-bottom: 0.06in;
+  }
+  ul { list-style: none; }
+  li {
+    font-size: 10.5pt; line-height: 1.35;
+    padding: 0.055in 0;
+    border-bottom: 1px solid var(--rule);
+    display: flex; gap: 0.09in; align-items: baseline;
+  }
+  li:last-child { border-bottom: none; }
+  .box {
+    flex: 0 0 auto;
+    width: 0.14in; height: 0.14in;
+    border: 1.5px solid var(--ink); border-radius: 2px;
+    transform: translateY(1.5px);
+  }
+  .note {
+    margin-top: auto;
+    background: var(--soft);
+    border-left: 3px solid var(--cardinal);
+    padding: 0.1in 0.12in;
+    font-size: 8.5pt; line-height: 1.35;
+  }
+  strong { font-weight: 700; }
+  em { font-style: italic; }
+
+  /* ---- Front cover ---- */
+  .cover {
+    background: var(--cardinal);
+    color: #fff;
+    justify-content: center; text-align: center;
+  }
+  .cover .bird { font-size: 34pt; margin-bottom: 0.25in; }
+  .cover h1 { font-size: 24pt; line-height: 1.12; margin-bottom: 0.18in; }
+  .cover .subtitle { font-size: 12pt; line-height: 1.4; opacity: 0.95; }
+  .cover .series {
+    margin-top: 0.6in; font-size: 8.5pt; letter-spacing: 0.18em;
+    text-transform: uppercase; opacity: 0.85;
+  }
+
+  /* ---- Back cover (Key Questions + contact) ---- */
+  .back .questions li { font-size: 10.5pt; }
+  .contact {
+    margin-top: auto; text-align: center;
+    border-top: 2px solid var(--cardinal);
+    padding-top: 0.16in;
+  }
+  .qr {
+    width: 0.95in; height: 0.95in;
+    border: 1.5px solid var(--ink);
+    margin: 0.08in auto;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 7pt; color: #777; text-align: center;
+  }
+  .contact .url { font-weight: 700; font-size: 11pt; }
+  .contact .tagline {
+    font-style: italic; color: var(--cardinal-dark);
+    font-size: 11pt; margin-top: 0.06in;
+  }
+  .legal { font-size: 6.5pt; line-height: 1.3; color: #666; margin-top: 0.1in; text-align: left; }
+</style>
+</head>
+<body>
+
+<!-- ================= SHEET 1 · OUTSIDE ================= -->
+<div class="sheet">
+
+  <!-- Fold-in flap (outside face): When to Act Now -->
+  <section class="panel">
+    <div class="kicker">Do not wait and see</div>
+    <h2>When to Act Now</h2>
+    <ul>
+      <li><span class="box"></span>Falls — especially a second one</li>
+      <li><span class="box"></span>Wandering</li>
+      <li><span class="box"></span>Unsafe driving</li>
+      <li><span class="box"></span>Medication errors</li>
+      <li><span class="box"></span>Scams that cost real money</li>
+      <li><span class="box"></span>No food / spoiled food</li>
+      <li><span class="box"></span>Stove left on</li>
+      <li><span class="box"></span>Sudden confusion</li>
+    </ul>
+    <div class="note">
+      Sudden confusion is often <strong>reversible</strong> — infection,
+      dehydration, or medications. Get a medical evaluation before assuming
+      the worst.
+    </div>
+  </section>
+
+  <!-- Back cover: Key Questions + contact/QR/tagline -->
+  <section class="panel back">
+    <div class="kicker">In every appointment</div>
+    <h2>Key Questions to Ask</h2>
+    <ul class="questions">
+      <li><span class="box"></span>Is this reversible?</li>
+      <li><span class="box"></span>Is rehab needed?</li>
+      <li><span class="box"></span>Is home still safe?</li>
+      <li><span class="box"></span>What does Medicare cover?</li>
+      <li><span class="box"></span>Do we need Medicaid planning?<br><em>See an NC elder-law attorney before moving any money.</em></li>
+      <li><span class="box"></span>Is hospice appropriate?<br><em>Any family member can call for a free evaluation.</em></li>
+    </ul>
+    <div class="contact">
+      <div class="url">thecardinalspromise.com</div>
+      <div class="qr">QR CODE<br>HERE</div>
+      <div class="tagline">"Take the next right step."</div>
+      <p class="legal">
+        General educational information for North Carolina families — not
+        legal, medical, financial, or insurance advice. Program rules and
+        figures change; verify with the relevant agency.
+        © 2026 Rob Brizzi · Cardinal's Promise Series
+      </p>
+    </div>
+  </section>
+
+  <!-- Front cover -->
+  <section class="panel cover">
+    <div class="bird">&#10057;</div>
+    <h1>Aging Parent<br>Cardinal's Toolkit</h1>
+    <p class="subtitle">The First Steps When a Parent<br>Suddenly Needs Help</p>
+    <div class="series">Cardinal's Promise Series</div>
+  </section>
+
+</div>
+
+<!-- ================= SHEET 2 · INSIDE ================= -->
+<div class="sheet">
+
+  <!-- Inside flap: Start Here -->
+  <section class="panel">
+    <div class="kicker">Start here</div>
+    <h2>What Happened?</h2>
+    <ul>
+      <li><span class="box"></span>Fall</li>
+      <li><span class="box"></span>Hospital stay</li>
+      <li><span class="box"></span>Memory change</li>
+      <li><span class="box"></span>Unsafe at home</li>
+      <li><span class="box"></span>Medication problem</li>
+      <li><span class="box"></span>Discharge planning</li>
+      <li><span class="box"></span>Hospice question</li>
+    </ul>
+    <div class="note">
+      Check what matches today, then work the next two panels in order.
+      You do not need to solve everything — only the next right step.
+    </div>
+  </section>
+
+  <!-- Inside center: First 24 Hours -->
+  <section class="panel">
+    <div class="kicker">Hour by hour</div>
+    <h2>First 24 Hours</h2>
+    <ul>
+      <li><span class="box"></span>Safety first</li>
+      <li><span class="box"></span>Get the medication list</li>
+      <li><span class="box"></span>Find insurance cards</li>
+      <li><span class="box"></span>Ask hospital status: <strong>inpatient or observation?</strong></li>
+      <li><span class="box"></span>Identify decision-maker / POA</li>
+      <li><span class="box"></span>Write down what changed — with dates</li>
+    </ul>
+    <div class="note">
+      "Observation" days may not count toward the 3-day inpatient stay
+      Medicare requires before covering rehab. Ask early — and ask in writing.
+    </div>
+  </section>
+
+  <!-- Inside right: Next 48–72 Hours -->
+  <section class="panel">
+    <div class="kicker">Building the plan</div>
+    <h2>Next 48&ndash;72 Hours</h2>
+    <ul>
+      <li><span class="box"></span>Call the doctor — ask <em>"Is this reversible?"</em></li>
+      <li><span class="box"></span>Call siblings — short, factual update</li>
+      <li><span class="box"></span>Area Agency on Aging — Eldercare Locator <strong>1&#8209;800&#8209;677&#8209;1116</strong></li>
+      <li><span class="box"></span>NC SHIIP for Medicare questions — <strong>ncdoi.gov/shiip</strong></li>
+      <li><span class="box"></span>County DSS for Medicaid / Special Assistance — <strong>epass.nc.gov</strong></li>
+      <li><span class="box"></span>Start the emergency binder</li>
+    </ul>
+    <div class="note">
+      Dementia crisis, any hour: Alzheimer's Association 24/7 Helpline
+      <strong>1&#8209;800&#8209;272&#8209;3900</strong>.
+      Local help anywhere in NC: dial <strong>211</strong>.
+    </div>
+  </section>
+
+</div>
+
+</body>
+</html>
