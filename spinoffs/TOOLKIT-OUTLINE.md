@@ -6,6 +6,9 @@ Facing Addiction, Illness, or Loss
 **Position:** The memoir tells the story; the Toolkit hands you the tools. Every
 tool in it was used in a real room. Bulk channel: hospices, treatment centers,
 churches, grief groups.
+**The hook (Rob's line, use on the back cover and in pitches):** He's in
+recovery — and hospice comes. Twelve years of one day at a time, and none of
+it taught him how to let go. If he needed this book, so does every family.
 
 ## Opening (finished draft) — John and Joan
 
