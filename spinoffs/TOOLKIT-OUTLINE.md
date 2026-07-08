@@ -7,7 +7,49 @@ Facing Addiction, Illness, or Loss
 tool in it was used in a real room. Bulk channel: hospices, treatment centers,
 churches, grief groups.
 
+## Opening (finished draft) — John and Joan
+
+*(Placement: the first pages of the book, before Part One. This is the bridge
+from bedside to toolkit — the story that earns the tools.)*
+
+John had spent his career as a pharmaceutical sales representative. Joan was a
+nurse. Between the two of them, healthcare was not a foreign language. They
+knew the words. They knew the systems. They knew what illness looked like from
+the professional side.
+
+But when illness came for Joan, healthcare stopped being professional. It
+became personal.
+
+I sat with them near the end. I watched John carry the strange double weight
+of being both husband and caregiver. He understood medicine, but medicine did
+not tell him how to say goodbye. Joan understood nursing, but nursing did not
+make her less human in the bed.
+
+That is what this season does. It takes people who are capable, educated,
+loving, and experienced, and still brings them to questions nobody wants to
+answer in a crisis.
+
+Who speaks when she cannot?
+What does comfort mean now?
+What treatments still help?
+What matters most today?
+What has already been written down, and what is everyone still guessing?
+
+John loved Joan. That was never in question. But love needed help becoming a
+plan.
+
+That is why this book exists. If a pharmaceutical sales rep and a nurse can
+still need guidance at the end, every family needs the conversation before the
+crisis.
+
+I did not write this book because families do not care. I wrote it because
+caring is not the same as being prepared. And when the person you love is
+declining, preparation is not cold. It is mercy.
+
 ## Structure — four parts, matching the reader's situation
+
+0. Opening: John and Joan (draft above) — why capable, loving people still
+   need a plan; sets up every worksheet that follows
 
 ### Part One: If You Love Someone Who Is Addicted
 1. The Three Lies the Disease Tells the Family (I can fix them / It's my fault /
@@ -82,6 +124,10 @@ _________________________________________________
 Then go say it. This is the right day.
 
 ## Production notes
+- PRIVACY (resolve before publication): if John and Joan are a real hospice
+  family, their names and identifying details must be changed (and a "names
+  and details have been changed" line added to the copyright page), or written
+  permission obtained. Same standard the memoir applies to patient rooms.
 - Uses ISBN #3 (paperback) and optionally #4 (ebook/PDF edition) from the block.
 - Cover: same navy + cardinal system as the memoir; "Toolkit" in the same type
   as the memoir title so the two books read as a set on a table.
