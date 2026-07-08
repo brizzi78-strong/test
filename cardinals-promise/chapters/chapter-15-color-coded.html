@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Chapter 15 — Palliative and Hospice Care (Color-Coded Edition)</title>
+<style>
+  /*
+    Color-coded chapter layout — Aging Parent Cardinal's Toolkit.
+    Each recurring element type has a fixed color so a reader in crisis can
+    flip to what they need without reading linearly:
+      CARDINAL RED  — Next Right Step (do this now)
+      AMBER        — Common Misconceptions (myth vs. truth)
+      BLUE         — Medicare / money facts
+      GREEN        — Key Takeaways
+      PLUM         — Action Checklist
+      WARM GRAY    — Rob's reflections (the human voice)
+    Print: US Letter portrait, colors preserved.
+  */
+  @page { size: 8.5in 11in; margin: 0.75in; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --cardinal: #a51c30;
+    --cardinal-dark: #7d1524;
+    --amber: #b45309;      --amber-bg: #fdf3e3;
+    --blue: #1d4e89;       --blue-bg: #eaf1f8;
+    --green: #2f6b3f;      --green-bg: #ecf4ee;
+    --plum: #5b3a6e;       --plum-bg: #f2edf6;
+    --gray: #57534e;       --gray-bg: #f5f2ee;
+    --ink: #1f2328;
+    --rule: #d9cec4;
+  }
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--ink);
+    line-height: 1.55;
+    max-width: 7in;
+    margin: 0 auto;
+    padding: 0.6in 0.3in 1in;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    background: #fff;
+  }
+  .sans { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+  /* ---- Chapter opening ---- */
+  .part { font-family: Helvetica, Arial, sans-serif; font-size: 9pt; letter-spacing: 0.18em;
+          text-transform: uppercase; color: var(--cardinal-dark); margin-bottom: 6px; }
+  h1 { font-family: Helvetica, Arial, sans-serif; font-size: 23pt; line-height: 1.15;
+       color: var(--cardinal); margin-bottom: 4px; }
+  .chapnum { display: block; font-size: 11pt; letter-spacing: 0.1em; text-transform: uppercase;
+             color: var(--ink); opacity: 0.6; margin-bottom: 2px; }
+  .epigraph { margin: 18px 0 6px; padding-left: 14px; border-left: 3px solid var(--rule);
+              font-style: italic; color: #555; }
+  .epigraph .attr { font-style: normal; font-size: 9.5pt; margin-top: 4px; }
+  .lede { margin: 16px 0 22px; font-size: 11.5pt; }
+
+  h2 { font-family: Helvetica, Arial, sans-serif; font-size: 14pt; color: var(--cardinal);
+       margin: 26px 0 8px; }
+  p { margin-bottom: 10px; font-size: 11pt; }
+  strong { font-weight: 700; }
+
+  /* ---- Legend ---- */
+  .legend { border: 1px solid var(--rule); border-radius: 6px; padding: 12px 14px; margin: 18px 0 26px;
+            font-family: Helvetica, Arial, sans-serif; font-size: 9pt; }
+  .legend h3 { font-size: 9.5pt; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 8px;
+               color: var(--ink); }
+  .legend ul { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 5px 18px; }
+  .legend li { display: flex; align-items: center; gap: 8px; }
+  .swatch { width: 12px; height: 12px; border-radius: 3px; flex: 0 0 auto; }
+
+  /* ---- Coded blocks ---- */
+  .block { border-radius: 6px; padding: 13px 16px; margin: 16px 0; }
+  .block .tag { font-family: Helvetica, Arial, sans-serif; font-size: 8.5pt; font-weight: 700;
+                letter-spacing: 0.14em; text-transform: uppercase; display: block; margin-bottom: 7px; }
+  .block p { font-size: 10.5pt; }
+  .block ul { margin: 2px 0 2px 18px; font-size: 10.5pt; }
+  .block li { margin-bottom: 6px; }
+
+  .myth      { background: var(--amber-bg); border-left: 5px solid var(--amber); }
+  .myth .tag { color: var(--amber); }
+  .myth dt   { font-weight: 700; color: var(--amber); font-size: 10.5pt; }
+  .myth dd   { margin: 1px 0 9px 0; font-size: 10.5pt; }
+  .myth dd:last-child { margin-bottom: 0; }
+
+  .money      { background: var(--blue-bg); border-left: 5px solid var(--blue); }
+  .money .tag { color: var(--blue); }
+
+  .takeaways      { background: var(--green-bg); border-left: 5px solid var(--green); }
+  .takeaways .tag { color: var(--green); }
+
+  .checklist      { background: var(--plum-bg); border-left: 5px solid var(--plum); }
+  .checklist .tag { color: var(--plum); }
+  .checklist ul   { list-style: none; margin-left: 0; }
+  .checklist li   { display: flex; gap: 9px; align-items: baseline; }
+  .cbox { flex: 0 0 auto; width: 11px; height: 11px; border: 1.5px solid var(--plum);
+          border-radius: 2px; transform: translateY(1px); }
+
+  .rob      { background: var(--gray-bg); border-left: 5px solid var(--gray); font-style: italic; }
+  .rob .tag { color: var(--gray); font-style: normal; }
+  .rob .sig { text-align: right; font-style: normal; font-family: Helvetica, Arial, sans-serif;
+              font-size: 9.5pt; color: var(--gray); margin-top: 4px; }
+
+  .nextstep      { background: var(--cardinal); color: #fff; border-left: 5px solid var(--cardinal-dark); }
+  .nextstep .tag { color: #f6d7db; }
+  .nextstep p    { color: #fff; }
+
+  /* Inline highlights keyed to the same system */
+  .hl-money { background: var(--blue-bg); box-shadow: 0 0 0 2px var(--blue-bg); border-bottom: 2px solid var(--blue); }
+  .hl-act   { background: #f7dfe2; box-shadow: 0 0 0 2px #f7dfe2; border-bottom: 2px solid var(--cardinal); }
+</style>
+</head>
+<body>
+
+<div class="part">Part VI · Hospice and End-of-Life Care</div>
+<h1><span class="chapnum">Chapter 15</span>Palliative and Hospice Care</h1>
+
+<div class="epigraph">
+  "…an approach that improves the quality of life of patients and their families
+  facing life-threatening illness."
+  <div class="attr">— World Health Organization, on palliative care</div>
+</div>
+
+<p class="lede">
+  No part of this journey is more misunderstood than hospice, and the
+  misunderstanding costs families the thing they can least afford to lose:
+  <strong>time</strong>. People hear <em>hospice</em> and think death, surrender, an
+  expensive last resort. Almost none of that is true. The most common thing
+  families say afterward is some version of: <em>I wish we had called sooner.</em>
+  This chapter is meant to make sure you are not one of them.
+</p>
+
+<div class="legend sans">
+  <h3>How this chapter is color-coded</h3>
+  <ul>
+    <li><span class="swatch" style="background:#b45309"></span>Common Misconceptions — myth vs. truth</li>
+    <li><span class="swatch" style="background:#1d4e89"></span>Medicare &amp; money facts</li>
+    <li><span class="swatch" style="background:#2f6b3f"></span>Key Takeaways</li>
+    <li><span class="swatch" style="background:#5b3a6e"></span>Action Checklist</li>
+    <li><span class="swatch" style="background:#57534e"></span>Rob's reflections</li>
+    <li><span class="swatch" style="background:#a51c30"></span>Next Right Step — do this now</li>
+  </ul>
+</div>
+
+<div class="block myth">
+  <span class="tag">Common Misconceptions</span>
+  <dl>
+    <dt>Myth: Hospice means giving up.</dt>
+    <dd>Truth: It means shifting the goal from cure to comfort, presence, and
+        dignity. It is active care, not surrender.</dd>
+    <dt>Myth: Calling hospice means death is days away.</dt>
+    <dd>Truth: Hospice is for a prognosis of about six months or less — and many
+        people live longer on it, partly because the care is so attentive.</dd>
+    <dt>Myth: Once you choose hospice, you can't change your mind.</dt>
+    <dd>Truth: You can come off hospice and return later, and the benefit can
+        continue past six months with recertification.</dd>
+    <dt>Myth: Hospice stops all medication and doctors.</dt>
+    <dd>Truth: Comfort medications continue and often increase; a hospice
+        physician is part of the team.</dd>
+  </dl>
+</div>
+
+<h2>15.1 Palliative Care</h2>
+<p>
+  Families mix up palliative care and hospice constantly, and the difference
+  matters. <strong>Palliative care</strong> is comfort-focused care — managing pain,
+  symptoms, and stress — that a person can receive <em>at any stage</em> of a serious
+  illness, even while still pursuing aggressive treatment or a cure. It is not
+  limited to the end of life.
+</p>
+<p>
+  <strong>Hospice</strong> is a specific kind of palliative care for the last months of
+  life, once the goal has shifted from cure to comfort. Put simply: all hospice
+  is palliative, but not all palliative care is hospice. If your parent is
+  seriously ill but not ready for hospice, <span class="hl-act">you can still ask for a
+  palliative-care consult</span> to improve their comfort and quality of life
+  alongside treatment — and many families wish they had asked sooner. You do
+  not have to choose between fighting an illness and being comfortable;
+  palliative care exists precisely so you can have both.
+</p>
+
+<h2>15.2 Hospice Care</h2>
+<p>
+  Hospice is not a place, usually. It is a philosophy and a team that comes to
+  wherever your person lives — their home, an assisted-living apartment, a
+  nursing home, or sometimes a dedicated hospice facility. The philosophy is
+  simple and radical: when cure is no longer the goal, comfort, dignity, and
+  presence become the whole point.
+</p>
+<p>
+  What hospice provides is a whole team, not just a nurse: physicians who
+  manage symptoms, nurses on call around the clock, aides for bathing and
+  personal care, social workers, chaplains, and trained volunteers, plus
+  medications, equipment, and grief support for the family that continues
+  after the death. In <em>Being Mortal</em>, Atul Gawande argues that medicine
+  fixates on safety and survival at the expense of what makes life worth
+  living, and that the better question is what a person is willing to trade
+  for the days they have left. Hospice is built around that question.
+</p>
+<p>
+  <strong>When to call — and the myth of "too soon."</strong> Hospice is for a person
+  with a life expectancy of about six months or less if the illness runs its
+  expected course. But it is not a one-way door: if your person stabilizes,
+  they can come off and go back on later, and the benefit can continue past
+  six months with recertification. There is no penalty for calling too soon.
+  There is enormous cost to calling too late.
+</p>
+<p>
+  Signs it may be time to ask include repeated hospitalizations for the same
+  condition, a clear downward trajectory (eating less, sleeping more,
+  withdrawing, losing weight), treatments that exhaust more than they help,
+  and the person signaling that they are tired of fighting.
+  <span class="hl-act">You do not need a doctor's permission to start the
+  conversation — any family member can call a hospice provider and ask for an
+  evaluation.</span>
+</p>
+<p>
+  There is also a level of hospice care most families never hear about:
+  <strong>continuous or "crisis" care</strong>, where a nurse can stay at the bedside
+  for hours during a hard stretch. If symptoms spike, ask for it by name.
+</p>
+
+<h2>15.3 Medicare Hospice Benefits</h2>
+<div class="block money">
+  <span class="tag">Medicare &amp; Money — What the Benefit Covers</span>
+  <p>
+    Here is where Medicare is not stingy at all, and where most families get it
+    backwards. They fear hospice will be a financial burden. It is the opposite.
+    If your parent has a terminal diagnosis and chooses comfort care over cure,
+    the <strong>Medicare Hospice Benefit can cover essentially all of it</strong>:
+  </p>
+  <ul>
+    <li>The full hospice team</li>
+    <li>All medications for pain and symptom relief</li>
+    <li>Medical equipment and supplies (hospital bed, oxygen, and more)</li>
+    <li>Short-term inpatient and respite care when the team arranges it</li>
+    <li>Grief and spiritual counseling for both the patient and the family</li>
+  </ul>
+  <p>
+    What families pay is almost nothing — at most a small copay, around
+    <strong>$5</strong>, per comfort prescription. <strong>The one real gap:</strong> hospice
+    does not pay room and board if your parent lives in a facility. The hospice
+    care itself comes to them wherever they are, but a facility's room-and-board
+    charge continues separately. And the grief support does not end at the
+    death — <strong>bereavement support for the family continues for about a year
+    afterward, at no cost.</strong> Most families never use what they are entitled to.
+  </p>
+</div>
+
+<div class="block rob">
+  <span class="tag">From Rob</span>
+  <p>
+    I have sat with families who waited on hospice because they feared the
+    cost — and lost weeks they could never get back. The benefit is one of the
+    most generous in all of Medicare, and the fear that keeps families away is
+    exactly backwards. If you take one thing from this chapter: ask sooner.
+  </p>
+  <div class="sig">— Rob</div>
+</div>
+
+<div class="block takeaways">
+  <span class="tag">Key Takeaways</span>
+  <ul>
+    <li>Palliative care is comfort care available at any stage of serious
+        illness, even alongside treatment; hospice is palliative care for the
+        last months of life once the goal shifts to comfort.</li>
+    <li>Hospice is a team and a philosophy that comes to wherever the person
+        lives, not a place — and choosing it is active care, not surrender.</li>
+    <li>Hospice is for a prognosis of about six months or less, but it is
+        reversible and renewable; there is no penalty for calling too soon and
+        a real cost to calling too late.</li>
+    <li>The Medicare Hospice Benefit covers nearly everything — team,
+        medications, equipment, counseling — with families paying almost
+        nothing; the one gap is facility room and board.</li>
+    <li>Bereavement support continues about a year after the death at no cost,
+        and a bedside "continuous care" level exists for hard stretches — ask
+        for it by name.</li>
+  </ul>
+</div>
+
+<div class="block checklist">
+  <span class="tag">Action Checklist</span>
+  <ul>
+    <li><span class="cbox"></span>If your parent is seriously ill but not ready for hospice, ask their
+        doctor for a palliative-care consult now.</li>
+    <li><span class="cbox"></span>Learn the signs that it may be time for hospice and watch for them
+        honestly.</li>
+    <li><span class="cbox"></span>Know that you can call a hospice provider directly for a
+        no-obligation evaluation — you don't need the doctor's permission.</li>
+    <li><span class="cbox"></span>If symptoms spike, ask the hospice team about continuous (crisis)
+        bedside care by name.</li>
+    <li><span class="cbox"></span>Confirm what the Medicare Hospice Benefit covers and clarify any
+        separate facility room-and-board cost.</li>
+    <li><span class="cbox"></span>Plan to use the bereavement support that continues for about a year
+        after the death.</li>
+  </ul>
+</div>
+
+<div class="block nextstep">
+  <span class="tag">Next Right Step</span>
+  <p>
+    If any of the signs in this chapter sound like your parent, call a local
+    hospice provider and ask for an evaluation — it costs nothing and commits
+    you to nothing. The families who carry the least regret are almost always
+    the ones who made this call sooner than felt comfortable.
+  </p>
+</div>
+
+</body>
+</html>
