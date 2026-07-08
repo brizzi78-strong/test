@@ -12,8 +12,8 @@ churches, grief groups.
 *(Placement: the first pages of the book, before Part One. This is the bridge
 from bedside to toolkit — the story that earns the tools.)*
 
-John had spent his career as a pharmaceutical sales representative. Joan was a
-nurse. Between the two of them, healthcare was not a foreign language. They
+John had spent his career selling medical equipment. Joan was a respiratory
+therapist. Between the two of them, healthcare was not a foreign language. They
 knew the words. They knew the systems. They knew what illness looked like from
 the professional side.
 
@@ -26,8 +26,8 @@ became personal.
 
 I sat with them near the end. I watched John carry the strange double weight
 of being both husband and caregiver. He understood medicine, but medicine did
-not tell him how to say goodbye. Joan understood nursing, but nursing did not
-make her less human in the bed.
+not tell him how to say goodbye. Joan had spent her working life at other
+people's bedsides, but that did not make her less human in her own.
 
 That is what this season does. It takes people who are capable, educated,
 loving, and experienced, and still brings them to questions nobody wants to
@@ -42,9 +42,9 @@ What has already been written down, and what is everyone still guessing?
 John loved Joan. That was never in question. But love needed help becoming a
 plan.
 
-That is why this book exists. If a pharmaceutical sales rep and a nurse can
-still need guidance at the end, every family needs the conversation before the
-crisis.
+That is why this book exists. If a medical salesman and a respiratory
+therapist can still need guidance at the end, every family needs the
+conversation before the crisis.
 
 I did not write this book because families do not care. I wrote it because
 caring is not the same as being prepared. And when the person you love is
@@ -128,12 +128,11 @@ _________________________________________________
 Then go say it. This is the right day.
 
 ## Production notes
-- PRIVACY (resolved): "John" and "Joan" are changed names, confirmed by Rob.
-  Careers can also be altered if needed for anonymity — but must stay within
-  healthcare (e.g., pharmacist, respiratory therapist, hospital admin), since
-  "they knew medicine professionally and still needed help" is the story's
-  engine. Add a "some names and identifying details have been changed" line
-  to the toolkit's copyright page.
+- PRIVACY (resolved): "John" and "Joan" are changed names, and their careers
+  have been changed too (kept within healthcare so the story's engine —
+  "they knew medicine professionally and still needed help" — survives).
+  Add a "some names and identifying details have been changed" line to the
+  toolkit's copyright page.
 - Uses ISBN #3 (paperback) and optionally #4 (ebook/PDF edition) from the block.
 - Cover: same navy + cardinal system as the memoir; "Toolkit" in the same type
   as the memoir title so the two books read as a set on a table.
