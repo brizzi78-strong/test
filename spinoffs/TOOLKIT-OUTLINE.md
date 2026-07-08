@@ -129,8 +129,11 @@ Then go say it. This is the right day.
 
 ## Production notes
 - PRIVACY (resolved): "John" and "Joan" are changed names, confirmed by Rob.
-  Add a "some names and identifying details have been changed" line to the
-  toolkit's copyright page.
+  Careers can also be altered if needed for anonymity — but must stay within
+  healthcare (e.g., pharmacist, respiratory therapist, hospital admin), since
+  "they knew medicine professionally and still needed help" is the story's
+  engine. Add a "some names and identifying details have been changed" line
+  to the toolkit's copyright page.
 - Uses ISBN #3 (paperback) and optionally #4 (ebook/PDF edition) from the block.
 - Cover: same navy + cardinal system as the memoir; "Toolkit" in the same type
   as the memoir title so the two books read as a set on a table.
