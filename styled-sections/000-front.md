@@ -44,8 +44,6 @@ Prologue
 
 Foreword
 
-Sobriety Was Not the Finish Line
-
 A Note to the One Who Loves an Addict
 
 **Part One — The Escape**
@@ -101,6 +99,8 @@ A Note to the One Who Loves an Addict
 33. The First Honest Mile
 34. What Grief Taught the Job
 35. The Table
+
+Sobriety Was Not the Finish Line
 
 What He Didn't Owe
 
