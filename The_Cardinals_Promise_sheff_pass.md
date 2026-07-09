@@ -4,7 +4,7 @@
 
 **ROB BRIZZI**
 
-CARDINAL PRESS
+CARDINAL PROMISE PRESS
 
 # **COPYRIGHT**
 
@@ -12,7 +12,7 @@ THE CARDINAL'S PROMISE. Copyright © 2026 by Rob Brizzi. All rights reserved.
 
 No part of this book may be reproduced in any form or by any electronic or mechanical means, including information storage and retrieval systems, without written permission from the publisher, except by a reviewer, who may quote brief passages in a review.
 
-Published by Cardinal Press, Raleigh, North Carolina.
+Published by Cardinal Promise Press, Raleigh, North Carolina.
 
 First edition, 2026.
 
@@ -113,8 +113,6 @@ A Reader's Guide
 Resources
 
 About the Author
-
-Photographs
 
 # **PROLOGUE**
 
@@ -835,7 +833,7 @@ They release us and I do the responsible-older-brother thing. That's it, I annou
 
 Chris and I have never had a falling out. Not once. You'd assume my addiction would have detonated us, and it strained plenty when I was at my worst in California, but it never broke. Not even the night he sat me down and gave me the ultimatum: admit you have a problem, or admit you have mental health issues. Pick one. I wasn't angry. I respected him too much to be angry. He loved me enough to tell me the truth when everyone else had run out of it. Through all the pills and the lies and the wreckage, I always knew my brother was trying to save my life. He may be the only person who could have said that sentence and had me actually hear it.
 
-After I got sober I talked him into taking a manager job in Pensacola, so for once we were in the same city. Chris is a workaholic, and I don't mean a guy who works hard, I mean the clinical definition. I'd call him to come out, I've got people I want you to meet, and he'd say no, I've got to work. Every time. But every so often he'd surface, and when he did he was generous to a fault. Let's take a trip, he'd say, and the next thing I knew I was in Costa Rica, in a tiny rental Kia they had warned us about at El Volcan, on a road that was less a road than a riverbed of rock. The Kia barely made it. So did we. That was the formula for every trip we took: Chris deciding, me going along, the two of us barely making it and calling it a vacation.
+After I got sober I talked him into taking a manager job in Pensacola, so for once we were in the same city. Chris is a workaholic, and I don't mean a guy who works hard, I mean the clinical definition. I'd call him to come out, I've got people I want you to meet, and he'd say no, I've got to work. Every time. But every so often he'd surface, and when he did he was generous to a fault. Let's take a trip, he'd say, and the next thing I knew I was in Costa Rica, in a tiny rental Hyundai they had warned us about at El Volcan, on a road that was less a road than a riverbed of rock. The Hyundai barely made it. So did we. That was the formula for every trip we took: Chris deciding, me going along, the two of us barely making it and calling it a vacation.
 
 And then there was India.
 
@@ -1968,7 +1966,3 @@ The phone numbers and web addresses were current when this book went to press. O
 # **ABOUT THE AUTHOR**
 
 Rob Brizzi is a hospice liaison and Certified Dementia Practitioner. Born in Mexico City and raised in New Jersey, he is in long-term recovery and has made it his mission to serve others, sitting with families in their hardest rooms and helping them show up for the people they love. He lives in Raleigh, North Carolina, with his wife, Hope. *The Cardinal's Promise* is his first book.
-
-# **PHOTOGRAPHS**
-
-\[Photo section — images to be placed here\]

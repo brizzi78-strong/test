@@ -35,7 +35,7 @@ driver's-side mirror and wouldn't leave. The book is what it took to understand
 why.
 
 Would you consider reading it, and if it earns it, saying a sentence about it?
-The manuscript is 52,000 words and I'll send it in whatever format you prefer.
+The manuscript is 54,000 words and I'll send it in whatever format you prefer.
 Either way: thank you for writing the book that helped me understand what I'd
 put my father through while there was still time to make it right.
 
@@ -64,7 +64,7 @@ sent me the bill. I've been sober seventeen years. Lou died on Christmas Day
 2025, and five weeks after I started my hospice job I was using everything he
 taught me on my own family.
 
-Would you consider reading it for a possible blurb? It's 52,000 words — a fast
+Would you consider reading it for a possible blurb? It's 54,000 words — a fast
 read — and I'll send it however is easiest for your office. Even if the answer
 is no, thank you for making it normal to talk about death at the table. It makes
 my job possible.
@@ -94,7 +94,7 @@ sobriety is in there ugly and true: the Walmart phone I hid under the table
 because everyone else had iPhones, the sponsor I was terrified to ask, the
 people I watched go back out and never once called weak.
 
-Would you consider reading it for a possible blurb? 52,000 words, and I'll send
+Would you consider reading it for a possible blurb? 54,000 words, and I'll send
 it in any format. Thank you either way — your book kept me honest about my own.
 
 Sincerely,
@@ -113,7 +113,7 @@ the literary lane.
 ### To the ghostwriter
 
 Could I ask a favor? Would you introduce me to Randy Grimes? My memoir The
-Cardinal's Promise is finished — 52,000 words, seventeen years sober, the
+Cardinal's Promise is finished — 54,000 words, seventeen years sober, the
 adoptive father who drove a U-Haul to come get me, and the hospice work I do
 now. I think Randy would recognize every page of the addiction arc, and a line
 from him would mean a lot on the cover. Happy to send him the PDF the moment
@@ -128,3 +128,42 @@ side; I'm seventeen years sober and I sit with hospice families now. If The
 Cardinal's Promise earns a sentence from you, it would carry real weight with
 the readers who need this book most. PDF attached — no deadline, no pressure,
 and thank you for Off Center either way.
+
+---
+
+## 5. David Sheff — follow-up (send 3 weeks after #1 if no reply; this is the only nudge)
+
+Subject: Following up — the son's side of Beautiful Boy
+
+Dear Mr. Sheff,
+
+Three weeks ago I wrote to you about my memoir, The Cardinal's Promise — the
+son's side of the story you told, and the father who stayed. I know the volume
+of requests you receive, so this will be my only follow-up.
+
+The book is finished: 54,000 words, and I'll send it in whatever format you
+prefer. If the timing doesn't work, no reply is needed — Beautiful Boy already
+did its part in this story. It helped keep me alive long enough to write mine.
+
+With gratitude,
+Rob Brizzi
+Hospice liaison, Certified Dementia Practitioner — Raleigh, NC
+[phone] · [email]
+
+---
+
+## 6. Quint Studer — personal note (he already said yes to lending his name; this delivers the book)
+
+Quint —
+
+The book is finished, and you're in it: the rooms, EntreCon, the four words you
+wrote in that cover, and my dad's name said out loud in a room full of leaders.
+You said yes once to putting your name on this. Here's the manuscript, so I can
+make good on my half.
+
+If a sentence comes to you after you read it, it goes on the cover. If it
+doesn't, the friendship already did more for this book than any blurb could.
+
+Thank you. The book says why.
+
+— Rob

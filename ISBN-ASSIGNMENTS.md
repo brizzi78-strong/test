@@ -1,4 +1,4 @@
-# ISBN Assignments — Cardinal Press (Bowker block of 10)
+# ISBN Assignments — Cardinal Promise Press (Bowker block of 10)
 
 Registrant: Robert Brizzi (brizzi78@icloud.com), managed at myidentifiers.com.
 
@@ -18,6 +18,6 @@ Registrant: Robert Brizzi (brizzi78@icloud.com), managed at myidentifiers.com.
 Notes:
 - All ten check digits verified valid.
 - Register each title's metadata at myidentifiers.com when it goes to press
-  (title, subtitle, imprint Cardinal Press, price, cover upload).
-- KDP: choose "Use my own ISBN" and enter the paperback ISBN; imprint = Cardinal Press.
+  (title, subtitle, imprint Cardinal Promise Press, price, cover upload).
+- KDP: choose "Use my own ISBN" and enter the paperback ISBN; imprint = Cardinal Promise Press.
 - Do not reuse an ISBN across formats — each format gets its own.
