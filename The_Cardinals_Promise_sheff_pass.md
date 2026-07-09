@@ -22,7 +22,7 @@ Ebook ISBN: 979-8-9966446-1-2
 
 This is a work of memoir. It reflects the author's present recollections of experiences over time. Some names and identifying details have been changed, some dialogue has been reconstructed, and some events are rendered as composites, as described in the Author's Note.
 
-Cover design: [credit]
+Cover design: Grace Nobrega
 
 Printed in the United States of America.
 
@@ -595,7 +595,7 @@ After Ramsey, Dave got recruited, Syracuse, Virginia Tech, Wake Forest. He chose
 
 Freshman year I lost the matches that mattered. Early sophomore season I drew the top seed in a tournament, a kid everyone knew would win, the kid I was supposed to be a warm-up for. Something happened I still can't fully explain. I wasn't afraid of him. The fear that had been the ground note of every match since that first pin just wasn't there. What was there was anger, not at him, at the idea that I was supposed to lose. I beat him. Ugly, grinding, the full three periods. But I won it. Afterward Lou didn't say much. A hand on my shoulder. In his language it meant: I always knew this was in you.
 
-I won the District at 119 that year, sophomore season, 1994. The recognition came fast after that. One afternoon Mr. Molino pulled me out of class, and I walked down the hall sure I was in trouble, running through everything I might have done. Instead he told me I'd been named Athlete of the Month for Ramsey. They put my name on the front lawn of the school for thirty days. They painted it on the wall in the old gym, and I was the first sophomore they had ever done that for.
+I won the District at 119 in 1994. The recognition came fast after that. One afternoon Mr. Molino pulled me out of class, and I walked down the hall sure I was in trouble, running through everything I might have done. Instead he told me I'd been named Athlete of the Month for Ramsey. They put my name on the front lawn of the school for thirty days. They painted it on the wall in the old gym, and I was the first sophomore they had ever done that for.
 
 I couldn't take any of it in. The gap between who everyone suddenly said I was and who I knew myself to be was too wide to cross. The achievement was real. The sense that I had earned it wasn't there, and it wouldn't be for years. I'd feel the same thing later, on MTV with cameras pointed at me, the same quiet question running underneath it all: who am I to be anybody? It would take a long time, and losing nearly everything, before I could stand in a room and believe I belonged in it.
 
@@ -617,7 +617,7 @@ Here's what stays with me now: Lou walked into that apartment before he ever wal
 
 ### *Senior Year: County Champion*
 
-Senior year I came into the Counties top seed at 130. My brother Chris was a freshman at 103. In the sauna, cutting weight together, we'd said it would be something to share an article. Chris upset the number-one seed to make the semis. The paper ran it: "Ramsey's Brizzi Brothers are Double Trouble." Dad was beaming.
+Senior year I came into the Counties top seed at 130. My brother Chris was a freshman at 103. In the sauna, cutting weight together, we'd said it would be something if we ever shared an article. Chris upset the number-one seed to make the semis. The paper ran it: "Ramsey's Brizzi Brothers are Double Trouble." Dad was beaming.
 
 I won the semis and the final 15-7, county champion at seventeen. My name on the wall again. Seventeen. I wouldn't understand that number for another thirty years.
 
@@ -631,7 +631,7 @@ He's complicated. Smart. Polished and strategic, an overachiever in the true sen
 
 ### *The Lesson and The Exception*
 
-Coach Albersi met me before school to run the track. He invested in me. At the year-end gathering he said, Brizzi went down a legend. When I was struggling, he wasn't around much. When I excelled, everyone wanted to be attached to it.
+Coach Albersi met me before school to run the track. He invested in me. At the year-end gathering he said, Brizzi went down a legend. But when I was struggling, he wasn't around much. When I excelled, everyone wanted to be attached to it.
 
 Lou was the exception. Through all of it, the nineteen seconds, the weight cuts, the throwing up, the bad ankle, the losses that hurt more than the wins, he was there. Not because I was becoming a legend. Because I was his son.
 
@@ -866,7 +866,7 @@ That's my brother. The DMV, India, the Bahamas, the ultimatum that saved my life
 
 My friend Angela called me from Chicago. You're not going to believe this, she said. I'm standing in the Abercrombie & Fitch on Michigan Avenue, I looked up at the screen, and there you are. Your commercial. For about a minute that felt like arriving. Then it passed straight through me, the way everything did back then, and the hunger underneath was still there.
 
-After Oxford I pointed the car west and drove it straight at the only thing I knew how to do, which was win. My first real job out of college was managing an Abercrombie & Fitch in San Diego. I had one speed, the same one that got me through weight cuts and 6 a.m. practices, and I brought it to folding polo shirts in a mall. I outworked everyone on staff, learned the inventory numbers cold, caught problems before the managers did and fixed them without being asked. Put a scoreboard in front of me and I was going to be at the top of it.
+After Oxford I pointed the car west and drove it straight at the only thing I knew how to do, which was win. My first real job out of college was managing an Abercrombie & Fitch in San Diego. I had one speed, the same one that got me through weight cuts and 6 a.m. practices, and I brought it to folding polo shirts in a mall. I outworked everyone on staff, learned the inventory numbers cold, caught problems before anyone else saw them and fixed them without being asked. Put a scoreboard in front of me and I was going to be at the top of it.
 
 Nesser filmed me doing a bio — wakeboarding in Islamorada, Florida, out on the water, being myself — and the tape brought an A&F talent scout to the store. It went to Abercrombie & Fitch TV, the in-store channel that played in every location in the country, and I got picked. That was the commercial Angela had called me about. The kid from Mexico City who'd needed speech therapy for a lisp was now the face on a loop in one of the biggest retail brands in America. Underneath it I still felt less than.
 
@@ -990,9 +990,9 @@ I never told anyone. Not my father, my brother, my mother, my wife. Not a sponso
 
 My biological father handed me ten thousand dollars in cash and called me fat in the same weekend, and I spent the money on pills before I left town. That was the reunion my therapist thought would heal me. But a cell didn't stop me, and neither did a courtroom. The first rehab was court-ordered. I want that up front, because it matters. I didn't walk in because I was ready. I walked in because a judge told me to.
 
-Laguna Beach, still in California. If you're going to be forced into rehab, you could do worse. High-end, the place Hollywood people land when their publicists run out of excuses. Beautiful grounds, ocean nearby. The clientele was a mix, retired grandfathers who'd been passing out in the garage next to younger guys who'd burned through their twenties faster than they expected.
+Laguna Beach, still in California. If you're going to be forced into rehab, you could do worse. High-end, the place Hollywood people land when their publicists run out of excuses. Beautiful grounds, ocean nearby. The clientele was a mix, retired grandfathers who'd been passing out in the garage, next to younger guys who'd burned through their twenties faster than they expected.
 
-I made friends with a guy named Tristan. He'd been on a soap opera, Passions, I think. An absolute lunatic. He'd been doing a lot of cocaine and hit a wall. We clicked, both from lives that looked good from the outside and were rotting inside. We'd hang out between sessions, talk about nothing, crack jokes. It felt more like summer camp than rehab. That was the problem.
+I made friends with a guy named Tristan. He'd been on a soap opera, Passions, I think. An absolute lunatic. He'd done a lot of cocaine and hit a wall. We clicked, both from lives that looked good from the outside and were rotting inside. We'd hang out between sessions, talk about nothing, crack jokes. It felt more like summer camp than rehab. That was the problem.
 
 I wasn't there to get better. I was there to get through it. Checking boxes, not surrendering. I went to the sessions, sat in the circles, said the things that sounded like progress, filled out the worksheets. From the outside it probably looked like work. Inside I was already planning what came next, not in recovery, in using. The pills hadn't let go of me, or I hadn't let go of them. Same thing.
 
@@ -1043,7 +1043,7 @@ She helped me find work through local connections, and for a while, in her quiet
 
 My father rented a U-Haul and drove to West Palm Beach to bring home a dead man. The dead man was me. I just hadn't finished the job yet. Before I tell you about the morning he showed up at my door, I have to show you the room he found me in.
 
-The apartment was about six hundred and fifty square feet on a high floor in CityPlace, carpet underfoot, a balcony that looked out over West Palm Beach. From up there the city looked like something I belonged to. PF Chang's and the Cheesecake Factory were right downstairs. I almost never went down to either. I almost never went anywhere.
+The apartment was about six hundred and fifty square feet on a high floor in CityPlace, carpet underfoot, a balcony over West Palm Beach. From up there the city looked like something I belonged to. PF Chang's and the Cheesecake Factory were right downstairs. I almost never went down to either. I almost never went anywhere.
 
 The walls were covered in Post-it notes. Yellow squares stuck to the paint in clusters, ideas, plans, schemes, businesses I was going to start, money I was going to make, the whole next version of my life mapped out in ballpoint on adhesive paper. It wasn't genius. It was a man who couldn't finish a thought, papering a room with the evidence.
 
@@ -1294,7 +1294,7 @@ I have medical sales experience, I said. But it's been a while. How long? About 
 
 Caroline, the home health leader who would hire me, didn't waste time. She read my résumé the way people do when they're not looking to be impressed, following the rise all the way to where it stopped. She didn't ask about the gaps. She asked about trust. How do you build it with people who don't know you? What do you do when the territory's cold and the numbers aren't there? How do you stay consistent when results don't show up? I talked about discipline without ego, showing up because it's right, not because someone's watching. Rejection as information, not a verdict. I talked about the pool, scanning the water when nothing was happening, how the job was the same whether anyone needed saving or not. She listened. Wrote. Looked up only when something mattered.
 
-The position pays sixty thousand a year, she said finally. Plus commission. But it's a slow build. Once I'd made five times that and felt hollow. This felt honest. I can do this, I said, and for the first time in an interview I wasn't performing belief. I was stating it.
+The position pays sixty thousand a year, she said finally. Plus commission. But it's a slow build. Once, I'd made five times that and felt hollow. This felt honest. I can do this, I said, and for the first time in an interview I wasn't performing belief. I was stating it.
 
 She called three days later. I need to talk to you about something from your background check. I knew. It shows a DUI from 2006. That wasn't disclosed. You're right, I said. I should have disclosed it. I'm sorry. A pause. Can you tell me what happened? So I did. Not the polished version. What it had been, what it cost, what had changed. When I finished the line stayed quiet. Okay, she said. I appreciate your honesty. Let me talk to HR.
 
@@ -1589,7 +1589,7 @@ I needed that more than I let on. For ten years I'd been the top guy in home hea
 
 About a year in, Dave lost his son Garrett. He was twenty-one, working at a pizza shop, and he was riding his bike home through the neighborhood when a car struck him. He didn't make it. People came from all over the company for the funeral, just to be there for Dave. I've never seen someone with as much faith. Coming back at all would have been enough. He did more.
 
-About two years in we had a national sales convention in Las Vegas. Dave and I had a routine when we traveled, breakfast, a little prayer, a mini Bible study, talk. One morning he started talking about Garrett. He said, sometimes I wonder. I know he was in the church. I know he had a relationship with Christ. But I worried about whether he was saved. And then he said, one day a bird landed. His son's favorite bird. And he knew. It was a sign. Garrett was okay. Later that trip, while most of the team was out doing whatever people do in Vegas, Dave and I went to the Bellagio, played a couple of slot machines, then got ice cream. I got cookie dough, and opened up. I told him about the DUIs, about Mexico, about the path I'd traveled. He shared some of his, and I'll keep that between us. We prayed right there, ice cream melting in the cups, slot machines going off in the distance.
+About two years in, we had a national sales convention in Las Vegas. Dave and I had a routine when we traveled, breakfast, a little prayer, a mini Bible study, talk. One morning he started talking about Garrett. He said, sometimes I wonder. I know he was in the church. I know he had a relationship with Christ. But I worried about whether he was saved. And then he said, one day a bird landed. His son's favorite bird. And he knew. It was a sign. Garrett was okay. Later that trip, while most of the team was out doing whatever people do in Vegas, Dave and I went to the Bellagio, played a couple of slot machines, then got ice cream. I got cookie dough, and opened up. I told him about the DUIs, about Mexico, about the path I'd traveled. He shared some of his, and I'll keep that between us. We prayed right there, ice cream melting in the cups, slot machines going off in the distance.
 
 It was Hope's mother Rhonda who found the connection. Her maiden name was Barger, and Dave's name turned up in the genealogy records, five generations back, distant but documented. I sat staring at the family tree on her computer screen. Of all the people at Novo Nordisk, I'd found family. I didn't know what that Christmas would take from me, or what would land on my driver's-side mirror two weeks after. But when it came, I would recognize it. Because Dave had taught me the language.
 
@@ -1597,7 +1597,7 @@ It was Hope's mother Rhonda who found the connection. Her maiden name was Barger
 
 The hardest part of leaving Novo wasn't the job. It was leaving that relationship with Dave. We're still close. He'll always hold a special place for me.
 
-I told people I was going to take some time off. Be there for my dad. Be there for my mom. Be present the way I'd been telling hospice families to be present, while there was still time. That was the plan. It's not what happened. What happened was I retreated into myself. The time I'd set aside became something else, a depression I didn't see coming and couldn't recognize from inside it. I was grieving what was already happening and what was coming, and the weight kept me from doing the thing I'd left my career to do. I know the name for it now. Grief doesn't wait for the loss. It can arrive early and freeze you, and you can't name it from inside. I wasn't working. I wasn't fully showing up for my parents. I was stuck in a version of myself that couldn't move in any direction. I don't say that for sympathy. I say it because it's the truth, and this book doesn't work if I only tell the parts where I got it right. Hospice, when it came, wasn't a pivot. It was a return, to the rooms I'd been thinking about since the home health years, to the weight I'd learned how to carry. It pulled me out of that in-between place and gave me direction again.
+I told people I was going to take some time off. Be there for my dad. Be there for my mom. Be present the way I'd been telling hospice families to be present, while there was still time. That was the plan. It's not what happened. What happened was I retreated into myself. The time I'd set aside became something else, a depression I didn't see coming and couldn't recognize from the inside. I was grieving what was already happening and what was coming, and the weight kept me from doing the thing I'd left my career to do. I know the name for it now. Grief doesn't wait for the loss. It can arrive early and freeze you, and you can't name it from inside. I wasn't working. I wasn't fully showing up for my parents. I was stuck in a version of myself that couldn't move in any direction. I don't say that for sympathy. I say it because it's the truth, and this book doesn't work if I only tell the parts where I got it right. Hospice, when it came, wasn't a pivot. It was a return, to the rooms I'd been thinking about since the home health years, to the weight I'd learned how to carry. It pulled me out of that in-between place and gave me direction again.
 
 **CHAPTER 30**
 
@@ -1774,7 +1774,7 @@ My father always made a big deal of my sobriety anniversary. Every January 9th. 
 *"Thou preparest a table before me in the presence of mine enemies: thou anointest my head with oil; my cup runneth over."*
 *— Psalm 23:5*
 
-Three days after my father died, I cried in the office of a nurse I'd known for an hour. She didn't reach for a phrase or try to fix it. She just stayed in the room with me. You never know when the grief is going to hit, or who's going to be standing there when it does.
+Three days after we buried my father, I cried in the office of a nurse I'd known for an hour. She didn't reach for a phrase or try to fix it. She just stayed in the room with me. You never know when the grief is going to hit, or who's going to be standing there when it does.
 
 That morning I walked into Brookdale for a routine visit. Linda was at the round table near the nurses' station. She'd been a nurse a long time, you could see it in how she carried herself. Compassionate, but not someone who let everybody in. A steadiness I recognized. We started talking. She was from the Buffalo area, upstate New York. We joked. It felt easy in a way things hadn't in days.
 
