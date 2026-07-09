@@ -126,7 +126,7 @@ His hands were around my throat before I understood he had crossed the cell. A s
 
 That is where the worst night of my life had set me down: a concrete floor in a Mexican holding cell. Nobody was coming, because nobody knew where I was. Not my father. Not my brother. Not my mother.
 
-I had been carried out of Mexico City as a child, to be given a better life. Somehow I had found my way back to a concrete floor inside it, with everything I'd built somewhere far away. This is the story of how I got there, and how I got out.
+I had been carried out of Mexico City as a child, to be given a better life. Somehow I had found my way back to a concrete floor inside it, with everything I'd built somewhere far away. This is the story of how I came back from that floor, and why my father never stopped coming for me.
 
 # **FOREWORD**
 
@@ -247,7 +247,7 @@ Rosa María and Armando lived next door. A clothesline ran between our balconies
 
 My mother taught English at a little preschool called Cascabelito. Little Bells. Because she worked there, I got to go for free. In the afternoons she'd put on music and dance around the kitchen while making tacos, rice, and beans. She would scoop my little brother, Chris, up on her hip and sing along to "The Locomotion," and I'd dance right next to her because she was happy. That was all the reason I needed.
 
-Her name was Becky. She was twenty-seven, a blonde girl from Cedar Grove, New Jersey, the oldest of three sisters, daughters of Bob and Jan Pontier. Somehow she had ended up building a new life in the middle of Mexico City. She had followed a man there for love. I didn't understand that kind of love back then.
+Her name was Becky. She was twenty-seven, a blonde girl from Cedar Grove, New Jersey, the oldest of three sisters, daughters of Bob and Jan Pontier. She had ended up building a new life in the middle of Mexico City. She had followed a man there for love. I didn't understand that kind of love back then.
 
 Kids don't know what their parents are surviving. They just know the shape of the rooms, the smell of dinner, the music playing in the kitchen, and the hand reaching down to hold theirs.
 
@@ -277,13 +277,13 @@ There's a black-and-white picture of me from back then. A little kid in a Mickey
 
 After my mom, I loved Ricardo, my older cousin. A few years ahead of me, which at that age is a whole generation, and I followed him everywhere. One day he took me to the market for gum. He walked me down the rows, naming things, while I looked at all of it. The gum came in big wrappers in every color, and there was one flavor every kid in the neighborhood wanted. We found it. I walked home with a piece of it in my cheek.
 
-My mom was pregnant with Chris when I was two, and I was almost three by the time he was born. The week before, I wouldn't let my mother put me down. I'd grab her hips while she walked and let her drag me along the floor. "Let me down," she kept saying. I didn't want down. I wanted to be carried. She told me she couldn't carry me anymore because there was going to be another baby. I asked if the baby could be mine. She said yes.
+My mom got pregnant with Chris when I was two; he was born just before I turned three. The week before, I wouldn't let my mother put me down. I'd grab her hips while she walked and let her drag me along the floor. "Let me down," she kept saying. I didn't want down. I wanted to be carried. She told me she couldn't carry me anymore because there was going to be another baby. I asked if the baby could be mine. She said yes.
 
 When she came through the door with him I climbed up on the couch next to her. "Is that my baby? Can I hold him?" She put him in my arms. He let out a thin little cry and I didn't know what to do with it. "Okay," I said. "I'll try again later." And I handed him back.
 
 For years I told Chris he'd been small enough to fit in my pocket when he was born. He believed me. That was the fun part of having a little brother. He believed everything you said.
 
-Chris was a crybaby. His ears, my mother said. They were worse than anyone knew yet. She'd hold him for hours. I'd go to my room and play the same record again. But I got used to it and came to love him.
+Chris was a crybaby. His ears, my mother said. They were worse than anyone knew yet. She'd hold him for hours. I'd go to my room and play the same record again. But I got used to it. He was mine, after all. I'd asked, and she'd said yes.
 
 After several years of marriage my mother had seen enough. She loved my father. That was never the question. She didn't announce anything. She got our passports quietly and said we were going to New Jersey to visit Grandpa. Two weeks. Like every other trip. I believed her completely.
 
@@ -301,7 +301,7 @@ She sat awake. The whole flight she was waiting for someone to stop her, at the 
 
 We landed in New Jersey at the start of winter. The airport felt like home at first. Same crowds, same noise, everyone rushing. Then I started listening. The words were wrong. Not Spanish. Something else. Everybody around me knew something I didn't.
 
-My aunt Nancey picked us up in her small red Honda Civic and drove us to my grandparents' place in West Paterson. I stepped outside and saw my own breath for the first time. I didn't know that could even happen. I'd only seen smoke like that when someone was smoking a cigarette.
+My aunt Nancey picked us up in her small red Honda Civic and drove us to my grandparents' place in West Paterson. I stepped outside and saw my own breath for the first time. I didn't know that could even happen. I'd only seen smoke like that come off a cigarette.
 
 My Spanish disappeared almost overnight. English was everywhere and I picked it up the way kids do, without deciding to. Back home I'd had a lisp. In New Jersey they sent me to speech therapy twice a week to fix the way I talked. Decades later it still comes out at the worst times.
 
