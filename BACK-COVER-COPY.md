@@ -6,17 +6,18 @@ For readers of *Beautiful Boy* and *Tuesdays with Morrie*
 
 ## Hook
 
-Fifteen days after his father died, a cardinal landed on the driver's-side mirror
+Fifteen days after his father died, a cardinal landed on the driver's side mirror
 of Rob Brizzi's car. He was seventeen years sober, to the day, sitting outside a
 nursing facility where he had just helped a family decide how to say goodbye. He
 took one picture. Then he started telling the truth.
 
-*The Cardinal's Promise* is the story of two fathers: Horacio, who stayed behind
+*The Cardinal's Promise* is the story of two fathers: Ignacio, who stayed behind
 in Mexico City and never stopped calling, and Lou, the New Jersey landscaper who
 married Rob's mother, adopted her two boys, and spent forty years proving that
-love is not a speech. It is the story of a boy carried out of Mexico at four, a
-wrestler who learned to stand alone, an addict who lost everything twice, and the
-U-Haul rescue that kept him alive long enough to be saved.
+love is not a speech. From Mexico City to New Jersey, from wrestling mats to
+prison cells, from the depths of addiction to the U-Haul rescue that kept him
+alive long enough to be saved — this is a son's account of the love that would
+not quit.
 
 And it is the story of what came after: seventeen years of sobriety, a marriage
 that began with a dating profile that said *don't write to me*, and the hospice

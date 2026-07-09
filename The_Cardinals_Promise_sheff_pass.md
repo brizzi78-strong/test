@@ -2,13 +2,13 @@
 
 *A Memoir for Families Facing Addiction, Illness, and Loss*
 
-**ROB BROVI**
+**ROB BRIZZI**
 
 CARDINAL PROMISE PRESS
 
 # **COPYRIGHT**
 
-THE CARDINAL'S PROMISE. Copyright © 2026 by Rob Brovi. All rights reserved.
+THE CARDINAL'S PROMISE. Copyright © 2026 by Rob Brizzi. All rights reserved.
 
 No part of this book may be reproduced in any form or by any electronic or mechanical means, including information storage and retrieval systems, without written permission from the publisher, except by a reviewer, who may quote brief passages in a review.
 
@@ -28,7 +28,7 @@ Printed in the United States of America.
 
 *For anyone who has struggled with addiction or loved someone who has*
 
-*In memory of Lou Brovi*
+*In memory of Lou Brizzi*
 
 *1941 – 2025*
 
@@ -295,7 +295,7 @@ What I love now is how close my mother and her sisters have become, she and Donn
 *"A father of the fatherless... is God in his holy habitation."*
 *— Psalm 68:5*
 
-He asked my mother out and she said no. He asked again and she said no again. So he kept showing up, week after week, until she finally saw his charm and his maturity. That was how Lou Brovi decided to stay.
+He asked my mother out and she said no. He asked again and she said no again. So he kept showing up, week after week, until she finally saw his charm and his maturity. That was how Lou Brizzi decided to stay.
 
 Lou met my mother in a bar in West Paterson in 1984. He was in his forties, a man who'd already lived a complicated life and decided he was ready to do the next part right. My mother was twenty-nine, back from Mexico with two small boys and not much else, staying with her parents and taking whatever work she could find. She'd learned to be careful about who she let near her children, and a charming man in a bar wasn't going to be the exception. That was why she said no, and why his coming back meant something.
 
@@ -325,7 +325,7 @@ I was eight. A hundred dollars was a fortune. I didn't even have to think about 
 
 "Okay," I said.
 
-Then I asked him something he hadn't planned for. Whether I could take Lou's name for my middle one. Nobody suggested it. I just wanted to carry it. That day Claudio Ignacio Bautista became Robert Louis Brovi. I had carried one father's name in the middle of mine my whole life. Now I would carry the other's. I've never once wished it back.
+Then I asked him something he hadn't planned for. Whether I could take Lou's name for my middle one. Nobody suggested it. I just wanted to carry it. That day Claudio Ignacio Bautista became Robert Louis Brizzi. I had carried one father's name in the middle of mine my whole life. Now I would carry the other's. I've never once wished it back.
 
 When I was six he taught me to swim by carrying me to the edge of the pool and putting me in. I came up coughing and furious, my arms going the way arms go when a body has decided it isn't going to drown, and I reached the wall and pulled myself out. Lou stood there watching, not laughing, just paying attention the way a man does when he's handed his kid something he'll need. He didn't make a speech. I got back in the water the next time, and the time after that.
 
@@ -380,7 +380,7 @@ Choosing one father didn't erase the other. I want to be careful about that, bec
 
 For years I carried a guilt too heavy to carry. I knew, the way a kid knows things without being told, what losing me had done to him, and somewhere in me I had signed for it, as if I were the one who had done the leaving. None of it had been mine to decide. But guilt doesn't check the facts. It just moves in, and today there is no one left to blame.
 
-Then they changed my name, and that one was harder. Claudio became Robert Brovi. On paper it was clean and it was right, and I know that now. Back then it felt like a correction, like the old name had been a mistake somebody was fixing, and I was the mistake.
+Then they changed my name, and that one was harder. Claudio became Robert Brizzi. On paper it was clean and it was right, and I know that now. Back then it felt like a correction, like the old name had been a mistake somebody was fixing, and I was the mistake.
 
 School was where it got to me. Second grade, Woodridge. I'd write Claudio at the top of my homework without thinking, my hand moving the way it always had, and Mrs. Locke would catch it. She was kind about it, every time.
 
@@ -388,7 +388,7 @@ School was where it got to me. Second grade, Woodridge. I'd write Claudio at the
 
 I'd take my eraser and rub the name out until the paper went soft and gray, and print the new one in the bald spot I'd left. Robert. Then I'd hand it back, and she'd smile like we'd fixed something together. It didn't feel fixed. It felt like erasing me.
 
-There was one thing they couldn't change, and I held onto it like a railing. Brovi still started with a B. When the teacher lined us up alphabetically, I landed near the front, right about where Bautista used to put me. My country was gone. My first father was gone. My name was gone. But I still stood in the same place in that line, and some mornings that one small thing was the only proof I had that any part of the old me had made the trip.
+There was one thing they couldn't change, and I held onto it like a railing. Brizzi still started with a B. When the teacher lined us up alphabetically, I landed near the front, right about where Bautista used to put me. My country was gone. My first father was gone. My name was gone. But I still stood in the same place in that line, and some mornings that one small thing was the only proof I had that any part of the old me had made the trip.
 
 **CHAPTER 5**
 
@@ -438,7 +438,7 @@ PART TWO
 
 Before the mat, there was the lunch table. Sixth grade in Ramsey, and I was the new kid with the wrong name and dark skin in a town that had almost none of either. The classroom was one room and the cafeteria was another, and the cafeteria I could not win.
 
-There was a table I sat at every day, and the kids at it had a thing they said about me. Brovi beats off. They would say it and squirt mayonnaise across the table to go with it, a little performance, every day, for the rest of the table to laugh at. I didn't even know what it meant. I knew it was about me, I knew it was filthy, and I knew the laughing was at me. That was enough.
+There was a table I sat at every day, and the kids at it had a thing they said about me. Brizzi beats off. They would say it and squirt mayonnaise across the table to go with it, a little performance, every day, for the rest of the table to laugh at. I didn't even know what it meant. I knew it was about me, I knew it was filthy, and I knew the laughing was at me. That was enough.
 
 And I kept sitting with them. That's the part I sit with now. Every day they did it, and every day I carried my tray back to the same seat. I didn't move tables. I didn't eat alone. Getting picked on by them felt better than having no one, and in a town where friends didn't come easy, that was the table. So I sat down and took it.
 
@@ -510,7 +510,7 @@ I'd known Dave since middle school. Everybody liked him, and the reason was that
 
 We connected freshman year, when a teacher named Mr. Ianuzzi ran a Bible study before school. Dave and I both started showing up because we wanted to. He brought in Ryan Martin, who became one of my best friends too. The three of us talked the way teenagers rarely do, about faith, about the gap between who you said you were on Sunday and who you were the rest of the week. Dave didn't need to fit in. He just lived it.
 
-When Dave became varsity starting quarterback sophomore year, the whole social world rearranged around him, and it didn't change him. He never made me feel left out. Senior year he went around telling people everybody needed to vote Rob Brovi for Best Looking. He almost campaigned me into a win. I didn't see myself that way. He was just that guy.
+When Dave became varsity starting quarterback sophomore year, the whole social world rearranged around him, and it didn't change him. He never made me feel left out. Senior year he went around telling people everybody needed to vote Rob Brizzi for Best Looking. He almost campaigned me into a win. I didn't see myself that way. He was just that guy.
 
 I had one real slip-up in high school. Junior prom. The group asked what I wanted to drink. I knew my parents drank Absolut Citron, so I said it without flinching, don't mix it, just the fifth. I chugged straight vodka for the first time in my life. Two hours later I was throwing up in the limo. Four hours later they carried me into prom like Weekend at Bernie's. The principal called my mom and she picked me up. I'd rarely seen her that disappointed. I got suspended, and my first thought was whether I was still captain of the wrestling team. I muscled my way back on track. The signs were all there. I was seventeen and didn't want to know what they meant.
 
@@ -535,7 +535,7 @@ I couldn't take any of it in. The gap between who everyone suddenly said I was a
 
 Junior year I cut nineteen pounds the week of the tournament, then binged so hard after weigh-ins that I threw up twice on the mat during a match against a guy who had two wins over me. The ref stopped it. Greeny, Coach Greenshields, got a towel, cleaned me up, sent me back out. I won the match and the tournament.
 
-That season in Regions I drew a kid who almost never lost, a Bergen County name everyone knew, dominant and smart, the kind who wins because he rarely makes a mistake. Quarterfinals, he was the two seed, I was the seven. Six minutes. Ten seconds left, I was down 5-4. He let me up, experienced guys do that with a lead, sure they can ride it out on their feet. He shouldn't have. Three seconds on the clock I shot a single-leg, my arms on his leg before my brain caught up, his balance gone. Takedown, 6-5, final. The paper the next day: "Late Takedown Keeps Ramsey's Brovi Going."
+That season in Regions I drew a kid who almost never lost, a Bergen County name everyone knew, dominant and smart, the kind who wins because he rarely makes a mistake. Quarterfinals, he was the two seed, I was the seven. Six minutes. Ten seconds left, I was down 5-4. He let me up, experienced guys do that with a lead, sure they can ride it out on their feet. He shouldn't have. Three seconds on the clock I shot a single-leg, my arms on his leg before my brain caught up, his balance gone. Takedown, 6-5, final. The paper the next day: "Late Takedown Keeps Ramsey's Brizzi Going."
 
 I won my semi, lost a close one in the finals, still went to States. Finished 18-4. After that match Lou sat with me while I caught my breath and the bracket moved on without us. Then: "That's who you are." Not great match. Not I knew you could do it. That's who you are. I just nodded. That was enough for him.
 
@@ -549,7 +549,7 @@ Here's what stays with me now: Lou walked into that apartment before he ever wal
 
 ### *Senior Year: County Champion*
 
-Senior year I came into the Counties as the top seed at 130. My brother Nick was a freshman at 103. In the sauna, cutting weight together, we'd said it would be something if we ever shared an article. Nick upset the number-one seed to make the semis. The paper ran it: "Ramsey's Brovi Brothers are Double Trouble." Dad was beaming.
+Senior year I came into the Counties as the top seed at 130. My brother Nick was a freshman at 103. In the sauna, cutting weight together, we'd said it would be something if we ever shared an article. Nick upset the number-one seed to make the semis. The paper ran it: "Ramsey's Brizzi Brothers are Double Trouble." Dad was beaming.
 
 I won the semis and the final 15-7, county champion at seventeen. My name on the wall again. Seventeen. I wouldn't understand that number for another thirty years.
 
@@ -563,7 +563,7 @@ He's complicated. Smart. Polished and strategic, an overachiever in the true sen
 
 ### *The Lesson and The Exception*
 
-Coach Albersi met me before school to run the track. He invested in me. At the year-end gathering he said, Brovi went down a legend. But when I was struggling, he wasn't around much. When I excelled, everyone wanted to be attached to it.
+Coach Albersi met me before school to run the track. He invested in me. At the year-end gathering he said, Brizzi went down a legend. But when I was struggling, he wasn't around much. When I excelled, everyone wanted to be attached to it.
 
 Lou was the exception. Through all of it, the nineteen seconds, the weight cuts, the throwing up, the bad ankle, the losses that hurt more than the wins, he was there. Not because I was becoming a legend. Because I was his son.
 
@@ -742,7 +742,7 @@ PART THREE
 *"Am I my brother's keeper?"*
 *— Genesis 4:9*
 
-I once handed my eighteen-year-old brother my birth certificate and sent him to the DMV to become me. He walked out as Robert Brovi, twenty-one, and we both thought we'd solved a problem instead of committing a federal crime. That's the worst thing my brother and I have ever done together, and you need to know him, because he is in every part of what came next. I can only tell it now because I'm fairly sure the statute of limitations has run out. If it hasn't, this paragraph is going to make for an interesting conversation with a lawyer.
+I once handed my eighteen-year-old brother my birth certificate and sent him to the DMV to become me. He walked out as Robert Brizzi, twenty-one, and we both thought we'd solved a problem instead of committing a federal crime. That's the worst thing my brother and I have ever done together, and you need to know him, because he is in every part of what came next. I can only tell it now because I'm fairly sure the statute of limitations has run out. If it hasn't, this paragraph is going to make for an interesting conversation with a lawyer.
 
 I was twenty-one. Nick was eighteen, a freshman at the University of Pennsylvania, Ivy League, admitted on his wrestling. So naturally I looked at all that promise and said: Nick, why don't you take my birth certificate down to the DMV and get yourself a driver's license? His whole face lit up. Oh my God, he said, that would be amazing. Two brothers, solving a problem. The problem being that Nick was eighteen and wanted to buy beer.
 
@@ -931,7 +931,7 @@ I drove back to California with pills in my system and cash in my pocket and the
 
 These days I don't carry anger toward Ignacio. I did for a while. What I know now is that I was a broken person meeting another broken person, and neither of us had the tools to give the other what they needed. But Ensenada gave me something I didn't recognize for years.
 
-Because I had Lou. Ensenada clarified something I'd always known without being able to say it. Lou Brovi was my father. Not because of a birth certificate. Because he chose it. Every day. Without keeping score. Ignacio gave me ten thousand dollars and I spent it on pills. Lou gave me his last twenty and never told me until years later. That's the difference.
+Because I had Lou. Ensenada clarified something I'd always known without being able to say it. Lou Brizzi was my father. Not because of a birth certificate. Because he chose it. Every day. Without keeping score. Ignacio gave me ten thousand dollars and I spent it on pills. Lou gave me his last twenty and never told me until years later. That's the difference.
 
 ### *Boca Raton*
 
@@ -1390,7 +1390,7 @@ Later he looked at me. You're steady, he said. Then: she is too. That was it. No
 *"Iron sharpeneth iron; so a man sharpeneth the countenance of his friend."*
 *— Proverbs 27:17*
 
-Years later, Grant Shaw stood in front of some of the top business leaders in the region, paused, and said my father's name into the room. Lou Brovi, great guy. But before Grant there were the rooms. Paying down the debt was one kind of work. Another kind was happening at the same time. Early on the work is obvious: work the steps, clean up the wreckage, rebuild trust slowly, one day at a time.
+Years later, Grant Shaw stood in front of some of the top business leaders in the region, paused, and said my father's name into the room. Lou Brizzi, great guy. But before Grant there were the rooms. Paying down the debt was one kind of work. Another kind was happening at the same time. Early on the work is obvious: work the steps, clean up the wreckage, rebuild trust slowly, one day at a time.
 
 I saw things in those rooms that never leave you. Young people dying from drugs and alcohol. Not old men at the end of long lives, young people with everything ahead of them. I sponsored people who went back out. Many of them died. Some went to jail. You pour yourself into someone, walk alongside them, answer the phone at midnight, and then one day you get the call that they didn't make it.
 
@@ -1406,7 +1406,7 @@ He always had a way of lifting a person up. I had one of his books, and one day 
 
 He told a story once about speaking at a meeting in New York. He'd been sharing a while, maybe longer than he realized, and someone in the back finally said one word. Next. He laughed telling it. No offense taken. Nobody gets special treatment in those rooms. In time we became friends, real friends, at his birthday party, at my wedding, anywhere we ended up in the same room. If I was having a bad day, I knew I could pick up the phone and call him.
 
-The moment came years into that friendship, at the business conference he built for the city. He was speaking, and he paused and looked out into the crowd. Lou Brovi, great guy. Nick and Rob, you know them? Hearing my father's name in a room like that stopped me. My dad worked at Baptist Hospital for years, showed up, did the job well, treated people right, stayed until he was eighty-two. Grant saying his name in a room full of leaders meant something. Not because it elevated us. Because it honored the life my father believed in.
+The moment came years into that friendship, at the business conference he built for the city. He was speaking, and he paused and looked out into the crowd. Lou Brizzi, great guy. Nick and Rob, you know them? Hearing my father's name in a room like that stopped me. My dad worked at Baptist Hospital for years, showed up, did the job well, treated people right, stayed until he was eighty-two. Grant saying his name in a room full of leaders meant something. Not because it elevated us. Because it honored the life my father believed in.
 
 He treated me like I mattered before I'd given him a single reason to believe I'd amount to anything. Lou would have loved him. They were cut from the same cloth, men who led by example, who didn't need applause, who showed up the same whether the room was full or empty. He also handed me one of the great friendships of my life: his nephew Mike moved down from Chicago to Pensacola, and we've been close ever since.
 
@@ -1767,7 +1767,7 @@ Love shows up where it's needed, not where it's earned. That is the cardinal's p
 
 # **AFTERWORD**
 
-There is a kind of wisdom that can only be earned by living through what most people spend their lives trying to avoid. Not in a classroom. Not through credentials. But through competition and failure, addiction and recovery, grief and responsibility, and the long hours spent beside people in the final chapter of their lives. Rob Brovi has that kind of wisdom, and this book is the evidence of it.
+There is a kind of wisdom that can only be earned by living through what most people spend their lives trying to avoid. Not in a classroom. Not through credentials. But through competition and failure, addiction and recovery, grief and responsibility, and the long hours spent beside people in the final chapter of their lives. Rob Brizzi has that kind of wisdom, and this book is the evidence of it.
 
 I have known Rob for thirty-five years, and a friendship like that gives you a long view of a man's life. Over those years we bonded over faith, character, and a shared belief in showing up and doing right by people. I knew him long before this book, long before the wisdom in these pages had taken shape, long enough to remember the younger version of him, full of energy and loyalty, the guy who hauled a buddy's Jeep doors around Long Beach Island in ninety-five-degree heat, no shade, just because somebody needed help moving. That was Rob being Rob. He has a servant's heart, and he has had it from the beginning. What I did not know back then was everything going on underneath: the battles he was fighting, the identity he was trying to find, the long road that would bring him here, to the writing of this book.
 
@@ -1867,4 +1867,4 @@ The phone numbers and web addresses were current when this book went to press. O
 
 # **ABOUT THE AUTHOR**
 
-Rob Brovi is a hospice liaison and Certified Dementia Practitioner. Born in Mexico City and raised in New Jersey, he is in long-term recovery and has made it his mission to serve others, sitting with families in their hardest rooms and helping them show up for the people they love. He lives in Raleigh, North Carolina, with his wife, Hope. *The Cardinal's Promise* is his first book.
+Rob Brizzi is a hospice liaison and Certified Dementia Practitioner. Born in Mexico City and raised in New Jersey, he is in long-term recovery and has made it his mission to serve others, sitting with families in their hardest rooms and helping them show up for the people they love. He lives in Raleigh, North Carolina, with his wife, Hope. *The Cardinal's Promise* is his first book.

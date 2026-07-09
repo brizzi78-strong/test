@@ -82,3 +82,5 @@ umbrella all pseudonyms live under.
 **Temporary (July 9, 2026):** family surname Brizzi -> Brovi throughout the manuscript for the blind-review pass (author name, Lou, the newspaper headlines, name-change scene). Cover, ISBN record, and blurb letters still carry the real name; restore or decide before print.
 
 **Temporary (July 9, 2026), superseding the earlier keep-with-approval entries for the blind-review pass:** Mager -> Major, Quint Studer -> Grant Shaw, Matt Campbell -> Mack Cole; EntreCon reference removed. Their real-name approvals remain on file; restore any or all before print.
+
+**DECIDED (July 9, 2026):** Byline is ROB BRIZZI — family surname restored throughout the interior; matches cover, Bowker ISBNs, and blurb letters. All other pseudonyms (Ignacio/Bautista, Donna, Dana/Mark/Jay, Sandra, Trudy, Christian, Detroit Frank, Asha, Nick, Kathy, Earl, Major, Grant Shaw, Mack Cole, Cain and Jacob) remain in place pending the author's calls.
