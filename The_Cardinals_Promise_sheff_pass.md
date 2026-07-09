@@ -80,27 +80,24 @@ A Note to the One Who Loves an Addict
 20. Horacio
 21. The Line
 22. The Salmon Palace
-23. The Offer
-24. They Gave Me a Chance
-25. Making Amends
-26. Gulf Breeze
-27. The People You Meet When You Stop Drinking
+23. They Gave Me a Chance
+24. Making Amends
+25. Gulf Breeze
+26. The People You Meet When You Stop Drinking
 
 **Part Five — Hope**
 
-28. Hope
-29. Sobriety Meets Hospice
+27. Hope
+28. Sobriety Meets Hospice
 
 **Part Six — The Last Chapter**
 
-30. The Detour
-31. Five Weeks
-32. The Days After
-33. The First Honest Mile
-34. What Grief Taught the Job
-35. The Table
-
-Sobriety Was Not the Finish Line
+29. The Detour
+30. Five Weeks
+31. The Days After
+32. The First Honest Mile
+33. What Grief Taught the Job
+34. The Table
 
 What He Didn't Owe
 
@@ -1256,7 +1253,7 @@ Visitors asked when I'd upgrade. Real estate logic said flip it, leverage it, mo
 
 **CHAPTER 23**
 
-## **The Offer**
+## **They Gave Me a Chance**
 
 *"Old things are passed away; behold, all things are become new."*
 *— 2 Corinthians 5:17*
@@ -1275,13 +1272,6 @@ She called three days later. I need to talk to you about something from your bac
 
 Four days. I went to work, went to meetings, had dinner, slept, did it again. On the fifth day Caroline called. How does a November first start date sound? I didn't answer right away. I sat in my car in Lou's driveway and let it settle. Not adrenaline. Gratitude. Someone had looked at who I was and decided it was enough. I called Lou. I got the job. She knew about the DUIs. HR wanted to pull the offer. She fought for me. A pause. That's a blessing, he said. I'm proud of you. After we hung up I sat there a long time. This wasn't a comeback. Comeback means something to go back to. This was confirmation.
 
-**CHAPTER 24**
-
-## **They Gave Me a Chance**
-
-*"No matter how far down the scale we have gone, we will see how our experience can benefit others."*
-*— Bill Wilson, Alcoholics Anonymous*
-
 Miss Jane was seventy-eight, recovering from hip surgery, and she apologized for the mess in a spotless house. Then she told me she used to dance, every Friday night for forty years, like it was a confession. That was the job. The work didn't feel heroic, which surprised me. I half-expected the new job to arrive with meaning baked in. Day one was paperwork. Compliance modules. Acronyms I barely remembered from a former life, HIPAA, OASIS. Caroline didn't give me a speech. She showed me how things worked. This is a long game, she said. You don't force referrals. You earn trust.
 
 Home health wasn't selling, not the way I'd done it. It was assisted livings and living rooms, oxygen tanks humming in the corner, family members exhausted in ways sleep doesn't fix. I walked into homes where time had slowed down.
@@ -1294,7 +1284,7 @@ It was familiar. I knew what it was like to need help and not want it, to be ash
 
 The days were long, doctors' offices, nursing homes, assisted livings, back roads. At night I still went to meetings, still called my sponsor. There was a moment, small and almost forgettable, sitting in my car after a visit with paperwork on the steering wheel, when I realized I wasn't waiting for something else anymore. This was enough. They gave me a chance, and I stayed ten years. There were sales awards in there; they mattered less than what they measured, that I'd finally found work I could do without performing. My manager Brenda Jahn was one of the best I ever worked for. She believed in me and pushed me, and that prepared me for everything that came next.
 
-**CHAPTER 25**
+**CHAPTER 24**
 
 ## **Making Amends**
 
@@ -1313,7 +1303,7 @@ The debt didn't disappear fast. But I stopped flinching when bills came. I start
 
 The courts came last. In 2013, four years sober, I wrote to the court myself and petitioned to have the cases dismissed. No lawyer this time. In 2002 that work had taken the Taylor firm and ten thousand dollars. In 2013 it took a letter from a sober man who had done everything the court asked. The dismissals came through. No record at all.
 
-**CHAPTER 26**
+**CHAPTER 25**
 
 ## **Gulf Breeze**
 
@@ -1342,7 +1332,7 @@ Quint has been sober for decades. He wrote books, moved whole hospital cultures 
 
 The morning after my father died, all these years later, Quint was the first person to reach me. Your dad was a great man, his text said. Of everyone who would reach out in those days, he got there first, and he said the truest thing. Sometimes God places someone in your life not to rescue you but to show you what's possible. For the first time since getting sober, I believed staying alive wasn't the finish line. It was the starting point.
 
-**CHAPTER 27**
+**CHAPTER 26**
 
 ## **The People You Meet When You Stop Drinking**
 
@@ -1379,7 +1369,7 @@ PART FIVE
 
 *She said, I will love you no matter what. I'd heard that sentence once before — proved, not spoken.*
 
-**CHAPTER 28**
+**CHAPTER 27**
 
 ## **Hope**
 
@@ -1516,7 +1506,7 @@ They went into the kitchen together while I stayed in the living room. I could h
 
 Later he looked at me. You're steady, he said. Then: she is too. That was it. No formal blessing, no speech. He saw two people steady in the same direction and noted it.
 
-**CHAPTER 29**
+**CHAPTER 28**
 
 ## **Sobriety Meets Hospice**
 
@@ -1547,7 +1537,7 @@ PART SIX
 
 *Presence, repeated, until the end. His, then mine.*
 
-**CHAPTER 30**
+**CHAPTER 29**
 
 ## **The Detour**
 
@@ -1574,7 +1564,7 @@ The hardest part of leaving Novo wasn't the job. It was leaving that relationshi
 
 I told people I was going to take some time off. Be there for my dad. Be there for my mom. Be present the way I'd been telling hospice families to be present, while there was still time. That was the plan. It's not what happened. What happened was I retreated into myself. The time I'd set aside became something else, a depression I didn't see coming and couldn't recognize from the inside. I was grieving what was already happening and what was coming, and the weight kept me from doing the thing I'd left my career to do. I know the name for it now. Grief doesn't wait for the loss. It can arrive early and freeze you, and you can't name it from inside. I wasn't working. I wasn't fully showing up for my parents. I was stuck in a version of myself that couldn't move in any direction. I don't say that for sympathy. I say it because it's the truth, and this book doesn't work if I only tell the parts where I got it right. Hospice, when it came, wasn't a pivot. It was a return, to the rooms I'd been thinking about since the home health years, to the weight I'd learned how to carry. It pulled me out of that in-between place and gave me direction again.
 
-**CHAPTER 31**
+**CHAPTER 30**
 
 ## **Five Weeks**
 
@@ -1629,7 +1619,7 @@ That spring, Hope and I told him we were moving to Raleigh. I could tell he was 
 
 He got pneumonia on December 23. His immune system had nothing left to fight with. They put him on a drip. Lynda had been calling, and I could hear in her voice what she was trying to tell me without saying it. My mother was in Raleigh visiting, she'd made the trip from Lantana with Parkinson's making every mile harder than it used to be. I thought I could do both: go down Saturday, have a day with her, still get there in time. I was wrong about the timeline. I stayed.
 
-**CHAPTER 32**
+**CHAPTER 31**
 
 ## **The Days After**
 
@@ -1694,7 +1684,7 @@ I sat in my car one afternoon thinking, am I becoming someone else? The answer c
 
 In January we went through his things. His gray suit was hanging on the right side of the closet, between two work shirts. Always be the best-dressed person in the room. I pulled it off the rack and held it up, and I couldn't put it back. I took it home in a garment bag with no plan. It hangs in my closet now, next to mine. It isn't my size and it isn't my style and I will never wear it. But some mornings I open the closet door and it's there, and I know what it is, and I know who wore it, and I leave it alone. I tell families sometimes, when they're clearing out a closet of their own: keep one thing. You'll know which one. It will tell you.
 
-**CHAPTER 33**
+**CHAPTER 32**
 
 ## **The First Honest Mile**
 
@@ -1713,7 +1703,7 @@ And I was mean. That scared me more than a craving would have. I lashed out at t
 
 Seventeen years sober, and I had hit a rock bottom again, an emotional one this time. The disease doesn't need a bottle to run the old plays, isolation, anger, the closed door. The difference was that this time I had to feel it all the way through. And this time I knew what to do with a bottom. I went back to meetings, more of them than I'd been to in years. I got a therapist. The morning calls with Mager got longer. I said out loud, in the rooms and on the phone, that I was not okay. I went back to the people I'd been sharp with and said sorry, plainly. Seventeen years in, I was back on the first honest mile.
 
-**CHAPTER 34**
+**CHAPTER 33**
 
 ## **What Grief Taught the Job**
 
@@ -1742,7 +1732,7 @@ And some rooms I can name. John sold medical equipment. Joan was a respiratory t
 
 My father always made a big deal of my sobriety anniversary. Every January 9th. My first year, he came to Gulf Breeze Hospital to hear me speak, sat in that room and listened to his son talk about staying sober for one year. He told me once, quietly, that whenever he mentioned my name to someone who knew me, they'd say the same thing: he's the best. That's what he built. Lou spent eighty-four years showing up without needing to know exactly where he was going. I'm trying to do the same.
 
-**CHAPTER 35**
+**CHAPTER 34**
 
 ## **The Table**
 
@@ -1790,42 +1780,6 @@ It took a clear sky raining on a bonfire in Chumuckla before I could believe He 
 I had help learning that. My mother put me in the pew before I could choose it, and that foundation was the floor I stood on when everything else gave way. Dave Meyer and Jeff Middleton showed me what it looks like in a grown man. Diabetes Dave taught me the language of signs. And Mager, on the phone, morning after morning, year after year.
 
 I still can't explain God on paper, and I've stopped trying. What I can tell you is that every time I hit the bottom of myself, something I had not put there was holding the floor. Today my faith doesn't look like certainty. It looks like that morning prayer with Mager. A red bird on a mirror. Walking into a dying stranger's room with nothing useful in my hands and trusting that presence is its own kind of prayer. I stopped needing the theology airtight. I just needed to keep showing up, and to let myself be shown up for. That, as much as anything, is what got me here.
-
-# **SOBRIETY WAS NOT THE FINISH LINE**
-
-I really thought sobriety was it. One more finish line to cross, one more way to earn my place back.
-
-Get sober. Stay sober. Live honestly and hope I don't mess up. Make a living on my own. Wake up without shame already sitting in the room. Stop making my family afraid every time the phone rang.
-
-That felt like enough. Until it wasn't.
-
-I needed simple instructions: don't drink, don't use, go to meetings, tell the truth, call your sponsor, make the next right decision. My life had become so complicated in addiction that recovery had to become simple. One day. One choice. One honest sentence at a time.
-
-But I did not understand what sobriety was really doing.
-
-I thought it was saving me from death.
-
-It was.
-
-But it was also preparing me for something else. The founders figured out that the only way to stay sober was to be useful to another man.
-
-I had spent years being the person people worried about. The son somebody was always praying for. The phone call no parent wants to get. My father had come for me when I could not come back for myself, and in those early sober years, I thought the miracle was that I had lived.
-
-I did not yet understand that being alive was only the beginning.
-
-Sobriety gave me a second chance, but the foundation I needed came slower. It came through humility, through volunteering and meetings, through showing up when I did not feel impressive. Love is not a speech. Love is action, repeated until trust begins to breathe again. That's what Lou taught me — being there for people, without ever sending the bill.
-
-Years later, hospice would teach me the rest.
-
-I would walk into rooms where families were scared, guilty, angry, silent, and running out of time. I would see the same look I had once seen in my father's eyes: someone trying to love a person they cannot save by force.
-
-I used to think healing meant I would finally feel good. Recovery taught me that healing meant I could function well even when I didn't. Hospice showed me the same truth at the bedside. A family may not feel good when someone they love is dying, but they can still love well. They can tell the truth. They can forgive. They can make the next right decision. They can be present. That is not happiness. It is something deeper.
-
-That is when I began to understand.
-
-Sobriety was not the finish line.
-
-It was the first honest mile.
 
 # **WHAT HE DIDN'T OWE**
 

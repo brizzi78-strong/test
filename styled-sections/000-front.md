@@ -80,27 +80,24 @@ A Note to the One Who Loves an Addict
 20. Horacio
 21. The Line
 22. The Salmon Palace
-23. The Offer
-24. They Gave Me a Chance
-25. Making Amends
-26. Gulf Breeze
-27. The People You Meet When You Stop Drinking
+23. They Gave Me a Chance
+24. Making Amends
+25. Gulf Breeze
+26. The People You Meet When You Stop Drinking
 
 **Part Five — Hope**
 
-28. Hope
-29. Sobriety Meets Hospice
+27. Hope
+28. Sobriety Meets Hospice
 
 **Part Six — The Last Chapter**
 
-30. The Detour
-31. Five Weeks
-32. The Days After
-33. The First Honest Mile
-34. What Grief Taught the Job
-35. The Table
-
-Sobriety Was Not the Finish Line
+29. The Detour
+30. Five Weeks
+31. The Days After
+32. The First Honest Mile
+33. What Grief Taught the Job
+34. The Table
 
 What He Didn't Owe
 
