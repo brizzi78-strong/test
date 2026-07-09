@@ -65,6 +65,7 @@ umbrella all pseudonyms live under.
 - Mager (ch24/27/32/34) — first reference only; sponsorship + sobriety — APPROVED per author
 - Diabetes Dave (ch29) — Garrett's death, faith conversation — APPROVED per author
 - Linda (ch34) — assisted-living nurse; real name kept at her request, facility name removed — APPROVED per author
+- Aunt ("Donna", pseudonym) — the "hasn't dated in years" line — she approved it by phone, per author
 - Dr. Jason Huet, Dave Meyer — written sign-offs on file (resolved earlier)
 
 **Pseudonyms now in the text (changed July 9, 2026):**
@@ -72,4 +73,4 @@ umbrella all pseudonyms live under.
 
 **Still outstanding:**
 - Written sign-offs: Chris (ch12), author's mother (Parkinson's disclosure), John of "John and Joan" (ch33) or pseudonym flag
-- Text fixes not yet applied: "some rooms I can name" (ch33); "She hasn't dated in years" (ch6, now Donna); statute-of-limitations joke (ch12); Author's Note sentence covering home-health patients and recovery names
+- Text fixes not yet applied: "some rooms I can name" (ch33); statute-of-limitations joke (ch12); Author's Note sentence covering home-health patients and recovery names
