@@ -59,7 +59,6 @@ A Note to the One Who Loves an Addict
 6. The Wrestler
 7. What the Mat Left
 8. The Suit
-
 9. When I Worked for the Mob
 10. Oxford
 11. MTV
@@ -82,12 +81,12 @@ A Note to the One Who Loves an Addict
 22. The Salmon Palace
 23. They Gave Me a Chance
 24. Making Amends
-25. Gulf Breeze
-26. The People You Meet When You Stop Drinking
 
 **Part Five — Hope**
 
-27. Hope
+25. Hope
+26. Gulf Breeze
+27. The People You Meet When You Stop Drinking
 28. Sobriety Meets Hospice
 
 **Part Six — The Last Chapter**
@@ -98,8 +97,6 @@ A Note to the One Who Loves an Addict
 32. The First Honest Mile
 33. What Grief Taught the Job
 34. The Table
-
-What He Didn't Owe
 
 Epilogue: The Cardinal's Promise
 

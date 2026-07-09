@@ -59,7 +59,6 @@ A Note to the One Who Loves an Addict
 6. The Wrestler
 7. What the Mat Left
 8. The Suit
-
 9. When I Worked for the Mob
 10. Oxford
 11. MTV
@@ -82,12 +81,12 @@ A Note to the One Who Loves an Addict
 22. The Salmon Palace
 23. They Gave Me a Chance
 24. Making Amends
-25. Gulf Breeze
-26. The People You Meet When You Stop Drinking
 
 **Part Five — Hope**
 
-27. Hope
+25. Hope
+26. Gulf Breeze
+27. The People You Meet When You Stop Drinking
 28. Sobriety Meets Hospice
 
 **Part Six — The Last Chapter**
@@ -98,8 +97,6 @@ A Note to the One Who Loves an Addict
 32. The First Honest Mile
 33. What Grief Taught the Job
 34. The Table
-
-What He Didn't Owe
 
 Epilogue: The Cardinal's Promise
 
@@ -342,7 +339,7 @@ Where he came from explains some of it. His father sold produce, and every so of
 
 He had three kids by the time he was twenty-two. His first wife, Judy, was a couple of years younger and fighting postpartum depression in an era that had no name for it and no help. He was still partying some. The marriage couldn't hold, and the kids spent most of their time with Mag, his mother. He told me the plain version himself, no excuses in it: he hadn't been the best version of himself back then. I think that's part of why he never lectured me about my own wreckage. He knew what it was to owe your kids a better man than the one they got.
 
-He worked IT most of his life, a lot of it on the help desk, the guy you call when the thing won't work, and he didn't stop until he was eighty-two. He was always working an angle for a second income, too. For a while he owned a weekend flea market called Boardwalk Lew's, and I hated every Saturday I spent working it. Nobody asked. Left alone on a Sunday he watched his games, the Yankees in the summer, the Giants in the fall. That was the whole vice.
+He worked IT most of his life, a lot of it on the help desk, the guy you call when the thing won't work, and he didn't stop until he was eighty-two. He was always working an angle for a second income, too. For a while he owned a weekend flea market called Boardwalk Lew's — the name came with the place and he never bothered to change it — and I hated every Saturday I spent working it. Nobody asked. Left alone on a Sunday he watched his games, the Yankees in the summer, the Giants in the fall. That was the whole vice.
 
 People have asked me how a man in his forties decides to take on an immigrant single mother's two boys. Lou never dressed the answer up. Your mother was beautiful, he said, and ten years younger. That was the honest start of it. The staying was the part he never explained.
 
@@ -574,7 +571,7 @@ I won my semi, lost a close one in the finals, still went to States. Finished 18
 
 ### *Charlie*
 
-I was about sixteen when I got the news about Charlie. He and Nancey had separated and he'd drifted somewhere harder to reach. The disease had him, the same one that came for me a decade later, though I didn't know that yet. My dad was the one who went and got him, found him alone in his apartment the way you find someone who's stopped being able to take care of himself. Charlie died about four years after that.
+I was in middle school when I got the news about Charlie. He and Nancey had separated and he'd drifted somewhere harder to reach. The disease had him, the same one that came for me a decade later, though I didn't know that yet. My dad was the one who went and got him, found him alone in his apartment the way you find someone who's stopped being able to take care of himself. Charlie died about four years after that.
 
 I loved him, and that's hard to explain to people who think grief needs proximity. I hadn't talked to him in years. I was sixteen, buried in wrestling and school. But I'd loved him, and when he died something opened in me I didn't have a name for. Nobody validated it. He was the first person I loved who was just gone.
 
@@ -706,7 +703,7 @@ And everything was a surprise. What are we watching, Dad? It's a surprise. Where
 
 My brother and I called him the most interesting man in the world. It started as a joke, the guy from the Dos Equis commercials. Stay thirsty, my friends. Then we realized we weren't joking. He really was. Not for who he knew. For who he was in a kitchen on an ordinary night, keeping a straight face, waiting for you to fall for it.
 
-Lou died on Christmas Day, 2025. The man who adopted me. The man who drove me to rehab and stopped at Carrabba's on the way so I could have a last glass of wine. The man who never talked about himself, never needed you to know who he knew, and never once acted like any of it was special. When your dad's alive you think you have time, that the stories will keep coming. Then one day they stop. I got to live in his world for a while.
+That was the man who adopted me. He never talked about himself, never needed you to know who he knew, and never once acted like any of it was special. I got to live in his world for a while.
 
 **CHAPTER 10**
 
@@ -793,7 +790,7 @@ I once handed my eighteen-year-old brother my birth certificate and sent him to 
 
 I was twenty-one. Chris was eighteen, a freshman at the University of Pennsylvania, Ivy League, admitted on his wrestling. So naturally I looked at all that promise and said: Chris, why don't you take my birth certificate down to the DMV and get yourself a driver's license? His whole face lit up. Oh my God, he said, that would be amazing. Two brothers, solving a problem. The problem being that Chris was eighteen and wanted to buy beer.
 
-Here's the part that still gets me: we look nothing alike. Chris has green eyes and lighter skin and at the time looked about fifteen. But this was before they put your photo in the system, so he strolled into the DMV with my birth certificate and, I want to be clear about the tradecraft here, a library card as his backup ID. A library card. For a felony. And he walked out as me.
+Here's the part that still gets me: we look nothing alike. Chris has hazel eyes and lighter skin and at the time looked about fifteen. But this was before they put your photo in the system, so he strolled into the DMV with my birth certificate and, I want to be clear about the tradecraft here, a library card as his backup ID. A library card. For a felony. And he walked out as me.
 
 Back at Penn he became a legend. Bouncers would hold the ID up to the light, look at the child standing in front of them, and say there's no way you're twenty-one. And Chris, cool as anything, would tell them: run it in the system. And it came back clean. Every time. Because it was real, my actual identity, in the actual New Jersey database. The only counterfeit item in the whole transaction was my brother's face.
 
@@ -870,7 +867,7 @@ The pills came back slow. Not with a decision I can point to. More like a long w
 
 I can tell you the exact feeling that hooked me. The first time I took a pill and chased it with a drink, something in me went quiet and right at the same time. Not high, exactly. Settled. The low hum that had run under everything since I was a kid, the part of me always checking the room, always reading faces to know who to be, just switched off. I wasn't trying to be funny and landing it. I was funny. I wasn't working to seem easy in my own skin. I was easy in it. For a man who had spent his whole life performing, here was the first time I didn't have to. I just was. This is what I was supposed to feel like the whole time, I thought. I would spend years chasing that one feeling, and I would never reach it again.
 
-Taking one before a workday, I told myself it was practical. Here's what a pill did for me in 2002, as honestly as I can put it: the noise went quiet. Not silent, quiet. The static of self-doubt dropped a few decibels. I could hear the customer instead of performing listening while I rehearsed my next line. I closed deals I wouldn't have closed. I walked into rooms that scared me and didn't let them. My numbers went up.
+The pills were Adderall and Ritalin. Taking one before a workday, I told myself it was practical. Here's what a pill did for me in 2002, as honestly as I can put it: the noise went quiet. Not silent, quiet. The static of self-doubt dropped a few decibels. I could hear the customer instead of performing listening while I rehearsed my next line. I closed deals I wouldn't have closed. I walked into rooms that scared me and didn't let them. My numbers went up.
 
 That's the trap. Not that the pills felt good, plenty of things feel good and don't ruin you. The trap was that they made me better at the thing I most needed to be better at, with money attached, in real time. I didn't see it as using. I saw it as competing.
 
@@ -1003,6 +1000,8 @@ Nancey didn't drink. I wasn't drinking either by then, still on medication, stil
 She knew I was in a dark place. She didn't try to fix it. Didn't ask me to explain it or show measurable improvement. She just loved me where I was and sat with me until I was ready.
 
 She helped me find work through local connections, and for a while, in her quiet orbit, I started to find my feet again.
+
+Then I left. I got an apartment in West Palm Beach, and I can't hand you a clean reason why. The disease wanted more room than my aunt's couch gave it, and it sold me the move as a fresh start. In West Palm the pills stopped being the whole story. I added cocaine. I all but stopped eating, and my body started filing its own reports — malnutrition, metabolic syndrome, the machinery quietly failing while I told anyone who asked I was fine. Boca was the last soft place. West Palm Beach was where the disease finally got me alone.
 
 **CHAPTER 16**
 
@@ -1152,7 +1151,7 @@ Somewhere in that year I understood what sobriety was actually asking of me. It 
 
 Who you stand next to decides more than people admit. The rooms have their own pecking order, old-timers, big personalities, sponsors who collect sponsees like merit badges, and if you attach yourself to the wrong people, the rooms themselves can walk you back out the door. I got lucky, or I got guided. The handful I stood next to wanted me sober more than they wanted an audience.
 
-I worked as a lifeguard again, watching the water at the UWF pool. I was thirty-two on a stand where everyone else working was nineteen. I felt old. I also felt good. Three rounds of P90X had me in the best shape I'd been in years. The job was simple. Scan faces, count heads, make sure everyone got home safe. Stop paying attention and someone could die. I liked that. Lifeguarding was presence. You stood watch, shift after shift, and most days nothing happened. That was the point. One day a mom asked if I'd give her kid swimming lessons. I'm pretty sure the lessons weren't really about the kid. I said maybe and went back to watching the water. The old me would have turned it into something. The new me could let a moment stay small.
+I worked as a lifeguard, watching the water at the UWF pool. I was thirty-two on a stand where everyone else working was nineteen. I felt old. I also felt good. Three rounds of P90X had me in the best shape I'd been in years. The job was simple. Scan faces, count heads, make sure everyone got home safe. Stop paying attention and someone could die. I liked that. Lifeguarding was presence. You stood watch, shift after shift, and most days nothing happened. That was the point. One day a mom asked if I'd give her kid swimming lessons. I'm pretty sure the lessons weren't really about the kid. I said maybe and went back to watching the water. The old me would have turned it into something. The new me could let a moment stay small.
 
 For a stretch in those years I trained MMA in a garage, thirty-two years old and grappling with guys ten years younger. The wrestling came right back. Nobody in that garage could stop the takedown, and for a few months I got to feel seventeen again. Then an opponent kneed me in the ribs in the middle of a front headlock and broke two of them, and a sparring round with a guy named Tyrone jarred a back tooth loose that ended in an implant. I never took an official fight. The garage sessions ended the way garage sessions should, with a body politely informing a man in his thirties that the mat had already taught him everything he needed.
 
@@ -1175,7 +1174,7 @@ People asked why I did all of it. The meetings, the volunteering, the running, t
 *"For if ye forgive men their trespasses, your heavenly Father will also forgive you."*
 *— Matthew 6:14*
 
-He never remarried. No second family, no one after my mother. He stayed in the same spot we left him in and loved her for the rest of his life.
+He never remarried. No second family, no one after my mother.
 
 When I was small, he called me his good luck charm. I think about that now. Whatever luck I was, it got on a plane when I was four, and he stayed where it left him.
 
@@ -1195,7 +1194,7 @@ For a couple of months it was easy. Two men on the phone, talking about games.
 
 Then one call, it turned. He told me he had never moved on after my mother left. He said he was still in love with her, all these years later.
 
-I sat with that. In a way, I felt sorry for him. I couldn't imagine what it must have done to him to lose his children and the woman he loved in the same leaving, and then to just stay there, in that spot, for the rest of his life. I had built a whole life since Mexico. He had stayed where we left him.
+I sat with that. In a way, I felt sorry for him. I couldn't imagine what it must have done to him to lose his children and the woman he loved in the same leaving, and then to just stay there, in that spot, all these years. I had built a whole life since Mexico. He had stayed where we left him.
 
 Then life got busy. That's the honest, ordinary way it happened, no blowup, no slammed door. I let the calls slip. He kept going out to that VoIP line. I was the one who stopped picking up the other end. He wanted to come to Pensacola, and I felt my boundaries start to bend, and I pulled back. Pensacola was Lou's. I couldn't do that to him. I told myself I'd pick it up again when things settled down. I didn't. We haven't spoken in years.
 
@@ -1291,7 +1290,7 @@ The days were long, doctors' offices, nursing homes, assisted livings, back road
 *"First be reconciled to thy brother, and then come and offer thy gift."*
 *— Matthew 5:24*
 
-$113,000. That was the number when I finally added it up in ink on a yellow legal pad, every credit card and collection account and legal fee, no rounding. I'd spent years not looking at it. Steady work meant I could finally face the wreckage I'd been outrunning, and my sponsor Mager was the one who walked me into it. He didn't rush me. He offered patience that refused to participate in my performance. I could narrate recovery convincingly, still controlling the version of me in the room. Mager didn't interrupt. He listened in a way that made clear he was hearing more than I was saying, and eventually, with nowhere for the performance to land, it fell apart on its own.
+$113,000. That was the number when I finally added it up in ink on a yellow legal pad, every credit card and collection account and legal fee, no rounding. I'd spent years not looking at it. Steady work meant I could finally face the wreckage I'd been outrunning, and my sponsor Mager — you'll meet him properly in a few chapters — was the one who walked me into it. He didn't rush me. He offered patience that refused to participate in my performance. I could narrate recovery convincingly, still controlling the version of me in the room. Mager didn't interrupt. He listened in a way that made clear he was hearing more than I was saying, and eventually, with nowhere for the performance to land, it fell apart on its own.
 
 I got stuck on the amends step. Not in theory. In the concrete requirement to account for everything, without narrative, without softening. One night after a meeting Mager slid a yellow legal pad across the table. Write it down, he said. I knew what he meant.
 
@@ -1303,73 +1302,13 @@ The debt didn't disappear fast. But I stopped flinching when bills came. I start
 
 The courts came last. In 2013, four years sober, I wrote to the court myself and petitioned to have the cases dismissed. No lawyer this time. In 2002 that work had taken the Taylor firm and ten thousand dollars. In 2013 it took a letter from a sober man who had done everything the court asked. The dismissals came through. No record at all.
 
-**CHAPTER 25**
-
-## **Gulf Breeze**
-
-*"Iron sharpeneth iron; so a man sharpeneth the countenance of his friend."*
-*— Proverbs 27:17*
-
-Years later, Quint Studer stood in front of some of the top business leaders in the region, paused, and said my father's name into the room. Lou Brizzi, great guy. But before Quint there were the rooms. Paying down the debt was one kind of work. Another kind was happening at the same time. Early on the work is obvious: work the steps, clean up the wreckage, rebuild trust slowly, one day at a time.
-
-I saw things in those rooms that never leave you. Young people dying from drugs and alcohol. Not old men at the end of long lives, young people with everything ahead of them. I sponsored people who went back out. Many of them died. Some went to jail. You pour yourself into someone, walk alongside them, answer the phone at midnight, and then one day you get the call that they didn't make it.
-
-I was that person once. I know what the disease does from the inside. Losing people in those rooms prepared me for something I didn't know I was being prepared for. Nothing in hospice is harder than a parent losing a child. The only reason I can stay in that room without flinching is that I've already sat with losses like that in recovery. Recovery taught me how to be present for the worst thing. Hospice just gave me a new room to bring it to.
-
-But eventually something else happens. You look around and realize sobriety by itself can't be the end of the story. I was thirty-three, sober long enough to know I wasn't going back, and I couldn't shake the feeling there was something left in the tank. Not ego. A quiet sense that maybe God hadn't kept me alive just to sit in meetings the rest of my life trying not to mess up again. I wanted to do more. I just hadn't seen many examples of what that looked like. Until I met Quint Studer.
-
-If you're not from the Gulf Coast, the name may not mean much. In Pensacola it's on the ballpark. Quint had run Baptist Hospital, the same hospital where my dad worked, then built one of the most respected healthcare consulting firms in the country, teaching hospitals across America the thing my father practiced nightly for free: treat people right, every time, whether anybody's watching or not. When he sold the firm he didn't buy an island. He and his wife Rishy bought the minor-league ballpark, put the stadium on the water, and went about rebuilding downtown Pensacola block by block. A man like that could sit anywhere he wanted. He sat in the rooms, in the same chairs as the rest of us, one more sober man saying his name out loud.
-
-I first met Quint at a meeting connected to Gulf Breeze Hospital. What struck me was how he carried himself, a steadiness, a calm that didn't feel like ego. When he spoke, people listened. Over time he'd talk with me after meetings, look me directly in the eye. He encouraged me with the kind of quiet belief that says, I see something in you.
-
-He always had a way of lifting a person up. I had one of his books, and one day I asked him to sign it. He wrote four words. You make people better. I've thought about that line more than he could know. It stopped being a compliment and turned into an assignment. I don't think he ever realized what he did with that pen. He made me want to do more than stay sober. He made me want to become the thing he'd written down.
-
-He told a story once about speaking at a meeting in New York. He'd been sharing a while, maybe longer than he realized, and someone in the back finally said one word. Next. He laughed telling it. No offense taken. Nobody gets special treatment in those rooms. In time we became friends, real friends, at his birthday party, at my wedding, anywhere we ended up in the same room. If I was having a bad day, I knew I could pick up the phone and call him.
-
-The moment at EntreCon, the business conference Quint built for the city, came years into that friendship. He was speaking, and he paused and looked out into the crowd. Lou Brizzi, great guy. Chris and Rob, you know them? Hearing my father's name in a room like that stopped me. My dad worked at Baptist Hospital for decades, showed up, did the job well, treated people right, stayed until he was eighty-two. Quint saying his name in a room full of leaders meant something. Not because it elevated us. Because it honored the life my father believed in.
-
-Quint has been sober for decades. He wrote books, moved whole hospital cultures toward something better, and still found time to check in on a kid from New Jersey trying to figure out how to stay sober. He treated me like I mattered before I'd given him a single reason to believe I'd amount to anything. That isn't a management philosophy. It's character. Lou would have loved him. They were cut from the same cloth, men who led by example, who didn't need applause, who showed up the same whether the room was full or empty. When I asked him to put his name on this book, he said yes. He also handed me one of the great friendships of my life. His nephew Mike moved down from Chicago to Pensacola, and we've been close ever since.
-
-The morning after my father died, all these years later, Quint was the first person to reach me. Your dad was a great man, his text said. Of everyone who would reach out in those days, he got there first, and he said the truest thing. Sometimes God places someone in your life not to rescue you but to show you what's possible. For the first time since getting sober, I believed staying alive wasn't the finish line. It was the starting point.
-
-**CHAPTER 26**
-
-## **The People You Meet When You Stop Drinking**
-
-*"Two are better than one... for if they fall, the one will lift up his fellow."*
-*— Ecclesiastes 4:9-10*
-
-One of the men I got sober alongside had been homeless with a tenth-grade education, and a few years later he had a Hollywood actor sleeping in his guest room. His name is Matt. Quint showed me what was possible, but he wasn't the first one God put in front of me. The others came earlier, when I couldn't yet see any of it.
-
-Early in sobriety your brain is rewiring itself. You walk around in a fog, not drunk, not high, just flat. I was depressed, living with my parents, going to meetings, trying to figure out what came next, and I kept landing on the same thought: I'd never build something real again. Not somebody like me. Somewhere in there I heard a stat: one in ten stays sober. I never looked it up. When you're new, you don't hear a number like that as information. You look around the room and wonder which one of you it's going to be. I was a long shot.
-
-I needed a sponsor. So I picked a guy named Andy. Andy's whole vibe was Eeyore, a low-grade heaviness over him like a cloud that never moved. Not angry, just down, like the world had worn him out long ago and he'd made peace with being tired. I'm looking at my sponsor thinking: is this what the long term looks like? If this is sober after fifteen years, I don't know what I signed up for.
-
-But I came to know Andy. Behind the Eeyore was a guy who'd come a long way, been through things I didn't know about yet, rebuilt himself piece by piece and wasn't interested in making it look pretty. When you're newly sober everything is a five-alarm fire. Living at your parents' at thirty-one, stressing about money and whether anyone will trust you again, calling your sponsor because you're spinning out about work or a girl or whatever felt like the end of the world that Tuesday. Andy would listen. Wouldn't interrupt, wouldn't match my energy, just let me run out of gas. Then, when I'd laid out the whole catastrophe, he'd say the same thing every time. You prayed about it? The answer was always no. I'd called Andy before I'd called God. What he was saying: the answer isn't in this phone call. It's in the conversation you haven't had yet. He sponsored me a year or two, and he's still a friend. I hear his voice every time I reach for the phone to complain about something before I've gotten on my knees.
-
-Then there was Detroit Bob. About eighty when I met him, sober a long time, did not care about impressing anybody. His favorite line, and I heard it a hundred times: I'm not here to help any of you. I'm here to save my own butt. And you're listening to me? That's just a fringe benefit. People figured he was cynical. Not Bob. Bob had done the work. He just wasn't going to perform it for an audience.
-
-We'd go to the diner together, me at thirty-one, him at eighty, the most unlikely pair in the place, and crack up. He'd tell stories that had no business being that funny, and whatever mess I was in he'd make smaller just by laughing at it. Not at me. With me. Bob knew the difference.
-
-Jeff Mager was about ten years older than me. I met him at a meeting called Harbor Town in Gulf Breeze and knew within thirty seconds he was different. If I'm a five on the energy scale, Mager is a twelve. No off switch. He walked up like he'd known me his whole life, big smile, firm handshake, a close talker, growling in your face like every conversation is the most important one he's ever had. I looked at him and thought: this guy has it going on. Wife, three kids, life dialed in. And sober. It was the first time I looked at someone in recovery and thought maybe this could be more than survival. Maybe you can thrive.
-
-Mager became my sponsor and taught me more than I could list, but one thing stuck hardest. You want to know what kind of program somebody's working? Don't listen to them at the podium. Talk to the people in their life. Their wife, their kids, their boss. The person at the podium is performing. The people at home are telling the truth. Mager and I talk on the phone every morning. Every single one. We do a short prayer together, a way to start the day right. Going on fifteen years of that. And he didn't treat sobriety like a ceiling, he treated it like a floor: one of the most intense careers in medical device sales, and he decides to train for an Ironman. First one at about forty-six, a race that takes fourteen hours. Then another. Qualified for an Ironman in France. Qualified for Hawaii. An absolute machine. That's what recovery looks like when you refuse to put a lid on it. God's sense of humor: my brother Chris was running the Gulf Coast territory for Intuitive Surgical and needed a rep in Pensacola. I told Chris, you've got to interview my sponsor, this guy's a maniac, never sold devices, but trust me. Mager still works with Chris to this day, different company now.
-
-The last one I need to tell you about is Matt Campbell. If you want to know what's possible when somebody does the next right thing over and over for long enough, Matt is the answer. He lived in Tallahassee when I met him, just sober. He'll tell you himself he couldn't write well. No family money, no degree to dust off. Matt had nothing but the program, and I think that's exactly what he needed.
-
-He was at Jason's Deli making maybe ten dollars an hour, calling me about work, money, life on ten dollars an hour, the same stuff I'd called Andy about, a different version. Then he got an admin job at a Honda dealership, and one day they were short a guy on the floor. Somebody called in sick. Hey Matt, you want to try? Matt went out and sold three cars his first day. The guys who'd been selling for years looked at him like, how did this kid just do that? Because Matt could connect. Whatever makes a great salesperson, the thing you can't teach, Matt had it. He just never had a chance to use it.
-
-He became a salesman at Honda, and then the best they'd ever seen. The guy who'd been homeless, who couldn't write, who made ten dollars an hour at a deli, started making three hundred thousand a year. Went back and got his GED. Met Rebecca, an amazing woman. Reconnected with his daughter Aubrey. Had a son, Xander. We all started going to church together, Matt, Rebecca, the kids, Mager, me, a whole crew whose lives had been rebuilt from wreckage, sitting in a pew on Sunday like the most normal thing in the world. And Matt didn't stop. He'd always had a dream of acting. He got an acting coach, went to auditions, never gave it up. He connected with people in the industry, got to know actors like Jeremy London. The guy who'd been homeless a few years earlier now has a Hollywood actor sleeping in his guest room. Matt became a producer. When I told him about this book he put me in touch with a guy he works with out in Hollywood, and they both decided they wanted to be part of it, documentary, trailer, eventually maybe a movie. I talked to Matt's friend on the phone. He listened to the story the same way I'm telling it to you, and when I was done he said: There's nobody else. Nobody who could play you. Nobody else is going to share the conviction you have for your own story. You're going to play yourself. I'm still sitting with that one.
-
-I started sober thinking mediocrity was the ceiling. Then I met Andy, Bob, Mager, and Matt. These are the people you meet when you stop drinking. Not the ones you expected, the ones God put in front of you. I thought I was too far gone for any of it. So did they, once. They walked into the room anyway, and so did I, and that turned out to be the whole thing. The best one was still ahead of me, and she didn't come from a meeting at all.
-
 PART FIVE
 
 # **HOPE**
 
 *She said, I will love you no matter what. I'd heard that sentence once before — proved, not spoken.*
 
-**CHAPTER 27**
+**CHAPTER 25**
 
 ## **Hope**
 
@@ -1468,29 +1407,21 @@ If you look at our Paris photos, we look great. What you can't see is the day be
 
 It was like that from the first trip. Before the passports and the overseas flights, we went to Ocean Springs, Mississippi, to a place we still call the Ugly Green House. The key was waiting under a trophy out front. It was not much to look at, and it did not need to be. The place was covered in dog hair, five of us were sharing a single half bath, and we made it special anyway. Hope had forgotten her ID and wanted to be able to order a drink, so I got up before light, drove us back to Pensacola to get it, and drove us straight back. It didn't feel like a sacrifice. It felt like the thing you do for someone when you're glad it is you doing it. Her father heard about that drive, and he told me later it was the moment he knew I was the one for her. We were together and we were going somewhere, and that was the whole appeal, then and now.
 
-Sometimes the camera does catch it. For Hope's thirtieth birthday I took her to Disney. We stayed at the Goofy resort, nothing fancy, and the first room they gave us stunk. I called the front desk. Like what, they said. Like BO, I said. They moved us, and from there the whole thing was perfect. But the part I keep is her face the first time she saw Disney. A grown woman, thirty years old, lit up like a kid who had just been handed the whole world for a day. She told me she wished she could be a pharmacist right there inside the little village, so she would never have to leave. No problem to solve, nothing going sideways, just Hope happy all the way through, and me happy watching her be that happy. That one the pictures got right.
+Sometimes the camera does catch it. For Hope's thirtieth birthday I took her to Disney. We stayed at the Goofy resort, nothing fancy. The part I keep is her face the first time she saw Disney. A grown woman, thirty years old, lit up like a kid who had just been handed the whole world for a day. She told me she wished she could be a pharmacist right there inside the little village, so she would never have to leave. No problem to solve, nothing going sideways, just Hope happy all the way through, and me happy watching her be that happy. That one the pictures got right.
 
 Jamaica got it right too. Water so clear the scuba felt like flying, dinners that ran long, and one night a musician with a Bob Marley soul came to our table and sang Three Little Birds, and I sat there sober and happy and believed every word of it.
 
 Most of the time, though, the real thing happens off camera. Japan figured us out fast. We booked through Gate 1 expecting the usual, organized and smooth, somebody holding a sign with your name on it. What we didn't plan on was that almost no one we met spoke English. Not broken English. None. We were lost the second we left the hotel, two people from North Carolina who couldn't read a single sign. Hope's allergies were through the roof, her eyes swollen, and we found a pharmacy that had to be a hundred degrees inside. I stood in aisle three pointing at my eyes, fake sneezing, miming a pill into my mouth with a thumbs up while the whole store watched me perform a one-act play for Claritin. We laughed about it for the rest of the trip.
 
-Then a driver dropped us at the top of a mountain to see a waterfall, beautiful and lush, and it hit me that it was freezing, there was no Wi-Fi, no cars, no Uber coming back, no way to reach another human for miles. I was checking a dead phone every thirty seconds. Hope just said, don't worry about it, we'll figure it out. And we did. We walked down the mountain past houses and shops and people who smiled and had no idea what we were saying, and found a cab that felt like a winning lottery ticket. That is Hope when a plan dies. She settles in, like that is where the real trip starts. I'm a picky eater, so I had pizza three times in Japan while she tried everything. We were a good team even when I was the weak link.
+Later a driver dropped us on a mountain with no Wi-Fi, no cars, and no way back, and while I checked a dead phone every thirty seconds, Hope just said, don't worry about it, we'll figure it out. We did. That is Hope when a plan dies. She settles in, like that is where the real trip starts.
 
 Europe was four countries in two weeks, Amsterdam to Brussels to Bruges to London to Paris, one carry-on each. In Paris, Hope had planned a real photo shoot, a professional one, the Eiffel Tower behind us, and she told me to pack a suit. Not a blazer. A suit, dress shoes, a tie. I teased her about hauling it across four countries in half of my one bag, but the truth is I loved what it said about her. She doesn't just take a trip. She plans the memory, puts the effort in ahead of time, and hands you something to keep. All I had to do was put on the suit and stand where she told me. I've done harder things for less.
 
-Jordan gave us the best story. An Uber driver named Sam picked us up the first day and ended up driving us the whole week, the way a trip will sometimes hand you a person. He was forty-five. Somewhere midweek he looked at us in the mirror and said, you want to hear something interesting? My father was born in 1890. I did the math twice. His father had been close to ninety when he was born. Was your dad in the Bible, I asked him. Moses? He didn't miss a beat. Old Testament, he said. We laughed the rest of the drive.
-
-By the end of the week Sam told us he was moving to Canada to open a restaurant. Why Canada? Easier to get a visa. Which part? He didn't know. He also had no idea how cold it gets there. Sam, I said, you might want to look that up.
-
 What she did with that suit is the part I keep. In Brussels my Toppik exploded, the hair fiber powder I used every day on the thin spots, cap off, container cracked, black powder worked into every seam of the bag. My hairline was my one real insecurity, and I figured the shoot was finished. I told her I'd wear a hat pulled low and call it a style. Hope didn't laugh it off and didn't tell me it was just hair, which never helps anybody. She got down on the floor and started scraping, off the zipper, off my socks, off the lining, scooping it back into the container bit by bit like she was panning for gold. We'll get enough, she said. Don't worry. She knew that powder was the one thing that could take me from feeling good to wanting to hide, and instead of arguing me out of it, she fixed it. If you look at those Paris photos, we look great. Nobody sees Brussels.
-
-New Year's Eve in Paris almost didn't happen at all. A friend in our group couldn't use his tickets, so ours were free, three hundred dollars we never spent, and we rang in the year at a long table between four French guests who wanted nothing to do with us and two American military women who wanted to be friends with everybody. We picked the right end of the table.
-
-Jordan was the same lesson in a harder package. The real reason for that trip was a hair transplant, three days face down in a chair while a surgeon moved my hair around like he was replanting a lawn, with Petra and the Dead Sea as the bonus. For weeks after I had to sleep with a U-shaped pillow so the new follicles wouldn't come loose, and my head looked like a construction zone, red and raw and stitched. The third morning, at the breakfast bar, I lifted my head too fast and cracked it on a metal overhang. Hope's eyes went wide. I could have hidden in the hotel for three weeks. Instead I walked through Petra bandaged and swollen like a wounded gladiator, because I wanted her to have the trip, and she walked right beside me and never once made it weird. She took her pictures and had the time of her life, and so did I. We finished the week sleeping in a cave at Wadi Rum, hosted by people who live out there because they choose to, under more stars than I knew the sky was holding.
 
 Ireland was the one I couldn't fully meet her on. We'd planned it long before, but by the time it came Lou's health was sliding and I had just taken time off work to be with him. Galway, the Cliffs of Moher, towns out of a postcard, and my head was back home in Pensacola the whole time. Hope didn't push. She told me nobody cared that I'd taken the time, that I was allowed to be where I was, and she loved me through a trip I wasn't all the way present for. That is its own way of carrying someone, and she did it without ever making me feel like a burden. In Galway I bought her a Claddagh ring, the little heart held in two hands, and gave it to her as the promise I didn't have the words for that week.
 
-Lou died on Christmas Day, 2025. I think about those trips differently now, not as time I should have spent some other way, but as time I'm grateful we took, every messy minute of it. The pictures never tell the whole story. They can't. They only catch the second we were smiling. Everything that earned the smile happened off camera, and most of it was Hope.
+I think about those trips differently now, not as time I should have spent some other way, but as time I'm grateful we took, every messy minute of it. The pictures never tell the whole story. They can't. They only catch the second we were smiling. Everything that earned the smile happened off camera, and most of it was Hope.
 
 ### *Blessings*
 
@@ -1506,16 +1437,76 @@ They went into the kitchen together while I stayed in the living room. I could h
 
 Later he looked at me. You're steady, he said. Then: she is too. That was it. No formal blessing, no speech. He saw two people steady in the same direction and noted it.
 
+**CHAPTER 26**
+
+## **Gulf Breeze**
+
+*"Iron sharpeneth iron; so a man sharpeneth the countenance of his friend."*
+*— Proverbs 27:17*
+
+Years later, Quint Studer stood in front of some of the top business leaders in the region, paused, and said my father's name into the room. Lou Brizzi, great guy. But before Quint there were the rooms. Paying down the debt was one kind of work. Another kind was happening at the same time. Early on the work is obvious: work the steps, clean up the wreckage, rebuild trust slowly, one day at a time.
+
+I saw things in those rooms that never leave you. Young people dying from drugs and alcohol. Not old men at the end of long lives, young people with everything ahead of them. I sponsored people who went back out. Many of them died. Some went to jail. You pour yourself into someone, walk alongside them, answer the phone at midnight, and then one day you get the call that they didn't make it.
+
+I was that person once. I know what the disease does from the inside. Losing people in those rooms prepared me for something I didn't know I was being prepared for. Nothing in hospice is harder than a parent losing a child. The only reason I can stay in that room without flinching is that I've already sat with losses like that in recovery. Recovery taught me how to be present for the worst thing. Hospice just gave me a new room to bring it to.
+
+But eventually something else happens. You look around and realize sobriety by itself can't be the end of the story. I was thirty-three, sober long enough to know I wasn't going back, and I couldn't shake the feeling there was something left in the tank. Not ego. A quiet sense that maybe God hadn't kept me alive just to sit in meetings the rest of my life trying not to mess up again. I wanted to do more. I just hadn't seen many examples of what that looked like. Until I met Quint Studer.
+
+If you're not from the Gulf Coast, the name may not mean much. In Pensacola it's on the ballpark. Quint had run Baptist Hospital, the same hospital where my dad worked, then built one of the most respected healthcare consulting firms in the country. When he sold it, he and his wife Rishy went about rebuilding downtown Pensacola block by block. A man like that could sit anywhere he wanted. He sat in the rooms, in the same chairs as the rest of us, one more sober man saying his name out loud.
+
+I first met Quint at a meeting connected to Gulf Breeze Hospital. What struck me was how he carried himself, a steadiness, a calm that didn't feel like ego. When he spoke, people listened. Over time he'd talk with me after meetings, look me directly in the eye. He encouraged me with the kind of quiet belief that says, I see something in you.
+
+He always had a way of lifting a person up. I had one of his books, and one day I asked him to sign it. He wrote four words. You make people better. I've thought about that line more than he could know. It stopped being a compliment and turned into an assignment. I don't think he ever realized what he did with that pen. He made me want to do more than stay sober. He made me want to become the thing he'd written down.
+
+He told a story once about speaking at a meeting in New York. He'd been sharing a while, maybe longer than he realized, and someone in the back finally said one word. Next. He laughed telling it. No offense taken. Nobody gets special treatment in those rooms. In time we became friends, real friends, at his birthday party, at my wedding, anywhere we ended up in the same room. If I was having a bad day, I knew I could pick up the phone and call him.
+
+The moment at EntreCon, the business conference Quint built for the city, came years into that friendship. He was speaking, and he paused and looked out into the crowd. Lou Brizzi, great guy. Chris and Rob, you know them? Hearing my father's name in a room like that stopped me. My dad worked at Baptist Hospital for years, showed up, did the job well, treated people right, stayed until he was eighty-two. Quint saying his name in a room full of leaders meant something. Not because it elevated us. Because it honored the life my father believed in.
+
+He treated me like I mattered before I'd given him a single reason to believe I'd amount to anything. Lou would have loved him. They were cut from the same cloth, men who led by example, who didn't need applause, who showed up the same whether the room was full or empty. He also handed me one of the great friendships of my life: his nephew Mike moved down from Chicago to Pensacola, and we've been close ever since.
+
+The morning after my father died, all these years later, Quint was the first person to reach me. Your dad was a great man, his text said. Of everyone who would reach out in those days, he got there first, and he said the truest thing. Sometimes God places someone in your life not to rescue you but to show you what's possible. For the first time since getting sober, I believed staying alive wasn't the finish line. It was the starting point.
+
+**CHAPTER 27**
+
+## **The People You Meet When You Stop Drinking**
+
+*"Two are better than one... for if they fall, the one will lift up his fellow."*
+*— Ecclesiastes 4:9-10*
+
+One of the men I got sober alongside had been homeless with a tenth-grade education, and a few years later he had a Hollywood actor sleeping in his guest room. His name is Matt. Quint showed me what was possible, but he wasn't the first one God put in front of me. The others came earlier, when I couldn't yet see any of it.
+
+Early in sobriety your brain is rewiring itself. You walk around in a fog, not drunk, not high, just flat. I was depressed, living with my parents, going to meetings, trying to figure out what came next, and I kept landing on the same thought: I'd never build something real again. Not somebody like me. Somewhere in there I heard a stat: one in ten stays sober. I never looked it up. When you're new, you don't hear a number like that as information. You look around the room and wonder which one of you it's going to be. I was a long shot.
+
+I needed a sponsor. So I picked a guy named Andy. Andy's whole vibe was Eeyore, a low-grade heaviness over him like a cloud that never moved. Not angry, just down, like the world had worn him out long ago and he'd made peace with being tired. I'm looking at my sponsor thinking: is this what the long term looks like? If this is sober after fifteen years, I don't know what I signed up for.
+
+But I came to know Andy. Behind the Eeyore was a guy who'd come a long way, been through things I didn't know about yet, rebuilt himself piece by piece and wasn't interested in making it look pretty. When you're newly sober everything is a five-alarm fire. Living at your parents' at thirty-one, stressing about money and whether anyone will trust you again, calling your sponsor because you're spinning out about work or a girl or whatever felt like the end of the world that Tuesday. Andy would listen. Wouldn't interrupt, wouldn't match my energy, just let me run out of gas. Then, when I'd laid out the whole catastrophe, he'd say the same thing every time. You prayed about it? The answer was always no. I'd called Andy before I'd called God. What he was saying: the answer isn't in this phone call. It's in the conversation you haven't had yet. He sponsored me a year or two, and he's still a friend. I hear his voice every time I reach for the phone to complain about something before I've gotten on my knees.
+
+Then there was Detroit Bob. About eighty when I met him, sober a long time, did not care about impressing anybody. His favorite line, and I heard it a hundred times: I'm not here to help any of you. I'm here to save my own butt. And you're listening to me? That's just a fringe benefit. People figured he was cynical. Not Bob. Bob had done the work. He just wasn't going to perform it for an audience.
+
+We'd go to the diner together, me at thirty-one, him at eighty, the most unlikely pair in the place, and crack up. He'd tell stories that had no business being that funny, and whatever mess I was in he'd make smaller just by laughing at it. Not at me. With me. Bob knew the difference.
+
+Mager — the sponsor who slid that legal pad across the table — was about ten years older than me. I met him at a meeting called Harbor Town in Gulf Breeze and knew within thirty seconds he was different. If I'm a five on the energy scale, Mager is a twelve. No off switch. He walked up like he'd known me his whole life, big smile, firm handshake, a close talker, growling in your face like every conversation is the most important one he's ever had. I looked at him and thought: this guy has it going on. Wife, three kids, life dialed in. And sober. It was the first time I looked at someone in recovery and thought maybe this could be more than survival. Maybe you can thrive.
+
+Mager became my sponsor and taught me more than I could list, but one thing stuck hardest. You want to know what kind of program somebody's working? Don't listen to them at the podium. Talk to the people in their life. Their wife, their kids, their boss. The person at the podium is performing. The people at home are telling the truth. Mager and I talk on the phone every morning. Every single one. We do a short prayer together, a way to start the day right. Going on fifteen years of that. And he didn't treat sobriety like a ceiling, he treated it like a floor: one of the most intense careers in medical device sales, and he decides to train for an Ironman. First one at about forty-six, a race that takes fourteen hours. Then another. Qualified for an Ironman in France. Qualified for Hawaii. An absolute machine. That's what recovery looks like when you refuse to put a lid on it. God's sense of humor: my brother Chris was running the Gulf Coast territory for Intuitive Surgical and needed a rep in Pensacola. I told Chris, you've got to interview my sponsor, this guy's a maniac, never sold devices, but trust me. Mager still works with Chris to this day, different company now.
+
+The last one I need to tell you about is Matt Campbell. If you want to know what's possible when somebody does the next right thing over and over for long enough, Matt is the answer. He lived in Tallahassee when I met him, just sober. He'll tell you himself he couldn't write well. No family money, no degree to dust off. Matt had nothing but the program, and I think that's exactly what he needed.
+
+He was at Jason's Deli making maybe ten dollars an hour, calling me about work, money, life on ten dollars an hour, the same stuff I'd called Andy about, a different version. Then he got an admin job at a Honda dealership, and one day they were short a guy on the floor. Somebody called in sick. Hey Matt, you want to try? Matt went out and sold three cars his first day. The guys who'd been selling for years looked at him like, how did this kid just do that? Because Matt could connect. Whatever makes a great salesperson, the thing you can't teach, Matt had it. He just never had a chance to use it.
+
+He became a salesman at Honda, and then the best they'd ever seen. The guy who'd been homeless, who couldn't write, who made ten dollars an hour at a deli, started making three hundred thousand a year. Went back and got his GED. Met Rebecca, an amazing woman. Reconnected with his daughter Aubrey. Had a son, Xander. We all started going to church together, Matt, Rebecca, the kids, Mager, me, a whole crew whose lives had been rebuilt from wreckage, sitting in a pew on Sunday like the most normal thing in the world. And Matt didn't stop. He'd always had a dream of acting. He got an acting coach, went to auditions, never gave it up. He connected with people in the industry, got to know actors like Jeremy London. The guy who'd been homeless a few years earlier now has a Hollywood actor sleeping in his guest room. Matt became a producer.
+
+I started sober thinking mediocrity was the ceiling. Then I met Andy, Bob, Mager, and Matt. These are the people you meet when you stop drinking. Not the ones you expected, the ones God put in front of you. I thought I was too far gone for any of it. So did they, once. They walked into the room anyway, and so did I, and that turned out to be the whole thing. And the best one didn't come from a meeting at all. You've already met her.
+
 **CHAPTER 28**
 
 ## **Sobriety Meets Hospice**
 
-*"Blessed are they that mourn: for they shall be comforted."*
-*— Matthew 5:4*
+*"I have fought a good fight, I have finished my course, I have kept the faith."*
+*— 2 Timothy 4:7*
 
 The first death that stayed with me wasn't a patient, and it came years before hospice was ever my job. It was Detroit Bob.
 
-Bob was eighty-one, bald, with a scratchy voice and a face that looked permanently annoyed, like the world had let him down personally and he hadn't decided yet whether to forgive it. I met him at Courage at Noon in my first year sober. He was crotchety. He smelled like Old Spice, just enough, never too much. And he had the one thing I could not stop staring at: decades sober, old, and at peace with all of it. I needed to understand how a person did that.
+You've met Detroit Bob already — the one who was only in the rooms to save his own butt. What I haven't told you is the rest of him. I met him at Courage at Noon in my first year sober. Bald, a scratchy voice, a face that looked permanently annoyed, like the world had let him down personally and he hadn't decided yet whether to forgive it. He smelled like Old Spice, just enough, never too much. And he had the one thing I could not stop staring at: decades sober, old, and at peace with all of it. I needed to understand how a person did that.
 
 So we got close. We'd go eat after meetings, the kid a few years in and the old man who had seen it all. Then, years into the friendship, the cancer came. He knew it was going to take him, and he stayed sober anyway, a man at the very end of his life with every excuse in the world to pick up, choosing not to. He fought it for about six months, and somewhere in there he went on hospice, the first time that word ever meant someone I loved instead of a thing I would one day do for a living.
 
@@ -1763,45 +1754,11 @@ It wasn't only Lisa's table. In our family, food was the language love spoke whe
 
 After my dad died the center had gone, and the rest of us felt it loosen. Lisa did what she's always done. She kept the table set.
 
-I think about the meatloaf sometimes, that night when she was barely old enough to drive and cooked a meal for two boys who didn't make it easy. She's still standing at the counter. Still opening the door. The last time I was there for Thanksgiving I stood in her kitchen a minute before we sat down. I didn't say anything. I just watched, and thought about how the people who hold families together don't usually get thanked for it. They just keep doing it. Year after year. We sat down. Someone said grace. The food was passed. And for a few hours everything had a center again. Lisa made sure of that.
+I think about a night when she was barely old enough to drive and cooked meatloaf for two boys who didn't make it easy. She's still standing at the counter. Still opening the door. The last time I was there for Thanksgiving I stood in her kitchen a minute before we sat down. I didn't say anything. I just watched, and thought about how the people who hold families together don't usually get thanked for it. They just keep doing it. Year after year. We sat down. Someone said grace. The food was passed. And for a few hours everything had a center again. Lisa made sure of that.
 
 ### *The Floor*
 
-Almost every morning for fifteen years, my phone has rung early and it's Mager, or I've called him first, and we pray. A few plain sentences to start the day pointed the right way. Nothing eloquent. Two sober men on a phone line, saying thank you, asking for help, hanging up, going to work.
-
-People ask me where God was in all of it, and the honest answer is that He was never the one who left. I was.
-
-I let Him into my heart at thirteen, in a church my parents made non-negotiable, and I meant it as much as a kid can mean anything. Then I spent my twenties proving I didn't need Him, or anyone. The using years weren't godless so much as God-ignoring. I knew the door was there. I just stopped walking through it. That is the quiet way faith goes for a lot of us. Not a dramatic loss. A slow stopping.
-
-In that holding cell in Mexico I wanted to pray and couldn't, and I've thought about that a lot since. I hadn't stopped believing. I couldn't stand to ask for help out of a hole I'd dug myself. That isn't the absence of faith. It's faith plus shame, a paralysis of its own, and it kept me on that floor with my mouth shut.
-
-It took a clear sky raining on a bonfire in Chumuckla before I could believe He was in the room with me again, not as a Sunday idea but as a plain fact. I've told you that night already. What I didn't say is what it started. From then on I stopped trying to think my way to God and started just showing up to Him, the way I showed up to meetings, the way Lou showed up to everything. Faith turned out to be less a feeling I had to summon and more a thing I did, over and over, until it held.
-
-I had help learning that. My mother put me in the pew before I could choose it, and that foundation was the floor I stood on when everything else gave way. Dave Meyer and Jeff Middleton showed me what it looks like in a grown man. Diabetes Dave taught me the language of signs. And Mager, on the phone, morning after morning, year after year.
-
-I still can't explain God on paper, and I've stopped trying. What I can tell you is that every time I hit the bottom of myself, something I had not put there was holding the floor. Today my faith doesn't look like certainty. It looks like that morning prayer with Mager. A red bird on a mirror. Walking into a dying stranger's room with nothing useful in my hands and trusting that presence is its own kind of prayer. I stopped needing the theology airtight. I just needed to keep showing up, and to let myself be shown up for. That, as much as anything, is what got me here.
-
-# **WHAT HE DIDN'T OWE**
-
-Lou Brizzi didn't adopt me as a baby, half of a couple planning a family. He married my mom when I was a boy and chose to stay when he had every reason not to.
-
-Look at who you see as stepdads, the ones who marry a woman with kids. Even among the ones still present, still married, still in those kids' lives, most treat the child a little differently. Not cruelly. Just a gap that never fully closes. Lou never drew that line.
-
-When he adopted me and Chris in that courthouse, he didn't take it lightly. He looked at two boys from Mexico City and decided they were his. Then my mom left, pursued another life. The pain of a twelve-year relationship ending, the divorce, the aftermath, it would have been enough for any man to say, I don't owe them anything. Society would have told him that. His friends might have. The world would have understood if Lou had quietly stepped back from two boys who weren't his by blood, whose mother had moved on, and who, let's be honest, weren't always the most grateful kids.
-
-We weren't. We were not easy to love in some of those years. Throw in addiction, financial wreckage, lying, disappearing. Behavior that would have given a biological father permission to walk away, let alone a man who married into it. But Lou didn't love us less after the divorce. If anything, more. A man in his fifties who'd gone on with his life, married an amazing nurse named Lynda, built something new, settled, and one day his phone rings and it's the kid he adopted twenty years ago, starving in a one-bedroom in West Palm Beach, the power shut off, running the refrigerator off an extension cord in the hallway.
-
-What did Lou owe Claudio Balderas at that point? Nothing. You've read what he did, the plane, the rented truck, the night on the floor beside my mattress, the bagel waiting in the morning, the long drive home. He did it the way he did everything: without being asked, and without a word about the cost.
-
-That's what this book is about. Adoption, addiction, recovery, hospice, those are just the chapters. It's about a man who chose two boys who weren't his and never stopped choosing them. Who stayed after the marriage ended. Who came after the DUIs. Who flew to West Palm Beach and drove his son home in a U-Haul when the world would have told him he'd done plenty.
-
-I want men to read this and understand that what Lou did is possible, that you can choose a child who isn't yours and love them without condition, without a line you won't cross. There can be more men like Lou. I have to believe that, because if what he did was unrepeatable, then his life was a miracle and nothing more. And Lou wasn't a miracle. He was a man who made a decision and honored it every day for the rest of his life. That's not supernatural. That's available to anyone willing to do it.
-
-Till the day I die I'll think about the man who drove that U-Haul. I understand now what it cost him, every time, and he never once sent me the bill. And I have one more story to tell you, because I've come to believe he still shows up, even now.
-
-This is his story. Told by the son who almost didn't make it. For every father who stayed when he didn't have to.
-
-*R.B.*
+Almost every morning for fifteen years, my phone has rung early and it's Mager, or I've called him first, and we pray. A few plain sentences to start the day pointed the right way. Nothing eloquent. Two sober men on a phone line, saying thank you, asking for help, hanging up, going to work. People ask me where God was in all of it, and the honest answer is that He was never the one who left. I was. I still can't explain God on paper, and I've stopped trying. What I can tell you is that every time I hit the bottom of myself, something I had not put there was holding the floor. Today my faith doesn't look like certainty. It looks like that morning call. A red bird on a mirror. Walking into a dying stranger's room with nothing useful in my hands and trusting that presence is its own kind of prayer. I stopped needing the theology airtight. I just needed to keep showing up, and to let myself be shown up for. That, as much as anything, is what got me here.
 
 # **EPILOGUE: THE CARDINAL'S PROMISE**
 
@@ -1829,6 +1786,8 @@ I pull out my phone, slow and careful. I think I'm recording video. I press the 
 I stand in the parking lot, phone in my hand, tears on my face, and feel peace. Not the absence of grief. Grief is still there, always will be. But peace underneath it. I look at my phone. The camera had been in photo mode. One picture. The cardinal on the mirror. I send it to Hope. To Chris. To Jon, Lisa, Joel. To Lynda. The text: Dad came to see me. I told him I loved him.
 
 The cardinal wasn't a miracle. What I believe is simpler. The message had been delivered my whole life, in wrestling rooms and church basements and holding cells and cargo vans, in boundaries that felt harsh and second chances I hadn't earned and ordinary Tuesday afternoons nobody wrote down. The cardinal was a reminder that the message is still being sent. That Lou, in whatever form love takes when the person carrying it is gone, is still here, in the work I do in his name without ever saying his name, in the steadiness I bring to someone else's hardest day that was built by his hands.
+
+I want men to read this and understand that what Lou did is possible, that you can choose a child who isn't yours and love them without condition, without a line you won't cross. There can be more men like Lou. I have to believe that, because if what he did was unrepeatable, then his life was a miracle and nothing more. And Lou wasn't a miracle. He was a man who made a decision and honored it every day for the rest of his life. That's not supernatural. That's available to anyone willing to do it.
 
 If you're reading this in recovery, from addiction, from loss, from a version of yourself that no longer serves the life you're trying to build, the broken parts of your story don't disqualify you from purpose. They prepare you for it. If you're grieving someone you lost, not being there at the end doesn't mean you were absent from the life. If the important things were said before the end required them, you were present. And if you're sitting with an aging parent right now, putting off the hard conversation, waiting for a better time: there's no better time. Say the great things while they can still hear you. On a Tuesday. At dinner. On a phone call that feels ordinary. Presence is built across years.
 
