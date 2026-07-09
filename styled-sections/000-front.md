@@ -42,8 +42,6 @@ Printed in the United States of America.
 
 Prologue
 
-Foreword
-
 A Note to the One Who Loves an Addict
 
 **Part One — The Escape**
@@ -101,6 +99,8 @@ A Note to the One Who Loves an Addict
 Epilogue: The Cardinal's Promise
 
 What I'm Asking You to Do
+
+Afterword
 
 Author's Note
 

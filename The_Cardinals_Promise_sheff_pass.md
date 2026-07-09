@@ -42,8 +42,6 @@ Printed in the United States of America.
 
 Prologue
 
-Foreword
-
 A Note to the One Who Loves an Addict
 
 **Part One — The Escape**
@@ -102,6 +100,8 @@ Epilogue: The Cardinal's Promise
 
 What I'm Asking You to Do
 
+Afterword
+
 Author's Note
 
 A Reader's Guide
@@ -123,36 +123,6 @@ His hands were around my throat before I understood he had crossed the cell. A s
 That is where the worst night of my life had set me down: a concrete floor in a Mexican holding cell. Nobody was coming, because nobody knew where I was. Not my father. Not my brother. Not my mother.
 
 I had been carried out of Mexico City as a child, to be given a better life. Somehow I had found my way back to a concrete floor inside it, with everything I'd built somewhere far away. This is the story of how I came back from that floor, and why my father never stopped coming for me.
-
-# **FOREWORD**
-
-There is a kind of wisdom that can only be earned by living through what most people spend their lives trying to avoid. Not in a classroom. Not through credentials. But through competition and failure, addiction and recovery, grief and responsibility, and the long hours spent beside people in the final chapter of their lives. Rob Brizzi has that kind of wisdom, and this book is the evidence of it.
-
-I have known Rob for thirty-five years, and a friendship like that gives you a long view of a man's life. Over those years we bonded over faith, character, and a shared belief in showing up and doing right by people. I knew him long before this book, long before the wisdom in these pages had taken shape, long enough to remember the younger version of him, full of energy and loyalty, the guy who hauled a buddy's Jeep doors around Long Beach Island in ninety-five-degree heat, no shade, just because somebody needed help moving. That was Rob being Rob. He has a servant's heart, and he has had it from the beginning. What I did not know back then was everything going on underneath: the battles he was fighting, the identity he was trying to find, the long road that would bring him here, to the writing of this book.
-
-Rob was a serious competitor. As a wrestler in high school and college he learned something most people never do, that at the highest levels the physical is only the beginning, and the real contest is internal. He learned that hard work separates the people who merely want something from the people willing to pay the price for it. Formation like that does not leave a man. It shapes the way he meets every challenge that comes after.
-
-And the challenges kept coming. Rob spent years in business, where his success came from his authenticity and his ability to become an expert in whatever he was doing. He learned to listen for what people need beneath what they say they want. Those skills are foundational to this book.
-
-The credential that mattered most is the one that cost him the most to earn. Rob walked through the valley himself. He battled addiction. He knows what it is to be lost, to reach for something that promises relief and gives you nothing back, to hit the bottom that forces a man to look honestly at who he is. He came through that fire transformed. He stopped trying to build his worth on performance, and what he found on the other side was steadier, a deeper sense of who he was and what mattered. It is something he has lived.
-
-When I reconnected with Rob, it was as if no time had passed. Within minutes our conversation left both of us in tears. As I heard him talk about his father, I understood that this man has an irreplaceable calling. For years Rob has been of service to those in recovery, and he has continued that service through his work in hospice. He sits with families in what he calls the last chapter. He has been there for people in their most vulnerable moments, guiding families through conversations most of us spend a lifetime avoiding, and he does it with the full weight of his own experience as a son who was himself guided through the darkness by the steady, unconditional presence of a father who was all in.
-
-Lou was a father like that. He hit a hundred fly balls at Finch Park in Ramsey, drove Rob and his brother Chris to wrestling practice three nights a week, and leaned in at every turn because he wanted his boys to be the best version of themselves in every part of life. That love left a mark on Rob, and he carries it forward now, offering families the same presence his father once gave him.
-
-This book was written to honor that legacy. It connects Rob's father's story to the larger story of how we live, how we love, and how we face the end of life with honesty and grace. It takes on the conversations most people find too painful to begin, and it does so with the earned authority of a man who has had those conversations hundreds of times, with real families, at the hardest moments of a human life.
-
-You can trust what you are about to read. Rob does not have a long list of titles after his name, and he has never needed one. He has done the harder thing. He has lived it. He has wrestled, literally and figuratively, with the hardest questions of identity, suffering, and meaning. He has served in the places most people are afraid to go, and he has come out of them with something worth saying.
-
-So here is the invitation Rob extends to you in these pages. What would it look like if your life were not just for yourself? What would it look like to give your life to the people around you, especially in their hardest moments? This is not a call to perfection. It is a call to show up for the people who are yours to love, with everything you have. Rob is the first to tell you he is a work in progress, moving closer every day to the man he wants to be.
-
-This book will help you do exactly that. I am grateful it exists, and I am grateful you are holding it.
-
-*Sincerely,*
-
-*Dave Meyer*
-
-*Former NFL quarterback*
 
 # **A NOTE TO THE ONE WHO LOVES AN ADDICT**
 
@@ -544,7 +514,7 @@ When Dave became varsity starting quarterback sophomore year, the whole social w
 
 I had one real slip-up in high school. Junior prom. The group asked what I wanted to drink. I knew my parents drank Absolut Citron, so I said it without flinching, don't mix it, just the fifth. I chugged straight vodka for the first time in my life. Two hours later I was throwing up in the limo. Four hours later they carried me into prom like Weekend at Bernie's. The principal called my mom and she picked me up. I'd rarely seen her that disappointed. I got suspended, and my first thought was whether I was still captain of the wrestling team. I muscled my way back on track. The signs were all there. I was seventeen and didn't want to know what they meant.
 
-After Ramsey, Dave got recruited, Syracuse, Virginia Tech, Wake Forest. He chose Virginia Tech, where Michael Vick showed up and made the playbook obsolete. Dave mentored him, and was on the team that beat Clemson 41-20 in the 2001 Gator Bowl, Vick's last college game. When the dogfighting scandal broke years later he didn't pile on: the guy's in over his head, he'll get a chance to redeem himself. Dave went on to the NFL, third-string behind Peyton Manning at the Colts, then Brett Favre at the Packers, then into coaching, an opportunity at LSU the year Saban won it there. Then he did one of the bravest things I've watched a man do: went to China as a missionary, learned full Mandarin, taught the Bible for years. Those were my active-addiction years; we talked, but not often. The last couple years we've reconnected like no time passed. Dave wrote the foreword to this book. That tells you who he is. Dave never had to earn a room; I was still negotiating, and the mat was where the negotiating got settled.
+After Ramsey, Dave got recruited, Syracuse, Virginia Tech, Wake Forest. He chose Virginia Tech, where Michael Vick showed up and made the playbook obsolete. Dave mentored him, and was on the team that beat Clemson 41-20 in the 2001 Gator Bowl, Vick's last college game. When the dogfighting scandal broke years later he didn't pile on: the guy's in over his head, he'll get a chance to redeem himself. Dave went on to the NFL, third-string behind Peyton Manning at the Colts, then Brett Favre at the Packers, then into coaching, an opportunity at LSU the year Saban won it there. Then he did one of the bravest things I've watched a man do: went to China as a missionary, learned full Mandarin, taught the Bible for years. Those were my active-addiction years; we talked, but not often. The last couple years we've reconnected like no time passed. Dave wrote the afterword to this book. That tells you who he is. Dave never had to earn a room; I was still negotiating, and the mat was where the negotiating got settled.
 
 **CHAPTER 7**
 
@@ -812,13 +782,7 @@ One afternoon in Dharamsala our cab driver gets into a genuine fistfight, out of
 
 I made one more error in judgment at that hotel. I asked the front desk if anyone could give me a massage. They said no. Then, somehow, they found someone. A man appears at my door, and I am fairly confident he was the landscaper. He had no idea what he was doing. The table had no headrest, so my neck was bent up against the end of it at a right angle, like I was being disciplined. Whatever he poured on me was not massage oil. Olive oil, I think. Possibly Crisco. It was the worst massage of my life, and when I finally stood up you could see the grease through my pants. I went and found Chris and said the only thing there was to say: you are not going to believe what just happened to me.
 
-When Chris got engaged to Nisha, I was the best man, that part was never in doubt. The bachelor party was another story. I don't drink, everyone was scattered across the country, and I was not exactly setting a blistering planning pace. Then a couple of his buddies, Brian Buffington and DiBiase, called to tell me it was handled: Baha Mar, in the Bahamas. Three, four thousand dollars a night. I offered to split a room, which is how my mom's boyfriend Gary and I ended up roommates at a resort like that.
-
-Chris's friends operate at a level I can only call cinematic. That's the crowd. One morning there was a guy on the gym treadmill I couldn't place, and then it landed: Dabo Swinney, the head coach of Clemson, in town for a wedding. I asked him when he was going to hire Saban as his assistant, and got a polite laugh. I have never quite known when to stop.
-
-The whole weekend ran on gambling, which is an interesting thing to be sober in the middle of at a bachelor party in the Bahamas. Chris parked me at the craps table and said, just do exactly what I tell you. Roll the dice. I'll handle the rest. So there I am, rolling dice with no earthly idea what's happening, Chris calling every bet, and people keep winning. The table is losing its mind. At one point a complete stranger reaches over and presses a thousand-dollar chip into my hand. Thank you, he says. You just made me so much money. A thousand dollars from a man I'd never met, for throwing dice while my brother told me what to do. Which is the truest thing I can tell you about us. Chris sees what I can't, and when I stop arguing and do what he says, it works out in ways I never would have bet on.
-
-That's my brother. The DMV, India, the Bahamas, the ultimatum that saved my life. My best friend.
+That's my brother. The DMV, India, the ultimatum that saved my life. Chris sees what I can't, and when I stop arguing and do what he says, it works out in ways I never would have bet on. My best friend.
 
 **CHAPTER 13**
 
@@ -1343,7 +1307,7 @@ We sat in the living room. No small talk. I had the whole confession loaded and 
 
 He nodded slowly. He didn't follow up. No questions about relapse or money or any of the wreckage I'd braced to defend. He had heard the one thing he wanted to hear. That father of yours sounds like a good man, he said. Best man I've ever known, I told him. Jeff smiled for the first time, stood, and put out his hand. You have my blessing. Then his eyes filled and he didn't look away. I could have done better in my marriage with Rhonda, he said. I blame myself. He wasn't giving me a tough-father speech. He was handing me his own regret and trusting me with it. Don't screw this up, he added. No sir. I won't.
 
-Outside my own father, Jeff is one of two men who have shown me what faith looks like when it's lived instead of just spoken. The other is Dave Meyer, my friend since the middle school Bible study, who wrote the foreword to this book. Different men, same spine. Neither one talks the talk and stops there; both walk it. Neither has ever lost sight of where God is in it. I've needed them both as proof that the thing I reached for in a muddy field in Chumuckla holds up across a whole life.
+Outside my own father, Jeff is one of two men who have shown me what faith looks like when it's lived instead of just spoken. The other is Dave Meyer, my friend since the middle school Bible study, who wrote the afterword to this book. Different men, same spine. Neither one talks the talk and stops there; both walk it. Neither has ever lost sight of where God is in it. I've needed them both as proof that the thing I reached for in a muddy field in Chumuckla holds up across a whole life.
 
 ### *Wonderwoman*
 
@@ -1812,6 +1776,36 @@ If you love someone who is dying, go sit with them. If you don't know where to b
 Then do the smallest brave thing in front of you. Make the call. Cross the parking lot. Open the door.
 
 Love shows up where it's needed, not where it's earned. That is the cardinal's promise. It was done for me. Now go and do it for somebody else.
+
+# **AFTERWORD**
+
+There is a kind of wisdom that can only be earned by living through what most people spend their lives trying to avoid. Not in a classroom. Not through credentials. But through competition and failure, addiction and recovery, grief and responsibility, and the long hours spent beside people in the final chapter of their lives. Rob Brizzi has that kind of wisdom, and this book is the evidence of it.
+
+I have known Rob for thirty-five years, and a friendship like that gives you a long view of a man's life. Over those years we bonded over faith, character, and a shared belief in showing up and doing right by people. I knew him long before this book, long before the wisdom in these pages had taken shape, long enough to remember the younger version of him, full of energy and loyalty, the guy who hauled a buddy's Jeep doors around Long Beach Island in ninety-five-degree heat, no shade, just because somebody needed help moving. That was Rob being Rob. He has a servant's heart, and he has had it from the beginning. What I did not know back then was everything going on underneath: the battles he was fighting, the identity he was trying to find, the long road that would bring him here, to the writing of this book.
+
+Rob was a serious competitor. As a wrestler in high school and college he learned something most people never do, that at the highest levels the physical is only the beginning, and the real contest is internal. He learned that hard work separates the people who merely want something from the people willing to pay the price for it. Formation like that does not leave a man. It shapes the way he meets every challenge that comes after.
+
+And the challenges kept coming. Rob spent years in business, where his success came from his authenticity and his ability to become an expert in whatever he was doing. He learned to listen for what people need beneath what they say they want. Those skills are foundational to this book.
+
+The credential that mattered most is the one that cost him the most to earn. Rob walked through the valley himself. He battled addiction. He knows what it is to be lost, to reach for something that promises relief and gives you nothing back, to hit the bottom that forces a man to look honestly at who he is. He came through that fire transformed. He stopped trying to build his worth on performance, and what he found on the other side was steadier, a deeper sense of who he was and what mattered. It is something he has lived.
+
+When I reconnected with Rob, it was as if no time had passed. Within minutes our conversation left both of us in tears. As I heard him talk about his father, I understood that this man has an irreplaceable calling. For years Rob has been of service to those in recovery, and he has continued that service through his work in hospice. He sits with families in what he calls the last chapter. He has been there for people in their most vulnerable moments, guiding families through conversations most of us spend a lifetime avoiding, and he does it with the full weight of his own experience as a son who was himself guided through the darkness by the steady, unconditional presence of a father who was all in.
+
+Lou was a father like that. He hit a hundred fly balls at Finch Park in Ramsey, drove Rob and his brother Chris to wrestling practice three nights a week, and leaned in at every turn because he wanted his boys to be the best version of themselves in every part of life. That love left a mark on Rob, and he carries it forward now, offering families the same presence his father once gave him.
+
+This book was written to honor that legacy. It connects Rob's father's story to the larger story of how we live, how we love, and how we face the end of life with honesty and grace. It takes on the conversations most people find too painful to begin, and it does so with the earned authority of a man who has had those conversations hundreds of times, with real families, at the hardest moments of a human life.
+
+You can trust what you have just read. Rob does not have a long list of titles after his name, and he has never needed one. He has done the harder thing. He has lived it. He has wrestled, literally and figuratively, with the hardest questions of identity, suffering, and meaning. He has served in the places most people are afraid to go, and he has come out of them with something worth saying.
+
+So here is the invitation Rob extends to you in these pages. What would it look like if your life were not just for yourself? What would it look like to give your life to the people around you, especially in their hardest moments? This is not a call to perfection. It is a call to show up for the people who are yours to love, with everything you have. Rob is the first to tell you he is a work in progress, moving closer every day to the man he wants to be.
+
+This book will help you do exactly that. I am grateful it exists, and I am grateful you are holding it.
+
+*Sincerely,*
+
+*Dave Meyer*
+
+*Former NFL quarterback*
 
 # **AUTHOR'S NOTE**
 

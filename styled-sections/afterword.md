@@ -1,4 +1,4 @@
-# **FOREWORD**
+# **AFTERWORD**
 
 There is a kind of wisdom that can only be earned by living through what most people spend their lives trying to avoid. Not in a classroom. Not through credentials. But through competition and failure, addiction and recovery, grief and responsibility, and the long hours spent beside people in the final chapter of their lives. Rob Brizzi has that kind of wisdom, and this book is the evidence of it.
 
@@ -16,7 +16,7 @@ Lou was a father like that. He hit a hundred fly balls at Finch Park in Ramsey, 
 
 This book was written to honor that legacy. It connects Rob's father's story to the larger story of how we live, how we love, and how we face the end of life with honesty and grace. It takes on the conversations most people find too painful to begin, and it does so with the earned authority of a man who has had those conversations hundreds of times, with real families, at the hardest moments of a human life.
 
-You can trust what you are about to read. Rob does not have a long list of titles after his name, and he has never needed one. He has done the harder thing. He has lived it. He has wrestled, literally and figuratively, with the hardest questions of identity, suffering, and meaning. He has served in the places most people are afraid to go, and he has come out of them with something worth saying.
+You can trust what you have just read. Rob does not have a long list of titles after his name, and he has never needed one. He has done the harder thing. He has lived it. He has wrestled, literally and figuratively, with the hardest questions of identity, suffering, and meaning. He has served in the places most people are afraid to go, and he has come out of them with something worth saying.
 
 So here is the invitation Rob extends to you in these pages. What would it look like if your life were not just for yourself? What would it look like to give your life to the people around you, especially in their hardest moments? This is not a call to perfection. It is a call to show up for the people who are yours to love, with everything you have. Rob is the first to tell you he is a work in progress, moving closer every day to the man he wants to be.
 
