@@ -49,8 +49,9 @@ umbrella all pseudonyms live under.
 - Anyone still living who is named near drugs, crime, or violence: Rascals
   members (item 1) are the only remaining case.
 - Dick Vitale, Dave Meyer, Quint Studer, Dr. Huet appear only in positive
-  contexts — no defamation exposure, but Dr. Huet's cover quote and Dave's
-  foreword need their written OK on final wording (already tracked in
-  KDP-COVER-SPECS.md and with the foreword).
+  contexts — no defamation exposure. RESOLVED (July 2026): Dr. Huet approved
+  the cover quote as printed ("Rob's journey in sobriety has become a life of
+  service.") and Dave Meyer signed off on the foreword as printed. Both
+  confirmed by Rob.
 - The Author's Note's name-change disclosure should stay in the front matter
   verbatim; it is doing legal work, not just courtesy.
