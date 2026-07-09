@@ -122,7 +122,7 @@ His hands were around my throat before I understood he had crossed the cell. A s
 
 That is where the worst night of my life had set me down: a concrete floor in a Mexican holding cell. Nobody was coming, because nobody knew where I was. Not my father. Not my brother. Not my mother.
 
-I had been carried out of Mexico City as a child, to be given a better life. Somehow I had found my way back to a concrete floor inside it, with everything I'd built somewhere far away. This is the story of how I came back from that floor, and why my father never stopped coming for me.
+I had been carried out of Mexico City as a child, to be given a better life. Somehow I had found my way back to a concrete floor inside the same country, with everything I'd built somewhere far away. This is the story of how I came back from that floor, and why my father never stopped coming for me.
 
 # **A NOTE TO THE ONE WHO LOVES AN ADDICT**
 
@@ -185,7 +185,7 @@ The man was my papa, Ignacio. She had met him in Acapulco around 1974, on a trip
 
 My mother's father, the man I'd grow up calling Grandpa Bob, didn't approve of the marriage. Papa's father was the one who insisted on it. My parents had already married in Mexico, and in 1977 they did it again in Cedar Grove, New Jersey, with mariachis. My grandfather came around to Papa over the years, but he never got over how far away she lived.
 
-My mother makes her own way. She always has. She loved my dad. Nick and I came from that.
+My mother makes her own way. She always has. She loved my father. Nick and I came from that.
 
 My papa was a proud man. He worked a government job, and every morning he left the house in pressed clothes. He took me to the park and the movies, mostly. He'd take off running and I'd come after him and we'd race. He always got there first. Then he'd turn around with a grin and say, "Wow, you're fast today." And I'd yell, "I'm fast!" I believed him every time.
 
@@ -213,7 +213,7 @@ When she came through the door with him I climbed up on the couch next to her. "
 
 For years I told Nick he'd been small enough to fit in my pocket when he was born. He believed me. That was the fun part of having a little brother. He believed everything you said.
 
-Nick was a crybaby. His ears, my mother said. They were worse than anyone knew yet. She'd hold him for hours. I'd go to my room and play the same record again. But I got used to it. He was mine, after all. I'd asked, and she'd said yes.
+Nick was a crybaby. His ears, my mother said. She'd hold him for hours. I'd go to my room and play the same record again. But I got used to it. He was mine, after all. I'd asked, and she'd said yes.
 
 After several years of marriage my mother had seen enough. She loved my father. That was never the question. She didn't announce anything. She got our passports quietly and said we were going to New Jersey to visit Grandpa. Two weeks. Like every other trip. I believed her completely.
 
@@ -239,7 +239,7 @@ My mom had called Papa when we landed and told him the truth. We weren't coming 
 
 I didn't know we were never going back. My grandfather was strict, and he'd never approved of the marriage. But he let us in. We paid him eight hundred a month. He was hard on her and soft on us, and my grandmother took on most of the days. I missed my father. My mom started over with no degree and nobody to fall back on, and she worked. That's her story to tell, in her own voice, and I hope she does. This book is here because of her. She picked us.
 
-Then her hand closed around mine. That was all I had. Her hand, and what she'd told me, and my belief that we'd be back soon. I was wrong about soon. But Mexico wasn't done with me.
+In that airport, her hand had closed around mine. That was all I had. Her hand, and what she'd told me, and my belief that we'd be back soon. I was wrong about soon. But Mexico wasn't done with me.
 
 **CHAPTER 2**
 
@@ -625,7 +625,7 @@ After the divorce he lived in Mahwah. He'd go out, have a drink, talk to people.
 
 Some of my dad's closest buddies had gold records hanging on their walls, and he never thought it was worth mentioning.
 
-That was the family I grew up inside. Outside it, my dad knew everybody. Not the way people say that at networking events. He actually did — the people you'd expect and the ones you wouldn't. His world had more layers than I understood as a kid. I'm still finding some of them now. Lou didn't explain himself. He just lived it, and every so often you'd catch a glimpse and think: who is my father?
+That was the world I grew up inside. Outside it, my dad knew everybody. Not the way people say that at networking events. He actually did — the people you'd expect and the ones you wouldn't. His world had more layers than I understood as a kid. I'm still finding some of them now. Lou didn't explain himself. He just lived it, and every so often you'd catch a glimpse and think: who is my father?
 
 When I was about seven he took me to visit friends of his somewhere in Jersey. Nice house. Long hair, laid back, and they were growing some funny tobacco in the backyard. I didn't know what it was, but I could tell my dad was amused. Inside, one of them stood at the wall polishing something — a round flat thing in a frame — working a cloth over it slow and careful, proud of it. I just knew it was shiny and gold.
 
@@ -805,11 +805,11 @@ I took a sales job in 2002. For a while it felt like proof California hadn't bro
 
 The job was selling uniform services to businesses. Cold calls, presentations to operations managers, a lot of time in parking lots eating lunch and running the next hour in my head. The quota was real, the pressure was constant, and your manager knew your numbers before you finished breakfast. I liked all of it. The structure that would wear someone else down was exactly what I needed, clear rules, clear targets, a scoreboard that updated every day. Lou had raised me in that language: show up, do the work, let the result tell the story.
 
-For the first six months I was clean. Trying. Calling Lou on Sundays, giving him the real numbers, hearing him go quiet in the good way. There's a satisfaction in reporting progress to a man who's seen your worst. He never sounded as impressed as I wanted him to be. You doing okay out there? he'd ask. I'm doing great, Dad, I'd tell him, making more than I ever thought I would. That's good, he'd say. But are you happy? Happy felt like the wrong question. I was successful, I was winning, and I told myself those were the same thing. Yeah, Dad. I'm happy. I don't know if he believed me. I'm not sure I believed myself.
+For the first six months I was sober. Trying. Calling Lou on Sundays, giving him the real numbers, hearing him go quiet in the good way. There's a satisfaction in reporting progress to a man who's seen your worst. He never sounded as impressed as I wanted him to be. You doing okay out there? he'd ask. I'm doing great, Dad, I'd tell him, making more than I ever thought I would. That's good, he'd say. But are you happy? Happy felt like the wrong question. I was successful, I was winning, and I told myself those were the same thing. Yeah, Dad. I'm happy. I don't know if he believed me. I'm not sure I believed myself.
 
 ### *Started Using*
 
-The pills came back slow. Not with a decision I can point to. More like a long week, a rough stretch of no's, a body tired of being on for ten hours and a brain that had no idea how to shut off at night.
+The pills came slow. Not with a decision I can point to. More like a long week, a rough stretch of no's, a body tired of being on for ten hours and a brain that had no idea how to shut off at night.
 
 I can tell you the exact feeling that hooked me. The first time I took a pill and chased it with a drink, something in me went quiet and right at the same time. Not high, exactly. Settled. The low hum that had run under everything since I was a kid, the part of me always checking the room, always reading faces to know who to be, just switched off. I wasn't trying to be funny and landing it. I was funny. I wasn't working to seem easy in my own skin. I was easy in it. For a man who had spent his whole life performing, here was the first time I didn't have to. I just was. This is what I was supposed to feel like the whole time, I thought. I would spend years chasing that one feeling, and I would never reach it again.
 
@@ -1161,7 +1161,7 @@ I haven't answered since. It took me a long time to understand that all of it, t
 *"Keep thy heart with all diligence; for out of it are the issues of life."*
 *— Proverbs 4:23*
 
-"Rob, if you relapse, I'm going to have to wash my hands of you." No emotion. No threat. My father said it the way he stated facts, and it was the kindest hard thing anyone ever told me. I'd learned to hold a line with Ignacio. The harder one was the line I had to hold with myself. Sobriety didn't erase desire. That surprised me. What sobriety gave me was time. What it took away was the anesthesia, and without it I could feel everything, the hunger included. The disease doesn't leave when you put the drink down. It moves to the back of the room and waits, patient, for a hard week or a good excuse.
+"Rob, if you relapse, I'm going to have to wash my hands of you." No emotion. No threat. My father said it the way he stated facts, and it was the kindest hard thing anyone ever told me. Holding a line with Ignacio would take me years to learn. The harder one was the line I had to hold with myself. Sobriety didn't erase desire. That surprised me. What sobriety gave me was time. What it took away was the anesthesia, and without it I could feel everything, the hunger included. The disease doesn't leave when you put the drink down. It moves to the back of the room and waits, patient, for a hard week or a good excuse.
 
 By late 2010 I was restless in a way I couldn't name. Sober, working, going to meetings, living clean, and underneath it something in me still wanted out. An opportunity came across my radar, medical device sales, Stryker. A name that promises money and momentum. A fast way back to the version of me that knew how to win. The thought hit like adrenaline: this is how I get back. Then a quieter one, more honest: I don't know if I can stay sober there.
 
@@ -1355,7 +1355,7 @@ It was like that from the first trip. Before the passports and the overseas flig
 
 Sometimes the camera does catch it. For Hope's thirtieth birthday I took her to Disney. We stayed at the Goofy resort, nothing fancy. The part I keep is her face the first time she saw Disney. A grown woman, thirty years old, lit up like a kid who had just been handed the whole world for a day. She told me she wished she could be a pharmacist right there inside the little village, so she would never have to leave. No problem to solve, nothing going sideways, just Hope happy all the way through, and me happy watching her be that happy. That one the pictures got right.
 
-Jamaica got it right too. Water so clear the scuba felt like flying, dinners that ran long, and one night a musician with a Bob Marley soul came to our table and sang “Three Little Birds”, and I sat there sober and happy and believed every word of it.
+Jamaica got it right too. Water so clear the scuba felt like flying, dinners that ran long, and one night a musician with a Bob Marley soul came to our table and sang "Three Little Birds," and I sat there sober and happy and believed every word of it.
 
 Most of the time, though, the real thing happens off camera. Japan figured us out fast. We booked through Gate 1 expecting the usual, organized and smooth, somebody holding a sign with your name on it. What we didn't plan on was that almost no one we met spoke English. Not broken English. None. We were lost the second we left the hotel, two people from North Carolina who couldn't read a single sign. Hope's allergies were through the roof, her eyes swollen, and we found a pharmacy that had to be a hundred degrees inside. I stood in aisle three pointing at my eyes, fake sneezing, miming a pill into my mouth with a thumbs up while the whole store watched me perform a one-act play for Claritin. We laughed about it for the rest of the trip.
 
@@ -1466,7 +1466,7 @@ Around that same stretch the recognition I'd chased my whole life finally showed
 
 I talked to Lou about Frank one evening. I don't know why this is hitting me so hard, I said. I did everything right. He didn't hesitate. That's not why it's bothering you. He was right. Frank hadn't needed me to fix anything. He'd needed me in the room. I was being let into places where presence was the only thing left to offer, and something in me already knew how to do that. Not as a technique. As a practice. An old man dying sober at eighty-eight showed me that the most you can do at that edge is refuse to leave. Years later, that became the whole job.
 
-Jason Huet has seen both halves of my life. Next door in Stanton Hall at eighteen, and now a doctor whose patients I've come to know at the end. He told me once what he sees, and he dates it the way I do, from the day I got sober: the compassion, and how close I let myself get to the people in the beds. Then he said the sentence I've never gotten over. I wouldn't want anyone else to be there for my patients. From a man who knew me when, that's worth more than anything the old life ever chased.
+Jason Huet has seen both halves of my life. Next door in Stanton Hall at eighteen, and now a doctor who sees from the clinical side what I see at the bedside. He told me once what he sees, and he dates it the way I do, from the day I got sober: the compassion, and how close I let myself get to the people in the beds. Then he said the sentence I've never gotten over. I wouldn't want anyone else to be there for my patients. From a man who knew me when, that's worth more than anything the old life ever chased.
 
 PART SIX
 
@@ -1540,9 +1540,9 @@ The relationship between my father and me was not perfect. Nothing in this story
 
 Lou was diagnosed with stomach and esophageal cancer in the spring of 2015. He was seventy-three. He called me on a Tuesday, no preamble. Got some news, he said. Surgery. And holistic stuff. No chemo. I'm not doing chemo. I knew better than to argue. Okay, I said, which meant, I hear you, and I'll show up for whatever comes next. The surgery was brutal. Sandra was there every day. I believe it's because of Sandra that my father lived another ten years. She was a nurse; she understood his body in ways the rest of us didn't. She loved him completely and he loved her. He told me straight, more than once: Sandra was the love of his life. About twenty-five years married. My relationship with Sandra was always centered on my dad. She was good to me, always. She's a complex person, with a controlling nature expressed in the sweetest, most Southern way imaginable. I don't mean that as criticism. Who she is was exactly what Lou needed. The season ahead will be hard for her, because her life was organized entirely around his. I worry about her. I pray for her.
 
-Lou came through the surgery. By December the scans were clean. The cancer stayed away for eight years — one scare in 2018, something on his liver, and nothing was ever done about it; it held. He was at my wedding in April 2019. He was there when Nick married Asha in February 2024. He was there when Nick and Asha's daughter was born in July 2025. He held her. Years that looked, from the inside, like a permanent gift. They weren't.
+Lou came through the surgery. By December the scans were clean. The cancer stayed away for eight years — one scare in 2018, something on his liver, and nothing was ever done about it; it held. He was at my wedding in April 2019. Years that looked, from the inside, like a permanent gift. They weren't.
 
-In January 2024 the cancer came back. Stage 4. Lungs and lymph nodes. Lou was eighty-two. He told Sandra. He told Dana. He told no one else. I noticed it before I knew what I was noticing, his mood a little off, something in the quality of him I couldn't name. Nick was getting married in February, and Lou had decided, quietly and completely, that his son's wedding wasn't going to be about his diagnosis. So he showed up. He danced. He celebrated. Asha's father had passed the year before, and the wedding was a big Indian celebration in Fort Lauderdale, joyful and carrying grief as well as love. Lou understood that. He held it inside and let the day be what it was supposed to be. He kept the secret until March or April. The cancer's back, he said. January. I didn't want to say anything because of Nick's wedding.
+In January 2024 the cancer came back. Stage 4. Lungs and lymph nodes. Lou was eighty-two. He told Sandra. He told Dana. He told no one else. I noticed it before I knew what I was noticing, his mood a little off, something in the quality of him I couldn't name. Nick was getting married in February, and Lou had decided, quietly and completely, that his son's wedding wasn't going to be about his diagnosis. So he showed up. He danced. He celebrated. Asha's father had passed the year before, and the wedding was a big Indian celebration in Fort Lauderdale, joyful and carrying grief as well as love. Lou understood that. He held it inside and let the day be what it was supposed to be. He kept the secret until March or April. The cancer's back, he said. January. I didn't want to say anything because of Nick's wedding. And in July 2025, a year and a half into the fight, he was there when Nick and Asha's daughter was born. He held her.
 
 Dana and I talked. We knew he had to do something. Nick was the one who got through to him, researched, found a surgeon in Birmingham using connections from a previous job, got him an appointment. The surgeon looked at him and said, stage 4, your age, no surgeon is going to operate on you. We were distraught. Surgery had worked the first time; we thought it was the answer again. Immunotherapy came up, not as hard on the body as chemo or radiation. Lou agreed to try. He was choosing to try. Not for himself. For us.
 
@@ -1595,7 +1595,7 @@ It was an odd feeling, being there, in the place where my father's body was. Now
 
 Pastor Levi Gardner officiated. He had been Dad's pastor for years, and he opened by praying that Lou, raised with Christ, would know the strength of His presence and rejoice in His glory. Then he read the 23rd Psalm, the whole thing. The Lord is my shepherd. I had heard those words at a lot of bedsides over the years. I had never once heard them land on me the way they did that day.
 
-Both my brothers stood up to speak, Nick and Mark. Nick gave the eulogy, and it was spot on, the right words, the right respect, no more and no less. He talked about a father who was steady and present, a man who never needed to say out loud that he was proud of you. You just knew.
+Two of my brothers stood up to speak, Nick and Mark. Nick gave the eulogy, and it was spot on, the right words, the right respect, no more and no less. He talked about a father who was steady and present, a man who never needed to say out loud that he was proud of you. You just knew.
 
 Nick told the one about Fargo. Years back, Dad got in the car and drove alone from New Jersey to Fargo, North Dakota, to watch Nick finish a national wrestling tournament. That was Lou. If it mattered to one of his kids, he showed up, the whole drive, no matter how far. And Nick shared the phrase the two of them had kept between them for years. After the big moments they would say it quietly to each other. Hey Dad, we made it. Four words that held all the early mornings and long drives, all the nights it would have been easier to quit. Sitting there, I thought about how many of us had our own version of that with him, and how we were all going to have to learn to say it now without him there to answer.
 
@@ -1723,7 +1723,7 @@ January 9, 2026. Seventeen years sober to the day, and fifteen days after my fat
 
 And then it lands, the cardinal, on the mirror, close enough to touch through the glass.
 
-Seventeen years from West Palm Beach, from the apartment with the blinds drawn and the refrigerator in the hallway, from the morning I opened the door and found Lou standing there. Seventeen, the age I was when I won the county championship. He'd been in the third row that day. He was always in the third row.
+Seventeen years from West Palm Beach, from the apartment with the blinds drawn and the extension cord running to the hallway, from the morning I opened the door and found Lou standing there. Seventeen, the age I was when I won the county championship. He'd been in the third row that day. He was always in the third row.
 
 Dad, I say out loud. Alone in the car. Just his name. And then the thing I should have said a hundred more times when he was alive to hear it. I love you. The cardinal doesn't move. Dad, I love you. I know you're watching out for me.
 
