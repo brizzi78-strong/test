@@ -878,7 +878,7 @@ The Florida license felt like a loophole I'd found in the universe. Their comput
 
 **Tijuana, 2005**
 
-The cell was the end of that night. It started as something ordinary, back in my San Diego years, before Florida. A workday, a Tuesday, and when I was done I crossed into Tijuana. I'd crossed enough times to think I understood how it worked, and that was the problem. Do something dangerous often enough and it starts to feel like routine.
+The cell was the end of that night. It started as something ordinary, back in my San Diego years, before Florida. A workday, a Tuesday, and when I was done I crossed into Tijuana. I'd crossed enough times to think I understood how it worked, and that was the problem. Do something dangerous often enough and it starts to feel like a run.
 
 This time a cop saw the watch.
 
