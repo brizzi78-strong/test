@@ -906,7 +906,7 @@ I wanted to pray and couldn't. I still believed, somewhere under it. I couldn't 
 
 The door opened. Light cut in. I looked up and stayed where I was, afraid it was for someone else, afraid to stand too fast. A man said something and waved me forward. I got up. My legs were wrong under me. I stepped around the wet places and around the men, past Rico, who didn't look at me. Outside the air wasn't clean, but it was air. Someone gave me back enough to walk out with. Not all of it. Enough.
 
-It wasn't the moment I changed. I was scared, and fear isn't surrender; fear wears off. There was more running ahead of me, more lying, more damage. But something had been marked. I'd seen how small my life had gotten. A cell, a rat, a man's hands on my throat, a concrete floor, and me folded against the wall hoping no one noticed me.
+It wasn't the moment I changed. I was scared, and fear isn't surrender; fear wears off. I went back to Tijuana the next day. There was more running ahead of me, more lying, more damage. But something had been marked. I'd seen how small my life had gotten. A cell, a rat, a man's hands on my throat, a concrete floor, and me folded against the wall hoping no one noticed me.
 
 I never told anyone. Not my father, my brother, my mother, my wife. Not a sponsor, not a priest. I carried it out of shame, and because once you hide a thing long enough, the hiding starts to feel like part of who you are.
 
