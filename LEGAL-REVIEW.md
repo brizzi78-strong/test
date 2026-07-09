@@ -64,11 +64,12 @@ umbrella all pseudonyms live under.
 - Quint Studer (ch26) — name, recovery/meeting references — APPROVED per author
 - Mager (ch24/27/32/34) — first reference only; sponsorship + sobriety — APPROVED per author
 - Diabetes Dave (ch29) — Garrett's death, faith conversation — APPROVED per author
+- Linda (ch34) — assisted-living nurse; real name kept at her request, facility name removed — APPROVED per author
 - Dr. Jason Huet, Dave Meyer — written sign-offs on file (resolved earlier)
 
 **Pseudonyms now in the text (changed July 9, 2026):**
-- Ignacio (biological father; surname Bautista), Aunt Donna, Dana, Mark, Jay (Lou's children), Sandra (Lou's wife), Diane (Brookdale nurse), Christian (rehab friend; soap-opera name cut)
+- Ignacio (biological father; surname Bautista), Aunt Donna, Dana, Mark, Jay (Lou's children), Sandra (Lou's wife), —, Christian (rehab friend; soap-opera name cut)
 
 **Still outstanding:**
 - Written sign-offs: Chris (ch12), author's mother (Parkinson's disclosure), John of "John and Joan" (ch33) or pseudonym flag
-- Text fixes not yet applied: Ignacio's employer line (ch1); "some rooms I can name" (ch33); Judy + postpartum detail (ch3); Rascals/weed decoupling (ch9); Brookdale facility name (ch34); "She hasn't dated in years" (ch6, now Donna); statute-of-limitations joke (ch12); Author's Note sentence covering home-health patients and recovery names
+- Text fixes not yet applied: Ignacio's employer line (ch1); "some rooms I can name" (ch33); Judy + postpartum detail (ch3); Rascals/weed decoupling (ch9); "She hasn't dated in years" (ch6, now Donna); statute-of-limitations joke (ch12); Author's Note sentence covering home-health patients and recovery names
