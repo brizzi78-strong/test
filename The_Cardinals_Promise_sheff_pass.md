@@ -672,7 +672,7 @@ College wrestling isn't high school wrestling scaled up. It's a different sport 
 
 Sophomore year the program got cut. Title IX. No discussion, no warning, just over. I'd like to say I was devastated — better story. What I felt was relief, the clean kind. For the first time since I was twelve, no scoreboard, no coach, no bracket. Just time.
 
-So I had to figure out what I was doing there. I transferred into the Richard T. Farmer School of Business and declared marketing. Why marketing? Because I was bad at everything else and I could talk. People ask why I went into sales and that's the answer. I'm not a detail person. I can connect with people, and marketing pointed that way.
+So I had to figure out what I was doing there. I transferred into the Richard T. Farmer School of Business and declared marketing. Why marketing? Because I was bad at everything else and I could talk. People ask why I went into sales and that's the answer. I can connect with people, and marketing pointed that way.
 
 Kappa Sigma did something I didn't expect. After the standard rush, they came back for me. Not a form letter — a specific ask. I knew the feeling. The thin envelope from the coach. Lou walking into my mother's life and not leaving. I joined. For the first time I wasn't the wrestler. I was just Rob, still working out what that meant.
 
@@ -799,7 +799,7 @@ That's the trap. Not that the pills felt good, plenty of things feel good and do
 
 By then I had a full prescription of my own in California, the bottle right there, no more rationing what I had. The easy access didn't satisfy the chase. It amplified it. What I didn't see was the arithmetic underneath. You take more to get the same effect. The baseline shifts. Monday's edge is Tuesday's normal and Wednesday you're already reaching for it. When California ran dry I started crossing into Tijuana to resupply, an hour from San Diego, a Saturday routine, back before anyone noticed. Six figures a year, crossing the border for pills, because the machine I'd built couldn't run without fuel.
 
-Alcohol came in alongside. Pills to ramp up in the day, drinks to come down at night. From the first time I drank I was a blackout drinker, not giggly after two beers, just gone, piecing the night together off other people's faces in the morning. On the outside I projected a confidence that read as arrogance. Inside I was the same scared kid who needed to prove he belonged in whatever room he'd walked into.
+Alcohol came in alongside. Pills to ramp up in the day, drinks to come down at night. From the first time I drank I was a blackout drinker, not giggly after two beers, just gone, piecing the night together off other people's faces in the morning. I blacked out four nights a week. On the outside I projected a confidence that read as arrogance. Inside I was the same scared kid who needed to prove he belonged in whatever room he'd walked into.
 
 ### *The Wreckage*
 
