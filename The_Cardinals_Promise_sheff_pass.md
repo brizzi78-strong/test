@@ -593,7 +593,7 @@ I can still see him at the front door. Dyed hair, pressed shirt, tie pulled tigh
 
 The summer I was nineteen, between semesters at Miami and working construction, my dad called and said he got me a job. Auditing. I said, auditing? Dad, I haven't taken an accounting class yet. He said, they'll teach you.
 
-I won't use the name of the guy who hired me. Very Italian name. Bad toupee, drove a Buick. The office wasn't an office, it was a back room with one other person in it, an Italian girl named Felicia. That was the whole operation. He tells me I'll be driving the five boroughs auditing the books for the painters and carpenters union. Nineteen years old, fake glasses, a suit that didn't quite fit, about to walk into union offices in Harlem, Brooklyn, and Manhattan pretending to know what I was looking at.
+I won't use the name of the guy who hired me. Very Italian name. Bad toupee, drove a Buick. The office wasn't an office, it was a back room with one other person in it, an Italian girl named Felicia. That was the whole operation. He tells me I'll be driving the five boroughs auditing the books for a trade union. Nineteen years old, fake glasses, a suit that didn't quite fit, about to walk into union offices in Harlem, Brooklyn, and Manhattan pretending to know what I was looking at.
 
 First they sent me out with a guy named Sal to train me. Everywhere we went, people knew him. Hey Sal, what's up Sal, big handshakes, big smiles. Three days of that, and in three days Sal didn't teach me one thing. Not what to look for, not what auditing even meant, not a single page. Then he told me he had to get out of the area. His exact words. I was nineteen. I didn't know what that meant. I still don't. But Sal was gone, and now it was just me.
 
