@@ -2,7 +2,7 @@
 
 *A Memoir for Families Facing Addiction, Illness, and Loss*
 
-**ROB BRIZZI**
+**ROB BROVI**
 
 CARDINAL PROMISE PRESS
 
