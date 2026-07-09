@@ -68,8 +68,8 @@ umbrella all pseudonyms live under.
 - Dr. Jason Huet, Dave Meyer — written sign-offs on file (resolved earlier)
 
 **Pseudonyms now in the text (changed July 9, 2026):**
-- Ignacio (biological father; surname Bautista), Aunt Donna, Dana, Mark, Jay (Lou's children), Sandra (Lou's wife), —, Christian (rehab friend; soap-opera name cut)
+- Ignacio (biological father; surname Bautista), Aunt Donna, Dana, Mark, Jay (Lou's children), Sandra (Lou's wife), Trudy (Lou's first wife), —, Christian (rehab friend; soap-opera name cut)
 
 **Still outstanding:**
 - Written sign-offs: Chris (ch12), author's mother (Parkinson's disclosure), John of "John and Joan" (ch33) or pseudonym flag
-- Text fixes not yet applied: "some rooms I can name" (ch33); Judy + postpartum detail (ch3); Rascals/weed decoupling (ch9); "She hasn't dated in years" (ch6, now Donna); statute-of-limitations joke (ch12); Author's Note sentence covering home-health patients and recovery names
+- Text fixes not yet applied: "some rooms I can name" (ch33); Rascals/weed decoupling (ch9); "She hasn't dated in years" (ch6, now Donna); statute-of-limitations joke (ch12); Author's Note sentence covering home-health patients and recovery names
