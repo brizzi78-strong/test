@@ -78,3 +78,5 @@ umbrella all pseudonyms live under.
 - Text fixes not yet applied: Author's Note sentence covering home-health patients and recovery names
 
 **Temporary pseudonyms (July 9, 2026) pending sign-off calls — restore or keep after author's calls:** Chris -> Nick (brother), Becky -> Kathy (mother), Andy -> Earl (first sponsor). Grandma on the U-Haul cardinal identified in-text as Lou's mother, Mag. Mother's Lantana move dated 2019 in ch30.
+
+**Temporary (July 9, 2026):** family surname Brizzi -> Brovi throughout the manuscript for the blind-review pass (author name, Lou, the newspaper headlines, name-change scene). Cover, ISBN record, and blurb letters still carry the real name; restore or decide before print.

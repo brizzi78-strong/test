@@ -1,6 +1,6 @@
 # **WHAT HE DIDN'T OWE**
 
-Lou Brizzi didn't adopt me as a baby, half of a couple planning a family. He married my mom when I was a boy and chose to stay when he had every reason not to.
+Lou Brovi didn't adopt me as a baby, half of a couple planning a family. He married my mom when I was a boy and chose to stay when he had every reason not to.
 
 Look at who you see as stepdads, the ones who marry a woman with kids. Even among the ones still present, still married, still in those kids' lives, most treat the child a little differently. Not cruelly. Just a gap that never fully closes. Lou never drew that line.
 
