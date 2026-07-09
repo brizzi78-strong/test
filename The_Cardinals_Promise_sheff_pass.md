@@ -1272,11 +1272,11 @@ She called three days later. I need to talk to you about something from your bac
 
 Four days. I went to work, went to meetings, had dinner, slept, did it again. On the fifth day Caroline called. How does a November first start date sound? I didn't answer right away. I sat in my car in Lou's driveway and let it settle. Not adrenaline. Gratitude. Someone had looked at who I was and decided it was enough. I called Lou. I got the job. She knew about the DUIs. HR wanted to pull the offer. She fought for me. A pause. That's a blessing, he said. I'm proud of you. After we hung up I sat there a long time. This wasn't a comeback. Comeback means something to go back to. This was confirmation.
 
-Miss Jane was seventy-eight, recovering from hip surgery, and she apologized for the mess in a spotless house. Then she told me she used to dance, every Friday night for forty years, like it was a confession. That was the job. The work didn't feel heroic, which surprised me. I half-expected the new job to arrive with meaning baked in. Day one was paperwork. Compliance modules. Acronyms I barely remembered from a former life, HIPAA, OASIS. Caroline didn't give me a speech. She showed me how things worked. This is a long game, she said. You don't force referrals. You earn trust.
+The work didn't feel heroic, which surprised me. I half-expected the new job to arrive with meaning baked in. Day one was paperwork. Compliance modules. Acronyms I barely remembered from a former life, HIPAA, OASIS. Caroline didn't give me a speech. She showed me how things worked. This is a long game, she said. You don't force referrals. You earn trust.
 
 Home health wasn't selling, not the way I'd done it. It was assisted livings and living rooms, oxygen tanks humming in the corner, family members exhausted in ways sleep doesn't fix. I walked into homes where time had slowed down.
 
-Miss Jane was terrified she'd never walk without a walker again. I didn't rush past it. I asked about the dancing, and her face changed when she talked about it.
+Miss Jane was seventy-eight, recovering from hip surgery, and she apologized for the mess in a spotless house. She told me she used to dance, every Friday night for forty years, like it was a confession, and she was terrified she'd never walk without a walker again. I didn't rush past it. I asked about the dancing, and her face changed when she talked about it. That was the job.
 
 Mr. Joe was newly diabetic, embarrassed he needed a nurse to teach him insulin. His hands shook as he practiced. I'm sorry, he kept saying. I should have this by now. You have it, I told him. You've done it right three times in a row. He looked up like he hadn't thought to count the successes.
 
