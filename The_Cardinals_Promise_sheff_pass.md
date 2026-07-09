@@ -61,44 +61,46 @@ A Note to the One Who Loves an Addict
 6. The Wrestler
 7. What the Mat Left
 8. The Suit
-9. Oxford
-10. MTV
+
+9. When I Worked for the Mob
+10. Oxford
+11. MTV
 
 **Part Three — The Fall**
 
-11. My Brother's Keeper
-12. The Performance Trap
-13. The Cell
-14. Checking Boxes
-15. West Palm Beach
-16. New Orleans
+12. My Brother's Keeper
+13. The Performance Trap
+14. The Cell
+15. Checking Boxes
+16. West Palm Beach
+17. New Orleans
 
 **Part Four — Getting Square**
 
-17. Chumuckla
-18. The Quiet Years
-19. Horacio
-20. The Line
-21. The Salmon Palace
-22. The Offer
-23. They Gave Me a Chance
-24. Making Amends
-25. Gulf Breeze
-26. The People You Meet When You Stop Drinking
+18. Chumuckla
+19. The Quiet Years
+20. Horacio
+21. The Line
+22. The Salmon Palace
+23. The Offer
+24. They Gave Me a Chance
+25. Making Amends
+26. Gulf Breeze
+27. The People You Meet When You Stop Drinking
 
 **Part Five — Hope**
 
-27. Hope
-28. Sobriety Meets Hospice
+28. Hope
+29. Sobriety Meets Hospice
 
 **Part Six — The Last Chapter**
 
-29. The Detour
-30. Five Weeks
-31. The Days After
-32. The First Honest Mile
-33. What Grief Taught the Job
-34. The Table
+30. The Detour
+31. Five Weeks
+32. The Days After
+33. The First Honest Mile
+34. What Grief Taught the Job
+35. The Table
 
 What He Didn't Owe
 
@@ -670,7 +672,26 @@ Love is easy to admire when it's spoken. This was the other kind — a man rejec
 
 I can still see him at the front door. Dyed hair, pressed shirt, tie pulled tight, shoes shined. That's what a father does while he's waiting. He keeps showing up.
 
-### *Lou's World*
+**CHAPTER 9**
+
+## **When I Worked for the Mob**
+
+*"A good name is rather to be chosen than great riches, and loving favour rather than silver and gold."*
+*— Proverbs 22:1*
+
+The summer I was nineteen, between semesters at Miami and working construction, my dad called and said he got me a job. Auditing. I said, auditing? Dad, I haven't taken an accounting class yet. He said, they'll teach you.
+
+I won't use the name of the guy who hired me. Very Italian name. Bad toupee, drove a Buick. The office wasn't an office, it was a back room with one other person in it, an Italian girl named Felicia. That was the whole operation. He tells me I'll be driving the five boroughs auditing the books for the painters and carpenters union. Nineteen years old, fake glasses, a suit that didn't quite fit, about to walk into union offices in Harlem, Brooklyn, and Manhattan pretending to know what I was looking at.
+
+First they sent me out with a guy named Sal to train me. Everywhere we went, people knew him. Hey Sal, what's up Sal, big handshakes, big smiles. Three days of that, and in three days Sal didn't teach me one thing. Not what to look for, not what auditing even meant, not a single page. Then he told me he had to get out of the area. His exact words. I was nineteen. I didn't know what that meant. I still don't. But Sal was gone, and now it was just me.
+
+They'd sit me down with these giant ledgers and I'd flip pages like I knew what I was doing. They were always nice about it. You want coffee, cake, donuts? I'd say no, flip pages for an hour, leave.
+
+After a few weeks the boss calls and says I'm leaving too early. I said, I don't know what I'm doing, I don't know what I'm looking at. He said — I'll never forget it — it doesn't matter, I get paid by the hour, just sit in there and punch numbers into the calculator. That's when it landed. Whatever this was, it wasn't accounting. I left him a note and went back to construction. Didn't even quit in person.
+
+That job came out of my dad's world. A conversation at a bar in Mahwah, a handshake, a phone call, and his nineteen-year-old son is driving the five boroughs in fake glasses pretending to audit the mob.
+
+After the divorce he lived in Mahwah. He'd go out, have a drink, talk to people. He could sit next to a stranger and walk out with a new friend and a business opportunity. Not scheming. Just how he worked.
 
 Some of my dad's closest buddies had gold records hanging on their walls, and he never thought it was worth mentioning.
 
@@ -694,19 +715,7 @@ Years later we're at my sister Lisa's place in Sarasota, walking into breakfast 
 
 That was Lou. Gold records on the wall, Dickie V at breakfast, not a word about any of it. The guys from the union hall, the guys from the bar, the legends — he treated them the same, because to him they were all just people. If you found out one of them was famous, that was your discovery to make.
 
-After the divorce he lived in Mahwah. He'd go out, have a drink, talk to people. He could sit next to a stranger and walk out with a new friend and a business opportunity. Not scheming. Just how he worked.
 
-So one summer, I'm between semesters at Miami working construction, and he calls and says he got me a job. Auditing. I said, auditing? Dad, I haven't taken an accounting class yet. He said, they'll teach you.
-
-I won't use the name of the guy who hired me. Very Italian name. Bad toupee, drove a Buick. The office wasn't an office, it was a back room with one other person in it, an Italian girl named Felicia. That was the whole operation. He tells me I'll be driving the five boroughs auditing the books for the painters and carpenters union. Nineteen years old, fake glasses, a suit that didn't quite fit, about to walk into union offices in Harlem, Brooklyn, and Manhattan pretending to know what I was looking at.
-
-First they sent me out with a guy named Sal to train me. Everywhere we went, people knew him. Hey Sal, what's up Sal, big handshakes, big smiles. Three days of that, and in three days Sal didn't teach me one thing. Not what to look for, not what auditing even meant, not a single page. Then he told me he had to get out of the area. His exact words. I was nineteen. I didn't know what that meant. I still don't. But Sal was gone, and now it was just me.
-
-They'd sit me down with these giant ledgers and I'd flip pages like I knew what I was doing. They were always nice about it. You want coffee, cake, donuts? I'd say no, flip pages for an hour, leave.
-
-After a few weeks the boss calls and says I'm leaving too early. I said, I don't know what I'm doing, I don't know what I'm looking at. He said — I'll never forget it — it doesn't matter, I get paid by the hour, just sit in there and punch numbers into the calculator. That's when it landed. Whatever this was, it wasn't accounting. I left him a note and went back to construction. Didn't even quit in person.
-
-That job came out of my dad's world. A conversation at a bar in Mahwah, a handshake, a phone call, and his nineteen-year-old son is driving the five boroughs in fake glasses pretending to audit the mob.
 
 There's another story I only learned in the last couple of years, from someone close to our family I won't name. It's the kind that makes you realize your dad's life had whole chapters you never read.
 
@@ -736,7 +745,7 @@ My brother and I called him the most interesting man in the world. It started as
 
 Lou died on Christmas Day, 2025. The man who adopted me. The man who drove me to rehab and stopped at Carrabba's on the way so I could have a last glass of wine. The man who never talked about himself, never needed you to know who he knew, and never once acted like any of it was special. When your dad's alive you think you have time, that the stories will keep coming. Then one day they stop. I got to live in his world for a while.
 
-**CHAPTER 9**
+**CHAPTER 10**
 
 ## **Oxford**
 
@@ -773,7 +782,7 @@ I fell into a depression. Not dramatic, not announced. Gray. Lou heard it in my 
 
 On the way out, a waitress ran into the parking lot after us and handed me her phone number. I looked at Lou. He kept walking, eyes straight ahead. I asked if he'd said something, left a big tip, set the whole thing up. He denied it flat. Didn't miss a beat. I never believed him. He took it to the grave. That might be my favorite thing about him.
 
-**CHAPTER 10**
+**CHAPTER 11**
 
 ## **MTV**
 
@@ -810,7 +819,7 @@ PART THREE
 
 *Everything I'd built was borrowed. This is what the repo man looks like.*
 
-**CHAPTER 11**
+**CHAPTER 12**
 
 ## **My Brother's Keeper**
 
@@ -855,7 +864,7 @@ The whole weekend ran on gambling, which is an interesting thing to be sober in 
 
 That's my brother. The DMV, India, the Bahamas, the ultimatum that saved my life. My best friend.
 
-**CHAPTER 12**
+**CHAPTER 13**
 
 ## **The Performance Trap**
 
@@ -940,7 +949,7 @@ That's when my dad stepped in. He'd remarried years earlier, Lynda, a nurse, the
 
 The Florida license felt like a loophole I'd found in the universe. Their computers didn't talk to California's, so I passed the test, smiled for the camera, and walked out with a clean one, laminated proof that I'd beaten the system. I told myself everything would be different here. But a geographic cure only works if you leave the problem behind, and my problem had a driver's license now, clean and ready to take it anywhere. One night before Dad and Lynda made it down, I went out, and I drove home drunk. At a red light I looked left, and there was a cop. I looked right. Another cop. A drunk man on a suspended license, boxed in on both sides, holding his breath at a light in a town where nobody knew him yet. The light changed. They rolled on. By the grace of God I wasn't pulled over, not that night, not ever. People in the rooms talk about the moment of clarity. That red light was mine. I didn't get sober that night, and I didn't slow down for long. But I never forgot what that box felt like. The old patterns came back like muscle memory, the late nights, the mornings that turned into afternoons, the résumé I kept updating and never sent. I'd drive past Dad and Lynda's house, see him in the driveway washing his car, and think about stopping in. But that meant questions about interviews and the leads I hadn't followed, so it was easier to wave and keep driving. The jobs were gone, and Pensacola without work started to feel like a place I was hiding rather than rebuilding. So when my Aunt Nancey called and said come stay with me, I went.
 
-**CHAPTER 13**
+**CHAPTER 14**
 
 ## **The Cell**
 
@@ -981,7 +990,7 @@ It wasn't the moment I changed. I was scared, and fear isn't surrender; fear wea
 
 I never told anyone. Not my father, my brother, my mother, my wife. Not a sponsor, not a priest. I carried it out of shame, and because once you hide a thing long enough, the hiding starts to feel like part of who you are.
 
-**CHAPTER 14**
+**CHAPTER 15**
 
 ## **Checking Boxes**
 
@@ -1032,7 +1041,7 @@ She knew I was in a dark place. She didn't try to fix it. Didn't ask me to expla
 
 She helped me find work through local connections, and for a while, in her quiet orbit, I started to find my feet again.
 
-**CHAPTER 15**
+**CHAPTER 16**
 
 ## **West Palm Beach**
 
@@ -1077,7 +1086,7 @@ Because here's the part I have to be honest about: this wasn't the moment I got 
 
 But I think about it all the time now. What did he owe me at that point, a grown man he'd adopted, who'd burned through everything, living off stolen electricity in a tower of Post-it notes, praying on a balcony to disappear? Nothing. He owed me nothing. And he slept on my floor, and bought me a bagel, and rented the truck, and found Marcus, and drove me home, and pointed at a bird and told me my grandmother was watching out for us. That's the man. That was always the man.
 
-**CHAPTER 16**
+**CHAPTER 17**
 
 ## **New Orleans**
 
@@ -1120,7 +1129,7 @@ PART FOUR
 
 *You can't pay back a man who never sent a bill. You can pass it on.*
 
-**CHAPTER 17**
+**CHAPTER 18**
 
 ## **Chumuckla**
 
@@ -1155,7 +1164,7 @@ Lou picked me up. Same truck, same calm. He didn't ask me to prove anything, did
 
 The day I got out wasn't the day I was saved. It was the day I was handed the chance to be, and what came next was a long line of ordinary mornings I had to learn how to fill.
 
-**CHAPTER 18**
+**CHAPTER 19**
 
 ## **The Quiet Years**
 
@@ -1196,7 +1205,7 @@ The shape of those years was small on purpose. Up at five thirty. Coffee. A litt
 
 People asked why I did all of it. The meetings, the volunteering, the running, the calls at midnight. I only ever had one answer. It kept me sober. That was enough. By 2010 I was becoming someone who could be trusted. Not because of talent or drive. Because of repetition. In the quiet years, staying sober wasn't the boring part. It was the whole victory.
 
-**CHAPTER 19**
+**CHAPTER 20**
 
 ## **Horacio**
 
@@ -1237,7 +1246,7 @@ He called every Wednesday at seven, right on time, until I stopped answering.
 
 I haven't answered since. It took me a long time to understand that all of it, the Wednesday calls at seven from a borrowed line, the birthday calls, even the friend requests to people he had never met, was the love. I understood it. I still couldn't answer it. It hasn't stopped him from trying. There was never anyone else to try for. Chris and me. That's what he has. Do I have closure? I don't know. It's complicated, and I've stopped needing it not to be. What's simple is this: I honor Lou. One father kept calling. The other one kept coming.
 
-**CHAPTER 20**
+**CHAPTER 21**
 
 ## **The Line**
 
@@ -1256,7 +1265,7 @@ I left shaken. That line forced a choice I couldn't hand off. Go back to that wo
 
 The payoff came quietly, months later. A Tuesday morning in 2011, on my walk along the bay, coffee in a paper cup, the sun just coming up over the water. I wasn't thinking about anything in particular, and then I knew, the way you know your own name. The quiet inside me had been there long enough that it wasn't a phase anymore. It was who I was. I wasn't a man trying not to drink. I was a man who didn't. Nothing announced it. I took another sip of coffee and kept walking.
 
-**CHAPTER 21**
+**CHAPTER 22**
 
 ## **The Salmon Palace**
 
@@ -1279,7 +1288,7 @@ When I got the keys I stood in the middle of that small living room longer than 
 
 Visitors asked when I'd upgrade. Real estate logic said flip it, leverage it, move on. I didn't. That place held the first version of me that wasn't running. Years later, when Hope walked through that door the first time, she didn't say a word about the size. She noticed how it felt. We'd take a devotional out to the pool, or down to the dock, and read it together. The rhythm we still fall back into, the one that's just part of the house now, started there. We sold it in 2019, a hundred thousand in equity, and put it down on the home Hope and I built together in East Hill, the kind I'd never let myself imagine from across the street. From a one-bedroom salmon castle to a house we built from the ground up. That's what five years of showing up quietly can do.
 
-**CHAPTER 22**
+**CHAPTER 23**
 
 ## **The Offer**
 
@@ -1300,7 +1309,7 @@ She called three days later. I need to talk to you about something from your bac
 
 Four days. I went to work, went to meetings, had dinner, slept, did it again. On the fifth day Caroline called. How does a November first start date sound? I didn't answer right away. I sat in my car in Lou's driveway and let it settle. Not adrenaline. Gratitude. Someone had looked at who I was and decided it was enough. I called Lou. I got the job. She knew about the DUIs. HR wanted to pull the offer. She fought for me. A pause. That's a blessing, he said. I'm proud of you. After we hung up I sat there a long time. This wasn't a comeback. Comeback means something to go back to. This was confirmation.
 
-**CHAPTER 23**
+**CHAPTER 24**
 
 ## **They Gave Me a Chance**
 
@@ -1319,7 +1328,7 @@ It was familiar. I knew what it was like to need help and not want it, to be ash
 
 The days were long, doctors' offices, nursing homes, assisted livings, back roads. At night I still went to meetings, still called my sponsor. There was a moment, small and almost forgettable, sitting in my car after a visit with paperwork on the steering wheel, when I realized I wasn't waiting for something else anymore. This was enough. They gave me a chance, and I stayed ten years. There were sales awards in there; they mattered less than what they measured, that I'd finally found work I could do without performing. My manager Brenda Jahn was one of the best I ever worked for. She believed in me and pushed me, and that prepared me for everything that came next.
 
-**CHAPTER 24**
+**CHAPTER 25**
 
 ## **Making Amends**
 
@@ -1338,7 +1347,7 @@ The debt didn't disappear fast. But I stopped flinching when bills came. I start
 
 The courts came last. In 2013, four years sober, I wrote to the court myself and petitioned to have the cases dismissed. No lawyer this time. In 2002 that work had taken the Taylor firm and ten thousand dollars. In 2013 it took a letter from a sober man who had done everything the court asked. The dismissals came through. No record at all.
 
-**CHAPTER 25**
+**CHAPTER 26**
 
 ## **Gulf Breeze**
 
@@ -1367,7 +1376,7 @@ Quint has been sober for decades. He wrote books, moved whole hospital cultures 
 
 The morning after my father died, all these years later, Quint was the first person to reach me. Your dad was a great man, his text said. Of everyone who would reach out in those days, he got there first, and he said the truest thing. Sometimes God places someone in your life not to rescue you but to show you what's possible. For the first time since getting sober, I believed staying alive wasn't the finish line. It was the starting point.
 
-**CHAPTER 26**
+**CHAPTER 27**
 
 ## **The People You Meet When You Stop Drinking**
 
@@ -1404,7 +1413,7 @@ PART FIVE
 
 *She said, I will love you no matter what. I'd heard that sentence once before — proved, not spoken.*
 
-**CHAPTER 27**
+**CHAPTER 28**
 
 ## **Hope**
 
@@ -1541,7 +1550,7 @@ They went into the kitchen together while I stayed in the living room. I could h
 
 Later he looked at me. You're steady, he said. Then: she is too. That was it. No formal blessing, no speech. He saw two people steady in the same direction and noted it.
 
-**CHAPTER 28**
+**CHAPTER 29**
 
 ## **Sobriety Meets Hospice**
 
@@ -1572,7 +1581,7 @@ PART SIX
 
 *Presence, repeated, until the end. His, then mine.*
 
-**CHAPTER 29**
+**CHAPTER 30**
 
 ## **The Detour**
 
@@ -1599,7 +1608,7 @@ The hardest part of leaving Novo wasn't the job. It was leaving that relationshi
 
 I told people I was going to take some time off. Be there for my dad. Be there for my mom. Be present the way I'd been telling hospice families to be present, while there was still time. That was the plan. It's not what happened. What happened was I retreated into myself. The time I'd set aside became something else, a depression I didn't see coming and couldn't recognize from the inside. I was grieving what was already happening and what was coming, and the weight kept me from doing the thing I'd left my career to do. I know the name for it now. Grief doesn't wait for the loss. It can arrive early and freeze you, and you can't name it from inside. I wasn't working. I wasn't fully showing up for my parents. I was stuck in a version of myself that couldn't move in any direction. I don't say that for sympathy. I say it because it's the truth, and this book doesn't work if I only tell the parts where I got it right. Hospice, when it came, wasn't a pivot. It was a return, to the rooms I'd been thinking about since the home health years, to the weight I'd learned how to carry. It pulled me out of that in-between place and gave me direction again.
 
-**CHAPTER 30**
+**CHAPTER 31**
 
 ## **Five Weeks**
 
@@ -1654,7 +1663,7 @@ That spring, Hope and I told him we were moving to Raleigh. I could tell he was 
 
 He got pneumonia on December 23. His immune system had nothing left to fight with. They put him on a drip. Lynda had been calling, and I could hear in her voice what she was trying to tell me without saying it. My mother was in Raleigh visiting, she'd made the trip from Lantana with Parkinson's making every mile harder than it used to be. I thought I could do both: go down Saturday, have a day with her, still get there in time. I was wrong about the timeline. I stayed.
 
-**CHAPTER 31**
+**CHAPTER 32**
 
 ## **The Days After**
 
@@ -1719,7 +1728,7 @@ I sat in my car one afternoon thinking, am I becoming someone else? The answer c
 
 In January we went through his things. His gray suit was hanging on the right side of the closet, between two work shirts. Always be the best-dressed person in the room. I pulled it off the rack and held it up, and I couldn't put it back. I took it home in a garment bag with no plan. It hangs in my closet now, next to mine. It isn't my size and it isn't my style and I will never wear it. But some mornings I open the closet door and it's there, and I know what it is, and I know who wore it, and I leave it alone. I tell families sometimes, when they're clearing out a closet of their own: keep one thing. You'll know which one. It will tell you.
 
-**CHAPTER 32**
+**CHAPTER 33**
 
 ## **The First Honest Mile**
 
@@ -1738,7 +1747,7 @@ And I was mean. That scared me more than a craving would have. I lashed out at t
 
 Seventeen years sober, and I had hit a rock bottom again, an emotional one this time. The disease doesn't need a bottle to run the old plays, isolation, anger, the closed door. The difference was that this time I had to feel it all the way through. And this time I knew what to do with a bottom. I went back to meetings, more of them than I'd been to in years. I got a therapist. The morning calls with Mager got longer. I said out loud, in the rooms and on the phone, that I was not okay. I went back to the people I'd been sharp with and said sorry, plainly. Seventeen years in, I was back on the first honest mile.
 
-**CHAPTER 33**
+**CHAPTER 34**
 
 ## **What Grief Taught the Job**
 
@@ -1767,7 +1776,7 @@ And some rooms I can name. John sold medical equipment. Joan was a respiratory t
 
 My father always made a big deal of my sobriety anniversary. Every January 9th. My first year, he came to Gulf Breeze Hospital to hear me speak, sat in that room and listened to his son talk about staying sober for one year. He told me once, quietly, that whenever he mentioned my name to someone who knew me, they'd say the same thing: he's the best. That's what he built. Lou spent eighty-four years showing up without needing to know exactly where he was going. I'm trying to do the same.
 
-**CHAPTER 34**
+**CHAPTER 35**
 
 ## **The Table**
 

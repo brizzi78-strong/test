@@ -61,44 +61,46 @@ A Note to the One Who Loves an Addict
 6. The Wrestler
 7. What the Mat Left
 8. The Suit
-9. Oxford
-10. MTV
+
+9. When I Worked for the Mob
+10. Oxford
+11. MTV
 
 **Part Three — The Fall**
 
-11. My Brother's Keeper
-12. The Performance Trap
-13. The Cell
-14. Checking Boxes
-15. West Palm Beach
-16. New Orleans
+12. My Brother's Keeper
+13. The Performance Trap
+14. The Cell
+15. Checking Boxes
+16. West Palm Beach
+17. New Orleans
 
 **Part Four — Getting Square**
 
-17. Chumuckla
-18. The Quiet Years
-19. Horacio
-20. The Line
-21. The Salmon Palace
-22. The Offer
-23. They Gave Me a Chance
-24. Making Amends
-25. Gulf Breeze
-26. The People You Meet When You Stop Drinking
+18. Chumuckla
+19. The Quiet Years
+20. Horacio
+21. The Line
+22. The Salmon Palace
+23. The Offer
+24. They Gave Me a Chance
+25. Making Amends
+26. Gulf Breeze
+27. The People You Meet When You Stop Drinking
 
 **Part Five — Hope**
 
-27. Hope
-28. Sobriety Meets Hospice
+28. Hope
+29. Sobriety Meets Hospice
 
 **Part Six — The Last Chapter**
 
-29. The Detour
-30. Five Weeks
-31. The Days After
-32. The First Honest Mile
-33. What Grief Taught the Job
-34. The Table
+30. The Detour
+31. Five Weeks
+32. The Days After
+33. The First Honest Mile
+34. What Grief Taught the Job
+35. The Table
 
 What He Didn't Owe
 
