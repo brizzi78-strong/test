@@ -55,3 +55,20 @@ umbrella all pseudonyms live under.
   confirmed by Rob.
 - The Author's Note's name-change disclosure should stay in the front matter
   verbatim; it is doing legal work, not just courtesy.
+
+
+## Name & Permission Ledger (updated July 9, 2026)
+
+**Real names kept with the subject's approval (per author; get written confirmation before printing):**
+- Matt Campbell (ch27) — full name, recovery story, income, children — APPROVED per author
+- Quint Studer (ch26) — name, recovery/meeting references — APPROVED per author
+- Mager (ch24/27/32/34) — first reference only; sponsorship + sobriety — APPROVED per author
+- Diabetes Dave (ch29) — Garrett's death, faith conversation — APPROVED per author
+- Dr. Jason Huet, Dave Meyer — written sign-offs on file (resolved earlier)
+
+**Pseudonyms now in the text (changed July 9, 2026):**
+- Ignacio (biological father; surname Bautista), Aunt Connie, Dana, Mark, Jay (Lou's children), Donna (Lou's wife), Diane (Brookdale nurse), Christian (rehab friend; soap-opera name cut)
+
+**Still outstanding:**
+- Written sign-offs: Chris (ch12), author's mother (Parkinson's disclosure), John of "John and Joan" (ch33) or pseudonym flag
+- Text fixes not yet applied: Ignacio's employer line (ch1); "some rooms I can name" (ch33); Judy + postpartum detail (ch3); Rascals/weed decoupling (ch9); Brookdale facility name (ch34); "She hasn't dated in years" (ch6, now Connie); statute-of-limitations joke (ch12); Author's Note sentence covering home-health patients and recovery names
