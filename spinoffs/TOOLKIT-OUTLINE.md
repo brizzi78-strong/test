@@ -136,7 +136,7 @@ Then go say it. This is the right day.
   "they knew medicine professionally and still needed help" — survives).
   Add a "some names and identifying details have been changed" line to the
   toolkit's copyright page.
-- Uses ISBN #3 (paperback) and optionally #4 (ebook/PDF edition) from the block.
+- ISBNs assigned: 979-8-9966446-2-9 (paperback), 979-8-9966446-3-6 (ebook/PDF).
 - Cover: same navy + cardinal system as the memoir; "Toolkit" in the same type
   as the memoir title so the two books read as a set on a table.
 - Cross-sell: last page of the memoir and the toolkit each point to the other.
