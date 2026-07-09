@@ -481,7 +481,7 @@ And it wasn't only the big things. One time I asked for White Castle, and the ne
 
 And once, it was far bigger than a tournament or a sack of burgers. I was in college in Oxford, Ohio, and I was in a dark place, the kind where you can't find your way out, where it finally takes everything you have just to admit you need help. Dad got in the car and drove to Ohio. He came the way he always had, except this time it wasn't for a game.
 
-Then there was West Palm Beach. By then I wasn't a kid anymore. I was a grown man dying by inches, deep in addiction, out of road. Dad drove down and pulled his dying son out of it. He didn't shame me. He showed up one more time, when showing up meant saving my life.
+Then there was West Palm Beach. By then I wasn't a kid anymore. I was a grown man dying by inches, deep in addiction, out of road. Dad flew down and pulled his dying son out of it. He didn't shame me. He showed up one more time, when showing up meant saving my life.
 
 I broke down in front of him once. I don't remember anymore what had pushed me there, just that I was undone, the way you only let yourself be in front of someone safe. He didn't tell me to pull it together. He let me get it out, and then he looked at me and said it plain.
 
@@ -1041,7 +1041,7 @@ She helped me find work through local connections, and for a while, in her quiet
 
 **West Palm Beach, November 2008**
 
-My father rented a U-Haul and drove to West Palm Beach to bring home a dead man. The dead man was me. I just hadn't finished the job yet. Before I tell you about the morning he showed up at my door, I have to show you the room he found me in.
+My father flew to West Palm Beach and rented a U-Haul to bring home a dead man. The dead man was me. I just hadn't finished the job yet. Before I tell you about the morning he showed up at my door, I have to show you the room he found me in.
 
 The apartment was about six hundred and fifty square feet on a high floor in CityPlace, carpet underfoot, a balcony over West Palm Beach. From up there the city looked like something I belonged to. PF Chang's and the Cheesecake Factory were right downstairs. I almost never went down to either. I almost never went anywhere.
 
@@ -1273,7 +1273,7 @@ By then I was doing well again, quietly. Home health had stabilized my life. Sob
 
 The unit was small but solid. Thick walls, high ceilings, construction that survives hurricanes and decades and neglect. It felt anchored. I didn't need to impress anymore. I needed something permanent.
 
-The market was down hard in 2014, which is the only reason a place like that ever came within reach. It was listed at a hundred and thirty thousand. I offered a hundred and nine, and they accepted. The only thing between me and the keys was the down payment, and I was short. Not dramatically. Enough to matter. So I called my brother, and I hated every second of it. Chris had done everything right, watched Lou rescue me, watched me fall and climb and wobble. He loved me, but love isn't unlimited credit. I need to borrow ten thousand dollars, I said. He didn't make me sweat it. Rob, he said, I'll loan it to you and I won't ask you a dollar for it. But if you don't pay it back, it'll affect our relationship. He wasn't threatening me. He was trusting me, conditionally. I understand, I said. He sent it. I set up an automatic payment that day, two hundred a month. It took five years. I never missed one.
+The market was down hard in 2014, which is the only reason a place like that ever came within reach. It was listed at a hundred and thirty thousand. I offered a hundred and nine, and they accepted. The only thing between me and the keys was the down payment, and I was short. Not dramatically. Enough to matter. So I called my brother, and I hated every second of it. Chris had done everything right, watched Lou rescue me, watched me fall and climb and wobble. He loved me, but love isn't unlimited credit. I need to borrow ten thousand dollars, I said. He didn't make me sweat it. Rob, he said, I'll loan it to you and I won't ask you a dollar for it. But if you don't pay it back, it'll affect our relationship. He wasn't threatening me. He was trusting me, conditionally. I understand, I said. He sent it. I set up an automatic payment that day, two hundred a month, and paid extra when I could. It took four years. I never missed one.
 
 When I got the keys I stood in the middle of that small living room longer than I expected. Nothing about it was impressive, and that was the point. I'd earned it through repetition. For five years the Mirador was my world. I woke up there, prayed there, paid down debt there, stayed sober there. Went to work, came home, did it again. Nobody applauded. That was the miracle. I was becoming someone who kept promises.
 
@@ -1828,7 +1828,7 @@ We weren't. We were not easy to love in some of those years. Throw in addiction,
 
 What did Lou owe Claudio Balderas at that point? Nothing. You've read what he did, the plane, the rented truck, the night on the floor beside my mattress, the bagel waiting in the morning, the long drive home. He did it the way he did everything: without being asked, and without a word about the cost.
 
-That's what this book is about. Adoption, addiction, recovery, hospice, those are just the chapters. It's about a man who chose two boys who weren't his and never stopped choosing them. Who stayed after the marriage ended. Who came after the DUIs. Who drove a U-Haul to Florida when the world would have told him he'd done plenty.
+That's what this book is about. Adoption, addiction, recovery, hospice, those are just the chapters. It's about a man who chose two boys who weren't his and never stopped choosing them. Who stayed after the marriage ended. Who came after the DUIs. Who flew to West Palm Beach and drove his son home in a U-Haul when the world would have told him he'd done plenty.
 
 I want men to read this and understand that what Lou did is possible, that you can choose a child who isn't yours and love them without condition, without a line you won't cross. There can be more men like Lou. I have to believe that, because if what he did was unrepeatable, then his life was a miracle and nothing more. And Lou wasn't a miracle. He was a man who made a decision and honored it every day for the rest of his life. That's not supernatural. That's available to anyone willing to do it.
 

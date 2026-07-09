@@ -10,7 +10,7 @@ We weren't. We were not easy to love in some of those years. Throw in addiction,
 
 What did Lou owe Claudio Balderas at that point? Nothing. You've read what he did, the plane, the rented truck, the night on the floor beside my mattress, the bagel waiting in the morning, the long drive home. He did it the way he did everything: without being asked, and without a word about the cost.
 
-That's what this book is about. Adoption, addiction, recovery, hospice, those are just the chapters. It's about a man who chose two boys who weren't his and never stopped choosing them. Who stayed after the marriage ended. Who came after the DUIs. Who drove a U-Haul to Florida when the world would have told him he'd done plenty.
+That's what this book is about. Adoption, addiction, recovery, hospice, those are just the chapters. It's about a man who chose two boys who weren't his and never stopped choosing them. Who stayed after the marriage ended. Who came after the DUIs. Who flew to West Palm Beach and drove his son home in a U-Haul when the world would have told him he'd done plenty.
 
 I want men to read this and understand that what Lou did is possible, that you can choose a child who isn't yours and love them without condition, without a line you won't cross. There can be more men like Lou. I have to believe that, because if what he did was unrepeatable, then his life was a miracle and nothing more. And Lou wasn't a miracle. He was a man who made a decision and honored it every day for the rest of his life. That's not supernatural. That's available to anyone willing to do it.
 

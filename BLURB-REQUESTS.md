@@ -26,8 +26,8 @@ father in it.
 I've written a memoir called The Cardinal's Promise. It's the other side of your
 book: the son's side, and the father who stayed. I was adopted out of Mexico City
 at four, had my face on MTV at twenty-two, and was starving in a dark apartment
-by twenty-six — until my adoptive father, Lou, rented a U-Haul and drove to
-Florida to bring home a son who was dying by inches. I've been sober seventeen
+by twenty-six — until my adoptive father, Lou, flew to West Palm
+Beach, rented a U-Haul, and drove home a son who was dying by inches. I've been sober seventeen
 years. I work in hospice now, sitting with families in the last chapter, doing
 for strangers what Lou did for me. He died on Christmas Day 2025. Fifteen days
 later — on my seventeenth sobriety anniversary — a cardinal landed on my
@@ -114,7 +114,7 @@ the literary lane.
 
 Could I ask a favor? Would you introduce me to Randy Grimes? My memoir The
 Cardinal's Promise is finished — 54,000 words, seventeen years sober, the
-adoptive father who drove a U-Haul to come get me, and the hospice work I do
+adoptive father who flew down and drove me home in a U-Haul, and the hospice work I do
 now. I think Randy would recognize every page of the addiction arc, and a line
 from him would mean a lot on the cover. Happy to send him the PDF the moment
 he's open to it.
