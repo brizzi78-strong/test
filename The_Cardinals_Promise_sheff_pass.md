@@ -74,7 +74,7 @@ A Note to the One Who Loves an Addict
 
 18. Chumuckla
 19. The Quiet Years
-20. Ernesto
+20. Ignacio
 21. The Line
 22. The Salmon Palace
 23. They Gave Me a Chance
@@ -181,7 +181,7 @@ Her name was Becky. She was twenty-seven, a blonde girl from Cedar Grove, New Je
 
 Kids don't know what their parents are surviving. They just know the shape of the rooms, the smell of dinner, the music playing in the kitchen, and the hand reaching down to hold theirs.
 
-The man was my papa, Ernesto. She had met him in Acapulco around 1974, on a trip with Sue Doyle, her best friend from high school. He was in college then, working twenty-four-hour shifts at a hospital, and he'd call her when he got off. She went home. Years later she came back to Mexico with my aunt Connie, asked around until she found him, and caught him the day before he left to guide tours in Greece. She moved to Mexico on the spot. Part of it was him. Part of it was getting away from her father. She learned Spanish from the soap operas.
+The man was my papa, Ignacio. She had met him in Acapulco around 1974, on a trip with Sue Doyle, her best friend from high school. He was in college then, working twenty-four-hour shifts at a hospital, and he'd call her when he got off. She went home. Years later she came back to Mexico with my aunt Connie, asked around until she found him, and caught him the day before he left to guide tours in Greece. She moved to Mexico on the spot. Part of it was him. Part of it was getting away from her father. She learned Spanish from the soap operas.
 
 My mother's father, the man I'd grow up calling Grandpa Bob, didn't approve of the marriage. Papa's father was the one who insisted on it. My parents had already married in Mexico, and in 1977 they did it again in Cedar Grove, New Jersey, with mariachis. My grandfather came around to Papa over the years, but he never got over how far away she lived.
 
@@ -189,7 +189,7 @@ My mother makes her own way. She always has. She loved my dad. Chris and I came 
 
 My papa was a proud man. He worked for the Secretary of Commerce, and every morning he left the house in pressed clothes. He took me to the park and the movies, mostly. He'd take off running and I'd come after him and we'd race. He always got there first. Then he'd turn around with a grin and say, "Wow, you're fast today." And I'd yell, "I'm fast!" I believed him every time.
 
-He bought me my own record player, a Fisher-Price like the neighbor's. One day he came home excited about a promotion, picked me up, and called me his good luck charm. Claudio, you are my good luck charm. That was my name then. Claudio Ernesto Bautista — his own name folded into the middle of mine. When my father looked at you, you were the center of the world. He told me he was proud of me and I ran around the house like I owned it.
+He bought me my own record player, a Fisher-Price like the neighbor's. One day he came home excited about a promotion, picked me up, and called me his good luck charm. Claudio, you are my good luck charm. That was my name then. Claudio Ignacio Bautista — his own name folded into the middle of mine. When my father looked at you, you were the center of the world. He told me he was proud of me and I ran around the house like I owned it.
 
 At night he told me a story, his voice low, like every word mattered. The rabbit in the moon. He said a long time ago a god came down and walked the earth as a tired old man, hungry, and the only one who shared what little he had was a small rabbit. To thank him, the god lifted the rabbit up and pressed his shape into the moon, so anyone who looked up would remember. Look, he'd say. He's still up there. I'd ask him to tell it again. Just the two of us in the dark, and I never wanted it to end.
 
@@ -252,7 +252,7 @@ Two weeks became the rest of my life, and I held her hand and didn't know it yet
 
 The first thing New Jersey took from me was the noise. In Mexico City, sound had been the texture of every day. My grandparents' house in West Paterson had none of it. The quiet there was on purpose, and the house ran on a schedule: dinner at the same time, lights out at the same time, conversation that never wandered past what could be handled politely. It wasn't unkind, only contained. After where I'd come from, contained felt close to safe.
 
-Before long I had friends on the street, Frank and Jason, and I'd run to find them and be outside all day. English came fast because there was no other way, and my Spanish went quiet sooner than I expected, a word here, a phrase there, then one day I caught myself translating in my head, and not long after I'd stopped translating. School confused me. I understood more than I could say, so I watched the other kids for cues, when to talk, when to laugh, how to stand, and learned it was safer to take a room in than to announce myself. My name was Claudio Ernesto Bautista, and in a class of John Smiths and Erik Thomases nobody could say any of it, so they landed on Cloudio and that stuck.
+Before long I had friends on the street, Frank and Jason, and I'd run to find them and be outside all day. English came fast because there was no other way, and my Spanish went quiet sooner than I expected, a word here, a phrase there, then one day I caught myself translating in my head, and not long after I'd stopped translating. School confused me. I understood more than I could say, so I watched the other kids for cues, when to talk, when to laugh, how to stand, and learned it was safer to take a room in than to announce myself. My name was Claudio Ignacio Bautista, and in a class of John Smiths and Erik Thomases nobody could say any of it, so they landed on Cloudio and that stuck.
 
 My mother worked all the time, jobs nobody hands a title to. She left early and came home tired, and I saw far less of her than I had in Mexico. At night I'd climb into her bed and ask to play with her hair, and some nights she let me. The nights she did, something settled in my chest I couldn't have named. She kept food on the table, kept us clean, kept us safe. The thing I hold onto most isn't the big sacrifices, and there were plenty. It's smaller than that. She waitressed long nights, on her feet for hours, the kind of tired that sinks into your back and stays. On her way home she would call to see if I was still up.
 
@@ -270,7 +270,7 @@ And it never stopped after I grew up. I moved more times than I can count, and e
 
 Chris took to New Jersey without trouble. He hadn't lost a country, he'd gained one. I'd done both at once.
 
-At night I thought about Ernesto, not with anger, with confusion, half-expecting him to turn up one day so we could pick things back up. I didn't know how to love a man who was gone but not dead. No funeral, no grave, no explanation a child could hold. The grown-ups rarely spoke of him, and when they did it was careful, the way you handle something that might break if you name it straight. Some losses get handled by silence. I learned that early.
+At night I thought about Ignacio, not with anger, with confusion, half-expecting him to turn up one day so we could pick things back up. I didn't know how to love a man who was gone but not dead. No funeral, no grave, no explanation a child could hold. The grown-ups rarely spoke of him, and when they did it was careful, the way you handle something that might break if you name it straight. Some losses get handled by silence. I learned that early.
 
 My grandparents gave me what they had, which was steadiness, a house that stayed where it was, meals that came when they were supposed to. Not the warmth my mother gave, but reliable, and that counts for a lot when the ground has just moved.
 
@@ -301,7 +301,7 @@ Lou met my mother in a bar in West Paterson in 1984. He was in his forties, a ma
 
 I was six the first time I met him. He came over to my grandparents' place, where we were living, and Nana and Grandpa had him to dinner. Most of that night is gone now. What I remember is that he brought Tootsie Rolls for Chris and me. Two boys who weren't his, and he walked in with something in his pocket just for us. Before he ever decided we were his, he was already treating us like we were.
 
-I didn't understand yet that there'd been a father before him, a man there one season and gone the next, leaving a space shaped exactly like him. I'd learn the rest of Ernesto's story much later, that he'd hit a breaking point and decided the kindest thing he could do was step away from us, because he couldn't carry his own life and ours at the same time. I've come to believe he left so we could have something he knew he couldn't give us. It's the most generous version, and it's the one I keep.
+I didn't understand yet that there'd been a father before him, a man there one season and gone the next, leaving a space shaped exactly like him. I'd learn the rest of Ignacio's story much later, that he'd hit a breaking point and decided the kindest thing he could do was step away from us, because he couldn't carry his own life and ours at the same time. I've come to believe he left so we could have something he knew he couldn't give us. It's the most generous version, and it's the one I keep.
 
 Lou was not a saint, and I won't pretend he was. He had a temper that showed up at the wrong moments. He was a whole man, complicated the way real fathers are when you finally see them clearly. But once he decided you were his, that settled it. He was there for the early mornings and the late nights, the school conferences and the wrestling matches, the hospital waiting rooms and the church basements, and never kept a ledger of it. He had no use for talk about sacrifice. He just lived it.
 
@@ -325,7 +325,7 @@ I was eight. A hundred dollars was a fortune. I didn't even have to think about 
 
 "Okay," I said.
 
-Then I asked him something he hadn't planned for. Whether I could take Lou's name for my middle one. Nobody suggested it. I just wanted to carry it. That day Claudio Ernesto Bautista became Robert Louis Brizzi. I had carried one father's name in the middle of mine my whole life. Now I would carry the other's. I've never once wished it back.
+Then I asked him something he hadn't planned for. Whether I could take Lou's name for my middle one. Nobody suggested it. I just wanted to carry it. That day Claudio Ignacio Bautista became Robert Louis Brizzi. I had carried one father's name in the middle of mine my whole life. Now I would carry the other's. I've never once wished it back.
 
 When I was six he taught me to swim by carrying me to the edge of the pool and putting me in. I came up coughing and furious, my arms going the way arms go when a body has decided it isn't going to drown, and I reached the wall and pulled myself out. Lou stood there watching, not laughing, just paying attention the way a man does when he's handed his kid something he'll need. He didn't make a speech. I got back in the water the next time, and the time after that.
 
@@ -376,7 +376,7 @@ For a second he didn't say anything. Then I watched his eyes fill. I had never s
 
 He didn't make a thing of it. He finished tucking me in the way he had every other night, except now I had a word for him I hadn't had a minute before.
 
-Choosing one father didn't erase the other. I want to be careful about that, because people hear adoption and think one family slides into the space the other left, clean as that. It doesn't. A parent who loses a child can't set another one in the empty spot and call it even, and it doesn't run the other way either. I had chosen Lou and I meant it, and there was still a room inside me with Ernesto's name on the door.
+Choosing one father didn't erase the other. I want to be careful about that, because people hear adoption and think one family slides into the space the other left, clean as that. It doesn't. A parent who loses a child can't set another one in the empty spot and call it even, and it doesn't run the other way either. I had chosen Lou and I meant it, and there was still a room inside me with Ignacio's name on the door.
 
 For years I carried a guilt too heavy to carry. I knew, the way a kid knows things without being told, what losing me had done to him, and somewhere in me I had signed for it, as if I were the one who had done the leaving. None of it had been mine to decide. But guilt doesn't check the facts. It just moves in, and today there is no one left to blame.
 
@@ -619,7 +619,7 @@ They'd sit me down with these giant ledgers and I'd flip pages like I knew what 
 
 After a few weeks the boss calls and says I'm leaving too early. I said, I don't know what I'm doing, I don't know what I'm looking at. He said — I'll never forget it — it doesn't matter, I get paid by the hour, just sit in there and punch numbers into the calculator. That's when it landed. Whatever this was, it wasn't accounting. I left him a note and went back to construction. Didn't even quit in person.
 
-That job came out of my dad's world. A conversation at a bar in Mahwah, a handshake, a phone call, and his nineteen-year-old son is driving the five boroughs in fake glasses pretending to audit the mob.
+That job came out of my dad's world — a conversation at a bar in Mahwah, a handshake, a phone call. He had no idea what the job actually was. Neither did I, until I was inside it: his nineteen-year-old son driving the five boroughs in fake glasses, pretending to audit the mob.
 
 After the divorce he lived in Mahwah. He'd go out, have a drink, talk to people. He could sit next to a stranger and walk out with a new friend and a business opportunity. Not scheming. Just how he worked.
 
@@ -927,25 +927,25 @@ I wasn't there to get better. I was there to get through it. Checking boxes, not
 
 Every day I told my therapist: I can't get off the pills, I need them, I can't function without them. And she'd say, you have to stop, you can't keep doing this. I heard her. I didn't believe her. The pills had been the solution so long I couldn't picture a version of myself that ran without them. Without them I was just the scared kid from Mexico City who couldn't sit still and didn't believe he was enough.
 
-The therapist had an idea. She said I needed to get in touch with my birth father. Ernesto. The man I'd left in Mexico City at four. I hadn't spoken to him in years and barely had a memory of him that wasn't assembled from other people's stories and my own four-year-old fragments. She thought part of what I was carrying was unresolved grief about being left. Maybe she was right. What I know is I agreed to try, because agreeing to try was another box to check.
+The therapist had an idea. She said I needed to get in touch with my birth father. Ignacio. The man I'd left in Mexico City at four. I hadn't spoken to him in years and barely had a memory of him that wasn't assembled from other people's stories and my own four-year-old fragments. She thought part of what I was carrying was unresolved grief about being left. Maybe she was right. What I know is I agreed to try, because agreeing to try was another box to check.
 
 I called my mom. She had a cousin who might track him down. They found him. We decided to meet not in Mexico City but closer to the California border. Ensenada.
 
-Ernesto was fifty-three that weekend, still a good-looking man, and we spoke in English, which tells you how much of my first life had survived the trip north. He was charming. The first thing I noticed was the energy, fun, engaging, a man a room adjusts to when he walks in. But under the charm something felt off. The best word I have is slippery. Like he was always performing. Charming in a way that makes you check your pockets afterward, not because he took anything, but because you feel like he could have. To be fair, I was in no shape to evaluate anybody. Fresh out of a rehab I'd half-assed, still craving pills, meeting the biological father I hadn't seen since I was four. And we drank together, the two of us at a table like it was the most natural thing in the world, with the man the therapist thought would heal me. Neither of us said a word about it.
+Ignacio was fifty-three that weekend, still a good-looking man, and we spoke in English, which tells you how much of my first life had survived the trip north. He was charming. The first thing I noticed was the energy, fun, engaging, a man a room adjusts to when he walks in. But under the charm something felt off. The best word I have is slippery. Like he was always performing. Charming in a way that makes you check your pockets afterward, not because he took anything, but because you feel like he could have. To be fair, I was in no shape to evaluate anybody. Fresh out of a rehab I'd half-assed, still craving pills, meeting the biological father I hadn't seen since I was four. And we drank together, the two of us at a table like it was the most natural thing in the world, with the man the therapist thought would heal me. Neither of us said a word about it.
 
-He was generous. He gave me ten thousand dollars. Cash. Just handed it over. Ten thousand dollars to a guy who'd just come out of rehab and was still telling his therapist he couldn't live without pills. That money was lighter fluid on a fire that hadn't gone out. The moment it was in my hand something shifted, not toward healing, toward planning. I could feel the disease doing its math. Ernesto wanted to come along wherever I went. So I told him I was going shopping for a gift for him, which was at least half true, since I had come with nothing to give him. A gift meant he had to stay behind. I left alone and bought Ritalin. With money my biological father had given me at a reunion that was supposed to be about healing.
+He was generous. He gave me ten thousand dollars. Cash. Just handed it over. Ten thousand dollars to a guy who'd just come out of rehab and was still telling his therapist he couldn't live without pills. That money was lighter fluid on a fire that hadn't gone out. The moment it was in my hand something shifted, not toward healing, toward planning. I could feel the disease doing its math. Ignacio wanted to come along wherever I went. So I told him I was going shopping for a gift for him, which was at least half true, since I had come with nothing to give him. A gift meant he had to stay behind. I left alone and bought Ritalin. With money my biological father had given me at a reunion that was supposed to be about healing.
 
-Ernesto called me fat. More than once, across different conversations, not a joke that landed wrong. Why are you so fat? What happened to you? I'd been through a lot of things. Having my biological father repeatedly ask why I was fat was a new one. I think what I had gone down there looking for was compassion.
+Ignacio called me fat. More than once, across different conversations, not a joke that landed wrong. Why are you so fat? What happened to you? I'd been through a lot of things. Having my biological father repeatedly ask why I was fat was a new one. I think what I had gone down there looking for was compassion.
 
-Then there was the scrapbook. My mom had put together a scrapbook of my childhood, New Jersey, birthdays, holidays, school pictures, wrestling matches, and given it to me to show him. A way of saying, look, he turned out okay, here's what you missed, here's what we built. Ernesto flipped through it, and as the pages turned he kept coming back to my mother. Becky. Becky. Becky. Then he stopped on a page and said, you looked very sad there. You must have missed me. I didn't say anything. I let it sit there. It wasn't about me. He was looking at a childhood he'd chosen not to be part of, and the only way he could process it was to put himself at the center.
+Then there was the scrapbook. My mom had put together a scrapbook of my childhood, New Jersey, birthdays, holidays, school pictures, wrestling matches, and given it to me to show him. A way of saying, look, he turned out okay, here's what you missed, here's what we built. Ignacio flipped through it, and as the pages turned he kept coming back to my mother. Becky. Becky. Becky. Then he stopped on a page and said, you looked very sad there. You must have missed me. I didn't say anything. I let it sit there. It wasn't about me. He was looking at a childhood he'd chosen not to be part of, and the only way he could process it was to put himself at the center.
 
-I didn't stay long after that. No reunion was going to fill the hole I'd been pouring pills into for years. Before Ensenada, Ernesto was an idea. After, he was a real person, charming and generous and slippery and self-centered.
+I didn't stay long after that. No reunion was going to fill the hole I'd been pouring pills into for years. Before Ensenada, Ignacio was an idea. After, he was a real person, charming and generous and slippery and self-centered.
 
 I drove back to California with pills in my system and cash in my pocket and the full knowledge that nothing had healed. Another box checked. The small, private room inside me was exactly the same.
 
-These days I don't carry anger toward Ernesto. I did for a while. What I know now is that I was a broken person meeting another broken person, and neither of us had the tools to give the other what they needed. But Ensenada gave me something I didn't recognize for years.
+These days I don't carry anger toward Ignacio. I did for a while. What I know now is that I was a broken person meeting another broken person, and neither of us had the tools to give the other what they needed. But Ensenada gave me something I didn't recognize for years.
 
-Because I had Lou. Ensenada clarified something I'd always known without being able to say it. Lou Brizzi was my father. Not because of a birth certificate. Because he chose it. Every day. Without keeping score. Ernesto gave me ten thousand dollars and I spent it on pills. Lou gave me his last twenty and never told me until years later. That's the difference.
+Because I had Lou. Ensenada clarified something I'd always known without being able to say it. Lou Brizzi was my father. Not because of a birth certificate. Because he chose it. Every day. Without keeping score. Ignacio gave me ten thousand dollars and I spent it on pills. Lou gave me his last twenty and never told me until years later. That's the difference.
 
 ### *Boca Raton*
 
@@ -1129,7 +1129,7 @@ People asked why I did all of it. The meetings, the volunteering, the running, t
 
 **CHAPTER 20**
 
-## **Ernesto**
+## **Ignacio**
 
 *"For if ye forgive men their trespasses, your heavenly Father will also forgive you."*
 *— Matthew 6:14*
@@ -1144,7 +1144,7 @@ The next time I saw him in person was in Ensenada, in 2006, right after the firs
 
 What I couldn't do was become the son he wanted. He was looking for a relationship I didn't have in me to give. It took me years to understand that those were two different things, that you can forgive a man completely and still not be able to hand him your life.
 
-In 2015 I reached for him again. I was thirty-six and sober, and part of the reaching was amends, my side of the street, the years of anger, the silence. I made them. And I called him Ernesto. Not Papa. Not Dad. Dad was a word that belonged to someone else by then. Ernesto never said anything about it. We talked every week for a couple of months.
+In 2015 I reached for him again. I was thirty-six and sober, and part of the reaching was amends, my side of the street, the years of anger, the silence. I made them. And I called him Ignacio. Not Papa. Not Dad. Dad was a word that belonged to someone else by then. Ignacio never said anything about it. We talked every week for a couple of months.
 
 He didn't have a phone that could reach the States. So every Wednesday he would go out to a place that had a VoIP line, and at seven o'clock my phone would ring. He had to leave his home just to hear my voice.
 
@@ -1175,7 +1175,7 @@ I haven't answered since. It took me a long time to understand that all of it, t
 *"Keep thy heart with all diligence; for out of it are the issues of life."*
 *— Proverbs 4:23*
 
-"Rob, if you relapse, I'm going to have to wash my hands of you." No emotion. No threat. My father said it the way he stated facts, and it was the kindest hard thing anyone ever told me. I'd learned to hold a line with Ernesto. The harder one was the line I had to hold with myself. Sobriety didn't erase desire. That surprised me. What sobriety gave me was time. What it took away was the anesthesia, and without it I could feel everything, the hunger included. The disease doesn't leave when you put the drink down. It moves to the back of the room and waits, patient, for a hard week or a good excuse.
+"Rob, if you relapse, I'm going to have to wash my hands of you." No emotion. No threat. My father said it the way he stated facts, and it was the kindest hard thing anyone ever told me. I'd learned to hold a line with Ignacio. The harder one was the line I had to hold with myself. Sobriety didn't erase desire. That surprised me. What sobriety gave me was time. What it took away was the anesthesia, and without it I could feel everything, the hunger included. The disease doesn't leave when you put the drink down. It moves to the back of the room and waits, patient, for a hard week or a good excuse.
 
 By late 2010 I was restless in a way I couldn't name. Sober, working, going to meetings, living clean, and underneath it something in me still wanted out. An opportunity came across my radar, medical device sales, Stryker. A name that promises money and momentum. A fast way back to the version of me that knew how to win. The thought hit like adrenaline: this is how I get back. Then a quieter one, more honest: I don't know if I can stay sober there.
 
@@ -1817,9 +1817,9 @@ This is a true story, told from memory. Dialogue has been reconstructed as faith
 
 1. Rob calls Lou "the man who didn't have to." Where in your own life have you seen chosen love outlast obligated love — and what made it hold?
 
-2. The book gives us two fathers, and its verdict is: "One father kept calling. The other one kept coming." How did your feelings about Ernesto shift as you read, and which moment moved them most?
+2. The book gives us two fathers, and its verdict is: "One father kept calling. The other one kept coming." How did your feelings about Ignacio shift as you read, and which moment moved them most?
 
-3. When eight-year-old Claudio becomes Robert, it feels like "erasing me." Years later, Rob deliberately calls his birth father Ernesto — not Papa, not Dad. What is the book saying about names, and who gets to give them?
+3. When eight-year-old Claudio becomes Robert, it feels like "erasing me." Years later, Rob deliberately calls his birth father Ignacio — not Papa, not Dad. What is the book saying about names, and who gets to give them?
 
 4. Wrestling taught Rob that "the body quits when the mind gives it permission." Where does that lesson save him later — and where does the same drive nearly destroy him?
 
@@ -1835,7 +1835,7 @@ This is a true story, told from memory. Dialogue has been reconstructed as faith
 
 10. In the hospice room, "Not ready isn't a no. It's a doorway." Whose room in your own life needs someone willing to stand in that doorway — and what would your version of "Tell me about her" be?
 
-11. "Do I have closure? I don't know." Why do you think the book refuses a tidy ending with Ernesto? What does it offer in place of closure?
+11. "Do I have closure? I don't know." Why do you think the book refuses a tidy ending with Ignacio? What does it offer in place of closure?
 
 12. Rob writes that the cardinal "wasn't a miracle... the message is still being sent." What do you make of signs after loss? Has the book changed how you would receive one?
 
