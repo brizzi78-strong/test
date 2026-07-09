@@ -2,30 +2,24 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Chapter 15 — Palliative and Hospice Care (Color-Coded Edition)</title>
+<title>Chapter 15 — Private Pay (BLUE · Plan Ahead)</title>
 <style>
   /*
     Color-coded chapter layout — Aging Parent Cardinal's Toolkit.
-    Each recurring element type has a fixed color so a reader in crisis can
-    flip to what they need without reading linearly:
-      CARDINAL RED  — Next Right Step (do this now)
-      AMBER        — Common Misconceptions (myth vs. truth)
-      BLUE         — Medicare / money facts
-      GREEN        — Key Takeaways
-      PLUM         — Action Checklist
-      WARM GRAY    — Rob's reflections (the human voice)
+    Uses the book's own three-color urgency system:
+      RED    #a51c30 — Act Today
+      YELLOW #b45309 — Watch Closely
+      BLUE   #1d4e89 — Plan Ahead   <-- this chapter's color
     Print: US Letter portrait, colors preserved.
   */
   @page { size: 8.5in 11in; margin: 0.75in; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
-    --cardinal: #a51c30;
-    --cardinal-dark: #7d1524;
-    --amber: #b45309;      --amber-bg: #fdf3e3;
-    --blue: #1d4e89;       --blue-bg: #eaf1f8;
-    --green: #2f6b3f;      --green-bg: #ecf4ee;
-    --plum: #5b3a6e;       --plum-bg: #f2edf6;
-    --gray: #57534e;       --gray-bg: #f5f2ee;
+    --red: #a51c30;     --red-bg: #f7dfe2;
+    --yellow: #b45309;  --yellow-bg: #fdf3e3;
+    --blue: #1d4e89;    --blue-bg: #eaf1f8;
+    --blue-dark: #143a67;
+    --gray: #57534e;    --gray-bg: #f5f2ee;
     --ink: #1f2328;
     --rule: #d9cec4;
   }
@@ -42,266 +36,345 @@
   }
   .sans { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
-  /* ---- Chapter opening ---- */
+  /* ---- Chapter banner: the book's color tag ---- */
+  .colorbar {
+    font-family: Helvetica, Arial, sans-serif;
+    background: var(--blue); color: #fff;
+    padding: 8px 14px; border-radius: 6px;
+    display: flex; align-items: center; gap: 10px;
+    font-size: 10.5pt; font-weight: 700; letter-spacing: 0.1em;
+    text-transform: uppercase; margin-bottom: 14px;
+  }
+  .colorbar .dot { width: 12px; height: 12px; border-radius: 50%; background: #fff; }
   .part { font-family: Helvetica, Arial, sans-serif; font-size: 9pt; letter-spacing: 0.18em;
-          text-transform: uppercase; color: var(--cardinal-dark); margin-bottom: 6px; }
+          text-transform: uppercase; color: var(--blue-dark); margin-bottom: 6px; }
   h1 { font-family: Helvetica, Arial, sans-serif; font-size: 23pt; line-height: 1.15;
-       color: var(--cardinal); margin-bottom: 4px; }
+       color: var(--blue); margin-bottom: 14px; }
   .chapnum { display: block; font-size: 11pt; letter-spacing: 0.1em; text-transform: uppercase;
              color: var(--ink); opacity: 0.6; margin-bottom: 2px; }
-  .epigraph { margin: 18px 0 6px; padding-left: 14px; border-left: 3px solid var(--rule);
-              font-style: italic; color: #555; }
-  .epigraph .attr { font-style: normal; font-size: 9.5pt; margin-top: 4px; }
-  .lede { margin: 16px 0 22px; font-size: 11.5pt; }
 
-  h2 { font-family: Helvetica, Arial, sans-serif; font-size: 14pt; color: var(--cardinal);
-       margin: 26px 0 8px; }
+  h2 { font-family: Helvetica, Arial, sans-serif; font-size: 13.5pt; color: var(--blue);
+       margin: 24px 0 8px; }
   p { margin-bottom: 10px; font-size: 11pt; }
   strong { font-weight: 700; }
 
   /* ---- Legend ---- */
-  .legend { border: 1px solid var(--rule); border-radius: 6px; padding: 12px 14px; margin: 18px 0 26px;
+  .legend { border: 1px solid var(--rule); border-radius: 6px; padding: 11px 14px; margin: 16px 0 22px;
             font-family: Helvetica, Arial, sans-serif; font-size: 9pt; }
-  .legend h3 { font-size: 9.5pt; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 8px;
-               color: var(--ink); }
-  .legend ul { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 5px 18px; }
-  .legend li { display: flex; align-items: center; gap: 8px; }
-  .swatch { width: 12px; height: 12px; border-radius: 3px; flex: 0 0 auto; }
+  .legend h3 { font-size: 9.5pt; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 7px; }
+  .legend ul { list-style: none; }
+  .legend li { display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px; }
+  .swatch { width: 11px; height: 11px; border-radius: 3px; flex: 0 0 auto; transform: translateY(1px); }
+  .legend .name { font-weight: 700; }
 
-  /* ---- Coded blocks ---- */
+  /* ---- Blocks ---- */
   .block { border-radius: 6px; padding: 13px 16px; margin: 16px 0; }
   .block .tag { font-family: Helvetica, Arial, sans-serif; font-size: 8.5pt; font-weight: 700;
                 letter-spacing: 0.14em; text-transform: uppercase; display: block; margin-bottom: 7px; }
   .block p { font-size: 10.5pt; }
-  .block ul { margin: 2px 0 2px 18px; font-size: 10.5pt; }
+  .block ol, .block ul { margin: 2px 0 2px 18px; font-size: 10.5pt; }
   .block li { margin-bottom: 6px; }
 
-  .myth      { background: var(--amber-bg); border-left: 5px solid var(--amber); }
-  .myth .tag { color: var(--amber); }
-  .myth dt   { font-weight: 700; color: var(--amber); font-size: 10.5pt; }
-  .myth dd   { margin: 1px 0 9px 0; font-size: 10.5pt; }
-  .myth dd:last-child { margin-bottom: 0; }
+  .plain      { background: var(--blue-bg); border-left: 5px solid var(--blue); }
+  .plain .tag { color: var(--blue); }
 
-  .money      { background: var(--blue-bg); border-left: 5px solid var(--blue); }
-  .money .tag { color: var(--blue); }
+  .think      { background: var(--gray-bg); border-left: 5px solid var(--gray); }
+  .think .tag { color: var(--gray); }
 
-  .takeaways      { background: var(--green-bg); border-left: 5px solid var(--green); }
-  .takeaways .tag { color: var(--green); }
+  .caution      { background: var(--yellow-bg); border-left: 5px solid var(--yellow); }
+  .caution .tag { color: var(--yellow); }
 
-  .checklist      { background: var(--plum-bg); border-left: 5px solid var(--plum); }
-  .checklist .tag { color: var(--plum); }
-  .checklist ul   { list-style: none; margin-left: 0; }
-  .checklist li   { display: flex; gap: 9px; align-items: baseline; }
-  .cbox { flex: 0 0 auto; width: 11px; height: 11px; border: 1.5px solid var(--plum);
-          border-radius: 2px; transform: translateY(1px); }
+  .week      { background: var(--blue-bg); border-left: 5px solid var(--blue); }
+  .week .tag { color: var(--blue); }
 
   .rob      { background: var(--gray-bg); border-left: 5px solid var(--gray); font-style: italic; }
   .rob .tag { color: var(--gray); font-style: normal; }
-  .rob .sig { text-align: right; font-style: normal; font-family: Helvetica, Arial, sans-serif;
-              font-size: 9.5pt; color: var(--gray); margin-top: 4px; }
 
-  .nextstep      { background: var(--cardinal); color: #fff; border-left: 5px solid var(--cardinal-dark); }
-  .nextstep .tag { color: #f6d7db; }
-  .nextstep p    { color: #fff; }
+  .takeaway      { background: var(--blue); color: #fff; border-left: 5px solid var(--blue-dark); }
+  .takeaway .tag { color: #cfe0f2; }
+  .takeaway p    { color: #fff; }
 
-  /* Inline highlights keyed to the same system */
-  .hl-money { background: var(--blue-bg); box-shadow: 0 0 0 2px var(--blue-bg); border-bottom: 2px solid var(--blue); }
-  .hl-act   { background: #f7dfe2; box-shadow: 0 0 0 2px #f7dfe2; border-bottom: 2px solid var(--cardinal); }
+  /* ---- Worksheet ---- */
+  .worksheet { border: 2px solid var(--blue); border-radius: 6px; padding: 14px 16px; margin: 18px 0; }
+  .worksheet .tag { font-family: Helvetica, Arial, sans-serif; font-size: 8.5pt; font-weight: 700;
+                    letter-spacing: 0.14em; text-transform: uppercase; color: var(--blue);
+                    display: block; margin-bottom: 8px; }
+  .worksheet h4 { font-family: Helvetica, Arial, sans-serif; font-size: 10pt; color: var(--blue-dark);
+                  margin: 12px 0 5px; }
+  table { width: 100%; border-collapse: collapse; font-size: 9.5pt; margin: 6px 0 10px;
+          font-family: Helvetica, Arial, sans-serif; }
+  th { text-align: left; background: var(--blue-bg); color: var(--blue-dark);
+       padding: 5px 8px; border: 1px solid var(--rule); font-size: 8.5pt;
+       text-transform: uppercase; letter-spacing: 0.06em; }
+  td { border: 1px solid var(--rule); padding: 9px 8px; }
+  td.blank { min-width: 1in; }
+  .fill { border-bottom: 1px solid var(--ink); display: inline-block; min-width: 2.2in; }
+  .fillline { margin-bottom: 9px; font-size: 10pt; font-family: Helvetica, Arial, sans-serif; }
+  .checks { list-style: none; margin: 4px 0 8px !important; columns: 2; column-gap: 24px;
+            font-family: Helvetica, Arial, sans-serif; font-size: 9.5pt; }
+  .checks li { display: flex; gap: 8px; align-items: baseline; margin-bottom: 6px; break-inside: avoid; }
+  .cbox { flex: 0 0 auto; width: 10px; height: 10px; border: 1.5px solid var(--blue);
+          border-radius: 2px; transform: translateY(1px); }
+  ol.qs { margin: 4px 0 4px 20px; font-size: 10.5pt; }
+  ol.qs li { margin-bottom: 6px; }
 </style>
 </head>
 <body>
 
-<div class="part">Part VI · Hospice and End-of-Life Care</div>
-<h1><span class="chapnum">Chapter 15</span>Palliative and Hospice Care</h1>
-
-<div class="epigraph">
-  "…an approach that improves the quality of life of patients and their families
-  facing life-threatening illness."
-  <div class="attr">— World Health Organization, on palliative care</div>
-</div>
-
-<p class="lede">
-  No part of this journey is more misunderstood than hospice, and the
-  misunderstanding costs families the thing they can least afford to lose:
-  <strong>time</strong>. People hear <em>hospice</em> and think death, surrender, an
-  expensive last resort. Almost none of that is true. The most common thing
-  families say afterward is some version of: <em>I wish we had called sooner.</em>
-  This chapter is meant to make sure you are not one of them.
-</p>
+<div class="colorbar"><span class="dot"></span> Blue · Plan Ahead</div>
+<div class="part">Part 3 · Paying for Care</div>
+<h1><span class="chapnum">Chapter 15</span>Private Pay</h1>
 
 <div class="legend sans">
-  <h3>How this chapter is color-coded</h3>
+  <h3>How this toolkit is color coded</h3>
   <ul>
-    <li><span class="swatch" style="background:#b45309"></span>Common Misconceptions — myth vs. truth</li>
-    <li><span class="swatch" style="background:#1d4e89"></span>Medicare &amp; money facts</li>
-    <li><span class="swatch" style="background:#2f6b3f"></span>Key Takeaways</li>
-    <li><span class="swatch" style="background:#5b3a6e"></span>Action Checklist</li>
-    <li><span class="swatch" style="background:#57534e"></span>Rob's reflections</li>
-    <li><span class="swatch" style="background:#a51c30"></span>Next Right Step — do this now</li>
+    <li><span class="swatch" style="background:#a51c30"></span><span><span class="name">RED — Act Today.</span> Crisis, urgent safety, hospital discharge, hospice, last-days decisions, or caregiver collapse.</span></li>
+    <li><span class="swatch" style="background:#b45309"></span><span><span class="name">YELLOW — Watch Closely.</span> Something has changed. Get support soon, ask better questions, and do not ignore the pattern.</span></li>
+    <li><span class="swatch" style="background:#1d4e89"></span><span><span class="name">BLUE — Plan Ahead.</span> Documents, money, benefits, medication lists, and conversations best handled before a crisis. <em>This chapter is blue.</em></span></li>
   </ul>
 </div>
 
-<div class="block myth">
-  <span class="tag">Common Misconceptions</span>
-  <dl>
-    <dt>Myth: Hospice means giving up.</dt>
-    <dd>Truth: It means shifting the goal from cure to comfort, presence, and
-        dignity. It is active care, not surrender.</dd>
-    <dt>Myth: Calling hospice means death is days away.</dt>
-    <dd>Truth: Hospice is for a prognosis of about six months or less — and many
-        people live longer on it, partly because the care is so attentive.</dd>
-    <dt>Myth: Once you choose hospice, you can't change your mind.</dt>
-    <dd>Truth: You can come off hospice and return later, and the benefit can
-        continue past six months with recertification.</dd>
-    <dt>Myth: Hospice stops all medication and doctors.</dt>
-    <dd>Truth: Comfort medications continue and often increase; a hospice
-        physician is part of the team.</dd>
-  </dl>
+<div class="block plain">
+  <span class="tag">The Plain Truth</span>
+  <p>
+    Private pay means the family or the person receiving care pays directly for
+    care using personal funds — savings, retirement income, pensions, Social
+    Security, investments, home sale proceeds, or family contributions.
+  </p>
+  <p>
+    Private pay often becomes part of the plan when care is needed but Medicare
+    does not cover it, Medicaid is not available yet, or long-term care insurance
+    does not apply. Avoiding the money conversation does not protect the family.
+    It weakens the care plan. The better question is not, <em>"Can we afford care
+    forever?"</em> It is: <strong>what care is needed now, what does it cost, how long
+    can we sustain it, and when do we need another plan?</strong>
+  </p>
 </div>
 
-<h2>15.1 Palliative Care</h2>
-<p>
-  Families mix up palliative care and hospice constantly, and the difference
-  matters. <strong>Palliative care</strong> is comfort-focused care — managing pain,
-  symptoms, and stress — that a person can receive <em>at any stage</em> of a serious
-  illness, even while still pursuing aggressive treatment or a cure. It is not
-  limited to the end of life.
-</p>
-<p>
-  <strong>Hospice</strong> is a specific kind of palliative care for the last months of
-  life, once the goal has shifted from cure to comfort. Put simply: all hospice
-  is palliative, but not all palliative care is hospice. If your parent is
-  seriously ill but not ready for hospice, <span class="hl-act">you can still ask for a
-  palliative-care consult</span> to improve their comfort and quality of life
-  alongside treatment — and many families wish they had asked sooner. You do
-  not have to choose between fighting an illness and being comfortable;
-  palliative care exists precisely so you can have both.
-</p>
-
-<h2>15.2 Hospice Care</h2>
-<p>
-  Hospice is not a place, usually. It is a philosophy and a team that comes to
-  wherever your person lives — their home, an assisted-living apartment, a
-  nursing home, or sometimes a dedicated hospice facility. The philosophy is
-  simple and radical: when cure is no longer the goal, comfort, dignity, and
-  presence become the whole point.
-</p>
-<p>
-  What hospice provides is a whole team, not just a nurse: physicians who
-  manage symptoms, nurses on call around the clock, aides for bathing and
-  personal care, social workers, chaplains, and trained volunteers, plus
-  medications, equipment, and grief support for the family that continues
-  after the death. In <em>Being Mortal</em>, Atul Gawande argues that medicine
-  fixates on safety and survival at the expense of what makes life worth
-  living, and that the better question is what a person is willing to trade
-  for the days they have left. Hospice is built around that question.
-</p>
-<p>
-  <strong>When to call — and the myth of "too soon."</strong> Hospice is for a person
-  with a life expectancy of about six months or less if the illness runs its
-  expected course. But it is not a one-way door: if your person stabilizes,
-  they can come off and go back on later, and the benefit can continue past
-  six months with recertification. There is no penalty for calling too soon.
-  There is enormous cost to calling too late.
-</p>
-<p>
-  Signs it may be time to ask include repeated hospitalizations for the same
-  condition, a clear downward trajectory (eating less, sleeping more,
-  withdrawing, losing weight), treatments that exhaust more than they help,
-  and the person signaling that they are tired of fighting.
-  <span class="hl-act">You do not need a doctor's permission to start the
-  conversation — any family member can call a hospice provider and ask for an
-  evaluation.</span>
-</p>
-<p>
-  There is also a level of hospice care most families never hear about:
-  <strong>continuous or "crisis" care</strong>, where a nurse can stay at the bedside
-  for hours during a hard stretch. If symptoms spike, ask for it by name.
-</p>
-
-<h2>15.3 Medicare Hospice Benefits</h2>
-<div class="block money">
-  <span class="tag">Medicare &amp; Money — What the Benefit Covers</span>
+<div class="block think">
+  <span class="tag">What Families Usually Think</span>
   <p>
-    Here is where Medicare is not stingy at all, and where most families get it
-    backwards. They fear hospice will be a financial burden. It is the opposite.
-    If your parent has a terminal diagnosis and chooses comfort care over cure,
-    the <strong>Medicare Hospice Benefit can cover essentially all of it</strong>:
+    "Medicare will cover more than it does." "We should not have to use savings."
+    "Mom worked hard for that money." "Dad wanted to leave something to the
+    kids." These thoughts are common — and dangerous if they delay planning.
+    Money should not make every decision, but it should be named clearly enough
+    that the family can plan honestly. A family may protect an inheritance so
+    tightly that the person who earned the money does not receive the care they
+    need.
   </p>
-  <ul>
-    <li>The full hospice team</li>
-    <li>All medications for pain and symptom relief</li>
-    <li>Medical equipment and supplies (hospital bed, oxygen, and more)</li>
-    <li>Short-term inpatient and respite care when the team arranges it</li>
-    <li>Grief and spiritual counseling for both the patient and the family</li>
+</div>
+
+<h2>What Private Pay Covers — and What It Doesn't Solve</h2>
+<p>
+  Private pay can cover what insurance does not: private duty caregivers,
+  assisted living and memory care fees, adult day care, respite, care managers,
+  transportation, meal delivery, home safety modifications, and supplies. It is
+  often the glue between formal services — home health for skilled needs plus
+  private duty for meals and bathing, hospice plus private duty help at night.
+</p>
+<p>
+  But money can buy help; it cannot solve every problem. Private pay does not
+  guarantee a perfect caregiver, a safe home, family agreement, unlimited time,
+  or no future decline. Money creates options, and it can disappear quickly
+  without a plan.
+</p>
+
+<h2>The Monthly Burn Rate</h2>
+<p>
+  The monthly burn rate is the amount being spent each month on care — <strong>a
+  number, not a vague guess</strong>. Include housing or facility base rate, care
+  level fees, private duty care, medications, supplies, transportation,
+  insurance premiums, food, home maintenance, utilities, copays, equipment, and
+  care manager fees. Then compare it to monthly income and available savings.
+  A family may discover the plan is sustainable, works only for a limited
+  period, or needs adjustment. Numbers do not remove emotion. But they turn fog
+  into a map.
+</p>
+
+<h2>Home, Assisted Living, and Memory Care Costs</h2>
+<p>
+  <strong>At home,</strong> a few hours a week may be manageable, but daily help costs
+  more, overnight costs more, and twenty-four-hour care can become extremely
+  expensive. The question is not whether home is emotionally preferred — it is
+  whether home is safe, supported, and financially sustainable.
+</p>
+<p>
+  <strong>Assisted living</strong> bills may include base rent, care level fees,
+  medication management, community or move-in fees, supply and transportation
+  charges, and rate increases over time. Ask for a written cost breakdown — not
+  just the brochure number.
+</p>
+<p>
+  <strong>Memory care</strong> is often more expensive because it provides more
+  supervision and dementia-specific support. Ask the total monthly cost today,
+  what could make it increase, and what happens if funds run out. It can bring
+  safety and structure — and drain funds quickly if not planned carefully.
+</p>
+
+<h2>Family Contributions and the Spouse at Home</h2>
+<p>
+  Family contributions should be handled in writing, not on vague promises: who
+  is contributing, how much, how often, for how long, whether it is a gift or a
+  loan, who pays the bill, who tracks payments, and the backup plan if someone
+  stops. A written plan protects both the relationships and the care plan.
+</p>
+<div class="block caution">
+  <span class="tag">Watch Closely — The Spouse at Home</span>
+  <p>
+    Do not spend down money without understanding how the spouse at home will
+    live — what income they need, what bills, housing, and insurance costs
+    remain, and whether Medicaid planning is likely later. Care planning should
+    not protect one person by making the other financially unsafe. Both lives
+    matter. If Medicaid may be needed later, do not move money, retitle assets,
+    or make gifts without professional advice.
+  </p>
+</div>
+
+<h2>When to Ask for Professional Guidance</h2>
+<p>
+  Ask for guidance when care costs are high, funds may run out within one to
+  two years, a spouse remains at home, a home may need to be sold, Medicaid may
+  be needed later, long-term care insurance exists, family members disagree
+  about money, someone wants to transfer assets, or there are trusts or complex
+  accounts. Possible professionals: an elder law attorney, financial advisor,
+  accountant, Medicaid planner, long-term care insurance representative,
+  veterans benefits counselor, facility business office, or care manager.
+  A good question asked early can prevent a very expensive mistake later.
+</p>
+
+<div class="block week">
+  <span class="tag">What to Do This Week</span>
+  <ol>
+    <li><strong>Write down the current care costs</strong> — every recurring cost. Do not guess.</li>
+    <li><strong>Identify monthly income</strong> — Social Security, pension, retirement distributions, and other income.</li>
+    <li><strong>Estimate available savings</strong> — list accounts and approximate values. Gather information; do not make changes yet.</li>
+    <li><strong>Calculate the monthly gap</strong> — care cost minus income equals what must come from savings or another source.</li>
+    <li><strong>Ask how long the current plan can last</strong> — divide available funds by the monthly gap.</li>
+    <li><strong>Decide when another plan is needed</strong> — review insurance and VA benefits, ask about Medicaid planning, or compare settings before the money is gone.</li>
+  </ol>
+</div>
+
+<div class="worksheet">
+  <span class="tag">▣ Worksheet — Private Pay Planning</span>
+  <p style="font-size:9pt; font-family:Helvetica,Arial,sans-serif; color:#555;">
+    For planning only. It does not replace financial, legal, tax, Medicaid, or benefits advice.
+  </p>
+
+  <div class="fillline">Person receiving care <span class="fill"></span></div>
+  <div class="fillline">Main caregiver / phone <span class="fill"></span></div>
+  <div class="fillline">Financial point person / phone <span class="fill"></span></div>
+  <div class="fillline">Financial Power of Attorney (if known) <span class="fill"></span></div>
+  <div class="fillline">Current care setting <span class="fill"></span></div>
+
+  <h4>Monthly income</h4>
+  <table>
+    <tr><th>Source</th><th>Monthly Amount</th><th>Notes</th></tr>
+    <tr><td>Social Security</td><td class="blank"></td><td></td></tr>
+    <tr><td>Pension</td><td class="blank"></td><td></td></tr>
+    <tr><td>Retirement distribution</td><td class="blank"></td><td></td></tr>
+    <tr><td>Rental / investment income</td><td class="blank"></td><td></td></tr>
+    <tr><td>Other income</td><td class="blank"></td><td></td></tr>
+    <tr><td><strong>Total monthly income</strong></td><td class="blank"></td><td></td></tr>
+  </table>
+
+  <h4>Monthly care costs</h4>
+  <table>
+    <tr><th>Cost</th><th>Monthly Amount</th><th>Notes</th></tr>
+    <tr><td>Private duty care</td><td class="blank"></td><td></td></tr>
+    <tr><td>Assisted living / memory care base rate</td><td class="blank"></td><td></td></tr>
+    <tr><td>Care level &amp; medication fees</td><td class="blank"></td><td></td></tr>
+    <tr><td>Supplies &amp; incontinence</td><td class="blank"></td><td></td></tr>
+    <tr><td>Transportation &amp; adult day care</td><td class="blank"></td><td></td></tr>
+    <tr><td>Housing, utilities, maintenance</td><td class="blank"></td><td></td></tr>
+    <tr><td>Insurance premiums &amp; copays</td><td class="blank"></td><td></td></tr>
+    <tr><td>Equipment &amp; care manager</td><td class="blank"></td><td></td></tr>
+    <tr><td><strong>Total monthly care costs</strong></td><td class="blank"></td><td></td></tr>
+  </table>
+
+  <h4>Monthly gap &amp; how long the plan lasts</h4>
+  <div class="fillline">Total monthly care costs <span class="fill" style="min-width:1.4in"></span></div>
+  <div class="fillline">Total monthly income <span class="fill" style="min-width:1.4in"></span></div>
+  <div class="fillline">Monthly gap (costs minus income) <span class="fill" style="min-width:1.4in"></span></div>
+  <div class="fillline">Funds available for care <span class="fill" style="min-width:1.4in"></span></div>
+  <div class="fillline">Estimated months this plan can last <span class="fill" style="min-width:1.4in"></span></div>
+  <div class="fillline">Date to review the plan again <span class="fill" style="min-width:1.4in"></span></div>
+
+  <h4>Available funds for care</h4>
+  <table>
+    <tr><th>Asset / Account</th><th>Approx. Value</th><th>Accessible?</th></tr>
+    <tr><td>Checking / savings</td><td class="blank"></td><td></td></tr>
+    <tr><td>Investment account</td><td class="blank"></td><td></td></tr>
+    <tr><td>Retirement account</td><td class="blank"></td><td></td></tr>
+    <tr><td>Home equity</td><td class="blank"></td><td></td></tr>
+    <tr><td>Life insurance cash value</td><td class="blank"></td><td></td></tr>
+  </table>
+
+  <h4>Other payment sources to explore</h4>
+  <ul class="checks">
+    <li><span class="cbox"></span>Long-term care insurance</li>
+    <li><span class="cbox"></span>VA benefits</li>
+    <li><span class="cbox"></span>Medicaid planning / waiver / HCBS</li>
+    <li><span class="cbox"></span>Family contributions</li>
+    <li><span class="cbox"></span>Home sale</li>
+    <li><span class="cbox"></span>Reverse mortgage (with professional guidance)</li>
+    <li><span class="cbox"></span>Life insurance options</li>
+    <li><span class="cbox"></span>State, local, or community support</li>
   </ul>
-  <p>
-    What families pay is almost nothing — at most a small copay, around
-    <strong>$5</strong>, per comfort prescription. <strong>The one real gap:</strong> hospice
-    does not pay room and board if your parent lives in a facility. The hospice
-    care itself comes to them wherever they are, but a facility's room-and-board
-    charge continues separately. And the grief support does not end at the
-    death — <strong>bereavement support for the family continues for about a year
-    afterward, at no cost.</strong> Most families never use what they are entitled to.
-  </p>
+
+  <h4>Family contribution plan (write it down clearly)</h4>
+  <table>
+    <tr><th>Name</th><th>Amount</th><th>Frequency</th><th>Gift or Loan?</th></tr>
+    <tr><td class="blank"></td><td></td><td></td><td></td></tr>
+    <tr><td class="blank"></td><td></td><td></td><td></td></tr>
+    <tr><td class="blank"></td><td></td><td></td><td></td></tr>
+  </table>
+  <div class="fillline">Who pays the care bill? <span class="fill"></span></div>
+  <div class="fillline">Who tracks contributions? <span class="fill"></span></div>
+  <div class="fillline">What happens if someone cannot continue? <span class="fill"></span></div>
+</div>
+
+<div class="worksheet">
+  <span class="tag">▣ Cost Questions to Ask a Facility or Agency</span>
+  <ol class="qs">
+    <li>What is the base monthly cost, what is included, and what costs extra?</li>
+    <li>How are care levels priced, and how often can rates increase?</li>
+    <li>Are there move-in fees or deposits, and are supplies, medication, and transportation included?</li>
+    <li>What happens if care needs increase, or if private funds run out?</li>
+    <li>Do you accept long-term care insurance, or Medicaid / Medicaid waiver if applicable?</li>
+    <li>What is the move-out policy, and can we get all costs in writing?</li>
+  </ol>
 </div>
 
 <div class="block rob">
-  <span class="tag">From Rob</span>
+  <span class="tag">Rob's Note</span>
   <p>
-    I have sat with families who waited on hospice because they feared the
-    cost — and lost weeks they could never get back. The benefit is one of the
-    most generous in all of Medicare, and the fear that keeps families away is
-    exactly backwards. If you take one thing from this chapter: ask sooner.
+    Private pay conversations can feel cold because they put numbers next to
+    love. But the numbers are not the enemy. The numbers are there so the family
+    can protect the care plan.
   </p>
-  <div class="sig">— Rob</div>
-</div>
-
-<div class="block takeaways">
-  <span class="tag">Key Takeaways</span>
-  <ul>
-    <li>Palliative care is comfort care available at any stage of serious
-        illness, even alongside treatment; hospice is palliative care for the
-        last months of life once the goal shifts to comfort.</li>
-    <li>Hospice is a team and a philosophy that comes to wherever the person
-        lives, not a place — and choosing it is active care, not surrender.</li>
-    <li>Hospice is for a prognosis of about six months or less, but it is
-        reversible and renewable; there is no penalty for calling too soon and
-        a real cost to calling too late.</li>
-    <li>The Medicare Hospice Benefit covers nearly everything — team,
-        medications, equipment, counseling — with families paying almost
-        nothing; the one gap is facility room and board.</li>
-    <li>Bereavement support continues about a year after the death at no cost,
-        and a bedside "continuous care" level exists for hard stretches — ask
-        for it by name.</li>
-  </ul>
-</div>
-
-<div class="block checklist">
-  <span class="tag">Action Checklist</span>
-  <ul>
-    <li><span class="cbox"></span>If your parent is seriously ill but not ready for hospice, ask their
-        doctor for a palliative-care consult now.</li>
-    <li><span class="cbox"></span>Learn the signs that it may be time for hospice and watch for them
-        honestly.</li>
-    <li><span class="cbox"></span>Know that you can call a hospice provider directly for a
-        no-obligation evaluation — you don't need the doctor's permission.</li>
-    <li><span class="cbox"></span>If symptoms spike, ask the hospice team about continuous (crisis)
-        bedside care by name.</li>
-    <li><span class="cbox"></span>Confirm what the Medicare Hospice Benefit covers and clarify any
-        separate facility room-and-board cost.</li>
-    <li><span class="cbox"></span>Plan to use the bereavement support that continues for about a year
-        after the death.</li>
-  </ul>
-</div>
-
-<div class="block nextstep">
-  <span class="tag">Next Right Step</span>
   <p>
-    If any of the signs in this chapter sound like your parent, call a local
-    hospice provider and ask for an evaluation — it costs nothing and commits
-    you to nothing. The families who carry the least regret are almost always
-    the ones who made this call sooner than felt comfortable.
+    I have seen families avoid the cost conversation until the crisis arrives.
+    Then everyone is shocked, rushed, and angry — and that is when bad decisions
+    happen.
+  </p>
+  <p>
+    Talking about money does not mean you care less. It means you are trying to
+    make care last. It means you are trying to protect the parent, the caregiver,
+    the spouse at home, and the family from surprise.
+  </p>
+  <p>
+    Do not let guilt write the budget. Do not let fear hide the numbers. Put the
+    costs on paper. Then decide what the next right step should be.
+  </p>
+</div>
+
+<div class="block takeaway">
+  <span class="tag">Chapter 15 Takeaway</span>
+  <p>
+    Private pay means using personal or family funds to pay directly for care
+    that insurance or public benefits may not cover. The next right question is:
+    <strong>what does the current care plan cost each month, and how long can we
+    safely sustain it?</strong>
   </p>
 </div>
 
