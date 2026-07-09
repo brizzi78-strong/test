@@ -72,4 +72,4 @@ umbrella all pseudonyms live under.
 
 **Still outstanding:**
 - Written sign-offs: Chris (ch12), author's mother (Parkinson's disclosure), John of "John and Joan" (ch33) or pseudonym flag
-- Text fixes not yet applied: "some rooms I can name" (ch33); Rascals/weed decoupling (ch9); "She hasn't dated in years" (ch6, now Donna); statute-of-limitations joke (ch12); Author's Note sentence covering home-health patients and recovery names
+- Text fixes not yet applied: "some rooms I can name" (ch33); "She hasn't dated in years" (ch6, now Donna); statute-of-limitations joke (ch12); Author's Note sentence covering home-health patients and recovery names

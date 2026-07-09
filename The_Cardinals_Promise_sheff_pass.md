@@ -627,7 +627,7 @@ Some of my dad's closest buddies had gold records hanging on their walls, and he
 
 That was the family I grew up inside. Outside it, my dad knew everybody. Not the way people say that at networking events. He actually did — the people you'd expect and the ones you wouldn't. His world had more layers than I understood as a kid. I'm still finding some of them now. Lou didn't explain himself. He just lived it, and every so often you'd catch a glimpse and think: who is my father?
 
-When I was about seven he took me to visit friends of his somewhere in Jersey. Nice house. Long hair, laid back, and they were growing weed in the backyard. I didn't know what it was, but I could tell my dad thought it was funny. Inside, one of them stood at the wall polishing something — a round flat thing in a frame — working a cloth over it slow and careful, proud of it. I just knew it was shiny and gold.
+When I was about seven he took me to visit friends of his somewhere in Jersey. Nice house. Long hair, laid back, and they were growing some funny tobacco in the backyard. I didn't know what it was, but I could tell my dad was amused. Inside, one of them stood at the wall polishing something — a round flat thing in a frame — working a cloth over it slow and careful, proud of it. I just knew it was shiny and gold.
 
 Home that night, my mom asked how it went. I told her about the nice guys shining their gold records.
 
