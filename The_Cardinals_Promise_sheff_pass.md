@@ -365,7 +365,7 @@ What I love now is how close my mother and her sisters have become, she and Nanc
 
 He asked my mother out and she said no. He asked again and she said no again. So he kept showing up, week after week, until she finally saw his charm and his maturity. That was how Lou Brizzi decided to stay.
 
-Lou Brizzi met my mother in a bar in West Paterson in 1984. He was in his forties, a man who'd already lived a complicated life and decided he was ready to do the next part right. My mother was twenty-nine, back from Mexico with two small boys and not much else, staying with her parents and taking whatever work she could find. She'd learned to be careful about who she let near her children, and a charming man in a bar wasn't going to be the exception. That was why she said no, and why his coming back meant something.
+Lou met my mother in a bar in West Paterson in 1984. He was in his forties, a man who'd already lived a complicated life and decided he was ready to do the next part right. My mother was twenty-nine, back from Mexico with two small boys and not much else, staying with her parents and taking whatever work she could find. She'd learned to be careful about who she let near her children, and a charming man in a bar wasn't going to be the exception. That was why she said no, and why his coming back meant something.
 
 I was six the first time I met him. He came over to my grandparents' place, where we were living, and Nana and Grandpa had him to dinner. Most of that night is gone now. What I remember is that he brought Tootsie Rolls for Chris and me. Two boys who weren't his, and he walked in with something in his pocket just for us. Before he ever decided we were his, he was already treating us like we were.
 
@@ -381,9 +381,9 @@ He worked IT most of his life, a lot of it on the help desk, the guy you call wh
 
 People have asked me how a man in his forties decides to take on an immigrant single mother's two boys. Lou never dressed the answer up. Your mother was beautiful, he said, and ten years younger. That was the honest start of it. The staying was the part he never explained.
 
-He adopted us when I was eight. The paperwork had taken years, international adoption in the eighties moved slow and asked for everything twice. Lou wasn't a patient man by nature, but he was patient in practice. He made the trips, sat in the offices, signed what they put in front of him, and waited for the next form.
-
 Around the time Lou came into our lives we left my grandparents' place in West Paterson for a house of our own in Woodridge. That was the home of my grade-school years, before Ramsey.
+
+He adopted us when I was eight. The paperwork had taken years, international adoption in the eighties moved slow and asked for everything twice. Lou wasn't a patient man by nature, but he was patient in practice. He made the trips, sat in the offices, signed what they put in front of him, and waited for the next form.
 
 When the time came to change our name, my mother told me Grandpa wanted to ask me something. We went down to the basement of the Woodridge house, wood paneling, brown carpet, the cool stale smell a basement has. Grandpa Bob sat me down and got to the point the way he always did.
 
