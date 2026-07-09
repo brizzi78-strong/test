@@ -668,7 +668,7 @@ That was the version of me I was building at Miami. Not Claudio. Rob — county 
 
 The wrestling room was in the Athletic Center, a building that smelled like liniment and decades of somebody's suffering. Chuck Angelo rarely raised his voice. He didn't need to. The expectation lived in the silence.
 
-College wrestling isn't high school wrestling scaled up. It's a different sport under similar rules. The men I faced had been doing this since before I could read English, and they had the cheerful brutality of experienced guys who enjoy working on beginners. I got thrown. A lot. Practice was 6 a.m. and 4 p.m. You cut weight. You drilled until the moves stopped needing thought. I wasn't the most talented wrestler on the team. What I had was what I always had: I showed up, and when it got hard I showed up harder. That year we made a run to the final eight of the NCAA tournament. We weren't supposed to be there.
+College wrestling isn't high school wrestling scaled up. It's a different sport under similar rules. The men I faced had been doing this since before I could read English, and they had the cheerful brutality of experienced guys who enjoy working on beginners. I got thrown. A lot. Practice was 6 a.m. and 4 p.m. You cut weight. You drilled until the moves stopped needing thought. I wasn't the most talented wrestler on the team. What I had was what I always had: I showed up, and when it got hard I showed up harder.
 
 Sophomore year the program got cut. Title IX. No discussion, no warning, just over. I'd like to say I was devastated — better story. What I felt was relief, the clean kind. For the first time since I was twelve, no scoreboard, no coach, no bracket. Just time.
 
