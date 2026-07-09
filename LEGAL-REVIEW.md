@@ -69,7 +69,7 @@ umbrella all pseudonyms live under.
 - Dr. Jason Huet, Dave Meyer — written sign-offs on file (resolved earlier)
 
 **Pseudonyms now in the text (changed July 9, 2026):**
-- Ignacio (biological father; surname Bautista), Aunt Donna, Dana, Mark, Jay (Lou's children), Sandra (Lou's wife), Trudy (Lou's first wife), —, Christian (rehab friend; soap-opera name cut)
+- Ignacio (biological father; surname Bautista), Aunt Donna, Dana, Mark, Jay (Lou's children), Sandra (Lou's wife), Trudy (Lou's first wife), —, Christian (rehab friend; soap-opera name cut), Detroit Frank (deceased AA friend, renamed at family's request)
 
 **Still outstanding:**
 - Written sign-offs: Chris (ch12), author's mother (Parkinson's disclosure), ~~John of "John and Joan"~~ RESOLVED: names were already changed by author, careers swapped; ch33 now flags the pseudonyms in-text
