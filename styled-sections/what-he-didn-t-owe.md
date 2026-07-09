@@ -8,7 +8,7 @@ When he adopted me and Chris in that courthouse, he didn't take it lightly. He l
 
 We weren't. We were not easy to love in some of those years. Throw in addiction, financial wreckage, lying, disappearing. Behavior that would have given a biological father permission to walk away, let alone a man who married into it. But Lou didn't love us less after the divorce. If anything, more. A man in his fifties who'd gone on with his life, married an amazing nurse named Lynda, built something new, settled, and one day his phone rings and it's the kid he adopted twenty years ago, starving in a one-bedroom in West Palm Beach, the power shut off, running the refrigerator off an extension cord in the hallway.
 
-What did Lou owe Claudio Balderas at that point? Nothing. You've read what he did, the plane, the rented truck, the night on the floor beside my mattress, the bagel waiting in the morning, the long drive home. He did it the way he did everything: without being asked, and without a word about the cost.
+What did Lou owe Claudio Bautista at that point? Nothing. You've read what he did, the plane, the rented truck, the night on the floor beside my mattress, the bagel waiting in the morning, the long drive home. He did it the way he did everything: without being asked, and without a word about the cost.
 
 That's what this book is about. Adoption, addiction, recovery, hospice, those are just the chapters. It's about a man who chose two boys who weren't his and never stopped choosing them. Who stayed after the marriage ended. Who came after the DUIs. Who flew to West Palm Beach and drove his son home in a U-Haul when the world would have told him he'd done plenty.
 

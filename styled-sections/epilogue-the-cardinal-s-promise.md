@@ -21,7 +21,7 @@ It sits there. Turns its head slightly. Still looking. I don't know how long we 
 
 I pull out my phone, slow and careful. I think I'm recording video. I press the button. The cardinal sits. Two minutes, maybe less, maybe more. Finally I say, Dad, I have to go. And it flies, not startled, not sudden. Lifts off the mirror to a nearby tree, sits a moment, then is gone.
 
-I stand in the parking lot, phone in my hand, tears on my face, and feel peace. Not the absence of grief. Grief is still there, always will be. But peace underneath it. I look at my phone. The camera had been in photo mode. One picture. The cardinal on the mirror. I send it to Hope. To Chris. To Jon, Lisa, Joel. To Lynda. The text: Dad came to see me. I told him I loved him.
+I stand in the parking lot, phone in my hand, tears on my face, and feel peace. Not the absence of grief. Grief is still there, always will be. But peace underneath it. I look at my phone. The camera had been in photo mode. One picture. The cardinal on the mirror. I send it to Hope. To Chris. To Jay, Dana, Mark. To Lynda. The text: Dad came to see me. I told him I loved him.
 
 The cardinal wasn't a miracle. What I believe is simpler. The message had been delivered my whole life, in wrestling rooms and church basements and holding cells and cargo vans, in boundaries that felt harsh and second chances I hadn't earned and ordinary Tuesday afternoons nobody wrote down. The cardinal was a reminder that the message is still being sent. That Lou, in whatever form love takes when the person carrying it is gone, is still here, in the work I do in his name without ever saying his name, in the steadiness I bring to someone else's hardest day that was built by his hands.
 
