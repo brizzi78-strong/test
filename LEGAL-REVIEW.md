@@ -76,3 +76,5 @@ umbrella all pseudonyms live under.
 **Still outstanding:**
 - Written sign-offs: Chris (ch12), author's mother (Parkinson's disclosure), ~~John of "John and Joan"~~ RESOLVED: names were already changed by author, careers swapped; ch33 now flags the pseudonyms in-text
 - Text fixes not yet applied: Author's Note sentence covering home-health patients and recovery names
+
+**Temporary pseudonyms (July 9, 2026) pending sign-off calls — restore or keep after author's calls:** Chris -> Nick (brother), Becky -> Kathy (mother), Andy -> Earl (first sponsor). Grandma on the U-Haul cardinal identified in-text as Lou's mother, Mag. Mother's Lantana move dated 2019 in ch30.
