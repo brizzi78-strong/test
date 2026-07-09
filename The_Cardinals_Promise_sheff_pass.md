@@ -42,8 +42,6 @@ Printed in the United States of America.
 
 Prologue
 
-A Note to the One Who Loves an Addict
-
 **Part One — The Escape**
 
 1. Mexico City — The Escape
@@ -98,6 +96,8 @@ A Note to the One Who Loves an Addict
 
 Epilogue: The Cardinal's Promise
 
+A Note to the One Who Loves an Addict
+
 What I'm Asking You to Do
 
 Afterword
@@ -123,24 +123,6 @@ His hands were around my throat before I understood he had crossed the cell. A s
 That is where the worst night of my life had set me down: a concrete floor in a Mexican holding cell. Nobody was coming, because nobody knew where I was. Not my father. Not my brother. Not my mother.
 
 I had been carried out of Mexico City as a child, to be given a better life. Somehow I had found my way back to a concrete floor inside the same country, with everything I'd built somewhere far away. This is the story of how I came back from that floor, and why my father never stopped coming for me.
-
-# **A NOTE TO THE ONE WHO LOVES AN ADDICT**
-
-If you picked up this book because you love someone who is using, or you lost someone who did, I want to say something to you before the story starts.
-
-It isn't your fault.
-
-There's an old line they teach in the rooms where families go, and it took me years on the other side of it to see how true it is. You didn't cause it. You can't control it. You can't cure it. Three sentences, every one of them a mercy, because all three say the same thing: this was never yours to fix.
-
-I know you've tried. I know you've lain awake turning someone else's life over and over, looking for the thing you missed. I was the person on the other end of those nights. My mother wired me money she told herself was for rent. My father drove a truck across the state to haul me home. None of it made me stop. Not because they failed. Because it wasn't theirs to win.
-
-I have been on both sides of this. I did not understand addiction as a disease at first. I understood it as a disappearance. One day the person you love is still there, sitting across from you, using the same voice, wearing the same face, and somehow already slipping away. You keep reaching for the version of them you remember. You keep thinking love should be enough. Then life teaches you, slowly and brutally, that love is not a cure. It is a lamp. It does not stop the storm, but it keeps you from abandoning the room.
-
-Years later I would learn that this is also the whole of hospice. You cannot cure the thing in the room. You can only refuse to leave it. The lamp is the same. Only the room changes.
-
-What you can do is stay. Not fix, not control, not cure. Stay. Set the boundary that keeps you whole, leave the door open a crack, and keep showing up in the ways that don't cost you your own life. That is not a small thing.
-
-So pull up a chair. Let me tell you how I know. I'll make you one promise before we start: I will tell you the truth the whole way through. It begins in a country I left when I was four years old.
 
 PART ONE
 
@@ -1739,9 +1721,27 @@ If you're reading this in recovery, from addiction, from loss, from a version of
 
 The cardinal flew off into the gray. The promise remains. It was never in the bird. It was in what Lou built in me, across thirty years of chosen love and stubborn presence. Now it's my turn. Keep showing up. Keep choosing love.
 
+# **A NOTE TO THE ONE WHO LOVES AN ADDICT**
+
+If you picked up this book because you love someone who is using, or you lost someone who did, I want to say something to you now that the story is done.
+
+It isn't your fault.
+
+There's an old line they teach in the rooms where families go, and it took me years on the other side of it to see how true it is. You didn't cause it. You can't control it. You can't cure it. Three sentences, every one of them a mercy, because all three say the same thing: this was never yours to fix.
+
+I know you've tried. I know you've lain awake turning someone else's life over and over, looking for the thing you missed. I was the person on the other end of those nights. My mother wired me money she told herself was for rent. My father drove a truck across the state to haul me home. None of it made me stop. Not because they failed. Because it wasn't theirs to win.
+
+I have been on both sides of this. I did not understand addiction as a disease at first. I understood it as a disappearance. One day the person you love is still there, sitting across from you, using the same voice, wearing the same face, and somehow already slipping away. You keep reaching for the version of them you remember. You keep thinking love should be enough. Then life teaches you, slowly and brutally, that love is not a cure. It is a lamp. It does not stop the storm, but it keeps you from abandoning the room.
+
+Years later I would learn that this is also the whole of hospice. You cannot cure the thing in the room. You can only refuse to leave it. The lamp is the same. Only the room changes.
+
+What you can do is stay. Not fix, not control, not cure. Stay. Set the boundary that keeps you whole, leave the door open a crack, and keep showing up in the ways that don't cost you your own life. That is not a small thing.
+
+So now you know how I know. One promise was all I had to offer — to tell you the truth the whole way through — and I've kept it as well as I know how. There's one more page, and it's yours.
+
 # **WHAT I'M ASKING YOU TO DO**
 
-I told you at the start I'd make you a promise, and I've tried to tell you the truth the whole way through. Here is the part that belongs to you — the one who loves someone you can't fix, the one sitting in a parking lot afraid to walk into the room, the one still carrying the words you never got to say. I was guided through the dark by a man who would not leave. His name was Lou. Now it's my turn to hand you the map and point you at the door.
+Here is the part that belongs to you — the one who loves someone you can't fix, the one sitting in a parking lot afraid to walk into the room, the one still carrying the words you never got to say. I was guided through the dark by a man who would not leave. His name was Lou. Now it's my turn to hand you the map and point you at the door.
 
 The plan is short on purpose.
 

@@ -1,6 +1,6 @@
 # **A NOTE TO THE ONE WHO LOVES AN ADDICT**
 
-If you picked up this book because you love someone who is using, or you lost someone who did, I want to say something to you before the story starts.
+If you picked up this book because you love someone who is using, or you lost someone who did, I want to say something to you now that the story is done.
 
 It isn't your fault.
 
@@ -14,4 +14,4 @@ Years later I would learn that this is also the whole of hospice. You cannot cur
 
 What you can do is stay. Not fix, not control, not cure. Stay. Set the boundary that keeps you whole, leave the door open a crack, and keep showing up in the ways that don't cost you your own life. That is not a small thing.
 
-So pull up a chair. Let me tell you how I know. I'll make you one promise before we start: I will tell you the truth the whole way through. It begins in a country I left when I was four years old.
+So now you know how I know. One promise was all I had to offer — to tell you the truth the whole way through — and I've kept it as well as I know how. There's one more page, and it's yours.

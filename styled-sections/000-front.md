@@ -42,8 +42,6 @@ Printed in the United States of America.
 
 Prologue
 
-A Note to the One Who Loves an Addict
-
 **Part One — The Escape**
 
 1. Mexico City — The Escape
@@ -97,6 +95,8 @@ A Note to the One Who Loves an Addict
 34. The Table
 
 Epilogue: The Cardinal's Promise
+
+A Note to the One Who Loves an Addict
 
 What I'm Asking You to Do
 

@@ -1,6 +1,6 @@
 # **WHAT I'M ASKING YOU TO DO**
 
-I told you at the start I'd make you a promise, and I've tried to tell you the truth the whole way through. Here is the part that belongs to you — the one who loves someone you can't fix, the one sitting in a parking lot afraid to walk into the room, the one still carrying the words you never got to say. I was guided through the dark by a man who would not leave. His name was Lou. Now it's my turn to hand you the map and point you at the door.
+Here is the part that belongs to you — the one who loves someone you can't fix, the one sitting in a parking lot afraid to walk into the room, the one still carrying the words you never got to say. I was guided through the dark by a man who would not leave. His name was Lou. Now it's my turn to hand you the map and point you at the door.
 
 The plan is short on purpose.
 
