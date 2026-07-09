@@ -72,5 +72,5 @@ umbrella all pseudonyms live under.
 - Ignacio (biological father; surname Bautista), Aunt Donna, Dana, Mark, Jay (Lou's children), Sandra (Lou's wife), Trudy (Lou's first wife), —, Christian (rehab friend; soap-opera name cut)
 
 **Still outstanding:**
-- Written sign-offs: Chris (ch12), author's mother (Parkinson's disclosure), John of "John and Joan" (ch33) or pseudonym flag
-- Text fixes not yet applied: "some rooms I can name" (ch33); statute-of-limitations joke (ch12); Author's Note sentence covering home-health patients and recovery names
+- Written sign-offs: Chris (ch12), author's mother (Parkinson's disclosure), ~~John of "John and Joan"~~ RESOLVED: names were already changed by author, careers swapped; ch33 now flags the pseudonyms in-text
+- Text fixes not yet applied: statute-of-limitations joke (ch12); Author's Note sentence covering home-health patients and recovery names
