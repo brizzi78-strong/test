@@ -71,6 +71,8 @@ umbrella all pseudonyms live under.
 **Pseudonyms now in the text (changed July 9, 2026):**
 - Ignacio (biological father; surname Bautista), Aunt Donna, Dana, Mark, Jay (Lou's children), Sandra (Lou's wife), Trudy (Lou's first wife), —, Christian (rehab friend; soap-opera name cut), Detroit Frank (deceased AA friend, renamed at family's request), Asha (Chris's wife)
 
+**Resolved July 9, 2026:** ch12 statute-of-limitations joke KEPT — author verified NJ limitation (5 yrs, N.J.S.A. 2C:21-17 / 2C:21-2.1) expired ~2004 for the ~1999 event.
+
 **Still outstanding:**
 - Written sign-offs: Chris (ch12), author's mother (Parkinson's disclosure), ~~John of "John and Joan"~~ RESOLVED: names were already changed by author, careers swapped; ch33 now flags the pseudonyms in-text
-- Text fixes not yet applied: statute-of-limitations joke (ch12); Author's Note sentence covering home-health patients and recovery names
+- Text fixes not yet applied: Author's Note sentence covering home-health patients and recovery names
