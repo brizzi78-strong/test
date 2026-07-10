@@ -1164,6 +1164,8 @@ And there is an apology I owe him too. For most of my life the distance was some
 
 He called every Wednesday at seven, right on time, until I stopped answering.
 
+And every Fourth of July — my birthday — for as far back as my memory goes, the phone has rung with him on the other end. It rang through the using years and the sober years, whether I picked up or not. A while ago I changed my number. He doesn't have the new one. Somewhere in Mexico City this July, I have to believe, a man will dial a number that doesn't reach anyone anymore, because that is what he does with the day his first son was born.
+
 I haven't answered since. It took me a long time to understand that all of it, the Wednesday calls at seven from a borrowed line, the birthday calls, even the friend requests to people he had never met, was the love. I understood it. I still couldn't answer it. It hasn't stopped him from trying. There was never anyone else to try for. Chris and me. That's what he has. Do I have closure? I don't know. It's complicated, and I've stopped needing it not to be. What's simple is this: I honor Lou. One father kept calling. The other one kept coming.
 
 **CHAPTER 21**
