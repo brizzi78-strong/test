@@ -85,4 +85,4 @@ umbrella all pseudonyms live under.
 
 **DECIDED (July 9, 2026):** Byline is ROB BRIZZI — family surname restored throughout the interior; matches cover, Bowker ISBNs, and blurb letters. All other pseudonyms (Ignacio/Bautista, Donna, Dana/Mark/Jay, Sandra, Trudy, Christian, Detroit Frank, Asha, Nick, Kathy, Earl, Major, Grant Shaw, Mack Cole, Cain and Jacob) remain in place pending the author's calls.
 
-**July 10, 2026:** Allendale Bar and Grill scene added to ch12 — Nick's pending sign-off must now cover his alcohol struggles and that night, in addition to the DMV story.
+**July 10, 2026 (corrected):** The Allendale Bar and Grill outburst was LOU's, not the brother's — scene moved to ch3 as a Lou story (his war with drink, why he stopped). Nick's pending sign-off scope reverts to the DMV story only.
