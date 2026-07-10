@@ -88,3 +88,5 @@ umbrella all pseudonyms live under.
 **July 10, 2026 (corrected):** The Allendale Bar and Grill outburst was LOU's, not the brother's — scene moved to ch3 as a Lou story (his war with drink, why he stopped). Nick's pending sign-off scope reverts to the DMV story only.
 
 **July 10, 2026:** Brother's real name CHRIS restored throughout (temporary 'Nick' retired), per author. His sign-off conversation still recommended for ch12 (DMV story).
+
+**July 10, 2026 — REAL-NAME WORKING COPY:** All pseudonyms reverted to real names for Scott's editorial pass (Horacio/Balderas, Nancey, Lisa/Joel/Jon, Lynda, Judy, Becky, Andy, Mager, Quint Studer, Matt Campbell, Detroit Bob, Tristan, Kris and Kyle, Nisha, Priya). The privacy pseudonym set and every text-level protection decision remain in git history and this ledger; re-apply before publication as decided then. Garrett stays unnamed (author's standing choice); Linda real at her request; the soap-opera name and other identifying-detail cuts remain in place.

@@ -4,9 +4,9 @@
 
 1. Rob calls Lou "the man who didn't have to." Where in your own life have you seen chosen love outlast obligated love — and what made it hold?
 
-2. The book gives us two fathers, and its verdict is: "One father kept calling. The other one kept coming." How did your feelings about Ignacio shift as you read, and which moment moved them most?
+2. The book gives us two fathers, and its verdict is: "One father kept calling. The other one kept coming." How did your feelings about Horacio shift as you read, and which moment moved them most?
 
-3. When eight-year-old Claudio becomes Robert, it feels like "erasing me." Years later, Rob deliberately calls his birth father Ignacio — not Papa, not Dad. What is the book saying about names, and who gets to give them?
+3. When eight-year-old Claudio becomes Robert, it feels like "erasing me." Years later, Rob deliberately calls his birth father Horacio — not Papa, not Dad. What is the book saying about names, and who gets to give them?
 
 4. Wrestling taught Rob that "the body quits when the mind gives it permission." Where does that lesson save him later — and where does the same drive nearly destroy him?
 
@@ -22,7 +22,7 @@
 
 10. In the hospice room, "Not ready isn't a no. It's a doorway." Whose room in your own life needs someone willing to stand in that doorway — and what would your version of "Tell me about her" be?
 
-11. "Do I have closure? I don't know." Why do you think the book refuses a tidy ending with Ignacio? What does it offer in place of closure?
+11. "Do I have closure? I don't know." Why do you think the book refuses a tidy ending with Horacio? What does it offer in place of closure?
 
 12. Rob writes that the cardinal "wasn't a miracle... the message is still being sent." What do you make of signs after loss? Has the book changed how you would receive one?
 
