@@ -60,6 +60,17 @@
   .d-red { background: var(--red); } .d-yellow { background: #e59824; } .d-blue { background: var(--blue); }
   .tocpart.p-red { color: var(--red); } .tocpart.p-yellow { color: var(--yellow); } .tocpart.p-blue { color: var(--blue); }
 
+  .toc li .lead { flex: 1 1 auto; min-width: 14px; border-bottom: 1px dotted #b9ae9f;
+    transform: translateY(-3px); }
+  .toc li .tocpg { flex: 0 0 auto; color: #57534e; font-variant-numeric: tabular-nums; }
+
+  /* ---- Index ---- */
+  .index { font-family: Helvetica, Arial, sans-serif; font-size: 9pt; columns: 2;
+    column-gap: 26px; }
+  .index h3 { font-size: 10pt; color: var(--red); margin: 10px 0 3px; break-after: avoid; }
+  .index h3:first-child { margin-top: 0; }
+  .index p { font-size: 9pt; margin: 0 0 2px; padding-left: 14px; text-indent: -14px; }
+
   /* ---- Chapters ---- */
   section.chapter { page-break-before: always; }
   section.red    { --c: #a51c30; --c-bg: #f7dfe2; --c-dark: #7d1524; }
@@ -174,7 +185,7 @@
 
 <!-- ============ HOW TO READ THE COLORS ============ -->
 <h2 class="fm">How to Read the Colors</h2>
-<p>This toolkit is color coded so families can find the right level of urgency quickly.</p>
+<p>This toolkit is color-coded so families can find the right level of urgency quickly.</p>
 <div class="legendbox">
   <div class="lrow"><span class="lswatch" style="background:#a51c30"></span>
     <div><div class="lname" style="color:#a51c30">RED — Act Today</div>
@@ -192,68 +203,69 @@
   <span class="tag">In a Crisis Right Now?</span>
   <p>Skip ahead. <strong>"What Are You Facing?"</strong> — the Start Here pages just before Chapter 1 — routes you
   to the right chapter in under a minute, and <strong>"Numbers That Matter"</strong> on the last
-  pages puts every phone number in one place.</p>
+  page puts every phone number in one place.</p>
 </div>
 
 <div class="pagebreak"></div>
 <h2 class="fm">Contents</h2>
 <div class="toc">
   <ul>
-    <li>Why I Wrote This Toolkit</li>
-    <li>Before You Begin: Aging Whispers Before It Shouts</li>
-    <li>How to Use This Handbook</li>
-    <li>Start Here: What Are You Facing? — The First 24–72 Hours</li>
-    <li><span class="tocdot d-blue"></span>For the Future Planners</li>
+    <li>Why I Wrote This Toolkit<span class="lead"></span><span class="tocpg" data-t="Why I Wrote This Toolkit">8</span></li>
+    <li>Before You Begin: Aging Whispers Before It Shouts<span class="lead"></span><span class="tocpg" data-t="Before You Begin: Aging Whispers Before It Shouts">9</span></li>
+    <li>How to Use This Handbook<span class="lead"></span><span class="tocpg" data-t="How to Use This Handbook">10</span></li>
+    <li>Start Here: What Are You Facing? — The First 24–72 Hours<span class="lead"></span><span class="tocpg" data-t="Start Here: What Are You Facing? — The First 24–72 Hours">11</span></li>
+    <li><span class="tocdot d-blue"></span>For the Future Planners<span class="lead"></span><span class="tocpg" data-t="For the Future Planners">14</span></li>
   </ul>
   <div class="tocpart">Part 1 — Something Has Changed</div>
   <ul>
-    <li><span class="tocdot d-yellow"></span>Chapter 1: Something Has Changed</li>
-    <li><span class="tocdot d-red"></span>Chapter 2: Falls, Weakness, and Decline</li>
-    <li><span class="tocdot d-yellow"></span>Chapter 3: Memory Loss and Dementia</li>
-    <li><span class="tocdot d-red"></span>Chapter 4: Caregiver Burnout</li>
-    <li><span class="tocdot d-yellow"></span>Chapter 5: The Family Meeting</li>
+    <li><span class="tocdot d-yellow"></span>Chapter 1: Something Has Changed<span class="lead"></span><span class="tocpg" data-t="Chapter 1: Something Has Changed">15</span></li>
+    <li><span class="tocdot d-red"></span>Chapter 2: Falls, Weakness, and Decline<span class="lead"></span><span class="tocpg" data-t="Chapter 2: Falls, Weakness, and Decline">19</span></li>
+    <li><span class="tocdot d-yellow"></span>Chapter 3: Memory Loss and Dementia<span class="lead"></span><span class="tocpg" data-t="Chapter 3: Memory Loss and Dementia">25</span></li>
+    <li><span class="tocdot d-red"></span>Chapter 4: Caregiver Burnout<span class="lead"></span><span class="tocpg" data-t="Chapter 4: Caregiver Burnout">31</span></li>
+    <li><span class="tocdot d-yellow"></span>Chapter 5: The Family Meeting<span class="lead"></span><span class="tocpg" data-t="Chapter 5: The Family Meeting">37</span></li>
   </ul>
   <div class="tocpart">Part 2 — Care Options</div>
   <ul>
-    <li><span class="tocdot d-yellow"></span>Chapter 6: Home Health</li>
-    <li><span class="tocdot d-yellow"></span>Chapter 7: Private Duty Care</li>
-    <li><span class="tocdot d-yellow"></span>Chapter 8: Assisted Living</li>
-    <li><span class="tocdot d-yellow"></span>Chapter 9: Memory Care</li>
-    <li><span class="tocdot d-red"></span>Chapter 10: Skilled Nursing and Rehab</li>
-    <li><span class="tocdot d-yellow"></span>Chapter 11: Palliative Care</li>
-    <li><span class="tocdot d-red"></span>Chapter 12: Hospice</li>
+    <li><span class="tocdot d-yellow"></span>Chapter 6: Home Health<span class="lead"></span><span class="tocpg" data-t="Chapter 6: Home Health">42</span></li>
+    <li><span class="tocdot d-yellow"></span>Chapter 7: Private Duty Care<span class="lead"></span><span class="tocpg" data-t="Chapter 7: Private Duty Care">49</span></li>
+    <li><span class="tocdot d-yellow"></span>Chapter 8: Assisted Living<span class="lead"></span><span class="tocpg" data-t="Chapter 8: Assisted Living">57</span></li>
+    <li><span class="tocdot d-yellow"></span>Chapter 9: Memory Care<span class="lead"></span><span class="tocpg" data-t="Chapter 9: Memory Care">62</span></li>
+    <li><span class="tocdot d-red"></span>Chapter 10: Skilled Nursing and Rehab<span class="lead"></span><span class="tocpg" data-t="Chapter 10: Skilled Nursing and Rehab">68</span></li>
+    <li><span class="tocdot d-yellow"></span>Chapter 11: Palliative Care<span class="lead"></span><span class="tocpg" data-t="Chapter 11: Palliative Care">74</span></li>
+    <li><span class="tocdot d-red"></span>Chapter 12: Hospice<span class="lead"></span><span class="tocpg" data-t="Chapter 12: Hospice">79</span></li>
   </ul>
   <div class="tocpart">Part 3 — Paying for Care</div>
   <ul>
-    <li><span class="tocdot d-blue"></span>Chapter 13: Medicare Basics</li>
-    <li><span class="tocdot d-blue"></span>Chapter 14: Medicaid Basics</li>
-    <li><span class="tocdot d-blue"></span>Chapter 15: Private Pay</li>
-    <li><span class="tocdot d-blue"></span>Chapter 16: Long-Term Care Insurance</li>
-    <li><span class="tocdot d-blue"></span>Chapter 17: Prescription Assistance</li>
-    <li><span class="tocdot d-blue"></span>Chapter 18: VA Benefits</li>
+    <li><span class="tocdot d-blue"></span>Chapter 13: Medicare Basics<span class="lead"></span><span class="tocpg" data-t="Chapter 13: Medicare Basics">85</span></li>
+    <li><span class="tocdot d-blue"></span>Chapter 14: Medicaid Basics<span class="lead"></span><span class="tocpg" data-t="Chapter 14: Medicaid Basics">91</span></li>
+    <li><span class="tocdot d-blue"></span>Chapter 15: Private Pay<span class="lead"></span><span class="tocpg" data-t="Chapter 15: Private Pay">96</span></li>
+    <li><span class="tocdot d-blue"></span>Chapter 16: Long-Term Care Insurance<span class="lead"></span><span class="tocpg" data-t="Chapter 16: Long-Term Care Insurance">102</span></li>
+    <li><span class="tocdot d-blue"></span>Chapter 17: Prescription Assistance<span class="lead"></span><span class="tocpg" data-t="Chapter 17: Prescription Assistance">106</span></li>
+    <li><span class="tocdot d-blue"></span>Chapter 18: VA Benefits<span class="lead"></span><span class="tocpg" data-t="Chapter 18: VA Benefits">111</span></li>
   </ul>
   <div class="tocpart">Part 4 — The Documents That Matter</div>
   <ul>
-    <li><span class="tocdot d-blue"></span>Chapter 19: The Important Documents Folder</li>
-    <li><span class="tocdot d-blue"></span>Chapter 20: Healthcare Power of Attorney</li>
-    <li><span class="tocdot d-blue"></span>Chapter 21: Living Will / Advance Directive</li>
-    <li><span class="tocdot d-blue"></span>Chapter 22: Financial Power of Attorney</li>
-    <li><span class="tocdot d-red"></span>Chapter 23: Medical Orders — DNR, MOST, and POLST</li>
-    <li><span class="tocdot d-yellow"></span>Chapter 24: Advance Care Planning Conversations</li>
-    <li><span class="tocdot d-blue"></span>Chapter 25: Medication and Doctor Lists</li>
-    <li><span class="tocdot d-red"></span>Chapter 26: Emergency Contacts and Crisis Plan</li>
+    <li><span class="tocdot d-blue"></span>Chapter 19: The Important Documents Folder<span class="lead"></span><span class="tocpg" data-t="Chapter 19: The Important Documents Folder">116</span></li>
+    <li><span class="tocdot d-blue"></span>Chapter 20: Healthcare Power of Attorney<span class="lead"></span><span class="tocpg" data-t="Chapter 20: Healthcare Power of Attorney">121</span></li>
+    <li><span class="tocdot d-blue"></span>Chapter 21: Living Will / Advance Directive<span class="lead"></span><span class="tocpg" data-t="Chapter 21: Living Will / Advance Directive">126</span></li>
+    <li><span class="tocdot d-blue"></span>Chapter 22: Financial Power of Attorney<span class="lead"></span><span class="tocpg" data-t="Chapter 22: Financial Power of Attorney">132</span></li>
+    <li><span class="tocdot d-red"></span>Chapter 23: Medical Orders — DNR, MOST, and POLST<span class="lead"></span><span class="tocpg" data-t="Chapter 23: Medical Orders — DNR, MOST, and POLST">138</span></li>
+    <li><span class="tocdot d-yellow"></span>Chapter 24: Advance Care Planning Conversations<span class="lead"></span><span class="tocpg" data-t="Chapter 24: Advance Care Planning Conversations">142</span></li>
+    <li><span class="tocdot d-blue"></span>Chapter 25: Medication and Doctor Lists<span class="lead"></span><span class="tocpg" data-t="Chapter 25: Medication and Doctor Lists">148</span></li>
+    <li><span class="tocdot d-red"></span>Chapter 26: Emergency Contacts and Crisis Plan<span class="lead"></span><span class="tocpg" data-t="Chapter 26: Emergency Contacts and Crisis Plan">153</span></li>
   </ul>
   <div class="tocpart">Part 5 — Hospice and the Last Days</div>
   <ul>
-    <li><span class="tocdot d-red"></span>Chapter 27: The Last Days Plan</li>
-    <li><span class="tocdot d-red"></span>Chapter 28: What to Expect in the Last Days</li>
-    <li><span class="tocdot d-blue"></span>Chapter 29: After Death</li>
+    <li><span class="tocdot d-red"></span>Chapter 27: The Last Days Plan<span class="lead"></span><span class="tocpg" data-t="Chapter 27: The Last Days Plan">158</span></li>
+    <li><span class="tocdot d-red"></span>Chapter 28: What to Expect in the Last Days<span class="lead"></span><span class="tocpg" data-t="Chapter 28: What to Expect in the Last Days">164</span></li>
+    <li><span class="tocdot d-blue"></span>Chapter 29: After Death<span class="lead"></span><span class="tocpg" data-t="Chapter 29: After Death">169</span></li>
   </ul>
   <div class="tocpart">Back of the Book</div>
   <ul>
-    <li>About the Author</li>
-    <li>Your State Guide</li>
-    <li>Numbers That Matter</li>
+    <li>About the Author<span class="lead"></span><span class="tocpg" data-t="About the Author">174</span></li>
+    <li>Your State Guide<span class="lead"></span><span class="tocpg" data-t="Your State Guide">175</span></li>
+    <li>Index<span class="lead"></span><span class="tocpg" data-t="Index">176</span></li>
+    <li>Numbers That Matter<span class="lead"></span><span class="tocpg" data-t="Numbers That Matter">178</span></li>
   </ul>
 </div>
 
@@ -1270,7 +1282,7 @@ is not to win an argument. It is to lower the risk.</p>
     <tr><td><strong>0–7 · Watch &amp; Plan</strong></td><td>Managing for now. Keep a written care list, name one
     backup, review emergency contacts, organize documents.</td></tr>
     <tr><td><strong>8–15 · Stress Building</strong></td><td>Hold a family meeting. Assign tasks. Ask what can come
-    off the caregiver's plate. Consider private duty, adult day support, or a home-health evaluation.</td></tr>
+    off the caregiver's plate. Consider private duty, adult day support, or a home health evaluation.</td></tr>
     <tr><td><strong>16–23 · High Risk</strong></td><td>Schedule a family meeting soon. Ask for concrete help.
     Consider paid support. Review whether the parent is safe alone.</td></tr>
     <tr><td><strong>24–32 · Crisis</strong></td><td>Do not wait. Call a family meeting. Contact the doctor, social
@@ -1401,7 +1413,7 @@ should gently move people from commentary to contribution.</p>
   cooking, caregiver exhaustion, no overnight coverage.</li>
   <li style="margin-bottom:5px;"><strong>What matters most to the person receiving care?</strong> Name the priority —
   safety, comfort, or staying home as long as it is safe.</li>
-  <li style="margin-bottom:5px;"><strong>What support is needed?</strong> Family help, a home-health evaluation, private
+  <li style="margin-bottom:5px;"><strong>What support is needed?</strong> Family help, a home health evaluation, private
   duty, adult day care, assisted living, memory care, palliative care, hospice, or caregiver relief.</li>
   <li style="margin-bottom:5px;"><strong>Who is responsible for what?</strong> Names. Dates. Deadlines. No fog.</li>
   <li style="margin-bottom:5px;"><strong>When will we meet again?</strong> Set the next check-in. One meeting is not the
@@ -1854,7 +1866,7 @@ therapist, or hospice team. Some agencies offer licensed nursing separately; som
 directly.</p>
 
 <h2>Private Duty Care vs. Home Health</h2>
-<p>Families often mix these up (Chapter 6 draws the full distinction), and a family may need both — home-health physical therapy helps
+<p>Families often mix these up (Chapter 6 draws the full distinction), and a family may need both — home health physical therapy helps
 Dad regain strength after a hospital stay, while private duty care helps him shower safely, eat
 lunch, and avoid being alone during the day. One supports medical recovery; the other
 supports daily life.</p>
@@ -1917,8 +1929,7 @@ The first goal may not be full acceptance. The first goal may be getting through
 
 <h2>When Private Duty Care Is Not Enough</h2>
 <p>It may not be enough when the person needs two-person transfers, is unsafe even with
-scheduled visits, has severe dementia behaviors or frequent wandering, needs twenty-four-
-hour supervision that is not financially sustainable at home, or when the caregiver cannot continue despite the help. At that point, families may need to consider assisted living, memory
+scheduled visits, has severe dementia behaviors or frequent wandering, needs twenty-four-hour supervision that is not financially sustainable at home, or when the caregiver cannot continue despite the help. At that point, families may need to consider assisted living, memory
 care, skilled nursing, palliative care, or hospice if appropriate. Changing the plan does not mean
 private duty care failed. It means the needs changed or became clearer.</p>
 
@@ -2306,8 +2317,7 @@ full question list to bring with you.</p>
   <p>Memory care is a residential setting designed for people with dementia or Alzheimer's who
   need more structure, supervision, and safety than regular assisted living can provide.</p>
   <p>It is not a punishment. It is not "locking someone away." It is not giving up.</p>
-  <p>At its best, memory care provides a safer environment, predictable routines, dementia-
-  trained staff, secured areas, medication support, meals, bathing help, activities, redirection,
+  <p>At its best, memory care provides a safer environment, predictable routines, dementia-trained staff, secured areas, medication support, meals, bathing help, activities, redirection,
   and supervision. Families often wait too long because the decision feels painful — that is
   understandable. But dementia can create risks love alone cannot manage: a stove left on,
   walking out the door at night, refusing medication, falling because they cannot remember the
@@ -2460,7 +2470,7 @@ does not guarantee good dementia care. The care culture does.</p>
     <tr><td>Nurse on site / on call</td><td></td><td></td><td></td></tr>
     <tr><td>Behavior support process</td><td></td><td></td><td></td></tr>
     <tr><td>Fall &amp; medication process</td><td></td><td></td><td></td></tr>
-    <tr><td>Family communication process</td><td></td><td></td><td></td></tr>
+    <tr><td>Family-communication process</td><td></td><td></td><td></td></tr>
     <tr><td>Care needs they cannot manage</td><td></td><td></td><td></td></tr>
   </table>
 </div>
@@ -2612,8 +2622,7 @@ discharge. The care conference should produce a plan, not just reassurance.</p>
 
 <h2>When Going Home May Not Be Safe</h2>
 <p>Going home may not be safe if the person cannot transfer safely or get to the bathroom,
-falls or is at high risk for falls, needs more help than one caregiver can provide, needs two-
-person assistance, or lives in a home with stairs that cannot be managed. It may also be unsafe
+falls or is at high risk for falls, needs more help than one caregiver can provide, needs two-person assistance, or lives in a home with stairs that cannot be managed. It may also be unsafe
 if dementia creates supervision needs that cannot be met at home, if medications or wounds
 require skilled care the family cannot provide, if the person is not eating or drinking safely, or if
 the caregiver cannot physically or safely continue. If home is not safe, that is not a failure — it
@@ -2954,8 +2963,7 @@ frequency vary by agency and plan of care, so ask what each agency actually prov
 
 <h2>What Hospice Does Not Mean</h2>
 <p>Hospice does not usually mean a full-time bedside caregiver. This surprises families. Hospice
-supports the family and manages comfort, but it does not typically sit at the bedside twenty-
-four hours a day — the family, and sometimes private duty caregivers, still provide much of the
+supports the family and manages comfort, but it does not typically sit at the bedside twenty-four hours a day — the family, and sometimes private duty caregivers, still provide much of the
 hands-on daily care. Hospice also does not mean the person can never change their mind. If
 someone improves or wants to pursue treatment again, they can leave hospice. And it does not
 mean stopping all care — comfort medications, personal care, and support continue. Knowing
@@ -3348,9 +3356,7 @@ you to use it.</p>
 
 <div class="block plain">
   <span class="tag">The Plain Truth</span>
-  <p>Medicaid is different from Medicare. Medicare is health insurance. Medicaid is a needs-
-  based program that may help pay for medical care and, for people who qualify, certain long-
-  term services and supports.</p>
+  <p>Medicaid is different from Medicare. Medicare is health insurance. Medicaid is a needs-based program that may help pay for medical care and, for people who qualify, certain long-term services and supports.</p>
   <p>For many families, Medicaid becomes important when an aging parent needs long-term care — nursing facility care, home and community-based services, or other state programs — and private money is running out. Medicaid can be a lifeline. It can also be confusing. Rules
   vary by state, and eligibility can depend on income, assets, medical and functional need,
   marital status, transfers of assets, care setting, and program type. So be careful: do not
@@ -3385,8 +3391,7 @@ mean every setting or service is covered.</p>
 <p>Medicaid is the nation's primary payer for long-term services and supports, delivered in institutions such as nursing facilities or in community-based settings such as the home, depending on the program and eligibility rules. It may help people who need ongoing
 assistance because of chronic illness, disability, frailty, or functional limits. The important point:
 Medicaid may help with long-term care for people who qualify, but qualifying is not automatic.
-The person usually must meet both financial and functional or medical requirements, and those requirements — along with the program names, waiting lists, and application process — differ by state. Do not rely on what worked for a neighbor in another state. Medicaid is not gossip-
-friendly. It is paperwork-friendly.</p>
+The person usually must meet both financial and functional or medical requirements, and those requirements — along with the program names, waiting lists, and application process — differ by state. Do not rely on what worked for a neighbor in another state. Medicaid is not gossip-friendly. It is paperwork-friendly.</p>
 
 <h2>Nursing Facility, Home &amp; Community, Assisted Living, and Memory Care</h2>
 <p><strong>Nursing facility Medicaid</strong> may help pay for that level of care for people who
@@ -3626,8 +3631,7 @@ family members can become emotional; a written plan protects the relationships a
 
 <h2>When to Ask for Professional Guidance</h2>
 <p>Ask for guidance when care costs are high, funds may run out within one to two years, a
-spouse remains at home, a home may need to be sold, Medicaid may be needed later, long-
-term care insurance exists, family members disagree about money, someone wants to transfer
+spouse remains at home, a home may need to be sold, Medicaid may be needed later, long-term care insurance exists, family members disagree about money, someone wants to transfer
 assets, or there are trusts or complex accounts. Possible professionals: an elder law attorney,
 financial advisor, accountant, Medicaid planner, long-term care insurance representative,
 veterans benefits counselor, facility business office, or care manager. A good question asked
@@ -3794,8 +3798,7 @@ information.</p>
 
 <h2>If There Is a Policy</h2>
 <p>If a policy exists, call the insurance company. Ask what is covered and how to start a claim — and do not assume every setting or service qualifies. Ask specifically about home care,
-assisted living, memory care, adult day care, and nursing facility care; caregiver and licensed-
-agency requirements; the daily or monthly benefit amount; the elimination period; the
+assisted living, memory care, adult day care, and nursing facility care; caregiver and licensed-agency requirements; the daily or monthly benefit amount; the elimination period; the
 maximum benefit period; inflation protection; required assessments and documentation;
 whether it is reimbursement or a cash benefit; and who can submit claims.</p>
 
@@ -3929,8 +3932,7 @@ assessments, or provider forms. Without the right paperwork, payment may be dela
 <h2>The Million-Dollar House and the Free Medication</h2>
 <p>Years ago, while working for a large pharmaceutical company, I was helping a physician's
 office find a way for a patient to afford a medication that cost more than $850 per month.</p>
-<p>The physician's office told me she would never qualify for assistance. "She lives in a multi-
-million-dollar home," they said.</p>
+<p>The physician's office told me she would never qualify for assistance. "She lives in a multi-million-dollar home," they said.</p>
 <p>I asked a different question: "What is her income?"</p>
 <p>After reviewing the details, I explained that many pharmaceutical assistance programs focus
 primarily on income, not the value of a person's home. The office was skeptical. The patient
@@ -4069,8 +4071,7 @@ condition, and safety.</p>
   <div class="fillline">Medicare Extra Help — could it apply? &nbsp;Yes ☐ &nbsp;No ☐ &nbsp;Unsure ☐ — who will check/apply? <span class="fill" style="min-width:1.5in"></span></div>
   <div class="fillline">Also check: &nbsp;Manufacturer patient assistance ☐ &nbsp;State Pharmaceutical Assistance Program ☐ &nbsp;Disease-specific foundation ☐</div>
   <p class="note">Documents often needed for manufacturer programs: prescription information,
-  proof of income, insurance/Part D card, a doctor form, patient signature, and denial or prior-
-  authorization information.</p>
+  proof of income, insurance/Part D card, a doctor form, patient signature, and denial or prior-authorization information.</p>
   <h4>Medication safety review (check any concern)</h4>
   <ul class="checks">
     <li><span class="cbox"></span>Too many or duplicate medications</li>
@@ -4128,8 +4129,7 @@ condition, and safety.</p>
   Other families assume VA will pay for everything, which is not safe either. VA benefits can be
   helpful, but eligibility depends on service history, discharge status, income, assets, disability
   status, health care enrollment, care needs, and the specific program. Benefits may include VA
-  health care, VA pension, Aid and Attendance, Housebound benefits, survivor benefits, long-
-  term services and supports, caregiver support, and burial benefits. The better question is not,
+  health care, VA pension, Aid and Attendance, Housebound benefits, survivor benefits, long-term services and supports, caregiver support, and burial benefits. The better question is not,
   "Does VA pay for care?" It is: <strong>is this person connected to VA, and which VA benefit or
   program might apply?</strong></p>
 </div>
@@ -4542,8 +4542,7 @@ job is not personal preference; it is to honor the person's known wishes, values
 and best interests. A Healthcare Power of Attorney is not a crown. It is a responsibility.</p>
 
 <h2>Capacity Matters — Do Not Wait</h2>
-<p>The best time to complete or update this document is while the person still has decision-
-making capacity — the ability to understand the decision, understand the consequences, and
+<p>The best time to complete or update this document is while the person still has decision-making capacity — the ability to understand the decision, understand the consequences, and
 communicate a choice. If memory is changing, do not wait. If dementia has been diagnosed, do
 not assume it is automatically too late, but do not delay either — ask the doctor and an
 attorney what is appropriate. Once a person loses capacity, signing new legal documents may no longer be possible, and families may face harder options — such as asking a court to appoint a guardian — a slower, more expensive, and more public process. The door is easiest to open before
@@ -4692,8 +4691,7 @@ whether it is valid and current.</p>
   <p>A Healthcare Power of Attorney names <em>who</em> can speak. A Living Will or Advance
   Directive helps explain <em>what</em> the person would want.</p>
   <p>Both matter. The names and forms may vary by state, but the purpose is the same: do not
-  make the family guess in the hardest room of their life. These documents may address life-
-  sustaining treatment, artificial nutrition and hydration, ventilators, CPR, comfort care, and
+  make the family guess in the hardest room of their life. These documents may address life-sustaining treatment, artificial nutrition and hydration, ventilators, CPR, comfort care, and
   other serious choices. This is not only paperwork. It is a gift — something for the family to
   hold when emotions are loud and decisions are heavy. The better question is not, "What
   would we want?" It is: <strong>what did Mom or Dad say they would want?</strong></p>
@@ -4718,12 +4716,11 @@ also needs guidance.</p>
 
 <h2>What a Living Will May Cover</h2>
 <p>Depending on the state and document, it may address CPR, ventilator use, feeding tube,
-artificial hydration, dialysis, surgery, antibiotics, hospital transfer, intensive care, comfort-
-focused care, palliative care, hospice, organ donation, spiritual preferences, preferred place of
+artificial hydration, dialysis, surgery, antibiotics, hospital transfer, intensive care, comfort-focused care, palliative care, hospice, organ donation, spiritual preferences, preferred place of
 care, who should be involved, what quality of life means, and what treatments would feel too
 burdensome. The document may not answer every question — that is why the conversation
 matters too. The paper is the map. The conversation is the lantern.</p>
-<p>One more thing to know: a living will usually applies only in specific medical situations
+<p>One more thing to know: a Living Will usually applies only in specific medical situations
 defined by state law — often a terminal condition or permanent unconsciousness certified by
 physicians. Ask the attorney or doctor what triggers it, so the family does not over-read its
 reach.</p>
@@ -4746,14 +4743,12 @@ what comfort-focused care would look like instead.</p>
 <p><strong>Artificial nutrition and hydration.</strong> Feeding tubes and IV fluids feel personal —
 food means love, water means care. But near the end of life or in advanced illness, the body
 may not process food and fluids the same way; they may help in some situations and create
-burdens in others. Ask what problem you are trying to solve, whether it is temporary or long-
-term, whether it will improve comfort or strength, whether it could cause complications, what
+burdens in others. Ask what problem you are trying to solve, whether it is temporary or long-term, whether it will improve comfort or strength, whether it could cause complications, what
 comfort feeding means, and what hospice or palliative care would recommend. Do not let guilt
 make the decision alone. Ask what helps the person.</p>
 
 <h2>Comfort-Focused Care</h2>
-<p>A Living Will can help clarify when the goal should shift from cure to comfort. Comfort-
-focused care may include pain, breathing, anxiety, and nausea relief; mouth and skin care;
+<p>A Living Will can help clarify when the goal should shift from cure to comfort. Comfort-focused care may include pain, breathing, anxiety, and nausea relief; mouth and skin care;
 gentle repositioning; a quiet room; family presence; spiritual support; hospice; palliative care;
 and avoiding burdensome treatments. Comfort care is not "doing nothing." It is doing the
 things that matter when cure is no longer the goal. It is active, focused care — care with the noise turned down.</p>
@@ -5505,9 +5500,7 @@ Advance care planning gives the family a compass. It does not calm the storm, bu
 <p>A medication list helps the care team understand what is actually being taken — not what
 was prescribed three years ago, not what is sitting in the cabinet, not what one sibling
 remembers. What is being taken now. It helps with doctor appointments, ER visits, hospital
-admissions, rehab, home health, hospice, assisted living or memory care move-ins, refills, side-
-effect concerns, fall-risk reviews, and end-of-life comfort planning. Include prescriptions, over-
-the-counter medications, vitamins, supplements, creams, inhalers, eye drops, insulin, patches,
+admissions, rehab, home health, hospice, assisted living or memory care move-ins, refills, side-effect concerns, fall-risk reviews, and end-of-life comfort planning. Include prescriptions, over-the-counter medications, vitamins, supplements, creams, inhalers, eye drops, insulin, patches,
 and as-needed medications. If it goes in, on, under, or near the body for medical reasons, write
 it down.</p>
 
@@ -5730,8 +5723,7 @@ from spinning. It creates a first step.</p>
 </div>
 
 <h2>When to Call the Doctor, Hospice, Home Health, or Facility</h2>
-<p><strong>The doctor or nurse triage line</strong> for concerns that are serious but not clearly life-
-threatening — fever, new weakness, worsening confusion, medication side effects, new
+<p><strong>The doctor or nurse triage line</strong> for concerns that are serious but not clearly life-threatening — fever, new weakness, worsening confusion, medication side effects, new
 swelling or pain, dehydration, a recent fall without obvious major injury, or a question about
 whether the ER is needed. Use this script: "Something has changed, and I need guidance on
 what to do next," then describe the change clearly.</p>
@@ -6396,8 +6388,7 @@ The team takes it from there.</p>
 <p>If the person was not on hospice, what to do depends on the setting and whether the death
 was expected. In a facility, the staff will usually know the process — they will notify the nurse
 and physician and help contact the funeral home. At home with an expected death and a
-doctor who will sign the death certificate, the family may be able to call that doctor or an on-
-call line. If the death was unexpected, or there is no plan and no clear person to call, calling
+doctor who will sign the death certificate, the family may be able to call that doctor or an on-call line. If the death was unexpected, or there is no plan and no clear person to call, calling
 911 may be necessary. Understand that this may bring emergency responders — and, in some areas, law enforcement — and may lead to resuscitation attempts unless a valid DNR or
 POLST is present and visible. This is exactly why the documents in Part 4 matter, and why they
 should be easy to find.</p>
@@ -6584,6 +6575,101 @@ agencies.</p>
 <p><em>State-specific companion guides in the Cardinal's Promise Series — with every program,
 office, and form for your state named and explained — are available at
 thecardinalspromise.com.</em></p>
+
+<!-- ============ INDEX ============ -->
+<div class="pagebreak"></div>
+<h2 class="fm">Index</h2>
+<p style="font-family:Helvetica,Arial,sans-serif; font-size:9pt; color:#666;">Chapter-defining discussions are listed first in bold.</p>
+<div class="index">
+<!-- INDEX-BODY-START -->
+<h3>0–9</h3>
+<p>911, when to call, 16, 20, 153–154, 158, 160–161, 164, 169, 171, 173</p>
+<p>988 Suicide &amp; Crisis Lifeline, 31</p>
+<h3>A</h3>
+<p>activities of daily living (ADLs), 49</p>
+<p>advance care planning, <strong>142–147</strong>, 43, 74, 76–77</p>
+<p>advance directive, <strong>126–131</strong></p>
+<p>Aid and Attendance (VA), <strong>111–115</strong></p>
+<p>Alzheimer’s disease, <strong>25–30</strong>, 62</p>
+<p>appeals, Medicare denial, 69, 86–87, 89</p>
+<p>Area Agency on Aging, 93</p>
+<p>assisted living, <strong>57–61</strong>, 62, 64, 85, 87, 92, 96–97, 112</p>
+<h3>B</h3>
+<p>blood thinners (anticoagulants), 17, 19–20, 22, 149</p>
+<p>burnout, caregiver, <strong>31–36</strong>, 69</p>
+<h3>C</h3>
+<p>comfort medications, 80, 159–160, 166</p>
+<p>custodial care, 51, 69, 85–86, 88–90, 92</p>
+<h3>D</h3>
+<p>death certificate, <strong>169–173</strong>, 113–114</p>
+<p>delirium, 27, 29</p>
+<p>dementia, <strong>25–30</strong>, 50, 53–54, 62–64, 66–67, 128, 143</p>
+<p>discharge planning, 20, 37, 68–72, 111, 113</p>
+<p>DNR (Do Not Resuscitate), <strong>138–141</strong>, 127, 146, 171</p>
+<h3>E</h3>
+<p>Eldercare Locator, 32</p>
+<p>emergency contacts, <strong>153–157</strong>, 28, 34, 41, 54, 77, 83, 117–118</p>
+<p>Extra Help (Part D), 107–109</p>
+<h3>F</h3>
+<p>falls, <strong>19–24</strong>, 16, 28, 34, 39, 44–45, 51, 57, 61, 64</p>
+<p>family meeting, <strong>37–41</strong>, 28, 32–35, 58, 64, 70, 74, 76–77, 142</p>
+<p>financial power of attorney, <strong>132–137</strong>, 26, 28, 41, 95, 98, 117, 119, 121, 146</p>
+<p>funeral home, <strong>169–173</strong>, 41, 77, 83, 119, 154, 160–161, 163, 166, 168</p>
+<h3>G</h3>
+<p>GoodRx and discount programs, 108–110</p>
+<p>grief, 16, 27, 80, 126, 128, 142, 158, 164, 169, 171</p>
+<h3>H</h3>
+<p>healthcare power of attorney, <strong>121–125</strong>, 41, 77, 83, 118, 126, 132, 142, 146</p>
+<p>home health, <strong>42–48</strong>, 21, 28, 50, 87, 154, 156</p>
+<p>hospice, <strong>79–84</strong>, 75, 87, 112, 128, 143, 154, 156, 159–160, 166, 169–171</p>
+<h3>I</h3>
+<p>important documents folder, <strong>116–120</strong>, 123, 128, 154</p>
+<h3>J</h3>
+<p>Jimmo v. Sebelius (maintenance coverage), <strong>68–73</strong></p>
+<h3>L</h3>
+<p>Last Days plan, <strong>158–163</strong>, 164, 166, 168</p>
+<p>living will, <strong>126–131</strong>, 41, 77, 83, 118, 138, 142, 146, 156, 161</p>
+<p>long-term care insurance, <strong>102–105</strong>, 87, 98, 100, 133, 135</p>
+<p>look-back period (Medicaid, VA), 92, 95, 112</p>
+<h3>M</h3>
+<p>Medicaid, <strong>91–95</strong>, 87, 97–98, 100, 108, 133–134</p>
+<p>Medicare, <strong>85–90</strong>, 43, 51, 69, 79, 91, 96, 107–108, 112, 114</p>
+<p>Medicare Advantage, 86–88, 107–108</p>
+<p>Medicare Prescription Payment Plan, 107</p>
+<p>medication list, <strong>148–152</strong>, 40, 117, 157</p>
+<p>Medigap, 86, 88</p>
+<p>memory care, <strong>62–67</strong>, 28, 57, 92–94, 96–97</p>
+<p>MOST form, <strong>138–141</strong>, 41, 77, 83, 118, 127, 130, 142–143, 146, 154, 157, 159–161</p>
+<h3>O</h3>
+<p>observation status, 87, 89</p>
+<h3>P</h3>
+<p>palliative care, <strong>74–78</strong>, 45, 112, 127–128, 143</p>
+<p>Part D (drug coverage), <strong>106–110</strong>, 86, 88, 118</p>
+<p>pharmacist, working with your, 22, 108, 110, 152</p>
+<p>POLST, <strong>138–141</strong>, 146, 171</p>
+<p>prescription assistance programs, <strong>106–110</strong></p>
+<p>private duty care, <strong>49–56</strong>, 21, 28, 42, 44–45, 70, 96–97</p>
+<p>private pay, <strong>96–101</strong>, 50, 85, 89, 92</p>
+<h3>Q</h3>
+<p>QIO (Quality Improvement Organization), 69</p>
+<h3>R</h3>
+<p>respite care, 32–34, 39, 50, 52–53, 80, 96, 112, 114</p>
+<h3>S</h3>
+<p>SHIP (State Health Insurance Assistance Program), 88, 93, 107</p>
+<p>skilled nursing, <strong>68–73</strong>, 42, 87</p>
+<p>Social Security, 94, 96, 98, 113–114, 119, 132, 170–172</p>
+<p>spend-down (Medicaid), 92</p>
+<p>stroke, signs of (BE-FAST), 16, 43, 68, 142, 153, 156</p>
+<p>sundowning, 27</p>
+<h3>T</h3>
+<p>three-day inpatient rule, <strong>85–90</strong></p>
+<h3>V</h3>
+<p>VA benefits, <strong>111–115</strong>, 87, 119</p>
+<p>VA Caregiver Support Line, 112</p>
+<h3>W</h3>
+<p>wandering, <strong>25–30</strong>, 32, 38–39, 45, 50–52, 57, 62–66</p>
+<!-- INDEX-BODY-END -->
+</div>
 
 <!-- ============ NUMBERS THAT MATTER ============ -->
 <div class="pagebreak"></div>
