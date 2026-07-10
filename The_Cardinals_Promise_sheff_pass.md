@@ -100,6 +100,8 @@ A Note to the One Who Loves an Addict
 
 What I'm Asking You to Do
 
+Lou's Way
+
 Afterword
 
 Author's Note
@@ -285,7 +287,7 @@ I was six the first time I met him. He came over to my grandparents' place, wher
 
 I didn't understand yet that there'd been a father before him, a man there one season and gone the next, leaving a space shaped exactly like him. I'd learn the rest of Ignacio's story much later, that he'd hit a breaking point and decided the kindest thing he could do was step away from us, because he couldn't carry his own life and ours at the same time. I've come to believe he left so we could have something he knew he couldn't give us. It's the most generous version, and it's the one I keep.
 
-Lou was not a saint, and I won't pretend he was. He had a temper that showed up at the wrong moments. He was a whole man, complicated the way real fathers are when you finally see them clearly. But once he decided you were his, that settled it. He was there for the early mornings and the late nights, the school conferences and the wrestling matches, the hospital waiting rooms and the church basements, and never kept a ledger of it. He had no use for talk about sacrifice. He just lived it.
+Lou was not a saint, and I won't pretend he was. He had a temper that showed up at the wrong moments, and he knew it about himself — he had a name for it, his Mr. Hyde moments. He could be angry at the wrong time, and he could turn around and produce a warmth so unexpected it changed the temperature of a room. He was a whole man, complicated the way real fathers are when you finally see them clearly. Loving him meant learning to hold both truths at once. Some moments were hard. The whole person was worth holding onto. But once he decided you were his, that settled it. He was there for the early mornings and the late nights, the school conferences and the wrestling matches, the hospital waiting rooms and the church basements, and never kept a ledger of it. He had no use for talk about sacrifice. He just lived it.
 
 Where he came from explains some of it. His father sold produce, and every so often three men in suits would walk in and whatever business they had got done in the back. When the relatives came over from Italy, Lou was the boy who lost his bed to them and slept in the attic. He carried that longer than anybody knew. Years later, during a stretch when he was going to therapy, it came up out of him at a family Christmas, an old man yelling at his uncle about a boy who had to sleep in the attic. The temper was the Italian kind you see in the movies. It was older than any of us, and it was never really about us.
 
@@ -707,7 +709,7 @@ I think about those four years and I thank God for my dad. Lou could have sent m
 
 He worked two jobs in those years, and one of them was at a garden center, planting trees, a man in his fifties down on his knees in the dirt. And I was selfish with it. I'd call him for more money, not for books or rent but for drinking and going out, and he sent it every time. I didn't think twice about where it came from or what it cost him. I do now.
 
-If he was in pain he wouldn't use the word. At the very end the nurse had to work around it. Are you in pain? No. Are you uncomfortable in that area? Yes. Okay, you're in pain. He wouldn't give himself even the language of suffering.
+If he was in pain he wouldn't use the word. He wouldn't give himself even the language of suffering.
 
 Miami changed my life, and the man who made it possible was sharing a rental in Mahwah, paying back loans for years, never once making the cost feel like something I owed him. I graduated in May 2000, Lou and my mom in the crowd, tracking the sea of identical caps until they found mine. The car was pointed west. California was waiting. I had everything I needed and no idea what I was carrying.
 
@@ -1518,6 +1520,16 @@ The decline wasn't dramatic at first, less energy in his voice on the phone, con
 
 The relationship between my father and me was not perfect. Nothing in this story has been. But in the years of my sobriety, the real years, the years of showing up and staying, we said everything that needed saying. Not in one conversation. Not in a deathbed scene. In the ordinary, Sunday phone calls, the back porch in Pensacola, the wedding toast he couldn't quite get through, the moment at EntreCon when Grant said his name in a room full of leaders. I made amends to him. Not with a speech, Lou would have hated a speech. With years of behavior that said: I know what you did, I know what it cost, I'm not going to waste it. He told me. Four words on a phone call. I'm proud of you. We were not unfinished. That is not a small thing.
 
+### *The Right Place*
+
+I want you to see him whole first, because the man who was about to start dying had never stopped living.
+
+Lou was a man of places. He could seem simple if you only caught the surface, but he carried a private map of the world inside him — the best restaurants, the best bagels, the streets worth taking, the shop worth passing twenty other shops to reach. New York wasn't an idea to him. It was muscle memory. He kept returning to the places he'd known since childhood, as if tradition were something you kept alive by visiting it. At Clyde's in Lodi he had a lemonade rule: two scoops, one always lemon, the other your choice. Flexible inside a fixed tradition — there was room for choice, but only after the lemon was settled. He never wanted to be rushed at a meal. A restaurant wasn't a place to consume food; it was a place to be recognized, to settle in, to let the thing unfold. He liked career waiters, professionals who remembered him and knew their craft, and he tipped twenty dollars like a man paying respect to people who knew how to do their job.
+
+Yankee games had their own liturgy. Leave the house at five, catch batting practice, soak in the park. A hot dog or chicken fingers, done the same way every time. He watched almost every game of a season — the blowouts, the lost years, the Septembers that meant nothing in the standings. I asked him once why. I just enjoy the game, he said. I understand it differently now. He wasn't only watching baseball. He was practicing loyalty — staying with a thing because it was his, not because it was winning.
+
+And he never stopped wanting to be useful. He'd retired on paper and kept working anyway, into his eighties, answering phones and untangling computer problems. The pay was almost nothing, and one day he called me like he'd won a sweepstakes because his boss had doubled it. What I remember isn't the money. It's an eighty-year-old man beaming over a good performance review. At eighty, he did a 5K with Hope and me, finished dead last, and took home the tortoise award, which somehow made the whole thing better. After the 2015 surgery — they took about half of his esophagus and half of his stomach — his body seemed to have struck a strange bargain with time: he ate less, weighed less, took his vitamins, saw his holistic doctor, and won himself years. He spent them wanting things. Strength. Respect. A good review. Proof he wasn't finished. There is dignity in still wanting, and my father had it to the last.
+
 ### *Vigils*
 
 Lou was diagnosed with stomach and esophageal cancer in the spring of 2015. He was seventy-three. He called me on a Tuesday, no preamble. Got some news, he said. Surgery. And holistic stuff. No chemo. I'm not doing chemo. I knew better than to argue. Okay, I said, which meant, I hear you, and I'll show up for whatever comes next. The surgery was brutal. Sandra was there every day. I believe it's because of Sandra that my father lived another ten years. She was a nurse; she understood his body in ways the rest of us didn't. She loved him completely and he loved her. He told me straight, more than once: Sandra was the love of his life. About twenty-five years married. My relationship with Sandra was always centered on my dad. She was good to me, always. She's a complex person, with a controlling nature expressed in the sweetest, most Southern way imaginable. I don't mean that as criticism. Who she is was exactly what Lou needed. The season ahead will be hard for her, because her life was organized entirely around his. I worry about her. I pray for her.
@@ -1531,6 +1543,14 @@ Dana and I talked. We knew he had to do something. Nick was the one who got thro
 ### *The Treatment*
 
 The immunotherapy started in summer 2024. At first, impossibly, it worked. The tumor in his lung nearly dissolved. The oncologist used the word encouraging. Then the side effects came, rashes all over his body. Lou never complained. His heart rate and blood pressure started going off and he ended up in the hospital. I was there when they put the pacemaker in. He was upbeat about it, ready to keep fighting. A pacemaker at eighty-three and he came out looking for the next round. He did a second round of immunotherapy, then a third, trying to clear the lymph nodes. The third round was what finally took a toll. He got weak. By mid-2025 the phone calls had changed, and he stopped asking about my work. Not because he didn't care. Because asking took focus that was going to the basic maintenance of existing.
+
+### *He Wouldn't Say Pain*
+
+Lou would not say he was in pain. He came up in a world where pain wasn't something men announced. You swallowed it, walked it off, worked through it, or hid it badly enough that everyone around you had to become a detective. His discomfort came out sideways — restlessness instead of language, a man who couldn't settle in a chair he'd sat in for twenty years.
+
+It was Hope who found the doorway. Are you in pain? got a flat no, every time. Then she tried it another way. Are you uncomfortable in this area? Yes. That question gave him a way to tell the truth without feeling like he'd surrendered something. Hospice taught me that words matter. Lou taught me that pride matters too. Sometimes care isn't forcing someone to admit what hurts. Sometimes care is learning the doorway a person is willing to walk through.
+
+I respected the toughness. I also saw the loneliness inside it. There's a kind of toughness that helps a man survive, and a kind that keeps anyone from helping him. Lou had both.
 
 There was a stretch in late 2024, about a year before the end, when I was sure we were losing him. He could barely walk. He was barely coherent, and he was in a lot of pain. I called the family and told everyone they needed to come to town. I didn't think he was going to make it. Mark flew in, and I picked him up at the airport. He told me he didn't know how to do this, how to be in the room with our father like that, with all of it right there on the surface. Mark wears his humor like armor; he's the funny one. Seeing him without it was something else entirely. Just grab his hand, I told him, and tell him you love him. That's all. It was one of the truest, most solid moments I've ever had with my brother, the two of us grown men in an airport pickup lane, working out how to go say goodbye to our dad. Lou rallied after that. He gave us most of another year. But that was the first time I rehearsed losing him.
 
@@ -1575,9 +1595,11 @@ We pulled up to the funeral home, and there was the truck, parked right out fron
 
 It was an odd feeling, being there, in the place where my father's body was. Now my last memory of him would be here, like this. But I had to see him. I couldn't not. So I went in.
 
+The funeral home was small. A lobby at the entrance, a family waiting area off to the left, and to the right a little room with pews and a writing station, where even now people were being asked to sign their names. Grief has strange manners. I sat with Nick and Asha, with Mark and Jay and their families, with Hope. And somewhere in that hour it landed on me that we were not all grieving the same man. The room was full of different Lous. Some had known him as an older father figure, some as a younger one. Some as a friend. Some as a coworker. Some as a complicated old wound. Some only as the man he became at the end, softened and slowed. Jay once told me his Lou had felt more like a friend than a father — they were closer in age, they went out together, they traded texts about the Yankee games. Mine was the rescuer. Families don't pass around love in equal cups. Some sons need instruction. Some need warmth. Some need a hand on the shoulder because they're already carrying more than they can name. Some need to be pulled out of an apartment in West Palm Beach. Lou seemed to know which of us needed which, and he showed up accordingly. I lost the man who chose me, rescued me, and left me with a promise. Everyone else in those pews lost somebody else.
+
 Pastor Levi Gardner officiated. He had been Dad's pastor for years, and he opened by praying that Lou, raised with Christ, would know the strength of His presence and rejoice in His glory. Then he read the 23rd Psalm, the whole thing. The Lord is my shepherd. I had heard those words at a lot of bedsides over the years. I had never once heard them land on me the way they did that day.
 
-Two of my brothers stood up to speak, Nick and Mark. Nick gave the eulogy, and it was spot on, the right words, the right respect, no more and no less. He talked about a father who was steady and present, a man who never needed to say out loud that he was proud of you. You just knew.
+Two of my brothers stood up to speak, Nick and Mark. I did not. I wanted to honor my father, but grief had taken the legs out from under language — I couldn't have stood without collapsing. So Nick did what brothers do when one of them can't carry the thing alone. He carried it for both of us. He gave the eulogy, and it was spot on, the right words, the right respect, no more and no less. He talked about a father who was steady and present, a man who never needed to say out loud that he was proud of you. You just knew.
 
 Nick told the one about Fargo. Years back, Dad got in the car and drove alone from New Jersey to Fargo, North Dakota, to watch Nick finish a national wrestling tournament. If it mattered to one of his kids, he showed up, no matter how far. And Nick shared the phrase the two of them had kept between them for years. After the big moments they would say it quietly to each other. Hey Dad, we made it. Four words that held all the early mornings and long drives, all the nights it would have been easier to quit. Sitting there, I thought about how many of us had our own version of that with him, and how we were all going to have to learn to say it now without him there to answer.
 
@@ -1589,11 +1611,23 @@ And when it came time to pass the landscaping business down, he didn't. He sold 
 
 Nick credited Sandra, too, called her the reason Dad got his strength and his joy back in the last stretch of his life. It was true. She had given him good years, and she had been there for every one of the hard ones. I was grateful for what she had been to him.
 
+And Nick said one more thing that stayed with me. He was the one who had talked Dad into the immunotherapy, and he said that knowing everything — the rashes, the pacemaker, the third round that finally took its toll — he would choose it again, because it bought the time in which Dad held his granddaughter. That sentence did something to me. It took the decision out of the language of treatment and put it where it had belonged all along: the language of love.
+
+Nick had carried Dad's pride his whole life — the golden child, in the best sense of it, the kid who was nearly held back in grade school and rewrote every record I set, the son who stayed close and never forgot where he came from. I had carried something else. Nick carried his pride. I carried his rescue. Dad knew the difference, and he loved us accordingly. I think he saw me as a little more fragile — not weaker, exactly, but breakable in places I didn't always know how to name. He was right.
+
 Then I stood at the casket. I looked down at my father, and it wasn't him anymore. The body was there, but he wasn't. I knew his soul had already gone on ahead. I had watched that line get crossed in other people's rooms more times than I can count, and I knew it the moment I saw it. It still didn't stop the feeling. I stood there and loved him, for everything he was, and everything he wasn't.
 
 The patriarch was gone, and nothing seemed to flow the same. Lou had been the one everything quietly organized itself around, the center a family doesn't notice until it's gone and the whole thing loosens. Nobody said it out loud. We all felt it.
 
 We drove home the way we had come, talking about Lou the whole way, the real one, the complicated one, the man whose truck said Jersey in a Florida parking lot. The grief rode with us. It rides with me still. I've stopped wishing it away. It's the weight of having been loved like that, and I'd rather carry it than have nothing to carry.
+
+### *The Conversation I Never Had*
+
+There are things I never asked my father while he was alive.
+
+I knew he had fallen out with his brother, a brother close to him in age. I knew some of the background. What I never asked was whether he missed him. I never asked enough about his own father, either — the man who sold produce and died around fifty. I wanted to know what that loss did to him, whether it shaped the way he held on or pulled back, whether becoming my father had anything to do with the father he lost too soon. And near the end I wanted to ask what he wanted done with everything after he was gone. I never did. Lou drew hard boundaries around certain subjects, and if there's not an opening, you can't really push. Hospice taught me that. So did being his son.
+
+I sit with families for a living and hand them the questions I never handed him. Ask now, I tell them. This is the right day. I believe every word of it, and I also know what it is to stand outside a door a man has decided to keep shut, and to love him enough to leave it that way. Both things are true. I spent my life being saved by my father. At the end, I had to learn that loving him didn't mean saving him back.
 
 ### *Who Stays. Who Goes.*
 
@@ -1764,6 +1798,28 @@ If you love someone who is dying, go sit with them. If you don't know where to b
 Then do the smallest brave thing in front of you. Make the call. Cross the parking lot. Open the door.
 
 Love shows up where it's needed, not where it's earned. That is the cardinal's promise. It was done for me. Now go and do it for somebody else.
+
+# **LOU'S WAY**
+
+Not things he said. Things he did, distilled. My father never gave a speech in his life, and I won't put one in his mouth now. But if you asked me what Lou knew, this is it.
+
+He showed up before he explained.
+
+He helped without keeping score.
+
+He believed love was proven in repetition.
+
+He never confused disappointment with abandonment.
+
+He respected people who knew how to do their job.
+
+He could enjoy the game even when the season was lost.
+
+He still wanted to be useful, all the way to the end.
+
+He let people find the doorway they could walk through.
+
+He stayed.
 
 # **AFTERWORD**
 
