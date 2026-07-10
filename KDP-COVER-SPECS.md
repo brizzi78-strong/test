@@ -1,20 +1,20 @@
 # KDP Cover-Wrap Specs — The Cardinal's Promise
 
-Trim size: 6" x 9". Interior page count: 226 (current typeset; the
+Trim size: 6" x 9". Interior page count: 228 (current typeset; the
 spine math below moves with it — rerun before ordering the wrap).
 
 ## Spine width
 
-| Paper | Formula | 226 pages |
+| Paper | Formula | 228 pages |
 |---|---|---|
-| White (recommended for text-only) | pages × 0.002252" | 0.509" |
+| White (recommended for text-only) | pages × 0.002252" | 0.513" |
 | Cream | pages × 0.0025" | 0.548" |
 
 ## Full wrap dimensions (includes 0.125" bleed on all outside edges)
 
 | Paper | Width | Height |
 |---|---|---|
-| White | 0.125 + 6 + 0.509 + 6 + 0.125 = **12.759"** | 9 + 0.25 = **9.25"** |
+| White | 0.125 + 6 + 0.513 + 6 + 0.125 = **12.763"** | 9 + 0.25 = **9.25"** |
 | Cream | 0.125 + 6 + 0.548 + 6 + 0.125 = **12.798"** | **9.25"** |
 
 At 300 DPI (white): 3823 × 2775 px.
@@ -63,7 +63,7 @@ Author bio line (below copy or on flap):
 
 ## Cover source-image note
 
-The uploaded front-cover JPEG is 1320 × 1990 px (~226 DPI at 6x9). For print, ask
+The uploaded front-cover JPEG is 1320 × 1990 px (~228 DPI at 6x9). For print, ask
 the designer for the original art at 300 DPI (1800 × 2700 px minimum for the front
 panel). For the Kindle eBook cover, KDP recommends 1600 × 2560 px — the current
 image works but a higher-res export is better.
