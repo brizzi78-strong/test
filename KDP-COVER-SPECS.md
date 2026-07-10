@@ -29,9 +29,16 @@ Notes for the designer:
   sits at the top of the back panel, small italic, set apart from the body copy.
   It is a comparison, NOT an endorsement — never style it as a quote or attribute
   it to anyone.
-- SUBTITLE CHANGE (designer task): the cover currently reads "A Practical Guide for
-  Families Facing Addiction, Illness, or Loss." Replace with the memoir-forward
-  subtitle: "A Memoir for Families Facing Addiction, Illness, and Loss" (matches the interior title page and cover).
+- SUBTITLE (settled): the approved wrap reads "A Memoir of the Father Who Stayed"
+  with the tagline "IMMIGRANT. ADDICT. SON." The interior title page and EPUB
+  metadata now match ("A Memoir of the Father Who Stayed"). Use the same subtitle
+  in the KDP listing. The tagline is cover styling only — not part of the official
+  subtitle.
+- BARCODE (designer task, REQUIRED): the approved wrap still carries a placeholder
+  barcode reading ISBN 978-1-963342-01-0, which is NOT this book's ISBN. Replace
+  with a barcode for 979-8-9966446-0-5, or clear the zone and let KDP print its own.
+- BLURB: the front-cover quote credited to "Dr Huet" is approved by Jason Huet
+  (author confirmed 2026-07-10).
 
 ## Draft back-cover copy (~170 words)
 
@@ -63,7 +70,8 @@ Author bio line (below copy or on flap):
 
 ## Cover source-image note
 
-The uploaded front-cover JPEG is 1320 × 1990 px (~229 DPI at 6x9). For print, ask
-the designer for the original art at 300 DPI (1800 × 2700 px minimum for the front
-panel). For the Kindle eBook cover, KDP recommends 1600 × 2560 px — the current
-image works but a higher-res export is better.
+The APPROVED full wrap (repo: cover/cover_wrap_approved.jpg) is 1320 × 664 px —
+about 103 DPI at the 12.766" wrap width. That is a design proof, not a print file.
+Ask the designer for the final wrap at 300 DPI: 3823 × 2775 px (white paper,
+229 pages), with the corrected barcode. For the Kindle eBook cover, request a
+front-panel-only export at 1600 × 2560 px or larger.
