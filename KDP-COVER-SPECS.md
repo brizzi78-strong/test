@@ -1,23 +1,23 @@
 # KDP Cover-Wrap Specs — The Cardinal's Promise
 
-Trim size: 6" x 9". Interior page count: 229 (current typeset; the
+Trim size: 6" x 9". Interior page count: 228 (current typeset; the
 spine math below moves with it — rerun before ordering the wrap).
 
 ## Spine width
 
-| Paper | Formula | 229 pages |
+| Paper | Formula | 228 pages |
 |---|---|---|
-| White (recommended for text-only) | pages × 0.002252" | 0.516" |
-| Cream | pages × 0.0025" | 0.548" |
+| White (recommended for text-only) | pages × 0.002252" | 0.513" |
+| Cream | pages × 0.0025" | 0.570" |
 
 ## Full wrap dimensions (includes 0.125" bleed on all outside edges)
 
 | Paper | Width | Height |
 |---|---|---|
-| White | 0.125 + 6 + 0.516 + 6 + 0.125 = **12.766"** | 9 + 0.25 = **9.25"** |
-| Cream | 0.125 + 6 + 0.548 + 6 + 0.125 = **12.798"** | **9.25"** |
+| White | 0.125 + 6 + 0.513 + 6 + 0.125 = **12.763"** | 9 + 0.25 = **9.25"** |
+| Cream | 0.125 + 6 + 0.570 + 6 + 0.125 = **12.820"** | **9.25"** |
 
-At 300 DPI (white): 3823 × 2775 px.
+At 300 DPI (white): 3829 × 2775 px.
 
 Notes for the designer:
 - Keep text 0.25" inside trim edges; nothing critical in the 0.125" bleed zone.
@@ -42,9 +42,6 @@ Notes for the designer:
      singular Cardinal — matching the copyright page and ISBN registration.
   4. Barcode: still shows placeholder 978-1-963342-01-0. Replace with a barcode
      for 979-8-9966446-0-5, or clear the zone and let KDP print its own.
-- BARCODE (designer task, REQUIRED): the approved wrap still carries a placeholder
-  barcode reading ISBN 978-1-963342-01-0, which is NOT this book's ISBN. Replace
-  with a barcode for 979-8-9966446-0-5, or clear the zone and let KDP print its own.
 - BLURB: the front-cover quote credited to "Dr Huet" is approved by Jason Huet
   (author confirmed 2026-07-10).
 
@@ -80,6 +77,6 @@ Author bio line (below copy or on flap):
 
 The APPROVED full wrap (repo: cover/cover_wrap_approved.jpg) is 1320 × 664 px —
 about 103 DPI at the 12.766" wrap width. That is a design proof, not a print file.
-Ask the designer for the final wrap at 300 DPI: 3823 × 2775 px (white paper,
-229 pages), with the corrected barcode. For the Kindle eBook cover, request a
+Ask the designer for the final wrap at 300 DPI: 3829 × 2775 px (white paper,
+228 pages), with the corrected barcode. For the Kindle eBook cover, request a
 front-panel-only export at 1600 × 2560 px or larger.

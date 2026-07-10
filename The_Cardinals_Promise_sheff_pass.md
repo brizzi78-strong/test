@@ -399,7 +399,7 @@ The drives were endless. Cooperstown. New York City. Albany, to see the Double-A
 
 He coached baseball, the Foxes and the Falcons, and he coached me hardest of all. We would go to the field and he would hit me a hundred balls, then a hundred more. At the batting cages he fed the machine until my hands were raw and I could barely grip the bat. He never let me quit because it hurt. *Stay in the box. Take the next pitch.* That was the lesson under the lesson.
 
-Chris and Dad kept a phrase between them. After the big moments, a school, a hard-won match, a job, they would say it quietly to each other. *Hey Dad, we made it.* I had my own version of it in that car coming home from upstate, the quiet after a long day, the two of us, the feeling that we had done the thing together. That was Lou's idea of love. Not announced. Earned, together. And when he was proud of you, he wouldn't say so. He'd give you a small smile and a look so full of approval it went deeper than any words.
+Chris and Dad kept a phrase between them. After the big moments, a school, a hard-won match, a job, they would say it quietly to each other. *Hey Dad, we made it.* I had my own version of it in that car coming home from upstate, the quiet after a long day, the two of us, the feeling that we had done the thing together. That was Lou's idea of love. Not announced. Earned, together. And when he was proud of you, he wouldn't say so. He'd give you a small smile and a look, and the look said all of it.
 
 And it wasn't only the big things. One time I asked for White Castle, and the nearest one was an hour away. He drove me. An hour there for a sack of little burgers, because his kid had a taste for them. When I needed a root canal, he came for that too. Big or small, fun or painful, if it was mine, he was there.
 
@@ -417,7 +417,7 @@ It took me years to see what he had handed me. I make my living showing up. I wa
 
 # **THE DRIVES · I**
 
-*A quarter to eight on a Saturday morning, and he was already dressed, keys in his hand. You want to take a ride? Five hours to Cooperstown, a dim room full of gloves, a long look at a ball Babe Ruth touched, five hours back. I slept most of the way home. He never said why. He drove.*
+*He woke me early on a Saturday with the keys already in his hand. You want to take a ride? Ten hours of road, there and back, so a twelve-year-old could stand in a dim room and look at a ball Babe Ruth touched. He never said why. He drove.*
 
 PART TWO
 
@@ -448,7 +448,7 @@ I couldn't fix the cafeteria. But there was one place in that town where nobody 
 
 The first place I had to learn to show up for myself, with Lou watching from the stands, was a wrestling mat. I was twelve when wrestling first came up, and it came up between Charlie and my dad. The two of them talked it over, talked wrestling, before anybody said a word to me. It wasn't a read on any talent. I didn't have any. I was awkward, undersized, the kid picked somewhere in the middle in gym class, not last, which would've been a story, just middle. It was a hunch, the way people point a kid at something because nothing else has stuck.
 
-Charlie was Aunt Nancey's husband, and he changed the temperature of a room by walking into it. He laughed easily. He looked at you, even when you were a kid, like what you were saying was the most interesting thing he'd heard all day. He loved my aunt, and she loved him. I talked to Nancey recently and she said it plain: there will never be another man like Charlie. She hasn't dated in years.
+Charlie was Aunt Nancey's husband, and a room got lighter the moment he walked into it. He laughed easily. He looked at you, even when you were a kid, like what you were saying was the most interesting thing he'd heard all day. He loved my aunt, and she loved him. I talked to Nancey recently and she didn't dress it up: there will never be another man like Charlie. She hasn't dated in years.
 
 That hunch rerouted my life. No Charlie, no wrestling room, no county title at seventeen, no mat to teach me how to stay when everything in me wanted to leave.
 
@@ -578,7 +578,7 @@ The wrestling years left marks I still feel. For a long time my body didn't feel
 *"Drudgery is the touchstone of character."*
 *— Oswald Chambers*
 
-A recruiter looked at my father across a desk and told him to dye the gray out of his hair. Nobody would hire him otherwise. He went home and did it, and never said a word about it. What it cost him I understood only later, when the money got tight. By then he was in his early fifties and we were living in Ramsey. I was starting high school — old enough to notice tension, too young to know its price.
+A recruiter looked at my father across a desk and told him to dye the gray out of his hair. Nobody would hire him otherwise. He went home and did it, and never said a word about it. I understood the price only later, when the money got tight. By then he was in his early fifties and we were living in Ramsey. I was starting high school — old enough to notice tension, too young to know its price.
 
 From the outside our life looked stable. A house. Cars in the driveway. Dinner on the table, wrestling practice, the bills paid, the routine holding. You don't see how much of a life like that is held up by one man getting out of bed every morning. Not until something cracks.
 
@@ -674,7 +674,7 @@ Lou's world had made me. Then it sent me off to build one of my own.
 
 Before I ever set foot on campus, there was a party in New Jersey. Tricia Hart hosted it, a mixer for kids heading to Miami that fall. That night I met Dean Ferrera from Hawthorne and people who'd matter for years. I liked going to a school in Ohio already knowing a few faces. Dean became one of my best friends. He's a cardiologist outside Chicago now.
 
-My mom and dad dropped me off in the fall of 1996. Partial wrestling scholarship, financial aid, Lou covering the rest. That was how it got paid for. My mom cried when she left me there. The woman who had carried two kids out of a country without flinching stood in a dorm parking lot in Ohio and couldn't stop the tears. I didn't feel like I'd chosen Miami so much as it had chosen me first — a letter from a coach with my name on it. Later I saw it in Newsweek, "best schools for your money," number four. The Ivy of the Midwest.
+My mom and dad dropped me off in the fall of 1996. Partial wrestling scholarship, financial aid, Lou covering the rest. That was how it got paid for. My mom cried when she left me there. The woman who had moved two kids across a border without flinching stood in a dorm parking lot in Ohio and couldn't stop the tears. I didn't feel like I'd chosen Miami so much as it had chosen me first — a letter from a coach with my name on it. Later I saw it in Newsweek, "best schools for your money," number four. The Ivy of the Midwest.
 
 My dorm was Stanton Hall, my roommate a good-natured Packers fan from Wisconsin with a cheesehead on his shelf and the accent to prove it. I didn't know what a cheesehead was. I'm from New Jersey. Next door was Jason Huet, six-five, a high school basketball player who'd wanted Chapel Hill and was sore his parents made him come to Miami. Hard shell, didn't let everybody in, but once he did, he didn't take it lightly. He teased me constantly — swore he couldn't understand a word I said. He's a pulmonologist in Charleston now. He texted recently: you want to come see me for Memorial Day? That's a friendship that just holds. The twins from Ramsey were there too, Kris and Kyle, the two who'd kept their hands clean at the lunch table. When they heard I was going to Miami, one of them said, isn't he a nerd? My friend Dave said, he's actually cool now. They became good friends too.
 
@@ -690,7 +690,7 @@ So I had to figure out what I was doing there. I transferred into the Richard T.
 
 Kappa Sigma did something I didn't expect. After the standard rush, they came back for me. Not a form letter — a specific ask. I knew the feeling. The thin envelope from the coach. Lou walking into my mother's life and not leaving. I joined. For the first time I wasn't the wrestler. I was just Rob, still working out what that meant.
 
-I was still my mother's kid underneath it, the type of guy who'd end up at a church across the Indiana line with a man yelling at us like John the Baptist — the same man who had driven us there at a hundred miles an hour, reading scripture behind the wheel.
+I was still my mother's kid underneath it. One Sunday I ended up at a church across the Indiana line, driven there at a hundred miles an hour by a man who read scripture off the steering wheel and then stood up front yelling at us like John the Baptist.
 
 I drank. Everybody drank; that was the cover. It would be years before I understood that not everyone drank the way I did. I won't glamorize it, but the parties were great — the fun you know won't last, which is part of why it mattered. Junior year I lived in the fraternity house. Underneath it all was an insecurity I couldn't shake. The wrestling, the fraternity, the friends, and still some part of me didn't believe any of it was real.
 
@@ -727,7 +727,7 @@ Miami changed my life, and the man who made it possible was sharing a rental in 
 
 # **THE DRIVES · II**
 
-*Ohio, junior year. The gray had gotten into my voice, and he heard it over the phone. He didn't ask questions. He got in the car in New Jersey and drove ten hours, no call ahead. A doctor's office, then a booth — laminated menus, free refills, him across from me. Then he turned around and drove back. Twenty hours of road to sit across from his kid in a booth. He drove.*
+*Ohio, junior year. The gray had gotten into my voice, and he heard it over the phone. He didn't ask questions. He got in the car in New Jersey and drove ten hours, no call ahead. A doctor's office, then a booth with him across from me and nothing that needed saying. Then he turned around and drove back. Twenty hours of road to sit across from his kid in a booth. He drove.*
 
 PART THREE
 
@@ -744,7 +744,7 @@ PART THREE
 
 I once handed my eighteen-year-old brother my birth certificate and sent him to the DMV to become me. He walked out as Robert Brizzi, twenty-one, and we both thought we'd solved a problem instead of committing a federal crime. That's the worst thing my brother and I have ever done together, and you need to know him, because he is in every part of what came next. I can only tell it now because I'm fairly sure the statute of limitations has run out. If it hasn't, this paragraph is going to make for an interesting conversation with a lawyer.
 
-I was twenty-one. Chris was eighteen, a freshman at the University of Pennsylvania, Ivy League, admitted on his wrestling. So naturally I looked at all that promise and said: Chris, why don't you take my birth certificate down to the DMV and get yourself a driver's license? His whole face lit up. Oh my God, he said, that would be amazing. Two brothers, solving a problem. The problem being that Chris was eighteen and wanted to buy beer.
+I was twenty-one. Chris was eighteen, a freshman at the University of Pennsylvania, Ivy League, admitted on his wrestling. So naturally I looked at all that promise and said: Chris, why don't you take my birth certificate down to the DMV and get yourself a driver's license? His eyes went wide. Oh my God, he said, that would be amazing. Two brothers, solving a problem. The problem being that Chris was eighteen and wanted to buy beer.
 
 Here's the part that still gets me: we look nothing alike. Chris has hazel eyes and lighter skin and at the time looked about fifteen. But this was before they put your photo in the system, so he strolled into the DMV with my birth certificate and, I want to be clear about the tradecraft here, a library card as his backup ID. A library card. For a felony. And he walked out as me.
 
@@ -835,7 +835,7 @@ I pray they have forgiven me. Some of it I've been able to make right. Some of i
 
 ### *The First DUI*
 
-The first DUI was 2002, and it should have stopped me. I was driving down to San Diego to see an ex-girlfriend I wasn't even in love with, holding on because letting go felt like admitting defeat. I'd been drinking. I was exhausted, strung out from work, running on fumes and momentum.
+The first DUI was 2002, and it should have stopped me. I was driving down to San Diego to see an ex-girlfriend I wasn't even in love with, holding on because letting go felt like admitting defeat. I'd been drinking. I was exhausted, strung out from work, running on nothing but momentum.
 
 I got so tired I pulled over to sleep on the shoulder near Camp Pendleton, the car still running. The military police saw me and called the cops. I tried the old trick, pennies in my mouth, and I can tell you it doesn't work.
 
@@ -1060,9 +1060,9 @@ PART FOUR
 
 I am powerless. I am powerless over alcohol, over the pills, over the man I became when I had either one in me. They are the hardest words I have ever said out loud, and the first time I said them and meant them was at a farmhouse called Chumuckla.
 
-January 9, 2009. That's the date I count from. The night before, Lou took me to Carrabba's. My last meal as a drinking man, one last glass of wine. He didn't make a ceremony of it and he didn't lecture me. He sat across from me while I drank it, the way he sat across from every hard thing in my life, not trying to fix the part that couldn't be fixed in a restaurant.
+January 9, 2009. That's the date I count from. The night before, Lou took me to Carrabba's. My last meal as a drinking man, one last glass of wine. He didn't make a ceremony of it and he didn't say a word against it. He sat across from me while I drank it, the way he sat across from every hard thing in my life, not trying to fix the part that couldn't be fixed in a restaurant.
 
-People imagine that last glass as something out of a movie, savored slow, every note of it memorized. Here's the truth: it was disappointing. I never drank for the taste of anything. The goal was always to get drunk, and one glass isn't a drink to a man like me, it's a signal — the whole machine waking up and asking, where's the rest? I sat there with my father across the table and my body already doing the arithmetic on a bottle that wasn't coming. That glass taught me the lesson I'd spend the next year learning on purpose: one is too many and twelve isn't enough. My last drink didn't even work. That's the disease, right there, in one restaurant.
+People imagine that last glass as something out of a movie, savored slow, every note of it memorized. Here's the truth: it was disappointing. I never drank for the taste of anything. The goal was always to get drunk, and one glass isn't a drink to a man like me, it's a signal — the whole machine waking up and asking, where's the rest? I sat there with my father across the table and my body already asking after a bottle that wasn't coming. That glass taught me the lesson I'd spend the next year learning on purpose: one is too many and twelve isn't enough. My last drink didn't even work. That's the disease, right there, in one restaurant.
 
 The next morning we drove out to a farmhouse in the panhandle. Chumuckla. The name sounded made up. It wasn't a facility the way Laguna Beach had been, no ocean, no manicured grounds, no soap opera actors in the next room. A farmhouse down a dirt road, fields around it, run by a man named Ron who'd seen more than most people would believe. Lou walked me in, signed the paperwork, hugged me, and left. The life I'd been running from ran out of road at the end of that driveway.
 
@@ -1189,7 +1189,7 @@ By late 2010 I was restless in a way I couldn't name. Sober, working, going to m
 
 That scared me. I drove to see Lou. He didn't ask why I'd come; he rarely did. He listened while I talked in circles, opportunity, timing, readiness, fear. Eventually the truth slipped out. I still want to drink, I said. The words just hung there. Accurate.
 
-He didn't react the way I expected. No anger, no lecture, no disappointment. He looked at me the way he had when I was losing badly on a mat and he was deciding whether I could recover. Then he said it. Just a boundary. It landed harder than any consequence I'd faced, not because it was cruel but because it was clean. He'd done what he could do, and he wasn't going to stand by and watch me die slowly while pretending that watching helped.
+He didn't react the way I expected. No anger, no speech, no disappointment. He looked at me the way he had when I was losing badly on a mat and he was deciding whether I could recover. Then he said it. Just a boundary. It landed harder than any consequence I'd faced, not because it was cruel but because it was clean. He'd done what he could do, and he wasn't going to stand by and watch me die slowly while pretending that watching helped.
 
 I left shaken. That line forced a choice I couldn't hand off. Go back to that world too soon and I wouldn't be returning, I'd be relapsing with a résumé. I didn't take the job. It didn't feel brave. It felt like staying alive.
 
@@ -1212,7 +1212,7 @@ By then I was doing well again, quietly. Home health had stabilized my life. Sob
 
 The unit was small but solid. Thick walls, high ceilings, construction that survives hurricanes and decades and neglect. It felt anchored. I didn't need to impress anymore. I needed something permanent.
 
-The market was down hard in 2014, which is the only reason a place like that ever came within reach. It was listed at a hundred and thirty thousand. I offered a hundred and nine, and they accepted. The only thing between me and the keys was the down payment, and I was short. Not dramatically. Enough to matter. So I called my brother, and I hated every second of it. Chris had done everything right, watched Lou rescue me, watched me fall and climb and wobble. He loved me, but love isn't unlimited credit. I need to borrow ten thousand dollars, I said. He didn't make me sweat it. Rob, he said, I'll loan it to you and I won't ask you a dollar for it. But if you don't pay it back, it'll affect our relationship. He wasn't threatening me. He was trusting me, conditionally. I understand, I said. He sent it. I set up an automatic payment that day, two hundred a month, and paid extra when I could. It took four years. I never missed one.
+Prices in Pensacola were still down in 2014, which is the only reason a place like that ever came within reach. It was listed at a hundred and thirty thousand. I offered a hundred and nine, and they accepted. The only thing between me and the keys was the down payment, and I was short. Not dramatically. Enough to matter. So I called my brother, and I hated every second of it. Chris had done everything right, watched Lou rescue me, watched me fall and climb and wobble. He loved me, but love isn't unlimited credit. I need to borrow ten thousand dollars, I said. He didn't make me sweat it. Rob, he said, I'll loan it to you and I won't ask you a dollar for it. But if you don't pay it back, it'll affect our relationship. He wasn't threatening me. He was trusting me, conditionally. I understand, I said. He sent it. I set up an automatic payment that day, two hundred a month, and paid extra when I could. It took four years. I never missed one.
 
 When I got the keys I stood in the middle of that small living room longer than I expected. Nothing about it was impressive, and that was the point. I'd earned it through repetition. For five years the Mirador was my world. I woke up there, prayed there, paid down debt there, stayed sober there. Went to work, came home, did it again. Nobody applauded. That was the miracle. I was becoming someone who kept promises.
 
@@ -1303,13 +1303,13 @@ By the end of dinner I couldn't wait to kiss her. I walked her to the car, opene
 
 The next morning was the McGuire's 5K, eight thousand people. I felt a pull to find her in the crowd, and we made our way to each other. She arrived in a little green outfit, adorable. A friend from the gym had a bulldog puppy, and I carried it over and said, that's the kind of dog we need to get. She looked at me. We? It just came out. Sudden, and right. One dinner in, and some part of me had already decided.
 
-After that, fast. My mom couldn't believe how quickly Hope moved in. Nine months later I proposed and she said yes. Hope grew up simple, Eclectic, Auburn Montgomery for undergrad, barely getting C's at first. Then she decided she wanted to be a pharmacist and that changed everything. Head down, all A's by the end. That got her into Auburn's pharmacy school, one of the best in the country. She was there when Cam Newton led them to the national championship. She was beautiful, smart, and kind, and the kindness mattered most. I'd dated impressive women. Hope was good. There's a difference. With her I showed things I'd never shown anyone, the real inventory, the shame, the fear under the confidence, the kid from Mexico City who still sometimes wondered if he was worth choosing. She didn't look away. For the first time, being known didn't feel like a threat. It felt like relief.
+After that, fast. My mom couldn't believe how quickly Hope moved in. Nine months later I proposed and she said yes. Hope grew up simple, Eclectic, Auburn Montgomery for undergrad, barely getting C's at first. Then she decided she wanted to be a pharmacist and that changed everything. Head down, all A's by the end. That got her into Auburn's pharmacy school, one of the best in the country. She was still in undergrad when Cam Newton led Auburn to the national championship. She was beautiful, smart, and kind, and the kindness mattered most. I'd dated impressive women. Hope was good. There's a difference. With her I showed things I'd never shown anyone, the real inventory, the shame, the fear under the confidence, the kid from Mexico City who still sometimes wondered if he was worth choosing. She didn't look away. For the first time, being known didn't feel like a threat. It felt like relief.
 
 The moment I knew came quietly. I was wrestling an old insecurity, the kind I had always managed alone, and instead of managing it I said it out loud. She said, I will love you no matter what. People say those words. I could feel that she meant them, all the way down. My father spent a lifetime proving that sentence without ever needing to say it. Hearing it said to me, and believing it, was the moment I knew I would marry her. Falling in love with her was the easiest thing I'd ever done, and nothing in my life had been easy.
 
 ### *The Voice on the Radio*
 
-We'd been dating about a month when Dave Ramsey's voice filled the car. Neither of us reached to change it. When the segment ended she said: I have a hundred thousand dollars in student loans. Not embarrassed, not defensive. Factual. We could pay it off, I said. We? If this goes where I think it's going, yeah. The two of us. That's my debt, she said, from before I met you. If we do this, it's our debt. She was quiet a long time. Finally: I want to be free. Then we'll get free, I said.
+We'd been dating about a month when Dave Ramsey's voice filled the car. Neither of us reached to change it. When the segment ended she said: I have a hundred thousand dollars in student loans. Not embarrassed, not defensive. Factual. We could pay it off, I said. We? That word again. If this goes where I think it's going, yeah. The two of us. That's my debt, she said, from before I met you. If we do this, it's our debt. She was quiet a long time. Finally: I want to be free. Then we'll get free, I said.
 
 Lou never took to the plan. When he heard us talking budgets and cutting back, something in him bristled. You gotta enjoy your life, he said. You can't cut everything out. It came out with a little heat, and the heat wasn't aimed at us — with Lou it rarely was. A man who tipped twenty dollars on principle was never going to love a budget. He heard frugality and understood deprivation.
 
@@ -1325,7 +1325,7 @@ Outside my own father, Jeff is one of two men who have shown me what faith looks
 
 ### *Wonderwoman*
 
-For most of my life my mother was unbreakable. She carried two boys out of a country on her own nerve, worked nights without complaint, and still found a way to have a hot meal and a made-up home waiting for me at every turn. Wonderwoman. The first crack I ever saw in her was in Central Park.
+For most of my life my mother was unbreakable. She got two boys out of Mexico on her own nerve, worked nights without complaint, and still found a way to have a hot meal and a made-up home waiting for me at every turn. Wonderwoman. The first crack I ever saw in her was in Central Park.
 
 About six months in, I brought Hope to meet my mom. Gary was there too, her boyfriend, one of the good people I've known. We had lunch at Tavern on the Green and walked through Central Park. A good day. Then she stepped over a curb and her leg gave out. Not a stumble you laugh off, her body just quit. I helped her up. She brushed it off. But I saw it. The first time I looked at my mother and saw someone fragile.
 
@@ -1393,7 +1393,7 @@ Europe was four countries in two weeks, Amsterdam to Brussels to Bruges to Londo
 
 What she did with that suit is the part I keep. In Brussels my Toppik exploded, the hair fiber powder I used every day on the thin spots, cap off, container cracked, black powder worked into every seam of the bag. My hairline was my one real insecurity, and I figured the shoot was finished. I told her I'd wear a hat pulled low and call it a style. Hope didn't laugh it off and didn't tell me it was just hair, which never helps anybody. She got down on the floor and started scraping, off the zipper, off my socks, off the lining, scooping it back into the container bit by bit like she was panning for gold. We'll get enough, she said. Don't worry. She knew that powder was the one thing that could take me from feeling good to wanting to hide, and instead of arguing me out of it, she fixed it. If you look at those Paris photos, we look great. Nobody sees Brussels.
 
-Ireland was the one I couldn't fully meet her on. We'd planned it long before, but by the time it came Lou's health was sliding and I had just taken time off work to be with him. Galway, the Cliffs of Moher, towns out of a postcard, and my head was back home in Pensacola the whole time. Hope didn't push. She told me nobody cared that I'd taken the time, that I was allowed to be where I was, and she loved me through a trip I wasn't all the way present for. That is its own way of carrying someone, and she did it without ever making me feel like a burden. In Galway I bought her a Claddagh ring, the little heart held in two hands, and gave it to her as the promise I didn't have the words for that week.
+Ireland was the one I couldn't fully meet her on. We'd planned it long before, but by the time it came Lou's health was sliding and I had just taken time off work to be with him. Galway, the Cliffs of Moher, towns out of a postcard, and my head was back home in Pensacola the whole time. Hope didn't push. She told me nobody cared that I'd taken the time, that I was allowed to be where I was, and she loved me through a trip I wasn't all the way present for. That is its own way of carrying someone, and she did it without ever making me feel like a burden. In Galway I bought her a Claddagh ring, the little heart held in two hands, and gave it to her as the promise I couldn't say out loud that week.
 
 I think about those trips differently now, not as time I should have spent some other way, but as time I'm grateful we took, every messy minute of it. The pictures never tell the whole story. They can't. They only catch the second we were smiling. Everything that earned the smile happened off camera, and most of it was Hope.
 
@@ -1436,7 +1436,7 @@ He told a story once about speaking at a meeting in New York. He'd been sharing 
 
 The moment came years into that friendship, at the business conference he built for the city. He was speaking, and he paused and looked out into the crowd. Lou Brizzi, great guy. Chris and Rob, you know them? Hearing my father's name in a room like that stopped me. My dad worked at Baptist Hospital for years, showed up, did the job well, treated people right, stayed until he was eighty-two. Quint saying his name in a room full of leaders meant something. Not because it elevated us. Because it honored the life my father believed in.
 
-He treated me like I mattered before I'd given him a single reason to believe I'd amount to anything. Lou would have loved him. They were cut from the same cloth, men who led by example, who didn't need applause, who showed up the same whether the room was full or empty. He also handed me one of the great friendships of my life: his nephew Mike moved down from Chicago to Pensacola, and we've been close ever since.
+He treated me like I mattered before I'd given him a single reason to believe I'd amount to anything. Lou would have loved him. They were the same breed, men who led by example, who didn't need applause, who showed up the same whether the room was full or empty. He also handed me one of the great friendships of my life: his nephew Mike moved down from Chicago to Pensacola, and we've been close ever since.
 
 The morning after my father died, all these years later, Quint was the first person to reach me. Your dad was a great man, his text said. Of everyone who would reach out in those days, he got there first, and he said the truest thing. Sometimes God places someone in your life not to rescue you but to show you what's possible. For the first time since getting sober, I believed staying alive wasn't the finish line. It was the starting point.
 
@@ -1484,7 +1484,7 @@ You've met Detroit Bob already — the one who was only in the rooms to save his
 
 So we got close. We'd go eat after meetings, the kid a few years in and the old man who had seen it all. Then, years into the friendship, the cancer came. He knew it was going to take him, and he stayed sober anyway, a man at the very end of his life with every excuse in the world to pick up, choosing not to. He fought it for about six months, and somewhere in there he went on hospice, the first time that word ever meant someone I loved instead of a thing I would one day do for a living.
 
-One afternoon he looked at me and said it plain, the way he said everything. I am so proud of the man I have seen you grow into over the past seven years. You have really blossomed. And sober looks good on you. Bob did not hand out lines like that. I have carried it ever since.
+One afternoon he looked at me and said it straight out, the way he said everything. I am so proud of the man I have seen you grow into over the past seven years. You have really blossomed. And sober looks good on you. Bob did not hand out lines like that. I have carried it ever since.
 
 Near the end I went to see him, and it was the first time I had ever been in a room with someone actively dying. The place was full. People he'd carried in the rooms, people who'd carried him, a steady stream coming to sit with him and say what they needed to say while he could still hear it. My first thought was a small, honest panic: how was I supposed to feel all of this without anything to take the edge off? I had never done grief without a buffer. The panic didn't last, and what replaced it wasn't sadness. It was gratitude, and a level calm, the plain fact of being there and not needing to be anywhere else. He told me once that sobriety wasn't something he fought every morning; it was a decision he had made a single time and never went back to revisit, and he carried it all the way to the edge of his life. Decades older than me, and still showing me how it was done. That was when I understood what being sober had bought me: the ability to stay in a room like that and not run.
 
@@ -1619,7 +1619,7 @@ My father died on Christmas Day, 2025.
 
 When we pulled up to the funeral home, his truck was parked out front, NJERZ on the Florida plates. A man who moved all the way to the Gulf and still made his truck say Jersey. That's what undid me, not the building, not the door. The plates. But before any of it, there was a breakfast.
 
-Hope and I went to church that morning and ate before we drove up to Raleigh. Dad had beaten cancer three times by then. This last round looked like another miracle, and with him, miracles had started to feel ordinary. The esophagus and the stomach in 2015, when he nearly died. The liver scare in 2018 that never needed treatment. And in 2024, the lungs and the lymph nodes, when he was at death's door, and he walked back out.
+Hope and I had gone down for a visit, and we went to church that morning and ate with Dad before the drive back up to Raleigh. Dad had beaten cancer three times by then. This last round looked like another miracle, and with him, miracles had started to feel ordinary. The esophagus and the stomach in 2015, when he nearly died. The liver scare in 2018 that never needed treatment. And in 2024, the lungs and the lymph nodes, when he was at death's door, and he walked back out.
 
 There was an opening in hospice, at a company I had already given ten years to. At the table that morning, Dad told me what he always told me. Listen to your boss. Work hard. He had put that in me a long time ago, and he said it again like it was the first time.
 
@@ -1665,7 +1665,7 @@ Chris credited Lynda, too, called her the reason Dad got his strength and his jo
 
 And Chris said one more thing that stayed with me. He was the one who had talked Dad into the immunotherapy, and he said that knowing everything — the rashes, the pacemaker, the third round that finally took its toll — he would choose it again, because it bought the time in which Dad held his granddaughter. That sentence did something to me. It took the decision out of the language of treatment and put it where it had belonged all along: the language of love.
 
-Chris had carried Dad's pride his whole life — the golden child, in the best sense of it, the kid who was nearly held back in grade school and rewrote every record I set, the son who stayed close and never forgot where he came from. I had carried something else. Chris carried his pride. I carried his rescue. Dad knew the difference, and he loved us accordingly. I think he saw me as a little more fragile — not weaker, exactly, but breakable in places I didn't always know how to name. He was right.
+Chris had carried Dad's pride his whole life — the golden child, in the best sense of it, the kid who was nearly held back in grade school and rewrote every record I set, the son who stayed close and never forgot where he came from. I had carried something else. Chris carried his pride. I carried his rescue. Dad knew the difference, and he loved us each in the way we needed. I think he saw me as a little more fragile — not weaker, exactly, but breakable in places I didn't always know how to name. He was right.
 
 Then I stood at the casket. I looked down at my father, and it wasn't him anymore. The body was there, but he wasn't. I knew his soul had already gone on ahead. I had watched that line get crossed in other people's rooms more times than I can count, and I knew it the moment I saw it. It still didn't stop the feeling. I stood there and loved him, for everything he was, and everything he wasn't.
 
@@ -1748,7 +1748,7 @@ My father always made a big deal of my sobriety anniversary. Every January 9. My
 
 A few days after we buried my father, I cried in the office of a nurse I'd known for an hour. She didn't reach for a phrase or try to fix it. She just stayed in the room with me. You never know when the grief is going to hit, or who's going to be standing there when it does.
 
-That morning I walked into one of the assisted-living communities I call on for a routine visit. Linda was at the round table near the nurses' station. She'd been a nurse a long time, you could see it in how she carried herself. Compassionate, but not someone who let everybody in. A steadiness I recognized. We started talking. She was from the Buffalo area, upstate New York. We joked. It felt easy in a way things hadn't in days.
+That morning I walked into one of the assisted-living communities I call on for a routine visit. Linda — no relation to my stepmom Lynda — was at the round table near the nurses' station. She'd been a nurse a long time, you could see it in how she carried herself. Compassionate, but not someone who let everybody in. A steadiness I recognized. We started talking. She was from the Buffalo area, upstate New York. We joked. It felt easy in a way things hadn't in days.
 
 Then I told her we had buried my dad on Saturday. Her face changed. You could tell she felt it. She just sat there with me. And I let myself go. I wouldn't call it a breakdown, but I cried in her office, that raw, in front of someone I barely knew, and I don't know whether you're supposed to cry in front of a nurse you just met at a facility you're calling on for work. But in that moment I felt something I can only call spiritual, a sense that God had put this person in my path. Not for referrals or business. For this.
 
