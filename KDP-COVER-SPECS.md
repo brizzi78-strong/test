@@ -29,16 +29,19 @@ Notes for the designer:
   sits at the top of the back panel, small italic, set apart from the body copy.
   It is a comparison, NOT an endorsement — never style it as a quote or attribute
   it to anyone.
-- SUBTITLE (settled): the approved wrap reads "A Memoir of the Father Who Stayed."
-  The interior title page and EPUB metadata match. Use the same subtitle in the
-  KDP listing.
-- TAGLINE REPLACEMENT (designer task, REQUIRED): remove "IMMIGRANT. ADDICT. SON."
-  from both places it appears (under the subtitle on the front panel, and on the
-  spine below the title). On the FRONT PANEL, in its place under the subtitle, set
-  the audience line: "For the caregiver of a loved one in addiction, disease, or
-  loss." (small caps or italic, quieter than the subtitle). On the SPINE, do not
-  replace — spine shows title + author + press logo only. (Author decision
-  2026-07-10.)
+- SUBTITLE (settled 2026-07-10, author's exact wording): "For the Caregiver of a
+  Loved One in Addiction, Disease, or Loss." The interior title page and EPUB
+  metadata match. Use the same subtitle in the KDP listing.
+- DESIGNER FIXES for the July 10 wrap revision (all REQUIRED):
+  1. Change the red script line under the title from "For Those Who Love an
+     Addict, Face Loss, or Need Hope" to the exact subtitle above.
+  2. Remove "IMMIGRANT. ADDICT. SON." from the front panel (already off the
+     spine — good).
+  3. PRESS NAME: the revision reads "CARDINALS PROMISE PRESS" (plural) on the
+     spine and the back panel. The imprint is "CARDINAL PROMISE PRESS" —
+     singular Cardinal — matching the copyright page and ISBN registration.
+  4. Barcode: still shows placeholder 978-1-963342-01-0. Replace with a barcode
+     for 979-8-9966446-0-5, or clear the zone and let KDP print its own.
 - BARCODE (designer task, REQUIRED): the approved wrap still carries a placeholder
   barcode reading ISBN 978-1-963342-01-0, which is NOT this book's ISBN. Replace
   with a barcode for 979-8-9966446-0-5, or clear the zone and let KDP print its own.

@@ -1,6 +1,6 @@
 # **THE CARDINAL'S PROMISE**
 
-*A Memoir of the Father Who Stayed*
+*For the Caregiver of a Loved One in Addiction, Disease, or Loss*
 
 **ROB BRIZZI**
 
