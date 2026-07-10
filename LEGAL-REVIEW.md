@@ -86,3 +86,5 @@ umbrella all pseudonyms live under.
 **DECIDED (July 9, 2026):** Byline is ROB BRIZZI — family surname restored throughout the interior; matches cover, Bowker ISBNs, and blurb letters. All other pseudonyms (Ignacio/Bautista, Donna, Dana/Mark/Jay, Sandra, Trudy, Christian, Detroit Frank, Asha, Nick, Kathy, Earl, Major, Grant Shaw, Mack Cole, Cain and Jacob) remain in place pending the author's calls.
 
 **July 10, 2026 (corrected):** The Allendale Bar and Grill outburst was LOU's, not the brother's — scene moved to ch3 as a Lou story (his war with drink, why he stopped). Nick's pending sign-off scope reverts to the DMV story only.
+
+**July 10, 2026:** Brother's real name CHRIS restored throughout (temporary 'Nick' retired), per author. His sign-off conversation still recommended for ch12 (DMV story).
