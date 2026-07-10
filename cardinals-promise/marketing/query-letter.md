@@ -35,7 +35,8 @@ rehab coverage, the "plateaued" denial that families never learn they can
 appeal, the hospice benefit most families fear when they should be reaching
 for it, and the after-death hour when the right first call is rarely 911. The
 manuscript has been reviewed for clinical, benefits, and legal accuracy, with
-a Doctor of Pharmacy as project consultant.
+medication content reviewed by Hope Brizzi, PharmD, the book's project
+consultant.
 
 I am a Certified Dementia Practitioner with a career across home health,
 hospice, senior living, and healthcare — years of sitting with families in

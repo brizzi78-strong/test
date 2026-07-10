@@ -1,7 +1,7 @@
-# Aging Parent Cardinal's Toolkit — Trifold Crisis Companion
+# The Cardinal's Toolkit: Caregiver Hero — Trifold Crisis Companion
 
 A laminated, fridge-worthy quick-reference companion to the full handbook
-(*Aging Parent Cardinal's Toolkit*, Cardinal's Promise Series). It is the
+(*The Cardinal's Toolkit: Caregiver Hero*, Cardinal's Promise Series). It is the
 bird's-eye map; the full toolkit is the deep woods guide.
 
 **Format:** US Letter (11" × 8.5"), landscape, trifold (roll fold), printed
@@ -29,7 +29,7 @@ land exactly where a reader flips to.
 
 ## Front cover
 
-**Aging Parent Cardinal's Toolkit**
+**The Cardinal's Toolkit: Caregiver Hero**
 
 *The First Steps When a Parent Suddenly Needs Help*
 
@@ -67,12 +67,12 @@ Pick the line that matches today, then work the panels to the right.
 - ☐ Call doctor — ask: *"Is this reversible?"*
 - ☐ Call siblings — short, factual update
 - ☐ Contact Area Agency on Aging — Eldercare Locator **1-800-677-1116**
-- ☐ Call NC SHIIP for Medicare questions — **ncdoi.gov/shiip**
-- ☐ Call county DSS for Medicaid / Special Assistance questions — **epass.nc.gov**
+- ☐ Call SHIP for free Medicare counseling — **1-877-839-2675** · shiphelp.org
+- ☐ Call your county or state social services office for Medicaid questions — **Medicaid.gov**
 - ☐ Start the emergency binder
 
 *Dementia crisis at any hour: Alzheimer's Association 24/7 Helpline
-**1-800-272-3900**. Local help anywhere in NC: dial **211**.*
+**1-800-272-3900**. Local help anywhere in the U.S.: dial **211**.*
 
 ---
 
@@ -97,7 +97,7 @@ These are not "wait and see." Act today:
 - Is rehab needed?
 - Is home still safe?
 - What does Medicare cover?
-- Do we need Medicaid planning? *(See an NC elder-law attorney before moving any money.)*
+- Do we need Medicaid planning? *(See an elder-law attorney before moving any money.)*
 - Is hospice appropriate? *(Any family member can call for a free evaluation.)*
 
 ## Back panel footer (same panel, below)
@@ -106,6 +106,6 @@ These are not "wait and see." Act today:
 
 *"Take the next right step."*
 
-Small print: General educational information for North Carolina families —
+Small print: General educational information for family caregivers —
 not legal, medical, financial, or insurance advice. Figures and programs
 change; verify with the relevant agency.
