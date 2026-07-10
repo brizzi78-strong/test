@@ -29,11 +29,14 @@ Notes for the designer:
   sits at the top of the back panel, small italic, set apart from the body copy.
   It is a comparison, NOT an endorsement — never style it as a quote or attribute
   it to anyone.
-- SUBTITLE (settled): the approved wrap reads "A Memoir of the Father Who Stayed"
-  with the tagline "IMMIGRANT. ADDICT. SON." The interior title page and EPUB
-  metadata now match ("A Memoir of the Father Who Stayed"). Use the same subtitle
-  in the KDP listing. The tagline is cover styling only — not part of the official
-  subtitle.
+- SUBTITLE (settled): the approved wrap reads "A Memoir of the Father Who Stayed."
+  The interior title page and EPUB metadata match. Use the same subtitle in the
+  KDP listing.
+- TAGLINE REMOVAL (designer task, REQUIRED): remove "IMMIGRANT. ADDICT. SON."
+  entirely — it appears in two places on the current wrap: under the subtitle on
+  the front panel, and on the spine below the title. Front panel shows title +
+  subtitle only; spine shows title + author + press logo (author decision
+  2026-07-10).
 - BARCODE (designer task, REQUIRED): the approved wrap still carries a placeholder
   barcode reading ISBN 978-1-963342-01-0, which is NOT this book's ISBN. Replace
   with a barcode for 979-8-9966446-0-5, or clear the zone and let KDP print its own.
