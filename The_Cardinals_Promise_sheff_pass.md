@@ -407,6 +407,10 @@ For as long as I could remember I'd carried a quiet question, whether I was real
 
 It took me years to see what he had handed me. I make my living showing up. I walk into rooms other people can't bring themselves to enter, and I stay. I don't always know what to say. But I know how to be there, and I learned it from a man who drove me up to tournaments in upstate New York, and an hour out of his way for White Castle because I asked. Everything I do at a bedside, I first learned in his car.
 
+# **THE DRIVES · I**
+
+*A quarter to eight on a Saturday morning, and he was already dressed, keys in his hand. You want to take a ride? Five hours to Cooperstown, a dim room full of gloves, a long look at a ball Babe Ruth touched, five hours back. I slept most of the way home. He never said why. He drove.*
+
 PART TWO
 
 # **THE MAT**
@@ -713,6 +717,10 @@ If he was in pain he wouldn't use the word. He wouldn't give himself even the la
 
 Miami changed my life, and the man who made it possible was sharing a rental in Mahwah, paying back loans for years, never once making the cost feel like something I owed him. I graduated in May 2000, Lou and my mom in the crowd, tracking the sea of identical caps until they found mine. The car was pointed west. California was waiting. I had everything I needed and no idea what I was carrying.
 
+# **THE DRIVES · II**
+
+*Ohio, junior year. The gray had gotten into my voice, and he heard it over the phone. He didn't ask questions. He got in the car in New Jersey and drove ten hours, no call ahead. A doctor's office, then a booth — laminated menus, free refills, him across from me. Then he turned around and drove back. Twenty hours of road to sit across from his kid in a booth. He drove.*
+
 PART THREE
 
 # **THE FALL**
@@ -741,6 +749,8 @@ If the DMV didn't prove we had no concept of consequences, there's the night he 
 They release us and I do the responsible-older-brother thing. That's it, I announce. We got arrested. We're staying in tonight. Nick and John look at me like I've started speaking another language. Screw that, we're going out. They had driven eight hours with the Jerky Boys for this weekend and they were not about to spend it watching me sulk. So we go back out, to a different fraternity, where, as luck would have it, I'd been dating one of the brothers' girlfriends, and a cop walks in. We come within a hair of getting arrested twice in one night, same campus. My mother found out about the first arrest and I heard about it for a year: how could you let your brother get arrested at your school? I never did tell her how close we came to a sequel.
 
 Nick and I have never had a falling out. Not once. You'd assume my addiction would have detonated us, and it strained plenty when I was at my worst in California, but it never broke. Not even the night he sat me down and gave me the ultimatum: admit you have a problem, or admit you have mental health issues. Pick one. I wasn't angry. I respected him too much to be angry. He loved me enough to tell me the truth when everyone else had run out of it. Through all the pills and the lies and the wreckage, I always knew my brother was trying to save my life. He may be the only person who could have said that sentence and had me actually hear it.
+
+The disease didn't single me out, either. Nick had his own seasons with hard alcohol, and hard alcohol made his temper unpredictable. There was a night at the Allendale Bar and Grill, a family outing, my mother and my aunt Donna at the table, that blew up so fast nobody can remember anymore what set it off. A fist came down on the table. Everyone scattered for the car, Nick right behind them, and a hand got caught in the car door on the way out. The next day the remorse had him wrecked. That was the pattern when he drank: heat, then regret. I don't tell it to even any score. I tell it because the current ran through the whole family, not just me — and because that night is the reason Lou stopped drinking.
 
 After I got sober I talked him into taking a manager job in Pensacola, so for once we were in the same city. Nick is a workaholic, and I don't mean a guy who works hard, I mean the clinical definition. I'd call him to come out, I've got people I want you to meet, and he'd say no, I've got to work. Every time. But every so often he'd surface, and when he did he was generous to a fault. Let's take a trip, he'd say, and the next thing I knew I was in Costa Rica, in a tiny rental Hyundai they had warned us about at El Volcan, on a road that was less a road than a riverbed of rock. The Hyundai barely made it. So did we. That was the formula for every trip we took: Nick deciding, me going along, the two of us barely making it and calling it a vacation.
 
@@ -1015,6 +1025,10 @@ I tried to brush it off. Tried to change the subject. But she saw it. I think th
 
 It was a few weeks before everything came to a head. Before Nick called. Before my dad drove me out to a farmhouse in the panhandle and signed the paperwork himself.
 
+# **THE DRIVES · III**
+
+*November 2008. A rented U-Haul pointed north out of West Palm Beach, my father at the wheel, sixty-seven years old, driving his son home from the dead. A cardinal had landed on the U-Haul before we pulled out. Grandma's looking out for us, he said. He drove.*
+
 PART FOUR
 
 # **GETTING SQUARE**
@@ -1231,6 +1245,10 @@ Major looked at the pad. Didn't soften it, didn't minimize it. Okay, he said. No
 The debt didn't disappear fast. But I stopped flinching when bills came. I started answering calls from numbers I didn't recognize. My past stopped feeling like it was following me, not because it was gone, but because it was being addressed. Not redemption. Nothing was being erased. Responsibility. One payment, one opened envelope, one answered call at a time.
 
 The courts came last. In 2013, four years sober, I wrote to the court myself and petitioned to have the cases dismissed. No lawyer this time. In 2002 that work had taken the Taylor firm and ten thousand dollars. In 2013 it took a letter from a sober man who had done everything the court asked. The dismissals came through. No record at all.
+
+# **THE DRIVES · IV**
+
+*New York State, weekend after weekend, however far the bracket went. He'd worked the night before and never talked about the miles. It was the rides home I kept: the dark, the quiet, the feeling that we had done the thing together. Love, not announced. Earned, together. He drove.*
 
 PART FIVE
 
@@ -1453,6 +1471,10 @@ Around that same stretch the recognition I'd chased my whole life finally showed
 I talked to Lou about Frank one evening. I don't know why this is hitting me so hard, I said. I did everything right. He didn't hesitate. That's not why it's bothering you. He was right. Frank hadn't needed me to fix anything. He'd needed me in the room. I was being let into places where presence was the only thing left to offer, and something in me already knew how to do that. Not as a technique. As a practice. An old man dying sober at eighty-eight showed me that the most you can do at that edge is refuse to leave. Years later, that became the whole job.
 
 Jason Huet has seen both halves of my life. Next door in Stanton Hall at eighteen, and now a doctor who sees from the clinical side what I see at the bedside. He told me once what he sees, and he dates it the way I do, from the day I got sober: the compassion, and how close I let myself get to the people in the beds. Then he said the sentence I've never gotten over. I wouldn't want anyone else to be there for my patients. From a man who knew me when, that's worth more than anything the old life ever chased.
+
+# **THE DRIVES · V**
+
+*Spring 2025. Our car pointed north out of Pensacola, seventeen years of living near him somewhere back in the mirrors. He had told me to go — that was always his way, more concerned that we were okay than that we were close. I didn't know it was the last of the old kind of drive, the kind where he was still at the other end of the road. This time, I drove.*
 
 PART SIX
 

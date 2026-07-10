@@ -84,3 +84,5 @@ umbrella all pseudonyms live under.
 **Temporary (July 9, 2026), superseding the earlier keep-with-approval entries for the blind-review pass:** Mager -> Major, Quint Studer -> Grant Shaw, Matt Campbell -> Mack Cole; EntreCon reference removed. Their real-name approvals remain on file; restore any or all before print.
 
 **DECIDED (July 9, 2026):** Byline is ROB BRIZZI — family surname restored throughout the interior; matches cover, Bowker ISBNs, and blurb letters. All other pseudonyms (Ignacio/Bautista, Donna, Dana/Mark/Jay, Sandra, Trudy, Christian, Detroit Frank, Asha, Nick, Kathy, Earl, Major, Grant Shaw, Mack Cole, Cain and Jacob) remain in place pending the author's calls.
+
+**July 10, 2026:** Allendale Bar and Grill scene added to ch12 — Nick's pending sign-off must now cover his alcohol struggles and that night, in addition to the DMV story.
