@@ -289,7 +289,7 @@ I didn't understand yet that there'd been a father before him, a man there one s
 
 Lou was not a saint, and I won't pretend he was. He had a temper that showed up at the wrong moments, and he knew it about himself — he had a name for it, his Mr. Hyde moments. Most of it wasn't even anger, really; it was how he processed things he didn't like, out loud and with heat, and once a mood had him it was hard to pull him out of it. He could be angry at the wrong time, and he could turn around and produce a warmth so unexpected it changed the temperature of a room. He was a whole man, complicated the way real fathers are when you finally see them clearly. Loving him meant learning to hold both truths at once. Some moments were hard. The whole person was worth holding onto.
 
-Hard alcohol brought out the worst of it, and for a stretch Lou had his own war with the drink. There was a night at the Allendale Bar and Grill — a family outing, my mother and my aunt Donna and Chris at the table — that blew up so fast nobody can remember anymore what set it off. His fist came down on the table. Everyone scattered for the car, Lou right behind them, and a hand got caught in the car door on the way out. The next day the remorse had him wrecked. That was the pattern when he drank: heat, then regret. That night is a big part of why my father stopped drinking. I think it's also part of why, years later, he never lectured me from a high place about my own disease. He knew the current from inside. But once he decided you were his, that settled it. He was there for the early mornings and the late nights, the school conferences and the wrestling matches, the hospital waiting rooms and the church basements, and never kept a ledger of it. He had no use for talk about sacrifice. He just lived it.
+Hard alcohol brought out the worst of it, and for a stretch Lou had his own war with the drink. There was a night at the Allendale Bar and Grill — a family outing, Lou and my mother and my aunt Donna and Chris at the table — that blew up so fast nobody can remember anymore what set it off. His fist came down on the table. Everyone scattered for the car, Lou right behind them, and a hand got caught in the car door on the way out. The next day the remorse had him wrecked. That was the pattern when he drank: heat, then regret. That night is a big part of why my father stopped drinking. I think it's also part of why, years later, he never lectured me from a high place about my own disease. He knew the current from inside. But once he decided you were his, that settled it. He was there for the early mornings and the late nights, the school conferences and the wrestling matches, the hospital waiting rooms and the church basements, and never kept a ledger of it. He had no use for talk about sacrifice. He just lived it.
 
 Where he came from explains some of it. His father sold produce, and every so often three men in suits would walk in and whatever business they had got done in the back. When the relatives came over from Italy, Lou was the boy who lost his bed to them and slept in the attic. He carried that longer than anybody knew. Years later, during a stretch when he was going to therapy, it came up out of him at a family Christmas, an old man yelling at his uncle about a boy who had to sleep in the attic. The temper was the Italian kind you see in the movies. It was older than any of us, and it was never really about us.
 
@@ -1031,7 +1031,7 @@ It was a few weeks before everything came to a head. Before Chris called. Before
 
 # **THE DRIVES · III**
 
-*November 2008. A rented U-Haul pointed north out of West Palm Beach, my father at the wheel, sixty-seven years old, driving his son home from the dead. A cardinal had landed on the U-Haul before we pulled out. Grandma's looking out for us, he said. He drove.*
+*November 2008. A rented U-Haul pointed north out of West Palm Beach, my father at the wheel, sixty-seven years old, driving his son home from the dead. As we pulled out, a cardinal landed on the U-Haul. Grandma's looking out for us, he said. He drove.*
 
 PART FOUR
 
@@ -1291,7 +1291,7 @@ The moment I knew came quietly. I was wrestling an old insecurity, the kind I ha
 
 We'd been dating about a month when Dave Ramsey's voice filled the car. Neither of us reached to change it. When the segment ended she said: I have a hundred thousand dollars in student loans. Not embarrassed, not defensive. Factual. We could pay it off, I said. We? If this goes where I think it's going, yeah. The two of us. That's my debt, she said, from before I met you. If we do this, it's our debt. She was quiet a long time. Finally: I want to be free. Then we'll get free, I said.
 
-Lou never took to the plan. When he heard us talking budgets and cutting back, something in him bristled. You gotta enjoy your life, he said. You can't cut everything out. It came out with a little heat, and the heat wasn't aimed at us — that was just how he processed what he didn't like. A man who tipped twenty dollars on principle was never going to love a budget. He heard frugality and understood deprivation.
+Lou never took to the plan. When he heard us talking budgets and cutting back, something in him bristled. You gotta enjoy your life, he said. You can't cut everything out. It came out with a little heat, and the heat wasn't aimed at us — with Lou it rarely was. A man who tipped twenty dollars on principle was never going to love a budget. He heard frugality and understood deprivation.
 
 ### *Are You Saved?*
 
@@ -1603,7 +1603,7 @@ Hope and I went to church that morning and ate before we drove up to Raleigh. Da
 
 There was an opening in hospice, at a company I had already given ten years to. At the table that morning, Dad told me what he always told me. Listen to your boss. Work hard. He had put that in me a long time ago, and he said it again like it was the first time.
 
-When I heard he had pneumonia, I wasn't scared. I knew he would make it. He always made it. Hope and I would drive down Friday and see him, and he would be sitting up, telling a story. That was the plan. That isn't what happened.
+When I heard he had pneumonia, I wasn't scared. I knew he would make it. He always made it. Hope and I would drive down that weekend and see him, and he would be sitting up, telling a story. That was the plan. That isn't what happened.
 
 Something in me shut down before he was gone. I couldn't pick up when my stepmom called. I went somewhere I had gone as a little boy when I was scared, that same quiet, far-off place, the dissociation I had learned before I had a word for it.
 
@@ -1845,7 +1845,7 @@ He could enjoy the game even when the season was lost.
 
 He still wanted to be useful, all the way to the end.
 
-He let people find the doorway they could walk through.
+He taught me that care is learning the doorway a person is willing to walk through.
 
 He stayed.
 

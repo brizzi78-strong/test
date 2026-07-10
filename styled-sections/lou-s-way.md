@@ -16,6 +16,6 @@ He could enjoy the game even when the season was lost.
 
 He still wanted to be useful, all the way to the end.
 
-He let people find the doorway they could walk through.
+He taught me that care is learning the doorway a person is willing to walk through.
 
 He stayed.
