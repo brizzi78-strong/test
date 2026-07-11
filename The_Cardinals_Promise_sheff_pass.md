@@ -368,7 +368,7 @@ He didn't make a thing of it. He finished tucking me in the way he had every oth
 
 Choosing one father didn't erase the other. I want to be careful about that, because people hear adoption and think one family slides into the space the other left, clean as that. It doesn't. A parent who loses a child can't set another one in the empty spot and call it even, and it doesn't run the other way either. I had chosen Lou and I meant it, and there was still a room inside me with Horacio's name on the door.
 
-For years I carried a guilt too heavy to carry. I knew, the way a kid knows things without being told, what losing me had done to him, and somewhere in me I had signed for it, as if I were the one who had done the leaving. None of it had been mine to decide. But guilt doesn't check the facts. It just moves in, and today there is no one left to blame.
+For years I felt guilty about him. I knew, the way a kid knows things without being told, what losing me had done to him, and some part of me decided it was my fault, as if I were the one who had done the leaving. I was four. Nothing about it had been mine to decide. The guilt didn't care. It stayed anyway.
 
 Then they changed my name, and that one was harder. Claudio became Robert Brizzi. On paper it was clean and it was right, and I know that now. Back then it felt like a correction, like the old name had been a mistake somebody was fixing, and I was the mistake.
 
