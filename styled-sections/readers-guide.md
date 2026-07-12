@@ -8,13 +8,13 @@
 
 3. When eight-year-old Claudio becomes Robert, it feels like "erasing me." Years later, Rob deliberately calls his birth father Horacio — not Papa, not Dad. What is the book saying about names, and who gets to give them?
 
-4. Wrestling taught Rob that "the body quits when the mind gives it permission." Where does that lesson save him later — and where does the same drive nearly destroy him?
+4. On the mat, when Rob's body wanted to quit, he learned to tell it no. Where does that lesson save him later — and where does the same drive nearly destroy him?
 
 5. Lou almost never explains himself: he drives to Cooperstown, buys the Walkman, sleeps on the floor of a wrecked apartment, sets out a sesame bagel. Which of his silent gestures stayed with you, and why do you think the book gives him so few speeches?
 
-6. "The rescue didn't save me. It kept me alive long enough to be saved." What is the difference, in this book, between rescuing someone and saving them — and who else lives inside that difference?
+6. "The rescue didn't get me sober. It kept me alive long enough to get there." What is the difference, in this book, between rescuing someone and saving them — and who else lives inside that difference?
 
-7. Rob's mother wired money she told herself was for rent. The book says the disease "takes the people who love you most and turns their love into one more thing to use." Where is the line between loving an addict and enabling one? Did the book change where you'd draw it?
+7. Rob's mother wired money she told herself was for rent. "The lie I lived was letting her believe her money was keeping her son fed." Where is the line between loving an addict and enabling one? Did the book change where you'd draw it?
 
 8. After seventeen years sober, grief drove Rob into an emotional rock bottom, the first one he ever had to feel all the way through. How is the sober breakdown after Lou's death different from his using-era bottoms? How is it the same?
 
