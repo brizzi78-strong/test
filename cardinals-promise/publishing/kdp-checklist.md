@@ -21,11 +21,11 @@ The two files KDP asks for are in this folder:
 1. **Title:** The Caregiver's Cardinal Toolkit · **Subtitle:** A Hero's Guide to Caring for an Aging Parent
 2. **Series:** Cardinal's Promise (optional but set it — the memoir joins it later)
 3. **Author:** Rob Brizzi · **Contributor:** Hope Brizzi, PharmD — Consultant (optional)
-4. **Description:** start from the back-cover copy; first sentence is the hook Amazon shows
+4. **Description:** paste the ready HTML from `marketing/amazon-listing.md` (first 200 characters are the visible hook; no URLs allowed)
 5. **ISBN — IMPORTANT:** the designed cover shows ISBN 978-1-963342-02-7, which is **invalid** (fails the ISBN-13 checksum) and must not be printed. Real options: take KDP's free ISBN (fastest), or use your own from Bowker if you want to own the record across printers (required if you later add IngramSpark). Either way, put the assigned number on the copyright page — the master HTML has an `ISBN: [to be assigned]` slot — and tell me: I'll set it and regenerate the interior
 6. **AI content question:** KDP asks whether AI tools were used. Answer it accurately per your records of how the book was produced; this is a legal attestation on your account, and the book itself carries no disclosure by your decision
-7. **Categories:** Health & Wellness → Aging; Family & Relationships → Eldercare; Self-Help → Death, Grief, Bereavement
-8. **Keywords (7 slots):** caregiver guide aging parents · Medicare hospice handbook · dementia caregiver support · elder care planning workbook · sandwich generation help · aging parent checklist · caregiver burnout
+7. **Categories** (verified storefront nodes — see `marketing/amazon-listing.md`): Parenting & Relationships → Aging Parents; Health, Fitness & Dieting → Aging; Medical Books → Medicine → Hospice Care
+8. **Keywords (7 slots — final list in `marketing/amazon-listing.md`):** elder care planning workbook for families · sandwich generation help for adult children · hospital discharge planning for seniors · medicare medicaid long term care costs · end of life decisions and comfort care · dementia memory loss what to do next · power of attorney advance directive checklist
 9. **Print options:** Black & white interior *(cheaper — but this book's color coding is its identity: choose* **premium color** *and check the printing cost against your target list price)*, white paper, 8.5 × 11, matte cover (matches the art), no bleed
 10. **Pricing:** after choosing color option, KDP shows printing cost; set list price for a sane royalty (60% of list minus printing, Amazon channel)
 11. **Order a physical proof** before clicking Publish — check the spine alignment, gutter comfort, and color fidelity in hand
