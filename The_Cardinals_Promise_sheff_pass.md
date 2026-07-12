@@ -63,36 +63,35 @@ Prologue
 
 12. My Brother's Keeper
 13. The Performance Trap
-14. The Cell
-15. Checking Boxes
-16. West Palm Beach
-17. New Orleans
+14. Checking Boxes
+15. West Palm Beach
+16. New Orleans
 
 **Part Four — Getting Square**
 
-18. Chumuckla
-19. The Quiet Years
-20. Horacio
-21. The Line
-22. The Salmon Palace
-23. They Gave Me a Chance
-24. Making Amends
+17. Chumuckla
+18. The Quiet Years
+19. Horacio
+20. The Line
+21. The Salmon Palace
+22. They Gave Me a Chance
+23. Making Amends
 
 **Part Five — Hope**
 
-25. Hope
-26. Gulf Breeze
-27. The People You Meet When You Stop Drinking
-28. Sobriety Meets Hospice
+24. Hope
+25. Gulf Breeze
+26. The People You Meet When You Stop Drinking
+27. Sobriety Meets Hospice
 
 **Part Six — The Last Chapter**
 
-29. The Detour
-30. Five Weeks
-31. The Days After
-32. The First Honest Mile
-33. What Grief Taught the Job
-34. The Table
+28. The Detour
+29. Five Weeks
+30. The Days After
+31. The First Honest Mile
+32. What Grief Taught the Job
+33. The Table
 
 Epilogue: The Cardinal's Promise
 
@@ -114,17 +113,50 @@ About the Author
 
 # **PROLOGUE**
 
+*"He brought me up also out of an horrible pit, out of the miry clay, and set my feet upon a rock, and established my goings."*
+*— Psalm 40:2*
+
 **Tijuana, Mexico. 2005.**
 
 His hands were around my throat before I understood he had crossed the cell. A small man, wired, moving too fast, meth or something close to it, his eyes too wide and his whole body ready to fly apart. Somebody called him Rico. His face came an inch from mine, and the only English he had came out in a rasp. "Gringo. Gringo. Money."
 
-"No tengo dinero," I told him. The words came out thin. They had taken everything hours before I reached that door — my watch, my bag, whatever was in my pockets.
+"No tengo dinero," I told him. The words came out thin. It was true. They had already taken everything.
 
 "Money. Money." The fingers pressed, eased, pressed again. His breath was sour and chemical. Then the hands dropped. He muttered something, backed to the wall, and the dark took him.
 
-That is where the worst night of my life had set me down: a concrete floor in a Mexican holding cell. Nobody was coming, because nobody knew where I was. Not my father. Not my brother. Not my mother.
+The night had started ordinary. A workday, a Tuesday in my San Diego years, and when I was done I crossed into Tijuana. I'd crossed enough times to think I understood how it worked, and that was the problem. Do something dangerous often enough and it starts to feel like a run.
 
-I had been carried out of Mexico City as a child, to be given a better life. Somehow I had found my way back to a concrete floor inside the same country, with everything I'd built somewhere far away. This is the story of how I came back from that floor, and why my father never stopped coming for me.
+This time a cop saw the watch.
+
+He took it first. Then the bag. Then everything else in my pockets. For a moment I thought that might be the end of it, that I'd be sent back across the line with one more story I'd never tell. Then he pulled me out of the car.
+
+It wasn't a prison. It was a holding cell in a building I couldn't have found again the next day. I didn't know where I was, who knew I was there, or how long they meant to keep me.
+
+The smell reached me before the door shut. Sewer and vomit and mold, sweat over the top of it, something rotten underneath. When it closed, the dark seemed to move. I stood still and waited for my eyes to adjust. They didn't, not really. Shapes shifted. Breathing came from every direction. In the corner a wet cough ran too long and ended in a rattle. A rat crossed the floor after a cockroach, claws on concrete, the pounce, a soft crunch, and was gone.
+
+The men spoke Spanish faster than I could follow. It had been my first language once. Mexico was where I started. By now it was buried far enough down that I could hear it without holding it, and the words moved past me in pieces.
+
+Some of the men were gone in the head, rocking, laughing, talking to no one. Others sat with their backs to the wall and their eyes empty. A few just watched me. I didn't belong there, and they knew it. Rico was one of them.
+
+My throat burned. I wanted to put a hand to it and didn't. I wasn't going to let the room see it. I slid down the wall instead and sat, knees to my chest, the concrete cold through my clothes, my forehead down. I knew the position. My body found it before my mind caught up. Get small, stay quiet, don't hold anyone's eye, don't give the room a reason to pick you. It was the same shape I'd folded into as a boy when the yelling started.
+
+There was no bedroom this time. No hallway light, no mother down the hall. No father in the stands. And no one on earth knew where I was.
+
+Not my father. Not my brother. Not my mother. No one.
+
+I sat on a concrete floor in Mexico with my head on my knees, and the life I'd been performing, the sales job, the income, the watch, the lines I used to sound like more, was somewhere else. What was left was the smell, the dark, and my own breathing.
+
+I lost track of time. The voices flattened into noise. I thought about my mother, her hand around mine in the airport when I was four, the woman who carried me out of this country to give me a life. I'd come back to take myself apart. Then my father, Lou. That was worse. He'd chosen me, made me his son, sat in the bleachers and paid the bills and handed over money he didn't have, and never once made me feel I had to earn the place. And I'd put myself here.
+
+I wanted to pray and couldn't. I still believed, somewhere under it. I couldn't ask for help out of a hole I'd dug myself.
+
+The door opened. Light cut in. I looked up and stayed where I was, afraid it was for someone else, afraid to stand too fast. A man said something and waved me forward. I got up. My legs were wrong under me. I stepped around the wet places and around the men, past Rico, who didn't look at me. Outside the air wasn't clean, but it was air. Someone gave me back enough to walk out with. Not all of it. Enough.
+
+It wasn't the moment I changed. I was scared, and fear isn't surrender; fear wears off. I went back to Tijuana the next day. There was more running ahead of me, more lying, more damage. I'd seen how small my life had gotten. A cell, a rat, a man's hands on my throat, a concrete floor, and me folded against the wall hoping no one noticed me.
+
+I never told anyone. Not my father, my brother, my mother, my wife. Not a sponsor, not a priest. I carried it out of shame, and the longer I kept it hidden, the harder it got to say.
+
+I had been carried out of Mexico City as a child, to be given a better life. Twenty-three years later I had found my way back to a concrete floor inside the same country. This is the story of how I came back from that floor, and why my father never stopped coming for me.
 
 PART ONE
 
@@ -859,47 +891,6 @@ The Florida license felt like a loophole I'd found in the universe. Their comput
 
 **CHAPTER 14**
 
-## **The Cell**
-
-*"He brought me up also out of an horrible pit, out of the miry clay, and set my feet upon a rock, and established my goings."*
-*— Psalm 40:2*
-
-**Tijuana, 2005**
-
-The cell was the end of that night. It started as something ordinary, back in my San Diego years, before Florida. A workday, a Tuesday, and when I was done I crossed into Tijuana. I'd crossed enough times to think I understood how it worked, and that was the problem. Do something dangerous often enough and it starts to feel like a run.
-
-This time a cop saw the watch.
-
-He took it first. Then the bag. Then everything else in my pockets. For a moment I thought that might be the end of it, that I'd be sent back across the line with one more story I'd never tell. Then he pulled me out of the car.
-
-It wasn't a prison. It was a holding cell in a building I couldn't have found again the next day. I didn't know where I was, who knew I was there, or how long they meant to keep me.
-
-The smell reached me before the door shut. Sewer and vomit and mold, sweat over the top of it, something rotten underneath. When it closed, the dark seemed to move. I stood still and waited for my eyes to adjust. They didn't, not really. Shapes shifted. Breathing came from every direction. In the corner a wet cough ran too long and ended in a rattle. A rat crossed the floor after a cockroach, claws on concrete, the pounce, a soft crunch, and was gone.
-
-The men spoke Spanish faster than I could follow. It had been my first language once. Mexico was where I started. By now it was buried far enough down that I could hear it without holding it, and the words moved past me in pieces.
-
-Some of the men were gone in the head, rocking, laughing, talking to no one. Others sat with their backs to the wall and their eyes empty. A few just watched me. I didn't belong there, and they knew it. Rico was one of them, the wired little man who would come across the cell for my throat. You already know how that went.
-
-My throat burned. I wanted to put a hand to it and didn't. I wasn't going to let the room see it. I slid down the wall instead and sat, knees to my chest, the concrete cold through my clothes, my forehead down. I knew the position. My body found it before my mind caught up. Get small, stay quiet, don't hold anyone's eye, don't give the room a reason to pick you. It was the same shape I'd folded into as a boy when the yelling started.
-
-There was no bedroom this time. No hallway light, no mother down the hall. No Lou in the stands. And no one on earth knew where I was.
-
-Not my father. Not my brother. Not my mother. No one.
-
-I sat on a concrete floor in Mexico with my head on my knees, and the life I'd been performing, the sales job, the income, the watch, the lines I used to sound like more, was somewhere else. What was left was the smell, the dark, and my own breathing.
-
-I lost track of time. The voices flattened into noise. I thought about my mother, her hand around mine in the airport when I was four, the woman who carried me out of this country to give me a life. I'd come back to take myself apart. Then Lou. That was worse. He'd chosen me, made me his son, sat in the bleachers and paid the bills and handed over money he didn't have, and never once made me feel I had to earn the place. And I'd put myself here.
-
-I wanted to pray and couldn't. I still believed, somewhere under it. I couldn't ask for help out of a hole I'd dug myself.
-
-The door opened. Light cut in. I looked up and stayed where I was, afraid it was for someone else, afraid to stand too fast. A man said something and waved me forward. I got up. My legs were wrong under me. I stepped around the wet places and around the men, past Rico, who didn't look at me. Outside the air wasn't clean, but it was air. Someone gave me back enough to walk out with. Not all of it. Enough.
-
-It wasn't the moment I changed. I was scared, and fear isn't surrender; fear wears off. I went back to Tijuana the next day. There was more running ahead of me, more lying, more damage. I'd seen how small my life had gotten. A cell, a rat, a man's hands on my throat, a concrete floor, and me folded against the wall hoping no one noticed me.
-
-I never told anyone. Not my father, my brother, my mother, my wife. Not a sponsor, not a priest. I carried it out of shame, and the longer I kept it hidden, the harder it got to say.
-
-**CHAPTER 15**
-
 ## **Checking Boxes**
 
 *"Man looketh on the outward appearance, but the LORD looketh on the heart."*
@@ -951,7 +942,7 @@ She helped me find work through local connections, and for a while, in her quiet
 
 Then I left. I got an apartment in West Palm Beach, and I can't hand you a clean reason why. I told myself it was a fresh start. In West Palm the pills stopped being the whole story. The drinking came back, and I added cocaine. I all but stopped eating, and my body started filing its own reports — malnutrition, metabolic syndrome, the machinery quietly failing while I told anyone who asked I was fine. Boca was the last soft place. West Palm Beach was where the disease finally got me alone.
 
-**CHAPTER 16**
+**CHAPTER 15**
 
 ## **West Palm Beach**
 
@@ -996,7 +987,7 @@ Because here's the part I have to be honest about: this wasn't the moment I got 
 
 But I think about it all the time now. What did he owe me at that point, a grown man he'd adopted, who'd burned through everything, living off stolen electricity in a tower of Post-it notes, praying on a balcony to disappear? Nothing. He owed me nothing. And he slept on my floor, and bought me a bagel, and rented the truck, and found Marcus, and drove me home, and pointed at a bird and told me my grandmother was watching out for us. That's the man. That was always the man.
 
-**CHAPTER 17**
+**CHAPTER 16**
 
 ## **New Orleans**
 
@@ -1049,7 +1040,7 @@ PART FOUR
 
 *You can't pay back a man who never sent a bill. You can pass it on.*
 
-**CHAPTER 18**
+**CHAPTER 17**
 
 ## **Chumuckla**
 
@@ -1092,7 +1083,7 @@ Lou picked me up. Same truck, same calm. He didn't ask me to prove anything, did
 
 What came next was a long line of ordinary mornings I had to learn how to fill.
 
-**CHAPTER 19**
+**CHAPTER 18**
 
 ## **The Quiet Years**
 
@@ -1133,7 +1124,7 @@ The shape of those years was small on purpose. Up at five thirty. Coffee. A litt
 
 People asked why I did all of it. The meetings, the volunteering, the running, the calls at midnight. I only ever had one answer. It kept me sober. That was enough. By 2010 I was becoming someone who could be trusted. Not because of talent or drive. Because of repetition. In the quiet years, staying sober wasn't the boring part. It was the whole victory.
 
-**CHAPTER 20**
+**CHAPTER 19**
 
 ## **Horacio**
 
@@ -1176,7 +1167,7 @@ And every Fourth of July — my birthday — for as far back as my memory goes, 
 
 It took me a long time to understand that all of it, the Wednesday calls at seven from a borrowed line, the birthday calls, even the friend requests to people he had never met, was the love. I understood it. I still couldn't answer it. It hasn't stopped him from trying. There was never anyone else to try for. Chris and me. That's what he has. Do I have closure? I don't know. It's complicated, and I've stopped needing it not to be. What's simple is this: I honor Lou. One father kept calling. The other one kept coming.
 
-**CHAPTER 21**
+**CHAPTER 20**
 
 ## **The Line**
 
@@ -1195,7 +1186,7 @@ I left shaken. That line forced a choice I couldn't hand off. Go back to that wo
 
 The payoff came quietly, months later. A Tuesday morning in 2011, on my walk along the bay, coffee in a paper cup, the sun just coming up over the water. I wasn't thinking about anything in particular, and then I knew, the way you know your own name. I didn't want a drink. I hadn't wanted one in a long time, and it wasn't a fight anymore. I took another sip of coffee and kept walking.
 
-**CHAPTER 22**
+**CHAPTER 21**
 
 ## **The Salmon Palace**
 
@@ -1218,7 +1209,7 @@ When I got the keys I stood in the middle of that small living room longer than 
 
 That condo is where I finally stopped running. Years later, when Hope walked through that door the first time, she didn't say a word about the size. She noticed how it felt. We'd take a devotional out to the pool, or down to the dock, and read it together. The habit we still fall back into, the one that's just part of the house now, started there. We sold it in 2019, a hundred thousand in equity, and put it down on the home Hope and I built together in East Hill, the kind I'd never let myself imagine from across the street. From a one-bedroom salmon castle to a house we built from the ground up. That's what five years of showing up quietly can do.
 
-**CHAPTER 23**
+**CHAPTER 22**
 
 ## **They Gave Me a Chance**
 
@@ -1251,7 +1242,7 @@ It was familiar. I knew what it was like to need help and not want it, to be ash
 
 The days were long, doctors' offices, nursing homes, assisted livings, back roads. At night I still went to meetings, still called my sponsor. There was a moment, small and almost forgettable, sitting in my car after a visit with paperwork on the steering wheel, when I realized I wasn't waiting for something else anymore. This was enough. They gave me a chance, and I stayed ten years. There were sales awards in there; they mattered less than what they measured, that I'd finally found work I could do without performing. My manager Brenda Jahn was one of the best I ever worked for. She believed in me and pushed me, and that prepared me for everything that came next.
 
-**CHAPTER 24**
+**CHAPTER 23**
 
 ## **Making Amends**
 
@@ -1280,7 +1271,7 @@ PART FIVE
 
 *She said, I will love you no matter what. I'd heard that sentence once before — proved, not spoken.*
 
-**CHAPTER 25**
+**CHAPTER 24**
 
 ## **Hope**
 
@@ -1411,7 +1402,7 @@ They went into the kitchen together while I stayed in the living room. I could h
 
 Later he looked at me. You're steady, he said. Then: she is too. That was it. No formal blessing, no speech. He saw two people steady in the same direction and noted it.
 
-**CHAPTER 26**
+**CHAPTER 25**
 
 ## **Gulf Breeze**
 
@@ -1440,7 +1431,7 @@ He treated me like I mattered before I'd given him a single reason to believe I'
 
 The morning after my father died, all these years later, Quint was the first person to reach me. Your dad was a great man, his text said. Of everyone who would reach out in those days, he got there first, and he said the truest thing. God didn't put Quint in my life to rescue me. He put him there to show me what was possible. For the first time since getting sober, I believed there was more for me to do than stay alive.
 
-**CHAPTER 27**
+**CHAPTER 26**
 
 ## **The People You Meet When You Stop Drinking**
 
@@ -1471,7 +1462,7 @@ He became a salesman at BMW, and then the best they'd ever seen. The guy who'd b
 
 I started sober thinking mediocrity was the ceiling. Then I met Andy, Bob, Mager, and Matt. These are the people you meet when you stop drinking. Not the ones you expected, the ones God put in front of you. I thought I was too far gone for any of it. So did they, once. They walked into the room anyway, and so did I, and that turned out to be the whole thing. And the best one didn't come from a meeting at all. You've already met her.
 
-**CHAPTER 28**
+**CHAPTER 27**
 
 ## **Sobriety Meets Hospice**
 
@@ -1506,7 +1497,7 @@ PART SIX
 
 *Presence, repeated, until the end. His, then mine.*
 
-**CHAPTER 29**
+**CHAPTER 28**
 
 ## **The Detour**
 
@@ -1533,7 +1524,7 @@ The hardest part of leaving Novo wasn't the job. It was leaving that relationshi
 
 I told people I was going to take some time off. Be there for my dad. Be there for my mom. Be present the way I'd spent years telling families to be present, while there was still time. That was the plan. It's not what happened. What happened was I retreated into myself. The time I'd set aside became something else, a depression I didn't see coming and couldn't recognize from the inside. I was grieving what was already happening and what was coming, and the weight kept me from doing the thing I'd left my career to do. I know the name for it now. The grief showed up before the loss did, and it froze me. I wasn't working. I wasn't fully showing up for my parents. I was stuck in a version of myself that couldn't move in any direction. I don't say that for sympathy. I say it because it's the truth, and this book doesn't work if I only tell the parts where I got it right. Hospice, when it came, wasn't a pivot. It was a return, to the rooms I'd been thinking about since the home health years, to the weight I'd learned how to carry. It pulled me out of that in-between place and gave me direction again.
 
-**CHAPTER 30**
+**CHAPTER 29**
 
 ## **Five Weeks**
 
@@ -1608,7 +1599,7 @@ He got pneumonia on December 23. His immune system had nothing left to fight wit
 
 My father died on Christmas Day, 2025.
 
-**CHAPTER 31**
+**CHAPTER 30**
 
 ## **The Days After**
 
@@ -1691,7 +1682,7 @@ I sat in my car one afternoon thinking, am I becoming someone else? The answer c
 
 In January we went through his things. His gray suit was hanging on the right side of the closet, between two work shirts. Always be the best-dressed person in the room. I pulled it off the rack and held it up, and I couldn't put it back. I took it home in a garment bag with no plan. It hangs in my closet now, next to mine. It isn't my size and it isn't my style and I will never wear it. But some mornings I open the closet door and it's there, and I know what it is, and I know who wore it, and I leave it alone. I tell families sometimes, when they're clearing out a closet of their own: keep one thing. You'll know which one. It will tell you.
 
-**CHAPTER 32**
+**CHAPTER 31**
 
 ## **The First Honest Mile**
 
@@ -1710,7 +1701,7 @@ And I was mean. That scared me more than a craving would have. I lashed out at t
 
 Seventeen years sober, and I had hit a rock bottom again, an emotional one this time. The disease doesn't need a bottle to run the old plays, isolation, anger, the closed door. The difference was that this time I had to feel it all the way through. And this time I knew what to do with a bottom. I went back to meetings, more of them than I'd been to in years. I got a therapist. The morning calls with Mager got longer. I said out loud, in the rooms and on the phone, that I was not okay. I went back to the people I'd been sharp with and said sorry, plainly. Seventeen years in, I was back on the first honest mile.
 
-**CHAPTER 33**
+**CHAPTER 32**
 
 ## **What Grief Taught the Job**
 
@@ -1739,7 +1730,7 @@ And some rooms stay with me whole. There was a couple I'll call John and Joan. J
 
 My father always made a big deal of my sobriety anniversary. Every January 9. My first year, he came to Gulf Breeze Hospital to hear me speak, sat in that room and listened to his son talk about staying sober for one year. He told me once, quietly, that whenever he mentioned my name to someone who knew me, they'd say the same thing: he's the best. That's what he built. Lou spent eighty-four years showing up without needing to know exactly where he was going. I'm trying to do the same.
 
-**CHAPTER 34**
+**CHAPTER 33**
 
 ## **The Table**
 

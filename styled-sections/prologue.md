@@ -1,13 +1,46 @@
 # **PROLOGUE**
 
+*"He brought me up also out of an horrible pit, out of the miry clay, and set my feet upon a rock, and established my goings."*
+*— Psalm 40:2*
+
 **Tijuana, Mexico. 2005.**
 
 His hands were around my throat before I understood he had crossed the cell. A small man, wired, moving too fast, meth or something close to it, his eyes too wide and his whole body ready to fly apart. Somebody called him Rico. His face came an inch from mine, and the only English he had came out in a rasp. "Gringo. Gringo. Money."
 
-"No tengo dinero," I told him. The words came out thin. They had taken everything hours before I reached that door — my watch, my bag, whatever was in my pockets.
+"No tengo dinero," I told him. The words came out thin. It was true. They had already taken everything.
 
 "Money. Money." The fingers pressed, eased, pressed again. His breath was sour and chemical. Then the hands dropped. He muttered something, backed to the wall, and the dark took him.
 
-That is where the worst night of my life had set me down: a concrete floor in a Mexican holding cell. Nobody was coming, because nobody knew where I was. Not my father. Not my brother. Not my mother.
+The night had started ordinary. A workday, a Tuesday in my San Diego years, and when I was done I crossed into Tijuana. I'd crossed enough times to think I understood how it worked, and that was the problem. Do something dangerous often enough and it starts to feel like a run.
 
-I had been carried out of Mexico City as a child, to be given a better life. Somehow I had found my way back to a concrete floor inside the same country, with everything I'd built somewhere far away. This is the story of how I came back from that floor, and why my father never stopped coming for me.
+This time a cop saw the watch.
+
+He took it first. Then the bag. Then everything else in my pockets. For a moment I thought that might be the end of it, that I'd be sent back across the line with one more story I'd never tell. Then he pulled me out of the car.
+
+It wasn't a prison. It was a holding cell in a building I couldn't have found again the next day. I didn't know where I was, who knew I was there, or how long they meant to keep me.
+
+The smell reached me before the door shut. Sewer and vomit and mold, sweat over the top of it, something rotten underneath. When it closed, the dark seemed to move. I stood still and waited for my eyes to adjust. They didn't, not really. Shapes shifted. Breathing came from every direction. In the corner a wet cough ran too long and ended in a rattle. A rat crossed the floor after a cockroach, claws on concrete, the pounce, a soft crunch, and was gone.
+
+The men spoke Spanish faster than I could follow. It had been my first language once. Mexico was where I started. By now it was buried far enough down that I could hear it without holding it, and the words moved past me in pieces.
+
+Some of the men were gone in the head, rocking, laughing, talking to no one. Others sat with their backs to the wall and their eyes empty. A few just watched me. I didn't belong there, and they knew it. Rico was one of them.
+
+My throat burned. I wanted to put a hand to it and didn't. I wasn't going to let the room see it. I slid down the wall instead and sat, knees to my chest, the concrete cold through my clothes, my forehead down. I knew the position. My body found it before my mind caught up. Get small, stay quiet, don't hold anyone's eye, don't give the room a reason to pick you. It was the same shape I'd folded into as a boy when the yelling started.
+
+There was no bedroom this time. No hallway light, no mother down the hall. No father in the stands. And no one on earth knew where I was.
+
+Not my father. Not my brother. Not my mother. No one.
+
+I sat on a concrete floor in Mexico with my head on my knees, and the life I'd been performing, the sales job, the income, the watch, the lines I used to sound like more, was somewhere else. What was left was the smell, the dark, and my own breathing.
+
+I lost track of time. The voices flattened into noise. I thought about my mother, her hand around mine in the airport when I was four, the woman who carried me out of this country to give me a life. I'd come back to take myself apart. Then my father, Lou. That was worse. He'd chosen me, made me his son, sat in the bleachers and paid the bills and handed over money he didn't have, and never once made me feel I had to earn the place. And I'd put myself here.
+
+I wanted to pray and couldn't. I still believed, somewhere under it. I couldn't ask for help out of a hole I'd dug myself.
+
+The door opened. Light cut in. I looked up and stayed where I was, afraid it was for someone else, afraid to stand too fast. A man said something and waved me forward. I got up. My legs were wrong under me. I stepped around the wet places and around the men, past Rico, who didn't look at me. Outside the air wasn't clean, but it was air. Someone gave me back enough to walk out with. Not all of it. Enough.
+
+It wasn't the moment I changed. I was scared, and fear isn't surrender; fear wears off. I went back to Tijuana the next day. There was more running ahead of me, more lying, more damage. I'd seen how small my life had gotten. A cell, a rat, a man's hands on my throat, a concrete floor, and me folded against the wall hoping no one noticed me.
+
+I never told anyone. Not my father, my brother, my mother, my wife. Not a sponsor, not a priest. I carried it out of shame, and the longer I kept it hidden, the harder it got to say.
+
+I had been carried out of Mexico City as a child, to be given a better life. Twenty-three years later I had found my way back to a concrete floor inside the same country. This is the story of how I came back from that floor, and why my father never stopped coming for me.

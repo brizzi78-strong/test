@@ -63,36 +63,35 @@ Prologue
 
 12. My Brother's Keeper
 13. The Performance Trap
-14. The Cell
-15. Checking Boxes
-16. West Palm Beach
-17. New Orleans
+14. Checking Boxes
+15. West Palm Beach
+16. New Orleans
 
 **Part Four — Getting Square**
 
-18. Chumuckla
-19. The Quiet Years
-20. Horacio
-21. The Line
-22. The Salmon Palace
-23. They Gave Me a Chance
-24. Making Amends
+17. Chumuckla
+18. The Quiet Years
+19. Horacio
+20. The Line
+21. The Salmon Palace
+22. They Gave Me a Chance
+23. Making Amends
 
 **Part Five — Hope**
 
-25. Hope
-26. Gulf Breeze
-27. The People You Meet When You Stop Drinking
-28. Sobriety Meets Hospice
+24. Hope
+25. Gulf Breeze
+26. The People You Meet When You Stop Drinking
+27. Sobriety Meets Hospice
 
 **Part Six — The Last Chapter**
 
-29. The Detour
-30. Five Weeks
-31. The Days After
-32. The First Honest Mile
-33. What Grief Taught the Job
-34. The Table
+28. The Detour
+29. Five Weeks
+30. The Days After
+31. The First Honest Mile
+32. What Grief Taught the Job
+33. The Table
 
 Epilogue: The Cardinal's Promise
 
