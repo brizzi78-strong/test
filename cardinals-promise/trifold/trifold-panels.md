@@ -1,7 +1,7 @@
-# The Cardinal's Toolkit: Caregiver Hero — Trifold Crisis Companion
+# The Cardinal's Toolkit — Trifold Crisis Companion
 
 A laminated, fridge-worthy quick-reference companion to the full handbook
-(*The Cardinal's Toolkit: Caregiver Hero*, Cardinal's Promise Series). It is the
+(*The Cardinal's Toolkit*, Cardinal's Promise Series). It is the
 bird's-eye map; the full toolkit is the deep woods guide.
 
 **Format:** US Letter (11" × 8.5"), landscape, trifold (roll fold), printed
@@ -29,7 +29,7 @@ land exactly where a reader flips to.
 
 ## Front cover
 
-**The Cardinal's Toolkit: Caregiver Hero**
+**The Cardinal's Toolkit**
 
 *The First Steps When a Parent Suddenly Needs Help*
 
