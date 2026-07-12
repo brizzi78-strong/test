@@ -694,7 +694,7 @@ I was still my mother's kid underneath it. One Sunday I ended up at a church acr
 
 I drank. Everybody drank; that was the cover. It would be years before I understood that not everyone drank the way I did. I won't glamorize it, but the parties were great — the fun you know won't last, which is part of why it mattered. Junior year I lived in the fraternity house. Underneath it all was an insecurity I couldn't shake. The wrestling, the fraternity, the friends, and still some part of me didn't believe any of it was real.
 
-I fell into a depression. Not dramatic, not announced. Gray. Lou heard it in my voice on the phone. He didn't ask follow-up questions. He got in his car in New Jersey and drove ten hours to Ohio. Didn't call ahead to confirm I needed him. Took me to a doctor, got me seen, then to a chain restaurant. Laminated menus, free refills, nothing to it but food and a booth and him across from me.
+I fell into a depression. Not announced. Gray. Lou heard it in my voice on the phone. He didn't ask follow-up questions. He got in his car in New Jersey and drove ten hours to Ohio. Didn't call ahead to confirm I needed him. Took me to a doctor, got me seen, then to a chain restaurant. Laminated menus, free refills, nothing to it but food and a booth and him across from me.
 
 On the way out, a waitress ran into the parking lot after us and handed me her phone number. I looked at Lou. He kept walking, eyes straight ahead. I asked if he'd said something, left a big tip, set the whole thing up. He denied it flat. Didn't miss a beat. I never believed him. He took it to the grave. That might be my favorite thing about him.
 
@@ -811,7 +811,7 @@ For the first six months I was sober. Trying. Calling Lou on Sundays, giving him
 
 ### *Started Using*
 
-The pills came slow. Not with a decision I can point to. More like a long week, a rough stretch of no's, a body tired of being on for ten hours and a brain that had no idea how to shut off at night.
+The pills came slow. There was no decision I can point to, just a long week, a rough stretch of no's, a body tired of being on for ten hours, and a brain that had no idea how to shut off at night. Once they started, I never stopped taking them.
 
 I can tell you the exact feeling that hooked me. The first time I took a pill and chased it with a drink, something in me went quiet and right at the same time. Not high, exactly. Settled. The low hum that had run under everything since I was a kid, the part of me always checking the room, always reading faces to know who to be, just switched off. I wasn't trying to be funny and landing it. I was funny. I wasn't working to seem easy in my own skin. I was easy in it. For a man who had spent his whole life performing, here was the first time I didn't have to. I just was. This is what I was supposed to feel like the whole time, I thought. I would spend years chasing that one feeling, and I would never reach it again.
 
