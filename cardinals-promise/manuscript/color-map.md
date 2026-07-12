@@ -8,7 +8,7 @@ The toolkit is color coded so families can find the right level of urgency quick
 | Color | Meaning | Scope |
 |---|---|---|
 | 🔴 **RED — Act Today** | Crisis, urgent safety, hospital discharge, hospice, last-days decisions, or caregiver collapse. | |
-| 🟡 **YELLOW — Watch Closely** | Something has changed. Get support soon, ask better questions, and do not ignore the pattern. | |
+| 🟡 **PURPLE — Watch Closely** | Something has changed. Get support soon, ask better questions, and do not ignore the pattern. | |
 | 🔵 **BLUE — Plan Ahead** | Documents, money, benefits, medication lists, and conversations best handled before a crisis. | |
 
 ## Chapter color map
@@ -54,7 +54,7 @@ The toolkit is color coded so families can find the right level of urgency quick
 ## Suggested print values
 
 - RED: `#a51c30` (cardinal), tint `#f7dfe2`
-- YELLOW: `#b45309` (amber ink for legibility), tint `#fdf3e3`
+- YELLOW: `#6b21a8` (amber ink for legibility), tint `#f3e8ff`
 - BLUE: `#1d4e89`, tint `#eaf1f8`
 
 Every chapter follows the same anatomy: Plain Truth → What Families Usually
