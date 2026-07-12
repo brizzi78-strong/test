@@ -71,26 +71,27 @@ Prologue
 
 17. Chumuckla
 18. The Quiet Years
-19. Horacio
-20. The Line
-21. The Salmon Palace
-22. They Gave Me a Chance
-23. Making Amends
+19. The People You Meet When You Stop Drinking
+20. Horacio
+21. The Line
+22. The Salmon Palace
+23. They Gave Me a Chance
+24. Making Amends
 
 **Part Five — Hope**
 
-24. Hope
-25. The People You Meet When You Stop Drinking
-26. Sobriety Meets Hospice
+25. Hope
+26. What We Built
+27. Sobriety Meets Hospice
 
 **Part Six — The Last Chapter**
 
-27. The Detour
-28. Five Weeks
-29. The Days After
-30. The First Honest Mile
-31. What Grief Taught the Job
-32. The Table
+28. The Detour
+29. Five Weeks
+30. The Days After
+31. The First Honest Mile
+32. What Grief Taught the Job
+33. The Table
 
 Epilogue: The Cardinal's Promise
 
