@@ -19,7 +19,7 @@ them were handed a map.
 Parent** (prescriptive nonfiction,
 approximately 52,000 words) is that map — built to be useful on a family's
 worst day, not read cover to cover. Its 29 chapters are color-coded by urgency
-— RED: Act Today, YELLOW: Watch Closely, BLUE: Plan Ahead — so a panicked
+— RED: Act Today, PURPLE: Watch Closely, BLUE: Plan Ahead — so a panicked
 reader can route themselves to the right page in under a minute. Every chapter
 follows the same anatomy: the plain truth, the myth families walk in believing,
 the teaching, and then the tools — fillable worksheets, scored self-checks, and

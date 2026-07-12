@@ -4,8 +4,8 @@ The two files KDP asks for are in this folder:
 
 | KDP upload slot | File | Spec |
 |---|---|---|
-| Manuscript (interior) | `kdp-interior.pdf` | 205 pages, 8.5 × 11 in, no bleed, mirrored margins (1.05" gutter / 0.55" outside), fonts embedded, page numbers + TOC + index match |
-| Book cover | `kdp-cover-wrap.pdf` | One-piece wrap, 17.7311 × 11.25 in with 0.125" bleed; spine 0.4811" (205 pages × 0.002347", **premium color** paper — recompute if ink choice changes); 2" × 1.2" white barcode zone, lower-right of back cover, left blank for KDP |
+| Manuscript (interior) | `kdp-interior.pdf` | 207 pages, 8.5 × 11 in, no bleed, mirrored margins (1.05" gutter / 0.55" outside), fonts embedded, page numbers + TOC + index match |
+| Book cover | `kdp-cover-wrap.pdf` | One-piece wrap, 17.7358 × 11.25 in with 0.125" bleed; spine 0.4858" (207 pages × 0.002347", **premium color** paper — recompute if ink choice changes); 2" × 1.2" white barcode zone, lower-right of back cover, left blank for KDP |
 
 ## Before you upload
 
@@ -13,7 +13,7 @@ The two files KDP asks for are in this folder:
 - [ ] **Bio verified** — Certified Dementia Practitioner credential current
 - [ ] **Final human proofread** of `kdp-interior.pdf` (read it as a printed proof, not on screen)
 - [ ] **Back-cover copy approved** — edit `back-cover-copy.md` and ask for a wrap regen if you change anything
-- [ ] **Cover wrap regeneration pending** — the new navy design was adopted, but the wrap PDF still needs the designer's print-resolution front art (the shared preview is ~90dpi at wrap size; KDP needs 300dpi). Give the designer these exact dimensions in the same request: **full wrap 17.7311 × 11.25 in (0.125" bleed all around), spine 0.4811" centered, premium-color paper** — and generate the template from KDP's cover calculator to be safe.
+- [ ] **Cover wrap regeneration pending** — the new navy design was adopted, but the wrap PDF still needs the designer's print-resolution front art (the shared preview is ~90dpi at wrap size; KDP needs 300dpi). Give the designer these exact dimensions in the same request: **full wrap 17.7358 × 11.25 in (0.125" bleed all around), spine 0.4858" centered, premium-color paper** — and generate the template from KDP's cover calculator to be safe.
 - [ ] **Publisher imprint confirmed** — copyright page now says Cardinal Press (was Blue Ridge LLC); confirm which entity actually publishes
 
 ## At kdp.amazon.com (Bookshelf → Create → Paperback)

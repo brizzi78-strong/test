@@ -15,7 +15,7 @@ if you're supposed to already know. You're not. Almost no family is handed a map
 career across home health, hospice, and senior living, <i>The Caregiver's
 Cardinal Toolkit</i> is built to be useful on your worst day — not read cover
 to cover. Its 29 chapters are color-coded by urgency — <b>RED: Act Today ·
-YELLOW: Watch Closely · BLUE: Plan Ahead</b> — so you can find the right page
+PURPLE: Watch Closely · BLUE: Plan Ahead</b> — so you can find the right page
 in under a minute.
 
 Inside, you'll learn how to:

@@ -6,7 +6,7 @@ Series, Rob Brizzi), the North Carolina family caregiver handbook.
 ## Contents
 
 - `manuscript/color-map.md` — the book's three-color urgency system
-  (RED — Act Today, YELLOW — Watch Closely, BLUE — Plan Ahead) and the
+  (RED — Act Today, PURPLE — Watch Closely, BLUE — Plan Ahead) and the
   chapter-by-chapter color map. Every derived piece should use these colors.
 - `chapters/chapter-15-color-coded.html` — Chapter 15 (Private Pay, BLUE)
   laid out in the book's color system, with the legend, worksheets, and
