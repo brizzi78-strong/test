@@ -90,3 +90,5 @@ umbrella all pseudonyms live under.
 **July 10, 2026:** Brother's real name CHRIS restored throughout (temporary 'Nick' retired), per author. His sign-off conversation still recommended for ch12 (DMV story).
 
 **July 10, 2026 — REAL-NAME WORKING COPY:** All pseudonyms reverted to real names for Scott's editorial pass (Horacio/Balderas, Nancey, Lisa/Joel/Jon, Lynda, Judy, Becky, Andy, Mager, Quint Studer, Matt Campbell, Detroit Bob, Tristan, Kris and Kyle, Nisha, Priya). The privacy pseudonym set and every text-level protection decision remain in git history and this ledger; re-apply before publication as decided then. Garrett stays unnamed (author's standing choice); Linda real at her request; the soap-opera name and other identifying-detail cuts remain in place.
+
+- Tyler and Jaye (Hope's cousins), Aunt Mitch, Tyler's dad: PENDING — section restored to book 2026-07-11; needs their explicit okay on real names, the arrest, relapse timeline, the injury, and the stepdaughter reference before publication.

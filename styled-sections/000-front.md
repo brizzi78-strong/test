@@ -95,6 +95,8 @@ Prologue
 
 Epilogue: The Cardinal's Promise
 
+Tyler and Jaye
+
 A Note to the One Who Loves an Addict
 
 What I'm Asking You to Do

@@ -95,6 +95,8 @@ Prologue
 
 Epilogue: The Cardinal's Promise
 
+Tyler and Jaye
+
 A Note to the One Who Loves an Addict
 
 What I'm Asking You to Do
@@ -173,9 +175,9 @@ PART ONE
 
 **Mexico City, 1982**
 
-That summer, my mother was obsessed with E.T.
+"Claudio," my mother said, "you will love this story."
 
-The movie wasn't even out yet, but she'd already tracked down and read the paperback. One afternoon she sat me down to explain it. She told me about an alien left behind by his spaceship, and the boy who hid him in his room to try to get him home.
+That summer she was obsessed with E.T. The movie wasn't even out yet, but she'd already tracked down and read the paperback. One afternoon she sat me down to explain it. She told me about an alien left behind by his spaceship, and the boy who hid him in his room to try to get him home.
 
 "What are aliens?" I asked.
 
@@ -321,7 +323,7 @@ I didn't understand yet that there'd been a father before him, a man there one s
 
 Lou was not a saint, and I won't pretend he was. He had a temper that showed up at the wrong moments, and he knew it about himself — he had a name for it, his Mr. Hyde moments. Most of it wasn't even anger, really; it was how he processed things he didn't like, out loud and with heat, and once a mood had him it was hard to pull him out of it. And he could turn around and produce a warmth so unexpected it changed the temperature of a room. He was a complicated man. Both things were true of him. Some moments were hard. He was worth it.
 
-Hard alcohol brought out the worst of it, and for a stretch Lou had his own war with the drink. There was a night at the Allendale Bar and Grill — a family outing, Lou and my mother and my aunt Nancey and Chris at the table — that blew up so fast nobody can remember anymore what set it off. His fist came down on the table. Everyone scattered for the car, Lou right behind them, and a hand got caught in the car door on the way out. The next day the remorse had him wrecked. That was the pattern when he drank: heat, then regret. That night is a big part of why my father stopped drinking. I think it's also part of why, years later, he never lectured me from a high place about my own disease. He knew the current from inside.
+Hard alcohol brought out the worst of it, and for a stretch Lou had his own war with the drink. There was a night at the Allendale Bar and Grill — a family outing, Lou and my mother and my aunt Nancey and Chris at the table — that blew up so fast nobody can remember anymore what set it off. His fist came down on the table. Everyone scattered for the car, Lou right behind them. The next day the remorse had him wrecked. That was the pattern when he drank: heat, then regret. That night is a big part of why my father stopped drinking. I think it's also part of why, years later, he never lectured me from a high place about my own disease. He knew the current from inside.
 
 Once he decided you were his, that settled it. He was there for the early mornings and the late nights, the school conferences and the wrestling matches, the hospital waiting rooms and the church basements, and never kept a ledger of it. He had no use for talk about sacrifice. He just lived it.
 
@@ -708,7 +710,7 @@ Before I ever set foot on campus, there was a party in New Jersey. Tricia Hart h
 
 My mom and dad dropped me off in the fall of 1996. Partial wrestling scholarship, financial aid, Lou covering the rest. That was how it got paid for. My mom cried when she left me there. The woman who had moved two kids across a border without flinching stood in a dorm parking lot in Ohio and couldn't stop the tears. I didn't feel like I'd chosen Miami so much as it had chosen me first — a letter from a coach with my name on it. Later I saw it in Newsweek, "best schools for your money," number four. The Ivy of the Midwest.
 
-My dorm was Stanton Hall, my roommate a good-natured Packers fan from Wisconsin with a cheesehead on his shelf and the accent to prove it. I didn't know what a cheesehead was. I'm from New Jersey. Next door was Jason Huet, six-five, a high school basketball player who'd wanted Chapel Hill and was sore his parents made him come to Miami. Hard shell, didn't let everybody in, but once he did, he didn't take it lightly. He teased me constantly — swore he couldn't understand a word I said. He's a pulmonologist in Charleston now. He texted recently: you want to come see me for Memorial Day? That's a friendship that just holds. The twins from Ramsey were there too, Kris and Kyle, the two who'd kept their hands clean at the lunch table. When they heard I was going to Miami, one of them said, isn't he a nerd? My friend Dave said, he's actually cool now. They became good friends too.
+My dorm was Stanton Hall, my roommate a good-natured Packers fan from Wisconsin with a cheesehead on his shelf and the accent to prove it. I didn't know what a cheesehead was. I'm from New Jersey. Next door was Jason Huet, six-five, a high school basketball player who'd wanted Chapel Hill and was sore his parents made him come to Miami. Hard shell, didn't let everybody in, but once he did, he didn't take it lightly. He teased me constantly — swore he couldn't understand a word I said. He's a pulmonologist in Charleston now. He texted recently: you want to come see me for Memorial Day? That's a friendship that just holds. The twins from Ramsey were there too, Kris and Kyle, the two who'd kept their hands clean at the lunch table. They became good friends too.
 
 That was the version of me I was building at Miami. Not Claudio. Rob — county wrestling champion, Miami student, American. Nobody here knew who I'd been before I arrived. Being the darker-skinned kid on a mostly white-bread campus gave me something, a little spice, and I connected in ways that hadn't come as easily in high school.
 
@@ -851,7 +853,7 @@ The pills were Adderall and Ritalin. Taking one before a workday, I told myself 
 
 That's the trap. Not that the pills felt good, plenty of things feel good and don't ruin you. The trap was that they made me better at the thing I most needed to be better at, with money attached, in real time. I didn't see it as using. I saw it as competing.
 
-By then I had a full prescription of my own in California, the bottle right there, no more rationing what I had. The easy access didn't satisfy the chase. It amplified it. What I didn't see was the arithmetic underneath. You take more to get the same effect. The baseline shifts. When California ran dry I started crossing into Tijuana to resupply, an hour from San Diego, a Saturday routine, back before anyone noticed. One of those runs ended on the concrete floor where this book began. I crossed again the next day anyway. Six figures a year, crossing the border for pills, because the machine I'd built couldn't run without fuel.
+By then I had a full prescription of my own in California, the bottle right there, no more rationing what I had. The easy access didn't satisfy the chase. It amplified it. What I didn't see was the arithmetic underneath. You take more to get the same effect. The baseline shifts. When California ran dry I started crossing into Tijuana to resupply, an hour from San Diego, a routine, back before anyone noticed. One of those runs ended on the concrete floor where this book began. I crossed again the next day anyway. Six figures a year, crossing the border for pills, because the machine I'd built couldn't run without fuel.
 
 Alcohol came in alongside. Pills to ramp up in the day, drinks to come down at night. From the first time I drank I was a blackout drinker, not giggly after two beers, just gone, piecing the night together off other people's faces in the morning. I blacked out four nights a week. On the outside I projected a confidence that read as arrogance. Inside I was the same scared kid who needed to prove he belonged in whatever room he'd walked into.
 
@@ -910,7 +912,7 @@ The therapist had an idea. She said I needed to get in touch with my birth fathe
 
 I called my mom. She had a cousin who might track him down. They found him. We decided to meet not in Mexico City but closer to the California border. Ensenada.
 
-Horacio was fifty-three that weekend, still a good-looking man, and we spoke in English, which tells you how much of my first life had survived the trip north. The first thing I noticed was the energy, fun, engaging, a man a room adjusts to when he walks in. But under the charm something felt off. The best word I have is slippery. Like he was always performing. Charming in a way that makes you check your pockets afterward, not because he took anything, but because you feel like he could have. To be fair, I was in no shape to evaluate anybody. Fresh out of a rehab I'd half-assed, still craving pills, meeting the biological father I hadn't seen since I was four. And we drank together, the two of us at a table like it was the most natural thing in the world, with the man the therapist thought would heal me. Neither of us said a word about it.
+Horacio was fifty-three that weekend, still a good-looking man, and we spoke in English, which tells you how much of my first life had survived the trip north. The first thing I noticed was the energy, fun, engaging, a man a room adjusts to when he walks in. But under the charm something felt off. The best word I have is slippery. Like he was always performing. Charming in a way that makes you check your pockets afterward, not because he took anything, but because you feel like he could have. To be fair, I was in no shape to evaluate anybody. Fresh out of a rehab I'd half-assed, still craving pills, meeting the biological father I hadn't seen since I was a small boy. And we drank together, the two of us at a table like it was the most natural thing in the world, with the man the therapist thought would heal me. Neither of us said a word about it.
 
 He was generous, and he was trying to make amends the only way he knew how. He gave me ten thousand dollars. Cash. Just handed it over. Ten thousand dollars to a guy who'd just come out of rehab and was still telling his therapist he couldn't live without pills. That money was lighter fluid on a fire that hadn't gone out. The moment it was in my hand something shifted, not toward healing, toward planning. I could feel the disease doing its math. Horacio wanted to come along wherever I went. So I told him I was going shopping for a gift for him, which was at least half true, since I had come with nothing to give him. A gift meant he had to stay behind. I left alone and bought Ritalin. With money my biological father had given me at a reunion that was supposed to be about healing.
 
@@ -1347,7 +1349,7 @@ We sat in the living room. No small talk. I had the whole confession loaded and 
 
 He nodded slowly. He didn't follow up. He had heard the one thing he wanted to hear. That father of yours sounds like a good man, he said. Best man I've ever known, I told him. Jeff smiled for the first time, stood, and put out his hand. You have my blessing. Then his eyes filled and he didn't look away. I could have done better in my marriage with Rhonda, he said. I blame myself. He wasn't giving me a tough-father speech. He was handing me his own regret and trusting me with it. Don't screw this up, he added. No sir. I won't. He told me later the moment he'd actually known I was the one for her: the weekend early on when Hope forgot her ID on a trip to Mississippi, and I got up before light, drove back to Pensacola for it, and drove us straight back.
 
-Outside my own father, Jeff is one of two men who have shown me what faith looks like when it's lived instead of just spoken. The other is Dave Meyer, my friend since the middle school Bible study. Different men, same spine. Neither one talks the talk and stops there; both walk it. Neither has ever lost sight of where God is in it. I've needed them both as proof that the thing I reached for in a muddy field in Chumuckla holds up across a whole life.
+Outside my own father, Jeff is one of two men who have shown me what faith looks like when it's lived instead of just spoken. The other is Dave Meyer, my friend since middle school. Different men, same spine. Neither one talks the talk and stops there; both walk it. Neither has ever lost sight of where God is in it. I've needed them both as proof that the thing I reached for in a muddy field in Chumuckla holds up across a whole life.
 
 ### *Blessings*
 
@@ -1598,7 +1600,7 @@ When I heard he had pneumonia, I wasn't scared. I told myself he would make it. 
 
 Something in me shut down before he was gone. I couldn't pick up when my stepmom called. I went somewhere I had gone as a little boy when I was scared, that same quiet, far-off place, the dissociation I had learned before I had a word for it.
 
-Part of it was that my mother was in town. She has Parkinson's now, and getting to me had cost her every ounce of energy she had. Part of it was simpler, and harder to admit. I did not want my last memory of my father to be tubes in his nose. He had been bigger than three cancers. I couldn't let the man in that bed become the last picture I kept of him.
+Part of it was that my mother was in town. She has Parkinson's now, and getting to me had cost her every ounce of energy she had. Part of it was simpler, and harder to admit. I did not want my last memory of my father to be tubes in his nose. He had been bigger than two cancers and a scare. I couldn't let the man in that bed become the last picture I kept of him.
 
 It was selfish. I'm sorry it was that way. But I can only tell you the truth of it. The week before, I had told my sponsor that I'd said everything to my dad that needed saying. I had. There was no unfinished sentence between us. And it still didn't spare me what came next.
 
@@ -1706,7 +1708,7 @@ The room changes. The husband starts talking, and the daughter in the coat final
 
 They didn't sign anything that day. Sometimes they don't. But when I stood to go, the husband walked me to the door, which cost him something with his knees, and shook my hand at the threshold. That's how I knew. Not ready isn't a no. It's a doorway, and somebody has to be willing to stand in it first.
 
-And some rooms stay with me whole. There was a couple I'll call John and Joan. John sold medical equipment. Joan was a respiratory therapist. Between the two of them, healthcare was not a foreign language. They knew the words, the systems, what illness looked like from the professional side. And John was twelve years sober, a man who had already done the hardest thing most people can imagine, one day at a time, for over a decade. Recovery had taught him how to live. It had not taught him how to let go. I sat with them near the end. He understood medicine, but medicine did not tell him how to say goodbye. She had spent her working life at other people's bedsides, and it did not make her less human in her own. John loved Joan. That was never in question. Love just needed help becoming a plan: who speaks when she cannot, what comfort means now, what matters most today. John and Joan taught me that knowing medicine is not the same as having peace. The room did not feel good at the end. It wasn't supposed to. But John stayed in it, and the two of them got through it together. I watched them do it. If a medical salesman and a respiratory therapist still needed that conversation, every family does.
+And some rooms stay with me whole. There was a couple I'll call Ed and Eva. Ed sold medical equipment. Eva was a respiratory therapist. Between the two of them, healthcare was not a foreign language. They knew the words, the systems, what illness looked like from the professional side. And Ed was twelve years sober, a man who had already done the hardest thing most people can imagine, one day at a time, for over a decade. Recovery had taught him how to live. It had not taught him how to let go. I sat with them near the end. He understood medicine, but medicine did not tell him how to say goodbye. She had spent her working life at other people's bedsides, and it did not make her less human in her own. Ed loved Eva. That was never in question. Love just needed help becoming a plan: who speaks when she cannot, what comfort means now, what matters most today. Ed and Eva taught me that knowing medicine is not the same as having peace. The room did not feel good at the end. It wasn't supposed to. But Ed stayed in it, and the two of them got through it together. I watched them do it.
 
 My father always made a big deal of my sobriety anniversary. Every January 9. My first year, he came to Gulf Breeze Hospital to hear me speak, sat in that room and listened to his son talk about staying sober for one year. He told me once, quietly, that whenever he mentioned my name to someone who knew me, they'd say the same thing: he's the best. That's what he built. Lou spent eighty-four years showing up without needing to know exactly where he was going. I'm trying to do the same.
 
@@ -1741,7 +1743,7 @@ It wasn't only Lisa's table. In our family, nobody said love out loud. They cook
 
 After my dad died, Lisa did what she's always done. She kept the table set.
 
-I think about a night when she was barely old enough to drive and cooked meatloaf for two boys who didn't make it easy. She's still standing at the counter. Still opening the door. The last time I was there for Thanksgiving I stood in her kitchen a minute before we sat down. I didn't say anything. I just watched, and thought about how the people who hold families together don't usually get thanked for it. They just keep doing it. Year after year. We sat down. Someone said grace. The food was passed. And for a few hours everything had a center again. Lisa made sure of that.
+I think about a night long ago when she cooked meatloaf for two boys who didn't make it easy. She's still standing at the counter. Still opening the door. The last time I was there for Thanksgiving I stood in her kitchen a minute before we sat down. I didn't say anything. I just watched, and thought about how the people who hold families together don't usually get thanked for it. They just keep doing it. Year after year. We sat down. Someone said grace. The food was passed. And for a few hours everything had a center again. Lisa made sure of that.
 
 ### *The Floor*
 
@@ -1779,6 +1781,26 @@ I want men to read this and understand that what Lou did is possible, that you c
 If you're reading this in recovery, from addiction, from loss, from a version of yourself that no longer serves the life you're trying to build, the broken parts of your story don't disqualify you from purpose. They prepare you for it. If you're grieving someone you lost, not being there at the end doesn't mean you were absent from the life. If the important things were said before the end required them, you were present. And if you're sitting with an aging parent right now, putting off the hard conversation, waiting for a better time: there's no better time. Say the great things while they can still hear you. On a Tuesday. At dinner. On a phone call that feels ordinary. Presence is built across years.
 
 The cardinal flew off into the gray. The promise remains. It was never in the bird. It was in what Lou built in me, across thirty years of chosen love and stubborn presence. Now it's my turn. Keep showing up. Keep choosing love.
+
+# **TYLER AND JAYE**
+
+Tyler is Hope's first cousin, which makes him my family too, and for about eight years he was caught in the cycle anyone who's loved an addict will recognize: rehab, jail, an on-and-off marriage that kept pulling him under. I stayed in his life the whole time, but at a distance, because I had my own sobriety to protect and couldn't have what he was using anywhere near me or the home Hope and I had built. That's a hard thing to admit. But it's what loving an addict asks of you when you've only just climbed out yourself.
+
+His dad carried most of it. He took Tyler in again and again, got him clean, put him to work, the same thing my own father had done for me. His mom, Aunt Mitch, drew the one line she couldn't cross: no using in her house. Her deepest fear was that she'd be the one to find him dead there.
+
+After a while I learned to read him by his silence. When Tyler went quiet, no texts, no returned calls, for weeks, that was the tell. He was using again. The pattern always ran the same direction: clean at his dad's, then he'd leave, then drift back into the old life.
+
+There was an arrest in there. The next morning I sent an Uber to bring him home from jail rather than get in the middle of it myself. The thing I kept saying to him was the only thing I knew how to say: if you get messed up and you're driving, what happens if you kill someone else?
+
+Then he gave us a stretch of hope. From February of 2024 into that next winter he stayed sober at his dad's. He was with the family for Thanksgiving and Christmas that year, clean and present and himself. Then he went back to his ex-wife, and the pattern closed over him again. A few weeks before everything changed, he relapsed. We all felt it before anyone said it. In the silence.
+
+The fight happened the evening of May 30th. The hospital didn't reach his ex-wife until one or two in the morning, and the moment she got the call, she called me. A call that late never means anything good. All I knew was that he'd been in a fight and couldn't move. I phoned his parents from the road, and we made our way to Birmingham not knowing whether he'd live, or how bad it was until the doctors made rounds at dawn. Somewhere on that road I admitted the thing underneath the fear. I wanted to talk to Tyler because I hadn't been there for him. The distance had protected my sobriety. It had also been distance. Both of those were true in that car.
+
+Here's what happened, the way Tyler tells it. He was walking to the park with his eight-year-old stepdaughter and the dogs when two loose dogs came at them, aggressive. The owner came out and refused to put his dogs up, even as Tyler yelled at him to. Tyler and his stepdaughter turned to walk away, and the man followed them and got in Tyler's face. Tyler swung and hit him. The man picked Tyler up and slammed him to the ground.
+
+His neck broke at C5 and C6. He couldn't move anything below it. His eight-year-old stepdaughter stood screaming, with no idea how to call for help. The man who'd slammed him was too frightened to call 911. A neighbor finally did.
+
+That's where Tyler's life divided in two. After it came the hospital bed in the living room, the ramps, the accessible shower, the morning routines that take hours, and his sister Jaye, Hope's cousin too, moving in to help carry him back toward some independence, a husband and two daughters and a career of her own set down so she could stay. I've said elsewhere that I learned to notice the caregiver. This is one of the places I learned it. Tyler is still fighting, and Jaye is still showing up.
 
 # **A NOTE TO THE ONE WHO LOVES AN ADDICT**
 
