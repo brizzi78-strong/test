@@ -163,7 +163,7 @@ My mother taught English at a little preschool called Cascabelito. Little Bells.
 
 Her name was Becky. She was twenty-seven, the oldest of Bob and Jan Pontier's three girls, and a long way from Cedar Grove, New Jersey. She had followed a man to the middle of Mexico City for love, and built a new life there. I didn't understand that kind of love back then.
 
-Kids don't know what their parents are surviving. They just know the smell of dinner, the music playing in the kitchen, and the hand reaching down to hold theirs.
+I didn't know what she was surviving. I knew the smell of dinner, the music playing in the kitchen, and her hand reaching down to hold mine.
 
 The man was my papa, Horacio. She had met him in Acapulco around 1974, on a trip with Sue Doyle, her best friend from high school. He was in college then, working twenty-four-hour shifts at a hospital, and he'd call her when he got off. She went home. Years later she came back to Mexico with my aunt Nancey, asked around until she found him, and caught him the day before he left to guide tours in Greece. She moved to Mexico on the spot. Part of it was him. Part of it was getting away from her father. She learned Spanish from the soap operas.
 
