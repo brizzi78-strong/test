@@ -29,12 +29,15 @@ Notes for the designer:
   sits at the top of the back panel, small italic, set apart from the body copy.
   It is a comparison, NOT an endorsement — never style it as a quote or attribute
   it to anyone.
-- SUBTITLE (settled 2026-07-10, author's exact wording): "For the Caregiver of a
-  Loved One in Addiction, Disease, or Loss." The interior title page and EPUB
-  metadata match. Use the same subtitle in the KDP listing.
+- SUBTITLE (FINAL, 2026-07-11, per reader-panel feedback): "A Memoir of the
+  Father Who Stayed." Five independent reviewers found the caregiver-facing
+  subtitle promised a manual the book isn't; the memoir subtitle matches the
+  content and doubles hand-sell. Interior title page and EPUB metadata match.
+  Use the same subtitle in the KDP listing. The caregiver line ("for the
+  caregiver of a loved one in addiction, disease, or loss") may be used in
+  back-cover copy and the KDP description, NOT as the subtitle.
 - DESIGNER FIXES for the July 10 wrap revision (all REQUIRED):
-  1. Change the red script line under the title from "For Those Who Love an
-     Addict, Face Loss, or Need Hope" to the exact subtitle above.
+  1. Change the red script line under the title to the exact subtitle above.
   2. Remove "IMMIGRANT. ADDICT. SON." from the front panel (already off the
      spine — good).
   3. PRESS NAME: the revision reads "CARDINALS PROMISE PRESS" (plural) on the
