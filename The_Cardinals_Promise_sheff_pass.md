@@ -569,7 +569,7 @@ When I threw up in a match, he didn't see weakness. When I got pinned in ninetee
 
 ### *The Marks*
 
-The wrestling years left marks I still feel. For a long time my body didn't feel like my own. It was something to manage, a number to beat, proof I deserved my place. Mirrors became scales. Food stayed complicated, some meals were cheat meals, others I ate lean. The voice that once whispered drop the pounds or you don't belong found new language when life felt out of control. The same drive that made me cut nineteen pounds and walk onto the mat later tried to numb everything with other things. Control felt safer than surrender. It took years, and the steady love of people who saw me past the scale, Lou telling me, flat out, that he loved me as much as his own kids, my mother's quiet meals, before I could begin to rest in a body that didn't have to earn its place. Some days I still have to choose that on purpose. The choice gets easier every year.
+The wrestling years left marks I still feel. For a long time my body didn't feel like my own. It was something to manage, a number to beat, proof I deserved my place. Food stayed complicated, some meals were cheat meals, others I ate lean. When life felt out of control, drop the pounds was still the first thought that came back. The same drive that cut nineteen pounds to make weight later went looking for other ways to numb everything. It took years to make peace with my body, and it wasn't discipline that got me there. It was Lou telling me, flat out, that he loved me as much as his own kids, and my mother's quiet meals. Some days I still have to choose that peace on purpose. It gets easier every year.
 
 **CHAPTER 8**
 
@@ -791,7 +791,7 @@ The hunger stayed. I transferred to the highest-grossing Abercrombie in the coun
 
 Here is what the screen couldn't show. I walked into every room sure that everyone else in it was the real thing and I was the only fake. They belonged. I was getting away with something. Once you believe that, the bar slides from approval to survival, and you spend your energy guarding the secret instead of living a life.
 
-The secret was older than California. Under every mask there is a part of you that got buried, and mine went back to a four-year-old who was carried out of one country and set down in another. Somewhere in the years that followed, in the new name I had to print at the top of my homework, the dark skin that didn't match the other kids, the lisp they sent me to therapy to fix, I made a decision I didn't have the words for. This part of me is not welcome here. Claudio wasn't safe. So Claudio went quiet.
+The secret was older than California. It went back to a four-year-old carried out of one country and set down in another. In the years that followed — the new name I had to print at the top of my homework, the dark skin that didn't match the other kids, the lisp they sent me to therapy to fix — I came to a decision I didn't have words for: this part of me is not welcome here. Claudio wasn't safe. So Claudio went quiet.
 
 People sometimes ask — I've asked it myself — why the disease took me and not Chris. Same blood, same two fathers, same kitchen. The honest answer I've come to is this: Chris was a year and a half when we left Mexico. He carried nothing out of that country to miss. I was four. I had a papa who raced me to the corner and called me his good luck charm, and then I didn't. Missing Horacio was work I was doing before I had words for it. Chris grew up with one father. I grew up with one father and one ghost.
 
