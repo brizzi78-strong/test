@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Find Your Situation — Pathway Samples</title>
+<style>
+  @page { size: 8.5in 11in; margin: 0.8in; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --red: #a51c30;    --red-bg: #f7dfe2;    --red-dark: #7d1524;
+    --yellow: #b45309; --yellow-bg: #fdf3e3; --yellow-dark: #8a3e06;
+    --blue: #1d4e89;   --blue-bg: #eaf1f8;   --blue-dark: #143a67;
+    --gray: #57534e;   --gray-bg: #f5f2ee;
+    --ink: #1f2328;    --rule: #d9cec4;
+  }
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--ink); line-height: 1.55;
+    max-width: 6.9in; margin: 0 auto; padding: 0.4in 0.25in 1in;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+    background: #fff;
+  }
+  p { margin-bottom: 10px; font-size: 11pt; }
+  strong { font-weight: 700; } em { font-style: italic; }
+  .pagebreak { page-break-before: always; }
+
+  /* ---- Cover & title pages ---- */
+  .coverpage { text-align: center; page-break-after: always; }
+  .coverpage img { width: 100%; max-width: 6.4in; border-radius: 4px; }
+  .titlepage { text-align: center; padding-top: 1.6in; page-break-after: always; }
+  .titlepage .series { font-family: Helvetica, Arial, sans-serif; font-size: 10pt;
+    letter-spacing: 0.22em; text-transform: uppercase; color: var(--red-dark); margin-bottom: 0.5in; }
+  .titlepage h1 { font-family: Helvetica, Arial, sans-serif; font-size: 30pt; line-height: 1.15;
+    color: var(--red); margin-bottom: 0.25in; }
+  .titlepage .subtitle { font-size: 14pt; font-style: italic; margin-bottom: 0.9in; }
+  .titlepage .authors { font-family: Helvetica, Arial, sans-serif; font-size: 13pt; line-height: 1.6; }
+
+  /* ---- Front matter ---- */
+  h2.fm { font-family: Helvetica, Arial, sans-serif; font-size: 17pt; color: var(--red);
+          margin: 0 0 12px; }
+  .fmkicker { font-family: Helvetica, Arial, sans-serif; font-size: 9pt; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--gray); margin-bottom: 5px; }
+
+  /* ---- Color legend ---- */
+  .legendbox { border: 1px solid var(--rule); border-radius: 8px; padding: 16px 18px; margin: 16px 0;
+    font-family: Helvetica, Arial, sans-serif; }
+  .legendbox .lrow { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px; }
+  .legendbox .lrow:last-child { margin-bottom: 0; }
+  .lswatch { flex: 0 0 auto; width: 15px; height: 15px; border-radius: 4px; transform: translateY(3px); }
+  .lname { font-weight: 700; font-size: 11pt; }
+  .ldesc { font-size: 10pt; color: #444; }
+
+  /* ---- Contents ---- */
+  .toc { font-family: Helvetica, Arial, sans-serif; font-size: 10.5pt; }
+  .toc .tocpart { font-weight: 700; margin: 14px 0 5px; text-transform: uppercase;
+    letter-spacing: 0.06em; font-size: 10pt; }
+  .toc ul { list-style: none; }
+  .toc li { padding: 3px 0; display: flex; gap: 8px; align-items: baseline; }
+  .tocdot { flex: 0 0 auto; width: 9px; height: 9px; border-radius: 50%; transform: translateY(1px); }
+  .d-red { background: var(--red); } .d-yellow { background: #e59824; } .d-blue { background: var(--blue); }
+  .tocpart.p-red { color: var(--red); } .tocpart.p-yellow { color: var(--yellow); } .tocpart.p-blue { color: var(--blue); }
+
+  .toc li .lead { flex: 1 1 auto; min-width: 14px; border-bottom: 1px dotted #b9ae9f;
+    transform: translateY(-3px); }
+  .toc li .tocpg { flex: 0 0 auto; color: #57534e; font-variant-numeric: tabular-nums; }
+
+  /* ---- Index ---- */
+  .index { font-family: Helvetica, Arial, sans-serif; font-size: 9pt; columns: 2;
+    column-gap: 26px; }
+  .index h3 { font-size: 10pt; color: var(--red); margin: 10px 0 3px; break-after: avoid; }
+  .index h3:first-child { margin-top: 0; }
+  .index p { font-size: 9pt; margin: 0 0 2px; padding-left: 14px; text-indent: -14px; }
+
+  /* ---- Chapters ---- */
+  section.chapter { page-break-before: always; }
+  section.red    { --c: #a51c30; --c-bg: #f7dfe2; --c-dark: #7d1524; }
+  section.yellow { --c: #b45309; --c-bg: #fdf3e3; --c-dark: #8a3e06; }
+  section.blue   { --c: #1d4e89; --c-bg: #eaf1f8; --c-dark: #143a67; }
+  .colorbar {
+    font-family: Helvetica, Arial, sans-serif; background: var(--c); color: #fff;
+    padding: 7px 13px; border-radius: 6px; display: flex; align-items: center; gap: 10px;
+    font-size: 10pt; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .colorbar .dot { width: 11px; height: 11px; border-radius: 50%; background: #fff; }
+  .partlabel { font-family: Helvetica, Arial, sans-serif; font-size: 9pt; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--c-dark); margin-bottom: 5px; }
+  section.chapter h1 { font-family: Helvetica, Arial, sans-serif; font-size: 20pt; line-height: 1.15;
+    color: var(--c); margin-bottom: 12px; }
+  .chapnum { display: block; font-size: 10.5pt; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--ink); opacity: 0.6; margin-bottom: 2px; }
+  section.chapter h2 { font-family: Helvetica, Arial, sans-serif; font-size: 13pt; color: var(--c);
+    margin: 20px 0 7px; }
+  .partintro { background: var(--gray-bg); border-left: 5px solid var(--gray); border-radius: 6px;
+    padding: 12px 15px; margin: 0 0 16px; font-size: 10.5pt; }
+
+  /* ---- Blocks ---- */
+  .block { border-radius: 6px; padding: 12px 15px; margin: 14px 0; }
+  .block .tag { font-family: Helvetica, Arial, sans-serif; font-size: 8.5pt; font-weight: 700;
+    letter-spacing: 0.14em; text-transform: uppercase; display: block; margin-bottom: 6px; }
+  .block p { font-size: 10.5pt; }
+  .block ol, .block ul { margin: 2px 0 2px 18px; font-size: 10.5pt; }
+  .block li { margin-bottom: 5px; }
+  .plain      { background: var(--c-bg); border-left: 5px solid var(--c); }
+  .plain .tag { color: var(--c); }
+  .think      { background: var(--gray-bg); border-left: 5px solid var(--gray); }
+  .think .tag { color: var(--gray); }
+  .week      { background: var(--c-bg); border-left: 5px solid var(--c); }
+  .week .tag { color: var(--c); }
+  .alert      { background: var(--red-bg); border-left: 5px solid var(--red); }
+  .alert .tag { color: var(--red); }
+  .rob      { background: var(--gray-bg); border-left: 5px solid var(--gray); font-style: italic; }
+  .rob .tag { color: var(--gray); font-style: normal; }
+  .takeaway      { background: var(--c); color: #fff; border-left: 5px solid var(--c-dark); }
+  .takeaway .tag { color: rgba(255,255,255,0.75); }
+  .takeaway p    { color: #fff; }
+
+  /* ---- Worksheets & tables ---- */
+  .worksheet { border: 2px solid var(--c); border-radius: 6px; padding: 13px 15px; margin: 16px 0; }
+  .worksheet .tag { font-family: Helvetica, Arial, sans-serif; font-size: 8.5pt; font-weight: 700;
+    letter-spacing: 0.14em; text-transform: uppercase; color: var(--c); display: block; margin-bottom: 7px; }
+  .worksheet h4 { font-family: Helvetica, Arial, sans-serif; font-size: 10pt; color: var(--c-dark);
+    margin: 11px 0 5px; }
+  .worksheet .note { font-size: 9pt; font-family: Helvetica, Arial, sans-serif; color: #555; margin-bottom: 6px; }
+  table { width: 100%; border-collapse: collapse; font-size: 9.5pt; margin: 6px 0 10px;
+    font-family: Helvetica, Arial, sans-serif; page-break-inside: auto; }
+  th { text-align: left; background: var(--c-bg); color: var(--c-dark); padding: 5px 8px;
+    border: 1px solid var(--rule); font-size: 8.5pt; text-transform: uppercase; letter-spacing: 0.05em; }
+  td { border: 1px solid var(--rule); padding: 8px; vertical-align: top; }
+  .fill { border-bottom: 1px solid var(--ink); display: inline-block; min-width: 2.2in; }
+  .fillline { margin-bottom: 8px; font-size: 10pt; font-family: Helvetica, Arial, sans-serif; }
+  .checks { list-style: none; margin: 4px 0 8px !important; columns: 2; column-gap: 22px;
+    font-family: Helvetica, Arial, sans-serif; font-size: 9.5pt; }
+  .checks.one { columns: 1; }
+  .checks li { display: flex; gap: 8px; align-items: baseline; margin-bottom: 5px; break-inside: avoid; }
+  .cbox { flex: 0 0 auto; width: 10px; height: 10px; border: 1.5px solid var(--c, var(--ink));
+    border-radius: 2px; transform: translateY(1px); }
+  ol.qs { margin: 4px 0 4px 20px; font-size: 10.5pt; }
+  ol.qs li { margin-bottom: 5px; }
+  .script { background: var(--gray-bg); border-radius: 6px; padding: 10px 13px; margin: 10px 0;
+    font-size: 10pt; }
+  .script .tag { font-family: Helvetica, Arial, sans-serif; font-size: 8.5pt; font-weight: 700;
+    letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); display: block; margin-bottom: 5px; }
+
+  /* ---- Epigraph quotes ---- */
+  .bookquote {
+    text-align: center; padding: 1.2in 0.5in 0; page-break-after: always;
+  }
+  .bookquote p { font-size: 14pt; font-style: italic; line-height: 1.6; color: #1f2328; }
+  .bookquote .attr { display: block; margin-top: 14px; font-size: 10.5pt; font-style: normal;
+    font-family: Helvetica, Arial, sans-serif; letter-spacing: 0.08em; color: #7d1524; }
+  .partquote {
+    margin: 4px 0 18px; padding: 10px 16px;
+    border-left: 3px solid var(--rule);
+    font-style: italic; font-size: 11pt; color: #555;
+  }
+  .partquote .attr { display: block; margin-top: 5px; font-size: 9pt; font-style: normal;
+    font-family: Helvetica, Arial, sans-serif; letter-spacing: 0.06em; color: var(--c-dark); }
+</style></head>
+<body>
+<section class="chapter red">
+<div class="colorbar"><span class="dot"></span> Red · Act Today</div>
+<div class="partlabel">Find Your Situation · Pathway 1</div>
+<h1><span class="chapnum">Your Situation</span>"Mom had a stroke — she's in the hospital and they say she needs a skilled nursing facility."</h1>
+
+<div class="block plain">
+  <span class="tag">The One Thing That Protects Everything Else</span>
+  <p>Before anything else, ask the hospital — today, and get it in writing:
+  <strong>"Is my mother admitted as an inpatient, or under observation?"</strong>
+  Medicare only covers the SNF stay after a <strong>3-day inpatient</strong> hospital stay —
+  observation days and the discharge day do not count. If she is on observation status, ask the
+  doctor whether inpatient admission is appropriate. (Many Medicare Advantage plans waive
+  this rule — call the plan and ask.) <em>→ Chapters 10 and 13</em></p>
+</div>
+
+<h2>Your First Five Moves</h2>
+<ol class="qs">
+  <li><strong>Confirm inpatient status</strong> (above) and write down who told you, and when.</li>
+  <li><strong>Meet the discharge planner</strong> — ask for a list of SNFs with open beds, then check
+  each one on <strong>medicare.gov/care-compare</strong> before you agree. You may say:
+  "We would like to understand our choices." <em>→ Chapter 10</em></li>
+  <li><strong>Get the medication list</strong> and the names of her hospital doctors before the
+  transfer — hand-offs are where medication errors happen. <em>→ Chapter 25</em></li>
+  <li><strong>Know the money clock:</strong> with a qualifying stay, Medicare pays days 1–20 in
+  full, days 21–100 with a daily coinsurance, and nothing after 100. Rehab rarely runs that
+  long — but know the numbers before the bills arrive. <em>→ Chapters 13–15</em></li>
+  <li><strong>Attend the SNF care conference</strong> (ask for one in week one). Ask: "What are the
+  therapy goals, and what does discharge planning look like from here?"</li>
+</ol>
+
+<div class="block alert">
+  <span class="tag">The Trapdoor to Watch</span>
+  <p>If the SNF says therapy will end because she has "plateaued" or is "not making
+  progress" — <strong>that is not the rule.</strong> Medicare covers skilled care to maintain
+  function too (the <em>Jimmo</em> standard). You can appeal the cut-off notice through your
+  Medicare QIO — the fast appeal is free and often works. <em>→ Chapter 10 has the script.</em></p>
+</div>
+
+<h2>While She Recovers — Two Quiet Tasks</h2>
+<ul class="checks one">
+  <li><span class="cbox"></span><span class="txt">Learn the stroke warning signs for next time — <strong>BE-FAST</strong>: balance, eyes, face drooping, arm weakness, speech trouble → note the time, call 911. <em>→ Chapter 2</em></span></li>
+  <li><span class="cbox"></span><span class="txt">If her paperwork is not done and she can still make decisions, this is the week: Healthcare Power of Attorney and advance directive. <em>→ Chapters 20–21</em></span></li>
+</ul>
+
+<div class="block takeaway">
+  <span class="tag">Pathway Takeaway</span>
+  <p>Confirm <strong>inpatient</strong> status today, pick the SNF from real inspection data, and
+  never accept "plateaued" as the end of therapy without an appeal.</p>
+</div>
+</section>
+
+<section class="chapter yellow">
+<div class="colorbar"><span class="dot"></span> Yellow · Watch Closely</div>
+<div class="partlabel">Find Your Situation · Pathway 2</div>
+<h1><span class="chapnum">Your Situation</span>"Dad has been declining — he can't take care of himself anymore."</h1>
+
+<div class="block plain">
+  <span class="tag">First, Rule Out the Reversible</span>
+  <p>If the change is <strong>sudden</strong> — days, not months — treat it as medical until proven
+  otherwise: infections, dehydration, and medications cause confusion and weakness that can
+  be reversed. Call his doctor today and describe what changed, with dates.
+  <em>→ Chapters 1–3</em></p>
+</div>
+
+<h2>Your First Five Moves</h2>
+<ol class="qs">
+  <li><strong>Write the change log:</strong> what he can no longer do safely — bathing, meals,
+  medications, stairs, driving — with examples and dates. Facts move doctors. <em>→ Chapter 1</em></li>
+  <li><strong>Book a full evaluation</strong> with his doctor. Bring the log and ask: "Is any of this
+  reversible, and does he meet criteria for a home health evaluation?" <em>→ Chapter 6</em></li>
+  <li><strong>Match help to the real gaps</strong> — not the brochure: daily hands-on help is
+  private duty or family (Ch. 7); therapy and nursing at home is home health (Ch. 6); rising
+  supervision needs point to assisted living or memory care (Ch. 8–9).</li>
+  <li><strong>Get the documents signed while he can:</strong> Healthcare and Financial Power of
+  Attorney and an advance directive require capacity — waiting can cost the family a
+  guardianship case later. <em>→ Chapters 20–22</em></li>
+  <li><strong>Call the family meeting</strong> before the crisis picks the date for you — who does
+  what, who pays what, who decides what. <em>→ Chapter 5</em></li>
+</ol>
+
+<div class="block alert">
+  <span class="tag">The Trapdoor to Watch</span>
+  <p><strong>Medicare does not pay for long-term custodial care</strong> — not at home, not in
+  assisted living, not in a nursing home. If his money may run short, start the Medicaid
+  conversation early: the <strong>five-year look-back</strong> punishes money moved late, and an
+  elder-law attorney before any transfer is cheaper than one after. <em>→ Chapters 14–15</em></p>
+</div>
+
+<h2>And One Thing for You</h2>
+<ul class="checks one">
+  <li><span class="cbox"></span><span class="txt">If you are the one absorbing the decline, read the burnout chapter before you think you need it — the scored self-check takes five minutes, and asking for help is planning, not failure. <em>→ Chapter 4</em></span></li>
+</ul>
+
+<div class="block takeaway">
+  <span class="tag">Pathway Takeaway</span>
+  <p>Rule out the reversible first, match help to the actual gaps, sign the documents while he
+  can, and start the money conversation before the crisis starts it for you.</p>
+</div>
+</section>
+
+<section class="chapter blue">
+<div class="colorbar"><span class="dot"></span> Blue · Plan Ahead</div>
+<div class="partlabel">Find Your Situation · Pathway 3</div>
+<h1><span class="chapnum">Your Situation</span>"I lost Mom years ago. Now Dad is declining — how do I protect his assets and make sure he gets care?"</h1>
+
+<div class="block plain">
+  <span class="tag">The Honest Answer First</span>
+  <p>"Protect all the assets" and "qualify for help paying for care" pull against each other, and
+  the law knows it: Medicaid looks back <strong>five years</strong> at money and property moved
+  for less than value, and late transfers create penalty months when he needs care most.
+  The single highest-value move on this page: <strong>see an elder-law attorney before anyone
+  moves a dollar</strong> — the consult costs a fraction of one look-back mistake.
+  <em>→ Chapters 14–15</em></p>
+</div>
+
+<h2>Your First Five Moves</h2>
+<ol class="qs">
+  <li><strong>Documents while he has capacity:</strong> durable Financial Power of Attorney,
+  Healthcare Power of Attorney, advance directive. Without them, you may need a guardianship
+  case just to help him. <em>→ Chapters 20–22</em></li>
+  <li><strong>Build the inventory:</strong> accounts, deed, income, insurance policies — including
+  any <strong>long-term care insurance</strong> he may have forgotten he owns. One folder.
+  <em>→ Chapters 16, 19</em></li>
+  <li><strong>Elder-law consult</strong> (look for CELA certification or a NAELA member): what is
+  exempt, what spend-down would look like, whether any planning still makes sense at his
+  timeline — <em>before</em> any transfer, "adding names" to accounts, or signing the house over.</li>
+  <li><strong>Match care to today's gaps</strong> — home health evaluation, private duty hours,
+  adult day, or a residential move. <em>→ Chapters 6–9</em></li>
+  <li><strong>If he ever served:</strong> ask about VA pension with Aid and Attendance — and note
+  the VA has its own <strong>36-month look-back</strong>. <em>→ Chapter 18</em></li>
+</ol>
+
+<div class="block alert">
+  <span class="tag">The Trapdoor to Watch</span>
+  <p>The neighbor's advice — <strong>"just put the house in your name"</strong> — is how families
+  create Medicaid penalty periods and surprise tax bills at the same time. Widowed parents
+  managing money alone are also prime targets for exploitation: set up account alerts, and treat
+  any new "friend" with financial interest as a red flag. <em>→ Chapter 26</em></p>
+</div>
+
+<div class="block takeaway">
+  <span class="tag">Pathway Takeaway</span>
+  <p>Documents first, inventory second, elder-law attorney before any transfer — and match
+  the care to the gaps he has now, not the crisis you fear later.</p>
+</div>
+</section>
+
+<section class="chapter blue">
+<div class="colorbar"><span class="dot"></span> Blue · Plan Ahead</div>
+<div class="partlabel">Find Your Situation · Pathway 4</div>
+<h1><span class="chapnum">Your Situation</span>"Mom is deciding between Original Medicare and Medicare Advantage."</h1>
+
+<div class="block plain">
+  <span class="tag">The Trade in One Paragraph</span>
+  <p><strong>Original Medicare</strong> (usually with a Medigap supplement and a Part D drug
+  plan) costs more per month, but nearly any doctor or hospital that takes Medicare, with few
+  prior authorizations. <strong>Medicare Advantage</strong> replaces that with one private plan —
+  lower premium, often dental/vision extras — in exchange for networks, prior authorization,
+  and copays that stack up in a bad year. Neither is "wrong." One question decides most cases:
+  <em>which would she rather have in the year she gets really sick?</em> <em>→ Chapter 13</em></p>
+</div>
+
+<h2>The Five Questions to Answer Before Choosing</h2>
+<ol class="qs">
+  <li>Are <strong>her doctors and preferred hospital</strong> in the Advantage plan's network — and what happens if they leave it?</li>
+  <li>Are <strong>her medications</strong> on the plan's formulary, and at what tier? (Run them through the Medicare Plan Finder at medicare.gov.)</li>
+  <li>Can she <strong>afford the Medigap premium now</strong>? Predictable premiums versus unpredictable copays is the real math.</li>
+  <li>Does she <strong>travel or split the year</strong> between states? Networks travel poorly; Original Medicare goes everywhere.</li>
+  <li>How would she feel about <strong>prior authorization</strong> for rehab or home health during a serious illness?</li>
+</ol>
+
+<div class="block alert">
+  <span class="tag">The Trapdoor to Watch</span>
+  <p>The choice is <strong>stickier than it looks</strong>. Leaving Advantage later usually means
+  buying Medigap <em>with medical underwriting</em> — in most states the insurer can charge
+  more or say no because of her health, exactly when she most wants back in. Ask SHIP about
+  guaranteed-issue windows and trial rights <em>before</em> choosing, not after.</p>
+</div>
+
+<h2>Free, Unbiased Help</h2>
+<ul class="checks one">
+  <li><span class="cbox"></span><span class="txt"><strong>SHIP</strong> — free, unbiased Medicare counseling: <strong>1-877-839-2675</strong> · shiphelp.org (they will sit with her and run her exact doctors and drugs)</span></li>
+  <li><span class="cbox"></span><span class="txt"><strong>Open Enrollment</strong> runs October 15 – December 7 each year; plans change their networks and formularies annually — recheck even if she is happy</span></li>
+</ul>
+
+<div class="block takeaway">
+  <span class="tag">Pathway Takeaway</span>
+  <p>Run her actual doctors and drugs through the plan, price the bad year and not just the
+  premium, and understand the Medigap underwriting trap before — not after — she chooses.</p>
+</div>
+</section>
+
+</body>
+</html>
