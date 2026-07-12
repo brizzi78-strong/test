@@ -40,11 +40,48 @@ COMPASSION · ORGANIZATION · CONFIDENCE · PEACE OF MIND
 
 Publisher mark: Cardinal Press
 
-## Front-panel elements (for reference)
-Kicker: HERO GUIDE: CAREGIVERS · Title: THE CAREGIVER'S CARDINAL TOOLKIT ·
-Subtitle: A Hero's Guide to Caring for an Aging Parent · Icon row:
-Worksheets / Checklists / Care Planning Tools / Guidance You Can Trust ·
-Author: ROB BRIZZI
+## Front panel — APPROVED DIRECTION (white/minimal, replaces the navy design)
+
+Author-chosen aesthetic (closest in the category to *Being Mortal*): warm
+white/cream field with a thin gold frame; photorealistic red cardinal on a
+delicate gold-line branch, upper third; navy serif stacked title; gold-line
+mountain/pine art above the author name.
+
+**Designer brief — the four audience-tested additions:**
+1. Kicker: "WORKBOOK" (small, gold, letterspaced) — or the utility line
+   "Worksheets, Scripts & Checklists for Every Step"
+2. Title: **THE CAREGIVER'S CARDINAL TOOLKIT** (full title — do not drop
+   "Caregiver's")
+3. Subtitle: "A Hero's Guide to Caring for an Aging Parent" (the official,
+   indexed subtitle) — ⚠️ note: the buyer panel found "hero" exhausts the
+   crisis buyer; the alternative "A Guide for Caring for an Aging Parent"
+   is pre-approved language if the author decides to drop it — one word
+   triggers the metadata sweep
+4. Author line: ROB BRIZZI with the credential beneath —
+   "CDP · Certified Dementia Practitioner"
+5. Bottom utility row in gold line-art style: Worksheets / Checklists /
+   Medicare & Insurance Traps / Care at Home (concrete labels only — no
+   "Guidance You Can Trust")
+6. ISBN on the back panel barcode area: **978-1-963342-03-1**
+
+**Market-research refinements (category-leader conventions):**
+- "CARDINAL TOOLKIT" must own 40-60% of cover height -- the only thing that
+  has to read at 100px thumbnail (the approved design already does this)
+- Style the cardinal ALERT and forward-facing -- a herald, not a mourner.
+  Avoid the sympathy-market register (cardinal on snowy branch, soft focus);
+  the buyer's parent is alive
+- One disciplined color-coding device: a thin row of red/purple/blue
+  file-folder tabs along the bottom edge -- signals "color-coded workbook"
+  without a rainbow
+- Series strip above or below the author line: "A Cardinal's Promise
+  Companion" (the Johns Hopkins Press Health Book device)
+- Maximum one seal; no "bestseller" claims anywhere (Amazon prohibits them
+  on covers)
+- Squint test before final: shrink to 10%; if anything but bird + title +
+  cream survives, simplify
+
+Wrap geometry (premium color, 207pp): full wrap 17.7358 × 11.25 in,
+0.125" bleed, spine 0.4858" centered. Spine: navy text on the cream field.
 
 ## ⚠️ ISBN warning
 The designed cover carries ISBN 978-1-963342-02-7 — that number is
