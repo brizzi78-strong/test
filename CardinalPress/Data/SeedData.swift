@@ -1,7 +1,9 @@
 import Foundation
 
 /// Bundled content for The Cardinal's Toolkit — the companion app to
-/// "The Cardinal's Toolkit: The North Carolina Family Caregiver Handbook."
+/// "The Caregiver's Cardinal Toolkit" by Rob Brizzi, CDP, with
+/// Hope Brizzi, PharmD (Cardinal's Promise Series). Checklists,
+/// articles, and phone numbers are drawn from the handbook itself.
 /// Everything ships with the app — no account, no network.
 enum SeedData {
 
@@ -15,67 +17,67 @@ enum SeedData {
         ),
         Reflection(
             id: "ref-02",
-            text: "Caring for yourself is not time stolen from your parent. It's how you make sure the person caring for them shows up whole.",
-            attribution: nil
+            text: "Take the next right step.",
+            attribution: "The Caregiver's Cardinal Toolkit"
         ),
         Reflection(
             id: "ref-03",
-            text: "Some days caregiving looks like love. Some days it looks like paperwork, patience, and a long drive. It's all love.",
-            attribution: nil
+            text: "When everything feels urgent, do not try to solve the whole future. Write down: What changed? What is unsafe today? Who needs to know? What is the next call? That is enough for now.",
+            attribution: "The Cardinal Rule, from the handbook"
         ),
         Reflection(
             id: "ref-04",
+            text: "You don't have to solve all of this today. Find the most urgent issue, do one thing about it, and then take the next right step. That's it. That's the whole method.",
+            attribution: "from the handbook"
+        ),
+        Reflection(
+            id: "ref-05",
+            text: "The deeper promise was never \"this exact place, no matter what.\" It is: I will make sure you are cared for. I will protect your dignity. I will not abandon you. Sometimes keeping the deeper promise means changing the plan.",
+            attribution: "from the handbook"
+        ),
+        Reflection(
+            id: "ref-06",
+            text: "Sometimes \"I'm fine\" means \"I have no room left to fall apart.\" Check your own gauges today, not just theirs.",
+            attribution: "from the handbook"
+        ),
+        Reflection(
+            id: "ref-07",
             text: "You are not failing because you are tired. You are tired because you are doing something enormous.",
             attribution: nil
         ),
         Reflection(
-            id: "ref-05",
+            id: "ref-08",
             text: "Asking for help is not the moment you stopped being enough. It's the moment you started building a team.",
             attribution: nil
         ),
         Reflection(
-            id: "ref-06",
+            id: "ref-09",
             text: "Progress today might be one signed form, one safe shower, one shared laugh over an old story. That counts. That has always counted.",
             attribution: nil
         ),
         Reflection(
-            id: "ref-07",
+            id: "ref-10",
             text: "It is possible to miss someone who is still here — to grieve in small daily pieces. That feeling has a name, it's normal, and you're allowed to have it.",
             attribution: nil
         ),
         Reflection(
-            id: "ref-08",
+            id: "ref-11",
             text: "Grief is the price we pay for love.",
             attribution: "Colin Murray Parkes"
         ),
         Reflection(
-            id: "ref-09",
-            text: "Your parent doesn't need a perfect caregiver. They need you — rested enough, supported enough, and present.",
-            attribution: nil
-        ),
-        Reflection(
-            id: "ref-10",
+            id: "ref-12",
             text: "What we have once enjoyed we can never lose. All that we love deeply becomes a part of us.",
             attribution: "Helen Keller"
         ),
         Reflection(
-            id: "ref-11",
-            text: "One decision at a time. You don't have to solve the whole future today — just the next right thing.",
-            attribution: nil
-        ),
-        Reflection(
-            id: "ref-12",
+            id: "ref-13",
             text: "Be as kind to yourself today as you would be to a dear friend carrying exactly what you are carrying.",
             attribution: nil
         ),
         Reflection(
-            id: "ref-13",
-            text: "The cardinal does not sing because the winter is over. It sings because it has a song.",
-            attribution: nil
-        ),
-        Reflection(
             id: "ref-14",
-            text: "You have handled every hard day so far — a perfect record. Today asks only for today.",
+            text: "The cardinal does not sing because the winter is over. It sings because it has a song.",
             attribution: nil
         ),
     ]
@@ -83,6 +85,7 @@ enum SeedData {
     // MARK: - Affirmations
 
     static let affirmations: [String] = [
+        "Take the next right step. That's the whole method.",
         "I am doing a hard thing, and I am doing it with love.",
         "Rest is part of caregiving, not a break from it.",
         "I can't do everything. I can do today's things.",
@@ -96,191 +99,224 @@ enum SeedData {
         "Small wins count: a good meal, a calm morning, a returned phone call.",
         "I didn't cause this, and I can't cure it. I can care.",
         "Boundaries protect the caregiver — and the care.",
-        "One decision at a time is a real pace.",
-        "Someday I'll be glad I was here. Today I'm allowed to just be tired.",
+        "Changing the plan is not breaking the promise.",
         "Right now, in this breath, I am doing enough.",
     ]
 
     // MARK: - Journal prompts
 
     static let journalPrompts: [String] = [
+        "What changed? What is unsafe today? Who needs to know?",
         "What went better today than I expected?",
-        "The hardest moment this week was… and I got through it by…",
         "Something my parent said or did that made me smile…",
         "What do I need to ask for help with?",
-        "A memory of them from before…",
+        "The next right step is…",
         "What am I worried about right now, honestly?",
         "One thing I did well as a caregiver this week…",
         "What would I tell a friend in my exact situation?",
     ]
 
-    // MARK: - Articles
+    // MARK: - Articles (condensed from the handbook's chapters)
 
     static let articles: [Article] = [
         Article(
             id: "art-01",
-            title: "You Can't Pour from an Empty Cup",
-            subtitle: "Caregiver burnout, and why respite isn't optional",
-            symbolName: "cup.and.saucer",
+            title: "Caregiver Burnout",
+            subtitle: "Sometimes \"I'm fine\" means \"I have no room left\" — Chapter 4",
+            symbolName: "flame",
             body: """
-Family caregivers routinely report exhaustion, poor sleep, back pain, anxiety, and a creeping sense of being erased from their own lives. None of that means you're doing it wrong. It means you're carrying a second full-time life on top of your own — and every load has a limit.
+Burnout can look like sadness, anger, control, or silence — a daughter who snaps at everyone, a son who stops answering calls, a spouse who cries in the shower. Watch for constant exhaustion, irritability, resentment, trouble sleeping, ignoring your own health, pulling away from friends, feeling trapped, guilt for wanting relief, making more mistakes, and dreading the phone.
 
-Burnout rarely announces itself. It shows up as snapping at the person you love, dreading the phone, skipping your own doctor's appointments, going numb. If you recognize yourself in that list, treat it the way you'd treat your parent's symptoms: as real, and as something to act on.
+The caregiver may never use the word burnout. They may say "I'm fine," or "I don't have a choice." Listen closely. Sometimes "I'm fine" means "I have no room left to fall apart."
 
-The single most effective treatment is respite — regular, scheduled time when someone else is responsible. Not a someday reward; a standing appointment. A sibling's Saturday, a paid aide's afternoon, an adult day program two days a week, a volunteer from church. In North Carolina, your local Area Agency on Aging can help you find respite programs, and Project C.A.R.E. offers respite support specifically for dementia caregivers. Start smaller than you think you need — two protected hours a week — and grow it.
+If you are at the edge — having thoughts of harming yourself, or afraid of what exhaustion might make you do — call or text 988, the Suicide & Crisis Lifeline, any hour. And tell your own doctor what caregiving is costing you: caregiver depression is a treatable medical condition, not a character flaw.
 
-And keep one piece of your old life on the calendar no matter what: the walking group, the choir, the fishing trip. It isn't selfish. It's the part of you your parent would least want this season of life to take.
+Respite care exists for exactly this moment. Ask the doctor, a social worker, or the Eldercare Locator (1-800-677-1116) about respite options today — and in North Carolina, ask about Project C.A.R.E. if dementia is part of the picture. Resentment is information. So is exhaustion. Treat them like the vital signs they are.
 """
         ),
         Article(
             id: "art-02",
-            title: "The Paperwork That Matters Most",
-            subtitle: "Five documents to have in place before a crisis",
-            symbolName: "doc.text",
+            title: "The Promise That Traps Families",
+            subtitle: "A promise made in one season may need wisdom in another — Chapter 4",
+            symbolName: "hand.raised.fingers.spread",
             body: """
-The worst time to discover a missing document is in a hospital hallway. A short stack of paperwork, done while your parent can fully participate, prevents most of the legal scrambles families face later.
+Many families carry a promise: "I promised Mom I would never put her in a nursing home." Those promises usually come from love — but they are often made before anyone understands what care may require: before dementia causes wandering, before falls happen at night, before bathing becomes unsafe, before the caregiver has not slept in months.
 
-The core five: a durable power of attorney (so someone can handle finances if your parent can't); a health care power of attorney (so someone can make medical decisions); an advance directive or living will (your parent's own wishes about end-of-life care); a HIPAA authorization (so doctors can talk to you); and an up-to-date will. In North Carolina, advance directives must be signed before two qualified witnesses and notarized, and you can file them with the N.C. Secretary of State's advance directive registry so they can be found when needed.
+A promise made in one season may need wisdom in another.
 
-Just as important as signing them is finding them. Make a "where everything is" sheet: documents, insurance cards, Medicare number, deed, accounts, and the passwords that unlock modern life. Keep copies where the people who'll need them can reach them — not only in a safe-deposit box that's sealed exactly when it's needed most.
+The deeper promise is usually not "I will keep you in this exact place no matter what." It is "I will make sure you are cared for. I will protect your dignity. I will not abandon you."
 
-A note of care: this app can help you get organized, but it isn't legal advice, and every family's situation differs. An elder law attorney — many offer flat-fee document packages — is worth one afternoon and is far cheaper than untangling things after a crisis.
+Sometimes keeping the deeper promise means changing the plan. That is not betrayal. That is love growing up under pressure.
 """
         ),
         Article(
             id: "art-03",
-            title: "Making the House Safe",
-            subtitle: "An afternoon of small fixes that prevents the big fall",
-            symbolName: "house",
+            title: "Home Health vs. Private Duty Care",
+            subtitle: "The names sound similar; the services are different — Chapters 6–7",
+            symbolName: "stethoscope",
             body: """
-Falls are the leading cause of injury for older adults — and most happen at home, on an ordinary day, over something that could have been fixed in five minutes. A single walkthrough with fresh eyes is one of the highest-value afternoons you'll ever spend.
+This is one of the most common — and most expensive — confusions in caregiving. A family may need both kinds of help, but they are not the same thing, and asking for the wrong one wastes precious weeks.
 
-Walk the paths your parent actually uses: bed to bathroom, chair to kitchen, door to mailbox. Clear them completely. Loose rugs go — sentimental or not — or get double-sided tape. Cords move to the wall. Add night lights along the bedroom-to-bathroom route, because that 2 a.m. trip is the most dangerous walk in the house.
+Home health is medical: intermittent, clinician-ordered visits — nursing, therapy, social work, and limited aide time — typically after illness, wounds, weakness, or decline. Medicare may cover it when requirements are met: a clinician's evaluation, a skilled need, homebound status, and documentation. But it is not long blocks of supervision, and it is not someone to stay with Mom all day.
 
-The bathroom deserves the most attention: grab bars in the shower and beside the toilet (towel bars are not grab bars), a non-slip mat, a shower chair, and a raised toilet seat if standing is hard. In the kitchen, move daily items between hip and shoulder height so there's no reason to climb. Check that smoke and carbon monoxide detectors work, set the water heater no higher than 120°F, and post emergency numbers in large print by the phone.
+Private duty care is non-medical daily help, usually paid privately: bathing, meals, companionship, and supervision — including longer blocks and overnight coverage, for when the person cannot safely be alone.
 
-Then look at the stairs: railings on both sides, secure, with good light and marked edges. If the doctor has suggested a cane or walker, make sure it's actually within reach at the bedside — the fanciest walker in the world prevents nothing from across the room. Medicare and the VA sometimes cover home-safety equipment; your Area Agency on Aging can point you to programs that help pay for modifications.
+The question is not which one sounds better. It is: what does my parent actually need at home? Ask the doctor, "Can we schedule a provider evaluation to determine whether home health is appropriate?" — not "Can Medicare send someone to stay with Mom?" And if the real need is supervision, start pricing private duty care honestly rather than waiting for a benefit that will not come.
 """
         ),
         Article(
             id: "art-04",
-            title: "Talking With Your Parent About Help",
-            subtitle: "How to have the conversation nobody wants to start",
-            symbolName: "bubble.left.and.bubble.right",
+            title: "Inpatient or Under Observation?",
+            subtitle: "The one hospital question that changes everything — Chapter 13",
+            symbolName: "building.2",
             body: """
-Most caregiving conflict isn't really about the car keys, the aide, or the move. It's about dignity. Your parent has spent a lifetime being the one who helps, decides, and provides — and every conversation about "help" can sound to them like a demotion from adult to dependent.
+A person can spend the night in a hospital bed — several nights, even — and still be considered an outpatient under "observation status." It feels identical from the bedside. On paper, it is a trapdoor.
 
-So start earlier than feels necessary, and start with questions, not conclusions. "Dad, if you ever needed a hand with the house, how would you want that to work?" lands very differently than "Dad, we've decided you need someone." Whenever possible, offer choices between acceptable options rather than yes/no ultimatums — people rarely fight the option they picked themselves.
+Why it matters: Medicare Part A may cover a limited skilled nursing facility stay after a hospitalization, but the qualifying stay generally means at least three consecutive days as an admitted inpatient. Observation days and the discharge day do not count. A parent who spent three nights "under observation" may leave the hospital with no covered rehab at all — a surprise worth thousands of dollars, discovered at the worst possible moment. (Many Medicare Advantage plans and some programs waive this — ask.)
 
-Pick your moments and your battles. One topic at a time, in private, unhurried, never in front of an audience. Lead with what you see and how you feel, not verdicts: "I noticed two falls this month and I'm scared" invites a conversation; "You can't stay here alone" starts a standoff. Expect the first conversation to fail. Its job is to plant the seed, not sign the paperwork.
+So ask early, and more than once: "Is my parent admitted as an inpatient, or under observation status?" Write down the answer and who gave it. Status can change during a stay.
 
-If you hit a wall, borrow authority. Many parents will hear from a doctor, a pastor, or an old friend what they cannot hear from their child. And through it all, protect the relationship: you can win the argument about the shower chair and lose something more valuable. Aim to be their ally against the problem — not the newest problem.
+Before discharge, ask what the stay was classified as, how many covered days are available, what you could owe, what happens when coverage ends, and what appeal rights exist. The discharge planner and hospital social worker answer these questions every day — but usually only when asked.
 """
         ),
         Article(
             id: "art-05",
-            title: "When It's Time for More Help",
-            subtitle: "Reading the signs, knowing the options, surviving the guilt",
-            symbolName: "figure.2.arms.open",
+            title: "The Family Meeting",
+            subtitle: "Names. Dates. Deadlines. No fog. — Chapter 5",
+            symbolName: "person.3",
             body: """
-There is usually no single dramatic moment when home care stops being enough — just an accumulation: a second fall, medications missed, food spoiling in the fridge, wandering, your own health starting to crack. If you keep asking yourself whether it's time, that question is itself information.
+When care needs change, most families communicate by rumor: one sibling talks to Mom, another hears it secondhand, and everyone assumes someone else handled it. A short, structured family meeting replaces the rumor mill.
 
-Know the ladder of options, because "more help" rarely means a nursing home. It usually starts with a few hours of in-home help a week, then adult day programs (which also give you respite), then more hours, then assisted living, memory care, or skilled nursing — each step matched to actual needs. In North Carolina, your county's Area Agency on Aging and NC 211 can map what exists near you and what it costs; the Eldercare Locator (1-800-677-1116) does the same nationwide.
+Use a simple agenda, and do not let the conversation wander into every old family wound: What changed? — name the reason for the meeting in one sentence. What is unsafe today? — falls, wandering, missed medications, unsafe driving or cooking, caregiver exhaustion, no overnight coverage. What matters most to the person receiving care — safety, comfort, or staying home as long as it is safe? What support is needed? Who is responsible for what — names, dates, deadlines, no fog. And when will we meet again? One meeting is not the whole plan.
 
-Watch your own gauges as closely as your parent's. Caregivers who are drowning routinely rate their parent as "fine" while their own blood pressure, sleep, and marriage say otherwise. If a professional — a doctor, a discharge planner, a care manager — tells you the current plan isn't sustainable, believe them.
+Choose one point person. That does not mean they do all the work — it means they coordinate communication so nothing falls between siblings. The point person keeps the medication list updated, communicates with doctors, shares updates, and knows where the documents are. They do not have to be the oldest child or the loudest voice — just the person most able to help the plan hold together.
 
-And about the guilt: choosing more help is not breaking a promise. The promise was never "I will do everything with my own two hands until I collapse." It was "I will make sure you are safe and loved." Sometimes the most faithful way to keep that promise is to bring in reinforcements — and to arrive as the daughter or son again, instead of only the exhausted nurse.
+Separate roles from opinions: everyone may have a view, but the meeting assigns jobs. And set the next check-in before you leave the room.
 """
         ),
     ]
 
-    // MARK: - Planning checklists
+    // MARK: - Checklists (from the handbook, with its color system)
 
     static let checklists: [Checklist] = [
         Checklist(
-            id: "cl-docs",
-            title: "The Essential Documents",
-            subtitle: "Five papers to have in place before a crisis",
-            symbolName: "doc.text",
+            id: "cl-first24",
+            title: "In the First 24 Hours",
+            subtitle: "Seven actions, not seven chapters",
+            symbolName: "exclamationmark.triangle",
+            tier: .actToday,
             items: [
-                ChecklistItem("docs-dpoa", "Durable power of attorney signed",
-                              detail: "Lets a trusted person handle finances if your parent can't."),
-                ChecklistItem("docs-hcpoa", "Health care power of attorney signed",
-                              detail: "Names who makes medical decisions when they can't."),
-                ChecklistItem("docs-ad", "Advance directive / living will completed",
-                              detail: "In NC: two qualified witnesses and a notary. Consider the NC Secretary of State registry."),
-                ChecklistItem("docs-hipaa", "HIPAA authorization on file with doctors",
-                              detail: "So providers can legally talk to you."),
-                ChecklistItem("docs-will", "Will located and current"),
-                ChecklistItem("docs-cards", "Copies of insurance and Medicare cards made"),
-                ChecklistItem("docs-map", "\"Where everything is\" sheet written",
-                              detail: "Documents, accounts, deed, keys, passwords — and who has copies."),
+                ChecklistItem("f24-safety", "Handle immediate safety — the person, the stove, the car keys, the stairs"),
+                ChecklistItem("f24-cards", "Photograph the insurance and Medicare cards, front and back"),
+                ChecklistItem("f24-meds", "Gather the medication list — or the bottles, in one bag"),
+                ChecklistItem("f24-status", "If a hospital is involved, ask: inpatient, or under observation?",
+                              detail: "Write down the answer and who gave it — it can decide whether Medicare covers rehab later."),
+                ChecklistItem("f24-poa", "Find out who is legally authorized to make decisions — and where the POA papers are"),
+                ChecklistItem("f24-notes", "Start a notes page — what changed, when it started, who told you what"),
+                ChecklistItem("f24-next", "Do one thing about the most urgent issue — then take the next right step"),
+            ]
+        ),
+        Checklist(
+            id: "cl-crisis",
+            title: "Emergency Page & Crisis Plan",
+            subtitle: "Print it. Post it. A clear call gets better help.",
+            symbolName: "phone.badge.checkmark",
+            tier: .actToday,
+            items: [
+                ChecklistItem("er-id", "Full name, date of birth, and address"),
+                ChecklistItem("er-dx", "Main diagnoses and allergies"),
+                ChecklistItem("er-medloc", "Where the medication list is"),
+                ChecklistItem("er-docs", "Doctor names, numbers, and pharmacy"),
+                ChecklistItem("er-ins", "Insurance information"),
+                ChecklistItem("er-agent", "The healthcare agent, named"),
+                ChecklistItem("er-contacts", "Family, facility, home health, and hospice contacts"),
+                ChecklistItem("er-hospital", "Preferred hospital"),
+                ChecklistItem("er-most", "DNR / MOST / POLST status, if applicable",
+                              detail: "Emergency crews need the original, quickly findable."),
+                ChecklistItem("er-posted", "Printed and posted where the caregiver can grab it"),
             ]
         ),
         Checklist(
             id: "cl-safety",
-            title: "Home Safety Walkthrough",
-            subtitle: "An afternoon of fixes that prevents the big fall",
+            title: "Home Safety After a Fall",
+            subtitle: "Small changes prevent big injuries",
             symbolName: "house",
+            tier: .watchClosely,
             items: [
-                ChecklistItem("safe-paths", "Walking paths cleared — rugs, cords, clutter"),
-                ChecklistItem("safe-grab", "Grab bars in shower and beside toilet",
-                              detail: "Towel bars are not grab bars."),
-                ChecklistItem("safe-night", "Night lights from bedroom to bathroom"),
-                ChecklistItem("safe-stairs", "Stair railings secure on both sides, edges lit"),
-                ChecklistItem("safe-bath", "Non-slip mat and shower chair in place"),
-                ChecklistItem("safe-alarms", "Smoke and CO detectors tested"),
-                ChecklistItem("safe-water", "Water heater set to 120°F or lower"),
-                ChecklistItem("safe-numbers", "Emergency numbers posted large-print by the phone"),
-                ChecklistItem("safe-aid", "Cane or walker within reach at the bedside"),
+                ChecklistItem("hs-rugs", "Loose rugs gone — or taped down"),
+                ChecklistItem("hs-clutter", "Clutter and cords out of the walking paths"),
+                ChecklistItem("hs-light", "Good lighting, plus a nightlight from bed to bathroom"),
+                ChecklistItem("hs-rails", "Stairs have railings"),
+                ChecklistItem("hs-grab", "Grab bars in the shower and by the toilet"),
+                ChecklistItem("hs-bath", "Shower chair, handheld shower head, non-slip mat"),
+                ChecklistItem("hs-toilet", "Raised toilet seat — or bedside commode — if rising is hard"),
+                ChecklistItem("hs-chair", "A sturdy chair that is easy to rise from"),
+                ChecklistItem("hs-phone", "Phone or call device within reach"),
             ]
         ),
         Checklist(
-            id: "cl-medical",
-            title: "Medical Information Kit",
-            subtitle: "One folder that travels to every appointment",
-            symbolName: "cross.case",
+            id: "cl-folder",
+            title: "The Documents Folder: First Five",
+            subtitle: "A useful folder beats a perfect folder that never gets built",
+            symbolName: "folder",
+            tier: .planAhead,
             items: [
-                ChecklistItem("med-list", "Current medication list with doses and times"),
-                ChecklistItem("med-allergy", "Allergy list written down"),
-                ChecklistItem("med-history", "One-page health history and diagnoses summary"),
-                ChecklistItem("med-docs", "Doctors' names and numbers listed"),
-                ChecklistItem("med-pharmacy", "Pharmacy name and number listed"),
-                ChecklistItem("med-hospital", "Preferred hospital noted"),
-                ChecklistItem("med-most", "DNR or MOST form location known (if one exists)",
-                              detail: "Emergency crews need the original, quickly findable."),
-                ChecklistItem("med-copies", "A copy of the kit in your car or bag"),
+                ChecklistItem("folder-meds", "The medication list"),
+                ChecklistItem("folder-docs", "The doctor list"),
+                ChecklistItem("folder-ins", "Copies of the insurance and Medicare cards"),
+                ChecklistItem("folder-health", "The healthcare decision documents",
+                              detail: "Healthcare power of attorney and living will / advance directive."),
+                ChecklistItem("folder-contacts", "The emergency contacts page"),
+                ChecklistItem("folder-where", "The right people know where the folder is"),
+                ChecklistItem("folder-alive", "A reminder set to keep it current",
+                              detail: "A folder no one can find — or that is out of date — is not doing its job."),
             ]
         ),
         Checklist(
-            id: "cl-discharge",
-            title: "Hospital Discharge Day",
-            subtitle: "The most dangerous handoff in health care, tamed",
-            symbolName: "cross.circle",
+            id: "cl-medlist",
+            title: "The Medication List",
+            subtitle: "Bring the list, not just the bottles",
+            symbolName: "pills",
+            tier: .planAhead,
             items: [
-                ChecklistItem("dis-instructions", "Written discharge instructions in hand — and understood"),
-                ChecklistItem("dis-meds", "Every medication change reconciled against the old list",
-                              detail: "Ask directly: what's new, what stopped, what changed dose?"),
-                ChecklistItem("dis-followup", "Follow-up appointments booked before leaving"),
-                ChecklistItem("dis-equipment", "Home equipment ordered and delivery confirmed"),
-                ChecklistItem("dis-warning", "Warning signs to watch for written down"),
-                ChecklistItem("dis-call", "Who to call after hours — name and number"),
-                ChecklistItem("dis-ride", "Transportation home arranged"),
-                ChecklistItem("dis-help", "First week of extra help scheduled"),
+                ChecklistItem("med-each", "Every medication: name, dose, when, why, and who prescribed it"),
+                ChecklistItem("med-allergy", "Allergies and medication reactions written down"),
+                ChecklistItem("med-otc", "Vitamins, supplements, and over-the-counter drugs included"),
+                ChecklistItem("med-forms", "Inhalers, eye drops, creams, patches, insulin, oxygen included"),
+                ChecklistItem("med-stopped", "Recently stopped medications noted",
+                              detail: "A discontinued medication sitting in the cabinet has a way of coming back."),
+                ChecklistItem("med-copy", "A copy travels with the caregiver — wallet, phone, or bag"),
+                ChecklistItem("med-review", "A pharmacist medication review requested"),
             ]
         ),
     ]
 
-    // MARK: - Support lines & organizations
+    // MARK: - Numbers That Matter (from the handbook's last page)
 
     static let urgentHelp: [SupportResource] = [
         SupportResource(
+            id: "line-988",
+            name: "988 Suicide & Crisis Lifeline",
+            detail: "Mental health crisis — yours or theirs, any hour. Call or text 988.",
+            actionLabel: "Call or text 988",
+            symbolName: "heart.fill",
+            url: "tel:988"
+        ),
+        SupportResource(
             id: "line-eldercare",
             name: "Eldercare Locator",
-            detail: "Connects you to local aging services anywhere in the US. Weekdays, 1-800-677-1116.",
+            detail: "Finding local aging services anywhere in the US. 1-800-677-1116.",
             actionLabel: "Call 1-800-677-1116",
             symbolName: "phone.fill",
             url: "tel:18006771116"
+        ),
+        SupportResource(
+            id: "line-alz",
+            name: "Alzheimer's Association Helpline",
+            detail: "Dementia questions or a dementia crisis, 24/7. 1-800-272-3900.",
+            actionLabel: "Call 1-800-272-3900",
+            symbolName: "brain.head.profile",
+            url: "tel:18002723900"
         ),
         SupportResource(
             id: "line-nc211",
@@ -290,91 +326,83 @@ And about the guilt: choosing more help is not breaking a promise. The promise w
             symbolName: "phone.arrow.up.right.fill",
             url: "tel:211"
         ),
-        SupportResource(
-            id: "line-alz",
-            name: "Alzheimer's Association Helpline",
-            detail: "24/7 support for dementia caregivers — crisis moments included. 1-800-272-3900.",
-            actionLabel: "Call 1-800-272-3900",
-            symbolName: "brain.head.profile",
-            url: "tel:18002723900"
-        ),
-        SupportResource(
-            id: "line-988",
-            name: "988 Suicide & Crisis Lifeline",
-            detail: "Caregivers hit walls too. Free, confidential support 24/7 — call or text 988.",
-            actionLabel: "Call or text 988",
-            symbolName: "heart.fill",
-            url: "tel:988"
-        ),
     ]
 
     static let ncResources: [SupportResource] = [
         SupportResource(
-            id: "nc-daas",
-            name: "NC Division of Aging and Adult Services",
-            detail: "The state's front door to aging services, including your county's Area Agency on Aging.",
-            actionLabel: "ncdhhs.gov/aging",
-            symbolName: "building.columns",
-            url: "https://www.ncdhhs.gov/divisions/aging-and-adult-services"
-        ),
-        SupportResource(
             id: "nc-shiip",
             name: "SHIIP — Medicare Counseling",
-            detail: "Free, unbiased Medicare help from the NC Department of Insurance. 1-855-408-1212.",
+            detail: "Free, unbiased Medicare counseling from the NC Department of Insurance. 1-855-408-1212.",
             actionLabel: "Call 1-855-408-1212",
             symbolName: "checkmark.shield",
             url: "tel:18554081212"
+        ),
+        SupportResource(
+            id: "nc-epass",
+            name: "ePASS",
+            detail: "Apply online for NC Medicaid and other assistance programs.",
+            actionLabel: "epass.nc.gov",
+            symbolName: "laptopcomputer",
+            url: "https://epass.nc.gov"
+        ),
+        SupportResource(
+            id: "nc-dss",
+            name: "County DSS",
+            detail: "Your county's Department of Social Services — the front door for Medicaid and Adult Protective Services.",
+            actionLabel: "Find your county office",
+            symbolName: "building.columns",
+            url: "https://www.ncdhhs.gov/divisions/social-services/local-dss-directory"
+        ),
+        SupportResource(
+            id: "nc-daas",
+            name: "NC Division of Aging and Adult Services",
+            detail: "State aging services, including your county's Area Agency on Aging.",
+            actionLabel: "ncdhhs.gov/aging",
+            symbolName: "person.2.fill",
+            url: "https://www.ncdhhs.gov/divisions/aging-and-adult-services"
         ),
         SupportResource(
             id: "nc-care",
             name: "Project C.A.R.E.",
             detail: "NC's respite and support program for families caring for someone with dementia.",
             actionLabel: "Learn more",
-            symbolName: "person.2.fill",
+            symbolName: "hands.and.sparkles",
             url: "https://www.ncdhhs.gov/divisions/aging-and-adult-services/project-care"
-        ),
-        SupportResource(
-            id: "nc-aps",
-            name: "Adult Protective Services",
-            detail: "If you suspect an older adult is being abused, neglected, or exploited, report it to your county DSS.",
-            actionLabel: "How to report",
-            symbolName: "shield.lefthalf.filled",
-            url: "https://www.ncdhhs.gov/divisions/social-services/adult-protective-services"
         ),
     ]
 
     static let nationalResources: [SupportResource] = [
         SupportResource(
-            id: "org-fca",
-            name: "Family Caregiver Alliance",
-            detail: "Practical guides, state-by-state help, and caregiver education.",
-            actionLabel: "caregiver.org",
-            symbolName: "text.book.closed",
-            url: "https://www.caregiver.org"
+            id: "org-medicare",
+            name: "Medicare",
+            detail: "Medicare questions. 1-800-MEDICARE (1-800-633-4227).",
+            actionLabel: "Call 1-800-633-4227",
+            symbolName: "cross.circle",
+            url: "tel:18006334227"
         ),
         SupportResource(
-            id: "org-aarp",
-            name: "AARP Family Caregiving",
-            detail: "Checklists, legal basics, and a caregiver support line.",
-            actionLabel: "aarp.org/caregiving",
-            symbolName: "person.crop.circle.badge.checkmark",
-            url: "https://www.aarp.org/caregiving/"
+            id: "org-ship",
+            name: "SHIP — State Health Insurance Assistance Program",
+            detail: "Free, unbiased Medicare counseling in every state. 1-877-839-2675 · shiphelp.org.",
+            actionLabel: "shiphelp.org",
+            symbolName: "checkmark.shield.fill",
+            url: "https://www.shiphelp.org"
         ),
         SupportResource(
             id: "org-va",
-            name: "VA Caregiver Support",
-            detail: "If your parent is a veteran: programs, stipends, and a support line. 1-855-260-3274.",
+            name: "VA Caregiver Support Line",
+            detail: "Caring for a veteran: programs, stipends, and support. 1-855-260-3274.",
             actionLabel: "Call 1-855-260-3274",
             symbolName: "star.circle",
             url: "tel:18552603274"
         ),
         SupportResource(
-            id: "org-medicare",
-            name: "Medicare.gov",
-            detail: "Coverage lookups, plan comparison, and \"what does Medicare cover?\" answers.",
-            actionLabel: "medicare.gov",
-            symbolName: "cross.circle",
-            url: "https://www.medicare.gov"
+            id: "org-aps",
+            name: "Adult Protective Services",
+            detail: "Suspected abuse, neglect, or financial exploitation — statewide hotline in most states.",
+            actionLabel: "napsa-now.org",
+            symbolName: "shield.lefthalf.filled",
+            url: "https://www.napsa-now.org"
         ),
     ]
 }

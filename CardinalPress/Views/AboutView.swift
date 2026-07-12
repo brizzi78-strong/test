@@ -28,10 +28,31 @@ struct AboutView: View {
                 .listRowBackground(Color.clear)
             }
 
+            Section("Mission") {
+                Text("To help families avoid unnecessary suffering by understanding the healthcare system before a crisis forces them to. If this toolkit helps one family make one better decision, it has done its job.")
+                    .font(.subheadline.italic())
+                    .padding(.vertical, 4)
+            }
+
             Section("About") {
-                Text("This app accompanies The Cardinal's Toolkit workbook by Rob Brizzi — practical tools to help North Carolina families stay organized and prepared while caring for an aging parent. The four pillars of the book live here too: practical tools, planning and checklists, support and resources, and care at home.")
+                Text("This app accompanies The Caregiver's Cardinal Toolkit by Rob Brizzi, Certified Dementia Practitioner, with Hope Brizzi, PharmD — part of the Cardinal's Promise Series. Its checklists, articles, and phone numbers come from the handbook, organized by the book's color system: red means act today, purple means watch closely, blue means plan ahead.")
                     .font(.subheadline)
                     .padding(.vertical, 4)
+                if let url = URL(string: "https://thecardinalspromise.com") {
+                    Link(destination: url) {
+                        HStack {
+                            Image(systemName: "globe")
+                                .foregroundStyle(Theme.cardinal)
+                            Text("thecardinalspromise.com")
+                                .font(.subheadline)
+                                .foregroundStyle(.primary)
+                            Spacer()
+                            Image(systemName: "arrow.up.right")
+                                .font(.caption)
+                                .foregroundStyle(.tertiary)
+                        }
+                    }
+                }
             }
 
             Section("Why the cardinal?") {
@@ -56,8 +77,10 @@ struct AboutView: View {
                 HStack {
                     Spacer()
                     VStack(spacing: 2) {
-                        Text("The Cardinal's Toolkit")
-                        Text("Version 1.0 · Rob Brizzi")
+                        Text("\"Take the next right step.\"")
+                            .italic()
+                        Text("The Cardinal's Toolkit · Version 1.0")
+                        Text("Rob Brizzi, CDP · with Hope Brizzi, PharmD")
                     }
                     .font(.caption)
                     .foregroundStyle(.tertiary)

@@ -14,6 +14,9 @@ struct ChecklistsView: View {
                             ChecklistRow(checklist: checklist)
                         }
                     }
+                } header: {
+                    Text("From the handbook — red means act today, purple means watch closely, blue means plan ahead.")
+                        .textCase(nil)
                 } footer: {
                     Text("Progress is saved on this device. These lists organize the work — they aren't legal or medical advice.")
                 }
@@ -33,22 +36,30 @@ private struct ChecklistRow: View {
     var body: some View {
         let done = store.completedCount(in: checklist)
         let total = checklist.items.count
+        let tierColor = Theme.tierColor(checklist.tier)
         HStack(spacing: 13) {
             ZStack {
                 Circle()
-                    .stroke(Theme.gold.opacity(0.25), lineWidth: 3.5)
+                    .stroke(tierColor.opacity(0.2), lineWidth: 3.5)
                 Circle()
                     .trim(from: 0, to: total == 0 ? 0 : CGFloat(done) / CGFloat(total))
-                    .stroke(done == total ? Theme.gold : Theme.cardinal,
+                    .stroke(done == total ? Theme.gold : tierColor,
                             style: StrokeStyle(lineWidth: 3.5, lineCap: .round))
                     .rotationEffect(.degrees(-90))
                 Image(systemName: done == total ? "checkmark" : checklist.symbolName)
                     .font(.system(size: 15))
-                    .foregroundStyle(done == total ? Theme.gold : Theme.navy)
+                    .foregroundStyle(done == total ? Theme.gold : tierColor)
             }
             .frame(width: 42, height: 42)
 
-            VStack(alignment: .leading, spacing: 2) {
+            VStack(alignment: .leading, spacing: 3) {
+                Text(checklist.tier.rawValue)
+                    .font(.system(size: 10, weight: .bold))
+                    .textCase(.uppercase)
+                    .padding(.horizontal, 7)
+                    .padding(.vertical, 2)
+                    .background(tierColor.opacity(0.14), in: Capsule())
+                    .foregroundStyle(tierColor)
                 Text(checklist.title)
                     .font(.subheadline.weight(.semibold))
                 Text(checklist.subtitle)
@@ -56,7 +67,7 @@ private struct ChecklistRow: View {
                     .foregroundStyle(.secondary)
                 Text("\(done) of \(total) done")
                     .font(.caption2.weight(.medium))
-                    .foregroundStyle(done == total ? Theme.gold : Theme.cardinal)
+                    .foregroundStyle(done == total ? Theme.gold : tierColor)
             }
         }
         .padding(.vertical, 3)
@@ -76,7 +87,7 @@ struct ChecklistDetailView: View {
                         .font(.subheadline)
                         .foregroundStyle(.secondary)
                     ProgressView(value: Double(done), total: Double(checklist.items.count))
-                        .tint(done == checklist.items.count ? Theme.gold : Theme.cardinal)
+                        .tint(done == checklist.items.count ? Theme.gold : Theme.tierColor(checklist.tier))
                     if done == checklist.items.count {
                         Label("All done. Well handled.", systemImage: "checkmark.seal.fill")
                             .font(.caption.weight(.semibold))

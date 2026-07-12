@@ -64,6 +64,13 @@ struct SupportResource: Identifiable, Hashable {
     let url: String
 }
 
+/// The handbook's color system: how urgent is this page?
+enum ChecklistTier: String, Hashable {
+    case actToday = "Act Today"         // red — crisis, urgent safety
+    case watchClosely = "Watch Closely" // purple — something has changed
+    case planAhead = "Plan Ahead"       // blue — documents, money, conversations
+}
+
 /// A planning checklist from the handbook. Item completion is stored
 /// on-device (see CompanionStore.checkedItemIDs).
 struct Checklist: Identifiable, Hashable {
@@ -71,6 +78,7 @@ struct Checklist: Identifiable, Hashable {
     let title: String
     let subtitle: String
     let symbolName: String
+    let tier: ChecklistTier
     let items: [ChecklistItem]
 }
 
