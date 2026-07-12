@@ -1,0 +1,39 @@
+name: iOS build
+
+on:
+  push:
+    branches:
+      - main
+      - claude/iphone-cardinal-press-app-5gk9rr
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build (iOS Simulator)
+    runs-on: macos-15
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Show Xcode version
+        run: xcodebuild -version
+
+      - name: Build CardinalPress for iOS Simulator
+        run: |
+          xcodebuild build \
+            -project CardinalPress.xcodeproj \
+            -target CardinalPress \
+            -sdk iphonesimulator \
+            -configuration Debug \
+            SYMROOT="$PWD/build" \
+            CODE_SIGNING_ALLOWED=NO \
+            ONLY_ACTIVE_ARCH=NO
+
+      - name: Upload simulator app bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: CardinalPress-simulator
+          path: build/Debug-iphonesimulator/CardinalPress.app
+          if-no-files-found: error
