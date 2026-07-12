@@ -146,5 +146,43 @@ Rob Brizzi, CDP
 Certified Dementia Practitioner · thecardinalspromise.com
 [phone] · [email]
 
+## Target #2 (author's warm contact): Dr. Jason Huet, MD — Charleston
+
+Ask: blurb (1–3 sentences). Cover line on acceptance, in personal capacity:
+*"— Jason Huet, MD"* plus specialty/title exactly as he specifies.
+(Specialty not yet noted — tell me and I'll sharpen the "why it's in your
+lane" hooks the way the Ferrera letter does.)
+
+### Personalized letter — Dr. Huet
+
+Subject: Would you consider endorsing my caregiver handbook, Jason?
+
+Dear Dr. Huet,
+
+[Personal opener — one sentence on how you know each other; Rob supplies.]
+
+After my father died, I wrote the book I kept wishing I could hand the
+families I sat with through my years in home health, hospice, and senior
+living: *The Caregiver's Cardinal Toolkit* — a practical, color-coded
+workbook with the exact questions, scripts, and worksheets for hospital
+discharges, care decisions, Medicare traps, and the last days of life.
+
+It's the book for the family in your exam room who is suddenly caring for
+a parent and doesn't know what to ask: when to push for a home health
+evaluation, what "observation status" quietly does to coverage, how to
+bring you one accurate medication list, and how to hear "goals of care"
+without panic. The manuscript passed independent clinical, Medicare, and
+legal reviews, and a PharmD reviewed the medication content.
+
+Would you consider a one-to-three-sentence endorsement? I'll send the full
+PDF today — or just the pages closest to your practice. The quote would run
+with your name and title exactly as you specify (personal capacity), on the
+cover and Amazon page, with your approval of final wording. Either way,
+thank you — and I'd be glad to send a copy for your waiting room regardless.
+
+Rob Brizzi, CDP
+Certified Dementia Practitioner · thecardinalspromise.com
+[phone] · [email]
+
 ## Target list (researched)
 *(appended below when research completes)*
