@@ -35,13 +35,18 @@ struct TodayView: View {
     }
 
     private var header: some View {
-        VStack(alignment: .leading, spacing: 4) {
-            Text(Date(), format: .dateTime.weekday(.wide).month(.wide).day())
-                .font(.caption.weight(.semibold))
-                .foregroundStyle(Theme.cardinal)
-                .textCase(.uppercase)
-            Text(greeting)
-                .font(.title3.weight(.medium))
+        HStack(alignment: .bottom) {
+            VStack(alignment: .leading, spacing: 4) {
+                Text(Date(), format: .dateTime.weekday(.wide).month(.wide).day())
+                    .font(.caption.weight(.semibold))
+                    .foregroundStyle(Theme.cardinal)
+                    .textCase(.uppercase)
+                Text(greeting)
+                    .font(.title3.weight(.medium))
+            }
+            Spacer()
+            LivingCardinal()
+                .frame(width: 58, height: 58)
         }
     }
 
