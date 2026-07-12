@@ -80,18 +80,17 @@ Prologue
 **Part Five — Hope**
 
 24. Hope
-25. Gulf Breeze
-26. The People You Meet When You Stop Drinking
-27. Sobriety Meets Hospice
+25. The People You Meet When You Stop Drinking
+26. Sobriety Meets Hospice
 
 **Part Six — The Last Chapter**
 
-28. The Detour
-29. Five Weeks
-30. The Days After
-31. The First Honest Mile
-32. What Grief Taught the Job
-33. The Table
+27. The Detour
+28. Five Weeks
+29. The Days After
+30. The First Honest Mile
+31. What Grief Taught the Job
+32. The Table
 
 Epilogue: The Cardinal's Promise
 

@@ -1,23 +1,23 @@
 # KDP Cover-Wrap Specs — The Cardinal's Promise
 
-Trim size: 6" x 9". Interior page count: 224 (current typeset; the
+Trim size: 6" x 9". Interior page count: 219 (current typeset; the
 spine math below moves with it — rerun before ordering the wrap).
 
 ## Spine width
 
-| Paper | Formula | 224 pages |
+| Paper | Formula | 219 pages |
 |---|---|---|
-| White (recommended for text-only) | pages × 0.002252" | 0.504" |
-| Cream | pages × 0.0025" | 0.560" |
+| White (recommended for text-only) | pages × 0.002252" | 0.493" |
+| Cream | pages × 0.0025" | 0.548" |
 
 ## Full wrap dimensions (includes 0.125" bleed on all outside edges)
 
 | Paper | Width | Height |
 |---|---|---|
-| White | 0.125 + 6 + 0.504 + 6 + 0.125 = **12.754"** | 9 + 0.25 = **9.25"** |
-| Cream | 0.125 + 6 + 0.560 + 6 + 0.125 = **12.810"** | **9.25"** |
+| White | 0.125 + 6 + 0.493 + 6 + 0.125 = **12.743"** | 9 + 0.25 = **9.25"** |
+| Cream | 0.125 + 6 + 0.548 + 6 + 0.125 = **12.798"** | **9.25"** |
 
-At 300 DPI (white): 3826 × 2775 px.
+At 300 DPI (white): 3823 × 2775 px.
 
 Notes for the designer:
 - Keep text 0.25" inside trim edges; nothing critical in the 0.125" bleed zone.
@@ -77,6 +77,6 @@ Author bio line (below copy or on flap):
 
 The APPROVED full wrap (repo: cover/cover_wrap_approved.jpg) is 1320 × 664 px —
 about 103 DPI at the 12.766" wrap width. That is a design proof, not a print file.
-Ask the designer for the final wrap at 300 DPI: 3826 × 2775 px (white paper,
-224 pages), with the corrected barcode. For the Kindle eBook cover, request a
+Ask the designer for the final wrap at 300 DPI: 3823 × 2775 px (white paper,
+219 pages), with the corrected barcode. For the Kindle eBook cover, request a
 front-panel-only export at 1600 × 2560 px or larger.

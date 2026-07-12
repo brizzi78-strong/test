@@ -80,18 +80,17 @@ Prologue
 **Part Five — Hope**
 
 24. Hope
-25. Gulf Breeze
-26. The People You Meet When You Stop Drinking
-27. Sobriety Meets Hospice
+25. The People You Meet When You Stop Drinking
+26. Sobriety Meets Hospice
 
 **Part Six — The Last Chapter**
 
-28. The Detour
-29. Five Weeks
-30. The Days After
-31. The First Honest Mile
-32. What Grief Taught the Job
-33. The Table
+27. The Detour
+28. Five Weeks
+29. The Days After
+30. The First Honest Mile
+31. What Grief Taught the Job
+32. The Table
 
 Epilogue: The Cardinal's Promise
 
@@ -1310,7 +1309,7 @@ The drive from Pensacola to Scottsboro took six and a half hours. I was thirty-n
 
 We sat in the living room. No small talk. I had the whole confession loaded and ready, the résumé of my wreckage, born in Mexico City, adopted at eight, the wrestling, the money I made and lost, the addiction, the two DUIs, how Lou had to come and rescue me. I figured a father would want all of it before he handed over his daughter. He didn't ask for any of it. He looked at me and asked one thing. Are you saved? Yes sir. Can you tell me about that experience? So I told him about my faith. Where it started, the church my mother and Lou made non-negotiable, how I'd lost the thread of it for years, and how it had come back and held. The wreckage stayed in my pocket. I never got into the addiction, the DUIs, the rescue, and he never asked.
 
-He nodded slowly. He didn't follow up. He had heard the one thing he wanted to hear. That father of yours sounds like a good man, he said. Best man I've ever known, I told him. Jeff smiled for the first time, stood, and put out his hand. You have my blessing. Then his eyes filled and he didn't look away. I could have done better in my marriage with Rhonda, he said. I blame myself. He wasn't giving me a tough-father speech. He was handing me his own regret and trusting me with it. Don't screw this up, he added. No sir. I won't.
+He nodded slowly. He didn't follow up. He had heard the one thing he wanted to hear. That father of yours sounds like a good man, he said. Best man I've ever known, I told him. Jeff smiled for the first time, stood, and put out his hand. You have my blessing. Then his eyes filled and he didn't look away. I could have done better in my marriage with Rhonda, he said. I blame myself. He wasn't giving me a tough-father speech. He was handing me his own regret and trusting me with it. Don't screw this up, he added. No sir. I won't. He told me later the moment he'd actually known I was the one for her: the weekend early on when Hope forgot her ID on a trip to Mississippi, and I got up before light, drove back to Pensacola for it, and drove us straight back.
 
 Outside my own father, Jeff is one of two men who have shown me what faith looks like when it's lived instead of just spoken. The other is Dave Meyer, my friend since the middle school Bible study. Different men, same spine. Neither one talks the talk and stops there; both walk it. Neither has ever lost sight of where God is in it. I've needed them both as proof that the thing I reached for in a muddy field in Chumuckla holds up across a whole life.
 
@@ -1370,16 +1369,6 @@ In a short time we worked like a team. We paid off over a hundred thousand dolla
 
 If you look at our Paris photos, we look great. What you can't see is the day before, Hope on her knees in a Brussels hotel room, scraping spilled hair fiber out of my bag so I'd feel okay standing in front of that camera. That gap, between the picture and the day before it, is the whole point. The trips Hope and I took were some of the best times of my life. They were also a long string of small disasters, and the disasters are where we got strong. We didn't find out what we had when the plan worked. We found out when it fell apart and we were both still standing there, figuring it out.
 
-It was like that from the first trip. Before the passports and the overseas flights, we went to Ocean Springs, Mississippi, to a place we still call the Ugly Greenhouse. The key was waiting under a trophy out front. It was not much to look at, and it did not need to be. The place was covered in dog hair, five of us were sharing a single half bath, and we made it special anyway. Hope had forgotten her ID and wanted to be able to order a drink, so I got up before light, drove us back to Pensacola to get it, and drove us straight back. It didn't feel like a sacrifice. It felt like the thing you do for someone when you're glad it is you doing it. Her father heard about that drive, and he told me later it was the moment he knew I was the one for her. We were together and we were going somewhere, and that was the whole appeal, then and now.
-
-Sometimes the camera does catch it. For Hope's thirtieth birthday I took her to Disney. We stayed at the Goofy resort, nothing fancy. The part I keep is her face the first time she saw Disney. A grown woman, thirty years old, lit up like a kid who had just been handed the whole world for a day. She told me she wished she could be a pharmacist right there inside the little village, so she would never have to leave. No problem to solve, nothing going sideways, just Hope happy all the way through, and me happy watching her be that happy. That one the pictures got right.
-
-Jamaica was great too. Water so clear the scuba felt like flying, dinners that ran long, and one night a musician with a Bob Marley soul came to our table and sang "Three Little Birds," and I sat there sober and happy and believed every word of it.
-
-Most of the time, though, the real thing happens off camera. Japan figured us out fast. We booked through Gate 1 expecting the usual, organized and smooth, somebody holding a sign with your name on it. What we didn't plan on was that almost no one we met spoke English. Not broken English. None. We were lost the second we left the hotel, two people from North Carolina who couldn't read a single sign. Hope's allergies were through the roof, her eyes swollen, and we found a pharmacy that had to be a hundred degrees inside. I stood in aisle three pointing at my eyes, fake sneezing, miming a pill into my mouth with a thumbs up while the whole store watched me perform a one-act play for Claritin. We laughed about it for the rest of the trip.
-
-Later a driver dropped us on a mountain with no Wi-Fi, no cars, and no way back, and while I checked a dead phone every thirty seconds, Hope just said, don't worry about it, we'll figure it out. We did. That is Hope when a plan dies. She settles in, like that is where the real trip starts.
-
 Europe was four countries in two weeks, Amsterdam to Brussels to Bruges to London to Paris, one carry-on each. In Paris, Hope had planned a real photo shoot, a professional one, the Eiffel Tower behind us, and she told me to pack a suit. Not a blazer. A suit, dress shoes, a tie. I teased her about hauling it across four countries in half of my one bag, but the truth is I loved what it said about her. She doesn't just take a trip. She plans the memory, puts the effort in ahead of time, and hands you something to keep. All I had to do was put on the suit and stand where she told me. I've done harder things for less.
 
 What she did with that suit is the part I keep. In Brussels my Toppik exploded, the hair fiber powder I used every day on the thin spots, cap off, container cracked, black powder worked into every seam of the bag. My hairline was my one real insecurity, and I figured the shoot was finished. I told her I'd wear a hat pulled low and call it a style. She didn't laugh it off and didn't tell me it was just hair, which never helps anybody. You could wear the Peaky Blinders hat, she said. It would look great. Then she got down on the floor and scraped it out of the bag anyway, scooping it back into the container bit by bit. We'll get enough, she said. Don't worry. She knew that powder was the one thing that could take me from feeling good to wanting to hide, and instead of arguing me out of it, she fixed it. If you look at those Paris photos, we look great. Nobody sees Brussels.
@@ -1403,35 +1392,6 @@ They went into the kitchen together while I stayed in the living room. I could h
 Later he looked at me. You're steady, he said. Then: she is too. That was it. No formal blessing, no speech. He saw two people steady in the same direction and noted it.
 
 **CHAPTER 25**
-
-## **Gulf Breeze**
-
-*"Iron sharpeneth iron; so a man sharpeneth the countenance of his friend."*
-*— Proverbs 27:17*
-
-Years later, Quint Studer stood in front of some of the top business leaders in the region, paused, and said my father's name into the room. Lou Brizzi, great guy. But before Quint there were the rooms. Paying down the debt was one kind of work. Another kind was happening at the same time. Early on the work is obvious: work the steps, clean up the wreckage, rebuild trust slowly, one day at a time.
-
-I saw things in those rooms that never leave you. Young people dying from drugs and alcohol. Not old men at the end of long lives, young people with everything ahead of them. I sponsored people who went back out. Many of them died. Some went to jail. You pour yourself into someone, walk alongside them, answer the phone at midnight, and then one day you get the call that they didn't make it.
-
-I was that person once. I know what the disease does from the inside. Losing people in those rooms prepared me for something I didn't know I was being prepared for. Nothing in hospice is harder than a parent losing a child. The only reason I can stay in that room without flinching is that I've already sat with losses like that in recovery. Hospice just gave me a new room to bring it to.
-
-But eventually something else happens. You look around and realize sobriety by itself can't be the end of the story. I was thirty-three, sober long enough to know I wasn't going back, and I couldn't shake the feeling there was something left in the tank. Not ego. A quiet sense that maybe God hadn't kept me alive just to sit in meetings the rest of my life trying not to mess up again. I wanted to do more. I just hadn't seen many examples of what that looked like. Until I met Quint Studer.
-
-If you're not from the Gulf Coast, the name may not mean much. In Pensacola it's on the ballpark. Quint had run Baptist Hospital, the same hospital where my dad worked, then built one of the most respected healthcare consulting firms in the country. When he sold it, he and his wife Rishy went about rebuilding downtown Pensacola block by block. A man like that could sit anywhere he wanted. He sat in the rooms, in the same chairs as the rest of us, one more sober man saying his name out loud.
-
-I first met Quint at a meeting connected to Gulf Breeze Hospital. What struck me was how he carried himself, a steadiness, a calm that didn't feel like ego. When he spoke, people listened. Over time he'd talk with me after meetings, look me directly in the eye. He encouraged me with the kind of quiet belief that says, I see something in you.
-
-He always had a way of lifting a person up. I had one of his books, and one day I asked him to sign it. He wrote four words. You make people better. I've thought about that line more than he could know. It stopped being a compliment and turned into an assignment. I don't think he ever realized what he did with that pen. He made me want to do more than stay sober. He made me want to become the thing he'd written down.
-
-He told a story once about speaking at a meeting in New York. He'd been sharing a while, maybe longer than he realized, and someone in the back finally said one word. Next. He laughed telling it. No offense taken. Nobody gets special treatment in those rooms. In time we became friends, real friends, at his birthday party, at my wedding, anywhere we ended up in the same room. If I was having a bad day, I knew I could pick up the phone and call him.
-
-The moment came years into that friendship, at the business conference he built for the city. He was speaking, and he paused and looked out into the crowd. Lou Brizzi, great guy. Chris and Rob, you know them? Hearing my father's name in a room like that stopped me. My dad worked at Baptist Hospital for years, showed up, did the job well, treated people right, stayed until he was eighty-two. Quint saying his name in a room full of leaders meant something. Not because it elevated us. Because it honored the life my father believed in.
-
-He treated me like I mattered before I'd given him a single reason to believe I'd amount to anything. Lou would have loved him. They were the same breed, men who led by example, who didn't need applause, who showed up the same whether the room was full or empty. He also handed me one of the great friendships of my life: his nephew Mike moved down from Chicago to Pensacola, and we've been close ever since.
-
-The morning after my father died, all these years later, Quint was the first person to reach me. Your dad was a great man, his text said. Of everyone who would reach out in those days, he got there first, and he said the truest thing. God didn't put Quint in my life to rescue me. He put him there to show me what was possible. For the first time since getting sober, I believed there was more for me to do than stay alive.
-
-**CHAPTER 26**
 
 ## **The People You Meet When You Stop Drinking**
 
@@ -1460,14 +1420,28 @@ He was at Jason's Deli making maybe ten dollars an hour, calling me about work, 
 
 He became a salesman at BMW, and then the best they'd ever seen. The guy who'd been homeless, who couldn't write, who made ten dollars an hour at a deli, started making three hundred thousand a year. Went back and got his GED. Met Rebecca, an amazing woman. Reconnected with his daughter Aubrey. Had a son, Xander. We all started going to church together, Matt, Rebecca, the kids, Mager, me, a whole crew whose lives had been rebuilt from wreckage, sitting in a pew on Sunday like the most normal thing in the world. And Matt didn't stop. He'd always had a dream of acting. He got an acting coach, went to auditions, never gave it up. He connected with people in the industry, got to know actors like Jeremy London. The guy who'd been homeless a few years earlier now has a Hollywood actor sleeping in his guest room. Matt became a producer.
 
-I started sober thinking mediocrity was the ceiling. Then I met Andy, Bob, Mager, and Matt. These are the people you meet when you stop drinking. Not the ones you expected, the ones God put in front of you. I thought I was too far gone for any of it. So did they, once. They walked into the room anyway, and so did I, and that turned out to be the whole thing. And the best one didn't come from a meeting at all. You've already met her.
+And then there was Quint Studer. I was thirty-three, sober long enough to know I wasn't going back, and I couldn't shake the feeling there was something left in the tank. Not ego. A quiet sense that maybe God hadn't kept me alive just to sit in meetings the rest of my life trying not to mess up again. I wanted to do more. I just hadn't seen many examples of what that looked like.
 
-**CHAPTER 27**
+If you're not from the Gulf Coast, the name may not mean much. In Pensacola it's on the ballpark. Quint had run Baptist Hospital, the same hospital where my dad worked, then built one of the most respected healthcare consulting firms in the country. When he sold it, he and his wife Rishy went about rebuilding downtown Pensacola block by block. A man like that could sit anywhere he wanted. He sat in the rooms, in the same chairs as the rest of us, one more sober man saying his name out loud. What struck me was how he carried himself, a steadiness that didn't feel like ego. Over time he'd talk with me after meetings, look me directly in the eye, and encourage me with the kind of quiet belief that says, I see something in you.
+
+I had one of his books, and one day I asked him to sign it. He wrote four words. You make people better. I've thought about that line more than he could know. It stopped being a compliment and turned into an assignment. He made me want to do more than stay sober. He made me want to become the thing he'd written down.
+
+Years into the friendship, at the business conference he built for the city, he was speaking, and he paused and looked out into the crowd. Lou Brizzi, great guy. Chris and Rob, you know them? Hearing my father's name in a room like that stopped me. My dad worked at Baptist Hospital for years, showed up, did the job well, treated people right, stayed until he was eighty-two. Quint saying his name in a room full of leaders honored the life my father believed in.
+
+The morning after my father died, all these years later, Quint was the first person to reach me. Your dad was a great man, his text said. Of everyone who would reach out in those days, he got there first, and he said the truest thing. God didn't put Quint in my life to rescue me. He put him there to show me what was possible. For the first time since getting sober, I believed there was more for me to do than stay alive.
+
+I started sober thinking mediocrity was the ceiling. Then I met Andy, Bob, Mager, Matt, and Quint. These are the people you meet when you stop drinking. Not the ones you expected, the ones God put in front of you. I thought I was too far gone for any of it. So did they, once. They walked into the room anyway, and so did I, and that turned out to be the whole thing. And the best one didn't come from a meeting at all. You've already met her.
+
+**CHAPTER 26**
 
 ## **Sobriety Meets Hospice**
 
 *"I have fought a good fight, I have finished my course, I have kept the faith."*
 *— 2 Timothy 4:7*
+
+I saw things in the rooms that never leave you. Young people dying from drugs and alcohol. Not old men at the end of long lives, young people with everything ahead of them. I sponsored people who went back out. Many of them died. Some went to jail. You pour yourself into someone, walk alongside them, answer the phone at midnight, and then one day you get the call that they didn't make it.
+
+I was that person once. I know what the disease does from the inside. Losing people in those rooms prepared me for something I didn't know I was being prepared for. Nothing in hospice is harder than a parent losing a child. The only reason I can stay in that room without flinching is that I've already sat with losses like that in recovery. Hospice just gave me a new room to bring it to.
 
 The first death that stayed with me wasn't a patient, and it came years before hospice was ever my job. It was Detroit Bob.
 
@@ -1497,7 +1471,7 @@ PART SIX
 
 *Presence, repeated, until the end. His, then mine.*
 
-**CHAPTER 28**
+**CHAPTER 27**
 
 ## **The Detour**
 
@@ -1508,15 +1482,15 @@ The recognition I'd stopped chasing had a way of finding me anyway. After ten ye
 
 ### *Diabetes Dave*
 
-They called him Diabetes Dave in Panama City. Not behind his back. To his face. Because he's been doing what he does so long and is just that good at it. He doesn't even go to the front door. He goes to the back. Everyone knows him. High character, strong Christian, an all-around good person. Dave was my mentor. He took the time.
+They called him Diabetes Dave in Panama City. Not behind his back. To his face. He doesn't even go to the front door. He goes to the back. Dave was my mentor. He took the time.
 
 I needed that more than I let on. For ten years I'd been the top guy in home health, the one people called, and I'd walked into Novo Nordisk a nobody in an industry I didn't understand, starting over at the bottom of the learning curve in my forties. Dave never let me feel it alone. He sat with me, walked me through what I didn't know, and made sure I always had somebody in my corner. I'm not sure I'd have made that jump without him.
 
 About a year in, Dave lost his son. He was twenty-one, working at a pizza shop, and he was riding his bike home through the neighborhood when a car struck him. He didn't make it. People came from all over the company for the funeral, just to be there for Dave. I've never seen someone with as much faith. Coming back at all would have been enough. He did more.
 
-About two years in, we had a national sales convention in Las Vegas. Dave and I had a routine when we traveled, breakfast, a little prayer, a mini Bible study, talk. One morning he started talking about his son. He said, sometimes I wonder. I know he was in the church. I know he had a relationship with Christ. But I worried about whether he was saved. And then he said, one day a bird landed. His son's favorite bird. And he knew. It was a sign. His boy was okay. Later that trip, while most of the team was out doing whatever people do in Vegas, Dave and I went to the Bellagio, played a couple of slot machines, then got ice cream. I got cookie dough, and opened up. I told him about the DUIs, about Mexico, about the path I'd traveled. He shared some of his, and I'll keep that between us. We prayed right there, ice cream melting in the cups, slot machines going off in the distance.
+About two years in, we had a national sales convention in Las Vegas. Dave and I had a routine when we traveled, breakfast, a little prayer, a mini Bible study, talk. One morning he started talking about his son. He said, sometimes I wonder. I know he was in the church. I know he had a relationship with Christ. But I worried about whether he was saved. And then he said, one day a bird landed. His son's favorite bird. And he knew. It was a sign. His boy was okay. Later that trip Dave and I went to the Bellagio, played a couple of slot machines, then got ice cream. I got cookie dough, and opened up. I told him about the DUIs, about Mexico, about the path I'd traveled. He shared some of his, and I'll keep that between us. We prayed right there, ice cream melting in the cups, slot machines going off in the distance.
 
-It was Hope's mother Rhonda who found the connection. Her maiden name was Barger, and Dave's name turned up in the genealogy records, five generations back, distant but documented. I sat staring at the family tree on her computer screen. Of all the people at Novo Nordisk, I'd found family. I didn't know what that Christmas would take from me, or what would land on my driver's side mirror two weeks after. But when it came, I would recognize it. Because Dave had taught me the language.
+I didn't know then what that Christmas would take from me, or what would land on my driver's side mirror two weeks after. But when it came, I would recognize it. Dave had taught me the language.
 
 ### *The Call*
 
@@ -1524,7 +1498,7 @@ The hardest part of leaving Novo wasn't the job. It was leaving that relationshi
 
 I told people I was going to take some time off. Be there for my dad. Be there for my mom. Be present the way I'd spent years telling families to be present, while there was still time. That was the plan. It's not what happened. What happened was I retreated into myself. The time I'd set aside became something else, a depression I didn't see coming and couldn't recognize from the inside. I was grieving what was already happening and what was coming, and the weight kept me from doing the thing I'd left my career to do. I know the name for it now. The grief showed up before the loss did, and it froze me. I wasn't working. I wasn't fully showing up for my parents. I was stuck in a version of myself that couldn't move in any direction. I don't say that for sympathy. I say it because it's the truth, and this book doesn't work if I only tell the parts where I got it right. Hospice, when it came, wasn't a pivot. It was a return, to the rooms I'd been thinking about since the home health years, to the weight I'd learned how to carry. It pulled me out of that in-between place and gave me direction again.
 
-**CHAPTER 29**
+**CHAPTER 28**
 
 ## **Five Weeks**
 
@@ -1599,7 +1573,7 @@ He got pneumonia on December 23. His immune system had nothing left to fight wit
 
 My father died on Christmas Day, 2025.
 
-**CHAPTER 30**
+**CHAPTER 29**
 
 ## **The Days After**
 
@@ -1682,7 +1656,7 @@ I sat in my car one afternoon thinking, am I becoming someone else? The answer c
 
 In January we went through his things. His gray suit was hanging on the right side of the closet, between two work shirts. Always be the best-dressed person in the room. I pulled it off the rack and held it up, and I couldn't put it back. I took it home in a garment bag with no plan. It hangs in my closet now, next to mine. It isn't my size and it isn't my style and I will never wear it. But some mornings I open the closet door and it's there, and I know what it is, and I know who wore it, and I leave it alone. I tell families sometimes, when they're clearing out a closet of their own: keep one thing. You'll know which one. It will tell you.
 
-**CHAPTER 31**
+**CHAPTER 30**
 
 ## **The First Honest Mile**
 
@@ -1701,7 +1675,7 @@ And I was mean. That scared me more than a craving would have. I lashed out at t
 
 Seventeen years sober, and I had hit a rock bottom again, an emotional one this time. The disease doesn't need a bottle to run the old plays, isolation, anger, the closed door. The difference was that this time I had to feel it all the way through. And this time I knew what to do with a bottom. I went back to meetings, more of them than I'd been to in years. I got a therapist. The morning calls with Mager got longer. I said out loud, in the rooms and on the phone, that I was not okay. I went back to the people I'd been sharp with and said sorry, plainly. Seventeen years in, I was back on the first honest mile.
 
-**CHAPTER 32**
+**CHAPTER 31**
 
 ## **What Grief Taught the Job**
 
@@ -1730,7 +1704,7 @@ And some rooms stay with me whole. There was a couple I'll call John and Joan. J
 
 My father always made a big deal of my sobriety anniversary. Every January 9. My first year, he came to Gulf Breeze Hospital to hear me speak, sat in that room and listened to his son talk about staying sober for one year. He told me once, quietly, that whenever he mentioned my name to someone who knew me, they'd say the same thing: he's the best. That's what he built. Lou spent eighty-four years showing up without needing to know exactly where he was going. I'm trying to do the same.
 
-**CHAPTER 33**
+**CHAPTER 32**
 
 ## **The Table**
 
