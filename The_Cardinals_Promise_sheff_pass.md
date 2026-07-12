@@ -264,7 +264,7 @@ My grandfather had a hard childhood, harder than he ever let on. His own father 
 
 Then there was my nana, Jan, who could catch you off guard with her gentleness. One afternoon, not long after I'd learned about cowboys and Indians in school, she mentioned she had some American Indian in her. I burst into tears and ran to my mother. There's an Indian, she's an Indian.
 
-There's a story from those years. My mother always wore red nail polish, my aunt Nancey always pink. That was how the world was arranged. Then one day they came home with the colors switched, and I lost it: sobbing, insisting they had it wrong and had to put it back. They went and changed their nails again just to settle me. It wasn't a tantrum, it was panic. I had lost a country, a father, and a language. The nail colors were one thing that stayed where it belonged, and when they switched, I panicked. The need to hold things in place never fully left me.
+There's a story from those years. My mother always wore red nail polish, my aunt Nancey always pink. That was how the world was arranged. Then one day they came home with the colors switched, and I lost it: sobbing, insisting they had it wrong and had to put it back. They went and changed their nails again just to settle me. It wasn't a tantrum, it was panic. I had lost a country, a father, and a language. The nail colors were one thing that stayed where it belonged, and then they didn't. The need to hold things in place never fully left me.
 
 And there was Nancey, my mother's youngest sister, who treated Chris and me as her own from the start. She was at the games and the matches, always in our corner. Early twenties when we arrived from Mexico, years before she met Charlie. She told me not long ago that no matter how old I get she'll always see the same little kid, and I know the one she means: the boy in the backseat too scared to get out of the car.
 
@@ -323,7 +323,7 @@ His whole hobby was us. Saturday mornings at the batting cages in Woodridge, his
 
 Part of what he built was the church. He and my mother decided early that Chris and I would be raised in church, and it wasn't up for discussion. Sunday mornings, confirmation, and at thirteen I let God into my heart, the way you do when the adults around you have earned enough trust that the invitation means something. I'd lose the thread of it for a long time, the drinking years, California, the stretch when I was too busy performing a life to remember what mine was built on, but it never went anywhere. It waited.
 
-We moved to Ramsey when I was in sixth grade. Bigger house, new school, a town where the kids had known each other since before I showed up, and I came in as the new boy with dark olive skin and features that didn't match the rest of Bergen County. But I had Lou, who understood that a boy who comes home quiet in the wrong way doesn't need to be interrogated, he needs someone there. He couldn't fix school for me. He was just home when I got there, and that turned out to be the whole thing.
+We moved to Ramsey when I was in sixth grade. Bigger house, new school, a town where the kids had known each other since before I showed up, and I came in as the new boy with dark olive skin and features that didn't match the rest of Bergen County. But I had Lou, who understood that a boy who comes home quiet in the wrong way doesn't need to be interrogated, he needs someone there. He couldn't fix school for me. He was just home when I got there, and that turned out to be enough.
 
 My mother and Lou divorced in 1996, the year I turned eighteen. The divorce handed him an easy way out and every social permission to take it. We were grown, or close to it, and the marriage that had tied him to us was finished. He stayed anyway, a plain fact he never bothered to announce: we were his, and that didn't come undone because the marriage had. The first time he chose us, it was a handful of Tootsie Rolls at my grandparents' dinner table. This time it was a divorce he could have walked away from clean, and he stayed. The same decision, made twelve years apart.
 
@@ -378,7 +378,7 @@ School was where it got to me. Second grade, Woodridge. I'd write Claudio at the
 
 I'd take my eraser and rub the name out until the paper went soft and gray, and print the new one in the bald spot I'd left. Robert. Then I'd hand it back, and she'd smile like we'd fixed something together. It didn't feel fixed. It felt like erasing me.
 
-There was one thing they couldn't change, and I held onto it like a railing. Brizzi still started with a B. When the teacher lined us up alphabetically, I landed near the front, right about where Balderas used to put me. My country was gone. My first father was gone. My name was gone. But I still stood in the same place in that line, and some mornings that one small thing was the only proof I had that any part of the old me had made the trip.
+There was one thing they couldn't change, and I held onto it. Brizzi still started with a B. When the teacher lined us up alphabetically, I landed near the front, right about where Balderas used to put me. My country was gone. My first father was gone. My name was gone. But I still stood in the same place in that line, and some mornings that one small thing was the only proof I had that any part of the old me had made the trip.
 
 **CHAPTER 5**
 
@@ -446,7 +446,7 @@ I crossed it out before my mom could see it. That is the part that tells you who
 
 I couldn't fix the cafeteria. But there was one place in that town where nobody got to rank me, where there was no table and no lineup and no committee deciding what I was worth. One body against one body, and whatever I'd been handed, I got to settle it myself.
 
-The first place I had to learn to show up for myself, with Lou watching from the stands, was a wrestling mat. I was twelve when wrestling first came up, and it came up between Charlie and my dad. The two of them talked it over, talked wrestling, before anybody said a word to me. It wasn't a read on any talent. I didn't have any. I was awkward, undersized, the kid picked somewhere in the middle in gym class, not last, which would've been a story, just middle. It was a hunch, the way people point a kid at something because nothing else has stuck.
+The first place I had to learn to show up for myself, with Lou watching from the stands, was a wrestling mat. I was twelve when wrestling first came up, and it came up between Charlie and my dad. The two of them talked it over before anybody said a word to me. It wasn't a read on any talent. I didn't have any. I was awkward, undersized, the kid picked somewhere in the middle in gym class, not last, which would've been a story, just middle. It was a hunch, the way people point a kid at something because nothing else has stuck.
 
 Charlie was Aunt Nancey's husband, and a room got lighter the moment he walked into it. He laughed easily. He looked at you, even when you were a kid, like what you were saying was the most interesting thing he'd heard all day. He loved my aunt, and she loved him. I talked to Nancey recently and she didn't dress it up: there will never be another man like Charlie. She hasn't dated in years.
 
@@ -580,7 +580,7 @@ The wrestling years left marks I still feel. For a long time my body didn't feel
 
 A recruiter looked at my father across a desk and told him to dye the gray out of his hair. Nobody would hire him otherwise. He went home and did it, and never said a word about it. I understood the price only later, when the money got tight. By then he was in his early fifties and we were living in Ramsey. I was starting high school — old enough to notice tension, too young to know its price.
 
-From the outside our life looked stable. A house. Cars in the driveway. Dinner on the table, wrestling practice, the bills paid, the routine holding. I didn't see how much of it was held up by him getting out of bed every morning. Not until he got laid off.
+From the outside our life looked stable. A house. Cars in the driveway. Dinner on the table, wrestling practice, the bills paid, the routine holding. I didn't see how much of it was held up by him getting out of bed every morning.
 
 He had a good job. Good enough that the lights stayed on, the mortgage got paid, and we had the things kids never stop to think about — shoes, gas, food, wrestling lessons. Then he got laid off.
 
@@ -746,7 +746,7 @@ I once handed my eighteen-year-old brother my birth certificate and sent him to 
 
 I was twenty-one. Chris was eighteen, a freshman at the University of Pennsylvania, Ivy League, admitted on his wrestling. So naturally I looked at all that promise and said: Chris, why don't you take my birth certificate down to the DMV and get yourself a driver's license? His eyes went wide. Oh my God, he said, that would be amazing. Two brothers, solving a problem. The problem being that Chris was eighteen and wanted to buy beer.
 
-Here's the part that still gets me: we look nothing alike. Chris has hazel eyes and lighter skin and at the time looked about fifteen. But this was before they put your photo in the system, so he strolled into the DMV with my birth certificate and, I want to be clear about the tradecraft here, a library card as his backup ID. A library card. For a felony. And he walked out as me.
+Here's the part I still can't believe: we look nothing alike. Chris has hazel eyes and lighter skin and at the time looked about fifteen. But this was before they put your photo in the system, so he strolled into the DMV with my birth certificate and, I want to be clear about the tradecraft here, a library card as his backup ID. A library card. For a felony. And he walked out as me.
 
 Back at Penn he became a legend. Bouncers would hold the ID up to the light, look at the child standing in front of them, and say there's no way you're twenty-one. And Chris, cool as anything, would tell them: run it in the system. And it came back clean. Every time. Because it was real, my actual identity, in the actual New Jersey database. The only counterfeit item in the whole transaction was my brother's face.
 
@@ -1321,7 +1321,7 @@ We sat in the living room. No small talk. I had the whole confession loaded and 
 
 He nodded slowly. He didn't follow up. He had heard the one thing he wanted to hear. That father of yours sounds like a good man, he said. Best man I've ever known, I told him. Jeff smiled for the first time, stood, and put out his hand. You have my blessing. Then his eyes filled and he didn't look away. I could have done better in my marriage with Rhonda, he said. I blame myself. He wasn't giving me a tough-father speech. He was handing me his own regret and trusting me with it. Don't screw this up, he added. No sir. I won't.
 
-Outside my own father, Jeff is one of two men who have shown me what faith looks like when it's lived instead of just spoken. The other is Dave Meyer, my friend since the middle school Bible study, who wrote the afterword to this book. Different men, same spine. Neither one talks the talk and stops there; both walk it. Neither has ever lost sight of where God is in it. I've needed them both as proof that the thing I reached for in a muddy field in Chumuckla holds up across a whole life.
+Outside my own father, Jeff is one of two men who have shown me what faith looks like when it's lived instead of just spoken. The other is Dave Meyer, my friend since the middle school Bible study. Different men, same spine. Neither one talks the talk and stops there; both walk it. Neither has ever lost sight of where God is in it. I've needed them both as proof that the thing I reached for in a muddy field in Chumuckla holds up across a whole life.
 
 ### *Wonderwoman*
 
@@ -1580,7 +1580,7 @@ And he never stopped wanting to be useful. He'd retired on paper and kept workin
 
 ### *Vigils*
 
-Lou was diagnosed with stomach and esophageal cancer in the spring of 2015. He was seventy-three. He called me on a Tuesday, no preamble. Got some news, he said. Surgery. And holistic stuff. No chemo. I'm not doing chemo. I knew better than to argue. Okay, I said, which meant, I hear you, and I'll show up for whatever comes next. The surgery was brutal. Lynda was there every day. I believe it's because of Lynda that my father lived another ten years. She was a nurse; she understood his body in ways the rest of us didn't. She loved him completely and he loved her. He told me straight, more than once: Lynda was the love of his life. About twenty-five years married. My relationship with Lynda was always centered on my dad. She was good to me, always. She's a complex person, with a controlling nature expressed in the sweetest, most Southern way imaginable. I don't mean that as criticism. Who she is was exactly what Lou needed. The season ahead will be hard for her, because her life was organized entirely around his. I worry about her. I pray for her.
+Lou was diagnosed with stomach and esophageal cancer in the spring of 2015. He was seventy-three. He called me on a Tuesday, no preamble. Got some news, he said. Surgery. And holistic stuff. No chemo. I'm not doing chemo. I knew better than to argue. Okay, I said, which meant, I hear you, and I'll show up for whatever comes next. The surgery was brutal. Lynda was there every day. I believe it's because of Lynda that my father lived another ten years. She was a nurse; she understood his body in ways the rest of us didn't. She loved him completely and he loved her. He told me straight, more than once: Lynda was the love of his life. My relationship with Lynda was always centered on my dad. She was good to me, always. She's a complex person, with a controlling nature expressed in the sweetest, most Southern way imaginable. I don't mean that as criticism. Who she is was exactly what Lou needed. The season ahead will be hard for her, because her life was organized entirely around his. I worry about her. I pray for her.
 
 Lou came through the surgery. By December the scans were clean. The cancer stayed away for eight years — one scare in 2018, something on his liver, and nothing was ever done about it; it held. He was at my wedding in April 2019. Years that looked, from the inside, like a permanent gift. They weren't.
 
@@ -1619,11 +1619,11 @@ My father died on Christmas Day, 2025.
 
 When we pulled up to the funeral home, his truck was parked out front, NJERZ on the Florida plates. A man who moved all the way to the Gulf and still made his truck say Jersey. That's what undid me, not the building, not the door. The plates. But before any of it, there was a breakfast.
 
-Hope and I had gone down for a visit, and we went to church that morning and ate with Dad before the drive back up to Raleigh. Dad had beaten cancer three times by then. This last round looked like another miracle, and with him, miracles had started to feel ordinary. The esophagus and the stomach in 2015, when he nearly died. The liver scare in 2018 that never needed treatment. And in 2024, the lungs and the lymph nodes, when he was at death's door, and he walked back out.
+Hope and I had gone down for a visit, and we went to church that morning and ate with Dad before the drive back up to Raleigh. Dad had beaten cancer twice by then, with a scare in between that never came to anything. This last round looked like another miracle, and with him, miracles had started to feel ordinary. The esophagus and the stomach in 2015, when he nearly died. The liver scare in 2018 that never needed treatment. And in 2024, the lungs and the lymph nodes, when he was at death's door, and he walked back out.
 
 There was an opening in hospice, at a company I had already given ten years to. At the table that morning, Dad told me what he always told me. Listen to your boss. Work hard. He had put that in me a long time ago, and he said it again like it was the first time.
 
-When I heard he had pneumonia, I wasn't scared. I knew he would make it. He always made it. Hope and I would drive down that weekend and see him, and he would be sitting up, telling a story. That was the plan. That isn't what happened.
+When I heard he had pneumonia, I wasn't scared. I told myself he would make it. He always made it. Hope and I would drive down that weekend and see him, and he would be sitting up, telling a story. That was the plan. That isn't what happened.
 
 Something in me shut down before he was gone. I couldn't pick up when my stepmom called. I went somewhere I had gone as a little boy when I was scared, that same quiet, far-off place, the dissociation I had learned before I had a word for it.
 
@@ -1665,7 +1665,7 @@ Chris credited Lynda, too, called her the reason Dad got his strength and his jo
 
 And Chris said one more thing that stayed with me. He was the one who had talked Dad into the immunotherapy, and he said that knowing everything — the rashes, the pacemaker, the third round that finally took its toll — he would choose it again, because it bought the time in which Dad held his granddaughter. That sentence did something to me.
 
-Chris had carried Dad's pride his whole life — the golden child, in the best sense of it, the kid who was nearly held back in grade school and rewrote every record I set, the son who stayed close and never forgot where he came from. I had carried something else. Chris carried his pride. I carried his rescue. Dad knew the difference, and he loved us each in the way we needed. I think he saw me as a little more fragile — not weaker, exactly, but breakable in places I didn't always know how to name. He was right.
+Chris had carried Dad's pride his whole life — the golden child, in the best sense of it, the son who stayed close and never forgot where he came from. I had carried something else. Chris carried his pride. I carried his rescue. Dad knew the difference, and he loved us each in the way we needed. I think he saw me as a little more fragile — not weaker, exactly, but breakable in places I didn't always know how to name. He was right.
 
 Then I stood at the casket. I looked down at my father, and it wasn't him anymore. The body was there, but he wasn't. I knew his soul had already gone on ahead. I had watched that line get crossed in other people's rooms more times than I can count, and I knew it the moment I saw it. It still didn't stop the feeling. I stood there and loved him, for everything he was, and everything he wasn't.
 
@@ -1917,13 +1917,13 @@ This is a true story, told from memory. Dialogue has been reconstructed as faith
 
 3. When eight-year-old Claudio becomes Robert, it feels like "erasing me." Years later, Rob deliberately calls his birth father Horacio — not Papa, not Dad. What is the book saying about names, and who gets to give them?
 
-4. Wrestling taught Rob that "the body quits when the mind gives it permission." Where does that lesson save him later — and where does the same drive nearly destroy him?
+4. On the mat, when Rob's body wanted to quit, he learned to tell it no. Where does that lesson save him later — and where does the same drive nearly destroy him?
 
 5. Lou almost never explains himself: he drives to Cooperstown, buys the Walkman, sleeps on the floor of a wrecked apartment, sets out a sesame bagel. Which of his silent gestures stayed with you, and why do you think the book gives him so few speeches?
 
-6. "The rescue didn't save me. It kept me alive long enough to be saved." What is the difference, in this book, between rescuing someone and saving them — and who else lives inside that difference?
+6. "The rescue didn't get me sober. It kept me alive long enough to get there." What is the difference, in this book, between rescuing someone and saving them — and who else lives inside that difference?
 
-7. Rob's mother wired money she told herself was for rent. The book says the disease "takes the people who love you most and turns their love into one more thing to use." Where is the line between loving an addict and enabling one? Did the book change where you'd draw it?
+7. Rob's mother wired money she told herself was for rent. "The lie I lived was letting her believe her money was keeping her son fed." Where is the line between loving an addict and enabling one? Did the book change where you'd draw it?
 
 8. After seventeen years sober, grief drove Rob into an emotional rock bottom, the first one he ever had to feel all the way through. How is the sober breakdown after Lou's death different from his using-era bottoms? How is it the same?
 
