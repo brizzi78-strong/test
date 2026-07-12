@@ -7,11 +7,11 @@ struct AboutView: View {
                 VStack(spacing: 12) {
                     ZStack {
                         Circle()
-                            .fill(Theme.reflectionGradient)
-                            .frame(width: 84, height: 84)
-                        Image(systemName: "bird.fill")
-                            .font(.system(size: 38))
-                            .foregroundStyle(.white)
+                            .fill(Theme.paper)
+                            .frame(width: 92, height: 92)
+                            .overlay(Circle().strokeBorder(Theme.ink.opacity(0.08)))
+                        CardinalMark()
+                            .frame(width: 60, height: 60)
                     }
 
                     Text("The Cardinal's Companion")

@@ -50,8 +50,9 @@ struct TodayView: View {
     private var reflectionCard: some View {
         let reflection = store.reflection()
         return VStack(alignment: .leading, spacing: 14) {
-            HStack {
-                Image(systemName: "bird.fill")
+            HStack(spacing: 7) {
+                CardinalMark(tint: .white)
+                    .frame(width: 18, height: 18)
                 Text("Today's Reflection")
                     .font(.caption.weight(.bold))
                     .textCase(.uppercase)
