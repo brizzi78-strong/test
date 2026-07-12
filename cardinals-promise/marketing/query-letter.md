@@ -1,9 +1,9 @@
-# Query Letter — The Cardinal's Toolkit
+# Query Letter — The Caregiver's Cardinal Toolkit
 
 > Draft for Rob's review. Personalize the first line per agent; keep to one
-> page. Per the editorial reviewer's advice, the query leads with "The
-> Cardinal's Toolkit" and the descriptive subtitle. The cover tagline is
-> "You Are Not Alone. You Are the Difference!"
+> page. Title and subtitle now match the final cover. Note: the round-1
+> editor advised against "hero" framing (it cuts against Chapter 4's
+> message) — the author chose the cover subtitle knowingly.
 
 ---
 
@@ -15,8 +15,8 @@ going next — as if you're supposed to already know. Fifty-three million
 Americans are caring for an aging family member right now, and almost none of
 them were handed a map.
 
-**THE CARDINAL'S TOOLKIT: A Practical Guide for Families Navigating Care,
-Decisions, and the Journey That Changes Everything** (prescriptive nonfiction,
+**THE CAREGIVER'S CARDINAL TOOLKIT: A Hero's Guide to Caring for an Aging
+Parent** (prescriptive nonfiction,
 approximately 52,000 words) is that map — built to be useful on a family's
 worst day, not read cover to cover. Its 29 chapters are color-coded by urgency
 — RED: Act Today, YELLOW: Watch Closely, BLUE: Plan Ahead — so a panicked
@@ -29,7 +29,7 @@ up. We are trying to understand whether comfort-focused support would help
 now."*
 
 Where competing titles explain conditions (*The 36-Hour Day*) or survey the
-landscape (the AARP guides), *The Cardinal's Toolkit* arms the reader for the
+landscape (the AARP guides), *The Caregiver's Cardinal Toolkit* arms the reader for the
 system itself: the observation-status trapdoor that quietly voids Medicare
 rehab coverage, the "plateaued" denial that families never learn they can
 appeal, the hospice benefit most families fear when they should be reaching

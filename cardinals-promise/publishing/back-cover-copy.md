@@ -1,36 +1,50 @@
-# Back Cover Copy — The Cardinal's Toolkit
+# Back Cover Copy — The Caregiver's Cardinal Toolkit
 
-> Set on the KDP cover wrap (`kdp-cover-wrap.pdf`). Edit here, and the wrap
-> regenerates to match.
+> Adopted from the designed navy cover (author's choice, "adopt it fully").
+> This is the source of truth for the cover wrap's back panel — edit here
+> and the wrap regenerates to match.
 
 ## Headline
-**Nobody picks the day they become a caregiver.**
+**Caring for an aging parent can feel overwhelming.**
 
 ## Body
-It arrives as a fall, a diagnosis, or a discharge planner on the phone asking
-where your parent is going next — as if you're supposed to already know. This
-toolkit is the map: built to be useful on your family's worst day, not read
-cover to cover.
+The Caregiver's Cardinal Toolkit was created to help families organize
+information, make informed decisions, and navigate the challenges of aging
+with greater confidence.
 
-## What's inside
-- **29 chapters color-coded by urgency** — RED: Act Today · YELLOW: Watch
-  Closely · BLUE: Plan Ahead — so you can route yourself to the right page in
-  under a minute
-- **Word-for-word scripts** for the moments language fails: *"Is my parent
-  admitted as an inpatient, or under observation?"*
-- **Fillable worksheets and scored self-checks**, plus a tear-out
-  Numbers That Matter phone page for the refrigerator
-- **The trapdoors nobody warns you about** — observation status, the
-  "plateaued" denial you can appeal, and the hospice benefit families fear
-  when they should be reaching for it
+## Inside you'll find practical tools to help you:
+- Organize medical, legal, and financial information
+- Prepare for emergencies and care transitions
+- Understand care options and available resources
+- Track appointments, medications, and important contacts
+- Reduce stress and avoid common caregiving mistakes
 
 ## Author block
-**Rob Brizzi** is a Certified Dementia Practitioner who has spent his career
-in home health, hospice, senior living, and healthcare — years of sitting with
-families as they faced these exact decisions. Medication content reviewed by
-Hope Brizzi, PharmD, project consultant.
+**Rob Brizzi** is a hospice professional, recovery advocate, and author. His
+work at the bedside of patients and families has shaped his mission to bring
+comfort, grace, and dignity to the end-of-life journey.
 
-## Tagline + footer band
-*You are not alone. You are the difference.*
+Rob lives in North Carolina with his wife, Hope.
 
-A CARDINAL'S PROMISE COMPANION · THECARDINALSPROMISE.COM
+> ⚠️ Author verify: (1) "recovery advocate" is a new credential claim not in
+> the book's About page; (2) this publicly identifies Hope as Rob's wife —
+> the book credits "Hope Brizzi, PharmD, project consultant" without stating
+> the relationship. Confirm both are intended before print.
+
+## Footer band
+COMPASSION · ORGANIZATION · CONFIDENCE · PEACE OF MIND
+
+Publisher mark: Cardinal Press
+
+## Front-panel elements (for reference)
+Kicker: HERO GUIDE: CAREGIVERS · Title: THE CAREGIVER'S CARDINAL TOOLKIT ·
+Subtitle: A Hero's Guide to Caring for an Aging Parent · Icon row:
+Worksheets / Checklists / Care Planning Tools / Guidance You Can Trust ·
+Author: ROB BRIZZI
+
+## ⚠️ ISBN warning
+The designed cover carries ISBN 978-1-963342-02-7 — that number is
+**mathematically invalid** (fails the ISBN-13 checksum; correct check digit
+for that prefix would be 4) and appears to be AI-fabricated. Do NOT print it.
+Use the real ISBN KDP assigns (or your Bowker ISBN) and let KDP generate the
+barcode in the white zone.
