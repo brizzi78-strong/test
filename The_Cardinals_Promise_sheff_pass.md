@@ -315,7 +315,7 @@ What I love now is how close my mother and her sisters have become, she and Nanc
 
 He asked my mother out and she said no. He asked again and she said no again. So he kept showing up, week after week, until she finally saw his charm and his maturity. That was how Lou Brizzi decided to stay.
 
-Lou met my mother in a bar in West Paterson in 1984. He was in his forties, a man who'd already lived a complicated life and decided he was ready to do the next part right. My mother was twenty-nine, back from Mexico with two small boys and not much else, staying with her parents and taking whatever work she could find. She'd learned to be careful about who she let near her children, and a charming man in a bar wasn't going to be the exception. That was why she said no, and why his coming back meant something.
+Lou met my mother in a bar in West Paterson in 1984. He was a man who'd already lived a complicated life and decided he was ready to do the next part right. My mother was twenty-nine, back from Mexico with two small boys and not much else, staying with her parents and taking whatever work she could find. She'd learned to be careful about who she let near her children, and a charming man in a bar wasn't going to be the exception. That was why she said no, and why his coming back meant something.
 
 I was six the first time I met him. He came over to my grandparents' place, where we were living, and Nana and Grandpa had him to dinner. Most of that night is gone now. What I remember is that he brought Tootsie Rolls for Chris and me. Two boys who weren't his, and he walked in with something in his pocket just for us. Before he ever decided we were his, he was already treating us like we were.
 
@@ -335,7 +335,7 @@ And there was Mag. She babysat Chris and me when we were boys, and her whole pro
 
 He worked IT most of his life, a lot of it on the help desk, the guy you call when the thing won't work, and he didn't stop until he was eighty-two. He was always working an angle for a second income, too. For a while he owned a weekend flea market called Boardwalk Lew's — the name came with the place and he never bothered to change it — and I hated every Saturday I spent working it. Nobody asked. Left alone on a Sunday he watched his games, the Yankees in the summer, the Giants in the fall. That was the whole vice.
 
-People have asked me how a man in his forties decides to take on an immigrant single mother's two boys. Lou never dressed the answer up. Your mother was beautiful, he said, and ten years younger. That was the honest start of it. The staying was the part he never explained.
+People have asked me how a grown man decides to take on an immigrant single mother's two boys. Lou never dressed the answer up. Your mother was beautiful, he said, and ten years younger. That was the honest start of it. The staying was the part he never explained.
 
 He and my mother were married at Pines Lake, where Aunt Terry's family lived, the same place the Halloween candy hit the kitchen floor. Around the time Lou came into our lives we left my grandparents' place in West Paterson for a house of our own in Woodridge. That was the home of my grade-school years, before Ramsey.
 
@@ -476,7 +476,7 @@ Kris and Kyle were twin brothers, the most popular kids in the grade, and they s
 
 It went on the rest of middle school. By the end the joke had moved into ink. Somebody wrote have fun chokin' the chicken in my yearbook, the book you're supposed to keep.
 
-I crossed it out before my mom could see it. That is the part that tells you who I already was. She had carried two boys out of one country and built us a life in another with no degree and no one to catch her. I wasn't going to hand her this too. So I took a pen to my own yearbook and scratched the line out, alone, so she would never have to feel it. I was twelve. I didn't have the word for it yet. I was already a caretaker.
+I crossed it out before my mom could see it. That is the part that tells you who I already was. She had carried two boys out of one country and built us a life in another with no degree and no one to catch her. I wasn't going to hand her this too. So I took a pen to my own yearbook and scratched the line out, alone, so she would never have to feel it. I was fourteen. I didn't have the word for it yet. I was already a caretaker.
 
 I couldn't fix the cafeteria. But there was one place in that town where nobody got to rank me, where there was no table and no lineup and no committee deciding what I was worth. One body against one body, and whatever I'd been handed, I got to settle it myself.
 
@@ -1471,7 +1471,7 @@ Jason Huet has seen both halves of my life. Next door in Stanton Hall at eightee
 
 # **THE DRIVES · V**
 
-*Spring 2025. Our car pointed north out of Pensacola, seventeen years of living near him somewhere back in the mirrors. He had told me to go — that was always his way, more concerned that we were okay than that we were close. I didn't know it was the last of the old kind of drive, the kind where he was still at the other end of the road. This time, I drove.*
+*Spring 2025. Our car pointed north out of Pensacola, nineteen years of living near him somewhere back in the mirrors. He had told me to go — that was always his way, more concerned that we were okay than that we were close. I didn't know it was the last of the old kind of drive, the kind where he was still at the other end of the road. This time, I drove.*
 
 PART SIX
 
@@ -1575,7 +1575,7 @@ I respected the toughness. I also saw the loneliness inside it. It kept him goin
 
 There was a stretch in late 2024, about a year before the end, when I was sure we were losing him. He could barely walk. He was barely coherent, and he was in a lot of pain. I called the family and told everyone they needed to come to town. I didn't think he was going to make it. Joel flew in, and I picked him up at the airport. He told me he didn't know how to do this, how to be in the room with our father like that, with all of it right there on the surface. Joel wears his humor like armor; he's the funny one. Seeing him without it was something else entirely. Just grab his hand, I told him, and tell him you love him. That's all. It was one of the truest, most solid moments I've ever had with my brother, the two of us grown men in an airport pickup lane, working out how to go say goodbye to our dad. Lou rallied after that. He gave us most of another year. But that was the first time I rehearsed losing him.
 
-That spring, Hope and I told him we were moving to Raleigh. I could tell he was disappointed. I'd lived close to him in Pensacola for seventeen years. But he understood, and he told me to go. That was always his way, even at the end, more concerned about whether we were okay than whether we were close. The last time I saw him before the move we went to McGuire's. He looked fine. He said he wasn't worried, said as long as Lynda was there he was okay. Part of me looks back and wonders if I should have stayed longer. I wouldn't have known that five weeks into my new job he'd take a turn and go downhill fast.
+That spring, Hope and I told him we were moving to Raleigh. I could tell he was disappointed. I'd lived close to him in Pensacola for nineteen years. But he understood, and he told me to go. That was always his way, even at the end, more concerned about whether we were okay than whether we were close. The last time I saw him before the move we went to McGuire's. He looked fine. He said he wasn't worried, said as long as Lynda was there he was okay. Part of me looks back and wonders if I should have stayed longer. I wouldn't have known that five weeks into my new job he'd take a turn and go downhill fast.
 
 He got pneumonia on December 23. His immune system had nothing left to fight with. Lynda had been calling, and I could hear in her voice what she was trying to tell me without saying it. My mother was in Raleigh visiting, she'd made the trip from Lantana, where she'd lived since 2019, with Parkinson's making every mile harder than it used to be. I thought I could do both: go down Saturday, have a day with her, still get there in time. I was wrong about the timeline. I stayed.
 
@@ -1606,7 +1606,7 @@ It was selfish. I'm sorry it was that way. But I can only tell you the truth of 
 
 The night before Christmas, they put him on a morphine drip. He was in the hospital, on comfort care — not hospice; it went that fast. I knew what the drip meant — it's my work. Morphine at the end doesn't take anyone. It eases the pain and the hunger for air while the dying does what it was already doing. The drip didn't tell me what was coming. It told me where he already was. Comfort was the assignment now. Christmas morning, I didn't need anyone to tell me. The texting had stopped, and the silence had a shape. Then the phone rang. Chris, confirming what I already knew. Our father was gone.
 
-I didn't feel guilty at first, and that's the truth. I had been at his bedside every other time — the surgeries, the pacemaker — and I had lived close to him for seventeen years. The guilt came later, and it came from outside: people in the family who love me and who gave me a very hard time about not being there. I understand it. Grief needs somewhere to go. But the conversation with my sponsor still rings true, and I hold it like a railing: I said everything that needed to be said. Being absent from the last hour is not the same as being absent from the life.
+I didn't feel guilty at first, and that's the truth. I had been at his bedside every other time — the surgeries, the pacemaker — and I had lived close to him for nineteen years. The guilt came later, and it came from outside: people in the family who love me and who gave me a very hard time about not being there. I understand it. Grief needs somewhere to go. But the conversation with my sponsor still rings true, and I hold it like a railing: I said everything that needed to be said. Being absent from the last hour is not the same as being absent from the life.
 
 When he was gone, something landed on me that I had never felt before, not over anyone. I had been around death for years. I knew the word. I did not know the thing. Now I did. Grief. It has a weight you cannot describe to anyone who hasn't carried it. I carried it.
 
