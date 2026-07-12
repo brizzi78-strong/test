@@ -1,9 +1,9 @@
-# Query Letter — The Cardinal's Toolkit: Caregiver Hero
+# Query Letter — The Cardinal's Toolkit
 
 > Draft for Rob's review. Personalize the first line per agent; keep to one
 > page. Per the editorial reviewer's advice, the query leads with "The
-> Cardinal's Toolkit" and the descriptive subtitle, letting "Caregiver Hero"
-> ride as series brand.
+> Cardinal's Toolkit" and the descriptive subtitle. The cover tagline is
+> "You Are Not Alone. You Are the Difference!"
 
 ---
 
