@@ -13,7 +13,7 @@ The two files KDP asks for are in this folder:
 - [ ] **Bio verified** — Certified Dementia Practitioner credential current
 - [ ] **Final human proofread** of `kdp-interior.pdf` (read it as a printed proof, not on screen)
 - [ ] **Back-cover copy approved** — edit `back-cover-copy.md` and ask for a wrap regen if you change anything
-- [ ] **Cover wrap regeneration pending** — the new navy design was adopted, but the wrap PDF still needs the designer's print-resolution front art (the shared preview is ~90dpi at wrap size; KDP needs 300dpi). Give the designer these exact dimensions in the same request: **full wrap 17.7358 × 11.25 in (0.125" bleed all around), spine 0.4858" centered, premium-color paper** — and generate the template from KDP's cover calculator to be safe.
+- [ ] **Cover wrap pending final art** — the WHITE/minimal design is now the approved direction (see the designer brief in `back-cover-copy.md`: full title, CDP credential, gold utility row, corrected subtitle). The wrap template in this folder is rebuilt in that style; it needs the designer's print-resolution cardinal art. Give the designer these exact dimensions in the same request: **full wrap 17.7358 × 11.25 in (0.125" bleed all around), spine 0.4858" centered, premium-color paper** — and generate the template from KDP's cover calculator to be safe.
 - [ ] **Publisher imprint confirmed** — copyright page now says Cardinal Press (was Blue Ridge LLC); confirm which entity actually publishes
 
 ## At kdp.amazon.com (Bookshelf → Create → Paperback)
