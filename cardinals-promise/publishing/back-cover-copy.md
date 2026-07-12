@@ -5,31 +5,35 @@
 > and the wrap regenerates to match.
 
 ## Headline
-**Caring for an aging parent can feel overwhelming.**
+**Caring for an aging parent is overwhelming — nobody hands you a map.**
 
 ## Body
-The Caregiver's Cardinal Toolkit was created to help families organize
-information, make informed decisions, and navigate the challenges of aging
-with greater confidence.
+Color-coded by urgency — Act Today, Watch Closely, Plan Ahead — The
+Caregiver's Cardinal Toolkit helps your family get organized, make informed
+decisions, and face the healthcare system with confidence, even on your
+worst day.
 
 ## Inside you'll find practical tools to help you:
 - Organize medical, legal, and financial information
 - Prepare for emergencies and care transitions
-- Understand care options and available resources
+- Compare care options — from home health to hospice — and how to pay
 - Track appointments, medications, and important contacts
-- Reduce stress and avoid common caregiving mistakes
+- Protect yourself from burnout — and avoid the mistakes that cost families money
 
 ## Author block
-**Rob Brizzi** is a hospice professional, recovery advocate, and author. His
-work at the bedside of patients and families has shaped his mission to bring
-comfort, grace, and dignity to the end-of-life journey.
+**Rob Brizzi** is a Certified Dementia Practitioner with a career across
+home health, hospice, and senior living. His work at the bedside of patients
+and families has shaped his mission to bring comfort, grace, and dignity to
+the end-of-life journey.
 
-Rob lives in North Carolina with his wife, Hope.
+Rob lives in North Carolina with his wife, Hope Brizzi, PharmD.
 
-> ⚠️ Author verify: (1) "recovery advocate" is a new credential claim not in
-> the book's About page; (2) this publicly identifies Hope as Rob's wife —
-> the book credits "Hope Brizzi, PharmD, project consultant" without stating
-> the relationship. Confirm both are intended before print.
+> Marketing reviewer's changes applied: bio now leads with the Certified
+> Dementia Practitioner credential (the front-cover claim); "recovery
+> advocate" cut — it displaced the selling credential (Rob's recovery story
+> stays in the Author's Note where it lives naturally). Naming Hope as
+> Rob's wife reveals nothing new (the Author's Note already says "my wife,
+> Hope" twice) — but get Hope's OK on the PharmD mention here.
 
 ## Footer band
 COMPASSION · ORGANIZATION · CONFIDENCE · PEACE OF MIND

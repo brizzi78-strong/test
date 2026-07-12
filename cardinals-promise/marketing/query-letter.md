@@ -26,7 +26,8 @@ the teaching, and then the tools — fillable worksheets, scored self-checks, an
 word-for-word scripts for the moments when language fails: *"Is my parent
 admitted as an inpatient, or under observation?"* *"We are not trying to give
 up. We are trying to understand whether comfort-focused support would help
-now."*
+now."* Its burnout chapter tells caregivers the truly heroic move is asking
+for help before they break — which is what the subtitle means.
 
 Where competing titles explain conditions (*The 36-Hour Day*) or survey the
 landscape (the AARP guides), *The Caregiver's Cardinal Toolkit* arms the reader for the
