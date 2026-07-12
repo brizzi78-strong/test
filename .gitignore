@@ -1,3 +1,4 @@
+# --- iOS app (CardinalPress) ---
 # Xcode
 build/
 DerivedData/
@@ -13,3 +14,32 @@ xcuserdata/
 
 # macOS
 .DS_Store
+
+# --- CARD Token (Hardhat/Foundry) ---
+# Node modules
+/node_modules
+
+# Compilation output
+/dist
+
+# Hardhat build artifacts
+/artifacts
+/cache
+
+# Foundry build artifacts
+/out
+/cache_forge
+/broadcast
+
+# Typechain output
+/types
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Coverage and gas reports
+/coverage
+/.gas-snapshot
+/snapshots

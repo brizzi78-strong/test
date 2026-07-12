@@ -1,0 +1,24 @@
+name: verify-claims
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  verify:
+    name: Verify launch claims
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      # Builds the contract, inspects the compiled ABI, runs the full test
+      # suite (example + fuzz + invariant), and fails the build if any claim
+      # in verification/claims.json loses its executable evidence.
+      - run: npm run verify
