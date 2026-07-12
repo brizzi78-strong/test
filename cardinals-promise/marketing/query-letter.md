@@ -54,7 +54,7 @@ time and consideration.
 
 Sincerely,
 
-Rob Brizzi, CDP
+Rob Brizzi, Certified Dementia Practitioner
 thecardinalspromise.com
 [phone] · [email]
 
