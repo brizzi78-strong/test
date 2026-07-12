@@ -152,8 +152,23 @@ struct TodayView: View {
 
     private var quickTools: some View {
         VStack(alignment: .leading, spacing: 12) {
+            Text("In a crisis right now?")
+                .font(.headline)
+
+            NavigationLink {
+                ChecklistDetailView(checklist: SeedData.checklists[0])
+            } label: {
+                QuickToolRow(
+                    title: "In the First 24 Hours",
+                    subtitle: "Seven actions, not seven chapters",
+                    symbolName: "exclamationmark.triangle",
+                    color: Theme.cardinal
+                )
+            }
+
             Text("Take a moment")
                 .font(.headline)
+                .padding(.top, 8)
 
             VStack(spacing: 10) {
                 NavigationLink {

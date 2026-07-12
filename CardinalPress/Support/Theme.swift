@@ -46,6 +46,16 @@ enum Theme {
         )
     }
 
+    /// The handbook's color system: red = act today, purple = watch
+    /// closely, blue = plan ahead.
+    static func tierColor(_ tier: ChecklistTier) -> Color {
+        switch tier {
+        case .actToday: return cardinal
+        case .watchClosely: return dusk
+        case .planAhead: return sky
+        }
+    }
+
     /// Color associated with each mood, from heavy to light.
     static func moodColor(_ mood: Mood) -> Color {
         switch mood {
