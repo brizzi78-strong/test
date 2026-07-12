@@ -1185,7 +1185,7 @@ It took me a long time to understand that all of it, the Wednesday calls at seve
 
 "Rob, if you relapse, I'm going to have to wash my hands of you." No emotion. No threat. My father said it the way he stated facts, and it was the kindest hard thing anyone ever told me. Sobriety didn't erase desire. That surprised me. What sobriety gave me was time. What it took away was the anesthesia, and without it I could feel everything, the hunger included. The disease doesn't leave when you put the drink down. It moves to the back of the room and waits, patient, for a hard week or a good excuse.
 
-By late 2010 I was restless in a way I couldn't name. Sober, working, going to meetings, living clean, and underneath it something in me still wanted out. An opportunity came across my radar, medical device sales, Stryker. A name that promises money and momentum. A fast way back to the version of me that knew how to win. The thought hit like adrenaline: this is how I get back. Then a quieter one, more honest: I don't know if I can stay sober there.
+By late 2010 I was restless in a way I couldn't name. Sober, working, going to meetings, living clean, and underneath it something in me still wanted out. An opportunity came across my radar, medical device sales, Stryker. Big money, fast track. My first thought was: this is how I get back. My second: I don't know if I can stay sober there.
 
 That scared me. I drove to see Lou. He didn't ask why I'd come; he rarely did. He listened while I talked in circles, opportunity, timing, readiness, fear. Eventually the truth slipped out. I still want to drink, I said. The words just hung there. Accurate.
 
