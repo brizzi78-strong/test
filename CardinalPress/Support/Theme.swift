@@ -1,9 +1,17 @@
 import SwiftUI
 
-/// Shared colors and styling for the Cardinal's Companion.
+/// Shared colors and styling for The Cardinal's Toolkit,
+/// drawn from the handbook's cover: cardinal red, deep navy,
+/// antique gold, and warm cream.
 enum Theme {
     /// Cardinal red — the app's signature color.
     static let cardinal = Color(red: 196 / 255, green: 30 / 255, blue: 58 / 255)
+
+    /// Deep navy from the book's title type.
+    static let navy = Color(red: 0.13, green: 0.19, blue: 0.31)
+
+    /// Antique gold from the cover accents.
+    static let gold = Color(red: 0.69, green: 0.54, blue: 0.24)
 
     /// A darker shade used in gradients.
     static let cardinalDark = Color(red: 128 / 255, green: 16 / 255, blue: 37 / 255)

@@ -1,31 +1,40 @@
-# The Cardinal's Companion
+# The Cardinal's Toolkit — iPhone App
 
-A SwiftUI iPhone app offering **resources and tools for healing** — a gentle companion for anyone grieving or going through a hard season. The cardinal, said to appear when a loved one is near, is the app's emblem.
+The companion app to **_The Cardinal's Toolkit: The North Carolina Family Caregiver Handbook_** by Rob Brizzi — practical tools to help you stay organized and prepared while caring for an aging parent.
 
-Everything is private and offline: no account, no network, no analytics. Journal entries and mood check-ins never leave the device.
+The cardinal is North Carolina's state bird: it stays through every winter. So do caregivers.
 
-## Features
+Everything is private and offline: no account, no network, no analytics. Journal entries, mood check-ins, and checklist progress never leave the device.
+
+## The four pillars, as tabs
 
 ### Today
-- A **daily reflection** — a short, comforting thought that changes each day.
-- A **mood check-in** ("How is your heart today?") with a five-point scale from *Struggling* to *Peaceful*, plus a strip showing your last week.
-- Quick access to the healing tools.
+- A **daily reflection** written for caregivers — encouragement that changes each day.
+- A **mood check-in** ("How is your heart today?") from *Struggling* to *Peaceful*, with a last-7-days strip.
+- The living cardinal mascot (he breathes, blinks, and flicks his tail) and quick links to the tools.
 
-### Tools
-- **Breathe** — guided breathing (in 4 · hold 4 · out 6) with an animated circle to follow. The long exhale is what settles the nervous system.
-- **Come Back to Now** — the classic 5-4-3-2-1 grounding exercise, walked through step by step across the five senses.
-- **Gentle Words** — a swipeable deck of affirmations written specifically for grief's hardest days.
+### Checklists — *Planning & Checklists*
+Interactive checklists with progress saved on-device:
+- **The Essential Documents** — POA, health care POA, advance directive (with NC witness/notary notes), HIPAA, will, "where everything is" sheet
+- **Home Safety Walkthrough** — the afternoon of fixes that prevents the big fall
+- **Medical Information Kit** — the folder that travels to every appointment
+- **Hospital Discharge Day** — taming health care's most dangerous handoff
+
+### Tools — *Practical Tools*
+For the caregiver's own heart:
+- **Breathe** — guided breathing (in 4 · hold 4 · out 6) with an animated circle
+- **Come Back to Now** — the 5-4-3-2-1 grounding exercise
+- **Gentle Words** — 16 affirmations written for caregiving's hardest days
 
 ### Journal
-- Private entries with a mood, an optional title, and free writing.
-- **Starter prompts** ("What do I wish I could tell them today?") for blank-page days.
-- Edit, swipe-to-delete; persisted on-device via `UserDefaults` (JSON-encoded).
+Private entries with mood, optional title, and caregiver-specific starter prompts ("What do I need to ask for help with?"). Edit, swipe-to-delete; persisted via `UserDefaults`.
 
-### Resources
-- **Crisis support**: 988 Suicide & Crisis Lifeline, Crisis Text Line, SAMHSA helpline (tap-to-call/text), and an international helpline finder.
-- **Gentle reading**: five in-app articles — grief's non-linear timeline, the cardinal tradition and "continuing bonds," caring for a grieving body, supporting a grieving friend, and when to seek professional help.
-- **Organizations**: The Dougy Center, What's Your Grief, Modern Loss, and the National Alliance for Children's Grief.
-- **About** — the app's story, privacy promise, and a clear "this is not therapy" note of care.
+### Resources — *Support & Resources*
+- **When you need help now**: Eldercare Locator, NC 211, Alzheimer's Association 24/7 Helpline, 988
+- **North Carolina**: Division of Aging & Adult Services, SHIIP Medicare counseling, Project C.A.R.E., Adult Protective Services
+- **National**: Family Caregiver Alliance, AARP Caregiving, VA Caregiver Support, Medicare.gov
+- **Gentle reading**: five in-app articles — caregiver burnout, the essential paperwork, home safety, talking with your parent about help, and when it's time for more care
+- **About** — the book, the bird, the privacy promise, and a clear "not medical/legal advice" note
 
 ## Requirements
 
@@ -38,34 +47,36 @@ Everything is private and offline: no account, no network, no analytics. Journal
 2. Select an iPhone simulator (or a device with your signing team set on the target).
 3. Build and run (⌘R). There are no external dependencies.
 
+CI builds the app on a macOS runner on every push (`.github/workflows/ios-build.yml`) and uploads the simulator `.app` bundle as a workflow artifact.
+
 ## Architecture
 
 ```
 CardinalPress/
 ├── CardinalPressApp.swift      # App entry point; injects the shared store
 ├── Models/
-│   └── Models.swift            # Mood, JournalEntry, MoodCheckIn, Reflection, Article, SupportResource
+│   └── Models.swift            # Mood, JournalEntry, MoodCheckIn, Reflection, Article, SupportResource, Checklist
 ├── Data/
-│   ├── CompanionStore.swift    # ObservableObject: journal + check-ins (persisted), daily reflection
-│   └── SeedData.swift          # Reflections, affirmations, prompts, articles, support resources
+│   ├── CompanionStore.swift    # ObservableObject: journal, check-ins, checklist progress (all persisted)
+│   └── SeedData.swift          # ALL content: reflections, affirmations, prompts, articles, checklists, resources
 ├── Support/
-│   └── Theme.swift             # Cardinal palette, tool gradients, mood colors
+│   └── Theme.swift             # Cover palette: cardinal red, navy, gold, cream
 └── Views/
-    ├── ContentView.swift       # Root TabView (Today · Tools · Journal · Resources)
-    ├── TodayView.swift         # Reflection card, mood check-in, week strip, quick tools
+    ├── ContentView.swift       # Root TabView (Today · Checklists · Tools · Journal · Resources)
+    ├── TodayView.swift         # Reflection, mood check-in, week strip, quick tools
+    ├── ChecklistsView.swift    # Progress rings, item toggles, per-list reset
     ├── ToolsView.swift         # Tool cards + care disclaimer
     ├── BreathingView.swift     # Animated guided breathing
     ├── GroundingView.swift     # 5-4-3-2-1 walkthrough
     ├── AffirmationsView.swift  # Swipeable affirmation deck
     ├── JournalView.swift       # Entry list + editor sheet with prompts
-    ├── ResourcesView.swift     # Crisis lines, articles, organizations
-    └── AboutView.swift         # Story, privacy, disclaimer
+    ├── ResourcesView.swift     # Urgent / NC / national resources + articles
+    ├── AboutView.swift         # The book, the bird, privacy, disclaimer
+    └── CardinalMark.swift      # Code-drawn cardinal emblem + LivingCardinal animation
 ```
 
-The Xcode project uses a file-system-synchronized group (Xcode 16+), so new files added under `CardinalPress/` are picked up automatically.
-
-All content lives in `SeedData.swift` — reflections, affirmations, prompts, articles, and resource links can be edited there without touching any view code.
+All content lives in `SeedData.swift` — reflections, checklists, articles, and resource links can be edited there without touching any view code, which makes syncing the app with new editions of the workbook a one-file change.
 
 ## A note of care
 
-This app offers comfort and self-care tools. It is not therapy and not a substitute for professional mental-health care. If you are in crisis in the US, call or text **988**; elsewhere, find a helpline at [findahelpline.com](https://findahelpline.com).
+This app supports organization and caregiver self-care. It is not medical, legal, or financial advice. In an emergency call 911; for local aging services anywhere in the US call the Eldercare Locator at 1-800-677-1116, or dial 2-1-1 in North Carolina.

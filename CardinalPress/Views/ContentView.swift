@@ -8,6 +8,11 @@ struct ContentView: View {
                     Label("Today", systemImage: "sunrise.fill")
                 }
 
+            ChecklistsView()
+                .tabItem {
+                    Label("Checklists", systemImage: "checklist")
+                }
+
             ToolsView()
                 .tabItem {
                     Label("Tools", systemImage: "leaf.fill")

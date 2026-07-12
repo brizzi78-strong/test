@@ -32,7 +32,7 @@ struct ToolsView: View {
                     } label: {
                         ToolCard(
                             title: "Gentle Words",
-                            description: "A deck of affirmations written for grief's hardest days. Swipe through until one lands.",
+                            description: "A deck of affirmations written for caregiving's hardest days. Swipe through until one lands.",
                             symbolName: "heart.text.square",
                             color: Theme.dusk
                         )

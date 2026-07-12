@@ -63,3 +63,25 @@ struct SupportResource: Identifiable, Hashable {
     let symbolName: String
     let url: String
 }
+
+/// A planning checklist from the handbook. Item completion is stored
+/// on-device (see CompanionStore.checkedItemIDs).
+struct Checklist: Identifiable, Hashable {
+    let id: String
+    let title: String
+    let subtitle: String
+    let symbolName: String
+    let items: [ChecklistItem]
+}
+
+struct ChecklistItem: Identifiable, Hashable {
+    let id: String
+    let text: String
+    let detail: String?
+
+    init(_ id: String, _ text: String, detail: String? = nil) {
+        self.id = id
+        self.text = text
+        self.detail = detail
+    }
+}

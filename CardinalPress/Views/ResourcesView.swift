@@ -5,6 +5,7 @@ struct ResourcesView: View {
         NavigationStack {
             List {
                 crisisSection
+                ncSection
                 readingSection
                 organizationsSection
                 aboutSection
@@ -18,13 +19,25 @@ struct ResourcesView: View {
 
     private var crisisSection: some View {
         Section {
-            ForEach(SeedData.crisisLines) { line in
+            ForEach(SeedData.urgentHelp) { line in
                 ResourceLinkRow(resource: line)
             }
         } header: {
-            Text("If you need support right now")
+            Text("When you need help now")
         } footer: {
-            Text("If you or someone else is in immediate danger, call your local emergency number (911 in the US).")
+            Text("For medical emergencies, call 911.")
+        }
+    }
+
+    private var ncSection: some View {
+        Section {
+            ForEach(SeedData.ncResources) { resource in
+                ResourceLinkRow(resource: resource)
+            }
+        } header: {
+            Text("North Carolina")
+        } footer: {
+            Text("Your county's Area Agency on Aging — reachable through the Division of Aging — is the single best local starting point.")
         }
     }
 
@@ -52,13 +65,13 @@ struct ResourcesView: View {
 
     private var organizationsSection: some View {
         Section {
-            ForEach(SeedData.organizations) { org in
+            ForEach(SeedData.nationalResources) { org in
                 ResourceLinkRow(resource: org)
             }
         } header: {
-            Text("Organizations that can help")
+            Text("National")
         } footer: {
-            Text("Local hospices also run free bereavement groups open to everyone in the community — not just hospice families.")
+            Text("Local churches, senior centers, and hospitals often run free caregiver support groups — ask; they rarely advertise.")
         }
     }
 
@@ -71,7 +84,7 @@ struct ResourcesView: View {
                     Image(systemName: "bird.fill")
                         .foregroundStyle(Theme.cardinal)
                         .frame(width: 28)
-                    Text("About the Cardinal's Companion")
+                    Text("About The Cardinal's Toolkit")
                         .font(.subheadline)
                 }
             }

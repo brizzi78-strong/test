@@ -12,7 +12,7 @@ struct JournalView: View {
                     ContentUnavailableView {
                         Label("Your journal is empty", systemImage: "book.closed")
                     } description: {
-                        Text("Writing to — or about — someone you miss is one of the oldest tools for healing. Everything you write stays on this device.")
+                        Text("Caregiving days are full. A few honest lines at the end of one — what happened, what you felt — is one of the oldest ways to lighten the load. Everything you write stays on this device.")
                     } actions: {
                         Button("Write your first entry") { isCreating = true }
                             .buttonStyle(.borderedProminent)

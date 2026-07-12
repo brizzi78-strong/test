@@ -14,14 +14,42 @@ final class CompanionStore: ObservableObject {
         didSet { persist(checkIns, key: Self.checkInsKey) }
     }
 
+    @Published private(set) var checkedItemIDs: Set<String> {
+        didSet { defaults.set(Array(checkedItemIDs).sorted(), forKey: Self.checklistKey) }
+    }
+
     private static let journalKey = "companion.journalEntries"
     private static let checkInsKey = "companion.moodCheckIns"
+    private static let checklistKey = "companion.checkedItems"
     private let defaults: UserDefaults
 
     init(defaults: UserDefaults = .standard) {
         self.defaults = defaults
         self.journalEntries = Self.load([JournalEntry].self, key: Self.journalKey, from: defaults) ?? []
         self.checkIns = Self.load([MoodCheckIn].self, key: Self.checkInsKey, from: defaults) ?? []
+        self.checkedItemIDs = Set(defaults.stringArray(forKey: Self.checklistKey) ?? [])
+    }
+
+    // MARK: - Checklists
+
+    func isChecked(_ item: ChecklistItem) -> Bool {
+        checkedItemIDs.contains(item.id)
+    }
+
+    func toggleChecked(_ item: ChecklistItem) {
+        if checkedItemIDs.contains(item.id) {
+            checkedItemIDs.remove(item.id)
+        } else {
+            checkedItemIDs.insert(item.id)
+        }
+    }
+
+    func completedCount(in checklist: Checklist) -> Int {
+        checklist.items.filter { checkedItemIDs.contains($0.id) }.count
+    }
+
+    func resetChecklist(_ checklist: Checklist) {
+        checkedItemIDs.subtract(checklist.items.map(\.id))
     }
 
     // MARK: - Daily reflection
