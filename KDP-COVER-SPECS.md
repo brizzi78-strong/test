@@ -127,8 +127,10 @@ RULE: nothing prints without the person's exact words in writing.
 
 ## Production plan — Spiritus (agreed 2026-07-13)
 
-20 hours, scoped in writing, rates per service (dev ~$200/hr; line/proof
-typically $100-150/hr — ask for the split; target $3-3.5k not $4k):
+20 hours, scoped in writing. AUTHOR'S CALL 2026-07-13: pay their quoted
+rate without negotiating ($200/hr, ~$4k) — generosity buys engagement,
+and the relationship (endorsement, intros, platform) is worth more than
+the discount. Generous on rate, precise on scope:
 
 SCOTT (10 hrs, creative): full read (~6-7h) -> editorial letter (~2h) ->
 back-matter architecture for the new contributor pieces (~1-2h).
