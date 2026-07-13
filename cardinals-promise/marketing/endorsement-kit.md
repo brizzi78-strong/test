@@ -146,12 +146,21 @@ Rob Brizzi, CDP
 Certified Dementia Practitioner · thecardinalspromise.com
 [phone] · [email]
 
-## Target #2 (author's warm contact): Dr. Jason Huet, MD — Charleston
+## Target #2 (author's warm contact): Dr. Jason Huet, MD, Pulmonologist — Charleston
 
 Ask: blurb (1–3 sentences). Cover line on acceptance, in personal capacity:
-*"— Jason Huet, MD"* plus specialty/title exactly as he specifies.
-(Specialty not yet noted — tell me and I'll sharpen the "why it's in your
-lane" hooks the way the Ferrera letter does.)
+*"— Jason Huet, MD, Pulmonologist"* (title/affiliation exactly as he
+specifies).
+
+Why the book is in his lane (use in the letter):
+- The home health chapter teaches families the homebound language his
+  patients live — "leaving home causes significant weakness or shortness
+  of breath" — so the evaluation actually gets ordered
+- The hospice chapter shows families that hospice brings the oxygen,
+  hospital bed, and supplies home — the referral conversation pulmonology
+  owns for advanced COPD and lung disease
+- The last-days pages walk families through breathing changes calmly:
+  when to use the medicine or oxygen, and which signs mean urgent help
 
 ### Personalized letter — Dr. Huet
 
@@ -167,12 +176,16 @@ living: *The Caregiver's Cardinal Toolkit* — a practical, color-coded
 workbook with the exact questions, scripts, and worksheets for hospital
 discharges, care decisions, Medicare traps, and the last days of life.
 
-It's the book for the family in your exam room who is suddenly caring for
-a parent and doesn't know what to ask: when to push for a home health
-evaluation, what "observation status" quietly does to coverage, how to
-bring you one accurate medication list, and how to hear "goals of care"
-without panic. The manuscript passed independent clinical, Medicare, and
-legal reviews, and a PharmD reviewed the medication content.
+There's more pulmonology in it than the title suggests: the home health
+chapter teaches families the homebound language your patients live —
+"leaving home causes significant weakness or shortness of breath" — so
+the evaluation actually gets ordered; the hospice chapter shows them that
+hospice brings the oxygen, hospital bed, and supplies home, which is the
+conversation that gets your advanced COPD patients referred in time; and
+the last-days pages walk a frightened family through breathing changes
+calmly — when to use the medicine or oxygen, and which signs mean urgent
+help. The manuscript passed independent clinical, Medicare, and legal
+reviews, and a PharmD reviewed the medication content.
 
 Would you consider a one-to-three-sentence endorsement? I'll send the full
 PDF today — or just the pages closest to your practice. The quote would run
