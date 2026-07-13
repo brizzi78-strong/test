@@ -85,6 +85,11 @@ no placeholder barcode (zone clear — KDP prints its own).
 NOTE: the front cover carries a second Dr. Huet quote ("I'm proud to see all the
 service Rob does in his recovery journey.") — the approved quote was the
 "patients" line (now on the back). Get Huet's okay on this second quote too.
+ADDED 2026-07-13 per marketing review: "AFTERWORD BY DAVE MEYER, FORMER NFL
+QUARTERBACK" on the front panel under the subtitle (gold). CONDITION: Dave
+Meyer's roster claims must be verified and his written sign-off obtained
+before print — if the credential doesn't verify, remove this line. Also put
+the afterword credit in the KDP description.
 
 The deliverable The_Cardinals_Promise_cover_wrap.pdf is this art re-composited
 to exact KDP geometry (panels sliced at the fold lines and scaled to
