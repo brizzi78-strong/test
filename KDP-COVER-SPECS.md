@@ -124,3 +124,27 @@ DIRECT GALLEY ASK: Dr. Drew Pinsky (addiction medicine, media) — pitch
 letter on request.
 
 RULE: nothing prints without the person's exact words in writing.
+
+## Production plan — Spiritus (agreed 2026-07-13)
+
+20 hours, scoped in writing, rates per service (dev ~$200/hr; line/proof
+typically $100-150/hr — ask for the split; target $3-3.5k not $4k):
+
+SCOTT (10 hrs, creative): full read (~6-7h) -> editorial letter (~2h) ->
+back-matter architecture for the new contributor pieces (~1-2h).
+Advice only; author rules on every suggestion.
+
+JOCELYN (10 hrs, line): line pass on NEW contributor pages only (~2h);
+cold proofread of locked print PDF (~7h); re-check corrected pages (~1h).
+
+Sequence: contributor pages in -> book locks -> Scott -> author rules ->
+rebuild -> Jocelyn -> fixes -> attorney 2-hr read (ch12 + Tyler/Jaye +
+consent stack; Authors Guild membership is the cheap route) -> KDP proof.
+Clock starts only when the locked file is sent. ~2 weeks of pipeline.
+Hard cap: no editing purchases beyond these 20 hours.
+
+Contributor pages (200-400 words each): Hope (partner), Chris (brother),
+Lisa (Sharing My Father), Jaye (caregiver), Matt (Homeless to Millionaire),
+Scott (to the parent whose child didn't make it), mom (offered once).
+The Empty Chair (AJ) already set. One rebuild when all pages are in;
+cover/spine moves once.
