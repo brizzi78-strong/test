@@ -1,0 +1,309 @@
+<title>The First 72 Hours — Caregiver Worksheet</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root {
+    --paper: #FAF7F2;
+    --sheet: #FFFFFF;
+    --ink: #2A231E;
+    --muted: #70645A;
+    --cardinal: #B3222B;
+    --cardinal-deep: #8E1B22;
+    --line: #D9CFC3;
+    --line-soft: #E8E1D7;
+    --fill-line: #C9BEB1;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #211B17;
+      --sheet: #2A231E;
+      --ink: #EDE6DD;
+      --muted: #A79A8E;
+      --cardinal: #E0575E;
+      --cardinal-deep: #E87A80;
+      --line: #4A4038;
+      --line-soft: #3A322B;
+      --fill-line: #55483E;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #211B17;
+    --sheet: #2A231E;
+    --ink: #EDE6DD;
+    --muted: #A79A8E;
+    --cardinal: #E0575E;
+    --cardinal-deep: #E87A80;
+    --line: #4A4038;
+    --line-soft: #3A322B;
+    --fill-line: #55483E;
+  }
+  :root[data-theme="light"] {
+    --paper: #FAF7F2;
+    --sheet: #FFFFFF;
+    --ink: #2A231E;
+    --muted: #70645A;
+    --cardinal: #B3222B;
+    --cardinal-deep: #8E1B22;
+    --line: #D9CFC3;
+    --line-soft: #E8E1D7;
+    --fill-line: #C9BEB1;
+  }
+
+  html { background: var(--paper); }
+  body {
+    margin: 0;
+    color: var(--ink);
+    font-family: Charter, "Bitstream Charter", Georgia, Cambria, serif;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 44rem; margin: 0 auto; padding: 3rem 1.25rem 5rem; }
+
+  .eyebrow {
+    font-family: ui-sans-serif, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: .72rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--cardinal); margin: 0 0 .8rem;
+  }
+  .masthead { padding-bottom: 2rem; border-bottom: 3px solid var(--cardinal); margin-bottom: 2rem; }
+  .masthead h1 { font-size: clamp(2rem, 6vw, 2.8rem); line-height: 1.1; margin: 0 0 .9rem; font-weight: 700; text-wrap: balance; }
+  .masthead .tagline { font-size: 1.1rem; font-style: italic; color: var(--muted); margin: 0; max-width: 34rem; }
+
+  .opener { margin: 0 0 2.25rem; max-width: 38rem; }
+  .opener p { margin: 0 0 1rem; }
+
+  .toolbox-box {
+    border: 1.5px solid var(--cardinal);
+    border-left-width: 6px;
+    border-radius: 3px;
+    padding: .95rem 1.15rem;
+    margin: 0 0 2rem;
+    background: color-mix(in srgb, var(--cardinal) 5%, var(--sheet));
+  }
+  .toolbox-box .tb-label {
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: .7rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase;
+    color: var(--cardinal); display: flex; align-items: center; gap: .5rem; margin-bottom: .35rem;
+  }
+  .tb-mark { width: .85em; height: .7em; display: inline-block; position: relative; }
+  .tb-mark::before { content: ""; position: absolute; inset: 30% 0 0 0; background: var(--cardinal); border-radius: 1px; }
+  .tb-mark::after { content: ""; position: absolute; top: 0; left: 28%; right: 28%; height: 34%; border: 1.5px solid var(--cardinal); border-bottom: none; border-radius: 2px 2px 0 0; }
+  .toolbox-box .tb-use { font-style: italic; margin: 0; font-size: .98rem; }
+
+  .day {
+    background: var(--sheet); border: 1px solid var(--line); border-radius: 4px;
+    padding: 1.9rem 2rem 2.1rem; margin: 0 0 2.25rem;
+  }
+  .day-tag {
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    display: inline-block; font-size: .7rem; font-weight: 700; letter-spacing: .14em;
+    text-transform: uppercase; color: #fff; background: var(--cardinal-deep);
+    padding: .28rem .7rem; border-radius: 2px; margin: 0 0 .9rem;
+  }
+  :root[data-theme="dark"] .day-tag, :root:not([data-theme="light"]) .day-tag { color: var(--sheet); }
+  @media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) .day-tag { color: #fff; } }
+  .day h2 { font-size: 1.45rem; margin: 0 0 .35rem; line-height: 1.15; text-wrap: balance; }
+  .day .lead { color: var(--muted); margin: 0 0 1.4rem; font-size: .97rem; max-width: 35rem; }
+
+  .fields { display: flex; flex-direction: column; gap: 1.05rem; }
+  .field .q { font-size: .95rem; font-weight: 700; margin: 0 0 .45rem; }
+  .field .hint { font-family: ui-sans-serif, system-ui, sans-serif; font-size: .82rem; color: var(--muted); margin: -.3rem 0 .5rem; }
+  .lines { display: flex; flex-direction: column; gap: 1.5rem; }
+  .lines > span { display: block; border-bottom: 1px solid var(--fill-line); height: 1px; }
+
+  .checks { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: .6rem; font-family: ui-sans-serif, system-ui, sans-serif; font-size: .95rem; }
+  .checks li { display: flex; gap: .7rem; align-items: baseline; }
+  .checks .box { flex: none; width: .85rem; height: .85rem; border: 1.5px solid var(--muted); border-radius: 2px; transform: translateY(.12rem); }
+  .checks .blank { border-bottom: 1px solid var(--fill-line); flex: 1; align-self: flex-end; height: 1.1rem; min-width: 5rem; }
+
+  .day h3 {
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: .76rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--cardinal-deep); margin: 1.6rem 0 .7rem;
+    padding-bottom: .35rem; border-bottom: 1px solid var(--line-soft);
+  }
+
+  .tablewrap { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; font-family: ui-sans-serif, system-ui, sans-serif; font-size: .88rem; }
+  th { text-align: left; font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); font-weight: 600; padding: .4rem .6rem; border-bottom: 2px solid var(--line); }
+  td { border-bottom: 1px solid var(--line-soft); padding: 1.05rem .6rem .3rem; }
+  td:first-child, th:first-child { padding-left: 0; }
+
+  .note { font-size: .88rem; color: var(--muted); font-style: italic; margin: 1.4rem 0 0; }
+
+  .after {
+    border-top: 3px solid var(--cardinal);
+    margin-top: 2.5rem; padding-top: 2rem;
+  }
+  .after h2 { font-size: 1.5rem; margin: 0 0 .8rem; }
+  .after p { max-width: 38rem; margin: 0 0 1rem; }
+  .after .from { font-family: ui-sans-serif, system-ui, sans-serif; font-size: .85rem; color: var(--muted); margin-top: 1.6rem; }
+
+  .colophon { text-align: center; color: var(--muted); font-style: italic; margin-top: 3rem; }
+  .colophon .rule { width: 3rem; height: 3px; background: var(--cardinal); margin: 0 auto 1.2rem; }
+
+  @media print {
+    :root { --paper: #fff; --sheet: #fff; --ink: #000; --muted: #444; --cardinal: #8E1B22; --cardinal-deep: #8E1B22; --line: #999; --line-soft: #ccc; --fill-line: #777; }
+    html, body { background: #fff; }
+    .wrap { max-width: none; padding: 0; }
+    .day { border: none; border-radius: 0; padding: 0 0 1rem; margin: 0; break-before: page; }
+    .day:first-of-type { break-before: auto; }
+    .day-tag { color: #fff !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .toolbox-box { background: #fff; }
+    .after { break-before: page; }
+    a { color: inherit; text-decoration: none; }
+  }
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="eyebrow">A free worksheet from The Cardinal's Toolbox</p>
+    <h1>The First 72 Hours</h1>
+    <p class="tagline">When everything just changed — a diagnosis, a fall, a phone call — this is the next step. One page a day. That's the whole job.</p>
+  </header>
+
+  <section class="opener">
+    <p>You don't have to do this perfectly. You have to do the next thing.</p>
+    <p>This worksheet is three days of next things. Don't work ahead. Don't read it all tonight. Do today's page, then stop and rest — resting is on the list because it's part of the job.</p>
+  </section>
+
+  <div class="toolbox-box" role="note">
+    <p class="tb-label"><span class="tb-mark" aria-hidden="true"></span>The Cardinal's Toolbox</p>
+    <p class="tb-use">Practical tools to help you stay organized and prepared. Use this page when you need one clear next step.</p>
+  </div>
+
+  <!-- HOUR 0 + DAY 1 -->
+  <section class="day">
+    <span class="day-tag">Day 1 · The first 24 hours</span>
+    <h2>Steady the ground</h2>
+    <p class="lead">Before anything else: if anyone is unsafe right now, call the doctor or 911 first. This page will still be here.</p>
+
+    <div class="fields">
+      <div class="field">
+        <p class="q">What happened, in one sentence?</p>
+        <p class="hint">Plain words. Not the medical term — what you'd tell your best friend.</p>
+        <div class="lines"><span></span><span></span></div>
+      </div>
+      <div class="field">
+        <p class="q">What exactly were you told, and by whom?</p>
+        <p class="hint">Name and role of who said it. If it was a doctor, ask the office for the visit summary — you're entitled to it.</p>
+        <div class="lines"><span></span><span></span></div>
+      </div>
+      <div class="field">
+        <p class="q">The one question you wish you had asked:</p>
+        <p class="hint">Call the office tomorrow and ask it. Doctors expect the call-back. Write their answer here.</p>
+        <div class="lines"><span></span><span></span></div>
+      </div>
+    </div>
+
+    <h3>Before you sleep tonight</h3>
+    <ul class="checks">
+      <li><span class="box"></span>Tell one person. Just one. Say it out loud to somebody.</li>
+      <li><span class="box"></span>Eat something. Drink water.</li>
+      <li><span class="box"></span>Put every medication bottle in one bag or basket — don't organize it yet, just gather it.</li>
+      <li><span class="box"></span>Stop researching by 9 p.m. The forty open tabs will not help you tonight.</li>
+    </ul>
+    <p class="note">Day 1 is not for decisions. It's for standing up.</p>
+  </section>
+
+  <!-- DAY 2 -->
+  <section class="day">
+    <span class="day-tag">Day 2 · People and papers</span>
+    <h2>Gather what you'll need</h2>
+    <p class="lead">Everything that happens next — appointments, insurance, hospital visits — goes easier if today's list is done once.</p>
+
+    <h3>Find these (check what you locate)</h3>
+    <ul class="checks">
+      <li><span class="box"></span>Insurance cards — Medicare, Medicaid, supplement (photograph front and back)</li>
+      <li><span class="box"></span>Photo ID</li>
+      <li><span class="box"></span>Medication bottles from yesterday's basket — now list them below</li>
+      <li><span class="box"></span>Power of attorney / health care proxy — <em>if none exists, write "start this" on Day 3's list</em></li>
+      <li><span class="box"></span>Any paperwork from the hospital or doctor's office</li>
+    </ul>
+
+    <h3>Medication quick list</h3>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th style="width:40%">Medication</th><th style="width:25%">Dose</th><th style="width:35%">When taken</th></tr>
+        </thead>
+        <tbody>
+          <tr><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Three phone numbers you'll dial most</h3>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th style="width:34%">Who</th><th style="width:33%">Name</th><th style="width:33%">Phone</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Primary doctor</td><td></td><td></td></tr>
+          <tr><td>Pharmacy</td><td></td><td></td></tr>
+          <tr><td>Family — first call</td><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Photograph these pages when they're filled in. Now the answers live in your phone too.</p>
+  </section>
+
+  <!-- DAY 3 -->
+  <section class="day">
+    <span class="day-tag">Day 3 · The next right steps</span>
+    <h2>Point the road forward</h2>
+    <p class="lead">You're not solving everything today. You're setting three things in motion and saying one thing out loud.</p>
+
+    <ul class="checks">
+      <li><span class="box"></span>Book the follow-up appointment (date: <span class="blank"></span>)</li>
+      <li><span class="box"></span>Schedule a family meeting this week — everyone, in person or on the phone (date: <span class="blank"></span>)</li>
+      <li><span class="box"></span>Pick one person who can relieve you for two hours a week (name: <span class="blank"></span>)</li>
+    </ul>
+
+    <h3>At the family meeting, ask these five questions</h3>
+    <div class="fields">
+      <div class="field">
+        <p class="q">What changed?</p>
+        <div class="lines"><span></span></div>
+      </div>
+      <div class="field">
+        <p class="q">What are we worried about?</p>
+        <div class="lines"><span></span></div>
+      </div>
+      <div class="field">
+        <p class="q">What does Mom/Dad want most?</p>
+        <p class="hint">Ask them. Write it in their words, not yours.</p>
+        <div class="lines"><span></span></div>
+      </div>
+      <div class="field">
+        <p class="q">What decision needs to be made now?</p>
+        <div class="lines"><span></span></div>
+      </div>
+      <div class="field">
+        <p class="q">Who is responsible for the next step?</p>
+        <div class="lines"><span></span></div>
+      </div>
+    </div>
+    <p class="note">Disagreement at the meeting is allowed. Leaving without a next step is not.</p>
+  </section>
+
+  <!-- AFTER -->
+  <section class="after">
+    <h2>After the 72 hours</h2>
+    <p>The road ahead has names on it — Medicare, Medicaid, dementia, assisted living, hospice — and every one of them is more manageable met prepared than met at 2 a.m. in a discharge office.</p>
+    <p>I wrote the manual I wish someone had handed that first family I ever sat with: <strong>The Aging Parent Cardinal's Toolkit</strong> — 25 chapters of straight answers, the full worksheets this page comes from, and a North Carolina resource directory. It's the same calm hand, with a bigger clipboard.</p>
+    <p><strong>[LINK: Toolkit page — thecardinalspromise.com]</strong></p>
+    <p>Whatever you do next: you don't have to be unafraid. You have to show up anyway. You already did — three days in a row.</p>
+    <p class="from">Rob Brizzi, CDP (Certified Dementia Practitioner) · The Cardinal's Toolbox · Cardinal Promise Press</p>
+  </section>
+
+  <footer class="colophon">
+    <div class="rule"></div>
+    <p>Story, then toolbox, then the next right action.<br>thecardinalspromise.com</p>
+  </footer>
+
+</div>
