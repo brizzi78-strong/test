@@ -48,6 +48,15 @@ Notes for the designer:
 - BLURB: the front-cover quote credited to "Dr Huet" is approved by Jason Huet
   (author confirmed 2026-07-10).
 
+## KDP description lines (author-approved 2026-07-13)
+
+> Plenty of guides cover the logistics. This one also tends to the spirit —
+> the grief, the grace, and the promise at the center of caring for a parent.
+
+Use in the KDP description alongside the caregiver line ("for the caregiver
+of a loved one in addiction, disease, or loss") and the faith signal
+("a story of addiction, adoption, hospice, and faith"). NOT for the cover.
+
 ## Draft back-cover copy (~170 words)
 
 > *For readers of* Beautiful Boy *and* Tuesdays with Morrie.
