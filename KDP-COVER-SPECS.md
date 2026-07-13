@@ -78,10 +78,13 @@ Author bio line (below copy or on flap):
 
 ## APPROVED WRAP (2026-07-13): painted-cardinal design
 
-The author approved a new full-wrap design (repo: cover/cover_wrap_painted_source.png,
-1492 x 1054 px). It replaces the July 10 navy wrap. It already satisfies the fix
+The author approved a new full-wrap design (repo: cover/cover_wrap_painted_source.jpg,
+1535 x 1024 px — the night/moon version, corrected upload 2026-07-13). It replaces the July 10 navy wrap. It already satisfies the fix
 list: correct subtitle red line, no tagline, CARDINAL PROMISE PRESS singular,
 no placeholder barcode (zone clear — KDP prints its own).
+NOTE: the front cover carries a second Dr. Huet quote ("I'm proud to see all the
+service Rob does in his recovery journey.") — the approved quote was the
+"patients" line (now on the back). Get Huet's okay on this second quote too.
 
 The deliverable The_Cardinals_Promise_cover_wrap.pdf is this art re-composited
 to exact KDP geometry (panels sliced at the fold lines and scaled to
