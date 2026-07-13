@@ -185,7 +185,7 @@ I tried to. I couldn't.
 
 The only world I knew was Mexico City. I was four years old.
 
-We lived in Bosque de Aragón, in a two-story brick row house on a dead-end street, the houses wrapped around a patch of grass. The walls were thick and you heard everything anyway. Radios. Fights. The street vendors shouting before sunrise. Music from passing cars and open windows. Overhead, old sneakers hung by their laces from the power lines, swinging in the breeze.
+We lived in Bosques de Aragón, in a two-story brick row house on a dead-end street, the houses wrapped around a patch of grass. The walls were thick and you heard everything anyway. Radios. Fights. The street vendors shouting before sunrise. Music from passing cars and open windows. Overhead, old sneakers hung by their laces from the power lines, swinging in the breeze.
 
 Rosa María and Armando lived next door. A clothesline ran between our balconies, always full of sheets drying stiff under the hot sun. Every morning started the same way: my mother put a pot of beans on the stove, and the whole house filled with the smell. Beans, onions, sugar, and the warm bread she bought from the bakery on the corner.
 
@@ -1267,7 +1267,7 @@ Caroline, the home health leader who would hire me, didn't waste time. She read 
 
 The position pays sixty thousand a year, she said finally. Plus commission. But it's a slow build. Once, I'd made five times that and felt hollow. This felt honest. I can do this, I said, and for the first time in an interview I wasn't performing belief. I was stating it.
 
-She called three days later. I need to talk to you about something from your background check. I knew. It shows a DUI from 2006. That wasn't disclosed. You're right, I said. I should have disclosed it. I'm sorry. A pause. Can you tell me what happened? So I did. Not the polished version. What it had been, what it cost, what had changed. When I finished the line stayed quiet. Okay, she said. I appreciate your honesty. Let me talk to HR.
+She called three days later. I need to talk to you about something from your background check. I knew. It shows two DUIs. Those weren't disclosed. You're right, I said. I should have disclosed it. I'm sorry. A pause. Can you tell me what happened? So I did. Not the polished version. What it had been, what it cost, what had changed. When I finished the line stayed quiet. Okay, she said. I appreciate your honesty. Let me talk to HR.
 
 Four days. I went to work, went to meetings, had dinner, slept, did it again. On the fifth day Caroline called. How does a November first start date sound? I didn't answer right away. I sat in my car in Lou's driveway and let it settle. Not adrenaline. Gratitude. Someone had looked at who I was and decided it was enough. I called Lou. I got the job. She knew about the DUIs. HR wanted to pull the offer. She fought for me. A pause. That's a blessing, he said. I'm proud of you. After we hung up I sat there a long time. This wasn't a comeback. Comeback means something to go back to. This was confirmation.
 

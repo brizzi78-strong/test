@@ -107,3 +107,5 @@ umbrella all pseudonyms live under.
 - Dave Meyer afterword: verify NFL roster claims independently + written sign-off on afterword and Ch. 6 bio claims (already pending, now flagged major by marketer).
 - Del Taco hit-and-run (Ch. 13): attorney says acceptable to keep (limitations expired); optional trim of timestamp/location if author wants zero residue.
 - Addiction-MD safety item: extend Resources disclaimer with one sentence that stopping alcohol suddenly can be medically dangerous and withdrawal may need medical supervision; clinician sign-off on Resources page.
+- Tyler and Jaye: SIGNED OFF (author confirmed 2026-07-13). Still confirm no proceeding pending over the May 30 incident before print.
+- Horacio/Balderas: author decision 2026-07-13 — KEEP real name. Counsel awareness noted; mother's written confirmation of the slap/threat accounts still recommended.
