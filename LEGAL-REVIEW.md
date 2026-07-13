@@ -109,3 +109,4 @@ umbrella all pseudonyms live under.
 - Addiction-MD safety item: extend Resources disclaimer with one sentence that stopping alcohol suddenly can be medically dangerous and withdrawal may need medical supervision; clinician sign-off on Resources page.
 - Tyler and Jaye: SIGNED OFF (author confirmed 2026-07-13). Still confirm no proceeding pending over the May 30 incident before print.
 - Horacio/Balderas: author decision 2026-07-13 — KEEP real name. Counsel awareness noted; mother's written confirmation of the slap/threat accounts still recommended.
+- Lynda (stepmother): RENAMED to pseudonym "Donna" throughout the book, 2026-07-13, at author's direction (they are not in contact; passage review not possible). Real name preserved in this ledger and git history. The ch33 "no relation to my stepmom" aside was removed (no longer needed). Author's Note's changed-names language covers this.
