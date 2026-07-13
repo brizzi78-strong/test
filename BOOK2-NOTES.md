@@ -27,3 +27,12 @@ The memoir's back matter is the seed outline: the three C's, Hope's
 it's a doorway," start-hospice guidance, the boundary examples, the Resources
 page, and the contributor pieces coming in (caregiver, partner, sibling,
 bereaved parent). Needs its own ISBN (979-8-9966446-2-x next in the block).
+
+## Decisions (author, 2026-07-13)
+- Cover design LOCKED as the mockup (author's call).
+- Imprint plan agreed: one reader-facing imprint on both books — Cardinal
+  Promise Press — with "an imprint of Blue Ridge Press LLC" structure if/when
+  the LLC is real; confirm with tax/legal.
+- Sequence: memoir launches first and alone; book 2 lands 6-9 months later.
+  One seed line only in memoir marketing. Book 2 never touches book 1's timeline.
+- Huet okay still needed for quote reuse on this cover.
