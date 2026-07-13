@@ -1,23 +1,23 @@
 # KDP Cover-Wrap Specs — The Cardinal's Promise
 
-Trim size: 6" x 9". Interior page count: 223 (current typeset; the
+Trim size: 6" x 9". Interior page count: 225 (current typeset; the
 spine math below moves with it — rerun before ordering the wrap).
 
 ## Spine width
 
 | Paper | Formula | 223 pages |
 |---|---|---|
-| White (recommended for text-only) | pages × 0.002252" | 0.502" |
-| Cream | pages × 0.0025" | 0.558" |
+| White (recommended for text-only) | pages × 0.002252" | 0.507" |
+| Cream | pages × 0.0025" | 0.563" |
 
 ## Full wrap dimensions (includes 0.125" bleed on all outside edges)
 
 | Paper | Width | Height |
 |---|---|---|
-| White | 0.125 + 6 + 0.502 + 6 + 0.125 = **12.752"** | 9 + 0.25 = **9.25"** |
-| Cream | 0.125 + 6 + 0.558 + 6 + 0.125 = **12.808"** | **9.25"** |
+| White | 0.125 + 6 + 0.507 + 6 + 0.125 = **12.757"** | 9 + 0.25 = **9.25"** |
+| Cream | 0.125 + 6 + 0.563 + 6 + 0.125 = **12.813"** | **9.25"** |
 
-At 300 DPI (white): 3826 × 2775 px.
+At 300 DPI (white): 3828 × 2775 px.
 
 Notes for the designer:
 - Keep text 0.25" inside trim edges; nothing critical in the 0.125" bleed zone.
@@ -93,9 +93,9 @@ the afterword credit in the KDP description.
 
 The deliverable The_Cardinals_Promise_cover_wrap.pdf is this art re-composited
 to exact KDP geometry (panels sliced at the fold lines and scaled to
-6.125" / 0.502" / 6.125", 3826 x 2775 @ 300 DPI canvas). Source art is ~117 DPI,
+6.125" / 0.507" / 6.125", 3828 x 2775 @ 300 DPI canvas). Source art is ~117 DPI,
 so this file is PROOF quality. For the print run, request the same design from
-the designer at native 3826 x 2775 (and a front-panel-only export at
+the designer at native 3828 x 2775 (and a front-panel-only export at
 1600 x 2560+ for the Kindle cover).
 
 ## Cover source-image note (superseded July 10 wrap)
@@ -103,5 +103,5 @@ the designer at native 3826 x 2775 (and a front-panel-only export at
 The APPROVED full wrap (repo: cover/cover_wrap_approved.jpg) is 1320 × 664 px —
 about 103 DPI at the 12.766" wrap width. That is a design proof, not a print file.
 Ask the designer for the final wrap at 300 DPI: 3826 × 2775 px (white paper,
-223 pages), with the corrected barcode. For the Kindle eBook cover, request a
+225 pages), with the corrected barcode. For the Kindle eBook cover, request a
 front-panel-only export at 1600 × 2560 px or larger.

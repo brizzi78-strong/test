@@ -105,6 +105,8 @@ Afterword
 
 Author's Note
 
+Acknowledgments
+
 A Reader's Guide
 
 Resources
@@ -1905,6 +1907,30 @@ This book will help you do exactly that. I am grateful it exists, and I am grate
 # **AUTHOR'S NOTE**
 
 This is a true story, told from memory. Dialogue has been reconstructed as faithfully as memory allows; it keeps the substance of what was said, if not always the exact words. Some names and identifying details have been changed to protect privacy, above all those of the patients and families I served in home health and hospice, whose hardest days deserve protection, not exposure. Where the sober men and women of the rooms appear by their real names, it is with their permission; others have been renamed. A few of the rooms I describe from my work are composites of many rooms, for the same reason. Nothing in these pages was invented to sharpen the story. My mother, who is all over this book, checked more of these memories than anyone. Whatever I still got wrong is mine.
+
+# **ACKNOWLEDGMENTS**
+
+Hope. You tilted your head, said "We?", and never stopped meaning it. You read every page of this book and told me you were proud of me. That's the only review I'll ever need.
+
+My mother, who carried two boys out of Mexico City and then checked more of these memories than anyone. This book is half hers.
+
+Chris. My brother, my keeper. You know what you said to me that night. It worked.
+
+Lisa, Jon, and Joel — we shared him. I know what we lost.
+
+The men God put in front of me: Andy, Bob, Mager, Matt, and Quint. You walked into the room. So did I. That turned out to be the whole thing.
+
+Dave Meyer, for thirty-five years of friendship and for the words that open and close this book.
+
+Dr. Huet, and every nurse, aide, chaplain, and social worker I get to stand beside in the last chapter. You taught me what showing up looks like when it's a profession.
+
+Tyler and Jaye, for letting me tell it.
+
+Scott, my editor, who made these pages better and let them stay mine.
+
+The rooms, and the people in them, who keep teaching me that the door only had to open once.
+
+And Dad. I kept the promise.
 
 # **A READER'S GUIDE**
 

@@ -105,6 +105,8 @@ Afterword
 
 Author's Note
 
+Acknowledgments
+
 A Reader's Guide
 
 Resources
