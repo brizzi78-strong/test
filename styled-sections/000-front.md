@@ -34,10 +34,6 @@ Printed in the United States of America.
 
 *For Hope, who tilted her head and said "We?"*
 
-*Those we love don't go away,*
-
-*they walk beside us every day.*
-
 **CONTENTS**
 
 Prologue

@@ -9,7 +9,7 @@ Close. So close I can see individual feathers. It looks at me through the glass 
 
 Let me tell you how I got to this parking lot.
 
-January 9, 2026. Seventeen years sober to the day, and fifteen days after my father died. I'm in my car in the parking lot of Peak Resources Skilled Nursing Facility in Raleigh, coffee in my hand, just out of a visit with a family still deciding whether to place their mother on hospice. I'd sat with them, answered their questions, stayed until the staying was done. A gray January morning, the coffee going cold, the space between one call and the next.
+January 9, 2026. Seventeen years sober to the day, and fifteen days after my father died. I'm in my car in the parking lot of a skilled nursing facility in Raleigh, coffee in my hand, just out of a visit with a family still deciding whether to start hospice for their mother. I'd sat with them, answered their questions, stayed until the staying was done. A gray January morning, the coffee going cold, the space between one call and the next.
 
 And then it lands, the cardinal, on the mirror, close enough to touch through the glass.
 
