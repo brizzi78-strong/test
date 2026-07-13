@@ -76,7 +76,21 @@ Author bio line (below copy or on flap):
 > Mexico City and raised in New Jersey, he is in long-term recovery. He lives in
 > Raleigh, North Carolina, with his wife, Hope.
 
-## Cover source-image note
+## APPROVED WRAP (2026-07-13): painted-cardinal design
+
+The author approved a new full-wrap design (repo: cover/cover_wrap_painted_source.png,
+1492 x 1054 px). It replaces the July 10 navy wrap. It already satisfies the fix
+list: correct subtitle red line, no tagline, CARDINAL PROMISE PRESS singular,
+no placeholder barcode (zone clear — KDP prints its own).
+
+The deliverable The_Cardinals_Promise_cover_wrap.pdf is this art re-composited
+to exact KDP geometry (panels sliced at the fold lines and scaled to
+6.125" / 0.502" / 6.125", 3826 x 2775 @ 300 DPI canvas). Source art is ~117 DPI,
+so this file is PROOF quality. For the print run, request the same design from
+the designer at native 3826 x 2775 (and a front-panel-only export at
+1600 x 2560+ for the Kindle cover).
+
+## Cover source-image note (superseded July 10 wrap)
 
 The APPROVED full wrap (repo: cover/cover_wrap_approved.jpg) is 1320 × 664 px —
 about 103 DPI at the 12.766" wrap width. That is a design proof, not a print file.
