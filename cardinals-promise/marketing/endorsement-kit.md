@@ -66,7 +66,7 @@ like.")*
 ## The one-pager (attach as PDF or paste below the letter)
 
 **THE CAREGIVER'S CARDINAL TOOLKIT — A Hero's Guide to Caring for an Aging
-Parent** · Rob Brizzi, CDP · Cardinal Press · 208-page 8.5×11 color
+Parent** · Rob Brizzi, CDP · Cardinal Press · 210-page 8.5×11 color
 workbook · ISBN 978-1-963342-03-1 · Publication: [date]
 
 *One line:* The map nobody hands a family on their worst day — 29 chapters
@@ -123,7 +123,22 @@ for EACH doctor:
 line goes on the FRONT cover under the subtitle. The designer brief in
 `publishing/back-cover-copy.md` reserves that slot.
 
-### Blurb drafts — AWAITING DOCTOR APPROVAL (do not print yet)
+### ✅ FINAL — BOTH QUOTES APPROVED (July 2026)
+
+- **Dr. Ferrera (approved option 2):** "Plenty of guides cover the
+  logistics. This one also tends to the spirit — the grief, the grace, and
+  the promise at the center of caring for a parent." — Dean Ferrera, MD,
+  Cardiologist
+- **Dr. Huet (approved option 1):** "Hospice is the one thing Medicare
+  truly gets right — and this book finally shows families how to use it."
+  — Jason Huet, MD, Pulmonologist
+
+**Placed:** Ferrera leads the back cover (wrap updated); both quotes on the
+book's new Praise page (front matter) and in the Amazon listing's Editorial
+Reviews. Front cover kept clean per the market-research direction. Keep the
+doctors' approval messages on file; send each a finished copy at proofs.
+
+### The draft options that were offered (record)
 
 Both doctors have reacted but not yet supplied written wording. Rob's
 recap: Dr. Huet said *hospice is something Medicare gets right*; Dr.

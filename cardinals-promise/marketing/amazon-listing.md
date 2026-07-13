@@ -40,6 +40,19 @@ worksheets, take them to appointments. Medication content reviewed by Hope
 Brizzi, PharmD. Book one of the Cardinal's Promise series.
 ```
 
+## Editorial Reviews (paste into Author Central after the listing is live)
+
+> Both quotes are doctor-approved verbatim (July 2026). Do not edit their
+> wording; credit lines run exactly as below, personal capacity.
+
+"Plenty of guides cover the logistics. This one also tends to the spirit —
+the grief, the grace, and the promise at the center of caring for a parent."
+— **Dean Ferrera, MD, Cardiologist**
+
+"Hospice is the one thing Medicare truly gets right — and this book finally
+shows families how to use it."
+— **Jason Huet, MD, Pulmonologist**
+
 ## Categories (pick paths that land on these storefront nodes)
 
 1. **Parenting & Relationships › Aging Parents** — the primary node; where
