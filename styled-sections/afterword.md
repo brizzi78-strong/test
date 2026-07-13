@@ -26,4 +26,4 @@ This book will help you do exactly that. I am grateful it exists, and I am grate
 
 *Dave Meyer*
 
-*NFL quarterback. Played with Vick, Manning, and Favre; in the booth with Saban.*
+*NFL QB. Played with Vick, Manning, and Favre; in the booth with Saban.*
