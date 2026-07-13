@@ -8,6 +8,13 @@ The two files KDP asks for are in this folder:
 | Book cover | `kdp-cover-wrap.pdf` | One-piece wrap, 17.7382 × 11.25 in with 0.125" bleed; spine 0.4882" (208 pages × 0.002347", **premium color** paper — recompute if ink choice changes); 2" × 1.2" white barcode zone, lower-right of back cover, left blank for KDP |
 
 ## Before you upload
+- [ ] **Beta-reader question (Rob's call, July 2026): the five part-divider
+  art pages** (before Chapters 1, 6, 13, 19, 27 — gold line art + cardinal,
+  vector). Rob decided to "let the readers decide": ask Hope and early
+  readers whether the dividers stay, go, or get replaced by commissioned
+  art in the same five slots. Removing them later = delete the five
+  `.divider` blocks + trailing blank, then rebuild (page count and spine
+  change back).
 
 - [ ] **Hope's read-through is done** (Chapters 17, 25, 2, 3, 27–28) — the credit page claims a PharmD review
 - [ ] **Bio verified** — Certified Dementia Practitioner credential current
