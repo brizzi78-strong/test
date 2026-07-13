@@ -1204,7 +1204,7 @@ What I couldn't do was become the son he wanted. He was looking for a relationsh
 
 In 2015 I reached for him again. I was thirty-six and sober, and part of the reaching was amends, my side of the street, the years of anger, the silence. I made them. And I called him Horacio. Not Papa. Not Dad. Dad was a word that belonged to someone else by then. Horacio never said anything about it. We talked every week for a couple of months.
 
-He didn't have a phone that could reach the States. So every Wednesday he would go out to a place that had a VoIP line, and at seven o'clock my phone would ring. He had to leave his home just to hear my voice.
+He had no long-distance service on his phone. So every Wednesday he would go out to a place that had a VoIP line, and at seven o'clock my phone would ring. He had to leave his home just to hear my voice.
 
 Mostly we talked about sports. That was the easy ground between us. He loved baseball, so we would go back and forth about games and players, who was hot and who was washed up. Soccer was his real love, though. He would get going on it and the stories would come, matches he had seen, players he swore by, games that had meant something to him long before I was born.
 
