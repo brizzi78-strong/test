@@ -123,6 +123,39 @@ for EACH doctor:
 line goes on the FRONT cover under the subtitle. The designer brief in
 `publishing/back-cover-copy.md` reserves that slot.
 
+### Blurb drafts — AWAITING DOCTOR APPROVAL (do not print yet)
+
+Both doctors have reacted but not yet supplied written wording. Rob's
+recap: Dr. Huet said *hospice is something Medicare gets right*; Dr.
+Ferrera said *he loves the spiritual aspect*. The drafts below are built
+around those reactions. Send each doctor their three options; whatever
+they approve or edit — **in writing** — becomes the printed quote. Nothing
+goes on the cover, Amazon, or the website until then.
+
+**For Dr. Huet (his hospice point):**
+1. "Hospice is the one thing Medicare truly gets right — and this book
+   finally shows families how to use it."
+2. "Families wait too long for hospice because no one explains it. This
+   toolkit explains it — clearly, honestly, and in time to matter."
+3. "Hospice is something Medicare gets right. This book makes sure
+   families find that out before the last week instead of during it."
+
+**For Dr. Ferrera (his spiritual point):**
+1. "What sets this book apart is its heart — it organizes the paperwork
+   without ever losing the soul of caregiving."
+2. "Plenty of guides cover the logistics. This one also tends to the
+   spirit — the grief, the grace, and the promise at the center of caring
+   for a parent."
+3. "A rare workbook that handles Medicare and medication lists with
+   precision, and the spiritual weight of caregiving with real
+   tenderness."
+
+Suggested cover-line pairing once approved: Ferrera's quote leads the
+BACK cover (the heart appeal meets the browser first); Huet's hospice
+line goes with the Amazon Editorial Reviews and the hospice chapter's
+marketing. If either lands a single knockout sentence, it takes the
+FRONT-cover slot under the subtitle.
+
 ### Thank-you + PDF email (send on acceptance — both doctors)
 
 Subject: Thank you — the book, and the two-minute version of what's next
