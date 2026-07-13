@@ -97,7 +97,62 @@ caregiver-education platform.
    (Editorial Reviews), and the website — and the strongest one line goes on
    the FRONT cover under the subtitle.
 
-## Target #1 (author's warm contact): Dr. Dean Ferrera, Cardiologist — Indiana
+## ✅ STATUS: BOTH WARM CONTACTS ACCEPTED (July 2026)
+
+Dr. Ferrera and Dr. Huet have both agreed to endorse. The ask stage is
+done for these two — what follows is the collection stage. Do these steps
+for EACH doctor:
+
+1. **Send the thank-you + PDF email** (template below) with the full book
+   PDF attached — same day if possible; enthusiasm decays.
+2. **Get the blurb in writing**: 1–3 sentences, in their own words. If
+   they ask you to draft it, offer 2–3 options and let them edit — the
+   quote must be words they've approved verbatim.
+3. **Confirm the credit line exactly as they want it printed**, e.g.
+   *"— Dean Ferrera, MD, Cardiologist"* / *"— Jason Huet, MD,
+   Pulmonologist"* — their spelling, their title, personal capacity only
+   (no hospital or health-system attribution unless they insist AND their
+   employer allows it; when in doubt, name-and-specialty only).
+4. **Keep their written approval** (the email itself) on file — it's your
+   permission record for the cover, Amazon, and website uses.
+5. **Send each a free finished copy** when proofs arrive (customary; never
+   payment).
+
+**Where the quotes go when they land:** back cover (top), Amazon listing
+(Editorial Reviews), thecardinalspromise.com — and the strongest single
+line goes on the FRONT cover under the subtitle. The designer brief in
+`publishing/back-cover-copy.md` reserves that slot.
+
+### Thank-you + PDF email (send on acceptance — both doctors)
+
+Subject: Thank you — the book, and the two-minute version of what's next
+
+Dear Dr. [Ferrera / Huet],
+
+Thank you — it means a great deal to have your name on this. The full PDF
+is attached; the pages closest to your practice are [cardiology: the fall
+chapter, the medication-list system, and the palliative-timing chapter /
+pulmonology: the home health chapter, the hospice chapter, and the
+last-days pages].
+
+Whenever you've had a look, all I need is one to three sentences in your
+own words, and the exact credit line you'd like printed (for example,
+"[Name], MD, [Specialty]" — personal capacity, no institutional
+attribution). The quote will appear on the back cover, the Amazon page,
+and the book's website, and nothing runs without your written OK on the
+final wording. If it's easier, I'm happy to send a couple of draft options
+for you to edit or reject entirely.
+
+No deadline pressure — within the next three weeks would be wonderful.
+And a finished copy is yours the day it exists.
+
+With real gratitude,
+
+Rob Brizzi, CDP
+Certified Dementia Practitioner · thecardinalspromise.com
+[phone] · [email]
+
+## Target #1 (author's warm contact): Dr. Dean Ferrera, Cardiologist — Indiana — ✅ ACCEPTED
 
 Ask: blurb first (fastest yes); if the conversation goes well, he is also a
 candidate for the foreword. (Indiana-based — geography is irrelevant for an
@@ -146,7 +201,7 @@ Rob Brizzi, CDP
 Certified Dementia Practitioner · thecardinalspromise.com
 [phone] · [email]
 
-## Target #2 (author's warm contact): Dr. Jason Huet, MD, Pulmonologist — Charleston
+## Target #2 (author's warm contact): Dr. Jason Huet, MD, Pulmonologist — Charleston — ✅ ACCEPTED
 
 Ask: blurb (1–3 sentences). Cover line on acceptance, in personal capacity:
 *"— Jason Huet, MD, Pulmonologist"* (title/affiliation exactly as he
