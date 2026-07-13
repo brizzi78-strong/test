@@ -8,7 +8,7 @@ Chris. My brother, my keeper. You know what you said to me that night. It worked
 
 Lisa, Jon, and Joel — we shared him. I know what we lost.
 
-The men God put in front of me: Andy, Bob, Mager, Matt, and Quint. You walked into the room. So did I.
+The men God put in front of me: Andy, Bob, Mager, Matt, and Quint. You walked into the room. So did I. That turned out to be the whole thing.
 
 Dave Meyer, for thirty-five years of friendship and for the words that open and close this book.
 
