@@ -2,7 +2,7 @@
 
 This book argues that there is a solution. Here is where to find help putting it into practice. These are the organizations I trust and point people to. All of it is free or low cost.
 
-988 Suicide and Crisis Lifeline. Call or text 988. Twenty-four hours a day, free and confidential. For anyone this book finds in a dark place — the addiction pages, the grief pages, any of it.
+988 Suicide and Crisis Lifeline. Call or text 988. Twenty-four hours a day, free and confidential. For anyone reading this in a dark place — the addiction pages, the grief pages, any of it.
 
 ### *If You or Someone You Love Is Struggling With Addiction*
 
@@ -32,4 +32,4 @@ Ira Byock, *The Four Things That Matter Most*.
 
 ### *A Note on These Resources*
 
-The phone numbers and web addresses were current when this book went to press. Organizations change. If a number stops working, search the name. None of this is medical or legal advice. It is a place to begin. One caution worth stating plainly: stopping alcohol suddenly after heavy, steady drinking can be medically dangerous. Withdrawal can bring seizures. Let a doctor or a detox program supervise it.
+The phone numbers and web addresses were current when this book went to press. Organizations change. If a number stops working, search the name. None of this is medical or legal advice. It is a place to begin. One caution: stopping alcohol suddenly after heavy, steady drinking can be medically dangerous. Withdrawal can bring seizures. Let a doctor or a detox program supervise it.
