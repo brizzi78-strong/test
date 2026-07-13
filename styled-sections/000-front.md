@@ -93,9 +93,9 @@ Prologue
 
 Epilogue: The Cardinal's Promise
 
-Tyler and Jaye
-
 A Note to the One Who Loves an Addict
+
+Tyler and Jaye
 
 The Empty Chair
 

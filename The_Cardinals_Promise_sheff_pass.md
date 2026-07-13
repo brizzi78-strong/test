@@ -93,9 +93,9 @@ Prologue
 
 Epilogue: The Cardinal's Promise
 
-Tyler and Jaye
-
 A Note to the One Who Loves an Addict
+
+Tyler and Jaye
 
 The Empty Chair
 
@@ -128,8 +128,6 @@ And the challenges kept coming. Rob spent years in business, where his success c
 The credential that mattered most is the one that cost him the most to earn. Rob walked through the valley himself. He battled addiction. He knows what it is to be lost, to reach for something that promises relief and gives you nothing back, to hit the bottom that forces a man to look honestly at who he is. He came through that fire transformed. He stopped trying to build his worth on performance, and what he found on the other side was steadier, a deeper sense of who he was and what mattered. It is something he has lived.
 
 *Dave Meyer*
-
-*NFL QB. Played with Vick, Manning, and Favre; in the booth with Saban.*
 
 # **PROLOGUE**
 
@@ -1085,7 +1083,7 @@ But I'll tell you what was underneath the costume, because it's the part nobody 
 
 About a dozen of us were in that house. Dan was one of the therapists, a man who'd been where I was and come out the other side. There was the gymnast, nineteen, Olympic-level in his sport before addiction pulled him off the edge of it. Funny, kind, light in a way you don't expect from somebody that young in a room that heavy. There was Mike, one of those people you meet once and think about the rest of your life, quiet, steady. He looked out for me in the small ways that matter when you're new and raw. In 2018 I got the call that Mike was gone. And there was Chad, forty-three, a bodybuilder, a chef, a crack addict, all of it living in the same frame. Chad leaned on the nickname harder than anybody — Corporate Rob — and from him it was all play. Chad made me laugh. And Chad told me the truth.
 
-The truth came in the first seventy-two hours, and it was the thing that finally broke the story I'd walked in with. By the time you get out of here, Chad told me, you'll be doing meth and knowing it's better than Adderall. He wasn't being cruel. He was drawing me the map. I had come in still believing my addiction had a collar on it — pills, prescriptions, a label from a pharmacy, nothing like the men shooting heroin. Chad's sentence took the collar off. I was no different. There was only one direction left from where I stood, and it was down. That was what broke Corporate Rob. Not the withdrawal, not the mirror. A crack addict chef telling me, kindly, exactly where my road went.
+The truth came in the first seventy-two hours, and it was the thing that finally broke the story I'd walked in with. By the time you get out of here, Chad told me, you'll be doing meth and knowing it's better than Adderall. He wasn't being cruel. He was drawing me the map. I had come in still believing my addiction had a collar on it — pills, prescriptions, a label from a pharmacy, nothing like the men shooting heroin. Chad's sentence took the collar off. I was no different. There was only one direction left from where I stood, and it was down. The withdrawal was its own war, and it still wasn't what broke Corporate Rob. Neither was the mirror. What did it was a crack addict chef telling me, kindly, exactly where my road went.
 
 Later I found out Chad and the gymnast died together. An overdose. Two of the people who got me through those ninety days, gone the same day. That's what this disease does. It picks people off.
 
@@ -1093,7 +1091,7 @@ The first week I couldn't look at myself in the bathroom mirror. I'd brush my te
 
 One night they had a bonfire outside. Stars overhead, the air cold the way North Florida can surprise you in January. We stood around the fire and I wasn't performing recovery, wasn't pretending, just standing there with a ring of strangers who'd ended up in the same dirt yard for the same reason. And I prayed. Not out loud. Inside. God, if you're real, give me a sign. I don't know what I'm doing. Show me something. The sky was clear. I remember that specifically.
 
-Then it started raining. Not a storm, not weather moving in. Rain out of a clear sky, on the fire, on my face, on the other guys. It lasted maybe a minute, then stopped. I stood there with rain on my face and something that had been sealed shut for years broke open. Say what you want about coincidence. I know what the sky did. That was the first night I believed God was in the room with me, not in theory, not in a Sunday-morning way. In a muddy field in Chumuckla.
+Then it started raining. Not a storm, not weather moving in. Rain out of a clear sky, on the fire, on my face, on the other guys. It lasted maybe a minute, then stopped. I stood there with rain on my face and something that had been sealed shut for years broke open. I know what the sky did. That was the first night I believed God was in the room with me, not in theory, not in a Sunday-morning way. In a muddy field in Chumuckla.
 
 Jane was the other therapist, tougher than Dan, didn't let me slide on anything. One day she handed me a piece of paper and told me to write a letter to myself from five years in the future. Not a plan. A letter from the man I was trying to become, back to the man I was right then. I sat with it a long time because I didn't know if there'd be a man five years out. I wrote it anyway, about my days, about being sober, about work I was proud of, about people who could trust me. About Lou. About being someone he could be proud of. Jane read it, handed it back, said, hold on to this. That was the whole instruction.
 
@@ -1155,7 +1153,7 @@ People asked why I did all of it. The meetings, the volunteering, the running, t
 
 One of the men I got sober alongside had been homeless with a tenth-grade education, and a few years later he had a Hollywood actor sleeping in his guest room. His name is Matt. The men God put in front of me weren't the ones I would have picked, and the first of them came early, when I couldn't yet see any of it.
 
-Early in sobriety your brain is rewiring itself. You walk around in a fog, not drunk, not high, just flat. I was depressed, living with my parents, going to meetings, trying to figure out what came next, and I kept landing on the same thought: I'd never build something real again. Not somebody like me. Somewhere in there I heard a stat: one in ten stays sober. I never looked it up. When you're new, you don't hear a number like that as information. You look around the room and wonder which one of you it's going to be. I was a long shot.
+Early in sobriety your brain is rewiring itself. You walk around in a fog, not drunk, not high, just flat. I was depressed, living with my parents, going to meetings, trying to figure out what came next, and I kept landing on the same thought: I'd never build something real again. Not somebody like me. Somewhere in there I heard people say how few stay sober. I never looked it up. When you're new, you don't hear that as information. You look around the room and wonder which one of you it's going to be. I was a long shot.
 
 I needed a sponsor. So I picked a guy named Andy. Andy's whole vibe was Eeyore, a low-grade heaviness over him like a cloud that never moved. Not angry, just down, like the world had worn him out long ago and he'd made peace with being tired. I'm looking at my sponsor thinking: is this what the long term looks like? If this is sober after fifteen years, I don't know what I signed up for.
 
@@ -1173,7 +1171,7 @@ The last one I need to tell you about is Matt Campbell. If you want to know what
 
 He was at Jason's Deli making maybe ten dollars an hour, calling me about work, money, life on ten dollars an hour, the same stuff I'd called Andy about, a different version. Then he got an admin job at a BMW dealership, and one day they were short a guy on the floor. Somebody called in sick. Hey Matt, you want to try? Matt went out and sold three cars his first day. The guys who'd been selling for years looked at him like, how did this kid just do that? Because Matt could connect. Whatever makes a great salesperson, the thing you can't teach, Matt had it. He just never had a chance to use it.
 
-He became a salesman at BMW, and then the best they'd ever seen. The guy who'd been homeless, who couldn't write, who made ten dollars an hour at a deli, started making three hundred thousand a year. Went back and got his GED. Met Rebecca, an amazing woman. Reconnected with his daughter Aubrey. Had a son, Xander. We all started going to church together, Matt, Rebecca, the kids, Mager, me, a whole crew whose lives had been rebuilt from wreckage, sitting in a pew on Sunday like the most normal thing in the world. And Matt didn't stop. He'd always had a dream of acting. He got an acting coach, went to auditions, never gave it up. He connected with people in the industry, got to know actors like Jeremy London. The guy who'd been homeless a few years earlier now has a Hollywood actor sleeping in his guest room. Matt became a producer.
+He became a salesman at BMW, and then the best they'd ever seen. The guy who'd been homeless, who couldn't write, who made ten dollars an hour at a deli, went back and got his GED. Met Rebecca, an amazing woman. Reconnected with his daughter Aubrey. Had a son, Xander. We all started going to church together, Matt, Rebecca, the kids, Mager, me, a whole crew whose lives had been rebuilt from wreckage, sitting in a pew on Sunday like the most normal thing in the world. And Matt didn't stop. He'd always had a dream of acting. He got an acting coach, went to auditions, never gave it up. He connected with people in the industry. Matt became a producer.
 
 And then there was Quint Studer. I was thirty-three, sober long enough to know I wasn't going back, and I couldn't shake the feeling there was something left in the tank. Not ego. A quiet sense that maybe God hadn't kept me alive just to sit in meetings the rest of my life trying not to mess up again. I wanted to do more. I just hadn't seen many examples of what that looked like.
 
@@ -1226,7 +1224,7 @@ And there is an apology I owe him too. For most of my life the distance was some
 
 He called every Wednesday at seven, right on time, until I stopped answering.
 
-And every Fourth of July — my birthday — since that first call, the phone has rung with him on the other end. It rang through the using years and the sober years, whether I picked up or not. I was born on the Fourth of July, the immigrant kid with the most American birthday there is, and the one person who never once forgot it was the father I left in Mexico. It took me until this page to notice that. A while ago I changed my number. He doesn't have the new one. Somewhere in Mexico City this July, I have to believe, a man will dial a number that doesn't reach anyone anymore, because that is what he does with the day his first son was born.
+And every Fourth of July — my birthday — since that first call, the phone has rung with him on the other end. It rang through the using years and the sober years, whether I picked up or not. I was born on the Fourth of July, the immigrant kid with the most American birthday there is, and the one person who never once forgot it was the father I left in Mexico. It took me until this page to notice that. A while ago I changed my number. He doesn't have the new one. Somewhere in Mexico City this July, a man will dial a number I chose not to give him, because that is what he does with the day his first son was born.
 
 It took me a long time to understand that all of it, the Wednesday calls at seven from a borrowed line, the birthday calls, even the friend requests to people he had never met, was the love. I understood it. I still couldn't answer it. It hasn't stopped him from trying. There was never anyone else to try for. Chris and me. That's what he has. Do I have closure? I don't know. It's complicated, and I've stopped needing it not to be. What's simple is this: I honor Lou. One father kept calling. The other one kept coming.
 
@@ -1357,7 +1355,7 @@ By the end of dinner I couldn't wait to kiss her. I walked her to the car, opene
 
 The next morning was the McGuire's 5K, eight thousand people. I felt a pull to find her in the crowd, and we made our way to each other. She arrived in a little green outfit, adorable. A friend from the gym had a bulldog puppy, and I carried it over and said, that's the kind of dog we need to get. She looked at me. We? It just came out. Sudden, and right. One dinner in, and some part of me had already decided.
 
-After that, fast. My mom couldn't believe how quickly Hope moved in. Nine months later I proposed and she said yes. Hope grew up simple, Eclectic, Auburn Montgomery for undergrad, barely getting C's at first. Then she decided she wanted to be a pharmacist and that changed everything. Head down, all A's by the end. That got her into Auburn's pharmacy school, one of the best in the country. She was still in undergrad when Cam Newton led Auburn to the national championship. She was beautiful, smart, and kind, and the kindness mattered most. I'd dated impressive women. Hope was good. There's a difference. With her I showed things I'd never shown anyone, the real inventory, the shame, the fear under the confidence, the kid from Mexico City who still sometimes wondered if he was worth choosing. She didn't look away. For the first time, being known didn't feel like a threat. It felt like relief.
+After that, fast. My mom couldn't believe how quickly Hope moved in. Nine months later I proposed and she said yes. Hope grew up simple, Eclectic, Auburn Montgomery for undergrad, barely getting C's at first. Then she decided she wanted to be a pharmacist and that changed everything. Head down, all A's by the end. That got her into Auburn's pharmacy school, one of the best in the country. She was still in undergrad when Cam Newton led Auburn to the national championship. She was beautiful, smart, and kind, and the kindness mattered most. I'd dated impressive women. Hope was good. There's a difference. With her I showed things I'd never shown anyone, the real inventory, the shame, the fear under the confidence, Claudio, the kid from Mexico City who still sometimes wondered if he was worth choosing. She didn't look away. For the first time, being known didn't feel like a threat. It felt like relief.
 
 The moment I knew came quietly. I was wrestling an old insecurity, the kind I had always managed alone, and instead of managing it I said it out loud. She said, I will love you no matter what. People say those words. I could feel that she meant them, all the way down. My father spent a lifetime proving that sentence without ever needing to say it. Hearing it said to me, and believing it, was the moment I knew I would marry her. Falling in love with her was the easiest thing I'd ever done.
 
@@ -1549,7 +1547,7 @@ I met with a family once. I'll call the daughter Mary. Her mother was ninety-fiv
 
 Another room has stayed with me, and I'll keep it vague out of respect. Two men, and it took about a minute to see that whatever was between them was the deepest thing in either of their lives. But when one of them spoke about the other, the word he used was best friend. They were partners, and they had spent a lifetime keeping a careful distance in public, and even here, even at the end, the habit held. The love was real. The showing of it still had to be hidden. I didn't name it. It wasn't mine to name. What I remember most is the sense that the one who could still leave needed to get home, to the one place the two of them had ever been free to love out loud. I have never forgotten that. Part of this work is noticing the love that has had to live in code, and making room for it without making a thing of it.
 
-In one room I was talking with the patient, an easy back-and-forth, and somewhere in it I told him a little of my own story, the addiction, the years I lost, the long road back. I've learned that when I open that door even a crack, people walk through it. His wife had come in partway through, and when I finished she went quiet, then asked me something that had nothing to do with her husband and everything to do with what she was actually carrying. Her son was thirty-eight, living at home, drinking himself under. He had a little girl of his own, and his mother lay awake wondering whether he could take care of her. Did rehab work, she wanted to know. What could she do. Was there anything she could do. I gave her what I had, the truth as I'd lived it, no dressing it up. But mostly I understood that I'd walked into that room to sit with a dying man and ended up holding his wife's other grief, the living one. Addiction doesn't wait outside the hospice door. It's already in half the rooms, and because I came back from it, families hand me that fear too. I take it.
+In one room I was talking with the patient, an easy back-and-forth, and somewhere in it I told him a little of my own story, the addiction, the years I lost, the long road back. I've learned that when I open that door even a crack, people walk through it. His wife had come in partway through, and when I finished she went quiet, then asked me something that had nothing to do with her husband and everything to do with what she was actually carrying. Her son was thirty-eight, living at home, drinking himself under. He had a little girl of his own, and his mother lay awake wondering whether he could take care of her. Did rehab work, she wanted to know. What could she do. Was there anything she could do. I gave her what I had, the truth as I'd lived it, no dressing it up. You didn't cause it, I told her. You can't control it. You can't cure it. What you can do is stay, and help him live long enough to get there. But mostly I understood that I'd walked into that room to sit with a dying man and ended up holding his wife's other grief, the living one. Addiction doesn't wait outside the hospice door. It's already in half the rooms, and because I came back from it, families hand me that fear too. I take it.
 
 And there was a pastor I'll call Melvin. His wife was a pastor's daughter who had sworn she would never marry a pastor and gone off and earned her own doctorate, and somewhere in there married one anyway. What struck me was how she loved him. Not for the way he loved her, exactly, but for the whole life they had built, the full accumulation of it stacked up in the room with them. His son was there, and his grandson, and his wife, all of them knowing he could go at any moment, all of them staying.
 
@@ -1798,11 +1796,29 @@ I stand in the parking lot, phone in my hand, tears on my face, and feel peace. 
 
 The cardinal wasn't a miracle. What I believe is simpler. The message had been delivered my whole life, in wrestling rooms and church basements and holding cells and U-Hauls, in boundaries that felt harsh and second chances I hadn't earned and ordinary Tuesday afternoons nobody wrote down. The cardinal was a reminder that the message is still being sent. That Lou, in whatever form love takes when the person carrying it is gone, is still here, in the work I do in his name without ever saying his name, in the steadiness I bring to someone else's hardest day that was built by his hands.
 
-I want men to read this and understand that what Lou did is possible, that you can choose a child who isn't yours and love them without condition, without a line you won't cross. There can be more men like Lou. I have to believe that, because if what he did was unrepeatable, then his life was a miracle and nothing more. And Lou wasn't a miracle. He was a man who made a decision and honored it every day for the rest of his life. That's not supernatural. That's available to anyone willing to do it.
+I want men to read this and understand that what Lou did is possible, that you can choose a child who isn't yours and love them without condition, without a line you won't cross. There can be more men like Lou. I have to believe that, because if what he did was unrepeatable, then his life was a miracle and nothing more. And Lou wasn't a miracle. He was a man who made a decision and honored it every day for the rest of his life. That's not supernatural. That's available to anyone willing to do it. And if you're the one in the fight and nobody is coming for you: the rooms are full of men like Lou. Mine found me there. Walk in and let yours find you.
 
-If you're reading this in recovery, from addiction, from loss, from a version of yourself that no longer serves the life you're trying to build, the broken parts of your story don't disqualify you from purpose. They prepare you for it. If you're grieving someone you lost, not being there at the end doesn't mean you were absent from the life. If the important things were said before the end required them, you were present. And if you're sitting with an aging parent right now, putting off the hard conversation, waiting for a better time: there's no better time. Say the great things while they can still hear you. On a Tuesday. At dinner. On a phone call that feels ordinary. Presence is built across years.
+If you're reading this in recovery, from addiction, from loss, from a version of yourself that no longer serves the life you're trying to build, the broken parts of your story don't disqualify you from purpose. They prepare you for it. If you're grieving someone you lost: if the important things were said before the end required them, you were present. And if you're sitting with an aging parent right now, putting off the hard conversation, waiting for a better time: there's no better time. Say the great things while they can still hear you. On a Tuesday. At dinner. On a phone call that feels ordinary. Presence is built across years.
 
 The cardinal flew off into the gray. The promise remains. It was never in the bird. It was in what Lou built in me, across thirty years of chosen love and stubborn presence. Now it's my turn. Keep showing up. Keep choosing love.
+
+# **A NOTE TO THE ONE WHO LOVES AN ADDICT**
+
+If you picked up this book because you love someone who is using, or you lost someone who did, I want to say something to you now that the story is done.
+
+It isn't your fault.
+
+There's an old line they teach in the rooms where families go, and it took me years on the other side of it to see how true it is. You didn't cause it. You can't control it. You can't cure it. Three sentences, every one of them a mercy, because all three say the same thing: this was never yours to fix.
+
+I know you've tried. I know you've lain awake turning someone else's life over and over, looking for the thing you missed. I was the person on the other end of those nights. My mother wired me money she told herself was for rent. My father drove a truck across the state to haul me home. None of it made me stop. Not because they failed. Because it wasn't theirs to win. But hear the other half, because it's just as true: the rescue didn't get me sober. It kept me alive long enough to get there. You cannot make them stop. You can help them live until they do.
+
+I have been on both sides of this. I did not understand addiction as a disease at first. I understood it as a disappearance. One day the person you love is still there, sitting across from you, using the same voice, wearing the same face, and somehow already slipping away. You keep reaching for the version of them you remember. You keep thinking love should be enough. Then life teaches you, slowly and brutally, that love is not a cure. It won't make them stop. What it does is keep you from leaving.
+
+Years later I would learn that this is also the whole of hospice. You cannot cure the thing in the room. You can only refuse to leave it.
+
+What you can do is stay. Not fix, not control, not cure. Stay. Set the boundary that keeps you whole, leave the door open a crack, and keep showing up in the ways that don't cost you your own life. If you are not safe, the boundary is distance — my mother saved two boys by leaving.
+
+So now you know how I know. One promise was all I had to offer — to tell you the truth the whole way through — and I've kept it as well as I know how. There's one more page, and it's yours.
 
 # **TYLER AND JAYE**
 
@@ -1823,24 +1839,6 @@ Here's what happened, the way Tyler tells it. He was walking to the park with hi
 His neck broke at C5 and C6. He couldn't move anything below it. His eight-year-old stepdaughter stood screaming, with no idea how to call for help. The man who'd slammed him was too frightened to call 911. A neighbor finally did.
 
 That's where Tyler's life divided in two. After it came the hospital bed in the living room, the ramps, the accessible shower, the morning routines that take hours, and his sister Jaye, Hope's cousin too, moving in to help carry him back toward some independence, a husband and two daughters and a career of her own set down so she could stay. This is one of the places I learned to notice the caregiver. Tyler is still fighting, and Jaye is still showing up.
-
-# **A NOTE TO THE ONE WHO LOVES AN ADDICT**
-
-If you picked up this book because you love someone who is using, or you lost someone who did, I want to say something to you now that the story is done.
-
-It isn't your fault.
-
-There's an old line they teach in the rooms where families go, and it took me years on the other side of it to see how true it is. You didn't cause it. You can't control it. You can't cure it. Three sentences, every one of them a mercy, because all three say the same thing: this was never yours to fix.
-
-I know you've tried. I know you've lain awake turning someone else's life over and over, looking for the thing you missed. I was the person on the other end of those nights. My mother wired me money she told herself was for rent. My father drove a truck across the state to haul me home. None of it made me stop. Not because they failed. Because it wasn't theirs to win.
-
-I have been on both sides of this. I did not understand addiction as a disease at first. I understood it as a disappearance. One day the person you love is still there, sitting across from you, using the same voice, wearing the same face, and somehow already slipping away. You keep reaching for the version of them you remember. You keep thinking love should be enough. Then life teaches you, slowly and brutally, that love is not a cure. It won't make them stop. What it does is keep you from leaving.
-
-Years later I would learn that this is also the whole of hospice. You cannot cure the thing in the room. You can only refuse to leave it.
-
-What you can do is stay. Not fix, not control, not cure. Stay. Set the boundary that keeps you whole, leave the door open a crack, and keep showing up in the ways that don't cost you your own life. If you are not safe, the boundary is distance — my mother saved two boys by leaving.
-
-So now you know how I know. One promise was all I had to offer — to tell you the truth the whole way through — and I've kept it as well as I know how. There's one more page, and it's yours.
 
 # **THE EMPTY CHAIR**
 

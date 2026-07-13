@@ -11,5 +11,3 @@ And the challenges kept coming. Rob spent years in business, where his success c
 The credential that mattered most is the one that cost him the most to earn. Rob walked through the valley himself. He battled addiction. He knows what it is to be lost, to reach for something that promises relief and gives you nothing back, to hit the bottom that forces a man to look honestly at who he is. He came through that fire transformed. He stopped trying to build his worth on performance, and what he found on the other side was steadier, a deeper sense of who he was and what mattered. It is something he has lived.
 
 *Dave Meyer*
-
-*NFL QB. Played with Vick, Manning, and Favre; in the booth with Saban.*
