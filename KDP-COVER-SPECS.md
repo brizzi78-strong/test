@@ -105,3 +105,22 @@ about 103 DPI at the 12.766" wrap width. That is a design proof, not a print fil
 Ask the designer for the final wrap at 300 DPI: 3826 × 2775 px (white paper,
 225 pages), with the corrected barcode. For the Kindle eBook cover, request a
 front-panel-only export at 1600 × 2560 px or larger.
+
+## Endorsement pipeline (2026-07-13)
+
+IN HAND: Dave Meyer foreword (cover credit: FOREWORD BY DAVE MEYER, NFL QB —
+pending his sign-off); Dr. Huet back quote (approved) + front quote (pending
+his okay); Quint Studer verbal ("I love the Brizzi's. Lou was a great man.")
+— get exact wording in writing before printing.
+
+ASKS VIA SCOTT CARBONARA (editor; one conversation): (1) his edit pass;
+(2) his own endorsement — 15 years sober, lost his daughter to overdose;
+he controls every word of how he's credited; (3) intro to Randy Grimes
+(Off Center, NFL center, recovery interventionist — best-fit back-cover
+blurb; completes the football thread with Meyer); (4) intro to Jack
+Canfield (Scott's ghostwritten books carry Canfield endorsements).
+
+DIRECT GALLEY ASK: Dr. Drew Pinsky (addiction medicine, media) — pitch
+letter on request.
+
+RULE: nothing prints without the person's exact words in writing.
