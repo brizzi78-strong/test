@@ -12,7 +12,9 @@ The two files KDP asks for are in this folder:
   art pages** (before Chapters 1, 6, 13, 19, 27 — gold line art + cardinal,
   vector). Rob decided to "let the readers decide": ask Hope and early
   readers whether the dividers stay, go, or get replaced by commissioned
-  art in the same five slots. Removing them later = delete the five
+  art in the same five slots. The beta round is set up in
+  `marketing/beta-reader-kit.md` — live feedback form:
+  https://form.jotform.com/261936560720054 Removing them later = delete the five
   `.divider` blocks + trailing blank, then rebuild (page count and spine
   change back).
 
