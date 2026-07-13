@@ -14,7 +14,7 @@ Stay. You cannot save anyone. You can be there, and being there is the whole thi
 
 Leave the door open a crack. Keep coming back.
 
-And if the fight is yours, if it's the disease that has you, walk into the room with the folding chairs and the bad coffee, and then keep walking in. Do that, one day at a time, and I can tell you what happened to me: a past you can look at without flinching, the day you stop performing your life and start living it, and the slow realization that something bigger than you has been carrying you the whole time.
+And if the fight is yours, if it's the disease that has you, walk into the room with the folding chairs and the bad coffee, and then keep walking in. Do that, one day at a time, and I can tell you what happened to me. A past you can look at without flinching. The day you stop performing your life and start living it. And something bigger than you, carrying you the whole time.
 
 If you love someone who is dying, go sit with them. If you don't know where to begin, CaringInfo, at caringinfo.org, will help you find care and find the words. If you or someone you love is drowning in addiction, call the SAMHSA National Helpline at 1-800-662-4357. It is free, it is confidential, and someone is there.
 
