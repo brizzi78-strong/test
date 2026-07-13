@@ -3,7 +3,7 @@
 *"He brought me up also out of an horrible pit, out of the miry clay, and set my feet upon a rock, and established my goings."*
 *— Psalm 40:2*
 
-**Tijuana, Mexico. 2005.**
+**Tijuana, Mexico, 2005**
 
 His hands were around my throat before I understood he had crossed the cell. A small man, wired, moving too fast, meth or something close to it, his eyes too wide and his whole body ready to fly apart. Somebody called him Rico. His face came an inch from mine, and the only English he had came out in a rasp. "Gringo. Gringo. Money."
 

@@ -2,11 +2,11 @@
 
 This book argues that there is a solution. Here is where to find help putting it into practice. These are the organizations I trust and point people to. All of it is free or low cost.
 
+988 Suicide and Crisis Lifeline. Call or text 988. Twenty-four hours a day, free and confidential. For anyone this book finds in a dark place — the addiction pages, the grief pages, any of it.
+
 ### *If You or Someone You Love Is Struggling With Addiction*
 
 SAMHSA National Helpline. 1-800-662-HELP (4357). Free, confidential, twenty-four hours a day, 365 days a year, in English and Spanish. Treatment referrals and information for people and families facing substance use or mental health disorders. TTY 1-800-487-4889. Or text your ZIP code to 435748 (HELP4U). samhsa.gov/find-help
-
-988 Suicide and Crisis Lifeline. Call or text 988. Twenty-four hours a day, free and confidential.
 
 Alcoholics Anonymous. aa.org. Meetings, in person and online, almost everywhere. The chapter that gave this book its spine is called "There Is a Solution." It is the second chapter of the book they call the Big Book.
 
@@ -26,10 +26,10 @@ Medicare Care Compare. medicare.gov/care-compare. Compare hospice providers in y
 
 ### *Further Reading*
 
-Atul Gawande, "Being Mortal: Medicine and What Matters in the End."
+Atul Gawande, *Being Mortal: Medicine and What Matters in the End*.
 
-Ira Byock, "The Four Things That Matter Most."
+Ira Byock, *The Four Things That Matter Most*.
 
 ### *A Note on These Resources*
 
-The phone numbers and web addresses were current when this book went to press. Organizations change. If a number stops working, search the name. None of this is medical or legal advice. It is a place to begin.
+The phone numbers and web addresses were current when this book went to press. Organizations change. If a number stops working, search the name. None of this is medical or legal advice. It is a place to begin. One caution worth stating plainly: stopping alcohol suddenly after heavy, steady drinking can be medically dangerous. Withdrawal can bring seizures. Let a doctor or a detox program supervise it.

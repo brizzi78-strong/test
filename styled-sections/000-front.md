@@ -30,7 +30,7 @@ Printed in the United States of America.
 
 *In memory of Lou Brizzi*
 
-*1941 – 2025*
+*1941–2025*
 
 *For Hope, who tilted her head and said "We?"*
 
