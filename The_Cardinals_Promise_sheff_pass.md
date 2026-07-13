@@ -1894,7 +1894,7 @@ This book will help you do exactly that. I am grateful it exists, and I am grate
 
 *Dave Meyer*
 
-*Former NFL quarterback. He shared a huddle with Michael Vick, Peyton Manning, and Brett Favre — and a sideline with Nick Saban at LSU.*
+*Former NFL quarterback. A huddle with Vick, Manning, and Favre; a sideline with Saban.*
 
 # **AUTHOR'S NOTE**
 
