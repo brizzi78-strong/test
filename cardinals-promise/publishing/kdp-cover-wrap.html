@@ -4,19 +4,19 @@
 <meta charset="utf-8">
 <title>KDP Cover Wrap — The Caregiver's Cardinal Toolkit (white design)</title>
 <style>
-  /* 208-page 8.5x11 paperback, PREMIUM COLOR paper: spine = 208 x 0.002347 = 0.4882in.
-     Wrap = bleed 0.125 + back 8.5 + spine 0.4882 + front 8.5 + bleed 0.125 = 17.7382in.
+  /* 210-page 8.5x11 paperback, PREMIUM COLOR paper: spine = 210 x 0.002347 = 0.4929in.
+     Wrap = bleed 0.125 + back 8.5 + spine 0.4929 + front 8.5 + bleed 0.125 = 17.7429in.
      (If the ink choice or page count changes, recompute.)
      WHITE design language per the approved direction — the front panel here is a
      typographic TEMPLATE: the designer drops the final cardinal/mountain art into
      the marked slots at print resolution. */
-  @page { size: 17.7382in 11.25in; margin: 0; }
+  @page { size: 17.7429in 11.25in; margin: 0; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
     --cream: #faf7f1; --navy: #1e2a44; --gold: #b08d2e; --red: #c41e2f;
     --rule: #d8cfbc;
   }
-  body { width: 17.7382in; height: 11.25in; position: relative;
+  body { width: 17.7429in; height: 11.25in; position: relative;
     background: var(--cream); font-family: Georgia, "Times New Roman", serif;
     color: var(--navy); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 
@@ -25,7 +25,12 @@
 
   /* ---- BACK (left) ---- */
   .back { position: absolute; left: 0; top: 0; width: 8.625in; height: 11.25in;
-    padding: 0.85in 0.75in 0.7in 0.85in; }
+    padding: 0.68in 0.75in 0.7in 0.85in; }
+  .back .endq { font-size: 12pt; font-style: italic; line-height: 1.5;
+    text-align: center; margin: 0 0.2in 0.1in; color: var(--navy); }
+  .back .endattr { text-align: center; font-family: Helvetica, Arial, sans-serif;
+    font-size: 8.5pt; letter-spacing: 0.14em; color: var(--gold);
+    text-transform: uppercase; margin-bottom: 0.24in; }
   .back .panel-frame { left: 0.375in; right: 0.22in; }
   .back h2 { font-size: 21pt; line-height: 1.25; margin-bottom: 0.25in; color: var(--navy); }
   .back p { font-size: 11.5pt; line-height: 1.55; margin-bottom: 0.18in; }
@@ -45,10 +50,10 @@
     height: 1.2in; background: #fff; border: 0.5px solid var(--rule); }
 
   /* ---- SPINE ---- */
-  .spine { position: absolute; left: 8.625in; top: 0; width: 0.4882in; height: 11.25in;
+  .spine { position: absolute; left: 8.625in; top: 0; width: 0.4929in; height: 11.25in;
     background: var(--cream); border-left: 0.5px solid var(--rule);
     border-right: 0.5px solid var(--rule); }
-  .spinetxt { position: absolute; top: 0.6in; left: 0; width: 0.4882in; height: 10in;
+  .spinetxt { position: absolute; top: 0.6in; left: 0; width: 0.4929in; height: 10in;
     writing-mode: vertical-rl; display: flex; align-items: center;
     justify-content: flex-start; gap: 0.35in;
     font-family: Georgia, serif; color: var(--navy); }
@@ -56,7 +61,7 @@
   .spinetxt .a { font-size: 9.5pt; letter-spacing: 0.1em; color: var(--gold); }
 
   /* ---- FRONT (right) ---- */
-  .front { position: absolute; left: 9.1132in; top: 0; width: 8.625in; height: 11.25in;
+  .front { position: absolute; left: 9.1179in; top: 0; width: 8.625in; height: 11.25in;
     padding: 0.75in 0.75in 0.55in 0.62in; text-align: center; }
   .front .panel-frame { left: 0.22in; right: 0.375in; }
   .kicker { font-family: Helvetica, Arial, sans-serif; font-size: 11pt;
@@ -99,6 +104,10 @@
 <!-- ================= BACK ================= -->
 <section class="back">
   <div class="panel-frame"></div>
+  <p class="endq">“Plenty of guides cover the logistics. This one also tends to
+  the spirit — the grief, the grace, and the promise at the center of caring
+  for a parent.”</p>
+  <p class="endattr">— Dean Ferrera, MD, Cardiologist</p>
   <h2>Caring for an aging parent is overwhelming — nobody hands you a map.</h2>
   <p>Color-coded by urgency — Act Today, Watch Closely, Plan Ahead — The
   Caregiver's Cardinal Toolkit helps your family get organized, make informed

@@ -4,6 +4,18 @@
 > This is the source of truth for the cover wrap's back panel — edit here
 > and the wrap regenerates to match.
 
+## Endorsement (leads the back panel, above the headline) — APPROVED
+"Plenty of guides cover the logistics. This one also tends to the spirit —
+the grief, the grace, and the promise at the center of caring for a parent."
+— Dean Ferrera, MD, Cardiologist
+
+> Dr. Huet's approved quote ("Hospice is the one thing Medicare truly gets
+> right — and this book finally shows families how to use it." — Jason
+> Huet, MD, Pulmonologist) runs in the book's Praise page and the Amazon
+> Editorial Reviews. The front cover stays clean per the market research
+> (title owns the cover; squint test) — revisit only if Rob wants a
+> front-cover quote line.
+
 ## Headline
 **Caring for an aging parent is overwhelming — nobody hands you a map.**
 
@@ -80,8 +92,9 @@ mountain/pine art above the author name.
 - Squint test before final: shrink to 10%; if anything but bird + title +
   cream survives, simplify
 
-Wrap geometry (premium color, 207pp): full wrap 17.7358 × 11.25 in,
-0.125" bleed, spine 0.4858" centered. Spine: navy text on the cream field.
+Wrap geometry (premium color, 210pp): full wrap 17.7429 × 11.25 in,
+0.125" bleed, spine 0.4929" centered. Spine: navy text on the cream field.
+(Recompute if the page count changes: spine = pages × 0.002347.)
 
 ## ⚠️ ISBN warning
 The designed cover carries ISBN 978-1-963342-02-7 — that number is
