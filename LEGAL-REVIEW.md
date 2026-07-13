@@ -93,3 +93,17 @@ umbrella all pseudonyms live under.
 
 - Tyler and Jaye (Hope's cousins), Aunt Mitch, Tyler's dad: PENDING — section restored to book 2026-07-11; needs their explicit okay on real names, the arrest, relapse timeline, the injury, and the stepdaughter reference before publication.
 - Birth-certificate story (Ch. 12, My Brother's Keeper): acquisitions reviewer flags the identity-fraud confession + statute-of-limitations hedge for publishing-attorney sign-off before print; pair with Chris's written consent (already pending as Chris DMV sign-off). No text change required. Added 2026-07-13.
+
+## Expert-panel legal/consent stack (added 2026-07-13, pre-print)
+- Rascals "funny tobacco" clause (Ch. 9): attorney calls it defamation per se of living public figures; recommended TEXT TRIM (cut the clause + "plants in the yard"), no consent route realistic.
+- Chris / birth-certificate chapter (Ch. 12): attorney + dev editor + marketer all flag; get Chris's written sign-off on the whole chapter AND trim the two statute-of-limitations sentences; "federal crime" likely wrong at law — soften to "a crime."
+- Tyler and Jaye: attorney says HIGHEST exposure in book — signed releases from Tyler and Jaye; confirm no criminal/civil proceeding pending over the May 30 fight; blur or cut ex-wife, stepdaughter's age, and the neighbor characterization if consent incomplete.
+- Matt Campbell (Ch. 19): signed release must specifically cover recovery status, the $300k income figure, and children's names (Aubrey, Xander); recommended trim of dollar figure + kids' names regardless.
+- Linda (Ch. 33): experts recommend rename/blur (workplace identifiability + hospice anti-kickback optics); NOTE: Linda asked to appear under her real name — if kept real, get it in writing and consider employer courtesy read of Chs. 27/32/33.
+- Lynda "controlling nature" line (Ch. 29): give her the passage before release, or rephrase.
+- Horacio/Balderas: full birth name identifies him in Mexico City with a slap/threat attributed; confirm real-vs-masked decision with author + counsel (pseudonym starting with B preserves the alphabet-line passage). Mother's written confirmation of the slap/threat accounts recommended.
+- Caroline (Ch. 23): confirm changed name; if real, change it.
+- AA epigraphs (Big Book quotes, 3 chapters): secure AAWS reprint permission or written fair-use opinion; add AAWS non-affiliation disclaimer to copyright page if required.
+- Dave Meyer afterword: verify NFL roster claims independently + written sign-off on afterword and Ch. 6 bio claims (already pending, now flagged major by marketer).
+- Del Taco hit-and-run (Ch. 13): attorney says acceptable to keep (limitations expired); optional trim of timestamp/location if author wants zero residue.
+- Addiction-MD safety item: extend Resources disclaimer with one sentence that stopping alcohol suddenly can be medically dangerous and withdrawal may need medical supervision; clinician sign-off on Resources page.
