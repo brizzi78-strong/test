@@ -36,3 +36,8 @@ bereaved parent). Needs its own ISBN (979-8-9966446-2-x next in the block).
 - Sequence: memoir launches first and alone; book 2 lands 6-9 months later.
   One seed line only in memoir marketing. Book 2 never touches book 1's timeline.
 - Huet okay still needed for quote reuse on this cover.
+
+## Designer (author, 2026-07-13)
+Grace Nobrega designs/finalizes BOTH covers (she's already credited on the
+memoir's copyright page). Book-2 mockup goes to her as the approved direction;
+her deliverables get the fix list below plus whatever the expert panel adds.
