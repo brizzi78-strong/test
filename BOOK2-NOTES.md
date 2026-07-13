@@ -41,3 +41,29 @@ bereaved parent). Needs its own ISBN (979-8-9966446-2-x next in the block).
 Grace Nobrega designs/finalizes BOTH covers (she's already credited on the
 memoir's copyright page). Book-2 mockup goes to her as the approved direction;
 her deliverables get the fix list below plus whatever the expert panel adds.
+
+## Expert panel verdicts (5 experts, 2026-07-13) — all GO-with-changes
+Full report: session scratchpad book2experts.txt. Headlines:
+- Scope: anchor in end-of-life + DEMENTIA (CDP credential currently unused —
+  add the dementia chapter; it's the differentiator). Addiction = one lens.
+  Subtitle direction: "...Facing Addiction, Serious Illness, or the End of Life."
+- Content: scripts-forward. Chapter formula: Before you walk in / The words
+  (verbatim, 2-3 variants) / When it goes sideways / What not to say. Add
+  family-meeting chapter (sibling "you're giving up" conflict). Clinical review
+  required (named reviewers) for: confrontation/intervention, suicide asks,
+  prognosis, withdrawal, dementia capacity. Credit Byock (four things) and
+  Al-Anon (three C's) on-page. Add Narcan to resources.
+- 70% rule: at least 70-80% of guide = material NOT in the memoir back matter.
+- Cover (locked = composition only; Grace's fix list): CARDINAL PROMISE PRESS
+  (no LLC), cardinal colophon replaces tree, Huet quote OFF front (ask him for
+  a NEW quote about this book later), tagline slot = credential strip or
+  "From the author of THE CARDINAL'S PROMISE", match the memoir's painterly
+  cardinal (current bird is flat/clip-art vs book 1), one divider system,
+  even the title-line scaling.
+- Business: dual distribution KDP + IngramSpark (institutional bulk is the
+  perennial engine); ~$14.99, compact trim; email capture in memoir back
+  matter later; no public announcement until memoir has 60-90 days of reviews;
+  written contributor releases BEFORE pieces are written; ISBN 979-8-9966446-2-x
+  registered under Cardinal Promise Press.
+- Title: current title workable if subtitle carries genre. Alternatives offered:
+  A) "Not Ready Isn't a No"  B) "Show Up and Stay". AUTHOR TO RULE (no rush).
