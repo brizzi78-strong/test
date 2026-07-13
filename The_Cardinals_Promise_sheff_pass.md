@@ -1894,7 +1894,7 @@ This book will help you do exactly that. I am grateful it exists, and I am grate
 
 *Dave Meyer*
 
-*Former NFL quarterback. A huddle with Vick, Manning, and Favre; a sideline with Saban.*
+*NFL quarterback. A huddle with Vick, Manning, and Favre; a sideline with Saban.*
 
 # **AUTHOR'S NOTE**
 
