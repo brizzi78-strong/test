@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+# Build reader-proof deliverables for "The Father Who Stayed" from the
+# assembled manuscript. Produces EPUB, DOCX, and a 6x9 proof PDF.
+#
+# Requires: pandoc, python3 + weasyprint (pip install weasyprint).
+#
+# NOTE: the PDF produced here is a READING PROOF, not the print-spec KDP
+# interior. The locked 226-page KDP interior (which drives the 0.509" spine
+# and cover-wrap math) is typeset separately at final lock, after Scott's
+# proofread. Do not upload this proof PDF to KDP as the interior.
+
+set -euo pipefail
+SRC="The_Father_Who_Stayed_sheff_pass.md"
+BASE="The_Father_Who_Stayed"
+
+# EPUB (metadata-driven; cover art pending Grace's redesign)
+pandoc "$SRC" \
+  --metadata-file=build-metadata.yaml \
+  --toc --toc-depth=1 \
+  --split-level=1 \
+  -o "$BASE.epub"
+
+# DOCX (editorial/review)
+pandoc "$SRC" \
+  --metadata-file=build-metadata.yaml \
+  --toc --toc-depth=1 \
+  -o "$BASE.docx"
+
+# Reading-proof PDF via HTML + WeasyPrint (6x9 trim, mirrored margins)
+pandoc "$SRC" \
+  --metadata-file=build-metadata.yaml \
+  -t html5 -s \
+  --css=build-print.css \
+  -o "$BASE.tmp.html"
+python3 -c "import weasyprint; weasyprint.HTML('$BASE.tmp.html').write_pdf('$BASE.pdf')"
+rm -f "$BASE.tmp.html"
+
+echo "Built: $BASE.epub  $BASE.docx  $BASE.pdf"
