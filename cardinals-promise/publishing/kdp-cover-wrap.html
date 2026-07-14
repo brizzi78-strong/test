@@ -2,98 +2,108 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>KDP Cover Wrap — The Caregiver's Cardinal Toolkit (white design)</title>
+<title>KDP Cover Wrap — The Caregiver's Cardinal Toolkit (navy design)</title>
 <style>
   /* 216-page 8.5x11 paperback, PREMIUM COLOR paper: spine = 216 x 0.002347 = 0.5070in.
      Wrap = bleed 0.125 + back 8.5 + spine 0.5070 + front 8.5 + bleed 0.125 = 17.7570in.
      (If the ink choice or page count changes, recompute.)
-     WHITE design language per the approved direction — the front panel here is a
-     typographic TEMPLATE: the designer drops the final cardinal/mountain art into
-     the marked slots at print resolution. */
+     NAVY design language — chosen by the reader panel (design tiebreak 3-2 on the
+     100px thumbnail test; sunset design disqualified for condolence-card register).
+     Layout TEMPLATE with the required fixes applied: real ISBN zone, CDP credential,
+     approved utility labels, Ferrera endorsement leading the back, red/purple/blue
+     color-tab strip. NO kicker (author's call, July 2026). The designer drops the
+     photorealistic cardinal-on-blossom-branch art and the author photo into the
+     marked slots at print resolution (full wrap at 300 DPI = 5327 x 3375 px). */
   @page { size: 17.7570in 11.25in; margin: 0; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
-    --cream: #faf7f1; --navy: #1e2a44; --gold: #b08d2e; --red: #c41e2f;
-    --rule: #d8cfbc;
+    --navy: #1b2440; --navy-deep: #141b31; --gold: #c9a45c; --red: #c41e2f;
+    --cream: #f5f1e8; --rule: #3a4568;
   }
   body { width: 17.7570in; height: 11.25in; position: relative;
-    background: var(--cream); font-family: Georgia, "Times New Roman", serif;
-    color: var(--navy); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    background: var(--navy); font-family: Georgia, "Times New Roman", serif;
+    color: var(--cream); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 
   .panel-frame { position: absolute; top: 0.375in; bottom: 0.375in;
-    border: 1.5px solid var(--gold); }
+    border: 1px solid var(--gold); opacity: 0.85; }
 
   /* ---- BACK (left) ---- */
   .back { position: absolute; left: 0; top: 0; width: 8.625in; height: 11.25in;
-    padding: 0.68in 0.75in 0.7in 0.85in; }
-  .back .endq { font-size: 12pt; font-style: italic; line-height: 1.5;
-    text-align: center; margin: 0 0.2in 0.1in; color: var(--navy); }
-  .back .endattr { text-align: center; font-family: Helvetica, Arial, sans-serif;
-    font-size: 8.5pt; letter-spacing: 0.14em; color: var(--gold);
-    text-transform: uppercase; margin-bottom: 0.24in; }
+    padding: 0.62in 0.75in 0.7in 0.85in; }
   .back .panel-frame { left: 0.375in; right: 0.22in; }
-  .back h2 { font-size: 21pt; line-height: 1.25; margin-bottom: 0.25in; color: var(--navy); }
-  .back p { font-size: 11.5pt; line-height: 1.55; margin-bottom: 0.18in; }
-  .back ul { list-style: none; margin: 0.05in 0 0.22in; }
-  .back li { font-size: 11.5pt; line-height: 1.5; padding: 0.045in 0 0.045in 0.28in;
+  .endq { font-size: 11.5pt; font-style: italic; line-height: 1.5;
+    text-align: center; margin: 0 0.25in 0.08in; color: var(--cream); }
+  .endattr { text-align: center; font-family: Helvetica, Arial, sans-serif;
+    font-size: 8.5pt; letter-spacing: 0.14em; color: var(--gold);
+    text-transform: uppercase; margin-bottom: 0.2in; }
+  .back h2 { font-size: 19pt; line-height: 1.25; margin-bottom: 0.2in;
+    color: var(--gold); }
+  .back p { font-size: 11pt; line-height: 1.5; margin-bottom: 0.14in; }
+  .back ul { list-style: none; margin: 0.04in 0 0.18in; }
+  .back li { font-size: 11pt; line-height: 1.45; padding: 0.04in 0 0.04in 0.28in;
     position: relative; }
   .back li::before { content: "✓"; position: absolute; left: 0; color: var(--gold);
     font-weight: bold; }
-  .back .bio { font-size: 10.5pt; line-height: 1.5; border-top: 1px solid var(--rule);
-    padding-top: 0.16in; }
-  .back .tagline { font-style: italic; text-align: center; color: var(--red);
-    font-size: 12pt; margin-top: 0.2in; }
-  .back .footerband { position: absolute; bottom: 0.55in; left: 0.85in; right: 2.5in;
+  .biorow { display: flex; gap: 0.22in; border-top: 1px solid var(--rule);
+    padding-top: 0.14in; }
+  .photoslot { flex: 0 0 1.15in; height: 1.35in; border: 1px dashed var(--gold);
+    display: flex; align-items: center; justify-content: center; text-align: center;
+    font-family: Helvetica, Arial, sans-serif; font-size: 7.5pt; color: var(--gold); }
+  .biorow .bio { font-size: 10pt; line-height: 1.45; }
+  .back .tagline { font-style: italic; text-align: center; color: var(--gold);
+    font-size: 11.5pt; margin-top: 0.16in; }
+  .back .footerband { position: absolute; bottom: 0.55in; left: 0.85in; right: 2.6in;
     text-align: left; font-family: Helvetica, Arial, sans-serif; font-size: 8pt;
     letter-spacing: 0.16em; color: var(--gold); text-transform: uppercase; }
+  .pressmark { position: absolute; bottom: 0.95in; left: 0.85in;
+    font-family: Helvetica, Arial, sans-serif; font-size: 9pt; letter-spacing: 0.2em;
+    color: var(--cream); text-transform: uppercase; }
   .barcode { position: absolute; right: 0.25in; bottom: 0.375in; width: 2in;
-    height: 1.2in; background: #fff; border: 0.5px solid var(--rule); }
+    height: 1.2in; background: #ffffff; display: flex; align-items: center;
+    justify-content: center; text-align: center; font-family: Helvetica, Arial, sans-serif;
+    font-size: 7.5pt; color: #333; padding: 0.08in; }
 
   /* ---- SPINE ---- */
   .spine { position: absolute; left: 8.625in; top: 0; width: 0.5070in; height: 11.25in;
-    background: var(--cream); border-left: 0.5px solid var(--rule);
-    border-right: 0.5px solid var(--rule); }
+    background: var(--navy-deep); }
   .spinetxt { position: absolute; top: 0.6in; left: 0; width: 0.5070in; height: 10in;
     writing-mode: vertical-rl; display: flex; align-items: center;
     justify-content: flex-start; gap: 0.35in;
-    font-family: Georgia, serif; color: var(--navy); }
+    font-family: Georgia, serif; color: var(--cream); }
   .spinetxt .t { font-size: 10.5pt; letter-spacing: 0.06em; font-weight: bold; }
+  .spinetxt .t .g { color: var(--gold); }
   .spinetxt .a { font-size: 9.5pt; letter-spacing: 0.1em; color: var(--gold); }
 
   /* ---- FRONT (right) ---- */
   .front { position: absolute; left: 9.1320in; top: 0; width: 8.625in; height: 11.25in;
-    padding: 0.75in 0.75in 0.55in 0.62in; text-align: center; }
+    padding: 0.7in 0.75in 0.55in 0.62in; text-align: center; }
   .front .panel-frame { left: 0.22in; right: 0.375in; }
-  .kicker { font-family: Helvetica, Arial, sans-serif; font-size: 11pt;
-    letter-spacing: 0.35em; color: var(--gold); text-transform: uppercase;
-    margin-bottom: 0.3in; }
-  .artslot { width: 4.6in; height: 2.3in; margin: 0 auto 0.3in;
+  .artslot { width: 5.8in; height: 2.9in; margin: 0 auto 0.28in;
     border: 1px dashed var(--gold); display: flex; align-items: center;
     justify-content: center; font-family: Helvetica, Arial, sans-serif;
     font-size: 9pt; color: var(--gold); }
-  .front h1 { font-size: 44pt; line-height: 1.08; letter-spacing: 0.04em;
-    color: var(--navy); margin-bottom: 0.18in; }
-  .front h1 .small { display: block; font-size: 19pt; letter-spacing: 0.2em; }
-  .orn { color: var(--gold); font-size: 13pt; margin: 0.05in 0 0.18in; }
-  .subtitle { font-size: 15pt; letter-spacing: 0.1em; color: var(--gold);
-    text-transform: uppercase; margin-bottom: 0.32in; }
-  .artslot2 { width: 6in; height: 1.3in; margin: 0 auto 0.26in;
-    border: 1px dashed var(--gold); display: flex; align-items: center;
-    justify-content: center; font-family: Helvetica, Arial, sans-serif;
-    font-size: 9pt; color: var(--gold); }
-  .utilrow { display: flex; justify-content: center; gap: 0.4in;
+  .front h1 { font-family: Georgia, serif; color: var(--cream); margin-bottom: 0.14in; }
+  .front h1 .small { display: block; font-size: 27pt; letter-spacing: 0.06em;
+    line-height: 1.15; }
+  .front h1 .big { display: block; font-size: 54pt; letter-spacing: 0.03em;
+    line-height: 1.04; }
+  .front h1 .gold { color: var(--gold); }
+  .orn { color: var(--gold); font-size: 12pt; margin: 0.04in 0 0.14in; }
+  .subtitle { font-size: 14.5pt; letter-spacing: 0.12em; color: var(--gold);
+    text-transform: uppercase; margin-bottom: 0.28in; }
+  .utilrow { display: flex; justify-content: center; gap: 0.35in;
     font-family: Helvetica, Arial, sans-serif; font-size: 8.5pt;
-    letter-spacing: 0.08em; text-transform: uppercase; color: var(--navy);
+    letter-spacing: 0.08em; text-transform: uppercase; color: var(--cream);
     margin-bottom: 0.28in; }
   .utilrow span { border-top: 1px solid var(--gold); padding-top: 0.07in; }
-  .author { font-family: Georgia, serif; font-size: 19pt; letter-spacing: 0.22em;
-    color: var(--navy); }
+  .author { font-family: Georgia, serif; font-size: 20pt; letter-spacing: 0.24em;
+    color: var(--cream); }
   .cred { font-family: Helvetica, Arial, sans-serif; font-size: 9pt;
     letter-spacing: 0.14em; color: var(--gold); text-transform: uppercase;
     margin-top: 0.08in; }
   .series { font-family: Helvetica, Arial, sans-serif; font-size: 8pt;
     letter-spacing: 0.2em; color: var(--gold); text-transform: uppercase;
-    margin-top: 0.16in; }
+    margin-top: 0.14in; }
   .colortabs { position: absolute; bottom: 0.125in; left: 1.4in; right: 1.5in;
     height: 0.14in; display: flex; }
   .colortabs div { flex: 1; }
@@ -121,34 +131,41 @@
     <li>Track appointments, medications, and important contacts</li>
     <li>Protect yourself from burnout — and avoid the mistakes that cost families money</li>
   </ul>
-  <p class="bio"><strong>Rob Brizzi</strong> is a Certified Dementia Practitioner
-  with a career across home health, hospice, and senior living. His work at the
-  bedside of patients and families has shaped his mission to bring comfort,
-  grace, and dignity to the end-of-life journey. Rob lives in North Carolina
-  with his wife, Hope Brizzi, PharmD.</p>
+  <div class="biorow">
+    <div class="photoslot">PHOTO: author headshot<br>(print-res file)</div>
+    <p class="bio"><strong>Rob Brizzi</strong> is a Certified Dementia Practitioner
+    with a career across home health, hospice, and senior living. His work at the
+    bedside of patients and families has shaped his mission to bring comfort,
+    grace, and dignity to the end-of-life journey. Rob lives in North Carolina
+    with his wife, Hope Brizzi, PharmD.</p>
+  </div>
   <p class="tagline">You are not alone. You are the difference.</p>
+  <div class="pressmark">Cardinal Press</div>
   <div class="footerband">Compassion · Organization · Confidence · Peace of Mind<br>
-    Cardinal Press · thecardinalspromise.com</div>
-  <div class="barcode"></div>
+    thecardinalspromise.com</div>
+  <div class="barcode">KDP barcode zone<br>ISBN 978-1-963342-03-1<br>(never print -02-7 — invalid)</div>
 </section>
 
 <!-- ================= SPINE ================= -->
 <section class="spine">
   <div class="spinetxt">
-    <span class="t">THE CAREGIVER'S CARDINAL TOOLKIT</span>
+    <span class="t">THE CAREGIVER'S <span class="g">CARDINAL</span> TOOLKIT</span>
     <span class="a">ROB BRIZZI</span>
   </div>
 </section>
 
-<!-- ================= FRONT (typographic template — art slots marked) ================= -->
+<!-- ================= FRONT (navy template — art slots marked, no kicker) ================= -->
 <section class="front">
   <div class="panel-frame"></div>
-  <div class="kicker">Workbook</div>
-  <div class="artslot">ART: red cardinal, alert, on gold-line branch (designer file)</div>
-  <h1><span class="small">The Caregiver's</span> CARDINAL TOOLKIT</h1>
+  <div class="artslot">ART: photorealistic red cardinal, alert and forward-facing,
+  on blossom branch (designer print-res file)</div>
+  <h1>
+    <span class="small">THE CAREGIVER'S</span>
+    <span class="big gold">CARDINAL</span>
+    <span class="big">TOOLKIT</span>
+  </h1>
   <div class="orn">— ❖ —</div>
   <div class="subtitle">A Hero's Guide to Caring<br>for an Aging Parent</div>
-  <div class="artslot2">ART: gold line-art mountains &amp; pines (designer file)</div>
   <div class="utilrow">
     <span>Worksheets</span><span>Checklists</span>
     <span>Medicare &amp; Insurance Traps</span><span>Care at Home</span>

@@ -40,6 +40,14 @@ worksheets, take them to appointments. Medication content reviewed by Hope
 Brizzi, PharmD. Book one of the Cardinal's Promise series.
 ```
 
+## The hook line (A+ content banner, ads, social — panel-tested)
+
+**"What do I do with my aging parent?"** — the reader panel found this exact
+question is what buyers type at midnight; two of five voted for a cover
+built on it. It stays off the cover (the design carrying it failed the
+sympathy-register test) but leads the A+ banner, ad headlines, and the
+website hero, answered by the title: *The Caregiver's Cardinal Toolkit.*
+
 ## Editorial Reviews (paste into Author Central after the listing is live)
 
 > Both quotes are doctor-approved verbatim (July 2026). Do not edit their

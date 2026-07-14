@@ -52,16 +52,26 @@ COMPASSION · ORGANIZATION · CONFIDENCE · PEACE OF MIND
 
 Publisher mark: Cardinal Press
 
-## Front panel — APPROVED DIRECTION (white/minimal, replaces the navy design)
+## Front panel — APPROVED DIRECTION (NAVY, decided by reader panel July 2026)
 
-Author-chosen aesthetic (closest in the category to *Being Mortal*): warm
-white/cream field with a thin gold frame; photorealistic red cardinal on a
-delicate gold-line branch, upper third; navy serif stacked title; gold-line
-mountain/pine art above the author name.
+The five-reader panel split 2/2/1 across navy, the sunset question cover,
+and white minimal. Navy won the tiebreak: it took the 100px Amazon-thumbnail
+test 3–2, and the sunset design was disqualified under the two-reader rule —
+both clinical/lived-experience readers independently called cardinal-at-sunset
+condolence-card imagery. The panel's synthesis (Marta, hospice RN): "B's
+design, C's question as marketing copy, lose the sunset."
 
-**Designer brief — the four audience-tested additions:**
-1. Kicker: "WORKBOOK" (small, gold, letterspaced) — or the utility line
-   "Worksheets, Scripts & Checklists for Every Step"
+**SERIES NOTE:** the navy design language extends to the whole Cardinal's
+Promise series — *A Cardinal's Promise* will also be navy (author's call,
+July 2026). Keep palette and type system consistent across titles:
+navy #1b2440 field, gold #c9a45c, cream #f5f1e8 type, thin gold frame.
+
+Aesthetic: deep navy field, thin gold frame; photorealistic red cardinal —
+alert and forward-facing — on a blossom branch, upper third; stacked serif
+title in cream with CARDINAL in gold; gold utility row; author name large.
+
+**Designer brief:**
+1. NO kicker (author removed "WORKBOOK", July 2026)
 2. Title: **THE CAREGIVER'S CARDINAL TOOLKIT** (full title — do not drop
    "Caregiver's")
 3. Subtitle: "A Hero's Guide to Caring for an Aging Parent" (the official,
