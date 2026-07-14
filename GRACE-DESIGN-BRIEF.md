@@ -17,12 +17,20 @@ back all stay. Only the text layer changes, per the fix list below.
 - Keep text 0.25" inside trim; nothing critical in the 0.125" bleed zone
 - Also deliver: Kindle front-panel-only export, 1600 x 2560 px or larger
 
-**FRONT panel copy (exact):**
+**FRONT panel copy (exact — three elements only, per cover-panel round 2):**
 - Title: THE CARDINAL'S PROMISE
-- Subtitle (this is final and locked — replaces "Finding Hope Through
-  Addiction, Adoption, and Immigration"): *A Memoir of the Father Who Stayed*
-- Credit line: FOREWORD BY DAVE MEYER, NFL QB
+- Subtitle (final and locked — replaces "Finding Hope Through Addiction,
+  Adoption, and Immigration"): *A Memoir of the Father Who Stayed*
+  — set LARGER and a step lighter than the mockup's gold; it is the hook and
+  must survive Amazon thumbnail
 - Author: ROB BRIZZI  (no "By")
+- NO foreword credit on the front, NO ornament between subtitle and name —
+  three cover critics found the five-element stack crowded and the credit a
+  genre-wobble for the grief buyer. Dave's credential lives on the BACK
+  (his quote is attributed DAVE MEYER, NFL QB there).
+- Optional per art director: consider mirroring the cardinal to face into
+  the cover, and tightening the title stack's leading; reference comp:
+  cover/memoir-front-sample-v2.png
 
 **SPINE (reading top to bottom):**
 THE CARDINAL'S PROMISE • ROB BRIZZI, with the small red cardinal mark.
