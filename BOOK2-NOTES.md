@@ -67,3 +67,24 @@ Full report: session scratchpad book2experts.txt. Headlines:
   registered under Cardinal Promise Press.
 - Title: current title workable if subtitle carries genre. Alternatives offered:
   A) "Not Ready Isn't a No"  B) "Show Up and Stay". AUTHOR TO RULE (no rush).
+
+## Cover comparison verdicts (2026-07-13, expert criteria applied)
+Three concepts on file:
+1. cover/book2-navy-front-mockup.jpg — navy typographic SWNTBS front. RETIRED.
+2. cover/book2-mirror-art-concept.jpg — painted mirror art titled "It's Not
+   Your Fault". VERDICT: the ART is book 2's direction (painterly match to the
+   memoir; literally the epilogue image — cardinal on side mirror, man walking
+   away, "objects in mirror" line). The TITLE stays "Saying What Needs to Be
+   Said" (won buyer test 2/2; addict-only framing rejected by strategist + both
+   test buyers). Mockup fixes: typo "the loves ones"; drop "By".
+   PARKED: "It's Not Your Fault" = future title for a third, addiction-family
+   book (the three C's in four words).
+3. cover/memoir-wrap-photo-back-concept.png — NEW MEMOIR wrap (photo back).
+   VERDICT: becomes the memoir's real wrap once Grace fixes five text items:
+   (a) subtitle must be the locked "A Memoir of the Father Who Stayed" (mockup
+   shows rejected "Finding Hope Through Addiction, Adoption, and Immigration");
+   (b) Dave credit "NFL QB" not "Former NFL Quarterback", and restore front
+   "FOREWORD BY DAVE MEYER, NFL QB"; (c) barcode is fake 978-1-963412-01-3 —
+   real ISBN 979-8-9966446-0-5 or clear zone; (d) add approved Huet "patients"
+   quote to back; (e) drop "By" before author name. The author-photo back and
+   the spine cardinal mark are keepers — best memoir package yet.
