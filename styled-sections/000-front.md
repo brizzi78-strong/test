@@ -1,6 +1,6 @@
-# **THE CARDINAL'S PROMISE**
+# **THE FATHER WHO STAYED**
 
-*A Memoir of the Father Who Stayed*
+*The Cardinal's Promise — A Memoir*
 
 **ROB BRIZZI**
 
@@ -8,7 +8,7 @@ CARDINAL PROMISE PRESS
 
 # **COPYRIGHT**
 
-THE CARDINAL'S PROMISE. Copyright © 2026 by Rob Brizzi. All rights reserved.
+THE FATHER WHO STAYED. Copyright © 2026 by Rob Brizzi. All rights reserved.
 
 No part of this book may be reproduced in any form or by any electronic or mechanical means, including information storage and retrieval systems, without written permission from the publisher, except by a reviewer, who may quote brief passages in a review.
 

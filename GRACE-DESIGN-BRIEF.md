@@ -5,7 +5,7 @@ imprint name across both books. Job 1 is needed now; Job 2 has no deadline.
 
 ---
 
-## JOB 1 — The Cardinal's Promise (memoir) — FINAL PRINT WRAP
+## JOB 1 — The Father Who Stayed (memoir) — FINAL PRINT WRAP
 
 **Base design:** your photo-back wrap concept (the dark painted cardinal with
 the author photo on the back). Approved direction — art, layout, and photo
@@ -18,9 +18,9 @@ back all stay. Only the text layer changes, per the fix list below.
 - Also deliver: Kindle front-panel-only export, 1600 x 2560 px or larger
 
 **FRONT panel copy (exact — three elements only, per cover-panel round 2):**
-- Title: THE CARDINAL'S PROMISE
+- Title: THE FATHER WHO STAYED
 - Subtitle (final and locked — replaces "Finding Hope Through Addiction,
-  Adoption, and Immigration"): *A Memoir of the Father Who Stayed*
+  Adoption, and Immigration"): *The Cardinal's Promise — A Memoir*
   — set LARGER and a step lighter than the mockup's gold; it is the hook and
   must survive Amazon thumbnail
 - Author: ROB BRIZZI  (no "By")
@@ -33,7 +33,7 @@ back all stay. Only the text layer changes, per the fix list below.
   cover/memoir-front-sample-v2.png
 
 **SPINE (reading top to bottom):**
-THE CARDINAL'S PROMISE • ROB BRIZZI, with the small red cardinal mark.
+THE FATHER WHO STAYED • ROB BRIZZI, with the small red cardinal mark.
 
 **BACK panel copy (exact):**
 
@@ -52,7 +52,7 @@ Body copy:
 > lot between hospice visits, when a red bird landed on his driver's-side
 > mirror and refused to leave.
 >
-> *The Cardinal's Promise* is a memoir of addiction and recovery, of two
+> *The Father Who Stayed* is a memoir of addiction and recovery, of two
 > fathers — one who kept calling and one who kept coming — and of the work
 > Rob does now: sitting with families in the last chapter, showing up the way
 > Lou taught him. It is a book about the love that doesn't send a bill.
@@ -84,7 +84,7 @@ mockup changes.
 - Title: SAYING WHAT NEEDS TO BE SAID
 - Subtitle — set LARGER than usual; it must be readable at Amazon thumbnail:
   *A Practical Guide for Families Caring for an Aging Parent*
-- Line: FROM THE AUTHOR OF *THE CARDINAL'S PROMISE*
+- Line: FROM THE AUTHOR OF *THE FATHER WHO STAYED*
 - Author: ROB BRIZZI  (no "By")
 - Bottom: CARDINAL PROMISE PRESS
 - No endorsement quote on the front (one is coming later for the back)

@@ -1,6 +1,6 @@
-# **THE CARDINAL'S PROMISE**
+# **THE FATHER WHO STAYED**
 
-*A Memoir of the Father Who Stayed*
+*The Cardinal's Promise — A Memoir*
 
 **ROB BRIZZI**
 
@@ -8,7 +8,7 @@ CARDINAL PROMISE PRESS
 
 # **COPYRIGHT**
 
-THE CARDINAL'S PROMISE. Copyright © 2026 by Rob Brizzi. All rights reserved.
+THE FATHER WHO STAYED. Copyright © 2026 by Rob Brizzi. All rights reserved.
 
 No part of this book may be reproduced in any form or by any electronic or mechanical means, including information storage and retrieval systems, without written permission from the publisher, except by a reviewer, who may quote brief passages in a review.
 
@@ -2016,4 +2016,4 @@ The phone numbers and web addresses were current when this book went to press. O
 
 # **ABOUT THE AUTHOR**
 
-Rob Brizzi is a hospice liaison and Certified Dementia Practitioner. Born in Mexico City and raised in New Jersey, he is in long-term recovery and has made it his mission to serve others, sitting with families in their hardest rooms and helping them show up for the people they love. He lives in Raleigh, North Carolina, with his wife, Hope. *The Cardinal's Promise* is his first book.
+Rob Brizzi is a hospice liaison and Certified Dementia Practitioner. Born in Mexico City and raised in New Jersey, he is in long-term recovery and has made it his mission to serve others, sitting with families in their hardest rooms and helping them show up for the people they love. He lives in Raleigh, North Carolina, with his wife, Hope. *The Father Who Stayed* is his first book.
