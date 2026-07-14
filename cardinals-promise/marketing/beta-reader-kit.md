@@ -58,7 +58,7 @@ Rob
 
 ## Logistics
 
-- Attach the current PDF (`book/cardinals-toolkit-book.pdf`, 217 pages)
+- Attach the current PDF (`book/cardinals-toolkit-book.pdf`, 222 pages)
   or share it however each reader prefers; printed spiral copies from a
   local print shop are worth it for the least tech-comfortable readers.
 - Give a **2-week deadline** — open-ended beta reads never come back.
