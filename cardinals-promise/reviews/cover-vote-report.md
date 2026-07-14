@@ -48,6 +48,21 @@ copy, lose the sunset."
 - **Thumbnail verified:** 100px/60px render test passed — title legible,
   navy pops on Amazon white, utility row degrades cleanly.
 
+## Follow-up vote: author photo placement (same panel)
+
+Rob asked the panel whether his headshot (navy blazer, white shirt, blue
+background — warm, professional) goes on the front or back.
+
+**Result: BACK, 5–0.** Recurring logic across all five: the front already
+carries bird + title + credential and a face would read promotional and
+fragment the thumbnail; trust is built when the buyer flips the book over
+and finds the face beside the bio and CDP credential — plus Amazon's
+About the Author section. The navy wrap template already has the photo
+slot on the back panel beside the bio; no layout change needed. The
+headshot still must arrive as a print-resolution file (the chat preview
+cannot be used for print — roughly 350×410 px at 300 DPI minimum for the
+1.15in slot, and bigger is better).
+
 ## Still open
 
 - Tom winced at "A Hero's Guide" again (second reader across rounds to do
