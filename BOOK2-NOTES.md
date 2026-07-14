@@ -88,3 +88,12 @@ Three concepts on file:
    real ISBN 979-8-9966446-0-5 or clear zone; (d) add approved Huet "patients"
    quote to back; (e) drop "By" before author name. The author-photo back and
    the spine cardinal mark are keepers — best memoir package yet.
+
+## CATALOG DECISION (author, 2026-07-13): Path A
+- Book 1: The Cardinal's Promise (memoir) — launches first, alone.
+- Book 2: Saying What Needs to Be Said (broad family guide) — mirror art,
+  6-9 months after the memoir.
+- Book 3: It's Not Your Fault (for the family of the addict) — title and
+  navy/mirror-adjacent look PARKED for the future; not announced, not started
+  until book 2 ships.
+The story, the manual, the absolution.
