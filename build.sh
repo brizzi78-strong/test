@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Build reader-proof deliverables for "The Father Who Stayed" from the
+# Build reader-proof deliverables for "The Cardinal's Promise" from the
 # assembled manuscript. Produces EPUB, DOCX, and a 6x9 proof PDF.
 #
 # Requires: pandoc, python3 + weasyprint (pip install weasyprint).
@@ -10,8 +10,8 @@
 # proofread. Do not upload this proof PDF to KDP as the interior.
 
 set -euo pipefail
-SRC="The_Father_Who_Stayed_sheff_pass.md"
-BASE="The_Father_Who_Stayed"
+SRC="The_Cardinals_Promise_sheff_pass.md"
+BASE="The_Cardinals_Promise"
 
 # EPUB (metadata-driven; cover art pending Grace's redesign)
 pandoc "$SRC" \

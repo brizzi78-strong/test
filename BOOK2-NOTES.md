@@ -1,7 +1,7 @@
 # Book 2 — Saying What Needs to Be Said
 
 **Subtitle (per mockup):** A Practical Guide for Families Facing Addiction,
-Illness, or Loss. Author: Rob Brizzi. Companion to The Father Who Stayed —
+Illness, or Loss. Author: Rob Brizzi. Companion to The Cardinal's Promise —
 the memoir tends the spirit; this is the practical manual the reader panels
 asked for. Cardinal branding carries across both covers.
 
@@ -57,7 +57,7 @@ Full report: session scratchpad book2experts.txt. Headlines:
 - Cover (locked = composition only; Grace's fix list): CARDINAL PROMISE PRESS
   (no LLC), cardinal colophon replaces tree, Huet quote OFF front (ask him for
   a NEW quote about this book later), tagline slot = credential strip or
-  "From the author of THE FATHER WHO STAYED", match the memoir's painterly
+  "From the author of THE CARDINAL'S PROMISE", match the memoir's painterly
   cardinal (current bird is flat/clip-art vs book 1), one divider system,
   even the title-line scaling.
 - Business: dual distribution KDP + IngramSpark (institutional bulk is the
@@ -90,7 +90,7 @@ Three concepts on file:
    the spine cardinal mark are keepers — best memoir package yet.
 
 ## CATALOG DECISION (author, 2026-07-13): Path A
-- Book 1: The Father Who Stayed (memoir) — launches first, alone.
+- Book 1: The Cardinal's Promise (memoir) — launches first, alone.
 - Book 2: Saying What Needs to Be Said (broad family guide) — mirror art,
   6-9 months after the memoir.
 - Book 3: It's Not Your Fault (for the family of the addict) — title and
