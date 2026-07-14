@@ -74,11 +74,11 @@ title in cream with CARDINAL in gold; gold utility row; author name large.
 1. NO kicker (author removed "WORKBOOK", July 2026)
 2. Title: **THE CAREGIVER'S CARDINAL TOOLKIT** (full title — do not drop
    "Caregiver's")
-3. Subtitle: "A Hero's Guide to Caring for an Aging Parent" (the official,
-   indexed subtitle) — ⚠️ note: the buyer panel found "hero" exhausts the
-   crisis buyer; the alternative "A Guide for Caring for an Aging Parent"
-   is pre-approved language if the author decides to drop it — one word
-   triggers the metadata sweep
+3. Subtitle: "A Hero's Guide to Caring for an Aging Parent" — ✅ DECIDED,
+   AUTHOR'S FINAL CALL (July 2026): "hero" STAYS. The buyer panel and two
+   beta readers flagged the word; Rob weighed the evidence and kept it —
+   the hero framing is the brand's heart. Do not re-litigate in future
+   review rounds; the old fallback wording is retired.
 4. Author line: ROB BRIZZI with the credential beneath —
    "CDP · Certified Dementia Practitioner"
 5. Bottom utility row in gold line-art style: Worksheets / Checklists /
