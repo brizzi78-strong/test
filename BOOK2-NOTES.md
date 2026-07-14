@@ -97,3 +97,13 @@ Three concepts on file:
   navy/mirror-adjacent look PARKED for the future; not announced, not started
   until book 2 ships.
 The story, the manual, the absolution.
+
+## Subtitle direction (author, 2026-07-13)
+Subtitle centers on the AGING PARENT and gets LARGER type on the cover
+(the mockup's gold subtitle was too small). Working wording:
+"A Practical Guide for Families Caring for an Aging Parent"
+(matches the author's pitch line "...at the center of caring for a parent";
+anchors the book on the eldercare/end-of-life shelf per the strategist).
+Addiction and loss move to KDP keywords, categories, and the description —
+not the cover subtitle. Grace: subtitle sized up a full step; it should be
+readable at Amazon thumbnail.
