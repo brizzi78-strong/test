@@ -107,3 +107,28 @@ anchors the book on the eldercare/end-of-life shelf per the strategist).
 Addiction and loss move to KDP keywords, categories, and the description —
 not the cover subtitle. Grace: subtitle sized up a full step; it should be
 readable at Amazon thumbnail.
+
+## StoryBrand framing + catalog (author, 2026-07-14)
+Positioning philosophy (Donald Miller — reader is the hero, author is the
+guide). The memoir doesn't say "look what happened to me"; it says "if you've
+loved someone with addiction, wondered whether a father can change a life, or
+questioned whether redemption is possible, this is for you." The emotional
+center is the father's steadfast love, which any reader can enter from — as
+the child, the parent, or the caregiver. This is why the subtitle
+"A Memoir of the Father Who Stayed" works: the hero isn't Rob; it's the love
+readers recognize.
+
+The two books point back to the reader's journey from two angles:
+- The Cardinal's Promise (memoir): "Hope is possible."
+- It's Not Your Fault (guide): "You're not carrying this alone." — speaks
+  straight to caregiver guilt, the emotional engine of the eldercare shelf.
+
+DECISION (author, 2026-07-14): TWO SEPARATE BOOKS. "It's Not Your Fault"
+and the aging-parent caregiver guide are NOT merged — they remain distinct
+titles on the roadmap (Path A structure stands). "It's Not Your Fault" is
+captured here as the LEADING direction for its own book; the current guide
+title ("Saying What Needs to Be Said") and the Job-2 design brief are left
+UNCHANGED for now per the author (capture the idea, don't rewrite yet).
+Note for later: "It's Not Your Fault" + a caregiver-guilt subtitle stays on
+one shelf (eldercare/end-of-life), so it does not reintroduce the
+addiction/eldercare discoverability split the strategist flagged.
