@@ -18,7 +18,7 @@ The two files KDP asks for are in this folder:
   `.divider` blocks + trailing blank, then rebuild (page count and spine
   change back).
 
-- [ ] **Hope's read-through is done** (Chapters 17, 25, 2, 3, 27–28) — the credit page claims a PharmD review
+- [x] **SKIPPED (July 2026): Hope's pharmaceutical review not completed** — shipping without the full chapter read-through. Removed PharmD clinical-review attribution from copyright page; Hope retains "Project Consultant" credit for her role in the book's inception.
 - [ ] **Bio verified** — Certified Dementia Practitioner credential current
 - [ ] **Final human proofread** of `kdp-interior.pdf` (read it as a printed proof, not on screen)
 - [ ] **Back-cover copy approved** — edit `back-cover-copy.md` and ask for a wrap regen if you change anything
@@ -29,7 +29,7 @@ The two files KDP asks for are in this folder:
 
 1. **Title:** The Caregiver's Cardinal Toolkit · **Subtitle:** A Hero's Guide to Caring for an Aging Parent
 2. **Series:** Cardinal's Promise (optional but set it — the memoir joins it later)
-3. **Author:** Rob Brizzi · **Contributor:** Hope Brizzi, PharmD — Consultant (optional)
+3. **Author:** Rob Brizzi (no contributor line needed — Hope retains "Project Consultant" credit on title page and back cover but did not complete pharmaceutical review)
 4. **Description:** paste the ready HTML from `marketing/amazon-listing.md` (first 200 characters are the visible hook; no URLs allowed)
 5. **ISBN:** use your own — **978-1-963342-03-1** (paperback, Bowker block slot 03; already on the copyright page). At KDP choose "Use my own ISBN" and enter it with imprint **Cardinal Press** — the imprint must match your Bowker registration, so confirm the block is registered to you/Cardinal Press at myidentifiers.com. **978-1-963342-04-8** is reserved for the audiobook edition. The `-02-7` printed on the earlier cover design was a miscomputed check digit — never print it; the cover must show 978-1-963342-03-1
 6. **AI content question** (on the **Content** tab): KDP distinguishes **AI-generated** content (created by AI, even if you edited it — must disclose, with extent follow-ups) from **AI-assisted** (AI helped refine your own work — no disclosure required). Answer accurately per your records; the disclosure goes to Amazon only and is not shown publicly
