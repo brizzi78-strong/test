@@ -72,9 +72,6 @@ Body copy:
 > Rob does now: sitting with families in the last chapter, showing up the way
 > Lou taught him. It is a book about the love that doesn't send a bill.
 
-Endorsement:
-> "I wouldn't want anyone else to be there for my patients." — Dr. Huet
-
 Author photo (keep) with bio:
 > ROB BRIZZI is a hospice liaison and Certified Dementia Practitioner. Born
 > in Mexico City and raised in New Jersey, he is in long-term recovery. He

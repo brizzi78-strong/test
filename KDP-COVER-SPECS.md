@@ -45,8 +45,10 @@ Notes for the designer:
      singular Cardinal — matching the copyright page and ISBN registration.
   4. Barcode: still shows placeholder 978-1-963342-01-0. Replace with a barcode
      for 979-8-9966446-0-5, or clear the zone and let KDP print its own.
-- BLURB: the front-cover quote credited to "Dr Huet" is approved by Jason Huet
-  (author confirmed 2026-07-10).
+- BLURB: PULLED (author, 2026-07-15) — all Dr. Huet / Jason Huet quotes are
+  removed from the cover "for now," pending fresh consent. Back cover keeps Dave
+  Meyer's quote as the endorsement. (Earlier note: front-cover "Dr Huet" quote
+  had been approved by Jason Huet, 2026-07-10; that approval is on hold.)
 
 ## KDP description lines (author-approved 2026-07-13)
 
@@ -77,8 +79,6 @@ of a loved one in addiction, disease, or loss") and the faith signal
 > one who kept calling and one who kept coming — and of the work Rob does now:
 > sitting with families in the last chapter, showing up the way Lou taught him.
 > It is a book about the love that doesn't send a bill.
->
-> **"I wouldn't want anyone else to be there for my patients." — Dr. Huet**
 
 Author bio line (below copy or on flap):
 > Rob Brizzi is a hospice liaison and Certified Dementia Practitioner. Born in

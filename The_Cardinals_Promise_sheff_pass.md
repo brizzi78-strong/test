@@ -304,7 +304,7 @@ I always said yes, and she always knew the order before I gave it. Two double ch
 
 And it never stopped after I grew up. I moved more times than I can count, and every time, she made the new place a home. She would go to T.J. Maxx and fill a cart, and a bare apartment I had just landed in would turn into somewhere that felt like mine. In college she even bought me a Jenny McCarthy poster and hung it on my wall, because making a place mine meant making it feel like me, right down to the parts a mother would rather not picture. I felt loved. The vanilla shake at midnight. The lamp from T.J. Maxx, picked out so I wouldn't have to walk into an empty room.
 
-Her protection had teeth, too. Years later, coming back from a cruise through Mexico, tanned so deep I looked, in the official eyes of United States customs, very Mexican, I got pulled aside. The paper looked unofficial, they said. Security questioned me for an hour, then the police arrived, then, two hours after that, the FBI. Seven hours off the boat, fourteen different officers, the same answers every time. I wasn't nervous. For once I had nothing to hide. I was just embarrassed, all the way through, and somewhere around hour five I caught myself wondering whether this was going to be the rest of my life, proving on demand that I was who the paper said I was. My mother heard about it and did what she does. She went to a New Jersey courthouse and came home with an official birth certificate, so nobody could ever again hold her son for seven hours over the way a document looked.
+Years later, coming back from a cruise through Mexico, tanned so deep I looked, in the official eyes of United States customs, very Mexican, I got pulled aside. The paper looked unofficial, they said. Security questioned me for an hour, then the police arrived, then, two hours after that, the FBI. Seven hours off the boat, fourteen different officers, the same answers every time. I wasn't nervous. For once I had nothing to hide. I was just embarrassed, all the way through, and somewhere around hour five I caught myself wondering whether this was going to be the rest of my life, proving on demand that I was who the paper said I was. My mother heard about it and did what she does. She went to a New Jersey courthouse and came home with an official birth certificate, so nobody could ever again hold her son for seven hours over the way a document looked.
 
 Chris took to New Jersey without trouble. He'd been a year and a half when we left Mexico. I'd been four.
 
@@ -726,11 +726,11 @@ That was the man who adopted me. He never talked about himself, never needed you
 
 Lou's world had made me. Then it sent me off to build one of my own.
 
-Before I ever set foot on campus, there was a party in New Jersey. Tricia Hart hosted it, a mixer for kids heading to Miami that fall. That night I met Dean Ferrera from Hawthorne and people who'd matter for years. I liked going to a school in Ohio already knowing a few faces. Dean became one of my best friends. He's a cardiologist outside Chicago now.
+Before I ever set foot on campus, there was a party in New Jersey. Tricia Hart hosted it, a mixer for kids heading to Miami that fall. That night I met people who'd matter for years. I liked going to a school in Ohio already knowing a few faces.
 
 My mom and dad dropped me off in the fall of 1996. Partial wrestling scholarship, financial aid, Lou covering the rest. That was how it got paid for. My mom cried when she left me there. The woman who had moved two kids across a border without flinching stood in a dorm parking lot in Ohio and couldn't stop the tears. I didn't feel like I'd chosen Miami so much as it had chosen me first — a letter from a coach with my name on it. Later I saw it in *Newsweek*, "best schools for your money," number four. The Ivy of the Midwest.
 
-My dorm was Stanton Hall, my roommate a good-natured Packers fan from Wisconsin with a cheesehead on his shelf and the accent to prove it. I didn't know what a cheesehead was. I'm from New Jersey. Next door was Jason Huet, six-five, a high school basketball player who'd wanted Chapel Hill and was sore his parents made him come to Miami. Hard shell, didn't let everybody in, but once he did, he didn't take it lightly. He teased me constantly — swore he couldn't understand a word I said. He's a pulmonologist in Charleston now. He texted recently: you want to come see me for Memorial Day? That's a friendship that just holds. The twins from Ramsey were there too, Kris and Kyle, the two who'd kept their hands clean at the lunch table. They became good friends too.
+My dorm was Stanton Hall, my roommate a good-natured Packers fan from Wisconsin with a cheesehead on his shelf and the accent to prove it. I didn't know what a cheesehead was. I'm from New Jersey. The twins from Ramsey were there too, Kris and Kyle, the two who'd kept their hands clean at the lunch table. They became good friends too.
 
 That was the version of me I was building at Miami. Not Claudio. Rob — county wrestling champion, Miami student, American. Nobody here knew who I'd been before I arrived. Being the darker-skinned kid on a mostly white-bread campus gave me something, and I connected in ways that hadn't come as easily in high school.
 
@@ -761,7 +761,7 @@ On the way out, a waitress ran into the parking lot after us and handed me her p
 
 **Cancun, spring 1999**
 
-I still don't entirely know how MTV ended up putting my face on national television. Junior year Dave Nesser, a college buddy, said we were going to Cancun for spring break. Three hundred people from Miami. MTV. The beach. Ten days at the center of the known universe. A scout stopped me with a Polaroid, took my picture, said stay near your phone. That night the hotel phone rang. Dean answered, then handed it to me with a look I'd never seen on his face. It's MTV.
+I still don't entirely know how MTV ended up putting my face on national television. Junior year Dave Nesser, a college buddy, said we were going to Cancun for spring break. Three hundred people from Miami. MTV. The beach. Ten days at the center of the known universe. A scout stopped me with a Polaroid, took my picture, said stay near your phone. That night the hotel phone rang. A buddy answered, then handed it to me with a look I'd never seen on his face. It's MTV.
 
 The lineup was NSYNC, 98 Degrees, Busta Rhymes, Eminem, and for ten days I carried the same VIP pass they did.
 
@@ -769,7 +769,7 @@ The show aired eight times a day for three months. Back in Oxford, cars slowed, 
 
 That feeling, the one that hadn't come after the county championship, or the wrestling room, or Kappa Sig, came in Cancun, ten feet from Timberlake with cameras pointed my way. I'd finally found the feeling. From then on I knew exactly what I was chasing.
 
-Senior year I lived with Dave Nesser, Dean Ferrera, and Jason Huet in a condo downtown. Absolute pigs. We destroyed that place. We were about to scatter.
+Senior year I lived with Dave Nesser and two other guys in a condo downtown. Absolute pigs. We destroyed that place. We were about to scatter.
 
 I think about those four years and I thank God for my dad. Lou could have sent me to community college, a local school, a hundred cheaper options. Instead he let me go to Miami and took out loans to do it. He was splitting a rental house in Mahwah with his friend Roger, who'd been through a divorce of his own, and Lou's room was the small one upstairs. Chris and I would visit and you could read it in his body when things were weighing on him. He never put it on us. He carried it, quietly, the way he carried everything.
 
@@ -1488,8 +1488,6 @@ Around that same stretch the recognition I'd chased my whole life finally showed
 
 I talked to Lou about Bob one evening. I don't know why this is hitting me so hard, I said. I did everything right. He didn't hesitate. That's not why it's bothering you. He was right. Bob hadn't needed me to fix anything. He'd needed me in the room. I was being let into places where presence was the only thing left to offer, and something in me already knew how to do that. Not as a technique. As a practice. An old man dying sober at eighty-eight showed me that the most you can do at that edge is refuse to leave. Years later, that became the whole job.
 
-Jason Huet has seen both halves of my life. Next door in Stanton Hall at eighteen, and now a doctor who sees from the clinical side what I see at the bedside. He told me once what he sees, and he dates it the way I do, from the day I got sober: the compassion, and how close I let myself get to the people in the beds. Then he said the sentence I've never gotten over. I wouldn't want anyone else to be there for my patients. From a man who knew me when, that's worth more than anything the old life ever chased.
-
 # **THE DRIVES · V**
 
 *Spring 2025. Our car pointed north out of Pensacola, eighteen years of living near him somewhere back in the mirrors. He had told me to go — that was always his way, more concerned that we were okay than that we were close. I didn't know it was the last of the old kind of drive, the kind where he was still at the other end of the road. This time, I drove.*
@@ -1937,7 +1935,7 @@ The men God put in front of me: Andy, Bob, Mager, Matt, and Quint. You walked in
 
 Dave Meyer, for thirty-five years of friendship and for the words that open and close this book.
 
-Dr. Huet, and every nurse, aide, chaplain, and social worker I get to stand beside in the last chapter. You taught me what showing up looks like when it's a profession.
+Every nurse, aide, chaplain, and social worker I get to stand beside in the last chapter. You taught me what showing up looks like when it's a profession.
 
 Tyler and Jaye, for letting me tell it.
 

@@ -12,7 +12,7 @@ The men God put in front of me: Andy, Bob, Mager, Matt, and Quint. You walked in
 
 Dave Meyer, for thirty-five years of friendship and for the words that open and close this book.
 
-Dr. Huet, and every nurse, aide, chaplain, and social worker I get to stand beside in the last chapter. You taught me what showing up looks like when it's a profession.
+Every nurse, aide, chaplain, and social worker I get to stand beside in the last chapter. You taught me what showing up looks like when it's a profession.
 
 Tyler and Jaye, for letting me tell it.
 
