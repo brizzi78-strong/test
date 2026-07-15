@@ -36,4 +36,14 @@ pandoc "$SRC" \
 python3 -c "import weasyprint; weasyprint.HTML('$BASE.tmp.html').write_pdf('$BASE.pdf')"
 rm -f "$BASE.tmp.html"
 
-echo "Built: $BASE.epub  $BASE.docx  $BASE.pdf"
+# Self-contained web-readable HTML (embedded CSS + cover image, one file)
+pandoc "$SRC" \
+  --metadata-file=build-metadata.yaml \
+  -t html5 -s \
+  --toc --toc-depth=1 \
+  --embed-resources \
+  --css=build-web.css \
+  --metadata=title-prefix:"" \
+  -o "$BASE.html"
+
+echo "Built: $BASE.epub  $BASE.docx  $BASE.pdf  $BASE.html"
