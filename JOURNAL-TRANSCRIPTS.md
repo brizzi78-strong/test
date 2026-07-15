@@ -282,3 +282,22 @@ sometimes catch myself not spending enough time out in nature, which is one of m
 goals.
 
 (Confirms the "earth" reading in the #1 joy list.)
+
+---
+
+## 26. Voice note — community / belonging (cleaned from dictation)
+
+**First memory of being part of a community — how did people look, move, and speak
+differently?**
+That was when I came from Mexico to the US. I could definitely feel that I was an
+outsider.
+
+**Do you feel you belong?**
+I didn't feel like I didn't belong. I just felt that I was different.
+
+**What did it teach you about belonging?**
+It taught me to adhere to the social norms of the society, to engage with people,
+and to meet them where they were at.
+
+(Dictated; filler words removed. "YY" in the raw transcript read as the prompt
+"do you feel you belong.")
