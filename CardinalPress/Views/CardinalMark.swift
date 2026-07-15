@@ -59,59 +59,78 @@ struct CardinalMark: View {
                     .translatedBy(x: -cx * s, y: -cy * s)
             }
 
-            let red = tint ?? Color(red: 0.68, green: 0.12, blue: 0.18)
-            let darkRed = tint ?? Color(red: 0.52, green: 0.08, blue: 0.13)
-            let black = tint ?? Color(red: 0.15, green: 0.08, blue: 0.09)
-            let beak = tint ?? Color(red: 0.90, green: 0.48, blue: 0.10)
+            let red = tint ?? Color(red: 0.77, green: 0.12, blue: 0.23)
+            let darkRed = tint ?? Color(red: 0.63, green: 0.0, blue: 0.0)
+            let black = tint ?? Color(red: 0.08, green: 0.08, blue: 0.08)
+            let beak = tint ?? Color(red: 1.0, green: 0.80, blue: 0.0)
 
             context.translateBy(x: 0, y: pose.bob * s)
 
-            // Tail — long, elegant feathers swept back
-            var tailPath = bezierPath([(56, 70), (92, 65), (88, 80), (52, 82)])
-            if pose.tailLift != 0 {
-                tailPath = tailPath.applying(rotation(about: 54, 75, degrees: -pose.tailLift * 0.6))
-            }
-            context.fill(tailPath, with: .color(darkRed))
-
-            // Body — smooth, rounded, full-bodied
-            context.fill(ellipse(50, 68, 30, 28), with: .color(red))
-
-            // Wing — darker overlay, smooth curve
+            // Wing — darker red, layered
             if tint == nil {
-                context.fill(ellipse(60, 66, 22, 13).applying(rotation(about: 60, 66, degrees: 22)),
-                             with: .color(darkRed.opacity(0.85)))
+                context.fill(bezierPath([(46, 62), (61, 56), (69, 66), (59, 71)]),
+                             with: .color(darkRed))
             }
 
-            // Head — round, natural proportions
-            context.fill(ellipse(40, 42, 18, 18), with: .color(red))
+            // Body — full, rounded
+            context.fill(ellipse(52, 66, 28, 23), with: .color(red))
 
-            // Crest — two smooth pointed feathers, iconic cardinal silhouette
-            let crestLift: CGFloat = pose.tailLift > 0 ? pose.tailLift * 0.15 : 0
-            context.fill(bezierPath([(32, 32), (35, 4 - crestLift), (40, 28)]),
-                         with: .color(red))
-            context.fill(bezierPath([(40, 28), (46, 2 - crestLift), (51, 32)]),
+            // Head — proportional
+            context.fill(ellipse(44, 44, 18, 18), with: .color(red))
+
+            // Crest — pointed upward
+            let crestTilt: CGFloat = pose.tailLift > 0 ? pose.tailLift * 0.2 : 0
+            context.fill(bezierPath([(40, 34), (44, 10 - crestTilt), (48, 32)]),
                          with: .color(red))
 
-            // Face mask — subtle, natural
+            // Face mask — black patch
             if tint == nil {
-                context.fill(bezierPath([(24, 40), (35, 35), (42, 40), (40, 50), (28, 51)]),
-                             with: .color(black.opacity(0.60)))
+                context.fill(bezierPath([(42, 42), (52, 44), (48, 58), (38, 56)]),
+                             with: .color(black))
             }
 
-            // Beak — small, pointed, natural angle
-            context.fill(bezierPath([(18, 40), (28, 37), (28, 43)]),
+            // Beak — golden
+            context.fill(bezierPath([(38, 46), (32, 50), (38, 54)]),
                          with: .color(beak))
 
-            // Eye
+            // Eye — with highlight
             if tint == nil {
-                context.fill(ellipse(39, 36, 2.6, 2.6), with: .color(black))
+                context.fill(ellipse(42, 40, 3.2, 3.2), with: .color(.white))
                 if pose.isBlinking {
-                    context.fill(ellipse(39, 36, 2.6, 0.4), with: .color(black.opacity(0.9)))
+                    context.fill(ellipse(42, 40, 3.2, 0.5), with: .color(black))
                 } else {
-                    context.fill(ellipse(39.8, 35.0, 1.1, 1.1), with: .color(.white.opacity(0.95)))
+                    context.fill(ellipse(42, 40, 1.8, 1.8), with: .color(black))
+                    context.fill(ellipse(42.5, 39.2, 0.8, 0.8), with: .color(.white.opacity(0.9)))
                 }
             } else {
-                context.fill(ellipse(39, 36, 2.8, pose.isBlinking ? 0.4 : 2.8), with: .color(red))
+                context.fill(ellipse(42, 40, 3.4, pose.isBlinking ? 0.5 : 3.4), with: .color(red))
+            }
+
+            // Tail — long, swept back
+            var tail = bezierPath([(60, 66), (78, 70), (75, 84), (62, 78)])
+            if pose.tailLift != 0 {
+                tail = tail.applying(rotation(about: 64, 75, degrees: -pose.tailLift * 0.4))
+            }
+            context.fill(tail, with: .color(darkRed))
+
+            // Feet — simple lines
+            if tint == nil {
+                context.stroke(
+                    Path { path in
+                        path.move(to: point(48, 85))
+                        path.addLine(to: point(44, 100))
+                    },
+                    with: .color(black),
+                    lineWidth: 1.2 * s
+                )
+                context.stroke(
+                    Path { path in
+                        path.move(to: point(56, 85))
+                        path.addLine(to: point(60, 100))
+                    },
+                    with: .color(black),
+                    lineWidth: 1.2 * s
+                )
             }
         }
         .aspectRatio(1, contentMode: .fit)
