@@ -219,3 +219,12 @@ partnerships of that kind?
 the way you see yourself?
 
 **Answer:** Feel validated. But too many times I forget it's about the journey.
+
+---
+
+## 21. Journal — the unprecedented, fully-supported risk
+**Prompt:** If you could successfully do anything you wanted from start to finish,
+if you could take an unprecedented risk and know that you'd be entirely
+supported, what would you do?
+
+**Answer:** Best-sell my book.
