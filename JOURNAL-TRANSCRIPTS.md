@@ -267,7 +267,8 @@ set to Brizzi — confirm.)
 [Megalis?] is a place where I feel safe, and another place where I feel unsafe.
 The places I feel safe are with people I feel I could be myself with. Where I feel
 unsafe is where I feel judged. Sometimes I feel unsafe on the road, when there are
-a lot of people driving and a lot of traffic. And...
+a lot of people driving and a lot of traffic. I feel safe when I'm at the gym —
+although sometimes my body won't react the same way it did when I was younger, so
+I have to be careful.
 
-(Dictated; first word "Megalis" uncertain; the thought appears cut off — may
-continue.)
+(Dictated; first word "Megalis" uncertain.)
