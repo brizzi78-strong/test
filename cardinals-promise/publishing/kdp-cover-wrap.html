@@ -2,52 +2,48 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>KDP Cover Wrap — The Caregiver's Cardinal Toolkit (navy design)</title>
+<title>KDP Cover Wrap — It's Not Your Fault (cream design)</title>
 <style>
   /* 228-page 8.5x11 paperback, PREMIUM COLOR paper: spine = 228 x 0.002347 = 0.5351in.
      Wrap = bleed 0.125 + back 8.5 + spine 0.5351 + front 8.5 + bleed 0.125 = 17.7851in.
-     (Page count grew to 228 when the Contents was expanded to the
-     full sub-section — "Dummies-style" — listing, July 2026. If the ink choice
-     or page count changes again, recompute.)
-     NAVY design language — chosen by the reader panel (design tiebreak 3-2 on the
-     100px thumbnail test; sunset design disqualified for condolence-card register).
-     Layout TEMPLATE with the required fixes applied: real ISBN zone, CDP credential,
-     approved utility labels, Ferrera endorsement leading the back, red/purple/blue
-     color-tab strip. NO kicker (author's call, July 2026). The designer drops the
-     photorealistic cardinal-on-blossom-branch art and the author photo into the
-     marked slots at print resolution (full wrap at 300 DPI = 5336 x 3375 px). */
+     (Recompute if ink choice or page count changes: spine = pages x 0.002347.)
+     CREAM design language — the author's finished "It's Not Your Fault" cover (July 2026).
+     This title is the deliberate cream outlier; the rest of the Cardinal's Promise series
+     stays navy. Layout TEMPLATE: the designer drops the photorealistic cardinal-on-gold-
+     blossom-branch art and the author photo into the marked slots at print resolution
+     (full wrap at 300 DPI = 5336 x 3375 px). */
   @page { size: 17.7851in 11.25in; margin: 0; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
-    --navy: #1b2440; --navy-deep: #141b31; --gold: #c9a45c; --red: #c41e2f;
-    --cream: #f5f1e8; --rule: #3a4568;
+    --cream: #f7f4ee; --cream-deep: #efe9dd; --navy: #1e2a44; --navy-soft: #2b3a5c;
+    --gold: #b08d2e; --gold-soft: #c9a45c; --red: #b02a1f; --rule: #d8cdb6;
   }
   body { width: 17.7851in; height: 11.25in; position: relative;
-    background: var(--navy); font-family: Georgia, "Times New Roman", serif;
-    color: var(--cream); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    background: var(--cream); font-family: Georgia, "Times New Roman", serif;
+    color: var(--navy); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 
-  .panel-frame { position: absolute; top: 0.375in; bottom: 0.375in;
-    border: 1px solid var(--gold); opacity: 0.85; }
+  /* gold double-rule frame */
+  .frame { position: absolute; top: 0.34in; bottom: 0.34in; border: 1.5px solid var(--gold); }
+  .frame::after { content: ""; position: absolute; inset: 5px; border: 0.75px solid var(--gold); }
 
   /* ---- BACK (left) ---- */
   .back { position: absolute; left: 0; top: 0; width: 8.625in; height: 11.25in;
-    padding: 0.62in 0.75in 0.7in 0.85in; }
-  .back .panel-frame { left: 0.375in; right: 0.22in; }
+    padding: 0.66in 0.75in 0.7in 0.85in; }
+  .back .frame { left: 0.375in; right: 0.22in; }
   .endq { font-size: 11.5pt; font-style: italic; line-height: 1.5;
-    text-align: center; margin: 0 0.25in 0.08in; color: var(--cream); }
+    text-align: center; margin: 0 0.25in 0.08in; color: var(--navy); }
   .endattr { text-align: center; font-family: Helvetica, Arial, sans-serif;
     font-size: 8.5pt; letter-spacing: 0.14em; color: var(--gold);
-    text-transform: uppercase; margin-bottom: 0.2in; }
-  .back h2 { font-size: 19pt; line-height: 1.25; margin-bottom: 0.2in;
-    color: var(--gold); }
+    text-transform: uppercase; margin-bottom: 0.22in; }
+  .back h2 { font-size: 19pt; line-height: 1.25; margin-bottom: 0.2in; color: var(--navy); }
   .back p { font-size: 11pt; line-height: 1.5; margin-bottom: 0.14in; }
   .back ul { list-style: none; margin: 0.04in 0 0.18in; }
   .back li { font-size: 11pt; line-height: 1.45; padding: 0.04in 0 0.04in 0.28in;
     position: relative; }
-  .back li::before { content: "✓"; position: absolute; left: 0; color: var(--gold);
+  .back li::before { content: "✦"; position: absolute; left: 0; color: var(--gold);
     font-weight: bold; }
   .biorow { display: flex; gap: 0.22in; border-top: 1px solid var(--rule);
-    padding-top: 0.14in; }
+    padding-top: 0.16in; }
   .photoslot { flex: 0 0 1.15in; height: 1.35in; border: 1px dashed var(--gold);
     display: flex; align-items: center; justify-content: center; text-align: center;
     font-family: Helvetica, Arial, sans-serif; font-size: 7.5pt; color: var(--gold); }
@@ -59,72 +55,58 @@
     letter-spacing: 0.16em; color: var(--gold); text-transform: uppercase; }
   .pressmark { position: absolute; bottom: 0.95in; left: 0.85in;
     font-family: Helvetica, Arial, sans-serif; font-size: 9pt; letter-spacing: 0.2em;
-    color: var(--cream); text-transform: uppercase; }
+    color: var(--navy); text-transform: uppercase; }
   .barcode { position: absolute; right: 0.25in; bottom: 0.375in; width: 2in;
-    height: 1.2in; background: #ffffff; display: flex; align-items: center;
-    justify-content: center; text-align: center; font-family: Helvetica, Arial, sans-serif;
-    font-size: 7.5pt; color: #333; padding: 0.08in; }
+    height: 1.2in; background: #ffffff; border: 1px solid var(--rule); display: flex;
+    align-items: center; justify-content: center; text-align: center;
+    font-family: Helvetica, Arial, sans-serif; font-size: 7.5pt; color: #333; padding: 0.08in; }
 
   /* ---- SPINE ---- */
   .spine { position: absolute; left: 8.625in; top: 0; width: 0.5351in; height: 11.25in;
-    background: var(--navy-deep); }
+    background: var(--cream-deep); }
   .spinetxt { position: absolute; top: 0.6in; left: 0; width: 0.5351in; height: 10in;
     writing-mode: vertical-rl; display: flex; align-items: center;
-    justify-content: flex-start; gap: 0.35in;
-    font-family: Georgia, serif; color: var(--cream); }
-  .spinetxt .t { font-size: 10.5pt; letter-spacing: 0.06em; font-weight: bold; }
-  .spinetxt .t .g { color: var(--gold); }
+    justify-content: flex-start; gap: 0.35in; font-family: Georgia, serif; color: var(--navy); }
+  .spinetxt .t { font-size: 11pt; letter-spacing: 0.05em; font-weight: bold; }
   .spinetxt .a { font-size: 9.5pt; letter-spacing: 0.1em; color: var(--gold); }
 
   /* ---- FRONT (right) ---- */
   .front { position: absolute; left: 9.1601in; top: 0; width: 8.625in; height: 11.25in;
-    padding: 0.7in 0.75in 0.55in 0.62in; text-align: center; }
-  .front .panel-frame { left: 0.22in; right: 0.375in; }
-  .artslot { width: 5.8in; height: 2.9in; margin: 0 auto 0.28in;
+    padding: 0.62in 0.72in 0.6in 0.62in; text-align: center; }
+  .front .frame { left: 0.22in; right: 0.375in; }
+  .kicker { font-family: Helvetica, Arial, sans-serif; font-size: 11pt; letter-spacing: 0.26em;
+    text-transform: uppercase; color: var(--gold); margin: 0.32in 0 0.2in; }
+  .kicker::before { content: "— "; } .kicker::after { content: " —"; }
+  .artslot { width: 5.2in; height: 3.15in; margin: 0 auto 0.2in;
     border: 1px dashed var(--gold); display: flex; align-items: center;
-    justify-content: center; font-family: Helvetica, Arial, sans-serif;
-    font-size: 9pt; color: var(--gold); }
-  .front h1 { font-family: Georgia, serif; color: var(--cream); margin-bottom: 0.14in; }
-  .front h1 .small { display: block; font-size: 27pt; letter-spacing: 0.06em;
-    line-height: 1.15; }
-  .front h1 .big { display: block; font-size: 54pt; letter-spacing: 0.03em;
-    line-height: 1.04; }
-  .front h1 .gold { color: var(--gold); }
-  .orn { color: var(--gold); font-size: 12pt; margin: 0.04in 0 0.14in; }
-  .subtitle { font-size: 14.5pt; letter-spacing: 0.12em; color: var(--gold);
-    text-transform: uppercase; margin-bottom: 0.28in; }
-  .utilrow { display: flex; justify-content: center; gap: 0.35in;
-    font-family: Helvetica, Arial, sans-serif; font-size: 8.5pt;
-    letter-spacing: 0.08em; text-transform: uppercase; color: var(--cream);
-    margin-bottom: 0.28in; }
-  .utilrow span { border-top: 1px solid var(--gold); padding-top: 0.07in; }
-  .author { font-family: Georgia, serif; font-size: 20pt; letter-spacing: 0.24em;
-    color: var(--cream); }
-  .cred { font-family: Helvetica, Arial, sans-serif; font-size: 9pt;
-    letter-spacing: 0.14em; color: var(--gold); text-transform: uppercase;
-    margin-top: 0.08in; }
-  .series { font-family: Helvetica, Arial, sans-serif; font-size: 8pt;
-    letter-spacing: 0.2em; color: var(--gold); text-transform: uppercase;
-    margin-top: 0.14in; }
-  .colortabs { position: absolute; bottom: 0.125in; left: 1.4in; right: 1.5in;
-    height: 0.14in; display: flex; }
-  .colortabs div { flex: 1; }
+    justify-content: center; text-align: center; font-family: Helvetica, Arial, sans-serif;
+    font-size: 9pt; color: var(--gold); padding: 0.2in; }
+  .front h1 { font-family: Georgia, serif; color: var(--navy); font-weight: bold;
+    font-size: 62pt; line-height: 0.98; letter-spacing: 0.01em; margin-bottom: 0.16in; }
+  .orn { color: var(--gold); font-size: 12pt; letter-spacing: 0.4em; margin: 0.1in 0; }
+  .orn::before { content: "— ◆ —"; }
+  .subtitle { font-family: Helvetica, Arial, sans-serif; font-size: 14pt; letter-spacing: 0.1em;
+    line-height: 1.5; color: var(--gold); text-transform: uppercase; margin: 0.04in auto 0.02in;
+    max-width: 6.2in; }
+  .author { font-family: Georgia, serif; font-size: 21pt; letter-spacing: 0.24em;
+    color: var(--navy); text-transform: uppercase; margin-top: 0.34in; }
+  .series { font-family: Helvetica, Arial, sans-serif; font-size: 8pt; letter-spacing: 0.2em;
+    color: var(--gold); text-transform: uppercase; margin-top: 0.12in; }
 </style>
 </head>
 <body>
 
 <!-- ================= BACK ================= -->
 <section class="back">
-  <div class="panel-frame"></div>
+  <div class="frame"></div>
   <p class="endq">“Plenty of guides cover the logistics. This one also tends to
   the spirit — the grief, the grace, and the promise at the center of caring
   for a parent.”</p>
   <p class="endattr">— Dean Ferrera, MD, Cardiologist</p>
   <h2>Caring for an aging parent is overwhelming — nobody hands you a map.</h2>
-  <p>Color-coded by urgency — Act Today, Watch Closely, Plan Ahead — The
-  Caregiver's Cardinal Toolkit helps your family get organized, make informed
-  decisions, and face the healthcare system with confidence, even on your
-  worst day.</p>
+  <p>Color-coded by urgency — Act Today, Watch Closely, Plan Ahead — <em>It's
+  Not Your Fault</em> helps your family get organized, make informed decisions,
+  and face the healthcare system with confidence, even on your worst day.</p>
   <p><strong>Inside you'll find practical tools to help you:</strong></p>
   <ul>
     <li>Organize medical, legal, and financial information</li>
@@ -142,7 +124,7 @@
     with his wife, Hope Brizzi, PharmD.</p>
   </div>
   <p class="tagline">You are not alone. You are the difference.</p>
-  <div class="pressmark">Cardinal Press</div>
+  <div class="pressmark">Cardinal Promise Press</div>
   <div class="footerband">Compassion · Organization · Confidence · Peace of Mind<br>
     thecardinalspromise.com</div>
   <div class="barcode">KDP barcode zone<br>ISBN 978-1-963342-03-1<br>(never print -02-7 — invalid)</div>
@@ -151,35 +133,23 @@
 <!-- ================= SPINE ================= -->
 <section class="spine">
   <div class="spinetxt">
-    <span class="t">THE CAREGIVER'S <span class="g">CARDINAL</span> TOOLKIT</span>
+    <span class="t">IT'S NOT YOUR FAULT</span>
     <span class="a">ROB BRIZZI</span>
   </div>
 </section>
 
-<!-- ================= FRONT (navy template — art slots marked, no kicker) ================= -->
+<!-- ================= FRONT (cream — art slot marked) ================= -->
 <section class="front">
-  <div class="panel-frame"></div>
+  <div class="frame"></div>
+  <div class="kicker">A Cardinal's Promise Guide</div>
   <div class="artslot">ART: photorealistic red cardinal, alert and forward-facing,
-  on blossom branch (designer print-res file)</div>
-  <h1>
-    <span class="small">THE CAREGIVER'S</span>
-    <span class="big gold">CARDINAL</span>
-    <span class="big">TOOLKIT</span>
-  </h1>
-  <div class="orn">— ❖ —</div>
-  <div class="subtitle">A Hero's Guide to Caring<br>for an Aging Parent</div>
-  <div class="utilrow">
-    <span>Worksheets</span><span>Checklists</span>
-    <span>Medicare &amp; Insurance Traps</span><span>Care at Home</span>
-  </div>
-  <div class="author">ROB BRIZZI</div>
-  <div class="cred">CDP · Certified Dementia Practitioner</div>
+  on a gold blossom branch (designer print-res file)</div>
+  <h1>IT'S NOT<br>YOUR FAULT</h1>
+  <div class="orn"></div>
+  <div class="subtitle">A Practical Guide for Families<br>Caring for an Aging Parent</div>
+  <div class="orn"></div>
+  <div class="author">Rob Brizzi</div>
   <div class="series">A Cardinal's Promise Companion</div>
-  <div class="colortabs">
-    <div style="background:#a51c30"></div>
-    <div style="background:#6b21a8"></div>
-    <div style="background:#1d4e89"></div>
-  </div>
 </section>
 
 </body>

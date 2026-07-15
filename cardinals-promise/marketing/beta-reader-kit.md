@@ -1,4 +1,4 @@
-# Beta Reader Kit — The Caregiver's Cardinal Toolkit
+# Beta Reader Kit — It's Not Your Fault
 
 > Purpose: get 5–10 real readers through the book before KDP upload, and
 > settle the open question Rob assigned to readers: do the five part-divider
@@ -32,7 +32,7 @@ Subject: Would you read my book before it goes to print? (2–3 hours, honest op
 
 Hi [Name],
 
-I've finished my book — The Caregiver's Cardinal Toolkit, a color-coded
+I've finished my book — It's Not Your Fault, a color-coded
 workbook for families caring for an aging parent — and before it goes to
 the printer I need a few people I trust to read it the way a real family
 would.

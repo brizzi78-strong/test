@@ -1,4 +1,4 @@
-# KDP Publishing Checklist — The Caregiver's Cardinal Toolkit
+# KDP Publishing Checklist — It's Not Your Fault
 
 The two files KDP asks for are in this folder:
 
@@ -22,16 +22,16 @@ The two files KDP asks for are in this folder:
 - [ ] **Bio verified** — Certified Dementia Practitioner credential current
 - [ ] **Final human proofread** of `kdp-interior.pdf` (read it as a printed proof, not on screen)
 - [ ] **Back-cover copy approved** — edit `back-cover-copy.md` and ask for a wrap regen if you change anything
-- [ ] **Cover wrap pending final art** — the WHITE/minimal design is now the approved direction (see the designer brief in `back-cover-copy.md`: full title, CDP credential, gold utility row, corrected subtitle). The wrap template in this folder is rebuilt in that style; it needs the designer's print-resolution cardinal art. Give the designer these exact dimensions in the same request: **full wrap 17.7851 × 11.25 in (0.125" bleed all around), spine 0.5351" centered (228pp, premium-color paper)** — and generate the template from KDP's cover calculator to be safe.
-- [ ] **Publisher imprint confirmed** — copyright page now says Cardinal Press (was Blue Ridge LLC); confirm which entity actually publishes
+- [ ] **Cover wrap pending print-resolution art** — the finished **cream** *It's Not Your Fault* design is adopted (see the design brief in `back-cover-copy.md`). The wrap template in this folder is rebuilt in that cream style. The delivered cover image (`cover-its-not-your-fault.jpeg`) is a ~155 DPI mockup, **not print-ready** — the designer must supply the front art at print resolution. Give the designer these exact dimensions: **full wrap 17.7851 × 11.25 in (0.125" bleed all around), spine 0.5351" centered (228pp, premium-color paper)** — and generate the template from KDP's cover calculator to be safe.
+- [ ] **Publisher imprint confirmed** — copyright page now says Cardinal Promise Press (was Blue Ridge LLC); confirm which entity actually publishes
 
 ## At kdp.amazon.com (Bookshelf → Create → Paperback)
 
-1. **Title:** The Caregiver's Cardinal Toolkit · **Subtitle:** A Hero's Guide to Caring for an Aging Parent
+1. **Title:** It's Not Your Fault · **Subtitle:** A Practical Guide for Families Caring for an Aging Parent
 2. **Series:** Cardinal's Promise (optional but set it — the memoir joins it later)
 3. **Author:** Rob Brizzi (no contributor line needed — Hope retains "Project Consultant" credit on title page and back cover but did not complete pharmaceutical review)
 4. **Description:** paste the ready HTML from `marketing/amazon-listing.md` (first 200 characters are the visible hook; no URLs allowed)
-5. **ISBN:** use your own — **978-1-963342-03-1** (paperback, Bowker block slot 03; already on the copyright page). At KDP choose "Use my own ISBN" and enter it with imprint **Cardinal Press** — the imprint must match your Bowker registration, so confirm the block is registered to you/Cardinal Press at myidentifiers.com. **978-1-963342-04-8** is reserved for the audiobook edition. The `-02-7` printed on the earlier cover design was a miscomputed check digit — never print it; the cover must show 978-1-963342-03-1
+5. **ISBN:** use your own — **978-1-963342-03-1** (paperback, Bowker block slot 03; already on the copyright page). At KDP choose "Use my own ISBN" and enter it with imprint **Cardinal Promise Press** — the imprint must match your Bowker registration, so confirm the block is registered to you/Cardinal Promise Press at myidentifiers.com. **978-1-963342-04-8** is reserved for the audiobook edition. The `-02-7` printed on the earlier cover design was a miscomputed check digit — never print it; the cover must show 978-1-963342-03-1
 6. **AI content question** (on the **Content** tab): KDP distinguishes **AI-generated** content (created by AI, even if you edited it — must disclose, with extent follow-ups) from **AI-assisted** (AI helped refine your own work — no disclosure required). Answer accurately per your records; the disclosure goes to Amazon only and is not shown publicly
 7. **Categories** (verified storefront nodes — see `marketing/amazon-listing.md`): Parenting & Relationships → Aging Parents; Health, Fitness & Dieting → Aging; Medical Books → Medicine → Hospice Care
 8. **Keywords (7 slots — final list in `marketing/amazon-listing.md`):** elder care planning workbook for families · sandwich generation help for adult children · hospital discharge planning for seniors · medicare medicaid long term care costs · end of life decisions and comfort care · dementia memory loss what to do next · power of attorney advance directive checklist
@@ -42,6 +42,6 @@ The two files KDP asks for are in this folder:
 ## After the paperback is live
 
 - [ ] Copyright registration at copyright.gov (the application asks its own AI-generated-content question — same honest answer as KDP's)
-- [ ] Ebook edition (EPUB) — say the word and I'll build it from the same HTML
+- [ ] Ebook edition (EPUB) — **needs a full rebuild:** the existing `cardinals-toolkit.epub` still carries the OLD title (*The Caregiver's Cardinal Toolkit*), the old cover, and none of the July 2026 content (expanded Contents, new sections, Cardinal Moments). Rebuild from the current HTML when ready — say the word.
 - [ ] IngramSpark for bookstore/library distribution (needs your own ISBN)
 - [ ] Update thecardinalspromise.com with the buy link

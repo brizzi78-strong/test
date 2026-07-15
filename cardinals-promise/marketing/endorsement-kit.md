@@ -1,4 +1,4 @@
-# Physician Endorsement Kit — The Caregiver's Cardinal Toolkit
+# Physician Endorsement Kit — It's Not Your Fault
 
 > Goal: 1 foreword (the prize) + 3–5 blurbs from working professionals.
 > Priority order: a UNC/Duke geriatrician or palliative physician, an
@@ -36,7 +36,7 @@ Dear Dr. [Name],
 I'm a Certified Dementia Practitioner who has spent my career in home
 health, hospice, and senior living here in North Carolina. After my father
 died, I wrote the book I kept wishing I could hand the families I sat with:
-*The Caregiver's Cardinal Toolkit* — a practical, color-coded workbook that
+*It's Not Your Fault* — a practical, color-coded workbook that
 gives families the exact questions, scripts, and worksheets for hospital
 discharges, care decisions, Medicare traps, and the last days of life.
 
@@ -65,8 +65,8 @@ like.")*
 
 ## The one-pager (attach as PDF or paste below the letter)
 
-**THE CAREGIVER'S CARDINAL TOOLKIT — A Hero's Guide to Caring for an Aging
-Parent** · Rob Brizzi, CDP · Cardinal Press · 210-page 8.5×11 color
+**IT'S NOT YOUR FAULT — A Practical Guide for Families
+Caring for an Aging Parent** · Rob Brizzi, CDP · Cardinal Promise Press · 210-page 8.5×11 color
 workbook · ISBN 978-1-963342-03-1 · Publication: [date]
 
 *One line:* The map nobody hands a family on their worst day — 29 chapters
@@ -227,7 +227,7 @@ Dear Dr. Ferrera,
 
 After my father died, I wrote the book I kept wishing I could hand the
 families I sat with through my years in home health, hospice, and senior
-living: *The Caregiver's Cardinal Toolkit* — a practical, color-coded
+living: *It's Not Your Fault* — a practical, color-coded
 workbook with the exact questions, scripts, and worksheets for hospital
 discharges, care decisions, Medicare traps, and the last days of life.
 
@@ -275,7 +275,7 @@ Dear Dr. Huet,
 
 After my father died, I wrote the book I kept wishing I could hand the
 families I sat with through my years in home health, hospice, and senior
-living: *The Caregiver's Cardinal Toolkit* — a practical, color-coded
+living: *It's Not Your Fault* — a practical, color-coded
 workbook with the exact questions, scripts, and worksheets for hospital
 discharges, care decisions, Medicare traps, and the last days of life.
 
@@ -302,7 +302,7 @@ Certified Dementia Practitioner · thecardinalspromise.com
 
 ## Target list (researched)
 
-### Endorsement Target Research — "The Caregiver's Cardinal Toolkit"
+### Endorsement Target Research — "It's Not Your Fault"
 
 ## A note on the "Carolina Alzheimer's Network"
 
