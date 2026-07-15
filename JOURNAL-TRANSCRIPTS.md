@@ -259,3 +259,15 @@ Brizzi is.
 
 (Dictated; filler words removed. Transcription rendered the name as "Rob Riddy";
 set to Brizzi — confirm.)
+
+---
+
+## 24. Voice note — safe / unsafe places (cleaned from dictation)
+
+[Megalis?] is a place where I feel safe, and another place where I feel unsafe.
+The places I feel safe are with people I feel I could be myself with. Where I feel
+unsafe is where I feel judged. Sometimes I feel unsafe on the road, when there are
+a lot of people driving and a lot of traffic. And...
+
+(Dictated; first word "Megalis" uncertain; the thought appears cut off — may
+continue.)
