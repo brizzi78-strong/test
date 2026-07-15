@@ -44,3 +44,17 @@ time you have?
 
 **Answer:** To serve others. Nobody at the bedside talks about anything but the
 ties with the ones they loved.
+
+---
+
+## 4. "What's Your Story?" journal — relationship with your mind
+**Prompt:** How would you describe your relationship with your mind?
+
+**Answer:** I struggle to be enough. Sometimes I don't know I'm good enough. [?]
+
+---
+
+## 5. "What's Your Story?" journal — state of mind over a day
+**Prompt:** How do you relate to your state of mind over the course of a day?
+
+**Answer:** I tend to be a rollercoaster. [?]
