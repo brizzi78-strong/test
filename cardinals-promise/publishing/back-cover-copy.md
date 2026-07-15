@@ -102,8 +102,8 @@ title in cream with CARDINAL in gold; gold utility row; author name large.
 - Squint test before final: shrink to 10%; if anything but bird + title +
   cream survives, simplify
 
-Wrap geometry (premium color, 222pp): full wrap 17.7710 × 11.25 in,
-0.125" bleed, spine 0.5210" centered. Spine: navy text on the cream field.
+Wrap geometry (premium color, 228pp): full wrap 17.7851 × 11.25 in,
+0.125" bleed, spine 0.5351" centered. Spine: navy text on the cream field.
 (Recompute if the page count changes: spine = pages × 0.002347.)
 
 ## ⚠️ ISBN warning
