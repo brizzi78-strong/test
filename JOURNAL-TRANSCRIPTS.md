@@ -98,3 +98,11 @@ the creation of this self? How can you play a more active role in your own
 becoming?
 
 **Answer:** More financial stability. More purpose with Lou's legacy.
+
+---
+
+## 10. "Waking Up" journal — concrete steps
+**Prompt:** What concrete steps can you take toward creating a future self that
+you love?
+
+**Answer:** Complete book. Make a difference through my story.
