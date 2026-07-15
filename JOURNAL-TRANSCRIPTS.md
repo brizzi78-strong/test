@@ -228,3 +228,22 @@ if you could take an unprecedented risk and know that you'd be entirely
 supported, what would you do?
 
 **Answer:** Best-sell my book.
+
+---
+
+## 22. Notes app — "Technology reflection thoughts" (typed)
+
+**Relationship with Technology**
+- Views technology as necessary, not optional: get on board or miss the boat
+- Occasionally feels pulled into rabbit holes, but sees daily improvement
+- Core belief: challenging but worthwhile
+
+**Building Without Coding**
+- Created a personal website independently
+- Built an email list
+- Achieved multiple technical outcomes without learning to code
+
+**A Moment That Captures the Contrast**
+- 1996: ran out of gas with no cell phone, no cars passing
+- Sat and waited, hoping someone would show up
+- Stands out as a vivid reminder of life before ubiquitous technology
