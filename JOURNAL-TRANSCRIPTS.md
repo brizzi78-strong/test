@@ -146,3 +146,13 @@ your body feel alive and excited. Make a list of all that do not.
 blank)
 
 **Answer:** Optimize workflow.
+
+---
+
+## 14. "With People" journal — belonging
+**Prompt:** Fill-ins: I feel loved / valued / known / safe when ___ does ___.
+
+- **I feel loved when** Hope does something thoughtful for me.
+- **I feel valued when** my boss acknowledges me [always? — ?].
+- **I feel known when** God — feels present.
+- **I feel safe when** Hope makes our house a home.
