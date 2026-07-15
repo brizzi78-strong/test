@@ -62,38 +62,54 @@ struct CardinalMark: View {
 
             context.translateBy(x: 0, y: pose.bob * s)
 
-            // Tail (flicks about its joint with the body)
-            var tail = polygon([(58, 60), (84, 82), (75, 89), (53, 70)])
+            // Tail feathers — long, swept back, elegant
+            var tail = polygon([(55, 68), (88, 70), (85, 82), (52, 80)])
             if pose.tailLift != 0 {
-                tail = tail.applying(rotation(about: 56, 62, degrees: -pose.tailLift))
+                tail = tail.applying(rotation(about: 54, 74, degrees: -pose.tailLift * 0.8))
             }
             context.fill(tail, with: .color(dark))
-            // Body
-            context.fill(ellipse(48, 57, 23, 21), with: .color(red))
-            // Wing (rotated 32° about its center) — skipped for silhouettes
+
+            // Body — rounded, substantial, smooth
+            context.fill(ellipse(50, 65, 28, 26), with: .color(red))
+
+            // Belly — lighter tone for dimension (red is already used)
             if tint == nil {
-                context.fill(ellipse(56, 58, 15, 9).applying(rotation(about: 56, 58, degrees: 32)),
+                context.fill(ellipse(48, 70, 22, 18), with: .color(Theme.cardinal.opacity(0.7)))
+            }
+
+            // Wing — curved, darker, well-defined
+            if tint == nil {
+                context.fill(ellipse(58, 64, 20, 12).applying(rotation(about: 58, 64, degrees: 25)),
                              with: .color(dark))
             }
-            // Head and crest
-            context.fill(ellipse(36, 32, 14, 14), with: .color(red))
-            context.fill(polygon([(30, 22), (34, 4), (41, 20)]), with: .color(red))
-            context.fill(polygon([(38, 20), (46, 7), (48, 22)]), with: .color(red))
-            // Face mask, beak, eye
+
+            // Head — proportional, sits naturally on body
+            context.fill(ellipse(40, 42, 17, 17), with: .color(red))
+
+            // Crest feathers — iconic cardinal shape, pointed upward
+            let crestHeight: CGFloat = 8 - (pose.tailLift > 0 ? pose.tailLift * 0.2 : 0)
+            context.fill(polygon([(32, 32), (36, 2 - crestHeight), (41, 30)]), with: .color(red))
+            context.fill(polygon([(41, 30), (46, 1 - crestHeight), (51, 33)]), with: .color(red))
+
+            // Face & eye region
             if tint == nil {
-                context.fill(polygon([(21, 34), (30, 26), (38, 31), (36, 42), (27, 44)]), with: .color(mask))
+                // Mask (darker face area)
+                context.fill(polygon([(26, 40), (36, 35), (42, 39), (40, 50), (30, 52)]), with: .color(mask))
             }
-            context.fill(polygon([(13, 33.5), (25, 28.5), (25, 38.5)]), with: .color(beak))
+
+            // Beak — stronger, more natural angle
+            context.fill(polygon([(18, 40), (30, 37), (30, 43)]), with: .color(beak))
+
+            // Eye
             if tint == nil {
-                context.fill(ellipse(35, 27, 2.4, 2.4), with: .color(mask))
+                context.fill(ellipse(39, 36, 2.8, 2.8), with: .color(mask))
                 if pose.isBlinking {
-                    // Closed lid: a thin dark line where the eye was
-                    context.fill(ellipse(35, 27, 2.4, 0.5), with: .color(.black.opacity(0.7)))
+                    context.fill(ellipse(39, 36, 2.8, 0.5), with: .color(.black.opacity(0.8)))
                 } else {
-                    context.fill(ellipse(35.9, 26.2, 0.8, 0.8), with: .color(.white.opacity(0.85)))
+                    context.fill(ellipse(39.9, 35.1, 1.0, 1.0), with: .color(.white.opacity(1.0)))
                 }
             } else {
-                context.fill(ellipse(35, 27, 2.6, pose.isBlinking ? 0.6 : 2.6), with: .color(Theme.cardinal))
+                context.fill(ellipse(39, 36, 3.0, pose.isBlinking ? 0.5 : 3.0), with: .color(Theme.cardinal))
             }
         }
         .aspectRatio(1, contentMode: .fit)
