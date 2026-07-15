@@ -202,3 +202,12 @@ managers, supervisors / clients, collaborators, communities.)
 - Chris
 
 (Several name spellings uncertain — confirm #2–4 against original.)
+
+---
+
+## 19. "What's Your Story?" journal — working partnerships
+**Prompt:** Who do you enjoy working with, and why? How can you cultivate more
+partnerships of that kind?
+
+**Answer:** Scott Carbonara — because I feel we're like-minded. (Written
+"Carbonaro"; editor's name is Scott Carbonara.)
