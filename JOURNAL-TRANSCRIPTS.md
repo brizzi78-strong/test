@@ -118,3 +118,31 @@ you love?
 **Current Relationship with Self**
 - More forgiving toward self now
 - Moved into a place of acceptance and growth
+
+---
+
+## 12. "In Your Body" journal — alive / not
+**Prompt:** Make a list of all the positions, places, and situations that make
+your body feel alive and excited. Make a list of all that do not.
+
+**YAY! (feel alive and excited)**
+1. Yankee Stadium
+2. Traveling
+3. Chicken parm
+4. Making love to Hope
+5. My brother Chris
+6. My mom
+7. My aunts
+
+**NAY. (do not)**
+1. Dying [?]
+2. Bills
+3. Debts
+
+---
+
+## 13. "Facing the Screen" journal — technology + me
+**Prompt:** I want to use technology for: (and: I am going to do that by: — left
+blank)
+
+**Answer:** Optimize workflow.
