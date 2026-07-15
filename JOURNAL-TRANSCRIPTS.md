@@ -184,3 +184,21 @@ or why not?
 
 **Answer:** For the first time, I am writing a book and finishing it. It almost
 broke me, but I didn't give up.
+
+---
+
+## 18. "What's Your Story?" journal — major players
+**Prompt:** Make a list of the major players involved in your work. (Coworkers,
+managers, supervisors / clients, collaborators, communities.)
+
+**Answer:**
+- Hope
+- Joe Mager [?]
+- Donna [?]
+- Sommer [?]
+- Jeff Middleton
+- Rhonda
+- Mom
+- Chris
+
+(Several name spellings uncertain — confirm #2–4 against original.)
