@@ -37,18 +37,22 @@ struct CardinalMark: View {
             func point(_ x: CGFloat, _ y: CGFloat) -> CGPoint {
                 CGPoint(x: x * s, y: y * s)
             }
-            func polygon(_ points: [(CGFloat, CGFloat)]) -> Path {
-                var path = Path()
-                path.move(to: point(points[0].0, points[0].1))
-                for p in points.dropFirst() {
-                    path.addLine(to: point(p.0, p.1))
-                }
-                path.closeSubpath()
-                return path
-            }
+
             func ellipse(_ cx: CGFloat, _ cy: CGFloat, _ rx: CGFloat, _ ry: CGFloat) -> Path {
                 Path(ellipseIn: CGRect(x: (cx - rx) * s, y: (cy - ry) * s, width: rx * 2 * s, height: ry * 2 * s))
             }
+
+            func bezierPath(_ points: [(CGFloat, CGFloat)], closed: Bool = true) -> Path {
+                guard points.count >= 2 else { return Path() }
+                var path = Path()
+                path.move(to: point(points[0].0, points[0].1))
+                for i in 1..<points.count {
+                    path.addLine(to: point(points[i].0, points[i].1))
+                }
+                if closed { path.closeSubpath() }
+                return path
+            }
+
             func rotation(about cx: CGFloat, _ cy: CGFloat, degrees: CGFloat) -> CGAffineTransform {
                 CGAffineTransform(translationX: cx * s, y: cy * s)
                     .rotated(by: degrees * .pi / 180)
@@ -56,60 +60,58 @@ struct CardinalMark: View {
             }
 
             let red = tint ?? Theme.cardinal
-            let dark = tint ?? Theme.cardinalDark
-            let mask = tint ?? Color(red: 0.15, green: 0.09, blue: 0.10)
-            let beak = tint ?? Color(red: 0.93, green: 0.54, blue: 0.20)
+            let darkRed = tint ?? Theme.cardinalDark
+            let black = tint ?? Color(red: 0.2, green: 0.12, blue: 0.13)
+            let beak = tint ?? Color(red: 0.94, green: 0.55, blue: 0.18)
 
             context.translateBy(x: 0, y: pose.bob * s)
 
-            // Tail feathers — long, swept back, elegant
-            var tail = polygon([(55, 68), (88, 70), (85, 82), (52, 80)])
+            // Tail — long, elegant feathers swept back
+            var tailPath = bezierPath([(56, 70), (92, 65), (88, 80), (52, 82)])
             if pose.tailLift != 0 {
-                tail = tail.applying(rotation(about: 54, 74, degrees: -pose.tailLift * 0.8))
+                tailPath = tailPath.applying(rotation(about: 54, 75, degrees: -pose.tailLift * 0.6))
             }
-            context.fill(tail, with: .color(dark))
+            context.fill(tailPath, with: .color(darkRed))
 
-            // Body — rounded, substantial, smooth
-            context.fill(ellipse(50, 65, 28, 26), with: .color(red))
+            // Body — smooth, rounded, full-bodied
+            context.fill(ellipse(50, 68, 30, 28), with: .color(red))
 
-            // Belly — lighter tone for dimension (red is already used)
+            // Wing — darker overlay, smooth curve
             if tint == nil {
-                context.fill(ellipse(48, 70, 22, 18), with: .color(Theme.cardinal.opacity(0.7)))
+                context.fill(ellipse(60, 66, 22, 13).applying(rotation(about: 60, 66, degrees: 22)),
+                             with: .color(darkRed.opacity(0.8)))
             }
 
-            // Wing — curved, darker, well-defined
+            // Head — round, natural proportions
+            context.fill(ellipse(40, 42, 18, 18), with: .color(red))
+
+            // Crest — two smooth pointed feathers, iconic cardinal silhouette
+            let crestLift: CGFloat = pose.tailLift > 0 ? pose.tailLift * 0.15 : 0
+            context.fill(bezierPath([(32, 32), (35, 4 - crestLift), (40, 28)]),
+                         with: .color(red))
+            context.fill(bezierPath([(40, 28), (46, 2 - crestLift), (51, 32)]),
+                         with: .color(red))
+
+            // Face mask — subtle, natural
             if tint == nil {
-                context.fill(ellipse(58, 64, 20, 12).applying(rotation(about: 58, 64, degrees: 25)),
-                             with: .color(dark))
+                context.fill(bezierPath([(24, 40), (35, 35), (42, 40), (40, 50), (28, 51)]),
+                             with: .color(black.opacity(0.65)))
             }
 
-            // Head — proportional, sits naturally on body
-            context.fill(ellipse(40, 42, 17, 17), with: .color(red))
-
-            // Crest feathers — iconic cardinal shape, pointed upward
-            let crestHeight: CGFloat = 8 - (pose.tailLift > 0 ? pose.tailLift * 0.2 : 0)
-            context.fill(polygon([(32, 32), (36, 2 - crestHeight), (41, 30)]), with: .color(red))
-            context.fill(polygon([(41, 30), (46, 1 - crestHeight), (51, 33)]), with: .color(red))
-
-            // Face & eye region
-            if tint == nil {
-                // Mask (darker face area)
-                context.fill(polygon([(26, 40), (36, 35), (42, 39), (40, 50), (30, 52)]), with: .color(mask))
-            }
-
-            // Beak — stronger, more natural angle
-            context.fill(polygon([(18, 40), (30, 37), (30, 43)]), with: .color(beak))
+            // Beak — small, pointed, natural angle
+            context.fill(bezierPath([(18, 40), (28, 37), (28, 43)]),
+                         with: .color(beak))
 
             // Eye
             if tint == nil {
-                context.fill(ellipse(39, 36, 2.8, 2.8), with: .color(mask))
+                context.fill(ellipse(39, 36, 2.6, 2.6), with: .color(black))
                 if pose.isBlinking {
-                    context.fill(ellipse(39, 36, 2.8, 0.5), with: .color(.black.opacity(0.8)))
+                    context.fill(ellipse(39, 36, 2.6, 0.4), with: .color(black.opacity(0.9)))
                 } else {
-                    context.fill(ellipse(39.9, 35.1, 1.0, 1.0), with: .color(.white.opacity(1.0)))
+                    context.fill(ellipse(39.8, 35.0, 1.1, 1.1), with: .color(.white.opacity(0.95)))
                 }
             } else {
-                context.fill(ellipse(39, 36, 3.0, pose.isBlinking ? 0.5 : 3.0), with: .color(Theme.cardinal))
+                context.fill(ellipse(39, 36, 2.8, pose.isBlinking ? 0.4 : 2.8), with: .color(red))
             }
         }
         .aspectRatio(1, contentMode: .fit)
