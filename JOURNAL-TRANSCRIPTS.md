@@ -301,3 +301,15 @@ and to meet them where they were at.
 
 (Dictated; filler words removed. "YY" in the raw transcript read as the prompt
 "do you feel you belong.")
+
+---
+
+## 27. Voice note — agreements with the community / money (cleaned from dictation)
+
+**A list of agreements I've made, consciously or unconsciously, with the
+community — around spending money:**
+
+No matter where I'm at, to be generous. Generous in tipping, generous in church,
+and to give back some of the life that God's given me.
+
+(Echoes Lou — "a man who tipped twenty dollars on principle.")
