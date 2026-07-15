@@ -59,10 +59,10 @@ struct CardinalMark: View {
                     .translatedBy(x: -cx * s, y: -cy * s)
             }
 
-            let red = tint ?? Color(red: 0.75, green: 0.18, blue: 0.24)
-            let darkRed = tint ?? Color(red: 0.58, green: 0.10, blue: 0.16)
-            let black = tint ?? Color(red: 0.2, green: 0.12, blue: 0.13)
-            let beak = tint ?? Color(red: 0.92, green: 0.50, blue: 0.12)
+            let red = tint ?? Color(red: 0.68, green: 0.12, blue: 0.18)
+            let darkRed = tint ?? Color(red: 0.52, green: 0.08, blue: 0.13)
+            let black = tint ?? Color(red: 0.15, green: 0.08, blue: 0.09)
+            let beak = tint ?? Color(red: 0.90, green: 0.48, blue: 0.10)
 
             context.translateBy(x: 0, y: pose.bob * s)
 
@@ -79,7 +79,7 @@ struct CardinalMark: View {
             // Wing — darker overlay, smooth curve
             if tint == nil {
                 context.fill(ellipse(60, 66, 22, 13).applying(rotation(about: 60, 66, degrees: 22)),
-                             with: .color(darkRed.opacity(0.8)))
+                             with: .color(darkRed.opacity(0.85)))
             }
 
             // Head — round, natural proportions
@@ -95,7 +95,7 @@ struct CardinalMark: View {
             // Face mask — subtle, natural
             if tint == nil {
                 context.fill(bezierPath([(24, 40), (35, 35), (42, 40), (40, 50), (28, 51)]),
-                             with: .color(black.opacity(0.65)))
+                             with: .color(black.opacity(0.60)))
             }
 
             // Beak — small, pointed, natural angle
