@@ -211,3 +211,11 @@ partnerships of that kind?
 
 **Answer:** Scott Carbonara — because I feel we're like-minded. (Written
 "Carbonaro"; editor's name is Scott Carbonara.)
+
+---
+
+## 20. Journal — completing a venture
+**Prompt:** How would completing that venture make you feel? How might it change
+the way you see yourself?
+
+**Answer:** Feel validated. But too many times I forget it's about the journey.
