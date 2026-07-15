@@ -156,3 +156,13 @@ blank)
 - **I feel valued when** my boss acknowledges me [always? — ?].
 - **I feel known when** God — feels present.
 - **I feel safe when** Hope makes our house a home.
+
+---
+
+## 15. Journal — childhood dream
+**Prompt:** What did you want to be when you grew up? Why?
+**Answer:** Survive.
+
+**Prompt:** Did you follow that dream? Why? Why not?
+**Answer:** I'm glad I didn't [second line uncertain — possibly "I'm glad to
+thrive" — ?].
