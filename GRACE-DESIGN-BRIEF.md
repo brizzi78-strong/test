@@ -7,9 +7,24 @@ imprint name across both books. Job 1 is needed now; Job 2 has no deadline.
 
 ## JOB 1 — The Cardinal's Promise (memoir) — FINAL PRINT WRAP
 
-**Base design:** your photo-back wrap concept (the dark painted cardinal with
-the author photo on the back). Approved direction — art, layout, and photo
-back all stay. Only the text layer changes, per the fix list below.
+### Cover status (2026-07-15) — NEW clean front is the base
+Author shared a new, cleaner front panel: cover/memoir-front-v4-clean.jpg.
+This is the preferred art/type direction — richer navy, palette-knife cardinal
+on a branch, elegant serif title, thumbnail-legible. Build the full wrap from
+THIS front, not the earlier photo-back mockup's front. Two front fixes still
+needed on it:
+  1. ADD the subtitle (missing entirely): *A Memoir of the Father Who Stayed*
+     — locked by the author 2026-07-15; it matches the interior title page.
+     Set it below the title (larger and a step lighter), then the ornament,
+     then the author line.
+  2. "By Rob Brizzi" → **ROB BRIZZI** (drop "By").
+Result = three elements: title / subtitle / author (ornament ok as a divider).
+The photo-back panel and the spine cardinal mark from the earlier wrap are
+still keepers — carry them onto this cleaner front to make the full wrap.
+
+**Base design:** the new clean front above (cover/memoir-front-v4-clean.jpg)
+for the front; the author-photo back panel and spine cardinal from the earlier
+photo-back wrap stay. Only the text layer changes, per the fix list below.
 
 **Mechanical specs (KDP, 6" x 9" trim, white paper, 226 pages):**
 - Spine width: 0.509"
@@ -28,9 +43,9 @@ back all stay. Only the text layer changes, per the fix list below.
   three cover critics found the five-element stack crowded and the credit a
   genre-wobble for the grief buyer. Dave's credential lives on the BACK
   (his quote is attributed DAVE MEYER, NFL QB there).
-- Optional per art director: consider mirroring the cardinal to face into
-  the cover, and tightening the title stack's leading; reference comp:
-  cover/memoir-front-sample-v2.png
+- Reference comp (preferred): cover/memoir-front-v4-clean.jpg. Optional per
+  art director: consider mirroring the cardinal to face into the cover rather
+  than off the left edge.
 
 **SPINE (reading top to bottom):**
 THE CARDINAL'S PROMISE • ROB BRIZZI, with the small red cardinal mark.
