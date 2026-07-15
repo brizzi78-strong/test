@@ -726,11 +726,11 @@ That was the man who adopted me. He never talked about himself, never needed you
 
 Lou's world had made me. Then it sent me off to build one of my own.
 
-Before I ever set foot on campus, there was a party in New Jersey. Tricia Hart hosted it, a mixer for kids heading to Miami that fall. That night I met people who'd matter for years. I liked going to a school in Ohio already knowing a few faces.
+Before I ever set foot on campus, there was a party in New Jersey. Tricia Hart hosted it, a mixer for kids heading to Miami that fall. That night I met Dean Ferrera from Hawthorne and people who'd matter for years. I liked going to a school in Ohio already knowing a few faces. Dean became one of my best friends. He's a cardiologist outside Chicago now.
 
 My mom and dad dropped me off in the fall of 1996. Partial wrestling scholarship, financial aid, Lou covering the rest. That was how it got paid for. My mom cried when she left me there. The woman who had moved two kids across a border without flinching stood in a dorm parking lot in Ohio and couldn't stop the tears. I didn't feel like I'd chosen Miami so much as it had chosen me first — a letter from a coach with my name on it. Later I saw it in *Newsweek*, "best schools for your money," number four. The Ivy of the Midwest.
 
-My dorm was Stanton Hall, my roommate a good-natured Packers fan from Wisconsin with a cheesehead on his shelf and the accent to prove it. I didn't know what a cheesehead was. I'm from New Jersey. The twins from Ramsey were there too, Kris and Kyle, the two who'd kept their hands clean at the lunch table. They became good friends too.
+My dorm was Stanton Hall, my roommate a good-natured Packers fan from Wisconsin with a cheesehead on his shelf and the accent to prove it. I didn't know what a cheesehead was. I'm from New Jersey. Next door was Jason Huet, six-five, a high school basketball player who'd wanted Chapel Hill and was sore his parents made him come to Miami. Hard shell, didn't let everybody in, but once he did, he didn't take it lightly. He teased me constantly — swore he couldn't understand a word I said. He's a pulmonologist in Charleston now. He texted recently: you want to come see me for Memorial Day? That's a friendship that just holds. The twins from Ramsey were there too, Kris and Kyle, the two who'd kept their hands clean at the lunch table. They became good friends too.
 
 That was the version of me I was building at Miami. Not Claudio. Rob — county wrestling champion, Miami student, American. Nobody here knew who I'd been before I arrived. Being the darker-skinned kid on a mostly white-bread campus gave me something, and I connected in ways that hadn't come as easily in high school.
 
@@ -761,7 +761,7 @@ On the way out, a waitress ran into the parking lot after us and handed me her p
 
 **Cancun, spring 1999**
 
-I still don't entirely know how MTV ended up putting my face on national television. Junior year Dave Nesser, a college buddy, said we were going to Cancun for spring break. Three hundred people from Miami. MTV. The beach. Ten days at the center of the known universe. A scout stopped me with a Polaroid, took my picture, said stay near your phone. That night the hotel phone rang. A buddy answered, then handed it to me with a look I'd never seen on his face. It's MTV.
+I still don't entirely know how MTV ended up putting my face on national television. Junior year Dave Nesser, a college buddy, said we were going to Cancun for spring break. Three hundred people from Miami. MTV. The beach. Ten days at the center of the known universe. A scout stopped me with a Polaroid, took my picture, said stay near your phone. That night the hotel phone rang. Dean answered, then handed it to me with a look I'd never seen on his face. It's MTV.
 
 The lineup was NSYNC, 98 Degrees, Busta Rhymes, Eminem, and for ten days I carried the same VIP pass they did.
 
@@ -769,7 +769,7 @@ The show aired eight times a day for three months. Back in Oxford, cars slowed, 
 
 That feeling, the one that hadn't come after the county championship, or the wrestling room, or Kappa Sig, came in Cancun, ten feet from Timberlake with cameras pointed my way. I'd finally found the feeling. From then on I knew exactly what I was chasing.
 
-Senior year I lived with Dave Nesser and two other guys in a condo downtown. Absolute pigs. We destroyed that place. We were about to scatter.
+Senior year I lived with Dave Nesser, Dean Ferrera, and Jason Huet in a condo downtown. Absolute pigs. We destroyed that place. We were about to scatter.
 
 I think about those four years and I thank God for my dad. Lou could have sent me to community college, a local school, a hundred cheaper options. Instead he let me go to Miami and took out loans to do it. He was splitting a rental house in Mahwah with his friend Roger, who'd been through a divorce of his own, and Lou's room was the small one upstairs. Chris and I would visit and you could read it in his body when things were weighing on him. He never put it on us. He carried it, quietly, the way he carried everything.
 
@@ -1935,7 +1935,7 @@ The men God put in front of me: Andy, Bob, Mager, Matt, and Quint. You walked in
 
 Dave Meyer, for thirty-five years of friendship and for the words that open and close this book.
 
-Every nurse, aide, chaplain, and social worker I get to stand beside in the last chapter. You taught me what showing up looks like when it's a profession.
+Dr. Huet, and every nurse, aide, chaplain, and social worker I get to stand beside in the last chapter. You taught me what showing up looks like when it's a profession.
 
 Tyler and Jaye, for letting me tell it.
 
