@@ -106,3 +106,15 @@ becoming?
 you love?
 
 **Answer:** Complete book. Make a difference through my story.
+
+---
+
+## 11. Notes app — "Body image reflections" (typed)
+
+**First Memories of the Body**
+- Initial feelings: body felt insufficient
+- Tendency to focus on imperfections over positive aspects
+
+**Current Relationship with Self**
+- More forgiving toward self now
+- Moved into a place of acceptance and growth
