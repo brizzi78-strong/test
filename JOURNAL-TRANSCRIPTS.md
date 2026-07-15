@@ -166,3 +166,12 @@ blank)
 **Prompt:** Did you follow that dream? Why? Why not?
 **Answer:** I'm glad I didn't [second line uncertain — possibly "I'm glad to
 thrive" — ?].
+
+---
+
+## 16. "At Work" journal — money
+**Prompt:** What should you do with the money you have? What shouldn't you do?
+Where did you get these ideas? How are they serving you?
+
+**Answer:** Most of my money goes to retirement (HSA) and insurance. Hope's goes
+towards bills.
