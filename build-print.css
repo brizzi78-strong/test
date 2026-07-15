@@ -1,38 +1,150 @@
+/* Print stylesheet for The Cardinal's Promise — 6x9 book proof (WeasyPrint). */
+
 @page {
   size: 6in 9in;
-  margin: 0.75in 0.625in 0.75in 0.75in;
+  margin: 0.85in 0.7in 0.8in 0.7in;
+  @bottom-center {
+    content: counter(page);
+    font-family: Georgia, serif;
+    font-size: 9.5pt;
+    color: #444;
+  }
+  @top-center {
+    content: string(runhead);
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 9pt;
+    color: #666;
+    padding-bottom: 0.15in;
+  }
 }
-@page :left  { margin: 0.75in 0.75in 0.75in 0.625in; }
-@page :right { margin: 0.75in 0.625in 0.75in 0.75in; }
+/* Title page: no folio, no running head */
+@page :first {
+  @bottom-center { content: none; }
+  @top-center { content: none; }
+}
 
-html { font-size: 11pt; }
+html { font-size: 11.5pt; }
 body {
-  font-family: "Georgia", "Times New Roman", serif;
-  line-height: 1.4;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.42;
   text-align: justify;
   hyphens: auto;
-  color: #111;
+  color: #1a1a1a;
+  widows: 2;
+  orphans: 2;
 }
+
+/* ---------- Title page ---------- */
+.titlepage { text-align: center; page-break-after: always; }
+.titlepage h1 {
+  font-size: 30pt;
+  line-height: 1.08;
+  letter-spacing: 0.01em;
+  font-weight: normal;
+  margin: 2.3in 0 0.35in;
+  page-break-before: avoid;
+}
+.titlepage h1 strong { font-weight: normal; }
+.titlepage p { text-indent: 0; margin: 0.14in 0; }
+.titlepage p:nth-of-type(1) { font-style: italic; font-size: 13.5pt; color: #444; }
+.titlepage p:nth-of-type(2) { font-size: 12.5pt; letter-spacing: 0.14em; margin-top: 1.7in; }
+.titlepage p:nth-of-type(3) { font-size: 9.5pt; letter-spacing: 0.12em; color: #666; }
+
+/* ---------- Part & front-matter section heads (h1) ---------- */
 h1 {
-  font-size: 20pt;
-  text-align: center;
   page-break-before: always;
-  margin: 1.2in 0 0.5in 0;
-  line-height: 1.15;
-  font-weight: bold;
+  string-set: runhead content(text);
+  text-align: center;
+  font-size: 19pt;
+  font-weight: normal;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+  margin: 1.9in 0 0.6in;
 }
-h1:first-of-type { page-break-before: avoid; }
-h2 { font-size: 14pt; text-align: center; margin: 0.8in 0 0.4in 0; }
-h3 { font-size: 12pt; }
-p { margin: 0; text-indent: 1.5em; }
-p:first-of-type,
+h1 strong { font-weight: normal; }
+
+/* ---------- Part-title pages ---------- */
+p.partno {
+  page-break-before: always;
+  text-indent: 0;
+  text-align: center;
+  font-size: 11pt;
+  letter-spacing: 0.3em;
+  color: #888;
+  margin: 2in 0 0.15in;
+}
+p.partno + h1 {
+  page-break-before: avoid;
+  margin: 0.15in 0 0.5in;
+}
+p.partno + h1 + p {   /* part epigraph */
+  text-indent: 0;
+  text-align: center;
+  font-style: italic;
+  color: #444;
+}
+
+/* ---------- Chapter number + title ---------- */
+p.chapno {
+  page-break-before: always;
+  text-indent: 0;
+  text-align: center;
+  font-size: 10pt;
+  letter-spacing: 0.24em;
+  color: #777;
+  margin: 1.5in 0 0.12in;
+}
+p.chapno strong { font-weight: normal; }
+h2 {
+  page-break-before: avoid;
+  string-set: runhead content(text);
+  text-align: center;
+  font-size: 18pt;
+  font-weight: normal;
+  line-height: 1.2;
+  margin: 0 0 0.5in;
+}
+h2 strong { font-weight: normal; }
+
+/* ---------- Scene-break subheads (h3) ---------- */
+h3 {
+  text-align: center;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 12pt;
+  margin: 1.4em 0 0.6em;
+}
+h3 em { font-style: italic; }
+
+/* ---------- Body ---------- */
+p { margin: 0; text-indent: 1.4em; }
 h1 + p, h2 + p, h3 + p, blockquote + p { text-indent: 0; }
+
+/* ---------- Epigraphs ---------- */
 blockquote {
   font-style: italic;
-  margin: 0.4em 1.2em;
   text-align: center;
   text-indent: 0;
+  font-size: 10.5pt;
+  color: #333;
+  margin: 0.4em 1.3em 1.3em;
 }
-em { font-style: italic; }
-hr { border: none; text-align: center; margin: 1em 0; }
-hr::after { content: "* * *"; letter-spacing: 0.4em; }
+blockquote p { text-indent: 0; margin: 0; }
+
+em, i { font-style: italic; }
+strong { font-weight: bold; }
+
+/* ---------- Scene divider ---------- */
+hr {
+  border: none;
+  text-align: center;
+  margin: 1.1em 0;
+  page-break-after: avoid;
+}
+hr::after { content: "\2766"; font-size: 12pt; color: #999; }
+
+/* ---------- Contents (numbering re-seeded in post-process) ---------- */
+ol.startfix { list-style: none; padding-left: 0; margin: 0.2em 0 0.7em; }
+ol.startfix > li { counter-increment: li; text-indent: 0; margin: 0.05em 0; }
+ol.startfix > li::before { content: counter(li) ".\00a0\00a0"; color: #555; }

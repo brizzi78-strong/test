@@ -27,12 +27,16 @@ pandoc "$SRC" \
   --toc --toc-depth=1 \
   -o "$BASE.docx"
 
-# Reading-proof PDF via HTML + WeasyPrint (6x9 trim, mirrored margins)
+# Reading-proof PDF via HTML + WeasyPrint (6x9 trim, mirrored margins).
+# Custom template (no duplicate title block) + post-process (chapter page
+# breaks, Contents numbering, title-page wrap).
 pandoc "$SRC" \
   --metadata-file=build-metadata.yaml \
-  -t html5 -s \
+  -t html5 \
+  --template=build-template.html \
   --css=build-print.css \
   -o "$BASE.tmp.html"
+python3 build-print-fix.py "$BASE.tmp.html"
 python3 -c "import weasyprint; weasyprint.HTML('$BASE.tmp.html').write_pdf('$BASE.pdf')"
 rm -f "$BASE.tmp.html"
 
