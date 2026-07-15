@@ -58,3 +58,10 @@ ties with the ones they loved.
 **Prompt:** How do you relate to your state of mind over the course of a day?
 
 **Answer:** I tend to be a rollercoaster. [?]
+
+---
+
+## 6. "Waking Up" journal — making your mind an ally
+**Prompt:** How can you make your mind an ally?
+
+**Answer:** Turn it over to God — when things are good, and when they're not.
