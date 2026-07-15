@@ -59,10 +59,10 @@ struct CardinalMark: View {
                     .translatedBy(x: -cx * s, y: -cy * s)
             }
 
-            let red = tint ?? Theme.cardinal
-            let darkRed = tint ?? Theme.cardinalDark
+            let red = tint ?? Color(red: 0.75, green: 0.18, blue: 0.24)
+            let darkRed = tint ?? Color(red: 0.58, green: 0.10, blue: 0.16)
             let black = tint ?? Color(red: 0.2, green: 0.12, blue: 0.13)
-            let beak = tint ?? Color(red: 0.94, green: 0.55, blue: 0.18)
+            let beak = tint ?? Color(red: 0.92, green: 0.50, blue: 0.12)
 
             context.translateBy(x: 0, y: pose.bob * s)
 
