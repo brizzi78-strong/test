@@ -19,6 +19,7 @@ The two files KDP asks for are in this folder:
   change back).
 
 - [x] **SKIPPED (July 2026): Hope's pharmaceutical review not completed** — shipping without the full chapter read-through. Removed PharmD clinical-review attribution from copyright page; Hope retains "Project Consultant" credit for her role in the book's inception.
+- [x] **Author photo placed (July 2026)** — professional navy-suit headshot (`author-headshot.jpeg`, 1023×1537 ≈ 890 DPI at the 1.15in slot) embedded in the back-cover wrap photo slot and the About the Author page.
 - [ ] **Bio verified** — Certified Dementia Practitioner credential current
 - [ ] **Final human proofread** of `kdp-interior.pdf` (read it as a printed proof, not on screen)
 - [ ] **Back-cover copy approved** — edit `back-cover-copy.md` and ask for a wrap regen if you change anything
