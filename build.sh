@@ -13,9 +13,10 @@ set -euo pipefail
 SRC="The_Cardinals_Promise_sheff_pass.md"
 BASE="The_Cardinals_Promise"
 
-# EPUB (metadata-driven; cover art pending Grace's redesign)
+# EPUB (metadata-driven; interim front cover plugged in pending Grace's final)
 pandoc "$SRC" \
   --metadata-file=build-metadata.yaml \
+  --epub-cover-image=cover/memoir-front-v4-clean.jpg \
   --toc --toc-depth=1 \
   --split-level=1 \
   -o "$BASE.epub"
