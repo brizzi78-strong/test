@@ -175,3 +175,12 @@ Where did you get these ideas? How are they serving you?
 
 **Answer:** Most of my money goes to retirement (HSA) and insurance. Hope's goes
 towards bills.
+
+---
+
+## 17. Journal — setting and achieving a goal
+**Prompt:** Do you see yourself as someone who can set a goal and achieve it? Why
+or why not?
+
+**Answer:** For the first time, I am writing a book and finishing it. It almost
+broke me, but I didn't give up.
