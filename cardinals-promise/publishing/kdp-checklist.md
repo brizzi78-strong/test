@@ -43,5 +43,6 @@ The two files KDP asks for are in this folder:
 
 - [ ] Copyright registration at copyright.gov (the application asks its own AI-generated-content question — same honest answer as KDP's)
 - [ ] Ebook edition (EPUB) — **needs a full rebuild:** the existing `cardinals-toolkit.epub` still carries the OLD title (*The Caregiver's Cardinal Toolkit*), the old cover, and none of the July 2026 content (expanded Contents, new sections, Cardinal Moments). Rebuild from the current HTML when ready — say the word.
+- [ ] Audiobook / text-to-speech — a narration-ready script is prepared at `publishing/its-not-your-fault-AUDIO.txt` (~52k words, ~5.8 hrs at 150 wpm). Worksheets, tables, the index, checkbox glyphs, and page references are stripped or summarized; 30-second boxes, Rob's Notes, and Cardinal Moments are announced by name. Drop it into Speechify (or any TTS/narration workflow); the reserved audiobook ISBN is 978-1-963342-04-8.
 - [ ] IngramSpark for bookstore/library distribution (needs your own ISBN)
 - [ ] Update thecardinalspromise.com with the buy link
