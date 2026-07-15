@@ -247,3 +247,15 @@ supported, what would you do?
 - 1996: ran out of gas with no cell phone, no cars passing
 - Sat and waited, hoping someone would show up
 - Stands out as a vivid reminder of life before ubiquitous technology
+
+---
+
+## 23. Voice note — online image / peace with self (cleaned from dictation)
+
+In the past, I was more concerned with portraying myself online a certain way,
+to protect a certain image. But since I've written this book, I've realized that
+stuff doesn't matter. I've kind of been at peace with who I am — with who Rob
+Brizzi is.
+
+(Dictated; filler words removed. Transcription rendered the name as "Rob Riddy";
+set to Brizzi — confirm.)
