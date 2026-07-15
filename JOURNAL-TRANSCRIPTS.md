@@ -272,3 +272,13 @@ although sometimes my body won't react the same way it did when I was younger, s
 I have to be careful.
 
 (Dictated; first word "Megalis" uncertain.)
+
+---
+
+## 25. Voice note — nature / connection to God (cleaned from dictation)
+
+I feel at one with the earth, and it makes me feel more connected to God. I
+sometimes catch myself not spending enough time out in nature, which is one of my
+goals.
+
+(Confirms the "earth" reading in the #1 joy list.)
