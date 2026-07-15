@@ -4,7 +4,7 @@ The two files KDP asks for are in this folder:
 
 | KDP upload slot | File | Spec |
 |---|---|---|
-| Manuscript (interior) | `kdp-interior.pdf` | **229 pages** (228 interior after dropping the cover page; already even), 8.5 × 11 in, no bleed, mirrored margins (1.05" gutter / 0.55" outside), fonts embedded, page numbers + TOC + index match. **Needs re-export** — the master grew to 229pp (expanded Contents + new sections and Cardinal Moment reflections, July 2026) |
+| Manuscript (interior) | `kdp-interior.pdf` | **228 pages** master (227 content after dropping the cover page, pad 1 blank → 228 even), 8.5 × 11 in, no bleed, mirrored margins (1.05" gutter / 0.55" outside), fonts embedded, page numbers + TOC + index match. **Needs re-export** — the master is 228pp (expanded Contents + new sections and Cardinal Moment reflections, July 2026) |
 | Book cover | `kdp-cover-wrap.pdf` | One-piece wrap, **17.7851 × 11.25 in** with 0.125" bleed; **spine 0.5351"** (228 pages × 0.002347", **premium color** paper — recompute if ink choice changes); 2" × 1.2" white barcode zone, lower-right of back cover, left blank for KDP. **Needs re-export** at the new spine |
 
 ## Before you upload

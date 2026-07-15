@@ -4,16 +4,11 @@
 > regenerates to match. Front-panel design is now the author's finished
 > **cream** cover (July 2026); see the design brief at the bottom.
 
-## Endorsement (leads the back panel, above the headline) — APPROVED
-"Plenty of guides cover the logistics. This one also tends to the spirit —
-the grief, the grace, and the promise at the center of caring for a parent."
-— Dean Ferrera, MD, Cardiologist
-
-> Dr. Huet's approved quote ("Hospice is the one thing Medicare truly gets
-> right — and this book finally shows families how to use it." — Jason
-> Huet, MD, Pulmonologist) runs in the book's Praise page and the Amazon
-> Editorial Reviews. The front cover stays clean (title owns the cover;
-> squint test) — revisit only if Rob wants a front-cover quote line.
+## Endorsement (leads the back panel, above the headline) — ON HOLD (July 2026)
+The physician endorsements (Ferrera, Huet) are pulled "for now" at the
+author's request. The back panel currently leads with the headline; the
+approved quotes are preserved in `marketing/endorsement-kit.md` and can be
+restored above the headline when ready.
 
 ## Headline
 **Caring for an aging parent is overwhelming — nobody hands you a map.**

@@ -1,5 +1,9 @@
 # Physician Endorsement Kit — It's Not Your Fault
 
+> **ON HOLD (July 2026):** the author asked to leave Dr. Ferrera and Dr. Huet
+> out of the book, cover, and Amazon listing *for now*. This kit is preserved
+> intact so their approved quotes and credit lines can be restored later.
+
 > Goal: 1 foreword (the prize) + 3–5 blurbs from working professionals.
 > Priority order: a UNC/Duke geriatrician or palliative physician, an
 > elder-law attorney, a hospital discharge planner or SHIP counselor, a
