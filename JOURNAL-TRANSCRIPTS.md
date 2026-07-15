@@ -65,3 +65,19 @@ ties with the ones they loved.
 **Prompt:** How can you make your mind an ally?
 
 **Answer:** Turn it over to God — when things are good, and when they're not.
+
+---
+
+## 7. "What's Your Story?" journal — core beliefs
+**Prompt:** What are a few of your core beliefs? Do they make you happy? Do they
+make the world a better place?
+
+**Answer:**
+- My marriage
+- My faith
+- Character
+- Work ethic
+- Making things meaningful [?]
+- Being vulnerable [?]
+
+(Last two lines uncertain — confirm against original.)
