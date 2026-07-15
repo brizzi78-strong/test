@@ -81,3 +81,11 @@ make the world a better place?
 - Being vulnerable [?]
 
 (Last two lines uncertain — confirm against original.)
+
+---
+
+## 8. "Waking Up" journal — letting beliefs go
+**Prompt:** Who would you be, and what would the world look like, if you let them
+go? (The prior prompt — "...why do you hold on to them?" — was left blank.)
+
+**Answer:** Less critical of each other's flaws. More understanding.
