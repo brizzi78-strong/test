@@ -31,6 +31,27 @@ revised edition.
 | 33 (Five Weeks) | "Don't give up. Don't ever give up." — Jim Valvano | The V Foundation (1993 ESPYs speech) | *"They that wait upon the LORD shall renew their strength; they shall mount up with wings as eagles."* — Isaiah 40:31 |
 | 36 (What Grief Taught the Job) | "Death ends a life, not a relationship." — Morrie Schwartz, in Mitch Albom's *Tuesdays with Morrie* | Doubleday / Penguin Random House | *"Weeping may endure for a night, but joy cometh in the morning."* — Psalm 30:5 |
 
+## Proposed addition (author, 2026-07-15): Hagakure / Tsunetomo
+
+Author wants Yamamoto Tsunetomo's *Hagakure* (c. 1716) insight — correcting a
+man's faults is compassion, but you must earn the right to be heard first — as a
+recurring "compass point" alongside Scripture, Lou's sayings, and recovery
+wisdom. Natural home: Chapter 12 (Chris's ultimatum), which already dramatizes it.
+
+CLEARANCE: the *idea* and the 1716 original are public domain. BUT the William
+Scott Wilson translation (Kodansha, 1979) the author cited is COPYRIGHTED — using
+its exact wording as an epigraph would break the book's "100% clear for KDP"
+status. Do NOT drop Wilson's translation in verbatim.
+
+RECOMMENDED (permission-free): render the insight in Rob's own voice, attributed
+to Tsunetomo / *Hagakure* (c. 1716), woven into ch12 prose as a compass point —
+NOT as a verbatim epigraph. Draft prepared; awaiting author go to insert.
+Discovery credit (Maria Popova, "How to Help Someone Change," *The Marginalian*,
+July 13, 2026) is the author's own account — optional acknowledgments/endnote,
+not a rights item.
+ALTERNATIVE (needs permission): license Wilson's exact words from Kodansha for a
+verbatim epigraph — contradicts the no-permissions policy; adds time/cost.
+
 Notes:
 - Short attributed epigraphs are commonly treated as fair use, but publishers and
   KDP's content review don't guarantee it; permission or swap is the safe path.
