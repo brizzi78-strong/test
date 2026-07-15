@@ -46,4 +46,19 @@ pandoc "$SRC" \
   --metadata=title-prefix:"" \
   -o "$BASE.html"
 
-echo "Built: $BASE.epub  $BASE.docx  $BASE.pdf  $BASE.html"
+# Speechify / text-to-speech copy: clean plain text, front-matter noise removed.
+# Keep title block + dedications; drop the copyright/ISBN boilerplate and the
+# table of contents (marker-based, so it survives front-matter edits).
+pandoc "$SRC" -t plain --wrap=none -o "$BASE.speechify.full.txt"
+awk '
+  /^FOREWORD$/        { skip=0 }
+  /^COPYRIGHT$/       { skip=1 }
+  skip==1 {
+    if ($0 ~ /^For / || $0 ~ /^In memory of / || $0 ~ /^[0-9][0-9][0-9][0-9]/) print
+    next
+  }
+  { print }
+' "$BASE.speechify.full.txt" > "${BASE}_speechify.txt"
+rm -f "$BASE.speechify.full.txt"
+
+echo "Built: $BASE.epub  $BASE.docx  $BASE.pdf  $BASE.html  ${BASE}_speechify.txt"
