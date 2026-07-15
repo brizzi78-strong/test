@@ -35,3 +35,12 @@ than or beyond yourself? How did it make you feel?
 
 **Answer:** On a mission trip in Nashville, TN, at age 13. I felt the energy of
 the room and everything — fears vanished. [last line "fears vanished" — ?]
+
+---
+
+## 3. "What's Your Story?" journal — purpose
+**Prompt:** Why do you think you are here? What are you supposed to do with the
+time you have?
+
+**Answer:** To serve others. Nobody at the bedside talks about anything but the
+ties with the ones they loved.
