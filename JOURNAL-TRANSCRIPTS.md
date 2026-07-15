@@ -89,3 +89,12 @@ make the world a better place?
 go? (The prior prompt — "...why do you hold on to them?" — was left blank.)
 
 **Answer:** Less critical of each other's flaws. More understanding.
+
+---
+
+## 9. "Waking Up" journal — future self
+**Prompt:** How do you envision your future self? Who and what is contributing to
+the creation of this self? How can you play a more active role in your own
+becoming?
+
+**Answer:** More financial stability. More purpose with Lou's legacy.
