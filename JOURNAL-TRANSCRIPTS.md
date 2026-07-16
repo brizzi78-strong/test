@@ -313,3 +313,19 @@ No matter where I'm at, to be generous. Generous in tipping, generous in church,
 and to give back some of the life that God's given me.
 
 (Echoes Lou — "a man who tipped twenty dollars on principle.")
+
+---
+
+## 28. Voice note — what communities have lost / the mask (cleaned from dictation)
+
+**What people, places, and traditions have your communities lost?**
+
+I've learned to adapt — going from Mexico to New Jersey, from Wood-Ridge to
+Ramsey, then to Miami of Ohio, and then to California. I've learned to put on a
+mask in order to be accepted. And I feel that I lost some really close friends
+along the way, just because of circumstances — but there have been some amazing
+people who've come across my path.
+
+(Dictated; "plays" heard as "places," "Woodridge" as Wood-Ridge NJ. The "mask to
+be accepted" line ties to the Performance Trap / known-vs-performing thread —
+see #23, #24.)
