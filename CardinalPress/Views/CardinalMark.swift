@@ -158,9 +158,31 @@ struct LivingCardinal: View {
     }
 }
 
+/// The real cardinal mascot (from the handbook artwork) as a full-color
+/// image that gently bobs, as if breathing. Falls back to a still image
+/// under Reduce Motion. Use where the bird should read as itself rather
+/// than as a single-color silhouette.
+struct FloatingCardinal: View {
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    @State private var lifted = false
+
+    var body: some View {
+        Image("CardinalEmblem")
+            .resizable()
+            .scaledToFit()
+            .offset(y: lifted ? -2.5 : 2.5)
+            .animation(
+                reduceMotion ? nil : .easeInOut(duration: 2.4).repeatForever(autoreverses: true),
+                value: lifted
+            )
+            .onAppear { lifted = true }
+            .accessibilityHidden(true)
+    }
+}
+
 #Preview {
     VStack(spacing: 30) {
-        LivingCardinal()
+        FloatingCardinal()
             .frame(width: 140)
         CardinalMark(tint: .white)
             .frame(width: 60)

@@ -10,8 +10,11 @@ struct AboutView: View {
                             .fill(Theme.paper)
                             .frame(width: 92, height: 92)
                             .overlay(Circle().strokeBorder(Theme.ink.opacity(0.08)))
-                        CardinalMark()
-                            .frame(width: 60, height: 60)
+                        Image("CardinalEmblem")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 68, height: 68)
+                            .accessibilityHidden(true)
                     }
 
                     Text("The Cardinal's Toolkit")
