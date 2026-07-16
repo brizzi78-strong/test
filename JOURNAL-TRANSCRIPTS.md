@@ -359,3 +359,15 @@ Unconditional love.
 
 (The book's core phrase — Lou "never once made me feel I had to earn the place,"
 "the love that doesn't send a bill.")
+
+---
+
+## 31. Voice note — Hope and presence (cleaned from dictation)
+
+Hope helped me realize that I wasn't present in the state I was in at home, and
+that I needed to prioritize time together. We just had an amazing trip — downtown
+Raleigh, getting massages, staying in a nice hotel — and we really were able to
+bond.
+
+(The "getting back to the joy" arc from ch26, in real time; and the presence
+theme at the book's center.)
