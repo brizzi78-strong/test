@@ -386,3 +386,16 @@ only reason I'd want more time is to spend as much of it as I can with my wife.
 
 (Dictated; trails off at the end. Service-over-ego and not-turning-from-death are
 the Part Six / hospice spine.)
+
+---
+
+## 33. Voice note — first memory of death (cleaned from dictation)
+
+My first memory of death — I wouldn't call it death, but someone actively dying —
+was my grandfather's mother, in a nursing home. I was a little boy, barely able to
+talk, and I spoke Spanish. But for some reason she looked like Santa Claus to me,
+and I said, "Ho ho ho." My mom said, "Stop." But I remember that meeting.
+
+(A genuinely book-worthy vignette: earliest brush with dying, in a nursing home,
+as an immigrant child — the seed of the hospice work decades before it began.
+Confirm the relation — "grandfather's mother.")
