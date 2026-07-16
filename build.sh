@@ -21,11 +21,12 @@ pandoc "$SRC" \
   --split-level=1 \
   -o "$BASE.epub"
 
-# DOCX (editorial/review)
+# DOCX (editorial/review) — with centered page numbers in the footer
 pandoc "$SRC" \
   --metadata-file=build-metadata.yaml \
   --toc --toc-depth=1 \
   -o "$BASE.docx"
+python3 build-docx-pagenum.py "$BASE.docx"
 
 # Reading-proof PDF via HTML + WeasyPrint (6x9 trim, mirrored margins).
 # Custom template (no duplicate title block) + post-process (chapter page
