@@ -72,7 +72,9 @@ Body copy:
 > Rob does now: sitting with families in the last chapter, showing up the way
 > Lou taught him. It is a book about the love that doesn't send a bill.
 
-Author photo (keep) with bio:
+Author photo (CHOSEN 2026-07-16 — navy blazer over open-collar white shirt,
+warm full smile, neutral gray studio backdrop; deliberately ties to the navy
+cover palette. Vertical crop, drops into the back-cover author frame as-is) with bio:
 > ROB BRIZZI is a hospice liaison and Certified Dementia Practitioner. Born
 > in Mexico City and raised in New Jersey, he is in long-term recovery. He
 > lives in Raleigh, North Carolina, with his wife, Hope.
@@ -82,6 +84,18 @@ Bottom: CARDINAL PROMISE PRESS (no "LLC" on the cover)
 **Barcode:** the mockup shows a placeholder (978-1-963412-01-3). The real
 ISBN is **979-8-9966446-0-5**. Use a real barcode for that ISBN, or leave the
 bottom-right 2" x 1.2" zone clear and KDP prints its own.
+
+**Latest proof review (2026-07-16) — brief corrections NOT yet applied on the
+newest wrap; still open:**
+1. Front subtitle still reads "Finding Hope Through Addiction, Adoption, and
+   Immigration." Replace with the locked subtitle: *A Memoir of the Father Who
+   Stayed* (confirmed by the author 2026-07-16; matches the interior title page).
+2. Barcode still shows the placeholder **978-1-963412-01-3** (a different
+   publisher's block). Use **979-8-9966446-0-5** or clear the zone for KDP.
+3. Back-cover author photo: swap in the chosen navy-blazer headshot above.
+4. Drop "By" before ROB BRIZZI on the front (title / subtitle / author only).
+5. Confirm Dave Meyer's credit line ("Former NFL Quarterback") and that he has
+   approved the back-cover quote.
 
 ---
 
