@@ -28,9 +28,12 @@ still keepers — carry them onto this cleaner front to make the full wrap.
 for the front; the author-photo back panel and spine cardinal from the earlier
 photo-back wrap stay. Only the text layer changes, per the fix list below.
 
-**Mechanical specs (KDP, 6" x 9" trim, white paper, 226 pages):**
-- Spine width: 0.509"
-- Full wrap with bleed: 12.759" x 9.25" = **3829 x 2775 px at 300 DPI**
+**Mechanical specs (KDP, 6" x 9" trim, white paper, 205 pages as of
+2026-07-16 — down from 226 after the Scott-pass trim/combine):**
+- Spine width: ~0.462" (205 x 0.002252"/pg, white paper)
+- Full wrap with bleed: ~12.712" x 9.25" = **~3814 x 2775 px at 300 DPI**
+- NOTE: KDP's own page count after you upload the final interior is the
+  authoritative number for the spine — reconfirm before Grace flattens the wrap.
 - Keep text 0.25" inside trim; nothing critical in the 0.125" bleed zone
 - Also deliver: Kindle front-panel-only export, 1600 x 2560 px or larger
 
