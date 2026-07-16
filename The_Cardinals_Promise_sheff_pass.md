@@ -707,9 +707,9 @@ I had no idea. I was seven. They were my dad's friends with shiny things on the 
 
 But that was Lou. The Rascals — Rock and Roll Hall of Famers, one of the biggest bands of the sixties — were his buddies. They came to his eightieth birthday. They came to his wedding.
 
-Years later we're at my sister Lisa's place in Sarasota, walking into breakfast at Another Broken Egg, and my dad spots a guy outside. His face lights up. Dickie V! The guy turns and it's Dick Vitale. They went to high school together. My dad went to high school with Dick Vitale and never once thought to mention it.
+Years later we're at my sister Lisa's place in Sarasota, walking into breakfast at Another Broken Egg, and my dad spots a guy outside. His face lights up. Dickie V! The guy turns, and it's Dick Vitale — the actual Dick Vitale. They'd gone to high school together in Jersey, and my dad had been telling me about it for years. Me and Dickie V. I'd nod the way you nod at a man who also swore the lawn was being handled by a goat. Then one morning there's Dickie V himself, turning around at the sound of my father's voice and lighting up right back at him.
 
-That was Lou. Gold records on the wall, Dickie V at breakfast, not a word about any of it. The guys from the union hall, the guys from the bar, the legends — he treated them the same, because to him they were all just people. If you found out one of them was famous, that was your discovery to make.
+That was Lou. He could not help mentioning the people he knew — the Rascals, Dickie V, a guy from the union hall — all in the same breath and the same easy tone. It should have been insufferable. It wasn't, and the reason is simple: every name was true. He never inflated a thing, and that was the funny part. He'd really been there for all of it, and he name-dropped the way a kid spreads out his baseball cards — not to impress you, just tickled you were finally looking.
 
 My dad didn't live in that world. He lived next to it. Close enough to know the rules, close enough to know when to say something and when to keep his mouth shut. As a kid I just thought my dad knew a lot of interesting people. He did. Some of them were more interesting than a seven-year-old needed to know about.
 
