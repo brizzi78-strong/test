@@ -166,6 +166,17 @@ struct TodayView: View {
                 )
             }
 
+            NavigationLink {
+                MedicationsView()
+            } label: {
+                QuickToolRow(
+                    title: "Medications",
+                    subtitle: "The list to hand to a doctor or ER",
+                    symbolName: "pills",
+                    color: Theme.cardinal
+                )
+            }
+
             Text("Take a moment")
                 .font(.headline)
                 .padding(.top, 8)
