@@ -7,14 +7,14 @@
     content: counter(page);
     font-family: Georgia, serif;
     font-size: 9.5pt;
-    color: #444;
+    color: #45557a;
   }
   @top-center {
     content: string(runhead);
     font-family: Georgia, serif;
     font-style: italic;
     font-size: 9pt;
-    color: #666;
+    color: #556690;
     padding-bottom: 0.15in;
   }
 }
@@ -30,7 +30,7 @@ body {
   line-height: 1.42;
   text-align: justify;
   hyphens: auto;
-  color: #1a1a1a;
+  color: #16223f;
   widows: 2;
   orphans: 2;
 }
@@ -47,9 +47,9 @@ body {
 }
 .titlepage h1 strong { font-weight: normal; }
 .titlepage p { text-indent: 0; margin: 0.14in 0; }
-.titlepage p:nth-of-type(1) { font-style: italic; font-size: 13.5pt; color: #444; }
+.titlepage p:nth-of-type(1) { font-style: italic; font-size: 13.5pt; color: #45557a; }
 .titlepage p:nth-of-type(2) { font-size: 12.5pt; letter-spacing: 0.14em; margin-top: 1.7in; }
-.titlepage p:nth-of-type(3) { font-size: 9.5pt; letter-spacing: 0.12em; color: #666; }
+.titlepage p:nth-of-type(3) { font-size: 9.5pt; letter-spacing: 0.12em; color: #556690; }
 
 /* ---------- Part & front-matter section heads (h1) ---------- */
 h1 {
@@ -71,7 +71,7 @@ p.partno {
   text-align: center;
   font-size: 11pt;
   letter-spacing: 0.3em;
-  color: #888;
+  color: #8a97b8;
   margin: 2in 0 0.15in;
 }
 p.partno + h1 {
@@ -82,7 +82,7 @@ p.partno + h1 + p {   /* part epigraph */
   text-indent: 0;
   text-align: center;
   font-style: italic;
-  color: #444;
+  color: #45557a;
 }
 
 /* ---------- Chapter number + title ---------- */
@@ -92,7 +92,7 @@ p.chapno {
   text-align: center;
   font-size: 10pt;
   letter-spacing: 0.24em;
-  color: #777;
+  color: #5f6f92;
   margin: 1.5in 0 0.12in;
 }
 p.chapno strong { font-weight: normal; }
@@ -127,7 +127,7 @@ blockquote {
   text-align: center;
   text-indent: 0;
   font-size: 10.5pt;
-  color: #333;
+  color: #2c3a58;
   margin: 0.4em 1.3em 1.3em;
 }
 blockquote p { text-indent: 0; margin: 0; }
@@ -142,9 +142,9 @@ hr {
   margin: 1.1em 0;
   page-break-after: avoid;
 }
-hr::after { content: "\2766"; font-size: 12pt; color: #999; }
+hr::after { content: "\2766"; font-size: 12pt; color: #8a97b8; }
 
 /* ---------- Contents (numbering re-seeded in post-process) ---------- */
 ol.startfix { list-style: none; padding-left: 0; margin: 0.2em 0 0.7em; }
 ol.startfix > li { counter-increment: li; text-indent: 0; margin: 0.05em 0; }
-ol.startfix > li::before { content: counter(li) ".\00a0\00a0"; color: #555; }
+ol.startfix > li::before { content: counter(li) ".\00a0\00a0"; color: #45557a; }
