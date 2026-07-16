@@ -411,3 +411,13 @@ stability is so I can leave my wife secure, and make her feel safe, if I'm not
 around.
 
 (Financial security reframed as an act of love for Hope — see #9, #16.)
+
+---
+
+## 35. Voice note — legacy (cleaned from dictation)
+
+I think legacy is overrated. But I think I'm beginning to come into that space
+where I feel I can make a difference in other people's lives — by telling my
+story, and being of service to others.
+
+(Ties the whole set together: story + service — see #10, #17, #21, #32.)
