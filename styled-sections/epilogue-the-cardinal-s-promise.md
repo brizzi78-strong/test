@@ -17,7 +17,7 @@ Seventeen years from West Palm Beach, from the apartment with the blinds drawn a
 
 Dad, I say out loud. Alone in the car. Just his name. And then the thing I should have said a hundred more times when he was alive to hear it. I love you. The cardinal doesn't move. Dad, I love you. I know you're watching out for me.
 
-It sits there. Turns its head slightly. Still looking. I don't know how long we stay like that. The parking lot goes away. Just me and the cardinal. Just me and Lou. Tears running down my face, not sobbing, the kind that comes from grief and relief colliding. Dad is gone. Dad is here. Both true.
+It sits there. Turns its head slightly. Still looking. I don't know how long we stay like that. The parking lot goes away. Just me and the cardinal. Just me and Lou. Tears running down my face, not sobbing, the kind that comes from grief and relief colliding. Dad is gone. Dad is here.
 
 I pull out my phone, slow and careful. I think I'm recording video. I press the button. The cardinal sits. Two minutes, maybe less, maybe more. Finally I say, Dad, I have to go. And it flies, not startled, not sudden. Lifts off the mirror to a nearby tree, sits a moment, then is gone.
 

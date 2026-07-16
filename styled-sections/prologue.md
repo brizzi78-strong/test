@@ -41,7 +41,7 @@ The door opened. Light cut in. I looked up and stayed where I was, afraid it was
 
 I went back the next day.
 
-It wasn't the moment I changed. I was scared, and fear isn't surrender; fear wears off. There was more running ahead of me, more lying, more damage. I'd seen how small my life had gotten. A cell, a rat, a man's hands on my throat, a concrete floor, and me folded against the wall hoping no one noticed me.
+It wasn't the moment I changed. I was scared, and fear wears off. There was more running ahead of me, more lying, more damage. I'd seen how small my life had gotten. A cell, a rat, a man's hands on my throat, a concrete floor, and me folded against the wall hoping no one noticed me.
 
 I never told anyone. Not my father, my brother, my mother, my wife. Not a sponsor, not a priest. I carried it out of shame, and the longer I kept it hidden, the harder it got to say.
 
