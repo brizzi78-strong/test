@@ -15,10 +15,12 @@ THIS front, not the earlier photo-back mockup's front. Two front fixes still
 needed on it:
   1. ADD the subtitle (missing entirely): *A Memoir of the Father Who Stayed*
      — locked by the author 2026-07-15; it matches the interior title page.
-     Set it below the title (larger and a step lighter), then the ornament,
-     then the author line.
+     Set it below the title (larger and a step lighter). Then, one step
+     smaller and clearly subordinate, the descriptive line (added 2026-07-16):
+     *Finding Hope Through Addiction, Adoption, Immigration, and Eventually
+     Hospice*. Then the ornament, then the author line.
   2. "By Rob Brizzi" → **ROB BRIZZI** (drop "By").
-Result = three elements: title / subtitle / author (ornament ok as a divider).
+Result = title / memoir subtitle / small descriptive line / author.
 The photo-back panel and the spine cardinal mark from the earlier wrap are
 still keepers — carry them onto this cleaner front to make the full wrap.
 
@@ -32,12 +34,16 @@ photo-back wrap stay. Only the text layer changes, per the fix list below.
 - Keep text 0.25" inside trim; nothing critical in the 0.125" bleed zone
 - Also deliver: Kindle front-panel-only export, 1600 x 2560 px or larger
 
-**FRONT panel copy (exact — three elements only, per cover-panel round 2):**
+**FRONT panel copy (exact — per cover-panel round 2, updated 2026-07-16):**
 - Title: THE CARDINAL'S PROMISE
-- Subtitle (final and locked — replaces "Finding Hope Through Addiction,
-  Adoption, and Immigration"): *A Memoir of the Father Who Stayed*
+- Subtitle (primary, final and locked): *A Memoir of the Father Who Stayed*
   — set LARGER and a step lighter than the mockup's gold; it is the hook and
   must survive Amazon thumbnail
+- Descriptive line (secondary, ADDED 2026-07-16 per author): *Finding Hope
+  Through Addiction, Adoption, Immigration, and Eventually Hospice* — set SMALL
+  and clearly subordinate, one step down from the memoir subtitle, so it reads
+  as a descriptive tagline rather than a competing subtitle. Keep it tight so
+  the front doesn't crowd; it need not survive the Amazon thumbnail.
 - Author: ROB BRIZZI  (no "By")
 - NO foreword credit on the front, NO ornament between subtitle and name —
   three cover critics found the five-element stack crowded and the credit a
@@ -81,15 +87,24 @@ cover palette. Vertical crop, drops into the back-cover author frame as-is) with
 
 Bottom: CARDINAL PROMISE PRESS (no "LLC" on the cover)
 
-**Barcode:** the mockup shows a placeholder (978-1-963412-01-3). The real
-ISBN is **979-8-9966446-0-5**. Use a real barcode for that ISBN, or leave the
-bottom-right 2" x 1.2" zone clear and KDP prints its own.
+**Barcode:** the mockup shows a placeholder (978-1-963412-01-3 — a different
+publisher's block, NOT ours). The real ISBN is **979-8-9966446-0-5**. Use a
+real barcode for that ISBN, or leave the bottom-right 2" x 1.2" zone clear and
+KDP prints its own.
+
+**ISBN block of record (Bowker / Myidentifiers, registrant Robert Brizzi,
+confirmed 2026-07-16):** ten 13-digit ISBNs —
+979-8-9966446-0-5 (**The Cardinal's Promise, paperback**), -1-2, -2-9
+(reserved for *Saying What Needs to Be Said*, Book 2), -3-6, -4-3, -5-0, -6-7,
+-7-4, -8-1, -9-8. Assign a separate ISBN per format/edition (paperback,
+hardcover, ebook). Manage at Bowker: My Account > My Identifiers.
 
 **Latest proof review (2026-07-16) — brief corrections NOT yet applied on the
 newest wrap; still open:**
-1. Front subtitle still reads "Finding Hope Through Addiction, Adoption, and
-   Immigration." Replace with the locked subtitle: *A Memoir of the Father Who
-   Stayed* (confirmed by the author 2026-07-16; matches the interior title page).
+1. Front subtitle: make it a two-line stack — primary subtitle *A Memoir of the
+   Father Who Stayed* (locked; matches the interior title page), then a small,
+   subordinate descriptive line beneath it: *Finding Hope Through Addiction,
+   Adoption, Immigration, and Eventually Hospice* (author-confirmed 2026-07-16).
 2. Barcode still shows the placeholder **978-1-963412-01-3** (a different
    publisher's block). Use **979-8-9966446-0-5** or clear the zone for KDP.
 3. Back-cover author photo: swap in the chosen navy-blazer headshot above.
