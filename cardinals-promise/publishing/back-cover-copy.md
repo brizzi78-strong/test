@@ -69,7 +69,7 @@ color-tab strip on the front (the color system lives inside the book).
 5. Art: photorealistic red cardinal on a gold blossom branch — alert, a
    herald, not a mourner. Avoid the sympathy register (snowy branch, soft
    focus); the buyer's parent is alive.
-6. ISBN on the back-panel barcode area: **978-1-963342-03-1**
+6. ISBN on the back-panel barcode area: **979-8-9966446-0-5**
 
 **Art asset status:** the delivered cover image (`cover-its-not-your-fault.jpeg`,
 1320×1974 px) is a **preview/mockup — about 155 DPI at 8.5×11, below print
@@ -81,8 +81,9 @@ Wrap geometry (premium color, 228pp): full wrap 17.7851 × 11.25 in,
 0.125" bleed, spine 0.5351" centered. Spine: navy title text on the cream
 field. (Recompute if the page count changes: spine = pages × 0.002347.)
 
-## ⚠️ ISBN warning
-Any AI-fabricated ISBN (e.g. 978-1-963342-02-7) is **mathematically invalid**
-(fails the ISBN-13 checksum). Do NOT print it. Use the real ISBN
-978-1-963342-03-1 (or your Bowker ISBN) and let KDP generate the barcode in
-the white zone.
+## ISBN
+Paperback: **979-8-9966446-0-5** — a real, checksum-valid ISBN from Rob's own
+Bowker block (registrant 9966446, MyIdentifiers). The audiobook edition uses
+979-8-9966446-2-9. Print the paperback number on the back-panel barcode area,
+or let the print/POD service generate the scannable barcode in the white zone.
+(Any earlier 978-1-963342-xx-x numbers were placeholders — do not use them.)

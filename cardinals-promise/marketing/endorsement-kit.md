@@ -71,7 +71,7 @@ like.")*
 
 **IT'S NOT YOUR FAULT — A Practical Guide for Families
 Caring for an Aging Parent** · Rob Brizzi, CDP · Cardinal Promise Press · 210-page 8.5×11 color
-workbook · ISBN 978-1-963342-03-1 · Publication: [date]
+workbook · ISBN 979-8-9966446-0-5 · Publication: [date]
 
 *One line:* The map nobody hands a family on their worst day — 29 chapters
 color-coded by urgency, with word-for-word scripts, fillable worksheets,
