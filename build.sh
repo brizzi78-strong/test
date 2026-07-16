@@ -41,6 +41,17 @@ python3 build-print-fix.py "$BASE.tmp.html"
 python3 -c "import weasyprint; weasyprint.HTML('$BASE.tmp.html').write_pdf('$BASE.pdf')"
 rm -f "$BASE.tmp.html"
 
+# KDP print interior: same layout, BLACK text for cheap B&W printing.
+pandoc "$SRC" \
+  --metadata-file=build-metadata.yaml \
+  -t html5 \
+  --template=build-template.html \
+  --css=build-print-kdp.css \
+  -o "${BASE}_KDP.tmp.html"
+python3 build-print-fix.py "${BASE}_KDP.tmp.html"
+python3 -c "import weasyprint; weasyprint.HTML('${BASE}_KDP.tmp.html').write_pdf('${BASE}_KDP_Interior.pdf')"
+rm -f "${BASE}_KDP.tmp.html"
+
 # Self-contained web-readable HTML (embedded CSS + cover image, one file)
 pandoc "$SRC" \
   --metadata-file=build-metadata.yaml \
