@@ -329,3 +329,19 @@ people who've come across my path.
 (Dictated; "plays" heard as "places," "Woodridge" as Wood-Ridge NJ. The "mask to
 be accepted" line ties to the Performance Trap / known-vs-performing thread —
 see #23, #24.)
+
+---
+
+## 29. Voice note — home, then and now (cleaned from dictation)
+
+**First memories of home?**
+I felt safe. I felt protected. I always had food, and typically had the things I
+needed.
+
+**Today — the smells, tastes, textures, objects that make home?**
+Today, home is nothing without my wife here. There's a lot I don't thank her for
+— making the place look pretty. She puts up blinds, hangs curtains, sets out
+candles, keeps it clean. She just makes it a very loving nest.
+
+(Mother's legacy -> Hope: safe/protected/fed as a child; Hope making the nest now
+— see ch2 and #14, "I feel safe when Hope makes our house a home.")
