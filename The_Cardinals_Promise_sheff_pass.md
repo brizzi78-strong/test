@@ -335,6 +335,8 @@ What I love now is how close my mother and her sisters have become, she and Nanc
 *"A father of the fatherless... is God in his holy habitation."*
 *— Psalm 68:5*
 
+**New Jersey, 1985**
+
 He asked my mother out and she said no. He asked again and she said no again. So he kept showing up, week after week, until she finally saw his charm and his maturity. That was how Lou Brizzi decided to stay.
 
 Lou met my mother in a bar in West Paterson in 1984. He was a man who'd already lived a complicated life and decided he was ready to do the next part right. My mother was twenty-nine, back from Mexico with two small boys and not much else, staying with her parents and taking whatever work she could find. She'd learned to be careful about who she let near her children, and a charming man in a bar wasn't going to be the exception. That was why she said no, and why his coming back meant something.
@@ -391,6 +393,8 @@ I understand it now in a way I couldn't then. I see it in every room I walk into
 
 *"I have called thee by thy name; thou art mine."*
 *— Isaiah 43:1*
+
+**New Jersey, 1986**
 
 Overnight, I had a big sister and two big brothers I hadn't even known to hope for. Lou chose us, and that choice came with a family already in place. He had three children of his own long before he ever met my mother: Lisa, Joel, and Jon. When he chose Chris and me, that was his decision to make. What his kids did was something else. They didn't have to make room for two boys from Mexico City who showed up attached to their father's new marriage. They made room anyway. They treated us like brothers.
 
@@ -530,6 +534,8 @@ He was always in the stands. He almost never missed a match in four years of hig
 
 ### *Cooperstown*
 
+**Cooperstown, New York, 1991**
+
 I was twelve. A quarter to eight on a Saturday morning, and Dad was in my doorway, already dressed, keys in his hand.
 
 "You want to take a ride?"
@@ -636,6 +642,8 @@ The wrestling years left marks I still feel. For a long time my body didn't feel
 *"Drudgery is the touchstone of character."*
 *— Oswald Chambers*
 
+**Ramsey, New Jersey, 1994**
+
 A recruiter looked at my father across a desk and told him to dye the gray out of his hair. Nobody would hire him otherwise. He went home and did it, and never said a word about it. I understood the price only later, when the money got tight. By then he was in his early fifties and we were living in Ramsey. I was starting high school — old enough to notice tension, too young to know its price.
 
 From the outside our life looked stable. A house. Cars in the driveway. Dinner on the table, wrestling practice, the bills paid, the routine holding. I didn't see how much of it was held up by him getting out of bed every morning.
@@ -726,7 +734,7 @@ That was the man who adopted me. He never talked about himself, never needed you
 *"The LORD is nigh unto them that are of a broken heart."*
 *— Psalm 34:18*
 
-**Oxford, Ohio, fall 1996**
+**Oxford, Ohio, 1996–2000**
 
 Lou's world had made me. Then it sent me off to build one of my own.
 
@@ -1150,6 +1158,8 @@ People asked why I did all of it. The meetings, the volunteering, the running, t
 *"Two are better than one... for if they fall, the one will lift up his fellow."*
 *— Ecclesiastes 4:9–10*
 
+**Pensacola, 2009–present**
+
 One of the men I got sober alongside had been homeless with a tenth-grade education, and a few years later he had a Hollywood actor sleeping in his guest room. His name is Matt. The men God put in front of me weren't the ones I would have picked, and the first of them came early, when I couldn't yet see any of it.
 
 Early in sobriety your brain is rewiring itself. You walk around in a fog, not drunk, not high, just flat. I was depressed, living with my parents, going to meetings, trying to figure out what came next, and I kept landing on the same thought: I'd never build something real again. Not somebody like me. Somewhere in there I heard people say how few stay sober. I never looked it up. When you're new, you don't hear that as information. You look around the room and wonder which one of you it's going to be. I was a long shot.
@@ -1308,6 +1318,8 @@ The days were long, doctors' offices, nursing homes, assisted livings, back road
 
 *"First be reconciled to thy brother, and then come and offer thy gift."*
 *— Matthew 5:24*
+
+**Pensacola, 2012**
 
 $113,000. That was the number when I finally added it up in ink on a yellow legal pad, every credit card and collection account and legal fee, no rounding. I'd spent years not looking at it. Steady work meant I could finally face the wreckage I'd been outrunning, and my sponsor Mager was the one who walked me into it. He didn't rush me. He was patient, but he wasn't buying the act. I could make my recovery sound like a success story, still controlling the version of me in the room. Mager didn't interrupt. He listened in a way that made clear he was hearing more than I was saying, and eventually, with nowhere for the story to land, it fell apart on its own.
 
@@ -1536,6 +1548,8 @@ I told people I was going to take some time off. Be there for my dad. Be there f
 *"They that wait upon the LORD shall renew their strength; they shall mount up with wings as eagles."*
 *— Isaiah 40:31*
 
+**November 11, 2025**
+
 Five weeks after I started the hospice job, my father started to die. We moved to Raleigh because life was expanding. Hope had been a pharmacist for eight years. Raleigh made sense, jobs, community, a church that felt like ours. Leaving Pensacola meant leaving roots. Hope never wavered. That's who she is. Not blindly optimistic; she sees clearly and asks hard questions. But under all of it is a bedrock belief that God has a plan for us to be of service. When the hospice opportunity came, it felt like a room I'd been circling for years with the door finally open. No debate. No spreadsheet. This was where I was most needed.
 
 ### *The Rooms*
@@ -1611,7 +1625,7 @@ My father died on Christmas Day, 2025.
 *"Jesus wept."*
 *— John 11:35*
 
-**December 2025**
+**December 28, 2025**
 
 When we pulled up to the funeral home, his truck was parked out front, NJERZ on the Florida plates. A man who moved all the way to the Gulf and still made his truck say Jersey. That's what undid me, not the building, not the door. The plates. But before any of it, there was a breakfast.
 
