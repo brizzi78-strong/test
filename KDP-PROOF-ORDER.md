@@ -5,13 +5,20 @@ Promise* from Amazon KDP, before the book is finished. These are review copies �
 not the published book. Ordering proofs never makes the book public and never
 transfers your rights.
 
-## Files to upload (both in this repo)
-- **Interior:** `The_Cardinals_Promise_KDP_Interior.pdf` — 6×9, black text, 204 pp, page numbers, fonts embedded.
-- **Cover:** `The_Cardinals_Promise_KDP_Cover.pdf` — full navy wrap, 12.709 × 9.25 in, spine 0.459" (built for this 204-page interior).
+## Files to upload
+- **Interior:** `The_Cardinals_Promise_KDP_Interior.pdf` (in this repo) — 6×9,
+  black text, **205 pp** (as of 2026-07-16), page numbers, fonts embedded.
+- **Cover:** **Grace's current wrap.** Per Grace (2026-07-16): use the cover as
+  it stands now for the proof; she corrects the details for the real thing.
+  (The repo-built `The_Cardinals_Promise_KDP_Cover.pdf` remains as a fallback.)
 
-> Temporary: the cover is a stand-in until Grace's final; the interior is a
-> reading proof, not the final locked typeset. If the page count changes before
-> you order, ask for a fresh cover so the spine stays correct.
+> Temporary proof, not the finished book:
+> - The proof cover still shows the placeholder barcode `978-1-963412-01-3` and
+>   the not-yet-final subtitle stack. Fine for a proof; **do not Publish it.**
+> - If KDP's previewer flags the barcode/ISBN mismatch, have Grace leave the
+>   barcode zone blank and let KDP drop in a placeholder.
+> - Interior is a reading proof, not the final locked typeset. KDP's page count
+>   after upload is the authoritative number for the spine.
 
 ## Steps
 1. **kdp.amazon.com → Create → Paperback.**
@@ -23,7 +30,7 @@ transfers your rights.
    - **White** paper, **Black & white** interior (cheapest; the navy is only for the on-screen/cover version).
    - Bleed: **No** (text-only interior).
    - Upload **the interior PDF**, then **the cover PDF**.
-6. **Preview:** run the **Online Previewer**. It checks trim, margins, and spine. Ours are built to KDP's math for 204 pages, so it should pass clean.
+6. **Preview:** run the **Online Previewer**. It checks trim, margins, and spine. The interior is built to KDP's 6×9 math for ~205 pages; let KDP confirm the exact count and spine.
 7. **Order copies:** on the pricing/publish screen, click **"Order Author Copies"** (or "Proof Copies"). Pay only the printing + shipping cost.
    - **Do NOT click "Publish."** Proofs don't require it, and not publishing keeps the book private.
 
