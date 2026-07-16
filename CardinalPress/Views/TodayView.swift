@@ -45,7 +45,7 @@ struct TodayView: View {
                     .font(.title3.weight(.medium))
             }
             Spacer()
-            LivingCardinal()
+            FloatingCardinal()
                 .frame(width: 58, height: 58)
         }
     }

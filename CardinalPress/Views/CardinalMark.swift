@@ -37,63 +37,100 @@ struct CardinalMark: View {
             func point(_ x: CGFloat, _ y: CGFloat) -> CGPoint {
                 CGPoint(x: x * s, y: y * s)
             }
-            func polygon(_ points: [(CGFloat, CGFloat)]) -> Path {
-                var path = Path()
-                path.move(to: point(points[0].0, points[0].1))
-                for p in points.dropFirst() {
-                    path.addLine(to: point(p.0, p.1))
-                }
-                path.closeSubpath()
-                return path
-            }
+
             func ellipse(_ cx: CGFloat, _ cy: CGFloat, _ rx: CGFloat, _ ry: CGFloat) -> Path {
                 Path(ellipseIn: CGRect(x: (cx - rx) * s, y: (cy - ry) * s, width: rx * 2 * s, height: ry * 2 * s))
             }
+
+            func bezierPath(_ points: [(CGFloat, CGFloat)], closed: Bool = true) -> Path {
+                guard points.count >= 2 else { return Path() }
+                var path = Path()
+                path.move(to: point(points[0].0, points[0].1))
+                for i in 1..<points.count {
+                    path.addLine(to: point(points[i].0, points[i].1))
+                }
+                if closed { path.closeSubpath() }
+                return path
+            }
+
             func rotation(about cx: CGFloat, _ cy: CGFloat, degrees: CGFloat) -> CGAffineTransform {
                 CGAffineTransform(translationX: cx * s, y: cy * s)
                     .rotated(by: degrees * .pi / 180)
                     .translatedBy(x: -cx * s, y: -cy * s)
             }
 
-            let red = tint ?? Theme.cardinal
-            let dark = tint ?? Theme.cardinalDark
-            let mask = tint ?? Color(red: 0.15, green: 0.09, blue: 0.10)
-            let beak = tint ?? Color(red: 0.93, green: 0.54, blue: 0.20)
+            let red = tint ?? Color(red: 0.77, green: 0.12, blue: 0.23)
+            let darkRed = tint ?? Color(red: 0.63, green: 0.0, blue: 0.0)
+            let black = tint ?? Color(red: 0.08, green: 0.08, blue: 0.08)
+            let beak = tint ?? Color(red: 1.0, green: 0.80, blue: 0.0)
 
             context.translateBy(x: 0, y: pose.bob * s)
 
-            // Tail (flicks about its joint with the body)
-            var tail = polygon([(58, 60), (84, 82), (75, 89), (53, 70)])
-            if pose.tailLift != 0 {
-                tail = tail.applying(rotation(about: 56, 62, degrees: -pose.tailLift))
-            }
-            context.fill(tail, with: .color(dark))
-            // Body
-            context.fill(ellipse(48, 57, 23, 21), with: .color(red))
-            // Wing (rotated 32° about its center) — skipped for silhouettes
+            // Wing — darker red, layered
             if tint == nil {
-                context.fill(ellipse(56, 58, 15, 9).applying(rotation(about: 56, 58, degrees: 32)),
-                             with: .color(dark))
+                context.fill(bezierPath([(46, 62), (61, 56), (69, 66), (59, 71)]),
+                             with: .color(darkRed))
             }
-            // Head and crest
-            context.fill(ellipse(36, 32, 14, 14), with: .color(red))
-            context.fill(polygon([(30, 22), (34, 4), (41, 20)]), with: .color(red))
-            context.fill(polygon([(38, 20), (46, 7), (48, 22)]), with: .color(red))
-            // Face mask, beak, eye
+
+            // Body — full, rounded
+            context.fill(ellipse(52, 66, 28, 23), with: .color(red))
+
+            // Head — proportional
+            context.fill(ellipse(44, 44, 18, 18), with: .color(red))
+
+            // Crest — pointed upward
+            let crestTilt: CGFloat = pose.tailLift > 0 ? pose.tailLift * 0.2 : 0
+            context.fill(bezierPath([(40, 34), (44, 10 - crestTilt), (48, 32)]),
+                         with: .color(red))
+
+            // Face mask — black patch
             if tint == nil {
-                context.fill(polygon([(21, 34), (30, 26), (38, 31), (36, 42), (27, 44)]), with: .color(mask))
+                context.fill(bezierPath([(42, 42), (52, 44), (48, 58), (38, 56)]),
+                             with: .color(black))
             }
-            context.fill(polygon([(13, 33.5), (25, 28.5), (25, 38.5)]), with: .color(beak))
+
+            // Beak — golden
+            context.fill(bezierPath([(38, 46), (32, 50), (38, 54)]),
+                         with: .color(beak))
+
+            // Eye — with highlight
             if tint == nil {
-                context.fill(ellipse(35, 27, 2.4, 2.4), with: .color(mask))
+                context.fill(ellipse(42, 40, 3.2, 3.2), with: .color(.white))
                 if pose.isBlinking {
-                    // Closed lid: a thin dark line where the eye was
-                    context.fill(ellipse(35, 27, 2.4, 0.5), with: .color(.black.opacity(0.7)))
+                    context.fill(ellipse(42, 40, 3.2, 0.5), with: .color(black))
                 } else {
-                    context.fill(ellipse(35.9, 26.2, 0.8, 0.8), with: .color(.white.opacity(0.85)))
+                    context.fill(ellipse(42, 40, 1.8, 1.8), with: .color(black))
+                    context.fill(ellipse(42.5, 39.2, 0.8, 0.8), with: .color(.white.opacity(0.9)))
                 }
             } else {
-                context.fill(ellipse(35, 27, 2.6, pose.isBlinking ? 0.6 : 2.6), with: .color(Theme.cardinal))
+                context.fill(ellipse(42, 40, 3.4, pose.isBlinking ? 0.5 : 3.4), with: .color(red))
+            }
+
+            // Tail — long, swept back
+            var tail = bezierPath([(60, 66), (78, 70), (75, 84), (62, 78)])
+            if pose.tailLift != 0 {
+                tail = tail.applying(rotation(about: 64, 75, degrees: -pose.tailLift * 0.4))
+            }
+            context.fill(tail, with: .color(darkRed))
+
+            // Feet — simple lines
+            if tint == nil {
+                context.stroke(
+                    Path { path in
+                        path.move(to: point(48, 85))
+                        path.addLine(to: point(44, 100))
+                    },
+                    with: .color(black),
+                    lineWidth: 1.2 * s
+                )
+                context.stroke(
+                    Path { path in
+                        path.move(to: point(56, 85))
+                        path.addLine(to: point(60, 100))
+                    },
+                    with: .color(black),
+                    lineWidth: 1.2 * s
+                )
             }
         }
         .aspectRatio(1, contentMode: .fit)
@@ -121,9 +158,31 @@ struct LivingCardinal: View {
     }
 }
 
+/// The real cardinal mascot (from the handbook artwork) as a full-color
+/// image that gently bobs, as if breathing. Falls back to a still image
+/// under Reduce Motion. Use where the bird should read as itself rather
+/// than as a single-color silhouette.
+struct FloatingCardinal: View {
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    @State private var lifted = false
+
+    var body: some View {
+        Image("CardinalEmblem")
+            .resizable()
+            .scaledToFit()
+            .offset(y: lifted ? -2.5 : 2.5)
+            .animation(
+                reduceMotion ? nil : .easeInOut(duration: 2.4).repeatForever(autoreverses: true),
+                value: lifted
+            )
+            .onAppear { lifted = true }
+            .accessibilityHidden(true)
+    }
+}
+
 #Preview {
     VStack(spacing: 30) {
-        LivingCardinal()
+        FloatingCardinal()
             .frame(width: 140)
         CardinalMark(tint: .white)
             .frame(width: 60)
