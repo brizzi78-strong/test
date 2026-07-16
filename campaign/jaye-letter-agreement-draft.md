@@ -66,22 +66,24 @@ _________________________ Jaye Rogers · Date ________
 
 ## Exhibit A — Commission per tracked sale of *The Cardinal's Promise*
 
-> Placeholder figures — memoir list prices are not final. Lock these numbers
-> before signature; the method below is the binding definition.
+List prices (set July 2026): **$19.99 paperback · $24.99 hardcover · $9.99
+Kindle.** Commission figures assume ~300-page printing costs; both parties
+initial an updated table once the final page count is known.
 
 **Direct orders (thecardinalspromise.com, code JAYE):**
 
-| Format | Est. list | Jaye's commission (est.) |
+| Format | List | Jaye's commission |
 |---|---|---|
-| Paperback | $19.99 | ≈ $4.30 |
-| Hardcover (if offered) | $29.99 | ≈ $6.75 |
+| Paperback | $19.99 | $4.27 |
+| Hardcover | $24.99 | $4.12 |
 
 **Amazon orders (via Jaye's Attribution link):**
 
-| Format | Jaye's commission (est.) |
+| Format | Jaye's commission |
 |---|---|
-| Paperback | ≈ $3.77 |
-| Kindle ($9.99) | ≈ $3.46 |
+| Paperback | $3.77 |
+| Hardcover | $2.87 |
+| Kindle ($9.99) | $3.46 |
 
 Preorders through her link or code count as tracked sales from the day
 preorders open.

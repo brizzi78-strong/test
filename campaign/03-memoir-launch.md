@@ -3,7 +3,9 @@
 **Title:** The Cardinal's Promise
 **Subtitle:** Immigrant. Addict. Son.
 **Imprint:** Cardinal Promise Press
-**Formats:** Paperback, ebook, audiobook (author-narrated — the voice IS the brand)
+**Formats & pricing (set July 2026):** Paperback **$19.99** · Hardcover
+**$24.99** · Kindle **$9.99** · audiobook (author-narrated — the voice IS the
+brand, pricing via ACX)
 **Team:** Foreword Dave Meyer · Endorsement Quint Studer · Publicity Smith Publicity
 · Cover quote Dr. Huet · Book trailer in production
 **Assets already live:** thecardinalspromise.com, Kit taxonomy + welcome sequences,

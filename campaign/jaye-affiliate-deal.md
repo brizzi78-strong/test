@@ -32,22 +32,23 @@ Amazon Attribution links during defined windows.
 
 ### Track 1 — Direct sales from thecardinalspromise.com (the real money)
 
-Memoir pricing isn't final yet — figures below assume $19.99 paperback,
-~300 pp (~$4.45 printing), ~$5 fulfillment, 10% code discount. Redo Exhibit A
-when memoir prices are locked.
+**Memoir pricing locked (July 2026): $19.99 paperback · $24.99 hardcover ·
+$9.99 Kindle.** Margins assume ~300 pp ($4.45 pb / $9.25 hc printing), ~$5
+fulfillment, 10% JAYE discount; refresh once final page count is known.
 
-| Format | Price (est.) | Contribution margin | **Jaye's 50%** |
-|--------|-------------|--------------------:|---------------:|
-| Memoir paperback, direct | $19.99 | ≈ $8.55 | **≈ $4.30** |
-| Memoir hardcover, direct (if offered, est. $29.99) | $29.99 | ≈ $13.50 | **≈ $6.75** |
+| Format | Price | Contribution margin | **Jaye's 50%** |
+|--------|-------|--------------------:|---------------:|
+| Memoir paperback, direct | $19.99 | ≈ $8.54 | **≈ $4.27** |
+| Memoir hardcover, direct | $24.99 | ≈ $8.24 | **≈ $4.12** |
 
 ### Track 2 — Amazon sales through her Attribution link
 
-KDP royalty is the margin here (no fulfillment on us; same estimates):
+KDP royalty is the margin here (no fulfillment on us):
 
-| Format | Royalty (est.) | **Jaye's 50%** |
-|--------|--------------:|---------------:|
+| Format | Royalty | **Jaye's 50%** |
+|--------|--------:|---------------:|
 | Memoir paperback | ≈ $7.54 | **≈ $3.77** |
+| Memoir hardcover | ≈ $5.74 | **≈ $2.87** |
 | Memoir Kindle ($9.99) | ≈ $6.92 | **≈ $3.46** |
 
 **Preorders count.** Her biggest window is Oct 2026–Jan 2027: every preorder
