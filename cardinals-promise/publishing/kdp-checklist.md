@@ -4,8 +4,8 @@ The two files KDP asks for are in this folder:
 
 | KDP upload slot | File | Spec |
 |---|---|---|
-| Manuscript (interior) | `kdp-interior.pdf` | **228 pages** master (227 content after dropping the cover page, pad 1 blank → 228 even), 8.5 × 11 in, no bleed, mirrored margins (1.05" gutter / 0.55" outside), fonts embedded, page numbers + TOC + index match. **Needs re-export** — the master is 228pp (expanded Contents + new sections and Cardinal Moment reflections, July 2026) |
-| Book cover | `kdp-cover-wrap.pdf` | One-piece wrap, **17.7851 × 11.25 in** with 0.125" bleed; **spine 0.5351"** (228 pages × 0.002347", **premium color** paper — recompute if ink choice changes); 2" × 1.2" white barcode zone, lower-right of back cover, left blank for KDP. **Needs re-export** at the new spine |
+| Manuscript (interior) | `kdp-interior.pdf` | **227 pages** master (226 content after dropping the cover page; already even), 8.5 × 11 in, no bleed, mirrored margins (1.05" gutter / 0.55" outside), fonts embedded, page numbers + TOC + index match. **Needs re-export** (July 2026) |
+| Book cover | `kdp-cover-wrap.pdf` | One-piece wrap, **17.7804 × 11.25 in** with 0.125" bleed; **spine 0.5304"** (226 pages × 0.002347", **premium color** paper — recompute if ink choice changes); 2" × 1.2" white barcode zone, lower-right of back cover, left blank for KDP. **Needs re-export** at the new spine |
 
 ## Before you upload
 - [x] **RESOLVED (July 2026): dividers stay.** Beta panel voted keep-as-is 5-0; full results in `reviews/beta-panel-report.md`. Original question: **the five part-divider (Rob's call, July 2026): the five part-divider
@@ -20,11 +20,11 @@ The two files KDP asks for are in this folder:
 
 - [x] **SKIPPED (July 2026): Hope's pharmaceutical review not completed** — shipping without the full chapter read-through. Removed PharmD clinical-review attribution from copyright page; Hope retains "Project Consultant" credit for her role in the book's inception.
 - [x] **Author photo placed (July 2026)** — professional navy-suit headshot (`author-headshot.jpeg`, 1023×1537 ≈ 890 DPI at the 1.15in slot) embedded in the back-cover wrap photo slot and the About the Author page.
-- [x] **Printed page numbers added (July 2026)** — the interior now carries typeset folios, bottom-center, muted gray. Folio = sheet number (the cover is sheet 1 and is left unnumbered), so every folio matches the Contents by construction (e.g., Chapter 1 = 37). Applied as a PDF post-process (Chromium can't typeset CSS margin-box counters): render the book HTML, then stamp `pageIndex+1` on every page except the cover with pdf-lib. Re-run this step whenever the interior is re-exported.
+- [x] **Printed page numbers added (July 2026)** — the interior now carries typeset folios, bottom-center, muted gray. Folio = sheet number (the cover is sheet 1 and is left unnumbered), so every folio matches the Contents by construction (e.g., Chapter 1 = 36). Applied as a PDF post-process (Chromium can't typeset CSS margin-box counters): render the book HTML, then stamp `pageIndex+1` on every page except the cover with pdf-lib. Re-run this step whenever the interior is re-exported.
 - [ ] **Bio verified** — Certified Dementia Practitioner credential current
 - [ ] **Final human proofread** of `kdp-interior.pdf` (read it as a printed proof, not on screen)
 - [ ] **Back-cover copy approved** — edit `back-cover-copy.md` and ask for a wrap regen if you change anything
-- [ ] **Cover wrap pending print-resolution art** — the finished **cream** *It's Not Your Fault* design is adopted (see the design brief in `back-cover-copy.md`). The wrap template in this folder is rebuilt in that cream style. The delivered cover image (`cover-its-not-your-fault.jpeg`) is a ~155 DPI mockup, **not print-ready** — the designer must supply the front art at print resolution. Give the designer these exact dimensions: **full wrap 17.7851 × 11.25 in (0.125" bleed all around), spine 0.5351" centered (228pp, premium-color paper)** — and generate the template from KDP's cover calculator to be safe.
+- [ ] **Cover wrap pending print-resolution art** — the finished **cream** *It's Not Your Fault* design is adopted (see the design brief in `back-cover-copy.md`). The wrap template in this folder is rebuilt in that cream style. The delivered cover image (`cover-its-not-your-fault.jpeg`) is a ~128 DPI mockup, **not print-ready** — the designer must supply the front art at print resolution. Give the designer these exact dimensions: **full wrap 17.7804 × 11.25 in (0.125" bleed all around), spine 0.5304" centered (226pp interior, premium-color paper)** — and generate the template from KDP's cover calculator to be safe.
 - [ ] **Publisher imprint confirmed** — copyright page now says Cardinal Promise Press (was Blue Ridge LLC); confirm which entity actually publishes
 
 ## At kdp.amazon.com (Bookshelf → Create → Paperback)
