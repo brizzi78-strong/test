@@ -83,27 +83,35 @@ NC niche — it's uncontested.
 These are winnable bestseller-flag categories for a well-launched indie title;
 verify exact paths in the picker at upload time (KDP renames nodes periodically).
 
-## 7. Paperback — print options
+## 7. Print options — paperback and hardcover
 
-| Setting | Choice |
-|---------|--------|
-| ISBN | **Own ISBN, imprint = Cardinal Promise Press** (buy via Bowker if not already owned). Free KDP ISBN lists "Independently published" — wrong for a three-book imprint. |
-| Trim size | 6" × 9" |
-| Ink & paper | Black ink, white paper (worksheets need crisp lines) |
-| Bleed | No bleed (unless final layout uses full-page art) |
-| Cover finish | **Matte** (fits the calm, keepsake brand) |
-| Fonts | Fully embedded (Spectral) — KDP accepts embedded-font PDF; PDF/X not required |
+| Setting | Paperback | Hardcover |
+|---------|-----------|-----------|
+| ISBN | **Own ISBN, Cardinal Promise Press** (each format needs its own ISBN — buy the Bowker 10-pack) | Own ISBN, Cardinal Promise Press |
+| Trim size | 6" × 9" | 6" × 9" (case laminate — KDP's only hardcover type) |
+| Ink & paper | Black ink, white paper (worksheets need crisp lines) | Same |
+| Bleed | No bleed (unless final layout uses full-page art) | Same |
+| Cover finish | **Matte** | **Matte** case laminate |
+| Fonts | Fully embedded (Spectral) — KDP accepts embedded-font PDF; PDF/X not required | Same interior file works for both |
 
-**Spine width** = page count × 0.002252" (white paper). Final page count comes
-from the typeset build; cover designer needs it before finishing the spine.
+Free KDP ISBNs list "Independently published" — wrong for a three-book imprint.
 
-## 8. Pricing & royalties
+**Spine width:** paperback = page count × 0.002252" (white paper); hardcover uses
+KDP's case-laminate template generator (different spine + wrap dimensions —
+generate both cover templates once final page count is known).
+
+## 8. Pricing & royalties (final page count will shift printing cost slightly; ~325 pp assumed)
 
 | Format | List price | Royalty math |
 |--------|-----------|--------------|
-| Paperback | **$19.99** | 60% × 19.99 − printing (~$4.85 at ~325 pp b/w) ≈ **$7.14/copy** |
+| Paperback | **$24.99** | 60% × 24.99 − printing (~$4.75) ≈ **$10.24/copy** |
+| Hardcover | **$39.99** | 60% × 39.99 − printing (~$9.55) ≈ **$14.44/copy** |
 | Kindle | **$9.99** | 70% plan ≈ **$6.92/copy** (minus small delivery fee) |
 | Kindle promo windows | $4.99 during memoir launch (Jan 2027) and ebook promo stacks (Apr/Sept 2027) | 70% ≈ $3.44 |
+
+Positioning note: the hardcover is the gift/institutional edition — libraries,
+facilities, and bulk buyers prefer it, and $39.99 anchors the $24.99 paperback
+as the sensible choice on the Amazon page.
 
 - Enable **Expanded Distribution** only if not going wide via IngramSpark;
   if bookstores/libraries matter (they do, for bulk/institutional), prefer
@@ -143,7 +151,8 @@ from the typeset build; cover designer needs it before finishing the spine.
 ## 12. Upload-day checklist
 
 - [ ] Interior PDF final (blockers cleared, fonts embedded, glossary page refs in)
-- [ ] Cover PDF with correct spine width for final page count
+- [ ] Two cover PDFs — paperback and hardcover case-laminate — from KDP's
+      template generator at final page count
 - [ ] Own ISBN assigned to Cardinal Promise Press and used on copyright page
 - [ ] Copyright page: AI acknowledgment verbatim; eCO registration number
 - [ ] Order printed proof (allow 7–10 days) — approve only after physical check

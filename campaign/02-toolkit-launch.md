@@ -21,7 +21,8 @@ hi-res memoir promo cover, one sidebar ending
 
 ## Pricing
 
-- Paperback **$19.99** (worksheets justify it; caregivers buy utility, not price)
+- Paperback **$24.99** (worksheets justify it; caregivers buy utility, not price)
+- Hardcover **$39.99** — the gift/institutional edition; anchors the paperback
 - Ebook **$9.99** launch price; $4.99 promo windows during memoir launch
 - Bulk tier: 20+ copies at 40% off direct (senior-living communities, agencies,
   churches, support groups) via the existing bulk landing page
