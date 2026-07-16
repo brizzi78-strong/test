@@ -18,8 +18,8 @@ her audience in her own voice, on her own schedule. She is an independent
 partner, not an employee, and this agreement doesn't restrict anything else
 she does.
 
-**2. Which books.** *The Aging Parent Cardinal's Toolkit* (from its release),
-*The Cardinal's Promise* (from its release), and future titles only if both
+**2. Which book.** *The Cardinal's Promise* only, from the opening of
+preorders. Other Cardinal Promise Press titles are included only if both
 parties add them in writing.
 
 **3. What Jaye earns.** Fifty percent (50%) of the contribution margin on every
@@ -64,24 +64,27 @@ _________________________ Jaye Rogers · Date ________
 
 ---
 
-## Exhibit A — Commission per tracked sale (as of July 2026)
+## Exhibit A — Commission per tracked sale of *The Cardinal's Promise*
+
+> Placeholder figures — memoir list prices are not final. Lock these numbers
+> before signature; the method below is the binding definition.
 
 **Direct orders (thecardinalspromise.com, code JAYE):**
 
-| Title / format | List | Jaye's commission |
+| Format | Est. list | Jaye's commission (est.) |
 |---|---|---|
-| Toolkit paperback | $24.99 | $7.60 |
-| Toolkit hardcover | $39.99 | $12.70 |
-| Memoir paperback (on release) | TBD | 50% of margin per this method |
-| Bundle (memoir + Toolkit pb) | $39.99 | $12.50 |
+| Paperback | $19.99 | ≈ $4.30 |
+| Hardcover (if offered) | $29.99 | ≈ $6.75 |
 
 **Amazon orders (via Jaye's Attribution link):**
 
-| Format | Jaye's commission |
+| Format | Jaye's commission (est.) |
 |---|---|
-| Toolkit paperback | $5.12 |
-| Toolkit hardcover | $7.22 |
-| Toolkit Kindle | $3.46 |
+| Paperback | ≈ $3.77 |
+| Kindle ($9.99) | ≈ $3.46 |
+
+Preorders through her link or code count as tracked sales from the day
+preorders open.
 
 Method: 50% × (list price − retailer/printing costs − direct-order discount and
 fulfillment where applicable). Figures update with notice if prices or printing

@@ -1,8 +1,13 @@
 # Jaye Rogers — Affiliate Partnership (50% of Contribution Margin)
 
-**Deal in one line:** Jaye (@rolliojuliet) gets her own affiliate program —
-**50% of the contribution margin** on every sale she drives, tracked through
-her own link and code, for as long as the partnership runs.
+**Deal in one line:** Jaye (@rolliojuliet) gets her own affiliate program on
+**The Cardinal's Promise only** — 50% of the contribution margin on every
+memoir sale she drives, tracked through her own link and code.
+
+**Scope decision (Rob, July 2026):** the deal covers the memoir, not the
+Toolkit. It's her family's book — the chapter about her and Tyler is in it —
+so her share comes from that title alone. The Toolkit and children's book stay
+out unless both parties add them in writing later.
 
 Status: proposed by Rob, July 2026. Terms below are a working draft to bring
 to Jaye — nothing is agreed until it's in writing and she's seen the numbers.
@@ -27,25 +32,26 @@ Amazon Attribution links during defined windows.
 
 ### Track 1 — Direct sales from thecardinalspromise.com (the real money)
 
-Selling direct via her code, per copy (author-copy print cost ~$4.75 pb /
-~$9.55 hc, ~$5 fulfillment allowance):
+Memoir pricing isn't final yet — figures below assume $19.99 paperback,
+~300 pp (~$4.45 printing), ~$5 fulfillment, 10% code discount. Redo Exhibit A
+when memoir prices are locked.
 
-| Format | Price | Contribution margin | **Jaye's 50%** |
-|--------|-------|--------------------:|---------------:|
-| Toolkit paperback | $24.99 | ≈ $15.25 | **≈ $7.60** |
-| Toolkit hardcover | $39.99 | ≈ $25.45 | **≈ $12.70** |
-| Memoir (when live, est. $19.99 pb) | $19.99 | ≈ $10.25 | **≈ $5.10** |
-| Bundle (memoir + Toolkit pb) | $39.99 | ≈ $25.00 | **≈ $12.50** |
+| Format | Price (est.) | Contribution margin | **Jaye's 50%** |
+|--------|-------------|--------------------:|---------------:|
+| Memoir paperback, direct | $19.99 | ≈ $8.55 | **≈ $4.30** |
+| Memoir hardcover, direct (if offered, est. $29.99) | $29.99 | ≈ $13.50 | **≈ $6.75** |
 
 ### Track 2 — Amazon sales through her Attribution link
 
-KDP royalty is the margin here (no fulfillment on us):
+KDP royalty is the margin here (no fulfillment on us; same estimates):
 
-| Format | Royalty | **Jaye's 50%** |
-|--------|--------:|---------------:|
-| Paperback | $10.24 | **$5.12** |
-| Hardcover | $14.44 | **$7.22** |
-| Kindle | $6.92 | **$3.46** |
+| Format | Royalty (est.) | **Jaye's 50%** |
+|--------|--------------:|---------------:|
+| Memoir paperback | ≈ $7.54 | **≈ $3.77** |
+| Memoir Kindle ($9.99) | ≈ $6.92 | **≈ $3.46** |
+
+**Preorders count.** Her biggest window is Oct 2026–Jan 2027: every preorder
+through her link is a tracked sale. The launch event IS her selling moment.
 
 Amazon Attribution reports the sales her link drove; we pay her from royalties
 monthly. She can ALSO stack Amazon Associates' ~4.5% on top — that comes from
@@ -67,7 +73,7 @@ Amazon, not us, and is hers to keep.
 ## Agreement checklist (one-page letter agreement, not a 20-page contract)
 
 - [ ] Parties: Cardinal Promise Press / Jaye Rogers
-- [ ] Scope: which titles (Toolkit now; memoir on release; children's book optional later)
+- [ ] Scope: **The Cardinal's Promise only** (other titles only by written addition later)
 - [ ] Rate: 50% of contribution margin as defined by the tables above; tables
       attached as the definition (no vague "profits" language — margin per copy, in dollars)
 - [ ] Term: 12 months, auto-renewing, either party out with 30 days' notice;

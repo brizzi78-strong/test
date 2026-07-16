@@ -47,9 +47,9 @@ sober, whose father died on Christmas Day — and what landed on his car mirror
 - **@rolliojuliet (Tyler & Jaye)** — the crown jewel. The launch event (doc 03),
   plus ongoing: their chapter, their audience, their honesty. Everything gated on
   their approval of the chapter; they get advance copies and full veto.
-  **Jaye has her own affiliate program at 50% of contribution margin** — full
-  deal structure, per-copy math, and agreement checklist in
-  [jaye-affiliate-deal.md](jaye-affiliate-deal.md).
+  **Jaye has her own affiliate program at 50% of contribution margin on the
+  memoir (The Cardinal's Promise only)** — full deal structure, per-copy math,
+  and agreement checklist in [jaye-affiliate-deal.md](jaye-affiliate-deal.md).
 - **UNC ambassadors** (per business plan) — campus recovery communities, school
   of social work, gerontology programs. Offer: free books + Rob speaks free once
   per semester.
