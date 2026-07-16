@@ -61,16 +61,21 @@ in red and **NOT** written above it in red marker, so the eye lands on *It's
 Not Your Fault.* Title type is dark charcoal serif; red diamond ornaments;
 author name in charcoal caps. Clean — no utility row or color-tab strip.
 
-**Designer brief (print-resolution rebuild):**
-1. Kicker (top, rust, letterspaced, flanked by short rules): **A Cardinal's Promise Guide**
-2. Title treatment: **IT'S ~~ALL~~ YOUR FAULT** — "ALL" crossed out in red, a
-   handwritten **NOT** above it in red; corrected reading is *It's Not Your
-   Fault.* This device owns the center and is the whole concept — keep it
-   legible at 100px thumbnail (the one real risk is a split-second misread of
-   "It's All Your Fault," which is also the intended double-take).
-3. Subtitle (rust, uppercase, letterspaced): **A Practical Guide for Families
-   Caring for an Aging Parent**
-4. Author line: **ROB BRIZZI** (charcoal caps). CDP credential omitted on the
+**Designer brief (print-resolution rebuild) — current adopted layout (July 2026):**
+1. Thin **red/rust double-rule frame**; no top kicker. Large photorealistic red
+   cardinal facing left on a **red-berry branch**, upper third, on a warm cream
+   field (#faf1e4).
+2. Title treatment: **IT'S ~~ALL~~ YOUR FAULT** — "ALL" struck out with a red X
+   and **NOT** written above it in red, so the corrected reading is *It's Not
+   Your Fault.* Deep-navy serif; the device owns the center. (⚠️ Keep it legible
+   at 100px thumbnail; a red X through the WRONG word flips the meaning — an
+   earlier draft crossed out "NOT" and read *"It's Your Fault."* Cross out
+   **ALL**, never NOT.)
+3. Subtitle (rust italic): **For Families Caring for an Aging Parent** (the
+   cover uses this short form; the registered metadata subtitle stays the longer
+   *A Practical Guide for Families Caring for an Aging Parent* unless changed).
+4. Author line: **ROB BRIZZI** (navy caps), and beneath it in **blue italic**:
+   *From the Author of **The Cardinal's Promise**.* CDP credential omitted on the
    front; it stays on the back bio.
 5. Art: photorealistic red cardinal on a rust-berry branch — alert, a herald,
    not a mourner. Avoid the sympathy register; the buyer's parent is alive.
