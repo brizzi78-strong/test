@@ -371,3 +371,18 @@ bond.
 
 (The "getting back to the joy" arc from ch26, in real time; and the presence
 theme at the book's center.)
+
+---
+
+## 32. Voice note — mortality, service, death (cleaned from dictation)
+
+**Thoughts on death and dying, contemplating my mortality in body, heart, and
+mind:**
+
+Being in hospice makes me realize how mortal we all are. The older I get, the
+more I want to — it's not about ego, it's more about service. How can I help as
+many people as I can while I'm here on Earth? I don't turn away from death. The
+only reason I'd want more time is to spend as much of it as I can with my wife.
+
+(Dictated; trails off at the end. Service-over-ego and not-turning-from-death are
+the Part Six / hospice spine.)
