@@ -345,3 +345,17 @@ candles, keeps it clean. She just makes it a very loving nest.
 
 (Mother's legacy -> Hope: safe/protected/fed as a child; Hope making the nest now
 — see ch2 and #14, "I feel safe when Hope makes our house a home.")
+
+---
+
+## 30. Voice note — vision of home / unconditional love (cleaned from dictation)
+
+**My visions and dreams of home:**
+I always want home to feel like a place I can come to — no matter what's going on
+at work or elsewhere, where I feel safe and I feel loved. Just a safe zone.
+
+**What should home provide that can't be found anywhere else?**
+Unconditional love.
+
+(The book's core phrase — Lou "never once made me feel I had to earn the place,"
+"the love that doesn't send a bill.")
