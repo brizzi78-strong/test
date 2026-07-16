@@ -575,6 +575,8 @@ After Ramsey, Dave got recruited, Syracuse, Virginia Tech, Wake Forest. He chose
 *"And every man that striveth for the mastery is temperate in all things."*
 *— 1 Corinthians 9:25*
 
+**Ramsey, New Jersey, 1993**
+
 ### *Sophomore Year: The Turn*
 
 Freshman year I lost the matches that mattered. Early sophomore season I drew the top seed in a tournament, a kid everyone knew would win, the kid I was supposed to be a warm-up for. Something happened I still can't fully explain. I wasn't afraid of him. The fear that had been the ground note of every match since that first pin just wasn't there. What was there was anger, not at him, at the idea that I was supposed to lose. I beat him. Ugly, grinding, the full three periods. But I won it. Afterward Lou didn't say much. A hand on my shoulder. In his language it meant: I always knew this was in you.
