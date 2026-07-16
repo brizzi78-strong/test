@@ -40,9 +40,11 @@ Publisher mark: Cardinal Promise Press
 
 ## Front panel — FINISHED COVER (CREAM, author-delivered, July 2026)
 
-The author delivered a finished front-cover design and it is adopted for
-this title. It supersedes the earlier reader-panel navy/white/sunset round:
-this book ships **cream**, and the retitle to *It's Not Your Fault* is final.
+**DECISION (July 2026): the "correction" crossout cover (Option A) is chosen**
+over the clean-title version (Option B). Hope's read settled it — *"life is
+messy."* The cover tells the truth of caregiving rather than smoothing it over.
+Option B is retired to `cover-clean-v1.jpeg` as a backup only. This book ships
+**cream**; the retitle to *It's Not Your Fault* is final.
 
 **SERIES NOTE:** cream is this book only. The rest of the Cardinal's Promise
 series — including the memoir *A Cardinal's Promise* — stays **navy** (the
