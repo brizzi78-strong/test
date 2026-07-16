@@ -1923,6 +1923,10 @@ This book will help you do exactly that. I am grateful it exists, and I am grate
 
 # **AUTHOR'S NOTE**
 
+For most of my life I wore a mask. Moving as much as I did as a kid — Mexico to New Jersey, town to town, later across the country — taught me one trick I used everywhere: read the room, become what it wanted, and hope that version got to stay. I got good at it. I performed a life that looked like success and kept the real inventory hidden. Even sober, even happy, I managed a careful image, online and off, and I called it protection.
+
+Writing this book took the mask off. Putting these years on the page, the parts I was proud of and the parts I'd spent decades hiding, I found there was nothing left to protect. The fear I'd built my whole life around — that if people saw the real thing, they'd turn away — was the lie. What replaced it is quieter than relief. It's peace. For the first time, I'm not performing Rob Brizzi. I'm just him. That is what writing this cost me, and what it gave back.
+
 This is a true story, told from memory. Dialogue has been reconstructed as faithfully as memory allows; it keeps the substance of what was said, if not always the exact words. Some names and identifying details have been changed to protect privacy, above all those of the patients and families I served in home health and hospice, whose hardest days deserve protection, not exposure. Where the sober men and women of the rooms appear by their real names, it is with their permission; others have been renamed. A few of the rooms I describe from my work are composites of many rooms, for the same reason. Nothing in these pages was invented to sharpen the story. My mother, who is all over this book, checked more of these memories than anyone. Whatever I still got wrong is mine.
 
 # **ACKNOWLEDGMENTS**
