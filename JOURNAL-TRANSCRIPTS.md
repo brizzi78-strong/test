@@ -399,3 +399,15 @@ and I said, "Ho ho ho." My mom said, "Stop." But I remember that meeting.
 (A genuinely book-worthy vignette: earliest brush with dying, in a nursing home,
 as an immigrant child — the seed of the hospice work decades before it began.
 Confirm the relation — "grandfather's mother.")
+
+---
+
+## 34. Voice note — a life well lived (cleaned from dictation)
+
+A life well lived is different for everybody, but one that includes financial
+stability, love, forgiveness, something you're striving for, peace with dying —
+but preparing to live as long as I can. What drives me to build financial
+stability is so I can leave my wife secure, and make her feel safe, if I'm not
+around.
+
+(Financial security reframed as an act of love for Hope — see #9, #16.)
