@@ -20,6 +20,7 @@ The two files KDP asks for are in this folder:
 
 - [x] **SKIPPED (July 2026): Hope's pharmaceutical review not completed** — shipping without the full chapter read-through. Removed PharmD clinical-review attribution from copyright page; Hope retains "Project Consultant" credit for her role in the book's inception.
 - [x] **Author photo placed (July 2026)** — professional navy-suit headshot (`author-headshot.jpeg`, 1023×1537 ≈ 890 DPI at the 1.15in slot) embedded in the back-cover wrap photo slot and the About the Author page.
+- [x] **Printed page numbers added (July 2026)** — the interior now carries typeset folios, bottom-center, muted gray. Folio = sheet number (the cover is sheet 1 and is left unnumbered), so every folio matches the Contents by construction (e.g., Chapter 1 = 37). Applied as a PDF post-process (Chromium can't typeset CSS margin-box counters): render the book HTML, then stamp `pageIndex+1` on every page except the cover with pdf-lib. Re-run this step whenever the interior is re-exported.
 - [ ] **Bio verified** — Certified Dementia Practitioner credential current
 - [ ] **Final human proofread** of `kdp-interior.pdf` (read it as a printed proof, not on screen)
 - [ ] **Back-cover copy approved** — edit `back-cover-copy.md` and ask for a wrap regen if you change anything
