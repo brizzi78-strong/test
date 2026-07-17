@@ -1,30 +1,26 @@
-import path from "node:path";
+import hardhatToolboxViemPlugin from "@nomicfoundation/hardhat-toolbox-viem";
+import { configVariable, defineConfig } from "hardhat/config";
 import { fileURLToPath } from "node:url";
-import type { HardhatUserConfig } from "hardhat/config";
-import { configVariable } from "hardhat/config";
-import hardhatToolboxMochaEthers from "@nomicfoundation/hardhat-toolbox-mocha-ethers";
 
-// Use the solc WASM build bundled with the `solc` npm package instead of
-// downloading a compiler binary (binaries.soliditylang.org may be unreachable
-// in sandboxed environments).
-const solcJsPath = path.join(
-  path.dirname(fileURLToPath(import.meta.url)),
-  "node_modules",
-  "solc",
-  "soljson.js",
+// Use the solc WASM build bundled in the `solc` npm package instead of
+// downloading a native binary from binaries.soliditylang.org. This keeps
+// builds hermetic and working behind restricted networks; the npm package
+// version pins the compiler version.
+const solcPath = fileURLToPath(
+  new URL("./node_modules/solc/soljson.js", import.meta.url),
 );
 
-const config: HardhatUserConfig = {
-  plugins: [hardhatToolboxMochaEthers],
+export default defineConfig({
+  plugins: [hardhatToolboxViemPlugin],
   solidity: {
     profiles: {
       default: {
         version: "0.8.28",
-        path: solcJsPath,
+        path: solcPath,
       },
       production: {
         version: "0.8.28",
-        path: solcJsPath,
+        path: solcPath,
         settings: {
           optimizer: {
             enabled: true,
@@ -35,10 +31,10 @@ const config: HardhatUserConfig = {
     },
   },
   networks: {
-    // Deploy to Sepolia with:
-    //   npx hardhat keystore set SEPOLIA_RPC_URL
-    //   npx hardhat keystore set SEPOLIA_PRIVATE_KEY
-    //   npx hardhat ignition deploy ignition/modules/CardinalsPromise.ts --network sepolia
+    hardhatMainnet: {
+      type: "edr-simulated",
+      chainType: "l1",
+    },
     sepolia: {
       type: "http",
       chainType: "l1",
@@ -52,13 +48,11 @@ const config: HardhatUserConfig = {
       accounts: [configVariable("MAINNET_PRIVATE_KEY")],
     },
   },
-  // Verify with: npx hardhat verify --network sepolia <address> <initialSupply>
+  // Verify with: npx hardhat verify --network sepolia <address>
   // (set the key first: npx hardhat keystore set ETHERSCAN_API_KEY)
   verify: {
     etherscan: {
       apiKey: configVariable("ETHERSCAN_API_KEY"),
     },
   },
-};
-
-export default config;
+});

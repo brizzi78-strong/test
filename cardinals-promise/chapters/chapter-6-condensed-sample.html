@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Chapter 6 — Condensed Sample</title>
+<style>
+  @page { size: 8.5in 11in; margin: 0.8in; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --red: #a51c30;    --red-bg: #f7dfe2;    --red-dark: #7d1524;
+    --yellow: #b45309; --yellow-bg: #fdf3e3; --yellow-dark: #8a3e06;
+    --blue: #1d4e89;   --blue-bg: #eaf1f8;   --blue-dark: #143a67;
+    --gray: #57534e;   --gray-bg: #f5f2ee;
+    --ink: #1f2328;    --rule: #d9cec4;
+  }
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--ink); line-height: 1.55;
+    max-width: 6.9in; margin: 0 auto; padding: 0.4in 0.25in 1in;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+    background: #fff;
+  }
+  p { margin-bottom: 10px; font-size: 11pt; }
+  strong { font-weight: 700; } em { font-style: italic; }
+  .pagebreak { page-break-before: always; }
+
+  /* ---- Cover & title pages ---- */
+  .coverpage { text-align: center; page-break-after: always; }
+  .coverpage img { width: 100%; max-width: 6.4in; border-radius: 4px; }
+  .titlepage { text-align: center; padding-top: 1.6in; page-break-after: always; }
+  .titlepage .series { font-family: Helvetica, Arial, sans-serif; font-size: 10pt;
+    letter-spacing: 0.22em; text-transform: uppercase; color: var(--red-dark); margin-bottom: 0.5in; }
+  .titlepage h1 { font-family: Helvetica, Arial, sans-serif; font-size: 30pt; line-height: 1.15;
+    color: var(--red); margin-bottom: 0.25in; }
+  .titlepage .subtitle { font-size: 14pt; font-style: italic; margin-bottom: 0.9in; }
+  .titlepage .authors { font-family: Helvetica, Arial, sans-serif; font-size: 13pt; line-height: 1.6; }
+
+  /* ---- Front matter ---- */
+  h2.fm { font-family: Helvetica, Arial, sans-serif; font-size: 17pt; color: var(--red);
+          margin: 0 0 12px; }
+  .fmkicker { font-family: Helvetica, Arial, sans-serif; font-size: 9pt; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--gray); margin-bottom: 5px; }
+
+  /* ---- Color legend ---- */
+  .legendbox { border: 1px solid var(--rule); border-radius: 8px; padding: 16px 18px; margin: 16px 0;
+    font-family: Helvetica, Arial, sans-serif; }
+  .legendbox .lrow { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px; }
+  .legendbox .lrow:last-child { margin-bottom: 0; }
+  .lswatch { flex: 0 0 auto; width: 15px; height: 15px; border-radius: 4px; transform: translateY(3px); }
+  .lname { font-weight: 700; font-size: 11pt; }
+  .ldesc { font-size: 10pt; color: #444; }
+
+  /* ---- Contents ---- */
+  .toc { font-family: Helvetica, Arial, sans-serif; font-size: 10.5pt; }
+  .toc .tocpart { font-weight: 700; margin: 14px 0 5px; text-transform: uppercase;
+    letter-spacing: 0.06em; font-size: 10pt; }
+  .toc ul { list-style: none; }
+  .toc li { padding: 3px 0; display: flex; gap: 8px; align-items: baseline; }
+  .tocdot { flex: 0 0 auto; width: 9px; height: 9px; border-radius: 50%; transform: translateY(1px); }
+  .d-red { background: var(--red); } .d-yellow { background: #e59824; } .d-blue { background: var(--blue); }
+  .tocpart.p-red { color: var(--red); } .tocpart.p-yellow { color: var(--yellow); } .tocpart.p-blue { color: var(--blue); }
+
+  .toc li .lead { flex: 1 1 auto; min-width: 14px; border-bottom: 1px dotted #b9ae9f;
+    transform: translateY(-3px); }
+  .toc li .tocpg { flex: 0 0 auto; color: #57534e; font-variant-numeric: tabular-nums; }
+
+  /* ---- Index ---- */
+  .index { font-family: Helvetica, Arial, sans-serif; font-size: 9pt; columns: 2;
+    column-gap: 26px; }
+  .index h3 { font-size: 10pt; color: var(--red); margin: 10px 0 3px; break-after: avoid; }
+  .index h3:first-child { margin-top: 0; }
+  .index p { font-size: 9pt; margin: 0 0 2px; padding-left: 14px; text-indent: -14px; }
+
+  /* ---- Chapters ---- */
+  section.chapter { page-break-before: always; }
+  section.red    { --c: #a51c30; --c-bg: #f7dfe2; --c-dark: #7d1524; }
+  section.yellow { --c: #b45309; --c-bg: #fdf3e3; --c-dark: #8a3e06; }
+  section.blue   { --c: #1d4e89; --c-bg: #eaf1f8; --c-dark: #143a67; }
+  .colorbar {
+    font-family: Helvetica, Arial, sans-serif; background: var(--c); color: #fff;
+    padding: 7px 13px; border-radius: 6px; display: flex; align-items: center; gap: 10px;
+    font-size: 10pt; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .colorbar .dot { width: 11px; height: 11px; border-radius: 50%; background: #fff; }
+  .partlabel { font-family: Helvetica, Arial, sans-serif; font-size: 9pt; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--c-dark); margin-bottom: 5px; }
+  section.chapter h1 { font-family: Helvetica, Arial, sans-serif; font-size: 20pt; line-height: 1.15;
+    color: var(--c); margin-bottom: 12px; }
+  .chapnum { display: block; font-size: 10.5pt; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--ink); opacity: 0.6; margin-bottom: 2px; }
+  section.chapter h2 { font-family: Helvetica, Arial, sans-serif; font-size: 13pt; color: var(--c);
+    margin: 20px 0 7px; }
+  .partintro { background: var(--gray-bg); border-left: 5px solid var(--gray); border-radius: 6px;
+    padding: 12px 15px; margin: 0 0 16px; font-size: 10.5pt; }
+
+  /* ---- Blocks ---- */
+  .block { border-radius: 6px; padding: 12px 15px; margin: 14px 0; }
+  .block .tag { font-family: Helvetica, Arial, sans-serif; font-size: 8.5pt; font-weight: 700;
+    letter-spacing: 0.14em; text-transform: uppercase; display: block; margin-bottom: 6px; }
+  .block p { font-size: 10.5pt; }
+  .block ol, .block ul { margin: 2px 0 2px 18px; font-size: 10.5pt; }
+  .block li { margin-bottom: 5px; }
+  .plain      { background: var(--c-bg); border-left: 5px solid var(--c); }
+  .plain .tag { color: var(--c); }
+  .think      { background: var(--gray-bg); border-left: 5px solid var(--gray); }
+  .think .tag { color: var(--gray); }
+  .week      { background: var(--c-bg); border-left: 5px solid var(--c); }
+  .week .tag { color: var(--c); }
+  .alert      { background: var(--red-bg); border-left: 5px solid var(--red); }
+  .alert .tag { color: var(--red); }
+  .rob      { background: var(--gray-bg); border-left: 5px solid var(--gray); font-style: italic; }
+  .rob .tag { color: var(--gray); font-style: normal; }
+  .takeaway      { background: var(--c); color: #fff; border-left: 5px solid var(--c-dark); }
+  .takeaway .tag { color: rgba(255,255,255,0.75); }
+  .takeaway p    { color: #fff; }
+
+  /* ---- Worksheets & tables ---- */
+  .worksheet { border: 2px solid var(--c); border-radius: 6px; padding: 13px 15px; margin: 16px 0; }
+  .worksheet .tag { font-family: Helvetica, Arial, sans-serif; font-size: 8.5pt; font-weight: 700;
+    letter-spacing: 0.14em; text-transform: uppercase; color: var(--c); display: block; margin-bottom: 7px; }
+  .worksheet h4 { font-family: Helvetica, Arial, sans-serif; font-size: 10pt; color: var(--c-dark);
+    margin: 11px 0 5px; }
+  .worksheet .note { font-size: 9pt; font-family: Helvetica, Arial, sans-serif; color: #555; margin-bottom: 6px; }
+  table { width: 100%; border-collapse: collapse; font-size: 9.5pt; margin: 6px 0 10px;
+    font-family: Helvetica, Arial, sans-serif; page-break-inside: auto; }
+  th { text-align: left; background: var(--c-bg); color: var(--c-dark); padding: 5px 8px;
+    border: 1px solid var(--rule); font-size: 8.5pt; text-transform: uppercase; letter-spacing: 0.05em; }
+  td { border: 1px solid var(--rule); padding: 8px; vertical-align: top; }
+  .fill { border-bottom: 1px solid var(--ink); display: inline-block; min-width: 2.2in; }
+  .fillline { margin-bottom: 8px; font-size: 10pt; font-family: Helvetica, Arial, sans-serif; }
+  .checks { list-style: none; margin: 4px 0 8px !important; columns: 2; column-gap: 22px;
+    font-family: Helvetica, Arial, sans-serif; font-size: 9.5pt; }
+  .checks.one { columns: 1; }
+  .checks li { display: flex; gap: 8px; align-items: baseline; margin-bottom: 5px; break-inside: avoid; }
+  .cbox { flex: 0 0 auto; width: 10px; height: 10px; border: 1.5px solid var(--c, var(--ink));
+    border-radius: 2px; transform: translateY(1px); }
+  ol.qs { margin: 4px 0 4px 20px; font-size: 10.5pt; }
+  ol.qs li { margin-bottom: 5px; }
+  .script { background: var(--gray-bg); border-radius: 6px; padding: 10px 13px; margin: 10px 0;
+    font-size: 10pt; }
+  .script .tag { font-family: Helvetica, Arial, sans-serif; font-size: 8.5pt; font-weight: 700;
+    letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); display: block; margin-bottom: 5px; }
+
+  /* ---- Epigraph quotes ---- */
+  .bookquote {
+    text-align: center; padding: 1.2in 0.5in 0; page-break-after: always;
+  }
+  .bookquote p { font-size: 14pt; font-style: italic; line-height: 1.6; color: #1f2328; }
+  .bookquote .attr { display: block; margin-top: 14px; font-size: 10.5pt; font-style: normal;
+    font-family: Helvetica, Arial, sans-serif; letter-spacing: 0.08em; color: #7d1524; }
+  .partquote {
+    margin: 4px 0 18px; padding: 10px 16px;
+    border-left: 3px solid var(--rule);
+    font-style: italic; font-size: 11pt; color: #555;
+  }
+  .partquote .attr { display: block; margin-top: 5px; font-size: 9pt; font-style: normal;
+    font-family: Helvetica, Arial, sans-serif; letter-spacing: 0.06em; color: var(--c-dark); }
+</style>
+</head>
+<body>
+
+<section class="chapter yellow">
+<div class="colorbar"><span class="dot"></span> Yellow · Watch Closely</div>
+<div class="partlabel">Part 2 · Care Options</div>
+<h1><span class="chapnum">Chapter 6</span>Home Health</h1>
+
+<div class="block plain">
+  <span class="tag">This Chapter in 30 Seconds</span>
+  <ul>
+    <li><strong>What it is:</strong> medical care at home — nursing, PT, OT, speech, social work, limited aide visits — ordered by a clinician for people who meet the requirements.</li>
+    <li><strong>What it is not:</strong> all-day supervision, housekeeping, meals, or a sitter. That is private duty care (Chapter 7).</li>
+    <li><strong>When to ask:</strong> after a fall, hospitalization, surgery, new weakness, new wound, medication change, or a decline in bathing, dressing, or walking.</li>
+    <li><strong>How to ask:</strong> not "order home health" — say <em>"Can we schedule a provider evaluation to determine whether home health is appropriate?"</em></li>
+    <li><strong>If the answer is no:</strong> ask what criteria are not met and what support they recommend instead.</li>
+  </ul>
+</div>
+
+<div class="block think">
+  <span class="tag">What Families Usually Think</span>
+  <p>That "home health" means someone stays with Mom — bathing, meals, supervision, every
+  day. It does not. Home health is a specific, intermittent medical service. Valuable, even
+  powerful — but do not build the plan on the wrong promise.</p>
+</div>
+
+<h2>What Home Health May Include</h2>
+<ul class="checks one">
+  <li><span class="cbox"></span><span class="txt"><strong>Skilled nursing</strong> — wound care, medication and disease teaching, symptom monitoring</span></li>
+  <li><span class="cbox"></span><span class="txt"><strong>Physical therapy</strong> — strength, balance, walking, transfers, fall risk</span></li>
+  <li><span class="cbox"></span><span class="txt"><strong>Occupational therapy</strong> — bathing, dressing, equipment, home setup for safer independence</span></li>
+  <li><span class="cbox"></span><span class="txt"><strong>Speech therapy</strong> — swallowing, communication, cognition</span></li>
+  <li><span class="cbox"></span><span class="txt"><strong>Medical social work</strong> — resources, planning, caregiver stress</span></li>
+  <li><span class="cbox"></span><span class="txt"><strong>Home health aide</strong> — limited personal care only as part of the skilled plan, not daily caregiving</span></li>
+</ul>
+
+<h2>What It Usually Does Not Provide</h2>
+<p>All-day or overnight supervision, housekeeping, meals, transportation, companionship,
+sitting services, or twenty-four-hour care. Home health is rarely the whole plan — when the
+need is daily support, look at private duty care, adult day care, or a care-setting change.</p>
+
+<h2>Home Health vs. Private Duty</h2>
+<table>
+  <tr><th>Home Health</th><th>Private Duty Care</th></tr>
+  <tr><td>Medical, intermittent, clinician-ordered</td><td>Non-medical daily help, often paid privately</td></tr>
+  <tr><td>Nursing, therapy, social work, limited aide</td><td>Bathing, meals, companionship, supervision</td></tr>
+  <tr><td>After illness, wounds, weakness, or decline</td><td>When the person cannot safely be alone</td></tr>
+  <tr><td>Not long blocks of supervision</td><td>Can cover longer blocks and overnight</td></tr>
+</table>
+<p>A family may need both: home health to strengthen, teach, and treat — private duty for
+daily support. The question is not which sounds better; it is what your parent actually needs.</p>
+
+<div class="block" style="background:#fdf3e3; border-left:5px solid #b45309;">
+  <span class="tag" style="color:#b45309;">How to Ask, the Right Way</span>
+  <p>For Medicare-covered home health, a clinician must find a <strong>skilled need</strong>,
+  <strong>homebound status</strong>, and complete the required face-to-face documentation. So
+  do not ask "Can you just order home health?" Ask: <strong>"Can we schedule a provider
+  evaluation to discuss this recent change and determine whether home health is
+  appropriate?"</strong> Bring facts: falls, new weakness, medication concerns, bathing or
+  dressing difficulty, recent hospitalization, wounds, confusion.</p>
+</div>
+
+<h2>"Homebound," in Plain English</h2>
+<p>Not "never leaves the house." It means leaving home is difficult, taxing, unsafe, or takes
+help or considerable effort — medical appointments and occasional outings are still allowed.
+Describe what is happening ("He uses a walker and gets exhausted," "She cannot manage
+stairs safely") and let the clinician decide.</p>
+
+<h2>Follow the Insurance</h2>
+<p>When my father was referred to home health, a social worker asked, "What insurance does
+he have?" It sounded routine — it was not. Plans reimburse differently, and behind every
+referral is a business reality. Do not become cynical; become informed: <em>Why this agency?
+What others are available? Does it accept my insurance? Do I have a choice?</em></p>
+
+<h2>When Home Health Is Not Enough — or Not Ordered</h2>
+<p>If your parent cannot safely be alone, wanders, needs daily medication supervision, or keeps
+falling despite therapy, the need is bigger than intermittent visits — think private duty, adult
+day care, assisted living, memory care, or a palliative/hospice evaluation. And if the clinician
+says no to home health, ask two questions: <strong>"What criteria are not being met?"</strong>
+and <strong>"What support do you recommend instead?"</strong> "Not home health" should
+start the next conversation, not end it.</p>
+
+<div class="block week">
+  <span class="tag">What to Do This Week</span>
+  <ol>
+    <li><strong>Write down what changed</strong> — facts: "Mom fell twice in two weeks."</li>
+    <li><strong>Ask for a provider evaluation</strong> using the script below.</li>
+    <li><strong>Bring your notes</strong> — fall log, medication list, discharge papers.</li>
+    <li><strong>Make the home ready</strong> — show the clinician the bathroom, stairs, and walking paths.</li>
+  </ol>
+</div>
+
+<div class="worksheet">
+  <span class="tag">▣ Worksheet — Home Health Evaluation</span>
+  <p class="note">Use this before a provider visit or home health evaluation.</p>
+  <div class="fillline">Person receiving care <span class="fill"></span></div>
+  <div class="fillline">Main caregiver / phone <span class="fill"></span></div>
+  <div class="fillline">Primary doctor / provider / phone <span class="fill"></span></div>
+  <div class="fillline">Preferred home health agency (if any) <span class="fill"></span></div>
+  <div class="fillline">Insurance <span class="fill"></span></div>
+  <h4>What changed? (check all that apply)</h4>
+  <ul class="checks">
+    <li><span class="cbox"></span>Fall or near fall</li>
+    <li><span class="cbox"></span>New weakness or trouble walking</li>
+    <li><span class="cbox"></span>Trouble transferring</li>
+    <li><span class="cbox"></span>Recent hospitalization or rehab stay</li>
+    <li><span class="cbox"></span>Recent surgery</li>
+    <li><span class="cbox"></span>New wound</li>
+    <li><span class="cbox"></span>Medication concern</li>
+    <li><span class="cbox"></span>Increased confusion</li>
+    <li><span class="cbox"></span>Shortness of breath or pain</li>
+    <li><span class="cbox"></span>Difficulty bathing, dressing, or toileting</li>
+    <li><span class="cbox"></span>Caregiver unable to manage safely</li>
+  </ul>
+  <h4>Current safety concerns</h4>
+  <table>
+    <tr><th>Concern</th><th>Yes / No / Unsure</th><th>Notes</th></tr>
+    <tr><td>Safe walking</td><td></td><td></td></tr>
+    <tr><td>Safe transfers</td><td></td><td></td></tr>
+    <tr><td>Safe bathing &amp; toileting</td><td></td><td></td></tr>
+    <tr><td>Medication safety</td><td></td><td></td></tr>
+    <tr><td>Wound or skin concern</td><td></td><td></td></tr>
+    <tr><td>Breathing / swallowing concern</td><td></td><td></td></tr>
+    <tr><td>Confusion or memory concern</td><td></td><td></td></tr>
+    <tr><td>Safe to be alone</td><td></td><td></td></tr>
+  </table>
+  <h4>Current equipment in the home (check what applies)</h4>
+  <ul class="checks">
+    <li><span class="cbox"></span>Cane</li>
+    <li><span class="cbox"></span>Walker</li>
+    <li><span class="cbox"></span>Wheelchair</li>
+    <li><span class="cbox"></span>Shower chair</li>
+    <li><span class="cbox"></span>Grab bars</li>
+    <li><span class="cbox"></span>Raised toilet seat</li>
+    <li><span class="cbox"></span>Bedside commode</li>
+    <li><span class="cbox"></span>Hospital bed</li>
+    <li><span class="cbox"></span>Oxygen</li>
+    <li><span class="cbox"></span>Medical alert device</li>
+    <li><span class="cbox"></span>Medication organizer</li>
+  </ul>
+  <h4>If home health starts</h4>
+  <div class="fillline">Agency name &amp; phone <span class="fill"></span></div>
+  <div class="fillline">Start of care date <span class="fill"></span></div>
+  <div class="fillline">Primary nurse / therapist <span class="fill"></span></div>
+  <div class="fillline">Visit schedule <span class="fill"></span></div>
+  <table>
+    <tr><th>Discipline</th><th>Name</th><th>Phone</th></tr>
+    <tr><td>Nurse</td><td></td><td></td></tr>
+    <tr><td>Physical therapist</td><td></td><td></td></tr>
+    <tr><td>Occupational therapist</td><td></td><td></td></tr>
+    <tr><td>Speech therapist</td><td></td><td></td></tr>
+    <tr><td>Social worker</td><td></td><td></td></tr>
+    <tr><td>Home health aide</td><td></td><td></td></tr>
+  </table>
+</div>
+<div class="worksheet">
+  <span class="tag">▣ Questions for the Provider</span>
+  <ol class="qs">
+    <li>Does my parent meet criteria for home health, and is there a skilled need?</li>
+    <li>Is my parent considered homebound, and was the required face-to-face encounter completed or scheduled?</li>
+    <li>Would nursing, physical therapy, occupational therapy, speech therapy, or social work help?</li>
+    <li>Would a home health aide be part of the care plan?</li>
+    <li>What documentation is needed?</li>
+    <li>What should we do if home health is not appropriate — what criteria are not being met?</li>
+    <li>What support is needed beyond home health?</li>
+  </ol>
+</div>
+<div class="script">
+  <span class="tag">▣ Home Health Script</span>
+  <p><strong>Calling the provider's office:</strong> "My parent has had a recent change in function
+  and safety. We are seeing concerns with ____________. Can we schedule an appointment or
+  provider evaluation to determine whether home health is appropriate and whether the
+  required documentation can be completed if they meet criteria?"</p>
+  <p><strong>At the visit:</strong> "Based on what you are seeing today, does my parent meet criteria
+  for home health services such as nursing, PT, OT, speech, social work, or aide support as part
+  of the care plan?"</p>
+  <p><strong>If the answer is no:</strong> "What criteria are not being met, and what support would
+  you recommend instead?"</p>
+</div>
+
+
+
+<div class="block rob">
+  <span class="tag">Rob's Note</span>
+  <p>I have seen families disappointed because they expected home health to cook meals,
+  supervise dementia, and take over the whole day. And I have seen families miss its real value:
+  the doctor's office sees a patient in a chair for fifteen minutes — home health sees the narrow
+  hallway, the bathroom without grab bars, the pill bottles on the counter, the stairs that have
+  become a mountain.</p>
+  <p>Home health is not the whole answer. But sometimes it is the first trained set of eyes that
+  helps a family understand what the next answer should be.</p>
+</div>
+<div class="block takeaway">
+  <span class="tag">Chapter 6 Takeaway</span>
+  <p>Home health is medical care in the home for people who meet the requirements — not
+  private duty care, housekeeping, or all-day supervision. The next right question is: <strong>can we
+  schedule a provider evaluation to determine whether home health is appropriate, and what
+  support is needed if it is not?</strong></p>
+</div>
+</section>
+
+</body>
+</html>

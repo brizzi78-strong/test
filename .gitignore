@@ -1,19 +1,45 @@
-# Dependencies
-node_modules/
+# --- iOS app (CardinalPress) ---
+# Xcode
+build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+*.xccheckout
+*.moved-aside
+*.xcscmblueprint
 
-# Hardhat build output
-artifacts/
-cache/
-types/
-typechain-types/
+# Swift Package Manager
+.build/
+.swiftpm/
 
-# Ignition deployment journals (keep committed deployments if you prefer)
-ignition/deployments/
+# macOS
+.DS_Store
 
-# Coverage
-coverage/
-coverage.json
+# --- CARD Token (Hardhat/Foundry) ---
+# Node modules
+/node_modules
 
-# Environment
+# Compilation output
+/dist
+
+# Hardhat build artifacts
+/artifacts
+/cache
+
+# Foundry build artifacts
+/out
+/cache_forge
+/broadcast
+
+# Typechain output
+/types
+
+# Environment files
 .env
 .env.*
+!.env.example
+
+# Coverage and gas reports
+/coverage
+/.gas-snapshot
+/snapshots

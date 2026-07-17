@@ -1,12 +1,11 @@
 {
   "compilerOptions": {
-    "target": "es2022",
-    "module": "nodenext",
-    "moduleResolution": "nodenext",
-    "strict": true,
-    "esModuleInterop": true,
+    "lib": ["es2023"],
+    "module": "node20",
+    "target": "es2023",
     "skipLibCheck": true,
-    "resolveJsonModule": true,
-    "noEmit": true
+    "outDir": "dist",
+    "types": ["node"],
+    "verbatimModuleSyntax": true
   }
 }

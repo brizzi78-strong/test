@@ -19,11 +19,12 @@ repo; items marked 🔑 need something only the project owner can provide
 
 | Step | Where |
 | --- | --- |
-| Token contract (250M hard cap, burnable, capped mint) | `contracts/CardinalsPromise.sol` |
-| Test suite — 19 tests, all passing | `test/CardinalsPromise.ts` |
+| Token contract (250M fixed supply — no mint, no burn; OpenZeppelin ERC20 + Ownable) | `contracts/CardinalsPromise.sol` |
+| Test suite — 17 tests (Foundry-style Solidity incl. fuzz + invariants, plus node:test/viem), all passing | `contracts/*.t.sol`, `test/CardinalsPromise.ts` |
+| Machine-checkable launch-claims ledger — 8/8 claims verified in CI (`npm run verify`) | `verification/claims.json` |
 | Static analysis — Slither v0.11.5, all 101 detectors, **0 findings** | run locally, see below to reproduce |
 | Local deployment rehearsal (Ignition) | `ignition/modules/CardinalsPromise.ts` |
-| CI — compile + tests on every push/PR | `.github/workflows/ci.yml` |
+| CI — build + full test suite + claims verification on every push/PR | `.github/workflows/verify.yml` |
 | Sepolia + mainnet network config | `hardhat.config.ts` |
 | Etherscan verification config | `hardhat.config.ts` (`verify.etherscan`) |
 | Uniswap V2 liquidity script | `scripts/add-liquidity.ts` |
@@ -35,9 +36,11 @@ repo; items marked 🔑 need something only the project owner can provide
 Slither doesn't yet parse Hardhat 3's split build-info files. Workaround:
 compile, then merge each `artifacts/build-info/*.json` + `*.output.json`
 pair into one file with the Hardhat 2 keys (`input`, `output`,
-`solcVersion`), strip the `project/` source-name prefix, ensure
+`solcVersion`), strip the `project/` source-name prefix, rewrite
+`npm/<pkg>@<version>/` source names to `node_modules/<pkg>/`, ensure
 `settings.optimizer` exists, and run
-`slither . --compile-force-framework hardhat --ignore-compile`.
+`slither . --compile-force-framework hardhat --ignore-compile
+--filter-paths "forge-std|\.t\.sol|openzeppelin"`.
 
 ## ⚠️ Where the remaining steps must run
 
@@ -55,8 +58,7 @@ steps 2–6 cannot execute from it. Run them either:
 ## 🔑 Step 1 — Keys and wallets (owner)
 
 - [ ] Create a fresh deployer wallet (hardware wallet or offline-generated key).
-- [ ] Create a Gnosis Safe multisig for the treasury/ownership if the supply
-      won't be fully minted at launch.
+- [ ] Create a Gnosis Safe multisig for the 50M treasury allocation.
 - [ ] Get an RPC endpoint (Alchemy/Infura free tier works) and an Etherscan
       API key (free at etherscan.io/apis).
 
@@ -68,7 +70,7 @@ npx hardhat keystore set SEPOLIA_PRIVATE_KEY     # fund it from a Sepolia faucet
 npx hardhat keystore set ETHERSCAN_API_KEY
 
 npx hardhat ignition deploy ignition/modules/CardinalsPromise.ts --network sepolia
-npx hardhat verify --network sepolia <deployed-address> 250000000000000000000000000
+npx hardhat verify --network sepolia <deployed-address>
 ```
 
 Then: add the token to a wallet, send a few transfers, confirm Etherscan
@@ -76,8 +78,8 @@ shows verified source and correct metadata.
 
 ## 🔑 Step 3 — Audit (owner engages, before real value)
 
-The contract is small (~190 lines) and Slither-clean, which keeps audit cost
-low. In rough order of cost: Slither/Mythril pass (done/free) → independent
+The contract is tiny (~20 lines over audited OpenZeppelin v5 base contracts)
+and Slither-clean, which keeps audit cost low. In rough order of cost: Slither/Mythril pass (done/free) → independent
 experienced reviewer → community platform (Code4rena, Sherlock) →
 professional firm. Do not skip this if the token will hold real value.
 
@@ -95,7 +97,7 @@ npx hardhat keystore set MAINNET_RPC_URL
 npx hardhat keystore set MAINNET_PRIVATE_KEY
 
 npx hardhat ignition deploy ignition/modules/CardinalsPromise.ts --network mainnet
-npx hardhat verify --network mainnet <deployed-address> 250000000000000000000000000
+npx hardhat verify --network mainnet <deployed-address>
 ```
 
 Immediately after:
