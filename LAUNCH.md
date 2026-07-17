@@ -9,7 +9,7 @@
 | Treasury | 50M CARD (20%) in a publicly announced wallet |
 | LP tokens | Locked 12 months (Team Finance or UNCX) |
 | Timeline | Week 0: Sepolia rehearsal → Weeks 1–2: independent audit + legal consult → Week 3: mainnet |
-| Before mainnet | Publish the one-page site (`site/`) explaining what the promise is |
+| Before mainnet | Publish the one-page site (`site/index.html`) at **thecardinalspromise.com/card** (the book's established domain — best trust signal; cp17.org can redirect there) and fill in the story section |
 
 Status of each step on the road to mainnet. Items marked ✅ are done in this
 repo; items marked 🔑 need something only the project owner can provide

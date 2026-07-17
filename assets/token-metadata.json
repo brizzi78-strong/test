@@ -10,9 +10,9 @@
     "sepolia": null
   },
   "links": {
-    "website": null,
-    "repository": null,
+    "website": "https://thecardinalspromise.com/card",
+    "repository": "https://github.com/brizzi78-strong/test",
     "twitter": null
   },
-  "notes": "Fill in contract addresses after deployment and links before submitting to Etherscan token update, CoinGecko, or a Uniswap token list. Etherscan requires a 32x32 PNG icon — export it from assets/logo.svg."
+  "notes": "Official site: thecardinalspromise.com (the book's established domain \u2014 token page at /card; cp17.org may redirect there). Fill in contract addresses after deployment before submitting to Etherscan token update, CoinGecko, or a Uniswap token list. Etherscan requires a 32x32 PNG icon \u2014 use assets/logo-32.png."
 }
