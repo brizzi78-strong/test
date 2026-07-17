@@ -48,4 +48,11 @@ export default defineConfig({
       accounts: [configVariable("MAINNET_PRIVATE_KEY")],
     },
   },
+  // Verify with: npx hardhat verify --network sepolia <address>
+  // (set the key first: npx hardhat keystore set ETHERSCAN_API_KEY)
+  verify: {
+    etherscan: {
+      apiKey: configVariable("ETHERSCAN_API_KEY"),
+    },
+  },
 });

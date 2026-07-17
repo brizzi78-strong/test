@@ -1,19 +1,24 @@
 {
-  "name": "card-token",
+  "name": "cardinals-promise",
   "private": true,
   "version": "0.1.0",
-  "description": "Foundry/Hardhat skeleton for the CARD token",
+  "description": "Cardinals Promise (CARD) — fixed-supply ERC-20 on Ethereum, with iOS companion app workspace",
   "type": "module",
   "scripts": {
     "build": "hardhat build",
     "test": "hardhat test",
-    "verify": "node scripts/verify-claims.mjs"
+    "verify": "node scripts/verify-claims.mjs",
+    "rehearse": "hardhat run scripts/rehearse-launch.ts",
+    "deploy:sepolia": "hardhat ignition deploy ignition/modules/CardinalsPromise.ts --network sepolia",
+    "deploy:mainnet": "hardhat ignition deploy ignition/modules/CardinalsPromise.ts --network mainnet"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-ignition": "^3.1.8",
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.7",
     "@openzeppelin/contracts": "^5.6.1",
     "@types/node": "^22.8.5",
+    "@uniswap/v2-core": "^1.0.1",
+    "@uniswap/v2-periphery": "^1.1.0-beta.0",
     "forge-std": "foundry-rs/forge-std#v1.9.4",
     "hardhat": "^3.9.1",
     "solc": "^0.8.28",

@@ -6,7 +6,7 @@ This repository holds several projects. Jump to the one you need:
 |---|---|---|
 | **The Cardinal's Toolkit — iPhone app** | `CardinalPress/` + `CardinalPress.xcodeproj` | Companion app to the NC Family Caregiver Handbook ([below](#the-cardinals-toolkit--iphone-app)) |
 | **The Cardinal's Promise / Toolkit book** | `cardinals-promise/` | Manuscript, samples, and marketing for the book |
-| **CARD Token — Foundry/Hardhat skeleton** | `contracts/`, `test/`, `verification/` | Fixed-supply ERC-20 skeleton ([below](#card-token--foundryhardhat-skeleton)) |
+| **Cardinals Promise (CARD) token** | `contracts/`, `test/`, `verification/`, `site/` | Fixed-supply ERC-20 with a complete launch kit ([below](#cardinals-promise-card-token)) |
 
 ---
 
@@ -95,88 +95,78 @@ This app supports organization and caregiver self-care. It is not medical, legal
 
 ---
 
-# CARD Token — Foundry/Hardhat Skeleton
+# Cardinals Promise (CARD) Token
 
 [![verify-claims](https://github.com/brizzi78-strong/test/actions/workflows/verify.yml/badge.svg)](https://github.com/brizzi78-strong/test/actions/workflows/verify.yml)
 
-A hybrid smart-contract project skeleton that works with **both** toolchains:
+**Cardinals Promise (CARD)** — a fixed-supply ERC-20 on Ethereum. The full
+250,000,000 supply is minted to the deployer at construction; there is **no
+mint function, no burn, no transfer tax, no blacklist, and no pausing** —
+the supply can never change. `Ownable` is inherited solely so
+`renounceOwnership()` can be executed as a public, verifiable launch step;
+no function is owner-gated, so ownership grants no power even before it is
+renounced.
 
-- **Hardhat 3** — TypeScript tests (`node:test` + viem) and Foundry-compatible
-  Solidity tests, run together with a single command.
-- **Foundry** — the same contracts and `.t.sol` tests run under `forge test`;
-  `foundry.toml` and `remappings.txt` point forge at the npm dependency tree,
-  so there is one set of dependencies for both tools.
-
-The sample contract is `CardToken` (CARD), the fixed-supply ERC-20 described in
-the token launch strategy (`TOKEN_LAUNCH_STRATEGY.md`): the full 250,000,000
-supply is minted to the deployer at construction, with no mint function and no
-pause/blocklist — supply can never change. `Ownable` is inherited solely so
-that `renounceOwnership()` can be executed as a public, verifiable launch step
-(see `LAUNCH_DAY_CHECKLIST.md`); no function is owner-gated, so ownership
-grants no power even before it is renounced.
+**Launching for real? Follow the step-by-step [launch runbook](LAUNCH.md)**
+(parameters and rationale in [TOKEN_LAUNCH_STRATEGY.md](TOKEN_LAUNCH_STRATEGY.md),
+launch-day sequence in [LAUNCH_DAY_CHECKLIST.md](LAUNCH_DAY_CHECKLIST.md)).
 
 ## Layout
 
 ```
-contracts/CardToken.sol             # the token
-contracts/CardToken.t.sol           # Foundry-style Solidity tests (forge-std)
-contracts/CardTokenInvariants.t.sol # stateful fuzz/invariant suite (handler-based)
-test/CardToken.ts                   # TypeScript tests (node:test + viem)
-verification/claims.json            # launch-claims registry (claim → evidence)
-scripts/verify-claims.mjs           # claims verifier (run via `npm run verify`)
-docs/AI_VERIFICATION_GAP.md         # why the claims ledger exists, and the pattern behind it
-ignition/modules/CardToken.ts       # Hardhat Ignition deployment module
-hardhat.config.ts                   # Hardhat 3 config
-foundry.toml + remappings.txt       # Foundry config (deps resolved from node_modules)
+contracts/CardinalsPromise.sol             # the token (OpenZeppelin ERC20 + Ownable)
+contracts/CardinalsPromise.t.sol           # Foundry-style Solidity tests (forge-std)
+contracts/CardinalsPromiseInvariants.t.sol # stateful fuzz/invariant suite (handler-based)
+test/CardinalsPromise.ts                   # TypeScript tests (node:test + viem)
+verification/claims.json                   # launch-claims registry (claim → evidence)
+scripts/verify-claims.mjs                  # claims verifier (run via `npm run verify`)
+scripts/rehearse-launch.ts                 # full local launch rehearsal (real Uniswap V2 stack)
+scripts/add-liquidity.ts                   # create/seed the Uniswap V2 CARD/ETH pool
+ignition/modules/CardinalsPromise.ts       # Hardhat Ignition deployment module
+docs/AUDIT-SCOPE.md                        # cold-start package for an auditor
+docs/LEGAL-BRIEFING.md                     # cited research briefing for counsel (US + EU)
+docs/AI_VERIFICATION_GAP.md                # why the claims ledger exists
+site/index.html                            # one-page launch site; assets/ has the logo
+hardhat.config.ts                          # Hardhat 3 config (solc from npm — no downloads)
+foundry.toml + remappings.txt              # Foundry config (deps resolved from node_modules)
 ```
 
 ## Getting started
 
 ```bash
 npm install
-```
-
-### Hardhat
-
-```bash
 npx hardhat test          # runs Solidity AND TypeScript tests
 npx hardhat build         # compile
+npm run verify            # verify every launch claim against executable evidence
+npm run rehearse          # full local launch rehearsal: deploy → pool → swap → renounce
 ```
 
-### Verify launch claims
-
-Every trust claim made in `TOKEN_LAUNCH_STRATEGY.md` (no mint, no tax, no
-blacklist, no pause, ownership grants no power, renounce works) is recorded in
-`verification/claims.json` and mapped to executable evidence — ABI-level
-structural checks, example tests, and stateful fuzz invariants:
-
-```bash
-npm run verify            # fails if any launch claim loses its backing
-```
-
-See `docs/AI_VERIFICATION_GAP.md` for the reasoning behind this setup.
-
-### Foundry (optional)
-
-With [Foundry](https://getfoundry.sh) installed, the same Solidity tests run
-natively:
-
-```bash
-forge test
-```
+Every trust claim (fixed supply, no tax, no blacklist, no pause, ownership
+grants no power, renounce works) is recorded in `verification/claims.json`
+and mapped to ABI-level structural checks, example tests, and stateful fuzz
+invariants. CI runs the verifier on every push. With
+[Foundry](https://getfoundry.sh) installed, the same Solidity tests also run
+natively via `forge test`.
 
 ## Deployment
 
-Deploy with Hardhat Ignition. RPC URLs and keys are supplied through the
-[Hardhat keystore / configuration variables](https://hardhat.org/docs) —
+RPC URLs and keys are supplied through the encrypted Hardhat keystore —
 nothing sensitive lives in the repo:
 
 ```bash
 npx hardhat keystore set SEPOLIA_RPC_URL
 npx hardhat keystore set SEPOLIA_PRIVATE_KEY
-npx hardhat ignition deploy ignition/modules/CardToken.ts --network sepolia
+npm run deploy:sepolia
+npx hardhat verify --network sepolia <deployed-address>
 ```
 
 A `mainnet` network is pre-wired the same way (`MAINNET_RPC_URL`,
-`MAINNET_PRIVATE_KEY`) for when the launch checklist in
-`TOKEN_LAUNCH_STRATEGY.md` is ready to execute.
+`MAINNET_PRIVATE_KEY`); `npm run deploy:mainnet` executes it when the launch
+checklist is ready.
+
+## Disclaimer
+
+This code is provided as-is. Have any contract audited by a professional
+before deploying it to mainnet or accepting real value, and make sure any
+token launch complies with the securities and consumer-protection laws of
+the relevant jurisdictions (see `docs/LEGAL-BRIEFING.md`).

@@ -6,11 +6,11 @@ import { network } from "hardhat";
 
 const TOTAL_SUPPLY = parseEther("250000000");
 
-describe("CardToken", async function () {
+describe("CardinalsPromise", async function () {
   const { viem } = await network.create();
 
   it("mints the full fixed supply to the deployer", async function () {
-    const token = await viem.deployContract("CardToken");
+    const token = await viem.deployContract("CardinalsPromise");
     const [deployer] = await viem.getWalletClients();
 
     assert.equal(await token.read.totalSupply(), TOTAL_SUPPLY);
@@ -21,15 +21,15 @@ describe("CardToken", async function () {
   });
 
   it("has the expected metadata", async function () {
-    const token = await viem.deployContract("CardToken");
+    const token = await viem.deployContract("CardinalsPromise");
 
-    assert.equal(await token.read.name(), "CARD");
+    assert.equal(await token.read.name(), "Cardinals Promise");
     assert.equal(await token.read.symbol(), "CARD");
     assert.equal(await token.read.decimals(), 18);
   });
 
   it("emits Transfer and moves balances", async function () {
-    const token = await viem.deployContract("CardToken");
+    const token = await viem.deployContract("CardinalsPromise");
     const [, recipient] = await viem.getWalletClients();
     const amount = parseEther("1000");
 
@@ -52,7 +52,7 @@ describe("CardToken", async function () {
   });
 
   it("renounces ownership to the zero address", async function () {
-    const token = await viem.deployContract("CardToken");
+    const token = await viem.deployContract("CardinalsPromise");
 
     await token.write.renounceOwnership();
 
@@ -63,7 +63,7 @@ describe("CardToken", async function () {
   });
 
   it("reverts when transferring more than the sender's balance", async function () {
-    const token = await viem.deployContract("CardToken");
+    const token = await viem.deployContract("CardinalsPromise");
     const [deployer, other] = await viem.getWalletClients();
 
     await viem.assertions.revertWithCustomError(
