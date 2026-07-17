@@ -1,0 +1,285 @@
+<title>Cardinal Promise Press — Brand Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root {
+    --paper: #FAF7F2;
+    --sheet: #FFFFFF;
+    --ink: #26201B;
+    --muted: #70645A;
+    --cardinal: #B3222B;
+    --cardinal-deep: #8E1B22;
+    --night: #1E1A2E;
+    --night-ink: #EFEAE2;
+    --line: #D9CFC3;
+    --line-soft: #EAE3D9;
+    --gold: #B98A2F;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #201B17; --sheet: #2A231E; --ink: #EDE6DD; --muted: #A79A8E;
+      --cardinal: #E0575E; --cardinal-deep: #E87A80; --line: #4A4038; --line-soft: #37302A;
+      --gold: #D3A54E;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #201B17; --sheet: #2A231E; --ink: #EDE6DD; --muted: #A79A8E;
+    --cardinal: #E0575E; --cardinal-deep: #E87A80; --line: #4A4038; --line-soft: #37302A;
+    --gold: #D3A54E;
+  }
+  :root[data-theme="light"] {
+    --paper: #FAF7F2; --sheet: #FFFFFF; --ink: #26201B; --muted: #70645A;
+    --cardinal: #B3222B; --cardinal-deep: #8E1B22; --line: #D9CFC3; --line-soft: #EAE3D9;
+    --gold: #B98A2F;
+  }
+
+  html { background: var(--paper); }
+  body { margin: 0; color: var(--ink); font-family: Charter, "Bitstream Charter", Georgia, Cambria, serif; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 52rem; margin: 0 auto; padding: 3.5rem 1.5rem 5rem; }
+  .sans { font-family: ui-sans-serif, system-ui, "Segoe UI", Helvetica, Arial, sans-serif; }
+
+  .eyebrow { font-family: ui-sans-serif, system-ui, sans-serif; font-size: .72rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--cardinal); margin: 0 0 1rem; }
+
+  /* ------- hero: the mark ------- */
+  .hero { text-align: center; padding: 2rem 0 3rem; border-bottom: 3px solid var(--cardinal); margin-bottom: 3rem; }
+  .perch { display: inline-block; margin-bottom: 1.8rem; }
+  .hero h1 { font-size: clamp(1.9rem, 5.5vw, 2.9rem); letter-spacing: .12em; font-weight: 700; margin: 0 0 .6rem; text-transform: uppercase; }
+  .hero h1 .thin { font-weight: 400; }
+  .hero .tagline { font-style: italic; color: var(--muted); font-size: 1.12rem; margin: 0; }
+
+  h2 { font-size: 1.7rem; margin: 3.2rem 0 .4rem; line-height: 1.15; }
+  h2 + .sub { color: var(--muted); margin: 0 0 1.4rem; max-width: 40rem; }
+  section > p { max-width: 40rem; }
+
+  /* ------- swatches ------- */
+  .swatches { display: grid; grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr)); gap: .9rem; margin: 1.4rem 0; }
+  .swatch { border: 1px solid var(--line); border-radius: 4px; overflow: hidden; background: var(--sheet); }
+  .swatch .chip { height: 4.6rem; }
+  .swatch .info { padding: .6rem .75rem .7rem; font-family: ui-sans-serif, system-ui, sans-serif; }
+  .swatch .name { font-size: .82rem; font-weight: 700; margin: 0; }
+  .swatch .hex { font-size: .75rem; color: var(--muted); margin: .15rem 0 0; font-variant-numeric: tabular-nums; }
+  .swatch .role { font-size: .72rem; color: var(--muted); margin: .3rem 0 0; }
+
+  /* ------- type specimens ------- */
+  .specimen { background: var(--sheet); border: 1px solid var(--line); border-radius: 4px; padding: 1.6rem 1.8rem; margin: 1rem 0; }
+  .specimen .label { font-family: ui-sans-serif, system-ui, sans-serif; font-size: .68rem; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); margin: 0 0 .7rem; }
+  .spec-display { font-size: 2rem; line-height: 1.15; margin: 0; font-weight: 700; }
+  .spec-body { font-size: 1.02rem; margin: 0; max-width: 36rem; }
+  .spec-utility { font-family: ui-sans-serif, system-ui, sans-serif; font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 600; margin: 0; color: var(--cardinal-deep); }
+
+  /* ------- covers ------- */
+  .covers { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 2rem; margin: 1.8rem 0 1rem; align-items: start; }
+  .cover { aspect-ratio: 2 / 3; border-radius: 3px; box-shadow: 0 10px 28px rgba(0,0,0,.22); display: flex; flex-direction: column; overflow: hidden; position: relative; }
+  .cover .spineband { position: absolute; left: 0; top: 0; bottom: 0; width: .55rem; background: #B3222B; }
+  .cover-caption { font-family: ui-sans-serif, system-ui, sans-serif; font-size: .8rem; color: var(--muted); margin-top: .8rem; max-width: 20rem; }
+
+  /* memoir cover — night, image-led */
+  .cover.memoir { background: linear-gradient(180deg, #241F35 0%, #1E1A2E 55%, #16131f 100%); color: #EFEAE2; justify-content: space-between; padding: 1.6rem 1.4rem 1.3rem 1.9rem; }
+  .memoir .branchline { position: relative; height: 3.4rem; margin-top: .6rem; }
+  .memoir .branchline::before { content: ""; position: absolute; left: 8%; right: 8%; bottom: 1rem; height: 2px; background: #6E6584; }
+  .memoir .branchline .bird { position: absolute; bottom: calc(1rem + 1px); left: 60%; width: 1.05rem; height: 1.05rem; background: #C42A33; border-radius: 50% 50% 45% 55%; }
+  .memoir .branchline .bird::before { content: ""; position: absolute; top: -0.32rem; left: .18rem; border-left: .3rem solid transparent; border-right: .12rem solid transparent; border-bottom: .42rem solid #C42A33; transform: rotate(-12deg); }
+  .memoir .title { font-size: 1.5rem; line-height: 1.12; font-weight: 700; margin: 0; }
+  .memoir .subtitle { font-style: italic; font-size: .85rem; color: #B7AFC9; margin: .5rem 0 0; }
+  .memoir .author { font-family: ui-sans-serif, system-ui, sans-serif; font-size: .72rem; letter-spacing: .22em; text-transform: uppercase; margin: 1.2rem 0 0; color: #EFEAE2; }
+
+  /* toolkit cover — paper, type-led */
+  .cover.toolkit { background: #F7F2E9; color: #26201B; padding: 1.5rem 1.4rem 1.3rem 1.9rem; justify-content: flex-start; }
+  .toolkit .kicker { font-family: ui-sans-serif, system-ui, sans-serif; font-size: .62rem; letter-spacing: .2em; text-transform: uppercase; color: #8E1B22; font-weight: 700; margin: 0 0 .9rem; }
+  .toolkit .title { font-size: 1.45rem; line-height: 1.1; font-weight: 700; margin: 0; }
+  .toolkit .title .red { color: #B3222B; }
+  .toolkit .rule { height: 3px; background: #B3222B; width: 3rem; margin: .9rem 0; }
+  .toolkit .subtitle { font-size: .8rem; line-height: 1.45; color: #5C5248; margin: 0; }
+  .toolkit .band { margin-top: auto; background: #B3222B; color: #F7F2E9; font-family: ui-sans-serif, system-ui, sans-serif; font-size: .62rem; letter-spacing: .14em; text-transform: uppercase; padding: .5rem .7rem; border-radius: 2px; }
+  .toolkit .author { font-family: ui-sans-serif, system-ui, sans-serif; font-size: .7rem; letter-spacing: .18em; text-transform: uppercase; margin: .9rem 0 0; }
+
+  /* ------- voice / rules ------- */
+  .two-col { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1.2rem; margin: 1.4rem 0; }
+  .card { background: var(--sheet); border: 1px solid var(--line); border-radius: 4px; padding: 1.3rem 1.5rem; }
+  .card h3 { font-family: ui-sans-serif, system-ui, sans-serif; font-size: .74rem; letter-spacing: .14em; text-transform: uppercase; margin: 0 0 .7rem; }
+  .card.do h3 { color: #2E6B3F; } .card.dont h3 { color: var(--cardinal-deep); }
+  :root[data-theme="dark"] .card.do h3 { color: #7FBF8E; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .card.do h3 { color: #7FBF8E; } }
+  .card ul { margin: 0; padding-left: 1.1rem; font-size: .95rem; }
+  .card li { margin-bottom: .5rem; }
+  .card li:last-child { margin-bottom: 0; }
+
+  blockquote.voice { border-left: 4px solid var(--cardinal); margin: 1.4rem 0; padding: .4rem 0 .4rem 1.2rem; font-style: italic; font-size: 1.08rem; max-width: 36rem; }
+  blockquote.voice cite { display: block; font-style: normal; font-family: ui-sans-serif, system-ui, sans-serif; font-size: .78rem; color: var(--muted); margin-top: .5rem; }
+
+  .marks { display: flex; gap: 2.5rem; flex-wrap: wrap; align-items: flex-end; margin: 1.5rem 0; }
+  .markbox { text-align: center; font-family: ui-sans-serif, system-ui, sans-serif; font-size: .78rem; color: var(--muted); }
+  .markbox .stage { background: var(--sheet); border: 1px solid var(--line); border-radius: 4px; padding: 1.6rem 2.2rem; margin-bottom: .6rem; }
+
+  .tb-mark { width: 2rem; height: 1.6rem; display: inline-block; position: relative; }
+  .tb-mark::before { content: ""; position: absolute; inset: 30% 0 0 0; background: var(--cardinal); border-radius: 2px; }
+  .tb-mark::after { content: ""; position: absolute; top: 0; left: 28%; right: 28%; height: 34%; border: 3px solid var(--cardinal); border-bottom: none; border-radius: 4px 4px 0 0; }
+
+  footer.colophon { text-align: center; color: var(--muted); font-style: italic; margin-top: 4rem; }
+  footer.colophon .rule { width: 3rem; height: 3px; background: var(--cardinal); margin: 0 auto 1.2rem; }
+  table { border-collapse: collapse; width: 100%; font-family: ui-sans-serif, system-ui, sans-serif; font-size: .88rem; }
+  th { text-align: left; font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); padding: .4rem .6rem; border-bottom: 2px solid var(--line); }
+  td { border-bottom: 1px solid var(--line-soft); padding: .55rem .6rem; vertical-align: top; }
+  td:first-child, th:first-child { padding-left: 0; }
+  .tablewrap { overflow-x: auto; }
+</style>
+
+<div class="wrap">
+
+  <header class="hero">
+    <div class="perch" aria-label="The Perch mark: a red cardinal on a line">
+      <svg width="150" height="64" viewBox="0 0 150 64" role="img" aria-hidden="true">
+        <line x1="8" y1="50" x2="142" y2="50" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="96" cy="38" r="11" fill="var(--cardinal)"/>
+        <path d="M 90 30 L 96 20 L 99 29 Z" fill="var(--cardinal)"/>
+      </svg>
+    </div>
+    <p class="eyebrow">Brand Guide · v1 · July 2026</p>
+    <h1>Cardinal <span class="thin">Promise</span> Press</h1>
+    <p class="tagline">One promise. Two doors in.</p>
+  </header>
+
+  <section>
+    <h2>The idea</h2>
+    <p class="sub">Everything hangs on one image and one sentence.</p>
+    <p>The image: <strong>a red bird that landed and stayed.</strong> The sentence: <em>show up for the people who are dying, and for the people who love them.</em></p>
+    <p>The two books are the same promise through two doors. <strong>The Cardinal's Promise</strong> is the <em>why</em> — the story, the father, the seventeen years. <strong>The Aging Parent Cardinal's Toolkit</strong> is the <em>what</em> — the manual for the family standing at the bed. Every branding decision below exists to make that pairing legible at a glance: same red, same bird, same voice — different ground.</p>
+  </section>
+
+  <section>
+    <h2>The marks</h2>
+    <p class="sub">Two marks, one bird. Simple enough to draw on a napkin, which is the test.</p>
+    <div class="marks">
+      <div class="markbox">
+        <div class="stage">
+          <svg width="110" height="48" viewBox="0 0 150 64" aria-hidden="true">
+            <line x1="8" y1="50" x2="142" y2="50" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="96" cy="38" r="11" fill="var(--cardinal)"/>
+            <path d="M 90 30 L 96 20 L 99 29 Z" fill="var(--cardinal)"/>
+          </svg>
+        </div>
+        <strong>The Perch</strong> — press mark<br>A red bird, landed on a line. The line is a branch, a mirror, a bed rail. Use on spines, title pages, the site header, email footers.
+      </div>
+      <div class="markbox">
+        <div class="stage"><span class="tb-mark"></span></div>
+        <strong>The Toolbox</strong> — utility mark<br>Marks every worksheet and action page inside the Toolkit and its lead magnets. Never appears on the memoir.
+      </div>
+    </div>
+    <p class="sans" style="font-size:.85rem; color:var(--muted); max-width:40rem;">Rule: the Perch belongs to the press and both books. The Toolbox belongs to the practical line only. Neither mark ever gets a gradient, an outline, or a drop shadow.</p>
+  </section>
+
+  <section>
+    <h2>Color</h2>
+    <p class="sub">One red. Two grounds. That's the whole system.</p>
+    <div class="swatches">
+      <div class="swatch"><div class="chip" style="background:#B3222B"></div><div class="info"><p class="name">Cardinal</p><p class="hex">#B3222B</p><p class="role">The bird. Marks, rules, bands, spines. Never for body text.</p></div></div>
+      <div class="swatch"><div class="chip" style="background:#8E1B22"></div><div class="info"><p class="name">Cardinal Deep</p><p class="hex">#8E1B22</p><p class="role">Print-safe red; small text on light grounds.</p></div></div>
+      <div class="swatch"><div class="chip" style="background:#F7F2E9; border-bottom:1px solid #D9CFC3"></div><div class="info"><p class="name">Paper</p><p class="hex">#F7F2E9</p><p class="role">The Toolkit's ground. Warm, calm, printable.</p></div></div>
+      <div class="swatch"><div class="chip" style="background:#1E1A2E"></div><div class="info"><p class="name">Night</p><p class="hex">#1E1A2E</p><p class="role">The memoir's ground. Winter dusk, not black.</p></div></div>
+      <div class="swatch"><div class="chip" style="background:#26201B"></div><div class="info"><p class="name">Ink</p><p class="hex">#26201B</p><p class="role">Text on light grounds. Warm near-black.</p></div></div>
+      <div class="swatch"><div class="chip" style="background:#B98A2F"></div><div class="info"><p class="name">Winter Gold</p><p class="hex">#B98A2F</p><p class="role">Sparingly: foil moments, award flashes, the 17. ≤5% of any layout.</p></div></div>
+    </div>
+    <p class="sans" style="font-size:.85rem; color:var(--muted); max-width:40rem;">The red never changes between books. The ground does: Paper says "manual," Night says "memoir." Side by side on a shelf, the matching red spine band ties them into a family.</p>
+  </section>
+
+  <section>
+    <h2>Typography</h2>
+    <p class="sub">A book voice and a clipboard voice.</p>
+    <div class="specimen">
+      <p class="label">Display &amp; body — Spectral (print) / Charter (web fallback)</p>
+      <p class="spec-display">He kept finding me.</p>
+      <p class="spec-body" style="margin-top:.8rem">Serif carries every sentence a reader feels: titles, chapter openers, body text, pull quotes. Short sentences deserve a face with weight.</p>
+    </div>
+    <div class="specimen">
+      <p class="label">Utility — system sans, uppercase, letterspaced</p>
+      <p class="spec-utility">The Cardinal's Toolbox · Use this page when you need one clear next step</p>
+      <p class="spec-body sans" style="margin-top:.8rem; font-size:.92rem;">Sans is for labels, worksheets, buttons, captions — anywhere the reader is acting, not feeling. It never sets a headline on the memoir side.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Cover architecture</h2>
+    <p class="sub">Same family, different door — visible from across the room.</p>
+    <div class="covers">
+      <div>
+        <div class="cover memoir">
+          <div class="spineband"></div>
+          <div>
+            <p class="title">The<br>Cardinal's<br>Promise</p>
+            <p class="subtitle">Immigrant. Addict. Son.</p>
+          </div>
+          <div>
+            <div class="branchline"><span class="bird"></span></div>
+            <p class="author">Rob Brizzi</p>
+          </div>
+        </div>
+        <p class="cover-caption"><strong>The memoir: Night ground, image-led.</strong> One bird, one line, a lot of quiet. Title in serif, generous space, subtitle in italic. Nothing else on the front.</p>
+      </div>
+      <div>
+        <div class="cover toolkit">
+          <div class="spineband"></div>
+          <p class="kicker">Straight answers · Real worksheets</p>
+          <p class="title">The Aging Parent<br><span class="red">Cardinal's Toolkit</span></p>
+          <div class="rule"></div>
+          <p class="subtitle">Medicare · Medicaid · Caregiving · Dementia · Assisted Living · Hospice</p>
+          <div class="band">25 chapters + The Cardinal's Toolbox</div>
+          <p class="author">Rob Brizzi, CDP</p>
+        </div>
+        <p class="cover-caption"><strong>The Toolkit: Paper ground, type-led.</strong> Structured, labeled, confident — it looks like the manual it is. Red band advertises the worksheets. CDP appears here (and only here).</p>
+      </div>
+    </div>
+    <p class="sans" style="font-size:.85rem; color:var(--muted); max-width:40rem;">Shared DNA: the red spine band at the same width and position on both; the Perch mark on both spines; Spectral titles; the author name set the same way. The children's book joins this shelf later on a third ground (daylight sky) with the same band.</p>
+  </section>
+
+  <section>
+    <h2>Voice</h2>
+    <p class="sub">The brand sounds like Rob writes.</p>
+    <blockquote class="voice">
+      You don't have to do this perfectly. You have to do the next thing.
+      <cite>The register: grounded, direct, short sentences. Witness, don't perform.</cite>
+    </blockquote>
+    <div class="two-col">
+      <div class="card do">
+        <h3>Always</h3>
+        <ul>
+          <li>Short sentences. Plain words. "Medicare vs. Medicaid" not "navigating coverage complexities."</li>
+          <li>Name people: Lou, Hope, Jaye, Tyler. The dying person is never abstracted.</li>
+          <li>Let the numbers be facts, not mysticism: 17 years, 15 days, one bird.</li>
+          <li>One idea per piece; one CTA per email.</li>
+        </ul>
+      </div>
+      <div class="card dont">
+        <h3>Never</h3>
+        <ul>
+          <li>No performed grief: no stock-photo tears, no violin copy, no countdown timers on memorial dates.</li>
+          <li>No employer mentions, anywhere, ever (the firewall).</li>
+          <li>No "journey," "battle," or "inspiring" as crutch words.</li>
+          <li>Dec 25 is memorial-only. Every year. No links, no ask.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Where each element lives</h2>
+    <div class="tablewrap">
+    <table>
+      <thead><tr><th>Element</th><th>Memoir (the why)</th><th>Toolkit (the what)</th></tr></thead>
+      <tbody>
+        <tr><td>Ground</td><td>Night #1E1A2E</td><td>Paper #F7F2E9</td></tr>
+        <tr><td>Cardinal red</td><td>The bird + spine band only</td><td>Marks, rules, bands, worksheet boxes</td></tr>
+        <tr><td>Marks</td><td>The Perch</td><td>The Perch + The Toolbox</td></tr>
+        <tr><td>Headline face</td><td>Spectral serif, always</td><td>Spectral serif; sans for labels</td></tr>
+        <tr><td>Author credit</td><td>Rob Brizzi</td><td>Rob Brizzi, CDP</td></tr>
+        <tr><td>Social tone</td><td>Story beats, the rooms, Lou</td><td>Straight answers, checklists, Q&amp;A</td></tr>
+        <tr><td>Gold accents</td><td>The 17 moments, endorsement flashes</td><td>Not used</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+
+  <footer class="colophon">
+    <div class="rule"></div>
+    <p>One promise. Two doors. Same bird.<br>Cardinal Promise Press · thecardinalspromise.com</p>
+  </footer>
+
+</div>
