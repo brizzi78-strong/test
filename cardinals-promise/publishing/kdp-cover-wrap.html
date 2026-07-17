@@ -4,22 +4,22 @@
 <meta charset="utf-8">
 <title>KDP Cover Wrap — It's Not Your Fault (cream design)</title>
 <style>
-  /* 252-page interior (253 incl. cover), 8.5x11 paperback, PREMIUM COLOR paper: spine = 252 x 0.002347 = 0.5914in.
-     Wrap = bleed 0.125 + back 8.5 + spine 0.5914 + front 8.5 + bleed 0.125 = 17.8414in.
+  /* 253-page interior (254 incl. cover), 8.5x11 paperback, PREMIUM COLOR paper: spine = 253 x 0.002347 = 0.5938in.
+     Wrap = bleed 0.125 + back 8.5 + spine 0.5938 + front 8.5 + bleed 0.125 = 17.8438in.
      (Recompute if ink choice or page count changes: spine = pages x 0.002347.)
      CREAM design language — the author's finished "It's Not Your Fault" cover (July 2026).
      This title is the deliberate cream outlier; the rest of the Cardinal's Promise series
      stays navy. Layout TEMPLATE: the designer drops the photorealistic cardinal-on-gold-
      blossom-branch art and the author photo into the marked slots at print resolution
      (full wrap at 300 DPI = 5334 x 3375 px). */
-  @page { size: 17.8414in 11.25in; margin: 0; }
+  @page { size: 17.8438in 11.25in; margin: 0; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
     --cream: #f7f4ee; --cream-deep: #efe9dd; --navy: #1e2a44; --navy-soft: #2b3a5c;
     --gold: #b08d2e; --gold-soft: #c9a45c; --red: #b02a1f; --rule: #d8cdb6;
     --maroon: #7d1f17; --blue: #1e57a8;
   }
-  body { width: 17.8414in; height: 11.25in; position: relative;
+  body { width: 17.8438in; height: 11.25in; position: relative;
     background: var(--cream); font-family: Georgia, "Times New Roman", serif;
     color: var(--navy); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 
@@ -64,16 +64,16 @@
     font-family: Helvetica, Arial, sans-serif; font-size: 7.5pt; color: #333; padding: 0.08in; }
 
   /* ---- SPINE ---- */
-  .spine { position: absolute; left: 8.625in; top: 0; width: 0.5914in; height: 11.25in;
+  .spine { position: absolute; left: 8.625in; top: 0; width: 0.5938in; height: 11.25in;
     background: var(--cream-deep); }
-  .spinetxt { position: absolute; top: 0.6in; left: 0; width: 0.5914in; height: 10in;
+  .spinetxt { position: absolute; top: 0.6in; left: 0; width: 0.5938in; height: 10in;
     writing-mode: vertical-rl; display: flex; align-items: center;
     justify-content: flex-start; gap: 0.35in; font-family: Georgia, serif; color: var(--navy); }
   .spinetxt .t { font-size: 11pt; letter-spacing: 0.05em; font-weight: bold; }
   .spinetxt .a { font-size: 9.5pt; letter-spacing: 0.1em; color: var(--gold); }
 
   /* ---- FRONT (right) ---- */
-  .front { position: absolute; left: 9.2164in; top: 0; width: 8.625in; height: 11.25in;
+  .front { position: absolute; left: 9.2188in; top: 0; width: 8.625in; height: 11.25in;
     padding: 0.62in 0.72in 0.6in 0.62in; text-align: center; }
   /* FRONT = adopted crossout cream design (matches front-cover-print) */
   .front .frame { left: 0.22in; right: 0.375in; border-color: var(--red); }

@@ -22,10 +22,10 @@ async function rasterToPdf(pngPath, wIn, hIn, outPath) {
 
 // =====================================================================
 // 1) FULL WRAP — flatten kdp-cover-wrap.html to an exact-size PDF
-//    Target: 17.8414 x 11.25 in @ 300 DPI  ->  5334 x 3375 px
+//    Target: 17.8438 x 11.25 in @ 300 DPI  ->  5334 x 3375 px
 // =====================================================================
 {
-  const W = Math.round(17.8414 * DPI); // 5334
+  const W = Math.round(17.8438 * DPI); // 5334
   const H = Math.round(11.25 * DPI);   // 3375
   const page = await browser.newPage({ viewport: { width: W, height: H }, deviceScaleFactor: 1 });
   // Force the CSS-in body to fill our pixel viewport exactly regardless of @page.
@@ -36,8 +36,8 @@ async function rasterToPdf(pngPath, wIn, hIn, outPath) {
   `});
   await page.screenshot({ path: `${SCR}/wrap-flat.png`, clip: { x:0, y:0, width:W, height:H } });
   await page.close();
-  await rasterToPdf(`${SCR}/wrap-flat.png`, 17.8414, 11.25, `${PUB}/kdp-cover-wrap-print.pdf`);
-  console.log(`WRAP  -> ${W}x${H}px  =>  kdp-cover-wrap-print.pdf (17.8414 x 11.25 in)`);
+  await rasterToPdf(`${SCR}/wrap-flat.png`, 17.8438, 11.25, `${PUB}/kdp-cover-wrap-print.pdf`);
+  console.log(`WRAP  -> ${W}x${H}px  =>  kdp-cover-wrap-print.pdf (17.8438 x 11.25 in)`);
 }
 
 // =====================================================================
