@@ -115,7 +115,7 @@ He didn't want anything at all.
 
 > **[Illustration Prompt (generate in same style): "Snowy winter scene, red pickup truck parked outside a quiet dark house with one warm yellow window glowing, light snow falling, melancholic but hopeful mood, same warm illustrated style as previous family scenes, red truck matches earlier truck image, subtle small silhouette of boy at window, soft emotional children's book illustration"]**
 
-*(artwork pending)*
+![Stand-in art: the red truck outside the quiet house](illustrations/pending/snowy-truck.jpeg)
 
 ## [Pages 19–20]
 
@@ -123,7 +123,7 @@ The quiet stayed a long time.
 
 > **[Illustration Prompt: "Empty wooden bleachers covered in fresh snow during winter day, soft snow falling, faint glowing red cardinal perched on top bench as subtle symbol of hope, empty space conveys loss but with gentle warmth, same style as Ramsey bleachers image, children's picture book illustration"]**
 
-*(artwork pending)*
+![Stand-in art: empty snowy bleachers with a faint cardinal](illustrations/pending/empty-bleachers.jpeg)
 
 ## [Pages 21–22]
 
@@ -132,7 +132,7 @@ Tap. Tap-tap.
 
 > **[Illustration Prompt: "Young dark-haired Rob sitting alone at kitchen table, looking toward snowy window with hopeful expression, untouched breakfast plate, warm interior lighting contrasting cool window, same character design and style as previous Rob illustrations, gentle emotional children's book art"]**
 
-*(artwork pending)*
+![Stand-in art: Rob at the table, turned toward the window](illustrations/pending/boy-at-table.jpeg)
 
 ## [Pages 23–24]
 
@@ -144,7 +144,7 @@ And it stayed.
 
 > **[Illustration Prompt: "Vibrant bright red cardinal perched on snowy windowsill, looking directly at viewer with kind expression, soft glowing aura, snow falling outside, young Rob's face partially visible inside, highly detailed emotional close-up in the same style as previous cardinal images, warm children's book illustration"]**
 
-*(artwork pending)*
+![Stand-in art: the cardinal on the snowy windowsill](illustrations/pending/cardinal-windowsill.jpeg)
 
 ## [Pages 25–26]
 
@@ -170,7 +170,7 @@ when he was proud and didn't say so.
 
 > **[Illustration Prompt: "Young Rob's hand pressed against cold window glass touching the bright red cardinal on the other side, snow outside, Rob's face full of wonder and love, soft glowing light from cardinal, emotional, matching hand/car cardinal style, warm children's book illustration"]**
 
-*(artwork pending)*
+![Stand-in art: Rob's hand on the glass, the cardinal outside](illustrations/pending/hand-on-glass.jpeg)
 
 ## [Pages 29–30]
 
@@ -184,7 +184,7 @@ tap. Tap-tap.
 
 > **[Illustration Prompt: "Three vertical panels in one spread: 1) Cardinal on kitchen table with Rob watching 2) Cardinal on snow-covered bleachers 3) Cardinal on rainy window sill, vibrant red glowing cardinal in each, hopeful and consistent with previous cardinal images, same warm illustrated style"]**
 
-*(artwork pending)*
+![Stand-in art: three panels — table, bleachers, rainy sill](illustrations/pending/three-panel-cardinals.jpeg)
 
 ## [Added spread – family, now]
 
@@ -209,7 +209,7 @@ It just changes where it sits.
 
 > **[Illustration Prompt: "Young Rob standing in green field looking up at bare tree branch where a bright red cardinal is perched looking down at him, soft hopeful sunlight, simple beautiful composition, same character design and warm emotional style as previous spreads"]**
 
-*(artwork pending)*
+![Stand-in art: Rob looking up at the cardinal on the branch](illustrations/pending/cardinal-tree-branch.jpeg)
 
 ## [Pages 33–34]
 
@@ -220,7 +220,7 @@ Red keeps its promises.
 
 > **[Illustration Prompt: "Hopeful ending spread: bright red cardinal flying across beautiful pink and gold sunset sky above dark house silhouettes, warm glowing light, feeling of continued love and promise kept, full-bleed emotional illustration matching glowing cardinal style"]**
 
-*(artwork pending)*
+![Stand-in art: the cardinal across the sunset sky](illustrations/pending/cardinal-sunset.jpeg)
 
 ## [Page 35 – Author Note]
 
