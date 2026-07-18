@@ -10,6 +10,7 @@ This repository holds several projects. Jump to the one you need:
 | **HireCheck — background screening service** | `hirecheck/` | Standalone service for running FCRA-aware pre-employment background checks on new hires (see `hirecheck/README.md`) |
 | **MyHR — new-hire paperwork service** | `myhr/` | Standalone onboarding service: e-signed new-hire forms (I-9, W-4, consent, etc.) with HR review and an audit trail (see `myhr/README.md`) |
 | **Recruiting — job requisitions & applicant tracking** | `recruiting/` | Standalone ATS: post requisitions and move applications through a hiring pipeline; reaching `hired` hands off to screening + onboarding (see `recruiting/README.md`) |
+| **Training — online training portal** | `training/` | Standalone LMS: customizable course catalog (e.g. Sexual Harassment Prevention), lesson tracking, and scored assessments (see `training/README.md`) |
 
 ---
 
