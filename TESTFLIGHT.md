@@ -11,9 +11,9 @@ v1.0 build 1, no special permissions). Replace every **[bracketed]** value.
 | Field | Value |
 |---|---|
 | Beta App Name | Cardinal's Toolkit |
-| Feedback Email | **[your email]** |
+| Feedback Email | brizzi78@icloud.com |
 | Marketing URL | https://thecardinalspromise.com |
-| Privacy Policy URL | **[your privacy page]** (see note below) |
+| Privacy Policy URL | https://thecardinalspromise.com/privacy (see note below) |
 | Beta App Description | *A companion to the caregiver handbook — checklists, a medication list, gentle self-care tools, and trusted phone numbers for families caring for an aging parent. Everything stays on your phone.* |
 | Export Compliance | **No** — the app uses no encryption beyond Apple's standard HTTPS, so answer "None of the algorithms mentioned above." |
 
@@ -63,7 +63,7 @@ Please tap through all five tabs, and especially try the new things:
 4. What's missing that you'd reach for on a hard day?
 
 To report: in the TestFlight app, take a screenshot and it offers to send feedback,
-or email **[your email]**.
+or email **brizzi78@icloud.com**.
 
 ---
 
