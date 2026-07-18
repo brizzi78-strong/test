@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cardinal HR — the hiring &amp; onboarding platform</title>
 <meta name="description" content="Cardinal HR runs the whole hiring journey — Recruiting, Screening, new-hire paperwork (MyHR), and Training — so a good hire is the default and a bad one gets caught early.">
+<meta name="theme-color" content="#F7F2E6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#101627" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Cardinal HR">
+<meta property="og:title" content="Cardinal HR — the hiring &amp; onboarding platform">
+<meta property="og:description" content="Cardinal HR runs the whole hiring journey — Recruiting, Screening, new-hire paperwork (MyHR), and Training — so a good hire is the default and a bad one gets caught early.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Cardinal HR — the hiring &amp; onboarding platform">
+<meta name="twitter:description" content="Cardinal HR runs the whole hiring journey — Recruiting, Screening, new-hire paperwork (MyHR), and Training — so a good hire is the default and a bad one gets caught early.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23A31B33'/%3E%3Ctext x='16' y='23' font-family='system-ui,sans-serif' font-size='20' font-weight='900' text-anchor='middle' fill='white'%3EC%3C/text%3E%3C/svg%3E">
 <style>
   :root {
@@ -103,11 +112,70 @@
     width: 26px; height: 26px; border-radius: 7px; display: grid; place-items: center;
     background: var(--brand); color: #fff; font-size: 15px; font-weight: 900;
   }
+  @media (prefers-color-scheme: dark) { .brand .glyph { color: #101627; } }
   :root[data-theme="dark"] .brand .glyph { color: #101627; }
+  :root[data-theme="light"] .brand .glyph { color: #fff; }
   .nav { display: flex; gap: 1.4rem; align-items: center; }
   .nav a { color: var(--muted); font-size: var(--step-0); font-weight: 600; }
   .nav a:hover { color: var(--ink); text-decoration: none; }
-  @media (max-width: 640px) { .nav .navlink { display: none; } }
+  .nav a.here { color: var(--ink); }
+
+  /* ---- skip link ---- */
+  .skip {
+    position: absolute; left: .5rem; top: -4rem; z-index: 50;
+    background: var(--brand); color: #fff; padding: .55rem 1rem; border-radius: 9px;
+    font-weight: 700; font-size: var(--step-0); box-shadow: var(--shadow);
+    transition: top .15s ease;
+  }
+  .skip:focus { top: .5rem; text-decoration: none; }
+  :root[data-theme="dark"] .skip { color: #101627; }
+  :root[data-theme="light"] .skip { color: #fff; }
+  @media (prefers-color-scheme: dark) { .skip { color: #101627; } }
+  @media (prefers-reduced-motion: reduce) { .skip { transition: none; } }
+  main:focus { outline: none; }
+
+  /* visually-hidden (screen-reader only) */
+  .vh {
+    position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+  }
+
+  /* ---- nav: mobile disclosure menu ---- */
+  .menu { position: relative; display: flex; }
+  .menu > summary { display: none; }
+  .menu > .menu-panel { display: flex !important; gap: 1.4rem; align-items: center; }
+  @media (max-width: 640px) {
+    .bar-inner { gap: .5rem; }
+    .brand { font-size: 1.02rem; }
+    .nav { gap: .5rem; }
+    .menu > summary {
+      display: inline-flex; align-items: center; gap: .4rem; cursor: pointer;
+      list-style: none; -webkit-user-select: none; user-select: none;
+      font-family: var(--font-body); font-weight: 700; font-size: var(--step-0);
+      color: var(--ink); background: var(--surface);
+      border: 1px solid var(--line); border-radius: 9px; padding: .5rem .7rem;
+    }
+    .menu > summary::-webkit-details-marker { display: none; }
+    .menu[open] > summary { border-color: color-mix(in srgb, var(--brand) 45%, var(--line)); }
+    .menu > .menu-panel {
+      display: none !important; position: absolute; right: 0; top: calc(100% + .55rem);
+      flex-direction: column; align-items: stretch; gap: .15rem;
+      min-width: 12rem; padding: .5rem;
+      background: var(--surface); border: 1px solid var(--line);
+      border-radius: 12px; box-shadow: var(--shadow);
+    }
+    .menu[open] > .menu-panel { display: flex !important; }
+    .menu-panel a { padding: .55rem .6rem; border-radius: 8px; }
+    .menu-panel a:hover { background: var(--surface-2); text-decoration: none; }
+    .menu-panel a.here { background: color-mix(in srgb, var(--brand) 10%, var(--surface)); }
+    .bar .btn { padding: .55rem .8rem; }
+  }
+
+  /* ---- footer nav ---- */
+  .foot-nav { display: flex; flex-wrap: wrap; gap: .5rem 1.3rem; padding-bottom: 1rem; }
+  .foot-nav a { color: var(--muted); font-weight: 600; font-size: var(--step-0); }
+  .foot-nav a:hover { color: var(--ink); }
+  .foot-nav a[aria-current="page"] { color: var(--ink); }
 
   .btn {
     display: inline-flex; align-items: center; gap: .5rem;
@@ -118,6 +186,7 @@
   }
   .btn:hover { text-decoration: none; transform: translateY(-1px); box-shadow: var(--shadow); }
   .btn.ghost { background: transparent; color: var(--ink); border-color: var(--line); }
+  @media (prefers-reduced-motion: reduce) { .btn:hover { transform: none; } }
 
   /* ---- hero ---- */
   .hero { padding: clamp(3rem, 8vw, 6rem) 0 clamp(2rem, 5vw, 3.5rem); }
@@ -200,7 +269,7 @@
   .band { background: var(--surface-2); border-block: 1px solid var(--line); }
   .band .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
   @media (max-width: 760px) { .band .grid { grid-template-columns: 1fr; } }
-  .band .item h4 { margin: 0 0 .3rem; font-size: var(--step-1); font-weight: 800; letter-spacing: -.01em; display: flex; align-items: center; gap: .5rem; }
+  .band .item h3 { margin: 0 0 .3rem; font-size: var(--step-1); font-weight: 800; letter-spacing: -.01em; display: flex; align-items: center; gap: .5rem; }
   .band .item p { margin: 0; color: var(--muted); font-size: var(--step-0); }
   .band .item .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--good); box-shadow: 0 0 0 4px color-mix(in srgb, var(--good) 18%, transparent); }
 
@@ -221,19 +290,27 @@
 </head>
 <body>
 
+<a class="skip" href="#main">Skip to content</a>
+
 <header class="bar">
   <div class="wrap bar-inner">
-    <div class="brand"><span class="glyph">C</span> Cardinal HR</div>
-    <nav class="nav">
-      <a class="navlink" href="features.html">Features</a>
-      <a class="navlink" href="pricing.html">Pricing</a>
-      <a class="navlink" href="security.html">Security</a>
+    <div class="brand"><span class="glyph" aria-hidden="true">C</span> Cardinal HR</div>
+    <nav class="nav" aria-label="Primary">
+      <details class="menu">
+        <summary class="menu-btn"><svg class="ham" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M2 4.5h12M2 8h12M2 11.5h12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>Menu</summary>
+        <div class="menu-panel">
+          <a class="navlink here" href="index.html" aria-current="page">Home</a>
+          <a class="navlink" href="features.html">Features</a>
+          <a class="navlink" href="pricing.html">Pricing</a>
+          <a class="navlink" href="security.html">Security</a>
+        </div>
+      </details>
       <a class="btn" href="#start">Start free trial</a>
     </nav>
   </div>
 </header>
 
-<main>
+<main id="main" tabindex="-1">
   <section class="hero">
     <div class="wrap">
       <p class="eyebrow">Hiring &amp; onboarding, end to end</p>
@@ -263,25 +340,25 @@
           <span class="idx">STAGE 01</span>
           <h3>Recruiting</h3>
           <p>Post requisitions and move applicants through the hiring pipeline.</p>
-          <div class="flow"><span class="chip">applied</span><span class="arrow">→</span><span class="chip">interview</span><span class="arrow">→</span><span class="chip">offer</span><span class="arrow">→</span><span class="chip end">hired</span></div>
+          <div class="flow"><span class="chip">applied</span><span class="arrow" aria-hidden="true">→</span><span class="chip">interview</span><span class="arrow" aria-hidden="true">→</span><span class="chip">offer</span><span class="arrow" aria-hidden="true">→</span><span class="chip end">hired</span></div>
         </article>
         <article class="stage reveal">
           <span class="idx">STAGE 02</span>
           <h3>Screening</h3>
           <p>Background checks with consent captured before anything runs.</p>
-          <div class="flow"><span class="chip">authorized</span><span class="arrow">→</span><span class="chip">in&nbsp;progress</span><span class="arrow">→</span><span class="chip end">clear</span></div>
+          <div class="flow"><span class="chip">authorized</span><span class="arrow" aria-hidden="true">→</span><span class="chip">in&nbsp;progress</span><span class="arrow" aria-hidden="true">→</span><span class="chip end">clear</span></div>
         </article>
         <article class="stage reveal">
           <span class="idx">STAGE 03</span>
           <h3>MyHR</h3>
           <p>New-hire paperwork, e-signed and reviewed by HR.</p>
-          <div class="flow"><span class="chip">assigned</span><span class="arrow">→</span><span class="chip">submitted</span><span class="arrow">→</span><span class="chip end">approved</span></div>
+          <div class="flow"><span class="chip">assigned</span><span class="arrow" aria-hidden="true">→</span><span class="chip">submitted</span><span class="arrow" aria-hidden="true">→</span><span class="chip end">approved</span></div>
         </article>
         <article class="stage reveal">
           <span class="idx">STAGE 04</span>
           <h3>Training</h3>
           <p>Assign courses, track lessons, score the assessment.</p>
-          <div class="flow"><span class="chip">not&nbsp;started</span><span class="arrow">→</span><span class="chip">in&nbsp;progress</span><span class="arrow">→</span><span class="chip end">completed</span></div>
+          <div class="flow"><span class="chip">not&nbsp;started</span><span class="arrow" aria-hidden="true">→</span><span class="chip">in&nbsp;progress</span><span class="arrow" aria-hidden="true">→</span><span class="chip end">completed</span></div>
         </article>
       </div>
     </div>
@@ -360,15 +437,15 @@
       </div>
       <div class="grid">
         <div class="item reveal">
-          <h4><span class="dot"></span> Consent before checking</h4>
+          <h3><span class="dot" aria-hidden="true"></span> Consent before checking</h3>
           <p>Background checks are consumer reports under the FCRA. Cardinal HR won't run one until the candidate's disclosure and authorization are on file.</p>
         </div>
         <div class="item reveal">
-          <h4><span class="dot"></span> A fair chance to dispute</h4>
+          <h3><span class="dot" aria-hidden="true"></span> A fair chance to dispute</h3>
           <p>An adverse decision issues a pre-adverse notice and holds for a waiting period, so a candidate can correct a wrong record before it costs them the job.</p>
         </div>
         <div class="item reveal">
-          <h4><span class="dot"></span> Everything on the record</h4>
+          <h3><span class="dot" aria-hidden="true"></span> Everything on the record</h3>
           <p>Every state change — signed, approved, returned, cleared — is appended to an immutable history. When someone asks "what happened," there's an answer.</p>
         </div>
       </div>
@@ -388,9 +465,15 @@
 <footer>
   <div class="wrap">
     <div class="foot-inner">
-      <div class="brand"><span class="glyph">C</span> Cardinal HR</div>
+      <div class="brand"><span class="glyph" aria-hidden="true">C</span> Cardinal HR</div>
       <span>Recruiting · Screening · MyHR · Training</span>
     </div>
+    <nav class="foot-nav" aria-label="Footer">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="features.html">Features</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="security.html">Security</a>
+    </nav>
     <p class="disclaimer">Cardinal HR helps run the hiring and onboarding process correctly; it is not legal, tax, or HR advice. Employers are responsible for confirming their FCRA, state, and tax obligations with qualified counsel. Equifax is a trademark of its owner; provider integrations require your own agreement with the provider. “Cardinal HR” is a working product name; confirm trademark availability before any launch.</p>
   </div>
 </footer>

@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cardinal HR — Security &amp; Compliance</title>
 <meta name="description" content="How Cardinal HR builds trust into the hiring workflow: FCRA consent before any background check, adverse-action waiting periods, e-signed onboarding forms, and an append-only audit trail on every state change. Security stated as principles and roadmap, not certifications.">
+<meta name="theme-color" content="#F7F2E6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#101627" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Cardinal HR">
+<meta property="og:title" content="Cardinal HR — Security &amp; Compliance">
+<meta property="og:description" content="How Cardinal HR builds trust into the hiring workflow: FCRA consent before any background check, adverse-action waiting periods, e-signed onboarding forms, and an append-only audit trail on every state change. Security stated as principles and roadmap, not certifications.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Cardinal HR — Security &amp; Compliance">
+<meta name="twitter:description" content="How Cardinal HR builds trust into the hiring workflow: FCRA consent before any background check, adverse-action waiting periods, e-signed onboarding forms, and an append-only audit trail on every state change. Security stated as principles and roadmap, not certifications.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23A31B33'/%3E%3Ctext x='16' y='23' font-family='system-ui,sans-serif' font-size='20' font-weight='900' text-anchor='middle' fill='white'%3EC%3C/text%3E%3C/svg%3E">
 <style>
   :root {
@@ -114,7 +123,63 @@
   .nav a { color: var(--muted); font-size: var(--step-0); font-weight: 600; }
   .nav a:hover { color: var(--ink); text-decoration: none; }
   .nav a.here { color: var(--ink); }
-  @media (max-width: 640px) { .nav .navlink { display: none; } }
+
+  /* ---- skip link ---- */
+  .skip {
+    position: absolute; left: .5rem; top: -4rem; z-index: 50;
+    background: var(--brand); color: #fff; padding: .55rem 1rem; border-radius: 9px;
+    font-weight: 700; font-size: var(--step-0); box-shadow: var(--shadow);
+    transition: top .15s ease;
+  }
+  .skip:focus { top: .5rem; text-decoration: none; }
+  :root[data-theme="dark"] .skip { color: #101627; }
+  :root[data-theme="light"] .skip { color: #fff; }
+  @media (prefers-color-scheme: dark) { .skip { color: #101627; } }
+  @media (prefers-reduced-motion: reduce) { .skip { transition: none; } }
+  main:focus { outline: none; }
+
+  /* visually-hidden (screen-reader only) */
+  .vh {
+    position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+  }
+
+  /* ---- nav: mobile disclosure menu ---- */
+  .menu { position: relative; display: flex; }
+  .menu > summary { display: none; }
+  .menu > .menu-panel { display: flex !important; gap: 1.4rem; align-items: center; }
+  @media (max-width: 640px) {
+    .bar-inner { gap: .5rem; }
+    .brand { font-size: 1.02rem; }
+    .nav { gap: .5rem; }
+    .menu > summary {
+      display: inline-flex; align-items: center; gap: .4rem; cursor: pointer;
+      list-style: none; -webkit-user-select: none; user-select: none;
+      font-family: var(--font-body); font-weight: 700; font-size: var(--step-0);
+      color: var(--ink); background: var(--surface);
+      border: 1px solid var(--line); border-radius: 9px; padding: .5rem .7rem;
+    }
+    .menu > summary::-webkit-details-marker { display: none; }
+    .menu[open] > summary { border-color: color-mix(in srgb, var(--brand) 45%, var(--line)); }
+    .menu > .menu-panel {
+      display: none !important; position: absolute; right: 0; top: calc(100% + .55rem);
+      flex-direction: column; align-items: stretch; gap: .15rem;
+      min-width: 12rem; padding: .5rem;
+      background: var(--surface); border: 1px solid var(--line);
+      border-radius: 12px; box-shadow: var(--shadow);
+    }
+    .menu[open] > .menu-panel { display: flex !important; }
+    .menu-panel a { padding: .55rem .6rem; border-radius: 8px; }
+    .menu-panel a:hover { background: var(--surface-2); text-decoration: none; }
+    .menu-panel a.here { background: color-mix(in srgb, var(--brand) 10%, var(--surface)); }
+    .bar .btn { padding: .55rem .8rem; }
+  }
+
+  /* ---- footer nav ---- */
+  .foot-nav { display: flex; flex-wrap: wrap; gap: .5rem 1.3rem; padding-bottom: 1rem; }
+  .foot-nav a { color: var(--muted); font-weight: 600; font-size: var(--step-0); }
+  .foot-nav a:hover { color: var(--ink); }
+  .foot-nav a[aria-current="page"] { color: var(--ink); }
 
   .btn {
     display: inline-flex; align-items: center; gap: .5rem;
@@ -190,7 +255,7 @@
   .band { background: var(--surface-2); border-block: 1px solid var(--line); }
   .band .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
   @media (max-width: 760px) { .band .grid { grid-template-columns: 1fr; } }
-  .band .item h4 { margin: 0 0 .3rem; font-size: var(--step-1); font-weight: 800; letter-spacing: -.01em; display: flex; align-items: center; gap: .5rem; }
+  .band .item h3 { margin: 0 0 .3rem; font-size: var(--step-1); font-weight: 800; letter-spacing: -.01em; display: flex; align-items: center; gap: .5rem; }
   .band .item p { margin: 0; color: var(--muted); font-size: var(--step-0); }
   .band .item .dot { flex: none; width: 9px; height: 9px; border-radius: 50%; background: var(--navy); box-shadow: 0 0 0 4px color-mix(in srgb, var(--navy) 16%, transparent); }
   .posture {
@@ -221,7 +286,7 @@
     border: 1px dashed color-mix(in srgb, var(--warn) 45%, var(--line));
     color: var(--warn); font-weight: 900; font-size: .95rem; font-family: var(--font-mono);
   }
-  .rm h4 { margin: .1rem 0 0; font-size: var(--step-1); font-weight: 800; letter-spacing: -.01em; }
+  .rm h3 { margin: .1rem 0 0; font-size: var(--step-1); font-weight: 800; letter-spacing: -.01em; }
   .rm p { margin: .15rem 0 0; color: var(--muted); font-size: var(--step-0); }
 
   /* ---- FAQ ---- */
@@ -264,20 +329,27 @@
 </head>
 <body>
 
+<a class="skip" href="#main">Skip to content</a>
+
 <header class="bar">
   <div class="wrap bar-inner">
-    <div class="brand"><span class="glyph">C</span> Cardinal HR</div>
-    <nav class="nav">
-      <a class="navlink" href="index.html">Home</a>
-      <a class="navlink" href="features.html">Features</a>
-      <a class="navlink" href="pricing.html">Pricing</a>
-      <a class="navlink here" href="security.html" aria-current="page">Security</a>
+    <div class="brand"><span class="glyph" aria-hidden="true">C</span> Cardinal HR</div>
+    <nav class="nav" aria-label="Primary">
+      <details class="menu">
+        <summary class="menu-btn"><svg class="ham" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M2 4.5h12M2 8h12M2 11.5h12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>Menu</summary>
+        <div class="menu-panel">
+          <a class="navlink" href="index.html">Home</a>
+          <a class="navlink" href="features.html">Features</a>
+          <a class="navlink" href="pricing.html">Pricing</a>
+          <a class="navlink here" href="security.html" aria-current="page">Security</a>
+        </div>
+      </details>
       <a class="btn" href="#start">Start free trial</a>
     </nav>
   </div>
 </header>
 
-<main>
+<main id="main" tabindex="-1">
   <section class="hero">
     <div class="wrap">
       <p class="eyebrow">Security &amp; Compliance</p>
@@ -304,9 +376,9 @@
           <h3>Consent before any check</h3>
           <p>Background checks are consumer reports under the FCRA. Cardinal HR won't run one until the candidate's disclosure and authorization are captured — there is no path to order a report without consent on file first.</p>
           <div class="flow">
-            <span class="chip gate">consent&nbsp;required</span><span class="arrow">→</span>
-            <span class="chip">authorized</span><span class="arrow">→</span>
-            <span class="chip">in&nbsp;progress</span><span class="arrow">→</span>
+            <span class="chip gate">consent&nbsp;required</span><span class="arrow" aria-hidden="true">→</span>
+            <span class="chip">authorized</span><span class="arrow" aria-hidden="true">→</span>
+            <span class="chip">in&nbsp;progress</span><span class="arrow" aria-hidden="true">→</span>
             <span class="chip end">clear</span>
           </div>
         </article>
@@ -316,8 +388,8 @@
           <h3>A waiting window before a no</h3>
           <p>When results could sink an offer, the system issues a pre-adverse-action notice and holds for a dispute window before a final adverse decision can be recorded — so a candidate can correct a wrong record before it costs them the job.</p>
           <div class="flow">
-            <span class="chip">pre-adverse&nbsp;notice</span><span class="arrow">→</span>
-            <span class="chip gate">dispute&nbsp;window</span><span class="arrow">→</span>
+            <span class="chip">pre-adverse&nbsp;notice</span><span class="arrow" aria-hidden="true">→</span>
+            <span class="chip gate">dispute&nbsp;window</span><span class="arrow" aria-hidden="true">→</span>
             <span class="chip">final&nbsp;notice</span>
           </div>
         </article>
@@ -327,9 +399,9 @@
           <h3>Typed e-signatures on required forms</h3>
           <p>Onboarding forms that need a signature — I-9, W-4, direct deposit, acknowledgments — capture a typed e-signature and move from assigned to submitted to approved. A packet's status is derived from the forms themselves, not set by hand.</p>
           <div class="flow">
-            <span class="chip">assigned</span><span class="arrow">→</span>
-            <span class="chip gate">e-signed</span><span class="arrow">→</span>
-            <span class="chip">submitted</span><span class="arrow">→</span>
+            <span class="chip">assigned</span><span class="arrow" aria-hidden="true">→</span>
+            <span class="chip gate">e-signed</span><span class="arrow" aria-hidden="true">→</span>
+            <span class="chip">submitted</span><span class="arrow" aria-hidden="true">→</span>
             <span class="chip end">approved</span>
           </div>
         </article>
@@ -339,8 +411,8 @@
           <h3>An append-only audit trail</h3>
           <p>Every state change across Recruiting, Screening, MyHR, and Training — signed, approved, returned, cleared, completed — is appended to an immutable history. Entries are added, never edited or deleted. When someone asks "what happened, and when," there's an answer.</p>
           <div class="flow">
-            <span class="chip">event</span><span class="arrow">→</span>
-            <span class="chip gate">appended</span><span class="arrow">→</span>
+            <span class="chip">event</span><span class="arrow" aria-hidden="true">→</span>
+            <span class="chip gate">appended</span><span class="arrow" aria-hidden="true">→</span>
             <span class="chip end">immutable</span>
           </div>
         </article>
@@ -357,15 +429,15 @@
       </div>
       <div class="grid">
         <div class="item reveal">
-          <h4><span class="dot"></span> One record, one truth</h4>
+          <h3><span class="dot" aria-hidden="true"></span> One record, one truth</h3>
           <p>A candidate becomes an employee on a single record that every module reads and writes. Nothing is re-keyed between hiring and onboarding, so there's one place a person's data lives — and one place to correct or remove it.</p>
         </div>
         <div class="item reveal">
-          <h4><span class="dot"></span> Least data</h4>
+          <h3><span class="dot" aria-hidden="true"></span> Least data</h3>
           <p>We collect what a hiring and HR workflow actually needs to function — no speculative data hoarding. Sensitive fields, like screening results, are tied to the workflow step that requires them.</p>
         </div>
         <div class="item reveal">
-          <h4><span class="dot"></span> Role-based access</h4>
+          <h3><span class="dot" aria-hidden="true"></span> Role-based access</h3>
           <p>Access is scoped by role as a design principle — a hiring manager, an HR reviewer, and a new hire don't see the same things. Granular, configurable role controls are an area we're continuing to build out.</p>
         </div>
       </div>
@@ -388,23 +460,23 @@
       <div class="roadmap">
         <div class="rm reveal">
           <span class="mk" aria-hidden="true">1</span>
-          <div><h4>SSO / SAML &amp; SCIM</h4><p>Single sign-on and automated user provisioning / de-provisioning so access follows your identity provider.</p></div>
+          <div><h3>SSO / SAML &amp; SCIM</h3><p>Single sign-on and automated user provisioning / de-provisioning so access follows your identity provider.</p></div>
         </div>
         <div class="rm reveal">
           <span class="mk" aria-hidden="true">2</span>
-          <div><h4>SOC 2 Type II</h4><p>A formal, independently audited report on our security controls over time. We do not hold one yet — see the FAQ.</p></div>
+          <div><h3>SOC 2 Type II</h3><p>A formal, independently audited report on our security controls over time. We do not hold one yet — see the FAQ.</p></div>
         </div>
         <div class="rm reveal">
           <span class="mk" aria-hidden="true">3</span>
-          <div><h4>Configurable data-retention policies</h4><p>Per-organization rules for how long records are kept and when they're purged, tuned to your obligations.</p></div>
+          <div><h3>Configurable data-retention policies</h3><p>Per-organization rules for how long records are kept and when they're purged, tuned to your obligations.</p></div>
         </div>
         <div class="rm reveal">
           <span class="mk" aria-hidden="true">4</span>
-          <div><h4>Per-field audit exports</h4><p>Exportable, field-level history from the audit trail — for internal review, disputes, or a regulator's request.</p></div>
+          <div><h3>Per-field audit exports</h3><p>Exportable, field-level history from the audit trail — for internal review, disputes, or a regulator's request.</p></div>
         </div>
         <div class="rm reveal">
           <span class="mk" aria-hidden="true">5</span>
-          <div><h4>E-Verify integration</h4><p>Optional E-Verify confirmation wired into the onboarding flow after the I-9 is completed.</p></div>
+          <div><h3>E-Verify integration</h3><p>Optional E-Verify confirmation wired into the onboarding flow after the I-9 is completed.</p></div>
         </div>
       </div>
     </div>
@@ -469,9 +541,15 @@
 <footer>
   <div class="wrap">
     <div class="foot-inner">
-      <div class="brand"><span class="glyph">C</span> Cardinal HR</div>
+      <div class="brand"><span class="glyph" aria-hidden="true">C</span> Cardinal HR</div>
       <span>Recruiting · Screening · MyHR · Training · Benefits · Payroll · Directory</span>
     </div>
+    <nav class="foot-nav" aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="security.html" aria-current="page">Security</a>
+    </nav>
     <p class="disclaimer">Cardinal HR is an illustrative working product, not a certified or independently audited service. The security statements on this page describe the product's intended posture and actual product behavior (enforced FCRA consent, adverse-action waiting periods, typed e-signatures, and an append-only audit trail) — they are not certifications, and nothing here claims SOC 2, ISO 27001, HIPAA, PCI, or GDPR compliance, penetration-test results, specific encryption guarantees, or uptime figures. Roadmap items are planned and not yet available. Cardinal HR helps run hiring, onboarding, and payroll workflows; it is not legal, tax, or HR advice, and employers remain responsible for confirming their FCRA, state, wage, and tax obligations with qualified counsel. “Cardinal HR” is a working product name; confirm trademark availability before any launch — note that Cardinal Health is an unrelated company with no connection to this product.</p>
   </div>
 </footer>

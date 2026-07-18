@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cardinal HR — Features</title>
 <meta name="description" content="The seven Cardinal HR modules — Recruiting, Screening (HireCheck), MyHR onboarding, Training, Benefits, Payroll, and the Employee Directory — in the order a hire actually moves through them, with the real status vocabulary of each.">
+<meta name="theme-color" content="#F7F2E6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#101627" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Cardinal HR">
+<meta property="og:title" content="Cardinal HR — Features">
+<meta property="og:description" content="The seven Cardinal HR modules — Recruiting, Screening (HireCheck), MyHR onboarding, Training, Benefits, Payroll, and the Employee Directory — in the order a hire actually moves through them, with the real status vocabulary of each.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Cardinal HR — Features">
+<meta name="twitter:description" content="The seven Cardinal HR modules — Recruiting, Screening (HireCheck), MyHR onboarding, Training, Benefits, Payroll, and the Employee Directory — in the order a hire actually moves through them, with the real status vocabulary of each.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23A31B33'/%3E%3Ctext x='16' y='23' font-family='system-ui,sans-serif' font-size='20' font-weight='900' text-anchor='middle' fill='white'%3EC%3C/text%3E%3C/svg%3E">
 <style>
   :root {
@@ -114,7 +123,63 @@
   .nav a { color: var(--muted); font-size: var(--step-0); font-weight: 600; }
   .nav a:hover { color: var(--ink); text-decoration: none; }
   .nav a.here { color: var(--ink); }
-  @media (max-width: 640px) { .nav .navlink { display: none; } }
+
+  /* ---- skip link ---- */
+  .skip {
+    position: absolute; left: .5rem; top: -4rem; z-index: 50;
+    background: var(--brand); color: #fff; padding: .55rem 1rem; border-radius: 9px;
+    font-weight: 700; font-size: var(--step-0); box-shadow: var(--shadow);
+    transition: top .15s ease;
+  }
+  .skip:focus { top: .5rem; text-decoration: none; }
+  :root[data-theme="dark"] .skip { color: #101627; }
+  :root[data-theme="light"] .skip { color: #fff; }
+  @media (prefers-color-scheme: dark) { .skip { color: #101627; } }
+  @media (prefers-reduced-motion: reduce) { .skip { transition: none; } }
+  main:focus { outline: none; }
+
+  /* visually-hidden (screen-reader only) */
+  .vh {
+    position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+  }
+
+  /* ---- nav: mobile disclosure menu ---- */
+  .menu { position: relative; display: flex; }
+  .menu > summary { display: none; }
+  .menu > .menu-panel { display: flex !important; gap: 1.4rem; align-items: center; }
+  @media (max-width: 640px) {
+    .bar-inner { gap: .5rem; }
+    .brand { font-size: 1.02rem; }
+    .nav { gap: .5rem; }
+    .menu > summary {
+      display: inline-flex; align-items: center; gap: .4rem; cursor: pointer;
+      list-style: none; -webkit-user-select: none; user-select: none;
+      font-family: var(--font-body); font-weight: 700; font-size: var(--step-0);
+      color: var(--ink); background: var(--surface);
+      border: 1px solid var(--line); border-radius: 9px; padding: .5rem .7rem;
+    }
+    .menu > summary::-webkit-details-marker { display: none; }
+    .menu[open] > summary { border-color: color-mix(in srgb, var(--brand) 45%, var(--line)); }
+    .menu > .menu-panel {
+      display: none !important; position: absolute; right: 0; top: calc(100% + .55rem);
+      flex-direction: column; align-items: stretch; gap: .15rem;
+      min-width: 12rem; padding: .5rem;
+      background: var(--surface); border: 1px solid var(--line);
+      border-radius: 12px; box-shadow: var(--shadow);
+    }
+    .menu[open] > .menu-panel { display: flex !important; }
+    .menu-panel a { padding: .55rem .6rem; border-radius: 8px; }
+    .menu-panel a:hover { background: var(--surface-2); text-decoration: none; }
+    .menu-panel a.here { background: color-mix(in srgb, var(--brand) 10%, var(--surface)); }
+    .bar .btn { padding: .55rem .8rem; }
+  }
+
+  /* ---- footer nav ---- */
+  .foot-nav { display: flex; flex-wrap: wrap; gap: .5rem 1.3rem; padding-bottom: 1rem; }
+  .foot-nav a { color: var(--muted); font-weight: 600; font-size: var(--step-0); }
+  .foot-nav a:hover { color: var(--ink); }
+  .foot-nav a[aria-current="page"] { color: var(--ink); }
 
   .btn {
     display: inline-flex; align-items: center; gap: .5rem;
@@ -236,20 +301,27 @@
 </head>
 <body>
 
+<a class="skip" href="#main">Skip to content</a>
+
 <header class="bar">
   <div class="wrap bar-inner">
-    <div class="brand"><span class="glyph">C</span> Cardinal HR</div>
-    <nav class="nav">
-      <a class="navlink" href="index.html">Home</a>
-      <a class="navlink here" href="features.html" aria-current="page">Features</a>
-      <a class="navlink" href="pricing.html">Pricing</a>
-      <a class="navlink" href="security.html">Security</a>
+    <div class="brand"><span class="glyph" aria-hidden="true">C</span> Cardinal HR</div>
+    <nav class="nav" aria-label="Primary">
+      <details class="menu">
+        <summary class="menu-btn"><svg class="ham" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M2 4.5h12M2 8h12M2 11.5h12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>Menu</summary>
+        <div class="menu-panel">
+          <a class="navlink" href="index.html">Home</a>
+          <a class="navlink here" href="features.html" aria-current="page">Features</a>
+          <a class="navlink" href="pricing.html">Pricing</a>
+          <a class="navlink" href="security.html">Security</a>
+        </div>
+      </details>
       <a class="btn" href="#start">Start free trial</a>
     </nav>
   </div>
 </header>
 
-<main>
+<main id="main" tabindex="-1">
   <section class="hero">
     <div class="wrap">
       <p class="eyebrow">Features · the seven modules</p>
@@ -274,12 +346,13 @@
     </div>
   </section>
 
-  <section id="recruiting" style="padding-top:0;">
+  <section style="padding-top:0;">
     <div class="wrap">
+      <h2 class="vh">The seven modules</h2>
       <div class="mods">
 
         <!-- 01 Recruiting -->
-        <article class="module reveal">
+        <article id="recruiting" class="module reveal">
           <div class="module-grid">
             <div class="m-main">
               <div class="m-top"><span class="m-num">01</span><span class="m-tag">Recruiting</span></div>
@@ -296,8 +369,8 @@
               <div>
                 <p class="slabel">Requisition status</p>
                 <div class="flow">
-                  <span class="chip">open</span><span class="arrow">→</span>
-                  <span class="chip">on_hold</span><span class="arrow">→</span>
+                  <span class="chip">open</span><span class="arrow" aria-hidden="true">→</span>
+                  <span class="chip">on_hold</span><span class="arrow" aria-hidden="true">→</span>
                   <span class="chip end">filled</span>
                   <span class="chip off">closed</span>
                 </div>
@@ -305,10 +378,10 @@
               <div>
                 <p class="slabel">Application status</p>
                 <div class="flow">
-                  <span class="chip">applied</span><span class="arrow">→</span>
-                  <span class="chip">screening</span><span class="arrow">→</span>
-                  <span class="chip">interview</span><span class="arrow">→</span>
-                  <span class="chip">offer</span><span class="arrow">→</span>
+                  <span class="chip">applied</span><span class="arrow" aria-hidden="true">→</span>
+                  <span class="chip">screening</span><span class="arrow" aria-hidden="true">→</span>
+                  <span class="chip">interview</span><span class="arrow" aria-hidden="true">→</span>
+                  <span class="chip">offer</span><span class="arrow" aria-hidden="true">→</span>
                   <span class="chip end">hired</span>
                 </div>
                 <div class="flow" style="margin-top:.4rem;">
@@ -322,7 +395,7 @@
         </article>
 
         <!-- 02 Screening -->
-        <article class="module reveal">
+        <article id="screening" class="module reveal">
           <div class="module-grid">
             <div class="m-main">
               <div class="m-top"><span class="m-num">02</span><span class="m-tag">Screening · HireCheck</span></div>
@@ -339,8 +412,8 @@
               <div>
                 <p class="slabel">Check status</p>
                 <div class="flow">
-                  <span class="chip">authorized</span><span class="arrow">→</span>
-                  <span class="chip">in_progress</span><span class="arrow">→</span>
+                  <span class="chip">authorized</span><span class="arrow" aria-hidden="true">→</span>
+                  <span class="chip">in_progress</span><span class="arrow" aria-hidden="true">→</span>
                   <span class="chip end">clear</span>
                 </div>
               </div>
@@ -350,7 +423,7 @@
         </article>
 
         <!-- 03 MyHR -->
-        <article class="module reveal">
+        <article id="myhr" class="module reveal">
           <div class="module-grid">
             <div class="m-main">
               <div class="m-top"><span class="m-num">03</span><span class="m-tag">MyHR · Onboarding</span></div>
@@ -367,8 +440,8 @@
               <div>
                 <p class="slabel">Form status</p>
                 <div class="flow">
-                  <span class="chip">assigned</span><span class="arrow">→</span>
-                  <span class="chip">submitted</span><span class="arrow">→</span>
+                  <span class="chip">assigned</span><span class="arrow" aria-hidden="true">→</span>
+                  <span class="chip">submitted</span><span class="arrow" aria-hidden="true">→</span>
                   <span class="chip end">approved</span>
                 </div>
                 <div class="flow" style="margin-top:.4rem;">
@@ -382,7 +455,7 @@
         </article>
 
         <!-- 04 Training -->
-        <article class="module reveal">
+        <article id="training" class="module reveal">
           <div class="module-grid">
             <div class="m-main">
               <div class="m-top"><span class="m-num">04</span><span class="m-tag">Training</span></div>
@@ -399,13 +472,13 @@
               <div>
                 <p class="slabel">Enrollment status</p>
                 <div class="flow">
-                  <span class="chip">not_started</span><span class="arrow">→</span>
-                  <span class="chip">in_progress</span><span class="arrow">→</span>
+                  <span class="chip">not_started</span><span class="arrow" aria-hidden="true">→</span>
+                  <span class="chip">in_progress</span><span class="arrow" aria-hidden="true">→</span>
                   <span class="chip end">completed</span>
                 </div>
                 <div class="flow" style="margin-top:.4rem;">
                   <span class="slabel" style="margin:0 .2rem 0 0;">assessment</span>
-                  <span class="chip off">failed</span><span class="arrow">→</span>
+                  <span class="chip off">failed</span><span class="arrow" aria-hidden="true">→</span>
                   <span class="chip">retake</span>
                 </div>
               </div>
@@ -415,7 +488,7 @@
         </article>
 
         <!-- 05 Benefits -->
-        <article class="module reveal">
+        <article id="benefits" class="module reveal">
           <div class="module-grid">
             <div class="m-main">
               <div class="m-top"><span class="m-num">05</span><span class="m-tag">Benefits</span></div>
@@ -432,9 +505,9 @@
               <div>
                 <p class="slabel">Enrollment status</p>
                 <div class="flow">
-                  <span class="chip">not_started</span><span class="arrow">→</span>
-                  <span class="chip">in_progress</span><span class="arrow">→</span>
-                  <span class="chip">submitted</span><span class="arrow">→</span>
+                  <span class="chip">not_started</span><span class="arrow" aria-hidden="true">→</span>
+                  <span class="chip">in_progress</span><span class="arrow" aria-hidden="true">→</span>
+                  <span class="chip">submitted</span><span class="arrow" aria-hidden="true">→</span>
                   <span class="chip end">confirmed</span>
                 </div>
               </div>
@@ -444,7 +517,7 @@
         </article>
 
         <!-- 06 Payroll -->
-        <article class="module reveal">
+        <article id="payroll" class="module reveal">
           <div class="module-grid">
             <div class="m-main">
               <div class="m-top"><span class="m-num">06</span><span class="m-tag">Payroll</span></div>
@@ -466,7 +539,7 @@
         </article>
 
         <!-- 07 Directory -->
-        <article class="module reveal">
+        <article id="directory" class="module reveal">
           <div class="module-grid">
             <div class="m-main">
               <div class="m-top"><span class="m-num">07</span><span class="m-tag">Employee Directory · HRIS core</span></div>
@@ -523,9 +596,15 @@
 <footer>
   <div class="wrap">
     <div class="foot-inner">
-      <div class="brand"><span class="glyph">C</span> Cardinal HR</div>
+      <div class="brand"><span class="glyph" aria-hidden="true">C</span> Cardinal HR</div>
       <span>Recruiting · Screening · MyHR · Training · Benefits · Payroll · Directory</span>
     </div>
+    <nav class="foot-nav" aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="features.html" aria-current="page">Features</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="security.html">Security</a>
+    </nav>
     <p class="disclaimer">Cardinal HR is an illustrative working product; the modules, statuses, and workflows shown here describe how the software behaves and are not legal, tax, or HR advice. The Payroll module computes withholding but does not itself file or remit payroll taxes — production tax filing is handled through a registered provider, and employers remain responsible for confirming their FCRA, state, wage, and tax obligations with qualified counsel. Equifax is a trademark of its owner; provider integrations require your own agreement with the provider. “Cardinal HR” is a working product name — confirm trademark availability before any launch, and note that Cardinal Health is an unrelated company with no connection to this product.</p>
   </div>
 </footer>

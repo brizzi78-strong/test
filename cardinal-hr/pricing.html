@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cardinal HR — Pricing</title>
 <meta name="description" content="Cardinal HR is priced per employee, per month. One platform for Recruiting, Screening, onboarding paperwork, Training, Benefits, Payroll, and your Employee Directory. Background checks billed per check.">
+<meta name="theme-color" content="#F7F2E6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#101627" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Cardinal HR">
+<meta property="og:title" content="Cardinal HR — Pricing">
+<meta property="og:description" content="Cardinal HR is priced per employee, per month. One platform for Recruiting, Screening, onboarding paperwork, Training, Benefits, Payroll, and your Employee Directory. Background checks billed per check.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Cardinal HR — Pricing">
+<meta name="twitter:description" content="Cardinal HR is priced per employee, per month. One platform for Recruiting, Screening, onboarding paperwork, Training, Benefits, Payroll, and your Employee Directory. Background checks billed per check.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23A31B33'/%3E%3Ctext x='16' y='23' font-family='system-ui,sans-serif' font-size='20' font-weight='900' text-anchor='middle' fill='white'%3EC%3C/text%3E%3C/svg%3E">
 <style>
   :root {
@@ -114,7 +123,63 @@
   .nav a { color: var(--muted); font-size: var(--step-0); font-weight: 600; }
   .nav a:hover { color: var(--ink); text-decoration: none; }
   .nav a.here { color: var(--ink); }
-  @media (max-width: 640px) { .nav .navlink { display: none; } }
+
+  /* ---- skip link ---- */
+  .skip {
+    position: absolute; left: .5rem; top: -4rem; z-index: 50;
+    background: var(--brand); color: #fff; padding: .55rem 1rem; border-radius: 9px;
+    font-weight: 700; font-size: var(--step-0); box-shadow: var(--shadow);
+    transition: top .15s ease;
+  }
+  .skip:focus { top: .5rem; text-decoration: none; }
+  :root[data-theme="dark"] .skip { color: #101627; }
+  :root[data-theme="light"] .skip { color: #fff; }
+  @media (prefers-color-scheme: dark) { .skip { color: #101627; } }
+  @media (prefers-reduced-motion: reduce) { .skip { transition: none; } }
+  main:focus { outline: none; }
+
+  /* visually-hidden (screen-reader only) */
+  .vh {
+    position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+  }
+
+  /* ---- nav: mobile disclosure menu ---- */
+  .menu { position: relative; display: flex; }
+  .menu > summary { display: none; }
+  .menu > .menu-panel { display: flex !important; gap: 1.4rem; align-items: center; }
+  @media (max-width: 640px) {
+    .bar-inner { gap: .5rem; }
+    .brand { font-size: 1.02rem; }
+    .nav { gap: .5rem; }
+    .menu > summary {
+      display: inline-flex; align-items: center; gap: .4rem; cursor: pointer;
+      list-style: none; -webkit-user-select: none; user-select: none;
+      font-family: var(--font-body); font-weight: 700; font-size: var(--step-0);
+      color: var(--ink); background: var(--surface);
+      border: 1px solid var(--line); border-radius: 9px; padding: .5rem .7rem;
+    }
+    .menu > summary::-webkit-details-marker { display: none; }
+    .menu[open] > summary { border-color: color-mix(in srgb, var(--brand) 45%, var(--line)); }
+    .menu > .menu-panel {
+      display: none !important; position: absolute; right: 0; top: calc(100% + .55rem);
+      flex-direction: column; align-items: stretch; gap: .15rem;
+      min-width: 12rem; padding: .5rem;
+      background: var(--surface); border: 1px solid var(--line);
+      border-radius: 12px; box-shadow: var(--shadow);
+    }
+    .menu[open] > .menu-panel { display: flex !important; }
+    .menu-panel a { padding: .55rem .6rem; border-radius: 8px; }
+    .menu-panel a:hover { background: var(--surface-2); text-decoration: none; }
+    .menu-panel a.here { background: color-mix(in srgb, var(--brand) 10%, var(--surface)); }
+    .bar .btn { padding: .55rem .8rem; }
+  }
+
+  /* ---- footer nav ---- */
+  .foot-nav { display: flex; flex-wrap: wrap; gap: .5rem 1.3rem; padding-bottom: 1rem; }
+  .foot-nav a { color: var(--muted); font-weight: 600; font-size: var(--step-0); }
+  .foot-nav a:hover { color: var(--ink); }
+  .foot-nav a[aria-current="page"] { color: var(--ink); }
 
   .btn {
     display: inline-flex; align-items: center; gap: .5rem;
@@ -242,7 +307,7 @@
     border: 1px solid color-mix(in srgb, var(--brand) 30%, var(--line));
     color: var(--brand); font-weight: 900; font-size: .85rem; font-family: var(--font-mono);
   }
-  .mod h4 { margin: .15rem 0 0; font-size: var(--step-1); font-weight: 800; letter-spacing: -.01em; }
+  .mod h3 { margin: .15rem 0 0; font-size: var(--step-1); font-weight: 800; letter-spacing: -.01em; }
   .mod p { margin: .15rem 0 0; color: var(--muted); font-size: var(--step-0); }
 
   /* ---- FAQ ---- */
@@ -284,20 +349,27 @@
 </head>
 <body>
 
+<a class="skip" href="#main">Skip to content</a>
+
 <header class="bar">
   <div class="wrap bar-inner">
-    <div class="brand"><span class="glyph">C</span> Cardinal HR</div>
-    <nav class="nav">
-      <a class="navlink" href="index.html">Home</a>
-      <a class="navlink" href="features.html">Features</a>
-      <a class="navlink here" href="pricing.html" aria-current="page">Pricing</a>
-      <a class="navlink" href="security.html">Security</a>
+    <div class="brand"><span class="glyph" aria-hidden="true">C</span> Cardinal HR</div>
+    <nav class="nav" aria-label="Primary">
+      <details class="menu">
+        <summary class="menu-btn"><svg class="ham" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M2 4.5h12M2 8h12M2 11.5h12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>Menu</summary>
+        <div class="menu-panel">
+          <a class="navlink" href="index.html">Home</a>
+          <a class="navlink" href="features.html">Features</a>
+          <a class="navlink here" href="pricing.html" aria-current="page">Pricing</a>
+          <a class="navlink" href="security.html">Security</a>
+        </div>
+      </details>
       <a class="btn" href="#start">Start free trial</a>
     </nav>
   </div>
 </header>
 
-<main>
+<main id="main" tabindex="-1">
   <section class="hero">
     <div class="wrap">
       <p class="eyebrow">Pricing</p>
@@ -395,35 +467,35 @@
       <div class="modgrid">
         <div class="mod reveal">
           <span class="mk" aria-hidden="true">R</span>
-          <div><h4>Recruiting</h4><p>Post requisitions and move applicants through an enforced hiring pipeline — no skipped steps, no dropped candidates.</p></div>
+          <div><h3>Recruiting</h3><p>Post requisitions and move applicants through an enforced hiring pipeline — no skipped steps, no dropped candidates.</p></div>
         </div>
         <div class="mod reveal">
           <span class="mk" aria-hidden="true">S</span>
-          <div><h4>Screening · HireCheck</h4><p>FCRA-aware background checks with consent captured up front. Billed per check, not per seat.</p></div>
+          <div><h3>Screening · HireCheck</h3><p>FCRA-aware background checks with consent captured up front. Billed per check, not per seat.</p></div>
         </div>
         <div class="mod reveal">
           <span class="mk" aria-hidden="true">H</span>
-          <div><h4>MyHR onboarding</h4><p>New-hire paperwork — I-9, W-4, direct deposit, acknowledgments — e-signed and approved by HR.</p></div>
+          <div><h3>MyHR onboarding</h3><p>New-hire paperwork — I-9, W-4, direct deposit, acknowledgments — e-signed and approved by HR.</p></div>
         </div>
         <div class="mod reveal">
           <span class="mk" aria-hidden="true">T</span>
-          <div><h4>Training</h4><p>A customizable course catalog with lesson-by-lesson progress and provable completion per employee.</p></div>
+          <div><h3>Training</h3><p>A customizable course catalog with lesson-by-lesson progress and provable completion per employee.</p></div>
         </div>
         <div class="mod reveal">
           <span class="mk" aria-hidden="true">B</span>
-          <div><h4>Benefits</h4><p>Guided benefits election — plan options, coverage tiers, and dependents — in the same flow that hired them.</p></div>
+          <div><h3>Benefits</h3><p>Guided benefits election — plan options, coverage tiers, and dependents — in the same flow that hired them.</p></div>
         </div>
         <div class="mod reveal">
           <span class="mk" aria-hidden="true">P</span>
-          <div><h4>Payroll</h4><p>Run pay and compute withholding from the same record. Tax filing is handled through a registered provider — see the FAQ.</p></div>
+          <div><h3>Payroll</h3><p>Run pay and compute withholding from the same record. Tax filing is handled through a registered provider — see the FAQ.</p></div>
         </div>
         <div class="mod reveal">
           <span class="mk" aria-hidden="true">D</span>
-          <div><h4>Employee Directory</h4><p>A single source of truth for who works here — roles, reporting lines, and contact details, kept current.</p></div>
+          <div><h3>Employee Directory</h3><p>A single source of truth for who works here — roles, reporting lines, and contact details, kept current.</p></div>
         </div>
         <div class="mod reveal">
           <span class="mk" aria-hidden="true">✓</span>
-          <div><h4>Audit trail</h4><p>Every state change — signed, approved, cleared, paid — is appended to an immutable history. Included on every tier.</p></div>
+          <div><h3>Audit trail</h3><p>Every state change — signed, approved, cleared, paid — is appended to an immutable history. Included on every tier.</p></div>
         </div>
       </div>
     </div>
@@ -480,9 +552,15 @@
 <footer>
   <div class="wrap">
     <div class="foot-inner">
-      <div class="brand"><span class="glyph">C</span> Cardinal HR</div>
+      <div class="brand"><span class="glyph" aria-hidden="true">C</span> Cardinal HR</div>
       <span>Recruiting · Screening · MyHR · Training · Benefits · Payroll · Directory</span>
     </div>
+    <nav class="foot-nav" aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="pricing.html" aria-current="page">Pricing</a>
+      <a href="security.html">Security</a>
+    </nav>
     <p class="disclaimer">Prices shown ($8 and $14 per employee per month, +$35 per background check, and the illustrative $240k cost-of-a-bad-hire figure) are illustrative for a working product and not a live commercial offer. Cardinal HR helps run hiring, onboarding, and payroll workflows; it is not legal, tax, or HR advice, and the Payroll module computes withholding but does not itself file or remit payroll taxes — production tax filing is via a registered provider. Employers are responsible for confirming their FCRA, state, wage, and tax obligations with qualified counsel. “Cardinal HR” is a working product name; confirm trademark availability before any launch — note that Cardinal Health is an unrelated company with no connection to this product.</p>
   </div>
 </footer>
