@@ -66,9 +66,24 @@ src/
 ## Running
 
 ```bash
-npm start                 # HTTP API on PORT (default 3600)
+npm start                 # HTTP API on PORT (default 3600), in-memory store
 PORT=4600 npm start
 ```
+
+### Durable storage (production step)
+
+By default the store is in-memory (data is lost on restart). Set `DIRECTORY_DB`
+to a file path to use the **durable SQLite store** — Node's built-in
+`node:sqlite`, no external dependency, behind the same `Store` interface:
+
+```bash
+DIRECTORY_DB=./data/hris.db npm start
+```
+
+Data written by one process is read back by the next; see
+`src/__tests__/sqliteStore.test.ts`, which proves persistence across a
+simulated restart. This is the first real step from prototype toward
+production; the same swap applies to the other modules' `Store` interfaces.
 
 ## Testing & typechecking
 
