@@ -42,12 +42,17 @@ metrics?* If it only protects engagement, it's not a Cardinal feature.
 - ⏳ **Women control contact** — women-message-first or verified-only DMs, and
   "no unsolicited photos" enforced. *(Partly modeled; needs real messaging.)*
 
-### P1 — Personal safety tools (build next; highest emotional value)
-- ⏳ **Share my date** — share date details (who/where/when) with a chosen
-  contact, with a **check-in timer** ("still on my date?") and a **panic /
-  emergency-contact** button. This is the single most-wanted, most-differentiating
-  safety feature. Needs a backend + notifications, ideally native for the panic
-  button.
+### P1 — Personal safety tools (highest emotional value)
+- ✅ **Share my date** — built in the demo: set a **trusted contact**, share a
+  date plan (who/where/when), a live **check-in timer** that escalates when
+  overdue ("your contact would be alerted"), an **I'm safe** button, and a
+  one-tap **panic button**. In production this needs a backend + notifications
+  and should be native for the panic button + live location.
+- ⏳ **Squad / friend vouch** — *"if you want to get with me, you've got to get
+  with my friends."* Let a member loop in her friends: friends can see a match
+  and vouch (or flag) before a date, "bring a friend" to a first meet, and group
+  dates. This is safety *and* the sorority social dynamic in one — dating inside
+  a trusted circle, not alone. Strong next build.
 - ⏳ **Photo verification enforced** so "verified" is real, not a badge.
 
 ### P2 — Moderation & real consequences (operational, not just code)

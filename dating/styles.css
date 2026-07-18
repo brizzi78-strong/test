@@ -167,6 +167,13 @@ main { flex: 1; width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 2r
 .nudge span { flex: 1; }
 .nudge-x { border: 0; background: none; color: inherit; font-size: 1.3rem; line-height: 1; cursor: pointer; padding: 0; }
 
+/* Safety: share my date */
+.date-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 1.1rem; }
+.date-line { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.3rem; }
+.checkin-timer { margin-top: 0.75rem; font-weight: 700; color: var(--red); font-variant-numeric: tabular-nums; }
+.btn.panic { display: block; width: 100%; margin-top: 1.5rem; background: var(--red-deep); color: #fff; font-size: 1.1rem; padding: 1rem; letter-spacing: 0.01em; }
+.btn.panic:hover { filter: brightness(1.08); }
+
 /* Refer & earn (multi-level) */
 .refer-code { display: flex; gap: 0.5rem; align-items: center; margin: 0.6rem 0; }
 .refer-code code { flex: 1; font-family: ui-monospace, monospace; font-weight: 700; background: var(--red-soft); color: var(--red); border-radius: 10px; padding: 0.6rem 0.8rem; letter-spacing: 0.04em; }

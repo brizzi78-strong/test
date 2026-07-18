@@ -40,6 +40,10 @@ python3 -m http.server 8000
   Cardinal+ upgrade.
 - **Events** — monthly in-person events (speed dating, group hike, mixer,
   brunch) with RSVP that persists. Free for women; Cardinal+ men get priority.
+- **Safety — Share my date** — set a trusted contact, share a date plan
+  (who/where/when), run a check-in timer that escalates when overdue, mark "I'm
+  safe," and a one-tap panic button. Because meeting someone new shouldn't mean
+  going in alone.
 - **Profile** — a preview of what the flock sees, editable any time, plus a
   **Safety & privacy** section: photo-verification badge, block/report (the ⋯
   on a card or "Report / block" in a match), and privacy toggles (incognito,

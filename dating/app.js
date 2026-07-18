@@ -65,7 +65,8 @@
       activity: { month: "", seconds: 0 },
       likesToday: { date: "", count: 0 },
       nudgeDismissed: "", rsvps: [], invited: false,
-      referrals: { direct: 0, indirect: 0, credits: 0 }
+      referrals: { direct: 0, indirect: 0, credits: 0 },
+      safety: { contact: null, date: null }
     };
   }
   const REFERRAL_COST = 3;
@@ -106,7 +107,8 @@
           privacy: Object.assign(base.privacy, saved.privacy || {}),
           activity: Object.assign(base.activity, saved.activity || {}),
           likesToday: Object.assign(base.likesToday, saved.likesToday || {}),
-          referrals: Object.assign(base.referrals, saved.referrals || {})
+          referrals: Object.assign(base.referrals, saved.referrals || {}),
+          safety: Object.assign(base.safety, saved.safety || {})
         });
       }
     } catch (e) { /* ignore */ }
@@ -115,7 +117,7 @@
   function save() { localStorage.setItem(STORE_KEY, JSON.stringify(state)); }
 
   /* ---- Navigation ---- */
-  const VIEWS = ["landing", "invite", "onboard", "join", "discover", "matches", "likes", "events", "profile"];
+  const VIEWS = ["landing", "invite", "onboard", "join", "discover", "matches", "likes", "events", "safety", "profile"];
   const PREMEMBER = ["invite", "onboard", "join"];
   function show(view) {
     VIEWS.forEach(v => { const el = $("#view-" + v); if (el) el.hidden = (v !== view); });
@@ -129,6 +131,7 @@
     if (view === "matches") renderMatches();
     if (view === "likes") renderLikes();
     if (view === "events") renderEvents();
+    if (view === "safety") renderSafety();
     if (view === "profile") renderProfilePreview();
     updateBadge();
   }
@@ -883,6 +886,150 @@
       save(); renderEvents();
     }));
   }
+
+  /* ---- Safety: Share my date ---- */
+  function fmtWhen(v) {
+    if (!v) return "";
+    const d = new Date(v);
+    if (isNaN(d)) return v;
+    let h = d.getHours(), ap = h >= 12 ? "PM" : "AM"; h = h % 12 || 12;
+    const mm = String(d.getMinutes()).padStart(2, "0");
+    return `${DAYS[d.getDay()]}, ${MONTHS[d.getMonth()]} ${d.getDate()}, ${h}:${mm} ${ap}`;
+  }
+  function checkinStatus(date) {
+    if (!date) return null;
+    if (date.status === "safe") return "safe";
+    if (date.checkin && new Date(date.checkin) < new Date()) return "overdue";
+    return "active";
+  }
+  function shareMessage(date) {
+    const me = state.profile.name;
+    return `${me} is meeting ${date.who} at ${date.place}, ${fmtWhen(date.when)}. ` +
+      `I'll check in by ${fmtWhen(date.checkin)}. If you don't hear from me, please reach out — and if you can't, check on me.`;
+  }
+
+  function renderSafety() {
+    const s = state.safety;
+    const c = s.contact;
+    let html = "";
+
+    // Trusted contact
+    html += `<div class="profile-block safety"><div class="lbl">Trusted contact</div>`;
+    if (c) {
+      html += `<div class="verified-row"><span class="verified ok-green">✓</span> ${escapeHtml(c.name)} · ${escapeHtml(c.reach)}</div>
+        <button class="btn btn-ghost" id="editContact" style="margin-top:0.6rem">Change contact</button>`;
+    } else {
+      html += `<p class="muted-p">The person we'd alert if you don't check in. Add someone you trust.</p>
+        <div class="field-row">
+          <label class="field"><span>Name</span><input type="text" id="contactName" placeholder="Best friend"></label>
+          <label class="field"><span>Phone or email</span><input type="text" id="contactReach" placeholder="555-123-4567"></label>
+        </div>
+        <button class="btn btn-primary" id="saveContact">Save contact</button>`;
+    }
+    html += `</div>`;
+
+    // Date plan
+    const status = checkinStatus(s.date);
+    html += `<div class="profile-block safety"><div class="lbl">Your date plan</div>`;
+    if (!s.date) {
+      html += `<p class="muted-p">Share who you're meeting, where, and when. Only your trusted contact sees it.</p>
+        <label class="field"><span>Who are you meeting?</span><input type="text" id="dWho" placeholder="Their name" maxlength="40"></label>
+        <label class="field"><span>Where</span><input type="text" id="dPlace" placeholder="Cup A Joe, Hillsborough St" maxlength="80"></label>
+        <div class="field-row">
+          <label class="field"><span>When</span><input type="datetime-local" id="dWhen"></label>
+          <label class="field"><span>Check in by</span><input type="datetime-local" id="dCheckin"></label>
+        </div>
+        <button class="btn btn-primary" id="shareDate" ${c ? "" : "disabled"}>${c ? "Share with " + escapeHtml(c.name) + " & start check-in" : "Add a trusted contact first"}</button>`;
+    } else {
+      const d = s.date;
+      const badge = status === "safe" ? `<span class="pace ok">✓ Checked in safe</span>`
+        : status === "overdue" ? `<span class="pace behind">Check-in overdue</span>`
+        : `<span class="pace ontrack">Shared · monitoring</span>`;
+      html += `<div class="date-card">
+        <div class="date-line"><strong>Meeting ${escapeHtml(d.who)}</strong> ${badge}</div>
+        <div class="muted-p">${escapeHtml(d.place)}</div>
+        <div class="muted-p">${escapeHtml(fmtWhen(d.when))} · check in by ${escapeHtml(fmtWhen(d.checkin))}</div>
+        <div class="muted-p">Shared with ${escapeHtml(c ? c.name : "your contact")} ✓</div>
+        ${status === "overdue"
+          ? `<div class="join-status" style="background:var(--red-soft);color:var(--red-deep);margin-top:0.75rem">In the real app, ${escapeHtml(c ? c.name : "your contact")} would now be alerted with your location. Are you okay?</div>`
+          : `<div class="checkin-timer" id="checkinTimer"></div>`}
+      </div>
+      <div class="refer-actions" style="margin-top:0.75rem">
+        ${status !== "safe" ? `<button class="btn btn-primary" id="imSafe">I'm safe ✓</button>` : ""}
+        <button class="btn btn-ghost" id="copyPlan">Copy the message</button>
+        <button class="btn btn-ghost" id="clearDate">${status === "safe" ? "Clear" : "Cancel plan"}</button>
+      </div>`;
+    }
+    html += `</div>`;
+
+    $("#safetyBody").innerHTML = html;
+    wireSafety();
+    updateCheckinCountdown();
+  }
+
+  function wireSafety() {
+    const sc = $("#saveContact");
+    if (sc) sc.addEventListener("click", () => {
+      const name = ($("#contactName").value || "").trim();
+      const reach = ($("#contactReach").value || "").trim();
+      if (!name || !reach) return;
+      state.safety.contact = { name, reach }; save(); renderSafety();
+    });
+    const ec = $("#editContact");
+    if (ec) ec.addEventListener("click", () => { state.safety.contact = null; save(); renderSafety(); });
+    const sd = $("#shareDate");
+    if (sd) sd.addEventListener("click", () => {
+      const who = ($("#dWho").value || "").trim();
+      const place = ($("#dPlace").value || "").trim();
+      const when = $("#dWhen").value;
+      const checkin = $("#dCheckin").value;
+      if (!who || !place || !when || !checkin) { alert("Fill in who, where, when, and a check-in time."); return; }
+      state.safety.date = { who, place, when, checkin, status: "active", sharedAt: today() };
+      save();
+      try { if (navigator.clipboard) navigator.clipboard.writeText(shareMessage(state.safety.date)); } catch (e) {}
+      renderSafety();
+    });
+    const safe = $("#imSafe");
+    if (safe) safe.addEventListener("click", () => { state.safety.date.status = "safe"; save(); renderSafety(); });
+    const cp = $("#copyPlan");
+    if (cp) cp.addEventListener("click", () => {
+      try { if (navigator.clipboard) navigator.clipboard.writeText(shareMessage(state.safety.date)); } catch (e) {}
+      cp.textContent = "Copied ✓"; setTimeout(() => { if ($("#copyPlan")) $("#copyPlan").textContent = "Copy the message"; }, 1500);
+    });
+    const cd = $("#clearDate");
+    if (cd) cd.addEventListener("click", () => { state.safety.date = null; save(); renderSafety(); });
+  }
+
+  function updateCheckinCountdown() {
+    const el = $("#checkinTimer");
+    const d = state.safety.date;
+    if (!el || !d || d.status !== "active") return;
+    const ms = new Date(d.checkin) - new Date();
+    if (ms <= 0) { renderSafety(); return; }
+    const mins = Math.floor(ms / 60000), secs = Math.floor((ms % 60000) / 1000);
+    el.textContent = `Check in within ${mins}m ${String(secs).padStart(2, "0")}s`;
+  }
+  setInterval(() => {
+    if ($("#view-safety") && !$("#view-safety").hidden) updateCheckinCountdown();
+  }, 1000);
+
+  function openPanic() {
+    const c = state.safety.contact;
+    $("#modalCard").innerHTML = `
+      <div class="m-hero"><div class="m-avatar" style="background:var(--red)">🚨</div></div>
+      <h2 style="color:var(--red)">Emergency</h2>
+      <p><strong>This is a demo.</strong> In the real Cardinal, this button would instantly:</p>
+      <div class="modal-quote" style="text-align:left">
+        <b>Alert your trusted contact</b>${c ? escapeHtml(c.name) + " (" + escapeHtml(c.reach) + ")" : "add one in Safety"} would be notified with your live location.
+      </div>
+      <p><strong>If you are in danger right now, call 911.</strong></p>
+      <div class="modal-actions" style="margin-top:1rem">
+        <button class="btn btn-ghost" id="closePanic">Close</button>
+      </div>`;
+    modal.hidden = false;
+    $("#closePanic").addEventListener("click", closeModal);
+  }
+  $("#panicBtn").addEventListener("click", openPanic);
 
   /* ---- Profile preview ---- */
   function renderProfilePreview() {
