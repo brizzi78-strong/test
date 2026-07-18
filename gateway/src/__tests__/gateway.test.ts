@@ -185,3 +185,21 @@ test('admin key issuance requires the admin token', async () => {
     await up.close();
   }
 });
+
+test('admin key issuance rejects malformed JSON with 400, not 500', async () => {
+  const up = await startUpstream();
+  const store = createInMemoryKeyStore();
+  const gw = await startGateway({ keyStore: store, upstreamBase: up.base, adminToken: 'secret' });
+  try {
+    const res = await fetch(`${gw.base}/admin/keys`, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json', 'x-admin-token': 'secret' },
+      body: '{ not valid json',
+    });
+    assert.equal(res.status, 400);
+    assert.equal(((await res.json()) as any).error.code, 'bad_request');
+  } finally {
+    await gw.close();
+    await up.close();
+  }
+});

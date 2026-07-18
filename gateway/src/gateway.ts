@@ -40,13 +40,20 @@ function sendJson(res: ServerResponse, status: number, body: unknown): void {
   res.end(JSON.stringify(body ?? null));
 }
 
+/** Thrown when a request body isn't valid JSON, so the caller can answer 400. */
+class BadRequestError extends Error {}
+
 async function readJson(req: IncomingMessage): Promise<unknown> {
   const chunks: Buffer[] = [];
   for await (const chunk of req) chunks.push(chunk as Buffer);
   if (chunks.length === 0) return undefined;
   const raw = Buffer.concat(chunks).toString('utf8').trim();
   if (raw.length === 0) return undefined;
-  return JSON.parse(raw);
+  try {
+    return JSON.parse(raw);
+  } catch {
+    throw new BadRequestError('request body is not valid JSON');
+  }
 }
 
 export function createGateway(opts: GatewayOptions): Server {
@@ -127,6 +134,11 @@ export function createGateway(opts: GatewayOptions): Server {
         'x-gateway-authenticated': 'true',
       });
     } catch (err) {
+      if (err instanceof BadRequestError) {
+        if (!res.headersSent) sendJson(res, 400, { error: { code: 'bad_request', message: err.message } });
+        else res.end();
+        return;
+      }
       const message = err instanceof Error ? err.message : 'internal error';
       if (!res.headersSent) sendJson(res, 500, { error: { code: 'internal', message } });
       else res.end();
