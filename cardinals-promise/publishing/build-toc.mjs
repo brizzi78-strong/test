@@ -79,7 +79,7 @@ for (const part of parts) {
             `<span class="ctitle">${esc(c.title)}</span>${P}${pg('c'+n)}</div>\n`;
     html += `  <div class="tsecs">\n`;
     c.secs.forEach((s,i) => {
-      html += `    <div class="tsec"><span>${esc(s)}</span>${P}${pg(`c${n}s${i}`)}</div>\n`;
+      html += `    <div class="tsec"><span>${n}.${i+1}  ${esc(s)}</span>${P}${pg(`c${n}s${i}`)}</div>\n`;
     });
     html += `  </div>\n`;
   }
