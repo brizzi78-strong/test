@@ -61,6 +61,56 @@ of $[7,500 + interest] plus court costs."
 - Have the **one-line theory** ready if interrupted: *"Tesla certified the credit,
   never filed it, and I got billed $7,500."*
 
+## 5a. Tesla's main defense: "You attested Head of Household, income > $225k"
+
+This is Tesla's argument. It fails on **three independent grounds** — any one wins.
+Your actual filed MAGI is **$212,363**, filed **Married Filing Jointly**.
+
+1. **It contradicts the IRS's own reason.** CP23 (Exhibit B) denies for a **VIN not
+   in IRS records** — i.e., no seller report on file — *not* income. If Tesla had
+   filed a "HoH > $225k" report, the IRS would deny for income and say so. It
+   didn't. The VIN-mismatch denial proves Tesla never filed the report.
+   > "Tesla says income. The IRS says the VIN wasn't in their records — meaning
+   > Tesla never filed. Tesla is arguing a reason the IRS never gave."
+
+2. **Eligibility is set by the filed return, not an app entry.** I filed jointly,
+   MAGI $212,363, under the $300,000 MFJ limit. An app checkbox does not override
+   my federal return.
+   > "The law tests my actual return, not Tesla's app. I filed jointly at $212,363
+   > — under the limit."
+
+3. **Even as Head of Household, I still qualify.** The HoH limit is **$225,000**.
+   My income ($212,363) is **under it**. So even accepting Tesla's version, I was
+   eligible under *both* thresholds.
+   > "Even if I were Head of Household, $212,363 is under the $225,000 limit.
+   > Under any filing status, I qualified."
+
+**Plus:** Tesla's GM signed Form 15400 (Exhibit A) certifying $7,500 under penalty
+of perjury — Tesla can't swear I qualified and then argue I didn't.
+
+4. **It should have been filed regardless — filing ≠ deciding eligibility.** The
+   seller's duty to file the time-of-sale report is mandatory; income eligibility
+   is decided at tax time on my return, not by a dealer choosing not to file. By
+   never filing, Tesla blocked a credit I actually qualify for — and it can still
+   file/correct it now (portal open to registered sellers). Tesla's own Form 15400
+   lists max credit **$7,500, not $0** — if Tesla thought I was over-income, why
+   certify $7,500?
+   > "Tesla had to file that report regardless. Income is decided on my return —
+   > not by Tesla. Not filing blocked a credit I actually qualify for, and they
+   > can still fix it today."
+
+5. **The app is not foolproof — and it's Tesla's, not mine.** It's Tesla's own
+   error-prone system (defaults, dropdowns, employee entry); it is **not a sworn
+   tax document**; and Tesla has refused to produce the record every time. My
+   sworn, filed return says I qualify.
+   > "Their app isn't foolproof — it's Tesla's system, not a sworn document, and
+   > they won't produce the record. My sworn return says I qualify."
+
+**Discipline:** don't argue "did I click it or not." State you file jointly and
+would never select HoH, then **pivot**: "It doesn't matter — my actual return
+qualifies under any threshold." Demand Tesla **produce** the app record it keeps
+refusing to show; the burden is on Tesla, and it has withheld the document.
+
 ## 5b. The "mic-drop" — hand up Exhibit A and let it land
 
 Your whole case fits on one piece of paper: **Tesla's own signed Form 15400.**
