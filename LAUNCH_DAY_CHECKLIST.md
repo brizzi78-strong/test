@@ -16,7 +16,12 @@ and don't announce anything until every box in sections 1–6 is checked.
       buffer for gas across all steps, plus the LP locker's fee. As of Jul 2026
       (re-check before launch): Team Finance = $150 flat in ETH + gas, keeps 100% of
       LP locked; UNCX = 0.1 ETH flat **+ 1% of the LP tokens** (so the lock shows 99%,
-      not 100%). Team Finance fits the "100% locked" claim in the announcement.
+      not 100% — if using UNCX, soften the announcement's "100% locked" claim to match).
+      Track records: UNCX lockers have no known exploit since 2020; Team Finance had
+      one exploit (Oct 2022, ~$14.5M via its v2→v3 *migration* feature, not the basic
+      time-lock; most funds returned, no repeat since). Cheapest + exact "100%" claim →
+      Team Finance; cleanest security history → UNCX. Either is acceptable for a
+      12-month lock of this size — decide, then make the announcement wording match.
 - [x] Announcement post drafted with placeholders for the three proof links
       (renounce tx, LP lock, treasury address) — see `ANNOUNCEMENT.md`
 - [ ] Pick a low-gas window (weekend/off-peak US hours; check a gas tracker)
