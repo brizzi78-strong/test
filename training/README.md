@@ -60,6 +60,16 @@ npm start                 # HTTP API on PORT (default 3300)
 PORT=4300 npm start
 ```
 
+### Durable storage
+
+By default the store is in-memory (data is lost on restart). Set `TRAINING_DB`
+to a file path to use the durable SQLite store (Node's built-in `node:sqlite`,
+no external dependency, same `Store` interface):
+
+```bash
+TRAINING_DB=./data/training.db npm start
+```
+
 ## Testing & typechecking
 
 ```bash

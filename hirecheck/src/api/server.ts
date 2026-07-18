@@ -8,7 +8,8 @@ import { EquifaxProvider } from '../providers/equifaxProvider.ts';
 import { MockProvider } from '../providers/mockProvider.ts';
 import type { ScreeningProvider } from '../providers/provider.ts';
 import { ScreeningService } from '../service/screeningService.ts';
-import { createInMemoryStore } from '../store/store.ts';
+import { createInMemoryStore, type Store } from '../store/store.ts';
+import { createSqliteStore } from '../store/sqliteStore.ts';
 import { createRequestListener } from './router.ts';
 
 export interface AppServer {
@@ -38,15 +39,23 @@ export function providerFromEnv(env: NodeJS.ProcessEnv = process.env): Screening
 }
 
 /**
- * Create (but do not start) an HTTP server backed by a fresh in-memory store.
- * The provider defaults to the environment selection; pass one explicitly (e.g.
- * in tests) to override. Callers start it with `server.listen(port)`.
+ * Select a store from the environment: `HIRECHECK_DB=/path/to/data.db` uses the
+ * durable SQLite store; unset falls back to the in-memory store.
  */
-export function createApp(provider: ScreeningProvider = providerFromEnv()): AppServer {
-  const service = new ScreeningService({
-    store: createInMemoryStore(),
-    provider,
-  });
+export function storeFromEnv(env: NodeJS.ProcessEnv = process.env): Store {
+  return env.HIRECHECK_DB ? createSqliteStore(env.HIRECHECK_DB) : createInMemoryStore();
+}
+
+/**
+ * Create (but do not start) an HTTP server. The provider and store default to
+ * the environment selection; pass either explicitly (e.g. in tests) to
+ * override. Callers start it with `server.listen(port)`.
+ */
+export function createApp(
+  provider: ScreeningProvider = providerFromEnv(),
+  store: Store = storeFromEnv(),
+): AppServer {
+  const service = new ScreeningService({ store, provider });
   const server = createServer(createRequestListener(service));
   return { server, service };
 }

@@ -86,6 +86,16 @@ npm start                 # HTTP API on PORT (default 3100)
 PORT=4100 npm start
 ```
 
+### Durable storage
+
+By default the store is in-memory (data is lost on restart). Set `MYHR_DB` to a
+file path to use the durable SQLite store (Node's built-in `node:sqlite`, no
+external dependency, same `Store` interface):
+
+```bash
+MYHR_DB=./data/myhr.db npm start
+```
+
 ## Testing & typechecking
 
 ```bash
