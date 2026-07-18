@@ -342,7 +342,7 @@ What I love now is how close my mother and her sisters have become, she and Nanc
 
 He asked my mother out and she said no. He asked again and she said no again. So he kept coming back, week after week, until she finally saw his charm and his maturity. That was how Lou Brizzi decided to stay.
 
-Lou met my mother in a bar in West Paterson in 1984. He was a man who'd already lived a complicated life and decided he was ready to do the next part right. My mother was twenty-nine, back from Mexico with two small boys and not much else, staying with her parents and taking whatever work she could find. She'd learned to be careful about who she let near her children, and a charming man in a bar wasn't going to be the exception. That was why she said no, and why his coming back meant something.
+Lou walked into a bar in West Paterson in 1984 to meet my mother. He was forty-one, a man who'd already lived a complicated life and decided he was ready to do the next part right. My mother was thirty-one, back from Mexico with two small boys and not much else, staying with her parents and taking whatever work she could find. She'd learned to be careful about who she let near her children, and a charming man in a bar wasn't going to be the exception. That was why she said no, and why his coming back meant something.
 
 I was six the first time I met him. He came over to my grandparents' place, where we were living, and Nana and Grandpa had him to dinner. Most of that night is gone now. What I remember is that he brought Tootsie Rolls for Chris and me. Two boys who weren't his, and he walked in with something in his pocket just for us. Before he ever decided we were his, he was already treating us like we were.
 
