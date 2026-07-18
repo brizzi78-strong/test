@@ -106,6 +106,13 @@ of perjury — Tesla can't swear I qualified and then argue I didn't.
    > "Their app isn't foolproof — it's Tesla's system, not a sworn document, and
    > they won't produce the record. My sworn return says I qualify."
 
+6. **This dealer failure is nationwide and IRS-acknowledged.** Dealers across the
+   country failed to correctly file these reports; in one case the dealership's own
+   general manager admitted his staff "used the wrong form" loaded in their system.
+   The IRS acknowledged the problem and reopened the portal. So a dealer data entry
+   is not proof of buyer error — it's a documented dealer-side system failure.
+   (See `systemic-reporting-failures.md`.)
+
 **Discipline:** don't argue "did I click it or not." State you file jointly and
 would never select HoH, then **pivot**: "It doesn't matter — my actual return
 qualifies under any threshold." Demand Tesla **produce** the app record it keeps

@@ -64,14 +64,21 @@ remains a registered dealer in the Energy Credits Online system and is able to
 submit this report now; we are pressing Tesla to do so (formal written demand
 enclosed).
 
-**4. Requested relief.** I ask that the IRS (a) reinstate the $7,500 New Clean
-Vehicle Credit once the seller's Form 15400 is on record; (b) hold or suspend
-collection while I compel the seller to file the missing report; and (c) abate
-the interest assessed, because the discrepancy results entirely from the seller's
-failure to file a required report and not from any error or ineligibility on my
-part. I am submitting this disagreement within the timeframe stated in the notice
-and I expressly preserve my right to appeal and my right to petition the U.S. Tax
-Court.
+**4. Allowance on proof of purchase.** Consistent with the IRS's stated remedy
+for buyers whose dealers did not correctly file a time-of-sale report — that a
+taxpayer who receives an error or rejection may submit proof of purchase of a
+qualified vehicle directly to the IRS — I enclose my proof of purchase: the
+Tesla-signed Clean Vehicle Seller Report (Form 15400) and my Motor Vehicle Order
+Agreement. I request that the credit be allowed on this proof.
+
+**5. Requested relief.** I ask that the IRS (a) allow/reinstate the $7,500 New
+Clean Vehicle Credit based on the enclosed proof of purchase and once the seller's
+Form 15400 is on record; (b) hold or suspend collection while I compel the seller
+to file the missing report; and (c) abate the interest assessed, because the
+discrepancy results entirely from the seller's failure to file a required report
+and not from any error or ineligibility on my part. I am submitting this
+disagreement within the timeframe stated in the notice and I expressly preserve my
+right to appeal and my right to petition the U.S. Tax Court.
 
 Enclosed are copies supporting my position. Please contact me at the phone number
 or address above if you need anything further.
