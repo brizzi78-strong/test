@@ -11,11 +11,12 @@ stay. Ordered roughly by priority. Items marked ✅ are in the demo now.
   experience; the flock and framing lead with that.
 
 ## Membership & safety model
-- **Free for women, with a 30-min/month activity pledge.** Women join free; in
-  return they commit to at least 30 minutes of activity a month so the flock
-  stays warm and the marketplace stays alive. Activity is tracked, shown on the
-  profile with an on-track / behind-pace status, and a dismissible nudge
-  appears in Discover when someone falls behind pace. ✅
+- **Free for women.** Women join free — that's the real commitment.
+- **30-min/month activity pledge — DEMO MECHANIC ONLY.** The pledge, tracking,
+  pace status, and nudge are illustrative to show a "keep the flock warm"
+  retention idea. It is **not** an enforced rule and no real policy locks anyone
+  out for missing it. Treat it as a prototype of a possible mechanic, not a
+  decision. ✅ (built as a demo)
 - **Men's pricing: Free vs. Cardinal+.** Free gives the full flock but caps
   likes at 10/day; running out triggers an upsell. Cardinal+ ($19.99/mo) is
   unlimited likes, see-who-liked-you, and a daily take-back. Chosen at the
