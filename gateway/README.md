@@ -19,7 +19,8 @@ public door, many private rooms.
   `X-API-Key: <key>`); missing → `401`, unknown → `401`.
 - **Tenant injection** — the key maps to a company; the gateway strips any
   client-supplied `X-Company-Id` / `X-Gateway-Tenant` and sets its own trusted
-  values downstream.
+  values downstream. Services **enforce** this header (see below), so it is real
+  data isolation, not just a hint.
 - **Rate limiting** — a per-key token bucket (default 20 req/s); over the limit → `429`.
 - **Routing** — the first path segment selects the service:
   `/directory/...` → the Directory service, `/hirecheck/...` → Screening, etc.
@@ -47,7 +48,8 @@ GATEWAY_ADMIN_TOKEN=change-me npm start   # listens on PORT (default 8080)
 | `<SERVICE>_URL` | Override an upstream, e.g. `DIRECTORY_URL=http://127.0.0.1:3600` |
 
 Services (path prefix → default upstream): `recruiting`, `hirecheck`, `myhr`,
-`training`, `benefits`, `payroll`, `directory`.
+`training`, `benefits`, `payroll`, `directory`, `timeoff`, `offboarding`,
+`orchestrator`.
 
 ## HTTP surface
 
@@ -71,10 +73,24 @@ curl -s -H "authorization: Bearer $KEY" $BASE/directory/health
 curl -s -XPOST -H "authorization: Bearer $KEY" $BASE/directory/companies -d '{"name":"Acme"}'
 ```
 
-## The next increment: per-tenant isolation
+## Per-tenant isolation (enforced)
 
-The gateway authenticates and injects a **trusted `X-Company-Id`**, but the
-services don't yet *read* it — they still take a `companyId` in the request. The
-natural follow-on is to have each service derive/enforce its company from that
-header (rejecting mismatches), which turns edge auth into full multi-tenant data
-isolation. The header is already there, waiting.
+Edge auth is now real multi-tenant isolation: every service enforces the
+gateway's trusted `X-Gateway-Tenant` header (see each service's
+`src/api/tenancy.ts`). For any request that arrives with that header, a service:
+
+- **stamps writes** with the tenant's company id — a body claiming a different
+  `companyId` is overridden, so you can only create/update under your own tenant;
+- **constrains list reads** to the tenant;
+- **hides other tenants' records** — a single record owned by another tenant
+  comes back as `404`.
+
+So a key issued for one company cannot read or write another company's data,
+whatever it puts in the request body. Requests **without** the header (direct
+local access, or internal calls from the orchestrator) are unenforced — in
+production only the gateway is exposed publicly.
+
+Residual: a targeted mutation of another tenant's record by its opaque id still
+persists before the response is hidden as a 404; closing that fully needs a
+per-service ownership check at the store layer. Reads, list queries, and record
+creation are fully isolated today.

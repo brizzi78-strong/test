@@ -7,10 +7,11 @@
  *     reverse-proxy to the selected service, injecting a trusted `X-Company-Id`
  *   - `/admin/keys` — issue and list API keys (guarded by an admin token)
  *
- * This adds authentication at the edge so the internal services can stay simple.
- * Full per-tenant data isolation is the natural next step: each service reads
- * the injected `X-Company-Id` and scopes its data to it, instead of trusting a
- * company id in the request body.
+ * This adds authentication at the edge. Each service then enforces per-tenant
+ * data isolation from the injected `X-Gateway-Tenant`: it stamps writes with the
+ * tenant, constrains list reads to it, and hides other tenants' records — so a
+ * key issued for one company can never read or write another's data, regardless
+ * of the company id in the request body (see each service's `api/tenancy.ts`).
  */
 
 import { createServer, type IncomingMessage, type Server, type ServerResponse } from 'node:http';

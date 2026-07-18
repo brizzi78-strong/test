@@ -4,6 +4,7 @@
  */
 
 import type { IncomingMessage, ServerResponse } from 'node:http';
+import { readTenant, scopeRequestToTenant, scopeResultToTenant } from './tenancy.ts';
 import { WIRED_SERVICES } from '../downstream/provisioner.ts';
 import { DomainError, ValidationError } from '../service/errors.ts';
 import type { OrchestratorService } from '../service/orchestratorService.ts';
@@ -118,8 +119,13 @@ export function createRequestListener(service: OrchestratorService) {
       }
 
       const body = req.method === 'GET' ? undefined : await readJsonBody(req);
+      const tenant = readTenant(req.headers);
+      if (tenant) scopeRequestToTenant(tenant, url.searchParams, body);
       const result = await match.route.handler({ params: match.params, query: url.searchParams, body });
-      sendJson(res, result.status, result.body);
+      const scoped = tenant
+        ? scopeResultToTenant(tenant, result.status, result.body)
+        : { status: result.status, body: result.body };
+      sendJson(res, scoped.status, scoped.body);
     } catch (err) {
       if (err instanceof DomainError) {
         sendJson(res, err.status, { error: { code: err.code, message: err.message } });

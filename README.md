@@ -19,7 +19,7 @@ This repository holds several projects. Jump to the one you need:
 | **Orchestrator — shared employee identity** | `orchestrator/` | The layer that makes "one employee record" real: a canonical company/person that cascades a hire into every service and records the id each assigned, so one record resolves everywhere (see `orchestrator/README.md`) |
 | **Admin Portal — the usable HR app** | `portal/` | Single-page HR console (register a company, hire employees, see one record resolve into every service) backed by a backend-for-frontend that proxies to the orchestrator server-side, keeping credentials off the browser (see `portal/README.md`) |
 | **Cardinal HR — platform website** | `cardinal-hr/` | Self-contained, cross-linked marketing site: Home (`index.html`), Features (`features.html`), Pricing (`pricing.html`), and Security (`security.html`) |
-| **API Gateway** | `gateway/` | Authenticated front door: API-key auth, per-key rate limiting, and reverse-proxy routing to the services with an injected trusted tenant (see `gateway/README.md`) |
+| **API Gateway** | `gateway/` | Authenticated front door: API-key auth, per-key rate limiting, and reverse-proxy routing to the services with an injected trusted tenant. Each service enforces that tenant (`src/api/tenancy.ts`) for real multi-tenant data isolation (see `gateway/README.md`) |
 | **Deployment scaffolding** | `deploy/` | Run the gateway + all services + website together: `docker compose -f deploy/docker-compose.yml up --build` (see `deploy/README.md`) |
 
 ---
