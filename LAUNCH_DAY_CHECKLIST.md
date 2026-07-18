@@ -8,30 +8,45 @@ and don't announce anything until every box in sections 1–6 is checked.
 
 - [ ] Contract code finalized: OpenZeppelin ERC-20, fixed 250M supply, no tax/blacklist/mint
 - [ ] Contract deployed and tested on a testnet (Sepolia) end-to-end, including the renounce
+      — copy-paste walkthrough in `SEPOLIA_DRY_RUN.md`
 - [ ] Deployer wallet is a fresh address with no unrelated history
 - [ ] Treasury wallet created (separate address; ideally a Safe multisig) and its purpose
       written down for the announcement
 - [ ] Enough ETH in the deployer wallet: 2–5 ETH for liquidity **plus** ~0.05–0.15 ETH
-      buffer for gas across all steps, plus the LP locker's fee (check Team Finance/UNCX
-      current pricing — some charge a flat fee, some a %)
-- [ ] Announcement post drafted with placeholders for the three proof links
-      (renounce tx, LP lock, treasury address)
+      buffer for gas across all steps, plus the LP locker's fee. As of Jul 2026
+      (re-check before launch): Team Finance = $150 flat in ETH + gas, keeps 100% of
+      LP locked; UNCX = 0.1 ETH flat **+ 1% of the LP tokens** (so the lock shows 99%,
+      not 100% — if using UNCX, soften the announcement's "100% locked" claim to match).
+      Track records: UNCX lockers have no known exploit since 2020; Team Finance had
+      one exploit (Oct 2022, ~$14.5M via its v2→v3 *migration* feature, not the basic
+      time-lock; most funds returned, no repeat since). Cheapest + exact "100%" claim →
+      Team Finance; cleanest security history → UNCX. Either is acceptable for a
+      12-month lock of this size — decide, then make the announcement wording match.
+- [x] Announcement post drafted with placeholders for the three proof links
+      (renounce tx, LP lock, treasury address) — see `ANNOUNCEMENT.md`
 - [ ] Pick a low-gas window (weekend/off-peak US hours; check a gas tracker)
 
 ## 1. Deploy
 
 - [ ] Deploy the token contract; full 250M mints to deployer
 - [ ] Record: contract address, deploy tx hash
+- [ ] Fill `launch.json` (network, token address, treasury address) — the helper
+      scripts below read it. Run `npx hardhat run scripts/launch-check.ts` between
+      steps whenever you want a PASS/FAIL readout of where things stand.
 - [ ] Sanity-check on Etherscan: total supply = 250,000,000, deployer balance = 250,000,000
 
 ## 2. Verify source
 
-- [ ] Verify contract source on Etherscan (exact compiler version + settings used to deploy)
+- [ ] Verify contract source on Etherscan (exact compiler version + settings used to deploy):
+      `npx hardhat verify --network mainnet <token-address>` (needs `ETHERSCAN_API_KEY`
+      in the keystore — see README "Etherscan verification")
 - [ ] Confirm the "Contract" tab shows readable code with a green check
 
 ## 3. Treasury transfer
 
-- [ ] Send 50,000,000 CARD to the treasury wallet
+- [ ] Send 50,000,000 CARD to the treasury wallet:
+      `npx hardhat run scripts/transfer-treasury.ts` (sends exactly 50M; refuses to
+      run twice or if any balance is off)
 - [ ] Record the tx hash (this is a proof link)
 - [ ] Confirm balances: deployer 200M, treasury 50M
 
@@ -56,14 +71,17 @@ and don't announce anything until every box in sections 1–6 is checked.
 ⚠️ Point of no return. Before clicking, confirm: source verified, treasury funded,
 pool live and trading, LP locked. After this, nothing about the contract can ever change.
 
-- [ ] Call `renounceOwnership()` from the deployer
+- [ ] Add the pool address to `launch.json`, then run
+      `npx hardhat run scripts/renounce.ts` — it re-checks the abort criteria
+      on-chain, makes you type "renounce forever", and only then sends
 - [ ] Confirm on Etherscan that owner is now the zero address (0x000…000)
 - [ ] Record the tx hash (this is a proof link)
 
 ## 7. Announce
 
-- [ ] Fill the three proof links into the drafted post: renounce tx, LP lock URL,
-      treasury address
+- [ ] Fill the six `{{...}}` placeholders in `ANNOUNCEMENT.md` (renounce tx, LP lock URL,
+      treasury address + funding tx, token address, pool link); search for `{{` to
+      confirm none were missed
 - [ ] State the token address prominently (scammers deploy fake lookalikes — tell people
       to trust only this address)
 - [ ] State the treasury's purpose and the "all spends announced" policy

@@ -127,7 +127,7 @@ docs/AUDIT-SCOPE.md                        # cold-start package for an auditor
 docs/LEGAL-BRIEFING.md                     # cited research briefing for counsel (US + EU)
 docs/AI_VERIFICATION_GAP.md                # why the claims ledger exists
 site/index.html                            # one-page launch site; assets/ has the logo
-hardhat.config.ts                          # Hardhat 3 config (solc from npm — no downloads)
+hardhat.config.ts                          # Hardhat 3 config (native solc; HARDHAT_BUNDLED_SOLC=1 for offline)
 foundry.toml + remappings.txt              # Foundry config (deps resolved from node_modules)
 ```
 
@@ -148,6 +148,15 @@ invariants. CI runs the verifier on every push. With
 [Foundry](https://getfoundry.sh) installed, the same Solidity tests also run
 natively via `forge test`.
 
+On first build Hardhat downloads the native `solc` binary from
+`binaries.soliditylang.org`. If that host is unreachable (restricted/offline
+networks), compile with the WASM build bundled in the `solc` npm package
+instead — same compiler version, identical bytecode:
+
+```bash
+HARDHAT_BUNDLED_SOLC=1 npx hardhat test
+```
+
 ## Deployment
 
 RPC URLs and keys are supplied through the encrypted Hardhat keystore —
@@ -163,6 +172,58 @@ npx hardhat verify --network sepolia <deployed-address>
 A `mainnet` network is pre-wired the same way (`MAINNET_RPC_URL`,
 `MAINNET_PRIVATE_KEY`); `npm run deploy:mainnet` executes it when the launch
 checklist is ready.
+
+## Sepolia dry run
+
+`SEPOLIA_DRY_RUN.md` is a copy-paste walkthrough of the whole launch sequence
+on the Sepolia testnet — deploy, verify, fund the treasury, simulate the
+pool, renounce — so the real launch day has no first-time steps in it.
+
+## Launch-day scripts
+
+Helpers for the transaction steps in `LAUNCH_DAY_CHECKLIST.md`. Fill in
+`launch.json` (network, token address, treasury address; pool address once it
+exists), then:
+
+```bash
+npx hardhat run scripts/launch-check.ts       # read-only: which step you're on + abort-criteria check
+npx hardhat run scripts/transfer-treasury.ts  # step 3: sends exactly 50M to the treasury, once
+npx hardhat run scripts/renounce.ts           # step 6: guarded renounce — verifies state, asks for confirmation
+```
+
+Each script verifies the on-chain state before doing anything and stops with
+an explanation instead of proceeding when something doesn't match the plan.
+`scripts/smoke-test-local.ts` runs the whole sequence against the in-process
+network to prove the guardrails work — no real network or funds involved.
+
+## Etherscan verification
+
+Source verification (step 2 of `LAUNCH_DAY_CHECKLIST.md`) goes through
+`hardhat-verify`, which ships with the toolbox. Store an
+[Etherscan API key](https://etherscan.io/apis) the same way as the RPC
+secrets, then verify the deployed address — `CardinalsPromise` takes no
+constructor arguments:
+
+```bash
+npx hardhat keystore set ETHERSCAN_API_KEY
+npx hardhat verify --network sepolia <deployed-address>
+```
+
+Deployments made with Ignition can be verified in one step from the recorded
+deployment instead:
+
+```bash
+npx hardhat ignition verify chain-11155111   # sepolia deployment id
+```
+
+Verification submits the sources to `etherscan.io`; compilation beforehand
+fetches the compiler from `binaries.soliditylang.org` (unless using the
+bundled fallback above), so those are the two hosts the toolchain needs to
+reach.
+
+If the API route isn't available, `verification/` contains a ready-to-upload
+standard JSON input and instructions for verifying manually through
+Etherscan's web form — see [verification/README.md](verification/README.md).
 
 ## Disclaimer
 
