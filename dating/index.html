@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cardinal — the dating app for people ready to stay</title>
+<meta name="description" content="Cardinals mate for life and stay through every winter. Cardinal is a dating app for people looking for the real thing — one honest profile, thoughtful matches, no games.">
+<meta name="theme-color" content="#D7263D">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Ccircle cx='128' cy='128' r='124' fill='%23D7263D'/%3E%3Cpath fill='%23fff' d='M76 160c0-44 26-74 62-78l6-26 14 22c22 4 38 20 44 40l22 8-20 12c-2 34-30 60-66 60-14 0-27-4-38-11l-24 9 8-24c-5-9-8-13-8-12z'/%3E%3Ccircle cx='150' cy='118' r='8' fill='%238E1B2C'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ TOP NAV ============ -->
+<header class="nav" id="nav">
+  <a class="brand" href="#" data-nav="landing">
+    <svg class="brand-mark" viewBox="0 0 256 256" aria-hidden="true">
+      <defs><linearGradient id="navg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#D7263D"/><stop offset="1" stop-color="#8E1B2C"/>
+      </linearGradient></defs>
+      <circle cx="128" cy="128" r="124" fill="url(#navg)"/>
+      <path fill="#fff" d="M76 160c0-44 26-74 62-78l6-26 14 22c22 4 38 20 44 40l22 8-20 12c-2 34-30 60-66 60-14 0-27-4-38-11l-24 9 8-24c-5-9-8-13-8-12z"/>
+      <circle cx="150" cy="118" r="8" fill="#8E1B2C"/>
+      <path fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" d="M70 196 q58 26 116 0"/>
+    </svg>
+    <span class="brand-name">Cardinal</span>
+  </a>
+  <nav class="nav-links" id="appNav" hidden>
+    <button class="nav-tab" data-nav="discover">Discover</button>
+    <button class="nav-tab" data-nav="matches">Matches <span class="badge" id="matchBadge" hidden>0</span></button>
+    <button class="nav-tab" data-nav="profile">Profile</button>
+    <button class="nav-tab ghost" id="signOut">Sign out</button>
+  </nav>
+</header>
+
+<main id="app">
+
+  <!-- ============ LANDING ============ -->
+  <section class="view" id="view-landing">
+    <div class="hero">
+      <div class="hero-mark">
+        <svg viewBox="0 0 256 256" aria-label="Cardinal">
+          <defs><linearGradient id="heroG" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#D7263D"/><stop offset="1" stop-color="#8E1B2C"/>
+          </linearGradient></defs>
+          <circle cx="128" cy="128" r="124" fill="url(#heroG)"/>
+          <circle cx="128" cy="128" r="124" fill="none" stroke="#fff" stroke-opacity="0.18" stroke-width="6"/>
+          <path fill="#fff" d="M76 160c0-44 26-74 62-78l6-26 14 22c22 4 38 20 44 40l22 8-20 12c-2 34-30 60-66 60-14 0-27-4-38-11l-24 9 8-24c-5-9-8-13-8-12z"/>
+          <circle cx="150" cy="118" r="8" fill="#8E1B2C"/>
+          <path fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" d="M70 196 q58 26 116 0"/>
+        </svg>
+      </div>
+      <h1>Cardinals mate for life.<br>Find yours.</h1>
+      <p class="lede">The cardinal stays through every winter. Cardinal is a
+        dating app for people who are done with games — one honest profile,
+        thoughtful matches, and room to say something real.</p>
+      <div class="cta-row">
+        <button class="btn btn-primary btn-lg" id="getStarted">Create your profile</button>
+        <button class="btn btn-ghost btn-lg" id="haveAccount">I already have one</button>
+      </div>
+      <p class="fineprint">Everything stays in your browser. No account, no
+        server, no tracking — this is a demo you can run anywhere.</p>
+    </div>
+
+    <div class="values">
+      <article class="value">
+        <div class="value-icon">🪶</div>
+        <h3>One true self</h3>
+        <p>No swiping through fifty photos. One profile, written honestly, is
+          how a cardinal calls.</p>
+      </article>
+      <article class="value">
+        <div class="value-icon">❄️</div>
+        <h3>Built to last</h3>
+        <p>Cardinals don't migrate. We match on what you want for the long
+          winters, not just the warm days.</p>
+      </article>
+      <article class="value">
+        <div class="value-icon">🎵</div>
+        <h3>Say something real</h3>
+        <p>Every match opens with a prompt, not a "hey." Start where it counts.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ ONBOARDING ============ -->
+  <section class="view" id="view-onboard" hidden>
+    <div class="panel">
+      <h2>Build your profile</h2>
+      <p class="panel-sub">This is how your matches meet you. Be honest — a
+        cardinal's song is unmistakable.</p>
+      <form id="profileForm" class="form">
+        <label class="field">
+          <span>Name</span>
+          <input name="name" type="text" required maxlength="40" placeholder="Robin">
+        </label>
+        <div class="field-row">
+          <label class="field">
+            <span>Age</span>
+            <input name="age" type="number" required min="18" max="120" placeholder="29">
+          </label>
+          <label class="field">
+            <span>Looking for</span>
+            <select name="seeking">
+              <option value="Everyone">Everyone</option>
+              <option value="Women">Women</option>
+              <option value="Men">Men</option>
+              <option value="Nonbinary people">Nonbinary people</option>
+            </select>
+          </label>
+        </div>
+        <label class="field">
+          <span>City</span>
+          <input name="city" type="text" maxlength="60" placeholder="Raleigh, NC">
+        </label>
+        <label class="field">
+          <span>Your color <small>— pick the plumage that feels like you</small></span>
+          <div class="swatches" id="swatches"></div>
+          <input name="color" type="hidden" value="#D7263D">
+        </label>
+        <label class="field">
+          <span>About you <small>— one honest paragraph</small></span>
+          <textarea name="bio" rows="3" maxlength="280" placeholder="What does a good winter look like with you in it?"></textarea>
+          <small class="count" data-count-for="bio">0 / 280</small>
+        </label>
+        <label class="field">
+          <span>Interests <small>— press enter to add, up to 6</small></span>
+          <div class="tag-input" id="tagInput">
+            <input type="text" id="tagField" placeholder="hiking, jazz, slow mornings…" maxlength="24">
+          </div>
+        </label>
+        <label class="field">
+          <span>A prompt for your matches</span>
+          <select name="prompt">
+            <option>The way to my heart is…</option>
+            <option>We'll get along if…</option>
+            <option>My idea of a perfect winter Sunday…</option>
+            <option>I'm looking for someone who…</option>
+            <option>The most spontaneous thing I've done…</option>
+          </select>
+          <input name="promptAnswer" type="text" maxlength="120" placeholder="Your answer…">
+        </label>
+        <div class="form-actions">
+          <button type="button" class="btn btn-ghost" data-nav="landing">Back</button>
+          <button type="submit" class="btn btn-primary">Take flight →</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ DISCOVER ============ -->
+  <section class="view" id="view-discover" hidden>
+    <div class="deck-wrap">
+      <div class="deck" id="deck"></div>
+      <div class="deck-empty" id="deckEmpty" hidden>
+        <div class="value-icon">🌙</div>
+        <h3>You've met everyone for now</h3>
+        <p>Every cardinal in the area has flown by. Check your matches, or
+          come back after the next snowfall.</p>
+        <button class="btn btn-ghost" id="reshuffle">Start over</button>
+      </div>
+      <div class="deck-controls" id="deckControls">
+        <button class="round-btn pass" id="passBtn" title="Pass" aria-label="Pass">✕</button>
+        <button class="round-btn info" id="infoBtn" title="Details" aria-label="Details">ℹ</button>
+        <button class="round-btn like" id="likeBtn" title="Like" aria-label="Like">♥</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MATCHES ============ -->
+  <section class="view" id="view-matches" hidden>
+    <div class="panel">
+      <h2>Your matches</h2>
+      <p class="panel-sub">A match means you both leaned in. Open one to see
+        their prompt — and say something real.</p>
+      <div class="match-list" id="matchList"></div>
+      <div class="match-empty" id="matchEmpty">
+        <div class="value-icon">🪺</div>
+        <p>No matches yet. Head to <button class="linklike" data-nav="discover">Discover</button> and start calling.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROFILE ============ -->
+  <section class="view" id="view-profile" hidden>
+    <div class="panel">
+      <h2>Your profile</h2>
+      <p class="panel-sub">This is what the flock sees.</p>
+      <div id="profilePreview"></div>
+      <div class="form-actions">
+        <button class="btn btn-ghost" id="editProfile">Edit profile</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ MATCH MODAL ============ -->
+<div class="modal" id="modal" hidden>
+  <div class="modal-card" id="modalCard"></div>
+</div>
+
+<footer class="footer">
+  <p>Cardinal · a dating-app demo. Cardinals mate for life and stay through every winter.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

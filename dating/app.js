@@ -1,0 +1,446 @@
+/* Cardinal — a client-side dating-app demo.
+   Everything lives in localStorage; there is no server. */
+(function () {
+  "use strict";
+
+  const STORE_KEY = "cardinal.v1";
+  const COLORS = ["#D7263D", "#8E1B2C", "#E4572E", "#C2185B", "#7B1FA2",
+                  "#3949AB", "#1565C0", "#00897B", "#2E7D32", "#F9A825"];
+
+  /* ---- Sample flock: the people you can discover ---- */
+  const FLOCK = [
+    { id: "c1", name: "Wren", age: 28, city: "Asheville, NC", color: "#E4572E", avatar: "🎨",
+      bio: "Muralist who paints birds on old brick. I make a mean chili and I'll lose every board game gracefully.",
+      tags: ["art", "hiking", "board games", "cooking"],
+      prompt: "The way to my heart is…", promptAnswer: "showing up with coffee and no agenda." },
+    { id: "c2", name: "Silas", age: 33, city: "Durham, NC", color: "#1565C0", avatar: "🎸",
+      bio: "Play upright bass in a jazz trio on weekends, write boring code on weekdays. Looking for my duet.",
+      tags: ["jazz", "vinyl", "coffee", "slow mornings"],
+      prompt: "We'll get along if…", promptAnswer: "you don't mind detours to record shops." },
+    { id: "c3", name: "Junia", age: 30, city: "Raleigh, NC", color: "#00897B", avatar: "📚",
+      bio: "Librarian, trail runner, terrible at texting back but great in person. I keep a life list of birds I've seen.",
+      tags: ["books", "running", "birding", "tea"],
+      prompt: "My idea of a perfect winter Sunday…", promptAnswer: "cinnamon rolls, a long walk, then absolutely nothing." },
+    { id: "c4", name: "Marco", age: 35, city: "Charlotte, NC", color: "#7B1FA2",
+      avatar: "🍜", bio: "Chef by trade, homebody by choice. I'll cook you the best meal of your week if you do the dishes.",
+      tags: ["food", "gardening", "dogs", "old films"],
+      prompt: "I'm looking for someone who…", promptAnswer: "texts back and means what they say." },
+    { id: "c5", name: "Priya", age: 27, city: "Chapel Hill, NC", color: "#F9A825",
+      avatar: "🔭", bio: "Grad student in astronomy. I stay up too late looking at the sky and I want someone to look up with.",
+      tags: ["stars", "camping", "documentaries", "chai"],
+      prompt: "The most spontaneous thing I've done…", promptAnswer: "drove six hours to catch a meteor shower on a Tuesday." },
+    { id: "c6", name: "Dominic", age: 31, city: "Greensboro, NC", color: "#2E7D32",
+      avatar: "🌱", bio: "I run a small plant nursery. Patient, a little quiet, and genuinely happy. Winter people welcome.",
+      tags: ["plants", "woodworking", "cycling", "farmers markets"],
+      prompt: "We'll get along if…", promptAnswer: "you're kind to waiters and okay with silence." },
+    { id: "c7", name: "Nadia", age: 34, city: "Wilmington, NC", color: "#C2185B",
+      avatar: "🏄", bio: "Ocean rescue in summer, ceramics in winter. I feel most myself near water and I laugh loudly.",
+      tags: ["surfing", "pottery", "travel", "live music"],
+      prompt: "The way to my heart is…", promptAnswer: "a handwritten note. Yes, still." },
+    { id: "c8", name: "Theo", age: 29, city: "Boone, NC", color: "#3949AB",
+      avatar: "⛰️", bio: "Park ranger who knows every trail in the county. Ask me about the cardinals that overwinter here.",
+      tags: ["mountains", "photography", "campfires", "poetry"],
+      prompt: "I'm looking for someone who…", promptAnswer: "wants a partner for the long trail, not just the trailhead." }
+  ];
+
+  /* ---- State ---- */
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+
+  let state = load();
+
+  function load() {
+    try {
+      const raw = localStorage.getItem(STORE_KEY);
+      if (raw) return JSON.parse(raw);
+    } catch (e) { /* ignore */ }
+    return { profile: null, seen: [], liked: [], matches: [], messages: {} };
+  }
+  function save() { localStorage.setItem(STORE_KEY, JSON.stringify(state)); }
+
+  /* ---- Navigation ---- */
+  const VIEWS = ["landing", "onboard", "discover", "matches", "profile"];
+  function show(view) {
+    VIEWS.forEach(v => { const el = $("#view-" + v); if (el) el.hidden = (v !== view); });
+    $("#appNav").hidden = !state.profile;
+    $$(".nav-tab").forEach(t => t.classList.toggle("active", t.dataset.nav === view));
+    window.scrollTo(0, 0);
+    if (view === "discover") renderDeck();
+    if (view === "matches") renderMatches();
+    if (view === "profile") renderProfilePreview();
+    updateBadge();
+  }
+
+  document.addEventListener("click", (e) => {
+    const nav = e.target.closest("[data-nav]");
+    if (nav) { e.preventDefault(); show(nav.dataset.nav); }
+  });
+
+  $("#getStarted").addEventListener("click", () => openOnboard());
+  $("#haveAccount").addEventListener("click", () => {
+    show(state.profile ? "discover" : "onboard");
+  });
+  $("#signOut").addEventListener("click", () => {
+    if (confirm("Sign out and clear this demo profile from your browser?")) {
+      state = { profile: null, seen: [], liked: [], matches: [], messages: {} };
+      save(); show("landing");
+    }
+  });
+  $("#editProfile").addEventListener("click", () => openOnboard(true));
+
+  /* ---- Onboarding ---- */
+  const form = $("#profileForm");
+  let tags = [];
+
+  function buildSwatches() {
+    const wrap = $("#swatches");
+    wrap.innerHTML = "";
+    COLORS.forEach(c => {
+      const b = document.createElement("button");
+      b.type = "button"; b.className = "swatch"; b.style.background = c;
+      b.setAttribute("aria-label", "Pick color " + c);
+      b.addEventListener("click", () => {
+        $$(".swatch").forEach(s => s.classList.remove("selected"));
+        b.classList.add("selected");
+        form.color.value = c;
+      });
+      wrap.appendChild(b);
+    });
+  }
+  buildSwatches();
+
+  function renderTags() {
+    const wrap = $("#tagInput");
+    $$(".tag", wrap).forEach(t => t.remove());
+    const field = $("#tagField");
+    tags.forEach((t, i) => {
+      const el = document.createElement("span");
+      el.className = "tag";
+      el.innerHTML = `${escapeHtml(t)} <button type="button" aria-label="Remove ${escapeHtml(t)}">×</button>`;
+      el.querySelector("button").addEventListener("click", () => { tags.splice(i, 1); renderTags(); });
+      wrap.insertBefore(el, field);
+    });
+    field.style.display = tags.length >= 6 ? "none" : "";
+  }
+  $("#tagField").addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === ",") {
+      e.preventDefault();
+      const v = e.target.value.trim().replace(/,$/, "");
+      if (v && tags.length < 6 && !tags.includes(v)) { tags.push(v); e.target.value = ""; renderTags(); }
+    } else if (e.key === "Backspace" && !e.target.value && tags.length) {
+      tags.pop(); renderTags();
+    }
+  });
+
+  const bio = form.bio, bioCount = $('[data-count-for="bio"]');
+  bio.addEventListener("input", () => { bioCount.textContent = `${bio.value.length} / 280`; });
+
+  function openOnboard(edit) {
+    if (edit && state.profile) {
+      const p = state.profile;
+      form.name.value = p.name; form.age.value = p.age; form.seeking.value = p.seeking;
+      form.city.value = p.city; form.color.value = p.color; form.bio.value = p.bio;
+      form.prompt.value = p.prompt; form.promptAnswer.value = p.promptAnswer;
+      tags = p.tags.slice();
+      bioCount.textContent = `${p.bio.length} / 280`;
+      $$(".swatch").forEach(s => s.classList.toggle("selected", s.style.background === hexToRgb(p.color)));
+    } else if (!edit) {
+      form.reset(); tags = []; form.color.value = COLORS[0];
+      bioCount.textContent = "0 / 280";
+    }
+    renderTags();
+    if (!$(".swatch.selected")) { const first = $(".swatch"); if (first) first.classList.add("selected"); }
+    show("onboard");
+  }
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    state.profile = {
+      name: (data.get("name") || "").trim(),
+      age: data.get("age"),
+      seeking: data.get("seeking"),
+      city: (data.get("city") || "").trim() || "Somewhere warm",
+      color: data.get("color") || COLORS[0],
+      avatar: "🐦",
+      bio: (data.get("bio") || "").trim() || "Here for the real thing.",
+      tags: tags.slice(),
+      prompt: data.get("prompt"),
+      promptAnswer: (data.get("promptAnswer") || "").trim() || "…ask me and find out."
+    };
+    save();
+    show("discover");
+  });
+
+  /* ---- Discover deck ---- */
+  function remaining() {
+    return FLOCK.filter(p => !state.seen.includes(p.id));
+  }
+
+  function renderDeck() {
+    const deck = $("#deck");
+    const empty = $("#deckEmpty");
+    const controls = $("#deckControls");
+    deck.innerHTML = "";
+    const pool = remaining();
+    if (!pool.length) {
+      empty.hidden = false; controls.style.visibility = "hidden";
+      return;
+    }
+    empty.hidden = true; controls.style.visibility = "visible";
+    // Render up to 3 cards, top card last so it's on top.
+    const visible = pool.slice(0, 3).reverse();
+    visible.forEach((p, idx) => {
+      const isTop = idx === visible.length - 1;
+      const depth = visible.length - 1 - idx;
+      const card = document.createElement("div");
+      card.className = "swipe-card";
+      card.dataset.id = p.id;
+      card.style.transform = `scale(${1 - depth * 0.04}) translateY(${depth * 10}px)`;
+      card.style.zIndex = idx;
+      card.innerHTML = cardHtml(p);
+      deck.appendChild(card);
+      if (isTop) attachDrag(card, p);
+    });
+  }
+
+  function cardHtml(p) {
+    return `
+      <div class="stamp like">LIKE</div>
+      <div class="stamp nope">NOPE</div>
+      <div class="card-photo" style="background:linear-gradient(160deg, ${p.color}, ${shade(p.color, -25)})">
+        <div class="card-avatar">${p.avatar}</div>
+        <div class="card-name">
+          <h3>${escapeHtml(p.name)}, ${escapeHtml(String(p.age))}</h3>
+          <div class="loc">${escapeHtml(p.city)}</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-bio">${escapeHtml(p.bio)}</p>
+        <div class="card-prompt"><b>${escapeHtml(p.prompt)}</b>${escapeHtml(p.promptAnswer)}</div>
+        <div class="card-tags">${p.tags.map(t => `<span class="tag">${escapeHtml(t)}</span>`).join("")}</div>
+      </div>`;
+  }
+
+  function attachDrag(card, person) {
+    let startX = 0, startY = 0, dx = 0, dy = 0, dragging = false;
+    const like = $(".stamp.like", card), nope = $(".stamp.nope", card);
+
+    const down = (x, y) => { startX = x; startY = y; dragging = true; card.classList.add("dragging"); };
+    const move = (x, y) => {
+      if (!dragging) return;
+      dx = x - startX; dy = y - startY;
+      const rot = dx / 18;
+      card.style.transform = `translate(${dx}px, ${dy}px) rotate(${rot}deg)`;
+      like.style.opacity = Math.max(0, Math.min(1, dx / 100));
+      nope.style.opacity = Math.max(0, Math.min(1, -dx / 100));
+    };
+    const up = () => {
+      if (!dragging) return;
+      dragging = false; card.classList.remove("dragging");
+      if (dx > 110) return fly(card, person, 1);
+      if (dx < -110) return fly(card, person, -1);
+      card.style.transform = ""; like.style.opacity = 0; nope.style.opacity = 0;
+    };
+
+    card.addEventListener("mousedown", e => down(e.clientX, e.clientY));
+    window.addEventListener("mousemove", e => move(e.clientX, e.clientY));
+    window.addEventListener("mouseup", up);
+    card.addEventListener("touchstart", e => down(e.touches[0].clientX, e.touches[0].clientY), { passive: true });
+    card.addEventListener("touchmove", e => move(e.touches[0].clientX, e.touches[0].clientY), { passive: true });
+    card.addEventListener("touchend", up);
+
+    card._fly = (dir) => fly(card, person, dir);
+  }
+
+  function fly(card, person, dir) {
+    card.style.transition = "transform .4s ease, opacity .4s ease";
+    card.style.transform = `translate(${dir * 600}px, -40px) rotate(${dir * 30}deg)`;
+    card.style.opacity = "0";
+    decide(person, dir > 0);
+    setTimeout(renderDeck, 260);
+  }
+
+  function decide(person, liked) {
+    if (!state.seen.includes(person.id)) state.seen.push(person.id);
+    if (liked) {
+      state.liked.push(person.id);
+      // A cardinal calls back most of the time.
+      if (mutual(person)) {
+        state.matches.push(person.id);
+        save();
+        showMatchModal(person);
+        return;
+      }
+    }
+    save();
+    updateBadge();
+  }
+
+  // Deterministic "do they like you back?" — feels random but is stable per person.
+  function mutual(person) {
+    let h = 0;
+    for (const ch of person.id + person.name) h = (h * 31 + ch.charCodeAt(0)) & 0xffff;
+    return (h % 10) < 7; // ~70% call back
+  }
+
+  // Top control buttons
+  $("#likeBtn").addEventListener("click", () => triggerTop(1));
+  $("#passBtn").addEventListener("click", () => triggerTop(-1));
+  $("#infoBtn").addEventListener("click", () => {
+    const pool = remaining();
+    if (pool.length) alert(`${pool.length} more ${pool.length === 1 ? "cardinal" : "cardinals"} in your area.`);
+  });
+  $("#reshuffle").addEventListener("click", () => {
+    state.seen = []; state.liked = []; save(); renderDeck();
+  });
+
+  function triggerTop(dir) {
+    const cards = $$(".swipe-card");
+    const top = cards[cards.length - 1];
+    if (top && top._fly) top._fly(dir);
+  }
+
+  document.addEventListener("keydown", (e) => {
+    if ($("#view-discover").hidden) return;
+    if (e.key === "ArrowRight") triggerTop(1);
+    if (e.key === "ArrowLeft") triggerTop(-1);
+  });
+
+  /* ---- Match modal ---- */
+  const modal = $("#modal");
+  function showMatchModal(person) {
+    const me = state.profile;
+    $("#modalCard").innerHTML = `
+      <div class="m-hero">
+        <div class="m-avatar" style="background:${me.color}">${me.avatar}</div>
+        <div class="m-avatar" style="background:${person.color}">${person.avatar}</div>
+      </div>
+      <h2>It's a match!</h2>
+      <p>You and ${escapeHtml(person.name)} both leaned in.</p>
+      <div class="modal-quote"><b>${escapeHtml(person.prompt)}</b>${escapeHtml(person.promptAnswer)}</div>
+      <div class="modal-msg">
+        <input type="text" id="firstMsg" placeholder="Say something real…" maxlength="140">
+        <button class="btn btn-primary" id="sendMsg">Send</button>
+      </div>
+      <div id="sentNote"></div>
+      <div class="modal-actions" style="margin-top:1rem">
+        <button class="btn btn-ghost" id="keepSwiping">Keep going</button>
+      </div>`;
+    modal.hidden = false;
+    $("#keepSwiping").addEventListener("click", closeModal);
+    $("#sendMsg").addEventListener("click", () => sendFirst(person));
+    $("#firstMsg").addEventListener("keydown", (e) => { if (e.key === "Enter") sendFirst(person); });
+    $("#firstMsg").focus();
+  }
+  function sendFirst(person) {
+    const val = $("#firstMsg").value.trim();
+    if (!val) return;
+    state.messages[person.id] = val;
+    save();
+    $("#sentNote").innerHTML = `<div class="sent-note">Sent to ${escapeHtml(person.name)} ✓</div>`;
+    $("#firstMsg").value = ""; $("#firstMsg").disabled = true; $("#sendMsg").disabled = true;
+  }
+  function closeModal() { modal.hidden = true; updateBadge(); }
+  modal.addEventListener("click", (e) => { if (e.target === modal) closeModal(); });
+
+  /* ---- Matches view ---- */
+  function renderMatches() {
+    const list = $("#matchList"), empty = $("#matchEmpty");
+    const ppl = state.matches.map(id => FLOCK.find(p => p.id === id)).filter(Boolean);
+    empty.hidden = ppl.length > 0;
+    list.hidden = ppl.length === 0;
+    list.innerHTML = ppl.map(p => `
+      <div class="match-tile" data-match="${p.id}">
+        <div class="m-avatar" style="background:${p.color}">${p.avatar}</div>
+        <div class="m-name">${escapeHtml(p.name)}</div>
+        <div class="m-loc">${escapeHtml(p.city)}</div>
+      </div>`).join("");
+    $$("[data-match]", list).forEach(t => {
+      t.addEventListener("click", () => {
+        const p = FLOCK.find(x => x.id === t.dataset.match);
+        if (p) openMatchDetail(p);
+      });
+    });
+  }
+
+  function openMatchDetail(person) {
+    const sent = state.messages[person.id];
+    $("#modalCard").innerHTML = `
+      <div class="m-hero">
+        <div class="m-avatar" style="background:${person.color}">${person.avatar}</div>
+      </div>
+      <h2 style="color:var(--fg)">${escapeHtml(person.name)}, ${escapeHtml(String(person.age))}</h2>
+      <p>${escapeHtml(person.city)}</p>
+      <div class="modal-quote"><b>About</b>${escapeHtml(person.bio)}</div>
+      <div class="modal-quote"><b>${escapeHtml(person.prompt)}</b>${escapeHtml(person.promptAnswer)}</div>
+      <div class="modal-msg">
+        <input type="text" id="firstMsg" placeholder="${sent ? "Send another…" : "Say something real…"}" maxlength="140">
+        <button class="btn btn-primary" id="sendMsg">Send</button>
+      </div>
+      <div id="sentNote">${sent ? `<div class="sent-note">You said: “${escapeHtml(sent)}” ✓</div>` : ""}</div>
+      <div class="modal-actions" style="margin-top:1rem">
+        <button class="btn btn-ghost" id="keepSwiping">Close</button>
+      </div>`;
+    modal.hidden = false;
+    $("#keepSwiping").addEventListener("click", closeModal);
+    $("#sendMsg").addEventListener("click", () => { sendFirst(person); });
+    $("#firstMsg").addEventListener("keydown", (e) => { if (e.key === "Enter") sendFirst(person); });
+  }
+
+  /* ---- Profile preview ---- */
+  function renderProfilePreview() {
+    const p = state.profile;
+    if (!p) return;
+    $("#profilePreview").innerHTML = `
+      <div class="profile-card">
+        <div class="p-avatar" style="background:${p.color}">${p.avatar}</div>
+        <div>
+          <h3>${escapeHtml(p.name)}, ${escapeHtml(String(p.age))}</h3>
+          <div class="p-meta">${escapeHtml(p.city)} · seeking ${escapeHtml(p.seeking.toLowerCase())}</div>
+        </div>
+      </div>
+      <div class="profile-block">
+        <div class="lbl">About</div>
+        <p>${escapeHtml(p.bio)}</p>
+      </div>
+      <div class="profile-block">
+        <div class="lbl">${escapeHtml(p.prompt)}</div>
+        <p>${escapeHtml(p.promptAnswer)}</p>
+      </div>
+      ${p.tags.length ? `<div class="profile-block">
+        <div class="lbl">Interests</div>
+        <div class="chip-row">${p.tags.map(t => `<span class="tag">${escapeHtml(t)}</span>`).join("")}</div>
+      </div>` : ""}`;
+  }
+
+  /* ---- Badge ---- */
+  function updateBadge() {
+    const b = $("#matchBadge");
+    const n = state.matches.length;
+    b.hidden = n === 0; b.textContent = n;
+  }
+
+  /* ---- Helpers ---- */
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  }
+  function shade(hex, pct) {
+    const { r, g, b } = parseHex(hex);
+    const t = pct < 0 ? 0 : 255, p = Math.abs(pct) / 100;
+    const mix = v => Math.round((t - v) * p + v);
+    return `#${[mix(r), mix(g), mix(b)].map(v => v.toString(16).padStart(2, "0")).join("")}`;
+  }
+  function parseHex(hex) {
+    const h = hex.replace("#", "");
+    return { r: parseInt(h.slice(0, 2), 16), g: parseInt(h.slice(2, 4), 16), b: parseInt(h.slice(4, 6), 16) };
+  }
+  function hexToRgb(hex) {
+    const { r, g, b } = parseHex(hex);
+    return `rgb(${r}, ${g}, ${b})`;
+  }
+
+  /* ---- Boot ---- */
+  updateBadge();
+  show(state.profile ? "discover" : "landing");
+})();
