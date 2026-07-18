@@ -6,6 +6,11 @@ interest · **Ceiling goal:** treble damages ($22,500) + attorney's fees
 > Master dossier. Section 12 indexes the supporting documents in this repo. Fields
 > in `[BRACKETS]` still need filling; **keep the full SSN out of this repo** —
 > only the last four (••7652) appears, as it does on the public Form 15400.
+>
+> **⚠️ Language rule:** the Form 15400 has the GM's **name printed, no signature**.
+> Always say Tesla **"completed"** / **"prepared and furnished"** the form — never
+> "signed" or "under penalty of perjury." (One already-sent email used "signed";
+> use "completed" in all future communications and in testimony.)
 
 ---
 
@@ -111,6 +116,7 @@ internal error and bolster the unfair-and-deceptive-practices claim.
 | 2026-06-01 (approx.) | IRS cutoff for submitting late 2025 time-of-sale reports — the window closes. Only now is the credit unrecoverable by filing. |
 | 2026-06-08 | IRS issues Notice CP23 disallowing $7,500. |
 | 2026-06-12 | CPA Sterling Price engaged; dispute letter v3 drafted (out of office to June 18). |
+| 2026-06-12 | Brizzi sends formal escalation + 60-day arbitration notice to resolutions@tesla.com (**delivered** — confirmed sent): file the late ECO report + confirmation OR pay $7,520.58 within 10 business days, else small claims + UDTPA arbitration + regulatory complaints. Tesla does not comply. |
 | **2026-06-28** | CP23 "pay by" date (interest accrues). |
 | **2026-08-07** | **Deadline to disagree with CP23 / preserve Tax Court rights.** |
 
