@@ -1,4 +1,4 @@
-// Exports the solc standard JSON input for CardToken.sol so the contract can
+// Exports the solc standard JSON input for CardinalsPromise.sol so the contract can
 // be verified manually on Etherscan (Verify & Publish -> Solidity
 // Standard-JSON-Input) when the hardhat-verify API route isn't available.
 //
@@ -6,7 +6,7 @@
 //   HARDHAT_BUNDLED_SOLC=1 npx hardhat build --build-profile production
 //   node scripts/export-solc-input.mjs
 //
-// Writes verification/CardToken.solc-input.json and prints the exact compiler
+// Writes verification/CardinalsPromise.solc-input.json and prints the exact compiler
 // version string to pick in the Etherscan form.
 
 import { mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
@@ -15,7 +15,7 @@ import { fileURLToPath } from "node:url";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const buildInfoDir = join(root, "artifacts", "build-info");
-const target = "project/contracts/CardToken.sol";
+const target = "project/contracts/CardinalsPromise.sol";
 
 const candidates = readdirSync(buildInfoDir)
   .filter((f) => f.endsWith(".json") && !f.endsWith(".output.json"))
@@ -50,9 +50,9 @@ if (!optimizer.enabled) {
 
 const outDir = join(root, "verification");
 mkdirSync(outDir, { recursive: true });
-const outFile = join(outDir, "CardToken.solc-input.json");
+const outFile = join(outDir, "CardinalsPromise.solc-input.json");
 writeFileSync(outFile, JSON.stringify(buildInfo.input, null, 2) + "\n");
 
 console.log(`Wrote ${outFile}`);
 console.log(`Compiler version for the Etherscan form: v${buildInfo.solcLongVersion}`);
-console.log(`Contract to select after upload: ${target}:CardToken`);
+console.log(`Contract to select after upload: ${target}:CardinalsPromise`);

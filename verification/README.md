@@ -1,11 +1,11 @@
 # Manual Etherscan verification (plan B)
 
-Ready-to-upload package for verifying `CardToken` through Etherscan's web UI —
+Ready-to-upload package for verifying `CardinalsPromise` through Etherscan's web UI —
 no API key and no `hardhat verify` run needed. Use this if the API route is
 unavailable; otherwise the commands in the main README's "Etherscan
 verification" section are less work.
 
-`CardToken.solc-input.json` is the solc **standard JSON input** for the
+`CardinalsPromise.solc-input.json` is the solc **standard JSON input** for the
 `production` build profile (optimizer enabled, 200 runs, evmVersion `cancun`)
 — the profile `npx hardhat ignition deploy` uses by default, so it matches the
 deployed bytecode. It has been checked to compile standalone with solc
@@ -20,9 +20,9 @@ deployed bytecode. It has been checked to compile standalone with solc
    - Compiler type: **Solidity (Standard-JSON-Input)**
    - Compiler version: **v0.8.28+commit.7893614a**
    - License: **MIT**
-3. Upload `CardToken.solc-input.json`.
+3. Upload `CardinalsPromise.solc-input.json`.
 4. If asked which contract, pick
-   `project/contracts/CardToken.sol:CardToken`.
+   `project/contracts/CardinalsPromise.sol:CardinalsPromise`.
 5. Constructor arguments: **none** — leave empty.
 6. Submit and confirm the Contract tab shows the green check
    (launch checklist step 2).

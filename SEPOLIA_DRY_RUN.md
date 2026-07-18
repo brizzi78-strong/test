@@ -37,7 +37,7 @@ npm install
 npx hardhat test
 ```
 
-All 14 tests should pass. (If the compiler download fails on your network,
+All tests should pass. (If the compiler download fails on your network,
 prefix commands with `HARDHAT_BUNDLED_SOLC=1`.)
 
 **f. Store the three secrets.** Hardhat encrypts these on your machine — the
@@ -58,10 +58,11 @@ private key. (This is exactly why it's a practice wallet.)
 ## Step 1 — Deploy the token (5 min)
 
 ```bash
-npx hardhat ignition deploy ignition/modules/CardToken.ts --network sepolia
+npm run deploy:sepolia
 ```
 
-It prints the deployed address, like `CardTokenModule#CardToken - 0xAB12...`.
+It prints the deployed address, like
+`CardinalsPromiseModule#CardinalsPromise - 0xAB12...`.
 **Record that address.**
 
 Now tell the helper scripts about it — edit `launch.json`:

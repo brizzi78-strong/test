@@ -15,7 +15,7 @@ const { viem } = await network.create(config.network);
 
 const [wallet] = await viem.getWalletClients();
 const deployer = wallet.account.address;
-const token = await viem.getContractAt("CardToken", config.token);
+const token = await viem.getContractAt("CardinalsPromise", config.token);
 const publicClient = await viem.getPublicClient();
 
 console.log(`network:  ${config.network}`);

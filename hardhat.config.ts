@@ -33,6 +33,8 @@ export default defineConfig({
       },
     },
   },
+  // Verify with: npx hardhat verify --network sepolia <address>
+  // (set the key first: npx hardhat keystore set ETHERSCAN_API_KEY)
   verify: {
     etherscan: {
       apiKey: configVariable("ETHERSCAN_API_KEY"),

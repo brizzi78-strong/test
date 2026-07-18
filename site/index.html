@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cardinals Promise (CARD)</title>
+<meta name="description" content="Cardinals Promise (CARD) — a fixed-supply ERC-20 token on Ethereum. 250M hard cap, ownership renounced, liquidity locked.">
+<style>
+  :root {
+    --red: #D7263D; --red-deep: #8E1B2C;
+    --bg: #ffffff; --fg: #1a1a1a; --muted: #666; --card: #f7f7f8; --border: #e5e5e8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #121214; --fg: #ececec; --muted: #9a9aa2; --card: #1c1c20; --border: #2b2b30; }
+  }
+  * { margin: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--fg); font: 17px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 680px; margin: 0 auto; padding: 4rem 1.25rem 5rem; }
+  .hero { text-align: center; margin-bottom: 3.5rem; }
+  .hero svg { width: 128px; height: 128px; }
+  h1 { font-size: 2.2rem; margin: 1rem 0 0.25rem; letter-spacing: -0.02em; }
+  .ticker { color: var(--red); font-weight: 700; }
+  .tagline { color: var(--muted); font-size: 1.1rem; }
+  h2 { font-size: 1.3rem; margin: 2.75rem 0 0.75rem; color: var(--red); }
+  p { margin: 0.75rem 0; }
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+  td { padding: 0.55rem 0.75rem; border-bottom: 1px solid var(--border); }
+  td:first-child { color: var(--muted); white-space: nowrap; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem 1.5rem; margin: 1rem 0; }
+  .addr { font-family: ui-monospace, monospace; font-size: 0.85rem; word-break: break-all; background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 0.6rem 0.8rem; display: block; margin: 0.5rem 0; }
+  .check { list-style: none; padding: 0; }
+  .check li { padding-left: 1.6rem; position: relative; margin: 0.5rem 0; }
+  .check li::before { content: "✓"; position: absolute; left: 0; color: var(--red); font-weight: 700; }
+  .disclaimer { font-size: 0.85rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: 3rem; padding-top: 1.5rem; }
+  a { color: var(--red); }
+  .todo { outline: 2px dashed var(--red); outline-offset: 4px; border-radius: 4px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="hero">
+    <svg viewBox="0 0 256 256" role="img" aria-label="Cardinals Promise logo">
+      <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#D7263D"/><stop offset="1" stop-color="#8E1B2C"/>
+      </linearGradient></defs>
+      <circle cx="128" cy="128" r="124" fill="url(#bg)"/>
+      <circle cx="128" cy="128" r="124" fill="none" stroke="#FFF" stroke-opacity="0.18" stroke-width="6"/>
+      <path fill="#FFF" d="M76 160c0-44 26-74 62-78l6-26 14 22c22 4 38 20 44 40l22 8-20 12c-2 34-30 60-66 60-14 0-27-4-38-11l-24 9 8-24c-5-9-8-13-8-12z"/>
+      <circle cx="150" cy="118" r="8" fill="#8E1B2C"/>
+      <path fill="none" stroke="#FFF" stroke-width="10" stroke-linecap="round" d="M70 196 q58 26 116 0"/>
+    </svg>
+    <h1>Cardinals Promise <span class="ticker">$CARD</span></h1>
+    <p class="tagline">A fixed-supply token on Ethereum. 250 million. Ever.</p>
+  </div>
+
+  <h2>The promise</h2>
+  <!-- TODO: this is the most important section on the page. Replace with the
+       real story: what Cardinals Promise means, who is behind it, and what
+       holders are part of. Everything else here is mechanics. -->
+  <p class="todo">[Write the story here — what is the promise, who is making
+  it, and why does it matter? One honest paragraph beats ten pages of
+  buzzwords.]</p>
+
+  <h2>What's promised on-chain</h2>
+  <ul class="check">
+    <li><strong>250,000,000 CARD, fixed forever.</strong> The full supply is minted once at deployment — the contract has no mint function at all, so the supply can never change.</li>
+    <li><strong>Ownership renounced.</strong> Minting rights were destroyed at launch — no one, including the creators, can ever issue more.</li>
+    <li><strong>Liquidity locked for 12 months.</strong> The Uniswap LP tokens are time-locked; the pool cannot be withdrawn.</li>
+    <li><strong>No tricks in the contract.</strong> No transfer fees, no blocklist, no pause switch, no hidden hooks. Verified source, audited, Slither-clean.</li>
+  </ul>
+
+  <h2>Token</h2>
+  <table>
+    <tr><td>Contract</td><td><span class="addr todo">[deployed address goes here after launch]</span></td></tr>
+    <tr><td>Network</td><td>Ethereum mainnet</td></tr>
+    <tr><td>Symbol</td><td>CARD</td></tr>
+    <tr><td>Decimals</td><td>18</td></tr>
+    <tr><td>Max supply</td><td>250,000,000 (fixed)</td></tr>
+    <tr><td>Distribution</td><td>80% Uniswap pool (LP locked) · 20% treasury (address published)</td></tr>
+  </table>
+
+  <h2>How to get CARD</h2>
+  <div class="card">
+    <p>CARD trades on <a href="https://app.uniswap.org" rel="noopener">Uniswap</a>. Paste the contract address above into the token selector — never trust a search result or a link from strangers. Verify the address against this page and Etherscan every time.</p>
+  </div>
+
+  <p class="disclaimer">The only official pages for this token are on
+  thecardinalspromise.com — treat any other site claiming to be Cardinals
+  Promise as fake. CARD is a cryptocurrency; its price can go to zero.
+  Nothing on this page is financial advice, and no returns are promised or
+  implied. Do your own research and never spend what you cannot afford to
+  lose.</p>
+</main>
+</body>
+</html>
