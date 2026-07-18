@@ -190,13 +190,14 @@
 
       <div class="join-card" id="membershipCard">
         <div class="join-icon">🪶</div>
-        <div>
+        <div style="flex:1">
           <h3 id="membershipTitle">Membership</h3>
           <p class="muted-p" id="membershipCopy">Free while we're getting off the ground.</p>
           <label class="consent" id="activityConsentWrap" hidden>
             <input type="checkbox" id="activityConsent">
             <span>I'll stay active at least <strong>30 minutes a month</strong> so the flock stays warm.</span>
           </label>
+          <div id="planOptions"></div>
         </div>
       </div>
 
@@ -211,6 +212,7 @@
 
   <!-- ============ DISCOVER ============ -->
   <section class="view" id="view-discover" hidden>
+    <div class="nudge" id="activityNudge" hidden></div>
     <div class="deck-wrap">
       <div class="deck" id="deck"></div>
       <div class="deck-empty" id="deckEmpty" hidden>

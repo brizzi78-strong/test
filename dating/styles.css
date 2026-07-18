@@ -135,6 +135,31 @@ main { flex: 1; width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 2r
 .meter-bar span { display: block; height: 100%; background: var(--red); border-radius: 999px; transition: width .3s ease; }
 .meter-label { font-size: 0.82rem; color: var(--muted); margin-top: 0.35rem; }
 
+/* Plan options (men's pricing) */
+#planOptions { margin-top: 0.75rem; display: flex; flex-direction: column; gap: 0.6rem; }
+.plan-option { display: flex; gap: 0.6rem; align-items: flex-start; border: 1px solid var(--border); border-radius: 12px; padding: 0.75rem 0.9rem; cursor: pointer; }
+.plan-option input { width: auto; margin-top: 0.3rem; }
+.plan-option:has(input:checked) { border-color: var(--red); box-shadow: 0 0 0 1px var(--red) inset; }
+.plan-body { flex: 1; }
+.plan-head { display: flex; justify-content: space-between; align-items: baseline; gap: 0.5rem; }
+.plan-price { color: var(--red); font-weight: 700; font-size: 0.9rem; }
+.plan-perks { margin: 0.4rem 0 0; padding-left: 1.1rem; color: var(--muted); font-size: 0.88rem; }
+.plan-perks li { margin: 0.15rem 0; }
+.plan-perks.tight { margin-top: 0.5rem; }
+.pill-plus { display: inline-block; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.04em; color: #fff; background: var(--red); border-radius: 999px; padding: 0.15rem 0.5rem; }
+
+/* Pace status */
+.pace { font-weight: 600; font-size: 0.85rem; }
+.pace.ok { color: #1c7a3f; }
+.pace.ontrack { color: #1c7a3f; }
+.pace.behind { color: var(--red); }
+
+/* Activity nudge banner */
+.nudge { display: flex; align-items: center; gap: 0.75rem; background: var(--red-soft); border: 1px solid var(--red); color: var(--red-deep); border-radius: 12px; padding: 0.7rem 0.9rem; margin: 0 auto 1.25rem; max-width: 420px; font-size: 0.9rem; }
+@media (prefers-color-scheme: dark) { .nudge { color: var(--fg); } }
+.nudge span { flex: 1; }
+.nudge-x { border: 0; background: none; color: inherit; font-size: 1.3rem; line-height: 1; cursor: pointer; padding: 0; }
+
 /* ---------- Values ---------- */
 .values { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem; }
 .value { background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; text-align: center; }

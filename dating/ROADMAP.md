@@ -13,8 +13,14 @@ stay. Ordered roughly by priority. Items marked ✅ are in the demo now.
 ## Membership & safety model
 - **Free for women, with a 30-min/month activity pledge.** Women join free; in
   return they commit to at least 30 minutes of activity a month so the flock
-  stays warm and the marketplace stays alive. Activity is tracked and shown on
-  the profile. ✅ (men are free in this demo; monetizing the men's side is TBD)
+  stays warm and the marketplace stays alive. Activity is tracked, shown on the
+  profile with an on-track / behind-pace status, and a dismissible nudge
+  appears in Discover when someone falls behind pace. ✅
+- **Men's pricing: Free vs. Cardinal+.** Free gives the full flock but caps
+  likes at 10/day; running out triggers an upsell. Cardinal+ ($19.99/mo) is
+  unlimited likes, see-who-liked-you, and a daily take-back. Chosen at the
+  join gate, changeable on the profile. ✅ (prices illustrative; no real
+  billing — that needs a payments backend)
 - **Background check to sign up.** Every new member clears a confidential
   background check in the join gate before they can meet the flock. ✅
   (demo-simulated; real checks need a vendor + backend)

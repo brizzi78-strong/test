@@ -62,10 +62,20 @@
     return {
       profile: null, seen: [], liked: [], matches: [], messages: {}, blocked: [],
       privacy: { incognito: false, hideAge: false, discoverable: true },
-      activity: { month: "", seconds: 0 }
+      activity: { month: "", seconds: 0 },
+      likesToday: { date: "", count: 0 },
+      nudgeDismissed: ""
     };
   }
   const ACTIVITY_GOAL_MIN = 30;
+
+  // Men's pricing. Women join free (their commitment is the activity pledge).
+  const MEN_PLANS = {
+    free: { plan: "Free", price: "$0", likeLimit: 10,
+      perks: ["Browse the whole flock", "10 likes a day", "Match & message"] },
+    plus: { plan: "Cardinal+", price: "$19.99/mo", likeLimit: null,
+      perks: ["Unlimited likes", "See who already liked you", "One free “take-back” a day"] }
+  };
   function load() {
     const base = defaults();
     try {
@@ -75,7 +85,8 @@
         // Merge so older saved state gains new fields.
         return Object.assign(base, saved, {
           privacy: Object.assign(base.privacy, saved.privacy || {}),
-          activity: Object.assign(base.activity, saved.activity || {})
+          activity: Object.assign(base.activity, saved.activity || {}),
+          likesToday: Object.assign(base.likesToday, saved.likesToday || {})
         });
       }
     } catch (e) { /* ignore */ }
@@ -214,24 +225,40 @@
 
   function renderJoin() {
     const woman = isWoman();
-    $("#membershipTitle").textContent = woman ? "Membership — free for women" : "Membership";
+    $("#membershipTitle").textContent = woman ? "Membership — free for women" : "Choose your membership";
     $("#membershipCopy").textContent = woman
       ? "Cardinal is free for women. In return, we ask one thing: stay active."
-      : "Free while we're getting off the ground. No card, no catch in this demo.";
+      : "Women join free. Here's how it works for everyone else:";
     $("#activityConsentWrap").hidden = !woman;
+
+    const opts = $("#planOptions");
+    if (woman) {
+      opts.innerHTML = "";
+    } else {
+      opts.innerHTML = ["free", "plus"].map((key, i) => planOptionHtml(key, i === 0)).join("");
+    }
 
     const bg = $("#bgConsent"), act = $("#activityConsent"), run = $("#runJoin");
     bg.checked = false; act.checked = false;
     $("#joinStatus").hidden = true; $("#joinStatus").innerHTML = "";
     run.disabled = true; run.textContent = "Run check & join →";
 
-    const refresh = () => {
-      const ok = bg.checked && (!woman || act.checked);
-      run.disabled = !ok;
-    };
+    const refresh = () => { run.disabled = !(bg.checked && (!woman || act.checked)); };
     bg.onchange = refresh;
     act.onchange = refresh;
     run.onclick = runJoin;
+  }
+
+  function planOptionHtml(key, checked) {
+    const p = MEN_PLANS[key];
+    return `
+      <label class="plan-option">
+        <input type="radio" name="plan" value="${key}" ${checked ? "checked" : ""}>
+        <div class="plan-body">
+          <div class="plan-head"><strong>${p.plan}</strong><span class="plan-price">${p.price}</span></div>
+          <ul class="plan-perks">${p.perks.map(x => `<li>${escapeHtml(x)}</li>`).join("")}</ul>
+        </div>
+      </label>`;
   }
 
   function runJoin() {
@@ -244,9 +271,14 @@
     setTimeout(() => {
       const woman = isWoman();
       state.profile.background = { status: "cleared", ref: bgRef(), date: today() };
-      state.profile.membership = woman
-        ? { plan: "Free (women)", free: true, activityGoalMin: ACTIVITY_GOAL_MIN }
-        : { plan: "Free (demo)", free: true, activityGoalMin: 0 };
+      if (woman) {
+        state.profile.membership = { plan: "Free (women)", free: true, activityGoalMin: ACTIVITY_GOAL_MIN };
+      } else {
+        const sel = document.querySelector('input[name="plan"]:checked');
+        const key = sel ? sel.value : "free";
+        const plan = MEN_PLANS[key];
+        state.profile.membership = { plan: plan.plan, free: key === "free", price: plan.price, likeLimit: plan.likeLimit, activityGoalMin: 0 };
+      }
       ensureActivityMonth();
       save();
       status.className = "join-status ok";
@@ -276,6 +308,31 @@
     if (state.activity.month !== m) { state.activity.month = m; state.activity.seconds = 0; }
   }
 
+  /* ---- Activity pace + nudge (women's 30 min/month pledge) ---- */
+  function daysInMonth() {
+    const d = new Date();
+    return new Date(d.getFullYear(), d.getMonth() + 1, 0).getDate();
+  }
+  function computePace(goal) {
+    ensureActivityMonth();
+    const expected = goal * (new Date().getDate() / daysInMonth());
+    const mins = Math.floor((state.activity.seconds || 0) / 60);
+    return { goal, mins, expected, behind: mins < expected - 1, remaining: Math.max(0, goal - mins) };
+  }
+  function renderNudge() {
+    const el = $("#activityNudge");
+    if (!el) return;
+    const p = state.profile;
+    const goal = p && p.membership && p.membership.activityGoalMin;
+    if (!goal || state.nudgeDismissed === monthKey()) { el.hidden = true; return; }
+    const pace = computePace(goal);
+    if (!pace.behind) { el.hidden = true; return; }
+    el.hidden = false;
+    el.innerHTML = `<span>🪶 You're a little behind your ${goal}-min pledge this month — about ${pace.remaining} min to go to keep the flock warm.</span>
+      <button class="nudge-x" id="nudgeDismiss" aria-label="Dismiss">×</button>`;
+    $("#nudgeDismiss").addEventListener("click", () => { state.nudgeDismissed = monthKey(); save(); el.hidden = true; });
+  }
+
   /* ---- Activity tracking (for the free-for-women 30 min/month pledge) ---- */
   function tickActivity() {
     if (!state.profile) return;
@@ -293,6 +350,7 @@
   }
 
   function renderDeck() {
+    renderNudge();
     const deck = $("#deck");
     const empty = $("#deckEmpty");
     const controls = $("#deckControls");
@@ -359,7 +417,7 @@
     const up = () => {
       if (!dragging) return;
       dragging = false; card.classList.remove("dragging");
-      if (dx > 110) return fly(card, person, 1);
+      if (dx > 110) return attemptLike(card, person);
       if (dx < -110) return fly(card, person, -1);
       card.style.transform = ""; like.style.opacity = 0; nope.style.opacity = 0;
     };
@@ -371,7 +429,7 @@
     card.addEventListener("touchmove", e => move(e.touches[0].clientX, e.touches[0].clientY), { passive: true });
     card.addEventListener("touchend", up);
 
-    card._fly = (dir) => fly(card, person, dir);
+    card._act = (dir) => (dir > 0 ? attemptLike(card, person) : fly(card, person, -1));
   }
 
   function fly(card, person, dir) {
@@ -380,6 +438,60 @@
     card.style.opacity = "0";
     decide(person, dir > 0);
     setTimeout(renderDeck, 260);
+  }
+
+  /* ---- Daily like limit (men's free tier) ---- */
+  function attemptLike(card, person) {
+    if (canLike()) { noteLike(); fly(card, person, 1); }
+    else { resetCard(card); showUpsell(); }
+  }
+  function resetCard(card) {
+    card.style.transition = "transform .25s ease";
+    card.style.transform = "";
+    const l = card.querySelector(".stamp.like"), n = card.querySelector(".stamp.nope");
+    if (l) l.style.opacity = 0; if (n) n.style.opacity = 0;
+  }
+  function likeLimit() {
+    const m = state.profile && state.profile.membership;
+    return m && m.likeLimit ? m.likeLimit : null; // null = unlimited
+  }
+  function ensureLikesDay() {
+    const d = today();
+    if (state.likesToday.date !== d) { state.likesToday.date = d; state.likesToday.count = 0; }
+  }
+  function canLike() {
+    const lim = likeLimit();
+    if (!lim) return true;
+    ensureLikesDay();
+    return state.likesToday.count < lim;
+  }
+  function noteLike() {
+    if (!likeLimit()) return;
+    ensureLikesDay();
+    state.likesToday.count++;
+    save();
+  }
+  function showUpsell() {
+    const plus = MEN_PLANS.plus;
+    $("#modalCard").innerHTML = `
+      <div class="m-hero"><div class="m-avatar" style="background:var(--red)">♥</div></div>
+      <h2 style="color:var(--fg)">Out of likes for today</h2>
+      <p>Free members get ${MEN_PLANS.free.likeLimit} likes a day. Upgrade to ${plus.plan} for unlimited — and see who already liked you.</p>
+      <div class="modal-quote"><b>${plus.plan} · ${plus.price}</b>${plus.perks.join(" · ")}</div>
+      <div class="modal-actions" style="margin-top:1rem">
+        <button class="btn btn-ghost" id="laterUpsell">Maybe tomorrow</button>
+        <button class="btn btn-primary" id="doUpgrade">Upgrade to ${plus.plan}</button>
+      </div>`;
+    modal.hidden = false;
+    $("#laterUpsell").addEventListener("click", closeModal);
+    $("#doUpgrade").addEventListener("click", () => {
+      upgradeTo("plus"); closeModal(); renderDeck();
+    });
+  }
+  function upgradeTo(key) {
+    const plan = MEN_PLANS[key];
+    state.profile.membership = { plan: plan.plan, free: key === "free", price: plan.price, likeLimit: plan.likeLimit, activityGoalMin: 0 };
+    save();
   }
 
   function decide(person, liked) {
@@ -419,7 +531,7 @@
   function triggerTop(dir) {
     const cards = $$(".swipe-card");
     const top = cards[cards.length - 1];
-    if (top && top._fly) top._fly(dir);
+    if (top && top._act) top._act(dir);
   }
 
   document.addEventListener("keydown", (e) => {
@@ -638,6 +750,9 @@
       }
       save(); renderProfilePreview();
     });
+    $$("[data-plan]").forEach(b => b.addEventListener("click", () => {
+      upgradeTo(b.dataset.plan); renderProfilePreview();
+    }));
     $$("[data-toggle]").forEach(t => t.addEventListener("click", () => {
       const key = t.dataset.toggle;
       state.privacy[key] = !state.privacy[key];
@@ -657,18 +772,38 @@
     if (!m) {
       return `<p class="muted-p">${woman ? "Cardinal is free for women." : "Free while we're getting off the ground."}</p>`;
     }
-    let html = `<div class="verified-row"><span class="pill-free">FREE</span> ${escapeHtml(m.plan)}</div>`;
+    const badge = m.free ? `<span class="pill-free">FREE</span>` : `<span class="pill-plus">PLUS</span>`;
+    let html = `<div class="verified-row">${badge} ${escapeHtml(m.plan)}${m.price && !m.free ? ` · ${escapeHtml(m.price)}` : ""}</div>`;
+
+    // Women: activity pledge meter + pace status.
     if (m.activityGoalMin) {
-      ensureActivityMonth();
-      const mins = Math.floor((state.activity.seconds || 0) / 60);
-      const pct = Math.min(100, Math.round((mins / m.activityGoalMin) * 100));
-      const met = mins >= m.activityGoalMin;
+      const pace = computePace(m.activityGoalMin);
+      const pct = Math.min(100, Math.round((pace.mins / m.activityGoalMin) * 100));
+      const met = pace.mins >= m.activityGoalMin;
+      const status = met ? `<span class="pace ok">✓ Pledge met</span>`
+        : pace.behind ? `<span class="pace behind">Behind pace</span>`
+        : `<span class="pace ontrack">On track</span>`;
       html += `
-        <p class="muted-p" style="margin-top:0.6rem">Your pledge: <strong>${m.activityGoalMin} min of activity a month</strong> so the flock stays warm.</p>
+        <p class="muted-p" style="margin-top:0.6rem">Your pledge: <strong>${m.activityGoalMin} min of activity a month</strong> so the flock stays warm. ${status}</p>
         <div class="meter" id="activityMeter">
           <div class="meter-bar"><span style="width:${pct}%"></span></div>
-          <div class="meter-label">${met ? "✓ " : ""}${mins} / ${m.activityGoalMin} min this month</div>
+          <div class="meter-label">${met ? "✓ " : ""}${pace.mins} / ${m.activityGoalMin} min this month</div>
         </div>`;
+    }
+
+    // Men: show perks + upgrade/downgrade.
+    if (!woman) {
+      const key = m.free ? "free" : "plus";
+      const plan = MEN_PLANS[key];
+      html += `<ul class="plan-perks tight">${plan.perks.map(x => `<li>${escapeHtml(x)}</li>`).join("")}</ul>`;
+      if (m.free) {
+        const lim = MEN_PLANS.free.likeLimit;
+        ensureLikesDay();
+        html += `<div class="meter-label" style="margin:0.25rem 0 0.75rem">${Math.max(0, lim - state.likesToday.count)} of ${lim} likes left today</div>
+          <button class="btn btn-primary" data-plan="plus">Upgrade to ${MEN_PLANS.plus.plan} · ${MEN_PLANS.plus.price}</button>`;
+      } else {
+        html += `<button class="btn btn-ghost" data-plan="free">Switch to Free</button>`;
+      }
     }
     return html;
   }
