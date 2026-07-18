@@ -36,6 +36,22 @@ first."** Micro > mega here — a real 12k-follower junior out-converts a rented
 - Creator-discovery tools (e.g., an influencer-search platform) can filter by
   location + follower band + engagement if you want to scale the search.
 
+**High-yield channels found (verified as real sources — go here first):**
+- **NC State Student Creator Program** — the university already runs a vetted
+  cohort of student creators. Partner with it / recruit from it.
+  (university-communications.ncsu.edu → social media hub)
+- **Wake Forest student social team** — same idea; WFU recruits student creators
+  through University Marketing & Communications (umc.wfu.edu).
+- **Student newspapers' "campus influencer" features** name real creators with
+  handles — mine these: The Daily Tar Heel (UNC), The Duke Chronicle & Duke Mag
+  (Duke), Technician (NC State), Old Gold & Black (WFU).
+- **Micro-influencer directories** (e.g., Modash's "North Carolina micro
+  influencers under 25k") to filter by location + band + engagement.
+
+> Caution: some "[school] influencers" lists are *who students like to follow*,
+> not enrolled students — confirm the person is actually at that school (and
+> currently, not a recent grad) before adding them to the sheet.
+
 ---
 
 ## 2. The vetting scorecard (score each candidate 1–5)
