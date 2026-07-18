@@ -61,9 +61,11 @@
   function defaults() {
     return {
       profile: null, seen: [], liked: [], matches: [], messages: {}, blocked: [],
-      privacy: { incognito: false, hideAge: false, discoverable: true }
+      privacy: { incognito: false, hideAge: false, discoverable: true },
+      activity: { month: "", seconds: 0 }
     };
   }
+  const ACTIVITY_GOAL_MIN = 30;
   function load() {
     const base = defaults();
     try {
@@ -71,7 +73,10 @@
       if (raw) {
         const saved = JSON.parse(raw);
         // Merge so older saved state gains new fields.
-        return Object.assign(base, saved, { privacy: Object.assign(base.privacy, saved.privacy || {}) });
+        return Object.assign(base, saved, {
+          privacy: Object.assign(base.privacy, saved.privacy || {}),
+          activity: Object.assign(base.activity, saved.activity || {})
+        });
       }
     } catch (e) { /* ignore */ }
     return base;
@@ -79,12 +84,14 @@
   function save() { localStorage.setItem(STORE_KEY, JSON.stringify(state)); }
 
   /* ---- Navigation ---- */
-  const VIEWS = ["landing", "onboard", "discover", "matches", "profile"];
+  const VIEWS = ["landing", "onboard", "join", "discover", "matches", "profile"];
   function show(view) {
     VIEWS.forEach(v => { const el = $("#view-" + v); if (el) el.hidden = (v !== view); });
-    $("#appNav").hidden = !state.profile;
+    // Hide the app nav during the join gate — you're not a member yet.
+    $("#appNav").hidden = !state.profile || view === "join";
     $$(".nav-tab").forEach(t => t.classList.toggle("active", t.dataset.nav === view));
     window.scrollTo(0, 0);
+    if (view === "join") renderJoin();
     if (view === "discover") renderDeck();
     if (view === "matches") renderMatches();
     if (view === "profile") renderProfilePreview();
@@ -178,6 +185,7 @@
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     const data = new FormData(form);
+    const prev = state.profile || {};
     state.profile = {
       name: (data.get("name") || "").trim(),
       age: data.get("age"),
@@ -190,11 +198,94 @@
       bio: (data.get("bio") || "").trim() || "Here for the real thing.",
       tags: tags.slice(),
       prompt: data.get("prompt"),
-      promptAnswer: (data.get("promptAnswer") || "").trim() || "…ask me and find out."
+      promptAnswer: (data.get("promptAnswer") || "").trim() || "…ask me and find out.",
+      // Carry membership/verification/background across an edit.
+      verified: prev.verified || false,
+      background: prev.background || null,
+      membership: prev.membership || null
     };
     save();
-    show("discover");
+    // New members clear the join gate (background check + membership) first.
+    show(state.profile.background && state.profile.background.status === "cleared" ? "discover" : "join");
   });
+
+  /* ---- Join gate: background check + membership ---- */
+  function isWoman() { return state.profile && state.profile.gender === "Woman"; }
+
+  function renderJoin() {
+    const woman = isWoman();
+    $("#membershipTitle").textContent = woman ? "Membership — free for women" : "Membership";
+    $("#membershipCopy").textContent = woman
+      ? "Cardinal is free for women. In return, we ask one thing: stay active."
+      : "Free while we're getting off the ground. No card, no catch in this demo.";
+    $("#activityConsentWrap").hidden = !woman;
+
+    const bg = $("#bgConsent"), act = $("#activityConsent"), run = $("#runJoin");
+    bg.checked = false; act.checked = false;
+    $("#joinStatus").hidden = true; $("#joinStatus").innerHTML = "";
+    run.disabled = true; run.textContent = "Run check & join →";
+
+    const refresh = () => {
+      const ok = bg.checked && (!woman || act.checked);
+      run.disabled = !ok;
+    };
+    bg.onchange = refresh;
+    act.onchange = refresh;
+    run.onclick = runJoin;
+  }
+
+  function runJoin() {
+    const run = $("#runJoin"), status = $("#joinStatus");
+    run.disabled = true;
+    status.hidden = false;
+    status.className = "join-status working";
+    status.innerHTML = `<span class="spinner"></span> Running your background check…`;
+    // Simulated check.
+    setTimeout(() => {
+      const woman = isWoman();
+      state.profile.background = { status: "cleared", ref: bgRef(), date: today() };
+      state.profile.membership = woman
+        ? { plan: "Free (women)", free: true, activityGoalMin: ACTIVITY_GOAL_MIN }
+        : { plan: "Free (demo)", free: true, activityGoalMin: 0 };
+      ensureActivityMonth();
+      save();
+      status.className = "join-status ok";
+      status.innerHTML = `<strong>✓ You're cleared.</strong> Welcome to the flock.`;
+      run.textContent = "Enter Cardinal →";
+      run.disabled = false;
+      run.onclick = () => show("discover");
+    }, 1500);
+  }
+
+  function bgRef() {
+    // Stable-ish reference from the name; no randomness needed.
+    let h = 0; const s = (state.profile.name || "") + (state.activity.seconds || 0);
+    for (const ch of s) h = (h * 31 + ch.charCodeAt(0)) & 0xffffff;
+    return "BGC-" + h.toString(36).toUpperCase().padStart(5, "0").slice(0, 6);
+  }
+  function today() {
+    const d = new Date();
+    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+  }
+  function monthKey() {
+    const d = new Date();
+    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}`;
+  }
+  function ensureActivityMonth() {
+    const m = monthKey();
+    if (state.activity.month !== m) { state.activity.month = m; state.activity.seconds = 0; }
+  }
+
+  /* ---- Activity tracking (for the free-for-women 30 min/month pledge) ---- */
+  function tickActivity() {
+    if (!state.profile) return;
+    if (typeof document !== "undefined" && document.hidden) return;
+    ensureActivityMonth();
+    state.activity.seconds += 15;
+    save();
+    if (!$("#view-profile").hidden) renderActivityMeter();
+  }
+  setInterval(tickActivity, 15000);
 
   /* ---- Discover deck ---- */
   function remaining() {
@@ -504,6 +595,19 @@
       </div>
 
       <div class="profile-block safety">
+        <div class="lbl">Background check</div>
+        ${p.background && p.background.status === "cleared"
+          ? `<div class="verified-row"><span class="verified ok-green">✓</span> Cleared · ${escapeHtml(p.background.ref)} · ${escapeHtml(p.background.date)}</div>`
+          : `<p class="muted-p">Not on file. Every member clears a confidential background check.</p>
+             <button class="btn btn-primary" id="bgCheckBtn">Run background check</button>`}
+      </div>
+
+      <div class="profile-block safety">
+        <div class="lbl">Membership</div>
+        ${membershipHtml(p)}
+      </div>
+
+      <div class="profile-block safety">
         <div class="lbl">Privacy</div>
         ${toggleRow("incognito", "Incognito mode", "Only people you like can see your profile.", pv.incognito)}
         ${toggleRow("discoverable", "Show me in Discover", "Turn off to take a break without deleting anything.", pv.discoverable)}
@@ -523,6 +627,17 @@
 
     const vb = $("#verifyBtn");
     if (vb) vb.addEventListener("click", openVerify);
+    const bb = $("#bgCheckBtn");
+    if (bb) bb.addEventListener("click", () => {
+      const woman = isWoman();
+      state.profile.background = { status: "cleared", ref: bgRef(), date: today() };
+      if (!state.profile.membership) {
+        state.profile.membership = woman
+          ? { plan: "Free (women)", free: true, activityGoalMin: ACTIVITY_GOAL_MIN }
+          : { plan: "Free (demo)", free: true, activityGoalMin: 0 };
+      }
+      save(); renderProfilePreview();
+    });
     $$("[data-toggle]").forEach(t => t.addEventListener("click", () => {
       const key = t.dataset.toggle;
       state.privacy[key] = !state.privacy[key];
@@ -534,6 +649,42 @@
       state.seen = state.seen.filter(id => id !== b.dataset.unblock);
       save(); renderProfilePreview();
     }));
+  }
+
+  function membershipHtml(p) {
+    const m = p.membership;
+    const woman = p.gender === "Woman";
+    if (!m) {
+      return `<p class="muted-p">${woman ? "Cardinal is free for women." : "Free while we're getting off the ground."}</p>`;
+    }
+    let html = `<div class="verified-row"><span class="pill-free">FREE</span> ${escapeHtml(m.plan)}</div>`;
+    if (m.activityGoalMin) {
+      ensureActivityMonth();
+      const mins = Math.floor((state.activity.seconds || 0) / 60);
+      const pct = Math.min(100, Math.round((mins / m.activityGoalMin) * 100));
+      const met = mins >= m.activityGoalMin;
+      html += `
+        <p class="muted-p" style="margin-top:0.6rem">Your pledge: <strong>${m.activityGoalMin} min of activity a month</strong> so the flock stays warm.</p>
+        <div class="meter" id="activityMeter">
+          <div class="meter-bar"><span style="width:${pct}%"></span></div>
+          <div class="meter-label">${met ? "✓ " : ""}${mins} / ${m.activityGoalMin} min this month</div>
+        </div>`;
+    }
+    return html;
+  }
+
+  function renderActivityMeter() {
+    const p = state.profile;
+    if (!p || !p.membership || !p.membership.activityGoalMin) return;
+    const meter = $("#activityMeter");
+    if (!meter) return;
+    ensureActivityMonth();
+    const goal = p.membership.activityGoalMin;
+    const mins = Math.floor((state.activity.seconds || 0) / 60);
+    const pct = Math.min(100, Math.round((mins / goal) * 100));
+    const met = mins >= goal;
+    meter.querySelector(".meter-bar span").style.width = pct + "%";
+    meter.querySelector(".meter-label").textContent = `${met ? "✓ " : ""}${mins} / ${goal} min this month`;
   }
 
   function toggleRow(key, label, help, on) {

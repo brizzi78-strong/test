@@ -10,6 +10,15 @@ stay. Ordered roughly by priority. Items marked ✅ are in the demo now.
   follows. So early growth, curation, and features prioritize the women's
   experience; the flock and framing lead with that.
 
+## Membership & safety model
+- **Free for women, with a 30-min/month activity pledge.** Women join free; in
+  return they commit to at least 30 minutes of activity a month so the flock
+  stays warm and the marketplace stays alive. Activity is tracked and shown on
+  the profile. ✅ (men are free in this demo; monetizing the men's side is TBD)
+- **Background check to sign up.** Every new member clears a confidential
+  background check in the join gate before they can meet the flock. ✅
+  (demo-simulated; real checks need a vendor + backend)
+
 ## Guiding principle
 - **Know who you're here for.** You set your own gender and who you're seeking;
   intent is stated up front. The demo flock is women, ages college-age to 45. ✅

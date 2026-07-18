@@ -167,6 +167,48 @@
     </div>
   </section>
 
+  <!-- ============ JOIN (background check + membership) ============ -->
+  <section class="view" id="view-join" hidden>
+    <div class="panel">
+      <h2>One last step before you join</h2>
+      <p class="panel-sub">Cardinal is built to be safe. Everyone clears a
+        background check before they can meet the flock.</p>
+
+      <div class="join-card">
+        <div class="join-icon">🛡️</div>
+        <div>
+          <h3>Background check</h3>
+          <p class="muted-p">We run a confidential criminal background check on
+            every new member. It's never shown to other people — it just lets
+            you in. Nothing here leaves your browser; this demo simulates it.</p>
+          <label class="consent">
+            <input type="checkbox" id="bgConsent">
+            <span>I authorize Cardinal to run a background check.</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="join-card" id="membershipCard">
+        <div class="join-icon">🪶</div>
+        <div>
+          <h3 id="membershipTitle">Membership</h3>
+          <p class="muted-p" id="membershipCopy">Free while we're getting off the ground.</p>
+          <label class="consent" id="activityConsentWrap" hidden>
+            <input type="checkbox" id="activityConsent">
+            <span>I'll stay active at least <strong>30 minutes a month</strong> so the flock stays warm.</span>
+          </label>
+        </div>
+      </div>
+
+      <div id="joinStatus" class="join-status" hidden></div>
+
+      <div class="form-actions">
+        <button type="button" class="btn btn-ghost" data-nav="onboard">Back</button>
+        <button type="button" class="btn btn-primary" id="runJoin" disabled>Run check &amp; join →</button>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ DISCOVER ============ -->
   <section class="view" id="view-discover" hidden>
     <div class="deck-wrap">

@@ -114,6 +114,27 @@ main { flex: 1; width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 2r
 .report-reason { display: flex; align-items: center; gap: 0.6rem; background: var(--panel); border: 1px solid var(--border); border-radius: 11px; padding: 0.7rem 0.85rem; cursor: pointer; }
 .report-reason input { width: auto; }
 
+/* Join gate (background check + membership) */
+.join-card { display: flex; gap: 1rem; align-items: flex-start; background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 1.1rem 1.25rem; margin: 1rem 0; }
+.join-icon { font-size: 1.8rem; line-height: 1.2; }
+.join-card h3 { font-size: 1.1rem; margin-bottom: 0.25rem; }
+.consent { display: flex; gap: 0.6rem; align-items: flex-start; margin-top: 0.75rem; font-size: 0.92rem; cursor: pointer; }
+.consent input { width: auto; margin-top: 0.2rem; }
+.join-status { border-radius: 12px; padding: 0.85rem 1rem; margin: 0.5rem 0 1rem; font-size: 0.95rem; display: flex; align-items: center; gap: 0.6rem; }
+.join-status.working { background: var(--panel); color: var(--muted); }
+.join-status.ok { background: #e7f7ed; color: #1c7a3f; }
+@media (prefers-color-scheme: dark) { .join-status.ok { background: #12301d; color: #6ee7a0; } }
+.spinner { width: 18px; height: 18px; border-radius: 50%; border: 3px solid var(--border); border-top-color: var(--red); animation: spin 0.7s linear infinite; flex-shrink: 0; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Membership */
+.pill-free { display: inline-block; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.04em; color: #fff; background: #1c7a3f; border-radius: 999px; padding: 0.15rem 0.5rem; }
+.verified.ok-green { background: #1c7a3f; }
+.meter { margin-top: 0.6rem; }
+.meter-bar { height: 10px; background: var(--border); border-radius: 999px; overflow: hidden; }
+.meter-bar span { display: block; height: 100%; background: var(--red); border-radius: 999px; transition: width .3s ease; }
+.meter-label { font-size: 0.82rem; color: var(--muted); margin-top: 0.35rem; }
+
 /* ---------- Values ---------- */
 .values { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem; }
 .value { background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; text-align: center; }

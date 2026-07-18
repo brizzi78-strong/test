@@ -22,6 +22,10 @@ python3 -m http.server 8000
 - **Landing** — the pitch: one honest profile, thoughtful matches, no games.
 - **Onboarding** — build a profile (name, age, city, plumage color, bio,
   interests, and a conversation prompt).
+- **Join gate** — before meeting the flock, every new member clears a
+  (simulated) background check. Cardinal is **free for women**, who pledge at
+  least **30 minutes of activity a month** to keep the flock warm; that
+  activity is tracked and shown on the profile.
 - **Discover** — a swipeable card deck of a sample "flock." Drag left/right,
   use the pass / like buttons, or the ← / → arrow keys.
 - **Matches** — everyone who called back, with a detail view and a first
