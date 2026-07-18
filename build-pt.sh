@@ -21,4 +21,15 @@ pandoc "$SRC" -M title="A Promessa do Cardeal" -M author="Rob Brizzi" -M lang="p
   -o "$BASE.docx"
 python3 build-docx-pagenum.py "$BASE.docx" || true
 
+
+# Speechify / TTS text: strip copyright block (DIREITOS AUTORAIS -> PREFÁCIO)
+pandoc "$SRC" -t plain --wrap=none -o "$BASE.speech.full.txt"
+awk '
+  /^PREFÁCIO$/          { skip=0 }
+  /^DIREITOS AUTORAIS$/ { skip=1 }
+  skip==1 { if ($0 ~ /^Para / || $0 ~ /^Em memória de / || $0 ~ /^[0-9][0-9][0-9][0-9]/) print; next }
+  { print }
+' "$BASE.speech.full.txt" > "${BASE}_speechify.txt"
+rm -f "$BASE.speech.full.txt"
+
 echo "Built: $BASE.pdf  $BASE.epub  $BASE.docx"
