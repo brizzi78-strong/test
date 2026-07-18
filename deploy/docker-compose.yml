@@ -98,6 +98,25 @@ services:
     ports: ["3800:3800"]
     volumes: ["offboarding-data:/data"]
 
+  # Shared-identity layer: one canonical company/person that cascades into every
+  # service above and records the id map, so "one employee record" resolves
+  # across all of them. Reaches the services by their compose names.
+  orchestrator:
+    <<: *service
+    command: node orchestrator/src/index.ts
+    environment:
+      PORT: "3900"
+      ORCHESTRATOR_DB: /data/orchestrator.db
+    ports: ["3900:3900"]
+    volumes: ["orchestrator-data:/data"]
+    depends_on:
+      - directory
+      - hirecheck
+      - myhr
+      - training
+      - benefits
+      - timeoff
+
   # Public API entry point: authenticates every request and proxies to the
   # services above (reachable by their compose service names on the internal
   # network). Set GATEWAY_ADMIN_TOKEN in your environment to issue keys.
@@ -120,6 +139,7 @@ services:
       - directory
       - timeoff
       - offboarding
+      - orchestrator
 
   web:
     image: nginx:alpine
@@ -138,4 +158,5 @@ volumes:
   directory-data:
   timeoff-data:
   offboarding-data:
+  orchestrator-data:
   gateway-data:

@@ -25,6 +25,7 @@ That starts:
 | Employee Directory | http://localhost:3600 |
 | Time Off (PTO) | http://localhost:3700 |
 | Offboarding | http://localhost:3800 |
+| Orchestrator (shared identity) | http://localhost:3900 |
 
 Health-check any service at `GET /health`. Data persists in per-service named
 volumes (`docker volume ls`); remove them with `docker compose ... down -v`.
@@ -35,6 +36,12 @@ any service through `http://localhost:8080/<service>/...` (see
 development and debugging — in a real deployment you'd keep only the gateway (and
 website) public and drop the direct `ports:` mappings so traffic must be
 authenticated.
+
+The **orchestrator** is the shared-identity layer: register a company once and
+`POST /orchestrator/companies/:id/hire` a person, and it cascades the creation
+into Directory, HireCheck, MyHR, Training, Benefits, and Time Off — recording
+the id each service assigned, so one canonical record resolves everywhere (see
+`orchestrator/README.md`).
 
 ```bash
 export GATEWAY_ADMIN_TOKEN=change-me
