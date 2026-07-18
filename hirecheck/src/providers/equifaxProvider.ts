@@ -50,6 +50,7 @@ const DEFAULT_PRODUCTS: Record<CheckType, string> = {
   employment_verification: 'verification/employment',
   education_verification: 'verification/education',
   motor_vehicle_record: 'mvr',
+  drug_screen: 'drug-screen',
 };
 
 export class EquifaxProvider implements ScreeningProvider {

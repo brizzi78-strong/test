@@ -33,6 +33,7 @@ const RECORD_SUMMARIES: Record<CheckType, string> = {
   employment_verification: 'Reported employer could not confirm dates',
   education_verification: 'Degree could not be verified with institution',
   motor_vehicle_record: 'Moving violation on record within lookback period',
+  drug_screen: 'Non-negative drug screen result; MRO review required',
 };
 
 export class MockProvider implements ScreeningProvider {

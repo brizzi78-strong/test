@@ -144,7 +144,7 @@ Errors return `{ "error": { "code", "message" } }` with an appropriate status
 
 `ssn_trace`, `sex_offender_registry`, `global_watchlist`, `national_criminal`,
 `county_criminal`, `employment_verification`, `education_verification`,
-`motor_vehicle_record`.
+`motor_vehicle_record`, `drug_screen`.
 
 ### Example: a full run with `curl`
 
