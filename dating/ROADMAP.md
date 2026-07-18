@@ -18,10 +18,10 @@ stay. Ordered roughly by priority. Items marked ✅ are in the demo now.
   out for missing it. Treat it as a prototype of a possible mechanic, not a
   decision. ✅ (built as a demo)
 - **Men's pricing: Free vs. Cardinal+.** Free gives the full flock but caps
-  likes at 10/day; running out triggers an upsell. Cardinal+ ($19.99/mo) is
-  unlimited likes, see-who-liked-you, and a daily take-back. Chosen at the
-  join gate, changeable on the profile. ✅ (prices illustrative; no real
-  billing — that needs a payments backend)
+  likes at 10/day; running out triggers an upsell. **Cardinal+ is $19.99/mo**
+  (confirmed price) — unlimited likes, see-who-liked-you, and a daily take-back.
+  Chosen at the join gate, changeable on the profile. ✅ (price decided; no real
+  billing yet — that needs a payments backend)
 - **Background check to sign up.** Every new member clears a confidential
   background check in the join gate before they can meet the flock. ✅
   (demo-simulated; real checks need a vendor + backend)
@@ -47,8 +47,10 @@ stay. Ordered roughly by priority. Items marked ✅ are in the demo now.
 2. **Slow / quality mode.** A few thoughtful matches a day, not infinite
    swiping — a curated flock. ✅ (small daily deck)
 3. **Better icebreakers.** Every match opens on a shared prompt or question. ✅
-4. **Community & events.** Local meetups, group activities, shared-interest
-   spaces — dating that isn't only one-on-one DMs. *(planned)*
+4. **Community & events.** Monthly in-person events (speed dating, group hike,
+   mixer, brunch) with RSVP, shown on an Events tab. Free for women; Cardinal+
+   men get priority RSVP. ✅ (sample events generated monthly; real ticketing/
+   venues need a backend)
 
 ## Notes
 This is a client-side demo, so "verification," "events," and real accounts are

@@ -28,6 +28,7 @@
   <nav class="nav-links" id="appNav" hidden>
     <button class="nav-tab" data-nav="discover">Discover</button>
     <button class="nav-tab" data-nav="matches">Matches <span class="badge" id="matchBadge" hidden>0</span></button>
+    <button class="nav-tab" data-nav="events">Events</button>
     <button class="nav-tab" data-nav="profile">Profile</button>
     <button class="nav-tab ghost" id="signOut">Sign out</button>
   </nav>
@@ -241,6 +242,17 @@
         <div class="value-icon">🪺</div>
         <p>No matches yet. Head to <button class="linklike" data-nav="discover">Discover</button> and start calling.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- ============ EVENTS ============ -->
+  <section class="view" id="view-events" hidden>
+    <div class="panel">
+      <h2>Monthly events</h2>
+      <p class="panel-sub">Cardinal isn't only for your phone. Once a month the
+        flock meets in person — low-key, safe, and easy to say yes to. Free for
+        women; Cardinal+ members get priority RSVP.</p>
+      <div class="event-list" id="eventList"></div>
     </div>
   </section>
 

@@ -30,6 +30,8 @@ python3 -m http.server 8000
   use the pass / like buttons, or the ← / → arrow keys.
 - **Matches** — everyone who called back, with a detail view and a first
   message.
+- **Events** — monthly in-person events (speed dating, group hike, mixer,
+  brunch) with RSVP that persists. Free for women; Cardinal+ men get priority.
 - **Profile** — a preview of what the flock sees, editable any time, plus a
   **Safety & privacy** section: photo-verification badge, block/report (the ⋯
   on a card or "Report / block" in a match), and privacy toggles (incognito,

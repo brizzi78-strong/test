@@ -64,7 +64,7 @@
       privacy: { incognito: false, hideAge: false, discoverable: true },
       activity: { month: "", seconds: 0 },
       likesToday: { date: "", count: 0 },
-      nudgeDismissed: ""
+      nudgeDismissed: "", rsvps: []
     };
   }
   const ACTIVITY_GOAL_MIN = 30;
@@ -95,7 +95,7 @@
   function save() { localStorage.setItem(STORE_KEY, JSON.stringify(state)); }
 
   /* ---- Navigation ---- */
-  const VIEWS = ["landing", "onboard", "join", "discover", "matches", "profile"];
+  const VIEWS = ["landing", "onboard", "join", "discover", "matches", "events", "profile"];
   function show(view) {
     VIEWS.forEach(v => { const el = $("#view-" + v); if (el) el.hidden = (v !== view); });
     // Hide the app nav during the join gate — you're not a member yet.
@@ -105,6 +105,7 @@
     if (view === "join") renderJoin();
     if (view === "discover") renderDeck();
     if (view === "matches") renderMatches();
+    if (view === "events") renderEvents();
     if (view === "profile") renderProfilePreview();
     updateBadge();
   }
@@ -669,6 +670,79 @@
     const p = FLOCK.find(x => x.id === btn.dataset.report);
     if (p) openReport(p);
   });
+
+  /* ---- Monthly events ---- */
+  const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  const DAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  const EVENT_THEMES = [
+    { key: "speed", emoji: "⏱️", title: "Cardinal Speed Dating", type: "Speed dating",
+      desc: "Ten five-minute conversations, one relaxed evening. We run the rotation; you just show up." },
+    { key: "hike", emoji: "🥾", title: "Sunrise Flock Hike", type: "Outdoors",
+      desc: "An easy group hike with coffee after. Meet people shoulder-to-shoulder, not screen-to-screen." },
+    { key: "mixer", emoji: "🍷", title: "Winter Warmers Mixer", type: "Mixer",
+      desc: "Low-key drinks at a cozy spot. Name tags optional, conversation prompts provided." },
+    { key: "brunch", emoji: "🥞", title: "Slow Sunday Brunch", type: "Brunch",
+      desc: "A long table, good pancakes, and no rush. Bring your appetite and an open mind." }
+  ];
+  const EVENT_CITIES = ["Raleigh, NC", "Asheville, NC", "Charlotte, NC", "Durham, NC"];
+
+  function thirdSaturday(year, monthIndex) {
+    const firstDow = new Date(year, monthIndex, 1).getDay();
+    const firstSat = 1 + ((6 - firstDow + 7) % 7);
+    return new Date(year, monthIndex, firstSat + 14);
+  }
+  function generateEvents() {
+    const now = new Date();
+    const out = [];
+    for (let n = 0; n < 4; n++) {
+      const m = now.getMonth() + n;
+      const year = now.getFullYear() + Math.floor(m / 12);
+      const monthIndex = ((m % 12) + 12) % 12;
+      const date = thirdSaturday(year, monthIndex);
+      const theme = EVENT_THEMES[n % EVENT_THEMES.length];
+      out.push(Object.assign({
+        id: `${year}-${monthIndex + 1}-${theme.key}`,
+        date,
+        city: EVENT_CITIES[n % EVENT_CITIES.length]
+      }, theme));
+    }
+    return out;
+  }
+  function attendeeBase(ev) {
+    let h = 0;
+    for (const ch of ev.id) h = (h * 31 + ch.charCodeAt(0)) & 0xffff;
+    return 24 + (h % 40); // 24–63
+  }
+  function renderEvents() {
+    const events = generateEvents();
+    $("#eventList").innerHTML = events.map(ev => {
+      const going = state.rsvps.includes(ev.id);
+      const count = attendeeBase(ev) + (going ? 1 : 0);
+      const label = `${DAYS[ev.date.getDay()]}, ${MONTHS[ev.date.getMonth()]} ${ev.date.getDate()}`;
+      return `
+        <div class="event-card">
+          <div class="event-date">
+            <span class="ed-mon">${MONTHS[ev.date.getMonth()]}</span>
+            <span class="ed-day">${ev.date.getDate()}</span>
+          </div>
+          <div class="event-body">
+            <div class="event-top"><span class="event-emoji">${ev.emoji}</span><h3>${escapeHtml(ev.title)}</h3></div>
+            <div class="event-meta"><span class="type-pill">${escapeHtml(ev.type)}</span> · ${escapeHtml(label)} · ${escapeHtml(ev.city)}</div>
+            <p class="muted-p">${escapeHtml(ev.desc)}</p>
+            <div class="event-foot">
+              <span class="going-count">${count} going</span>
+              <button class="btn ${going ? "btn-ghost" : "btn-primary"}" data-rsvp="${ev.id}">${going ? "Going ✓" : "RSVP"}</button>
+            </div>
+          </div>
+        </div>`;
+    }).join("");
+    $$("[data-rsvp]").forEach(b => b.addEventListener("click", () => {
+      const id = b.dataset.rsvp;
+      if (state.rsvps.includes(id)) state.rsvps = state.rsvps.filter(x => x !== id);
+      else state.rsvps.push(id);
+      save(); renderEvents();
+    }));
+  }
 
   /* ---- Profile preview ---- */
   function renderProfilePreview() {
