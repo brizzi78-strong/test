@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Build the KDP full-wrap paperback cover for The Little Cardinal's Promise.
 
-8.5 x 8.5" trim, 40 interior pages on premium color paper:
-  spine  = 40 * 0.002347"           = 0.0939"
+8.5 x 8.5" trim, 44 interior pages on premium color paper:
+  spine  = 44 * 0.002347"           = 0.1033"
   width  = 0.125 + 8.5 + spine + 8.5 + 0.125 = 17.3439"
   height = 8.5 + 2 * 0.125          = 8.75"
 Rendered at 300 DPI. KDP stamps its barcode on the lower-right of the
@@ -21,7 +21,7 @@ OUT_DIR = ROOT / "print"
 DPI = 300
 BLEED = int(0.125 * DPI)
 TRIM = int(8.5 * DPI)
-SPINE = int(round(40 * 0.002347 * DPI))       # 28 px
+SPINE = int(round(44 * 0.002347 * DPI))       # 31 px
 W = BLEED + TRIM + SPINE + TRIM + BLEED
 H = int(8.75 * DPI)
 
@@ -80,7 +80,7 @@ def main():
         y += int(60 * 1.6)
     # small painted cardinal below the blurb
     from paint_pending_art import cardinal
-    cardinal(d, back_cx, int(H * 0.62), 70, facing=1)
+    cardinal(img, back_cx, int(H * 0.62), 70, facing=1)
     d.text((back_cx, int(H * 0.72)), "BRIZZI HOUSE PUBLISHING",
            font=font("LiberationSerif-Regular.ttf", 48), fill=BROWN, anchor="mm")
     # barcode keep-clear zone: 2 x 1.2 in, 0.25 in from trim edges

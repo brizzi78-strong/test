@@ -27,6 +27,16 @@ For the ones watching the windows.
 
 ![Wedding day – Dad in a tux, the bride, and young Rob as ring bearer](illustrations/wedding-day.jpeg)
 
+## [New opening spread – just us]
+
+At first, it was just the two of them.
+Rob and Mama.
+Mama and Rob.
+
+> **[Illustration: Mama holding young Rob – it was just us, before Dad]**
+
+![Mama holding young Rob](illustrations/mama-and-young-rob.jpeg)
+
 ## [Pages 5–6]
 
 Rob's dad was the kind of dad
@@ -56,11 +66,9 @@ A hundred of them, then a hundred more.
 "One more," Dad always said,
 kneeling in the grass with that proud smile.
 
-> **[Illustration: Doorway serious talk (red shirt boy + open-palm Dad – IMG_3927) + small Yankees cap inset]**
+> **[Illustration: Doorway serious talk (red shirt boy + open-palm Dad – IMG_3927)]**
 
 ![Dad kneeling with an open palm, talking with Rob in the doorway](illustrations/doorway-talk.jpeg)
-
-![Inset: Dad in his Yankees cap](illustrations/dad-yankees-cap.jpeg)
 
 ## [Pages 11–12]
 
@@ -71,6 +79,17 @@ Dad made one promise, and only one.
 > **[Illustration: Mirror hug – boy in blue coat, Dad beaming behind (IMG_3925)]**
 
 ![Rob in the big blue coat, Dad beaming behind him in the mirror](illustrations/mirror-hug.jpeg)
+
+## [Added spread – California]
+
+When Rob grew up, he moved far away —
+all the way to California.
+Dad stayed. Dad watched. Dad waited.
+Promises don't mind the miles.
+
+> **[Illustration: Dad in his cap, watching and waiting (logo blurred)]**
+
+![Dad in his cap, waiting](illustrations/print/dad-yankees-cap.jpeg)
 
 ## [Added spread – torn jacket memory]
 
@@ -157,7 +176,7 @@ and her eyes went shiny.
 
 > **[Illustration: Mama kneeling with Rob at window (use uploaded family/mama-style images)]**
 
-![Mama holding young Rob as he points toward the window](illustrations/mama-and-young-rob.jpeg)
+![Stand-in art: Mama kneeling with Rob at the window](illustrations/pending/mama-at-window.jpeg)
 
 ## [Pages 27–28]
 
@@ -220,7 +239,7 @@ Red keeps its promises.
 
 > **[Illustration Prompt: "Hopeful ending spread: bright red cardinal flying across beautiful pink and gold sunset sky above dark house silhouettes, warm glowing light, feeling of continued love and promise kept, full-bleed emotional illustration matching glowing cardinal style"]**
 
-![Stand-in art: the cardinal across the sunset sky](illustrations/pending/cardinal-sunset.jpeg)
+![Closing image: Rob and the bird, close (crop from the car-window art)](illustrations/print/cardinal-closeup.jpeg)
 
 ## [Page 35 – Author Note]
 

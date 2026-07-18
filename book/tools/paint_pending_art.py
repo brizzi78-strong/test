@@ -719,6 +719,82 @@ def sunset():
     finish(img, "cardinal-sunset", vignette=0.08)
 
 
+def mama_at_window():
+    """Mama kneeling beside Rob at the window, the cardinal outside."""
+    img = canvas()
+    vgrad(img, (242, 230, 208), (227, 210, 181), 0, u(1980))
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, u(1980), S, S], fill=(197, 155, 107))
+    d.line([(0, u(1980)), (S, u(1980))], fill=(168, 128, 84), width=u(12))
+    glow(img, u(2140), u(220), u(420), color=(255, 226, 170), alpha=60)
+    d = ImageDraw.Draw(img)
+    # window
+    wx0, wy0, wx1, wy1 = u(520), u(300), u(1880), u(1380)
+    d.rectangle([wx0 - u(56), wy0 - u(56), wx1 + u(56), wy1 + u(56)],
+                fill=(139, 121, 97))
+    d.rectangle([wx0 - u(30), wy0 - u(30), wx1 + u(30), wy1 + u(30)],
+                fill=(120, 103, 82))
+    win = Image.new("RGB", (wx1 - wx0, wy1 - wy0), (212, 222, 232))
+    vgrad(win, (198, 210, 224), (234, 240, 246))
+    wd = ImageDraw.Draw(win)
+    wd.ellipse([-u(150), (wy1 - wy0) - u(280), (wx1 - wx0) + u(150),
+                (wy1 - wy0) + u(200)], fill=SNOW)
+    snowfall(win, 30, seed=31, rmin=4, rmax=9)
+    img.paste(win, (wx0, wy0))
+    # the cardinal on the outer sill, left pane, in clear view
+    csx = wx0 + int((wx1 - wx0) * 0.15)
+    glow(img, csx, wy1 - u(240), u(280), alpha=105)
+    cardinal(img, csx, wy1 - u(240), u(110), facing=1, ground=wy1 - u(40))
+    d = ImageDraw.Draw(img)
+    d.line([((wx0 + wx1) // 2, wy0), ((wx0 + wx1) // 2, wy1)],
+           fill=(120, 103, 82), width=u(26))
+    d.rectangle([wx0 - u(66), wy1 + u(26), wx1 + u(66), wy1 + u(74)], fill=SNOW)
+    # curtains
+    for cx0 in (wx0 - u(140), wx1 + u(40)):
+        d.rounded_rectangle([cx0, wy0 - u(80), cx0 + u(100), wy1 + u(90)], u(40),
+                            fill=(196, 120, 94))
+        d.ellipse([cx0 + u(18), wy1 - u(180), cx0 + u(82), wy1 - u(116)],
+                  fill=(160, 92, 70))
+    # Rob, back view at the left, pointing up at the bird
+    bx, by = u(1150), u(1720)
+    shadow(img, [bx - u(230), u(2290), bx + u(230), u(2380)], blur=u(30), alpha=50)
+    d = ImageDraw.Draw(img)
+    d.rounded_rectangle([bx - u(190), by - u(160), bx + u(190), u(2330)], u(110),
+                        fill=(182, 69, 58))
+    # pointing arm toward the cardinal
+    d.line([(bx - u(80), by - u(60)), (bx - u(330), by - u(400))],
+           fill=(182, 69, 58), width=u(90))
+    d.ellipse([bx - u(385), by - u(475), bx - u(290), by - u(380)],
+              fill=(240, 194, 154))
+    d.ellipse([bx - u(140), by - u(440), bx + u(140), by - u(140)],
+              fill=(240, 194, 154))
+    d.ellipse([bx - u(150), by - u(465), bx + u(150), by - u(255)], fill=(48, 40, 34))
+    d.ellipse([bx - u(55), by - u(470), bx + u(165), by - u(310)], fill=(48, 40, 34))
+    # Mama kneeling close beside him, back view, arm around his shoulders
+    mx, my = u(1680), u(1430)
+    shadow(img, [mx - u(330), u(2290), mx + u(330), u(2390)], blur=u(30), alpha=50)
+    d = ImageDraw.Draw(img)
+    d.rounded_rectangle([mx - u(300), my + u(560), mx + u(300), u(2340)], u(120),
+                        fill=(112, 128, 168))
+    d.rounded_rectangle([mx - u(280), my - u(60), mx + u(280), u(2160)], u(160),
+                        fill=(236, 232, 224))
+    # arm reaching around Rob's shoulders
+    d.line([(mx - u(180), my + u(160)), (bx + u(60), by - u(310))],
+           fill=(236, 232, 224), width=u(110))
+    d.ellipse([bx - u(20), by - u(380), bx + u(120), by - u(240)],
+              fill=(238, 190, 150))
+    # head fully wrapped in soft blonde waves (back view)
+    d.ellipse([mx - u(200), my - u(500), mx + u(200), my - u(40)],
+              fill=(224, 186, 122))
+    d.ellipse([mx - u(240), my - u(330), mx - u(80), my + u(60)],
+              fill=(224, 186, 122))
+    d.ellipse([mx + u(80), my - u(330), mx + u(240), my + u(60)],
+              fill=(224, 186, 122))
+    d.ellipse([mx - u(130), my - u(560), mx + u(130), my - u(380)],
+              fill=(212, 172, 108))
+    finish(img, "mama-at-window")
+
+
 if __name__ == "__main__":
     snowy_truck()
     empty_bleachers()
@@ -728,4 +804,5 @@ if __name__ == "__main__":
     three_panel()
     tree_branch()
     sunset()
+    mama_at_window()
     print("done")

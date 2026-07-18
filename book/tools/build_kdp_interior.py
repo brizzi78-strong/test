@@ -186,6 +186,9 @@ def build_pages():
     add(img)
 
     story = [
+        (None, [["At first, it was just the two of them."],
+                ["Rob and Mama.", "Mama and Rob."]],
+         ("art", ILL / "mama-and-young-rob.jpeg", None)),
         (None, [["Rob's dad was the kind of dad", "who showed up —",
                  "in his blue shirt, arms open,", "every single time."]],
          ("art", ILL / "print" / "lap-hug.jpeg", None)),
@@ -195,11 +198,16 @@ def build_pages():
          ("art", ILL / "print" / "bleachers-brizzi.jpeg", None)),
         (None, [["Saturdays were for fly balls.", "A hundred of them, then a hundred more."],
                 ["“One more,” Dad always said,", "kneeling in the grass with that proud smile."]],
-         ("art", ILL / "print" / "doorway-talk.jpeg", ILL / "print" / "dad-yankees-cap.jpeg")),
+         ("art", ILL / "print" / "doorway-talk.jpeg", None)),
         (None, [["Dad made one promise, and only one."],
                 ["“No matter what,” he said, kneeling with the ball,",
                  "“I will always show up for you.”"]],
          ("art", ILL / "print" / "mirror-hug.jpeg", None)),
+        (None, [["When Rob grew up, he moved far away —",
+                 "all the way to California."],
+                ["Dad stayed. Dad watched. Dad waited."],
+                ["Promises don't mind the miles."]],
+         ("art", ILL / "print" / "dad-yankees-cap.jpeg", None)),
         (None, [["Dad's old blue shirt was too big…", "but Rob wore it anyway."],
                 ["It still smelled like Saturday mornings."]],
          ("art", ILL / "torn-jacket.jpeg", None)),
@@ -227,7 +235,7 @@ def build_pages():
                 ["Mama knelt beside him,", "and her eyes went shiny."],
                 ["“You know what some people say about red birds,” she said.",
                  "“They say a cardinal is how love shows up… after.”"]],
-         ("art", ILL / "mama-and-young-rob.jpeg", None)),
+         ("art", ILL / "pending" / "mama-at-window.jpeg", None)),
         (None, [["Rob put his hand against the cold glass.",
                  "“You came,” he said, eyes shining.", "“You kept your promise.”"],
                 ["The cardinal tipped its head —", "the exact way Dad did",
@@ -248,7 +256,7 @@ def build_pages():
         (None, [["Now, when the world feels too quiet…", "watch the windows.",
                  "Watch the fences and the branches and the snow."],
                 ["Red keeps its promises."]],
-         ("pending", "cardinal-sunset")),
+         ("art", ILL / "print" / "cardinal-closeup.jpeg", None)),
     ]
 
     pending_count = 0
