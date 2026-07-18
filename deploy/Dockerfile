@@ -20,6 +20,7 @@ COPY directory ./directory
 COPY timeoff ./timeoff
 COPY offboarding ./offboarding
 COPY orchestrator ./orchestrator
+COPY portal ./portal
 COPY gateway ./gateway
 
 # Durable SQLite databases live here; mounted as a volume per service.

@@ -14,6 +14,7 @@ That starts:
 
 | Service | URL |
 |---|---|
+| **Admin portal** (the usable HR app) | http://localhost:4000 |
 | **API gateway** (authenticated entry) | http://localhost:8080 |
 | Website (nginx) | http://localhost:8081 |
 | Recruiting | http://localhost:3200 |
@@ -42,6 +43,12 @@ The **orchestrator** is the shared-identity layer: register a company once and
 into Directory, HireCheck, MyHR, Training, Benefits, and Time Off — recording
 the id each service assigned, so one canonical record resolves everywhere (see
 `orchestrator/README.md`).
+
+The **admin portal** at http://localhost:4000 is the human-facing app: a
+single-page HR console (register a company, hire employees, click an employee to
+see that one record resolve into every service) backed by a
+backend-for-frontend that proxies to the orchestrator server-side — so no
+credentials ever reach the browser (see `portal/README.md`).
 
 ```bash
 export GATEWAY_ADMIN_TOKEN=change-me

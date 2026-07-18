@@ -1,5 +1,6 @@
-# Run the whole Cardinal HR platform — all seven services plus the static
-# website — with one command:
+# Run the whole Cardinal HR platform — every service, the orchestrator, the
+# admin portal, the gateway, and the static marketing website — with one
+# command:
 #
 #   docker compose -f deploy/docker-compose.yml up --build
 #
@@ -116,6 +117,20 @@ services:
       - training
       - benefits
       - timeoff
+
+  # Human-facing admin console: a single-page HR UI plus a backend-for-frontend
+  # that proxies to the orchestrator server-side (so no credentials reach the
+  # browser). Register a company, hire employees, and watch one record resolve
+  # into every service. Reachable at http://localhost:4000.
+  portal:
+    <<: *service
+    command: node portal/src/index.ts
+    environment:
+      PORT: "4000"
+      ORCHESTRATOR_URL: http://orchestrator:3900
+    ports: ["4000:4000"]
+    depends_on:
+      - orchestrator
 
   # Public API entry point: authenticates every request and proxies to the
   # services above (reachable by their compose service names on the internal
