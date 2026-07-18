@@ -43,3 +43,4 @@ xcuserdata/
 /coverage
 /.gas-snapshot
 /snapshots
+__pycache__/
