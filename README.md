@@ -8,6 +8,7 @@ This repository holds several projects. Jump to the one you need:
 | **The Cardinal's Promise / Toolkit book** | `cardinals-promise/` | Manuscript, samples, and marketing for the book |
 | **CARD Token — Foundry/Hardhat skeleton** | `contracts/`, `test/`, `verification/` | Fixed-supply ERC-20 skeleton ([below](#card-token--foundryhardhat-skeleton)) |
 | **HireCheck — background screening service** | `hirecheck/` | Standalone service for running FCRA-aware pre-employment background checks on new hires (see `hirecheck/README.md`) |
+| **MyHR — new-hire paperwork service** | `myhr/` | Standalone onboarding service: e-signed new-hire forms (I-9, W-4, consent, etc.) with HR review and an audit trail (see `myhr/README.md`) |
 
 ---
 
