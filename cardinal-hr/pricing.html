@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cardinal HR — Pricing</title>
+<meta name="description" content="Cardinal HR is priced per employee, per month. One platform for Recruiting, Screening, onboarding paperwork, Training, Benefits, Payroll, and your Employee Directory. Background checks billed per check.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23A31B33'/%3E%3Ctext x='16' y='23' font-family='system-ui,sans-serif' font-size='20' font-weight='900' text-anchor='middle' fill='white'%3EC%3C/text%3E%3C/svg%3E">
+<style>
+  :root {
+    --paper: #F7F2E6;
+    --surface: #FFFDF7;
+    --surface-2: #EFE7D3;
+    --ink: #17233F;
+    --muted: #6B6350;
+    --line: #E2D9C3;
+    --brand: #A31B33;
+    --brand-strong: #7E1226;
+    --navy: #17233F;
+    --gold: #B4862A;
+    --good: #2E7D4F;
+    --warn: #B0771C;
+    --crit: #B23A3A;
+    --shadow: 0 1px 2px rgba(23,35,63,.07), 0 10px 26px -14px rgba(23,35,63,.24);
+    --shadow-lift: 0 2px 4px rgba(23,35,63,.08), 0 22px 48px -20px rgba(163,27,51,.38);
+
+    --font-display: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-body: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-mono: ui-monospace, "SF Mono", "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
+
+    --maxw: 1080px;
+    --step-0: clamp(.82rem, .8rem + .1vw, .9rem);
+    --step-1: clamp(1rem, .96rem + .2vw, 1.1rem);
+    --step-2: clamp(1.3rem, 1.2rem + .5vw, 1.6rem);
+    --step-3: clamp(1.8rem, 1.5rem + 1.4vw, 2.6rem);
+    --step-4: clamp(2.6rem, 2rem + 3vw, 4.4rem);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #101627;
+      --surface: #172033;
+      --surface-2: #1F2A42;
+      --ink: #F3EEE1;
+      --muted: #A9A28F;
+      --line: #2B3855;
+      --brand: #E2586B;
+      --brand-strong: #F27A8B;
+      --navy: #A9B6D6;
+      --gold: #D8B15A;
+      --good: #4FBE86;
+      --warn: #D6A24A;
+      --crit: #E07B6E;
+      --shadow: 0 1px 2px rgba(0,0,0,.45), 0 12px 32px -14px rgba(0,0,0,.65);
+      --shadow-lift: 0 2px 4px rgba(0,0,0,.5), 0 24px 52px -20px rgba(226,88,107,.5);
+    }
+  }
+  :root[data-theme="light"] {
+    --paper: #F7F2E6; --surface: #FFFDF7; --surface-2: #EFE7D3; --ink: #17233F;
+    --muted: #6B6350; --line: #E2D9C3; --brand: #A31B33; --brand-strong: #7E1226;
+    --navy: #17233F; --gold: #B4862A; --good: #2E7D4F; --warn: #B0771C; --crit: #B23A3A;
+    --shadow: 0 1px 2px rgba(23,35,63,.07), 0 10px 26px -14px rgba(23,35,63,.24);
+    --shadow-lift: 0 2px 4px rgba(23,35,63,.08), 0 22px 48px -20px rgba(163,27,51,.38);
+  }
+  :root[data-theme="dark"] {
+    --paper: #101627; --surface: #172033; --surface-2: #1F2A42; --ink: #F3EEE1;
+    --muted: #A9A28F; --line: #2B3855; --brand: #E2586B; --brand-strong: #F27A8B;
+    --navy: #A9B6D6; --gold: #D8B15A; --good: #4FBE86; --warn: #D6A24A; --crit: #E07B6E;
+    --shadow: 0 1px 2px rgba(0,0,0,.45), 0 12px 32px -14px rgba(0,0,0,.65);
+    --shadow-lift: 0 2px 4px rgba(0,0,0,.5), 0 24px 52px -20px rgba(226,88,107,.5);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: var(--step-1);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: var(--maxw); margin-inline: auto; padding-inline: clamp(1.1rem, 4vw, 2.2rem); }
+
+  a { color: var(--brand); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  :focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; border-radius: 4px; }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: .72rem;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--brand);
+    margin: 0;
+  }
+
+  /* ---- top bar ---- */
+  header.bar {
+    position: sticky; top: 0; z-index: 20;
+    backdrop-filter: saturate(1.4) blur(8px);
+    background: color-mix(in srgb, var(--paper) 82%, transparent);
+    border-bottom: 1px solid var(--line);
+  }
+  .bar-inner { display: flex; align-items: center; justify-content: space-between; height: 62px; }
+  .brand { display: flex; align-items: center; gap: .6rem; font-weight: 800; letter-spacing: -.02em; font-size: 1.15rem; }
+  .brand .glyph {
+    width: 26px; height: 26px; border-radius: 7px; display: grid; place-items: center;
+    background: var(--brand); color: #fff; font-size: 15px; font-weight: 900;
+  }
+  :root[data-theme="dark"] .brand .glyph { color: #101627; }
+  @media (prefers-color-scheme: dark) { .brand .glyph { color: #101627; } }
+  :root[data-theme="light"] .brand .glyph { color: #fff; }
+  .nav { display: flex; gap: 1.4rem; align-items: center; }
+  .nav a { color: var(--muted); font-size: var(--step-0); font-weight: 600; }
+  .nav a:hover { color: var(--ink); text-decoration: none; }
+  .nav a.here { color: var(--ink); }
+  @media (max-width: 640px) { .nav .navlink { display: none; } }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: .5rem;
+    font-family: var(--font-body); font-weight: 700; font-size: var(--step-0);
+    padding: .6rem 1rem; border-radius: 9px; border: 1px solid transparent;
+    background: var(--brand); color: #FFFFFF; cursor: pointer;
+    transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+  }
+  .btn:hover { text-decoration: none; transform: translateY(-1px); box-shadow: var(--shadow); }
+  .btn.ghost { background: transparent; color: var(--ink); border-color: var(--line); }
+  .btn.block { width: 100%; justify-content: center; }
+  @media (prefers-reduced-motion: reduce) { .btn:hover { transform: none; } }
+
+  /* ---- hero ---- */
+  .hero { padding: clamp(3rem, 8vw, 5.5rem) 0 clamp(1.6rem, 4vw, 2.6rem); }
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: var(--step-4);
+    line-height: 1.02; letter-spacing: -.03em; font-weight: 850;
+    text-wrap: balance; margin: .7rem 0 0; max-width: 15ch;
+  }
+  .hero .lede { font-size: var(--step-2); color: var(--muted); margin: 1.1rem 0 0; max-width: 48ch; line-height: 1.35; }
+  .hero .note {
+    display: inline-flex; align-items: baseline; gap: .55rem; flex-wrap: wrap;
+    margin-top: 1.6rem; padding: .7rem 1rem; border-radius: 12px;
+    background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow);
+    font-size: var(--step-0); color: var(--muted); max-width: 60ch;
+  }
+  .hero .note .big {
+    font-family: var(--font-display); font-weight: 850; font-size: 1.15rem;
+    letter-spacing: -.02em; font-variant-numeric: tabular-nums; color: var(--brand);
+  }
+
+  /* ---- section scaffolding ---- */
+  section { padding: clamp(2.4rem, 5.5vw, 4rem) 0; }
+  .sec-head { max-width: 56ch; margin-bottom: 1.8rem; }
+  .sec-head h2 {
+    font-family: var(--font-display); font-size: var(--step-3); letter-spacing: -.02em;
+    line-height: 1.08; font-weight: 820; margin: .5rem 0 0; text-wrap: balance;
+  }
+  .sec-head p { color: var(--muted); margin: .6rem 0 0; }
+
+  /* ---- pricing tiers ---- */
+  .tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; align-items: start; }
+  @media (max-width: 900px) { .tiers { grid-template-columns: 1fr; max-width: 30rem; margin-inline: auto; } }
+  .tier {
+    position: relative; background: var(--surface); border: 1px solid var(--line);
+    border-radius: 18px; padding: 1.5rem 1.4rem 1.6rem; box-shadow: var(--shadow);
+    display: flex; flex-direction: column; gap: .2rem; min-height: 100%;
+  }
+  .tier.feature {
+    border-color: color-mix(in srgb, var(--brand) 55%, var(--line));
+    box-shadow: var(--shadow-lift);
+  }
+  .tier.feature::before {
+    content: ""; position: absolute; inset: 0; border-radius: 18px; pointer-events: none;
+    border: 1px solid color-mix(in srgb, var(--brand) 45%, transparent);
+    box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--brand) 12%, transparent);
+  }
+  .popular {
+    position: absolute; top: -.72rem; left: 1.3rem;
+    font-family: var(--font-mono); font-size: .62rem; letter-spacing: .12em; text-transform: uppercase;
+    font-weight: 700; padding: .28rem .6rem; border-radius: 999px;
+    background: var(--brand); color: #fff; border: 1px solid var(--brand-strong);
+    box-shadow: var(--shadow);
+  }
+  @media (prefers-color-scheme: dark) { .popular { color: #101627; } }
+  :root[data-theme="dark"] .popular { color: #101627; }
+  :root[data-theme="light"] .popular { color: #fff; }
+  .tier .tname { font-family: var(--font-mono); font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; color: var(--brand); }
+  .tier h3 { margin: .35rem 0 0; font-size: var(--step-2); font-weight: 840; letter-spacing: -.02em; }
+  .tier .who { margin: .1rem 0 0; color: var(--muted); font-size: var(--step-0); }
+  .price { display: flex; align-items: baseline; gap: .35rem; margin: 1.1rem 0 .1rem; flex-wrap: wrap; }
+  .price .amt {
+    font-family: var(--font-display); font-weight: 860; letter-spacing: -.03em;
+    font-size: clamp(2.3rem, 1.8rem + 1.8vw, 3rem); line-height: 1;
+    font-variant-numeric: tabular-nums; color: var(--ink);
+  }
+  .price .per { font-size: var(--step-0); color: var(--muted); font-weight: 600; }
+  .price .custom {
+    font-family: var(--font-display); font-weight: 850; letter-spacing: -.02em;
+    font-size: clamp(1.9rem, 1.6rem + 1vw, 2.4rem); line-height: 1; color: var(--ink);
+  }
+  .tier .billnote { font-size: .78rem; color: var(--muted); margin: .1rem 0 0; min-height: 1.1rem; }
+  .tier .cta { margin-top: 1.1rem; }
+  .tier .incl { font-family: var(--font-mono); font-size: .68rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin: 1.3rem 0 .1rem; }
+  .checks { margin: .55rem 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: .5rem; }
+  .checks li { position: relative; padding-left: 1.55rem; font-size: var(--step-0); line-height: 1.45; }
+  .checks li::before {
+    content: "✓"; position: absolute; left: 0; top: 0; color: var(--good); font-weight: 900; font-size: .95em;
+  }
+  .checks li.plus::before { content: "＋"; color: var(--brand); font-weight: 800; font-size: .9em; }
+
+  /* ---- HireCheck callout ---- */
+  .callout {
+    margin-top: 1.3rem; display: flex; flex-wrap: wrap; align-items: center; gap: .9rem 1.6rem;
+    justify-content: space-between; background: var(--surface-2);
+    border: 1px solid var(--line); border-radius: 16px; padding: 1.2rem 1.4rem;
+  }
+  .callout .lead { display: flex; flex-direction: column; gap: .25rem; max-width: 62ch; }
+  .callout .tag { font-family: var(--font-mono); font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; color: var(--brand); }
+  .callout h3 { margin: 0; font-size: var(--step-1); font-weight: 820; letter-spacing: -.01em; }
+  .callout p { margin: 0; color: var(--muted); font-size: var(--step-0); }
+  .callout .figure {
+    display: flex; flex-direction: column; align-items: flex-end; gap: .1rem; white-space: nowrap;
+  }
+  .callout .figure .big {
+    font-family: var(--font-display); font-weight: 850; letter-spacing: -.02em;
+    font-size: clamp(1.7rem, 1.3rem + 1.4vw, 2.2rem); line-height: 1;
+    font-variant-numeric: tabular-nums; color: var(--ink);
+  }
+  .callout .figure .cap { font-family: var(--font-mono); font-size: .66rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+  @media (max-width: 560px) { .callout .figure { align-items: flex-start; } }
+
+  /* ---- everything-included band ---- */
+  .band { background: var(--surface-2); border-block: 1px solid var(--line); }
+  .modgrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: .8rem 1.4rem; }
+  @media (max-width: 640px) { .modgrid { grid-template-columns: 1fr; } }
+  .mod {
+    display: flex; gap: .8rem; padding: .9rem 0; border-top: 1px solid var(--line);
+  }
+  .mod .mk {
+    flex: none; width: 30px; height: 30px; border-radius: 8px; display: grid; place-items: center;
+    background: color-mix(in srgb, var(--brand) 12%, var(--surface));
+    border: 1px solid color-mix(in srgb, var(--brand) 30%, var(--line));
+    color: var(--brand); font-weight: 900; font-size: .85rem; font-family: var(--font-mono);
+  }
+  .mod h4 { margin: .15rem 0 0; font-size: var(--step-1); font-weight: 800; letter-spacing: -.01em; }
+  .mod p { margin: .15rem 0 0; color: var(--muted); font-size: var(--step-0); }
+
+  /* ---- FAQ ---- */
+  .faq { display: flex; flex-direction: column; gap: .6rem; max-width: 760px; }
+  details.qa {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+    padding: 0 1.1rem; box-shadow: var(--shadow);
+  }
+  details.qa summary {
+    list-style: none; cursor: pointer; padding: 1rem 0; font-weight: 750; letter-spacing: -.01em;
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  }
+  details.qa summary::-webkit-details-marker { display: none; }
+  details.qa summary .ic {
+    flex: none; width: 22px; height: 22px; border-radius: 6px; display: grid; place-items: center;
+    border: 1px solid var(--line); color: var(--brand); font-weight: 800; font-size: 1rem;
+    transition: transform .18s ease;
+  }
+  @media (prefers-reduced-motion: reduce) { details.qa summary .ic { transition: none; } }
+  details.qa[open] summary .ic { transform: rotate(45deg); }
+  details.qa .a { padding: 0 0 1.1rem; color: var(--muted); font-size: var(--step-0); line-height: 1.55; }
+  details.qa .a p { margin: 0; }
+
+  /* ---- final cta ---- */
+  .final { text-align: center; }
+  .final h2 { font-family: var(--font-display); font-size: var(--step-3); font-weight: 840; letter-spacing: -.02em; margin: 0 auto; max-width: 20ch; text-wrap: balance; }
+  .final p { color: var(--muted); margin: .8rem auto 1.6rem; max-width: 46ch; }
+  .final .row { display: flex; gap: .7rem; justify-content: center; flex-wrap: wrap; }
+
+  footer { border-top: 1px solid var(--line); color: var(--muted); font-size: var(--step-0); }
+  .foot-inner { display: flex; flex-wrap: wrap; gap: .6rem 1.4rem; justify-content: space-between; padding-block: 1.6rem; }
+  .disclaimer { font-size: .78rem; color: var(--muted); max-width: 78ch; margin-top: .4rem; padding-bottom: 1.6rem; }
+
+  /* reveal */
+  .reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap bar-inner">
+    <div class="brand"><span class="glyph">C</span> Cardinal HR</div>
+    <nav class="nav">
+      <a class="navlink" href="index.html#modules">Features</a>
+      <a class="navlink here" href="pricing.html" aria-current="page">Pricing</a>
+      <a class="navlink" href="#faq">FAQ</a>
+      <a class="btn" href="#start">Start free trial</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Pricing</p>
+      <h1>One platform, priced per employee.</h1>
+      <p class="lede">Recruiting, screening, onboarding paperwork, training, benefits, payroll, and your directory — billed per employee, per month. No per-module upsells, no per-seat math for every hiring manager.</p>
+      <p class="note">
+        <span class="big">$240k</span>
+        <span>is the illustrative cost of one failed executive hire. Getting hiring and onboarding right is what the whole platform is for — the subscription is a rounding error next to the mistake it helps you avoid.</span>
+      </p>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">Plans</p>
+        <h2>Three tiers. Priced per employee, per month (PEPM).</h2>
+        <p>Pick a tier by company size and what you need running. Every tier includes the full hiring pipeline and an audit trail on every action. Background checks are billed separately, per check — see below.</p>
+      </div>
+
+      <div class="tiers">
+        <article class="tier reveal">
+          <span class="tname">Core</span>
+          <h3>Core</h3>
+          <p class="who">Small teams (up to 50 employees)</p>
+          <div class="price"><span class="amt">$8</span><span class="per">/ employee / mo</span></div>
+          <p class="billnote">Billed monthly on active employees.</p>
+          <a class="btn ghost block cta" href="#start">Start free trial</a>
+          <p class="incl">Includes</p>
+          <ul class="checks">
+            <li>Recruiting — requisitions &amp; applicant pipeline</li>
+            <li>MyHR onboarding paperwork with e-signature</li>
+            <li>Training — course catalog &amp; completion tracking</li>
+            <li>Employee Directory</li>
+            <li>Full audit trail on every state change</li>
+            <li>Email support</li>
+          </ul>
+        </article>
+
+        <article class="tier feature reveal">
+          <span class="popular">Most popular</span>
+          <span class="tname">Complete</span>
+          <h3>Complete</h3>
+          <p class="who">Growing companies (50–500 employees)</p>
+          <div class="price"><span class="amt">$14</span><span class="per">/ employee / mo</span></div>
+          <p class="billnote">Billed monthly on active employees.</p>
+          <a class="btn block cta" href="#start">Start free trial</a>
+          <p class="incl">Everything in Core, plus</p>
+          <ul class="checks">
+            <li class="plus">Benefits — guided plan election &amp; dependents</li>
+            <li class="plus">Payroll — pay runs &amp; withholding calculation</li>
+            <li class="plus">Priority support with a named contact</li>
+            <li class="plus">Advanced reporting across modules</li>
+          </ul>
+        </article>
+
+        <article class="tier reveal">
+          <span class="tname">Enterprise</span>
+          <h3>Enterprise</h3>
+          <p class="who">500+ employees / custom needs</p>
+          <div class="price"><span class="custom">Custom</span></div>
+          <p class="billnote">Annual agreement — talk to us.</p>
+          <a class="btn ghost block cta" href="#start">Contact sales</a>
+          <p class="incl">Everything in Complete, plus</p>
+          <ul class="checks">
+            <li class="plus">SSO / SAML &amp; SCIM provisioning</li>
+            <li class="plus">Custom integrations &amp; API access</li>
+            <li class="plus">Dedicated support &amp; onboarding manager</li>
+            <li class="plus">Contractual uptime SLAs</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="callout reveal">
+        <div class="lead">
+          <span class="tag">Background checks · HireCheck</span>
+          <h3>+$35 per check, billed as used</h3>
+          <p>Screening is priced per check, not per seat — you only run one when you're actually hiring. The fee covers the provider's report cost plus our markup; consent is captured before anything runs, and results land on the candidate's record. Bundled packages and volume pricing available on Complete and Enterprise.</p>
+        </div>
+        <div class="figure">
+          <span class="big">+$35</span>
+          <span class="cap">per check</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">Everything included</p>
+        <h2>Seven modules, one employee record.</h2>
+        <p>Each module shares the same candidate-to-employee record, so nothing gets re-keyed between hiring and payroll. Availability by tier is listed with each plan above.</p>
+      </div>
+      <div class="modgrid">
+        <div class="mod reveal">
+          <span class="mk" aria-hidden="true">R</span>
+          <div><h4>Recruiting</h4><p>Post requisitions and move applicants through an enforced hiring pipeline — no skipped steps, no dropped candidates.</p></div>
+        </div>
+        <div class="mod reveal">
+          <span class="mk" aria-hidden="true">S</span>
+          <div><h4>Screening · HireCheck</h4><p>FCRA-aware background checks with consent captured up front. Billed per check, not per seat.</p></div>
+        </div>
+        <div class="mod reveal">
+          <span class="mk" aria-hidden="true">H</span>
+          <div><h4>MyHR onboarding</h4><p>New-hire paperwork — I-9, W-4, direct deposit, acknowledgments — e-signed and approved by HR.</p></div>
+        </div>
+        <div class="mod reveal">
+          <span class="mk" aria-hidden="true">T</span>
+          <div><h4>Training</h4><p>A customizable course catalog with lesson-by-lesson progress and provable completion per employee.</p></div>
+        </div>
+        <div class="mod reveal">
+          <span class="mk" aria-hidden="true">B</span>
+          <div><h4>Benefits</h4><p>Guided benefits election — plan options, coverage tiers, and dependents — in the same flow that hired them.</p></div>
+        </div>
+        <div class="mod reveal">
+          <span class="mk" aria-hidden="true">P</span>
+          <div><h4>Payroll</h4><p>Run pay and compute withholding from the same record. Tax filing is handled through a registered provider — see the FAQ.</p></div>
+        </div>
+        <div class="mod reveal">
+          <span class="mk" aria-hidden="true">D</span>
+          <div><h4>Employee Directory</h4><p>A single source of truth for who works here — roles, reporting lines, and contact details, kept current.</p></div>
+        </div>
+        <div class="mod reveal">
+          <span class="mk" aria-hidden="true">✓</span>
+          <div><h4>Audit trail</h4><p>Every state change — signed, approved, cleared, paid — is appended to an immutable history. Included on every tier.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">FAQ</p>
+        <h2>Questions worth answering before you buy.</h2>
+      </div>
+      <div class="faq">
+        <details class="qa reveal">
+          <summary>Is the background-check cost included in my plan? <span class="ic" aria-hidden="true">+</span></summary>
+          <div class="a"><p>No. Background checks (HireCheck) are billed per check at +$35, on top of your per-employee subscription. Screening only happens when you're actively hiring, so charging per check keeps you from paying per seat for something most of your workforce never triggers. The fee is a pass-through of the provider's report cost plus our markup.</p></div>
+        </details>
+        <details class="qa reveal">
+          <summary>Can I start with just hiring and add the rest later? <span class="ic" aria-hidden="true">+</span></summary>
+          <div class="a"><p>Yes. Core gives you Recruiting, MyHR onboarding, Training, and the Employee Directory — enough to run hiring end to end. When you're ready for Benefits and Payroll, move up to Complete. Because it's one employee record, nothing gets re-entered when you add a module.</p></div>
+        </details>
+        <details class="qa reveal">
+          <summary>Is there a free trial? <span class="ic" aria-hidden="true">+</span></summary>
+          <div class="a"><p>Yes — 14 days, no card required. You can run real requisitions, onboarding packets, and courses during the trial. Background checks run during a trial are billed per check at the standard +$35, since those are real provider reports.</p></div>
+        </details>
+        <details class="qa reveal">
+          <summary>How is "per employee" counted? <span class="ic" aria-hidden="true">+</span></summary>
+          <div class="a"><p>By active employees — people currently on the directory in an employed status. Candidates and applicants in the hiring pipeline are not billed until they're hired, and offboarded employees drop off at the end of the billing period. You're billed for who actually works there, not for every record you've ever created.</p></div>
+        </details>
+        <details class="qa reveal">
+          <summary>Do you file my payroll taxes? <span class="ic" aria-hidden="true">+</span></summary>
+          <div class="a"><p>Honestly: the Payroll module calculates gross-to-net and withholding and produces the pay run, but Cardinal HR does not itself remit or file payroll taxes with tax authorities. Production tax filing and remittance are handled through a registered payroll-tax provider connected to your account. You remain responsible for confirming filings are correct and on time — treat this as software, not a tax service.</p></div>
+        </details>
+        <details class="qa reveal">
+          <summary>Can I switch tiers later? <span class="ic" aria-hidden="true">+</span></summary>
+          <div class="a"><p>Yes, up or down. Upgrades take effect immediately and are prorated for the rest of the billing period; downgrades take effect at the start of your next period so you keep what you've paid for. Your data and history carry across — switching tiers changes what's enabled, not what you've already recorded.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="start" class="final">
+    <div class="wrap">
+      <p class="eyebrow" style="text-align:center;">Get started</p>
+      <h2>Hire the right person. Onboard, pay, and keep them.</h2>
+      <p>Start a 14-day trial on your own openings, or talk to us about Enterprise. No card required to begin.</p>
+      <div class="row">
+        <a class="btn" href="#start">Start free trial</a>
+        <a class="btn ghost" href="#start">Talk to sales</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-inner">
+      <div class="brand"><span class="glyph">C</span> Cardinal HR</div>
+      <span>Recruiting · Screening · MyHR · Training · Benefits · Payroll · Directory</span>
+    </div>
+    <p class="disclaimer">Prices shown ($8 and $14 per employee per month, +$35 per background check, and the illustrative $240k cost-of-a-bad-hire figure) are illustrative for a working product and not a live commercial offer. Cardinal HR helps run hiring, onboarding, and payroll workflows; it is not legal, tax, or HR advice, and the Payroll module computes withholding but does not itself file or remit payroll taxes — production tax filing is via a registered provider. Employers are responsible for confirming their FCRA, state, wage, and tax obligations with qualified counsel. “Cardinal HR” is a working product name; confirm trademark availability before any launch — note that Cardinal Health is an unrelated company with no connection to this product.</p>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      els.forEach(function (e) { e.classList.add('in'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.12 });
+    els.forEach(function (e) { io.observe(e); });
+  })();
+</script>
+</body>
+</html>

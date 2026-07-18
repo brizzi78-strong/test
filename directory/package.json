@@ -1,0 +1,19 @@
+{
+  "name": "directory",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Employee Directory (HRIS core) — the system of record: employees, departments, managers, employment status, and org-chart queries",
+  "type": "module",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "start": "node src/index.ts",
+    "test": "node --test",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.8.5",
+    "typescript": "~5.8.0"
+  }
+}

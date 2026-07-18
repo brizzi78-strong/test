@@ -13,7 +13,8 @@ This repository holds several projects. Jump to the one you need:
 | **Training — online training portal** | `training/` | Standalone LMS: customizable course catalog (e.g. Sexual Harassment Prevention), lesson tracking, and scored assessments (see `training/README.md`) |
 | **Benefits — benefits election / enrollment** | `benefits/` | Standalone service: plan catalog with coverage tiers, dependents, elections/waivers, and computed monthly premiums (see `benefits/README.md`) |
 | **Payroll — gross-to-net engine (Raleigh, NC)** | `payroll/` | Standalone withholding calculator: federal + NC-flat taxes, FICA, deductions, net pay, and employer taxes. Not filing-ready payroll (see `payroll/README.md`) |
-| **Cardinal HR — platform landing page** | `cardinal-hr/` | Self-contained marketing/overview page tying the hiring modules together (Recruiting · Screening · MyHR · Training · Benefits). Open `cardinal-hr/index.html` |
+| **Employee Directory — HRIS core** | `directory/` | Standalone system of record: employees, department tree, managers, employment status, and org-chart queries with cycle-safe invariants (see `directory/README.md`) |
+| **Cardinal HR — platform website** | `cardinal-hr/` | Self-contained marketing pages tying the modules together: overview (`cardinal-hr/index.html`) and pricing (`cardinal-hr/pricing.html`) |
 
 ---
 
