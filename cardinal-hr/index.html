@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cardinal HR — the hiring &amp; onboarding platform</title>
+<meta name="description" content="Cardinal HR runs the whole hiring journey — Recruiting, Screening, new-hire paperwork (MyHR), and Training — so a good hire is the default and a bad one gets caught early.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23A31B33'/%3E%3Ctext x='16' y='23' font-family='system-ui,sans-serif' font-size='20' font-weight='900' text-anchor='middle' fill='white'%3EC%3C/text%3E%3C/svg%3E">
+<style>
+  :root {
+    --paper: #F7F2E6;
+    --surface: #FFFDF7;
+    --surface-2: #EFE7D3;
+    --ink: #17233F;
+    --muted: #6B6350;
+    --line: #E2D9C3;
+    --brand: #A31B33;
+    --brand-strong: #7E1226;
+    --navy: #17233F;
+    --gold: #B4862A;
+    --good: #2E7D4F;
+    --warn: #B0771C;
+    --crit: #B23A3A;
+    --shadow: 0 1px 2px rgba(23,35,63,.07), 0 10px 26px -14px rgba(23,35,63,.24);
+
+    --font-display: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-body: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-mono: ui-monospace, "SF Mono", "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
+
+    --maxw: 1080px;
+    --step-0: clamp(.82rem, .8rem + .1vw, .9rem);
+    --step-1: clamp(1rem, .96rem + .2vw, 1.1rem);
+    --step-2: clamp(1.3rem, 1.2rem + .5vw, 1.6rem);
+    --step-3: clamp(1.8rem, 1.5rem + 1.4vw, 2.6rem);
+    --step-4: clamp(2.6rem, 2rem + 3vw, 4.4rem);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #101627;
+      --surface: #172033;
+      --surface-2: #1F2A42;
+      --ink: #F3EEE1;
+      --muted: #A9A28F;
+      --line: #2B3855;
+      --brand: #E2586B;
+      --brand-strong: #F27A8B;
+      --navy: #A9B6D6;
+      --gold: #D8B15A;
+      --good: #4FBE86;
+      --warn: #D6A24A;
+      --crit: #E07B6E;
+      --shadow: 0 1px 2px rgba(0,0,0,.45), 0 12px 32px -14px rgba(0,0,0,.65);
+    }
+  }
+  :root[data-theme="light"] {
+    --paper: #F7F2E6; --surface: #FFFDF7; --surface-2: #EFE7D3; --ink: #17233F;
+    --muted: #6B6350; --line: #E2D9C3; --brand: #A31B33; --brand-strong: #7E1226;
+    --navy: #17233F; --gold: #B4862A; --good: #2E7D4F; --warn: #B0771C; --crit: #B23A3A;
+    --shadow: 0 1px 2px rgba(23,35,63,.07), 0 10px 26px -14px rgba(23,35,63,.24);
+  }
+  :root[data-theme="dark"] {
+    --paper: #101627; --surface: #172033; --surface-2: #1F2A42; --ink: #F3EEE1;
+    --muted: #A9A28F; --line: #2B3855; --brand: #E2586B; --brand-strong: #F27A8B;
+    --navy: #A9B6D6; --gold: #D8B15A; --good: #4FBE86; --warn: #D6A24A; --crit: #E07B6E;
+    --shadow: 0 1px 2px rgba(0,0,0,.45), 0 12px 32px -14px rgba(0,0,0,.65);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: var(--step-1);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: var(--maxw); margin-inline: auto; padding-inline: clamp(1.1rem, 4vw, 2.2rem); }
+
+  a { color: var(--brand); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  :focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; border-radius: 4px; }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: .72rem;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--brand);
+    margin: 0;
+  }
+
+  /* ---- top bar ---- */
+  header.bar {
+    position: sticky; top: 0; z-index: 20;
+    backdrop-filter: saturate(1.4) blur(8px);
+    background: color-mix(in srgb, var(--paper) 82%, transparent);
+    border-bottom: 1px solid var(--line);
+  }
+  .bar-inner { display: flex; align-items: center; justify-content: space-between; height: 62px; }
+  .brand { display: flex; align-items: center; gap: .6rem; font-weight: 800; letter-spacing: -.02em; font-size: 1.15rem; }
+  .brand .glyph {
+    width: 26px; height: 26px; border-radius: 7px; display: grid; place-items: center;
+    background: var(--brand); color: #fff; font-size: 15px; font-weight: 900;
+  }
+  :root[data-theme="dark"] .brand .glyph { color: #101627; }
+  .nav { display: flex; gap: 1.4rem; align-items: center; }
+  .nav a { color: var(--muted); font-size: var(--step-0); font-weight: 600; }
+  .nav a:hover { color: var(--ink); text-decoration: none; }
+  @media (max-width: 640px) { .nav .navlink { display: none; } }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: .5rem;
+    font-family: var(--font-body); font-weight: 700; font-size: var(--step-0);
+    padding: .6rem 1rem; border-radius: 9px; border: 1px solid transparent;
+    background: var(--brand); color: #FFFFFF; cursor: pointer;
+    transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+  }
+  .btn:hover { text-decoration: none; transform: translateY(-1px); box-shadow: var(--shadow); }
+  .btn.ghost { background: transparent; color: var(--ink); border-color: var(--line); }
+
+  /* ---- hero ---- */
+  .hero { padding: clamp(3rem, 8vw, 6rem) 0 clamp(2rem, 5vw, 3.5rem); }
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: var(--step-4);
+    line-height: 1.02; letter-spacing: -.03em; font-weight: 850;
+    text-wrap: balance; margin: .7rem 0 0; max-width: 16ch;
+  }
+  .hero .lede { font-size: var(--step-2); color: var(--muted); margin: 1.1rem 0 0; max-width: 46ch; line-height: 1.35; }
+  .hero-cta { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1.8rem; }
+  .figure {
+    margin-top: 2.4rem; display: flex; flex-wrap: wrap; gap: 1.4rem 2.6rem; align-items: baseline;
+    padding-top: 1.6rem; border-top: 1px solid var(--line);
+  }
+  .figure .stat { display: flex; flex-direction: column; gap: .1rem; }
+  .figure .num {
+    font-family: var(--font-display); font-weight: 850; font-size: clamp(1.6rem, 1.2rem + 1.4vw, 2.3rem);
+    letter-spacing: -.02em; font-variant-numeric: tabular-nums; color: var(--ink);
+  }
+  .figure .cap { font-family: var(--font-mono); font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+
+  /* ---- section scaffolding ---- */
+  section { padding: clamp(2.6rem, 6vw, 4.4rem) 0; }
+  .sec-head { max-width: 54ch; margin-bottom: 2rem; }
+  .sec-head h2 {
+    font-family: var(--font-display); font-size: var(--step-3); letter-spacing: -.02em;
+    line-height: 1.08; font-weight: 820; margin: .5rem 0 0; text-wrap: balance;
+  }
+  .sec-head p { color: var(--muted); margin: .6rem 0 0; }
+
+  /* ---- pipeline ---- */
+  .pipe { display: grid; grid-template-columns: repeat(4, 1fr); gap: .9rem; }
+  @media (max-width: 860px) { .pipe { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 460px) { .pipe { grid-template-columns: 1fr; } }
+  .stage {
+    position: relative; background: var(--surface); border: 1px solid var(--line);
+    border-radius: 14px; padding: 1.1rem 1.1rem 1.2rem; box-shadow: var(--shadow);
+    display: flex; flex-direction: column; gap: .55rem; min-height: 100%;
+  }
+  .stage .idx { font-family: var(--font-mono); font-size: .7rem; color: var(--muted); letter-spacing: .1em; }
+  .stage h3 { margin: 0; font-size: var(--step-1); font-weight: 800; letter-spacing: -.01em; }
+  .stage p { margin: 0; font-size: var(--step-0); color: var(--muted); }
+  .flow { display: flex; flex-wrap: wrap; gap: .3rem; margin-top: .3rem; align-items: center; }
+  .chip {
+    font-family: var(--font-mono); font-size: .64rem; letter-spacing: .02em;
+    padding: .16rem .42rem; border-radius: 999px; border: 1px solid var(--line);
+    color: var(--muted); background: var(--surface-2); white-space: nowrap;
+  }
+  .chip.end { color: var(--good); border-color: color-mix(in srgb, var(--good) 45%, var(--line)); background: color-mix(in srgb, var(--good) 12%, var(--surface)); font-weight: 600; }
+  .arrow { color: var(--muted); font-size: .7rem; }
+
+  /* ---- module cards ---- */
+  .modules { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.1rem; }
+  @media (max-width: 760px) { .modules { grid-template-columns: 1fr; } }
+  .card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 16px;
+    padding: 1.4rem 1.4rem 1.5rem; box-shadow: var(--shadow);
+    display: flex; flex-direction: column; gap: .5rem;
+  }
+  .card .tag { font-family: var(--font-mono); font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; color: var(--brand); }
+  .card h3 { margin: .1rem 0 0; font-size: var(--step-2); font-weight: 820; letter-spacing: -.02em; }
+  .card > p { margin: .2rem 0 0; color: var(--muted); font-size: var(--step-0); }
+  .card ul { margin: .7rem 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: .4rem; }
+  .card li { position: relative; padding-left: 1.4rem; font-size: var(--step-0); }
+  .card li::before {
+    content: "✓"; position: absolute; left: 0; top: 0; color: var(--good); font-weight: 900; font-size: .85em;
+  }
+  .card.soon { border-style: dashed; box-shadow: none; }
+  .badge {
+    align-self: flex-start; font-family: var(--font-mono); font-size: .62rem; letter-spacing: .1em;
+    text-transform: uppercase; padding: .2rem .5rem; border-radius: 999px;
+    background: color-mix(in srgb, var(--warn) 16%, transparent); color: var(--warn);
+    border: 1px solid color-mix(in srgb, var(--warn) 40%, transparent);
+  }
+  .badge.live { background: color-mix(in srgb, var(--good) 15%, transparent); color: var(--good);
+    border-color: color-mix(in srgb, var(--good) 40%, transparent); }
+
+  /* ---- compliance band ---- */
+  .band { background: var(--surface-2); border-block: 1px solid var(--line); }
+  .band .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
+  @media (max-width: 760px) { .band .grid { grid-template-columns: 1fr; } }
+  .band .item h4 { margin: 0 0 .3rem; font-size: var(--step-1); font-weight: 800; letter-spacing: -.01em; display: flex; align-items: center; gap: .5rem; }
+  .band .item p { margin: 0; color: var(--muted); font-size: var(--step-0); }
+  .band .item .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--good); box-shadow: 0 0 0 4px color-mix(in srgb, var(--good) 18%, transparent); }
+
+  /* ---- cta ---- */
+  .final { text-align: center; }
+  .final h2 { font-family: var(--font-display); font-size: var(--step-3); font-weight: 840; letter-spacing: -.02em; margin: 0 auto; max-width: 20ch; text-wrap: balance; }
+  .final p { color: var(--muted); margin: .8rem auto 1.6rem; max-width: 44ch; }
+
+  footer { border-top: 1px solid var(--line); color: var(--muted); font-size: var(--step-0); }
+  .foot-inner { display: flex; flex-wrap: wrap; gap: .6rem 1.4rem; justify-content: space-between; padding-block: 1.6rem; }
+  .disclaimer { font-size: .78rem; color: var(--muted); max-width: 70ch; margin-top: .4rem; }
+
+  /* reveal */
+  .reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap bar-inner">
+    <div class="brand"><span class="glyph">C</span> Cardinal HR</div>
+    <nav class="nav">
+      <a class="navlink" href="#flow">How it works</a>
+      <a class="navlink" href="#modules">Modules</a>
+      <a class="navlink" href="#trust">Compliance</a>
+      <a class="btn" href="#start">Book a walkthrough</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Hiring &amp; onboarding, end to end</p>
+      <h1>The cost of a bad hire is six figures.</h1>
+      <p class="lede">Cardinal HR runs the whole journey — post the role, screen the candidate, sign the paperwork, finish the training — so a good hire is the default and a bad one gets caught early.</p>
+      <div class="hero-cta">
+        <a class="btn" href="#start">Book a walkthrough</a>
+        <a class="btn ghost" href="#flow">See the flow</a>
+      </div>
+      <div class="figure">
+        <div class="stat"><span class="num">$240k</span><span class="cap">avg. cost of a failed exec hire</span></div>
+        <div class="stat"><span class="num">4</span><span class="cap">modules, one candidate record</span></div>
+        <div class="stat"><span class="num">100%</span><span class="cap">actions on an audit trail</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="flow">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">The pipeline</p>
+        <h2>One candidate, four stages, no dropped handoffs.</h2>
+        <p>Each stage is a strict state machine — every move is allowed or it isn't, and reaching the end of one stage is what starts the next. The status words below are the real states an application, order, packet, and enrollment move through.</p>
+      </div>
+      <div class="pipe">
+        <article class="stage reveal">
+          <span class="idx">STAGE 01</span>
+          <h3>Recruiting</h3>
+          <p>Post requisitions and move applicants through the hiring pipeline.</p>
+          <div class="flow"><span class="chip">applied</span><span class="arrow">→</span><span class="chip">interview</span><span class="arrow">→</span><span class="chip">offer</span><span class="arrow">→</span><span class="chip end">hired</span></div>
+        </article>
+        <article class="stage reveal">
+          <span class="idx">STAGE 02</span>
+          <h3>Screening</h3>
+          <p>Background checks with consent captured before anything runs.</p>
+          <div class="flow"><span class="chip">authorized</span><span class="arrow">→</span><span class="chip">in&nbsp;progress</span><span class="arrow">→</span><span class="chip end">clear</span></div>
+        </article>
+        <article class="stage reveal">
+          <span class="idx">STAGE 03</span>
+          <h3>MyHR</h3>
+          <p>New-hire paperwork, e-signed and reviewed by HR.</p>
+          <div class="flow"><span class="chip">assigned</span><span class="arrow">→</span><span class="chip">submitted</span><span class="arrow">→</span><span class="chip end">approved</span></div>
+        </article>
+        <article class="stage reveal">
+          <span class="idx">STAGE 04</span>
+          <h3>Training</h3>
+          <p>Assign courses, track lessons, score the assessment.</p>
+          <div class="flow"><span class="chip">not&nbsp;started</span><span class="arrow">→</span><span class="chip">in&nbsp;progress</span><span class="arrow">→</span><span class="chip end">completed</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="modules">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">What's inside</p>
+        <h2>Four modules that already work — and one on the way.</h2>
+      </div>
+      <div class="modules">
+        <article class="card reveal">
+          <span class="badge live">Live</span>
+          <span class="tag">Recruiting</span>
+          <h3>Applicant tracking</h3>
+          <p>Job requisitions and a hiring pipeline that won't let anyone skip a step or be quietly forgotten.</p>
+          <ul>
+            <li>Requisitions: open, on hold, filled, closed</li>
+            <li>Enforced stages — no jumping straight to an offer</li>
+            <li>Reject / withdraw with a reason, on the record</li>
+            <li>Hiring a candidate fills the role and starts screening</li>
+          </ul>
+        </article>
+        <article class="card reveal">
+          <span class="badge live">Live</span>
+          <span class="tag">Screening · HireCheck</span>
+          <h3>Background checks</h3>
+          <p>FCRA-aware screening with a pluggable data provider — Equifax wired in, others drop into the same seam.</p>
+          <ul>
+            <li>No check runs before the candidate authorizes</li>
+            <li>Eight check types, bundled into packages</li>
+            <li>Adverse decisions wait out a dispute window</li>
+            <li>Every result kept with a full audit trail</li>
+          </ul>
+        </article>
+        <article class="card reveal">
+          <span class="badge live">Live</span>
+          <span class="tag">MyHR</span>
+          <h3>New-hire paperwork</h3>
+          <p>The forms a new hire actually has to sign, tracked from assigned to approved.</p>
+          <ul>
+            <li>I-9, W-4, tax, direct deposit, acknowledgments</li>
+            <li>Typed e-signature on the forms that need one</li>
+            <li>HR approves, or returns with a note to fix</li>
+            <li>Packet status derived from the forms themselves</li>
+          </ul>
+        </article>
+        <article class="card reveal">
+          <span class="badge live">Live</span>
+          <span class="tag">Training</span>
+          <h3>Online training portal</h3>
+          <p>A customizable course catalog — Sexual Harassment Prevention, safety, code of conduct, whatever you require.</p>
+          <ul>
+            <li>Courses are lessons plus an optional passing score</li>
+            <li>Lesson-by-lesson progress per learner</li>
+            <li>Assessment must pass to complete — retakes allowed</li>
+            <li>Completion you can prove, per employee</li>
+          </ul>
+        </article>
+        <article class="card soon reveal" style="grid-column: 1 / -1;">
+          <span class="badge">Next up</span>
+          <span class="tag">Benefits</span>
+          <h3>Choosing benefits</h3>
+          <p>A guided benefits election — plan options, coverage tiers, and dependents — so a new hire picks their benefits in the same flow that hired and onboarded them. In design.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="trust" class="band">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">Built for the parts that get you sued</p>
+        <h2>Compliance isn't a checkbox — it's the workflow.</h2>
+      </div>
+      <div class="grid">
+        <div class="item reveal">
+          <h4><span class="dot"></span> Consent before checking</h4>
+          <p>Background checks are consumer reports under the FCRA. Cardinal HR won't run one until the candidate's disclosure and authorization are on file.</p>
+        </div>
+        <div class="item reveal">
+          <h4><span class="dot"></span> A fair chance to dispute</h4>
+          <p>An adverse decision issues a pre-adverse notice and holds for a waiting period, so a candidate can correct a wrong record before it costs them the job.</p>
+        </div>
+        <div class="item reveal">
+          <h4><span class="dot"></span> Everything on the record</h4>
+          <p>Every state change — signed, approved, returned, cleared — is appended to an immutable history. When someone asks "what happened," there's an answer.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="start" class="final">
+    <div class="wrap">
+      <p class="eyebrow" style="text-align:center;">Get started</p>
+      <h2>Hire the right person. Onboard them the right way.</h2>
+      <p>See the full journey — from a posted role to a trained, cleared, fully-papered new hire — on your own openings.</p>
+      <a class="btn" href="#start">Book a walkthrough</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-inner">
+      <div class="brand"><span class="glyph">C</span> Cardinal HR</div>
+      <span>Recruiting · Screening · MyHR · Training</span>
+    </div>
+    <p class="disclaimer">Cardinal HR helps run the hiring and onboarding process correctly; it is not legal, tax, or HR advice. Employers are responsible for confirming their FCRA, state, and tax obligations with qualified counsel. Equifax is a trademark of its owner; provider integrations require your own agreement with the provider. “Cardinal HR” is a working product name; confirm trademark availability before any launch.</p>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      els.forEach(function (e) { e.classList.add('in'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.12 });
+    els.forEach(function (e) { io.observe(e); });
+  })();
+</script>
+</body>
+</html>
