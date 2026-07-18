@@ -67,6 +67,18 @@ paper certification and skipped the electronic filing. That is why the Brizzis
 hold a signed government form saying "$7,500" while the IRS notice says "no
 matching record." Both are true; the gap is Tesla's unfiled ECO report.
 
+**Tesla can still fix this now — and it is a corporate-level action.** Per IRS
+guidance, new dealer registration closed 9/30/2025, but "the portal will remain
+open beyond Sept. 30, 2025, for limited usage by previously registered users to
+submit time-of-sale reports **and updates to such reports**." Tesla, Inc. (EIN
+91-2197729) is a single registered seller — ECO registration is per business/EIN,
+not per store — so the fix lives with Tesla's **corporate tax/compliance team**,
+not the Raleigh showroom (which likely explains the runaround). The vehicle was
+placed in service 08/21/2025 (before the cutoff), so the credit is valid and the
+report can still be submitted/corrected. Sources: IRS "Clean vehicle credit
+seller or dealer requirements"; IRS Pub 5867A. Any "credit ended / portal closed"
+excuse is false.
+
 ## 6. Tesla's shifting (and false) explanations
 
 When contacted, Tesla gave three inconsistent accounts, none matching the notice:

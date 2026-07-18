@@ -44,11 +44,21 @@ SUV cap. The sole cause of my loss is Tesla's failure to file the required repor
 contacting Resolutions, Sales, Delivery Operations, and Support. The Support
 address auto-replied that it was "paused," and the matter was never resolved.
 
+**Routing note.** This is a corporate-level fix. Tesla, Inc. (EIN 91-2197729) is
+the single registered seller in Energy Credits Online; individual stores are not
+separately registered. The correction must therefore be made by Tesla's corporate
+tax/compliance team that holds the ECO account — not left with store staff who
+lack access. I ask Tesla Resolutions to route this to that team, and I ask the
+Raleigh store (which originated the sale and signed my Form 15400) to escalate it
+there and identify the responsible contact.
+
 **What I require — choose one, within 10 business days of this notice:**
 
-1. **File the late Clean Vehicle Seller Report (Form 15400)** for VIN
-   7SAYGDEE6TA451515 through the IRS Energy Credits Online portal — which remains
-   open to previously registered sellers such as Tesla — and provide me written
+1. **Submit or correct the Clean Vehicle Seller Report (Form 15400)** for VIN
+   7SAYGDEE6TA451515 through the IRS Energy Credits Online portal. Per IRS
+   guidance, that portal "will remain open beyond Sept. 30, 2025, for limited
+   usage by previously registered users to submit time-of-sale reports and updates
+   to such reports" — which is exactly Tesla's situation. Provide me written
    confirmation and a copy of the accepted submission; **OR**
 
 2. **Compensate me directly for $7,500**, plus the IRS interest that has accrued
