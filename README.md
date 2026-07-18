@@ -11,7 +11,8 @@ This repository holds several projects. Jump to the one you need:
 | **MyHR — new-hire paperwork service** | `myhr/` | Standalone onboarding service: e-signed new-hire forms (I-9, W-4, consent, etc.) with HR review and an audit trail (see `myhr/README.md`) |
 | **Recruiting — job requisitions & applicant tracking** | `recruiting/` | Standalone ATS: post requisitions and move applications through a hiring pipeline; reaching `hired` hands off to screening + onboarding (see `recruiting/README.md`) |
 | **Training — online training portal** | `training/` | Standalone LMS: customizable course catalog (e.g. Sexual Harassment Prevention), lesson tracking, and scored assessments (see `training/README.md`) |
-| **Cardinal HR — platform landing page** | `cardinal-hr/` | Self-contained marketing/overview page tying the four hiring modules together (Recruiting · Screening · MyHR · Training). Open `cardinal-hr/index.html` |
+| **Benefits — benefits election / enrollment** | `benefits/` | Standalone service: plan catalog with coverage tiers, dependents, elections/waivers, and computed monthly premiums (see `benefits/README.md`) |
+| **Cardinal HR — platform landing page** | `cardinal-hr/` | Self-contained marketing/overview page tying the hiring modules together (Recruiting · Screening · MyHR · Training · Benefits). Open `cardinal-hr/index.html` |
 
 ---
 
