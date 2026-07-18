@@ -1,0 +1,710 @@
+<title>Rootwork HR — People Operations</title>
+<meta name="description" content="A small-team HR workspace: employee directory, time off, onboarding, and performance reviews." />
+<style>
+  :root {
+    --bg:#f4f3ef; --surface:#ffffff; --surface-2:#efeee9; --surface-3:#e8e7e1;
+    --border:#e2e0d8; --border-strong:#d2cfc4;
+    --text:#1e2420; --text-muted:#5e6a64; --text-faint:#8a938d;
+    --accent:#0d7266; --accent-hover:#0a5c52; --accent-weak:#d9ece8; --accent-ink:#0a4a42;
+    --good:#2f8f5b; --good-bg:#e2f2e8; --warn:#a9720f; --warn-bg:#f7ecd4;
+    --bad:#c0413b; --bad-bg:#f7e1df; --info:#2f6fb0; --info-bg:#e1ecf7;
+    --shadow:0 1px 2px rgba(30,36,32,.06), 0 8px 24px -12px rgba(30,36,32,.18);
+    --shadow-lg:0 12px 40px -12px rgba(30,36,32,.32);
+    --radius:14px; --radius-sm:9px;
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+    --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg:#111614; --surface:#191f1c; --surface-2:#212824; --surface-3:#2a322d;
+      --border:#2b332e; --border-strong:#3a443d;
+      --text:#e9ede9; --text-muted:#9ba8a1; --text-faint:#6f7c74;
+      --accent:#37b8a6; --accent-hover:#4fccbb; --accent-weak:#1a2f2c; --accent-ink:#bfeee6;
+      --good:#57bd83; --good-bg:#16281e; --warn:#d69a3d; --warn-bg:#2c2413; --bad:#e0736c; --bad-bg:#2e1917;
+      --info:#6aa6df; --info-bg:#152230;
+      --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 28px -14px rgba(0,0,0,.6);
+      --shadow-lg:0 16px 46px -14px rgba(0,0,0,.7);
+    }
+  }
+  :root[data-theme="light"]{
+    --bg:#f4f3ef; --surface:#ffffff; --surface-2:#efeee9; --surface-3:#e8e7e1;
+    --border:#e2e0d8; --border-strong:#d2cfc4;
+    --text:#1e2420; --text-muted:#5e6a64; --text-faint:#8a938d;
+    --accent:#0d7266; --accent-hover:#0a5c52; --accent-weak:#d9ece8; --accent-ink:#0a4a42;
+    --good:#2f8f5b; --good-bg:#e2f2e8; --warn:#a9720f; --warn-bg:#f7ecd4;
+    --bad:#c0413b; --bad-bg:#f7e1df; --info:#2f6fb0; --info-bg:#e1ecf7;
+    --shadow:0 1px 2px rgba(30,36,32,.06), 0 8px 24px -12px rgba(30,36,32,.18);
+    --shadow-lg:0 12px 40px -12px rgba(30,36,32,.32);
+  }
+  :root[data-theme="dark"]{
+    --bg:#111614; --surface:#191f1c; --surface-2:#212824; --surface-3:#2a322d;
+    --border:#2b332e; --border-strong:#3a443d;
+    --text:#e9ede9; --text-muted:#9ba8a1; --text-faint:#6f7c74;
+    --accent:#37b8a6; --accent-hover:#4fccbb; --accent-weak:#1a2f2c; --accent-ink:#bfeee6;
+    --good:#57bd83; --good-bg:#16281e; --warn:#d69a3d; --warn-bg:#2c2413; --bad:#e0736c; --bad-bg:#2e1917;
+    --info:#6aa6df; --info-bg:#152230;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 28px -14px rgba(0,0,0,.6);
+    --shadow-lg:0 16px 46px -14px rgba(0,0,0,.7);
+  }
+
+  * { box-sizing:border-box; }
+  body {
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:var(--sans); font-size:15px; line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4 { margin:0; font-weight:650; letter-spacing:-.01em; text-wrap:balance; }
+  button { font-family:inherit; cursor:pointer; }
+  input,select,textarea { font-family:inherit; font-size:14px; }
+  .num { font-variant-numeric:tabular-nums; }
+  :focus-visible { outline:2px solid var(--accent); outline-offset:2px; border-radius:6px; }
+
+  /* ---------- shell ---------- */
+  .app { display:grid; grid-template-columns:236px 1fr; min-height:100vh; }
+  .sidebar {
+    background:var(--surface); border-right:1px solid var(--border);
+    display:flex; flex-direction:column; gap:4px; padding:20px 14px;
+    position:sticky; top:0; height:100vh;
+  }
+  .brand { display:flex; align-items:center; gap:10px; padding:4px 8px 18px; }
+  .brand .mark {
+    width:34px; height:34px; border-radius:9px; flex:none;
+    background:linear-gradient(150deg,var(--accent),var(--accent-hover));
+    display:grid; place-items:center; color:#fff; font-family:var(--serif);
+    font-size:20px; font-weight:700; box-shadow:var(--shadow);
+  }
+  .brand .name { font-family:var(--serif); font-size:19px; font-weight:600; letter-spacing:-.01em; }
+  .brand .sub { font-size:11px; color:var(--text-faint); letter-spacing:.08em; text-transform:uppercase; }
+  .nav-label { font-size:11px; letter-spacing:.09em; text-transform:uppercase; color:var(--text-faint);
+    padding:14px 10px 6px; }
+  .nav-item {
+    display:flex; align-items:center; gap:11px; width:100%; text-align:left;
+    padding:9px 10px; border-radius:var(--radius-sm); border:none; background:none;
+    color:var(--text-muted); font-size:14.5px; font-weight:500; transition:background .12s,color .12s;
+  }
+  .nav-item .ico { width:18px; height:18px; flex:none; stroke:currentColor; fill:none; stroke-width:1.7; }
+  .nav-item:hover { background:var(--surface-2); color:var(--text); }
+  .nav-item.active { background:var(--accent-weak); color:var(--accent-ink); font-weight:600; }
+  .nav-count { margin-left:auto; font-size:12px; background:var(--surface-3); color:var(--text-muted);
+    padding:1px 7px; border-radius:999px; font-variant-numeric:tabular-nums; }
+  .nav-item.active .nav-count { background:var(--accent); color:#fff; }
+  .side-foot { margin-top:auto; display:flex; flex-direction:column; gap:8px; padding-top:12px; }
+
+  .main { min-width:0; display:flex; flex-direction:column; }
+  .topbar {
+    display:flex; align-items:center; gap:16px; padding:16px 28px;
+    border-bottom:1px solid var(--border); background:color-mix(in srgb, var(--bg) 80%, transparent);
+    position:sticky; top:0; z-index:20; backdrop-filter:blur(8px);
+  }
+  .topbar h1 { font-size:20px; }
+  .topbar .crumb { font-size:12.5px; color:var(--text-faint); letter-spacing:.04em; }
+  .spacer { flex:1; }
+  .content { padding:26px 28px 60px; max-width:1180px; width:100%; }
+
+  /* ---------- controls ---------- */
+  .btn {
+    display:inline-flex; align-items:center; gap:7px; padding:8px 14px; border-radius:var(--radius-sm);
+    border:1px solid var(--border-strong); background:var(--surface); color:var(--text);
+    font-size:14px; font-weight:550; transition:background .12s,border-color .12s,transform .05s;
+  }
+  .btn:hover { background:var(--surface-2); }
+  .btn:active { transform:translateY(1px); }
+  .btn.primary { background:var(--accent); border-color:var(--accent); color:#fff; }
+  .btn.primary:hover { background:var(--accent-hover); }
+  .btn.ghost { border-color:transparent; background:transparent; color:var(--text-muted); }
+  .btn.ghost:hover { background:var(--surface-2); color:var(--text); }
+  .btn.sm { padding:5px 10px; font-size:13px; }
+  .btn .ico { width:16px; height:16px; stroke:currentColor; fill:none; stroke-width:1.8; }
+  .icon-btn { width:36px; height:36px; display:grid; place-items:center; border-radius:9px;
+    border:1px solid var(--border); background:var(--surface); color:var(--text-muted); }
+  .icon-btn:hover { color:var(--text); background:var(--surface-2); }
+  .icon-btn .ico { width:18px; height:18px; stroke:currentColor; fill:none; stroke-width:1.8; }
+
+  .field { display:flex; flex-direction:column; gap:5px; }
+  .field label { font-size:12.5px; font-weight:600; color:var(--text-muted); }
+  .input, .select, .textarea {
+    width:100%; padding:9px 11px; border-radius:9px; border:1px solid var(--border-strong);
+    background:var(--surface); color:var(--text);
+  }
+  .textarea { resize:vertical; min-height:74px; line-height:1.45; }
+  .input:focus,.select:focus,.textarea:focus { outline:none; border-color:var(--accent);
+    box-shadow:0 0 0 3px var(--accent-weak); }
+
+  .search { position:relative; flex:1; max-width:340px; }
+  .search .ico { position:absolute; left:11px; top:50%; transform:translateY(-50%);
+    width:16px; height:16px; stroke:var(--text-faint); fill:none; stroke-width:1.8; }
+  .search .input { padding-left:34px; }
+
+  /* ---------- pills ---------- */
+  .pill { display:inline-flex; align-items:center; gap:5px; font-size:12px; font-weight:650;
+    padding:3px 9px; border-radius:999px; letter-spacing:.01em; white-space:nowrap; }
+  .pill::before { content:""; width:6px; height:6px; border-radius:50%; background:currentColor; opacity:.9; }
+  .pill.good { color:var(--good); background:var(--good-bg); }
+  .pill.warn { color:var(--warn); background:var(--warn-bg); }
+  .pill.bad { color:var(--bad); background:var(--bad-bg); }
+  .pill.info { color:var(--info); background:var(--info-bg); }
+  .pill.neutral { color:var(--text-muted); background:var(--surface-3); }
+  .pill.plain::before { display:none; }
+
+  /* ---------- cards / layout ---------- */
+  .card { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius);
+    box-shadow:var(--shadow); }
+  .stat-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-bottom:24px; }
+  .stat { padding:16px 18px; }
+  .stat .k { font-size:12px; color:var(--text-muted); font-weight:600; letter-spacing:.02em;
+    display:flex; align-items:center; gap:7px; }
+  .stat .k .ico { width:15px; height:15px; stroke:var(--accent); fill:none; stroke-width:1.8; }
+  .stat .v { font-size:30px; font-weight:680; margin-top:8px; letter-spacing:-.02em; }
+  .stat .m { font-size:12.5px; color:var(--text-faint); margin-top:2px; }
+
+  .cols { display:grid; grid-template-columns:1.4fr 1fr; gap:20px; align-items:start; }
+  .panel { padding:0; overflow:hidden; }
+  .panel-head { display:flex; align-items:center; gap:10px; padding:15px 18px; border-bottom:1px solid var(--border); }
+  .panel-head h3 { font-size:15px; }
+  .panel-head .pill { margin-left:auto; }
+  .panel-body { padding:6px 8px; }
+
+  .row { display:flex; align-items:center; gap:12px; padding:10px 12px; border-radius:10px; }
+  .row + .row { margin-top:1px; }
+  .row:hover { background:var(--surface-2); }
+  .row .meta { min-width:0; flex:1; }
+  .row .meta .t { font-weight:600; font-size:14px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .row .meta .s { font-size:12.5px; color:var(--text-muted); }
+  .row .end { margin-left:auto; display:flex; align-items:center; gap:8px; }
+
+  .avatar { width:38px; height:38px; border-radius:50%; flex:none; display:grid; place-items:center;
+    color:#fff; font-weight:650; font-size:14px; letter-spacing:.01em; }
+  .avatar.lg { width:60px; height:60px; font-size:21px; }
+  .avatar.sm { width:28px; height:28px; font-size:11px; }
+
+  .empty { text-align:center; color:var(--text-faint); padding:34px 16px; font-size:13.5px; }
+
+  /* directory */
+  .toolbar { display:flex; align-items:center; gap:12px; margin-bottom:18px; flex-wrap:wrap; }
+  .grid-people { display:grid; grid-template-columns:repeat(auto-fill,minmax(248px,1fr)); gap:14px; }
+  .pcard { padding:16px; display:flex; flex-direction:column; gap:12px; text-align:left; width:100%;
+    background:var(--surface); border:1px solid var(--border); border-radius:var(--radius);
+    transition:border-color .12s, box-shadow .12s, transform .08s; }
+  .pcard:hover { border-color:var(--border-strong); box-shadow:var(--shadow); transform:translateY(-2px); }
+  .pcard .top { display:flex; gap:12px; align-items:center; }
+  .pcard .nm { font-weight:650; font-size:15px; }
+  .pcard .rl { font-size:12.5px; color:var(--text-muted); }
+  .pcard .foot { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+  .dept-tag { font-size:11.5px; font-weight:600; color:var(--text-muted); background:var(--surface-2);
+    border:1px solid var(--border); padding:2px 8px; border-radius:999px; }
+
+  /* progress */
+  .bar { height:7px; border-radius:999px; background:var(--surface-3); overflow:hidden; }
+  .bar > span { display:block; height:100%; background:var(--accent); border-radius:999px; transition:width .3s; }
+  .bar.good > span { background:var(--good); }
+
+  /* checklist */
+  .check { display:flex; align-items:center; gap:11px; padding:9px 10px; border-radius:9px; }
+  .check:hover { background:var(--surface-2); }
+  .check input { width:17px; height:17px; accent-color:var(--accent); flex:none; }
+  .check .lbl { font-size:14px; }
+  .check.done .lbl { color:var(--text-faint); text-decoration:line-through; }
+
+  /* stars */
+  .stars { display:inline-flex; gap:2px; }
+  .stars .s { width:15px; height:15px; fill:var(--border-strong); }
+  .stars .s.on { fill:#e0a92e; }
+
+  table { width:100%; border-collapse:collapse; }
+  th { text-align:left; font-size:11.5px; letter-spacing:.06em; text-transform:uppercase;
+    color:var(--text-faint); font-weight:650; padding:10px 12px; border-bottom:1px solid var(--border); }
+  td { padding:11px 12px; border-bottom:1px solid var(--border); font-size:14px; vertical-align:middle; }
+  tr:last-child td { border-bottom:none; }
+  .table-wrap { overflow-x:auto; }
+
+  /* modal */
+  .scrim { position:fixed; inset:0; background:rgba(20,26,23,.5); backdrop-filter:blur(3px);
+    display:grid; place-items:center; padding:20px; z-index:60; }
+  .modal { background:var(--surface); border:1px solid var(--border); border-radius:18px;
+    box-shadow:var(--shadow-lg); width:100%; max-width:540px; max-height:90vh; overflow:auto; }
+  .modal.wide { max-width:640px; }
+  .modal-head { display:flex; align-items:flex-start; gap:14px; padding:20px 22px 8px; }
+  .modal-head .x { margin-left:auto; }
+  .modal-body { padding:14px 22px 22px; }
+  .form-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .form-grid .full { grid-column:1 / -1; }
+
+  .section-title { font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--text-faint);
+    font-weight:650; margin:20px 0 8px; }
+  .kv { display:flex; justify-content:space-between; gap:12px; padding:7px 0; border-bottom:1px solid var(--border); font-size:14px; }
+  .kv:last-child { border-bottom:none; }
+  .kv .k { color:var(--text-muted); }
+
+  .toast { position:fixed; bottom:22px; left:50%; transform:translateX(-50%) translateY(20px);
+    background:var(--text); color:var(--bg); padding:11px 18px; border-radius:11px; font-size:14px; font-weight:550;
+    box-shadow:var(--shadow-lg); opacity:0; transition:opacity .2s, transform .2s; z-index:80; pointer-events:none; }
+  .toast.show { opacity:1; transform:translateX(-50%) translateY(0); }
+
+  .mobile-nav { display:none; }
+  @media (max-width:860px) {
+    .app { grid-template-columns:1fr; }
+    .sidebar { display:none; }
+    .mobile-nav { display:flex; gap:4px; overflow-x:auto; padding:8px 12px; background:var(--surface);
+      border-bottom:1px solid var(--border); position:sticky; top:0; z-index:30; }
+    .mobile-nav .nav-item { width:auto; white-space:nowrap; }
+    .cols { grid-template-columns:1fr; }
+    .stat-grid { grid-template-columns:repeat(2,1fr); }
+    .content { padding:18px 16px 60px; }
+    .topbar { padding:14px 16px; }
+    .form-grid { grid-template-columns:1fr; }
+  }
+  @media (prefers-reduced-motion:reduce) { * { transition:none !important; } }
+</style>
+
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="mark">R</div>
+      <div>
+        <div class="name">Rootwork</div>
+        <div class="sub">People Ops</div>
+      </div>
+    </div>
+    <div id="nav"></div>
+    <div class="side-foot">
+      <button class="btn ghost sm" id="themeBtn"><svg class="ico" viewBox="0 0 24 24" width="16" height="16" style="stroke:currentColor;fill:none;stroke-width:1.8"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 19 19M19 5l-1.5 1.5M6.5 17.5 5 19"/></svg><span id="themeLabel">Dark</span></button>
+      <button class="btn ghost sm" id="resetBtn"><svg class="ico" viewBox="0 0 24 24" width="16" height="16" style="stroke:currentColor;fill:none;stroke-width:1.8"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>Reset demo</button>
+    </div>
+  </aside>
+
+  <div class="main">
+    <div class="mobile-nav" id="mobileNav"></div>
+    <div class="topbar">
+      <div>
+        <div class="crumb" id="crumb">Overview</div>
+        <h1 id="viewTitle">Dashboard</h1>
+      </div>
+      <div class="spacer"></div>
+      <div id="topAction"></div>
+    </div>
+    <div class="content" id="view"></div>
+  </div>
+</div>
+
+<div id="modalRoot"></div>
+<div class="toast" id="toast"></div>
+
+<script>
+"use strict";
+const KEY = "rootwork-hr-v1";
+const $ = (s,r=document)=>r.querySelector(s);
+
+/* ---------------- data ---------------- */
+const AV = ["#0d7266","#b5642a","#3a67b0","#8a4fb0","#c0413b","#2f8f5b","#a9720f","#0e7c8a"];
+const TEMPLATE = ["Sign offer & tax forms","IT accounts & laptop","Add to payroll & benefits",
+  "Team intro & buddy assigned","Read team handbook","First-week 1:1 with manager","Set 30-day goals"];
+
+function seed(){
+  const mk=(id,fn,ln,title,dept,start,pto,onCount,revs)=>{
+    const ob = TEMPLATE.map((t,i)=>({task:t,done:i<onCount}));
+    return {id,firstName:fn,lastName:ln,title,dept,email:(fn[0]+ln).toLowerCase()+"@rootwork.co",
+      phone:"(919) 555-0"+(100+id), start, pto, avatar:AV[id%AV.length], mentorId:null, onboarding:ob, reviews:revs};
+  };
+  const employees = [
+    mk(1,"Dana","Okafor","Head of People","People",  "2022-03-14",18, 7, [{cycle:"H1 2026",rating:5,goals:"Roll out new review cycle; hire 2 engineers.",notes:"Exceptional quarter. Ready for director scope.",date:"2026-06-20"}]),
+    mk(2,"Marcus","Reyes","Senior Engineer","Engineering","2023-01-09",12, 7, [{cycle:"H1 2026",rating:4,goals:"Ship billing v2; mentor one junior.",notes:"Strong delivery, growing as a mentor.",date:"2026-06-18"}]),
+    mk(3,"Priya","Nair","Product Designer","Design","2024-06-03",15, 7, [{cycle:"H1 2026",rating:4,goals:"Design system refresh; usability tests.",notes:"Great craft. Push more on cross-team comms.",date:"2026-06-19"}]),
+    mk(4,"Leah","Bianchi","Account Executive","Sales","2023-09-25",9, 7, []),
+    mk(5,"Tomás","Guerrero","Support Lead","Support","2024-11-12",16, 7, []),
+    mk(6,"Aisha","Bello","Junior Engineer","Engineering","2026-06-29",20, 3, []),
+    mk(7,"Sam","Whitfield","Marketing Manager","Marketing","2026-07-06",20, 1, []),
+  ];
+  const timeOff = [
+    {id:1,empId:2,type:"Vacation",start:"2026-07-28",end:"2026-08-01",days:5,note:"Family trip",status:"Pending"},
+    {id:2,empId:3,type:"Sick",start:"2026-07-15",end:"2026-07-15",days:1,note:"",status:"Approved"},
+    {id:3,empId:4,type:"Personal",start:"2026-07-22",end:"2026-07-22",days:1,note:"Appointment",status:"Pending"},
+    {id:4,empId:1,type:"Vacation",start:"2026-06-30",end:"2026-07-03",days:4,note:"Long weekend",status:"Approved"},
+  ];
+  const M={2:1,3:1,6:2,7:4};   // mentor assignments: mentee id -> mentor id
+  employees.forEach(e=>{ if(M[e.id]) e.mentorId=M[e.id]; });
+  return {employees, timeOff, seq:{emp:8, to:5, rev:100}};
+}
+
+let db;
+function load(){ try{ db = JSON.parse(localStorage.getItem(KEY)); }catch(e){ db=null; } if(!db||!db.employees) db=seed(); }
+function save(){ localStorage.setItem(KEY, JSON.stringify(db)); }
+function reset(){ db=seed(); save(); render(); toast("Demo data restored"); }
+
+/* ---------------- helpers ---------------- */
+const emp = id => db.employees.find(e=>e.id===id);
+const initials = e => (e.firstName[0]+e.lastName[0]).toUpperCase();
+const fullName = e => e.firstName+" "+e.lastName;
+const esc = s => (s==null?"":String(s)).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function fmt(d){ if(!d) return "—"; const p=d.split("-"); return new Date(p[0],p[1]-1,p[2]).toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"}); }
+function fmtShort(d){ const p=d.split("-"); return new Date(p[0],p[1]-1,p[2]).toLocaleDateString("en-US",{month:"short",day:"numeric"}); }
+const TODAY = "2026-07-18";
+function daysBetween(a,b){ return Math.round((new Date(b)-new Date(a))/864e5); }
+function avatar(e,cls=""){ return `<div class="avatar ${cls}" style="background:${e.avatar}">${initials(e)}</div>`; }
+function onboardPct(e){ const d=e.onboarding.filter(t=>t.done).length; return Math.round(d/e.onboarding.length*100); }
+const isOnboarding = e => onboardPct(e) < 100;
+const pendingTO = () => db.timeOff.filter(t=>t.status==="Pending");
+const reviewsDue = () => db.employees.filter(e=>!isOnboarding(e) && e.reviews.length===0);
+function stars(n){ let h='<span class="stars" aria-label="'+n+' of 5">'; for(let i=1;i<=5;i++) h+=`<svg class="s ${i<=n?'on':''}" viewBox="0 0 24 24"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>`; return h+'</span>'; }
+
+/* ---------------- views ---------------- */
+const NAV = [
+  {id:"dashboard", label:"Dashboard", ico:'<rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/>'},
+  {id:"directory", label:"Directory", ico:'<circle cx="9" cy="8" r="3.2"/><path d="M3.5 20a5.5 5.5 0 0 1 11 0"/><circle cx="17.5" cy="9" r="2.6"/><path d="M15 20a5 5 0 0 1 6.5-4.8"/>'},
+  {id:"timeoff", label:"Time Off", ico:'<rect x="3.5" y="5" width="17" height="16" rx="2.5"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/>'},
+  {id:"onboarding", label:"Onboarding", ico:'<path d="M9 11.5 11 13.5 15.5 9"/><rect x="4" y="3.5" width="16" height="17" rx="2.5"/>'},
+  {id:"performance", label:"Performance", ico:'<path d="M4 19V5M4 19h16M8 16l3.5-4 3 2.5L20 8"/>'},
+];
+const TITLES = { dashboard:["Overview","Dashboard"], directory:["Team","Employee Directory"],
+  timeoff:["Requests","Time Off"], onboarding:["New Hires","Onboarding"], performance:["Growth","Performance Reviews"] };
+let current = "dashboard";
+
+function navBadge(id){
+  if(id==="timeoff"){ const n=pendingTO().length; return n?`<span class="nav-count num">${n}</span>`:""; }
+  if(id==="onboarding"){ const n=db.employees.filter(isOnboarding).length; return n?`<span class="nav-count num">${n}</span>`:""; }
+  if(id==="performance"){ const n=reviewsDue().length; return n?`<span class="nav-count num">${n}</span>`:""; }
+  return "";
+}
+function renderNav(){
+  const items = NAV.map(n=>`<button class="nav-item ${n.id===current?'active':''}" data-nav="${n.id}">
+    <svg class="ico" viewBox="0 0 24 24">${n.ico}</svg><span>${n.label}</span>${navBadge(n.id)}</button>`).join("");
+  $("#nav").innerHTML = `<div class="nav-label">Workspace</div>`+items;
+  $("#mobileNav").innerHTML = NAV.map(n=>`<button class="nav-item ${n.id===current?'active':''}" data-nav="${n.id}">
+    <svg class="ico" viewBox="0 0 24 24">${n.ico}</svg><span>${n.label}</span></button>`).join("");
+  document.querySelectorAll("[data-nav]").forEach(b=>b.onclick=()=>{ current=b.dataset.nav; render(); });
+}
+
+function render(){
+  renderNav();
+  $("#crumb").textContent = TITLES[current][0];
+  $("#viewTitle").textContent = TITLES[current][1];
+  const actions = {
+    directory:`<button class="btn primary" id="addEmp"><svg class="ico" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>Add employee</button>`,
+    timeoff:`<button class="btn primary" id="addTO"><svg class="ico" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>Request time off</button>`,
+    performance:`<button class="btn primary" id="addRev"><svg class="ico" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>New review</button>`,
+  };
+  $("#topAction").innerHTML = actions[current]||"";
+  ({dashboard:viewDashboard,directory:viewDirectory,timeoff:viewTimeoff,onboarding:viewOnboarding,performance:viewPerformance}[current])();
+  if($("#addEmp")) $("#addEmp").onclick=()=>empModal();
+  if($("#addTO")) $("#addTO").onclick=()=>toModal();
+  if($("#addRev")) $("#addRev").onclick=()=>revModal();
+}
+
+/* -------- dashboard -------- */
+function viewDashboard(){
+  const total = db.employees.length;
+  const onb = db.employees.filter(isOnboarding).length;
+  const pend = pendingTO().length;
+  const due = reviewsDue().length;
+  const newHires = db.employees.filter(e=>daysBetween(e.start,TODAY)<=30 && daysBetween(e.start,TODAY)>=-14);
+  const stat=(ico,k,v,m)=>`<div class="card stat"><div class="k"><svg class="ico" viewBox="0 0 24 24">${ico}</svg>${k}</div><div class="v num">${v}</div><div class="m">${m}</div></div>`;
+  const pendRows = pendingTO().map(t=>{ const e=emp(t.empId); return `<button class="row" data-open-to="${t.id}">
+    ${avatar(e)}<div class="meta"><div class="t">${esc(fullName(e))}</div><div class="s">${t.type} · ${fmtShort(t.start)}–${fmtShort(t.end)} · <span class="num">${t.days}</span>d</div></div>
+    <div class="end"><span class="pill warn plain">Pending</span></div></button>`; }).join("") || `<div class="empty">No requests waiting. You're all caught up.</div>`;
+  const dueRows = reviewsDue().map(e=>`<button class="row" data-rev="${e.id}">${avatar(e)}
+    <div class="meta"><div class="t">${esc(fullName(e))}</div><div class="s">${esc(e.title)} · ${esc(e.dept)}</div></div>
+    <div class="end"><span class="pill info plain">Review due</span></div></button>`).join("") || `<div class="empty">Every eligible employee has a current review.</div>`;
+  const onbRows = db.employees.filter(isOnboarding).map(e=>`<button class="row" data-onb="${e.id}">${avatar(e)}
+    <div class="meta"><div class="t">${esc(fullName(e))}</div><div class="s">Started ${fmtShort(e.start)}</div></div>
+    <div class="end" style="width:120px"><div class="bar" style="flex:1"><span style="width:${onboardPct(e)}%"></span></div><span class="num" style="font-size:12px;color:var(--text-muted)">${onboardPct(e)}%</span></div></button>`).join("") || `<div class="empty">No one is mid-onboarding.</div>`;
+
+  $("#view").innerHTML = `
+    <div class="stat-grid">
+      ${stat('<circle cx="9" cy="8" r="3.2"/><path d="M3.5 20a5.5 5.5 0 0 1 11 0"/><circle cx="17.5" cy="9" r="2.6"/><path d="M15 20a5 5 0 0 1 6.5-4.8"/>',"Headcount",total,newHires.length+" started in last 30 days")}
+      ${stat('<rect x="3.5" y="5" width="17" height="16" rx="2.5"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/>',"Pending time off",pend,pend?"Needs your approval":"Nothing to review")}
+      ${stat('<path d="M9 11.5 11 13.5 15.5 9"/><rect x="4" y="3.5" width="16" height="17" rx="2.5"/>',"Onboarding",onb,onb?"In progress now":"All complete")}
+      ${stat('<path d="M4 19V5M4 19h16M8 16l3.5-4 3 2.5L20 8"/>',"Reviews due",due,due?"Not yet started":"Up to date")}
+    </div>
+    <div class="cols">
+      <div class="card panel">
+        <div class="panel-head"><h3>Time-off approvals</h3>${pend?`<span class="pill warn">${pend} pending</span>`:`<span class="pill good">Clear</span>`}</div>
+        <div class="panel-body">${pendRows}</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <div class="card panel">
+          <div class="panel-head"><h3>Onboarding in progress</h3></div>
+          <div class="panel-body">${onbRows}</div>
+        </div>
+        <div class="card panel">
+          <div class="panel-head"><h3>Reviews to schedule</h3></div>
+          <div class="panel-body">${dueRows}</div>
+        </div>
+      </div>
+    </div>`;
+  document.querySelectorAll("[data-open-to]").forEach(b=>b.onclick=()=>{ current="timeoff"; render(); });
+  document.querySelectorAll("[data-onb]").forEach(b=>b.onclick=()=>{ current="onboarding"; render(); });
+  document.querySelectorAll("[data-rev]").forEach(b=>b.onclick=()=>revModal(+b.dataset.rev));
+}
+
+/* -------- directory -------- */
+let dirSearch="", dirDept="All";
+function viewDirectory(){
+  const depts = ["All",...new Set(db.employees.map(e=>e.dept))];
+  const q=dirSearch.toLowerCase();
+  const list = db.employees.filter(e=> (dirDept==="All"||e.dept===dirDept) &&
+    (!q || fullName(e).toLowerCase().includes(q) || e.title.toLowerCase().includes(q) || e.dept.toLowerCase().includes(q) || e.email.toLowerCase().includes(q)));
+  $("#view").innerHTML = `
+    <div class="toolbar">
+      <div class="search"><svg class="ico" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input class="input" id="dsearch" placeholder="Search name, role, department…" value="${esc(dirSearch)}"></div>
+      <select class="select" id="ddept" style="width:auto">${depts.map(d=>`<option ${d===dirDept?"selected":""}>${d}</option>`).join("")}</select>
+      <span style="margin-left:auto;color:var(--text-faint);font-size:13px" class="num">${list.length} of ${db.employees.length}</span>
+    </div>
+    <div class="grid-people">${list.map(e=>`
+      <button class="pcard" data-emp="${e.id}">
+        <div class="top">${avatar(e)}<div><div class="nm">${esc(fullName(e))}</div><div class="rl">${esc(e.title)}</div></div></div>
+        <div class="foot"><span class="dept-tag">${esc(e.dept)}</span>
+          ${isOnboarding(e)?`<span class="pill info">Onboarding</span>`:``}
+          <span style="margin-left:auto;font-size:12px;color:var(--text-faint)" class="num">${e.pto}d PTO</span></div>
+      </button>`).join("") || `<div class="empty" style="grid-column:1/-1">No one matches “${esc(dirSearch)}”.</div>`}</div>`;
+  const s=$("#dsearch"); s.oninput=()=>{ dirSearch=s.value; const p=s.selectionStart; viewDirectory(); const n=$("#dsearch"); n.focus(); n.setSelectionRange(p,p); };
+  $("#ddept").onchange=e=>{ dirDept=e.target.value; viewDirectory(); };
+  document.querySelectorAll("[data-emp]").forEach(b=>b.onclick=()=>empDetail(+b.dataset.emp));
+}
+
+function empDetail(id){
+  const e=emp(id);
+  const to=db.timeOff.filter(t=>t.empId===id);
+  const mentor=e.mentorId?emp(e.mentorId):null;
+  const mentees=db.employees.filter(x=>x.mentorId===id);
+  const body=`
+    <div class="modal-head">
+      ${avatar(e,"lg")}
+      <div><h2 style="font-size:20px">${esc(fullName(e))}</h2>
+        <div style="color:var(--text-muted);font-size:14px">${esc(e.title)} · ${esc(e.dept)}</div>
+        <div style="margin-top:8px">${isOnboarding(e)?`<span class="pill info">Onboarding ${onboardPct(e)}%</span>`:`<span class="pill good">Active</span>`}</div>
+      </div>
+      <button class="icon-btn x" data-close><svg class="ico" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    </div>
+    <div class="modal-body">
+      <div class="kv"><span class="k">Email</span><span>${esc(e.email)}</span></div>
+      <div class="kv"><span class="k">Phone</span><span class="num">${esc(e.phone)}</span></div>
+      <div class="kv"><span class="k">Start date</span><span>${fmt(e.start)}</span></div>
+      <div class="kv"><span class="k">PTO balance</span><span class="num">${e.pto} days</span></div>
+      <div class="kv"><span class="k">Mentor</span><span>${mentor?`<button class="btn sm ghost" data-open-emp="${mentor.id}" style="padding:2px 8px;color:var(--accent)">${esc(fullName(mentor))}</button>`:`<span style="color:var(--text-faint)">Unassigned</span>`}</span></div>
+      ${mentees.length?`<div class="kv"><span class="k">Mentoring</span><span style="text-align:right">${mentees.map(m=>esc(fullName(m))).join(", ")}</span></div>`:``}
+      <div class="section-title">Time off (${to.length})</div>
+      ${to.length?to.map(t=>`<div class="kv"><span class="k">${t.type} · ${fmtShort(t.start)}–${fmtShort(t.end)}</span><span class="pill ${t.status==="Approved"?"good":t.status==="Denied"?"bad":"warn"} plain">${t.status}</span></div>`).join(""):`<div style="color:var(--text-faint);font-size:13.5px;padding:4px 0">No requests on file.</div>`}
+      <div class="section-title">Latest review</div>
+      ${e.reviews.length?`<div class="kv"><span class="k">${e.reviews[0].cycle}</span>${stars(e.reviews[0].rating)}</div><div style="font-size:13.5px;color:var(--text-muted);padding:4px 0">${esc(e.reviews[0].notes)}</div>`:`<div style="color:var(--text-faint);font-size:13.5px;padding:4px 0">No review yet.</div>`}
+      <div style="display:flex;gap:10px;margin-top:20px">
+        <button class="btn" data-edit><svg class="ico" viewBox="0 0 24 24"><path d="M4 20h4L18 10l-4-4L4 16z"/><path d="M13 5l4 4"/></svg>Edit</button>
+        <button class="btn ghost" data-close style="margin-left:auto">Close</button>
+      </div>
+    </div>`;
+  openModal(body);
+  $("#modalRoot [data-edit]").onclick=()=>empModal(id);
+  const mb=$("#modalRoot [data-open-emp]"); if(mb) mb.onclick=()=>empDetail(+mb.dataset.openEmp);
+}
+
+function empModal(id){
+  const e = id?emp(id):null;
+  const depts=["Engineering","Design","Product","Sales","Marketing","Support","People","Finance"];
+  const others=db.employees.filter(x=>!e||x.id!==e.id);
+  const mentorOpts=`<option value="">None</option>`+others.map(x=>`<option value="${x.id}" ${e&&e.mentorId===x.id?"selected":""}>${esc(fullName(x))} · ${esc(x.dept)}</option>`).join("");
+  openModal(`
+    <div class="modal-head"><h2 style="font-size:19px">${e?"Edit employee":"Add employee"}</h2>
+      <button class="icon-btn x" data-close><svg class="ico" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+    <div class="modal-body"><form id="empForm"><div class="form-grid">
+      <div class="field"><label>First name</label><input class="input" name="firstName" required value="${e?esc(e.firstName):""}"></div>
+      <div class="field"><label>Last name</label><input class="input" name="lastName" required value="${e?esc(e.lastName):""}"></div>
+      <div class="field full"><label>Job title</label><input class="input" name="title" required value="${e?esc(e.title):""}"></div>
+      <div class="field"><label>Department</label><select class="select" name="dept">${depts.map(d=>`<option ${e&&e.dept===d?"selected":""}>${d}</option>`).join("")}</select></div>
+      <div class="field"><label>Start date</label><input class="input" type="date" name="start" required value="${e?e.start:TODAY}"></div>
+      <div class="field"><label>Email</label><input class="input" type="email" name="email" value="${e?esc(e.email):""}"></div>
+      <div class="field"><label>PTO balance (days)</label><input class="input num" type="number" name="pto" min="0" max="60" value="${e?e.pto:20}"></div>
+      <div class="field full"><label>Mentor / onboarding buddy</label><select class="select" name="mentorId">${mentorOpts}</select></div>
+    </div>
+    <div style="display:flex;gap:10px;margin-top:22px">
+      <button type="submit" class="btn primary">${e?"Save changes":"Add to team"}</button>
+      <button type="button" class="btn ghost" data-close style="margin-left:auto">Cancel</button>
+    </div></form></div>`);
+  $("#empForm").onsubmit=ev=>{
+    ev.preventDefault();
+    const f=Object.fromEntries(new FormData(ev.target));
+    const mentorId=f.mentorId?+f.mentorId:null;
+    if(e){ Object.assign(e,{firstName:f.firstName,lastName:f.lastName,title:f.title,dept:f.dept,start:f.start,email:f.email,pto:+f.pto,mentorId}); toast("Employee updated"); }
+    else { db.employees.push({id:db.seq.emp++,firstName:f.firstName,lastName:f.lastName,title:f.title,dept:f.dept,start:f.start,
+      email:f.email||(f.firstName[0]+f.lastName).toLowerCase()+"@rootwork.co",phone:"(919) 555-0"+(100+db.seq.emp),
+      pto:+f.pto,avatar:AV[db.seq.emp%AV.length],mentorId,onboarding:TEMPLATE.map(t=>({task:t,done:false})),reviews:[]}); toast("Employee added"); }
+    save(); closeModal(); render();
+  };
+}
+
+/* -------- time off -------- */
+function viewTimeoff(){
+  const order={Pending:0,Approved:1,Denied:2};
+  const rows=[...db.timeOff].sort((a,b)=>order[a.status]-order[b.status]||new Date(a.start)-new Date(b.start));
+  const pend=pendingTO().length;
+  $("#view").innerHTML=`
+    <div class="stat-grid" style="grid-template-columns:repeat(3,1fr)">
+      <div class="card stat"><div class="k">Pending</div><div class="v num">${pend}</div><div class="m">Awaiting decision</div></div>
+      <div class="card stat"><div class="k">Approved (upcoming)</div><div class="v num">${db.timeOff.filter(t=>t.status==="Approved"&&t.end>=TODAY).length}</div><div class="m">On the calendar</div></div>
+      <div class="card stat"><div class="k">Avg. PTO left</div><div class="v num">${Math.round(db.employees.reduce((s,e)=>s+e.pto,0)/db.employees.length)}d</div><div class="m">Across the team</div></div>
+    </div>
+    <div class="card panel"><div class="panel-head"><h3>All requests</h3>${pend?`<span class="pill warn">${pend} pending</span>`:`<span class="pill good">All handled</span>`}</div>
+    <div class="table-wrap"><table><thead><tr><th>Employee</th><th>Type</th><th>Dates</th><th>Days</th><th>Status</th><th></th></tr></thead><tbody>
+    ${rows.map(t=>{ const e=emp(t.empId); const pc={Approved:"good",Denied:"bad",Pending:"warn"}[t.status];
+      return `<tr><td><div style="display:flex;align-items:center;gap:9px">${avatar(e,"sm")}<div><div style="font-weight:600">${esc(fullName(e))}</div><div style="font-size:12px;color:var(--text-faint)">${esc(e.dept)}</div></div></div></td>
+      <td>${t.type}</td><td style="white-space:nowrap">${fmtShort(t.start)} – ${fmtShort(t.end)}</td><td class="num">${t.days}</td>
+      <td><span class="pill ${pc} plain">${t.status}</span></td>
+      <td style="text-align:right;white-space:nowrap">${t.status==="Pending"?
+        `<button class="btn sm" data-approve="${t.id}" style="color:var(--good)">Approve</button>
+         <button class="btn sm ghost" data-deny="${t.id}" style="color:var(--bad)">Deny</button>`:
+        `<button class="btn sm ghost" data-undo="${t.id}">Reset</button>`}</td></tr>`; }).join("")}
+    </tbody></table></div></div>`;
+  document.querySelectorAll("[data-approve]").forEach(b=>b.onclick=()=>decideTO(+b.dataset.approve,"Approved"));
+  document.querySelectorAll("[data-deny]").forEach(b=>b.onclick=()=>decideTO(+b.dataset.deny,"Denied"));
+  document.querySelectorAll("[data-undo]").forEach(b=>b.onclick=()=>decideTO(+b.dataset.undo,"Pending"));
+}
+function decideTO(id,status){
+  const t=db.timeOff.find(x=>x.id===id); const e=emp(t.empId); const prev=t.status;
+  if(status==="Approved"&&prev!=="Approved"&&t.type!=="Sick"){ if(e.pto<t.days){ toast(fullName(e)+" only has "+e.pto+" days left"); return; } e.pto-=t.days; }
+  if(prev==="Approved"&&status!=="Approved"&&t.type!=="Sick"){ e.pto+=t.days; }
+  t.status=status; save(); render();
+  toast(status==="Pending"?"Request reset to pending":`Request ${status.toLowerCase()}`);
+}
+function toModal(){
+  openModal(`
+    <div class="modal-head"><h2 style="font-size:19px">Request time off</h2>
+      <button class="icon-btn x" data-close><svg class="ico" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+    <div class="modal-body"><form id="toForm"><div class="form-grid">
+      <div class="field full"><label>Employee</label><select class="select" name="empId">${db.employees.map(e=>`<option value="${e.id}">${esc(fullName(e))} — ${e.pto}d left</option>`).join("")}</select></div>
+      <div class="field"><label>Type</label><select class="select" name="type"><option>Vacation</option><option>Sick</option><option>Personal</option></select></div>
+      <div class="field"><label>Note (optional)</label><input class="input" name="note" placeholder="e.g. Family trip"></div>
+      <div class="field"><label>Start date</label><input class="input" type="date" name="start" required value="${TODAY}"></div>
+      <div class="field"><label>End date</label><input class="input" type="date" name="end" required value="${TODAY}"></div>
+    </div>
+    <div style="display:flex;gap:10px;margin-top:22px">
+      <button type="submit" class="btn primary">Submit request</button>
+      <button type="button" class="btn ghost" data-close style="margin-left:auto">Cancel</button>
+    </div></form></div>`);
+  $("#toForm").onsubmit=ev=>{
+    ev.preventDefault();
+    const f=Object.fromEntries(new FormData(ev.target));
+    if(f.end<f.start){ toast("End date can't be before start date"); return; }
+    const days=daysBetween(f.start,f.end)+1;
+    db.timeOff.push({id:db.seq.to++,empId:+f.empId,type:f.type,start:f.start,end:f.end,days,note:f.note,status:"Pending"});
+    save(); closeModal(); current="timeoff"; render(); toast("Request submitted");
+  };
+}
+
+/* -------- onboarding -------- */
+function viewOnboarding(){
+  const active=db.employees.filter(isOnboarding);
+  const done=db.employees.filter(e=>!isOnboarding(e));
+  $("#view").innerHTML=`
+    <p style="color:var(--text-muted);margin:0 0 20px;max-width:60ch">Track each new hire through their first-week checklist. Tick items as they're completed — progress updates everywhere.</p>
+    ${active.length?`<div class="section-title">In progress · ${active.length}</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px">
+    ${active.map(e=>{ const pct=onboardPct(e); const men=e.mentorId?emp(e.mentorId):null; return `<div class="card" style="padding:16px">
+      <div style="display:flex;align-items:center;gap:11px;margin-bottom:12px">${avatar(e)}
+        <div style="flex:1"><div style="font-weight:650">${esc(fullName(e))}</div><div style="font-size:12.5px;color:var(--text-muted)">${esc(e.title)} · started ${fmtShort(e.start)}${men?` · <span style="color:var(--accent)">Mentor: ${esc(men.firstName)} ${esc(men.lastName[0])}.</span>`:` · <span style="color:var(--warn)">No mentor yet</span>`}</div></div>
+        <span class="pill ${pct===100?'good':'info'} plain num">${pct}%</span></div>
+      <div class="bar" style="margin-bottom:8px"><span style="width:${pct}%"></span></div>
+      <div>${e.onboarding.map((t,i)=>`<label class="check ${t.done?'done':''}"><input type="checkbox" ${t.done?'checked':''} data-ob="${e.id}:${i}"><span class="lbl">${esc(t.task)}</span></label>`).join("")}</div>
+    </div>`; }).join("")}</div>`:`<div class="card"><div class="empty">🎉 No one is mid-onboarding right now. Add an employee to start a checklist.</div></div>`}
+    ${done.length?`<div class="section-title">Fully onboarded · ${done.length}</div>
+    <div class="card panel"><div class="panel-body">${done.map(e=>`<div class="row">${avatar(e)}
+      <div class="meta"><div class="t">${esc(fullName(e))}</div><div class="s">${esc(e.title)} · ${esc(e.dept)}</div></div>
+      <div class="end"><span class="pill good">Complete</span></div></div>`).join("")}</div></div>`:``}`;
+  document.querySelectorAll("[data-ob]").forEach(c=>c.onchange=()=>{
+    const [id,i]=c.dataset.ob.split(":"); const e=emp(+id); e.onboarding[+i].done=c.checked; save(); render();
+    if(onboardPct(e)===100) toast(fullName(e)+" is fully onboarded 🎉");
+  });
+}
+
+/* -------- performance -------- */
+function viewPerformance(){
+  const rated=db.employees.filter(e=>e.reviews.length);
+  const due=reviewsDue();
+  const avg = rated.length? (rated.reduce((s,e)=>s+e.reviews[0].rating,0)/rated.length).toFixed(1):"—";
+  $("#view").innerHTML=`
+    <div class="stat-grid" style="grid-template-columns:repeat(3,1fr)">
+      <div class="card stat"><div class="k">Reviews on file</div><div class="v num">${rated.length}</div><div class="m">Across the team</div></div>
+      <div class="card stat"><div class="k">Average rating</div><div class="v num">${avg}</div><div class="m">Out of 5</div></div>
+      <div class="card stat"><div class="k">Reviews due</div><div class="v num">${due.length}</div><div class="m">${due.length?"Not yet started":"All up to date"}</div></div>
+    </div>
+    ${due.length?`<div class="section-title">Needs a review</div><div class="card panel"><div class="panel-body">
+      ${due.map(e=>`<div class="row">${avatar(e)}<div class="meta"><div class="t">${esc(fullName(e))}</div><div class="s">${esc(e.title)} · ${esc(e.dept)}</div></div>
+      <div class="end"><button class="btn sm primary" data-newrev="${e.id}">Start review</button></div></div>`).join("")}</div></div>`:``}
+    <div class="section-title">Completed reviews</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px">
+    ${rated.map(e=>{ const r=e.reviews[0]; return `<div class="card" style="padding:18px">
+      <div style="display:flex;align-items:center;gap:11px;margin-bottom:12px">${avatar(e)}
+        <div style="flex:1"><div style="font-weight:650">${esc(fullName(e))}</div><div style="font-size:12.5px;color:var(--text-muted)">${esc(e.title)}</div></div>
+        <button class="btn sm ghost" data-newrev="${e.id}">Update</button></div>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span class="pill neutral plain">${r.cycle}</span>${stars(r.rating)}</div>
+      <div style="font-size:12px;font-weight:650;color:var(--text-faint);letter-spacing:.05em;text-transform:uppercase;margin-bottom:3px">Goals</div>
+      <div style="font-size:13.5px;color:var(--text-muted);margin-bottom:10px">${esc(r.goals)}</div>
+      <div style="font-size:12px;font-weight:650;color:var(--text-faint);letter-spacing:.05em;text-transform:uppercase;margin-bottom:3px">Manager notes</div>
+      <div style="font-size:13.5px;color:var(--text)">${esc(r.notes)}</div>
+    </div>`; }).join("") || `<div class="card" style="grid-column:1/-1"><div class="empty">No reviews recorded yet.</div></div>`}
+    </div>`;
+  document.querySelectorAll("[data-newrev]").forEach(b=>b.onclick=()=>revModal(+b.dataset.newrev));
+}
+function revModal(empId){
+  const list=db.employees;
+  const pre = empId||list[0].id;
+  const existing = empId?emp(empId).reviews[0]:null;
+  openModal(`
+    <div class="modal-head"><h2 style="font-size:19px">${existing?"Update review":"New performance review"}</h2>
+      <button class="icon-btn x" data-close><svg class="ico" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+    <div class="modal-body"><form id="revForm"><div class="form-grid">
+      <div class="field full"><label>Employee</label><select class="select" name="empId" ${empId?"disabled":""}>${list.map(e=>`<option value="${e.id}" ${e.id===pre?"selected":""}>${esc(fullName(e))}</option>`).join("")}</select>${empId?`<input type="hidden" name="empId" value="${empId}">`:""}</div>
+      <div class="field"><label>Review cycle</label><input class="input" name="cycle" value="${existing?esc(existing.cycle):"H2 2026"}"></div>
+      <div class="field"><label>Rating</label><select class="select" name="rating">${[5,4,3,2,1].map(n=>`<option value="${n}" ${existing&&existing.rating===n?"selected":n===4&&!existing?"selected":""}>${n} — ${["","Needs improvement","Developing","Meets expectations","Exceeds","Outstanding"][n]}</option>`).join("")}</select></div>
+      <div class="field full"><label>Goals</label><textarea class="textarea" name="goals" placeholder="What are they working toward?">${existing?esc(existing.goals):""}</textarea></div>
+      <div class="field full"><label>Manager notes</label><textarea class="textarea" name="notes" placeholder="Summary of performance and feedback">${existing?esc(existing.notes):""}</textarea></div>
+    </div>
+    <div style="display:flex;gap:10px;margin-top:22px">
+      <button type="submit" class="btn primary">${existing?"Save review":"Record review"}</button>
+      <button type="button" class="btn ghost" data-close style="margin-left:auto">Cancel</button>
+    </div></form></div>`);
+  $("#revForm").onsubmit=ev=>{
+    ev.preventDefault();
+    const f=Object.fromEntries(new FormData(ev.target));
+    const e=emp(+f.empId);
+    e.reviews=[{cycle:f.cycle,rating:+f.rating,goals:f.goals,notes:f.notes,date:TODAY}];
+    save(); closeModal(); current="performance"; render(); toast("Review saved for "+fullName(e));
+  };
+}
+
+/* -------- modal + toast -------- */
+function openModal(html){
+  const r=$("#modalRoot");
+  r.innerHTML=`<div class="scrim"><div class="modal ${html.length>1800?'wide':''}" role="dialog" aria-modal="true">${html}</div></div>`;
+  const scrim=$(".scrim",r);
+  scrim.onclick=e=>{ if(e.target===scrim) closeModal(); };
+  r.querySelectorAll("[data-close]").forEach(b=>b.onclick=closeModal);
+  document.addEventListener("keydown",escClose);
+  const first=r.querySelector("input,select,textarea,button"); if(first) first.focus();
+}
+function closeModal(){ $("#modalRoot").innerHTML=""; document.removeEventListener("keydown",escClose); }
+function escClose(e){ if(e.key==="Escape") closeModal(); }
+let toastT;
+function toast(msg){ const t=$("#toast"); t.textContent=msg; t.classList.add("show"); clearTimeout(toastT); toastT=setTimeout(()=>t.classList.remove("show"),2600); }
+
+/* -------- theme -------- */
+function initTheme(){
+  const saved=localStorage.getItem("rootwork-theme");
+  if(saved) document.documentElement.setAttribute("data-theme",saved);
+  syncThemeLabel();
+  $("#themeBtn").onclick=()=>{
+    const cur=document.documentElement.getAttribute("data-theme")
+      || (matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");
+    const next=cur==="dark"?"light":"dark";
+    document.documentElement.setAttribute("data-theme",next);
+    localStorage.setItem("rootwork-theme",next); syncThemeLabel();
+  };
+}
+function syncThemeLabel(){
+  const cur=document.documentElement.getAttribute("data-theme")
+    || (matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");
+  $("#themeLabel").textContent = cur==="dark"?"Light mode":"Dark mode";
+}
+
+/* -------- boot -------- */
+load(); initTheme();
+$("#resetBtn").onclick=()=>{ if(confirm("Restore the sample team and clear your changes?")) reset(); };
+render();
+</script>
