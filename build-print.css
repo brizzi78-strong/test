@@ -27,6 +27,34 @@
 /* ---------- Front cover (screen/reading PDF only) ---------- */
 .bookcover { page: cover; break-after: page; margin: 0; position: relative; }
 .bookcover img { display: block; width: 6in; height: 9in; object-fit: cover; }
+.coverblurb {
+  position: absolute;
+  left: 0.7in; right: 0.7in;
+  top: 0.55in;
+  text-align: center;
+  color: #d8d4cb;
+  font-size: 10.5pt;
+  font-style: italic;
+  line-height: 1.35;
+}
+.coverblurb span {
+  display: block;
+  font-style: normal;
+  font-size: 8pt;
+  letter-spacing: 0.08em;
+  margin-top: 5px;
+  color: #b3ada1;
+}
+.coversub {
+  position: absolute;
+  left: 0; right: 0;
+  bottom: 1.5in;
+  text-align: center;
+  color: #d8d4cb;
+  font-size: 12.5pt;
+  font-style: italic;
+  letter-spacing: 0.03em;
+}
 .coverauthor {
   position: absolute;
   left: 0; right: 0;

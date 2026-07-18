@@ -45,6 +45,10 @@ if cover:
     html = html.replace(
         "<body>",
         '<body>\n<div class="bookcover"><img src="%s" alt="">'
+        '<div class="coverblurb">&#8220;I\'ve known this man for thirty-five years. '
+        'You can trust what you\'re about to read.&#8221;'
+        '<span>&#8212; DAVE MEYER, former NFL quarterback</span></div>'
+        '<div class="coversub">A Memoir of the Father Who Stayed</div>'
         '<div class="coverauthor">ROB BRIZZI</div></div>' % cover,
         1,
     )

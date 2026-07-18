@@ -28,7 +28,8 @@ Printed in the United States of America.
 
 *For anyone who has struggled with addiction or loved someone who has*
 
-*In memory of Lou Brizzi*
+*In honor of Lou Brizzi —*  
+*the man who kept showing up.*
 
 *1941–2025*
 
