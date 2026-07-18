@@ -80,10 +80,31 @@ services:
     ports: ["3600:3600"]
     volumes: ["directory-data:/data"]
 
+  # Public API entry point: authenticates every request and proxies to the
+  # services above (reachable by their compose service names on the internal
+  # network). Set GATEWAY_ADMIN_TOKEN in your environment to issue keys.
+  gateway:
+    <<: *service
+    command: node gateway/src/index.ts
+    environment:
+      PORT: "8080"
+      GATEWAY_DB: /data/gateway.db
+      GATEWAY_ADMIN_TOKEN: ${GATEWAY_ADMIN_TOKEN:-}
+    ports: ["8080:8080"]
+    volumes: ["gateway-data:/data"]
+    depends_on:
+      - recruiting
+      - hirecheck
+      - myhr
+      - training
+      - benefits
+      - payroll
+      - directory
+
   web:
     image: nginx:alpine
     restart: unless-stopped
-    ports: ["8080:80"]
+    ports: ["8081:80"]
     volumes:
       - ../cardinal-hr:/usr/share/nginx/html:ro
 
@@ -95,3 +116,4 @@ volumes:
   benefits-data:
   payroll-data:
   directory-data:
+  gateway-data:

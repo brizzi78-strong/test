@@ -14,7 +14,8 @@ That starts:
 
 | Service | URL |
 |---|---|
-| Website (nginx) | http://localhost:8080 |
+| **API gateway** (authenticated entry) | http://localhost:8080 |
+| Website (nginx) | http://localhost:8081 |
 | Recruiting | http://localhost:3200 |
 | Screening (HireCheck) | http://localhost:3000 |
 | MyHR onboarding | http://localhost:3100 |
@@ -25,6 +26,21 @@ That starts:
 
 Health-check any service at `GET /health`. Data persists in per-service named
 volumes (`docker volume ls`); remove them with `docker compose ... down -v`.
+
+The **gateway** is the authenticated front door: issue a key against it and call
+any service through `http://localhost:8080/<service>/...` (see
+`gateway/README.md`). The individual service ports above are exposed for local
+development and debugging — in a real deployment you'd keep only the gateway (and
+website) public and drop the direct `ports:` mappings so traffic must be
+authenticated.
+
+```bash
+export GATEWAY_ADMIN_TOKEN=change-me
+docker compose -f deploy/docker-compose.yml up --build
+KEY=$(curl -s -XPOST localhost:8080/admin/keys -H "x-admin-token: $GATEWAY_ADMIN_TOKEN" \
+  -d '{"companyId":"co_acme","name":"Acme"}' | jq -r .key)
+curl -s -H "authorization: Bearer $KEY" localhost:8080/directory/health
+```
 
 ## What's here
 

@@ -15,7 +15,8 @@ This repository holds several projects. Jump to the one you need:
 | **Payroll — gross-to-net engine (Raleigh, NC)** | `payroll/` | Standalone withholding calculator: federal + NC-flat taxes, FICA, deductions, net pay, and employer taxes. Not filing-ready payroll (see `payroll/README.md`) |
 | **Employee Directory — HRIS core** | `directory/` | Standalone system of record: employees, department tree, managers, employment status, and org-chart queries with cycle-safe invariants (see `directory/README.md`) |
 | **Cardinal HR — platform website** | `cardinal-hr/` | Self-contained, cross-linked marketing site: Home (`index.html`), Features (`features.html`), Pricing (`pricing.html`), and Security (`security.html`) |
-| **Deployment scaffolding** | `deploy/` | Run all seven services + the website together: `docker compose -f deploy/docker-compose.yml up --build` (see `deploy/README.md`) |
+| **API Gateway** | `gateway/` | Authenticated front door: API-key auth, per-key rate limiting, and reverse-proxy routing to the seven services with an injected trusted tenant (see `gateway/README.md`) |
+| **Deployment scaffolding** | `deploy/` | Run the gateway + seven services + website together: `docker compose -f deploy/docker-compose.yml up --build` (see `deploy/README.md`) |
 
 ---
 
