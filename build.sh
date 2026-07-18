@@ -24,7 +24,6 @@ pandoc "$SRC" \
 # DOCX (editorial/review) — with centered page numbers in the footer
 pandoc "$SRC" \
   --metadata-file=build-metadata.yaml \
-  --toc --toc-depth=1 \
   -o "$BASE.docx"
 python3 build-docx-pagenum.py "$BASE.docx"
 
@@ -56,7 +55,6 @@ rm -f "${BASE}_KDP.tmp.html"
 pandoc "$SRC" \
   --metadata-file=build-metadata.yaml \
   -t html5 -s \
-  --toc --toc-depth=1 \
   --embed-resources \
   --css=build-web.css \
   --metadata=title-prefix:"" \
