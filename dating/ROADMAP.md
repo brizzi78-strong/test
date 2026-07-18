@@ -3,6 +3,13 @@
 What people said is missing in today's dating apps, and what would make them
 stay. Ordered roughly by priority. Items marked ✅ are in the demo now.
 
+## Launch strategy
+- **Seed with women first — the men will follow.** A dating marketplace lives
+  or dies on the harder-to-attract side. Get the women's experience right
+  (safety, quality, no ghosting, respect for intent) and a healthy men's side
+  follows. So early growth, curation, and features prioritize the women's
+  experience; the flock and framing lead with that.
+
 ## Guiding principle
 - **Know who you're here for.** You set your own gender and who you're seeking;
   intent is stated up front. The demo flock is women, ages college-age to 45. ✅
