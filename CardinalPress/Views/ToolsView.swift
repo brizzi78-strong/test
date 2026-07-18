@@ -41,6 +41,7 @@ struct ToolsView: View {
                     footerNote
                 }
                 .padding()
+                .buttonStyle(PressableStyle())
             }
             .navigationTitle("Tools")
         }
@@ -88,6 +89,7 @@ private struct ToolCard: View {
         .padding(16)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(Color(.secondarySystemBackground), in: RoundedRectangle(cornerRadius: 18))
+        .cardShadow()
     }
 }
 

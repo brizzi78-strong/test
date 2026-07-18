@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct AboutView: View {
+    @EnvironmentObject private var store: CompanionStore
+
     var body: some View {
         List {
             Section {
@@ -65,9 +67,21 @@ struct AboutView: View {
             }
 
             Section("Your privacy") {
-                Text("Everything you enter — journal entries, mood check-ins, checklist progress — stays on this device. There is no account, no analytics, and nothing is sent anywhere.")
+                Text("Everything you enter — journal entries, mood check-ins, checklist progress, and your medication list — stays on this device. There is no account, no analytics, and nothing is sent anywhere.")
                     .font(.subheadline)
                     .padding(.vertical, 4)
+            }
+
+            Section {
+                ShareLink(item: store.fullExportText(),
+                          preview: SharePreview("The Cardinal's Toolkit — My Backup")) {
+                    Label("Export a backup", systemImage: "square.and.arrow.up")
+                        .foregroundStyle(Theme.cardinal)
+                }
+            } header: {
+                Text("Back up your data")
+            } footer: {
+                Text("Because everything stays on this device, it lives and dies with this phone. Export a copy of your checklists, medications, and journal — then save it to Files, email it to yourself, or print it. Do this now and then, and after big changes.")
             }
 
             Section("A note of care") {
@@ -101,5 +115,6 @@ struct AboutView: View {
     NavigationStack {
         AboutView()
     }
+    .environmentObject(CompanionStore())
     .tint(Theme.cardinal)
 }
