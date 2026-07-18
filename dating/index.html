@@ -28,6 +28,7 @@
   <nav class="nav-links" id="appNav" hidden>
     <button class="nav-tab" data-nav="discover">Discover</button>
     <button class="nav-tab" data-nav="matches">Matches <span class="badge" id="matchBadge" hidden>0</span></button>
+    <button class="nav-tab" data-nav="likes">Likes <span class="badge" id="likesBadge" hidden>0</span></button>
     <button class="nav-tab" data-nav="events">Events</button>
     <button class="nav-tab" data-nav="profile">Profile</button>
     <button class="nav-tab ghost" id="signOut">Sign out</button>
@@ -242,6 +243,15 @@
         <div class="value-icon">🪺</div>
         <p>No matches yet. Head to <button class="linklike" data-nav="discover">Discover</button> and start calling.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- ============ LIKES YOU ============ -->
+  <section class="view" id="view-likes" hidden>
+    <div class="panel">
+      <h2>Likes you</h2>
+      <p class="panel-sub" id="likesSub">People who liked you first. Like them back and it's an instant match.</p>
+      <div id="likesBody"></div>
     </div>
   </section>
 

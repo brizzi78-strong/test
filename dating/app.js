@@ -95,7 +95,7 @@
   function save() { localStorage.setItem(STORE_KEY, JSON.stringify(state)); }
 
   /* ---- Navigation ---- */
-  const VIEWS = ["landing", "onboard", "join", "discover", "matches", "events", "profile"];
+  const VIEWS = ["landing", "onboard", "join", "discover", "matches", "likes", "events", "profile"];
   function show(view) {
     VIEWS.forEach(v => { const el = $("#view-" + v); if (el) el.hidden = (v !== view); });
     // Hide the app nav during the join gate — you're not a member yet.
@@ -105,6 +105,7 @@
     if (view === "join") renderJoin();
     if (view === "discover") renderDeck();
     if (view === "matches") renderMatches();
+    if (view === "likes") renderLikes();
     if (view === "events") renderEvents();
     if (view === "profile") renderProfilePreview();
     updateBadge();
@@ -671,6 +672,63 @@
     if (p) openReport(p);
   });
 
+  /* ---- Likes You (admirers) ---- */
+  // Deterministic subset of the flock who liked you first.
+  function admirers() {
+    return FLOCK.filter(p => {
+      if (state.blocked.includes(p.id) || state.matches.includes(p.id)) return false;
+      let h = 0; for (const ch of p.id + "admire") h = (h * 31 + ch.charCodeAt(0)) & 0xffff;
+      return (h % 3) === 0;
+    });
+  }
+  function canSeeLikes() {
+    if (isWoman()) return true; // women see their admirers free
+    const m = state.profile && state.profile.membership;
+    return !!(m && m.free === false); // Cardinal+ men
+  }
+  function renderLikes() {
+    const list = admirers();
+    const body = $("#likesBody");
+    if (!list.length) {
+      body.innerHTML = `<div class="match-empty"><div class="value-icon">🪶</div>
+        <p>No likes yet. Keep showing up — the flock is finding you.</p></div>`;
+      return;
+    }
+    if (canSeeLikes()) {
+      body.innerHTML = `<div class="likes-grid">${list.map(p => `
+        <div class="like-tile">
+          <div class="m-avatar" style="background:${p.color}">${p.avatar}</div>
+          <div class="m-name">${escapeHtml(p.name)} ${verifiedBadge(p)}</div>
+          <div class="m-loc">${escapeHtml(p.intent || p.city)}</div>
+          <button class="btn btn-primary" data-likeback="${p.id}" style="margin-top:0.6rem;padding:0.4rem 0.9rem">Like back</button>
+        </div>`).join("")}</div>`;
+      $$("[data-likeback]", body).forEach(b => b.addEventListener("click", () => {
+        const p = FLOCK.find(x => x.id === b.dataset.likeback);
+        if (p) likeBack(p);
+      }));
+    } else {
+      body.innerHTML = `
+        <div class="likes-grid locked">${list.map(p => `
+          <div class="like-tile"><div class="m-avatar locked-avatar" style="background:${p.color}"></div>
+            <div class="m-name locked-name"></div></div>`).join("")}</div>
+        <div class="likes-cta">
+          <p><strong>${list.length} ${list.length === 1 ? "person likes" : "people like"} you.</strong> Upgrade to Cardinal+ to see who — and like back instantly.</p>
+          <button class="btn btn-primary" data-plan="plus">Upgrade to ${MEN_PLANS.plus.plan} · ${MEN_PLANS.plus.price}</button>
+        </div>`;
+      $$("[data-plan]", body).forEach(b => b.addEventListener("click", () => {
+        upgradeTo(b.dataset.plan); renderLikes(); updateBadge();
+      }));
+    }
+  }
+  function likeBack(person) {
+    if (!state.seen.includes(person.id)) state.seen.push(person.id);
+    if (!state.liked.includes(person.id)) state.liked.push(person.id);
+    if (!state.matches.includes(person.id)) state.matches.push(person.id);
+    save();
+    showMatchModal(person);
+    renderLikes(); updateBadge();
+  }
+
   /* ---- Monthly events ---- */
   const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   const DAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -929,6 +987,11 @@
     const b = $("#matchBadge");
     const n = state.matches.length;
     b.hidden = n === 0; b.textContent = n;
+    const lb = $("#likesBadge");
+    if (lb) {
+      const ln = state.profile ? admirers().length : 0;
+      lb.hidden = ln === 0; lb.textContent = ln;
+    }
   }
 
   /* ---- Helpers ---- */

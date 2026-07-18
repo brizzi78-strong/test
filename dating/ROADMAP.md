@@ -22,6 +22,10 @@ stay. Ordered roughly by priority. Items marked ✅ are in the demo now.
   (confirmed price) — unlimited likes, see-who-liked-you, and a daily take-back.
   Chosen at the join gate, changeable on the profile. ✅ (price decided; no real
   billing yet — that needs a payments backend)
+- **"Likes You" surface.** A Likes tab shows who liked you first; like back for
+  an instant match. Women see it free; free men get a blurred teaser + count
+  that converts to the Cardinal+ upsell — so the paywall points at something
+  real. ✅
 - **Background check to sign up.** Every new member clears a confidential
   background check in the join gate before they can meet the flock. ✅
   (demo-simulated; real checks need a vendor + backend)

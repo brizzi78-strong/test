@@ -160,6 +160,19 @@ main { flex: 1; width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 2r
 .nudge span { flex: 1; }
 .nudge-x { border: 0; background: none; color: inherit; font-size: 1.3rem; line-height: 1; cursor: pointer; padding: 0; }
 
+/* Likes You */
+.likes-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 0.9rem; }
+.like-tile { text-align: center; background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 1.1rem 0.75rem; }
+.like-tile .m-avatar { width: 64px; height: 64px; border-radius: 50%; display: grid; place-items: center; font-size: 2rem; margin: 0 auto 0.5rem; }
+.like-tile .m-name { font-weight: 700; }
+.like-tile .m-loc { color: var(--muted); font-size: 0.82rem; }
+.likes-grid.locked { filter: blur(7px); pointer-events: none; user-select: none; opacity: 0.9; }
+.locked-avatar { opacity: 0.6; }
+.locked-name { height: 0.9rem; width: 60%; margin: 0.3rem auto 0; background: var(--border); border-radius: 4px; }
+.likes-cta { text-align: center; margin-top: 1.25rem; }
+.likes-cta p { color: var(--muted); margin-bottom: 0.9rem; }
+.likes-cta strong { color: var(--fg); }
+
 /* Monthly events */
 .event-list { display: flex; flex-direction: column; gap: 1rem; }
 .event-card { display: flex; gap: 1rem; background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 1.1rem; }

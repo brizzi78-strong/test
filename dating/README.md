@@ -30,6 +30,9 @@ python3 -m http.server 8000
   use the pass / like buttons, or the ← / → arrow keys.
 - **Matches** — everyone who called back, with a detail view and a first
   message.
+- **Likes** — people who liked you first; like back for an instant match.
+  Women see it free; free men get a blurred teaser that converts to the
+  Cardinal+ upgrade.
 - **Events** — monthly in-person events (speed dating, group hike, mixer,
   brunch) with RSVP that persists. Free for women; Cardinal+ men get priority.
 - **Profile** — a preview of what the flock sees, editable any time, plus a
