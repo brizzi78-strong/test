@@ -71,6 +71,7 @@ main { flex: 1; width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 2r
 .hero { text-align: center; padding: 1.5rem 0 2.5rem; }
 .hero-mark svg { width: 116px; height: 116px; filter: drop-shadow(0 8px 24px rgba(142,27,44,0.28)); }
 .hero h1 { font-size: clamp(2rem, 6vw, 3rem); line-height: 1.1; letter-spacing: -0.03em; margin: 1.25rem 0 0.75rem; }
+.hero-tagline { font-weight: 700; color: var(--red); font-size: 1.05rem; margin: 0.25rem 0 1rem; letter-spacing: -0.01em; }
 .lede { color: var(--muted); font-size: 1.1rem; max-width: 42ch; margin: 0 auto 1.75rem; }
 .cta-row { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
 .fineprint { color: var(--muted); font-size: 0.85rem; margin-top: 1.25rem; }
@@ -113,6 +114,12 @@ main { flex: 1; width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 2r
 .report-reasons { display: flex; flex-direction: column; gap: 0.5rem; text-align: left; margin: 1rem 0; }
 .report-reason { display: flex; align-items: center; gap: 0.6rem; background: var(--panel); border: 1px solid var(--border); border-radius: 11px; padding: 0.7rem 0.85rem; cursor: pointer; }
 .report-reason input { width: auto; }
+
+/* Invite gate */
+.invite-tabs { display: flex; gap: 0.5rem; margin: 0.5rem 0 1.25rem; background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 0.3rem; }
+.invite-tab { flex: 1; border: 0; background: none; color: var(--muted); font: inherit; font-weight: 600; padding: 0.55rem; border-radius: 9px; cursor: pointer; }
+.invite-tab.active { background: var(--card); color: var(--red); box-shadow: var(--shadow-sm); }
+.invite-pane { display: flex; flex-direction: column; gap: 1rem; }
 
 /* Join gate (background check + membership) */
 .join-card { display: flex; gap: 1rem; align-items: flex-start; background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 1.1rem 1.25rem; margin: 1rem 0; }
@@ -159,6 +166,17 @@ main { flex: 1; width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 2r
 @media (prefers-color-scheme: dark) { .nudge { color: var(--fg); } }
 .nudge span { flex: 1; }
 .nudge-x { border: 0; background: none; color: inherit; font-size: 1.3rem; line-height: 1; cursor: pointer; padding: 0; }
+
+/* Refer & earn (multi-level) */
+.refer-code { display: flex; gap: 0.5rem; align-items: center; margin: 0.6rem 0; }
+.refer-code code { flex: 1; font-family: ui-monospace, monospace; font-weight: 700; background: var(--red-soft); color: var(--red); border-radius: 10px; padding: 0.6rem 0.8rem; letter-spacing: 0.04em; }
+.refer-code .btn { padding: 0.5rem 0.9rem; }
+.refer-level { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 0.85rem; margin: 0.6rem 0; }
+.refer-level-top { display: flex; justify-content: space-between; align-items: baseline; gap: 0.5rem; margin-bottom: 0.5rem; }
+.refer-stats { display: flex; gap: 1.25rem; margin: 0.6rem 0; font-size: 0.92rem; color: var(--muted); }
+.refer-stats strong { color: var(--fg); font-size: 1.05rem; }
+.refer-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.refer-actions .btn { padding: 0.5rem 0.85rem; font-size: 0.9rem; }
 
 /* Likes You */
 .likes-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 0.9rem; }

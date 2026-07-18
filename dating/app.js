@@ -64,8 +64,27 @@
       privacy: { incognito: false, hideAge: false, discoverable: true },
       activity: { month: "", seconds: 0 },
       likesToday: { date: "", count: 0 },
-      nudgeDismissed: "", rsvps: []
+      nudgeDismissed: "", rsvps: [], invited: false,
+      referrals: { direct: 0, indirect: 0, credits: 0 }
     };
+  }
+  const REFERRAL_COST = 3;
+  // Multi-level referral: full credit for people you invite, half for the
+  // people THEY invite. Status levels unlock perks (not cash — keeps it a
+  // referral ladder, not a pyramid scheme; see NAMING/positioning notes).
+  const REF_TIER1 = 1, REF_TIER2 = 0.5;
+  const REF_LEVELS = [
+    { name: "Fledgling", min: 0, perk: "Just getting started" },
+    { name: "Flock Leader", min: 3, perk: "Event priority + a badge" },
+    { name: "Cardinal Circle", min: 10, perk: "Free Cardinal+ & host your own events" }
+  ];
+  function refLevel(total) {
+    let lvl = REF_LEVELS[0];
+    for (const l of REF_LEVELS) if (total >= l.min) lvl = l;
+    return lvl;
+  }
+  function refNextLevel(total) {
+    return REF_LEVELS.find(l => l.min > total) || null;
   }
   const ACTIVITY_GOAL_MIN = 30;
 
@@ -86,7 +105,8 @@
         return Object.assign(base, saved, {
           privacy: Object.assign(base.privacy, saved.privacy || {}),
           activity: Object.assign(base.activity, saved.activity || {}),
-          likesToday: Object.assign(base.likesToday, saved.likesToday || {})
+          likesToday: Object.assign(base.likesToday, saved.likesToday || {}),
+          referrals: Object.assign(base.referrals, saved.referrals || {})
         });
       }
     } catch (e) { /* ignore */ }
@@ -95,13 +115,15 @@
   function save() { localStorage.setItem(STORE_KEY, JSON.stringify(state)); }
 
   /* ---- Navigation ---- */
-  const VIEWS = ["landing", "onboard", "join", "discover", "matches", "likes", "events", "profile"];
+  const VIEWS = ["landing", "invite", "onboard", "join", "discover", "matches", "likes", "events", "profile"];
+  const PREMEMBER = ["invite", "onboard", "join"];
   function show(view) {
     VIEWS.forEach(v => { const el = $("#view-" + v); if (el) el.hidden = (v !== view); });
-    // Hide the app nav during the join gate — you're not a member yet.
-    $("#appNav").hidden = !state.profile || view === "join";
+    // Hide the app nav until you're actually a member.
+    $("#appNav").hidden = !state.profile || PREMEMBER.includes(view);
     $$(".nav-tab").forEach(t => t.classList.toggle("active", t.dataset.nav === view));
     window.scrollTo(0, 0);
+    if (view === "invite") renderInvite();
     if (view === "join") renderJoin();
     if (view === "discover") renderDeck();
     if (view === "matches") renderMatches();
@@ -116,10 +138,15 @@
     if (nav) { e.preventDefault(); show(nav.dataset.nav); }
   });
 
-  $("#getStarted").addEventListener("click", () => openOnboard());
-  $("#haveAccount").addEventListener("click", () => {
-    show(state.profile ? "discover" : "onboard");
-  });
+  // Elite funnel: invite/waitlist -> onboard -> vetting (join) -> member.
+  function gate(mode) {
+    if (state.profile && state.profile.background && state.profile.background.status === "cleared") return show("discover");
+    if (state.profile) return show("join");           // invited, profile built, not yet vetted
+    if (state.invited) return show("onboard");         // invited, no profile yet
+    show("invite"); if (mode) setInviteMode(mode);     // need an invite / waitlist
+  }
+  $("#getStarted").addEventListener("click", () => gate("wait"));
+  $("#haveAccount").addEventListener("click", () => gate("code"));
   $("#signOut").addEventListener("click", () => {
     if (confirm("Sign out and clear this demo profile from your browser?")) {
       state = defaults();
@@ -127,6 +154,50 @@
     }
   });
   $("#editProfile").addEventListener("click", () => openOnboard(true));
+
+  /* ---- Invite gate + waitlist ---- */
+  function setInviteMode(mode) {
+    $$(".invite-tab").forEach(t => t.classList.toggle("active", t.dataset.invmode === mode));
+    $("#invitePaneCode").hidden = mode !== "code";
+    $("#invitePaneWait").hidden = mode !== "wait";
+  }
+  function renderInvite() {
+    setInviteMode($(".invite-tab.active")?.dataset.invmode || "code");
+    $("#inviteError").hidden = true;
+    $("#waitResult").hidden = true;
+    const ci = $("#inviteInput"); if (ci) ci.value = "";
+  }
+  $$(".invite-tab").forEach(t => t.addEventListener("click", () => setInviteMode(t.dataset.invmode)));
+  $("#redeemInvite").addEventListener("click", () => {
+    const code = $("#inviteInput").value.trim();
+    if (!code) { $("#inviteError").hidden = false; return; }
+    state.invited = true; save();
+    openOnboard();
+  });
+  $("#inviteInput").addEventListener("keydown", e => { if (e.key === "Enter") $("#redeemInvite").click(); });
+
+  function schoolFromEmail(email) {
+    const m = { "unc.edu": "UNC", "duke.edu": "Duke", "ncsu.edu": "NC State", "wfu.edu": "Wake Forest" };
+    const dom = (email.split("@")[1] || "").toLowerCase();
+    return m[dom] || (dom.endsWith(".edu") ? "your campus" : "");
+  }
+  $("#joinWait").addEventListener("click", () => {
+    const email = $("#waitEmail").value.trim();
+    const gender = $("#waitGender").value;
+    const school = schoolFromEmail(email);
+    let h = 0; for (const ch of email || gender) h = (h * 31 + ch.charCodeAt(0)) & 0xffff;
+    // Women move up first (women-first): much shorter line.
+    const pos = gender === "Woman" ? 8 + (h % 40) : 220 + (h % 780);
+    const where = school ? ` at ${school}` : "";
+    const note = gender === "Woman"
+      ? "Women move up first — you'll be in soon."
+      : "We open the men's side as more women join. Hang tight.";
+    const res = $("#waitResult");
+    res.hidden = false;
+    res.innerHTML = `<div>You're <strong>#${pos}</strong> on the waitlist${where}. ${note}</div>
+      <button class="btn btn-ghost" id="skipLine" style="margin-top:0.6rem">Skip the line (demo) →</button>`;
+    $("#skipLine").addEventListener("click", () => { state.invited = true; save(); openOnboard(); });
+  });
 
   /* ---- Onboarding ---- */
   const form = $("#profileForm");
@@ -212,10 +283,11 @@
       tags: tags.slice(),
       prompt: data.get("prompt"),
       promptAnswer: (data.get("promptAnswer") || "").trim() || "…ask me and find out.",
-      // Carry membership/verification/background across an edit.
+      // Carry membership/verification/background/interview across an edit.
       verified: prev.verified || false,
       background: prev.background || null,
-      membership: prev.membership || null
+      membership: prev.membership || null,
+      interview: prev.interview || null
     };
     save();
     // New members clear the join gate (background check + membership) first.
@@ -241,13 +313,19 @@
     }
 
     const bg = $("#bgConsent"), act = $("#activityConsent"), run = $("#runJoin");
-    bg.checked = false; act.checked = false;
+    const iv1 = $("#iv1"), iv2 = $("#iv2");
+    bg.checked = false; act.checked = false; iv1.value = ""; iv2.value = "";
     $("#joinStatus").hidden = true; $("#joinStatus").innerHTML = "";
-    run.disabled = true; run.textContent = "Run check & join →";
+    run.disabled = true; run.textContent = "Submit application →";
 
-    const refresh = () => { run.disabled = !(bg.checked && (!woman || act.checked)); };
+    const refresh = () => {
+      const interviewed = iv1.value.trim() && iv2.value.trim();
+      run.disabled = !(bg.checked && (!woman || act.checked) && interviewed);
+    };
     bg.onchange = refresh;
     act.onchange = refresh;
+    iv1.oninput = refresh;
+    iv2.oninput = refresh;
     run.onclick = runJoin;
   }
 
@@ -268,11 +346,15 @@
     run.disabled = true;
     status.hidden = false;
     status.className = "join-status working";
-    status.innerHTML = `<span class="spinner"></span> Running your background check…`;
-    // Simulated check.
+    status.innerHTML = `<span class="spinner"></span> Reviewing your interview &amp; background check…`;
+    // Simulated review.
     setTimeout(() => {
       const woman = isWoman();
       state.profile.background = { status: "cleared", ref: bgRef(), date: today() };
+      state.profile.interview = {
+        status: "passed", date: today(),
+        a1: ($("#iv1").value || "").trim(), a2: ($("#iv2").value || "").trim()
+      };
       if (woman) {
         state.profile.membership = { plan: "Free (women)", free: true, activityGoalMin: ACTIVITY_GOAL_MIN };
       } else {
@@ -284,7 +366,7 @@
       ensureActivityMonth();
       save();
       status.className = "join-status ok";
-      status.innerHTML = `<strong>✓ You're cleared.</strong> Welcome to the flock.`;
+      status.innerHTML = `<strong>✓ You're in.</strong> Interview passed, background cleared. Welcome to the flock.`;
       run.textContent = "Enter Cardinal →";
       run.disabled = false;
       run.onclick = () => show("discover");
@@ -847,8 +929,20 @@
       </div>
 
       <div class="profile-block safety">
+        <div class="lbl">Membership interview</div>
+        ${p.interview && p.interview.status === "passed"
+          ? `<div class="verified-row"><span class="verified ok-green">✓</span> Passed · ${escapeHtml(p.interview.date)}</div>`
+          : `<p class="muted-p">Not on file. New members complete a short screening interview to join.</p>`}
+      </div>
+
+      <div class="profile-block safety">
         <div class="lbl">Membership</div>
         ${membershipHtml(p)}
+      </div>
+
+      <div class="profile-block safety">
+        <div class="lbl">Refer &amp; earn</div>
+        ${referralHtml(p)}
       </div>
 
       <div class="profile-block safety">
@@ -885,6 +979,32 @@
     $$("[data-plan]").forEach(b => b.addEventListener("click", () => {
       upgradeTo(b.dataset.plan); renderProfilePreview();
     }));
+    const cc = $("#copyCode");
+    if (cc) cc.addEventListener("click", () => {
+      const code = referralCode();
+      try { if (navigator.clipboard) navigator.clipboard.writeText(code); } catch (e) { /* ignore */ }
+      cc.textContent = "Copied ✓";
+      setTimeout(() => { if ($("#copyCode")) $("#copyCode").textContent = "Copy"; }, 1500);
+    });
+    const s1 = $("#simRef1");
+    if (s1) s1.addEventListener("click", () => {
+      state.referrals.direct += 1; state.referrals.credits += REF_TIER1; save(); renderProfilePreview();
+    });
+    const s2 = $("#simRef2");
+    if (s2) s2.addEventListener("click", () => {
+      state.referrals.indirect += 1; state.referrals.credits += REF_TIER2; save(); renderProfilePreview();
+    });
+    const rr = $("#redeemRef");
+    if (rr) rr.addEventListener("click", () => {
+      if (state.referrals.credits < REFERRAL_COST) return;
+      state.referrals.credits -= REFERRAL_COST;
+      const woman = isWoman();
+      if (!woman) upgradeTo("plus"); // "free month" of Cardinal+ (demo)
+      save();
+      renderProfilePreview();
+      const note = $("#refNote");
+      if (note) note.innerHTML = `<div class="sent-note">Redeemed! ${woman ? REFERRAL_COST + " invites added to give away." : "Cardinal+ unlocked for a month."}</div>`;
+    });
     $$("[data-toggle]").forEach(t => t.addEventListener("click", () => {
       const key = t.dataset.toggle;
       state.privacy[key] = !state.privacy[key];
@@ -954,6 +1074,44 @@
     meter.querySelector(".meter-label").textContent = `${met ? "✓ " : ""}${mins} / ${goal} min this month`;
   }
 
+  function referralCode() {
+    const first = (state.profile.name || "friend").split(/\s+/)[0].toUpperCase().replace(/[^A-Z0-9]/g, "");
+    let h = 0; for (const ch of (state.profile.name || "") + "ref") h = (h * 31 + ch.charCodeAt(0)) & 0xffff;
+    return `${first || "FLOCK"}-${h.toString(36).toUpperCase().padStart(3, "0").slice(0, 3)}`;
+  }
+  function referralReward(p) {
+    return p.gender === "Woman" ? `${REFERRAL_COST} skip-the-line invites to give` : "1 month of Cardinal+ free";
+  }
+  function fmtCredits(n) { return Number.isInteger(n) ? String(n) : n.toFixed(1); }
+  function referralHtml(p) {
+    const r = state.referrals;
+    const total = r.direct + r.indirect;
+    const lvl = refLevel(total), next = refNextLevel(total);
+    const pct = next ? Math.min(100, Math.round((total / next.min) * 100)) : 100;
+    return `
+      <p class="muted-p">Invite friends and earn across two levels: <strong>${REF_TIER1} credit</strong> for everyone you invite, <strong>${REF_TIER2}</strong> for everyone <em>they</em> invite.</p>
+      <div class="refer-code"><code id="refCode">${escapeHtml(referralCode())}</code>
+        <button class="btn btn-ghost" id="copyCode">Copy</button></div>
+
+      <div class="refer-level">
+        <div class="refer-level-top"><strong>${lvl.name}</strong><span class="muted-p">${escapeHtml(lvl.perk)}</span></div>
+        <div class="meter-bar"><span style="width:${pct}%"></span></div>
+        <div class="meter-label">${next ? `${total} → ${next.min} to reach ${next.name}` : "Top level reached ✓"}</div>
+      </div>
+
+      <div class="refer-stats">
+        <span><strong>${r.direct}</strong> direct</span>
+        <span><strong>${r.indirect}</strong> 2nd-level</span>
+        <span><strong>${fmtCredits(r.credits)}</strong> credit${r.credits === 1 ? "" : "s"}</span>
+      </div>
+      <div class="refer-actions">
+        <button class="btn btn-ghost" id="simRef1">+ You invite a friend</button>
+        <button class="btn btn-ghost" id="simRef2">+ They invite a friend</button>
+        <button class="btn btn-primary" id="redeemRef" ${r.credits < REFERRAL_COST ? "disabled" : ""}>Redeem ${REFERRAL_COST} → ${referralReward(p)}</button>
+      </div>
+      <div id="refNote"></div>`;
+  }
+
   function toggleRow(key, label, help, on) {
     return `
       <div class="toggle-row">
@@ -1015,5 +1173,5 @@
 
   /* ---- Boot ---- */
   updateBadge();
-  show(state.profile ? "discover" : "landing");
+  show(state.profile && state.profile.background && state.profile.background.status === "cleared" ? "discover" : "landing");
 })();

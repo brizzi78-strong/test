@@ -20,12 +20,17 @@ python3 -m http.server 8000
 ## What's in it
 
 - **Landing** — the pitch: one honest profile, thoughtful matches, no games.
+- **Invite gate** — Cardinal is **invite-only**. Redeem an invite code, or join
+  the **waitlist** (women move up first).
 - **Onboarding** — build a profile (name, age, city, plumage color, bio,
   interests, and a conversation prompt).
-- **Join gate** — before meeting the flock, every new member clears a
-  (simulated) background check. Cardinal is **free for women**, who pledge at
-  least **30 minutes of activity a month** to keep the flock warm; that
-  activity is tracked and shown on the profile.
+- **Join gate (vetting)** — before meeting the flock, every new member passes a
+  short **membership interview** and clears a (simulated) **background check**.
+  Cardinal is **free for women**, who pledge at least **30 minutes of activity a
+  month** to keep the flock warm; that activity is tracked on the profile.
+- **Refer & earn** — a **multi-level** referral ladder: 1 credit per direct
+  invite, 0.5 per second-level, climbing status levels (Fledgling → Flock
+  Leader → Cardinal Circle) that unlock perks.
 - **Discover** — a swipeable card deck of a sample "flock." Drag left/right,
   use the pass / like buttons, or the ← / → arrow keys.
 - **Matches** — everyone who called back, with a detail view and a first

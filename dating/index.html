@@ -53,15 +53,16 @@
         </svg>
       </div>
       <h1>Cardinals mate for life.<br>Find yours.</h1>
-      <p class="lede">The cardinal stays through every winter. Cardinal is a
-        dating app for people who are done with games — one honest profile,
-        thoughtful matches, and room to say something real.</p>
+      <p class="hero-tagline">The first real dating app that looks out for you.</p>
+      <p class="lede">An invite-only, women-first dating community where every
+        member is verified and background-checked. No games, no drunk DMs — just
+        real people who actually show up.</p>
       <div class="cta-row">
-        <button class="btn btn-primary btn-lg" id="getStarted">Create your profile</button>
-        <button class="btn btn-ghost btn-lg" id="haveAccount">I already have one</button>
+        <button class="btn btn-primary btn-lg" id="getStarted">Request an invite</button>
+        <button class="btn btn-ghost btn-lg" id="haveAccount">I have an invite</button>
       </div>
-      <p class="fineprint">Everything stays in your browser. No account, no
-        server, no tracking — this is a demo you can run anywhere.</p>
+      <p class="fineprint">Invite-only · verified · background-checked. Everything
+        stays in your browser — a demo you can run anywhere.</p>
     </div>
 
     <div class="values">
@@ -82,6 +83,52 @@
         <h3>Say something real</h3>
         <p>Every match opens with a prompt, not a "hey." Start where it counts.</p>
       </article>
+    </div>
+  </section>
+
+  <!-- ============ INVITE / WAITLIST ============ -->
+  <section class="view" id="view-invite" hidden>
+    <div class="panel">
+      <h2>Cardinal is invite-only</h2>
+      <p class="panel-sub">A vetted, women-first community. Members join by
+        invite — or from the waitlist. Women move up first.</p>
+      <div class="invite-tabs">
+        <button class="invite-tab active" data-invmode="code">I have an invite</button>
+        <button class="invite-tab" data-invmode="wait">Join the waitlist</button>
+      </div>
+
+      <div class="invite-pane" id="invitePaneCode">
+        <label class="field">
+          <span>Invite code</span>
+          <input type="text" id="inviteInput" placeholder="e.g. FLOCK-2026" maxlength="24" autocomplete="off">
+        </label>
+        <p class="muted-p" id="inviteError" hidden>That code isn't right — check with the friend who invited you.</p>
+        <button class="btn btn-primary" id="redeemInvite">Enter Cardinal →</button>
+        <p class="fineprint">Demo: any code gets you in.</p>
+      </div>
+
+      <div class="invite-pane" id="invitePaneWait" hidden>
+        <div class="field-row">
+          <label class="field">
+            <span>School email</span>
+            <input type="email" id="waitEmail" placeholder="you@unc.edu" autocomplete="off">
+          </label>
+          <label class="field">
+            <span>You are</span>
+            <select id="waitGender">
+              <option value="Woman">Woman</option>
+              <option value="Man">Man</option>
+              <option value="Nonbinary">Nonbinary</option>
+            </select>
+          </label>
+        </div>
+        <button class="btn btn-primary" id="joinWait">Join the waitlist</button>
+        <div id="waitResult" class="join-status ok" hidden></div>
+      </div>
+
+      <div class="form-actions">
+        <button class="btn btn-ghost" data-nav="landing">Back</button>
+      </div>
     </div>
   </section>
 
@@ -186,6 +233,24 @@
           <label class="consent">
             <input type="checkbox" id="bgConsent">
             <span>I authorize Cardinal to run a background check.</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="join-card">
+        <div class="join-icon">🎥</div>
+        <div style="flex:1">
+          <h3>Membership interview</h3>
+          <p class="muted-p">Every member has a short screening before they're
+            let in — it's what keeps the flock real. Two quick questions here; in
+            the full product this is a 10-minute video call.</p>
+          <label class="field">
+            <span>Why Cardinal — and what are you looking for?</span>
+            <textarea id="iv1" rows="2" maxlength="200" placeholder="A sentence or two…"></textarea>
+          </label>
+          <label class="field">
+            <span>Describe a great first date, in your words.</span>
+            <textarea id="iv2" rows="2" maxlength="200" placeholder="A sentence or two…"></textarea>
           </label>
         </div>
       </div>
