@@ -80,6 +80,15 @@ services:
     ports: ["3600:3600"]
     volumes: ["directory-data:/data"]
 
+  timeoff:
+    <<: *service
+    command: node timeoff/src/index.ts
+    environment:
+      PORT: "3700"
+      TIMEOFF_DB: /data/timeoff.db
+    ports: ["3700:3700"]
+    volumes: ["timeoff-data:/data"]
+
   # Public API entry point: authenticates every request and proxies to the
   # services above (reachable by their compose service names on the internal
   # network). Set GATEWAY_ADMIN_TOKEN in your environment to issue keys.
@@ -100,6 +109,7 @@ services:
       - benefits
       - payroll
       - directory
+      - timeoff
 
   web:
     image: nginx:alpine
@@ -116,4 +126,5 @@ volumes:
   benefits-data:
   payroll-data:
   directory-data:
+  timeoff-data:
   gateway-data:

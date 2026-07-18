@@ -15,5 +15,6 @@ export function routesFromEnv(env: NodeJS.ProcessEnv = process.env): RouteTable 
     benefits: env.BENEFITS_URL ?? 'http://benefits:3400',
     payroll: env.PAYROLL_URL ?? 'http://payroll:3500',
     directory: env.DIRECTORY_URL ?? 'http://directory:3600',
+    timeoff: env.TIMEOFF_URL ?? 'http://timeoff:3700',
   };
 }
