@@ -11,42 +11,42 @@
   // The flock: women, ages college-age to 45.
   const FLOCK = [
     { id: "c1", name: "Wren", age: 28, city: "Asheville, NC", color: "#E4572E", avatar: "🎨",
-      gender: "Woman", intent: "Long-term",
+      gender: "Woman", intent: "Long-term", verified: true,
       bio: "Muralist who paints birds on old brick. I make a mean chili and I'll lose every board game gracefully.",
       tags: ["art", "hiking", "board games", "cooking"],
       prompt: "The way to my heart is…", promptAnswer: "showing up with coffee and no agenda." },
     { id: "c2", name: "Selah", age: 33, city: "Durham, NC", color: "#1565C0", avatar: "🎸",
-      gender: "Woman", intent: "Long-term",
+      gender: "Woman", intent: "Long-term", verified: true,
       bio: "Sing in a jazz trio on weekends, write boring code on weekdays. Looking for my duet.",
       tags: ["jazz", "vinyl", "coffee", "slow mornings"],
       prompt: "We'll get along if…", promptAnswer: "you don't mind detours to record shops." },
     { id: "c3", name: "Junia", age: 30, city: "Raleigh, NC", color: "#00897B", avatar: "📚",
-      gender: "Woman", intent: "Friendship first",
+      gender: "Woman", intent: "Friendship first", verified: true,
       bio: "Librarian, trail runner, terrible at texting back but great in person. I keep a life list of birds I've seen.",
       tags: ["books", "running", "birding", "tea"],
       prompt: "My idea of a perfect winter Sunday…", promptAnswer: "cinnamon rolls, a long walk, then absolutely nothing." },
     { id: "c4", name: "Marisol", age: 35, city: "Charlotte, NC", color: "#7B1FA2", avatar: "🍜",
-      gender: "Woman", intent: "Marriage-minded",
+      gender: "Woman", intent: "Marriage-minded", verified: true,
       bio: "Chef by trade, homebody by choice. I'll cook you the best meal of your week if you do the dishes.",
       tags: ["food", "gardening", "dogs", "old films"],
       prompt: "I'm looking for someone who…", promptAnswer: "texts back and means what they say." },
     { id: "c5", name: "Priya", age: 27, city: "Chapel Hill, NC", color: "#F9A825", avatar: "🔭",
-      gender: "Woman", intent: "Still figuring it out",
+      gender: "Woman", intent: "Still figuring it out", verified: false,
       bio: "Grad student in astronomy. I stay up too late looking at the sky and I want someone to look up with.",
       tags: ["stars", "camping", "documentaries", "chai"],
       prompt: "The most spontaneous thing I've done…", promptAnswer: "drove six hours to catch a meteor shower on a Tuesday." },
     { id: "c6", name: "Dominique", age: 31, city: "Greensboro, NC", color: "#2E7D32", avatar: "🌱",
-      gender: "Woman", intent: "Long-term",
+      gender: "Woman", intent: "Long-term", verified: true,
       bio: "I run a small plant nursery. Patient, a little quiet, and genuinely happy. Winter people welcome.",
       tags: ["plants", "woodworking", "cycling", "farmers markets"],
       prompt: "We'll get along if…", promptAnswer: "you're kind to waiters and okay with silence." },
     { id: "c7", name: "Nadia", age: 34, city: "Wilmington, NC", color: "#C2185B", avatar: "🏄",
-      gender: "Woman", intent: "Long-term",
+      gender: "Woman", intent: "Long-term", verified: false,
       bio: "Ocean rescue in summer, ceramics in winter. I feel most myself near water and I laugh loudly.",
       tags: ["surfing", "pottery", "travel", "live music"],
       prompt: "The way to my heart is…", promptAnswer: "a handwritten note. Yes, still." },
     { id: "c8", name: "Thea", age: 29, city: "Boone, NC", color: "#3949AB", avatar: "⛰️",
-      gender: "Woman", intent: "Marriage-minded",
+      gender: "Woman", intent: "Marriage-minded", verified: true,
       bio: "Park ranger who knows every trail in the county. Ask me about the cardinals that overwinter here.",
       tags: ["mountains", "photography", "campfires", "poetry"],
       prompt: "I'm looking for someone who…", promptAnswer: "wants a partner for the long trail, not just the trailhead." }
@@ -58,12 +58,23 @@
 
   let state = load();
 
+  function defaults() {
+    return {
+      profile: null, seen: [], liked: [], matches: [], messages: {}, blocked: [],
+      privacy: { incognito: false, hideAge: false, discoverable: true }
+    };
+  }
   function load() {
+    const base = defaults();
     try {
       const raw = localStorage.getItem(STORE_KEY);
-      if (raw) return JSON.parse(raw);
+      if (raw) {
+        const saved = JSON.parse(raw);
+        // Merge so older saved state gains new fields.
+        return Object.assign(base, saved, { privacy: Object.assign(base.privacy, saved.privacy || {}) });
+      }
     } catch (e) { /* ignore */ }
-    return { profile: null, seen: [], liked: [], matches: [], messages: {} };
+    return base;
   }
   function save() { localStorage.setItem(STORE_KEY, JSON.stringify(state)); }
 
@@ -91,7 +102,7 @@
   });
   $("#signOut").addEventListener("click", () => {
     if (confirm("Sign out and clear this demo profile from your browser?")) {
-      state = { profile: null, seen: [], liked: [], matches: [], messages: {} };
+      state = defaults();
       save(); show("landing");
     }
   });
@@ -187,7 +198,7 @@
 
   /* ---- Discover deck ---- */
   function remaining() {
-    return FLOCK.filter(p => !state.seen.includes(p.id));
+    return FLOCK.filter(p => !state.seen.includes(p.id) && !state.blocked.includes(p.id));
   }
 
   function renderDeck() {
@@ -217,14 +228,19 @@
     });
   }
 
+  function verifiedBadge(p) {
+    return p.verified ? `<span class="verified" title="Photo-verified">✓</span>` : "";
+  }
+
   function cardHtml(p) {
     return `
       <div class="stamp like">LIKE</div>
       <div class="stamp nope">NOPE</div>
+      <button class="card-report" data-report="${p.id}" title="Report or block" aria-label="Report or block ${escapeHtml(p.name)}">⋯</button>
       <div class="card-photo" style="background:linear-gradient(160deg, ${p.color}, ${shade(p.color, -25)})">
         <div class="card-avatar">${p.avatar}</div>
         <div class="card-name">
-          <h3>${escapeHtml(p.name)}, ${escapeHtml(String(p.age))}</h3>
+          <h3>${escapeHtml(p.name)}, ${escapeHtml(String(p.age))} ${verifiedBadge(p)}</h3>
           <div class="loc">${escapeHtml(p.city)}</div>
         </div>
       </div>
@@ -367,7 +383,7 @@
     list.innerHTML = ppl.map(p => `
       <div class="match-tile" data-match="${p.id}">
         <div class="m-avatar" style="background:${p.color}">${p.avatar}</div>
-        <div class="m-name">${escapeHtml(p.name)}</div>
+        <div class="m-name">${escapeHtml(p.name)} ${verifiedBadge(p)}</div>
         <div class="m-loc">${escapeHtml(p.city)}</div>
       </div>`).join("");
     $$("[data-match]", list).forEach(t => {
@@ -384,7 +400,7 @@
       <div class="m-hero">
         <div class="m-avatar" style="background:${person.color}">${person.avatar}</div>
       </div>
-      <h2 style="color:var(--fg)">${escapeHtml(person.name)}, ${escapeHtml(String(person.age))}</h2>
+      <h2 style="color:var(--fg)">${escapeHtml(person.name)}, ${escapeHtml(String(person.age))} ${verifiedBadge(person)}</h2>
       <p>${escapeHtml(person.city)}</p>
       <div class="modal-quote"><b>About</b>${escapeHtml(person.bio)}</div>
       <div class="modal-quote"><b>${escapeHtml(person.prompt)}</b>${escapeHtml(person.promptAnswer)}</div>
@@ -395,6 +411,7 @@
       <div id="sentNote">${sent ? `<div class="sent-note">You said: “${escapeHtml(sent)}” ✓</div>` : ""}</div>
       <div class="modal-actions" style="margin-top:1rem">
         <button class="btn btn-ghost" id="keepSwiping">Close</button>
+        <button class="btn btn-danger" data-report="${person.id}">Report / block</button>
       </div>`;
     modal.hidden = false;
     $("#keepSwiping").addEventListener("click", closeModal);
@@ -402,15 +419,65 @@
     $("#firstMsg").addEventListener("keydown", (e) => { if (e.key === "Enter") sendFirst(person); });
   }
 
+  /* ---- Report / block ---- */
+  const REPORT_REASONS = ["Fake or scam profile", "Inappropriate photos or messages",
+    "Harassment or hate", "Underage", "Someone I know / just not interested"];
+
+  function openReport(person) {
+    $("#modalCard").innerHTML = `
+      <h2 style="color:var(--fg)">Report or block ${escapeHtml(person.name)}</h2>
+      <p>Blocking removes them from your deck and matches — they can't see you and you won't see them. Reports are confidential.</p>
+      <div class="report-reasons">
+        ${REPORT_REASONS.map((r, i) => `
+          <label class="report-reason">
+            <input type="radio" name="reason" value="${escapeHtml(r)}" ${i === 0 ? "checked" : ""}>
+            <span>${escapeHtml(r)}</span>
+          </label>`).join("")}
+      </div>
+      <div class="modal-actions" style="margin-top:1rem">
+        <button class="btn btn-ghost" id="cancelReport">Cancel</button>
+        <button class="btn btn-danger" id="confirmBlock">Block ${escapeHtml(person.name)}</button>
+      </div>`;
+    modal.hidden = false;
+    $("#cancelReport").addEventListener("click", closeModal);
+    $("#confirmBlock").addEventListener("click", () => blockPerson(person));
+  }
+
+  function blockPerson(person) {
+    if (!state.blocked.includes(person.id)) state.blocked.push(person.id);
+    if (!state.seen.includes(person.id)) state.seen.push(person.id);
+    state.matches = state.matches.filter(id => id !== person.id);
+    state.liked = state.liked.filter(id => id !== person.id);
+    delete state.messages[person.id];
+    save();
+    closeModal();
+    // Refresh whatever view we're on.
+    if (!$("#view-discover").hidden) renderDeck();
+    if (!$("#view-matches").hidden) renderMatches();
+    if (!$("#view-profile").hidden) renderProfilePreview();
+    updateBadge();
+  }
+
+  // Delegated: report buttons live on rebuilt cards and modal.
+  document.addEventListener("click", (e) => {
+    const btn = e.target.closest("[data-report]");
+    if (!btn) return;
+    e.preventDefault(); e.stopPropagation();
+    const p = FLOCK.find(x => x.id === btn.dataset.report);
+    if (p) openReport(p);
+  });
+
   /* ---- Profile preview ---- */
   function renderProfilePreview() {
     const p = state.profile;
     if (!p) return;
+    const pv = state.privacy;
+    const blocked = state.blocked.map(id => FLOCK.find(x => x.id === id)).filter(Boolean);
     $("#profilePreview").innerHTML = `
       <div class="profile-card">
         <div class="p-avatar" style="background:${p.color}">${p.avatar}</div>
         <div>
-          <h3>${escapeHtml(p.name)}, ${escapeHtml(String(p.age))}</h3>
+          <h3>${escapeHtml(p.name)}${pv.hideAge ? "" : ", " + escapeHtml(String(p.age))} ${p.verified ? `<span class="verified" title="Photo-verified">✓</span>` : ""}</h3>
           <div class="p-meta">${escapeHtml(p.city)} · seeking ${escapeHtml(p.seeking.toLowerCase())}</div>
           ${p.intent ? `<div class="p-meta">Here for a ${escapeHtml(p.intent.toLowerCase())}</div>` : ""}
         </div>
@@ -426,7 +493,75 @@
       ${p.tags.length ? `<div class="profile-block">
         <div class="lbl">Interests</div>
         <div class="chip-row">${p.tags.map(t => `<span class="tag">${escapeHtml(t)}</span>`).join("")}</div>
-      </div>` : ""}`;
+      </div>` : ""}
+
+      <div class="profile-block safety">
+        <div class="lbl">Verification</div>
+        ${p.verified
+          ? `<div class="verified-row"><span class="verified">✓</span> You're photo-verified. Others see the badge on your profile.</div>`
+          : `<p class="muted-p">A quick photo check tells your matches you're real. Verified profiles get more and better matches.</p>
+             <button class="btn btn-primary" id="verifyBtn">Get verified</button>`}
+      </div>
+
+      <div class="profile-block safety">
+        <div class="lbl">Privacy</div>
+        ${toggleRow("incognito", "Incognito mode", "Only people you like can see your profile.", pv.incognito)}
+        ${toggleRow("discoverable", "Show me in Discover", "Turn off to take a break without deleting anything.", pv.discoverable)}
+        ${toggleRow("hideAge", "Hide my age", "Your age won't show on your card.", pv.hideAge)}
+      </div>
+
+      <div class="profile-block safety">
+        <div class="lbl">Blocked ${blocked.length ? `(${blocked.length})` : ""}</div>
+        ${blocked.length
+          ? `<div class="blocked-list">${blocked.map(b => `
+              <div class="blocked-row">
+                <span>${escapeHtml(b.name)} · ${escapeHtml(b.city)}</span>
+                <button class="linklike" data-unblock="${b.id}">Unblock</button>
+              </div>`).join("")}</div>`
+          : `<p class="muted-p">You haven't blocked anyone. Use the ⋯ on a card or "Report / block" in a match to block someone.</p>`}
+      </div>`;
+
+    const vb = $("#verifyBtn");
+    if (vb) vb.addEventListener("click", openVerify);
+    $$("[data-toggle]").forEach(t => t.addEventListener("click", () => {
+      const key = t.dataset.toggle;
+      state.privacy[key] = !state.privacy[key];
+      save(); renderProfilePreview();
+    }));
+    $$("[data-unblock]").forEach(b => b.addEventListener("click", () => {
+      state.blocked = state.blocked.filter(id => id !== b.dataset.unblock);
+      // Let them reappear in Discover.
+      state.seen = state.seen.filter(id => id !== b.dataset.unblock);
+      save(); renderProfilePreview();
+    }));
+  }
+
+  function toggleRow(key, label, help, on) {
+    return `
+      <div class="toggle-row">
+        <div>
+          <div class="toggle-label">${escapeHtml(label)}</div>
+          <div class="toggle-help">${escapeHtml(help)}</div>
+        </div>
+        <button class="switch ${on ? "on" : ""}" data-toggle="${key}" role="switch" aria-checked="${on}" aria-label="${escapeHtml(label)}"><span></span></button>
+      </div>`;
+  }
+
+  /* ---- Verification (demo) ---- */
+  function openVerify() {
+    $("#modalCard").innerHTML = `
+      <div class="m-hero"><div class="m-avatar" style="background:${state.profile.color}">${state.profile.avatar}</div></div>
+      <h2 style="color:var(--fg)">Verify your profile</h2>
+      <p>In the real app you'd snap a selfie matching a random pose, and we'd match it to your photos — no one else sees it. This demo just flips the badge on.</p>
+      <div class="modal-actions" style="margin-top:1rem">
+        <button class="btn btn-ghost" id="cancelVerify">Not now</button>
+        <button class="btn btn-primary" id="doVerify">Verify me</button>
+      </div>`;
+    modal.hidden = false;
+    $("#cancelVerify").addEventListener("click", closeModal);
+    $("#doVerify").addEventListener("click", () => {
+      state.profile.verified = true; save(); closeModal(); renderProfilePreview();
+    });
   }
 
   /* ---- Badge ---- */

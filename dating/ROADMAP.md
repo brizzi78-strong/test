@@ -17,8 +17,9 @@ stay. Ordered roughly by priority. Items marked ✅ are in the demo now.
 ## Biggest gaps to fix
 1. **Real depth, not photos.** Match on values, intentions, and personality —
    prompts and compatibility over hot-or-not. ✅ (prompts, bios, interests)
-2. **Safety & verified profiles.** ID/photo verification, no bots or catfish,
-   block/report that works, privacy by default. *(planned)*
+2. **Safety & verified profiles.** Photo verification (badge), block/report
+   that actually removes people, and privacy controls (incognito, hide-from-
+   Discover, hide age). ✅ (demo-level; real verification needs a backend)
 3. **Fair — no dark patterns.** No pay-to-win paywalls, no infinite addictive
    swiping, no hiding people to sell a subscription. ✅ (limited flock, no ads)
 4. **No ghosting / dead chats.** Conversation starters, nudges, and light

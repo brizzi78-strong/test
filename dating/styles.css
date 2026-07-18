@@ -86,6 +86,33 @@ main { flex: 1; width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 2r
 .btn-primary:hover { filter: brightness(1.05); }
 .btn-ghost { background: var(--panel); color: var(--fg); border: 1px solid var(--border); }
 .btn-ghost:hover { background: var(--card); }
+.btn-danger { background: none; color: var(--red); border: 1px solid var(--border); }
+.btn-danger:hover { background: var(--red-soft); }
+
+/* Verified badge */
+.verified { display: inline-grid; place-items: center; width: 1.05em; height: 1.05em; font-size: 0.72em; font-weight: 900; color: #fff; background: #1d9bf0; border-radius: 50%; vertical-align: 0.08em; }
+.verified-row { display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem; }
+.muted-p { color: var(--muted); font-size: 0.92rem; margin-bottom: 0.75rem; }
+
+/* Card report button */
+.card-report { position: absolute; top: 0.75rem; right: 0.75rem; z-index: 4; width: 34px; height: 34px; border-radius: 50%; border: 0; background: rgba(0,0,0,0.35); color: #fff; font-size: 1.1rem; line-height: 1; cursor: pointer; backdrop-filter: blur(4px); }
+.card-report:hover { background: rgba(0,0,0,0.55); }
+
+/* Safety & privacy blocks */
+.profile-block.safety { border-top: 1px solid var(--border); padding-top: 1.25rem; }
+.toggle-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.6rem 0; }
+.toggle-row + .toggle-row { border-top: 1px solid var(--border); }
+.toggle-label { font-weight: 600; }
+.toggle-help { color: var(--muted); font-size: 0.85rem; }
+.switch { flex-shrink: 0; width: 46px; height: 28px; border-radius: 999px; border: 0; background: var(--border); cursor: pointer; padding: 0; position: relative; transition: background .15s ease; }
+.switch span { position: absolute; top: 3px; left: 3px; width: 22px; height: 22px; border-radius: 50%; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.3); transition: transform .15s ease; }
+.switch.on { background: var(--red); }
+.switch.on span { transform: translateX(18px); }
+.blocked-list { display: flex; flex-direction: column; gap: 0.5rem; }
+.blocked-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; font-size: 0.92rem; }
+.report-reasons { display: flex; flex-direction: column; gap: 0.5rem; text-align: left; margin: 1rem 0; }
+.report-reason { display: flex; align-items: center; gap: 0.6rem; background: var(--panel); border: 1px solid var(--border); border-radius: 11px; padding: 0.7rem 0.85rem; cursor: pointer; }
+.report-reason input { width: auto; }
 
 /* ---------- Values ---------- */
 .values { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem; }

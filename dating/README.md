@@ -26,7 +26,10 @@ python3 -m http.server 8000
   use the pass / like buttons, or the ← / → arrow keys.
 - **Matches** — everyone who called back, with a detail view and a first
   message.
-- **Profile** — a preview of what the flock sees, editable any time.
+- **Profile** — a preview of what the flock sees, editable any time, plus a
+  **Safety & privacy** section: photo-verification badge, block/report (the ⋯
+  on a card or "Report / block" in a match), and privacy toggles (incognito,
+  hide from Discover, hide age). Verified profiles show a ✓ badge.
 
 ## Files
 
