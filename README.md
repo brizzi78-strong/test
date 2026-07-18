@@ -12,6 +12,7 @@ This repository holds several projects. Jump to the one you need:
 | **Recruiting — job requisitions & applicant tracking** | `recruiting/` | Standalone ATS: post requisitions and move applications through a hiring pipeline; reaching `hired` hands off to screening + onboarding (see `recruiting/README.md`) |
 | **Training — online training portal** | `training/` | Standalone LMS: customizable course catalog (e.g. Sexual Harassment Prevention), lesson tracking, and scored assessments (see `training/README.md`) |
 | **Benefits — benefits election / enrollment** | `benefits/` | Standalone service: plan catalog with coverage tiers, dependents, elections/waivers, and computed monthly premiums (see `benefits/README.md`) |
+| **Payroll — gross-to-net engine (Raleigh, NC)** | `payroll/` | Standalone withholding calculator: federal + NC-flat taxes, FICA, deductions, net pay, and employer taxes. Not filing-ready payroll (see `payroll/README.md`) |
 | **Cardinal HR — platform landing page** | `cardinal-hr/` | Self-contained marketing/overview page tying the hiring modules together (Recruiting · Screening · MyHR · Training · Benefits). Open `cardinal-hr/index.html` |
 
 ---

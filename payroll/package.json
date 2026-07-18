@@ -1,0 +1,19 @@
+{
+  "name": "payroll",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Payroll — gross-to-net payroll engine configured for Raleigh, NC (federal + NC flat tax, no local). A withholding calculator, not filing-ready payroll.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "start": "node src/index.ts",
+    "test": "node --test",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.8.5",
+    "typescript": "~5.8.0"
+  }
+}
