@@ -43,22 +43,21 @@ eligibility. It cited a VIN mismatch.
 Eventually, the documents themselves told the story the explanations would not.
 
 Among my delivery paperwork was a Clean Vehicle Seller Report — IRS Form 15400 —
-that Tesla had prepared and signed. On it, Tesla's own general manager certified,
-under penalties of perjury, that I had taken delivery of the vehicle for my own
+that Tesla had prepared and completed. On it, Tesla's own general manager stated, in its seller report, that I had taken delivery of the vehicle for my own
 use and that the maximum credit allowable was $7,500. Every fact the credit
-depends on was there, in Tesla's handwriting and signature.
+depends on was there, on Tesla's own form.
 
 So Tesla had certified that I qualified. The IRS had no record that I existed.
 Both things were true at once, and once I understood why, the contradiction
 dissolved.
 
-A signed paper form handed to a customer is not the same as an electronic filing
+A completed paper form handed to a customer is not the same as an electronic filing
 transmitted to the government. Under the rules for this credit, the seller must
 submit a time-of-sale report through the IRS Energy Credits Online portal. That
 electronic submission is what creates the record the IRS checks a return against.
 Tesla gave me the paper. Tesla never completed the filing.
 
-That single gap explains everything: the signed form promising $7,500, the IRS
+That single gap explains everything: the completed form promising $7,500, the IRS
 notice reporting no matching record, and the shifting excuses from people who
 were reaching for an explanation instead of checking whether the report had
 actually been filed. It was never my income. It was never my filing status. It

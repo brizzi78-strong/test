@@ -17,7 +17,7 @@ Inc., and I think it may also be a viable class.
 
 In August 2025 I bought a new Tesla Model Y in Raleigh, NC. I fully qualified for
 the $7,500 federal Clean Vehicle Credit (married filing jointly, MAGI $212,363;
-vehicle under the cap). **At delivery, Tesla's general manager signed and gave me
+vehicle under the cap). **At delivery, Tesla's general manager completed and gave me
 the IRS Clean Vehicle Seller Report (Form 15400) certifying the $7,500 credit —
 but Tesla never transmitted the matching time-of-sale report through the IRS
 Energy Credits Online portal.** Because that filing was never completed, the IRS
@@ -31,7 +31,7 @@ hitting other EV buyers (Tesla and Rivian), so a class may be appropriate.
 
 **Time-sensitive:** my IRS deadline to dispute is August 7, 2026.
 
-I've attached a complete case file (signed Form 15400, the IRS notice, the order
+I've attached a complete case file (completed Form 15400, the IRS notice, the order
 agreement, my correspondence with Tesla, and a damages/strategy summary). Could we
 schedule a brief consultation? I'm hoping to work on a contingency basis.
 

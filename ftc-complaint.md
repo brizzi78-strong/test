@@ -3,7 +3,7 @@
 > **How to file:** Submit at **reportfraud.ftc.gov** (or call 1-877-382-4357).
 > Paste the narrative below into the description field and fill the
 > `[BRACKETED]` contact fields. Do **not** include your SSN — the FTC does not
-> need it. Attach: the signed Form 15400, the IRS Notice CP23, and your
+> need it. Attach: the completed Form 15400, the IRS Notice CP23, and your
 > March 2026 emails to Tesla.
 
 ---
@@ -28,7 +28,7 @@ Vehicle Credit under IRC § 30D, and I meet all eligibility requirements
 (Married Filing Jointly, modified AGI $212,363 — under the $300,000 limit).
 
 At delivery, Tesla furnished me a Clean Vehicle Seller Report (IRS Form 15400),
-signed under penalties of perjury by Tesla's General Manager, Dan Ansari,
+completed in the name of Tesla's General Manager, Dan Ansari,
 certifying that the vehicle was placed in service for my original use and that
 the maximum credit allowable is $7,500.
 

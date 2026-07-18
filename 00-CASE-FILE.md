@@ -13,7 +13,7 @@ interest · **Ceiling goal:** treble damages ($22,500) + attorney's fees
 
 Robert and Tabitha Brizzi bought a new 2026 Tesla Model Y from Tesla's Raleigh, NC
 location and qualified, in full, for the $7,500 federal Clean Vehicle Credit
-(IRC § 30D). At delivery, Tesla's General Manager **signed and furnished IRS Form
+(IRC § 30D). At delivery, Tesla's General Manager **completed and furnished IRS Form
 15400 (Clean Vehicle Seller Report) certifying the $7,500 credit** — but Tesla
 **never transmitted the matching time-of-sale report through the IRS Energy
 Credits Online (ECO) portal**, the step that creates the IRS record needed to
@@ -21,7 +21,7 @@ claim the credit. With no record to match, the IRS issued **Notice CP23** on
 June 8, 2026 disallowing the credit and assessing tax plus interest. The Brizzis'
 loss is caused solely by Tesla's failure to file a report it had certified.
 
-**The one-line theory:** *Tesla certified the credit in a signed federal form, then
+**The one-line theory:** *Tesla put the credit on its own completed federal form, then
 failed to file it — and is billing the customer for the difference.*
 
 ## 2. Parties & identifiers
@@ -37,7 +37,7 @@ failed to file it — and is billing the customer for the difference.*
 - Tesla, Inc. — EIN **91-2197729**
 - Location: 2641 Sumner Blvd, Raleigh, NC 27616 (licensed to sell in North Carolina)
 - Signatory on Form 15400: **Dan Ansari, General Manager** (verified: GM,
-  Multi-Unit, Tesla, Raleigh)
+ Multi-Unit, Tesla, Raleigh)
 - Customer contact line used: 877-798-3752 · dispute address: resolutions@tesla.com
 - NC registered agent for service: **[confirm at sosnc.gov on day of filing]**
 
@@ -55,16 +55,16 @@ failed to file it — and is billing the customer for the difference.*
 | Filing status / income (MAGI) | < $300,000 MFJ | **$212,363** | ✅ |
 | Vehicle MSRP (Model Y = SUV) | ≤ $80,000 | $51,630 total | ✅ |
 | New vehicle, original use, personal | Required | Yes (per Form 15400) | ✅ |
-| Seller report — **paper** Form 15400 | Furnished to buyer | Signed by Tesla GM, certifies $7,500 | ✅ |
+| Seller report — **paper** Form 15400 | Furnished to buyer | Completed by Tesla GM, lists $7,500 | ✅ |
 | Seller report — **electronic** ECO filing | Transmitted by seller | **NEVER FILED** | ❌ ← root cause |
 
 ## 5. What went wrong (the decisive distinction)
 
-A **signed paper Form 15400 furnished to the buyer is not the same as the
+A **completed paper Form 15400 furnished to the buyer is not the same as the
 electronic time-of-sale report transmitted through IRS Energy Credits Online.**
 The IRS matches a return against the *electronic* submission. Tesla completed the
 paper certification and skipped the electronic filing. That is why the Brizzis
-hold a signed government form saying "$7,500" while the IRS notice says "no
+hold a completed government form saying "$7,500" while the IRS notice says "no
 matching record." Both are true; the gap is Tesla's unfiled ECO report.
 
 **Tesla can still fix this now — and it is a corporate-level action.** Per IRS
@@ -74,10 +74,11 @@ submit time-of-sale reports **and updates to such reports**." Tesla, Inc. (EIN
 91-2197729) is a single registered seller — ECO registration is per business/EIN,
 not per store — so the fix lives with Tesla's **corporate tax/compliance team**,
 not the Raleigh showroom (which likely explains the runaround). The vehicle was
-placed in service 08/21/2025 (before the cutoff), so the credit is valid and the
-report can still be submitted/corrected. Sources: IRS "Clean vehicle credit
-seller or dealer requirements"; IRS Pub 5867A. Any "credit ended / portal closed"
-excuse is false.
+placed in service 08/21/2025 (before the cutoff), so the credit is valid. Per
+published IRS guidance the report can still be submitted/corrected by a registered
+seller — **confirm the live portal status with the IRS/Sterling before asserting
+it**, since it can't be independently verified here. Sources: IRS "Clean vehicle
+credit seller or dealer requirements"; IRS Pub 5867A.
 
 ## 6. Tesla's shifting (and false) explanations
 
@@ -103,7 +104,7 @@ internal error and bolster the unfair-and-deceptive-practices claim.
 | Date | Event |
 |---|---|
 | 2025-08-12 | Order RN125485754 placed; Tesla Order Agreement accepted. |
-| 2025-08-21 | Delivery / placed in service. GM Dan Ansari signs & furnishes Form 15400 ($7,500) — but the ECO report is never transmitted. |
+| 2025-08-21 | Delivery / placed in service. GM Dan Ansari completes & furnishes Form 15400 ($7,500), name printed (not wet-signed) — but the ECO report is never transmitted. |
 | 2026-03-26/27 | Brizzi emails Tesla (Resolutions, Sales, Delivery Ops, Support) demanding the filing or $7,500; Support auto-replies "paused." Unresolved. |
 | 2026-06-08 | IRS issues Notice CP23 disallowing $7,500. |
 | 2026-06-12 | CPA Sterling Price engaged; dispute letter v3 drafted (out of office to June 18). |
@@ -123,24 +124,24 @@ dispute; the statutory "punishment" is **treble damages**, not emotional distres
 
 **Tesla's likely defense** (Order Agreement disclaims incentive guarantees) fails:
 the Brizzis *were* eligible; the loss came from Tesla not performing a filing it
-**certified under penalties of perjury**, which the disclaimer does not cover.
+**stated on Tesla's own federal form**, which the disclaimer does not cover.
 
 ## 10. Forum strategy
 
 - **Dodge-proof floor:** NC small claims (Wake County, ≤ $10,000) for $7,500 +
-  interest. The Order Agreement's arbitration clause **expressly preserves small
-  claims**, so Tesla cannot force arbitration.
+ interest. The Order Agreement's arbitration clause **expressly preserves small
+ claims**, so Tesla cannot force arbitration.
 - **Maximum / punishment:** AAA arbitration for the trebled $22,500 + fees. If
-  Tesla refuses to arbitrate or pay AAA fees, that **waives** the clause → file in
-  **NC District/Superior Court** (no small-claims cap).
+ Tesla refuses to arbitrate or pay AAA fees, that **waives** the clause → file in
+ **NC District/Superior Court** (no small-claims cap).
 - **Parallel pressure:** FTC + NC Attorney General complaints; potential class
-  action (Tesla *and* Rivian buyers suffer the same failure — claimants are early).
+ action (Tesla *and* Rivian buyers suffer the same failure — claimants are early).
 
 ## 11. Evidence inventory (originals held by claimant)
 
 | Exhibit | What it proves |
 |---|---|
-| **Signed IRS Form 15400** (08/21/2025, Dan Ansari, GM) | Tesla certified eligibility & $7,500; identifies VIN, buyer, original use |
+| **Completed IRS Form 15400** (08/21/2025, Dan Ansari, GM) | Tesla's own form lists eligibility & $7,500; identifies VIN, buyer, original use |
 | **IRS Notice CP23** (5 pp, 06/08/2026) | The disallowance, the $7,500 swing, the deadlines |
 | **Tesla Order Agreement** (Order RN125485754) | Purchase terms; incentives & arbitration clauses |
 | **Tesla emails** (03/26–27/2026) | Documented demand + Tesla non-response |

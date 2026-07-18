@@ -3,7 +3,7 @@
 > **How to file:** Submit at **ncdoj.gov/file-a-complaint** (Consumer
 > Protection) or call 1-877-5-NO-SCAM. Both you and the seller are in North
 > Carolina, which gives the NC DOJ clear jurisdiction. Paste the narrative
-> below, fill the `[BRACKETED]` fields, and attach the signed Form 15400, IRS
+> below, fill the `[BRACKETED]` fields, and attach the completed Form 15400, IRS
 > Notice CP23, the Tesla Order Agreement, and your March 2026 emails to Tesla.
 > Do **not** include your SSN.
 
@@ -30,9 +30,9 @@ Jointly; modified AGI $212,363, under the $300,000 cap; vehicle under the $80,00
 SUV MSRP cap).
 
 At delivery, Tesla furnished me a Clean Vehicle Seller Report (IRS Form 15400),
-signed under penalties of perjury by Tesla's General Manager, Dan Ansari,
+completed in the name of Tesla's General Manager, Dan Ansari,
 certifying my eligibility and a maximum credit of $7,500. Despite
-issuing that signed certification, Tesla never transmitted the corresponding
+issuing that completed report, Tesla never transmitted the corresponding
 time-of-sale report through the IRS Energy Credits Online portal — the filing
 that creates the IRS record needed to claim the credit.
 
@@ -56,6 +56,6 @@ following from Tesla: (1) prompt submission of the late time-of-sale report for
 VIN 7SAYGDEE6TA451515 through the IRS Energy Credits Online portal, with written
 confirmation; or (2) direct reimbursement of the $7,500 credit plus the IRS
 interest caused by Tesla's failure. I also ask that the Department review whether
-Tesla's conduct — certifying a federal credit in a signed report and then failing
+Tesla's conduct — listing a federal credit on its own completed report and then failing
 to file it — constitutes an unfair or deceptive trade practice under N.C. Gen.
 Stat. § 75-1.1.

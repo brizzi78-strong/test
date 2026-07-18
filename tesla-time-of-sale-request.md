@@ -24,9 +24,8 @@ This is a formal escalation of an unresolved dispute. I am the purchaser of a ne
 7SAYGDEE6TA451515**, Order No. RN125485754, placed in service **August 21, 2025**
 from your Raleigh, NC location.
 
-**The problem.** At delivery, Tesla furnished me a signed Clean Vehicle Seller
-Report (IRS Form 15400), dated August 21, 2025 and signed under penalties of
-perjury by your General Manager, Dan Ansari, certifying that I qualify for the
+**The problem.** At delivery, Tesla furnished me a completed Clean Vehicle Seller
+Report (IRS Form 15400), dated August 21, 2025 and completed in the name of your General Manager, Dan Ansari, certifying that I qualify for the
 maximum $7,500 credit. **However, Tesla never transmitted the corresponding time-of-sale
 report through the IRS Energy Credits Online (ECO) portal.** Furnishing me the
 paper form is not the same as filing it with the IRS. Because the electronic
@@ -49,20 +48,20 @@ the single registered seller in Energy Credits Online; individual stores are not
 separately registered. The correction must therefore be made by Tesla's corporate
 tax/compliance team that holds the ECO account — not left with store staff who
 lack access. I ask Tesla Resolutions to route this to that team, and I ask the
-Raleigh store (which originated the sale and signed my Form 15400) to escalate it
+Raleigh store (which originated the sale and completed my Form 15400) to escalate it
 there and identify the responsible contact.
 
 **What I require — choose one, within 10 business days of this notice:**
 
 1. **Submit or correct the Clean Vehicle Seller Report (Form 15400)** for VIN
-   7SAYGDEE6TA451515 through the IRS Energy Credits Online portal. Per IRS
-   guidance, that portal "will remain open beyond Sept. 30, 2025, for limited
-   usage by previously registered users to submit time-of-sale reports and updates
-   to such reports" — which is exactly Tesla's situation. Provide me written
-   confirmation and a copy of the accepted submission; **OR**
+ 7SAYGDEE6TA451515 through the IRS Energy Credits Online portal. Per IRS
+ guidance, that portal "will remain open beyond Sept. 30, 2025, for limited
+ usage by previously registered users to submit time-of-sale reports and updates
+ to such reports" — which is exactly Tesla's situation. Provide me written
+ confirmation and a copy of the accepted submission; **OR**
 
 2. **Compensate me directly for $7,500**, plus the IRS interest that has accrued
-   because of this error.
+ because of this error.
 
 **If neither occurs**, I will pursue all available remedies. That includes
 arbitration before the AAA (or small claims court, as permitted by the

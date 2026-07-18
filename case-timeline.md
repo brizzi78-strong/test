@@ -9,12 +9,12 @@
 
 ## The issue in one sentence
 
-Tesla furnished the Brizzis a signed Clean Vehicle Seller Report (IRS Form 15400)
+Tesla furnished the Brizzis a completed Clean Vehicle Seller Report (IRS Form 15400)
 certifying the full $7,500 credit, **but never transmitted the corresponding
 time-of-sale report through the IRS Energy Credits Online (ECO) portal** — so the
 IRS has no record to match against the Form 8936 on the Brizzis' 2025 return,
 causing the IRS to disallow the $7,500 credit (Notice CP23) even though the
-Brizzis meet every eligibility requirement and hold Tesla's signed certification.
+Brizzis meet every eligibility requirement and hold Tesla's own completed report.
 
 ## Eligibility — all criteria met
 
@@ -23,7 +23,7 @@ Brizzis meet every eligibility requirement and hold Tesla's signed certification
 | Filing status / income (MAGI) | < $300,000 MFJ | $212,363 | ✅ |
 | Vehicle MSRP (Model Y = SUV) | ≤ $80,000 | $48,990 base ($51,630 total) | ✅ |
 | Vehicle type / new / personal use | Qualifying new clean vehicle | Model Y LR AWD, personal use | ✅ |
-| Seller report — paper Form 15400 | Furnished to buyer | Signed by Tesla GM, certifies $7,500 | ✅ |
+| Seller report — paper Form 15400 | Furnished to buyer | Completed by Tesla GM, lists $7,500 | ✅ |
 | Seller report — electronic ECO filing | Required, transmitted by seller | **NEVER FILED by Tesla** | ❌ ← root cause |
 
 ## Timeline
@@ -42,10 +42,10 @@ Brizzis meet every eligibility requirement and hold Tesla's signed certification
 
 1. "Your income was too high to qualify." — False; MAGI $212,363 < $300,000 MFJ.
 2. "Head of Household was entered during the transaction." — Not the Brizzis'
-   filing status; they file MFJ.
+ filing status; they file MFJ.
 3. "A new employee may have entered the information incorrectly."
 4. Refused to provide / let the customer photograph the internal document said to
-   explain the discrepancy.
+ explain the discrepancy.
 
 These shifting, inconsistent accounts and the refusal to share documentation
 support the conclusion that the failure is Tesla's internal reporting error.
@@ -60,15 +60,15 @@ the IRS credit can be reinstated.
 **Track 2 — Recover from Tesla (fallback), and sue for more if ignored.** If
 Tesla refuses to file:
 - **Dodge-proof path:** small claims court (NC magistrate, Wake County ≤ $10,000)
-  for the $7,500 + interest. The Order Agreement's arbitration clause **expressly
-  preserves small claims**, so Tesla cannot force this into arbitration.
-  Drafted in `tesla-small-claims-statement.md`.
+ for the $7,500 + interest. The Order Agreement's arbitration clause **expressly
+ preserves small claims**, so Tesla cannot force this into arbitration.
+ Drafted in `tesla-small-claims-statement.md`.
 - **"Sue for more" path:** AAA arbitration claiming the $7,500 **trebled to
-  $22,500** plus attorney's fees under NC UDTPA (N.C. Gen. Stat. §§ 75-1.1,
-  75-16, 75-16.1), plus interest. Drafted in `tesla-arbitration-demand.md`.
+ $22,500** plus attorney's fees under NC UDTPA (N.C. Gen. Stat. §§ 75-1.1,
+ 75-16, 75-16.1), plus interest. Drafted in `tesla-arbitration-demand.md`.
 - **If Tesla refuses to arbitrate / won't pay AAA fees:** that typically **waives**
-  the arbitration clause, freeing a filing in **NC District/Superior Court** for
-  the full trebled amount (no small-claims cap). Civil action already initiated.
+ the arbitration clause, freeing a filing in **NC District/Superior Court** for
+ the full trebled amount (no small-claims cap). Civil action already initiated.
 
 **In parallel — protect IRS rights.** File the CP23 disagreement (certified mail)
 before August 7, 2026 regardless of Tesla's response, requesting reinstatement,
@@ -78,9 +78,9 @@ a collection hold, and interest abatement.
 
 - [ ] Confirm the VIN matches across: the car, the Form 15400, and Form 8936.
 - [ ] Coordinate with CPA Sterling Price (back June 18) on filing the CP23 response.
-- [ ] Attach the signed Form 15400 as the lead exhibit to the CP23 response.
+- [ ] Attach the completed Form 15400 as the lead exhibit to the CP23 response.
 - [ ] Double-check the v3 dispute letter: model year should read **2026** and the
-      notice year should read **2026**, not 2025.
+ notice year should read **2026**, not 2025.
 - [ ] Send the escalation to Tesla; keep proof of delivery.
 - [ ] If no Tesla response in 10 business days, file small claims / proceed with
-      civil action and file FTC + NC AG complaints.
+ civil action and file FTC + NC AG complaints.

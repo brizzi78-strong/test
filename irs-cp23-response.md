@@ -47,14 +47,14 @@ new 2026 model-year Tesla Model Y Long Range All-Wheel Drive (VIN
 7SAYGDEE6TA451515; Order No. RN125485754, ordered August 12, 2025; placed in
 service August 21, 2025 from the Raleigh, NC Tesla location). As a sport utility
 vehicle, its MSRP limit is $80,000; the vehicle's price ($51,630 total) is below
-that cap. **Tesla, Inc. furnished us a signed Clean Vehicle Seller Report (IRS
-Form 15400), dated August 21, 2025 and signed under penalties of perjury by
+that cap. **Tesla, Inc. furnished us a completed Clean Vehicle Seller Report (IRS
+Form 15400), dated August 21, 2025 and completed in the name of
 Tesla's General Manager (Dan Ansari), certifying that the vehicle was placed in service for
 original use by the buyer and that the maximum credit allowable is $7,500
 (Form 15400, line 11).** A copy is enclosed.
 
 **3. The discrepancy is the seller's failure to transmit the report — not my
-eligibility.** Although Tesla furnished us the signed Form 15400, Tesla did not
+eligibility.** Although Tesla furnished us the completed Form 15400, Tesla did not
 submit the corresponding time-of-sale report through the IRS Energy Credits
 Online (ECO) portal. Because that electronic submission was never completed, the
 IRS has no seller report on record to match against our Form 8936 — which is why
@@ -68,7 +68,7 @@ enclosed).
 for buyers whose dealers did not correctly file a time-of-sale report — that a
 taxpayer who receives an error or rejection may submit proof of purchase of a
 qualified vehicle directly to the IRS — I enclose my proof of purchase: the
-Tesla-signed Clean Vehicle Seller Report (Form 15400) and my Motor Vehicle Order
+Tesla-completed Clean Vehicle Seller Report (Form 15400) and my Motor Vehicle Order
 Agreement. I request that the credit be allowed on this proof.
 
 **5. Requested relief.** I ask that the IRS (a) allow/reinstate the $7,500 New
@@ -89,7 +89,7 @@ Robert Brizzi
 
 **Enclosures:**
 - Copy of Notice CP23 (Tax Year 2025, dated June 8, 2026)
-- **Signed Tesla Clean Vehicle Seller Report (IRS Form 15400), dated 08/21/2025**
+- **Completed Tesla Clean Vehicle Seller Report (IRS Form 15400), dated 08/21/2025**
 - Form 8936 as filed with our 2025 return
 - Tesla Motor Vehicle Order Agreement (Order No. RN125485754)
 - Final Price Sheet / delivery documents showing the VIN
