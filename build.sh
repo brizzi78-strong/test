@@ -16,7 +16,7 @@ BASE="The_Cardinals_Promise"
 # EPUB (metadata-driven; interim front cover plugged in pending Grace's final)
 pandoc "$SRC" \
   --metadata-file=build-metadata.yaml \
-  --epub-cover-image=cover/memoir-front-v4-clean.jpg \
+  --epub-cover-image=cover/cardinal-front-v5.jpg \
   --toc --toc-depth=1 \
   --split-level=1 \
   -o "$BASE.epub"
@@ -36,8 +36,8 @@ pandoc "$SRC" \
   --template=build-template.html \
   --css=build-print.css \
   -o "$BASE.tmp.html"
-python3 build-print-fix.py "$BASE.tmp.html"
-python3 -c "import weasyprint; weasyprint.HTML('$BASE.tmp.html').write_pdf('$BASE.pdf')"
+python3 build-print-fix.py "$BASE.tmp.html" cover/cardinal-front-v5.jpg
+python3 -c "import weasyprint; weasyprint.HTML('$BASE.tmp.html', base_url='.').write_pdf('$BASE.pdf')"
 rm -f "$BASE.tmp.html"
 
 # KDP print interior: same layout, BLACK text for cheap B&W printing.

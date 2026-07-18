@@ -11,6 +11,7 @@ import re
 import sys
 
 path = sys.argv[1]
+cover = sys.argv[2] if len(sys.argv) > 2 else None
 html = open(path, encoding="utf-8").read()
 
 # Chapter openers -> new page (styled via .chapno)
@@ -38,5 +39,13 @@ html = re.sub(
     count=1,
     flags=re.S,
 )
+
+# Optional full-page front cover (screen PDF only, never the KDP interior)
+if cover:
+    html = html.replace(
+        "<body>",
+        '<body>\n<div class="bookcover"><img src="%s" alt=""></div>' % cover,
+        1,
+    )
 
 open(path, "w", encoding="utf-8").write(html)
