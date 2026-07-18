@@ -67,18 +67,19 @@ paper certification and skipped the electronic filing. That is why the Brizzis
 hold a completed government form saying "$7,500" while the IRS notice says "no
 matching record." Both are true; the gap is Tesla's unfiled ECO report.
 
-**Tesla can still fix this now — and it is a corporate-level action.** Per IRS
-guidance, new dealer registration closed 9/30/2025, but "the portal will remain
-open beyond Sept. 30, 2025, for limited usage by previously registered users to
-submit time-of-sale reports **and updates to such reports**." Tesla, Inc. (EIN
-91-2197729) is a single registered seller — ECO registration is per business/EIN,
-not per store — so the fix lives with Tesla's **corporate tax/compliance team**,
-not the Raleigh showroom (which likely explains the runaround). The vehicle was
-placed in service 08/21/2025 (before the cutoff), so the credit is valid. Per
-published IRS guidance the report can still be submitted/corrected by a registered
-seller — **confirm the live portal status with the IRS/Sterling before asserting
-it**, since it can't be independently verified here. Sources: IRS "Clean vehicle
-credit seller or dealer requirements"; IRS Pub 5867A.
+**The window to fix this has likely closed — which makes it Tesla's fault, not
+a way out for Tesla.** IRS guidance set a cutoff for submitting *late* 2025
+time-of-sale reports through Energy Credits Online — reported as **on/around
+June 1, 2026** (an earlier Feb 7, 2026 deadline was referenced and later phased
+out). As of mid-July 2026 that window appears **closed**, consistent with what
+Tesla has told the Brizzis. **Confirm the exact cutoff and any exception with the
+IRS/Sterling.** The significance: Tesla had from delivery (08/21/2025) through
+~June 1, 2026 — **over nine months, including the Brizzis' written demand in
+March 2026** — to file, and did not. The credit is now likely unrecoverable by
+filing, so the loss is **permanent and caused by Tesla running out the clock.**
+That strengthens the money claim: the only remedy left is recovery from Tesla.
+Sources: IRS GovDelivery "Phase-Out of ECO for Clean Vehicle Credits Portal";
+NHADA "Submit 2025 Time of Sale Reports Before 6/1"; EY (Feb 7, 2026 extension).
 
 ## 6. Tesla's shifting (and false) explanations
 
@@ -105,7 +106,9 @@ internal error and bolster the unfair-and-deceptive-practices claim.
 |---|---|
 | 2025-08-12 | Order RN125485754 placed; Tesla Order Agreement accepted. |
 | 2025-08-21 | Delivery / placed in service. GM Dan Ansari completes & furnishes Form 15400 ($7,500), name printed (not wet-signed) — but the ECO report is never transmitted. |
-| 2026-03-26/27 | Brizzi emails Tesla (Resolutions, Sales, Delivery Ops, Support) demanding the filing or $7,500; Support auto-replies "paused." Unresolved. |
+| 2026-03-26/27 | Brizzi emails Tesla (Resolutions, Sales, Delivery Ops, Support) demanding the filing or $7,500; Support auto-replies "paused." Unresolved. **Portal still open.** |
+| 2026-05 (approx.) | Brizzi again presses Tesla about the credit. **Portal still open; Tesla still has ECO access — and still does not file.** |
+| 2026-06-01 (approx.) | IRS cutoff for submitting late 2025 time-of-sale reports — the window closes. Only now is the credit unrecoverable by filing. |
 | 2026-06-08 | IRS issues Notice CP23 disallowing $7,500. |
 | 2026-06-12 | CPA Sterling Price engaged; dispute letter v3 drafted (out of office to June 18). |
 | **2026-06-28** | CP23 "pay by" date (interest accrues). |

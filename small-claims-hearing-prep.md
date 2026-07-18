@@ -92,13 +92,13 @@ didn't qualify.
 4. **It should have been filed regardless — filing ≠ deciding eligibility.** The
  seller's duty to file the time-of-sale report is mandatory; income eligibility
  is decided at tax time on my return, not by a dealer choosing not to file. By
- never filing, Tesla blocked a credit I actually qualify for — and it can still
- file/correct it now (portal open to registered sellers). Tesla's own Form 15400
+ never filing, Tesla blocked a credit I actually qualify for. Tesla had over nine months — including after my March 2026 written
+ demand — and let the deadline pass. Tesla's own Form 15400
  lists max credit **$7,500, not $0** — if Tesla thought I was over-income, why
  certify $7,500?
  > "Tesla had to file that report regardless. Income is decided on my return —
- > not by Tesla. Not filing blocked a credit I actually qualify for, and they
- > can still fix it today."
+ > not by Tesla. They had nine months and my March-and-May 2026 demands — while
+ > the portal was still open — and let the deadline pass. That's why I'm out $7,500."
 
 5. **The app is not foolproof — and it's Tesla's, not mine.** It's Tesla's own
  error-prone system (defaults, dropdowns, employee entry); it is **not a sworn

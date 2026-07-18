@@ -65,7 +65,7 @@ was a clerical step the seller certified but did not finish.
 
 As consumers increasingly rely on digital systems to process tax incentives,
 rebates, and credits, transparency becomes more important, not less. When a
-manufacturer signs a federal form certifying a benefit and then does not file it,
+manufacturer completes a federal form certifying a benefit and then does not file it,
 the customer is left holding a promise the government has no record of — and, in
 my case, a $7,500 bill for the difference.
 

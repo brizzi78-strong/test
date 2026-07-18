@@ -31,7 +31,7 @@ Brizzis meet every eligibility requirement and hold Tesla's own completed report
 | Date | Event |
 |---|---|
 | 2025-08-12 | Order RN125485754 placed; Tesla Order Agreement accepted electronically. |
-| 2025-08-21 | Delivery / placed in service (VIN 7SAYGDEE6TA451515), Raleigh, NC. Tesla GM Dan Ansari signs and furnishes a Form 15400 Clean Vehicle Seller Report certifying the $7,500 credit — but the matching report is never transmitted through IRS Energy Credits Online. |
+| 2025-08-21 | Delivery / placed in service (VIN 7SAYGDEE6TA451515), Raleigh, NC. Tesla GM Dan Ansari completes and furnishes a Form 15400 Clean Vehicle Seller Report (name printed, not wet-signed) listing the $7,500 credit — but the matching report is never transmitted through IRS Energy Credits Online. |
 | 2026-03-26/27 | Brizzi emails multiple Tesla departments (Resolutions, Sales, Delivery Operations, Support) demanding Tesla file Form 15400 or compensate $7,500. Confirms sale was never submitted to IRS Energy Credits. Tesla Support auto-replies "paused — call 877.798.3752"; no resolution. |
 | 2026-06-08 | IRS issues **Notice CP23** (Tax Year 2025): disallows $7,500 Clean Vehicle Credit; total tax adjusted $28,939 → $36,439; balance due $2,272 + interest (~$20.58 at 6%). Reason cited: VIN did not match IRS records. |
 | 2026-06-12 | CPA Sterling Price acknowledges (auto-reply: out of office, returns June 18). Dispute letter v3 drafted. |
