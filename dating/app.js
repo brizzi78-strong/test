@@ -8,37 +8,46 @@
                   "#3949AB", "#1565C0", "#00897B", "#2E7D32", "#F9A825"];
 
   /* ---- Sample flock: the people you can discover ---- */
+  // The flock: women, ages college-age to 45.
   const FLOCK = [
     { id: "c1", name: "Wren", age: 28, city: "Asheville, NC", color: "#E4572E", avatar: "🎨",
+      gender: "Woman", intent: "Long-term",
       bio: "Muralist who paints birds on old brick. I make a mean chili and I'll lose every board game gracefully.",
       tags: ["art", "hiking", "board games", "cooking"],
       prompt: "The way to my heart is…", promptAnswer: "showing up with coffee and no agenda." },
-    { id: "c2", name: "Silas", age: 33, city: "Durham, NC", color: "#1565C0", avatar: "🎸",
-      bio: "Play upright bass in a jazz trio on weekends, write boring code on weekdays. Looking for my duet.",
+    { id: "c2", name: "Selah", age: 33, city: "Durham, NC", color: "#1565C0", avatar: "🎸",
+      gender: "Woman", intent: "Long-term",
+      bio: "Sing in a jazz trio on weekends, write boring code on weekdays. Looking for my duet.",
       tags: ["jazz", "vinyl", "coffee", "slow mornings"],
       prompt: "We'll get along if…", promptAnswer: "you don't mind detours to record shops." },
     { id: "c3", name: "Junia", age: 30, city: "Raleigh, NC", color: "#00897B", avatar: "📚",
+      gender: "Woman", intent: "Friendship first",
       bio: "Librarian, trail runner, terrible at texting back but great in person. I keep a life list of birds I've seen.",
       tags: ["books", "running", "birding", "tea"],
       prompt: "My idea of a perfect winter Sunday…", promptAnswer: "cinnamon rolls, a long walk, then absolutely nothing." },
-    { id: "c4", name: "Marco", age: 35, city: "Charlotte, NC", color: "#7B1FA2",
-      avatar: "🍜", bio: "Chef by trade, homebody by choice. I'll cook you the best meal of your week if you do the dishes.",
+    { id: "c4", name: "Marisol", age: 35, city: "Charlotte, NC", color: "#7B1FA2", avatar: "🍜",
+      gender: "Woman", intent: "Marriage-minded",
+      bio: "Chef by trade, homebody by choice. I'll cook you the best meal of your week if you do the dishes.",
       tags: ["food", "gardening", "dogs", "old films"],
       prompt: "I'm looking for someone who…", promptAnswer: "texts back and means what they say." },
-    { id: "c5", name: "Priya", age: 27, city: "Chapel Hill, NC", color: "#F9A825",
-      avatar: "🔭", bio: "Grad student in astronomy. I stay up too late looking at the sky and I want someone to look up with.",
+    { id: "c5", name: "Priya", age: 27, city: "Chapel Hill, NC", color: "#F9A825", avatar: "🔭",
+      gender: "Woman", intent: "Still figuring it out",
+      bio: "Grad student in astronomy. I stay up too late looking at the sky and I want someone to look up with.",
       tags: ["stars", "camping", "documentaries", "chai"],
       prompt: "The most spontaneous thing I've done…", promptAnswer: "drove six hours to catch a meteor shower on a Tuesday." },
-    { id: "c6", name: "Dominic", age: 31, city: "Greensboro, NC", color: "#2E7D32",
-      avatar: "🌱", bio: "I run a small plant nursery. Patient, a little quiet, and genuinely happy. Winter people welcome.",
+    { id: "c6", name: "Dominique", age: 31, city: "Greensboro, NC", color: "#2E7D32", avatar: "🌱",
+      gender: "Woman", intent: "Long-term",
+      bio: "I run a small plant nursery. Patient, a little quiet, and genuinely happy. Winter people welcome.",
       tags: ["plants", "woodworking", "cycling", "farmers markets"],
       prompt: "We'll get along if…", promptAnswer: "you're kind to waiters and okay with silence." },
-    { id: "c7", name: "Nadia", age: 34, city: "Wilmington, NC", color: "#C2185B",
-      avatar: "🏄", bio: "Ocean rescue in summer, ceramics in winter. I feel most myself near water and I laugh loudly.",
+    { id: "c7", name: "Nadia", age: 34, city: "Wilmington, NC", color: "#C2185B", avatar: "🏄",
+      gender: "Woman", intent: "Long-term",
+      bio: "Ocean rescue in summer, ceramics in winter. I feel most myself near water and I laugh loudly.",
       tags: ["surfing", "pottery", "travel", "live music"],
       prompt: "The way to my heart is…", promptAnswer: "a handwritten note. Yes, still." },
-    { id: "c8", name: "Theo", age: 29, city: "Boone, NC", color: "#3949AB",
-      avatar: "⛰️", bio: "Park ranger who knows every trail in the county. Ask me about the cardinals that overwinter here.",
+    { id: "c8", name: "Thea", age: 29, city: "Boone, NC", color: "#3949AB", avatar: "⛰️",
+      gender: "Woman", intent: "Marriage-minded",
+      bio: "Park ranger who knows every trail in the county. Ask me about the cardinals that overwinter here.",
       tags: ["mountains", "photography", "campfires", "poetry"],
       prompt: "I'm looking for someone who…", promptAnswer: "wants a partner for the long trail, not just the trailhead." }
   ];
@@ -139,6 +148,8 @@
     if (edit && state.profile) {
       const p = state.profile;
       form.name.value = p.name; form.age.value = p.age; form.seeking.value = p.seeking;
+      if (p.gender) form.gender.value = p.gender;
+      if (p.intent) form.intent.value = p.intent;
       form.city.value = p.city; form.color.value = p.color; form.bio.value = p.bio;
       form.prompt.value = p.prompt; form.promptAnswer.value = p.promptAnswer;
       tags = p.tags.slice();
@@ -159,7 +170,9 @@
     state.profile = {
       name: (data.get("name") || "").trim(),
       age: data.get("age"),
+      gender: data.get("gender"),
       seeking: data.get("seeking"),
+      intent: data.get("intent"),
       city: (data.get("city") || "").trim() || "Somewhere warm",
       color: data.get("color") || COLORS[0],
       avatar: "🐦",
@@ -215,6 +228,7 @@
           <div class="loc">${escapeHtml(p.city)}</div>
         </div>
       </div>
+      ${p.intent ? `<div class="card-intent">${escapeHtml(p.intent)}</div>` : ""}
       <div class="card-body">
         <p class="card-bio">${escapeHtml(p.bio)}</p>
         <div class="card-prompt"><b>${escapeHtml(p.prompt)}</b>${escapeHtml(p.promptAnswer)}</div>
@@ -398,6 +412,7 @@
         <div>
           <h3>${escapeHtml(p.name)}, ${escapeHtml(String(p.age))}</h3>
           <div class="p-meta">${escapeHtml(p.city)} · seeking ${escapeHtml(p.seeking.toLowerCase())}</div>
+          ${p.intent ? `<div class="p-meta">Here for a ${escapeHtml(p.intent.toLowerCase())}</div>` : ""}
         </div>
       </div>
       <div class="profile-block">

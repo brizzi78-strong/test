@@ -143,6 +143,7 @@ textarea { resize: vertical; }
 .card-name { position: relative; z-index: 1; color: #fff; text-shadow: 0 2px 12px rgba(0,0,0,0.4); }
 .card-name h3 { font-size: 1.6rem; letter-spacing: -0.01em; }
 .card-name .loc { font-size: 0.9rem; opacity: 0.9; }
+.card-intent { align-self: flex-start; margin: 0.7rem 0 -0.2rem 1.15rem; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--red); background: var(--red-soft); border-radius: 999px; padding: 0.25rem 0.65rem; }
 .card-body { padding: 1rem 1.15rem; display: flex; flex-direction: column; gap: 0.65rem; overflow: hidden; }
 .card-bio { font-size: 0.95rem; }
 .card-prompt { font-size: 0.9rem; }

@@ -96,9 +96,19 @@
         </label>
         <div class="field-row">
           <label class="field">
-            <span>Age</span>
-            <input name="age" type="number" required min="18" max="120" placeholder="29">
+            <span>Age <small>— college age to 45</small></span>
+            <input name="age" type="number" required min="18" max="45" placeholder="29">
           </label>
+          <label class="field">
+            <span>You are</span>
+            <select name="gender">
+              <option value="Woman">Woman</option>
+              <option value="Man">Man</option>
+              <option value="Nonbinary">Nonbinary</option>
+            </select>
+          </label>
+        </div>
+        <div class="field-row">
           <label class="field">
             <span>Looking for</span>
             <select name="seeking">
@@ -106,6 +116,15 @@
               <option value="Women">Women</option>
               <option value="Men">Men</option>
               <option value="Nonbinary people">Nonbinary people</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Here for a…</span>
+            <select name="intent">
+              <option value="Long-term">Long-term relationship</option>
+              <option value="Marriage-minded">Marriage-minded</option>
+              <option value="Friendship first">Friendship first</option>
+              <option value="Still figuring it out">Still figuring it out</option>
             </select>
           </label>
         </div>
