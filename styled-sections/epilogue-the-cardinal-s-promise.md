@@ -15,7 +15,7 @@ And then it lands, the cardinal, on the mirror, close enough to touch through th
 
 Seventeen years from West Palm Beach, from the apartment with the blinds drawn and the extension cord running to the hallway, from the morning I opened the door and found Lou standing there. Seventeen, the age I was when I won the county championship. He'd been in the third row that day. He was always in the third row.
 
-Dad, I say out loud. Alone in the car. Just his name. And then the thing I should have said a hundred more times when he was alive to hear it. I love you. The cardinal doesn't move. Dad, I love you. I know you're watching out for me.
+Dad, I say out loud. Alone in the car. Just his name. And then the word he and I mostly lived instead of spoke. I love you. Not because it went unsaid between us — it didn't. Before the end he'd looked at me and told me, Rob, don't worry about me. We're good. When my father said we're good, that was the whole of it: I love you, and I have closure with you. He never needed the sentence. But you don't run out of wanting to say it to a man you can't call anymore. I love you. The cardinal doesn't move. Dad, I love you. I know you're watching out for me.
 
 It sits there. Turns its head slightly. Still looking. I don't know how long we stay like that. The parking lot goes away. Just me and the cardinal. Just me and Lou. Tears running down my face, not sobbing, the kind that comes from grief and relief colliding. Dad is gone. Dad is here.
 
