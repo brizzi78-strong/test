@@ -417,11 +417,22 @@
           <span class="badge">Built</span>
           <span class="tag">Every module</span>
           <h3>An append-only audit trail</h3>
-          <p>Every state change across Recruiting, Screening, MyHR, and Training — signed, approved, returned, cleared, completed — is appended to an immutable history. Entries are added, never edited or deleted. When someone asks "what happened, and when," there's an answer.</p>
+          <p>Every state change across all nine modules — signed, approved, returned, cleared, completed, offboarded — is appended to an immutable history. Entries are added, never edited or deleted. When someone asks "what happened, and when," there's an answer.</p>
           <div class="flow">
             <span class="chip">event</span><span class="arrow" aria-hidden="true">→</span>
             <span class="chip gate">appended</span><span class="arrow" aria-hidden="true">→</span>
             <span class="chip end">immutable</span>
+          </div>
+        </article>
+        <article class="card reveal">
+          <span class="badge">Built</span>
+          <span class="tag">Gateway · Multi-tenancy</span>
+          <h3>Per-tenant data isolation</h3>
+          <p>Every request enters through an authenticated gateway that resolves the caller's company and injects a trusted tenant it can't spoof. Each service enforces it: writes are stamped to your tenant, lists are scoped to it, and another company's record simply comes back as not-found. A key for one company can't read or write another's data.</p>
+          <div class="flow">
+            <span class="chip gate">authenticated</span><span class="arrow" aria-hidden="true">→</span>
+            <span class="chip">tenant&nbsp;injected</span><span class="arrow" aria-hidden="true">→</span>
+            <span class="chip end">scoped&nbsp;&amp;&nbsp;isolated</span>
           </div>
         </article>
       </div>
@@ -438,7 +449,7 @@
       <div class="grid">
         <div class="item reveal">
           <h3><span class="dot" aria-hidden="true"></span> One record, one truth</h3>
-          <p>A candidate becomes an employee on a single record that every module reads and writes. Nothing is re-keyed between hiring and onboarding, so there's one place a person's data lives — and one place to correct or remove it.</p>
+          <p>Hiring provisions one canonical employee into every module at once and remembers the id each assigns, so a person resolves to the same record everywhere. Nothing is re-keyed — there's one place a person's data lives, and one place to correct or remove it.</p>
         </div>
         <div class="item reveal">
           <h3><span class="dot" aria-hidden="true"></span> Least data</h3>
@@ -550,7 +561,7 @@
   <div class="wrap">
     <div class="foot-inner">
       <div class="brand"><span class="glyph" aria-hidden="true">C</span> Cardinal HR</div>
-      <span>Recruiting · Screening · MyHR · Training · Benefits · Payroll · Directory</span>
+      <span>Recruiting · Screening · MyHR · Training · Benefits · Payroll · Directory · Time Off · Offboarding</span>
     </div>
     <nav class="foot-nav" aria-label="Footer">
       <a href="index.html">Home</a>
