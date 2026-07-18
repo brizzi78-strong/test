@@ -196,6 +196,50 @@ export async function transferTreasury(
   return hash;
 }
 
+// PRACTICE ONLY (Sepolia dry run, step 4): sends the remaining 200M to the
+// stand-in "pool" address so the balances look like a funded Uniswap pool to
+// the other scripts. The real launch creates an actual pool on Uniswap
+// instead. Guards mirror transferTreasury: runs only from the
+// treasury-funded state, never twice.
+export async function fundPoolSim(
+  token: CardinalsPromise,
+  publicClient: PublicClientLike,
+  deployer: `0x${string}`,
+  treasury: `0x${string}`,
+  pool: `0x${string}`,
+): Promise<`0x${string}`> {
+  if (
+    getAddress(pool) === getAddress(deployer) ||
+    getAddress(pool) === getAddress(treasury)
+  ) {
+    throw new Error("pool address must be its own separate practice wallet.");
+  }
+  const state = await readState(token, deployer, treasury, pool);
+  if (BigInt(state.owner) === 0n) {
+    throw new Error("ownership already renounced — nothing left to practice here.");
+  }
+  if (state.treasuryBalance !== TREASURY_AMOUNT) {
+    throw new Error(
+      `treasury holds ${fmt(state.treasuryBalance)}, expected ${fmt(TREASURY_AMOUNT)} — run transfer-treasury first.`,
+    );
+  }
+  if (state.poolBalance !== 0n) {
+    throw new Error(`pool already holds ${fmt(state.poolBalance ?? 0n)} — refusing to send again.`);
+  }
+  if (state.deployerBalance !== POOL_AMOUNT) {
+    throw new Error(
+      `deployer holds ${fmt(state.deployerBalance)}, expected exactly ${fmt(POOL_AMOUNT)}.`,
+    );
+  }
+
+  const hash = await token.write.transfer([pool, POOL_AMOUNT]);
+  const receipt = await publicClient.waitForTransactionReceipt({ hash });
+  if (receipt.status !== "success") {
+    throw new Error(`transfer transaction ${hash} failed (status: ${receipt.status})`);
+  }
+  return hash;
+}
+
 // Checklist step 6: the point of no return. Runs every abort-criteria check
 // it can verify on-chain, makes the human confirm the ones it can't (source
 // verified, LP locked), then renounces and confirms the owner is zero.

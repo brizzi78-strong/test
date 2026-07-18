@@ -11,7 +11,7 @@ import { network } from "hardhat";
 
 import {
   describeStage,
-  POOL_AMOUNT,
+  fundPoolSim,
   readState,
   renounce,
   transferTreasury,
@@ -60,9 +60,13 @@ await assert.rejects(
 );
 console.log("✔ renounce correctly blocked before pool is funded");
 
-// "Create the pool": send the 200M to the stand-in pool address
-const hash = await token.write.transfer([pool, POOL_AMOUNT]);
-await publicClient.waitForTransactionReceipt({ hash });
+// "Create the pool" via the practice helper
+await fundPoolSim(token, publicClient, deployer, treasury, pool);
+
+// Running it twice must be blocked
+await assert.rejects(fundPoolSim(token, publicClient, deployer, treasury, pool), /already holds/);
+console.log("✔ second pool-sim transfer correctly blocked");
+
 state = await readState(token, deployer, treasury, pool);
 verdict = describeStage(state, deployer);
 assert.equal(verdict.problems.length, 0, verdict.problems.join("; "));
