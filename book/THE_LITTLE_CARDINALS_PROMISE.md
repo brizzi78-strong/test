@@ -1,6 +1,6 @@
 # The Little Cardinal's Promise
 
-**Rob Brizzi • Cardinal Press • 2026**
+**Rob Brizzi • Brizzi House Publishing • 2026**
 
 ---
 
@@ -17,7 +17,7 @@ Rob Brizzi
 
 Copyright © 2026 Rob Brizzi. All rights reserved.
 No part of this book may be reproduced without permission.
-Cardinal Press • First edition, 2026
+Brizzi House Publishing • First edition, 2026
 
 ## [Page 4 – Dedication]
 

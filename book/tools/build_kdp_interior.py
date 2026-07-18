@@ -160,7 +160,7 @@ def build_pages():
     d.text((W // 2, int(H * 0.36)), "THE LITTLE", font=F_TITLE(170), fill=RED, anchor="mm")
     d.text((W // 2, int(H * 0.44)), "CARDINAL'S PROMISE", font=F_TITLE(170), fill=RED, anchor="mm")
     d.text((W // 2, int(H * 0.56)), "Rob Brizzi", font=font("LiberationSerif-Bold.ttf", 84), fill=INK, anchor="mm")
-    d.text((W // 2, int(H * 0.64)), "CARDINAL PRESS", font=F_SMALL, fill=(124, 106, 85), anchor="mm")
+    d.text((W // 2, int(H * 0.64)), "BRIZZI HOUSE PUBLISHING", font=F_SMALL, fill=(124, 106, 85), anchor="mm")
     add(img)
 
     # 3 copyright (bottom third, like the companion)
@@ -169,7 +169,7 @@ def build_pages():
         "The Little Cardinal's Promise",
         "Copyright © 2026 Rob Brizzi. All rights reserved.",
         "No part of this book may be reproduced without permission.",
-        "Cardinal Press",
+        "Brizzi House Publishing",
         "First edition, 2026",
     ]], body_font=F_SMALL, y=int(H * 0.62))
     add(img)
