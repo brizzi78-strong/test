@@ -92,7 +92,7 @@ p.chapno {
   text-align: center;
   font-size: 10pt;
   letter-spacing: 0.24em;
-  color: #5f6f92;
+  color: #a02b22;
   margin: 1.5in 0 0.12in;
 }
 p.chapno strong { font-weight: normal; }
@@ -103,6 +103,7 @@ h2 {
   font-size: 18pt;
   font-weight: normal;
   line-height: 1.2;
+  color: #a02b22;
   margin: 0 0 0.5in;
 }
 h2 strong { font-weight: normal; }
