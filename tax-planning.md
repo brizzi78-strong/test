@@ -78,6 +78,19 @@ allowed).
   1-car household buying under pressure — the invested $35K is the
   hedge (it stays liquid enough to buy a used car in a week if needed).
   CPA prices the exact recapture before listing it.
+  **ON PAUSE (July 2026) — active diminished-value claim.** The Tesla
+  was hit (not at fault); repaired at Relentless Collision; DV claim
+  061339503-01 pending against Liberty Mutual (at-fault carrier) with
+  Billy Walkowiak (court-certified DV expert) via the Right to Appraisal
+  process; NC small claims (≤$10K) is the backup route. Sequence:
+  resolve DV recovery (typ. $3–6K) FIRST, then revisit the sale at the
+  accident-adjusted price. Not-at-fault = no NC points/surcharge.
+  CPA item: DV proceeds on a 66% business vehicle interact with
+  depreciated basis — book correctly, may be partly taxable.
+  Accident #2 details TBD (which car / fault) before any final decision.
+  **Urgent regardless: $2M personal umbrella policy** — two accidents
+  in a year against a $1.24M net worth; auto liability limits alone
+  are the largest unpriced risk in the household.
   Retitling to the LLC: still no (disregarded entity — no benefit, 3%
   NC HUT + commercial insurance). Heavy "company car" purchase for the
   write-off: still no at current revenue (spends $1 to save ~38¢;
