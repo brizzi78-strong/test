@@ -52,5 +52,23 @@ if cover:
         '<div class="coverauthor">ROB BRIZZI</div></div>' % cover,
         1,
     )
+    backcover = (
+        '<div class="backcover">'
+        '<p class="bc-desc">A powerful true story of addiction, redemption, adoption, '
+        'immigration, and the promises that carry us through our darkest nights. Rob '
+        'Brizzi&#8217;s journey is one of painful lessons, unlikely rescue, and the '
+        'unwavering love of a man who never gave up on him. From the wrestling mats of '
+        'New Jersey to the hallways of hospice care, this is a story about hope, second '
+        'chances, and the cardinals that remind us we are never alone.</p>'
+        '<div class="bc-authorrow">'
+        '<img class="bc-photo" src="cover/rob-headshot.jpg" alt="">'
+        '<div class="bc-bio"><span class="bc-name">ROB BRIZZI</span> is a recovering addict '
+        'and a Certified Dementia Practitioner (CDP) who works as a hospice liaison. Born in '
+        'Mexico City and raised in New Jersey, he lives in Raleigh, North Carolina, with his '
+        'wife, Hope.</div></div>'
+        '<p class="bc-press">CARDINAL PROMISE PRESS</p>'
+        '</div>'
+    )
+    html = html.replace("</body>", backcover + "\n</body>", 1)
 
 open(path, "w", encoding="utf-8").write(html)

@@ -76,6 +76,64 @@
   @bottom-center { content: none; }
 }
 
+/* ---------- Back cover (screen/reading PDF only) ---------- */
+@page backcover {
+  margin: 0;
+  @top-center { content: none; }
+  @bottom-center { content: none; }
+}
+.backcover {
+  page: backcover;
+  break-before: page;
+  width: 6in; height: 9in;
+  margin: 0;
+  padding: 0.9in 0.72in;
+  box-sizing: border-box;
+  background: #0f1a33;
+  color: #e9e7e0;
+  position: relative;
+}
+.bc-desc {
+  font-size: 12pt;
+  line-height: 1.55;
+  text-align: left;
+  text-indent: 0;
+  margin: 0.15in 0 0;
+  color: #e4e2db;
+}
+.bc-authorrow {
+  position: absolute;
+  left: 0.72in; right: 0.72in;
+  bottom: 1.15in;
+  display: flex;
+  align-items: center;
+  gap: 0.28in;
+}
+.bc-photo {
+  width: 1.5in; height: 1.9in;
+  object-fit: cover;
+  border: 1px solid rgba(255,255,255,0.22);
+  flex: none;
+}
+.bc-bio {
+  font-size: 9.5pt;
+  line-height: 1.46;
+  text-align: left;
+  text-indent: 0;
+  color: #cfccc3;
+}
+.bc-name { color: #be3126; letter-spacing: 0.06em; }
+.bc-press {
+  position: absolute;
+  left: 0; right: 0;
+  bottom: 0.5in;
+  text-align: center;
+  text-indent: 0;
+  font-size: 8.5pt;
+  letter-spacing: 0.2em;
+  color: #8893b0;
+}
+
 html { font-size: 11.5pt; }
 body {
   font-family: Georgia, "Times New Roman", serif;
