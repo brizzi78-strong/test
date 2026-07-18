@@ -17,6 +17,7 @@ struct TodayView: View {
                 }
                 .padding(.horizontal)
                 .padding(.bottom, 32)
+                .buttonStyle(PressableStyle())
             }
             .navigationTitle("Today")
         }
@@ -79,6 +80,7 @@ struct TodayView: View {
         .padding(20)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(Theme.reflectionGradient, in: RoundedRectangle(cornerRadius: 20))
+        .shadow(color: Theme.cardinalDark.opacity(0.28), radius: 12, x: 0, y: 6)
     }
 
     // MARK: - Mood check-in
@@ -119,6 +121,10 @@ struct TodayView: View {
                 isSelected ? Theme.moodColor(mood) : Color(.secondarySystemBackground),
                 in: RoundedRectangle(cornerRadius: 12)
             )
+            .shadow(color: isSelected ? Theme.moodColor(mood).opacity(0.45) : .clear,
+                    radius: 7, x: 0, y: 4)
+            .scaleEffect(isSelected ? 1.03 : 1)
+            .animation(.spring(response: 0.3, dampingFraction: 0.7), value: isSelected)
         }
         .buttonStyle(.plain)
         .accessibilityLabel("Check in as \(mood.rawValue)")
@@ -248,6 +254,7 @@ struct QuickToolRow: View {
         }
         .padding(12)
         .background(Color(.secondarySystemBackground), in: RoundedRectangle(cornerRadius: 16))
+        .cardShadow()
     }
 }
 

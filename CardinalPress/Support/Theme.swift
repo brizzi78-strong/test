@@ -67,3 +67,24 @@ enum Theme {
         }
     }
 }
+
+// MARK: - Premium polish
+
+extension View {
+    /// A soft, layered shadow that lifts card surfaces off the background,
+    /// so they read as physical cards rather than flat rectangles.
+    func cardShadow() -> some View {
+        shadow(color: Color.black.opacity(0.07), radius: 9, x: 0, y: 4)
+    }
+}
+
+/// A button style that gently presses in on tap — the tactile feedback a
+/// native iOS control gives. Used on the tappable card rows.
+struct PressableStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .scaleEffect(configuration.isPressed ? 0.98 : 1)
+            .opacity(configuration.isPressed ? 0.96 : 1)
+            .animation(.spring(response: 0.3, dampingFraction: 0.72), value: configuration.isPressed)
+    }
+}

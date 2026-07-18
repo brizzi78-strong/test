@@ -67,6 +67,7 @@ private struct ChecklistRow: View {
                     .foregroundStyle(.secondary)
                 Text("\(done) of \(total) done")
                     .font(.caption2.weight(.medium))
+                    .monospacedDigit()
                     .foregroundStyle(done == total ? Theme.gold : tierColor)
             }
         }
