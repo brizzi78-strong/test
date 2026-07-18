@@ -96,9 +96,10 @@ Learn more at thecardinalspromise.com
 
 ## URLs & contact
 
-- **Support URL** — https://thecardinalspromise.com **[or a /support page]**
+- **Support URL** — https://thecardinalspromise.com
 - **Marketing URL** — https://thecardinalspromise.com
-- **Privacy Policy URL** — **[where you host privacy-policy.html]**
+- **Privacy Policy URL** — https://thecardinalspromise.com/privacy **(host `privacy-policy.html` there)**
+- **Support / contact email** — brizzi78@icloud.com
 - **Copyright** — © 2026 Rob Brizzi
 
 ---
