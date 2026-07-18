@@ -1,4 +1,4 @@
-# hiring-checks — new-hire background screening service
+# HireCheck — new-hire background screening service
 
 A small, self-contained service that lets a company run pre-employment
 background checks on a candidate and drive the result through a compliant

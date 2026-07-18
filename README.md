@@ -7,7 +7,7 @@ This repository holds several projects. Jump to the one you need:
 | **The Cardinal's Toolkit — iPhone app** | `CardinalPress/` + `CardinalPress.xcodeproj` | Companion app to the NC Family Caregiver Handbook ([below](#the-cardinals-toolkit--iphone-app)) |
 | **The Cardinal's Promise / Toolkit book** | `cardinals-promise/` | Manuscript, samples, and marketing for the book |
 | **CARD Token — Foundry/Hardhat skeleton** | `contracts/`, `test/`, `verification/` | Fixed-supply ERC-20 skeleton ([below](#card-token--foundryhardhat-skeleton)) |
-| **hiring-checks — background screening service** | `hiring-checks/` | Standalone service for running FCRA-aware pre-employment background checks on new hires (see `hiring-checks/README.md`) |
+| **HireCheck — background screening service** | `hirecheck/` | Standalone service for running FCRA-aware pre-employment background checks on new hires (see `hirecheck/README.md`) |
 
 ---
 

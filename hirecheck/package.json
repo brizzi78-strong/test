@@ -1,8 +1,8 @@
 {
-  "name": "hiring-checks",
+  "name": "hirecheck",
   "private": true,
   "version": "0.1.0",
-  "description": "New-hire background screening service — FCRA-aware order workflow with a pluggable Consumer Reporting Agency provider",
+  "description": "HireCheck — new-hire background screening service with an FCRA-aware order workflow and a pluggable Consumer Reporting Agency provider",
   "type": "module",
   "engines": {
     "node": ">=22.18"

@@ -48,7 +48,7 @@ export function buildRoutes(service: ScreeningService): Route[] {
     [
       'GET',
       '/meta',
-      () => ok({ service: 'hiring-checks', checkTypes: CHECK_TYPES }),
+      () => ok({ service: 'hirecheck', checkTypes: CHECK_TYPES }),
     ],
 
     ['POST', '/companies', ({ body }) => created(service.createCompany(asObject(body) as never))],

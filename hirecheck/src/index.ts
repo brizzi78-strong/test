@@ -12,5 +12,5 @@ const { server } = createApp();
 
 server.listen(port, () => {
   // eslint-disable-next-line no-console
-  console.log(`hiring-checks listening on http://localhost:${port}`);
+  console.log(`HireCheck listening on http://localhost:${port}`);
 });
