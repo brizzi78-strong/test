@@ -386,6 +386,8 @@ Part of what he built was the church. He and my mother decided early that Chris 
 
 We moved to Ramsey when I was in sixth grade. Bigger house, new school, a town where the kids had known each other since before I showed up, and I came in as the new boy with dark olive skin and features that didn't match the rest of Bergen County. But I had Lou, who understood that a boy who comes home quiet in the wrong way doesn't need to be interrogated, he needs someone there. He couldn't fix school for me. He was just home when I got there, and that turned out to be enough.
 
+The school paired me with a buddy to show me around those first weeks, a kid everybody called Whitey. We didn't get close then — that year I was mostly on my own. But by high school he had become one of my best friends, and all these years later he still is. I'm grateful for him.
+
 My mother and Lou divorced in 1996, the year I turned eighteen. The divorce handed him an easy way out and every social permission to take it. We were grown, or close to it, and the marriage that had tied him to us was finished. He stayed anyway, a plain fact he never bothered to announce: we were his, and that didn't come undone because the marriage had. The first time he chose us, it was a handful of Tootsie Rolls at my grandparents' dinner table. This time it was a divorce he could have walked away from clean, and he stayed. The same decision, made twelve years apart.
 
 I understand it now in a way I couldn't then. I see it in every room I walk into for work, in every family around a bed, in every grown son or daughter holding a hand that's getting cooler and trying to add up what one person's steady presence meant across thirty years of ordinary days. It showed up on a Saturday with a bucket of baseballs.
