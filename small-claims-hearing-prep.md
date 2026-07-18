@@ -1,0 +1,98 @@
+# Small Claims Hearing Prep — July 22, 2026 (Wake County Magistrate)
+
+**Claim:** Robert L. Brizzi v. Tesla, Inc. · **Amount:** $7,500 + IRS interest +
+court costs · **Your goal:** a money judgment. Keep it simple — Tesla certified
+$7,500, failed to file, you lost $7,500.
+
+> Not legal advice. This is an organizational aid for a pro se hearing.
+
+## 1. Bring THREE copies of every exhibit (magistrate, you, Tesla)
+
+Put them in this order; the signed Form 15400 is your lead exhibit.
+
+| # | Exhibit | What it proves |
+|---|---|---|
+| A | **Signed Form 15400** (08/21/2025, Dan Ansari, GM) | Tesla's own signed certification that you qualify for **$7,500** |
+| B | **IRS Notice CP23** (06/08/2026) | IRS removed exactly $7,500 (tax $28,939 → $36,439); the loss is real |
+| C | **Tesla Order Agreement** (RN125485754) | The sale; the clause that **preserves small claims** |
+| D | **Your emails to Tesla** (03/26–27/2026) | You demanded a fix; Tesla didn't resolve it |
+| E | **Form 8936** (as filed) | You properly claimed the credit with the correct VIN |
+| F | **One-page damages sheet** | $7,500 + interest = amount requested |
+
+Bring **originals** to show the magistrate; hand up the **copies**.
+
+## 2. Your opening (say this, ~90 seconds)
+
+"Your Honor, in August 2025 I bought a new Tesla Model Y and qualified for the
+$7,500 federal Clean Vehicle Credit. At delivery, Tesla's own general manager
+signed this IRS Form 15400 — Exhibit A — certifying under penalty of perjury that
+I qualified for the full $7,500. But to make the credit real, Tesla had to file a
+matching report with the IRS electronically, and **they never did.** Because Tesla
+never filed it, the IRS disallowed my credit — Exhibit B — and billed me $7,500
+plus interest. I qualified. I did everything right. I lost $7,500 solely because
+Tesla failed to complete a filing it had already signed. I'm asking for a judgment
+of $[7,500 + interest] plus court costs."
+
+## 3. Damages — keep the math clean
+
+- IRS removed **exactly $7,500** (Exhibit B: total tax $28,939 → $36,439).
+- Plus IRS interest (was $20.58 as of 06/08/2026 — **recompute to the hearing
+  date** and state the current figure).
+- **Ask for:** $[7,500 + current interest] + court costs.
+
+## 4. Anticipate Tesla's moves — and your rebuttals
+
+| If Tesla says… | You say… |
+|---|---|
+| **"This must go to arbitration."** | "Your Honor, Tesla's own Order Agreement says: *'If you prefer, you may instead take an individual dispute to small claims court.'* This forum is expressly permitted." (Exhibit C) |
+| **"We disclaim any guarantee of incentives."** | "I'm not claiming a guarantee — I *was* eligible. My loss came from Tesla failing to perform a filing it signed and certified, not from any eligibility guarantee." |
+| **"It's the IRS's fault / go to the IRS."** | "Only the seller can file the time-of-sale report. The IRS denied it *because* Tesla never filed. Tesla certified $7,500 in writing — Exhibit A." |
+| **"The credit ended / portal is closed."** | "False. My car was placed in service Aug 21, 2025, before the cutoff, and IRS guidance keeps the portal open for registered sellers like Tesla to submit and correct reports." |
+| **Tesla doesn't appear** | "I request a default judgment, Your Honor." (Bring proof of proper service on Tesla's registered agent.) |
+
+## 5. Logistics / do's & don'ts
+
+- **Confirm service** on Tesla's NC registered agent was completed and bring the
+  return-of-service proof — improper service is the #1 reason cases get continued.
+- Arrive **early**, dress neatly, address the magistrate as **"Your Honor."**
+- Stick to **money owed**; stay calm and factual. **Do not** ask for pain and
+  suffering — a magistrate awards economic loss, not emotional distress.
+- Let Tesla talk; correct only facts, using your exhibits by letter.
+- Have the **one-line theory** ready if interrupted: *"Tesla certified the credit,
+  never filed it, and I got billed $7,500."*
+
+## 5b. The "mic-drop" — hand up Exhibit A and let it land
+
+Your whole case fits on one piece of paper: **Tesla's own signed Form 15400.**
+Use it as the weapon. When you hand it to the magistrate, say:
+
+> "Your Honor, everything Tesla disputes is answered by Tesla's *own* signature.
+> On this form, Tesla's general manager certified — under penalty of perjury — my
+> name, my VIN, that I took delivery for my own use, and the exact number: seven
+> thousand five hundred dollars. Tesla wrote that. Tesla signed that. Then Tesla
+> failed to file it. I'm not asking you to take my word for anything — I'm asking
+> you to hold Tesla to its own."
+
+Then stop talking. Let the silence do the work.
+
+**Three lines to keep in your pocket** (use one, don't force all three):
+- "Tesla certified the credit, never filed it, and sent me the bill."
+- "I have Tesla's signature saying I qualified, and the IRS saying Tesla never
+  filed. Both are Tesla's doing."
+- "The only party who could file this report is the one that didn't — Tesla."
+
+**Rebuttal drill (say these out loud a few times before the 22nd):**
+- Arbitration → "Their own contract preserves small claims." (Exhibit C)
+- Disclaimer → "I was eligible; they failed to file. Different thing."
+- Blame IRS → "The IRS denied it *because* Tesla didn't file."
+- Portal closed → "False — placed in service before the cutoff; portal stays open
+  for registered sellers."
+
+## 6. After the hearing
+
+- If you win: get the written judgment; note how/when Tesla must pay.
+- Winning here does **not** bar the separate IRS fix — keep pressing Tesla/corporate
+  to file the ECO report so the credit itself is restored (avoid double recovery:
+  credit any payment received).
+- The **Aug 7 IRS CP23 deadline still stands** regardless of the hearing outcome —
+  mail that response (with Sterling).
