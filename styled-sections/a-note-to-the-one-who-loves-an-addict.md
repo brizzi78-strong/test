@@ -4,7 +4,7 @@ If you picked up this book because you love someone who is using, or you lost so
 
 It isn't your fault.
 
-There's an old line they teach in the rooms where families go, and it took me years on the other side of it to see how true it is. You didn't cause it. You can't control it. You can't cure it. Three sentences, every one of them a mercy, because all three say the same thing: this was never yours to fix.
+There's an old line they teach in the rooms where families go, and only from the other side of it did I see how true it is. You didn't cause it. You can't control it. You can't cure it. Three sentences, every one of them a mercy, because all three say the same thing: this was never yours to fix.
 
 I know you've tried. I know you've lain awake turning someone else's life over and over, looking for the thing you missed. I was the person on the other end of those nights. My mother wired me money she told herself was for rent. My father drove a truck across the state to haul me home. None of it made me stop. Not because they failed. Because it wasn't theirs to win. But hear the other half, because it's just as true: the rescue didn't get me sober. It kept me alive long enough to get there. You cannot make them stop. You can help them live until they do.
 
