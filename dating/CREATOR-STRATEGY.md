@@ -58,8 +58,17 @@ That's the flagship campus headline — it names the exact feeling of the target
 
 Supporting taglines:
 - *"The first real dating app that looks out for you."*
+- *"The others don't care about you. Cardinal does."*
 - *"Invite-only. Background-checked. No drunk DMs."*
 - *"Cardinals mate for life. Find yours."*
+
+**Competitive contrast angle.** The incumbents (Tinder, Hinge, Bumble) optimize
+for *your engagement* — time in app, swipes, subscriptions — not *your safety or
+your outcome*. "The others don't care about you" names that plainly: they profit
+when you keep swiping; Cardinal wins when you actually find someone and leave.
+Use it as the wedge in creator posts and paid social — but keep it truthful and
+punchy, not a smear (don't name competitors in a way that invites legal trouble;
+"the others" does the work).
 
 ## 3. What they post (content that actually converts)
 
