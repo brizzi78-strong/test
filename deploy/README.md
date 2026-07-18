@@ -24,6 +24,7 @@ That starts:
 | Payroll | http://localhost:3500 |
 | Employee Directory | http://localhost:3600 |
 | Time Off (PTO) | http://localhost:3700 |
+| Offboarding | http://localhost:3800 |
 
 Health-check any service at `GET /health`. Data persists in per-service named
 volumes (`docker volume ls`); remove them with `docker compose ... down -v`.

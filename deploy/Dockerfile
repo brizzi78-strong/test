@@ -18,6 +18,7 @@ COPY benefits ./benefits
 COPY payroll ./payroll
 COPY directory ./directory
 COPY timeoff ./timeoff
+COPY offboarding ./offboarding
 COPY gateway ./gateway
 
 # Durable SQLite databases live here; mounted as a volume per service.

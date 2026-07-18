@@ -89,6 +89,15 @@ services:
     ports: ["3700:3700"]
     volumes: ["timeoff-data:/data"]
 
+  offboarding:
+    <<: *service
+    command: node offboarding/src/index.ts
+    environment:
+      PORT: "3800"
+      OFFBOARDING_DB: /data/offboarding.db
+    ports: ["3800:3800"]
+    volumes: ["offboarding-data:/data"]
+
   # Public API entry point: authenticates every request and proxies to the
   # services above (reachable by their compose service names on the internal
   # network). Set GATEWAY_ADMIN_TOKEN in your environment to issue keys.
@@ -110,6 +119,7 @@ services:
       - payroll
       - directory
       - timeoff
+      - offboarding
 
   web:
     image: nginx:alpine
@@ -127,4 +137,5 @@ volumes:
   payroll-data:
   directory-data:
   timeoff-data:
+  offboarding-data:
   gateway-data:
