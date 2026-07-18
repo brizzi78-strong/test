@@ -25,8 +25,18 @@
 }
 
 /* ---------- Front cover (screen/reading PDF only) ---------- */
-.bookcover { page: cover; break-after: page; margin: 0; }
+.bookcover { page: cover; break-after: page; margin: 0; position: relative; }
 .bookcover img { display: block; width: 6in; height: 9in; object-fit: cover; }
+.coverauthor {
+  position: absolute;
+  left: 0; right: 0;
+  bottom: 0.95in;
+  text-align: center;
+  color: #eceae4;
+  font-size: 19pt;
+  letter-spacing: 0.14em;
+  font-family: Georgia, "Times New Roman", serif;
+}
 @page cover {
   margin: 0;
   @top-center { content: none; }

@@ -44,7 +44,8 @@ html = re.sub(
 if cover:
     html = html.replace(
         "<body>",
-        '<body>\n<div class="bookcover"><img src="%s" alt=""></div>' % cover,
+        '<body>\n<div class="bookcover"><img src="%s" alt="">'
+        '<div class="coverauthor">ROB BRIZZI</div></div>' % cover,
         1,
     )
 
