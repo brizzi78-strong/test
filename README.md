@@ -14,7 +14,7 @@ This repository holds several projects. Jump to the one you need:
 | **Benefits — benefits election / enrollment** | `benefits/` | Standalone service: plan catalog with coverage tiers, dependents, elections/waivers, and computed monthly premiums (see `benefits/README.md`) |
 | **Payroll — gross-to-net engine (Raleigh, NC)** | `payroll/` | Standalone withholding calculator: federal + NC-flat taxes, FICA, deductions, net pay, and employer taxes. Not filing-ready payroll (see `payroll/README.md`) |
 | **Employee Directory — HRIS core** | `directory/` | Standalone system of record: employees, department tree, managers, employment status, and org-chart queries with cycle-safe invariants (see `directory/README.md`) |
-| **Cardinal HR — platform website** | `cardinal-hr/` | Self-contained marketing pages tying the modules together: overview (`cardinal-hr/index.html`) and pricing (`cardinal-hr/pricing.html`) |
+| **Cardinal HR — platform website** | `cardinal-hr/` | Self-contained, cross-linked marketing site: Home (`index.html`), Features (`features.html`), Pricing (`pricing.html`), and Security (`security.html`) |
 
 ---
 
