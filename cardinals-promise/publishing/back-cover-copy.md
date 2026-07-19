@@ -10,6 +10,9 @@ author's request. The back panel currently leads with the headline; the
 approved quotes are preserved in `marketing/endorsement-kit.md` and can be
 restored above the headline when ready.
 
+## Top hook (leads the back panel, red italic)
+**You're not failing. You just haven't been shown how.**
+
 ## Headline
 **Caring for an aging parent is overwhelming — nobody hands you a map.**
 
@@ -18,12 +21,24 @@ Color-coded by urgency — Act Today, Watch Closely, Plan Ahead — It's Not
 Your Fault helps your family get organized, make informed decisions, and
 face the healthcare system with confidence, even on your worst day.
 
-## Inside you'll find practical tools to help you:
-- Organize medical, legal, and financial information
-- Prepare for emergencies and care transitions
-- Compare care options — from home health to hospice — and how to pay
-- Track appointments, medications, and important contacts
-- Protect yourself from burnout — and avoid the mistakes that cost families money
+## Inside you'll find how to:
+- Know what to do first when a parent declines — organized by urgency
+- Spot the Medicare "observation vs. admitted" trap that decides who pays for rehab
+- Protect savings and the home before the Medicaid five-year look-back
+- Compare every care option — home health to hospice — and how families actually pay
+- Find prescription help that looks at income, not your house
+- Protect yourself from burnout — and the mistakes that cost families the most
+
+## Front cover subtitle (July 2026)
+The cover subheading is now **"Helping Caregivers with Aging Loved Ones"** (was
+"For Families Caring for an Aging Parent"). The title page inside matches. The
+registered Amazon metadata subtitle still reads "A Practical Guide for Families
+Caring for an Aging Parent" — decide whether to align it at upload.
+
+> ⚠️ **Front crossout — do not reverse.** The title device is **IT'S ~~ALL~~
+> YOUR FAULT** with "Not" written above the struck-out "ALL," so it reads *It's
+> Not Your Fault.* A version that crosses out **NOT** reads *"It's Your Fault"* —
+> never ship that one.
 
 ## Author block
 **Rob Brizzi** is a Certified Dementia Practitioner with a career across

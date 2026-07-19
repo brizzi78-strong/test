@@ -42,7 +42,7 @@ const html = `<!DOCTYPE html><html><head><meta charset="utf-8"><style>
       <div class="l2">YOUR FAULT</div>
     </div>
     <div class="orn"></div>
-    <div class="sub">For Families Caring for an Aging Parent</div>
+    <div class="sub">Helping Caregivers with Aging Loved Ones</div>
     <div class="orn"></div>
     <div class="author">ROB BRIZZI</div>
     <div class="fromline">From the Author of <b>The Cardinal&rsquo;s Promise</b></div>
