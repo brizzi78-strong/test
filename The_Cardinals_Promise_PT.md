@@ -6,6 +6,12 @@
 
 CARDINAL PROMISE PRESS
 
+# **ELOGIOS**
+
+> *“Conheço este homem há trinta e cinco anos. Você pode confiar no que está prestes a ler.”*
+>
+> — DAVE MEYER, ex-quarterback da NFL
+
 # **DIREITOS AUTORAIS**
 
 A PROMESSA DO CARDEAL. Copyright © 2026 por Rob Brizzi. Todos os direitos reservados.
