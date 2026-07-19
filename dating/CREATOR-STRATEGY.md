@@ -57,10 +57,18 @@ That's the flagship campus headline — it names the exact feeling of the target
 (safety first). Use it as the hook for paid social, flyers, and creator posts.
 
 Supporting taglines:
+- *"Safe is sexy."*
 - *"The first real dating app that looks out for you."*
 - *"The others don't care about you. Cardinal does."*
 - *"Invite-only. Background-checked. No drunk DMs."*
 - *"Cardinals mate for life. Find yours."*
+
+**"Safe is sexy" — the reframe.** Most apps treat safety as the boring fine
+print. Cardinal makes it the *attraction*: vetted, background-checked, in-control
+is what's actually desirable now. It's short, ownable, endlessly remixable for
+social ("Safe is sexy. Drunk DMs aren't."), and it lets a woman post about
+safety without it feeling clinical. Strong candidate for the campaign line
+across TikTok/IG.
 
 **Competitive contrast angle.** The incumbents (Tinder, Hinge, Bumble) optimize
 for *your engagement* — time in app, swipes, subscriptions — not *your safety or
