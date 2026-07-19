@@ -83,7 +83,7 @@ Prólogo
 
 **Parte Seis — O Último Capítulo**
 
-28. O Desvio
+28. O Viagra dos Remédios para Diabetes
 29. Cinco Semanas
 30. Os Dias Seguintes
 31. A Primeira Milha Honesta
@@ -1563,7 +1563,7 @@ PARTE SEIS
 
 **CAPÍTULO 28**
 
-## **O Desvio**
+## **O Viagra dos Remédios para Diabetes**
 
 *"Porque os meus pensamentos não são os vossos pensamentos, nem os vossos caminhos os meus caminhos, diz o SENHOR."*
 *— Isaías 55:8*

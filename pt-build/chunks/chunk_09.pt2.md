@@ -10,7 +10,7 @@ PARTE SEIS
 
 **CAPÍTULO 28**
 
-## **O Desvio**
+## **O Viagra dos Remédios para Diabetes**
 
 *"Porque os meus pensamentos não são os vossos pensamentos, nem os vossos caminhos os meus caminhos, diz o SENHOR."*
 *— Isaías 55:8*

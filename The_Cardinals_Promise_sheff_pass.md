@@ -83,7 +83,7 @@ Prologue
 
 **Part Six — The Last Chapter**
 
-28. The Detour
+28. The Viagra of Diabetes Meds
 29. Five Weeks
 30. The Days After
 31. The First Honest Mile
@@ -1563,7 +1563,7 @@ PART SIX
 
 **CHAPTER 28**
 
-## **The Detour**
+## **The Viagra of Diabetes Meds**
 
 *"For my thoughts are not your thoughts, neither are your ways my ways, saith the LORD."*
 *— Isaiah 55:8*
