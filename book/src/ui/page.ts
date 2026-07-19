@@ -70,7 +70,7 @@ export function renderPage(businessName: string): string {
       <div class="step">Step 1 — pick a time</div>
       <div class="row">
         <div><label for="date">Date</label><input id="date" type="date" required></div>
-        <div><label for="time">Time</label><input id="time" type="time" required></div>
+        <div><label for="time">Time</label><select id="time" required></select></div>
       </div>
 
       <div class="step" style="margin-top:1.2rem">Step 2 — your details</div>
@@ -123,6 +123,15 @@ $("bookForm").addEventListener("submit", async (e)=>{
 $("againBtn").onclick=()=>{ $("bookForm").reset(); $("doneCard").hidden=true; $("formCard").hidden=false; };
 $("themeBtn").onclick=()=>{ const c=document.documentElement.getAttribute("data-theme"); const n=c==="dark"?"light":c==="light"?"":"dark"; if(n)document.documentElement.setAttribute("data-theme",n); else document.documentElement.removeAttribute("data-theme"); };
 
+(function populateTimes(){
+  const sel=$("time"); let html='<option value="">Select…</option>';
+  for(let h=8;h<=19;h++){ for(const m of [0,30]){
+    const v=String(h).padStart(2,"0")+":"+String(m).padStart(2,"0");
+    const ap=h<12?"AM":"PM"; const h12=((h+11)%12)+1;
+    html+='<option value="'+v+'">'+h12+":"+String(m).padStart(2,"0")+" "+ap+"</option>";
+  }}
+  sel.innerHTML=html;
+})();
 $("date").min=new Date().toISOString().slice(0,10);
 </script>
 </body>
