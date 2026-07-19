@@ -32,7 +32,9 @@ stay. Ordered roughly by priority. Items marked ✅ are in the demo now.
 
 ## Guiding principle
 - **Know who you're here for.** You set your own gender and who you're seeking;
-  intent is stated up front. The demo flock is women, ages college-age to 45. ✅
+  intent is stated up front. **Built for 18 to 45.** (Campuses are the launch
+  beachhead, but the app serves the whole 18–45 range.) The demo flock is
+  women, ages 18–45. ✅
 
 ## Biggest gaps to fix
 1. **Real depth, not photos.** Match on values, intentions, and personality —

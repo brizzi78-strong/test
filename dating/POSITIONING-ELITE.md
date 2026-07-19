@@ -116,6 +116,12 @@ bar/party "talking stage." Everything — invite-only, vetting, safety, events �
 is designed to be the antidote to that scene. Win her, and her whole network
 follows.
 
+**The intent: typically a first marriage.** Cardinal's members are, by and
+large, looking for their *first marriage* — serious about building a life, not
+casual, not perpetual "situationships." That's more specific than "long-term,"
+and it's the whole point: "cardinals mate for life" isn't a cute line, it's the
+intent filter. **Built for 18 to 45**, with campuses as the launch beachhead.
+
 **Tagline:** *"The first real dating app that looks out for you."*
 
 ## How this shows up in the demo (now built)
