@@ -129,6 +129,18 @@ services:
     ports: ["4100:4100"]
     volumes: ["booking-data:/data"]
 
+  # Live schedule UI: a day-view scheduling app backed by a backend-for-frontend
+  # that proxies to the Booking service (no credentials reach the browser).
+  schedule:
+    <<: *service
+    command: node schedule/src/index.ts
+    environment:
+      PORT: "4200"
+      BOOKING_URL: http://booking:4100
+    ports: ["4200:4200"]
+    depends_on:
+      - booking
+
   # Human-facing admin console: a single-page HR UI plus a backend-for-frontend
   # that proxies to the orchestrator server-side (so no credentials reach the
   # browser). Register a company, hire employees, and watch one record resolve
