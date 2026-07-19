@@ -228,7 +228,7 @@ El hombre era mi papá, Horacio. Lo había conocido en Acapulco alrededor de 197
 
 El padre de mi madre, el hombre al que de grande llamaría Grandpa Bob, no aprobaba el matrimonio. El padre de mi papá fue quien insistió en él. Mis padres ya se habían casado en México, y en 1977 lo hicieron otra vez en Cedar Grove, New Jersey, con mariachis. Mi abuelo con los años terminó aceptando a mi papá, pero nunca superó lo lejos que ella vivía.
 
-Mi madre se abre su propio camino. Siempre lo ha hecho. Amaba a mi padre. Chris y yo venimos de eso.
+Mi madre se labra su propio camino. Siempre lo ha hecho. Amaba a mi padre. Chris y yo venimos de eso.
 
 Mi papá era un hombre orgulloso. Tenía un trabajo de gobierno, y cada mañana salía de la casa con la ropa planchada. Casi siempre me llevaba al parque y al cine. Se echaba a correr y yo iba tras él y competíamos. Siempre llegaba primero. Luego se volteaba con una sonrisota y decía: "Órale, hoy vienes bien rápido." Y yo gritaba: "¡Soy rápido!" Le creía cada vez.
 
@@ -244,7 +244,7 @@ Luego salía y actuaba como si nada hubiera pasado. Cenábamos. Me leía hasta q
 
 Nunca sabías qué papá te iba a tocar. Me tomó años entender que había estado viendo a dos hombres distintos.
 
-Cuando mi madre le hacía frente, la cosa cambiaba. Una noche se puso física, una sola cachetada, y esa única vez le dijo lo que las puertas cerradas con llave y las desapariciones apenas habían insinuado. Su familia lo sabía, y se pusieron de su lado. Ella les había dicho más de una vez que se iba a ir. Le dijeron que si lo hacía, se quedarían con uno de nosotros. La amenaza de llevarse a un hijo era lo que ella no podía soportar. Al final, por eso nos fuimos.
+Cuando mi madre le hacía frente, la cosa cambiaba. Una noche se puso violenta, una sola cachetada, y esa única vez le dijo lo que las puertas cerradas con llave y las desapariciones apenas habían insinuado. Su familia lo sabía, y se pusieron de su lado. Ella les había dicho más de una vez que se iba a ir. Le dijeron que si lo hacía, se quedarían con uno de nosotros. La amenaza de llevarse a un hijo era lo que ella no podía soportar. Al final, por eso nos fuimos.
 
 Hay una foto mía de esa época. Un niño pequeño con una playera de Mickey Mouse lavada tantas veces que se había vuelto gris, aunque Mickey todavía conservaba su color. La usé hasta que se deshizo.
 
@@ -317,7 +317,7 @@ Siempre decía que sí, y ella siempre sabía la orden antes de que yo la diera.
 
 Y nunca paró después de que crecí. Me mudé más veces de las que puedo contar, y cada vez, ella convertía el lugar nuevo en un hogar. Iba a T.J. Maxx y llenaba un carrito, y un departamento vacío al que yo acababa de llegar se volvía un lugar que se sentía mío. En la universidad hasta me compró un póster de Jenny McCarthy y lo colgó en mi pared, porque hacer mío un lugar significaba hacer que se sintiera como yo, hasta en las partes que una madre preferiría no imaginar. Me sentí amado. La malteada de vainilla a la medianoche. La lámpara de T.J. Maxx, escogida para que no tuviera que entrar a un cuarto vacío.
 
-Años después, volviendo de un crucero por México, con un bronceado tan profundo que a los ojos oficiales de la aduana de Estados Unidos me veía muy mexicano, me apartaron. El papel se veía poco oficial, dijeron. Seguridad me interrogó una hora, luego llegó la policía, luego, dos horas después, el FBI. Siete horas fuera del barco, catorce oficiales distintos, las mismas respuestas cada vez. No estaba nervioso. Por una vez no tenía nada que esconder. Solo estaba avergonzado, de pies a cabeza, y como a la quinta hora me sorprendí preguntándome si esto iba a ser el resto de mi vida, demostrar cuando me lo exigieran que yo era quien el papel decía que era. Mi madre se enteró e hizo lo que ella hace. Fue a un juzgado de New Jersey y volvió a casa con un acta de nacimiento oficial, para que nadie pudiera volver a retener a su hijo siete horas por cómo se veía un documento.
+Años después, volviendo de un crucero por México, con un bronceado tan profundo que a ojos de los oficiales de la aduana de Estados Unidos me veía muy mexicano, me apartaron. El papel se veía poco oficial, dijeron. Seguridad me interrogó una hora, luego llegó la policía, luego, dos horas después, el FBI. Siete horas fuera del barco, catorce oficiales distintos, las mismas respuestas cada vez. No estaba nervioso. Por una vez no tenía nada que esconder. Solo estaba avergonzado, de pies a cabeza, y como a la quinta hora me sorprendí preguntándome si esto iba a ser el resto de mi vida, demostrar cuando me lo exigieran que yo era quien el papel decía que era. Mi madre se enteró e hizo lo que ella hace. Fue a un juzgado de New Jersey y volvió a casa con un acta de nacimiento oficial, para que nadie pudiera volver a retener a su hijo siete horas por cómo se veía un documento.
 
 Chris se acostumbró a New Jersey sin problema. Él había dejado México siendo un bebé; yo lo dejé con cuatro años y un padre al que extrañar.
 
@@ -325,7 +325,7 @@ En la noche pensaba en Horacio, no con enojo, con confusión, medio esperando qu
 
 Mis abuelos me dieron lo que tenían, que era firmeza, una casa que se quedaba donde estaba, comidas que llegaban cuando debían. No la calidez que daba mi madre, pero confiable, y eso vale mucho cuando el suelo acaba de moverse.
 
-Mi abuelo era maestro de historia de preparatoria. En casa era un hombre sencillo, y lo quería por eso. Era devoto de Wendy's, sobre todo de los Frosties, y me dijo una vez, muy en serio, que el único hueco en su vida era que Wendy's no vendiera hot dogs. Él y mi nana tomaban vino de oporto cada noche en vasos de papel, de un garrafón que guardaban. Juraba por el jabón Ivory para cada parte de un hombre, sin necesidad de shampoo, y lo decía como si fuera información clasificada. Le ponía cátsup a todo — cátsup sobre la cátsup — una costumbre que adopté por completo. Una vez me llevó a las vías del tren y me enseñó a poner una moneda de veinticinco centavos sobre el riel, echar a correr, y volver después del tren para encontrarla aplastada y lisa. A mi madre no le pareció cuando se enteró, y él nunca le vio el problema. Jugábamos UNO y guerra y damas, y Chris se puso a jugar ajedrez con él, pero el ajedrez nunca fue lo mío, y con el UNO me bastaba.
+Mi abuelo era maestro de historia de preparatoria. En casa era un hombre sencillo, y lo quería por eso. Era devoto de Wendy's, sobre todo de los Frosties, y me dijo una vez, muy en serio, que el único hueco en su vida era que Wendy's no vendiera hot dogs. Él y mi nana tomaban vino de oporto cada noche en vasos de papel, de un garrafón que guardaban. Juraba por el jabón Ivory para cada parte de un hombre, sin necesidad de champú, y lo decía como si fuera información clasificada. Le ponía cátsup a todo — cátsup sobre la cátsup — una costumbre que adopté por completo. Una vez me llevó a las vías del tren y me enseñó a poner una moneda de veinticinco centavos sobre el riel, echar a correr, y volver después del tren para encontrarla aplastada y lisa. A mi madre no le pareció cuando se enteró, y él nunca le vio el problema. Jugábamos UNO y guerra y damas, y Chris se puso a jugar ajedrez con él, pero el ajedrez nunca fue lo mío, y con el UNO me bastaba.
 
 Mi abuelo tuvo una infancia dura, más dura de lo que jamás dejó ver. Su propio padre era un alcohólico que murió desmayado sobre unas vías del tren, atropellado por un tren. Mi abuelo y su hermano gemelo Jack se metieron al ejército a los dieciséis, mintiendo sobre su edad, y le mandaban su paga a su madre. Conoció a mi abuela en Hope College, en Michigan, una escuela cristiana, donde ella tocaba el órgano. Tenían algo en común que ninguno de los dos eligió: los dos eran gemelos. Él tenía a Jack; ella tenía su propia hermana gemela. Para ser un hombre que vivía de enseñar, nunca empujó a mi madre ni a sus hermanas, Terry y Nancey, hacia la universidad. Según lo cuentan, decía que todas eran bonitas y encontrarían buenos maridos. Esa simplemente no era la expectativa en su casa.
 
@@ -354,19 +354,19 @@ Lou entró a un bar en West Paterson en 1984 para conocer a mi madre. Tenía cua
 
 Tenía seis años la primera vez que lo conocí. Vino a casa de mis abuelos, donde vivíamos, y Nana y el abuelo lo invitaron a cenar. Casi toda esa noche ya se me borró. Lo que recuerdo es que trajo Tootsie Rolls para Chris y para mí. Dos niños que no eran suyos, y entró con algo en el bolsillo solo para nosotros. Antes de decidir siquiera que éramos suyos, ya nos trataba como si lo fuéramos.
 
-Todavía no entendía que había habido un padre antes que él, un hombre presente una temporada y ausente la siguiente. El resto de la historia de Horacio la sabría mucho después — que llegó a un punto de quiebre y regresó a México, porque no podía cargar con su propia vida y la nuestra al mismo tiempo. He llegado a creer que se fue para que pudiéramos tener algo que él no podía darnos. Esa es la versión generosa. Es la que me quedo.
+Todavía no entendía que había habido un padre antes que él, un hombre presente una temporada y ausente la siguiente. El resto de la historia de Horacio la sabría mucho después — que llegó a un punto de quiebre y regresó a México, porque no podía cargar con su propia vida y la nuestra al mismo tiempo. He llegado a creer que se fue para que pudiéramos tener algo que él no podía darnos. Esa es la versión generosa. Es con la que me quedo.
 
 Lou no era un santo, y no voy a fingir que lo fuera. Tenía un temperamento que aparecía en los momentos equivocados, y lo sabía de sí mismo. La mayoría ni siquiera era enojo, en realidad; era su forma de procesar las cosas que no le gustaban, en voz alta y con calor, y una vez que un humor lo agarraba era difícil sacarlo de ahí. Y podía darse la vuelta y producir una calidez tan inesperada que cambiaba la temperatura de un cuarto. Algunos momentos fueron difíciles. Valía la pena.
 
 Una vez que decidía que eras suyo, quedaba zanjado. Estaba ahí para las madrugadas y las trasnochadas, las juntas de la escuela y las luchas, las salas de espera del hospital y los sótanos de la iglesia, y nunca llevaba la cuenta de nada. No le servía de nada hablar de sacrificio. Simplemente lo vivía.
 
-De dónde venía explica parte de eso. Su padre vendía frutas y verduras, y de vez en cuando entraban tres hombres de traje y cualquier asunto que tuvieran se resolvía en la trastienda. Cuando venían los parientes de Italia, Lou era el niño que les cedía su cama y dormía en el ático. Cargó con eso más tiempo del que nadie supo. Años después, durante una temporada en que iba a terapia, le salió en una Navidad familiar, un viejo gritándole a su tío por un niño que tenía que dormir en el ático. El temperamento era de ese tipo italiano que ves en las películas. Era más viejo que cualquiera de nosotros, y en realidad nunca fue sobre nosotros.
+De dónde venía explica parte de eso. Su padre vendía frutas y verduras, y de vez en cuando entraban tres hombres de traje y cualquier asunto que tuvieran se resolvía en la trastienda. Cuando venían los parientes de Italia, Lou era el niño que les cedía su cama y dormía en el ático. Cargó con eso más tiempo del que nadie supo. Años después, durante una temporada en que iba a terapia, le salió en una Navidad familiar, un viejo gritándole a su tío por un niño que tenía que dormir en el ático. El temperamento era de ese tipo italiano que ves en las películas. Era más viejo que cualquiera de nosotros, y en realidad nunca se trató de nosotros.
 
 Tenía tres hijos para cuando cumplió veintidós. Su primera esposa, Judy, era un par de años menor y peleaba contra una depresión posparto en una época que no tenía nombre para eso ni ayuda. Él todavía se iba de fiesta a veces. El matrimonio no aguantó, y los hijos pasaban la mayor parte del tiempo con Mag, su madre. Él mismo me dijo la verdad tal cual, sin excusas: no había sido la mejor versión de sí mismo en aquel entonces. Sabía lo que era deberles a tus hijos un hombre mejor que el que les tocó.
 
-Y estaba Mag. Nos cuidaba a Chris y a mí cuando éramos niños, y todo su programa era consentir. Friendly's cuando nos cuidaba, tele juntos en el sillón, y algunas noches hamburguesas fritas en mantequilla en un sartén, y estaban deliciosas. Cada vez yo insistía por White Castle y ella lo descartaba — no le gustaba manejar en la carretera, y punto. Era fan de hueso colorado de los Yankees, y estoy convencido de que de ahí lo sacó mi papá. Escuchaba los partidos, y cuando le daba sueño se llevaba el radio a la cama y escuchaba hasta quedarse dormida.
+Y estaba Mag. Nos cuidaba a Chris y a mí cuando éramos niños, y todo su programa era consentir. Friendly's cuando nos cuidaba, tele juntos en el sillón, y algunas noches hamburguesas fritas en mantequilla en un sartén, y estaban deliciosas. Cada vez yo insistía en White Castle y ella lo descartaba — no le gustaba manejar en la carretera, y punto. Era fan de hueso colorado de los Yankees, y estoy convencido de que de ahí lo sacó mi papá. Escuchaba los partidos, y cuando le daba sueño se llevaba el radio a la cama y escuchaba hasta quedarse dormida.
 
-Trabajó en IT la mayor parte de su vida, mucho de eso en la mesa de ayuda, el tipo al que llamas cuando la cosa no sirve, y no paró hasta los ochenta y dos. Siempre andaba buscando la manera de un segundo ingreso, también. Por un tiempo fue dueño de un mercado de pulgas de fin de semana llamado Boardwalk Lew's — el nombre venía con el lugar y nunca se molestó en cambiarlo — y odié cada sábado que pasé trabajando ahí. Nadie me lo pidió. Cuando lo dejaban solo un domingo veía sus partidos, los Yankees en el verano, los Giants en el otoño. Ese era todo el vicio.
+Trabajó en IT la mayor parte de su vida, mucho de eso en la mesa de ayuda, el tipo al que llamas cuando la cosa no sirve, y no paró hasta los ochenta y dos. Siempre andaba buscando la manera de tener un segundo ingreso, también. Por un tiempo fue dueño de un mercado de pulgas de fin de semana llamado Boardwalk Lew's — el nombre venía con el lugar y nunca se molestó en cambiarlo — y odié cada sábado que pasé trabajando ahí. Nadie me lo pidió. Cuando lo dejaban solo un domingo veía sus partidos, los Yankees en el verano, los Giants en el otoño. Ese era todo el vicio.
 
 La gente me ha preguntado cómo decide un hombre adulto hacerse cargo de los dos hijos de una madre soltera inmigrante. Lou nunca adornó la respuesta. Tu madre era hermosa, decía, y diez años más joven. Ese fue el inicio honesto. El quedarse fue la parte que nunca explicó.
 
@@ -376,11 +376,11 @@ Nos adoptó cuando yo tenía ocho años. El papeleo había tomado años, la adop
 
 Cuando llegó el momento de cambiar nuestro apellido, mi madre me dijo que el abuelo quería preguntarme algo. Bajamos al sótano de la casa de Woodridge, paneles de madera, alfombra café, ese olor fresco y estancado que tiene un sótano. El abuelo Bob me sentó y fue al grano como siempre lo hacía.
 
-"Te cambias el nombre a Robert", dijo. "Rob. Y te doy cien dólares."
+Te cambias el nombre a Robert, dijo. Rob. Y te doy cien dólares.
 
 Tenía ocho años. Cien dólares eran una fortuna. Ni siquiera tuve que pensarlo.
 
-"Está bien", dije.
+Está bien, dije.
 
 Luego le pregunté algo que él no tenía contemplado. Si podía tomar el nombre de Lou como mi segundo nombre. Nadie lo sugirió. Yo solo quería llevarlo. Ese día Claudio Horacio Balderas se convirtió en Robert Louis Brizzi. Toda mi vida había llevado el nombre de un padre en medio del mío. Ahora llevaría el del otro. Ni una sola vez he deseado que volviera a ser como antes.
 
@@ -417,9 +417,9 @@ Joel fue bueno con nosotros desde el principio. Firme. Aparecía y no necesitaba
 
 También es el guardián familiar de las historias sobre mí, las de cuando acababa de llegar de México y apenas hablaba inglés, en la época en que mi mamá salía con Lou. Todavía las cuenta. Está la noche en un restaurante chino en que alguien preguntó qué quería comer y yo dije, con total seguridad, taco. Está el ferry de New Jersey a New York, el carro de la familia subiéndose para cruzar el agua, y yo preguntando si podíamos poner el carro en el barco. Todos estos años después Joel todavía suelta cualquiera de las dos en una conversación solo para verme prepararme para el golpe. Ese es su propio tipo de amor, las burlas que solo recibes una vez que de verdad estás dentro.
 
-Jon y yo nos encontramos a través de la lucha. Sus hijastros luchaban, yo había luchado, y ese fue el puente. Hay una clave compartida entre la gente de la lucha. No tienes que explicar los cortes de peso, ni las derrotas, ni lo que cuesta volver a salir para el siguiente periodo. Jon lo entendía sin que yo tuviera que decirlo. También es uno de los que más callado sobresale que conozco. Empezó en Juniata College sacando seises y terminó como socio de una importante empresa de software. Más reservado que el resto de nosotros, pero bueno de principio a fin. Su historia rima con la de Chris, el desvalido que se vuelve el éxito. La gente de Lou no se queda tirada.
+Jon y yo nos encontramos a través de la lucha. Sus hijastros luchaban, yo había luchado, y ese fue el puente. Hay una clave compartida entre la gente de la lucha. No tienes que explicar los cortes de peso, ni las derrotas, ni lo que cuesta volver a salir para el siguiente periodo. Jon lo entendía sin que yo tuviera que decirlo. También es uno de los que sobresalen más calladamente que conozco. Empezó en Juniata College sacando seises y terminó como socio de una importante empresa de software. Más reservado que el resto de nosotros, pero bueno de principio a fin. Su historia rima con la de Chris, el desvalido que se vuelve el éxito. La gente de Lou no se queda tirada.
 
-El momento en que me sentí más cercano a él llegó años después, los dos ya adultos. Para entonces era exitoso, acercándose a la jubilación. Yo estaba en New Jersey para una capacitación de trabajo, y me aventé un viaje de Uber de hora y media solo para ir a verlo. Terminamos caminando, los dos, y me contó sobre un tipo al que había aconsejado en su empresa, lo agradecido que estaba el hombre por la oportunidad, y lo que había hecho por toda su familia. Por como lo contó Jon, de lo que estaba orgulloso no era del éxito. Era de haberle sido útil a alguien. Ese era un lado de él que solo había visto en pedazos. Ese día lo vi completo.
+El momento en que me sentí más cercano a él llegó años después, los dos ya adultos. Para entonces era exitoso, acercándose a la jubilación. Yo estaba en New Jersey para una capacitación de trabajo, y me aventé un viaje de Uber de hora y media solo para ir a verlo. Terminamos caminando, los dos, y me contó sobre un tipo al que había aconsejado en su empresa, lo agradecido que estaba el hombre por la oportunidad, y lo que había hecho por toda su familia. Por cómo lo contó Jon, de lo que estaba orgulloso no era del éxito. Era de haberle sido útil a alguien. Ese era un lado de él que solo había visto en pedazos. Ese día lo vi completo.
 
 Esa es la parte que todavía me conmueve. Lou nos eligió a Chris y a mí. Pero Lisa y Joel y Jon también nos eligieron. Pudieron habernos mantenido en la orilla de la familia, a una pequeña distancia que nunca termina de cerrarse. Nunca trazaron esa línea. Éramos hermanos. Lo seguimos siendo.
 
@@ -431,11 +431,11 @@ A Lou no me entregaron. Yo lo elegí.
 
 Pasó de noche, cuando me arropaba. Me había subido la cobija hasta la barbilla como siempre lo hacía, con la mano todavía apoyada en ella, a punto de dar las buenas noches. El cuarto estaba oscuro salvo por la luz del pasillo que entraba por la puerta entreabierta. Había estado guardando la pregunta todo el día, y en la oscuridad por fin se soltó.
 
-"¿Te puedo decir papá?"
+¿Te puedo decir papá?
 
 Por un segundo no dijo nada. Luego vi cómo se le llenaban los ojos. Nunca lo había visto lagrimear, ni una sola vez. Pero ahí estaba.
 
-"Sí", dijo. "Claro que sí, hijo."
+Sí, dijo. Claro que sí, hijo.
 
 No hizo un drama de eso. Terminó de arroparme como cada una de las otras noches, salvo que ahora yo tenía una palabra para él que no había tenido un minuto antes.
 
@@ -447,7 +447,7 @@ Luego cambiaron mi nombre, y ese fue más difícil. Claudio se volvió Robert Br
 
 La escuela fue donde me caló. Segundo grado, Woodridge. Escribía Claudio en la parte de arriba de mi tarea sin pensar, con la mano moviéndose como siempre lo había hecho, y la señora Locke lo notaba. Era amable al respecto, cada vez.
 
-"Mi amor", decía, volviendo a poner la hoja en mi escritorio, dando golpecitos en la esquina de arriba con un dedo. "¿Te acuerdas? Ahora escribimos Robert."
+Mi amor, decía, volviendo a poner la hoja en mi escritorio, dando golpecitos en la esquina de arriba con un dedo. ¿Te acuerdas? Ahora escribimos Robert.
 
 Yo tomaba mi goma y borraba el nombre hasta que el papel quedaba suave y gris, y escribía el nuevo en el hueco pelón que había dejado. Robert. Luego se la regresaba, y ella sonreía como si hubiéramos arreglado algo juntos. No se sentía arreglado. Se sentía como borrarme a mí.
 
@@ -466,7 +466,7 @@ Había una cosa que no pudieron cambiar, y me aferré a ella. Brizzi seguía emp
 
 **New Jersey, 1985**
 
-"Te quiero tanto como quiero a mis propios hijos." Me lo dijo un día en que yo estaba deshecho frente a él, y me sostuvo la mirada hasta que lo creí. Llevé su apellido antes de entender lo que había detrás. Lo que Lou me enseñó sobre ser hombre se reduce a unas cuantas cosas, y ninguna fue un discurso.
+Te quiero tanto como quiero a mis propios hijos. Me lo dijo un día en que yo estaba deshecho frente a él, y me sostuvo la mirada hasta que lo creí. Llevé su apellido antes de entender lo que había detrás. Lo que Lou me enseñó sobre ser hombre se reduce a unas cuantas cosas, y ninguna fue un discurso.
 
 No te quejas. No te haces la víctima. Das la cara.
 
@@ -478,7 +478,7 @@ Los viajes eran interminables. Cooperstown. La ciudad de Nueva York. Albany, par
 
 Entrenaba beisbol, a los Foxes y a los Falcons, y a mí me entrenó más duro que a nadie. Íbamos al campo y me bateaba cien pelotas, y luego otras cien. En las jaulas de bateo alimentaba la máquina hasta que se me pelaban las manos y apenas podía sostener el bat. Nunca me dejó rendirme porque doliera. *Quédate en la caja. Recibe el siguiente lanzamiento.* Esa era la lección debajo de la lección.
 
-Chris y papá tenían una frase entre ellos. Después de los grandes momentos, una escuela, una lucha ganada a pulso, un trabajo, se la decían en voz baja el uno al otro. *Oye, papá, lo logramos.* Yo tenía mi propia versión en ese carro de regreso del norte del estado, la calma después de un día largo, los dos, la sensación de que habíamos hecho la cosa juntos. Esa era la idea del amor que tenía Lou. No anunciada. Ganada, juntos. Y cuando estaba orgulloso de ti, no lo decía. Te daba una pequeña sonrisa y una mirada, y la mirada lo decía todo.
+Chris y papá tenían una frase entre ellos. Después de los grandes momentos, una escuela, una lucha ganada a pulso, un trabajo, se la decían en voz baja el uno al otro. *Oye, papá, lo logramos.* Yo tenía mi propia versión en ese carro de regreso del norte del estado, la calma después de un día largo, los dos, la sensación de que lo habíamos hecho juntos. Esa era la idea del amor que tenía Lou. No anunciada. Ganada, juntos. Y cuando estaba orgulloso de ti, no lo decía. Te daba una pequeña sonrisa y una mirada, y la mirada lo decía todo.
 
 Y no eran solo las cosas grandes. Una vez pedí White Castle, y el más cercano estaba a una hora. Me llevó. Una hora de ida por una bolsa de hamburguesitas, porque a su hijo se le antojaban. Cuando necesité una endodoncia en la universidad en Ohio, manejó diez horas para llevarme al dentista y diez horas de regreso. Un día entero manejando, por una silla de dentista. Grande o chico, divertido o doloroso, si era mío, ahí estaba él.
 
@@ -488,7 +488,7 @@ Luego estuvo West Palm Beach. Para entonces ya no era un niño. Era un hombre ad
 
 Una vez me quebré frente a él. Ya no recuerdo qué me había orillado a eso, solo que estaba deshecho, como solo te permites estarlo frente a alguien seguro. No me dijo que me controlara. Dejó que lo sacara, y luego me miró y lo dijo sin rodeos.
 
-"Te quiero tanto como quiero a mis propios hijos."
+Te quiero tanto como quiero a mis propios hijos.
 
 Desde que tengo memoria había cargado una pregunta callada: si de verdad era suyo, si ser elegido era lo mismo que pertenecer. La respondió en una sola frase. Tanto como a los suyos. No la suavizó. Y le creí.
 
@@ -515,7 +515,7 @@ Antes de la colchoneta, estuvo la mesa del almuerzo. Sexto grado en Ramsey, y yo
 
 Había una mesa en la que me sentaba todos los días, y los niños de esa mesa tenían algo que decían de mí. Brizzi se la jala. Lo decían y le echaban un chorro de mayonesa a la mesa para acompañarlo, una pequeña actuación, todos los días, para que el resto de la mesa se riera. Yo ni siquiera sabía qué significaba. Sabía que era sobre mí, sabía que era algo cochino, y sabía que las risas eran contra mí. Con eso bastaba.
 
-Y seguía sentándome con ellos. Esa es la parte con la que me siento ahora. Todos los días lo hacían, y todos los días yo llevaba mi charola de vuelta al mismo lugar. No me cambié de mesa. No comí solo. Que ellos me molestaran se sentía mejor que no tener a nadie, y en un pueblo donde los amigos no llegaban fácil, esa era la mesa. Así que me sentaba y lo aguantaba.
+Y seguía sentándome con ellos. Esa es la parte en la que me detengo ahora. Todos los días lo hacían, y todos los días yo llevaba mi charola de vuelta al mismo lugar. No me cambié de mesa. No comí solo. Que ellos me molestaran se sentía mejor que no tener a nadie, y en un pueblo donde los amigos no llegaban fácil, esa era la mesa. Así que me sentaba y lo aguantaba.
 
 Kris y Kyle eran hermanos gemelos, los niños más populares del grado, y también se sentaban ahí, y ni una sola vez se unieron. No lo detenían. Simplemente me dejaban en paz, y que los niños populares te dejaran en paz era lo más cercano a estar a salvo que había en ese salón. Recordé sus nombres durante treinta años. Nunca recordé los de quienes lo hacían.
 
@@ -557,25 +557,25 @@ Siempre estaba en las gradas. Casi nunca se perdió una lucha en cuatro años de
 
 Tenía doce años. Un cuarto para las ocho de una mañana de sábado, y papá estaba en el marco de mi puerta, ya vestido, las llaves en la mano.
 
-"¿Quieres ir a dar una vuelta?"
+¿Quieres ir a dar una vuelta?
 
-"¿A dónde vamos?"
+¿A dónde vamos?
 
-"Es una sorpresa."
+Es una sorpresa.
 
 Me tallé los ojos y dije que sí.
 
 Nos subimos al carro y manejó. A la hora, no pregunté. A las dos horas, sí.
 
-"Papá. ¿A dónde vamos?"
+Papá. ¿A dónde vamos?
 
-Volteó a verme, sonriendo un poco. "Cooperstown."
+Volteó a verme, sonriendo un poco. Cooperstown.
 
 Estaba a cinco horas de nuestra casa, el Salón de la Fama del Beisbol, y él siguió manejando como si nada.
 
 Llegamos un poco después de la una y entramos juntos. Adentro estaba en penumbra y fresco, vitrinas por todos lados, bats y guantes y camisetas usadas por hombres que solo había visto en la televisión. Papá me llevó vitrina por vitrina, sin prisa. Se detuvo en una pelota de beisbol.
 
-"Esa es una pelota de Babe Ruth."
+Esa es una pelota de Babe Ruth.
 
 Nos quedamos ahí un buen rato, los dos mirándola.
 
@@ -585,26 +585,26 @@ Nos volvimos a subir al carro un poco antes de las cinco, y no tardé en quedarm
 
 Conocía a Dave desde la secundaria. Le caía bien a todos, y la razón era que no estaba tratando de caerle bien a nadie. Chistoso, más grande que la vida, sin importarle lo que pensara la gente, lo cual a esa edad es casi un superpoder. Mi primer recuerdo claro de él es tenerle envidia: séptimo grado, andaba con una chava llamada Stephanie Coughlin, ella traía puesta su camiseta, y yo pensé que era la muchacha más hermosa que había visto en mi vida.
 
-Nos hicimos cercanos en primer año, cuando un maestro llamado el señor Ianuzzi daba un estudio bíblico antes de clases. Dave y yo empezamos a ir los dos porque queríamos. Él trajo a Ryan Martin, que también se volvió uno de mis mejores amigos. Los tres hablábamos como rara vez lo hacen los adolescentes, de la fe, de la distancia entre quien decías ser el domingo y quien eras el resto de la semana. Dave no necesitaba encajar. Simplemente lo vivía.
+Nos hicimos cercanos en primer año, cuando un maestro, el señor Ianuzzi, daba un estudio bíblico antes de clases. Dave y yo empezamos a ir los dos porque queríamos. Él trajo a Ryan Martin, que también se volvió uno de mis mejores amigos. Los tres hablábamos como rara vez lo hacen los adolescentes, de la fe, de la distancia entre quien decías ser el domingo y quien eras el resto de la semana. Dave no necesitaba encajar. Simplemente lo vivía.
 
 Cuando Dave se volvió el mariscal de campo titular en segundo año, todo el mundo social se reacomodó alrededor de él, y no lo cambió. Nunca me hizo sentir excluido. En el último año andaba diciéndole a la gente que todos tenían que votar por Rob Brizzi para el Más Guapo. Por poco me hace ganar a punta de campaña. Yo no me veía así. Él simplemente era ese tipo de persona.
 
 Tuve un solo desliz de verdad en la preparatoria. El baile de tercer año. El grupo preguntó qué quería tomar. Sabía que mis papás tomaban Absolut Citron, así que lo dije sin titubear, no lo mezclen, nada más la botella. Me empiné vodka puro por primera vez en mi vida. Dos horas después estaba vomitando en la limusina. Cuatro horas después me cargaron hasta el baile como en *Weekend at Bernie's*. El director llamó a mi mamá y ella me recogió. Rara vez la había visto tan decepcionada. Me suspendieron, y mi primer pensamiento fue si seguía siendo capitán del equipo de lucha. Me abrí paso a la fuerza de vuelta al camino. Dicen que siempre hay señales, y aquí estaba la mía: la primera vez que tomé, y tan ruidosa como puede ser una señal. Mi cuerpo no recibía el alcohol como el de los otros chavos. Nada de una borrachera ligera, nada de soltarse. Directo a la nada. Años después, en las salas, aprendería que a eso le llaman una alergia: el cuerpo del alcohólico reaccionando a un trago de una forma en que el de un bebedor normal nunca lo hará. La mía se anunció a los diecisiete, en el asiento trasero de una limusina camino al baile. Solo que todavía no quería saber lo que significaba.
 
-Después de Ramsey, reclutaron a Dave, Syracuse, Virginia Tech, Wake Forest. Eligió Virginia Tech, donde llegó Michael Vick e hizo obsoleto el libro de jugadas. Dave lo aconsejó. Cuando estalló el escándalo de las peleas de perros años después, no se sumó al linchamiento: el tipo está rebasado, tendrá una oportunidad de redimirse. Dave llegó a la NFL, tercera opción detrás de Peyton Manning en los Colts, luego Brett Favre en los Packers, y después al entrenamiento. Luego hizo una de las cosas más valientes que le he visto hacer a un hombre: se fue a China como misionero, aprendió mandarín completo, enseñó la Biblia durante años. Esos fueron mis años de adicción activa; hablábamos, pero no seguido. En los últimos par de años nos reconectamos como si no hubiera pasado el tiempo. Dave escribió el posfacio de este libro. Eso te dice quién es.
+Después de Ramsey, reclutaron a Dave, Syracuse, Virginia Tech, Wake Forest. Eligió Virginia Tech, donde llegó Michael Vick e hizo obsoleto el libro de jugadas. Dave lo aconsejó. Cuando estalló el escándalo de las peleas de perros años después, no se sumó al linchamiento: el tipo está rebasado, tendrá una oportunidad de redimirse. Dave llegó a la NFL, tercera opción detrás de Peyton Manning en los Colts, luego Brett Favre en los Packers, y después al entrenamiento. Luego hizo una de las cosas más valientes que le he visto hacer a un hombre: se fue a China como misionero, aprendió mandarín a fondo, enseñó la Biblia durante años. Esos fueron mis años de adicción activa; hablábamos, pero no seguido. En el último par de años nos reconectamos como si no hubiera pasado el tiempo. Dave escribió el posfacio de este libro. Eso te dice quién es.
 
 **CAPÍTULO 7**
 
 ## **Lo Que Dejó la Colchoneta**
 
-*"Y todo aquel que lucha, de todo se abstiene."*
+*"Todo aquel que lucha, de todo se abstiene."*
 *— 1 Corintios 9:25*
 
 **Ramsey, New Jersey, 1993**
 
 ### *Segundo Año: El Giro*
 
-En primer año perdí las luchas que importaban. Al principio de la temporada de segundo año me tocó el primer sembrado en un torneo, un chavo que todos sabían que iba a ganar, el chavo para el que yo se suponía que sería un calentamiento. Pasó algo que todavía no puedo explicar del todo. No le tenía miedo. El miedo que había sido la nota de fondo de cada lucha desde aquella primera colgada simplemente no estaba. Lo que estaba era rabia, no contra él, sino contra la idea de que se suponía que yo debía perder. Le gané. Feo, a puro desgaste, los tres periodos completos. Pero la gané. Después Lou no dijo mucho. Una mano en el hombro. En su idioma significaba: siempre supe que esto estaba dentro de ti.
+En primer año perdí las luchas que importaban. Al principio de la temporada de segundo año me tocó el primer sembrado en un torneo, un chavo que todos sabían que iba a ganar, el chavo para el que se suponía que yo sería un calentamiento. Pasó algo que todavía no puedo explicar del todo. No le tenía miedo. El miedo que había sido la nota de fondo de cada lucha desde aquella primera colgada simplemente no estaba. Lo que estaba era rabia, no contra él, sino contra la idea de que se suponía que yo debía perder. Le gané. Feo, a puro desgaste, los tres periodos completos. Pero la gané. Después Lou no dijo mucho. Una mano en el hombro. En su idioma significaba: siempre supe que esto estaba dentro de ti.
 
 Gané el Distrital en 119 libras en 1994. El reconocimiento llegó rápido después de eso. Una tarde el señor Molino me sacó de clase, y caminé por el pasillo seguro de que estaba en problemas, repasando todo lo que pudiera haber hecho. En cambio, me dijo que me habían nombrado Atleta del Mes de Ramsey. Pusieron mi nombre en el jardín delantero de la escuela durante treinta días. Lo pintaron en la pared del gimnasio viejo, y fui el primer alumno de segundo año al que le hicieron eso.
 
@@ -614,9 +614,9 @@ No podía asimilar nada de aquello. La distancia entre quien de repente todos de
 
 En tercer año bajé diecinueve libras la semana del torneo, y luego me atasqué tan fuerte después del pesaje que vomité dos veces en la colchoneta durante una lucha contra un tipo que me había ganado dos veces. El árbitro la detuvo. Greeny, el coach Greenshields, agarró una toalla, me limpió, me mandó de vuelta. Gané la lucha y el torneo.
 
-Esa temporada, en Regionales, me tocó un chavo que casi nunca perdía, un nombre del condado de Bergen que todos conocían, dominante e inteligente, de los que ganan porque rara vez cometen un error. Cuartos de final, él era el segundo sembrado, yo el séptimo. Seis minutos. Faltando diez segundos, iba perdiendo 5–4. Me dejó levantarme, los tipos con experiencia hacen eso cuando van arriba, seguros de que pueden aguantar de pie. No debió hacerlo. Con tres segundos en el reloj tiré una pierna, mis brazos en su pierna antes de que mi cerebro alcanzara a entender, su equilibrio perdido. Derribo, 6–5, final. El periódico al día siguiente: "Derribo tardío mantiene con vida a Brizzi de Ramsey."
+Esa temporada, en Regionales, me tocó un chavo que casi nunca perdía, un nombre del condado de Bergen que todos conocían, dominante e inteligente, de los que ganan porque rara vez cometen un error. Cuartos de final, él era el segundo sembrado, yo el séptimo. Seis minutos. Faltando diez segundos, iba perdiendo 5–4. Me dejó levantarme, los tipos con experiencia hacen eso cuando van arriba, seguros de que pueden aguantar de pie. No debió hacerlo. Con tres segundos en el reloj tiré una pierna, mis brazos en su pierna antes de que mi cerebro alcanzara a entender, su equilibrio perdido. Derribo, 6–5, final. El periódico al día siguiente: Derribo tardío mantiene con vida a Brizzi de Ramsey.
 
-Gané mi semifinal, perdí una cerrada en la final, aun así fui a Estatales. Terminé 18–4. Después de esa lucha, Lou se sentó conmigo mientras recuperaba el aliento y el cuadro seguía adelante sin nosotros. Luego: "Así eres tú." No buena lucha. No sabía que podías lograrlo. Así eres tú. Solo asentí. Con eso le bastaba.
+Gané mi semifinal, perdí una cerrada en la final, aun así fui a Estatales. Terminé 18–4. Después de esa lucha, Lou se sentó conmigo mientras recuperaba el aliento y el cuadro seguía adelante sin nosotros. Luego: Así eres tú. No buena lucha. No sabía que podías lograrlo. Así eres tú. Solo asentí. Con eso le bastaba.
 
 ### *Charlie*
 
@@ -628,7 +628,7 @@ Esto es lo que se me queda ahora: Lou entró a ese departamento antes de entrar 
 
 ### *Último Año: Campeón del Condado*
 
-En el último año llegué a los del Condado como primer sembrado en 130. Mi hermano Chris era de primer año en 103. En el sauna, bajando de peso juntos, habíamos dicho que sería algo si algún día compartíamos un artículo. Chris dio la sorpresa contra el primer sembrado para llegar a las semifinales. El periódico lo publicó: "Los hermanos Brizzi de Ramsey son Doble Problema." Papá estaba radiante.
+En el último año llegué a los del Condado como primer sembrado en 130. Mi hermano Chris era de primer año en 103. En el sauna, bajando de peso juntos, habíamos dicho que sería algo si algún día compartíamos un artículo. Chris dio la sorpresa contra el primer sembrado para llegar a las semifinales. El periódico lo publicó: Los hermanos Brizzi de Ramsey son Doble Problema. Papá estaba radiante.
 
 Gané las semifinales y la final 15–7, campeón del condado a los diecisiete. Mi nombre en la pared otra vez. Diecisiete. No entendería ese número sino hasta treinta años después.
 
@@ -638,13 +638,13 @@ Me lastimé el tobillo en Regionales, no fui yo mismo en las semifinales, perdí
 
 Chris es más que los récords. Terminó 120–4, tres títulos del condado, dos títulos de región, tres títulos de distrito, se colocó en Estatales tres veces, quedó segundo en el nacional de estilo libre en Fargo. El niño al que la escuela quería hacer repetir tercer grado reescribió cada récord que yo había puesto en Ramsey High. Cada uno.
 
-Es complicado. Inteligente. Pulido y estratégico, un triunfador en el sentido verdadero. Y aun así, lo primero que cualquiera dice de él es que es bondadoso. Callada, constantemente bondadoso. Es mi mejor amigo. Tomamos caminos distintos y procesamos la misma infancia de maneras distintas, pero no hay nadie a quien prefiera que me llame la mañana de Navidad, nadie a quien prefiera tener a mi lado junto a una tumba. Lou nos formó a los dos, de maneras distintas, y nunca nos comparó. Dio la cara por los récords de Chris y por mi título del condado con el mismo orgullo.
+Es complicado. Inteligente. Pulido y estratégico, un triunfador en el sentido verdadero. Y aun así, lo primero que cualquiera dice de él es que es bondadoso. Calladamente, constantemente bondadoso. Es mi mejor amigo. Tomamos caminos distintos y procesamos la misma infancia de maneras distintas, pero no hay nadie a quien prefiera que me llame la mañana de Navidad, nadie a quien prefiera tener a mi lado junto a una tumba. Lou nos formó a los dos, de maneras distintas, y nunca nos comparó. Dio la cara por los récords de Chris y por mi título del condado con el mismo orgullo.
 
 ### *La Lección y La Excepción*
 
 El coach Albersi me veía antes de clases para correr en la pista. Invirtió en mí. En la reunión de fin de año dijo, Brizzi se fue como una leyenda. Pero cuando yo batallaba, no andaba mucho por ahí. Cuando destacaba, todos querían estar pegados a eso.
 
-Lou era la excepción. A través de todo, los diecinueve segundos, las bajadas de peso, los vómitos, el tobillo lastimado, las derrotas que dolían más que las victorias, ahí estaba. No porque me estuviera volviendo una leyenda. Porque era su hijo.
+Lou era la excepción. A lo largo de todo aquello, los diecinueve segundos, las bajadas de peso, los vómitos, el tobillo lastimado, las derrotas que dolían más que las victorias, ahí estaba. No porque me estuviera volviendo una leyenda. Porque era su hijo.
 
 Un momento en los del Condado: estaba a punto de luchar por el título y me robaron mi Walkman. Lo necesitaba para calentar. Lou no me sermoneó. Manejó hasta Best Buy y me compró uno nuevo. Años después le dije, papá, siempre hiciste lo que fuera que te pidiera. Hizo una pausa como hacía antes de algo cierto. Rob. Hubo veces en que esos eran los últimos veinte dólares que traía en la bolsa. Y te los daba. Sin resentimiento. Solo un hecho. No supe qué decir. Todavía no lo sé.
 
@@ -712,11 +712,11 @@ Cuando tenía como siete años me llevó a visitar a unos amigos suyos en algún
 
 En casa esa noche, mi mamá preguntó cómo había estado. Le conté de los tipos amables que sacaban brillo a sus discos de oro.
 
-Dejó lo que estaba haciendo y me miró. "¿Sabes quiénes son, verdad?"
+Dejó lo que estaba haciendo y me miró. Sabes quiénes son, ¿verdad?
 
 Negué con la cabeza.
 
-"Son los Rascals." Cuando eso no me dijo nada, lo intentó de nuevo. "¿Conoces 'It's a Beautiful Morning'? ¿'Groovin''?"
+Son los Rascals. Cuando eso no me dijo nada, lo intentó de nuevo. ¿Conoces 'It's a Beautiful Morning'? ¿'Groovin''?
 
 No tenía idea. Tenía siete años. Eran los amigos de mi papá con cosas brillantes en la pared.
 
@@ -808,9 +808,9 @@ Esa sensación, la que no había llegado después del campeonato del condado, ni
 
 En último año viví con Dave Nesser, Dean Ferrera y Jason Huet en un condominio en el centro. Unos puercos absolutos. Destrozamos ese lugar. Estábamos a punto de dispersarnos.
 
-Pienso en esos cuatro años y le doy gracias a Dios por mi papá. Lou pudo haberme mandado a un colegio comunitario, una escuela local, cien opciones más baratas. En cambio me dejó ir a Miami y pidió préstamos para lograrlo. Compartía una casa rentada en Mahwah con su amigo Roger, que había pasado por un divorcio propio, y el cuarto de Lou era el chico de arriba. Chris y yo lo visitábamos y podías leerlo en su cuerpo cuando algo lo estaba pesando. Nunca nos lo echó encima. Lo cargaba, en silencio, como cargaba todo.
+Pienso en esos cuatro años y le doy gracias a Dios por mi papá. Lou pudo haberme mandado a un colegio comunitario, una escuela local, cien opciones más baratas. En cambio me dejó ir a Miami y pidió préstamos para lograrlo. Compartía una casa rentada en Mahwah con su amigo Roger, que había pasado por un divorcio propio, y el cuarto de Lou era el chico de arriba. Chris y yo lo visitábamos y podías leerlo en su cuerpo cuando algo le estaba pesando. Nunca nos lo echó encima. Lo cargaba, en silencio, como cargaba todo.
 
-Trabajó en dos empleos en esos años, y uno de ellos era en un vivero, plantando árboles, un hombre de cincuenta y tantos hincado en la tierra. Y yo fui egoísta con eso. Le llamaba por más dinero, no para libros o renta sino para tomar y salir, y él lo mandaba cada vez. No pensaba ni dos veces de dónde venía o lo que le costaba. Ahora sí.
+Trabajó en dos empleos en esos años, y uno de ellos era en un vivero, plantando árboles, un hombre de cincuenta y tantos hincado en la tierra. Y yo fui egoísta con eso. Le llamaba por más dinero, no para libros o renta sino para tomar y salir, y él lo mandaba cada vez. No me ponía a pensar de dónde venía ni lo que le costaba. Ahora sí.
 
 Si estaba adolorido no usaba la palabra.
 
@@ -830,7 +830,7 @@ TERCERA PARTE
 
 ## **El Guarda de Mi Hermano**
 
-*"¿Soy yo acaso guarda de mi hermano?"*
+*¿Soy yo acaso guarda de mi hermano?*
 *— Génesis 4:9*
 
 *Corregir los defectos de un hombre y decirle la verdad sobre sí mismo es la compasión más profunda, y el primer deber de cualquiera que le sirve. Pero solo la escuchará de alguien que se ha ganado el derecho a decirla.*
@@ -850,7 +850,7 @@ Y luego estuvo la India.
 
 La India se suponía que era la mudanza de Chris, un trabajo grande, del tipo que él asume sin parpadear. Yo volaría para pasar tiempo con él antes de que se instalara. Entonces, el día antes de su vuelo, le da parálisis de Bell. La mitad de su cara simplemente deja de funcionar. Me llama en pánico: no puedo mover el lado izquierdo de la cara, ¿cómo se supone que voy a ir a la India así? Y yo, siempre el hermano compasivo, le dije: Chris, ya pedí los días libres. Nos vamos.
 
-Yo volé primero. Salí del aeropuerto al calor y al ruido y a como un millón de personas moviéndose en todas direcciones a la vez, y pensé, con toda calma, qué he hecho. Chris llegó unos días después y arrancamos, Mumbai, Delhi, Calcuta, Agra. Subimos a Dharamsala, donde vive el Dalái Lama, y resultó que estaba en la ciudad. Preguntamos si podíamos verlo. Está meditando, nos dijeron. Difícil discutir con eso.
+Yo volé primero. Salí del aeropuerto al calor y al ruido y a como un millón de personas moviéndose en todas direcciones a la vez, y pensé, con toda calma, ¿qué he hecho? Chris llegó unos días después y arrancamos, Mumbai, Delhi, Calcuta, Agra. Subimos a Dharamsala, donde vive el Dalái Lama, y resultó que estaba en la ciudad. Preguntamos si podíamos verlo. Está meditando, nos dijeron. Difícil discutir con eso.
 
 Cada fotografía de Chris de ese viaje está tomada de espaldas. Todas y cada una. La mitad de su cara estaba paralizada y se negaba a que lo documentaran, así que volví a casa con una hermosa colección de fotos de uno de los lugares más bellos de la tierra en las que mi hermano aparece, en todas y cada una de las tomas, como si estuviera en protección de testigos.
 
@@ -862,7 +862,7 @@ Ese es mi hermano. El Nintendo que acaparé, la India, el ultimátum que salvó 
 
 ## **La Trampa de Actuar**
 
-*"El egoísmo, el egocentrismo. Creemos que esa es la raíz de nuestros problemas."*
+*El egoísmo, el egocentrismo. Creemos que esa es la raíz de nuestros problemas.*
 *— Bill Wilson, Alcohólicos Anónimos*
 
 **San Diego, 2002–2006**
@@ -933,7 +933,7 @@ Pero me conservó. Un buen abogado, el despacho Taylor, diez mil dólares, lo ne
 
 ### *El Segundo DUI*
 
-Cuatro años separan esos dos arrestos, y en el papel fueron los mejores cuatro años de mi vida. Los rankings, los clubes del presidente, el dinero, mi cara en la pantalla de cada tienda del país. Nadie que mirara habría dicho que había problemas. Necesitaba cinco años limpios para que el wet reckless siguiera siendo un wet reckless. Le di cuatro.
+Cuatro años separan esos dos arrestos, y en el papel fueron los mejores cuatro años de mi vida. Las clasificaciones, los clubes del presidente, el dinero, mi cara en la pantalla de cada tienda del país. Nadie que mirara habría dicho que había problemas. Necesitaba cinco años limpios para que el wet reckless siguiera siendo un wet reckless. Le di cuatro.
 
 El segundo llegó en 2006, y cayó dentro del plazo. El plan esa noche era dormir en el sofá. Ese era todo el plan. Habíamos salido en Newport Beach, una noche como muchas noches, y cuando se fue acabando yo iba a quedarme a dormir en casa de un amigo y manejar a casa en la mañana. Sobrio. Ese era el trato que hice conmigo mismo. Pero la persona que toma el primer trago no es la persona que toma el quinto, y para la última llamada aquel primer tipo ya no estaba en el cuarto. El que quedó tuvo hambre, y se subió al carro.
 
@@ -1023,7 +1023,7 @@ El departamento tenía unos seiscientos cincuenta pies cuadrados en un piso alto
 
 Las paredes estaban cubiertas de notas Post-it. Cuadritos amarillos pegados a la pintura en racimos, ideas, planes, esquemas, negocios que iba a empezar, dinero que iba a hacer, toda la siguiente versión de mi vida trazada con bolígrafo en papel adhesivo. No era genialidad. Era un hombre que no podía terminar un pensamiento, empapelando un cuarto con la evidencia.
 
-Había dejado de pagar las cosas. Las cuotas del condominio se vencieron. Los servicios se vencieron. Cortaron la luz, así que corrí un cable de extensión desde el refrigerador hasta un enchufe en el pasillo del edificio y dejé que jalara su electricidad del área común, robándola, la verdad, porque no podía, o no quería, pagar la cuenta. Había tal vez un par de yogures en ese refri. Esa era la comida en el departamento. El dinero que entraba se iba en pastillas, y cuando se acababa robaba electrónicos de las tiendas para volverlos a convertir en más.
+Había dejado de pagar las cosas. Las cuotas del condominio se vencieron. Los servicios se vencieron. Cortaron la luz, así que corrí un cable de extensión desde el refrigerador hasta un enchufe en el pasillo del edificio y dejé que jalara su electricidad del área común, robándola, la verdad, porque no podía, o no quería, pagar la cuenta. Había tal vez un par de yogures en ese refri. Esa era la comida en el departamento. El dinero que entraba se iba en pastillas, y cuando se acababa robaba aparatos electrónicos de las tiendas para volverlos a convertir en más.
 
 Mi madre me mandaba dinero en esos años. Se decía a sí misma que era para la renta, para la comida, para volver a levantarme. Yo lo usaba en drogas y alcohol. Esa es la parte de la enfermedad que apenas soporto escribir. Y aquí está la parte que nunca le conté, la mentira que más me carcome: parte de ese dinero se fue al table dance. La mentira que dije en voz alta era que no estaba abusando de mi medicamento. La mentira que viví fue dejarla creer que su dinero mantenía alimentado a su hijo.
 
@@ -1045,7 +1045,7 @@ Me desperté temprano, temprano para mí, y para cuando me levanté él ya habí
 
 Cuando arrancamos, un cardenal rojo se posó en el U-Haul.
 
-Lou lo vio antes que yo. Le hizo un gesto con la cabeza y dijo, la abuela nos está cuidando. Se refería a su madre, Mag. Lo dijo a la ligera, de la manera en que decía cualquier cosa sobre la gente que había perdido, sin aspavientos, nada más un hecho sobre cómo funcionaba el mundo según él. No le di mucha importancia entonces. Estaba demasiado hundido para darle importancia a casi nada. Diecisiete años después uno se posaría en mi espejo, y entendería exactamente lo que mi padre me había estado diciendo en aquel estacionamiento.
+Lou lo vio antes que yo. Le hizo un gesto con la cabeza y dijo, la abuela nos está cuidando. Se refería a su madre, Mag. Lo dijo a la ligera, de la manera en que decía cualquier cosa sobre la gente que había perdido, sin aspavientos, nada más un hecho sobre cómo funcionaba el mundo según él. No le di mucha importancia entonces. Estaba demasiado hundido para darle importancia a casi nada. Diecisiete años después uno se posaría en mi espejo, y yo entendería exactamente lo que mi padre me había estado diciendo en aquel estacionamiento.
 
 Dormí la mayor parte del camino. Cuando estaba despierto hablábamos un poco de béisbol, los Yankees, quién estaba bateando. No sacó el tema de las pastillas. No me pidió que explicara el departamento ni el peso ni el cable en el pasillo. Ese no era el viaje para eso. El viaje era sacarme de ese edificio con vida y apuntado hacia casa, y él entendía la diferencia entre mantener a un hombre respirando y arreglarlo.
 
@@ -1123,7 +1123,7 @@ La gente imagina esa última copa como algo salido de una película, saboreada d
 
 A la mañana siguiente manejamos hasta una granja en el panhandle. Chumuckla. El nombre sonaba inventado. No era un centro como lo había sido Laguna Beach, sin mar, sin terrenos cuidados, sin actores de telenovela en el cuarto de al lado. Una granja al final de un camino de tierra, campos alrededor, dirigida por un hombre llamado Ron que había visto más de lo que la mayoría de la gente creería. Lou me acompañó adentro, firmó el papeleo, me abrazó, y se fue.
 
-Ron no perdió el tiempo. Vio a través de lo que yo todavía estaba actuando. La mayoría de los hombres en esa casa eran entrenadores personales y trabajadores de cuello azul, y yo entré todavía presumiendo mi carrera, hablando de negocios con hombres que estaban ahí para seguir vivos. La brecha era ridícula, y le pusieron nombre: desde el primer día los muchachos me decían Corporate Rob. Pantalones de vestir, polo, corte de pelo, la versión de mí que había armado para convencer al mundo de que estaba bien. El apodo era en broma. También era un diagnóstico. Ron no estaba impresionado. Eso era lo que yo necesitaba.
+Ron no perdió el tiempo. Vio a través de lo que yo todavía estaba actuando. La mayoría de los hombres en esa casa eran entrenadores personales y obreros, y yo entré todavía presumiendo mi carrera, hablando de negocios con hombres que estaban ahí para seguir vivos. La brecha era ridícula, y le pusieron nombre: desde el primer día los muchachos me decían Corporate Rob. Pantalones de vestir, polo, corte de pelo, la versión de mí que había armado para convencer al mundo de que estaba bien. El apodo era en broma. También era un diagnóstico. Ron no estaba impresionado. Eso era lo que yo necesitaba.
 
 Pero te voy a decir qué había debajo del disfraz, porque es la parte que nadie espera. Incluso en el fondo, ciento cuarenta y cinco libras, la luz cortada, el U-Haul, todo eso, alguna voz en mí nunca había dejado de tener confianza. La lucha la puso ahí. Una vez me habían inmovilizado en diecinueve segundos frente a todo un gimnasio, y eso no me definió. Terminé 2-4 en primer año y me fui con un título del condado y mi nombre en la pared. En algún lugar debajo de las pastillas y el polo planchado, ese niño seguía en la colchoneta, todavía seguro de que una derrota humillante no tiene por qué ser la historia.
 
@@ -1176,13 +1176,13 @@ En algún momento de ese año entendí lo que la sobriedad de verdad me pedía. 
 
 Junto a quién te paras decide más de lo que la gente admite. Las salas tienen su propio escalafón, los veteranos, las personalidades grandes, los padrinos que coleccionan ahijados como insignias al mérito, y si te pegas a la gente equivocada, las salas mismas te pueden regresar caminando a la puerta. Tuve suerte, o me guiaron. El puñado junto al que me paré me quería sobrio más de lo que quería público.
 
-Trabajé de salvavidas, vigilando el agua en la alberca de UWF. Tenía treinta y dos años en una silla donde todos los demás que trabajaban tenían diecinueve. Me sentía viejo. También me sentía bien. Tres rondas de P90X me tenían en la mejor forma en años. El trabajo era sencillo. Recorrer las caras, contar cabezas, asegurarme de que todos llegaran a casa a salvo. Dejas de poner atención y alguien podía morir. Eso me gustaba. Ser salvavidas era presencia. Montabas guardia, turno tras turno, y la mayoría de los días no pasaba nada. Ese era el punto. Un día una mamá me preguntó si le daría clases de natación a su hijo. Estoy casi seguro de que las clases no eran realmente por el niño. Dije que tal vez y volví a vigilar el agua. El yo de antes lo habría convertido en algo. El yo nuevo podía dejar que un momento se quedara pequeño.
+Trabajé de salvavidas, vigilando el agua en la alberca de UWF. Tenía treinta y dos años en una silla donde todos los demás que trabajaban tenían diecinueve. Me sentía viejo. También me sentía bien. Tres rondas de P90X me tenían en la mejor forma en años. El trabajo era sencillo. Recorrer las caras, contar cabezas, asegurarme de que todos llegaran a casa a salvo. Dejabas de poner atención y alguien podía morir. Eso me gustaba. Ser salvavidas era presencia. Montabas guardia, turno tras turno, y la mayoría de los días no pasaba nada. Ese era el punto. Un día una mamá me preguntó si le daría clases de natación a su hijo. Estoy casi seguro de que las clases no eran realmente por el niño. Dije que tal vez y volví a vigilar el agua. El yo de antes lo habría convertido en algo. El yo nuevo podía dejar que un momento se quedara pequeño.
 
 Durante un tramo de esos años entrené MMA en una cochera, con treinta y dos años haciendo grappling contra tipos diez años más jóvenes. La lucha volvió enseguida. Nadie en esa cochera podía detener el derribo, y por unos meses me tocó sentirme de diecisiete otra vez. Luego un oponente me metió un rodillazo en las costillas en medio de una llave de cabeza y me rompió dos, y una ronda de sparring con un tipo llamado Tyrone me aflojó una muela de atrás que terminó en un implante. Nunca tomé una pelea oficial. Las sesiones de cochera terminaron como deben terminar las sesiones de cochera, con un cuerpo informándole cortésmente a un hombre de treinta y tantos que la colchoneta ya le había enseñado todo lo que necesitaba.
 
 La confianza también volvió, la de verdad esta vez, no la química. Fui a un juego de Auburn con un amigo y dije en voz alta, esa es la muchacha más guapa del estadio. Una hora después tenía su número y una invitación a visitarla. No mucho antes, había estado lavándome los dientes mirando fijamente la llave del agua. Ahora podía cruzar un salón otra vez.
 
-Las tres cosas de Cliff se vinieron conmigo desde Chumuckla, y las hice las tres. Fui a Courage at Noon todos los días durante el primer año, una sala en propiedad de la iglesia, la misma hora, el mismo puñado de gente aprendiendo a vivir de nuevo en su hora de comida. No siempre me sentía valiente al entrar. Entraba de todos modos. Fui voluntario en esa misma iglesia dos veces por semana durante un año. Y el 5K se convirtió en un maratón, que corrí como corría casi todo ese año, a puro nervio y repetición. Lo más largo que había corrido en mi vida eran nueve millas. Al inscribirme, el maratón completo costaba diez dólares más que el medio, así que tomé el completo. Esa es toda la historia de la decisión. Caminé partes. Terminé todo. Lou me esperaba en la meta con Subway, porque claro que sí. Cientos de juntas se volvieron miles. Los martes en la noche era la mesa redonda en el sótano de una iglesia metodista, una mesa sin cabecera ni pie, el recién llegado sentado al mismo nivel que el hombre con treinta años. Las mismas sillas plegables, el mismo café malo, las mismas historias contadas por gente distinta en distintas etapas de ruina y reparación. Escuchaba más de lo que hablaba, y cuando hablaba no lo dejaba todo bien amarradito. Decía la verdad. Nadie escribe un libro sobre la junta número cuatrocientos. Pero la junta número cuatrocientos es la que te mantiene sobrio, porque te presentaste a ella igual que a la primera.
+Las tres cosas de Cliff se vinieron conmigo desde Chumuckla, y las hice las tres. Fui a Courage at Noon todos los días durante el primer año, una sala propiedad de la iglesia, la misma hora, el mismo puñado de gente aprendiendo a vivir de nuevo en su hora de comida. No siempre me sentía valiente al entrar. Entraba de todos modos. Fui voluntario en esa misma iglesia dos veces por semana durante un año. Y el 5K se convirtió en un maratón, que corrí como corría casi todo ese año, a puro nervio y repetición. Lo más largo que había corrido en mi vida eran nueve millas. Al inscribirme, el maratón completo costaba diez dólares más que el medio, así que tomé el completo. Esa es toda la historia de la decisión. Caminé partes. Terminé todo. Lou me esperaba en la meta con Subway, porque claro que sí. Cientos de juntas se volvieron miles. Los martes en la noche era la mesa redonda en el sótano de una iglesia metodista, una mesa sin cabecera ni pie, el recién llegado sentado al mismo nivel que el hombre con treinta años. Las mismas sillas plegables, el mismo café malo, las mismas historias contadas por gente distinta en distintas etapas de ruina y reparación. Escuchaba más de lo que hablaba, y cuando hablaba no lo dejaba todo bien amarradito. Decía la verdad. Nadie escribe un libro sobre la junta número cuatrocientos. Pero la junta número cuatrocientos es la que te mantiene sobrio, porque te presentaste a ella igual que a la primera.
 
 En algún punto de ahí pasé de ser el hombre que necesitaba salvación al hombre al que otro hombre llamaba a medianoche. Apadriné a once personas. Algunas de verdad lo querían. Otras solo necesitaban el nombre de un padrino en un papel, una casilla que marcar para una corte o un programa, y los dos lo sabíamos. Algunas lo lograron. Otras no. De las once, una que yo sepa sigue sobria hoy. Una. Contestas el teléfono cada vez de todos modos, porque alguien lo contestó por ti, y porque nunca sabes cuál va a ser la que sí. Esa hizo el trabajo y se mudó lejos. Un año después me llamó de la nada, solo para decir gracias. Ahora apadrinaba a tres personas suyas. Así es como se supone que va. Lo recibes gratis, lo regalas, y un día un hombre que nunca conocerás se mantiene sobrio porque alguien una vez se quedó contigo.
 
@@ -1289,7 +1289,7 @@ Me tomó mucho tiempo entender que todo eso, las llamadas de los miércoles a la
 
 **Pensacola, 2010**
 
-"Rob, si recaes, voy a tener que lavarme las manos de ti." Sin emoción. Sin amenaza. Mi padre lo dijo como quien enuncia un hecho, y fue la cosa dura más amable que alguien me haya dicho jamás. Solo funcionaba viniendo de él. Se había pasado toda mi vida demostrando que nunca me dejaría de verdad. La sobriedad no borró el deseo. Eso me sorprendió. Lo que la sobriedad me dio fue tiempo. Lo que me quitó fue la anestesia, y sin ella podía sentirlo todo, el hambre incluida. La enfermedad no se fue cuando solté el trago. Se quedó callada y esperó.
+Rob, si recaes, voy a tener que lavarme las manos de ti. Sin emoción. Sin amenaza. Mi padre lo dijo como quien enuncia un hecho, y fue la cosa dura más amable que alguien me haya dicho jamás. Solo funcionaba viniendo de él. Se había pasado toda mi vida demostrando que nunca me dejaría de verdad. La sobriedad no borró el deseo. Eso me sorprendió. Lo que la sobriedad me dio fue tiempo. Lo que me quitó fue la anestesia, y sin ella podía sentirlo todo, el hambre incluida. La enfermedad no se fue cuando solté el trago. Se quedó callada y esperó.
 
 Para finales de 2010 estaba inquieto de una manera que no sabía nombrar. Sobrio, trabajando, yendo a las reuniones, viviendo limpio, y por debajo algo en mí todavía quería escapar. Una oportunidad apareció en mi radar, ventas de dispositivos médicos, Stryker. Mucho dinero, ascenso rápido. Mi primer pensamiento fue: así es como regreso. El segundo: no sé si pueda mantenerme sobrio ahí.
 
@@ -1425,7 +1425,7 @@ El viaje de Pensacola a Scottsboro tomó seis horas y media. Tenía treinta y nu
 
 Nos sentamos en la sala. Sin charla trivial. Yo tenía toda la confesión cargada y lista, el currículum de mis escombros, nacido en la Ciudad de México, adoptado a los ocho, la lucha, el dinero que gané y perdí, la adicción, los dos DUI, cómo Lou tuvo que venir a rescatarme. Suponía que un padre querría todo eso antes de entregar a su hija. No pidió nada de eso. Me miró y preguntó una sola cosa. ¿Eres salvo? Sí, señor. ¿Me puedes contar de esa experiencia? Así que le hablé de mi fe. Dónde empezó, la iglesia que mi madre y Lou hicieron innegociable, cómo había perdido el hilo por años, y cómo había regresado y se había sostenido. Los escombros se quedaron en mi bolsillo. Nunca entré en la adicción, los DUI, el rescate, y él nunca preguntó.
 
-Asintió despacio. No indagó más. Había oído la única cosa que quería oír. Ese padre tuyo suena como un buen hombre, dijo. El mejor hombre que he conocido, le dije. Jeff sonrió por primera vez, se puso de pie, y extendió la mano. Tienes mi bendición. Entonces sus ojos se llenaron y no apartó la mirada. Pude haberlo hecho mejor en mi matrimonio con Rhonda, dijo. Me culpo a mí mismo. No me estaba dando un discurso de padre duro. Me estaba entregando su propio arrepentimiento y confiándomelo. No lo eches a perder, agregó. No, señor. No lo haré. Después me dijo el momento en que de verdad había sabido que yo era el indicado para ella: el fin de semana, al principio, cuando Hope olvidó su identificación en un viaje a Mississippi, y me levanté antes de que amaneciera, manejé de regreso a Pensacola por ella, y nos manejé de vuelta directo.
+Asintió despacio. No indagó más. Había oído la única cosa que quería oír. Ese padre tuyo suena como un buen hombre, dijo. El mejor hombre que he conocido, le dije. Jeff sonrió por primera vez, se puso de pie, y extendió la mano. Tienes mi bendición. Entonces sus ojos se llenaron y no apartó la mirada. Pude haberlo hecho mejor en mi matrimonio con Rhonda, dijo. Me culpo a mí mismo. No me estaba dando un discurso de padre duro. Me estaba entregando su propio arrepentimiento y confiándomelo. No lo eches a perder, agregó. No, señor. No lo haré. Después me dijo el momento en que de verdad había sabido que yo era el indicado para ella: el fin de semana, al principio, cuando Hope olvidó su identificación en un viaje a Mississippi, y me levanté antes de que amaneciera, manejé de regreso a Pensacola por ella, y nos llevé de vuelta directo.
 
 Fuera de mi propio padre, Jeff es uno de dos hombres que me han mostrado cómo se ve la fe cuando se vive en lugar de solo hablarse. El otro es Dave Meyer, mi amigo desde la secundaria. Hombres distintos, la misma columna. Ninguno de los dos habla y se queda ahí; los dos la caminan. Ninguno ha perdido nunca de vista dónde está Dios en ello. He necesitado a los dos como prueba de que aquello que busqué en un campo lodoso en Chumuckla se sostiene a lo largo de toda una vida.
 
@@ -1439,7 +1439,7 @@ Fuimos juntos en el coche. Lou estaba sentado cuando entramos. Se puso de pie al
 
 Platicaron con facilidad. Le preguntó de dónde era, en qué consistía su trabajo. No estaba revisando un currículum. Estaba observando cómo se comportaba, si le sostenía la mirada, si decía lo que pensaba. En un punto dijo, Rob ha tenido un camino complicado. Hope asintió. Lo sé. No lo he oído. Lo sé. Lou se quedó con eso, luego sonrió, pequeña y privada. Había estado buscando algo y lo encontró.
 
-Se fueron juntos a la cocina mientras yo me quedé en la sala. Podía oír cajones abriéndose, platos moviéndose. No un interrogatorio. La estaba incluyendo en la vida diaria de su casa. Cuando regresaron, sirvió el café. Dos tazas, no tres. No fue un descuido.
+Se fueron juntos a la cocina mientras yo me quedaba en la sala. Podía oír cajones abriéndose, platos moviéndose. No un interrogatorio. La estaba incluyendo en la vida diaria de su casa. Cuando regresaron, sirvió el café. Dos tazas, no tres. No fue un descuido.
 
 Después me miró. Eres estable, dijo. Luego: ella también. Eso fue todo. Sin bendición formal, sin discurso. Vio a dos personas estables en la misma dirección y lo notó.
 
@@ -1496,7 +1496,7 @@ Le encanta reír, del modo de verdad, ese que la tumba por completo y arrastra a
 
 ### *El Camino*
 
-En poco tiempo trabajamos como un equipo. Pagamos más de cien mil dólares en préstamos estudiantiles y construimos una vida con margen en lugar de deuda, un hogar, un poco de seguridad que nunca había tenido cuando parecía exitoso. La recuperación me enseñó sobre el dinero lo mismo que me enseñó sobre todo lo demás: cumples las promesas pequeñas, todos los días, y se van sumando hasta ser una vida. Nos mudamos a Raleigh. Nunca tuvimos hijos, y nunca lo planeamos. Lo que construimos fuimos nosotros dos, y una vida con espacio para estar presentes para los demás. En estos días eso incluye a la mamá de Hope. Rhonda vive bajo nuestro techo ahora, que no es una frase que alguien diga a la ligera, y conocerla y quererla ha sido uno de los regalos callados de esta etapa. No ha tenido la vida más fácil. Lo que no vi venir fue ver a Hope y a su mamá acercarse, despacio, a lo largo de los años, hasta que Hope empezó a llamar a Rhonda su mejor amiga. Ninguna de las cosas buenas pasa de la noche a la mañana. Hacemos viajes juntas, a los Outer Banks y a otros lados, y en algún punto de los días comunes bajo un mismo techo ha ocurrido mucha sanación, de la que no se planea, solo sigues estando presente para ella. Me toca ser testigo. Hope es mi roca. No siempre es fácil, ningún matrimonio honesto lo es, pero ella nunca ha dejado de creer en lo que estamos construyendo. Yo no me habría vuelto este hombre sin Lou. Y el amor que encontré con Hope es lo que me preparó para lo que vino después: los cuidados paliativos, sentarme en cuartos donde la gente está perdiendo a la persona que más ama. Esa es mi historia de amor. Empezó con un mensaje terco en Match.com a una muchacha que me dijo que no le escribiera. La mejor regla que he roto.
+En poco tiempo trabajamos como un equipo. Pagamos más de cien mil dólares en préstamos estudiantiles y construimos una vida con margen en lugar de deuda, un hogar, un poco de seguridad que nunca había tenido cuando parecía exitoso. La recuperación me enseñó sobre el dinero lo mismo que me enseñó sobre todo lo demás: cumples las promesas pequeñas, todos los días, y se van sumando hasta ser una vida. Nos mudamos a Raleigh. Nunca tuvimos hijos, y nunca lo planeamos. Lo que construimos fuimos nosotros dos, y una vida con espacio para estar presentes para los demás. En estos días eso incluye a la mamá de Hope. Rhonda vive bajo nuestro techo ahora, que no es una frase que alguien diga a la ligera, y conocerla y quererla ha sido uno de los regalos callados de esta etapa. No ha tenido la vida más fácil. Lo que no vi venir fue ver a Hope y a su mamá acercarse, despacio, a lo largo de los años, hasta que Hope empezó a llamar a Rhonda su mejor amiga. Ninguna de las cosas buenas pasa de la noche a la mañana. Hacemos viajes juntos, a los Outer Banks y a otros lados, y en algún punto de los días comunes bajo un mismo techo ha ocurrido mucha sanación, de la que no se planea, solo sigues estando presente para ella. Me toca ser testigo. Hope es mi roca. No siempre es fácil, ningún matrimonio honesto lo es, pero ella nunca ha dejado de creer en lo que estamos construyendo. Yo no me habría vuelto este hombre sin Lou. Y el amor que encontré con Hope es lo que me preparó para lo que vino después: los cuidados paliativos, sentarme en cuartos donde la gente está perdiendo a la persona que más ama. Esa es mi historia de amor. Empezó con un mensaje terco en Match.com a una muchacha que me dijo que no le escribiera. La mejor regla que he roto.
 
 ### *Las Fotos Nunca Cuentan Toda la Historia*
 
@@ -1576,7 +1576,7 @@ SEXTA PARTE
 
 **Pensacola, 2021**
 
-El reconocimiento que había dejado de perseguir tenía la manera de encontrarme de todos modos. Después de diez años en atención domiciliaria, una de las representantes de la empresa que vende Ozempic empezó a fijarse en mí en los consultorios, preguntando por ahí quién sería un buen socio. Cuando se abrió una vacante, no dejaba de llamarme. ¿Quieres postularte? No, le dije, estoy contento donde estoy. Pero un amigo me dijo, dale una oportunidad. Así que hice la entrevista y obtuve el trabajo. Fue difícil irme. Diez años. Brenda Jahn había sido una gerente increíble. Pero lo vi como una oportunidad de aprender. Cuando empecé en Novo Nordisk no sabía la diferencia entre la diabetes tipo 1 y la tipo 2. Con la capacitación y el estudio en casa me volví bueno en eso. Muy bueno.
+El reconocimiento que había dejado de perseguir se las arreglaba para encontrarme de todos modos. Después de diez años en atención domiciliaria, una de las representantes de la empresa que vende Ozempic empezó a fijarse en mí en los consultorios, preguntando por ahí quién sería un buen socio. Cuando se abrió una vacante, no dejaba de llamarme. ¿Quieres postularte? No, le dije, estoy contento donde estoy. Pero un amigo me dijo, dale una oportunidad. Así que hice la entrevista y obtuve el trabajo. Fue difícil irme. Diez años. Brenda Jahn había sido una gerente increíble. Pero lo vi como una oportunidad de aprender. Cuando empecé en Novo Nordisk no sabía la diferencia entre la diabetes tipo 1 y la tipo 2. Con la capacitación y el estudio en casa me volví bueno en eso. Muy bueno.
 
 ### *Dave el Diabético*
 
@@ -1586,7 +1586,7 @@ Yo necesitaba eso más de lo que dejaba ver. Durante diez años había sido el m
 
 Como al año, Dave perdió a su hijo. Tenía veintiún años, trabajaba en una pizzería, y venía en bicicleta de regreso a casa por el vecindario cuando un auto lo atropelló. No sobrevivió. Vino gente de toda la empresa al funeral, solo para estar ahí por Dave. Nunca he visto a alguien con tanta fe. Con solo haber regresado ya habría sido suficiente. Él hizo más.
 
-Como a los dos años, tuvimos una convención nacional de ventas en Las Vegas. Dave y yo teníamos una rutina cuando viajábamos, el desayuno, una pequeña oración, un mini estudio bíblico, platicar. Una mañana empezó a hablar de su hijo. Dijo, a veces me pregunto. Sé que estaba en la iglesia. Sé que tenía una relación con Cristo. Pero me preocupaba si estaba salvo. Y luego dijo, un día se posó un pájaro. El pájaro favorito de su hijo. Y él supo. Era una señal. Su muchacho estaba bien. Más tarde en ese viaje, Dave y yo fuimos al Bellagio, jugamos un par de máquinas tragamonedas y luego fuimos por helado. Yo pedí de masa de galleta, y me abrí. Le conté de los DUI, del camino que había recorrido. Él compartió algo del suyo, y eso lo guardaré entre nosotros. Oramos ahí mismo, con el helado derritiéndose en los vasos, las tragamonedas sonando a lo lejos.
+Como a los dos años, tuvimos una convención nacional de ventas en Las Vegas. Dave y yo teníamos una rutina cuando viajábamos, el desayuno, una pequeña oración, un mini estudio bíblico, platicar. Una mañana empezó a hablar de su hijo. Dijo, a veces me pregunto. Sé que estaba en la iglesia. Sé que tenía una relación con Cristo. Pero me preocupaba si estaba salvo. Y luego dijo, un día se posó un pájaro. El pájaro favorito de su hijo. Y él supo. Era una señal. Su muchacho estaba bien. Más tarde en ese viaje, Dave y yo fuimos al Bellagio, jugamos en un par de máquinas tragamonedas y luego fuimos por helado. Yo pedí de masa de galleta, y me sinceré. Le conté de los DUI, del camino que había recorrido. Él compartió algo del suyo, y eso lo guardaré entre nosotros. Oramos ahí mismo, con el helado derritiéndose en los vasos, las tragamonedas sonando a lo lejos.
 
 En ese entonces no sabía lo que esa Navidad me quitaría, ni lo que se posaría en el espejo del lado del conductor dos semanas después. Pero cuando llegó, lo reconocería. Dave me había enseñado el idioma.
 
@@ -1605,7 +1605,7 @@ Le dije a la gente que iba a tomarme un tiempo. Estar ahí para mi papá. Estar 
 
 **11 de noviembre de 2025**
 
-Cinco semanas después de que empecé el trabajo en cuidados paliativos, mi padre empezó a morir. Nos mudamos a Raleigh porque la vida se estaba ampliando. Hope había sido farmacéutica durante ocho años. Raleigh tenía sentido, trabajos, comunidad, una iglesia que se sentía como nuestra. Dejar Pensacola significaba dejar raíces. Hope nunca titubeó. Así es ella. No optimista a ciegas; ve con claridad y hace preguntas difíciles. Pero debajo de todo hay una creencia firme de que Dios tiene un plan para que sirvamos. Cuando llegó la oportunidad de los cuidados paliativos, se sintió como un cuarto alrededor del cual había estado dando vueltas por años, con la puerta por fin abierta. Sin debate. Sin hoja de cálculo. Ahí era donde más me necesitaban.
+Cinco semanas después de que empecé el trabajo en cuidados paliativos, mi padre empezó a morir. Nos mudamos a Raleigh porque la vida se estaba abriendo. Hope había sido farmacéutica durante ocho años. Raleigh tenía sentido, trabajos, comunidad, una iglesia que se sentía como nuestra. Dejar Pensacola significaba dejar raíces. Hope nunca titubeó. Así es ella. No optimista a ciegas; ve con claridad y hace preguntas difíciles. Pero debajo de todo hay una creencia firme de que Dios tiene un plan para que sirvamos. Cuando llegó la oportunidad de los cuidados paliativos, se sintió como un cuarto alrededor del cual había estado dando vueltas por años, con la puerta por fin abierta. Sin debate. Sin hoja de cálculo. Ahí era donde más me necesitaban.
 
 ### *Los Cuartos*
 
@@ -1617,9 +1617,9 @@ Durante años mi mente había ensayado la supervivencia: la huida, la vergüenza
 
 Una vez me reuní con una familia. A la hija la llamaré Mary. Su madre tenía noventa y cinco años, no podía salir de la cama, no podía estar de pie más de treinta segundos. La familia tenía dudas. Siempre las tienen. Así que no empecé con información. Empecé con una pregunta. ¿Cómo te está afectando verla así? El cuarto cambió. Uno por uno empezaron a hablar, las hospitalizaciones, las estancias de rehabilitación, la esperanza que seguía llegando y retirándose, el agotamiento que no se habían dado permiso de nombrar. En algún momento oramos. Cuando terminamos, la familia tomó la decisión juntos. Alguien por fin les había preguntado cómo estaban cargando con eso. Los cuidados paliativos no son rendirse. No estoy ahí para decidir. Estoy ahí para quedarme.
 
-Otro cuarto se me ha quedado, y lo mantendré vago por respeto. Dos hombres, y tomó como un minuto ver que lo que había entre ellos era lo más profundo en la vida de cualquiera de los dos. Pero cuando uno de ellos hablaba del otro, la palabra que usaba era mejor amigo. Eran pareja, y habían pasado toda una vida manteniendo una distancia cuidadosa en público, y aun aquí, aun al final, el hábito se sostuvo. El amor era real. Mostrarlo todavía tenía que esconderse. No lo nombré. No me correspondía nombrarlo. Lo que más recuerdo es la sensación de que el que aún podía irse necesitaba llegar a casa, al único lugar donde los dos habían sido libres de amar en voz alta. Nunca lo he olvidado. Parte de este trabajo es notar el amor que ha tenido que vivir en clave, y hacerle espacio sin hacer un asunto de ello.
+Otro cuarto se me ha quedado, y lo mantendré vago por respeto. Dos hombres, y tomó como un minuto ver que lo que había entre ellos era lo más profundo en la vida de cualquiera de los dos. Pero cuando uno de ellos hablaba del otro, la palabra que usaba era mejor amigo. Eran pareja, y habían pasado toda una vida manteniendo una distancia cuidadosa en público, y aun aquí, aun al final, el hábito se sostuvo. El amor era real. Mostrarlo todavía tenía que esconderse. No lo nombré. No me correspondía nombrarlo. Lo que más recuerdo es la sensación de que el que aún podía irse necesitaba llegar a casa, al único lugar donde los dos habían sido libres de amar en voz alta. Nunca lo he olvidado. Parte de este trabajo es notar el amor que ha tenido que vivir en clave, y hacerle espacio sin hacer aspavientos.
 
-En un cuarto estaba platicando con el paciente, un ir y venir fácil, y en algún punto le conté un poco de mi propia historia, la adicción, los años que perdí, el largo camino de regreso. He aprendido que cuando abro esa puerta aunque sea una rendija, la gente entra por ella. Su esposa había llegado a mitad de la conversación, y cuando terminé se quedó callada, luego me preguntó algo que no tenía nada que ver con su esposo y todo que ver con lo que en realidad estaba cargando. Su hijo tenía treinta y ocho años, vivía en casa, bebiéndose hasta caer. Tenía una hijita propia, y su madre pasaba las noches en vela preguntándose si él podría cuidarla. ¿La rehabilitación funciona?, quería saber. Qué podía hacer ella. Si había algo que pudiera hacer. Le di lo que tenía, la verdad tal como la había vivido, sin adornarla. Tú no lo causaste, le dije. No lo puedes controlar. No lo puedes curar. Lo que sí puedes hacer es quedarte, y ayudarlo a vivir lo suficiente para llegar ahí. Pero sobre todo entendí que había entrado a ese cuarto a acompañar a un hombre que se moría y terminé sosteniendo el otro duelo de su esposa, el de los vivos. La adicción no espera afuera de la puerta de los cuidados paliativos. Ya está en la mitad de los cuartos, y porque yo regresé de ella, las familias también me entregan ese miedo. Lo tomo.
+En un cuarto estaba platicando con el paciente, un ir y venir fácil, y en algún punto le conté un poco de mi propia historia, la adicción, los años que perdí, el largo camino de regreso. He aprendido que cuando abro esa puerta aunque sea una rendija, la gente entra por ella. Su esposa había llegado a mitad de la conversación, y cuando terminé se quedó callada, luego me preguntó algo que no tenía nada que ver con su esposo y todo que ver con lo que en realidad estaba cargando. Su hijo tenía treinta y ocho años, vivía en casa, bebiendo hasta caer. Tenía una hijita propia, y su madre pasaba las noches en vela preguntándose si él podría cuidarla. ¿La rehabilitación funciona?, quería saber. Qué podía hacer ella. Si había algo que pudiera hacer. Le di lo que tenía, la verdad tal como la había vivido, sin adornarla. Tú no lo causaste, le dije. No lo puedes controlar. No lo puedes curar. Lo que sí puedes hacer es quedarte, y ayudarlo a vivir lo suficiente para llegar ahí. Pero sobre todo entendí que había entrado a ese cuarto a acompañar a un hombre que se moría y terminé sosteniendo el otro duelo de su esposa, el de los vivos. La adicción no espera afuera de la puerta de los cuidados paliativos. Ya está en la mitad de los cuartos, y porque yo regresé de ella, las familias también me entregan ese miedo. Lo tomo.
 
 Y hubo un pastor al que llamaré Melvin. Su esposa era hija de un pastor que había jurado que nunca se casaría con un pastor y se había ido a sacar su propio doctorado, y en algún punto de todo eso se casó con uno de todas formas. Lo que me impactó fue cómo lo amaba. No exactamente por la manera en que él la amaba, sino por toda la vida que habían construido, la acumulación entera apilada en el cuarto con ellos. Su hijo estaba ahí, y su nieto, y su esposa, todos sabiendo que él podía irse en cualquier momento, todos quedándose.
 
@@ -1651,7 +1651,7 @@ Lou salió adelante de la cirugía. Para diciembre los estudios estaban limpios.
 
 En enero de 2024 el cáncer volvió. Etapa 4. Pulmones y ganglios linfáticos. Lou tenía ochenta y dos años. Se lo dijo a Donna. Se lo dijo a Lisa. No se lo dijo a nadie más. Lo noté antes de saber qué estaba notando, su ánimo un poco raro, algo en su forma de ser que no podía nombrar. Chris se iba a casar en febrero, y Lou había decidido, callada y completamente, que la boda de su hijo no iba a ser sobre su diagnóstico. Así que se presentó. Bailó. Celebró. El padre de Nisha había fallecido el año anterior, y la boda fue una gran celebración india en Fort Lauderdale, gozosa y cargando duelo tanto como amor. Lou lo entendía. Lo guardó adentro y dejó que el día fuera lo que se suponía que fuera. Mi madre también estuvo ahí, con su Parkinson brotando fuerte ese mes. Se había caído los días antes y aun así fue, remendada con una curita que no engañaba a nadie. Al final de la noche encontró a Lou y le dijo, No se te vaya a ocurrir morirte. Y mi padre —con el cáncer ya de vuelta dentro de él, el secreto ya sellado— la miró y dijo, No se te vaya a ocurrir morirte a ti. Ella no sabía lo que él estaba cargando. Él sí. Guardó el secreto hasta marzo o abril. El cáncer volvió, dijo. En enero. No quise decir nada por la boda de Chris. Y en julio de 2025, año y medio dentro de la pelea, estuvo ahí cuando nació Priya, la hija de Chris y Nisha. La cargó en brazos.
 
-Lisa y yo hablamos. Sabíamos que tenía que hacer algo. Chris fue el que logró llegarle, investigó, encontró a un cirujano en Birmingham usando conexiones de un trabajo anterior, le consiguió una cita. El cirujano lo miró y dijo, etapa 4, su edad, ningún cirujano lo va a operar. Estábamos angustiados. La cirugía había funcionado la primera vez; pensamos que era la respuesta de nuevo. Salió el tema de la inmunoterapia, por lo general no tan dura con el cuerpo como la quimio o la radiación, nos dijeron. Lou accedió a intentarlo. Estaba eligiendo intentarlo. No por él. Por nosotros.
+Lisa y yo hablamos. Sabíamos que tenía que hacer algo. Chris fue el que logró llegarle, investigó, encontró a un cirujano en Birmingham usando contactos de un trabajo anterior, le consiguió una cita. El cirujano lo miró y dijo, etapa 4, su edad, ningún cirujano lo va a operar. Estábamos angustiados. La cirugía había funcionado la primera vez; pensamos que era la respuesta de nuevo. Salió el tema de la inmunoterapia, por lo general no tan dura con el cuerpo como la quimio o la radiación, nos dijeron. Lou accedió a intentarlo. Estaba eligiendo intentarlo. No por él. Por nosotros.
 
 ### *El Tratamiento*
 
@@ -1798,7 +1798,7 @@ Junta uno de esos cuartos y queda así. Una sala con una cama de hospital donde 
 
 El que está en la puerta lo dice antes de que yo me pueda sentar. No estamos listos para rendirnos con ella.
 
-No discuto. Discutir con esa frase es como pierdes el cuarto, y yo no estoy ahí para ganar. Me siento donde el esposo me pueda ver y hago la única pregunta con la que siempre abro. Cuéntame de ella. No el diagnóstico. Ella.
+No discuto. Discutir con esa frase es así como pierdes el cuarto, y yo no estoy ahí para ganar. Me siento donde el esposo me pueda ver y hago la única pregunta con la que siempre abro. Cuéntame de ella. No el diagnóstico. Ella.
 
 El cuarto cambia. El esposo empieza a hablar, y la hija del abrigo por fin se sienta. Alguien se ríe de algo que dijo su madre hace cuarenta años, y alguien más llora con la misma frase. Por veinte minutos la mujer en la cama no es un diagnóstico. Es la razón por la que todos en ese cuarto existen. Y en algún punto de esos veinte minutos, cuidados paliativos deja de significar rendirse y empieza a significar la forma en que su gente piensa amarla a través de lo que viene.
 
@@ -1868,7 +1868,7 @@ Papá, digo en voz alta. Solo en el auto. Solo su nombre. Y luego la palabra que
 
 Ahí está posado. Ladea un poco la cabeza. Sigue mirando. No sé cuánto tiempo nos quedamos así. El estacionamiento desaparece. Solo yo y el cardenal. Solo yo y Lou. Las lágrimas corriendo por mi cara, sin sollozos, esa clase que viene del choque entre el duelo y el alivio. Papá ya no está. Papá está aquí.
 
-Saco mi teléfono, lento y con cuidado. Creo que estoy grabando video. Presiono el botón. El cardenal se queda. Dos minutos, quizá menos, quizá más. Al fin digo, Papá, me tengo que ir. Y vuela, sin sobresaltarse, sin ser de golpe. Se levanta del espejo hacia un árbol cercano, se queda un momento, y luego se va.
+Saco mi teléfono, lento y con cuidado. Creo que estoy grabando video. Presiono el botón. El cardenal se queda. Dos minutos, quizá menos, quizá más. Al fin digo, Papá, me tengo que ir. Y vuela, sin sobresaltarse, sin brusquedad. Se levanta del espejo hacia un árbol cercano, se queda un momento, y luego se va.
 
 Me quedo parado en el estacionamiento, el teléfono en la mano, las lágrimas en la cara, y siento paz. No la ausencia del duelo. El duelo sigue ahí, siempre estará. Pero paz por debajo de él. Miro mi teléfono. La cámara había estado en modo foto. Una sola imagen. El cardenal en el espejo. Se la mando a Hope. A Chris. A Jon, Lisa, Joel. A Donna. El mensaje: Papá vino a verme. Le dije que lo quería.
 
@@ -1890,7 +1890,7 @@ Hay una vieja frase que enseñan en los salones a donde van las familias, y solo
 
 Sé que lo has intentado. Sé que te has quedado despierto dándole vueltas y vueltas a la vida de otra persona, buscando lo que se te pasó. Yo era la persona del otro lado de esas noches. Mi madre me mandaba dinero que se decía a sí misma que era para la renta. Mi padre manejó un camión a través del estado para traerme a casa. Nada de eso me hizo parar. No porque fallaran. Porque no era suyo para ganarlo. Pero escucha la otra mitad, porque es igual de cierta: el rescate no me puso sobrio. Me mantuvo vivo lo suficiente para llegar ahí. No puedes hacer que paren. Puedes ayudarlos a vivir hasta que lo hagan.
 
-He estado en ambos lados de esto. Al principio no entendía la adicción como una enfermedad. La entendía como una desaparición. Un día la persona que amas sigue ahí, sentada frente a ti, usando la misma voz, con la misma cara, y de algún modo ya se está escurriendo. Sigues estirando la mano hacia la versión de ellos que recuerdas. Sigues pensando que el amor debería bastar. Luego la vida te enseña, lento y brutal, que el amor no es una cura. No va a hacer que paren. Lo que hace es evitar que tú te vayas.
+He estado en ambos lados de esto. Al principio no entendía la adicción como una enfermedad. La entendía como una desaparición. Un día la persona que amas sigue ahí, sentada frente a ti, usando la misma voz, con la misma cara, y de algún modo ya se está escurriendo. Sigues estirando la mano hacia la versión de esa persona que recuerdas. Sigues pensando que el amor debería bastar. Luego la vida te enseña, lento y brutal, que el amor no es una cura. No va a hacer que paren. Lo que hace es evitar que tú te vayas.
 
 Años después aprendería que esto también es todo lo que son los cuidados paliativos. No puedes curar lo que está en el cuarto. Solo puedes negarte a dejarlo.
 
@@ -2000,7 +2000,7 @@ Durante la mayor parte de mi vida usé una máscara. Mudarme tanto como lo hice 
 
 Escribir este libro me quitó la máscara. Al poner estos años en la página, las partes de las que estaba orgulloso y las partes que había pasado décadas escondiendo, descubrí que no quedaba nada que proteger. El miedo alrededor del cual había construido toda mi vida —que si la gente veía lo verdadero, se apartaría— era la mentira. Lo que lo reemplazó es más callado que el alivio. Es paz. Por primera vez, no estoy actuando de Rob Brizzi. Simplemente soy él. Eso es lo que me costó escribir este libro, y lo que me devolvió.
 
-Esta es una historia real, contada de memoria. Los diálogos han sido reconstruidos con toda la fidelidad que la memoria permite; conservan la esencia de lo que se dijo, aunque no siempre las palabras exactas. Algunos nombres y detalles que identifican a las personas han sido cambiados para proteger la privacidad, sobre todo los de los pacientes y las familias a quienes atendí en la atención domiciliaria y en los cuidados paliativos, cuyos días más difíciles merecen protección, no exposición. Donde los hombres y las mujeres sobrios de las salas aparecen con sus nombres reales, es con su permiso; a otros les cambié el nombre. Algunas de las salas que describo de mi trabajo son composiciones de muchas salas, por la misma razón. Nada en estas páginas fue inventado para darle más filo a la historia. Mi madre, que está por todo este libro, revisó más de estos recuerdos que nadie. Todo lo que aún así me quedó mal es mío.
+Esta es una historia real, contada de memoria. Los diálogos han sido reconstruidos con toda la fidelidad que la memoria permite; conservan la esencia de lo que se dijo, aunque no siempre las palabras exactas. Algunos nombres y detalles que identifican a las personas han sido cambiados para proteger la privacidad, sobre todo los de los pacientes y las familias a quienes atendí en la atención domiciliaria y en los cuidados paliativos, cuyos días más difíciles merecen protección, no exposición. Donde los hombres y las mujeres sobrios de las salas aparecen con sus nombres reales, es con su permiso; a otros les cambié el nombre. Algunas de las salas que describo de mi trabajo son composiciones de muchas salas, por la misma razón. Nada en estas páginas fue inventado para darle más filo a la historia. Mi madre, que está por todo este libro, revisó más de estos recuerdos que nadie. Todo lo que aun así me quedó mal es mío.
 
 # **AGRADECIMIENTOS**
 
