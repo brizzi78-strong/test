@@ -7,7 +7,7 @@
 
 **New Jersey, 1985**
 
-Te quiero tanto como quiero a mis propios hijos. Me lo dijo un día en que yo estaba deshecho frente a él, y me sostuvo la mirada hasta que lo creí. Llevé su apellido antes de entender lo que había detrás. Lo que Lou me enseñó sobre ser hombre se reduce a unas cuantas cosas, y ninguna fue un discurso.
+"Te quiero tanto como quiero a mis propios hijos." Me lo dijo un día en que yo estaba deshecho frente a él, y me sostuvo la mirada hasta que lo creí. Llevé su apellido antes de entender lo que había detrás. Lo que Lou me enseñó sobre ser hombre se reduce a unas cuantas cosas, y ninguna fue un discurso.
 
 No te quejas. No te haces la víctima. Das la cara.
 
@@ -19,7 +19,7 @@ Los viajes eran interminables. Cooperstown. La ciudad de Nueva York. Albany, par
 
 Entrenaba beisbol, a los Foxes y a los Falcons, y a mí me entrenó más duro que a nadie. Íbamos al campo y me bateaba cien pelotas, y luego otras cien. En las jaulas de bateo alimentaba la máquina hasta que se me pelaban las manos y apenas podía sostener el bat. Nunca me dejó rendirme porque doliera. *Quédate en la caja. Recibe el siguiente lanzamiento.* Esa era la lección debajo de la lección.
 
-Chris y papá tenían una frase entre ellos. Después de los grandes momentos, una escuela, una lucha ganada a pulso, un trabajo, se la decían en voz baja el uno al otro. *Oye, papá, lo logramos.* Yo tenía mi propia versión en ese carro de regreso del norte del estado, la calma después de un día largo, los dos, la sensación de que lo habíamos hecho juntos. Esa era la idea del amor que tenía Lou. No anunciada. Ganada, juntos. Y cuando estaba orgulloso de ti, no lo decía. Te daba una pequeña sonrisa y una mirada, y la mirada lo decía todo.
+Chris y papá tenían una frase entre ellos. Después de los grandes momentos, una escuela, una lucha ganada a pulso, un trabajo, se la decían en voz baja el uno al otro. *Oye, papá, lo logramos.* Yo tenía mi propia versión en ese carro de regreso del norte del estado, la calma después de un día largo, los dos, la sensación de que habíamos hecho la cosa juntos. Esa era la idea del amor que tenía Lou. No anunciada. Ganada, juntos. Y cuando estaba orgulloso de ti, no lo decía. Te daba una pequeña sonrisa y una mirada, y la mirada lo decía todo.
 
 Y no eran solo las cosas grandes. Una vez pedí White Castle, y el más cercano estaba a una hora. Me llevó. Una hora de ida por una bolsa de hamburguesitas, porque a su hijo se le antojaban. Cuando necesité una endodoncia en la universidad en Ohio, manejó diez horas para llevarme al dentista y diez horas de regreso. Un día entero manejando, por una silla de dentista. Grande o chico, divertido o doloroso, si era mío, ahí estaba él.
 
@@ -29,7 +29,7 @@ Luego estuvo West Palm Beach. Para entonces ya no era un niño. Era un hombre ad
 
 Una vez me quebré frente a él. Ya no recuerdo qué me había orillado a eso, solo que estaba deshecho, como solo te permites estarlo frente a alguien seguro. No me dijo que me controlara. Dejó que lo sacara, y luego me miró y lo dijo sin rodeos.
 
-Te quiero tanto como quiero a mis propios hijos.
+"Te quiero tanto como quiero a mis propios hijos."
 
 Desde que tengo memoria había cargado una pregunta callada: si de verdad era suyo, si ser elegido era lo mismo que pertenecer. La respondió en una sola frase. Tanto como a los suyos. No la suavizó. Y le creí.
 
@@ -56,7 +56,7 @@ Antes de la colchoneta, estuvo la mesa del almuerzo. Sexto grado en Ramsey, y yo
 
 Había una mesa en la que me sentaba todos los días, y los niños de esa mesa tenían algo que decían de mí. Brizzi se la jala. Lo decían y le echaban un chorro de mayonesa a la mesa para acompañarlo, una pequeña actuación, todos los días, para que el resto de la mesa se riera. Yo ni siquiera sabía qué significaba. Sabía que era sobre mí, sabía que era algo cochino, y sabía que las risas eran contra mí. Con eso bastaba.
 
-Y seguía sentándome con ellos. Esa es la parte en la que me detengo ahora. Todos los días lo hacían, y todos los días yo llevaba mi charola de vuelta al mismo lugar. No me cambié de mesa. No comí solo. Que ellos me molestaran se sentía mejor que no tener a nadie, y en un pueblo donde los amigos no llegaban fácil, esa era la mesa. Así que me sentaba y lo aguantaba.
+Y seguía sentándome con ellos. Esa es la parte con la que me siento ahora. Todos los días lo hacían, y todos los días yo llevaba mi charola de vuelta al mismo lugar. No me cambié de mesa. No comí solo. Que ellos me molestaran se sentía mejor que no tener a nadie, y en un pueblo donde los amigos no llegaban fácil, esa era la mesa. Así que me sentaba y lo aguantaba.
 
 Kris y Kyle eran hermanos gemelos, los niños más populares del grado, y también se sentaban ahí, y ni una sola vez se unieron. No lo detenían. Simplemente me dejaban en paz, y que los niños populares te dejaran en paz era lo más cercano a estar a salvo que había en ese salón. Recordé sus nombres durante treinta años. Nunca recordé los de quienes lo hacían.
 
@@ -98,25 +98,25 @@ Siempre estaba en las gradas. Casi nunca se perdió una lucha en cuatro años de
 
 Tenía doce años. Un cuarto para las ocho de una mañana de sábado, y papá estaba en el marco de mi puerta, ya vestido, las llaves en la mano.
 
-¿Quieres ir a dar una vuelta?
+"¿Quieres ir a dar una vuelta?"
 
-¿A dónde vamos?
+"¿A dónde vamos?"
 
-Es una sorpresa.
+"Es una sorpresa."
 
 Me tallé los ojos y dije que sí.
 
 Nos subimos al carro y manejó. A la hora, no pregunté. A las dos horas, sí.
 
-Papá. ¿A dónde vamos?
+"Papá. ¿A dónde vamos?"
 
-Volteó a verme, sonriendo un poco. Cooperstown.
+Volteó a verme, sonriendo un poco. "Cooperstown."
 
 Estaba a cinco horas de nuestra casa, el Salón de la Fama del Beisbol, y él siguió manejando como si nada.
 
 Llegamos un poco después de la una y entramos juntos. Adentro estaba en penumbra y fresco, vitrinas por todos lados, bats y guantes y camisetas usadas por hombres que solo había visto en la televisión. Papá me llevó vitrina por vitrina, sin prisa. Se detuvo en una pelota de beisbol.
 
-Esa es una pelota de Babe Ruth.
+"Esa es una pelota de Babe Ruth."
 
 Nos quedamos ahí un buen rato, los dos mirándola.
 
@@ -126,26 +126,26 @@ Nos volvimos a subir al carro un poco antes de las cinco, y no tardé en quedarm
 
 Conocía a Dave desde la secundaria. Le caía bien a todos, y la razón era que no estaba tratando de caerle bien a nadie. Chistoso, más grande que la vida, sin importarle lo que pensara la gente, lo cual a esa edad es casi un superpoder. Mi primer recuerdo claro de él es tenerle envidia: séptimo grado, andaba con una chava llamada Stephanie Coughlin, ella traía puesta su camiseta, y yo pensé que era la muchacha más hermosa que había visto en mi vida.
 
-Nos hicimos cercanos en primer año, cuando un maestro, el señor Ianuzzi, daba un estudio bíblico antes de clases. Dave y yo empezamos a ir los dos porque queríamos. Él trajo a Ryan Martin, que también se volvió uno de mis mejores amigos. Los tres hablábamos como rara vez lo hacen los adolescentes, de la fe, de la distancia entre quien decías ser el domingo y quien eras el resto de la semana. Dave no necesitaba encajar. Simplemente lo vivía.
+Nos hicimos cercanos en primer año, cuando un maestro llamado el señor Ianuzzi daba un estudio bíblico antes de clases. Dave y yo empezamos a ir los dos porque queríamos. Él trajo a Ryan Martin, que también se volvió uno de mis mejores amigos. Los tres hablábamos como rara vez lo hacen los adolescentes, de la fe, de la distancia entre quien decías ser el domingo y quien eras el resto de la semana. Dave no necesitaba encajar. Simplemente lo vivía.
 
 Cuando Dave se volvió el mariscal de campo titular en segundo año, todo el mundo social se reacomodó alrededor de él, y no lo cambió. Nunca me hizo sentir excluido. En el último año andaba diciéndole a la gente que todos tenían que votar por Rob Brizzi para el Más Guapo. Por poco me hace ganar a punta de campaña. Yo no me veía así. Él simplemente era ese tipo de persona.
 
 Tuve un solo desliz de verdad en la preparatoria. El baile de tercer año. El grupo preguntó qué quería tomar. Sabía que mis papás tomaban Absolut Citron, así que lo dije sin titubear, no lo mezclen, nada más la botella. Me empiné vodka puro por primera vez en mi vida. Dos horas después estaba vomitando en la limusina. Cuatro horas después me cargaron hasta el baile como en *Weekend at Bernie's*. El director llamó a mi mamá y ella me recogió. Rara vez la había visto tan decepcionada. Me suspendieron, y mi primer pensamiento fue si seguía siendo capitán del equipo de lucha. Me abrí paso a la fuerza de vuelta al camino. Dicen que siempre hay señales, y aquí estaba la mía: la primera vez que tomé, y tan ruidosa como puede ser una señal. Mi cuerpo no recibía el alcohol como el de los otros chavos. Nada de una borrachera ligera, nada de soltarse. Directo a la nada. Años después, en las salas, aprendería que a eso le llaman una alergia: el cuerpo del alcohólico reaccionando a un trago de una forma en que el de un bebedor normal nunca lo hará. La mía se anunció a los diecisiete, en el asiento trasero de una limusina camino al baile. Solo que todavía no quería saber lo que significaba.
 
-Después de Ramsey, reclutaron a Dave, Syracuse, Virginia Tech, Wake Forest. Eligió Virginia Tech, donde llegó Michael Vick e hizo obsoleto el libro de jugadas. Dave lo aconsejó. Cuando estalló el escándalo de las peleas de perros años después, no se sumó al linchamiento: el tipo está rebasado, tendrá una oportunidad de redimirse. Dave llegó a la NFL, tercera opción detrás de Peyton Manning en los Colts, luego Brett Favre en los Packers, y después al entrenamiento. Luego hizo una de las cosas más valientes que le he visto hacer a un hombre: se fue a China como misionero, aprendió mandarín a fondo, enseñó la Biblia durante años. Esos fueron mis años de adicción activa; hablábamos, pero no seguido. En el último par de años nos reconectamos como si no hubiera pasado el tiempo. Dave escribió el posfacio de este libro. Eso te dice quién es.
+Después de Ramsey, reclutaron a Dave, Syracuse, Virginia Tech, Wake Forest. Eligió Virginia Tech, donde llegó Michael Vick e hizo obsoleto el libro de jugadas. Dave lo aconsejó. Cuando estalló el escándalo de las peleas de perros años después, no se sumó al linchamiento: el tipo está rebasado, tendrá una oportunidad de redimirse. Dave llegó a la NFL, tercera opción detrás de Peyton Manning en los Colts, luego Brett Favre en los Packers, y después al entrenamiento. Luego hizo una de las cosas más valientes que le he visto hacer a un hombre: se fue a China como misionero, aprendió mandarín completo, enseñó la Biblia durante años. Esos fueron mis años de adicción activa; hablábamos, pero no seguido. En los últimos par de años nos reconectamos como si no hubiera pasado el tiempo. Dave escribió el posfacio de este libro. Eso te dice quién es.
 
 **CAPÍTULO 7**
 
 ## **Lo Que Dejó la Colchoneta**
 
-*"Todo aquel que lucha, de todo se abstiene."*
+*"Y todo aquel que lucha, de todo se abstiene."*
 *— 1 Corintios 9:25*
 
 **Ramsey, New Jersey, 1993**
 
 ### *Segundo Año: El Giro*
 
-En primer año perdí las luchas que importaban. Al principio de la temporada de segundo año me tocó el primer sembrado en un torneo, un chavo que todos sabían que iba a ganar, el chavo para el que se suponía que yo sería un calentamiento. Pasó algo que todavía no puedo explicar del todo. No le tenía miedo. El miedo que había sido la nota de fondo de cada lucha desde aquella primera colgada simplemente no estaba. Lo que estaba era rabia, no contra él, sino contra la idea de que se suponía que yo debía perder. Le gané. Feo, a puro desgaste, los tres periodos completos. Pero la gané. Después Lou no dijo mucho. Una mano en el hombro. En su idioma significaba: siempre supe que esto estaba dentro de ti.
+En primer año perdí las luchas que importaban. Al principio de la temporada de segundo año me tocó el primer sembrado en un torneo, un chavo que todos sabían que iba a ganar, el chavo para el que yo se suponía que sería un calentamiento. Pasó algo que todavía no puedo explicar del todo. No le tenía miedo. El miedo que había sido la nota de fondo de cada lucha desde aquella primera colgada simplemente no estaba. Lo que estaba era rabia, no contra él, sino contra la idea de que se suponía que yo debía perder. Le gané. Feo, a puro desgaste, los tres periodos completos. Pero la gané. Después Lou no dijo mucho. Una mano en el hombro. En su idioma significaba: siempre supe que esto estaba dentro de ti.
 
 Gané el Distrital en 119 libras en 1994. El reconocimiento llegó rápido después de eso. Una tarde el señor Molino me sacó de clase, y caminé por el pasillo seguro de que estaba en problemas, repasando todo lo que pudiera haber hecho. En cambio, me dijo que me habían nombrado Atleta del Mes de Ramsey. Pusieron mi nombre en el jardín delantero de la escuela durante treinta días. Lo pintaron en la pared del gimnasio viejo, y fui el primer alumno de segundo año al que le hicieron eso.
 
@@ -155,9 +155,9 @@ No podía asimilar nada de aquello. La distancia entre quien de repente todos de
 
 En tercer año bajé diecinueve libras la semana del torneo, y luego me atasqué tan fuerte después del pesaje que vomité dos veces en la colchoneta durante una lucha contra un tipo que me había ganado dos veces. El árbitro la detuvo. Greeny, el coach Greenshields, agarró una toalla, me limpió, me mandó de vuelta. Gané la lucha y el torneo.
 
-Esa temporada, en Regionales, me tocó un chavo que casi nunca perdía, un nombre del condado de Bergen que todos conocían, dominante e inteligente, de los que ganan porque rara vez cometen un error. Cuartos de final, él era el segundo sembrado, yo el séptimo. Seis minutos. Faltando diez segundos, iba perdiendo 5–4. Me dejó levantarme, los tipos con experiencia hacen eso cuando van arriba, seguros de que pueden aguantar de pie. No debió hacerlo. Con tres segundos en el reloj tiré una pierna, mis brazos en su pierna antes de que mi cerebro alcanzara a entender, su equilibrio perdido. Derribo, 6–5, final. El periódico al día siguiente: Derribo tardío mantiene con vida a Brizzi de Ramsey.
+Esa temporada, en Regionales, me tocó un chavo que casi nunca perdía, un nombre del condado de Bergen que todos conocían, dominante e inteligente, de los que ganan porque rara vez cometen un error. Cuartos de final, él era el segundo sembrado, yo el séptimo. Seis minutos. Faltando diez segundos, iba perdiendo 5–4. Me dejó levantarme, los tipos con experiencia hacen eso cuando van arriba, seguros de que pueden aguantar de pie. No debió hacerlo. Con tres segundos en el reloj tiré una pierna, mis brazos en su pierna antes de que mi cerebro alcanzara a entender, su equilibrio perdido. Derribo, 6–5, final. El periódico al día siguiente: "Derribo tardío mantiene con vida a Brizzi de Ramsey."
 
-Gané mi semifinal, perdí una cerrada en la final, aun así fui a Estatales. Terminé 18–4. Después de esa lucha, Lou se sentó conmigo mientras recuperaba el aliento y el cuadro seguía adelante sin nosotros. Luego: Así eres tú. No buena lucha. No sabía que podías lograrlo. Así eres tú. Solo asentí. Con eso le bastaba.
+Gané mi semifinal, perdí una cerrada en la final, aun así fui a Estatales. Terminé 18–4. Después de esa lucha, Lou se sentó conmigo mientras recuperaba el aliento y el cuadro seguía adelante sin nosotros. Luego: "Así eres tú." No buena lucha. No sabía que podías lograrlo. Así eres tú. Solo asentí. Con eso le bastaba.
 
 ### *Charlie*
 
@@ -169,7 +169,7 @@ Esto es lo que se me queda ahora: Lou entró a ese departamento antes de entrar 
 
 ### *Último Año: Campeón del Condado*
 
-En el último año llegué a los del Condado como primer sembrado en 130. Mi hermano Chris era de primer año en 103. En el sauna, bajando de peso juntos, habíamos dicho que sería algo si algún día compartíamos un artículo. Chris dio la sorpresa contra el primer sembrado para llegar a las semifinales. El periódico lo publicó: Los hermanos Brizzi de Ramsey son Doble Problema. Papá estaba radiante.
+En el último año llegué a los del Condado como primer sembrado en 130. Mi hermano Chris era de primer año en 103. En el sauna, bajando de peso juntos, habíamos dicho que sería algo si algún día compartíamos un artículo. Chris dio la sorpresa contra el primer sembrado para llegar a las semifinales. El periódico lo publicó: "Los hermanos Brizzi de Ramsey son Doble Problema." Papá estaba radiante.
 
 Gané las semifinales y la final 15–7, campeón del condado a los diecisiete. Mi nombre en la pared otra vez. Diecisiete. No entendería ese número sino hasta treinta años después.
 
@@ -179,13 +179,13 @@ Me lastimé el tobillo en Regionales, no fui yo mismo en las semifinales, perdí
 
 Chris es más que los récords. Terminó 120–4, tres títulos del condado, dos títulos de región, tres títulos de distrito, se colocó en Estatales tres veces, quedó segundo en el nacional de estilo libre en Fargo. El niño al que la escuela quería hacer repetir tercer grado reescribió cada récord que yo había puesto en Ramsey High. Cada uno.
 
-Es complicado. Inteligente. Pulido y estratégico, un triunfador en el sentido verdadero. Y aun así, lo primero que cualquiera dice de él es que es bondadoso. Calladamente, constantemente bondadoso. Es mi mejor amigo. Tomamos caminos distintos y procesamos la misma infancia de maneras distintas, pero no hay nadie a quien prefiera que me llame la mañana de Navidad, nadie a quien prefiera tener a mi lado junto a una tumba. Lou nos formó a los dos, de maneras distintas, y nunca nos comparó. Dio la cara por los récords de Chris y por mi título del condado con el mismo orgullo.
+Es complicado. Inteligente. Pulido y estratégico, un triunfador en el sentido verdadero. Y aun así, lo primero que cualquiera dice de él es que es bondadoso. Callada, constantemente bondadoso. Es mi mejor amigo. Tomamos caminos distintos y procesamos la misma infancia de maneras distintas, pero no hay nadie a quien prefiera que me llame la mañana de Navidad, nadie a quien prefiera tener a mi lado junto a una tumba. Lou nos formó a los dos, de maneras distintas, y nunca nos comparó. Dio la cara por los récords de Chris y por mi título del condado con el mismo orgullo.
 
 ### *La Lección y La Excepción*
 
 El coach Albersi me veía antes de clases para correr en la pista. Invirtió en mí. En la reunión de fin de año dijo, Brizzi se fue como una leyenda. Pero cuando yo batallaba, no andaba mucho por ahí. Cuando destacaba, todos querían estar pegados a eso.
 
-Lou era la excepción. A lo largo de todo aquello, los diecinueve segundos, las bajadas de peso, los vómitos, el tobillo lastimado, las derrotas que dolían más que las victorias, ahí estaba. No porque me estuviera volviendo una leyenda. Porque era su hijo.
+Lou era la excepción. A través de todo, los diecinueve segundos, las bajadas de peso, los vómitos, el tobillo lastimado, las derrotas que dolían más que las victorias, ahí estaba. No porque me estuviera volviendo una leyenda. Porque era su hijo.
 
 Un momento en los del Condado: estaba a punto de luchar por el título y me robaron mi Walkman. Lo necesitaba para calentar. Lou no me sermoneó. Manejó hasta Best Buy y me compró uno nuevo. Años después le dije, papá, siempre hiciste lo que fuera que te pidiera. Hizo una pausa como hacía antes de algo cierto. Rob. Hubo veces en que esos eran los últimos veinte dólares que traía en la bolsa. Y te los daba. Sin resentimiento. Solo un hecho. No supe qué decir. Todavía no lo sé.
 
