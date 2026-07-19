@@ -48,7 +48,7 @@ Prólogo
 **Parte Um — A Fuga**
 
 1. Cidade do México — A Fuga
-2. Nova Jersey: Sobrevivência
+2. New Jersey: Sobrevivência
 3. O Homem Que Não Precisava
 4. Escolhido
 5. O Homem Que Me Criou
@@ -64,9 +64,9 @@ Prólogo
 
 **Parte Três — A Queda**
 
-12. Guardião do Meu Irmão
-13. A Armadilha do Desempenho
-14. Marcando Caixinhas
+12. O Guardião do Meu Irmão
+13. A Armadilha da Performance
+14. Marcar as Caixas
 15. West Palm Beach
 16. Nova Orleans
 
@@ -74,10 +74,10 @@ Prólogo
 
 17. Chumuckla
 18. Os Anos Silenciosos
-19. As Pessoas Que Você Conhece Quando Para de Beber
+19. As Pessoas Que Você Encontra Quando Para de Beber
 20. Horacio
 21. A Linha
-22. O Palácio do Salmão
+22. O Palácio Salmão
 23. Eles Me Deram uma Chance
 24. Fazendo Reparação
 
