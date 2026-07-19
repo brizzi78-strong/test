@@ -61,14 +61,8 @@
   <section class="hero"><div class="wrap">
     <p class="eyebrow">Therapeutic massage · Raleigh, NC</p>
     <h1>Book your reset.</h1>
-    <p class="lede">Swedish, deep tissue, prenatal, and hot stone — with licensed therapists. Request a time online and we'll confirm it with you.</p>
-    <div class="cta"><a class="btn" href="#book">Book an appointment</a><a class="btn" href="#menu" style="background:transparent;color:var(--brand);border:1px solid var(--line)">See services</a></div>
-  </div></section>
-
-  <section id="menu"><div class="wrap">
-    <h2>Services</h2>
-    <p class="sub">Tap a service to start booking.</p>
-    <div class="menu" id="menuList"></div>
+    <p class="lede">Pick a time that works for you and request it online — we'll confirm your appointment with you.</p>
+    <div class="cta"><a class="btn" href="#book">Book an appointment</a></div>
   </div></section>
 
   <section id="book"><div class="wrap">
@@ -76,11 +70,9 @@
     <p class="sub">Request an appointment — we'll confirm the time.</p>
     <div class="card" id="formCard">
       <form id="bookForm">
-        <div class="step">Step 1 — service</div>
-        <label for="service">Service</label><select id="service"></select>
-        <div class="step">Step 2 — time</div>
+        <div class="step">Step 1 — pick a time</div>
         <div class="row"><div><label for="date">Date</label><input id="date" type="date" required></div><div><label for="time">Time</label><input id="time" type="time" required></div></div>
-        <div class="step">Step 3 — your details</div>
+        <div class="step">Step 2 — your details</div>
         <div class="row"><div><label for="cname">Your name</label><input id="cname" required autocomplete="name"></div><div><label for="cphone">Phone</label><input id="cphone" type="tel" autocomplete="tel"></div></div>
         <label for="notes">Anything we should know? (optional)</label><textarea id="notes" rows="2"></textarea>
         <button class="btn block" type="submit" id="submitBtn">Request appointment</button>
@@ -109,20 +101,6 @@
 
 <script>
 const $=(id)=>document.getElementById(id);
-const SERVICES=[
-  {id:"sw",name:"Swedish massage",durationMinutes:60,priceCents:9000},
-  {id:"dt",name:"Deep tissue",durationMinutes:90,priceCents:13500},
-  {id:"pn",name:"Prenatal massage",durationMinutes:60,priceCents:10000},
-  {id:"hs",name:"Hot stone",durationMinutes:75,priceCents:12000},
-];
-const money=(c)=> c==null?"":"$"+(c/100).toFixed(2).replace(/\.00$/,"");
-const esc=(s)=>String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
-
-$("menuList").innerHTML=SERVICES.map(s=>
-  '<div class="mitem"><span><span class="nm">'+esc(s.name)+'</span><br><span class="meta">'+s.durationMinutes+' min</span></span>'+
-  '<span class="price">'+money(s.priceCents)+'</span><button class="btn pick" type="button" data-id="'+s.id+'">Book</button></div>').join("");
-$("service").innerHTML=SERVICES.map(s=>'<option value="'+s.id+'">'+esc(s.name)+' · '+s.durationMinutes+' min · '+money(s.priceCents)+'</option>').join("");
-document.querySelectorAll(".pick").forEach(b=>b.onclick=()=>{ $("service").value=b.getAttribute("data-id"); $("book").scrollIntoView({behavior:"smooth"}); $("cname").focus({preventScroll:true}); });
 
 $("date").min=new Date().toISOString().slice(0,10);
 function banner(m){const b=$("banner");b.textContent=m;b.className="banner show";}
@@ -130,9 +108,8 @@ $("bookForm").addEventListener("submit",(e)=>{
   e.preventDefault(); $("banner").className="banner";
   if(!$("date").value||!$("time").value){banner("Please pick a date and time.");return;}
   if(!$("cname").value.trim()){banner("Please enter your name.");return;}
-  const svc=SERVICES.find(s=>s.id===$("service").value);
   const when=new Date($("date").value+"T"+$("time").value).toLocaleString([], {weekday:"long",month:"long",day:"numeric",hour:"numeric",minute:"2-digit"});
-  $("confirmText").textContent=svc.name+" — "+when;
+  $("confirmText").textContent="Appointment — "+when;
   $("formCard").querySelector("#bookForm").hidden=true; $("doneBox").hidden=false; window.scrollTo({top:$("book").offsetTop-60,behavior:"smooth"});
 });
 $("againBtn").onclick=()=>{ $("bookForm").reset(); $("doneBox").hidden=true; $("bookForm").hidden=false; };

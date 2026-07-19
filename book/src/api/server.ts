@@ -94,11 +94,21 @@ async function listServices(cfg: Config, res: ServerResponse): Promise<void> {
 
 async function book(cfg: Config, req: IncomingMessage, res: ServerResponse): Promise<void> {
   const body = (await readJson(req)) as Record<string, unknown>;
-  const serviceId = typeof body.serviceId === 'string' ? body.serviceId : '';
+  let serviceId = typeof body.serviceId === 'string' && body.serviceId ? body.serviceId : '';
   const clientName = typeof body.clientName === 'string' ? body.clientName.trim() : '';
   const start = typeof body.start === 'string' ? body.start : '';
-  if (!serviceId || !clientName || !start) {
-    return json(res, 400, { error: { code: 'validation', message: 'service, name, and time are required' } });
+  if (!clientName || !start) {
+    return json(res, 400, { error: { code: 'validation', message: 'name and time are required' } });
+  }
+  // No service picker on the page: book into the business's service (the first
+  // one configured). The service still sets the appointment's duration.
+  if (!serviceId) {
+    const svcRes = await call(cfg, 'GET', `/services?companyId=${encodeURIComponent(cfg.companyId!)}`);
+    const list = Array.isArray(svcRes.body) ? (svcRes.body as Array<Record<string, unknown>>) : [];
+    if (!list.length) {
+      return json(res, 400, { error: { code: 'no_service', message: 'online booking is not available yet' } });
+    }
+    serviceId = String(list[0].id);
   }
   const upstream = await call(cfg, 'POST', '/appointments', {
     companyId: cfg.companyId,

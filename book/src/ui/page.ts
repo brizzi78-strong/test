@@ -67,16 +67,13 @@ export function renderPage(businessName: string): string {
 
   <div class="card" id="formCard">
     <form id="bookForm">
-      <div class="step">Step 1 — choose a service</div>
-      <div class="services" id="services"><p class="lede" id="svcLoading">Loading services…</p></div>
-
-      <div class="step" style="margin-top:1.2rem">Step 2 — pick a time</div>
+      <div class="step">Step 1 — pick a time</div>
       <div class="row">
         <div><label for="date">Date</label><input id="date" type="date" required></div>
         <div><label for="time">Time</label><input id="time" type="time" required></div>
       </div>
 
-      <div class="step" style="margin-top:1.2rem">Step 3 — your details</div>
+      <div class="step" style="margin-top:1.2rem">Step 2 — your details</div>
       <div class="row">
         <div><label for="cname">Your name</label><input id="cname" required autocomplete="name"></div>
         <div><label for="cphone">Phone</label><input id="cphone" type="tel" autocomplete="tel"></div>
@@ -102,49 +99,31 @@ export function renderPage(businessName: string): string {
 
 <script>
 const $=(id)=>document.getElementById(id);
-let selected=null, services=[];
-const money=(c)=> (c==null?"":"$"+(c/100).toFixed(2).replace(/\\.00$/,""));
-
-async function loadServices(){
-  try{
-    const res=await fetch("/api/services"); services=await res.json();
-    if(!Array.isArray(services)||!services.length){ $("services").innerHTML='<p class="lede">No services are available to book right now.</p>'; return; }
-    $("services").innerHTML="";
-    services.forEach((s,i)=>{
-      const b=document.createElement("button"); b.type="button"; b.className="svc"; b.setAttribute("aria-pressed","false");
-      b.innerHTML='<span><span class="nm">'+esc(s.name)+'</span><br><span class="meta">'+s.durationMinutes+' min</span></span><span class="price">'+money(s.priceCents)+'</span>';
-      b.onclick=()=>{ selected=s; document.querySelectorAll(".svc").forEach(x=>x.setAttribute("aria-pressed","false")); b.setAttribute("aria-pressed","true"); };
-      $("services").appendChild(b);
-      if(i===0){ selected=s; b.setAttribute("aria-pressed","true"); }
-    });
-  }catch(e){ $("services").innerHTML='<p class="lede">Couldn\\'t load services. Please try again later.</p>'; }
-}
 function esc(s){ return String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m])); }
 function banner(msg){ const b=$("banner"); b.textContent=msg; b.className="banner show err"; }
 
 $("bookForm").addEventListener("submit", async (e)=>{
   e.preventDefault();
-  if(!selected){ banner("Please choose a service."); return; }
   const date=$("date").value, time=$("time").value;
   if(!date||!time){ banner("Please pick a date and time."); return; }
+  if(!$("cname").value.trim()){ banner("Please enter your name."); return; }
   const start=new Date(date+"T"+time).toISOString();
   $("submitBtn").disabled=true; $("banner").className="banner";
   try{
     const res=await fetch("/api/book",{method:"POST",headers:{"content-type":"application/json"},
-      body:JSON.stringify({serviceId:selected.id,clientName:$("cname").value.trim(),clientPhone:$("cphone").value.trim()||undefined,notes:$("notes").value.trim()||undefined,start})});
+      body:JSON.stringify({clientName:$("cname").value.trim(),clientPhone:$("cphone").value.trim()||undefined,notes:$("notes").value.trim()||undefined,start})});
     const j=await res.json();
     if(!res.ok) throw new Error((j.error&&j.error.message)||"Could not book");
     const when=new Date(j.start).toLocaleString([], {weekday:"long",month:"long",day:"numeric",hour:"numeric",minute:"2-digit"});
-    $("confirmText").textContent=esc(j.serviceName)+" — "+when;
+    $("confirmText").textContent="Appointment — "+when;
     $("formCard").hidden=true; $("doneCard").hidden=false; window.scrollTo(0,0);
   }catch(err){ banner(err.message); }
   finally{ $("submitBtn").disabled=false; }
 });
-$("againBtn").onclick=()=>{ $("bookForm").reset(); $("doneCard").hidden=true; $("formCard").hidden=false; if(services[0]){ selected=services[0]; document.querySelectorAll(".svc").forEach((x,i)=>x.setAttribute("aria-pressed", i===0?"true":"false")); } };
+$("againBtn").onclick=()=>{ $("bookForm").reset(); $("doneCard").hidden=true; $("formCard").hidden=false; };
 $("themeBtn").onclick=()=>{ const c=document.documentElement.getAttribute("data-theme"); const n=c==="dark"?"light":c==="light"?"":"dark"; if(n)document.documentElement.setAttribute("data-theme",n); else document.documentElement.removeAttribute("data-theme"); };
 
 $("date").min=new Date().toISOString().slice(0,10);
-loadServices();
 </script>
 </body>
 </html>`;

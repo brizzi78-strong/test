@@ -62,29 +62,30 @@ test('lists the public service menu (only safe fields)', async () => {
   });
 });
 
-test('a client can request an appointment; it lands as requested on Booking', async () => {
+test('a client can request an appointment without picking a service; it defaults to the business service', async () => {
   await withSite(async (base, ctx) => {
+    // No serviceId sent — the page has no picker; the server books into the
+    // business's service (which still sets the duration).
     const res = await j(base, 'POST', '/api/book', {
-      serviceId: ctx.serviceId,
       clientName: 'Pat Rivera',
       clientPhone: '555-0100',
       start: '2026-08-01T15:00:00.000Z',
     });
     assert.equal(res.status, 201);
     assert.equal(res.json.status, 'requested');
-    assert.equal(res.json.serviceName, '60-min massage');
     // The booking exists on the backend as a pending request the business will confirm.
     const all = await j(ctx.bookingBase, 'GET', `/appointments?companyId=${ctx.companyId}`);
     assert.equal(all.json.length, 1);
     assert.equal(all.json[0].status, 'requested');
     assert.equal(all.json[0].clientName, 'Pat Rivera');
+    assert.equal(all.json[0].durationMinutes, 60); // from the defaulted service
   });
 });
 
-test('booking requires a service, name, and time', async () => {
-  await withSite(async (base, ctx) => {
-    const bad = await j(base, 'POST', '/api/book', { serviceId: ctx.serviceId, clientName: '', start: '' });
-    assert.equal(bad.status, 400);
+test('booking requires a name and a time', async () => {
+  await withSite(async (base) => {
+    assert.equal((await j(base, 'POST', '/api/book', { clientName: '', start: '' })).status, 400);
+    assert.equal((await j(base, 'POST', '/api/book', { clientName: 'Pat', start: '' })).status, 400);
   });
 });
 
