@@ -1,13 +1,15 @@
 :root {
-  --red: #D7263D;
-  --red-deep: #8E1B2C;
-  --red-soft: #fdecee;
+  /* Official Cardinal brand palette (from CardinalPress Theme.swift) */
+  --red: #C41E3A;          /* cardinal red */
+  --red-deep: #801025;     /* cardinal dark / maroon */
+  --red-soft: #f7e7ea;
+  --gold: #B08A3D;         /* antique gold accent */
   --bg: #ffffff;
-  --fg: #16223f;            /* navy, not black */
-  --muted: #5c6478;
+  --fg: #21304F;           /* deep navy */
+  --muted: #5a6480;
   --card: #ffffff;
-  --panel: #f6f7fa;
-  --border: #e6e8ef;
+  --panel: #f7f3ea;        /* warm cream / paper */
+  --border: #ece3d4;
   --shadow: 0 12px 40px rgba(142, 27, 44, 0.12);
   --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.06);
   --radius: 18px;
@@ -15,7 +17,7 @@
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --red: #ff4d63; --red-deep: #c13049; --red-soft: #241416;
+    --red: #e6435c; --red-deep: #a81225; --red-soft: #2a1416; --gold: #c9a45a;
     --bg: #0b1120; --fg: #eaedf5; --muted: #9aa2b8;
     --card: #121a2e; --panel: #101728; --border: #26304a;
     --shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
