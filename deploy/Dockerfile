@@ -22,6 +22,7 @@ COPY offboarding ./offboarding
 COPY orchestrator ./orchestrator
 COPY booking ./booking
 COPY schedule ./schedule
+COPY book ./book
 COPY portal ./portal
 COPY gateway ./gateway
 

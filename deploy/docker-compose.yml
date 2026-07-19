@@ -141,6 +141,22 @@ services:
     depends_on:
       - booking
 
+  # Client-facing booking site: a public page where customers self-book. It only
+  # lists services and creates *requested* appointments for the configured
+  # business — no schedule/admin access. Set BUSINESS_COMPANY_ID to the company
+  # bookings should land in.
+  book:
+    <<: *service
+    command: node book/src/index.ts
+    environment:
+      PORT: "4300"
+      BOOKING_URL: http://booking:4100
+      BUSINESS_COMPANY_ID: ${BUSINESS_COMPANY_ID:-}
+      BUSINESS_NAME: ${BUSINESS_NAME:-Our Studio}
+    ports: ["4300:4300"]
+    depends_on:
+      - booking
+
   # Human-facing admin console: a single-page HR UI plus a backend-for-frontend
   # that proxies to the orchestrator server-side (so no credentials reach the
   # browser). Register a company, hire employees, and watch one record resolve
