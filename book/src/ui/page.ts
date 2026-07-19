@@ -24,9 +24,9 @@ export function renderPage(businessName: string): string {
     --brand:#A31B33;--brand-strong:#7E1226;--good:#2E7D4F;--good-bg:#E4F0E8;--crit:#B23A3A;--crit-bg:#F6E1DE;
     --shadow:0 1px 2px rgba(23,35,63,.07),0 14px 34px -18px rgba(23,35,63,.3);
     --font:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;--mono:ui-monospace,Menlo,Consolas,monospace;}
-  @media (prefers-color-scheme:dark){:root{--paper:#101627;--surface:#172033;--surface-2:#1F2A42;--ink:#F3EEE1;--muted:#A9A28F;--line:#2B3855;--brand:#E2586B;--brand-strong:#F27A8B;--good:#4FBE86;--good-bg:#12321f;--crit:#E07B6E;--crit-bg:#3a1d1a;--shadow:0 1px 2px rgba(0,0,0,.45),0 16px 40px -18px rgba(0,0,0,.7);}}
+  @media (prefers-color-scheme:dark){:root{--paper:#101627;--surface:#172033;--surface-2:#1F2A42;--ink:#F3EEE1;--muted:#A9A28F;--line:#2B3855;--brand:#EA3B48;--brand-strong:#F55A64;--good:#4FBE86;--good-bg:#12321f;--crit:#E07B6E;--crit-bg:#3a1d1a;--shadow:0 1px 2px rgba(0,0,0,.45),0 16px 40px -18px rgba(0,0,0,.7);}}
   :root[data-theme="light"]{--paper:#F7F2E6;--surface:#FFFDF7;--surface-2:#EFE7D3;--ink:#17233F;--muted:#6B6350;--line:#E2D9C3;--brand:#A31B33;--brand-strong:#7E1226;--good:#2E7D4F;--good-bg:#E4F0E8;--crit:#B23A3A;--crit-bg:#F6E1DE;}
-  :root[data-theme="dark"]{--paper:#101627;--surface:#172033;--surface-2:#1F2A42;--ink:#F3EEE1;--muted:#A9A28F;--line:#2B3855;--brand:#E2586B;--brand-strong:#F27A8B;--good:#4FBE86;--good-bg:#12321f;--crit:#E07B6E;--crit-bg:#3a1d1a;}
+  :root[data-theme="dark"]{--paper:#101627;--surface:#172033;--surface-2:#1F2A42;--ink:#F3EEE1;--muted:#A9A28F;--line:#2B3855;--brand:#EA3B48;--brand-strong:#F55A64;--good:#4FBE86;--good-bg:#12321f;--crit:#E07B6E;--crit-bg:#3a1d1a;}
   *{box-sizing:border-box;} body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);line-height:1.5;}
   .wrap{max-width:560px;margin-inline:auto;padding:clamp(1.2rem,5vw,2.4rem) clamp(1rem,5vw,1.4rem) 3rem;}
   .head{display:flex;align-items:center;gap:.7rem;margin-bottom:.4rem;}
