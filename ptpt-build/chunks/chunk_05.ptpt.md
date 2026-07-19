@@ -88,7 +88,7 @@ Acordei cedo, cedo para mim, e quando me levantei ele já tinha saído e voltado
 
 Quando saímos, um cardeal vermelho pousou no U-Haul.
 
-Lou viu antes de mim. Ele fez um gesto com a cabeça na direção do pássaro e disse, a Vovó está a cuidar de nós. Ele quis dizer a mãe dele, Mag. Disse aquilo de leve, da maneira como dizia qualquer coisa sobre as pessoas que tinha perdido, sem drama, só um facto sobre como o mundo funcionava no que dependesse dele. Não pensei muito nisso na altura. Eu estava demasiado fundo para pensar muito em qualquer coisa. Dezassete anos depois um pousaria no meu espelho, e eu entenderia exatamente o que o meu pai me tinha dito naquele estacionamento.
+Lou viu antes de mim. Ele fez um gesto com a cabeça na direção do pássaro e disse, a Avó está a cuidar de nós. Ele quis dizer a mãe dele, Mag. Disse aquilo de leve, da maneira como dizia qualquer coisa sobre as pessoas que tinha perdido, sem drama, só um facto sobre como o mundo funcionava no que dependesse dele. Não pensei muito nisso na altura. Eu estava demasiado fundo para pensar muito em qualquer coisa. Dezassete anos depois um pousaria no meu espelho, e eu entenderia exatamente o que o meu pai me tinha dito naquele estacionamento.
 
 Dormi a maior parte da viagem. Quando estava acordado falávamos um pouco de beisebol, os Yankees, quem estava a bater. Ele não trouxe à tona os comprimidos. Não me pediu para explicar o apartamento nem o peso nem a extensão no corredor. Não era a viagem para isso. A viagem era para me tirar daquele prédio vivo e apontado para casa, e ele entendia a diferença entre manter um homem a respirar e consertá-lo.
 
@@ -141,7 +141,7 @@ Entregar-lhe aquele frasco foi a primeira coisa honesta que as minhas mãos fize
 
 # **AS VIAGENS · III**
 
-*Novembro de 2008. Um U-Haul alugado apontado para o norte, a sair de West Palm Beach, o meu pai ao volante, sessenta e sete anos, a trazer o filho de volta da morte. Quando saímos, um cardeal pousou no U-Haul. A Vovó está a cuidar de nós, ele disse. Ele conduziu.*
+*Novembro de 2008. Um U-Haul alugado apontado para o norte, a sair de West Palm Beach, o meu pai ao volante, sessenta e sete anos, a trazer o filho de volta da morte. Quando saímos, um cardeal pousou no U-Haul. A Avó está a cuidar de nós, ele disse. Ele conduziu.*
 
 PARTE QUATRO
 
