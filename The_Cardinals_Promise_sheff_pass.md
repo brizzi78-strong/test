@@ -230,6 +230,8 @@ He bought me my own record player, a Fisher-Price like the neighbor's. One day h
 
 At night he told me a story, his voice low, like every word mattered. The rabbit in the moon. He said a long time ago a god came down and walked the earth as a tired old man, hungry, and the only one who shared what little he had was a small rabbit. To thank him, the god lifted the rabbit up and pressed his shape into the moon, so anyone who looked up would remember. Look, he'd say. He's still up there. I'd ask him to tell it again. Just the two of us in the dark, and I never wanted it to end.
 
+I did not know why he sometimes disappeared. I did not know why Mama was afraid. I only knew that when he came home, I wanted him to read me the rabbit story again.
+
 But there was another side to Papa. He'd sit in cafés after work, playing chess, drinking coffee, not coming home. Some weekends he slept straight through, and his own father had to come and wake him. One Thanksgiving my mom cooked the whole dinner, and Papa never got up for it. Other times he left for work and didn't come back. A day. Then two. Then three. Then he'd walk in worn out, his eyes gone somewhere, go straight to the bedroom, lock the door, and shut the house out.
 
 I'd push the door open a crack and look in. He was always asleep. The air in that room was different from the rest of the house. I couldn't have told you how. A kid just knows it. Sometimes I heard him crying through the door.
@@ -276,7 +278,11 @@ My mom had called Papa when we landed and told him the truth. We weren't coming 
 
 My grandfather was strict, and he'd never approved of the marriage. But he let us in. We paid him eight hundred a month. He was hard on her and soft on us. My grandmother mostly stayed in the background; when someone was watching us, it was usually my aunts Nancey or Terry, or my grandfather. I missed my father. My mom started over with no degree and nobody to fall back on, and she worked. That's her story to tell, in her own voice, and I hope she does. This book is here because of her. She picked us.
 
-In that airport, her hand had closed around mine. That was all I had. Her hand, and what she'd told me, and my belief that we'd be back soon. I was wrong about soon. But Mexico wasn't done with me.
+In the airport, her hand had closed around mine. That was all I had. She said we would be gone two weeks.
+
+I believed her.
+
+I did not know two weeks could become the rest of your life.
 
 **CHAPTER 2**
 
