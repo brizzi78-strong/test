@@ -310,7 +310,11 @@ My aunt Nancey picked us up in her small red Honda Civic and drove us to Cedar G
 
 My Spanish disappeared almost overnight. English was everywhere and I picked it up the way kids do, without deciding to. Back home I'd had a lisp. In New Jersey they sent me to speech therapy twice a week to fix the way I talked. Decades later it still comes out at the worst times.
 
-My mom had called Papa when we landed and told him the truth. We weren't coming back. About six months later he came anyway. He tried to make a life here, got a job at a Mexican restaurant called El Torito, where they hired him because he was Mexican. For a while he was around. Chris wasn't even two and couldn't say the name. He called it el durito and talked about the balloons. But the old patterns were still there, the same bars, the same nights he didn't come home, and he couldn't make it work. He went back to Mexico. It would be years before I saw him again.
+My mom had called Papa when we landed and told him the truth. We weren't coming back. About six months later he came anyway. He moved in with us at Grandpa and Nana's house, and Grandpa helped him find a job at El Torito, a Mexican restaurant that hired him because he was Mexican. For a little while, we were a family again, Mama, Papa, Chris, and me, trying to build a life in a place that still didn't feel like home.
+
+Papa had a way of making an ordinary day feel extraordinary. One afternoon he dressed Chris and me as Batman and Robin, though it wasn't Halloween. Mama was furious. Papa just laughed. To him we didn't need a holiday to become superheroes. Looking back, I think he was trying to give us something no job, no country, and no amount of uncertainty could take away: the freedom to be kids.
+
+Chris wasn't even two and couldn't say the name of the restaurant. He called it el durito and talked about the balloons. But the old patterns were still there, the same bars, the same nights he didn't come home, and he couldn't make it work. He went back to Mexico. It would be years before I saw him again.
 
 My grandfather was strict, and he'd never approved of the marriage. But he let us in. We paid him eight hundred a month. He was hard on her and soft on us. My grandmother mostly stayed in the background; when someone was watching us, it was usually my aunts Nancey or Terry, or my grandfather. I missed my father. My mom started over with no degree and nobody to fall back on, and she worked. That's her story to tell, in her own voice, and I hope she does. This book is here because of her. She picked us.
 
