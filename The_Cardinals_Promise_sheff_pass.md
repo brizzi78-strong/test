@@ -791,7 +791,7 @@ It split me in two. When it was good, I felt invincible, untouchable, the sharpe
 
 Everything that came after, the DUIs, the balcony, my mother's money turning into pills, a floor in Tijuana, was me chasing one feeling from one night. Not the high. The relief. I wasn't trying to escape myself. I was trying to get back to the only version of myself I was ever comfortable inside.
 
-I have never been as committed to anything in my life as I was to using. Not the mat, not the career, not the people I loved. It got a devotion out of me that nothing else ever did, and it took everything in return.
+I have never been as committed to anything in my life as I was to using. It trumped all of it — the district titles, the county championship I won at seventeen, the career, MTV, the Abercrombie shoots, every accolade I ever collected trying to prove I was somebody. It beat out the people I loved. It got a devotion out of me that nothing else ever came close to, and it took everything in return.
 
 I understand addiction now in a way I can finally explain. It doesn't mean you're using all the time. It means you want to use all the time. You can't wait for the next pill, the next drink. I could walk into a bar feeling four feet tall, and three drinks later be on the couch, dancing, kissing a girl, and some part of me would stand off to the side and wonder how the same man could be both of those people in one night.
 
