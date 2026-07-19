@@ -60,6 +60,29 @@ metrics?* If it only protects engagement, it's not a Cardinal feature.
   it's literally how the founder met his wife. A signature Cardinal move.
 - ⏳ **Photo verification enforced** so "verified" is real, not a badge.
 
+### Accountability: honesty about expectations (handle with care)
+The intent: *"if you aren't honest about your expectations, there will be
+reviews."* Someone who says "marriage-minded" but is just playing games should
+get found out. **Good goal — but public free-text reviews of named individuals
+are dangerous** (defamation lawsuits, revenge/retaliation reviews, harassment,
+brigading, and a chilling effect that scares good users away). Apps that let
+people "review" dates have repeatedly landed in legal and PR trouble.
+
+Safer designs that get the accountability without the landmines:
+- ⏳ **Structured post-date feedback, not essays.** After a date, both people
+  answer a few fixed prompts: *Did they show up? Were they respectful? Did their
+  intent match their profile?* Buttons, not paragraphs — far harder to weaponize
+  or defame with.
+- ⏳ **Aggregate reputation, kept private-ish.** Turn that feedback into signals
+  (a reliability/respect score, an "intent matches profile" rate) shown as a
+  badge or surfaced to moderation — not a public wall of comments about a person.
+- ⏳ **Mismatched-intent flag → moderation, not the public.** Repeated "their
+  intent didn't match" reports route to human review and can cost someone their
+  spot — accountability through consequences, not through a public pillory.
+- **Rule of thumb:** reward honesty and act on dishonesty privately; never build
+  a system that lets one user publicly brand another. Get counsel before
+  shipping anything reputational.
+
 ### P2 — Moderation & real consequences (operational, not just code)
 - ⏳ **Human moderation** with a fast triage queue; action within hours, not
   weeks.
