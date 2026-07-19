@@ -144,7 +144,12 @@ Errors return `{ "error": { "code", "message" } }` with an appropriate status
 
 `ssn_trace`, `sex_offender_registry`, `global_watchlist`, `national_criminal`,
 `county_criminal`, `employment_verification`, `education_verification`,
-`motor_vehicle_record`, `drug_screen`.
+`motor_vehicle_record`, `drug_screen`, `identity_verification`.
+
+`identity_verification` confirms an applicant is who they claim (name + phone +
+identity match) — useful when screening in-home service workers. Like every
+check it is consent-gated (no report runs before the candidate authorizes) and
+resolved through the pluggable provider, not a covert people-search.
 
 ### Example: a full run with `curl`
 

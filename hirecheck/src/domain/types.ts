@@ -21,7 +21,8 @@ export type CheckType =
   | 'employment_verification'
   | 'education_verification'
   | 'motor_vehicle_record'
-  | 'drug_screen';
+  | 'drug_screen'
+  | 'identity_verification';
 
 export const CHECK_TYPES: readonly CheckType[] = [
   'ssn_trace',
@@ -33,6 +34,7 @@ export const CHECK_TYPES: readonly CheckType[] = [
   'education_verification',
   'motor_vehicle_record',
   'drug_screen',
+  'identity_verification',
 ];
 
 /**

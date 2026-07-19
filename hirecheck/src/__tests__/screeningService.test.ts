@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 
-import type { CheckType } from '../domain/types.ts';
+import { CHECK_TYPES, type CheckType } from '../domain/types.ts';
 import { addBusinessDays, ScreeningService } from '../service/screeningService.ts';
 import { ConflictError, NotFoundError, ValidationError } from '../service/errors.ts';
 import { createInMemoryStore } from '../store/store.ts';
@@ -257,6 +257,21 @@ test('MockProvider is deterministic and honors forcing keywords', async () => {
     email: 'error.case@example.com',
   });
   assert.equal(errored.status, 'error');
+});
+
+test('identity_verification is a supported, consent-gated check type', async () => {
+  // Available for building packages (e.g. screening in-home service workers).
+  assert.ok(CHECK_TYPES.includes('identity_verification'));
+
+  // The provider resolves it like any other check — here forced to `consider`.
+  const provider = new MockProvider();
+  const outcome = await provider.runCheck('identity_verification', {
+    firstName: 'Sam',
+    lastName: 'Lee',
+    email: 'needs.consider@example.com',
+  });
+  assert.equal(outcome.status, 'consider');
+  assert.match(outcome.records[0].summary, /Identity/i);
 });
 
 test('addBusinessDays skips weekends', () => {
