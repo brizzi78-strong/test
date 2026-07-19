@@ -53,6 +53,11 @@ metrics?* If it only protects engagement, it's not a Cardinal feature.
   and vouch (or flag) before a date, "bring a friend" to a first meet, and group
   dates. This is safety *and* the sorority social dynamic in one — dating inside
   a trusted circle, not alone. Strong next build.
+- ⏳ **Call First — the first date is a phone call.** Before anyone meets in
+  person, Cardinal nudges (or gates) a voice call through the app — number never
+  shared. It's safety (vet by voice, no rushing to meet a stranger) *and*
+  substance (you hear character in a voice you can't in a text). Old school, and
+  it's literally how the founder met his wife. A signature Cardinal move.
 - ⏳ **Photo verification enforced** so "verified" is real, not a badge.
 
 ### P2 — Moderation & real consequences (operational, not just code)
