@@ -118,6 +118,17 @@ services:
       - benefits
       - timeoff
 
+  # Scheduling + references for a service business (e.g. massage): appointments
+  # with worker double-booking prevention, plus employment references.
+  booking:
+    <<: *service
+    command: node booking/src/index.ts
+    environment:
+      PORT: "4100"
+      BOOKING_DB: /data/booking.db
+    ports: ["4100:4100"]
+    volumes: ["booking-data:/data"]
+
   # Human-facing admin console: a single-page HR UI plus a backend-for-frontend
   # that proxies to the orchestrator server-side (so no credentials reach the
   # browser). Register a company, hire employees, and watch one record resolve
@@ -155,6 +166,7 @@ services:
       - timeoff
       - offboarding
       - orchestrator
+      - booking
 
   web:
     image: nginx:alpine
@@ -174,4 +186,5 @@ volumes:
   timeoff-data:
   offboarding-data:
   orchestrator-data:
+  booking-data:
   gateway-data:

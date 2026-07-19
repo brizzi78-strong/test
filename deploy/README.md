@@ -27,6 +27,7 @@ That starts:
 | Time Off (PTO) | http://localhost:3700 |
 | Offboarding | http://localhost:3800 |
 | Orchestrator (shared identity) | http://localhost:3900 |
+| Booking (scheduling + references) | http://localhost:4100 |
 
 Health-check any service at `GET /health`. Data persists in per-service named
 volumes (`docker volume ls`); remove them with `docker compose ... down -v`.
