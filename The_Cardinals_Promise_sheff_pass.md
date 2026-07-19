@@ -777,6 +777,8 @@ I was still my mother's kid underneath it. One Sunday I ended up at a church acr
 
 I drank. Everybody drank; that was the cover. It would be years before I understood that not everyone drank the way I did. I won't glamorize it, but the parties were great — the fun you know won't last, which is part of why it mattered. Junior year I lived in the fraternity house. Underneath it all was an insecurity I couldn't shake. The wrestling, the fraternity, the friends, and still some part of me didn't believe any of it was real.
 
+This is the part I've never told, and without it the rest is just a list of wreckage. It was a love story. The longest, most consuming affair of my life was the one I had with my addiction.
+
 It started at a bar in Oxford. Justin held one out and asked if I wanted one. No, I said. I don't do drugs. It's a prescription, he said. Oh. Okay. That was the whole negotiation — the entire distance between the man I was and the man I'd become was one word, prescription, and one shrug.
 
 The first time I took an Adderall and put alcohol on top of it, something in me went quiet that had never been quiet before. I was free of the inhibition I'd carried since I was the dark-skinned kid who didn't match the rest of the room. I was articulate without reaching for it. I was funny without trying to be funny. The part of me that stood outside every conversation, watching, grading how I was doing, finally sat down. I wasn't performing being Rob. I just was him, the version I'd always believed was in there and could never reach.
