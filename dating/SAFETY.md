@@ -68,20 +68,26 @@ are dangerous** (defamation lawsuits, revenge/retaliation reviews, harassment,
 brigading, and a chilling effect that scares good users away). Apps that let
 people "review" dates have repeatedly landed in legal and PR trouble.
 
-Safer designs that get the accountability without the landmines:
-- ⏳ **Structured post-date feedback, not essays.** After a date, both people
-  answer a few fixed prompts: *Did they show up? Were they respectful? Did their
-  intent match their profile?* Buttons, not paragraphs — far harder to weaponize
-  or defame with.
-- ⏳ **Aggregate reputation, kept private-ish.** Turn that feedback into signals
-  (a reliability/respect score, an "intent matches profile" rate) shown as a
-  badge or surfaced to moderation — not a public wall of comments about a person.
-- ⏳ **Mismatched-intent flag → moderation, not the public.** Repeated "their
-  intent didn't match" reports route to human review and can cost someone their
-  spot — accountability through consequences, not through a public pillory.
-- **Rule of thumb:** reward honesty and act on dishonesty privately; never build
-  a system that lets one user publicly brand another. Get counsel before
-  shipping anything reputational.
+**The decided design: feedback goes to staff, never the public.** Reports and
+post-date feedback route to a **member HR / trust & safety desk** (internal
+staff), and repeated concerns **flag the member internally** — on their record,
+affecting their standing and, if it keeps happening, their spot on Cardinal.
+Nobody's feedback is ever posted publicly about a person. Accountability comes
+from *staff acting on flags*, not from a public wall. This sidesteps the
+defamation/harassment/revenge-review problem entirely while still making
+dishonesty cost something.
+
+How it works:
+- ⏳ **Structured post-date feedback, not essays.** After a date, a few fixed
+  prompts — *Did they show up? Were they respectful? Did their intent match
+  their profile?* Buttons, not paragraphs. Goes straight to staff.
+- ⏳ **Internal flags accumulate on the member's record.** A pattern (e.g.
+  repeated "intent didn't match") raises the member's flag level for the trust &
+  safety desk to review.
+- ⏳ **Staff review → consequences.** The desk decides: warning, restriction, or
+  removal. Consequences are real, but they're delivered by people, privately.
+- **Still get counsel** on how flag data is stored, disclosed, and used before
+  launch — internal-only reduces the risk a lot, but doesn't erase it.
 
 ### P2 — Moderation & real consequences (operational, not just code)
 - ⏳ **Human moderation** with a fast triage queue; action within hours, not
