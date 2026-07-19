@@ -7,7 +7,7 @@
 
 **New Jersey, 1985**
 
-"Te quiero tanto como quiero a mis propios hijos." Me lo dijo un día en que yo estaba deshecho frente a él, y me sostuvo la mirada hasta que lo creí. Llevé su apellido antes de entender lo que había detrás. Lo que Lou me enseñó sobre ser hombre se reduce a unas cuantas cosas, y ninguna fue un discurso.
+Te quiero tanto como quiero a mis propios hijos. Me lo dijo un día en que yo estaba deshecho frente a él, y me sostuvo la mirada hasta que lo creí. Llevé su apellido antes de entender lo que había detrás. Lo que Lou me enseñó sobre ser hombre se reduce a unas cuantas cosas, y ninguna fue un discurso.
 
 No te quejas. No te haces la víctima. Das la cara.
 
@@ -19,7 +19,7 @@ Los viajes eran interminables. Cooperstown. La ciudad de Nueva York. Albany, par
 
 Entrenaba beisbol, a los Foxes y a los Falcons, y a mí me entrenó más duro que a nadie. Íbamos al campo y me bateaba cien pelotas, y luego otras cien. En las jaulas de bateo alimentaba la máquina hasta que se me pelaban las manos y apenas podía sostener el bat. Nunca me dejó rendirme porque doliera. *Quédate en la caja. Recibe el siguiente lanzamiento.* Esa era la lección debajo de la lección.
 
-Chris y papá tenían una frase entre ellos. Después de los grandes momentos, una escuela, una lucha ganada a pulso, un trabajo, se la decían en voz baja el uno al otro. *Oye, papá, lo logramos.* Yo tenía mi propia versión en ese carro de regreso del norte del estado, la calma después de un día largo, los dos, la sensación de que habíamos hecho la cosa juntos. Esa era la idea del amor que tenía Lou. No anunciada. Ganada, juntos. Y cuando estaba orgulloso de ti, no lo decía. Te daba una pequeña sonrisa y una mirada, y la mirada lo decía todo.
+Chris y papá tenían una frase entre ellos. Después de los grandes momentos, una escuela, una lucha ganada a pulso, un trabajo, se la decían en voz baja el uno al otro. *Oye, papá, lo logramos.* Yo tenía mi propia versión en ese carro de regreso del norte del estado, la calma después de un día largo, los dos, la sensación de que lo habíamos hecho juntos. Esa era la idea del amor que tenía Lou. No anunciada. Ganada, juntos. Y cuando estaba orgulloso de ti, no lo decía. Te daba una pequeña sonrisa y una mirada, y la mirada lo decía todo.
 
 Y no eran solo las cosas grandes. Una vez pedí White Castle, y el más cercano estaba a una hora. Me llevó. Una hora de ida por una bolsa de hamburguesitas, porque a su hijo se le antojaban. Cuando necesité una endodoncia en la universidad en Ohio, manejó diez horas para llevarme al dentista y diez horas de regreso. Un día entero manejando, por una silla de dentista. Grande o chico, divertido o doloroso, si era mío, ahí estaba él.
 
@@ -29,7 +29,7 @@ Luego estuvo West Palm Beach. Para entonces ya no era un niño. Era un hombre ad
 
 Una vez me quebré frente a él. Ya no recuerdo qué me había orillado a eso, solo que estaba deshecho, como solo te permites estarlo frente a alguien seguro. No me dijo que me controlara. Dejó que lo sacara, y luego me miró y lo dijo sin rodeos.
 
-"Te quiero tanto como quiero a mis propios hijos."
+Te quiero tanto como quiero a mis propios hijos.
 
 Desde que tengo memoria había cargado una pregunta callada: si de verdad era suyo, si ser elegido era lo mismo que pertenecer. La respondió en una sola frase. Tanto como a los suyos. No la suavizó. Y le creí.
 
@@ -56,7 +56,7 @@ Antes de la colchoneta, estuvo la mesa del almuerzo. Sexto grado en Ramsey, y yo
 
 Había una mesa en la que me sentaba todos los días, y los niños de esa mesa tenían algo que decían de mí. Brizzi se la jala. Lo decían y le echaban un chorro de mayonesa a la mesa para acompañarlo, una pequeña actuación, todos los días, para que el resto de la mesa se riera. Yo ni siquiera sabía qué significaba. Sabía que era sobre mí, sabía que era algo cochino, y sabía que las risas eran contra mí. Con eso bastaba.
 
-Y seguía sentándome con ellos. Esa es la parte con la que me siento ahora. Todos los días lo hacían, y todos los días yo llevaba mi charola de vuelta al mismo lugar. No me cambié de mesa. No comí solo. Que ellos me molestaran se sentía mejor que no tener a nadie, y en un pueblo donde los amigos no llegaban fácil, esa era la mesa. Así que me sentaba y lo aguantaba.
+Y seguía sentándome con ellos. Esa es la parte en la que me detengo ahora. Todos los días lo hacían, y todos los días yo llevaba mi charola de vuelta al mismo lugar. No me cambié de mesa. No comí solo. Que ellos me molestaran se sentía mejor que no tener a nadie, y en un pueblo donde los amigos no llegaban fácil, esa era la mesa. Así que me sentaba y lo aguantaba.
 
 Kris y Kyle eran hermanos gemelos, los niños más populares del grado, y también se sentaban ahí, y ni una sola vez se unieron. No lo detenían. Simplemente me dejaban en paz, y que los niños populares te dejaran en paz era lo más cercano a estar a salvo que había en ese salón. Recordé sus nombres durante treinta años. Nunca recordé los de quienes lo hacían.
 
@@ -98,17 +98,17 @@ Siempre estaba en las gradas. Casi nunca se perdió una lucha en cuatro años de
 
 Tenía doce años. Un cuarto para las ocho de una mañana de sábado, y papá estaba en el marco de mi puerta, ya vestido, las llaves en la mano.
 
-"¿Quieres ir a dar una vuelta?"
+¿Quieres ir a dar una vuelta?
 
-"¿A dónde vamos?"
+¿A dónde vamos?
 
-"Es una sorpresa."
+Es una sorpresa.
 
 Me tallé los ojos y dije que sí.
 
 Nos subimos al carro y manejó. A la hora, no pregunté. A las dos horas, sí.
 
-"Papá. ¿A dónde vamos?"
+Papá. ¿A dónde vamos?
 
 Volteó a verme, sonriendo un poco. "Cooperstown."
 
