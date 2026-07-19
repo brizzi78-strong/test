@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Serenity Massage — Book online</title>
+<meta name="description" content="Therapeutic massage — book your appointment online. A self-contained demo booking site powered by Cardinal HR · Booking.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23A31B33'/%3E%3Ctext x='16' y='23' font-family='system-ui' font-size='20' font-weight='900' text-anchor='middle' fill='white'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E">
+<style>
+  :root{--paper:#F7F2E6;--surface:#FFFDF7;--surface-2:#EFE7D3;--ink:#17233F;--muted:#6B6350;--line:#E2D9C3;
+    --brand:#A31B33;--brand-strong:#7E1226;--gold:#B4862A;--good:#2E7D4F;--good-bg:#E4F0E8;--crit:#B23A3A;--crit-bg:#F6E1DE;
+    --shadow:0 1px 2px rgba(23,35,63,.07),0 16px 40px -20px rgba(23,35,63,.32);
+    --font:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;--mono:ui-monospace,Menlo,Consolas,monospace;}
+  @media (prefers-color-scheme:dark){:root{--paper:#101627;--surface:#172033;--surface-2:#1F2A42;--ink:#F3EEE1;--muted:#A9A28F;--line:#2B3855;--brand:#E2586B;--brand-strong:#F27A8B;--gold:#D8B15A;--good:#4FBE86;--good-bg:#12321f;--crit:#E07B6E;--crit-bg:#3a1d1a;--shadow:0 1px 2px rgba(0,0,0,.45),0 18px 44px -20px rgba(0,0,0,.7);}}
+  :root[data-theme="light"]{--paper:#F7F2E6;--surface:#FFFDF7;--surface-2:#EFE7D3;--ink:#17233F;--muted:#6B6350;--line:#E2D9C3;--brand:#A31B33;--brand-strong:#7E1226;--gold:#B4862A;--good:#2E7D4F;--good-bg:#E4F0E8;--crit:#B23A3A;--crit-bg:#F6E1DE;}
+  :root[data-theme="dark"]{--paper:#101627;--surface:#172033;--surface-2:#1F2A42;--ink:#F3EEE1;--muted:#A9A28F;--line:#2B3855;--brand:#E2586B;--brand-strong:#F27A8B;--gold:#D8B15A;--good:#4FBE86;--good-bg:#12321f;--crit:#E07B6E;--crit-bg:#3a1d1a;}
+  *{box-sizing:border-box;} body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);line-height:1.55;}
+  a{color:var(--brand);} .wrap{max-width:760px;margin-inline:auto;padding-inline:clamp(1rem,5vw,1.6rem);}
+  header.bar{position:sticky;top:0;z-index:8;background:color-mix(in srgb,var(--paper) 86%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+  .bar-in{display:flex;align-items:center;gap:.6rem;padding:.7rem 0;}
+  .glyph{width:32px;height:32px;border-radius:9px;background:var(--brand);color:#fff;display:grid;place-items:center;font-weight:900;}
+  .bname{font-weight:800;letter-spacing:-.01em;} .bar .btn{margin-left:auto;}
+  .theme{background:transparent;border:1px solid var(--line);border-radius:8px;color:var(--ink);padding:.3rem .5rem;cursor:pointer;margin-left:.5rem;}
+  .btn{display:inline-block;background:var(--brand);color:#fff;border:0;border-radius:11px;padding:.7rem 1.1rem;font:inherit;font-weight:700;cursor:pointer;text-decoration:none;}
+  .btn:hover{background:var(--brand-strong);} .btn.block{width:100%;font-size:1rem;margin-top:1.1rem;} .btn:disabled{opacity:.55;cursor:progress;}
+  .hero{padding:clamp(2.4rem,7vw,4.5rem) 0 clamp(1.4rem,4vw,2.4rem);}
+  .eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brand);margin:0;}
+  h1{font-size:clamp(2rem,1.5rem+3vw,3.4rem);line-height:1.03;letter-spacing:-.03em;margin:.5rem 0 0;text-wrap:balance;}
+  .lede{font-size:clamp(1.05rem,1rem+.4vw,1.25rem);color:var(--muted);margin:1rem 0 0;max-width:46ch;}
+  .hero .cta{margin-top:1.6rem;display:flex;gap:.6rem;flex-wrap:wrap;}
+  section{padding:clamp(1.8rem,5vw,3rem) 0;} h2{font-size:clamp(1.4rem,1.2rem+1vw,1.9rem);letter-spacing:-.02em;margin:0 0 .3rem;}
+  .sub{color:var(--muted);margin:0 0 1.2rem;}
+  .menu{display:grid;gap:.7rem;} .mitem{display:flex;align-items:center;gap:.9rem;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:.9rem 1.1rem;box-shadow:var(--shadow);}
+  .mitem .nm{font-weight:800;} .mitem .meta{color:var(--muted);font-size:.85rem;} .mitem .price{margin-left:auto;font-weight:800;font-size:1.1rem;font-variant-numeric:tabular-nums;color:var(--gold);}
+  .mitem .pick{margin-left:.4rem;}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:1.4rem 1.5rem;}
+  .step{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--brand);font-weight:700;margin-top:1rem;}
+  label{display:block;font-size:.76rem;font-weight:700;color:var(--muted);margin:.6rem 0 .22rem;}
+  input,select,textarea{width:100%;padding:.65rem .7rem;border:1px solid var(--line);border-radius:11px;background:var(--paper);color:var(--ink);font:inherit;}
+  input:focus,select:focus,textarea:focus{outline:2px solid var(--brand);outline-offset:1px;}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:.3rem .8rem;}@media(max-width:440px){.row{grid-template-columns:1fr;}}
+  .banner{display:none;padding:.7rem .9rem;border-radius:11px;margin-top:.9rem;font-size:.9rem;}
+  .banner.show{display:block;background:var(--crit-bg);border:1px solid var(--crit);}
+  .done{text-align:center;} .done .big{font-size:2.6rem;} .confirm{background:var(--good-bg);border:1px solid var(--good);border-radius:12px;padding:.85rem;margin:1rem 0;font-weight:600;}
+  .info{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}@media(max-width:520px){.info{grid-template-columns:1fr;}}
+  .info .box{background:var(--surface-2);border:1px solid var(--line);border-radius:14px;padding:1rem 1.1rem;}
+  .info h3{margin:0 0 .3rem;font-size:1rem;} .info p{margin:.1rem 0;color:var(--muted);font-size:.9rem;}
+  footer{border-top:1px solid var(--line);color:var(--muted);font-size:.8rem;padding:1.4rem 0 2.4rem;text-align:center;}
+  .demo-note{font-size:.76rem;margin-top:.4rem;}
+</style>
+</head>
+<body>
+<header class="bar"><div class="wrap bar-in">
+  <span class="glyph" aria-hidden="true">✦</span><span class="bname">Serenity Massage</span>
+  <a class="btn" href="#book">Book now</a>
+  <button class="theme" id="themeBtn" aria-label="Toggle theme">◐</button>
+</div></header>
+
+<main>
+  <section class="hero"><div class="wrap">
+    <p class="eyebrow">Therapeutic massage · Raleigh, NC</p>
+    <h1>Book your reset.</h1>
+    <p class="lede">Swedish, deep tissue, prenatal, and hot stone — with licensed therapists. Request a time online and we'll confirm it with you.</p>
+    <div class="cta"><a class="btn" href="#book">Book an appointment</a><a class="btn" href="#menu" style="background:transparent;color:var(--brand);border:1px solid var(--line)">See services</a></div>
+  </div></section>
+
+  <section id="menu"><div class="wrap">
+    <h2>Services</h2>
+    <p class="sub">Tap a service to start booking.</p>
+    <div class="menu" id="menuList"></div>
+  </div></section>
+
+  <section id="book"><div class="wrap">
+    <h2>Book online</h2>
+    <p class="sub">Request an appointment — we'll confirm the time.</p>
+    <div class="card" id="formCard">
+      <form id="bookForm">
+        <div class="step">Step 1 — service</div>
+        <label for="service">Service</label><select id="service"></select>
+        <div class="step">Step 2 — time</div>
+        <div class="row"><div><label for="date">Date</label><input id="date" type="date" required></div><div><label for="time">Time</label><input id="time" type="time" required></div></div>
+        <div class="step">Step 3 — your details</div>
+        <div class="row"><div><label for="cname">Your name</label><input id="cname" required autocomplete="name"></div><div><label for="cphone">Phone</label><input id="cphone" type="tel" autocomplete="tel"></div></div>
+        <label for="notes">Anything we should know? (optional)</label><textarea id="notes" rows="2"></textarea>
+        <button class="btn block" type="submit" id="submitBtn">Request appointment</button>
+        <div class="banner" id="banner"></div>
+      </form>
+      <div class="done" id="doneBox" hidden>
+        <div class="big" aria-hidden="true">✅</div>
+        <h2>Request received</h2>
+        <div class="confirm" id="confirmText"></div>
+        <p class="sub">We'll reach out to confirm. Thanks for booking with Serenity Massage!</p>
+        <button class="btn" id="againBtn">Book another</button>
+      </div>
+    </div>
+  </div></section>
+
+  <section><div class="wrap info">
+    <div class="box"><h3>Hours</h3><p>Mon–Fri · 9am – 7pm</p><p>Saturday · 9am – 4pm</p><p>Sunday · closed</p></div>
+    <div class="box"><h3>Visit</h3><p>123 Oak Street, Raleigh, NC</p><p>Free parking in the rear</p><p>Gift cards available in studio</p></div>
+  </div></section>
+</main>
+
+<footer><div class="wrap">
+  Powered by Cardinal HR · Booking
+  <div class="demo-note">Demo booking site — “Serenity Massage” is a sample business; requests here are illustrative and aren't sent anywhere.</div>
+</div></footer>
+
+<script>
+const $=(id)=>document.getElementById(id);
+const SERVICES=[
+  {id:"sw",name:"Swedish massage",durationMinutes:60,priceCents:9000},
+  {id:"dt",name:"Deep tissue",durationMinutes:90,priceCents:13500},
+  {id:"pn",name:"Prenatal massage",durationMinutes:60,priceCents:10000},
+  {id:"hs",name:"Hot stone",durationMinutes:75,priceCents:12000},
+];
+const money=(c)=> c==null?"":"$"+(c/100).toFixed(2).replace(/\.00$/,"");
+const esc=(s)=>String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
+
+$("menuList").innerHTML=SERVICES.map(s=>
+  '<div class="mitem"><span><span class="nm">'+esc(s.name)+'</span><br><span class="meta">'+s.durationMinutes+' min</span></span>'+
+  '<span class="price">'+money(s.priceCents)+'</span><button class="btn pick" type="button" data-id="'+s.id+'">Book</button></div>').join("");
+$("service").innerHTML=SERVICES.map(s=>'<option value="'+s.id+'">'+esc(s.name)+' · '+s.durationMinutes+' min · '+money(s.priceCents)+'</option>').join("");
+document.querySelectorAll(".pick").forEach(b=>b.onclick=()=>{ $("service").value=b.getAttribute("data-id"); $("book").scrollIntoView({behavior:"smooth"}); $("cname").focus({preventScroll:true}); });
+
+$("date").min=new Date().toISOString().slice(0,10);
+function banner(m){const b=$("banner");b.textContent=m;b.className="banner show";}
+$("bookForm").addEventListener("submit",(e)=>{
+  e.preventDefault(); $("banner").className="banner";
+  if(!$("date").value||!$("time").value){banner("Please pick a date and time.");return;}
+  if(!$("cname").value.trim()){banner("Please enter your name.");return;}
+  const svc=SERVICES.find(s=>s.id===$("service").value);
+  const when=new Date($("date").value+"T"+$("time").value).toLocaleString([], {weekday:"long",month:"long",day:"numeric",hour:"numeric",minute:"2-digit"});
+  $("confirmText").textContent=svc.name+" — "+when;
+  $("formCard").querySelector("#bookForm").hidden=true; $("doneBox").hidden=false; window.scrollTo({top:$("book").offsetTop-60,behavior:"smooth"});
+});
+$("againBtn").onclick=()=>{ $("bookForm").reset(); $("doneBox").hidden=true; $("bookForm").hidden=false; };
+$("themeBtn").onclick=()=>{const c=document.documentElement.getAttribute("data-theme");const n=c==="dark"?"light":c==="light"?"":"dark";if(n)document.documentElement.setAttribute("data-theme",n);else document.documentElement.removeAttribute("data-theme");};
+</script>
+</body>
+</html>
