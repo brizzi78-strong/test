@@ -789,7 +789,7 @@ It split me in two. When it was good, I felt invincible, untouchable, the sharpe
 
 Everything that came after, the DUIs, the balcony, my mother's money turning into pills, a floor in Tijuana, was me chasing one feeling from one night. Not the high. The relief. I wasn't trying to escape myself. I was trying to get back to the only version of myself I was ever comfortable inside.
 
-I understand addiction now in a way I can finally explain. It doesn't mean you're using all the time. It means you want to use all the time.
+I understand addiction now in a way I can finally explain. It doesn't mean you're using all the time. It means you want to use all the time. You can't wait for the next pill, the next drink. I could walk into a bar feeling four feet tall, and three drinks later be on the couch, dancing, kissing a girl, and some part of me would stand off to the side and wonder how the same man could be both of those people in one night.
 
 Jason still tells one on me. We ran a case race one night — you pair off, a case of beer to a team, and whoever puts theirs down first wins. I hated losing at anything, and a case of beer was no exception. Somebody had a camera going when it caught up with me afterward: me on the bathroom floor, sick as a dog, looking up at the lens and saying, this is what I do to win. It got a big laugh. It should have gotten a second look. I could turn getting sick on a tile floor into something I'd won. They say there are always signs. That was one I wasn't ready to read.
 
