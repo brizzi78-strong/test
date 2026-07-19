@@ -75,6 +75,7 @@ async function rasterToPdf(pngPath, wIn, hIn, outPath) {
     .orn::before{ content:"—  ◆  —"; }
     .sub{ font-size:31px; color:var(--maroon); font-style:italic; }
     .author{ font-size:46px; font-weight:bold; letter-spacing:.22em; color:var(--navy); margin-top:16px; }
+    .withline{ font-size:27px; font-weight:bold; letter-spacing:.06em; color:var(--maroon); margin-top:12px; }
     .fromline{ font-size:24px; color:var(--blue); font-style:italic; margin-top:16px; }
   </style></head><body>
     <div class="frame"></div>
@@ -90,6 +91,7 @@ async function rasterToPdf(pngPath, wIn, hIn, outPath) {
       <div class="sub">Helping Caregivers with Aging Loved Ones</div>
       <div class="orn"></div>
       <div class="author">ROB BRIZZI</div>
+      <div class="withline">with Hope Brizzi, PharmD</div>
       <div class="fromline">From the Author of <b>The Cardinal&rsquo;s Promise</b></div>
     </div>
   </body></html>`;
