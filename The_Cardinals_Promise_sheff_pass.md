@@ -795,6 +795,8 @@ I have never been as committed to anything in my life as I was to using. Not the
 
 I understand addiction now in a way I can finally explain. It doesn't mean you're using all the time. It means you want to use all the time. You can't wait for the next pill, the next drink. I could walk into a bar feeling four feet tall, and three drinks later be on the couch, dancing, kissing a girl, and some part of me would stand off to the side and wonder how the same man could be both of those people in one night.
 
+Getting sober was not relief. It was grief. Learning to stop using meant giving up my best friend — the one who was always there when I felt four feet tall, the one who never left until it had taken everything from me. I had to mourn it. You can grieve the thing that was killing you. I did, and some days I still do.
+
 And I won't tell you it's gone. I still carry the pattern. The substance left; the wiring didn't. These days I'm addicted to more — more work, more winning, more of whatever will fill the same hole. Recovery, for me, isn't the pattern disappearing. It's knowing it by name, and choosing every day not to feed it the one thing that almost killed me.
 
 And some days sobriety feels like that same nakedness I used to run from. No clothing, no armor, every nerve exposed to the air. The difference now is that I stay in it. I let myself be seen with nothing on, and I don't reach for something to take the edge off.
