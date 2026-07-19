@@ -58,6 +58,7 @@ That's the flagship campus headline — it names the exact feeling of the target
 
 Supporting taglines:
 - *"Safe is sexy."*
+- *"We screen. You vibe."*
 - *"The first real dating app that looks out for you."*
 - *"The others don't care about you. Cardinal does."*
 - *"Invite-only. Background-checked. No drunk DMs."*

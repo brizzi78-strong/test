@@ -9,6 +9,19 @@ This keeps the name and everything built so far — it sharpens the frame.
 
 ---
 
+## Brand principle: screening is invisible, the vibe is the point
+
+We screen — obviously. Verification, background checks, the interview: that's the
+floor. But nobody falls in love with a background check. So the vetting happens
+quietly in the background, and what a member actually *feels* is warmth, good
+energy, and a genuine connection — a good vibe. Safety earns the trust; the vibe
+is what they come for. Never let the safety machinery make the experience feel
+clinical or interrogating. The felt experience is: *relax, you're among real
+people, now go have something real.*
+
+Tagline candidates from this: *"We screen. You vibe."* · *"Screened for safety,
+matched for the vibe."*
+
 ## What "elite" means here (and what it doesn't)
 
 **It means:** vetted members, real identities, a real bar to entry, curated
