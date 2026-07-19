@@ -1346,6 +1346,19 @@
     return `rgb(${r}, ${g}, ${b})`;
   }
 
+  /* ---- Optional illustration swap: assets/cardinal-hero.png replaces the
+        code mark next to the promise once the file exists. ---- */
+  (function () {
+    const img = document.getElementById("promiseIllus");
+    if (!img) return;
+    img.addEventListener("load", () => {
+      img.hidden = false;
+      const mark = document.getElementById("promiseMark");
+      if (mark) mark.style.display = "none";
+    });
+    img.addEventListener("error", () => { img.hidden = true; });
+  })();
+
   /* ---- Boot ---- */
   updateBadge();
   show(state.profile && state.profile.background && state.profile.background.status === "cleared" ? "discover" : "landing");
