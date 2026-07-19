@@ -96,6 +96,8 @@
     plus: { plan: "Cardinal+", price: "$19.99/mo", likeLimit: null,
       perks: ["Unlimited likes", "See who already liked you", "One free “take-back” a day"] }
   };
+  // Paste your hosted subscription links (see PAYMENTS.md). Empty = demo mode.
+  const PAY = { stripe: "", paypal: "" };
   function load() {
     const base = defaults();
     try {
@@ -571,14 +573,38 @@
       </div>`;
     modal.hidden = false;
     $("#laterUpsell").addEventListener("click", closeModal);
-    $("#doUpgrade").addEventListener("click", () => {
-      upgradeTo("plus"); closeModal(); renderDeck();
-    });
+    $("#doUpgrade").addEventListener("click", () => openCheckout(() => renderDeck()));
   }
   function upgradeTo(key) {
     const plan = MEN_PLANS[key];
     state.profile.membership = { plan: plan.plan, free: key === "free", price: plan.price, likeLimit: plan.likeLimit, activityGoalMin: 0 };
     save();
+  }
+
+  // Checkout modal — Stripe + PayPal (hosted links from PAY; see PAYMENTS.md).
+  function openCheckout(onComplete) {
+    const plus = MEN_PLANS.plus;
+    const stripeBtn = PAY.stripe
+      ? `<a class="btn btn-primary pay-btn" href="${escapeHtml(PAY.stripe)}" target="_blank" rel="noopener">Pay with card · ${plus.price}</a>`
+      : `<button class="btn btn-primary pay-btn" disabled title="Add your Stripe link in PAYMENTS.md">Pay with card · ${plus.price}</button>`;
+    const paypalBtn = PAY.paypal
+      ? `<a class="btn btn-ghost pay-btn" href="${escapeHtml(PAY.paypal)}" target="_blank" rel="noopener">PayPal</a>`
+      : `<button class="btn btn-ghost pay-btn" disabled title="Add your PayPal link in PAYMENTS.md">PayPal</button>`;
+    $("#modalCard").innerHTML = `
+      <h2 style="color:var(--fg)">${plus.plan}</h2>
+      <div class="checkout-price">${plus.price}</div>
+      <ul class="plan-perks tight" style="text-align:left;display:inline-block">${plus.perks.map(x => `<li>${escapeHtml(x)}</li>`).join("")}</ul>
+      <div class="pay-btns">${stripeBtn}${paypalBtn}</div>
+      <p class="fineprint">${PAY.stripe || PAY.paypal ? "Secure checkout via Stripe / PayPal." : "Demo: no real charge. Add your Stripe/PayPal links to go live."}</p>
+      <div class="modal-actions">
+        <button class="btn btn-ghost" id="closeCheckout">Cancel</button>
+        <button class="btn btn-danger" id="demoUnlock">Skip &amp; unlock (demo)</button>
+      </div>`;
+    modal.hidden = false;
+    $("#closeCheckout").addEventListener("click", closeModal);
+    $("#demoUnlock").addEventListener("click", () => {
+      upgradeTo("plus"); closeModal(); if (onComplete) onComplete();
+    });
   }
 
   function decide(person, liked) {
@@ -801,6 +827,7 @@
           <button class="btn btn-primary" data-plan="plus">Upgrade to ${MEN_PLANS.plus.plan} · ${MEN_PLANS.plus.price}</button>
         </div>`;
       $$("[data-plan]", body).forEach(b => b.addEventListener("click", () => {
+        if (b.dataset.plan === "plus") return openCheckout(() => { renderLikes(); updateBadge(); });
         upgradeTo(b.dataset.plan); renderLikes(); updateBadge();
       }));
     }
@@ -1124,6 +1151,7 @@
       save(); renderProfilePreview();
     });
     $$("[data-plan]").forEach(b => b.addEventListener("click", () => {
+      if (b.dataset.plan === "plus") return openCheckout(() => renderProfilePreview());
       upgradeTo(b.dataset.plan); renderProfilePreview();
     }));
     const cc = $("#copyCode");

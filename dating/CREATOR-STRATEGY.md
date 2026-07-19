@@ -57,8 +57,17 @@ That's the flagship campus headline — it names the exact feeling of the target
 (safety first). Use it as the hook for paid social, flyers, and creator posts.
 
 Supporting taglines:
+- *"The Cardinal's Promise: you'll find love."*  ⚠️ see note below
 - *"Safe is sexy."*
 - *"We screen. You vibe."*
+
+> **Brand-overlap note on "The Cardinal's Promise":** it's a lovely, emotional
+> line — but it's *also* the name of an existing project in this same repo
+> (the memoir / CARD token, "The Cardinal's Promise"). Reusing it as the dating
+> app's tagline could either (a) be an intentional, unifying umbrella brand, or
+> (b) create confusion between a dating app and a memoir/token. Decide which on
+> purpose. If you want it as the dating tagline, consider clearly separating the
+> two, or leaning into one shared "Cardinal" family with distinct products.
 - *"The first real dating app that looks out for you."*
 - *"The others don't care about you. Cardinal does."*
 - *"Invite-only. Background-checked. No drunk DMs."*
