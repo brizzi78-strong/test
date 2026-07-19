@@ -310,24 +310,6 @@ My aunt Nancey picked us up in her small red Honda Civic and drove us to Cedar G
 
 My Spanish disappeared almost overnight. English was everywhere and I picked it up the way kids do, without deciding to. Back home I'd had a lisp. In New Jersey they sent me to speech therapy twice a week to fix the way I talked. Decades later it still comes out at the worst times.
 
-My mom had called Papa when we landed and told him the truth. We weren't coming back. About six months later he came anyway. He moved in with us at Grandpa and Nana's house, and Grandpa helped him find a job at El Torito, a Mexican restaurant that hired him because he was Mexican. For a little while, we were a family again, Mama, Papa, Chris, and me, trying to build a life in a place that still didn't feel like home.
-
-Papa had a way of making an ordinary day feel extraordinary. One afternoon he dressed Chris and me as Batman and Robin, though it wasn't Halloween. Mama was furious. Papa just laughed. To him we didn't need a holiday to become superheroes. Looking back, I think he was trying to give us something no job, no country, and no amount of uncertainty could take away: the freedom to be kids.
-
-Chris wasn't even two and couldn't say the name of the restaurant. He called it el dorito and talked about the balloons. But the old patterns were still there, the same bars, the same nights he didn't come home, and he couldn't make it work.
-
-We raced, and I won.
-
-Then Papa looked at me and said, "Claudio, I need to leave."
-
-I started crying.
-
-"It will be okay," he told me.
-
-But he looked sad when he said it.
-
-I didn't know I wouldn't see him again. He went back to Mexico. It would be years before I saw him again.
-
 My grandfather was strict, and he'd never approved of the marriage. But he let us in. We paid him eight hundred a month. He was hard on her and soft on us. My grandmother mostly stayed in the background; when someone was watching us, it was usually my aunts Nancey or Terry, or my grandfather. I missed my father. My mom started over with no degree and nobody to fall back on, and she worked. That's her story to tell, in her own voice, and I hope she does. This book is here because of her. She picked us.
 
 In the airport, her hand had closed around mine. That was all I had. She said we would be gone two weeks.
@@ -377,7 +359,7 @@ At night I thought about Horacio, not with anger, with confusion, half-expecting
 
 My grandparents gave me what they had, which was steadiness, a house that stayed where it was, meals that came when they were supposed to. Not the warmth my mother gave, but reliable, and that counts for a lot when the ground has just moved.
 
-My grandfather was a high school history teacher. At home he was a simple man, and I loved him for it. He was devoted to Wendy's, the Frosties most of all, and told me once, dead serious, that the one hole in his life was that Wendy's wouldn't sell hot dogs. He and my nana drank port wine every night out of paper cups, from a jug they kept. He swore by Ivory soap for every part of a man, no shampoo needed, and said it like classified information. He put ketchup on everything — ketchup on the ketchup — a habit I took whole. He took me to the railroad tracks once and showed me how to lay a quarter on the rail, run off, and come back after the train to find it flattened smooth. My mother didn't agree when she found out, and he never saw the problem. We played UNO and war and checkers, and Chris took up chess with him, but chess was never mine, and UNO was enough.
+My grandfather was a high school history teacher. At home he was a simple man, and I loved him for it. He was devoted to Wendy's, the Frosties most of all, and told me once, dead serious, that the one hole in his life was that Wendy's wouldn't sell hot dogs. He and my nana drank port wine every night out of paper cups, from a jug they kept. Coffee ice cream and chocolate pudding were their flavors, and I still can't taste either one without thinking of them. He swore by Ivory soap for every part of a man, no shampoo needed, and said it like classified information. He put ketchup on everything — ketchup on the ketchup — a habit I took whole. He took me to the railroad tracks once and showed me how to lay a quarter on the rail, run off, and come back after the train to find it flattened smooth. My mother didn't agree when she found out, and he never saw the problem. They had a dog, Abbey, who became my partner at the dinner table; anything on my plate I didn't like somehow found its way to her. We played UNO and war and checkers, and Chris took up chess with him, but chess was never mine, and UNO was enough.
 
 My grandfather had a hard childhood, harder than he ever let on. His own father was an alcoholic who died passed out on a railroad track, hit by a train. My grandfather and his twin brother Jack joined the army at sixteen, lying about their age, and sent their pay home to their mother. He met my grandmother at Hope College in Michigan, a Christian school, where she played the organ. They had something in common that neither of them chose: both were twins. He had Jack; she had a twin sister of her own. For a man who taught for a living, he never pushed my mother or her sisters, Terry and Nancey, toward college. The way they tell it, he'd say they were all pretty and would find good husbands. That just wasn't the expectation in their house.
 
@@ -389,7 +371,27 @@ And there was Nancey, my mother's youngest sister, who treated Chris and me as h
 
 And there was my aunt Terry, whose family had the house at Pines Lake. Terry was the one we had flown to see in Houston when her son, my cousin Kevin, was born, my mother pregnant with Chris, Nancey and my grandparents all crowding into the little two-bedroom with us. The American thread never broke, even from Mexico City. Once we landed in New Jersey for good, her house was where the ordinary kid memories got made. A Halloween with the three of us in costume on the kitchen floor, tearing into the candy, Kevin as He-Man, me as a pumpkin, and Wolfie, their German Shepherd, dressed as Battle Cat. Hide-and-seek on the metal railing between the levels, where I was sure I was hidden and laughed until I cried when I sprang out and scared the one who came looking. Kevin glued to his Nintendo while the rest of us ran. A pool where somebody toweled me dry while I announced I was cold, and I jumped straight back in.
 
-What I love now is how close my mother and her sisters have become, she and Nancey and Terry, a closeness that deepened after they lost their own mother. Watching my nana go was hard. The dementia took her in pieces, the person still in the room while the line kept dropping. That slow disappearing stayed with me. Years later I earned my Certified Dementia Practitioner credential. I was thinking of her when I did. But that was decades ahead. Back then I still missed my father, and nobody talked about him. I didn't know a man was about to show up.
+What I love now is how close my mother and her sisters have become, she and Nancey and Terry, a closeness that deepened after they lost their own mother. Watching my nana go was hard. The dementia took her in pieces, the person still in the room while the line kept dropping. That slow disappearing stayed with me. Years later I earned my Certified Dementia Practitioner credential. I was thinking of her when I did. But that was decades ahead.
+
+My mom had called Papa when we landed and told him the truth. We weren't coming back. About six months later he came anyway. He moved in with us at Grandpa and Nana's house, and Grandpa helped him find a job at El Torito, a Mexican restaurant that hired him because he was Mexican. For a little while, we were a family again, Mama, Papa, Chris, and me, trying to build a life in a place that still didn't feel like home.
+
+Papa had a way of making an ordinary day feel extraordinary. One afternoon he dressed Chris and me as Batman and Robin, though it wasn't Halloween. Mama was furious. Papa just laughed. To him we didn't need a holiday to become superheroes. Looking back, I think he was trying to give us something no job, no country, and no amount of uncertainty could take away: the freedom to be kids.
+
+Chris wasn't even two and couldn't say the name of the restaurant. He called it el dorito and talked about the balloons. But the old patterns were still there, the same bars, the same nights he didn't come home, and he couldn't make it work.
+
+Papa wanted to race. We ran. I beat him. I remember feeling proud.
+
+Then he looked at me and said, "Claudio, I need to leave."
+
+I started crying.
+
+"It will be okay," he told me.
+
+But he looked sad when he said it.
+
+I didn't know I would never see him again. He went back to Mexico. It would be years before I saw him again.
+
+Back then I still missed my father, and nobody talked about him. A year later, my mother told us there was someone she wanted us to meet.
 
 **CHAPTER 3**
 
@@ -405,6 +407,8 @@ He asked my mother out and she said no. He asked again and she said no again. So
 Lou walked into a bar in West Paterson in 1984 to meet my mother. He was forty-one, a man who'd already lived a complicated life and decided he was ready to do the next part right. My mother was thirty-one, back from Mexico with two small boys and not much else, staying with her parents and taking whatever work she could find. She'd learned to be careful about who she let near her children, and a charming man in a bar wasn't going to be the exception. That was why she said no, and why his coming back meant something.
 
 I was six the first time I met him. He came over to my grandparents' place, where we were living, and Nana and Grandpa had him to dinner. Most of that night is gone now. What I remember is that he brought Tootsie Rolls for Chris and me. Two boys who weren't his, and he walked in with something in his pocket just for us. Before he ever decided we were his, he was already treating us like we were.
+
+I never said anything to Mama, but some nights I still stood at the window, watching the street, hoping Papa would come back. It wasn't that I didn't like Lou. I was still waiting for Horacio.
 
 I didn't understand yet that there'd been a father before him, a man there one season and gone the next. I'd learn the rest of Horacio's story much later — that he'd hit a breaking point and went back to Mexico, because he couldn't carry his own life and ours at the same time. I've come to believe he left so we could have something he couldn't give us. That's the generous version. It's the one I keep.
 
