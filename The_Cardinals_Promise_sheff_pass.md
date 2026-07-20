@@ -396,7 +396,7 @@ Back then I still missed my father, and nobody talked about him. A year later, m
 *"A father of the fatherless... is God in his holy habitation."*
 *— Psalm 68:5*
 
-**New Jersey, 1985**
+**New Jersey, 1984**
 
 He asked my mother out and she said no. He asked again and she said no again. So he kept coming back, week after week, until she finally saw his charm and his maturity. That was how Lou Brizzi decided to stay.
 
