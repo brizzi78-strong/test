@@ -27,7 +27,7 @@ Some of the men were gone in the head, rocking, laughing, talking to no one. Oth
 
 My throat burned. I wanted to put a hand to it and didn't. I wasn't going to let the room see it. I slid down the wall instead and sat, knees to my chest, the concrete cold through my clothes, my forehead down. I knew the position. My body found it before my mind caught up. Get small, stay quiet, don't hold anyone's eye, don't give the room a reason to pick you. It was the same shape I'd folded into as a boy when the yelling started.
 
-There was no bedroom this time. No hallway light, no mother down the hall. No father in the stands. And no one on earth knew where I was.
+There was no bedroom this time. No hallway light. And no one on earth knew where I was.
 
 Not my father. Not my brother. Not my mother. No one.
 
