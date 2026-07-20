@@ -181,8 +181,6 @@ PART ONE
 
 # **THE ESCAPE**
 
-*Before I chose anything else, I chose a father.*
-
 **CHAPTER 1**
 
 ## **Mexico City — The Escape**
