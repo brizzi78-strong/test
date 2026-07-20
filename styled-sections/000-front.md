@@ -4,8 +4,6 @@
 
 **ROB BRIZZI**
 
-CARDINAL PROMISE PRESS
-
 # **COPYRIGHT**
 
 THE CARDINAL'S PROMISE. Copyright © 2026 by Rob Brizzi. All rights reserved.
