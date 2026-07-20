@@ -53,7 +53,7 @@ test('register a company and hire cascades into one resolvable record', async ()
   const { base, close } = await startServer();
   try {
     const meta = await get(base, '/meta');
-    assert.deepEqual(meta.json.wiredServices, ['directory', 'hirecheck', 'myhr', 'training', 'benefits', 'timeoff']);
+    assert.deepEqual(meta.json.wiredServices, ['directory', 'hirecheck', 'myhr', 'training', 'benefits', 'timeoff', 'accounting']);
 
     const company = await post(base, '/companies', { name: 'Globex' });
     assert.equal(company.status, 201);

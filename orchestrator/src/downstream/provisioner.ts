@@ -13,7 +13,12 @@ import type { PersonInput } from '../domain/types.ts';
 export interface Provisioner {
   readonly service: string;
   ensureCompany(name: string): Promise<string>;
-  createPerson(companyId: string, person: PersonInput): Promise<string>;
+  /**
+   * Create the person in this service, returning its local id. Absent on
+   * company-level services (e.g. accounting) that have no per-person record —
+   * those participate in `registerCompany` but are skipped when hiring.
+   */
+  createPerson?: (companyId: string, person: PersonInput) => Promise<string>;
 }
 
 /** Per-service wiring: where to create a person, and how to shape the body. */
@@ -23,10 +28,10 @@ interface ServiceConfig {
   defaultBase: string;
   /** env var overriding the base URL */
   envKey: string;
-  /** path that creates a person-like record */
-  personPath: string;
+  /** path that creates a person-like record; omit for company-only services */
+  personPath?: string;
   /** map the normalized identity to this service's create-body */
-  personBody: (companyId: string, p: PersonInput) => Record<string, unknown>;
+  personBody?: (companyId: string, p: PersonInput) => Record<string, unknown>;
 }
 
 const SERVICES: readonly ServiceConfig[] = [
@@ -93,6 +98,13 @@ const SERVICES: readonly ServiceConfig[] = [
     personPath: '/employees',
     personBody: (companyId, p) => ({ companyId, firstName: p.firstName, lastName: p.lastName, email: p.email }),
   },
+  {
+    // Company-level only: every company gets its own set of books. Accounting
+    // has no per-person record, so it has no personPath and is skipped on hire.
+    service: 'accounting',
+    defaultBase: 'http://accounting:4400',
+    envKey: 'ACCOUNTING_URL',
+  },
 ];
 
 async function postJson(
@@ -114,17 +126,21 @@ async function postJson(
 }
 
 function httpProvisioner(cfg: ServiceConfig, base: string, fetchImpl: typeof fetch): Provisioner {
-  return {
+  const provisioner: Provisioner = {
     service: cfg.service,
     async ensureCompany(name: string): Promise<string> {
       const res = await postJson(`${base}/companies`, { name }, fetchImpl);
       return String(res.id);
     },
-    async createPerson(companyId: string, person: PersonInput): Promise<string> {
-      const res = await postJson(`${base}${cfg.personPath}`, cfg.personBody(companyId, person), fetchImpl);
-      return String(res.id);
-    },
   };
+  const { personPath, personBody } = cfg;
+  if (personPath && personBody) {
+    provisioner.createPerson = async (companyId: string, person: PersonInput): Promise<string> => {
+      const res = await postJson(`${base}${personPath}`, personBody(companyId, person), fetchImpl);
+      return String(res.id);
+    };
+  }
+  return provisioner;
 }
 
 /** Build the HTTP provisioners for every wired service, honoring URL overrides. */

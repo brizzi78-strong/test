@@ -99,6 +99,18 @@ services:
     ports: ["3800:3800"]
     volumes: ["offboarding-data:/data"]
 
+  # Small-business bookkeeping: chart of accounts, customers, invoices,
+  # payments, expenses, and P&L / A-R aging reports. Company-level books; the
+  # orchestrator provisions one per company.
+  accounting:
+    <<: *service
+    command: node accounting/src/index.ts
+    environment:
+      PORT: "4400"
+      ACCOUNTING_DB: /data/accounting.db
+    ports: ["4400:4400"]
+    volumes: ["accounting-data:/data"]
+
   # Shared-identity layer: one canonical company/person that cascades into every
   # service above and records the id map, so "one employee record" resolves
   # across all of them. Reaches the services by their compose names.
@@ -117,6 +129,7 @@ services:
       - training
       - benefits
       - timeoff
+      - accounting
 
   # Scheduling + references for a service business (e.g. massage): appointments
   # with worker double-booking prevention, plus employment references.
@@ -195,6 +208,7 @@ services:
       - offboarding
       - orchestrator
       - booking
+      - accounting
 
   web:
     image: nginx:alpine
@@ -215,4 +229,5 @@ volumes:
   offboarding-data:
   orchestrator-data:
   booking-data:
+  accounting-data:
   gateway-data:

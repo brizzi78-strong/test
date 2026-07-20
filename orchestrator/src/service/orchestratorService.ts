@@ -86,11 +86,14 @@ export class OrchestratorService {
 
     const links: Record<string, string> = {};
     for (const p of this.provisioners) {
+      // Company-level services (e.g. accounting) have no per-person record.
+      if (!p.createPerson) continue;
       const companyLink = company.links[p.service];
       if (!companyLink) {
         throw new UpstreamError(`company is not linked to service '${p.service}'; re-register the company`);
       }
-      links[p.service] = await this.guard(p.service, () => p.createPerson(companyLink, person));
+      // Method call form preserves `this` for provisioners implemented as classes.
+      links[p.service] = await this.guard(p.service, () => p.createPerson!(companyLink, person));
     }
 
     const record: Person = {

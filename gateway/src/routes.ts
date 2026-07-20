@@ -19,5 +19,6 @@ export function routesFromEnv(env: NodeJS.ProcessEnv = process.env): RouteTable 
     offboarding: env.OFFBOARDING_URL ?? 'http://offboarding:3800',
     orchestrator: env.ORCHESTRATOR_URL ?? 'http://orchestrator:3900',
     booking: env.BOOKING_URL ?? 'http://booking:4100',
+    accounting: env.ACCOUNTING_URL ?? 'http://accounting:4400',
   };
 }

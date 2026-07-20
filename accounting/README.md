@@ -59,7 +59,7 @@ and writes its own company's rows.
 ## Run it
 
 ```bash
-npm start                                  # PORT default 3600 (in-memory store)
+npm start                                  # PORT default 4400 (in-memory store)
 ACCOUNTING_DB=/path/to/books.db npm start  # durable SQLite store (node:sqlite)
 npm test                                   # service + HTTP + persistence tests
 npm run typecheck
@@ -67,7 +67,7 @@ npm run typecheck
 
 | Env | Purpose |
 |---|---|
-| `PORT` | Listen port (default 3600). |
+| `PORT` | Listen port (default 4400). |
 | `ACCOUNTING_DB` | SQLite file path; unset uses the in-memory store. |
 
 ## Design
