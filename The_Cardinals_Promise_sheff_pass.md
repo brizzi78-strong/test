@@ -952,6 +952,8 @@ I flew out first. Walked out of the airport into the heat and the noise and roug
 
 Every photograph of Chris from that trip is taken from behind. Every single one. Half his face was frozen and he refused to be documented, so I came home with a gorgeous collection of pictures from one of the most beautiful places on earth in which my brother appears, in each and every frame, to be in witness protection.
 
+One night at the hotel I asked the front desk if they had anyone who could give me a massage. They said no, then somehow found someone anyway. The man who showed up looked like he'd been pulled off landscaping duty and pointed upstairs. There was a table but nothing for my head, so my neck sat cranked against the end of it like a punishment for asking. Whatever he rubbed on me wasn't massage oil — olive oil, maybe, or something closer to Crisco. It was, without question, the worst massage of my life. When I stood up you could see the grease coming through my pants. I found Chris and said, you are not going to believe what just happened to me.
+
 Chris likes to say that growing up, he and I played Nintendo. We didn't. I played Nintendo. He watched. I never once handed him the controller, not for a turn, not for a single level, and he sat on that floor beside me for hours anyway, waiting on a shot that was never coming. That's the whole thing. He stayed right there even when I gave him nothing to hold.
 
 That's my brother. The Nintendo I hogged, India, the ultimatum that saved my life. Chris sees what I can't, and when I stop arguing and do what he says, it works out in ways I never would have bet on. My best friend.
