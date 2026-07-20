@@ -248,7 +248,7 @@ When she came through the door with him I climbed up on the couch next to her. "
 
 For years I told Chris he'd been small enough to fit in my pocket when he was born. He believed me. That was the fun part of having a little brother. He believed everything you said.
 
-Chris was a crybaby. His ears, my mother said. She'd hold him for hours. I'd go to my room and play the same record again. But I got used to it. He was mine, after all. I'd asked, and she'd said yes.
+Chris cried a lot as a baby. His ears, my mother said. She'd hold him for hours. I'd go to my room and play the same record again. But I got used to it. He was mine, after all. I'd asked, and she'd said yes.
 
 I don't remember every detail of those first years in Mexico. Memories from when you are two, three, and four don't come back as whole stories. They come back in pieces.
 
