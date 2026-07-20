@@ -165,7 +165,7 @@ I sat on a concrete floor in Mexico with my head on my knees, and the life I'd b
 
 I lost track of time. The voices flattened into noise. I thought about my mother, her hand around mine in the airport when I was four, the woman who carried me out of this country to give me a life. I'd come back to take myself apart. Then my father, Lou. That was worse. He'd chosen me, made me his son, sat in the bleachers and paid the bills and handed over money he didn't have, and never once made me feel I had to earn the place. And I'd put myself here.
 
-I wanted to pray and couldn't. I still believed, somewhere under it. I couldn't ask for help out of a hole I'd dug myself.
+I wanted to pray and couldn't. I still believed, somewhere under it. Asking for help out of a hole I'd dug myself was more than I could do.
 
 The door opened. Light cut in. I looked up and stayed where I was, afraid it was for someone else, afraid to stand too fast. A man said something and waved me forward. I got up. My legs were wrong under me. I stepped around the wet places and around the men, past Rico, who didn't look at me. Outside the air wasn't clean, but it was air. Someone gave me back enough to walk out with. Not all of it. Enough.
 
