@@ -40,11 +40,3 @@ I wanted to pray and couldn't. I still believed, somewhere under it. Asking for 
 The door opened. Light cut in. I looked up and stayed where I was, afraid it was for someone else, afraid to stand too fast. A man said something and waved me forward. I got up. My legs were wrong under me. I stepped around the wet places and around the men, past Rico, who didn't look at me. Outside the air wasn't clean, but it was air. Someone gave me back enough to walk out with. Not all of it. Enough.
 
 I went back the next day.
-
-I've had to sit with that line longer than any other in this book. Twenty-four hours out of that cell, everything they took still gone, and I crossed the same bridge in the same direction. I'd like to tell you I fought it in the car — that some voice argued me toward the border and lost. There was no voice. That's the part I couldn't look at for years. The mind that should have been screaming was quiet. It had already filed the whole night under survivable, something I could walk off, and by that afternoon it was as if the cell had happened to another man. I told myself nothing. That silence is the disease. Not the drinking, not the border, not even the cell — the thing in me that could take a night like that and, a day later, reach for the door and go again.
-
-It wasn't the moment I changed. Fear wears off. There was more running ahead of me, more lying, more damage. But I'd seen how small my life had gotten. A cell, a rat, a man's hands on my throat, a concrete floor, and me folded against the wall hoping no one noticed me.
-
-I didn't tell anyone until the writing of this book. Not my wife, not a sponsor, not a priest. I carried it out of shame, and the longer I kept it hidden, the harder it got to say. I'm not sure I even let myself remember it straight. How far down I'd gone, how easily I went back — none of it fully landed until I had to look at it with the lights on, one page at a time. The mind keeps things like this under the carpet for a reason. Pull the carpet up and you have to see what you've been walking on.
-
-I had been carried out of Mexico City as a child, to be given a better life. Twenty-three years later I had found my way back to a concrete floor inside the same country. This is the story of how I came back from that floor, and why my father never stopped coming for me.
