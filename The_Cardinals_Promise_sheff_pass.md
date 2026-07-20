@@ -493,7 +493,7 @@ For years I felt guilty about him. I knew, the way a kid knows things without be
 
 Then they changed my name, and that one was harder. Claudio became Robert Brizzi. On paper it was clean and it was right, and I know that now. Back then it felt like a correction, like the old name had been a mistake somebody was fixing, and I was the mistake.
 
-School was where it got to me. Second grade, Woodridge. I'd write Claudio at the top of my homework without thinking, my hand moving the way it always had, and Mrs. Locke would catch it. She was kind about it, every time.
+School was where I felt it the most. Second grade, Woodridge. I'd write Claudio at the top of my homework without thinking, my hand moving the way it always had, and Mrs. Locke would catch it. She was kind about it, every time.
 
 "Honey," she'd say, setting the paper back on my desk, tapping the top corner with one finger. "Remember? We write Robert now."
 
