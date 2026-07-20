@@ -461,7 +461,7 @@ It could not have been easy for them. The dad who spent Saturdays hitting me fly
 
 Lisa is the oldest. She babysat Chris and me when we were small, two boys who were not always easy to look after, and did it without making a thing of it. She is the one who still hosts Thanksgiving every year, who keeps the table set the way our nana did. You'll meet her again later, at that table.
 
-Joel was good to us from the start. Steady. He showed up and didn't need credit for it. Whatever Chris and I needed growing up, Joel was around for it.
+Joel was good to us from the start. Steady. He showed up and didn't need credit for it. Whatever Chris and I needed growing up, Joel was around for it. He was the jokester of the family, the kind of class clown who never really grew out of it.
 
 He's also the one in the family who keeps all the stories about me, the ones from when I'd just arrived from Mexico and barely spoke English, back when my mom was dating Lou. He still tells them. There's the night at a Chinese restaurant when somebody asked what I wanted to eat and I said, with total confidence, taco. There's the ferry from New Jersey to New York, the family car rolling on to cross the water, and me asking if we could put the car on the boat. All these years later Joel will still drop either one into a conversation just to watch me brace for it. That's its own kind of love, the teasing you only get once you're truly in.
 
