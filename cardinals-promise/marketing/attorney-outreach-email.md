@@ -1,59 +1,64 @@
 # Elder-Law Attorney Outreach — email templates
 
-Short, warm, no hard sell. Attach `Elder-Law-Attorney-Program.pdf`. Swap the
-[brackets]. Send from a real person, not a "marketing" address.
+**Strategy: book-first.** Don't pitch the bulk program in the first email — let
+them fall for the book first. Offer a free copy, get it into their hands, then
+follow up about the partner program a couple of weeks later. Generosity opens the
+door; the sell sheet closes it. **Do not attach the sell sheet to the first
+email.** Send from a real person; swap the [brackets].
+
+**Keep sample costs sane:** mail a physical copy to your top-tier prospects (the
+ones most likely to buy cases) — highest-impact touch. For wider outreach, offer
+a digital review copy (PDF/ebook) first and mail a physical copy on request. A few
+dozen samples is a cheap acquisition cost when one firm orders 100.
 
 ---
 
-## A. Cold intro (first touch)
+## Email 1 — First touch: offer the book (no pitch)
 
-**Subject:** A book your clients would actually keep
+**Subject:** A book for your clients — my gift
 
 Hi [Attorney Name],
 
-I'm Rob Brizzi — a Certified Dementia Practitioner here in [area], and I've spent
-my career at the bedside in home health, hospice, and senior living. I just
-published *It's Not Your Fault: Helping Caregivers with Aging Loved Ones* — a
-practical, color-coded guide for families caring for an aging parent.
+I'm Rob Brizzi — a Certified Dementia Practitioner in [area] who spent a career at
+the bedside in senior care. I just published *It's Not Your Fault: Helping
+Caregivers with Aging Loved Ones*, a practical guide for families facing an aging
+parent's decline.
 
-I'm reaching out because the book, on nearly every planning page, tells families
-to do exactly what you tell them: **see an elder-law attorney, early** — about the
-Medicaid look-back, powers of attorney, trusts, and estate recovery.
+[Personalized line — see the openers below.]
 
-A few firms are now giving it to clients as a leave-behind, with a **custom
-bookplate** inside carrying their name and logo. It's memorable, it reinforces
-your advice, and families pass it along.
-
-I've attached a one-page overview. If it's interesting, I'd love to send you a
-copy to see for yourself — just reply with a good mailing address.
+No pitch here — I'd just like to put a copy in your hands, on me, because I think
+you'll recognize your clients on every page. What's a good mailing address?
 
 Warmly,
 Rob Brizzi, CDP
 thecardinalspromise.com
 
+*(Prefer to skim it digitally first? Say the word and I'll send the ebook.)*
+
 ---
 
-## B. Warm follow-up (after a sample or a good first reply)
+## Email 2 — Follow-up after they've had it (~2 weeks later)
 
-**Subject:** Your copy of *It's Not Your Fault* + next steps
+**Subject:** Hope the book was useful — one idea
 
 Hi [Attorney Name],
 
-Glad it resonated. Here's how the partner program works:
+Hope *It's Not Your Fault* was a good read — and maybe something you'd want your
+clients to have.
 
-- You order copies in bulk (tiers on the attached sheet).
-- We print a **custom bookplate** inside the front — *"Provided to you by
-  [Your Firm]"* — with your logo and contact details.
-- You hand them out at consults, signings, and community seminars.
+A few firms have started giving it to clients as a leave-behind, with a **custom
+bookplate** inside — *"Provided to you by [Your Firm]"*, your logo and contact
+info. It reinforces the exact advice you give, families keep it, and they pass it
+along. The book's text stays independent; only the insert is yours.
 
-The book itself stays editorially independent — your firm's name is on the
-insert, not in the text — which is what keeps it worth giving.
-
-Want me to put together a quote for [10 / 25 / 50] copies with your bookplate?
-Happy to hop on a quick call if that's easier: [phone / calendar link].
+I've attached a one-page overview. Want me to put together a quote for
+[25 / 50 / 100] copies with your bookplate? Happy to hop on a quick call too:
+[phone / calendar link].
 
 Thanks,
 Rob
+
+*(Attach `Elder-Law-Attorney-Program.pdf` here — not in the first email.)*
 
 ---
 
