@@ -220,7 +220,7 @@ My mother's father, the man I'd grow up calling Grandpa Bob, didn't approve of t
 
 My mother makes her own way. She always has. She loved my father. Chris and I came from that.
 
-My papa was a proud man. He worked a government job, and every morning he left the house in pressed clothes. Mostly he took me to the park and the movies. He'd take off running and I'd come after him and we'd race. He always got there first. Then he'd turn around with a grin and say, "Wow, you're fast today." And I'd yell, "I'm fast!" I believed him every time.
+My papa was a proud man. He worked a government job, and every morning he left the house in pressed clothes. He'd take off running and I'd come after him and we'd race. He always got there first. Then he'd turn around with a grin and say, "Wow, you're fast today." I believed him every time.
 
 He bought me my own record player, a Fisher-Price like the neighbor's. One day he came home excited about a promotion and picked me up. Claudio, you are my good luck charm. That was my name then. Claudio Horacio Balderas — his own name folded into the middle of mine. When my father looked at you, you were the center of the world. He told me he was proud of me and I ran around the house like I owned it.
 
