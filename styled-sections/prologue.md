@@ -1,6 +1,6 @@
 # **PROLOGUE**
 
-*"He brought me up also out of an horrible pit, out of the miry clay, and set my feet upon a rock, and established my goings."*
+*"He brought me up out of an horrible pit, out of the miry clay, and set my feet upon a rock."*
 *— Psalm 40:2*
 
 **Tijuana, Mexico, 2005**

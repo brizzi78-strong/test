@@ -128,7 +128,7 @@ The credential that mattered most is the one that cost him the most to earn. Rob
 
 # **PROLOGUE**
 
-*"He brought me up also out of an horrible pit, out of the miry clay, and set my feet upon a rock, and established my goings."*
+*"He brought me up out of an horrible pit, out of the miry clay, and set my feet upon a rock."*
 *— Psalm 40:2*
 
 **Tijuana, Mexico, 2005**
@@ -759,7 +759,7 @@ I can still see him at the front door. Dyed hair, pressed shirt, tie pulled tigh
 
 ## **When I Worked for the Mob**
 
-*"A good name is rather to be chosen than great riches, and loving favour rather than silver and gold."*
+*"A good name is rather to be chosen than great riches."*
 *— Proverbs 22:1*
 
 **New York, 1997**
@@ -891,7 +891,7 @@ On the way out, a waitress ran into the parking lot after us and handed me her p
 
 ## **MTV**
 
-*"I have seen all the works that are done under the sun; and, behold, all is vanity and vexation of spirit."*
+*"All is vanity and vexation of spirit."*
 *— Ecclesiastes 1:14*
 
 **Cancun, spring 1999**
@@ -1110,7 +1110,7 @@ Then I left. I got an apartment in West Palm Beach, and I can't hand you a clean
 
 ## **West Palm Beach**
 
-*"But when he was yet a great way off, his father saw him, and had compassion, and ran."*
+*"His father saw him, and had compassion, and ran."*
 *— Luke 15:20*
 
 **West Palm Beach, November 2008**
@@ -1251,7 +1251,7 @@ What came next was a long line of ordinary mornings I had to learn how to fill.
 
 ## **The Quiet Years**
 
-*"It is not so true that 'prayer changes things' as that prayer changes me and I change things."*
+*"Prayer changes me, and I change things."*
 *— Oswald Chambers*
 
 **Pensacola, 2009**
@@ -1675,7 +1675,7 @@ PART SIX
 
 ## **The Viagra of Diabetes Meds**
 
-*"For my thoughts are not your thoughts, neither are your ways my ways, saith the LORD."*
+*"My thoughts are not your thoughts, neither are your ways my ways."*
 *— Isaiah 55:8*
 
 **Pensacola, 2021**
@@ -1704,7 +1704,7 @@ I told people I was going to take some time off. Be there for my dad. Be there f
 
 ## **Five Weeks**
 
-*"They that wait upon the LORD shall renew their strength; they shall mount up with wings as eagles."*
+*"They shall mount up with wings as eagles."*
 *— Isaiah 40:31*
 
 **November 11, 2025**
@@ -1916,7 +1916,7 @@ My father always made a big deal of my sobriety anniversary. Every January 9. My
 
 ## **The Table**
 
-*"Thou preparest a table before me in the presence of mine enemies: thou anointest my head with oil; my cup runneth over."*
+*"Thou preparest a table before me in the presence of mine enemies."*
 *— Psalm 23:5*
 
 **Raleigh, 2025**
@@ -1953,7 +1953,7 @@ Almost every morning for fifteen years, my phone has rung early and it's Mager, 
 
 # **EPILOGUE: THE CARDINAL'S PROMISE**
 
-*"We shall be with you in the Fellowship of the Spirit, and you will surely meet some of us as you trudge the Road of Happy Destiny."*
+*"You will surely meet some of us as you trudge the Road of Happy Destiny."*
 *— Bill Wilson, Alcoholics Anonymous*
 
 A cardinal lands on the driver's side mirror of my car.

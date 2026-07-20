@@ -1,6 +1,6 @@
 # **EPILOGUE: THE CARDINAL'S PROMISE**
 
-*"We shall be with you in the Fellowship of the Spirit, and you will surely meet some of us as you trudge the Road of Happy Destiny."*
+*"You will surely meet some of us as you trudge the Road of Happy Destiny."*
 *— Bill Wilson, Alcoholics Anonymous*
 
 A cardinal lands on the driver's side mirror of my car.
