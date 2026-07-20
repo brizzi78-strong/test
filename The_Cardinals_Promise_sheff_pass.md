@@ -591,11 +591,11 @@ Before any championships or newspaper headlines, he took me to the Bergen County
 
 "Maybe someday you could win a match here," he told me.
 
-Around that same time, my Walkman was stolen. Dad didn't make a speech about it. He simply replaced it. That was Lou. He didn't make grand speeches. He showed his love in carpools, tournament weekends, replacement Walkmans, church on Sundays, and thousands of hours sitting beside wrestling mats.
+That was Lou. He didn't make grand speeches. He showed his love in carpools, tournament weekends, church on Sundays, and thousands of hours sitting beside wrestling mats.
 
 Years later, I returned to that same tournament and left as Bergen County champion.
 
-The wrestling room ran warmer than the rest of the building. Years of work had soaked into the mats and the walls, and it hit me at the door, rubber and sweat and something astringent underneath. I loved that room. Not because it was comfortable. Because it was the one place I didn't have to figure out who to be. I just had to work, and work I understood.
+The wrestling room ran warmer than the rest of the building. Years of work had soaked into the mats and the walls, and it hit me at the door, rubber and sweat and something dingy underneath. I loved that room. Not because it was comfortable. Because it was the one place I didn't have to figure out who to be. I just had to work, and work I understood.
 
 Wrestling is the loneliest sport there is. You step on the mat and nobody can help you. No subs, no timeouts that matter. You and him and six minutes and whatever you brought that week. If you hadn't put the work in, it showed. If you were afraid, it showed.
 
@@ -615,17 +615,13 @@ Freshman year I finished two and four. That nineteen-second pin was one of the l
 
 Sophomore year I entered districts as the fifth seed. I won the tournament, became district champion, and was named Athlete of the Month.
 
-Junior year one headline read, Late Takedown Keeps Ramsey's Brizzi Going. I entered regions as the seventh seed and made the finals.
+Junior year I entered regions as the seventh seed and made the finals.
 
-Senior year I went thirty-one and zero at one point on my way to county champion. Chris and I wrestled together by then, and the paper ran a headline of its own: Brizzi Brothers Are Double Trouble.
+Senior year I went thirty-one and zero at one point on my way to county champion. Chris and I wrestled together by then.
 
-I graduated eighty-eight and fifteen, one of the highest win totals in Ramsey wrestling history. But the victories were never only about wrestling. Somewhere along the way I had learned that success was how I gained acceptance. If I kept winning, people would value me. If I stopped, I feared they might not.
+I graduated eighty-one and eighteen, one of the highest win totals in Ramsey wrestling history. But the victories were never only about wrestling. Somewhere along the way I had learned that success was how I gained acceptance. If I kept winning, people would value me. If I stopped, I feared they might not.
 
 For years I thought wrestling was making me into someone. Looking back, I realize it was also teaching me something dangerous. I was beginning to believe that winning was who I was.
-
-Years later, Charlie was losing his own fight with addiction. Lou found him alone in an apartment, unable to care for himself. Long before my father drove to West Palm Beach and found me in the dark, he had already walked into another room where someone he loved was disappearing.
-
-Charlie did not make it. Lou came for me anyway.
 
 ### *Cooperstown*
 
