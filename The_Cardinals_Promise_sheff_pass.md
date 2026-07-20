@@ -369,7 +369,7 @@ What I love now is how close my mother and her sisters have become, she and Nanc
 
 Papa had a way of making an ordinary day feel extraordinary. One afternoon he dressed Chris and me as Batman and Robin, though it wasn't Halloween. Mama was furious. Papa just laughed. To him we didn't need a holiday to become superheroes. Looking back, I think he was trying to give us something no job, no country, and no amount of uncertainty could take away: the freedom to be kids.
 
-Chris wasn't even two and couldn't say the name of the restaurant. He called it el dorito and talked about the balloons. But the old patterns were still there, the same bars, the same nights he didn't come home, and he couldn't make it work.
+Chris wasn't even two and couldn't say the name of the restaurant. He called it el dorito and talked about the balloons. But the old patterns were still there, different bars now, the same nights he didn't come home, and he couldn't make it work.
 
 Papa wanted to race. We ran. I beat him. I remember feeling proud.
 
