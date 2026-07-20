@@ -792,7 +792,7 @@ I shook my head.
 
 I had no idea. I was seven. They were my dad's friends with shiny things on the wall.
 
-But that was Lou. The Rascals — Rock and Roll Hall of Famers, one of the biggest bands of the sixties — were his buddies. They came to his eightieth birthday. They came to his wedding.
+But that was Lou. The Rascals — Rock and Roll Hall of Famers, one of the biggest bands of the sixties — were his buddies. They came to his eightieth birthday.
 
 Years later we're at my sister Lisa's place in Sarasota, walking into breakfast at Another Broken Egg, and my dad spots a guy outside. His face lights up. Dickie V! The guy turns, and it's Dick Vitale — the actual Dick Vitale. They'd gone to high school together in Jersey, and my dad had been telling me about it for years. Me and Dickie V. I'd nod the way you nod at a man who also swore the lawn was being handled by a goat. Then one morning there's Dickie V himself, turning around at the sound of my father's voice and lighting up right back at him.
 
