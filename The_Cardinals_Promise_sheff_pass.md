@@ -133,7 +133,7 @@ The credential that mattered most is the one that cost him the most to earn. Rob
 
 **Tijuana, Mexico, 2005**
 
-His hands were around my throat before I understood he had crossed the cell. A small man, wired, moving too fast, meth or something close to it, his eyes too wide and his whole body ready to fly apart. Somebody called him Rico. His face came an inch from mine, and the only English he had came out in a rasp. "Gringo. Gringo. Money."
+His hands were around my throat before I understood he had crossed the cell, a small man moving too fast, wired on meth or something close to it, his eyes stretched wide and his whole body carrying the unstable energy of someone who might come apart without warning. Somebody called him Rico. His face came an inch from mine, and the only English he had came out in a rasp. "Gringo. Gringo. Money."
 
 "No tengo dinero," I told him. The words came out thin. It was true. They had already taken everything.
 
