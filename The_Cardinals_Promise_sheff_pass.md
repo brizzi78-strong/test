@@ -1129,7 +1129,7 @@ The walls were covered in Post-it notes. Yellow squares stuck to the paint in cl
 
 I'd stopped paying for things. The condo fees lapsed. The utilities lapsed. The power got shut off, so I ran an extension cord from the refrigerator out to an outlet in the building hallway and let it pull its electricity from the common area, stealing it, because I couldn't, or wouldn't, pay the bill. There were maybe a couple of yogurts in that fridge. That was the food in the apartment. What money came in went to pills, and when it ran out I shoplifted electronics to turn back into more.
 
-My mother sent me money in those years. She told herself it was for rent, for food, for getting back on my feet. I used it for drugs and alcohol. That is the part of the disease I can barely stand to write down. And here is the part I never told her, the lie that eats at me most: some of that money went to the strip club. The lie I said out loud was that I wasn't abusing my medication. The lie I lived was letting her believe her money was keeping her son fed.
+My mother sent me money in those years. She told herself it was for rent, for food, for getting back on my feet. I used it for drugs and alcohol. That is the part of the disease I can barely stand to write down. The part I never told her, the lie that eats at me most, is that some of that money went to the strip club. The lie I said out loud was that I wasn't abusing my medication. The lie I lived was letting her believe her money was keeping her son fed.
 
 She kept sending it anyway. I think she knew, and she couldn't make herself stop hoping. And when the end of it finally came, when I went to the rehab that actually took, it was my mother and my dad who paid for it. The same woman whose money I had turned into pills was the one who helped buy me the room where I got my life back.
 
@@ -1153,7 +1153,7 @@ Lou saw it before I did. He nodded at it and said, Grandma's looking out for us.
 
 I slept most of the drive. When I was awake we talked a little baseball, the Yankees, who was hitting. He didn't bring up the pills. He didn't ask me to explain the apartment or the weight or the cord in the hallway. That wasn't the trip for it. The trip was to get me out of that building alive and pointed home, and he understood the difference between keeping a man breathing and fixing him.
 
-Because here's the part I have to be honest about: this wasn't the moment I got sober. People want the U-Haul to be the turn. It wasn't. He got me back to Pensacola and I kept using, about two more months of it, until I hit a bottom underneath the bottom, and that was the one that finally took me to Chumuckla on January 9. The rescue didn't get me sober. It kept me alive long enough to get there.
+But I have to be honest: this wasn't the moment I got sober. People want the U-Haul to be the turn. It wasn't. He got me back to Pensacola and I kept using, about two more months of it, until I hit a bottom underneath the bottom, and that was the one that finally took me to Chumuckla on January 9. The rescue didn't get me sober. It kept me alive long enough to get there.
 
 But I think about it all the time now. What did he owe me at that point, a grown man he'd adopted, who'd burned through everything, living off stolen electricity in a tower of Post-it notes, praying on a balcony to disappear? Nothing. He owed me nothing. And he slept on my floor, and bought me a bagel, and rented the truck, and found Marcus, and drove me home, and pointed at a bird and told me my nana was watching out for us. That's the man. That was always the man.
 
@@ -1192,7 +1192,7 @@ Something is very wrong with you, she said.
 
 I tried to brush it off. Tried to change the subject. But she saw it. I think that was when she understood how bad things had gotten. I could still lie with my mouth. My eyes had stopped lying for me.
 
-The two weeks after that were pure panic. Not the fear of dying — I was past that. The panic of being caught. I moved through the days with the feeling that everyone knew the secret, that people were talking about me in rooms I wasn't in, conspiring around me. Here's the thing about that paranoia: it was accurate. They were. My parents were planning a rehab intervention, my dad and my mom coordinating behind the scenes, divorced twelve years and working together like they'd never stopped, because their son was dying and that outranked everything.
+The two weeks after that were pure panic. Not the fear of dying — I was past that. The panic of being caught. I moved through the days with the feeling that everyone knew the secret, that people were talking about me in rooms I wasn't in, conspiring around me. That paranoia was accurate. They were. My parents were planning a rehab intervention, my dad and my mom coordinating behind the scenes, divorced twelve years and working together like they'd never stopped, because their son was dying and that outranked everything.
 
 Then Chris came with the ultimatum I told you about. Admit you're addicted to drugs, or admit you have a mental health problem that needs treatment. Pick one. No middle ground offered, no third door where I got to keep going.
 
@@ -1247,7 +1247,7 @@ Jane was the other therapist, tougher than Dan, didn't let me slide on anything.
 
 Ninety days in, I walked out a different person than the one who walked in. Not fixed. Different. Corporate Rob replaced by somebody quieter and slower and less sure of himself, and that was progress. Cliff volunteered at Chumuckla, longer sober, and he pulled me aside on my last day. Three things, he said. Go to the noon meeting every day. Find somewhere to volunteer. Sign up for a 5K. I didn't ask why. I wrote it down and did it.
 
-Here's the part I don't tell often: I didn't want to leave. It surprised me more than anyone. Ninety days earlier I couldn't meet my own eyes in a mirror, and now the farmhouse was the one place on earth where I knew who I was and what came next, where every man in the house knew exactly what I was and stayed anyway. I understand the word institutionalized now. I wasn't in love with the walls. I was afraid of who I was without them.
+I don't tell this part often: I didn't want to leave. It surprised me more than anyone. Ninety days earlier I couldn't meet my own eyes in a mirror, and now the farmhouse was the one place on earth where I knew who I was and what came next, where every man in the house knew exactly what I was and stayed anyway. I understand the word institutionalized now. I wasn't in love with the walls. I was afraid of who I was without them.
 
 Lou picked me up. Same truck, same calm. He didn't ask me to prove anything, didn't ask what I'd learned. He just drove. Somewhere between the farmhouse and Pensacola he said the only thing he needed to. You get to start over, Rob. A clean page from a man who'd watched me fill the old one with every mistake I was capable of making. Thirty years old, ninety days, the man who'd driven me in driving me out. Whatever came next was on me.
 
@@ -1896,7 +1896,7 @@ Seventeen years sober, and I had hit a rock bottom again, an emotional one this 
 
 **Raleigh, 2026**
 
-Here is the part I can only admit now. Before I lost him, I was good at this job, but there was a gap in it. I would sit with a family and say the right things, nod at the right moments, and look like a man who understood exactly what they were feeling. Inside, I didn't. I hadn't lost the one I loved most yet. I was fluent in the words and a step removed from the weight. Losing my dad closed that gap. Now when I walk into a room where someone is losing the person they love most, I'm not performing understanding. I have it. I know the specific shape of it. It made me more compassionate, and it made me better at the work, which is a hard thing to be grateful for, and I am grateful for it anyway.
+Before I lost him, I was good at this job, but there was a gap in it, one I can only admit now. I would sit with a family and say the right things, nod at the right moments, and look like a man who understood exactly what they were feeling. Inside, I didn't. I hadn't lost the one I loved most yet. I was fluent in the words and a step removed from the weight. Losing my dad closed that gap. Now when I walk into a room where someone is losing the person they love most, I'm not performing understanding. I have it. I know the specific shape of it. It made me more compassionate, and it made me better at the work, which is a hard thing to be grateful for, and I am grateful for it anyway.
 
 Families would say, I'm terrified I won't be there when it happens. What I offered was what I knew to be true: presence is cumulative. You build it in the ordinary. Lou gave me everything I needed for the rooms I walk into now, and in those rooms, with the silences that need holding rather than filling, I carry him.
 
@@ -1933,7 +1933,7 @@ That morning I walked into one of the assisted-living communities I call on for 
 
 Then I told her we had buried my dad on Saturday. Her face changed. You could tell she felt it. She just sat there with me. And I let myself go. I wouldn't call it a breakdown, but I cried in her office, that raw, in front of someone I barely knew, and I don't know whether you're supposed to cry in front of a nurse you just met at a facility you're calling on for work. But in that moment I felt something I can only call spiritual, a sense that God had put this person in my path. Not for referrals or business. For this.
 
-It was no longer about work. Two people at a round table, one of them grieving and the other choosing to stay in the room for it. We hugged. I gave her a kiss on the cheek. From that day on I've looked forward to the days I get to see Linda. For the person, not the place. The other staff joke about it, oh, you always come in and kiss Linda on the cheek. They don't know the background, don't know what was shared at that table the Wednesday after we buried my father. That's fine. Not every connection needs an audience. Here's the part people might not expect: as a rep, I'm the one who's supposed to bring the chocolate and the goodies. When I go see Linda, I'm the one who feels taken care of. She gives me cookies. She checks in. The relationship runs backwards from the job description. Linda gave me a moment, three workdays after the funeral, at a round table, to stop holding it together. I'll carry that.
+It was no longer about work. Two people at a round table, one of them grieving and the other choosing to stay in the room for it. We hugged. I gave her a kiss on the cheek. From that day on I've looked forward to the days I get to see Linda. For the person, not the place. The other staff joke about it, oh, you always come in and kiss Linda on the cheek. They don't know the background, don't know what was shared at that table the Wednesday after we buried my father. That's fine. Not every connection needs an audience. As a rep, I'm the one who's supposed to bring the chocolate and the goodies. When I go see Linda, I'm the one who feels taken care of. She gives me cookies. She checks in. The relationship runs backwards from the job description. Linda gave me a moment, three workdays after the funeral, at a round table, to stop holding it together. I'll carry that.
 
 ### *Lisa's Table*
 
@@ -2042,7 +2042,7 @@ Rest easy, AJ. We'll keep the seat warm and the coffee bad.
 
 # **WHAT I'M ASKING YOU TO DO**
 
-Here is the part that belongs to you — the one who loves someone you can't fix, the one sitting in a parking lot afraid to walk into the room, the one still carrying the words you never got to say. I was guided through the dark by a man who would not leave. His name was Lou. Now it's my turn to hand you the map and point you at the door.
+This part belongs to you — the one who loves someone you can't fix, the one sitting in a parking lot afraid to walk into the room, the one still carrying the words you never got to say. I was guided through the dark by a man who would not leave. His name was Lou. Now it's my turn to hand you the map and point you at the door.
 
 The plan is short on purpose.
 
