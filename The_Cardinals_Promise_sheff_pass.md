@@ -90,6 +90,8 @@ Prologue
 
 Epilogue: The Cardinal's Promise
 
+**For Those Walking This Road**
+
 A Note to the One Who Loves an Addict
 
 Tyler and Jaye
@@ -1959,6 +1961,10 @@ I want men to read this and understand that what Lou did is possible, that you c
 If you're reading this in recovery, from addiction, from loss, from a version of yourself that no longer serves the life you're trying to build, the broken parts of your story don't disqualify you from purpose. They prepare you for it. If you're grieving someone you lost: if the important things were said before the end required them, you were present. And if you're sitting with an aging parent right now, putting off the hard conversation, waiting for a better time: there's no better time. Say the great things while they can still hear you. On a Tuesday. At dinner. On a phone call that feels ordinary. Presence is built across years.
 
 The cardinal flew off into the gray. The promise remains. It was never in the bird. It was in what Lou built in me, across thirty years of chosen love and stubborn presence. Now it's my turn. Keep showing up. Keep choosing love.
+
+# **FOR THOSE WALKING THIS ROAD**
+
+*The story ends with the cardinal. What follows are extended reflections for the road still ahead — for anyone loving an addict, anyone sitting with someone near the end, and anyone learning how to stay. Take what serves you. Leave the rest.*
 
 # **A NOTE TO THE ONE WHO LOVES AN ADDICT**
 

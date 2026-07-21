@@ -90,6 +90,8 @@ Prologue
 
 Epilogue: The Cardinal's Promise
 
+**For Those Walking This Road**
+
 A Note to the One Who Loves an Addict
 
 Tyler and Jaye
