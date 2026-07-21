@@ -1792,8 +1792,6 @@ My father died on Christmas Day, 2025.
 
 **December 28, 2025**
 
-When we pulled up to the funeral home, his truck was parked out front, NJERZ on the Florida plates. A man who moved all the way to the Gulf and still made his truck say Jersey. That's what undid me, not the building, not the door. The plates. But before any of it, there was a breakfast.
-
 Hope and I had gone down for a visit, and we went to church that morning and ate with Dad before the drive back up to Raleigh. Dad had beaten cancer twice by then, with a scare in between that never came to anything. This last round looked like another miracle, and with him, miracles had started to feel ordinary. The esophagus and the stomach in 2015, when he nearly died. The liver scare in 2018 that never needed treatment. And in 2024, the lungs and the lymph nodes, when he was at death's door, and he walked back out.
 
 There was an opening in hospice, at a company I had already given ten years to. At the table that morning, Dad told me what he always told me. Listen to your boss. Work hard. He had put that in me a long time ago, and he said it again like it was the first time.
@@ -1818,7 +1816,7 @@ When the time came, Hope and I made the drive to Pensacola. We talked the whole 
 
 The days in between blurred together. Then it was January 3, 2026, the service, at Harper-Morris Memorial Chapel.
 
-We pulled up to the funeral home, and there was the truck, parked right out front. Joel had driven it over. I lost it. I couldn't hold the tears back, and I didn't try.
+We pulled up to the funeral home, and there was the truck, parked right out front, NJERZ on the Florida plates. Joel had driven it over. A man who moved all the way to the Gulf and still made his truck say Jersey. That's what undid me, not the building, not the door. The plates. I lost it. I couldn't hold the tears back, and I didn't try.
 
 It was an odd feeling, being there, in the place where my father's body was. Now my last memory of him would be here, like this. But I had to see him. I couldn't not. So I went in.
 
