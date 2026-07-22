@@ -1,4 +1,4 @@
-# Amazon Listing — The Caregiver's Cardinal Toolkit
+# Amazon Listing — It's Not Your Fault
 
 > From the marketing panel review. Paste the description into KDP's
 > description field (it accepts this HTML). No URLs allowed in Amazon
@@ -12,8 +12,7 @@ diagnosis, or a discharge planner asking where your parent is going next — as
 if you're supposed to already know. You're not. Almost no family is handed a map.
 
 <b>This is the map.</b> Written by a Certified Dementia Practitioner with a
-career across home health, hospice, and senior living, <i>The Caregiver's
-Cardinal Toolkit</i> is built to be useful on your worst day — not read cover
+career across home health, hospice, and senior living, <i>It's Not Your Fault</i> is built to be useful on your worst day — not read cover
 to cover. Its 29 chapters are color-coded by urgency — <b>RED: Act Today ·
 PURPLE: Watch Closely · BLUE: Plan Ahead</b> — so you can find the right page
 in under a minute.
@@ -46,20 +45,14 @@ Brizzi, PharmD. Book one of the Cardinal's Promise series.
 question is what buyers type at midnight; two of five voted for a cover
 built on it. It stays off the cover (the design carrying it failed the
 sympathy-register test) but leads the A+ banner, ad headlines, and the
-website hero, answered by the title: *The Caregiver's Cardinal Toolkit.*
+website hero, answered by the title: *It's Not Your Fault.*
 
 ## Editorial Reviews (paste into Author Central after the listing is live)
 
-> Both quotes are doctor-approved verbatim (July 2026). Do not edit their
-> wording; credit lines run exactly as below, personal capacity.
-
-"Plenty of guides cover the logistics. This one also tends to the spirit —
-the grief, the grace, and the promise at the center of caring for a parent."
-— **Dean Ferrera, MD, Cardiologist**
-
-"Hospice is the one thing Medicare truly gets right — and this book finally
-shows families how to use it."
-— **Jason Huet, MD, Pulmonologist**
+> ON HOLD (July 2026): the physician endorsements (Ferrera, Huet) are pulled
+> "for now" at the author's request — leave this section empty at launch. The
+> approved verbatim quotes and credit lines are preserved in
+> `marketing/endorsement-kit.md` and can be dropped back in when ready.
 
 ## Categories (pick paths that land on these storefront nodes)
 
