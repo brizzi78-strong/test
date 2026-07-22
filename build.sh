@@ -75,8 +75,4 @@ awk '
 ' "$BASE.speechify.full.txt" > "${BASE}_speechify.txt"
 rm -f "$BASE.speechify.full.txt"
 
-# TTS-only pronunciation fix: "Lews" (no apostrophe, print spelling) reads
-# ambiguously aloud; swap in "Lou's" for narration only, print stays "Lews".
-sed -i "s/Boardwalk Lews/Boardwalk Lou's/g" "${BASE}_speechify.txt"
-
 echo "Built: $BASE.epub  $BASE.docx  $BASE.pdf  $BASE.html  ${BASE}_speechify.txt"
