@@ -1350,13 +1350,11 @@
         code mark next to the promise once the file exists. ---- */
   (function () {
     const img = document.getElementById("promiseIllus");
-    if (!img) return;
-    img.addEventListener("load", () => {
-      img.hidden = false;
-      const mark = document.getElementById("promiseMark");
-      if (mark) mark.style.display = "none";
-    });
-    img.addEventListener("error", () => { img.hidden = true; });
+    const bird = document.querySelector(".promise-bird");
+    if (!img || !bird) return;
+    // The bird column stays hidden until the real illustration actually loads.
+    img.addEventListener("load", () => { bird.style.display = "block"; });
+    img.addEventListener("error", () => { bird.style.display = "none"; });
   })();
 
   /* ---- Boot ---- */
