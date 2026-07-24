@@ -1,0 +1,261 @@
+/* Print stylesheet for The Cardinal's Promise — 6x9 book proof (WeasyPrint). */
+
+@page {
+  size: 6in 9in;
+  margin: 0.85in 0.7in 0.8in 0.7in;
+  @bottom-center {
+    content: counter(page);
+    font-family: Georgia, serif;
+    font-size: 9.5pt;
+    color: #45557a;
+  }
+  @top-center {
+    content: string(runhead);
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 9pt;
+    color: #556690;
+    padding-bottom: 0.15in;
+  }
+}
+/* Title page: no folio, no running head */
+@page :first {
+  @bottom-center { content: none; }
+  @top-center { content: none; }
+}
+
+/* ---------- Front cover (screen/reading PDF only) ---------- */
+.bookcover { page: cover; break-after: page; margin: 0; position: relative; }
+.bookcover img { display: block; width: 6in; height: 9in; object-fit: cover; }
+.coverblurb {
+  position: absolute;
+  left: 0.7in; right: 0.7in;
+  top: 0.55in;
+  text-align: center;
+  color: #d8d4cb;
+  font-size: 10.5pt;
+  font-style: italic;
+  line-height: 1.35;
+}
+.coverblurb span {
+  display: block;
+  font-style: normal;
+  font-size: 8pt;
+  letter-spacing: 0.08em;
+  margin-top: 5px;
+  color: #b3ada1;
+}
+.coversub {
+  position: absolute;
+  left: 0; right: 0;
+  bottom: 1.5in;
+  text-align: center;
+  color: #d8d4cb;
+  font-size: 12.5pt;
+  font-style: italic;
+  letter-spacing: 0.03em;
+}
+.coverauthor {
+  position: absolute;
+  left: 0; right: 0;
+  bottom: 0.95in;
+  text-align: center;
+  color: #eceae4;
+  font-size: 19pt;
+  letter-spacing: 0.14em;
+  font-family: Georgia, "Times New Roman", serif;
+}
+@page cover {
+  margin: 0;
+  @top-center { content: none; }
+  @bottom-center { content: none; }
+}
+/* Keep the title page free of folio/running head even when a cover precedes it */
+@page titlepage {
+  @top-center { content: none; }
+  @bottom-center { content: none; }
+}
+
+/* ---------- Back cover (screen/reading PDF only) ---------- */
+@page backcover {
+  margin: 0;
+  @top-center { content: none; }
+  @bottom-center { content: none; }
+}
+.backcover {
+  page: backcover;
+  break-before: page;
+  width: 6in; height: 9in;
+  margin: 0;
+  padding: 0.9in 0.72in;
+  box-sizing: border-box;
+  background: #0f1a33;
+  color: #e9e7e0;
+  position: relative;
+}
+.bc-desc {
+  font-size: 12pt;
+  line-height: 1.55;
+  text-align: left;
+  text-indent: 0;
+  margin: 0.15in 0 0;
+  color: #e4e2db;
+}
+.bc-authorrow {
+  position: absolute;
+  left: 0.72in; right: 0.72in;
+  bottom: 1.15in;
+  display: flex;
+  align-items: center;
+  gap: 0.28in;
+}
+.bc-photo {
+  width: 1.5in; height: 1.9in;
+  object-fit: cover;
+  border: 1px solid rgba(255,255,255,0.22);
+  flex: none;
+}
+.bc-bio {
+  font-size: 9.5pt;
+  line-height: 1.46;
+  text-align: left;
+  text-indent: 0;
+  color: #cfccc3;
+}
+.bc-name { color: #8c1a20; letter-spacing: 0.06em; }
+.bc-press {
+  position: absolute;
+  left: 0; right: 0;
+  bottom: 0.5in;
+  text-align: center;
+  text-indent: 0;
+  font-size: 8.5pt;
+  letter-spacing: 0.2em;
+  color: #8893b0;
+}
+
+html { font-size: 11.5pt; }
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.42;
+  text-align: justify;
+  hyphens: auto;
+  color: #16223f;
+  widows: 2;
+  orphans: 2;
+}
+
+/* ---------- Title page ---------- */
+.titlepage { text-align: center; page-break-after: always; page: titlepage; }
+.titlepage h1 {
+  font-size: 30pt;
+  line-height: 1.08;
+  letter-spacing: 0.01em;
+  font-weight: normal;
+  margin: 2.3in 0 0.35in;
+  page-break-before: avoid;
+}
+.titlepage h1 strong { font-weight: normal; }
+.titlepage p { text-indent: 0; margin: 0.14in 0; }
+.titlepage p:nth-of-type(1) { font-style: italic; font-size: 13.5pt; color: #45557a; }
+.titlepage p:nth-of-type(2) { font-size: 12.5pt; letter-spacing: 0.14em; margin-top: 1.7in; }
+.titlepage p:nth-of-type(3) { font-size: 9.5pt; letter-spacing: 0.12em; color: #556690; }
+
+/* ---------- Part & front-matter section heads (h1) ---------- */
+h1 {
+  page-break-before: always;
+  string-set: runhead content(text);
+  text-align: center;
+  font-size: 19pt;
+  font-weight: normal;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+  margin: 1.9in 0 0.6in;
+}
+h1 strong { font-weight: normal; }
+
+/* ---------- Part-title pages ---------- */
+p.partno {
+  page-break-before: always;
+  text-indent: 0;
+  text-align: center;
+  font-size: 11pt;
+  letter-spacing: 0.3em;
+  color: #8a97b8;
+  margin: 2in 0 0.15in;
+}
+p.partno + h1 {
+  page-break-before: avoid;
+  margin: 0.15in 0 0.5in;
+}
+p.partno + h1 + p {   /* part epigraph */
+  text-indent: 0;
+  text-align: center;
+  font-style: italic;
+  color: #45557a;
+}
+
+/* ---------- Chapter number + title ---------- */
+p.chapno {
+  page-break-before: always;
+  text-indent: 0;
+  text-align: center;
+  font-size: 10pt;
+  letter-spacing: 0.24em;
+  color: #8c1a20;
+  margin: 1.5in 0 0.12in;
+}
+p.chapno strong { font-weight: normal; }
+h2 {
+  page-break-before: avoid;
+  string-set: runhead content(text);
+  text-align: center;
+  font-size: 18pt;
+  font-weight: normal;
+  line-height: 1.2;
+  color: #8c1a20;
+  margin: 0 0 0.5in;
+}
+h2 strong { font-weight: normal; }
+
+/* ---------- Scene-break subheads (h3) ---------- */
+h3 {
+  text-align: center;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 12pt;
+  margin: 1.4em 0 0.6em;
+}
+h3 em { font-style: italic; }
+
+/* ---------- Body ---------- */
+p { margin: 0; text-indent: 1.4em; }
+h1 + p, h2 + p, h3 + p, blockquote + p { text-indent: 0; }
+
+/* ---------- Epigraphs ---------- */
+blockquote {
+  font-style: italic;
+  text-align: center;
+  text-indent: 0;
+  font-size: 10.5pt;
+  color: #2c3a58;
+  margin: 0.4em 1.3em 1.3em;
+}
+blockquote p { text-indent: 0; margin: 0; }
+
+em, i { font-style: italic; }
+strong { font-weight: bold; }
+
+/* ---------- Scene divider ---------- */
+hr {
+  border: none;
+  text-align: center;
+  margin: 1.1em 0;
+  page-break-after: avoid;
+}
+hr::after { content: "\2766"; font-size: 12pt; color: #8a97b8; }
+
+/* ---------- Contents (numbering re-seeded in post-process) ---------- */
+ol.startfix { list-style: none; padding-left: 0; margin: 0.2em 0 0.7em; }
+ol.startfix > li { counter-increment: li; text-indent: 0; margin: 0.05em 0; }
+ol.startfix > li::before { content: counter(li) ".\00a0\00a0"; color: #45557a; }

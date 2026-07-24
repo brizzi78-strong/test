@@ -1,0 +1,28 @@
+**CHAPTER 25**
+
+## **Gulf Breeze**
+
+*"Iron sharpeneth iron; so a man sharpeneth the countenance of his friend."*
+*— Proverbs 27:17*
+
+Years later, Quint Studer stood in front of some of the top business leaders in the region, paused, and said my father's name into the room. Lou Brizzi, great guy. But before Quint there were the rooms. Paying down the debt was one kind of work. Another kind was happening at the same time. Early on the work is obvious: work the steps, clean up the wreckage, rebuild trust slowly, one day at a time.
+
+I saw things in those rooms that never leave you. Young people dying from drugs and alcohol. Not old men at the end of long lives, young people with everything ahead of them. I sponsored people who went back out. Many of them died. Some went to jail. You pour yourself into someone, walk alongside them, answer the phone at midnight, and then one day you get the call that they didn't make it.
+
+I was that person once. I know what the disease does from the inside. Losing people in those rooms prepared me for something I didn't know I was being prepared for. Nothing in hospice is harder than a parent losing a child. The only reason I can stay in that room without flinching is that I've already sat with losses like that in recovery. Hospice just gave me a new room to bring it to.
+
+But eventually something else happens. You look around and realize sobriety by itself can't be the end of the story. I was thirty-three, sober long enough to know I wasn't going back, and I couldn't shake the feeling there was something left in the tank. Not ego. A quiet sense that maybe God hadn't kept me alive just to sit in meetings the rest of my life trying not to mess up again. I wanted to do more. I just hadn't seen many examples of what that looked like. Until I met Quint Studer.
+
+If you're not from the Gulf Coast, the name may not mean much. In Pensacola it's on the ballpark. Quint had run Baptist Hospital, the same hospital where my dad worked, then built one of the most respected healthcare consulting firms in the country. When he sold it, he and his wife Rishy went about rebuilding downtown Pensacola block by block. A man like that could sit anywhere he wanted. He sat in the rooms, in the same chairs as the rest of us, one more sober man saying his name out loud.
+
+I first met Quint at a meeting connected to Gulf Breeze Hospital. What struck me was how he carried himself, a steadiness, a calm that didn't feel like ego. When he spoke, people listened. Over time he'd talk with me after meetings, look me directly in the eye. He encouraged me with the kind of quiet belief that says, I see something in you.
+
+He always had a way of lifting a person up. I had one of his books, and one day I asked him to sign it. He wrote four words. You make people better. I've thought about that line more than he could know. It stopped being a compliment and turned into an assignment. I don't think he ever realized what he did with that pen. He made me want to do more than stay sober. He made me want to become the thing he'd written down.
+
+He told a story once about speaking at a meeting in New York. He'd been sharing a while, maybe longer than he realized, and someone in the back finally said one word. Next. He laughed telling it. No offense taken. Nobody gets special treatment in those rooms. In time we became friends, real friends, at his birthday party, at my wedding, anywhere we ended up in the same room. If I was having a bad day, I knew I could pick up the phone and call him.
+
+The moment came years into that friendship, at the business conference he built for the city. He was speaking, and he paused and looked out into the crowd. Lou Brizzi, great guy. Chris and Rob, you know them? Hearing my father's name in a room like that stopped me. My dad worked at Baptist Hospital for years, showed up, did the job well, treated people right, stayed until he was eighty-two. Quint saying his name in a room full of leaders meant something. Not because it elevated us. Because it honored the life my father believed in.
+
+He treated me like I mattered before I'd given him a single reason to believe I'd amount to anything. Lou would have loved him. They were the same breed, men who led by example, who didn't need applause, who showed up the same whether the room was full or empty. He also handed me one of the great friendships of my life: his nephew Mike moved down from Chicago to Pensacola, and we've been close ever since.
+
+The morning after my father died, all these years later, Quint was the first person to reach me. Your dad was a great man, his text said. Of everyone who would reach out in those days, he got there first, and he said the truest thing. God didn't put Quint in my life to rescue me. He put him there to show me what was possible. For the first time since getting sober, I believed there was more for me to do than stay alive.
