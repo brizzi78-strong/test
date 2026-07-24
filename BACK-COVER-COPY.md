@@ -24,8 +24,9 @@ that began with a dating profile that said *don't write to me*, and the hospice
 work that taught Rob what his father had been teaching him all along — that the
 most anyone can do at the edge of a life is refuse to leave the room.
 
-One father kept calling. The other one kept coming. This book is the promise
-they were both making.
+One father kept calling. The other one kept coming. This is a book about
+chosen love — the kind that isn't owed, doesn't quit, and has to be decided
+again every single day. This book is the promise they were both making.
 
 ## Author bio
 
@@ -64,21 +65,30 @@ addiction and recovery, end-of-life care, hospice, chosen family, fatherhood.)*
 
 ## Elevator pitch (spoken one-liner, Donald Miller style)
 
-**Lead with this one:**
+**Lead with this one — "chosen love" is the anchor phrase:**
+
+> "It's about chosen love — a father who had no reason to love me and chose
+> to anyway, every single day, for forty years."
+
+Tighter version of the same line:
+
+> "It's about a love that was chosen, not owed — and what that did to me."
+
+"Chosen love" is the book's own phrase for its central idea (it's the exact
+words the Epilogue and the Reader's Guide use), so leading with it means
+you're handing people the same phrase the book hands them — if they read it
+later, the pitch and the page rhyme.
+
+**Close second — "saying what needs to be said":**
 
 > "It's about learning to say the things that need saying before it's too
 > late — I learned it from my father, and now I help other families do it
 > at the bedside."
 
-Tighter version of the same line:
-
-> "It's about not leaving things unsaid — with the people you love, before
-> you run out of time to say them."
-
-This is the strongest one-liner because it's not just a hook — it's the
-book's actual thesis. It ties directly to Ch. 29 ("We were not unfinished")
-and the Epilogue's closing charge ("Say the great things while they can
-still hear you").
+This ties directly to Ch. 29 ("We were not unfinished") and the Epilogue's
+closing charge ("Say the great things while they can still hear you"). Use
+this one when the conversation is already about grief or aging parents;
+lead with "chosen love" everywhere else.
 
 **Alternates, by angle — use whichever fits the room:**
 
