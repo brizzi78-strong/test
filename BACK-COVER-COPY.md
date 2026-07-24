@@ -11,7 +11,7 @@ of Rob Brizzi's car. He was seventeen years sober, to the day, sitting outside a
 nursing facility where he had just helped a family decide how to say goodbye. He
 took one picture. Then he started telling the truth.
 
-*The Cardinal's Promise* is the story of two fathers: Ignacio, who stayed behind
+*The Cardinal's Promise* is the story of two fathers: Horacio, who stayed behind
 in Mexico City and never stopped calling, and Lou, the New Jersey landscaper who
 married Rob's mother, adopted her two boys, and spent forty years proving that
 love is not a speech. From Mexico City to New Jersey, from wrestling mats to
@@ -33,6 +33,42 @@ Rob Brizzi is a hospice liaison and Certified Dementia Practitioner. Born in
 Mexico City and raised in New Jersey, he is in long-term recovery and has made
 it his mission to sit with families in their hardest rooms. He lives in Raleigh,
 North Carolina, with his wife, Hope. *The Cardinal's Promise* is his first book.
+
+## Alternate: StoryBrand / Donald Miller style
+
+You know someone who is dying, or drowning in addiction, or a kid who needs to
+be chosen and doesn't know it yet. You don't know what to say to them. You're
+afraid that if you show up, you'll get it wrong — or that showing up at all
+will cost you more than you have to give.
+
+Rob Brizzi didn't know either, until a landscaper named Lou taught him,
+one ordinary Tuesday at a time, that showing up is the whole thing.
+
+Born Claudio in Mexico City, adopted into a New Jersey family at eight, and
+pulled out of a Tijuana jail cell in the worst years of his own addiction, Rob
+spent three decades learning what presence actually looks like: a father
+driving ten hours round-trip for a root canal, a U-Haul rented to carry a
+dying son home, a mother's midnight McDonald's run after a double shift. Today,
+as a hospice liaison, Rob sits with families in the hardest rooms in the
+world and hands them back exactly what Lou gave him.
+
+This book will show you:
+
+- How to sit with someone who is dying, or someone who is using, without
+  needing to fix it
+- Why showing up — not solving, not saving — is what love actually requires
+- How one man's example can end a cycle instead of repeating it
+- What it means to choose someone, and to finally believe you've been chosen
+
+Walk away from the hospital room, the addicted son, the failing parent, and
+you'll spend the rest of your life wondering if you could have stayed. Stay —
+even once, even imperfectly — and you'll understand what Rob learned from a
+father who never had to love him and never once let him doubt that he did.
+
+You don't need the right words. You just need to be in the room.
+
+*(Keyword categories for backend/discoverability: caregiving, adoption,
+addiction and recovery, end-of-life care, hospice, chosen family, fatherhood.)*
 
 ## Notes
 
