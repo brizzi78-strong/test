@@ -36,37 +36,26 @@ North Carolina, with his wife, Hope. *The Cardinal's Promise* is his first book.
 
 ## Alternate: StoryBrand / Donald Miller style
 
-You know someone who is dying, or drowning in addiction, or a kid who needs to
-be chosen and doesn't know it yet. You don't know what to say to them. You're
-afraid that if you show up, you'll get it wrong — or that showing up at all
-will cost you more than you have to give.
+Someone you love is dying, or using, or waiting to be chosen. You don't know
+what to say. You're afraid you'll get it wrong.
 
-Rob Brizzi didn't know either, until a landscaper named Lou taught him,
-one ordinary Tuesday at a time, that showing up is the whole thing.
+Rob Brizzi didn't know either — until a man named Lou taught him that showing
+up is the whole thing.
 
-Born Claudio in Mexico City, adopted into a New Jersey family at eight, and
-pulled out of a Tijuana jail cell in the worst years of his own addiction, Rob
-spent three decades learning what presence actually looks like: a father
-driving ten hours round-trip for a root canal, a U-Haul rented to carry a
-dying son home, a mother's midnight McDonald's run after a double shift. Today,
-as a hospice liaison, Rob sits with families in the hardest rooms in the
-world and hands them back exactly what Lou gave him.
+Rob was adopted at eight. He nearly died of addiction in his twenties. Today
+he's a hospice liaison who sits with dying strangers for a living. This book
+is what he learned along the way, from the man who never had to love him and
+never let him doubt that he did.
 
-By the end of this book, you will:
+Read this book and you will:
 
-- Know exactly what to do the next time you're standing in a hospital room
-  and every instinct tells you to say something, fix something, or leave
-- Stop mistaking silence for failure — and learn what to offer instead of words
-- See your own family's cycle clearly enough to be the one who finally breaks it
-- Trust that you can be chosen, or do the choosing, even after everything
-  that's already gone wrong
-- Walk into the hardest room you'll ever be in — a bedside, a rehab, a
-  reunion — and stay in it
+- Know what to say when someone is dying — or know it's okay to say nothing
+- Stop trying to fix people, and start staying with them instead
+- Break a cycle in your own family instead of repeating it
+- Believe you can still be chosen, no matter what you've already done
 
-Walk away from the hospital room, the addicted son, the failing parent, and
-you'll spend the rest of your life wondering if you could have stayed. Read
-this book, and you'll never again wonder what you're supposed to do when
-someone you love is falling apart. You'll know. You stay.
+You can walk away and wonder for the rest of your life if you could have
+stayed. Or you can read this book, and know.
 
 You don't need the right words. You just need to be in the room.
 
