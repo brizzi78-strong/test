@@ -145,7 +145,19 @@ The night had started ordinary. A workday, a Tuesday in my San Diego years, and 
 
 This time a cop saw the watch.
 
-He took it first. Then the bag. Then everything else in my pockets. For a moment I thought that might be the end of it, that I'd be sent back across the line with one more story I'd never tell. Then he pulled me out of the car.
+He was on foot, working the strip near the crossing, and he slowed when he passed my window the way they do when they've already decided something. He circled back. Tapped the glass with two fingers. I rolled it down because there was nothing else to do with a tap like that.
+
+His eyes went to my wrist before they went to my face. I knew what that meant before he said a word. I'd worn the watch because it made me feel like the man I was pretending to be, and now it was the reason a cop in Tijuana had stopped walking.
+
+Get out of the car, he said. Not loud. He didn't need to be loud.
+
+I got out. My legs did it before my head agreed to it. He had the watch off my wrist inside of a minute, working the clasp like a man taking something that was already his. Then the bag. Then my pockets, one at a time, methodical, no hurry in it at all, and the no-hurry was the part that scared me. A man in a rush is still deciding something. A man who isn't in a rush has already decided.
+
+I stood there on a street I'd crossed a hundred times and watched a stranger empty my pockets onto the hood of my own car, and some part of me was still running the old math, telling me this was a toll, a cost of doing business, the kind of story I'd tell later with the details sanded off. Then he took my arm and I understood the math was wrong. This wasn't a toll. There was no amount that made this stop.
+
+I asked him, in the Spanish that still lived somewhere under my English, what happens now. He didn't answer. That not-answering was its own answer, and it was the first time all night my body understood what my mind hadn't caught up to yet: nobody was coming, nobody knew where I was, and this man could do whatever he wanted with the next several hours of my life.
+
+He walked me to a car that wasn't marked like the ones on TV. No lights on top. Just a plain sedan with a man in the passenger seat who didn't turn around. I got in the back because a hand on my shoulder put me there. The door didn't have a handle on the inside. I noticed that before I noticed anything else.
 
 It wasn't a prison. It was a holding cell in a building I couldn't have found again the next day. I didn't know where I was, who knew I was there, or how long they meant to keep me.
 
