@@ -52,18 +52,21 @@ dying son home, a mother's midnight McDonald's run after a double shift. Today,
 as a hospice liaison, Rob sits with families in the hardest rooms in the
 world and hands them back exactly what Lou gave him.
 
-This book will show you:
+By the end of this book, you will:
 
-- How to sit with someone who is dying, or someone who is using, without
-  needing to fix it
-- Why showing up — not solving, not saving — is what love actually requires
-- How one man's example can end a cycle instead of repeating it
-- What it means to choose someone, and to finally believe you've been chosen
+- Know exactly what to do the next time you're standing in a hospital room
+  and every instinct tells you to say something, fix something, or leave
+- Stop mistaking silence for failure — and learn what to offer instead of words
+- See your own family's cycle clearly enough to be the one who finally breaks it
+- Trust that you can be chosen, or do the choosing, even after everything
+  that's already gone wrong
+- Walk into the hardest room you'll ever be in — a bedside, a rehab, a
+  reunion — and stay in it
 
 Walk away from the hospital room, the addicted son, the failing parent, and
-you'll spend the rest of your life wondering if you could have stayed. Stay —
-even once, even imperfectly — and you'll understand what Rob learned from a
-father who never had to love him and never once let him doubt that he did.
+you'll spend the rest of your life wondering if you could have stayed. Read
+this book, and you'll never again wonder what you're supposed to do when
+someone you love is falling apart. You'll know. You stay.
 
 You don't need the right words. You just need to be in the room.
 
