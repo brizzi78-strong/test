@@ -62,6 +62,47 @@ You don't need the right words. You just need to be in the room.
 *(Keyword categories for backend/discoverability: caregiving, adoption,
 addiction and recovery, end-of-life care, hospice, chosen family, fatherhood.)*
 
+## Elevator pitch (spoken one-liner, Donald Miller style)
+
+**Lead with this one:**
+
+> "It's about learning to say the things that need saying before it's too
+> late — I learned it from my father, and now I help other families do it
+> at the bedside."
+
+Tighter version of the same line:
+
+> "It's about not leaving things unsaid — with the people you love, before
+> you run out of time to say them."
+
+This is the strongest one-liner because it's not just a hook — it's the
+book's actual thesis. It ties directly to Ch. 29 ("We were not unfinished")
+and the Epilogue's closing charge ("Say the great things while they can
+still hear you").
+
+**Alternates, by angle — use whichever fits the room:**
+
+- Father/adoption: "It's about the man who adopted me and never once made
+  me feel like I had to earn my place."
+- Addiction/recovery: "It's about the father who pulled me out of
+  addiction, and how I learned to do the same thing for other people."
+- Hospice/showing up: "It's about what I learned from my dad about showing
+  up — I use it now sitting with people while they die."
+- Cardinal/title: "It's about a promise my father kept his whole life, and
+  a cardinal that showed up the day I finally understood it."
+- Shortest/most repeatable: "It's about a dad who chose me, and what that
+  taught me about staying in the room."
+- Best icebreaker with strangers: "It's about how a father saved my life
+  from addiction — and how I've spent my career doing that for dying
+  strangers ever since."
+
+**If they lean in for more (30-second version):**
+
+> "I was born in Mexico, adopted at eight by a guy named Lou who had every
+> reason to walk away and never did. I ended up an addict, he pulled me out
+> of it, and now I sit with dying people for a living. The book's about
+> what he taught me, without ever saying a word about it."
+
 ## Notes
 
 - Comp line is standard nominative use; do not imply endorsement by David Sheff
