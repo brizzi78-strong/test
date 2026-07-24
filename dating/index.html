@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cardinal — the dating app for people ready to stay</title>
+<meta name="description" content="Cardinals mate for life and stay through every winter. Cardinal is a dating app for people looking for the real thing — one honest profile, thoughtful matches, no games.">
+<meta name="theme-color" content="#C41E3A" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b1120" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23F7F3EA'/%3E%3Cg transform='translate(6,4) scale(0.88)'%3E%3Cpolygon points='46,62 61,56 69,66 59,71' fill='%23A10000'/%3E%3Cellipse cx='52' cy='66' rx='28' ry='23' fill='%23C41F3B'/%3E%3Ccircle cx='44' cy='44' r='18' fill='%23C41F3B'/%3E%3Cpolygon points='40,34 44,10 48,32' fill='%23C41F3B'/%3E%3Cpolygon points='42,42 52,44 48,58 38,56' fill='%23141414'/%3E%3Cpolygon points='38,46 32,50 38,54' fill='%23FFCC00'/%3E%3Ccircle cx='42' cy='40' r='3.2' fill='%23fff'/%3E%3Cpolygon points='60,66 78,70 75,84 62,78' fill='%23A10000'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ TOP NAV ============ -->
+<header class="nav" id="nav">
+  <a class="brand" href="#" data-nav="landing">
+    <svg class="brand-mark" viewBox="0 0 100 100" aria-hidden="true">
+      <circle cx="50" cy="50" r="50" fill="#F7F3EA"/>
+      <circle cx="50" cy="50" r="49" fill="none" stroke="#e7ddc9" stroke-width="1.5"/>
+      <g transform="translate(6,4) scale(0.88)">
+        <polygon points="46,62 61,56 69,66 59,71" fill="#A10000"/>
+        <ellipse cx="52" cy="66" rx="28" ry="23" fill="#C41F3B"/>
+        <circle cx="44" cy="44" r="18" fill="#C41F3B"/>
+        <polygon points="40,34 44,10 48,32" fill="#C41F3B"/>
+        <polygon points="42,42 52,44 48,58 38,56" fill="#141414"/>
+        <polygon points="38,46 32,50 38,54" fill="#FFCC00"/>
+        <circle cx="42" cy="40" r="3.2" fill="#fff"/><circle cx="42" cy="40" r="1.8" fill="#141414"/>
+        <polygon points="60,66 78,70 75,84 62,78" fill="#A10000"/>
+      </g>
+    </svg>
+    <span class="brand-name">Cardinal</span>
+  </a>
+  <nav class="nav-links" id="appNav" hidden>
+    <button class="nav-tab" data-nav="discover">Discover</button>
+    <button class="nav-tab" data-nav="matches">Matches <span class="badge" id="matchBadge" hidden>0</span></button>
+    <button class="nav-tab" data-nav="likes">Likes <span class="badge" id="likesBadge" hidden>0</span></button>
+    <button class="nav-tab" data-nav="events">Events</button>
+    <button class="nav-tab" data-nav="safety">Safety</button>
+    <button class="nav-tab" data-nav="profile">Profile</button>
+    <button class="nav-tab ghost" id="signOut">Sign out</button>
+  </nav>
+</header>
+
+<main id="app">
+
+  <!-- ============ LANDING ============ -->
+  <section class="view" id="view-landing">
+    <div class="hero">
+      <div class="hero-mark">
+        <svg viewBox="0 0 100 100" aria-label="Cardinal">
+          <circle cx="50" cy="50" r="50" fill="#F7F3EA"/>
+          <circle cx="50" cy="50" r="49" fill="none" stroke="#e7ddc9" stroke-width="1.2"/>
+          <g transform="translate(6,4) scale(0.88)">
+            <polygon points="46,62 61,56 69,66 59,71" fill="#A10000"/>
+            <ellipse cx="52" cy="66" rx="28" ry="23" fill="#C41F3B"/>
+            <circle cx="44" cy="44" r="18" fill="#C41F3B"/>
+            <polygon points="40,34 44,10 48,32" fill="#C41F3B"/>
+            <polygon points="42,42 52,44 48,58 38,56" fill="#141414"/>
+            <polygon points="38,46 32,50 38,54" fill="#FFCC00"/>
+            <circle cx="42" cy="40" r="3.2" fill="#fff"/><circle cx="42" cy="40" r="1.8" fill="#141414"/><circle cx="42.6" cy="39.2" r="0.8" fill="#fff"/>
+            <polygon points="60,66 78,70 75,84 62,78" fill="#A10000"/>
+          </g>
+        </svg>
+      </div>
+      <h1>Cardinals mate for life.<br>Find yours.</h1>
+      <p class="hero-tagline">The first real dating app that looks out for you.</p>
+      <p class="lede">An invite-only, women-first dating community where every
+        member is verified and background-checked. No games, no drunk DMs — just
+        real people who actually show up.</p>
+      <div class="cta-row">
+        <button class="btn btn-primary btn-lg" id="getStarted">Request an invite</button>
+        <button class="btn btn-ghost btn-lg" id="haveAccount">I have an invite</button>
+      </div>
+      <p class="fineprint">Invite-only · verified · background-checked. Everything
+        stays in your browser — a demo you can run anywhere.</p>
+    </div>
+
+    <div class="values">
+      <article class="value">
+        <div class="value-icon">🪶</div>
+        <h3>One true self</h3>
+        <p>No swiping through fifty photos. One profile, written honestly, is
+          how a cardinal calls.</p>
+      </article>
+      <article class="value">
+        <div class="value-icon">❄️</div>
+        <h3>Built to last</h3>
+        <p>Cardinals don't migrate. We match on what you want for the long
+          winters, not just the warm days.</p>
+      </article>
+      <article class="value">
+        <div class="value-icon">🎵</div>
+        <h3>Say something real</h3>
+        <p>Every match opens with a prompt, not a "hey." Start where it counts.</p>
+      </article>
+    </div>
+
+    <section class="how">
+      <p class="how-eyebrow">How Cardinal works</p>
+      <ol class="how-steps">
+        <li>
+          <span class="how-num">1</span>
+          <h3>Request an invite</h3>
+          <p>Cardinal is invite-only. Redeem a code or join the waitlist — women move up first.</p>
+        </li>
+        <li>
+          <span class="how-num">2</span>
+          <h3>Get vetted</h3>
+          <p>A quick verification, a confidential background check, and a short interview. Everyone's real.</p>
+        </li>
+        <li>
+          <span class="how-num">3</span>
+          <h3>Meet the flock</h3>
+          <p>A small, curated set of real people a day — matched on what you actually want.</p>
+        </li>
+        <li>
+          <span class="how-num">4</span>
+          <h3>Take it offline, safely</h3>
+          <p>First date's a call, old school. Then meet in person with Share-my-date watching your back.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="promise">
+      <p class="promise-eyebrow">The Cardinal's Promise</p>
+      <h2>We won't rest until you find yours.</h2>
+      <div class="promise-inner">
+      <div class="promise-bird" aria-hidden="true">
+        <img id="promiseIllus" class="promise-illus" src="assets/cardinal-hero.png" alt="">
+      </div>
+      <ul class="promise-list">
+        <li>Every member is real — <strong>verified, background-checked, and interviewed.</strong></li>
+        <li>Your <strong>safety comes first</strong> — always, over growth, over profit.</li>
+        <li>You <strong>control who can reach you.</strong> No unsolicited anything.</li>
+        <li>Report anyone, and <strong>real people act on it</strong> — fast, and for real.</li>
+        <li>Every match opens on <strong>something real.</strong> No games, no drunk DMs.</li>
+        <li><strong>Women are always free</strong> — that's a promise, not a promotion.</li>
+        <li>We'll never <strong>sell your data</strong> or trade on your attention.</li>
+        <li>We're built for one thing: helping you find a <strong>love that lasts.</strong></li>
+      </ul>
+      </div>
+      <p class="promise-sign">Cardinals mate for life. We promise to help you find yours.</p>
+    </section>
+  </section>
+
+  <!-- ============ INVITE / WAITLIST ============ -->
+  <section class="view" id="view-invite" hidden>
+    <div class="panel">
+      <h2>Cardinal is invite-only</h2>
+      <p class="panel-sub">A vetted, women-first community. Members join by
+        invite — or from the waitlist. Women move up first.</p>
+      <div class="invite-tabs">
+        <button class="invite-tab active" data-invmode="code">I have an invite</button>
+        <button class="invite-tab" data-invmode="wait">Join the waitlist</button>
+      </div>
+
+      <div class="invite-pane" id="invitePaneCode">
+        <label class="field">
+          <span>Invite code</span>
+          <input type="text" id="inviteInput" placeholder="e.g. FLOCK-2026" maxlength="24" autocomplete="off">
+        </label>
+        <p class="muted-p" id="inviteError" hidden>That code isn't right — check with the friend who invited you.</p>
+        <button class="btn btn-primary" id="redeemInvite">Enter Cardinal →</button>
+        <p class="fineprint">Demo: any code gets you in.</p>
+      </div>
+
+      <div class="invite-pane" id="invitePaneWait" hidden>
+        <div class="field-row">
+          <label class="field">
+            <span>School email</span>
+            <input type="email" id="waitEmail" placeholder="you@unc.edu" autocomplete="off">
+          </label>
+          <label class="field">
+            <span>You are</span>
+            <select id="waitGender">
+              <option value="Woman">Woman</option>
+              <option value="Man">Man</option>
+              <option value="Nonbinary">Nonbinary</option>
+            </select>
+          </label>
+        </div>
+        <button class="btn btn-primary" id="joinWait">Join the waitlist</button>
+        <div id="waitResult" class="join-status ok" hidden></div>
+      </div>
+
+      <div class="form-actions">
+        <button class="btn btn-ghost" data-nav="landing">Back</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ONBOARDING ============ -->
+  <section class="view" id="view-onboard" hidden>
+    <div class="panel">
+      <h2>Build your profile</h2>
+      <p class="panel-sub">This is how your matches meet you. Be honest — a
+        cardinal's song is unmistakable.</p>
+      <form id="profileForm" class="form">
+        <label class="field">
+          <span>Name</span>
+          <input name="name" type="text" required maxlength="40" placeholder="Robin">
+        </label>
+        <div class="field-row">
+          <label class="field">
+            <span>Age <small>— 18 to 45</small></span>
+            <input name="age" type="number" required min="18" max="45" placeholder="29">
+          </label>
+          <label class="field">
+            <span>You are</span>
+            <select name="gender">
+              <option value="Woman">Woman</option>
+              <option value="Man">Man</option>
+              <option value="Nonbinary">Nonbinary</option>
+            </select>
+          </label>
+        </div>
+        <div class="field-row">
+          <label class="field">
+            <span>Looking for</span>
+            <select name="seeking">
+              <option value="Everyone">Everyone</option>
+              <option value="Women">Women</option>
+              <option value="Men">Men</option>
+              <option value="Nonbinary people">Nonbinary people</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Here for a…</span>
+            <select name="intent">
+              <option value="Long-term">Long-term relationship</option>
+              <option value="Marriage-minded">Marriage-minded</option>
+              <option value="Friendship first">Friendship first</option>
+              <option value="Still figuring it out">Still figuring it out</option>
+            </select>
+          </label>
+        </div>
+        <label class="field">
+          <span>City</span>
+          <input name="city" type="text" maxlength="60" placeholder="Raleigh, NC">
+        </label>
+        <label class="field">
+          <span>Your color <small>— pick the plumage that feels like you</small></span>
+          <div class="swatches" id="swatches"></div>
+          <input name="color" type="hidden" value="#D7263D">
+        </label>
+        <label class="field">
+          <span>About you <small>— one honest paragraph</small></span>
+          <textarea name="bio" rows="3" maxlength="280" placeholder="What does a good winter look like with you in it?"></textarea>
+          <small class="count" data-count-for="bio">0 / 280</small>
+        </label>
+        <label class="field">
+          <span>Interests <small>— press enter to add, up to 6</small></span>
+          <div class="tag-input" id="tagInput">
+            <input type="text" id="tagField" placeholder="hiking, jazz, slow mornings…" maxlength="24">
+          </div>
+        </label>
+        <label class="field">
+          <span>A prompt for your matches</span>
+          <select name="prompt">
+            <option>The way to my heart is…</option>
+            <option>We'll get along if…</option>
+            <option>My idea of a perfect winter Sunday…</option>
+            <option>I'm looking for someone who…</option>
+            <option>The most spontaneous thing I've done…</option>
+          </select>
+          <input name="promptAnswer" type="text" maxlength="120" placeholder="Your answer…">
+        </label>
+        <div class="form-actions">
+          <button type="button" class="btn btn-ghost" data-nav="landing">Back</button>
+          <button type="submit" class="btn btn-primary">Take flight →</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ JOIN (background check + membership) ============ -->
+  <section class="view" id="view-join" hidden>
+    <div class="panel">
+      <h2>One last step before you join</h2>
+      <p class="panel-sub">Cardinal is built to be safe. Everyone clears a
+        background check before they can meet the flock.</p>
+
+      <div class="join-card">
+        <div class="join-icon">🛡️</div>
+        <div>
+          <h3>Background check</h3>
+          <p class="muted-p">We run a confidential criminal background check on
+            every new member. It's never shown to other people — it just lets
+            you in. Nothing here leaves your browser; this demo simulates it.</p>
+          <label class="consent">
+            <input type="checkbox" id="bgConsent">
+            <span>I authorize Cardinal to run a background check.</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="join-card">
+        <div class="join-icon">🎥</div>
+        <div style="flex:1">
+          <h3>Membership interview</h3>
+          <p class="muted-p">Every member has a short screening before they're
+            let in — it's what keeps the flock real. Two quick questions here; in
+            the full product this is a 10-minute video call.</p>
+          <label class="field">
+            <span>Why Cardinal — and what are you looking for?</span>
+            <textarea id="iv1" rows="2" maxlength="200" placeholder="A sentence or two…"></textarea>
+          </label>
+          <label class="field">
+            <span>Describe a great first date, in your words.</span>
+            <textarea id="iv2" rows="2" maxlength="200" placeholder="A sentence or two…"></textarea>
+          </label>
+        </div>
+      </div>
+
+      <div class="join-card" id="membershipCard">
+        <div class="join-icon">🪶</div>
+        <div style="flex:1">
+          <h3 id="membershipTitle">Membership</h3>
+          <p class="muted-p" id="membershipCopy">Free while we're getting off the ground.</p>
+          <label class="consent" id="activityConsentWrap" hidden>
+            <input type="checkbox" id="activityConsent">
+            <span>I'll stay active at least <strong>30 minutes a month</strong> so the flock stays warm.</span>
+          </label>
+          <div id="planOptions"></div>
+        </div>
+      </div>
+
+      <div id="joinStatus" class="join-status" hidden></div>
+
+      <div class="form-actions">
+        <button type="button" class="btn btn-ghost" data-nav="onboard">Back</button>
+        <button type="button" class="btn btn-primary" id="runJoin" disabled>Run check &amp; join →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DISCOVER ============ -->
+  <section class="view" id="view-discover" hidden>
+    <div class="nudge" id="activityNudge" hidden></div>
+    <div class="deck-wrap">
+      <div class="deck" id="deck"></div>
+      <div class="deck-empty" id="deckEmpty" hidden>
+        <div class="value-icon">🌙</div>
+        <h3>You've met everyone for now</h3>
+        <p>Every cardinal in the area has flown by. Check your matches, or
+          come back after the next snowfall.</p>
+        <button class="btn btn-ghost" id="reshuffle">Start over</button>
+      </div>
+      <div class="deck-controls" id="deckControls">
+        <button class="round-btn pass" id="passBtn" title="Pass" aria-label="Pass">✕</button>
+        <button class="round-btn info" id="infoBtn" title="Details" aria-label="Details">ℹ</button>
+        <button class="round-btn like" id="likeBtn" title="Like" aria-label="Like">♥</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MATCHES ============ -->
+  <section class="view" id="view-matches" hidden>
+    <div class="panel">
+      <h2>Your matches</h2>
+      <p class="panel-sub">A match means you both leaned in. Open one to see
+        their prompt — and say something real.</p>
+      <div class="match-list" id="matchList"></div>
+      <div class="match-empty" id="matchEmpty">
+        <div class="value-icon">🪺</div>
+        <p>No matches yet. Head to <button class="linklike" data-nav="discover">Discover</button> and start calling.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LIKES YOU ============ -->
+  <section class="view" id="view-likes" hidden>
+    <div class="panel">
+      <h2>Likes you</h2>
+      <p class="panel-sub" id="likesSub">People who liked you first. Like them back and it's an instant match.</p>
+      <div id="likesBody"></div>
+    </div>
+  </section>
+
+  <!-- ============ EVENTS ============ -->
+  <section class="view" id="view-events" hidden>
+    <div class="panel">
+      <h2>Monthly events</h2>
+      <p class="panel-sub">Cardinal isn't only for your phone. Once a month the
+        flock meets in person — low-key, safe, and easy to say yes to. Free for
+        women; Cardinal+ members get priority RSVP.</p>
+      <div class="event-list" id="eventList"></div>
+    </div>
+  </section>
+
+  <!-- ============ SAFETY: SHARE MY DATE ============ -->
+  <section class="view" id="view-safety" hidden>
+    <div class="panel">
+      <h2>Date safety</h2>
+      <p class="panel-sub">Meeting someone new should never mean going in alone.
+        Share your plan with someone you trust, set a check-in, and keep help one
+        tap away.</p>
+      <div id="safetyBody"></div>
+      <button class="btn panic" id="panicBtn">🚨 I need help now</button>
+    </div>
+  </section>
+
+  <!-- ============ PROFILE ============ -->
+  <section class="view" id="view-profile" hidden>
+    <div class="panel">
+      <h2>Your profile</h2>
+      <p class="panel-sub">This is what the flock sees.</p>
+      <div id="profilePreview"></div>
+      <div class="form-actions">
+        <button class="btn btn-ghost" id="editProfile">Edit profile</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ MATCH MODAL ============ -->
+<div class="modal" id="modal" hidden>
+  <div class="modal-card" id="modalCard"></div>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <svg viewBox="0 0 100 100" aria-hidden="true" width="30" height="30">
+        <circle cx="50" cy="50" r="50" fill="#F7F3EA"/>
+        <g transform="translate(6,4) scale(0.88)">
+          <ellipse cx="52" cy="66" rx="28" ry="23" fill="#C41F3B"/>
+          <circle cx="44" cy="44" r="18" fill="#C41F3B"/>
+          <polygon points="40,34 44,10 48,32" fill="#C41F3B"/>
+          <polygon points="42,42 52,44 48,58 38,56" fill="#141414"/>
+          <polygon points="38,46 32,50 38,54" fill="#FFCC00"/>
+          <circle cx="42" cy="40" r="3" fill="#fff"/>
+          <polygon points="60,66 78,70 75,84 62,78" fill="#A10000"/>
+        </g>
+      </svg>
+      <span class="footer-name">Cardinal</span>
+    </div>
+    <p class="footer-tag">Cardinals mate for life. Find yours.</p>
+    <p class="footer-disclaimer">A demo — background checks, verification, and payments are
+      simulated. Everything stays in your browser: no account, no server, no tracking.</p>
+    <p class="footer-copy">© 2026 Cardinal · <em>The Cardinal's Promise: you'll find love.</em></p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
