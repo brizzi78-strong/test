@@ -26,8 +26,11 @@ coda). Default recommendation: mid-book.
    had gone gray"). Rob to locate.
 4. **The gym wall** — District Champions 1994, 1995, 1996.
    Caption: *"Three straight years on that wall." (Ch. 7)*
-5. **MTV, Cancun 1999** — frame from the broadcast.
-   Caption: *"I'd finally found the feeling." (Ch. 11)*
+5. **Cancun, spring break 1999** — Rob (Florida Gators tee, VIP lanyard)
+   with Busta Rhymes and friends. Personal photo — replaces the MTV
+   broadcast frame and its permissions problem; the lanyards are visible.
+   Caption: *"The lineup was NSYNC, 98 Degrees, Busta Rhymes, Eminem, and
+   for ten days I carried the same VIP pass they did." (Ch. 11)*
 6. **Rob and Hope, Painting with a Twist, Pensacola** — the two canvases
    joined by one rope tied into a heart.
    Caption: *"When everything else in my life had sunk, Hope floated." (Ch. 25)*
@@ -82,8 +85,9 @@ recreations for marketing/web, not the printed insert.
 - [ ] Rob to supply: Mickey Mouse shirt photo (Ch. 1)
 - [ ] Rob to supply: the cardinal photo (Epilogue)
 - [ ] Confirm placement (mid-book vs. post-Epilogue)
-- [ ] Permissions check: MTV broadcast frame is a network still — verify
-      fair-use comfort level or crop/replace with a personal Cancun photo.
-      Same consideration for the professional wedding photos (photographer
-      usually retains copyright; a reprint license is normally cheap and easy).
+- [x] MTV frame permissions — RESOLVED: replaced with Rob's personal Cancun
+      photo (with Busta Rhymes; documentary use of a public event in a
+      memoir is standard editorial practice).
+- [ ] Professional wedding photos: photographer usually retains copyright;
+      a reprint license is normally cheap and easy — worth one text/email.
 - [ ] Grayscale test-print of the oldest photos (grandparents' wedding)
