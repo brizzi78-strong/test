@@ -64,6 +64,14 @@ With 10 images at ~1–2 per page this is an 8-page insert (4 leaves).
     Caption: *"January 9 was the day I got sober. April 9 was the day I
     got married. I didn't plan that. It just arrived." (Ch. 25)*
 
+## Received but NOT recommended for print
+
+- **The Raleigh house** — current residence, house number visible in both
+  photos. Do not include in the published book (privacy/safety). If a
+  "home" image is wanted, use the East Hill Pensacola house (#former
+  residence, since sold, and it's the house the text actually narrates
+  building in Ch. 22).
+
 ## A note on recreated images
 
 Two images in hand are illustrations/AI-style recreations rather than
