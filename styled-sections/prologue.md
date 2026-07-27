@@ -5,7 +5,7 @@
 
 **Tijuana, Mexico, 2005**
 
-His hands were already around my throat before I understood he had crossed the cell. Small man. Moving too fast. Wired on meth or something close enough that his whole body carried the unstable energy of someone who might come apart without warning. Somebody in the dark chuckled, cold, and said his name. Rico. A few others laughed with him, the low laugh of a room that already knew what was coming. Even in here, he had a reputation. His face came an inch from mine. The only English he had came out in a rasp.
+His hands were already around my throat before I understood he had crossed the cell. Small man. Moving too fast. Wired on meth or something close enough that his whole body carried the unstable energy of someone who might come apart without warning. Somebody in the dark made a snarling sound, low and animal. Somebody else said his name. Rico. Nobody moved to stop him. Even in here, he had a reputation. His face came an inch from mine. The only English he had came out in a rasp.
 
 "Gringo. Gringo. Money."
 
