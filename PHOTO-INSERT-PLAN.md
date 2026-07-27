@@ -51,6 +51,10 @@ With 10 images at ~1–2 per page this is an 8-page insert (4 leaves).
     the real photograph the commissioned illustration was drawn from.
     Possible caption: *"He looked like De Niro." (Ch. 3)*
 
+12. **Rob and Chris as young men** — arm over shoulder, the California-era
+    look. Run facing the boys-holding-hands photo (#2) as a then/now pair.
+    Possible caption: *"He's my best friend." (Ch. 12)*
+
 ## A note on recreated images
 
 Two images in hand are illustrations/AI-style recreations rather than
