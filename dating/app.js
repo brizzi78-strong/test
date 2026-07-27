@@ -1353,8 +1353,11 @@
     const bird = document.querySelector(".promise-bird");
     if (!img || !bird) return;
     // The bird column stays hidden until the real illustration actually loads.
-    img.addEventListener("load", () => { bird.style.display = "block"; });
+    const reveal = () => { bird.style.display = "block"; };
+    img.addEventListener("load", reveal);
     img.addEventListener("error", () => { bird.style.display = "none"; });
+    // If the image is already cached/complete, the load event won't fire — show it now.
+    if (img.complete && img.naturalWidth > 0) reveal();
   })();
 
   /* ---- Boot ---- */
