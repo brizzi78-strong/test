@@ -17,6 +17,10 @@ html = open(path, encoding="utf-8").read()
 # Chapter openers -> new page (styled via .chapno)
 html = html.replace("<p><strong>CHAPTER", '<p class="chapno"><strong>CHAPTER')
 
+# Chapter epigraphs (italic verse + attribution) -> centered (styled via .epigraph)
+html = re.sub(r"<p>(?=<em>“)", '<p class="epigraph">', html)
+html = re.sub(r"<p>(?=<em>Correcting a man)", '<p class="epigraph">', html)
+
 # Part labels ("PART ONE" ... "PART SIX") -> part-title page (styled via .partno)
 html = re.sub(
     r"<p>(PART (?:ONE|TWO|THREE|FOUR|FIVE|SIX))</p>",
