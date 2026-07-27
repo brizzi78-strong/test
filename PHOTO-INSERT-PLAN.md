@@ -96,8 +96,9 @@ recreations for marketing/web, not the printed insert.
 
 ## Open items
 
-- [ ] Rob to supply: Mickey Mouse shirt photo (Ch. 1)
-- [ ] Rob to supply: the cardinal photo (Epilogue)
+- [x] Mickey Mouse shirt photo / cardinal photo — CLOSED, author's call:
+      the text descriptions carry both; neither photo will be included.
+      (Drop items #3 and #10 from the image list.)
 - [ ] Confirm placement (mid-book vs. post-Epilogue)
 - [x] MTV frame permissions — RESOLVED: replaced with Rob's personal Cancun
       photo (with Busta Rhymes; documentary use of a public event in a
