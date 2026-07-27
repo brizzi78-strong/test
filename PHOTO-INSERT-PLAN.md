@@ -59,6 +59,11 @@ the insert is ~11 images across 8 pages (4 leaves).
     Caption: *"January 9 was the day I got sober. April 9 was the day I
     got married. I didn't plan that. It just arrived." (Ch. 25)*
 
+14. **Rob and Mager** — booth selfie, both grinning. The sponsor thread
+    made visible.
+    Caption: *"Mager and I talk on the phone every morning. Every single
+    one. Going on fifteen years of that." (Ch. 19)*
+
 ## Received but NOT recommended for print
 
 - **The Raleigh house** — current residence, house number visible in both
