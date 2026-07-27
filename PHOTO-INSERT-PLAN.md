@@ -21,9 +21,6 @@ coda). Default recommendation: mid-book.
    Caption: *"The two of them could have passed for movie stars." (Ch. 2)*
 2. **Rob and Chris as boys**, holding hands in striped shirts.
    Caption: *"Hazel eyes, light skin. Not like me." (Ch. 1)*
-3. **The Mickey Mouse shirt photo** — ⚠️ NOT YET SUPPLIED. Ch. 1 describes
-   it directly ("A little kid in a Mickey Mouse shirt washed so many times it
-   had gone gray"). Rob to locate.
 4. **The gym wall** — District Champions 1994, 1995, 1996.
    Caption: *"Three straight years on that wall." (Ch. 7)*
 5. **Cancun, spring break 1999** — Rob (Florida Gators tee, VIP lanyard)
@@ -41,11 +38,9 @@ coda). Default recommendation: mid-book.
 9. **Chris and Priya.**
    Caption: *"He was there when Chris and Nisha's daughter, Priya, was born.
    He held her." (Ch. 29)*
-10. **The cardinal on the mirror** — ⚠️ NOT YET SUPPLIED. The Epilogue's
-    one picture ("The camera had been in photo mode. One picture.").
-    This is the closing image and the strongest of them all. Rob to send.
-
-With 10 images at ~1–2 per page this is an 8-page insert (4 leaves).
+With the two text-carried images dropped (Mickey Mouse shirt, cardinal —
+author's call: the descriptions in Ch. 1 and the Epilogue do the work),
+the insert is ~11 images across 8 pages (4 leaves).
 
 ## Additional candidates (received after first draft of this plan)
 
