@@ -145,7 +145,7 @@ His hands were already around my throat before I understood he had crossed the c
 
 "Money. Money." One hand came off my throat and he rubbed his fingers against his thumb, the money sign from every movie ever made, while the other hand kept its grip. The fingers pressed. Eased. Pressed again. His breath was sour and chemical, hot against my mouth. Then the hands dropped. He muttered something, backed to the wall, and the dark took him.
 
-The night had started ordinary. A workday. A Tuesday in my San Diego years. When I was done I crossed into Tijuana the way I always did — for the pharmacies, for the pills my prescriptions back home could no longer keep up with. I wasn't sober that night. By then I rarely was. But I was down to the last of my supply, and to an addict an emptying bottle is the only emergency that counts. I'd crossed enough times that I thought I understood how it worked. That was the problem. Do something dangerous often enough and it stops feeling dangerous. It starts to feel like an errand.
+The night had started ordinary. A workday. A Tuesday in my San Diego years. When I was done I crossed into Tijuana the way I always did — for the pharmacies, for the pills my prescriptions back home could no longer keep up with. I wasn't sober that night. I'd been using in Tijuana since I crossed, and I was down to the last of my supply — to an addict, an emptying bottle is the only emergency that counts. I'd crossed enough times that I thought I understood how it worked. That was the problem. Do something dangerous often enough and it stops feeling dangerous. It starts to feel like an errand.
 
 This time a cop saw the watch.
 
