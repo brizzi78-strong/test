@@ -214,7 +214,7 @@ Rosa María and Armando lived next door. A clothesline ran between our balconies
 
 My mother taught English at a little preschool called Cascabelito. Little Bell. Because she worked there, I got to go for free. In the afternoons she'd put on music and dance around the kitchen while making tacos. She would scoop my little brother, Chris, up on her hip and sing along to "The Locomotion," and I'd dance right next to her because she was happy. That was all the reason I needed.
 
-My mother, Becky, had followed my father to Mexico because she loved him. She learned Spanish from soap operas, built a life in the middle of Mexico City, and chose him even when the people who loved her most questioned the decision. She always made her own way. Chris and I were born from that courage. It would be years before I learned the difference between courage and stubbornness, and that my mother had needed both.
+My mother, Becky, had followed my father to Mexico because she loved him. Blonde and American, she stood out on our street, and she stayed anyway. She learned Spanish from soap operas, built a life in the middle of Mexico City, and chose him even when the people who loved her most questioned the decision. She always made her own way. Chris and I were born from that courage. It would be years before I learned the difference between courage and stubbornness, and that my mother had needed both.
 
 I didn't understand the sacrifice. I knew the smell of dinner, the music playing in the kitchen, and her hand reaching down to hold mine.
 

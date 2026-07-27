@@ -44,6 +44,22 @@ coda). Default recommendation: mid-book.
 
 With 10 images at ~1–2 per page this is an 8-page insert (4 leaves).
 
+## Additional candidates (received after first draft of this plan)
+
+11. **Lou and Rob at the waterfront picnic table** — Lou mid-years in the
+    yellow Panama Jack cap, bridge behind them. Strong candidate; this is
+    the real photograph the commissioned illustration was drawn from.
+    Possible caption: *"He looked like De Niro." (Ch. 3)*
+
+## A note on recreated images
+
+Two images in hand are illustrations/AI-style recreations rather than
+original photographs (the Lou picnic-table illustration; possibly the
+mother-and-child Mexico street image). In a memoir, recreations must not be
+presented as photographs — if used, label plainly (e.g., "illustration from
+a family photograph"). Default: use the real photo where one exists; keep
+recreations for marketing/web, not the printed insert.
+
 ## Technical (KDP)
 
 - Interior is B&W: all photos convert to grayscale. Check each for contrast
