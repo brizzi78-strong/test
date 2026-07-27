@@ -5,50 +5,54 @@
 
 **Tijuana, Mexico, 2005**
 
-His hands were around my throat before I understood he had crossed the cell, a small man moving too fast, wired on meth or something close to it, his eyes stretched wide and his whole body carrying the unstable energy of someone who might come apart without warning. Somebody called him Rico. His face came an inch from mine, and the only English he had came out in a rasp. "Gringo. Gringo. Money."
+His hands were on my throat before I knew he had moved.
 
-"No tengo dinero," I told him. The words came out thin. It was true. They had already taken everything.
+Small man. Fast. Wired so tight his whole body looked like it might tear itself open. Somebody called him Rico. His face came an inch from mine. Eyes stretched too wide. Breath sour and chemical, hot against my mouth.
 
-"Money. Money." The fingers pressed, eased, pressed again. His breath was sour and chemical. Then the hands dropped. He muttered something, backed to the wall, and the dark took him.
+"Gringo. Gringo. Money."
 
-The night had started ordinary. A workday, a Tuesday in my San Diego years, and when I was done I crossed into Tijuana. I'd crossed enough times to think I understood how it worked, and that was the problem. Do something dangerous often enough and it starts to feel like a run.
+"No tengo dinero." The words came out thin and wrong. It was true. They had already taken everything.
+
+"Money. Money."
+
+The fingers tightened. Eased. Tightened again. Harder. The pressure found the exact place under the jaw where the air stops. My vision narrowed at the edges. I could feel my own pulse hammering against his thumbs. He was not playing. He was deciding.
+
+Then the hands dropped. He muttered something I couldn't catch, backed into the dark, and the dark took him.
+
+The night had started ordinary. A workday. A Tuesday in my San Diego years. When I finished I crossed into Tijuana the way I always did — enough times that the danger had started to feel like a routine. That was the mistake. Do something dangerous often enough and the body stops warning you.
 
 This time a cop saw the watch.
 
-He was on foot, working the strip near the crossing, and he slowed when he passed my window the way they do when they've already decided something. He circled back. Tapped the glass with two fingers. I rolled it down because there was nothing else to do with a tap like that.
+He took it first. Then the bag. Then everything in my pockets. For a second I thought that might be the end of it. Then he pulled me out of the car by the arm and the night changed shape.
 
-His eyes went to my wrist before they went to my face. I knew what that meant before he said a word. I'd worn the watch because it made me feel like the man I was pretending to be, and now it was the reason a cop in Tijuana had stopped walking.
+It wasn't a prison. It was a holding cell in a building I could never have found again. No one who loved me knew where I was. No one who cared if I lived knew I was there.
 
-Get out of the car, he said. Not loud. He didn't need to be loud.
+The smell hit before the door finished shutting.
 
-I got out. My legs did it before my head agreed to it. He had the watch off my wrist inside of a minute, working the clasp like a man taking something that was already his. Then the bag. Then my pockets, one at a time, methodical, no hurry in it at all, and the no-hurry was the part that scared me. A man in a rush is still deciding something. A man who isn't in a rush has already decided.
+Sewer. Vomit. Old mold. Sweat so thick it felt like a second skin on the air. Underneath it something sweet and rotten that coated the back of the tongue and stayed. When the door locked, the dark moved. I stood still and waited for my eyes. They did not come. Shapes shifted at the edge of vision. Breathing pressed in from every direction — wet, close, uneven. In the corner a cough went on too long and ended in a wet rattle. Something small crossed the concrete with claws. A soft crunch. Silence again.
 
-I stood there on a street I'd crossed a hundred times and watched a stranger empty my pockets onto the hood of my own car, and some part of me was still running the old math, telling me this was a toll, a cost of doing business, the kind of story I'd tell later with the details sanded off. Then he took my arm and I understood the math was wrong. This wasn't a toll. There was no amount that made this stop.
+The men spoke Spanish too fast to hold. It had been my first language. Mexico was where I started. Now the words slid past me in broken pieces and none of them were for me.
 
-I asked him, in the Spanish that still lived somewhere under my English, what happens now. He didn't answer. That not-answering was its own answer, and it was the first time all night my body understood what my mind hadn't caught up to yet: nobody was coming, nobody knew where I was, and this man could do whatever he wanted with the next several hours of my life.
+Some of the men were already gone — rocking, laughing at nothing, talking to the wall. Others sat with their backs flat against the concrete and eyes that did not blink. A few just watched. I did not belong here and every one of them knew it. Rico was one of the ones who watched.
 
-He walked me to a car that wasn't marked like the ones on TV. No lights on top. Just a plain sedan with a man in the passenger seat who didn't turn around. I got in the back because a hand on my shoulder put me there. The door didn't have a handle on the inside. I noticed that before I noticed anything else.
+My throat still burned where his hands had been. I wanted to touch it and didn't. I would not give the room that. I slid down the wall instead. Knees to chest. Forehead down. Concrete cold straight through the clothes and into the bone. The position arrived before the thought did. Get small. Make no sound. Do not meet anyone's eyes. Do not give them a reason. It was the same shape my body had learned as a boy when the yelling started and the only safety left was disappearing.
 
-It wasn't a prison. It was a holding cell in a building I couldn't have found again the next day. I didn't know where I was, who knew I was there, or how long they meant to keep me.
+There was no bedroom this time. No hallway light. No door that opened onto a house where someone might still be awake. No one on earth knew I was in this room.
 
-The smell reached me before the door shut. Sewer and vomit and mold, sweat over the top of it, something rotten underneath. When it closed, the dark seemed to move. I stood still and waited for my eyes to adjust. They didn't, not really. Shapes shifted. Breathing came from every direction. In the corner a wet cough ran too long and ended in a rattle. A rat crossed the floor after a cockroach, claws on concrete, the pounce, a soft crunch, and was gone.
+Not my father.
 
-The men spoke Spanish faster than I could follow. It had been my first language once. Mexico was where I started. By now it was buried far enough down that I could hear it without holding it, and the words moved past me in pieces.
+Not my brother.
 
-Some of the men were gone in the head, rocking, laughing, talking to no one. Others sat with their backs to the wall and their eyes empty. A few just watched me. I didn't belong there, and they knew it. Rico was one of them.
+Not my mother.
 
-My throat burned. I wanted to put a hand to it and didn't. I wasn't going to let the room see it. I slid down the wall instead and sat, knees to my chest, the concrete cold through my clothes, my forehead down. I knew the position. My body found it before my mind caught up. Get small, stay quiet, don't hold anyone's eye, don't give the room a reason to pick you. It was the same shape I'd folded into as a boy when the yelling started.
+No one.
 
-There was no bedroom this time. No hallway light. And no one on earth knew where I was.
+I sat on the concrete with my head on my knees and the life I had been performing somewhere far away. What remained was the smell, the dark, the sound of other men's breathing, and the fact of my own.
 
-Not my father. Not my brother. Not my mother. No one.
+Time stopped meaning anything. Voices flattened into a single low noise. I thought of my mother — her hand around mine in the airport when I was four, the woman who carried me out of this country so I could have a life. I had come back to take that life apart with my own hands. Then I thought of Lou. That was worse. He had chosen me. Made me his son. Sat in the bleachers. Paid bills he could not afford. Never once made me feel I had to earn the place he gave me. And I had put myself here.
 
-I sat on a concrete floor in Mexico with my head on my knees, and the life I'd been performing was somewhere else. What was left was the smell, the dark, and my own breathing.
+I wanted to pray and could not. Somewhere under the fear I still believed. But asking for help out of a hole I had dug myself felt like a lie I could not speak.
 
-I lost track of time. The voices flattened into noise. I thought about my mother, her hand around mine in the airport when I was four, the woman who carried me out of this country to give me a life. I'd come back to take myself apart. Then my father, Lou. That was worse. He'd chosen me, made me his son, sat in the bleachers and paid the bills and handed over money he didn't have, and never once made me feel I had to earn the place. And I'd put myself here.
-
-I wanted to pray and couldn't. I still believed, somewhere under it. Asking for help out of a hole I'd dug myself was more than I could do.
-
-The door opened. Light cut in. I looked up and stayed where I was, afraid it was for someone else, afraid to stand too fast. A man said something and waved me forward. I got up. My legs were wrong under me. I stepped around the wet places and around the men, past Rico, who didn't look at me. Outside the air wasn't clean, but it was air. Someone gave me back enough to walk out with. Not all of it. Enough.
+The door opened. Light cut a hard line across the floor. I looked up and stayed down, afraid the light was for someone else, afraid my legs would not hold if I stood too fast. A man said something and waved me forward. I got up. My legs felt wrong, like they belonged to a different body. I stepped around the wet places and around the men, past Rico, who did not look at me. Outside the air was not clean, but it was air. Someone gave me back enough money to walk out with. Not all of it. Enough.
 
 I came back the next day.
