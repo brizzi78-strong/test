@@ -58,6 +58,12 @@ With 10 images at ~1–2 per page this is an 8-page insert (4 leaves).
     look. Run facing the boys-holding-hands photo (#2) as a then/now pair.
     Possible caption: *"He's my best friend." (Ch. 12)*
 
+13. **Rob and Hope's wedding** — night shot under the oaks at Live Oak
+    Plantation, chandeliers in the trees, red boutonniere. Professional
+    photo (license note applies). Pairs on a spread with #7 (Mom and Lou).
+    Caption: *"January 9 was the day I got sober. April 9 was the day I
+    got married. I didn't plan that. It just arrived." (Ch. 25)*
+
 ## A note on recreated images
 
 Two images in hand are illustrations/AI-style recreations rather than
