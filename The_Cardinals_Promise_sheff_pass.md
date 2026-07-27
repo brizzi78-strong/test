@@ -668,7 +668,7 @@ I couldn't take any of it in. The gap between who everyone suddenly said I was a
 
 ### *Junior Year*
 
-Junior year I cut nineteen pounds the week of the tournament, then binged so hard after weigh-ins that I threw up twice on the mat during a match against a guy who had two wins over me. The ref stopped it. Greeny, Coach Greenshields, got a towel, cleaned me up, sent me back out. I won the match and the tournament.
+Junior year I cut nineteen pounds the week of the tournament, then binged so hard after weigh-ins that I threw up twice on the mat during a match against a guy who had two wins over me. The ref stopped it. Greeny, Coach Greenshields, got a towel, cleaned me up, sent me back out. I won the match and the tournament — my second straight District title.
 
 That season in Regions I drew a kid who almost never lost, a Bergen County name everyone knew, dominant and smart, the kind who wins because he rarely makes a mistake. Quarterfinals, he was the two seed, I was the seven. Six minutes. Ten seconds left, I was down 6–5. He let me up, experienced guys do that with a lead, sure they can ride it out on their feet. He shouldn't have. Three seconds on the clock I shot a single-leg, my arms on his leg before my brain caught up, his balance gone. Takedown, 7–6, final. The paper the next day: "Late Takedown Keeps Ramsey's Brizzi Going."
 
@@ -684,7 +684,7 @@ What stays with me now: Lou walked into that apartment before he ever walked int
 
 ### *Senior Year: County Champion*
 
-Senior year I came into the Counties as the top seed at 130. My brother Chris was a freshman at 103. In the sauna, cutting weight together, we'd said it would be something if we ever shared an article. Chris upset the number-one seed to make the semis. The paper ran it: "Ramsey's Brizzi Brothers are Double Trouble." Dad was beaming.
+Senior year I won the District again, three straight years on that wall, and came into the Counties as the top seed at 130. My brother Chris was a freshman at 103. In the sauna, cutting weight together, we'd said it would be something if we ever shared an article. Chris upset the number-one seed to make the semis. The paper ran it: "Ramsey's Brizzi Brothers are Double Trouble." Dad was beaming.
 
 I won the semis and the final 15–7, county champion at seventeen. My name on the wall again. Seventeen. I wouldn't understand that number for another thirty years.
 
