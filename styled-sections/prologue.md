@@ -29,7 +29,7 @@ It wasn't a prison. It was a holding cell in a building I could never have found
 
 The smell reached me before the door shut.
 
-Sewer. Vomit. Mold. Sweat over the top of it. Something rotten and sweet underneath that stuck to the back of the throat. When the door closed, the dark seemed to move. I stood still and waited for my eyes to adjust. They didn't. Not really. Shapes shifted. Breathing came from every direction — wet, close, uneven. In the corner a cough ran too long and ended in a rattle. A rat crossed the floor after a cockroach, claws on concrete, the pounce, a soft crunch, and was gone.
+Sewer. Vomit. Mold. Sweat over the top of it. Something rotten and sweet underneath that stuck to the back of the throat. I gagged on it, swallowed, gagged again. When the door closed, the dark seemed to move. I stood still and waited for my eyes to adjust. They didn't. Not really. Shapes shifted. Breathing came from every direction — wet, close, uneven. In the corner a cough ran too long and ended in a rattle. A rat crossed the floor after a cockroach, claws on concrete, the pounce, a soft crunch, and was gone.
 
 The men spoke Spanish faster than I could follow. It had been my first language once. Mexico was where I started. By now it was buried far enough down that I could hear it without holding it, and the words moved past me in pieces.
 
