@@ -47,6 +47,8 @@ Not my father. Not my brother. Not my mother. No one.
 
 I sat on a concrete floor in Mexico with my head on my knees, and the life I'd been performing was somewhere else. What was left was the smell, the dark, and my own breathing.
 
+The high was wearing off. I could feel the far edge of it, the place where the sick starts, and somewhere underneath the counting had already begun — how long since the last pill, how long until the need got loud. If somebody had opened that door and offered me the outside without my drugs or the pit with them, I would have chosen the pit. That is the truest thing I can tell you about that night.
+
 I lost track of time. The voices flattened into noise. I thought about my mother, her hand around mine in the airport when I was four, the woman who carried me out of this country to give me a life. I'd come back to take myself apart. Then my father, Lou. That was worse. He'd chosen me — a boy from Mexico City who wasn't his — made me his son, gave me his name, sat in the bleachers and paid the bills and handed over money he didn't have, and never once made me feel I had to earn the place. Somewhere back home he was asleep, believing his son was safe. And I'd put myself here.
 
 I wanted to pray and couldn't. I still believed, somewhere under it. Asking for help out of a hole I'd dug myself was more than I could do.
