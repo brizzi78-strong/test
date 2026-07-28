@@ -107,6 +107,16 @@ export class AccountingService {
     return company;
   }
 
+  getCompany(id: string): Company {
+    return this.require(this.store.companies, 'Company', id);
+  }
+
+  /** List companies, optionally filtered by exact name (used for idempotent bootstrap). */
+  listCompanies(filter?: { name?: string }): Company[] {
+    const name = filter?.name?.trim();
+    return this.store.companies.list((c) => !name || c.name === name);
+  }
+
   // --- Chart of accounts -------------------------------------------------
 
   createAccount(input: { companyId: string; type: AccountType; name: string; code?: string }): Account {

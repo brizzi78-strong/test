@@ -51,6 +51,8 @@ export function buildRoutes(service: AccountingService): Route[] {
     ],
 
     ['POST', '/companies', ({ body }) => created(service.createCompany(asObject(body) as never))],
+    ['GET', '/companies', ({ query }) => ok(service.listCompanies({ name: query.get('name') ?? undefined }))],
+    ['GET', '/companies/:id', ({ params }) => ok(service.getCompany(params.id))],
 
     ['POST', '/accounts', ({ body }) => created(service.createAccount(asObject(body) as never))],
     [

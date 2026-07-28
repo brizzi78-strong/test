@@ -20,9 +20,11 @@ COPY directory ./directory
 COPY timeoff ./timeoff
 COPY offboarding ./offboarding
 COPY orchestrator ./orchestrator
+COPY accounting ./accounting
 COPY booking ./booking
 COPY schedule ./schedule
 COPY book ./book
+COPY books ./books
 COPY portal ./portal
 COPY gateway ./gateway
 

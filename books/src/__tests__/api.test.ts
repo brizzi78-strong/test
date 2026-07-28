@@ -64,6 +64,31 @@ test('bootstraps the business and a default chart of accounts', async () => {
   });
 });
 
+test('restart reuses the same company instead of creating a duplicate', async () => {
+  // Share one Accounting instance across two Books BFFs (a "restart").
+  const accounting = createAccounting(createInMemoryStore());
+  const accPort = await listen(accounting.server);
+  const accountingBase = `http://127.0.0.1:${accPort}`;
+  const mkBooks = () => createBooks({ accountingBase, businessName: 'Blue Ridge Press LLC' });
+
+  const b1 = mkBooks();
+  const p1 = await listen(b1.server);
+  const b2 = mkBooks();
+  const p2 = await listen(b2.server);
+  try {
+    const id1 = (await j(`http://127.0.0.1:${p1}`, 'GET', '/api/app')).json.companyId;
+    const id2 = (await j(`http://127.0.0.1:${p2}`, 'GET', '/api/app')).json.companyId;
+    assert.equal(id1, id2); // same books, not a duplicate company
+    // And the default chart of accounts was seeded exactly once.
+    const accts = (await j(`http://127.0.0.1:${p2}`, 'GET', `/api/accounts?companyId=${id2}`)).json as any[];
+    assert.equal(accts.length, 5);
+  } finally {
+    await new Promise<void>((r) => b1.server.close(() => r()));
+    await new Promise<void>((r) => b2.server.close(() => r()));
+    await new Promise<void>((r) => accounting.server.close(() => r()));
+  }
+});
+
 test('the full billing loop persists through the BFF', async () => {
   await withApp(async (base) => {
     const co = (await j(base, 'GET', '/api/app')).json.companyId as string;

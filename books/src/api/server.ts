@@ -76,8 +76,15 @@ export function createApp(opts: AppOptions = {}): AppServer {
       ensuring = (async () => {
         let companyId = configuredId;
         if (!companyId) {
-          const co = await call('POST', '/companies', { name: businessName });
-          companyId = String(co.id);
+          // Reuse an existing company with this name (so restarts against a
+          // durable Accounting store don't create duplicate books); else create.
+          const existing = await call('GET', `/companies?name=${encodeURIComponent(businessName)}`);
+          if (Array.isArray(existing) && existing.length > 0) {
+            companyId = String(existing[0].id);
+          } else {
+            const co = await call('POST', '/companies', { name: businessName });
+            companyId = String(co.id);
+          }
         }
         const accounts = await call('GET', `/accounts?companyId=${encodeURIComponent(companyId)}`);
         if (Array.isArray(accounts) && accounts.length === 0) {
