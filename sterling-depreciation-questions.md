@@ -5,7 +5,7 @@
 ## The facts
 - **Vehicle:** 2026 Tesla Model Y Long Range AWD (under 6,000 lbs GVWR → §280F "luxury auto" caps apply)
 - **VIN:** 7SAYGDEE6TA451515 · **Placed in service:** 08/21/2025
-- **Cost:** $51,630 total
+- **Cost:** $51,630 total · **Current offer (Carvana):** **$39,600** (business 60% ≈ $23,760 / personal 40% ≈ $15,840)
 - **Business use:** **~60%** (via LLC) / 40% personal
 - **Clean vehicle credit:** $7,500 (§30D) claimed on the individual return — **currently disallowed by IRS Notice CP23** (VIN not on record; Tesla never filed the ECO time-of-sale report). Under dispute; may or may not be reinstated.
 - **Straight sale** — no insurance payout / not a total-loss (confirmed).
