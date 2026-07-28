@@ -4,23 +4,17 @@
 
 **ROB BRIZZI**
 
-# **COPYRIGHT**
-
-THE CARDINAL'S PROMISE. Copyright © 2026 by Rob Brizzi. All rights reserved.
-
-No part of this book may be reproduced in any form or by any electronic or mechanical means, including information storage and retrieval systems, without written permission from the publisher, except by a reviewer, who may quote brief passages in a review.
+Copyright © 2026 by Rob Brizzi. All rights reserved. No part of this book may be reproduced in any form without written permission from the publisher, except for brief quotations in reviews.
 
 Published by Cardinal Promise Press, Raleigh, North Carolina.
 
-First edition, 2026.
+First edition, 2026. Printed in the United States of America.
 
 Paperback ISBN: 979-8-9966446-0-5
 
 Ebook ISBN: 979-8-9966446-1-2
 
 This is a work of memoir. It reflects the author's present recollections of experiences over time. Some names and identifying details have been changed, some dialogue has been reconstructed, and some events are rendered as composites, as described in the Author's Note.
-
-Printed in the United States of America.
 
 *For anyone who has struggled with addiction or loved someone who has*
 
@@ -32,8 +26,6 @@ Printed in the United States of America.
 *For Hope, who tilted her head and said "We?"*
 
 **CONTENTS**
-
-Foreword
 
 Prologue
 
@@ -113,12 +105,6 @@ A Reader's Guide
 Resources
 
 About the Author
-
-# **FOREWORD**
-
-I have known Rob Brizzi for thirty-five years. Every page of this book sounds like the man I know.
-
-*Dave Meyer, former NFL quarterback*
 
 # **PROLOGUE**
 
@@ -2110,7 +2096,7 @@ Lou was a father like that. He hit a hundred fly balls at Finch Park in Ramsey, 
 
 This book was written to honor that legacy. It connects Rob's father's story to the larger story of how we live, how we love, and how we face the end of life with honesty and grace. It takes on the conversations most people find too painful to begin, and it does so with the earned authority of a man who has had those conversations hundreds of times, with real families, at the hardest moments of a human life.
 
-You can trust what you have just read. Rob does not have a long list of titles after his name, and he has never needed one. He has done the harder thing. He has lived it. He has wrestled, literally and figuratively, with the hardest questions of identity, suffering, and meaning. He has served in the places most people are afraid to go, and he has come out of them with something worth saying.
+You can trust what you have just read. Every page of this book sounds like the man I know. Rob does not have a long list of titles after his name, and he has never needed one. He has done the harder thing. He has lived it. He has wrestled, literally and figuratively, with the hardest questions of identity, suffering, and meaning. He has served in the places most people are afraid to go, and he has come out of them with something worth saying.
 
 So here is the invitation Rob extends to you in these pages. What would it look like if your life were not just for yourself? What would it look like to give your life to the people around you, especially in their hardest moments? This is not a call to perfection. It is a call to show up for the people who are yours to love, with everything you have. Rob is the first to tell you he is a work in progress, moving closer every day to the man he wants to be.
 
@@ -2118,7 +2104,7 @@ This book will help you do exactly that. I am grateful it exists, and I am grate
 
 *Sincerely,*
 
-*Dave Meyer*
+*Dave Meyer, former NFL quarterback*
 
 # **AUTHOR'S NOTE**
 
@@ -2140,7 +2126,7 @@ Lisa, Jon, and Joel — we shared him. I know what we lost.
 
 The men God put in front of me: Andy, Bob, Mager, Matt, and Quint. You walked into the room. So did I.
 
-Dave Meyer, for thirty-five years of friendship and for the words that open and close this book.
+Dave Meyer, for thirty-five years of friendship and for the words that close this book.
 
 Dr. Huet, and every nurse, aide, chaplain, and social worker I get to stand beside in the last chapter. You taught me what showing up looks like when it's a profession.
 

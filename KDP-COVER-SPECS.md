@@ -119,8 +119,10 @@ front-panel-only export at 1600 × 2560 px or larger.
 
 IN HAND: Dave Meyer foreword + back-cover quote — APPROVED by the author to use
 (2026-07-15, "yes for Meyer"); Dave carries the back-cover endorsement for now.
-Cover credit line FOREWORD BY DAVE MEYER, NFL QB. (Roster/credential wording is
-still a factual pre-print check.) Dr. Huet endorsement quotes (back + front) are
+Cover credit line: UPDATE 2026-07-28 — the Foreword moved to the back and merged
+into Dave's Afterword, so the credit line must read AFTERWORD BY DAVE MEYER, NFL
+QB (or be dropped from the cover). Flag to Grace before final art. (Roster/credential
+wording is still a factual pre-print check.) Dr. Huet endorsement quotes (back + front) are
 PULLED for now pending his OK for that use — see held-out/huet-and-dean-pulled.md;
 Huet stays in the book only as a friend, no career mention. Quint Studer verbal
 ("I love the Brizzi's. Lou was a great man.") — get exact wording in writing

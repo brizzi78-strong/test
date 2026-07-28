@@ -1,6 +1,6 @@
 import io, subprocess
 jobs = [
-  ("The_Cardinals_Promise_sheff_pass.md", "# **COPYRIGHT**", "# **FOREWORD**",
+  ("The_Cardinals_Promise_sheff_pass.md", "Copyright © 2026 by Rob Brizzi", "# **PROLOGUE**",
    "cover/cardinal-front-v5.jpg", "The Cardinal's Promise", "The_Cardinals_Promise_Speechify.epub"),
   ("The_Cardinals_Promise_PT.md", "# **DIREITOS AUTORAIS**", "# **PREFÁCIO**",
    "cover/cardinal-front-pt.jpg", "A Promessa do Cardeal", "The_Cardinals_Promise_PT_Speechify.epub"),

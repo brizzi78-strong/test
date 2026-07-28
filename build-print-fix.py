@@ -26,6 +26,24 @@ html = re.sub(
     flags=re.S,
 )
 
+# Copyright block (no heading in source) -> its own small-type page
+html = re.sub(
+    r"(<p>Copyright © 2026 by Rob Brizzi.*?)(?=<p><em>For anyone)",
+    r'<div class="copyrightpage">\1</div>',
+    html,
+    count=1,
+    flags=re.S,
+)
+
+# Dedication -> its own centered page ahead of the Contents
+html = re.sub(
+    r"(<p><em>For anyone.*?)(?=<div class=\"tocwrap\">)",
+    r'<div class="dedication">\1</div>',
+    html,
+    count=1,
+    flags=re.S,
+)
+
 # Chapter epigraphs (italic verse + attribution) -> centered (styled via .epigraph)
 html = re.sub(r"<p>(?=<em>“)", '<p class="epigraph">', html)
 html = re.sub(r"<p>(?=<em>Correcting a man)", '<p class="epigraph">', html)
@@ -44,9 +62,9 @@ def fix_ol(m):
 
 html = re.sub(r'<ol(\s+start="(\d+)")?[^>]*>', fix_ol, html)
 
-# Wrap the title page (first h1 and everything up to the next h1)
+# Wrap the title page (first h1 and everything up to the copyright block)
 html = re.sub(
-    r"(<h1\b.*?</h1>.*?)(?=<h1\b)",
+    r"(<h1\b.*?</h1>.*?)(?=<div class=\"copyrightpage\">)",
     r'<div class="titlepage">\1</div>',
     html,
     count=1,

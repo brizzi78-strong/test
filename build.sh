@@ -65,10 +65,10 @@ pandoc "$SRC" \
 # table of contents (marker-based, so it survives front-matter edits).
 pandoc "$SRC" -t plain --wrap=none -o "$BASE.speechify.full.txt"
 awk '
-  /^FOREWORD$/        { skip=0 }
-  /^COPYRIGHT$/       { skip=1 }
+  /^PROLOGUE$/                        { skip=0 }
+  /Copyright © 2026 by Rob Brizzi/    { skip=1 }
   skip==1 {
-    if ($0 ~ /^For / || $0 ~ /^In memory of / || $0 ~ /^In honor of / || $0 ~ /^the man who kept/ || $0 ~ /^[0-9][0-9][0-9][0-9]/) print
+    if (($0 ~ /^For / && $0 !~ /^For Those Walking This Road/) || $0 ~ /^In memory of / || $0 ~ /^In honor of / || $0 ~ /^the man who kept/ || $0 ~ /^[0-9][0-9][0-9][0-9]/) print
     next
   }
   { print }

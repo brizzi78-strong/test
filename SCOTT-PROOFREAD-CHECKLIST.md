@@ -36,7 +36,7 @@ Mexico City · West Paterson, NJ · Ramsey, NJ · Mahwah, NJ · Pensacola · Ral
 - Consistent capitalization of recurring terms (the rooms, the program, hospice)
 
 ## 6. Front & back matter
-- **Foreword (Dave)** — 2 edits still pending Dave's sign-off
+- **Afterword (Dave)** — foreword merged into it 2026-07-28 (front foreword removed); edits still pending Dave's sign-off
 - Author's Note · Prologue · **Acknowledgments** — every name spelled right, **no one omitted** (this is the one people get hurt over)
 - Dedication present · epigraph credits/permissions noted
 - Copyright page: title, subtitle **"A Memoir of the Father Who Stayed,"** ISBN **979-8-9966446-0-5**, Cardinal Promise Press

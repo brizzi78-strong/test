@@ -4,23 +4,17 @@
 
 **ROB BRIZZI**
 
-# **COPYRIGHT**
-
-THE CARDINAL'S PROMISE. Copyright © 2026 by Rob Brizzi. All rights reserved.
-
-No part of this book may be reproduced in any form or by any electronic or mechanical means, including information storage and retrieval systems, without written permission from the publisher, except by a reviewer, who may quote brief passages in a review.
+Copyright © 2026 by Rob Brizzi. All rights reserved. No part of this book may be reproduced in any form without written permission from the publisher, except for brief quotations in reviews.
 
 Published by Cardinal Promise Press, Raleigh, North Carolina.
 
-First edition, 2026.
+First edition, 2026. Printed in the United States of America.
 
 Paperback ISBN: 979-8-9966446-0-5
 
 Ebook ISBN: 979-8-9966446-1-2
 
 This is a work of memoir. It reflects the author's present recollections of experiences over time. Some names and identifying details have been changed, some dialogue has been reconstructed, and some events are rendered as composites, as described in the Author's Note.
-
-Printed in the United States of America.
 
 *For anyone who has struggled with addiction or loved someone who has*
 
@@ -32,8 +26,6 @@ Printed in the United States of America.
 *For Hope, who tilted her head and said "We?"*
 
 **CONTENTS**
-
-Foreword
 
 Prologue
 
@@ -81,7 +73,7 @@ Prologue
 
 **Part Six — The Last Chapter**
 
-28. The Detour
+28. The Viagra of Diabetes Meds
 29. Five Weeks
 30. The Days After
 31. The First Honest Mile

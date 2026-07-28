@@ -163,3 +163,25 @@ p.epigraph + p { text-indent: 0; margin-top: 0.06in; }
 .tocwrap p { text-indent: 0; margin: 1px 0 3px; line-height: 1.25; }
 .tocwrap ol { margin: 0 0 3px 1.1em; padding-left: 0.6em; }
 .tocwrap li { line-height: 1.25; margin: 0; }
+
+/* ---------- Copyright page (small type, no heading, no running head) ---------- */
+.copyrightpage {
+  page: titlepage;
+  page-break-before: always;
+  margin-top: 3.1in;
+  font-size: 8.5pt;
+  line-height: 1.5;
+}
+.copyrightpage p { text-indent: 0; text-align: left; margin: 0 0 0.09in; }
+
+/* ---------- Dedication page (centered, no running head) ---------- */
+.dedication { page: titlepage; page-break-before: always; text-align: center; }
+.dedication p { text-indent: 0; margin: 0.16in 0; }
+.dedication p:first-child { margin-top: 2.1in; }
+
+.tocwrap { page-break-before: always; }
+
+@page titlepage {
+  @top-center { content: none; }
+  @bottom-center { content: none; }
+}

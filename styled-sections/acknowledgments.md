@@ -10,7 +10,7 @@ Lisa, Jon, and Joel — we shared him. I know what we lost.
 
 The men God put in front of me: Andy, Bob, Mager, Matt, and Quint. You walked into the room. So did I.
 
-Dave Meyer, for thirty-five years of friendship and for the words that open and close this book.
+Dave Meyer, for thirty-five years of friendship and for the words that close this book.
 
 Dr. Huet, and every nurse, aide, chaplain, and social worker I get to stand beside in the last chapter. You taught me what showing up looks like when it's a profession.
 
