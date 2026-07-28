@@ -182,13 +182,14 @@ p.partno {
   font-size: 11pt;
   letter-spacing: 0.3em;
   color: #8a97b8;
-  margin: 2in 0 0.15in;
+  margin: 0.3in 0 0.08in;
 }
 p.partno + h1 {
   page-break-before: avoid;
-  margin: 0.15in 0 0.5in;
+  font-size: 16pt;
+  margin: 0 0 0.18in;
 }
-p.partno + h1 + p {   /* part epigraph */
+p.partno + h1 + p:not(.chapno) {   /* part epigraph */
   text-indent: 0;
   text-align: center;
   font-style: italic;
@@ -292,3 +293,10 @@ p.epigraph + p { text-indent: 0; margin-top: 0.06in; }
 .dedication p:first-child { margin-top: 2.1in; }
 
 .tocwrap { page-break-before: always; }
+
+/* ---------- Part opener shares the page with its first chapter ---------- */
+p.partno + h1 + p.chapno,
+p.partno + h1 + p:not(.chapno) + p.chapno {
+  page-break-before: avoid;
+  margin-top: 0.55in;
+}
