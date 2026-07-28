@@ -37,6 +37,28 @@ struct MoodCheckIn: Identifiable, Codable, Hashable {
     var mood: Mood
 }
 
+/// One medication on the person's list. The handbook's rule is "bring the
+/// list, not just the bottles" — this is that list, kept on-device.
+struct Medication: Identifiable, Codable, Hashable {
+    var id: UUID = UUID()
+    var name: String
+    var dose: String        // e.g. "10 mg"
+    var schedule: String    // when — e.g. "Morning, with food"
+    var purpose: String     // why — e.g. "Blood pressure"
+    var prescriber: String  // who prescribed it
+
+    /// One-line summary for sharing/export, skipping empty fields.
+    var summaryLine: String {
+        var parts = [name]
+        if !dose.isEmpty { parts.append(dose) }
+        if !schedule.isEmpty { parts.append(schedule) }
+        var line = parts.joined(separator: " · ")
+        if !purpose.isEmpty { line += " — for \(purpose)" }
+        if !prescriber.isEmpty { line += " (\(prescriber))" }
+        return line
+    }
+}
+
 /// A short daily reflection shown on the Today screen.
 struct Reflection: Identifiable, Hashable {
     let id: String

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Cardinals Promise (CARD) token mark -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#D7263D"/>
+      <stop offset="1" stop-color="#8E1B2C"/>
+    </linearGradient>
+  </defs>
+  <circle cx="128" cy="128" r="124" fill="url(#bg)"/>
+  <circle cx="128" cy="128" r="124" fill="none" stroke="#FFFFFF" stroke-opacity="0.18" stroke-width="6"/>
+  <!-- stylized cardinal: crest, head and beak drawn as one bold silhouette -->
+  <path fill="#FFFFFF" d="M76 160
+    c0-44 26-74 62-78
+    l6-26 14 22
+    c22 4 38 20 44 40
+    l22 8 -20 12
+    c-2 34 -30 60 -66 60
+    c-14 0 -27 -4 -38 -11
+    l-24 9 8 -24
+    c-5 -9 -8 -13 -8 -12 z"/>
+  <circle cx="150" cy="118" r="8" fill="#8E1B2C"/>
+  <!-- promise ring underscoring the bird -->
+  <path fill="none" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" d="M70 196 q58 26 116 0"/>
+</svg>

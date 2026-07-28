@@ -1,0 +1,18 @@
+{
+  "name": "Cardinals Promise",
+  "symbol": "CARD",
+  "decimals": 18,
+  "description": "Cardinals Promise (CARD) is a fixed-cap ERC-20 token on Ethereum. Maximum supply is hard-capped on-chain at 250,000,000 CARD; the contract has no fees, hooks, blocklists, or pausing.",
+  "totalSupplyCap": "250000000",
+  "logo": "assets/logo.svg",
+  "contract": {
+    "mainnet": null,
+    "sepolia": null
+  },
+  "links": {
+    "website": "https://thecardinalspromise.com/card",
+    "repository": "https://github.com/brizzi78-strong/test",
+    "twitter": null
+  },
+  "notes": "Official site: thecardinalspromise.com (the book's established domain \u2014 token page at /card; cp17.org may redirect there). Fill in contract addresses after deployment before submitting to Etherscan token update, CoinGecko, or a Uniswap token list. Etherscan requires a 32x32 PNG icon \u2014 use assets/logo-32.png."
+}

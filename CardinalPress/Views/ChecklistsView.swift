@@ -67,6 +67,7 @@ private struct ChecklistRow: View {
                     .foregroundStyle(.secondary)
                 Text("\(done) of \(total) done")
                     .font(.caption2.weight(.medium))
+                    .monospacedDigit()
                     .foregroundStyle(done == total ? Theme.gold : tierColor)
             }
         }
@@ -99,6 +100,19 @@ struct ChecklistDetailView: View {
                 .listRowInsets(EdgeInsets(top: 4, leading: 4, bottom: 4, trailing: 4))
             }
 
+            if checklist.id == "cl-medlist" {
+                Section {
+                    NavigationLink {
+                        MedicationsView()
+                    } label: {
+                        Label("Open your medication list", systemImage: "pills.fill")
+                            .foregroundStyle(Theme.cardinal)
+                    }
+                } footer: {
+                    Text("This checklist is the reminder; your medication list is the real thing to fill in and hand over.")
+                }
+            }
+
             Section {
                 ForEach(checklist.items) { item in
                     Button {
@@ -115,6 +129,9 @@ struct ChecklistDetailView: View {
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
                 Menu {
+                    ShareLink(item: store.shareText(for: checklist)) {
+                        Label("Share this checklist", systemImage: "square.and.arrow.up")
+                    }
                     Button(role: .destructive) {
                         withAnimation(.snappy) { store.resetChecklist(checklist) }
                     } label: {
