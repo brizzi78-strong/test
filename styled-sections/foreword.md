@@ -1,5 +1,5 @@
 # **FOREWORD**
 
-I have known Rob Brizzi for thirty-five years. He has a servant's heart, and he has had it from the beginning.
+I have known Rob Brizzi for thirty-five years. Every page of this book sounds like the man I know.
 
 *Dave Meyer, former NFL quarterback*

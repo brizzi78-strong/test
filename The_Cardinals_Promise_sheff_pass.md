@@ -116,7 +116,7 @@ About the Author
 
 # **FOREWORD**
 
-I have known Rob Brizzi for thirty-five years. He has a servant's heart, and he has had it from the beginning.
+I have known Rob Brizzi for thirty-five years. Every page of this book sounds like the man I know.
 
 *Dave Meyer, former NFL quarterback*
 
@@ -155,7 +155,7 @@ It wasn't a prison. It was a holding cell in a building I could never have found
 
 The smell reached me before the door shut.
 
-Sewer. Vomit. Mold. Sweat over the top of it. Something rotten and sweet underneath that stuck to the back of the throat. I gagged on it, swallowed, gagged again. When the door closed, the dark seemed to move. I stood still and waited for my eyes to adjust. They didn't. Not really. Shapes shifted. Breathing came from every direction — wet, close, uneven. In the corner a cough ran too long and ended in a rattle. A rat crossed the floor after a cockroach, claws on concrete, the pounce, a soft crunch, and was gone.
+Sewer. Vomit. Mold. Sweat over the top of it. Something rotten and sweet underneath that stuck to the back of the throat. I gagged on it, swallowed, gagged again. When the door closed, the dark seemed to move. I stood still and waited for my eyes to adjust. They didn't. Not really. Shapes shifted. Breathing came from every direction — wet, close, uneven. In the corner a cough ran too long and ended in a rattle. A rat crossed the floor, claws on concrete, and was gone.
 
 The men spoke Spanish faster than I could follow. It had been my first language once. Mexico was where I started. By now it was buried far enough down that I could hear it without holding it, and the words moved past me in pieces.
 
@@ -210,7 +210,7 @@ Rosa María and Armando lived next door. A clothesline ran between our balconies
 
 My mother taught English at a little preschool called Cascabelito. Little Bell. Because she worked there, I got to go for free. In the afternoons she'd put on music and dance around the kitchen while making tacos. She would scoop my little brother, Chris, up on her hip and sing along to "The Locomotion," and I'd dance right next to her because she was happy. That was all the reason I needed.
 
-My mother, Becky, had followed my father to Mexico because she loved him. Blonde and American, she stood out on our street, and she stayed anyway. She learned Spanish from soap operas, built a life in the middle of Mexico City, and chose him even when the people who loved her most questioned the decision. She always made her own way. Chris and I were born from that courage. It would be years before I learned the difference between bravery and stubbornness, and that my mother had needed both.
+My mother, Becky, had followed my father to Mexico because she loved him. Blonde and American, she stood out on our street, and she stayed anyway. She learned Spanish from soap operas, built a life in the middle of Mexico City, and chose him even when the people who loved her most questioned the decision. She always made her own way. Chris and I were born from that courage. Or stubbornness. She needed both.
 
 I didn't understand the sacrifice. I knew the smell of dinner, the music playing in the kitchen, and her hand reaching down to hold mine.
 
@@ -319,20 +319,6 @@ I always said yes. She knew the order before I gave it. Two double cheeseburgers
 
 That's how I knew my mother loved me.
 
-And her love never stopped after I grew up. I moved more times than I can count, and every time, she made my new place a home. She'd go to T.J. Maxx, fill a cart, and the bare apartment I had just moved into would turn into somewhere that felt like mine. In college she even bought me a Jenny McCarthy poster and hung it on my wall, because making a place mine meant making it feel like me, right down to the parts a mother would rather not picture. I felt loved. The burgers and vanilla shakes at midnight. The lamps and odds-and-ends from T.J. Maxx. Her nurturing touch turned my childhood into a happy time and my apartments into homes, so I wouldn't have to walk into an empty room.
-
-Years later, coming back from a cruise through Mexico, tanned so deep that in the eyes of United States customs I looked very Mexican, I got pulled aside.
-
-"These papers don't look official," a customs officer said, examining them from every angle.
-
-The officers questioned me for an hour before they called the police, who interrogated me for another two hours. Then the FBI arrived.
-
-I never denied I was ethnically Mexican or even born in Mexico. Seven hours off the boat, fourteen different officers, and I provided the same answers every time. They were less interested in who I was than in who they saw.
-
-I wasn't nervous. I had nothing to hide. But I was embarrassed, all the way through. If not for the humiliation, I would have let my anger show. Somewhere around hour five, I wondered if I would spend the rest of my life proving on demand that I was who the paper said I was.
-
-When my mother heard how I'd been detained and questioned, she jumped into action. She went to a New Jersey courthouse, got my official birth certificate, and gave it to me. She made sure that nobody could ever again hold her son for seven hours over the way a document looked.
-
 Chris had left Mexico as a baby, so he took to New Jersey without trouble. I'd left as a four-year-old with a father to miss.
 
 At night I thought about Horacio, not with anger, with confusion, half-expecting him to turn up one day so we could pick things back up. I didn't know how to love a man who was gone but not dead. No funeral, no grave, no explanation a child could hold. Grief has a shape when somebody dies, something to point at, a day people mark on a calendar. What I had instead was a door I kept checking, quietly, for years, without ever admitting that's what I was doing. The grown-ups rarely spoke of him, and when they did, they mentioned him carefully, the way you handle something that might break if you name it straight.
@@ -355,7 +341,7 @@ From an early age, I had strong opinions about the way things should be. In my m
 
 I also had a strong opinion about which colors belonged to Mom and my Aunt Nancey. Mom always wore red nail polish, Aunt Nancey always pink. That's just how the world worked. It had always been that way, and it followed that this rule should remain for evermore. I didn't make up those rules. Then one day, Mom and Aunt Nancey broke them. Mom came home with pink nails, and Nancey with red. I lost it. Sobbing, I insisted they had it wrong and had to put it back the way it should be. When they saw my response, they returned to the salon and changed their nails back to the "right" colors just to settle me.
 
-It wasn't a tantrum; it was panic. I'd lost a country, a father, and a language. The nail colors were one thing that needed to stay the way they belonged, and then they didn't.
+I'd lost a country, a father, and a language.
 
 Nancey, my mother's youngest sister, treated Chris and me as her own from the start. She was at the games and the matches, always in our corner. Nancey was in her early twenties when we arrived from Mexico, years before she met Charlie. She told me not long ago that no matter how old I get, she'll always see the same little kid, and I know the one she means: the boy in the backseat too scared to get out of the car.
 
@@ -363,7 +349,7 @@ Aunt Terry's family had the house at Pines Lake. We'd flown to see Terry once be
 
 Once we landed in New Jersey for good, her house was where I made ordinary kid memories. A Halloween with the three of us in costume on the kitchen floor, tearing into the candy, Kevin as He-Man, me as a pumpkin, and Wolfie, their German Shepherd, dressed as Battle Cat. Hide-and-seek on the metal railing between the levels, where I was sure I was hidden and laughed until I cried when I sprang out and scared the one who came looking. Kevin glued to his Nintendo while the rest of us ran. A pool where somebody toweled me dry while I announced I was cold, and I jumped straight back in.
 
-What I love now is how close my mother and her sisters have become, she and Nancey and Terry, a closeness that deepened after they lost their own mother. Watching my nana go was hard. Dementia took her in pieces, the person still in the room while the line kept dropping. That slow disappearing stayed with me. Much later, I earned my Certified Dementia Practitioner credential. I was thinking of her when I did. But that was decades ahead. Back then, still in those first months in New Jersey, my mom had called Papa when we landed and told him the truth. We weren't coming back. About six months later, he came anyway. He moved in with us at Grandpa and Nana's house. Even though I don't think Grandpa cared for Papa, he helped him find a job at El Torito, a Mexican restaurant. Chris wasn't even two and couldn't say the name of the restaurant. He called it el dorito and talked about the balloons. For a little while, we were a family again: Mama, Papa, Chris, and me, trying to build a life in a place that still didn't feel like home.
+What I love now is how close my mother and her sisters have become, she and Nancey and Terry, a closeness that deepened after they lost their own mother. Back then, still in those first months in New Jersey, my mom had called Papa when we landed and told him the truth. We weren't coming back. About six months later, he came anyway. He moved in with us at Grandpa and Nana's house. Even though I don't think Grandpa cared for Papa, he helped him find a job at El Torito, a Mexican restaurant. Chris wasn't even two and couldn't say the name of the restaurant. He called it el dorito and talked about the balloons. For a little while, we were a family again: Mama, Papa, Chris, and me, trying to build a life in a place that still didn't feel like home.
 
 Papa had a way of making an ordinary day feel extraordinary. One afternoon he dressed Chris and me as Batman and Robin, though it wasn't Halloween. Mama was furious. Papa just laughed. To him, we didn't need a holiday to become superheroes. Looking back, I think he was trying to give us something no job, no country, and no amount of uncertainty could take away: the freedom to be kids.
 
@@ -1632,11 +1618,27 @@ I think about those trips differently now, not as time I should have spent some 
 
 **2017**
 
-For most of my life my mother was unbreakable. She got two boys out of Mexico on her own nerve, worked nights without complaint, and still found a way to have a hot meal and a made-up home waiting for me at every turn. Wonderwoman. The first crack I ever saw in her was in Central Park.
+For most of my life my mother was unbreakable. She got two boys out of Mexico on her own nerve, worked nights without complaint, and still found a way to have a hot meal and a made-up home waiting for me at every turn. Wonderwoman.
+
+Her love never stopped when I grew up. I moved more times than I can count, and every time, she made the new place a home. She'd go to T.J. Maxx, fill a cart, and a bare apartment I had just landed in would turn into somewhere that felt like mine. In college she even bought me a Jenny McCarthy poster and hung it on my wall, because making a place mine meant making it feel like me, right down to the parts a mother would rather not picture. The burgers and vanilla shakes at midnight. The lamps and odds-and-ends from T.J. Maxx, picked out so I wouldn't have to walk into an empty room.
+
+Years later, coming back from a cruise through Mexico, tanned so deep that in the eyes of United States customs I looked very Mexican, I got pulled aside.
+
+"These papers don't look official," a customs officer said, examining them from every angle.
+
+The officers questioned me for an hour before they called the police, who interrogated me for another two hours. Then the FBI arrived.
+
+I never denied I was ethnically Mexican or even born in Mexico. Seven hours off the boat, fourteen different officers, and I provided the same answers every time. They were less interested in who I was than in who they saw.
+
+I wasn't nervous. I had nothing to hide. But I was embarrassed, all the way through. If not for the humiliation, I would have let my anger show. Somewhere around hour five, I wondered if I would spend the rest of my life proving on demand that I was who the paper said I was.
+
+When my mother heard how I'd been detained and questioned, she jumped into action. She went to a New Jersey courthouse, got my official birth certificate, and gave it to me. She made sure that nobody could ever again hold her son for seven hours over the way a document looked.
+
+The first crack I ever saw in her was in Central Park.
 
 About six months in, I brought Hope to meet my mom. Gary was there too, one of the good people I've known. We had lunch at Tavern on the Green and walked through Central Park. A good day. Then she stepped over a curb and her leg gave out. Not a stumble you laugh off, her body just quit. I helped her up. She brushed it off. But I saw it. The first time I looked at my mother and saw someone fragile.
 
-Sometime in 2022 she came to visit us in Pensacola. One morning in the kitchen her hand started to shake. She looked down at it. It's been happening more. Later, alone, Hope said it quietly: your mom has Parkinson's. I welled up. I'd known since Central Park. I told Hope, we can't feel sorry for her anymore, clarity, not coldness. What she needed was encouragement: the exercises, the medication, fight for quality of life. Watching both of them decline at the same time nearly broke me. My mom's body turning against her. My dad getting weaker. The two people who chose me, both fading. She came up for Christmas. I watched her get out of the car and knew it would be one of the last trips she made up here. She came anyway. That's my mom. Wonderwoman doesn't stop showing up. We talk every day. The woman who used to call after a long shift to ask if I wanted McDonald's still calls, except now I'm the one asking if she's eaten, if she's up, if she's okay. She is all over this book, every story I ran past her to get right. I couldn't have written a word of it without her.
+Sometime in 2022 she came to visit us in Pensacola. One morning in the kitchen her hand started to shake. She looked down at it. It's been happening more. Later, alone, Hope said it quietly: your mom has Parkinson's. I welled up. I'd known since Central Park. I told Hope, we can't feel sorry for her anymore, clarity, not coldness. What she needed was encouragement: the exercises, the medication, fight for quality of life. Watching both of them decline at the same time nearly broke me. My mom's body turning against her. My dad getting weaker. The two people who chose me, both fading. I had watched slow disappearing before: dementia took my nana in pieces, the person still in the room while the line kept dropping, and much later, when I earned my Certified Dementia Practitioner credential, I was thinking of her. She came up for Christmas. I watched her get out of the car and knew it would be one of the last trips she made up here. She came anyway. That's my mom. Wonderwoman doesn't stop showing up. We talk every day. The woman who used to call after a long shift to ask if I wanted McDonald's still calls, except now I'm the one asking if she's eaten, if she's up, if she's okay. She is all over this book, every story I ran past her to get right. I couldn't have written a word of it without her.
 
 They have a picture for it in the program. The addict moves through life like a tornado. When the wind finally dies down, he looks around and figures everything is fine. Everyone else is still standing in the wreckage, still shaking, and he is the last one to notice. Getting sober quieted my storm years ago. What it didn't do was repair what the storm did to the people who were standing in it, and my mother stood closest. Writing this book is what finally turned me around to look.
 
