@@ -1,0 +1,10 @@
+{
+  "name": "book",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Client-facing booking site — a public page where customers self-book an appointment, backed by a narrow backend-for-frontend over the Booking service",
+  "type": "module",
+  "engines": { "node": ">=22.18" },
+  "scripts": { "start": "node src/index.ts", "test": "node --test", "typecheck": "tsc --noEmit" },
+  "devDependencies": { "@types/node": "^22.8.5", "typescript": "~5.8.0" }
+}

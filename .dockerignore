@@ -1,0 +1,26 @@
+# Node
+**/node_modules
+**/*.log
+
+# Git
+.git
+.gitignore
+
+# The HR platform images only need the service modules — exclude the unrelated
+# workspace projects (iOS app, book, smart contracts) and their artifacts.
+CardinalPress
+CardinalPress.xcodeproj
+cardinals-promise
+contracts
+test
+verification
+ignition
+scripts
+artifacts
+cache
+out
+cache_forge
+broadcast
+docs
+*.md
+!cardinal-hr/**

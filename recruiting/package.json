@@ -1,0 +1,19 @@
+{
+  "name": "recruiting",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Recruiting — job requisitions and applicant tracking; applications move through a hiring pipeline with an audit trail",
+  "type": "module",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "start": "node src/index.ts",
+    "test": "node --test",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.8.5",
+    "typescript": "~5.8.0"
+  }
+}

@@ -1,0 +1,248 @@
+# Run the whole Cardinal HR platform — every service, the orchestrator, the
+# admin portal, the gateway, and the static marketing website — with one
+# command:
+#
+#   docker compose -f deploy/docker-compose.yml up --build
+#
+# Each service runs the same image (built once) with a different command, port,
+# and durable SQLite volume. The website is served by nginx from cardinal-hr/.
+name: cardinal-hr
+
+x-service: &service
+  build:
+    context: ..
+    dockerfile: deploy/Dockerfile
+  image: cardinalhr/services:local
+  restart: unless-stopped
+
+services:
+  recruiting:
+    <<: *service
+    command: node recruiting/src/index.ts
+    environment:
+      PORT: "3200"
+      RECRUITING_DB: /data/recruiting.db
+    ports: ["3200:3200"]
+    volumes: ["recruiting-data:/data"]
+
+  hirecheck:
+    <<: *service
+    command: node hirecheck/src/index.ts
+    environment:
+      PORT: "3000"
+      HIRECHECK_DB: /data/hirecheck.db
+      # Set HIRECHECK_PROVIDER=equifax (+ EQUIFAX_BASE_URL / EQUIFAX_API_KEY)
+      # to use the real provider instead of the mock.
+    ports: ["3000:3000"]
+    volumes: ["hirecheck-data:/data"]
+
+  myhr:
+    <<: *service
+    command: node myhr/src/index.ts
+    environment:
+      PORT: "3100"
+      MYHR_DB: /data/myhr.db
+    ports: ["3100:3100"]
+    volumes: ["myhr-data:/data"]
+
+  training:
+    <<: *service
+    command: node training/src/index.ts
+    environment:
+      PORT: "3300"
+      TRAINING_DB: /data/training.db
+    ports: ["3300:3300"]
+    volumes: ["training-data:/data"]
+
+  benefits:
+    <<: *service
+    command: node benefits/src/index.ts
+    environment:
+      PORT: "3400"
+      BENEFITS_DB: /data/benefits.db
+    ports: ["3400:3400"]
+    volumes: ["benefits-data:/data"]
+
+  payroll:
+    <<: *service
+    command: node payroll/src/index.ts
+    environment:
+      PORT: "3500"
+      PAYROLL_DB: /data/payroll.db
+    ports: ["3500:3500"]
+    volumes: ["payroll-data:/data"]
+
+  directory:
+    <<: *service
+    command: node directory/src/index.ts
+    environment:
+      PORT: "3600"
+      DIRECTORY_DB: /data/directory.db
+    ports: ["3600:3600"]
+    volumes: ["directory-data:/data"]
+
+  timeoff:
+    <<: *service
+    command: node timeoff/src/index.ts
+    environment:
+      PORT: "3700"
+      TIMEOFF_DB: /data/timeoff.db
+    ports: ["3700:3700"]
+    volumes: ["timeoff-data:/data"]
+
+  offboarding:
+    <<: *service
+    command: node offboarding/src/index.ts
+    environment:
+      PORT: "3800"
+      OFFBOARDING_DB: /data/offboarding.db
+    ports: ["3800:3800"]
+    volumes: ["offboarding-data:/data"]
+
+  # Small-business bookkeeping: chart of accounts, customers, invoices,
+  # payments, expenses, and P&L / A-R aging reports. Company-level books; the
+  # orchestrator provisions one per company.
+  accounting:
+    <<: *service
+    command: node accounting/src/index.ts
+    environment:
+      PORT: "4400"
+      ACCOUNTING_DB: /data/accounting.db
+    ports: ["4400:4400"]
+    volumes: ["accounting-data:/data"]
+
+  # Shared-identity layer: one canonical company/person that cascades into every
+  # service above and records the id map, so "one employee record" resolves
+  # across all of them. Reaches the services by their compose names.
+  orchestrator:
+    <<: *service
+    command: node orchestrator/src/index.ts
+    environment:
+      PORT: "3900"
+      ORCHESTRATOR_DB: /data/orchestrator.db
+    ports: ["3900:3900"]
+    volumes: ["orchestrator-data:/data"]
+    depends_on:
+      - directory
+      - hirecheck
+      - myhr
+      - training
+      - benefits
+      - timeoff
+      - accounting
+
+  # Scheduling + references for a service business (e.g. massage): appointments
+  # with worker double-booking prevention, plus employment references.
+  booking:
+    <<: *service
+    command: node booking/src/index.ts
+    environment:
+      PORT: "4100"
+      BOOKING_DB: /data/booking.db
+    ports: ["4100:4100"]
+    volumes: ["booking-data:/data"]
+
+  # Live schedule UI: a day-view scheduling app backed by a backend-for-frontend
+  # that proxies to the Booking service (no credentials reach the browser).
+  schedule:
+    <<: *service
+    command: node schedule/src/index.ts
+    environment:
+      PORT: "4200"
+      BOOKING_URL: http://booking:4100
+    ports: ["4200:4200"]
+    depends_on:
+      - booking
+
+  # Client-facing booking site: a public page where customers self-book. It only
+  # lists services and creates *requested* appointments for the configured
+  # business — no schedule/admin access. Set BUSINESS_COMPANY_ID to the company
+  # bookings should land in.
+  book:
+    <<: *service
+    command: node book/src/index.ts
+    environment:
+      PORT: "4300"
+      BOOKING_URL: http://booking:4100
+      BUSINESS_COMPANY_ID: ${BUSINESS_COMPANY_ID:-}
+      BUSINESS_NAME: ${BUSINESS_NAME:-Our Studio}
+    ports: ["4300:4300"]
+    depends_on:
+      - booking
+
+  # Cardinal Books: a simple bookkeeping app (invoices, payments, expenses, and
+  # P&L / A-R aging) served by a BFF that proxies to the Accounting service and
+  # opens to one company's books. Reachable at http://localhost:4500.
+  books:
+    <<: *service
+    command: node books/src/index.ts
+    environment:
+      PORT: "4500"
+      ACCOUNTING_URL: http://accounting:4400
+      BUSINESS_COMPANY_ID: ${BUSINESS_COMPANY_ID:-}
+      BUSINESS_NAME: ${BUSINESS_NAME:-Blue Ridge Press LLC}
+    ports: ["4500:4500"]
+    depends_on:
+      - accounting
+
+  # Human-facing admin console: a single-page HR UI plus a backend-for-frontend
+  # that proxies to the orchestrator server-side (so no credentials reach the
+  # browser). Register a company, hire employees, and watch one record resolve
+  # into every service. Reachable at http://localhost:4000.
+  portal:
+    <<: *service
+    command: node portal/src/index.ts
+    environment:
+      PORT: "4000"
+      ORCHESTRATOR_URL: http://orchestrator:3900
+    ports: ["4000:4000"]
+    depends_on:
+      - orchestrator
+
+  # Public API entry point: authenticates every request and proxies to the
+  # services above (reachable by their compose service names on the internal
+  # network). Set GATEWAY_ADMIN_TOKEN in your environment to issue keys.
+  gateway:
+    <<: *service
+    command: node gateway/src/index.ts
+    environment:
+      PORT: "8080"
+      GATEWAY_DB: /data/gateway.db
+      GATEWAY_ADMIN_TOKEN: ${GATEWAY_ADMIN_TOKEN:-}
+    ports: ["8080:8080"]
+    volumes: ["gateway-data:/data"]
+    depends_on:
+      - recruiting
+      - hirecheck
+      - myhr
+      - training
+      - benefits
+      - payroll
+      - directory
+      - timeoff
+      - offboarding
+      - orchestrator
+      - booking
+      - accounting
+
+  web:
+    image: nginx:alpine
+    restart: unless-stopped
+    ports: ["8081:80"]
+    volumes:
+      - ../cardinal-hr:/usr/share/nginx/html:ro
+
+volumes:
+  recruiting-data:
+  hirecheck-data:
+  myhr-data:
+  training-data:
+  benefits-data:
+  payroll-data:
+  directory-data:
+  timeoff-data:
+  offboarding-data:
+  orchestrator-data:
+  booking-data:
+  accounting-data:
+  gateway-data:

@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>HomeSafe — visit safety</title>
+<meta name="description" content="A private, offline safety companion for in-home service visits — for households vetting who comes in, and for workers heading to a client. Your data never leaves your device.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23A31B33'/%3E%3Cpath d='M16 6l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V10z' fill='white'/%3E%3C/svg%3E">
+<style>
+  :root {
+    --paper:#F7F2E6; --surface:#FFFDF7; --surface-2:#EFE7D3; --ink:#17233F; --muted:#6B6350;
+    --line:#E2D9C3; --brand:#A31B33; --brand-strong:#7E1226;
+    --good:#2E7D4F; --good-bg:#E4F0E8; --warn:#9A6410; --warn-bg:#F6ECD6; --crit:#B23A3A; --crit-bg:#F6E1DE;
+    --shadow:0 1px 2px rgba(23,35,63,.07), 0 10px 26px -14px rgba(23,35,63,.24);
+    --font:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+    --maxw:640px; --r:14px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper:#101627; --surface:#172033; --surface-2:#1F2A42; --ink:#F3EEE1; --muted:#A9A28F;
+      --line:#2B3855; --brand:#E2586B; --brand-strong:#F27A8B;
+      --good:#4FBE86; --good-bg:#12321f; --warn:#D6A24A; --warn-bg:#33280f; --crit:#E07B6E; --crit-bg:#3a1d1a;
+      --shadow:0 1px 2px rgba(0,0,0,.45), 0 12px 32px -14px rgba(0,0,0,.65);
+    }
+  }
+  :root[data-theme="light"]{--paper:#F7F2E6;--surface:#FFFDF7;--surface-2:#EFE7D3;--ink:#17233F;--muted:#6B6350;--line:#E2D9C3;--brand:#A31B33;--brand-strong:#7E1226;--good:#2E7D4F;--good-bg:#E4F0E8;--warn:#9A6410;--warn-bg:#F6ECD6;--crit:#B23A3A;--crit-bg:#F6E1DE;}
+  :root[data-theme="dark"]{--paper:#101627;--surface:#172033;--surface-2:#1F2A42;--ink:#F3EEE1;--muted:#A9A28F;--line:#2B3855;--brand:#E2586B;--brand-strong:#F27A8B;--good:#4FBE86;--good-bg:#12321f;--warn:#D6A24A;--warn-bg:#33280f;--crit:#E07B6E;--crit-bg:#3a1d1a;}
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink); font-family:var(--font); line-height:1.5; -webkit-text-size-adjust:100%; }
+  .wrap { max-width:var(--maxw); margin-inline:auto; padding:0 clamp(.9rem,4vw,1.4rem) 3rem; }
+  header.top { position:sticky; top:0; z-index:10; background:color-mix(in srgb,var(--paper) 88%,transparent);
+    backdrop-filter:blur(8px); border-bottom:1px solid var(--line); }
+  .top-in { max-width:var(--maxw); margin-inline:auto; padding:.7rem clamp(.9rem,4vw,1.4rem); display:flex; align-items:center; gap:.6rem; }
+  .logo { width:30px; height:30px; border-radius:8px; background:var(--brand); display:grid; place-items:center; }
+  .logo svg { width:18px; height:18px; }
+  h1.brand { font-size:1.1rem; margin:0; font-weight:800; letter-spacing:-.01em; }
+  .brand small { display:block; font-weight:600; font-size:.68rem; color:var(--muted); letter-spacing:.02em; }
+  .theme { margin-left:auto; background:transparent; border:1px solid var(--line); border-radius:8px; color:var(--ink); padding:.35rem .55rem; cursor:pointer; font-size:.9rem; }
+
+  .modes { display:flex; gap:.4rem; margin:1rem 0 .2rem; background:var(--surface-2); padding:.3rem; border-radius:12px; }
+  .modes button { flex:1; border:0; background:transparent; color:var(--muted); font:inherit; font-weight:700;
+    padding:.6rem; border-radius:9px; cursor:pointer; }
+  .modes button[aria-selected="true"] { background:var(--surface); color:var(--ink); box-shadow:var(--shadow); }
+
+  /* safety bar */
+  .safety { display:grid; grid-template-columns:1fr 1fr 1fr; gap:.5rem; margin:.9rem 0; }
+  .safety a, .safety button { display:flex; flex-direction:column; align-items:center; gap:.25rem; justify-content:center;
+    border:1px solid var(--line); background:var(--surface); color:var(--ink); border-radius:12px; padding:.7rem .4rem;
+    font:inherit; font-weight:700; font-size:.82rem; text-decoration:none; cursor:pointer; text-align:center; }
+  .safety .em { font-size:1.2rem; line-height:1; }
+  .safety .sos { border-color:var(--crit); color:var(--crit); background:var(--crit-bg); }
+
+  .banner { display:none; padding:.8rem .9rem; border-radius:12px; margin:.6rem 0; font-size:.9rem; font-weight:600; }
+  .banner.show { display:flex; align-items:center; gap:.6rem; flex-wrap:wrap; }
+  .banner.overdue { background:var(--crit-bg); border:1px solid var(--crit); color:var(--crit); }
+  .banner .btn { margin-left:auto; }
+
+  .card { background:var(--surface); border:1px solid var(--line); border-radius:var(--r); box-shadow:var(--shadow); padding:1rem 1.05rem; margin:.8rem 0; }
+  .card h2 { margin:.1rem 0 .1rem; font-size:1rem; }
+  .card .hint { color:var(--muted); font-size:.82rem; margin:.1rem 0 .8rem; }
+  label { display:block; font-size:.74rem; font-weight:700; color:var(--muted); margin:.55rem 0 .2rem; letter-spacing:.02em; }
+  input, textarea, select { width:100%; padding:.6rem .65rem; border:1px solid var(--line); border-radius:10px; background:var(--paper); color:var(--ink); font:inherit; }
+  input:focus, textarea:focus, select:focus { outline:2px solid var(--brand); outline-offset:1px; }
+  .row2 { display:grid; grid-template-columns:1fr 1fr; gap:.3rem .7rem; }
+  @media (max-width:440px){ .row2{ grid-template-columns:1fr; } }
+  .btn { background:var(--brand); color:#fff; border:0; border-radius:11px; padding:.7rem 1rem; font:inherit; font-weight:700; cursor:pointer; }
+  .btn:hover { background:var(--brand-strong); }
+  .btn.block { width:100%; margin-top:.9rem; }
+  .btn.ghost { background:transparent; color:var(--brand); border:1px solid var(--line); }
+  .btn.small { padding:.4rem .7rem; font-size:.82rem; border-radius:9px; }
+  .btn.good { background:var(--good); }
+  .btn.flag { background:transparent; color:var(--crit); border:1px solid var(--crit); }
+
+  .visit { border-left:4px solid var(--line); }
+  .visit.active { border-left-color:var(--warn); }
+  .visit.verified { border-left-color:var(--good); }
+  .visit.flagged { border-left-color:var(--crit); }
+  .visit .who { font-weight:800; font-size:1.05rem; }
+  .visit .meta { color:var(--muted); font-size:.84rem; margin:.15rem 0 .1rem; }
+  .pill { display:inline-block; font-size:.68rem; font-weight:800; text-transform:uppercase; letter-spacing:.04em; padding:.15rem .5rem; border-radius:999px; }
+  .pill.scheduled { background:var(--surface-2); color:var(--muted); }
+  .pill.active { background:var(--warn-bg); color:var(--warn); }
+  .pill.verified { background:var(--good-bg); color:var(--good); }
+  .pill.flagged { background:var(--crit-bg); color:var(--crit); }
+  .pill.completed { background:var(--surface-2); color:var(--muted); }
+  .actions { display:flex; flex-wrap:wrap; gap:.45rem; margin-top:.75rem; }
+  .check { display:flex; align-items:center; gap:.55rem; padding:.4rem 0; font-size:.9rem; font-weight:600; }
+  .check input { width:auto; }
+  .log { font-size:.78rem; color:var(--muted); margin-top:.5rem; border-top:1px dashed var(--line); padding-top:.5rem; }
+  .empty { color:var(--muted); text-align:center; padding:1.4rem 1rem; font-size:.9rem; }
+  .contact-row { display:flex; gap:.5rem; align-items:center; margin:.4rem 0; }
+  .contact-row .nm { font-weight:700; } .contact-row .ph { color:var(--muted); font-size:.85rem; }
+  .contact-row button { margin-left:auto; }
+  .note { background:var(--warn-bg); border:1px solid color-mix(in srgb,var(--warn) 40%,transparent); color:var(--ink); font-size:.8rem; padding:.6rem .75rem; border-radius:10px; margin:.6rem 0; }
+  .sect-title { font-size:.74rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin:1.4rem 0 .2rem; }
+  footer { color:var(--muted); font-size:.76rem; text-align:center; margin-top:2rem; line-height:1.6; }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <span class="logo" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 5l9 4v7c0 6-4 9.5-9 11-5-1.5-9-5-9-11V9z" fill="#fff"/></svg></span>
+    <h1 class="brand">HomeSafe<small>private &amp; offline — nothing leaves this device</small></h1>
+    <button class="theme" id="themeBtn" title="Toggle light/dark" aria-label="Toggle theme">◐</button>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="modes" role="tablist" aria-label="Who is this for">
+    <button id="mode-home" role="tab" aria-selected="true">My home</button>
+    <button id="mode-worker" role="tab" aria-selected="false">On a visit</button>
+  </div>
+  <p class="hint" id="modeHint" style="color:var(--muted);font-size:.82rem;margin:.4rem 2px 0;"></p>
+
+  <div class="safety" aria-label="Quick safety actions">
+    <button id="sharePlan"><span class="em" aria-hidden="true">📍</span>Share plan</button>
+    <a id="callContact" href="#"><span class="em" aria-hidden="true">📞</span>Call contact</a>
+    <a class="sos" id="call911" href="tel:911"><span class="em" aria-hidden="true">🚨</span>Emergency</a>
+  </div>
+
+  <div class="banner overdue" id="overdue" role="alert"></div>
+
+  <!-- New visit -->
+  <section class="card">
+    <h2 id="formTitle">Add an expected visit</h2>
+    <p class="hint" id="formHint"></p>
+    <form id="visitForm">
+      <label id="l-who" for="who"></label>
+      <input id="who" required autocomplete="off">
+      <div class="row2">
+        <div><label id="l-person" for="person"></label><input id="person" autocomplete="off"></div>
+        <div><label id="l-phone" for="phone"></label><input id="phone" type="tel" inputmode="tel" autocomplete="off"></div>
+      </div>
+      <div id="addrWrap" hidden><label for="addr">Address</label><input id="addr" autocomplete="off"></div>
+      <div class="row2">
+        <div><label for="date">Date</label><input id="date" type="date"></div>
+        <div><label for="window">Time window</label><input id="window" placeholder="e.g. 2–4 pm" autocomplete="off"></div>
+      </div>
+      <label id="l-detail" for="detail"></label>
+      <input id="detail" autocomplete="off">
+      <button class="btn block" type="submit">Save visit</button>
+    </form>
+  </section>
+
+  <div class="sect-title">Active &amp; upcoming</div>
+  <div id="activeList"></div>
+
+  <details class="card" id="contactsCard">
+    <summary style="font-weight:700;cursor:pointer;">Trusted contacts</summary>
+    <p class="hint">People to reach in one tap. Stored only on this device.</p>
+    <div id="contactList"></div>
+    <div class="row2" style="margin-top:.5rem">
+      <div><label for="cName">Name</label><input id="cName" autocomplete="off"></div>
+      <div><label for="cPhone">Phone</label><input id="cPhone" type="tel" inputmode="tel" autocomplete="off"></div>
+    </div>
+    <button class="btn ghost small" id="addContact" style="margin-top:.6rem">Add contact</button>
+  </details>
+
+  <div class="sect-title">History</div>
+  <div id="historyList"></div>
+
+  <div class="note" id="privacyNote">
+    <strong>How this keeps you safe — honestly.</strong> HomeSafe never looks anyone up. It doesn't search
+    phone numbers, names, or addresses. What protects you is having a plan on the record, confirming identity
+    <em>with the person's knowledge</em> (match what they gave you; call the company's official number), and
+    making sure a trusted person knows where you are and when to worry.
+  </div>
+
+  <footer>
+    Everything you enter stays in this browser (localStorage) on this device. Clearing your browser data erases it.
+    HomeSafe is a safety aid, not a background-check or emergency service — in danger, call your local emergency number.
+  </footer>
+</div>
+
+<script>
+"use strict";
+const $ = (id) => document.getElementById(id);
+const store = {
+  load(k, d) { try { return JSON.parse(localStorage.getItem("homesafe."+k)) ?? d; } catch { return d; } },
+  save(k, v) { localStorage.setItem("homesafe."+k, JSON.stringify(v)); },
+};
+let state = {
+  mode: store.load("mode", "home"),
+  visits: store.load("visits", []),
+  contacts: store.load("contacts", []),
+};
+const persist = () => { store.save("mode", state.mode); store.save("visits", state.visits); store.save("contacts", state.contacts); };
+const nowISO = () => new Date().toISOString();
+const fmtTime = (iso) => { try { return new Date(iso).toLocaleString([], {month:"short",day:"numeric",hour:"numeric",minute:"2-digit"}); } catch { return iso; } };
+const uid = () => "v" + Date.now().toString(36) + Math.floor(Math.random()*1e4).toString(36);
+
+const COPY = {
+  home: {
+    hint: "Someone coming into your home — a repair tech, delivery, cleaner, or caregiver.",
+    formTitle: "Add an expected visit",
+    formHint: "Enter who's supposed to come. An unexpected knock then stands out.",
+    who: "Company (who booked it)", person: "Worker's name (if known)", phone: "Company's official phone",
+    detail: "What for", addr: false,
+    checklist: ["Name matches who was booked", "Photo ID shown", "Confirmed by calling the company's official number"],
+    start: "They arrived",
+  },
+  worker: {
+    hint: "You're heading to a client's place. Share your plan and check in so someone has your back.",
+    formTitle: "Add a visit you're going to",
+    formHint: "Log the appointment, then share it with a trusted contact before you go.",
+    who: "Client name", person: "Booked through (platform / referral)", phone: "Client phone (as booked)",
+    detail: "Service", addr: true,
+    checklist: ["Booking confirmed (deposit / platform)", "Shared this plan with my contact", "Confirmed the address & who'll be there"],
+    start: "I've arrived",
+  },
+};
+
+function setMode(m) {
+  state.mode = m; persist();
+  $("mode-home").setAttribute("aria-selected", m==="home");
+  $("mode-worker").setAttribute("aria-selected", m==="worker");
+  const c = COPY[m];
+  $("modeHint").textContent = c.hint;
+  $("formTitle").textContent = c.formTitle;
+  $("formHint").textContent = c.formHint;
+  $("l-who").textContent = c.who; $("l-person").textContent = c.person; $("l-phone").textContent = c.phone;
+  $("l-detail").textContent = c.detail;
+  $("addrWrap").hidden = !c.addr;
+  render();
+}
+
+function primaryContact() { return state.contacts[0]; }
+
+function refreshSafetyBar() {
+  const c = primaryContact();
+  const call = $("callContact");
+  if (c) { call.href = "tel:" + c.phone.replace(/[^+\d]/g,""); call.style.opacity = 1; }
+  else { call.href = "#"; call.style.opacity = .5; }
+}
+
+function shareText(v) {
+  const c = COPY[v.mode];
+  const parts = [];
+  if (v.mode === "worker") {
+    parts.push(`Safety plan: I'm heading to ${v.person1 || "a client"}${v.detail ? " for "+v.detail : ""}.`);
+    if (v.addr) parts.push(`Address: ${v.addr}.`);
+  } else {
+    parts.push(`Heads up: ${v.who || "a service visit"}${v.person1 ? " ("+v.person1+")" : ""} coming to my home${v.detail ? " for "+v.detail : ""}.`);
+  }
+  if (v.window) parts.push(`Window: ${v.window}${v.date ? " on "+v.date : ""}.`);
+  if (v.expectedEnd) parts.push(`I'll check in by about ${new Date(v.expectedEnd).toLocaleTimeString([], {hour:"numeric",minute:"2-digit"})}.`);
+  return parts.join(" ");
+}
+
+function withLocation(base, cb) {
+  if (!navigator.geolocation) return cb(base);
+  navigator.geolocation.getCurrentPosition(
+    (p) => cb(base + ` My location: https://maps.google.com/?q=${p.coords.latitude.toFixed(5)},${p.coords.longitude.toFixed(5)}`),
+    () => cb(base),
+    { timeout: 6000 }
+  );
+}
+
+function smsLink(phone, body) {
+  const n = (phone||"").replace(/[^+\d]/g,"");
+  // Both iOS and Android accept ?body=
+  return `sms:${n}${n?"":""}?&body=${encodeURIComponent(body)}`;
+}
+
+function sharePlan(v) {
+  const c = primaryContact();
+  if (!c) { alert("Add a trusted contact first (under \"Trusted contacts\")."); $("contactsCard").open = true; return; }
+  const base = (v ? shareText(v) : "Just checking in — everything's fine.");
+  withLocation(base, (msg) => { window.location.href = smsLink(c.phone, msg); });
+}
+
+// ---- rendering ----
+function visitClass(v) { return v.flagged ? "flagged" : v.verified ? "verified" : v.status === "active" ? "active" : ""; }
+function pillFor(v) {
+  if (v.flagged) return '<span class="pill flagged">flagged</span>';
+  if (v.status === "completed") return '<span class="pill completed">done</span>';
+  if (v.verified) return '<span class="pill verified">verified</span>';
+  if (v.status === "active") return '<span class="pill active">here now</span>';
+  return '<span class="pill scheduled">scheduled</span>';
+}
+
+function visitCard(v) {
+  const c = COPY[v.mode];
+  const el = document.createElement("section");
+  el.className = "card visit " + visitClass(v);
+  const title = v.mode === "worker" ? (v.who || "Client") : (v.who || "Visit");
+  const sub = [v.person1, v.detail].filter(Boolean).join(" · ");
+  let html = `<div style="display:flex;align-items:center;gap:.5rem"><span class="who">${esc(title)}</span> ${pillFor(v)}</div>`;
+  if (sub) html += `<div class="meta">${esc(sub)}</div>`;
+  const when = [v.date, v.window].filter(Boolean).join(" · ");
+  if (when) html += `<div class="meta">🕑 ${esc(when)}</div>`;
+  if (v.mode === "worker" && v.addr) html += `<div class="meta">📌 ${esc(v.addr)}</div>`;
+  if (v.phone) html += `<div class="meta">📞 ${esc(v.phone)} <a href="tel:${esc(v.phone.replace(/[^+\d]/g,''))}" class="btn small ghost" style="padding:.1rem .5rem;margin-left:.3rem">call</a></div>`;
+
+  // checklist when active
+  if (v.status === "active" && !v.flagged) {
+    html += `<div style="margin-top:.6rem">`;
+    c.checklist.forEach((label, i) => {
+      const on = (v.checks||[])[i] ? "checked" : "";
+      html += `<label class="check"><input type="checkbox" data-check="${i}" ${on}> ${esc(label)}</label>`;
+    });
+    html += `</div>`;
+  }
+
+  html += `<div class="actions"></div>`;
+  if (v.log && v.log.length) html += `<div class="log">${v.log.map(l=>`${fmtTime(l.at)} — ${esc(l.what)}`).join("<br>")}</div>`;
+  el.innerHTML = html;
+
+  // buttons
+  const acts = el.querySelector(".actions");
+  const mk = (txt, cls, fn) => { const b=document.createElement("button"); b.className="btn small "+cls; b.textContent=txt; b.onclick=fn; acts.appendChild(b); };
+  if (v.status === "scheduled") mk(c.start, "", () => { v.status="active"; v.arrivedAt=nowISO();
+      if (v.mode==="worker") { const mins=parseInt(prompt("Expected to be done in about how many minutes?","60"),10); if(mins>0){ v.expectedEnd=new Date(Date.now()+mins*60000).toISOString(); } }
+      logv(v,"Arrived"); save(); });
+  if (v.status === "active") {
+    if (v.mode === "worker") mk("I'm OK ✓", "good", () => { v.lastCheckIn=nowISO(); logv(v,"Checked in — OK"); save(); });
+    else mk("Verified ✓", "good", () => { v.verified=true; logv(v,"Verified at the door"); save(); });
+    mk("Done", "ghost", () => { v.status="completed"; v.completedAt=nowISO(); logv(v,"Visit completed"); save(); });
+  }
+  if (!v.flagged) mk("Flag", "flag", () => {
+      const why = prompt("Add a private note about why this felt off (kept only on this device):","");
+      v.flagged=true; if (why) v.flagNote=why; logv(v,"Flagged"+(why?": "+why:"")); save();
+      if (v.status!=="completed") v.status="active";
+    });
+  mk("Share", "ghost", () => sharePlan(v));
+  mk("Delete", "ghost", () => { if(confirm("Delete this visit?")){ state.visits=state.visits.filter(x=>x.id!==v.id); save(); } });
+
+  // checklist wiring
+  el.querySelectorAll("input[data-check]").forEach(cb => cb.onchange = () => {
+    const i = +cb.getAttribute("data-check"); v.checks = v.checks || []; v.checks[i] = cb.checked;
+    if ((v.checks||[]).filter(Boolean).length === c.checklist.length && v.mode==="home") { v.verified=true; logv(v,"All checks confirmed"); }
+    save();
+  });
+  if (v.flagNote) { const n=document.createElement("div"); n.className="note"; n.style.background="var(--crit-bg)"; n.textContent="⚑ "+v.flagNote; el.appendChild(n); }
+  return el;
+}
+
+function esc(s){ return String(s).replace(/[&<>"']/g, m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m])); }
+function logv(v, what){ v.log = v.log||[]; v.log.push({at:nowISO(), what}); }
+function save(){ persist(); render(); }
+
+function render() {
+  const active = $("activeList"); active.innerHTML = "";
+  const mine = state.visits.filter(v => v.mode === state.mode);
+  const open = mine.filter(v => v.status !== "completed").sort((a,b)=> (a.date||"").localeCompare(b.date||""));
+  const done = mine.filter(v => v.status === "completed").reverse();
+  if (!open.length) active.innerHTML = `<div class="card empty">No active or upcoming visits. Add one above.</div>`;
+  else open.forEach(v => active.appendChild(visitCard(v)));
+  const hist = $("historyList"); hist.innerHTML = "";
+  if (!done.length) hist.innerHTML = `<div class="card empty">Completed visits show up here.</div>`;
+  else done.forEach(v => hist.appendChild(visitCard(v)));
+  renderContacts(); refreshSafetyBar(); checkOverdue();
+}
+
+function renderContacts() {
+  const list = $("contactList"); list.innerHTML = "";
+  if (!state.contacts.length) { list.innerHTML = `<p class="hint">No contacts yet — add one so “Share plan” and “Call contact” work.</p>`; return; }
+  state.contacts.forEach((c,i) => {
+    const row = document.createElement("div"); row.className="contact-row";
+    row.innerHTML = `<span class="nm">${esc(c.name)}</span><span class="ph">${esc(c.phone)}</span>`;
+    const del = document.createElement("button"); del.className="btn small ghost"; del.textContent="Remove";
+    del.onclick = () => { state.contacts.splice(i,1); save(); };
+    row.appendChild(del); list.appendChild(row);
+  });
+}
+
+function checkOverdue() {
+  const el = $("overdue");
+  const late = state.visits.find(v => v.mode==="worker" && v.status==="active" && v.expectedEnd &&
+    Date.now() > new Date(v.expectedEnd).getTime() + 10*60000 &&
+    (!v.lastCheckIn || new Date(v.lastCheckIn).getTime() < new Date(v.expectedEnd).getTime()));
+  if (!late) { el.className = "banner overdue"; el.innerHTML=""; return; }
+  el.className = "banner overdue show";
+  el.innerHTML = `⚠️ Visit to <strong>${esc(late.who||"a client")}</strong> is past its expected end and you haven't checked in.`;
+  const b = document.createElement("button"); b.className="btn small"; b.textContent="Alert my contact";
+  b.onclick = () => sharePlan({ ...late, __alert:true, mode:"worker" });
+  el.appendChild(b);
+}
+
+// ---- events ----
+$("visitForm").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const v = {
+    id: uid(), mode: state.mode, status: "scheduled",
+    who: $("who").value.trim(), person1: $("person").value.trim(), phone: $("phone").value.trim(),
+    addr: $("addr").value.trim(), date: $("date").value, window: $("window").value.trim(),
+    detail: $("detail").value.trim(), createdAt: nowISO(), log: [{at:nowISO(), what:"Added"}],
+  };
+  if (!v.who) return;
+  state.visits.push(v); $("visitForm").reset(); save();
+});
+$("addContact").addEventListener("click", () => {
+  const name = $("cName").value.trim(), phone = $("cPhone").value.trim();
+  if (!name || !phone) { alert("Enter a name and phone."); return; }
+  state.contacts.push({ name, phone }); $("cName").value=""; $("cPhone").value=""; save();
+});
+$("sharePlan").addEventListener("click", () => {
+  const activeVisit = state.visits.find(v => v.mode===state.mode && v.status==="active") ||
+                      state.visits.find(v => v.mode===state.mode && v.status==="scheduled");
+  sharePlan(activeVisit);
+});
+$("call911").addEventListener("click", (e) => { if (!confirm("Call your local emergency number now?")) e.preventDefault(); });
+$("mode-home").addEventListener("click", () => setMode("home"));
+$("mode-worker").addEventListener("click", () => setMode("worker"));
+$("themeBtn").addEventListener("click", () => {
+  const cur = document.documentElement.getAttribute("data-theme");
+  const next = cur === "dark" ? "light" : cur === "light" ? "" : "dark";
+  if (next) document.documentElement.setAttribute("data-theme", next); else document.documentElement.removeAttribute("data-theme");
+});
+
+// re-check overdue every minute
+setInterval(checkOverdue, 60000);
+setMode(state.mode);
+</script>
+</body>
+</html>
