@@ -155,6 +155,8 @@ He said something I couldn't understand. He didn't say it loud. He didn't need t
 
 He had the watch off my wrist inside a minute. Then the bag. Then everything else in my pockets, one item at a time, no hurry in it anywhere, and the no-hurry was the part that scared me. For a moment I thought that might be the end of it, that I'd be sent back across the line with one more story I'd never tell. Then he took my arm and walked me to a car that wasn't marked like the ones on TV. No lights. A plain sedan with a man in the passenger seat who never turned around. A hand on my shoulder put me in the back. The car smelled musty, like old smoke had soaked into the seats and stayed. He said things from the front I couldn't understand, and then he stopped saying anything. Some part of me kept running the old math, telling me this was a toll, a cost of doing business, a story I'd never tell. Then I reached for the door and there was no handle on the inside, and the math stopped working.
 
+The car stopped. The hand came back and walked me through a metal door and down a hallway. No desk. No paperwork. Nobody asked my name, and nobody wrote it down anywhere. That landed slowly: there was going to be no record that I was here. Then a door, and the hand let go of my arm.
+
 It wasn't a prison. It was a holding cell in a building I could never have found again. I didn't know where I was, who knew I was there, or how long they meant to keep me.
 
 The smell reached me before the door shut.
