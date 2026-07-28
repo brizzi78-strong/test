@@ -1,0 +1,37 @@
+# Render blueprint — deploy Cardinal Books from this repo with no server to manage.
+#
+# One-time setup at https://render.com :
+#   1. New +  ->  Blueprint  ->  connect this GitHub repo  ->  Apply.
+#   2. When prompted, set BOOKS_PASSWORD to a strong password (BOOKS_USER is
+#      "admin" by default; change it here if you like).
+#   3. Render builds the Docker image, attaches a 1 GB disk for the books data,
+#      and gives you an https://cardinal-books-*.onrender.com URL.
+#   4. (Optional) Add a custom domain like books.blueridgepressllc.com in the
+#      service's Settings -> Custom Domains, then point a DNS CNAME at Render.
+#
+# HTTPS is automatic. The app is password-gated (BOOKS_USER / BOOKS_PASSWORD), so
+# only you can open it. Data persists on the disk across deploys and restarts.
+
+services:
+  - type: web
+    name: cardinal-books
+    runtime: docker
+    plan: starter            # ~$7/mo; a persistent disk requires a paid instance
+    dockerfilePath: ./deploy/Dockerfile
+    dockerContext: .
+    dockerCommand: node deploy/allinone.ts
+    healthCheckPath: /health
+    autoDeploy: true
+    disk:
+      name: books-data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: BUSINESS_NAME
+        value: Blue Ridge Press LLC
+      - key: ACCOUNTING_DB
+        value: /data/accounting.db
+      - key: BOOKS_USER
+        value: admin
+      - key: BOOKS_PASSWORD
+        sync: false            # Render prompts you to set this on first deploy

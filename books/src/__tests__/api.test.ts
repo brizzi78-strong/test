@@ -41,6 +41,30 @@ async function j(base: string, method: string, path: string, body?: unknown) {
   return { status: res.status, json: (await res.json().catch(() => ({}))) as any };
 }
 
+test('password gate: blocks without creds, allows with, health stays open', async () => {
+  const accounting = createAccounting(createInMemoryStore());
+  const accPort = await listen(accounting.server);
+  const books = createBooks({
+    accountingBase: `http://127.0.0.1:${accPort}`,
+    businessName: 'Blue Ridge Press LLC',
+    user: 'admin',
+    password: 's3cret',
+  });
+  const port = await listen(books.server);
+  const base = `http://127.0.0.1:${port}`;
+  try {
+    assert.equal((await fetch(`${base}/`)).status, 401); // no creds
+    assert.equal((await fetch(`${base}/health`)).status, 200); // health exempt
+    const good = 'Basic ' + Buffer.from('admin:s3cret').toString('base64');
+    assert.equal((await fetch(`${base}/`, { headers: { authorization: good } })).status, 200);
+    const bad = 'Basic ' + Buffer.from('admin:wrong').toString('base64');
+    assert.equal((await fetch(`${base}/`, { headers: { authorization: bad } })).status, 401);
+  } finally {
+    await new Promise<void>((r) => books.server.close(() => r()));
+    await new Promise<void>((r) => accounting.server.close(() => r()));
+  }
+});
+
 test('serves the app shell', async () => {
   await withApp(async (base) => {
     const res = await fetch(`${base}/`);

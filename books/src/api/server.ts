@@ -14,6 +14,7 @@
  */
 
 import { createServer, type IncomingMessage, type Server, type ServerResponse } from 'node:http';
+import { timingSafeEqual } from 'node:crypto';
 import { PAGE } from '../ui/page.ts';
 
 export interface AppServer {
@@ -26,6 +27,9 @@ export interface AppOptions {
   /** Existing company id to use; when unset, one is created on first use. */
   companyId?: string;
   apiKey?: string;
+  /** Optional HTTP Basic auth gate (recommended when public); both required. */
+  user?: string;
+  password?: string;
   fetchImpl?: typeof fetch;
 }
 
@@ -48,6 +52,9 @@ export function createApp(opts: AppOptions = {}): AppServer {
   const configuredId = opts.companyId ?? process.env.BUSINESS_COMPANY_ID;
   const apiKey = opts.apiKey ?? process.env.GATEWAY_API_KEY;
   const fetchImpl = opts.fetchImpl ?? fetch;
+  const authUser = opts.user ?? process.env.BOOKS_USER;
+  const authPassword = opts.password ?? process.env.BOOKS_PASSWORD;
+  const gate = authUser && authPassword ? { user: authUser, password: authPassword } : undefined;
 
   // Per-server memoized bootstrap so we create the company / seed accounts once.
   let primary: Primary | undefined;
@@ -99,7 +106,7 @@ export function createApp(opts: AppOptions = {}): AppServer {
     return ensuring;
   }
 
-  const server = createServer(makeListener(base, apiKey, fetchImpl, ensurePrimary));
+  const server = createServer(makeListener(base, apiKey, fetchImpl, ensurePrimary, gate));
   return { server };
 }
 
@@ -108,11 +115,22 @@ function makeListener(
   apiKey: string | undefined,
   fetchImpl: typeof fetch,
   ensurePrimary: () => Promise<Primary>,
+  gate: { user: string; password: string } | undefined,
 ) {
   return async (req: IncomingMessage, res: ServerResponse): Promise<void> => {
     try {
       const url = new URL(req.url ?? '/', 'http://localhost');
       const method = req.method ?? 'GET';
+
+      // Password gate (when configured), except the health check.
+      if (gate && url.pathname !== '/health' && !authorized(req, gate)) {
+        res.writeHead(401, {
+          'www-authenticate': 'Basic realm="Cardinal Books", charset="UTF-8"',
+          'content-type': 'application/json',
+        });
+        res.end(JSON.stringify({ error: { code: 'unauthorized', message: 'authentication required' } }));
+        return;
+      }
 
       if (method === 'GET' && (url.pathname === '/' || url.pathname === '/index.html')) {
         res.writeHead(200, { 'content-type': 'text/html; charset=utf-8' });
@@ -173,4 +191,28 @@ async function readRaw(req: IncomingMessage): Promise<string | undefined> {
 function sendJson(res: ServerResponse, status: number, body: unknown): void {
   res.writeHead(status, { 'content-type': 'application/json' });
   res.end(JSON.stringify(body));
+}
+
+/** Constant-time HTTP Basic auth check against the configured user/password. */
+function authorized(req: IncomingMessage, gate: { user: string; password: string }): boolean {
+  const header = req.headers.authorization;
+  if (typeof header !== 'string' || !header.startsWith('Basic ')) return false;
+  let decoded: string;
+  try {
+    decoded = Buffer.from(header.slice(6), 'base64').toString('utf8');
+  } catch {
+    return false;
+  }
+  const sep = decoded.indexOf(':');
+  if (sep < 0) return false;
+  const user = decoded.slice(0, sep);
+  const password = decoded.slice(sep + 1);
+  return safeEqual(user, gate.user) && safeEqual(password, gate.password);
+}
+
+function safeEqual(a: string, b: string): boolean {
+  const ab = Buffer.from(a);
+  const bb = Buffer.from(b);
+  if (ab.length !== bb.length) return false;
+  return timingSafeEqual(ab, bb);
 }

@@ -48,8 +48,17 @@ Then open <http://localhost:4500>.
 | `PORT` | Listen port (default 4500). |
 | `ACCOUNTING_URL` | Accounting base URL (default `http://accounting:4400`). |
 | `BUSINESS_NAME` | Company these books belong to (default `Blue Ridge Press LLC`). |
-| `BUSINESS_COMPANY_ID` | Reuse an existing Accounting company id — set this in production so restarts don't create a new company. |
+| `BUSINESS_COMPANY_ID` | Reuse an existing Accounting company id. Not required — the app also finds an existing company by `BUSINESS_NAME`, so restarts don't create duplicate books. |
+| `BOOKS_USER` / `BOOKS_PASSWORD` | Optional HTTP Basic auth gate. Set **both** when the app is reachable publicly — everything except `/health` then requires the login. |
 | `GATEWAY_API_KEY` | Optional bearer key sent upstream, kept off the browser. |
+
+## Deploy it live
+
+See [`../deploy/DEPLOY-BOOKS.md`](../deploy/DEPLOY-BOOKS.md). The quickest path is
+the **Render** blueprint (`render.yaml` in the repo root): connect the repo, set a
+password, and Render runs [`../deploy/allinone.ts`](../deploy/allinone.ts) — the
+Accounting service + this app in one container with a persistent disk and
+automatic HTTPS.
 
 The whole stack also comes up together with
 `docker compose -f deploy/docker-compose.yml up --build` (Cardinal Books on

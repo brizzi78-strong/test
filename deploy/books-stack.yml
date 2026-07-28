@@ -40,6 +40,9 @@ services:
       PORT: "4500"
       ACCOUNTING_URL: http://accounting:4400
       BUSINESS_NAME: ${BUSINESS_NAME:-Blue Ridge Press LLC}
+      # Password gate (set these in a .env file next to this compose file).
+      BOOKS_USER: ${BOOKS_USER:-admin}
+      BOOKS_PASSWORD: ${BOOKS_PASSWORD:?set BOOKS_PASSWORD in deploy/.env}
     depends_on: ["accounting"]
     expose: ["4500"]
 
