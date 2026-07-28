@@ -170,6 +170,21 @@ services:
     depends_on:
       - booking
 
+  # Cardinal Books: a simple bookkeeping app (invoices, payments, expenses, and
+  # P&L / A-R aging) served by a BFF that proxies to the Accounting service and
+  # opens to one company's books. Reachable at http://localhost:4500.
+  books:
+    <<: *service
+    command: node books/src/index.ts
+    environment:
+      PORT: "4500"
+      ACCOUNTING_URL: http://accounting:4400
+      BUSINESS_COMPANY_ID: ${BUSINESS_COMPANY_ID:-}
+      BUSINESS_NAME: ${BUSINESS_NAME:-Blue Ridge Press LLC}
+    ports: ["4500:4500"]
+    depends_on:
+      - accounting
+
   # Human-facing admin console: a single-page HR UI plus a backend-for-frontend
   # that proxies to the orchestrator server-side (so no credentials reach the
   # browser). Register a company, hire employees, and watch one record resolve
