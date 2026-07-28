@@ -16,6 +16,9 @@ services:
   - type: web
     name: cardinal-books
     runtime: docker
+    # Deploy the tested working branch directly (main has diverged; no merge
+    # needed). Change this to "main" once the branch is merged, if you like.
+    branch: claude/background-check-services-rss0ky
     plan: starter            # ~$7/mo; a persistent disk requires a paid instance
     dockerfilePath: ./deploy/Dockerfile
     dockerContext: .
