@@ -17,6 +17,15 @@ html = open(path, encoding="utf-8").read()
 # Chapter openers -> new page (styled via .chapno)
 html = html.replace("<p><strong>CHAPTER", '<p class="chapno"><strong>CHAPTER')
 
+# Contents block -> compact two-column layout (styled via .tocwrap)
+html = re.sub(
+    r"(<p><strong>CONTENTS</strong></p>)(.*?)(?=<h1\b)",
+    r'<div class="tocwrap">\1\2</div>',
+    html,
+    count=1,
+    flags=re.S,
+)
+
 # Chapter epigraphs (italic verse + attribution) -> centered (styled via .epigraph)
 html = re.sub(r"<p>(?=<em>“)", '<p class="epigraph">', html)
 html = re.sub(r"<p>(?=<em>Correcting a man)", '<p class="epigraph">', html)
