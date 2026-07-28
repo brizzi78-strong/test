@@ -8,7 +8,7 @@
 - **Cost:** $51,630 total
 - **Business use:** **~60%** (via LLC) / 40% personal
 - **Clean vehicle credit:** $7,500 (§30D) claimed on the individual return — **currently disallowed by IRS Notice CP23** (VIN not on record; Tesla never filed the ECO time-of-sale report). Under dispute; may or may not be reinstated.
-- **Possible insurance/total-loss** on this vehicle — confirm whether a normal sale or an insurance settlement.
+- **Straight sale** — no insurance payout / not a total-loss (confirmed).
 
 ## The question
 **Is it better, after tax, to sell in December 2026 or hold to January 2027?** The instinct is that holding to January (a) preserves 2026's depreciation deduction and (b) pushes the sale's gain/recapture into 2027. Please confirm whether that nets out ahead given the specifics below.
@@ -20,7 +20,7 @@
 4. **§30D and business use:** with 60% business use, was the credit correctly split (business portion → general business credit vs. personal)? Any issue there?
 5. **Recapture on sale (§1245):** how much of "captured depreciation" comes back as ordinary income on the sale, and does Dec vs. Jan change the year it hits?
 6. **Business-use %:** does selling risk dropping business use below 50% and triggering depreciation recapture?
-7. **Insurance total-loss:** if this is an involuntary conversion (insurance payout) rather than a sale, how does that change the gain/loss and timing?
+7. **Sale price vs. basis:** at the likely resale value, is there a gain (ordinary recapture) or just a loss — and does Dec vs. Jan change which year it lands?
 
 ## What I'd like from you
 - A quick **Dec 2026 vs. Jan 2027** side-by-side (after-tax) using my actual Year-1 depreciation schedule.
