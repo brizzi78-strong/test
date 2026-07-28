@@ -68,7 +68,7 @@ awk '
   /^FOREWORD$/        { skip=0 }
   /^COPYRIGHT$/       { skip=1 }
   skip==1 {
-    if ($0 ~ /^For / || $0 ~ /^In memory of / || $0 ~ /^[0-9][0-9][0-9][0-9]/) print
+    if ($0 ~ /^For / || $0 ~ /^In memory of / || $0 ~ /^In honor of / || $0 ~ /^the man who kept/ || $0 ~ /^[0-9][0-9][0-9][0-9]/) print
     next
   }
   { print }
