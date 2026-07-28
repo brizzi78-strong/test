@@ -169,7 +169,7 @@ Not my father. Not my brother. Not my mother. No one.
 
 I sat on a concrete floor in Mexico with my head on my knees, and the life I'd been performing was somewhere else. What was left was the smell, the dark, and my own breathing.
 
-I lost track of time. The voices flattened into noise. I thought about my mother, her hand around mine in the airport when I was four, the woman who carried me out of this country to give me a life. I'd come back to take myself apart. Then my father, Lou. That was worse. He'd chosen me, made me his son, sat in the bleachers and paid the bills and handed over money he didn't have, and never once made me feel I had to earn the place. And I'd put myself here.
+I lost track of time. The voices flattened into noise. I thought about my mother, her hand around mine in the airport when I was four, the woman who carried me out of this country to give me a life. I'd come back to take myself apart. Then my father, Lou. That was worse. He'd chosen me — a boy from Mexico City who wasn't his — made me his son, gave me his name, sat in the bleachers and paid the bills and handed over money he didn't have, and never once made me feel I had to earn the place. Somewhere back home he was asleep, believing his son was safe. And I'd put myself here.
 
 I wanted to pray and couldn't. I still believed, somewhere under it. Asking for help out of a hole I'd dug myself was more than I could do.
 
@@ -234,7 +234,7 @@ When my mother pushed back, it turned. One night it went physical, a single slap
 
 There's a picture of me from back then. A little kid in a Mickey Mouse shirt washed so many times it had gone gray, though Mickey still held his color. I wore it until it fell apart.
 
-After Mama and Papa, I loved Richardo, my older cousin. A few years ahead of me, which at that age is a whole generation, and I followed him everywhere. One day he took me to the market for gum. He walked me down the rows, naming things, while I looked at all of it. The gum came in big wrappers in every color, and there was one flavor every kid in the neighborhood wanted. Mango. We found it. I walked home with a piece of it in my cheek.
+After Mama and Papa, I loved Ricardo, my older cousin. A few years ahead of me, which at that age is a whole generation, and I followed him everywhere. One day he took me to the market for gum. He walked me down the rows, naming things, while I looked at all of it. The gum came in big wrappers in every color, and there was one flavor every kid in the neighborhood wanted. Mango. We found it. I walked home with a piece of it in my cheek.
 
 My mom got pregnant with Chris when I was two; he was born just before I turned three. The week before, I wouldn't let my mother put me down. I'd grab her hips while she walked and let her drag me along the floor. "Let me down," she kept saying. I didn't want down. I wanted to be carried. She told me she couldn't carry me anymore because there was going to be another baby. I asked if the baby could be mine. She said yes.
 
@@ -244,7 +244,7 @@ For years I told Chris he'd been small enough to fit in my pocket when he was bo
 
 Chris cried a lot as a baby. His ears, my mother said. She'd hold him for hours. I'd go to my room and play the same record again. But I got used to it. He was mine, after all. I'd asked, and she'd said yes.
 
-I don't remember every detail of those first years in Mexico. Memories from when you are two, three, and four don't come back as whole stories. They come back in pieces. One of them is Richardo's birthday party, the piñata breaking open, candy spilling everywhere. They must be rich, I remember thinking. Look at all that candy.
+I don't remember every detail of those first years in Mexico. Memories from when you are two, three, and four don't come back as whole stories. They come back in pieces. One of them is Ricardo's birthday party, the piñata breaking open, candy spilling everywhere. They must be rich, I remember thinking. Look at all that candy.
 
 Mexico was home.
 
@@ -339,7 +339,7 @@ At night I thought about Horacio, not with anger, with confusion, half-expecting
 
 My grandparents gave me what they had, which was steadiness, a house that stayed where it was, meals that came when they were supposed to. Not the warmth my mother gave, but reliability, and that counts for a lot when the ground has just moved. There's a wedding photograph of them walking down the aisle, Grandpa in a white dinner jacket, dark hair slicked back, grinning like he'd won something; Nana on his arm in satin, red lipstick, an armful of white roses. The two of them could have passed for movie stars. They'd aged into it gracefully — Grandpa bald by then, green-eyed, still a handsome face, a cigarette usually going somewhere in the house; Nana's high cheekbones still carrying the pretty face from that picture.
 
-My grandfather taught high school history. At home he was a simple man, and I loved him for it. He was devoted to Wendy's, the Frosties most of all, and told me once, dead serious, that the one hole in his life was that Wendy's wouldn't sell hot dogs. He and my nana drank port wine every night out of paper cups, from a jug they kept. Coffee ice cream and chocolate pudding were their flavors, and I still can't taste either one without thinking of them. He confided in me that Ivory soap was made for every part of a man, no shampoo needed. He said it in a tone as if he'd just shared classified information. Ketchup was less a condiment than a way of life. It went on everything — ketchup on the ketchup — a habit I took whole.
+My grandfather taught high school history. At home he was a simple man, and I loved him for it. He was devoted to Wendy's, the Frosties most of all, and told me once, dead serious, that the one hole in his life was that Wendy's wouldn't sell hot dogs. He and my nana drank port wine every night out of paper cups, from a jug they kept. And ketchup was less a condiment than a way of life. It went on everything — ketchup on the ketchup — a habit I took whole.
 
 While he taught history, he also made me interested in science. Once he took me to the railroad tracks and showed me how to lay a quarter on the rail. Then we ran off and came back after the train passed to find it flattened smooth. My mother didn't agree when she found out, but he never saw the problem.
 
@@ -356,8 +356,6 @@ From an early age, I had strong opinions about the way things should be. In my m
 I also had a strong opinion about which colors belonged to Mom and my Aunt Nancey. Mom always wore red nail polish, Aunt Nancey always pink. That's just how the world worked. It had always been that way, and it followed that this rule should remain for evermore. I didn't make up those rules. Then one day, Mom and Aunt Nancey broke them. Mom came home with pink nails, and Nancey with red. I lost it. Sobbing, I insisted they had it wrong and had to put it back the way it should be. When they saw my response, they returned to the salon and changed their nails back to the "right" colors just to settle me.
 
 It wasn't a tantrum; it was panic. I'd lost a country, a father, and a language. The nail colors were one thing that needed to stay the way they belonged, and then they didn't.
-
-The need to hold things in place never fully left me.
 
 Nancey, my mother's youngest sister, treated Chris and me as her own from the start. She was at the games and the matches, always in our corner. Nancey was in her early twenties when we arrived from Mexico, years before she met Charlie. She told me not long ago that no matter how old I get, she'll always see the same little kid, and I know the one she means: the boy in the backseat too scared to get out of the car.
 
