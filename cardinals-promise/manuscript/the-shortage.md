@@ -34,6 +34,8 @@ The woman taking it for the forty pounds her doctor had been begging her about �
 
 There was no villain. There was just not enough. And not enough goes by luck, and money, and who has a pharmacist in the family.
 
+For a while there was a fallback. When Hope's shelf ran out of the drug I used to carry, doctors switched people to the competitor's — Mounjaro, the one whose reps I'd spent years fighting for lunch slots. Then that one went short too. Musical chairs across brands, and every switch was a new prior authorization, a new starting dose, a new month of nausea, one more call for Hope to make. Somewhere in there, the rivalry I had taken personally for a decade stopped meaning anything. There wasn't enough of anybody's drug.
+
 ---
 
 Nine at night, off the clock, Hope was on the phone with the store two towns over. A man had been to four pharmacies that day, still in his work boots, his numbers bad enough that a fifth no would have been a medical event. Hers was the first counter where somebody looked past the screen.
@@ -79,4 +81,5 @@ Hope still comes home some Thursdays and sits down with her coat on. I don't ask
 - One real detail of what that year cost Hope, in a form she'd let you print.
 - The counter stories (work boots, the last pen, the slammed pen) must stay composites with details changed — a pharmacist's household publishing recognizable patient encounters is a privacy exposure. Consider a book-level "encounters are composites" disclaimer.
 - Whether Hope was in retail/community pharmacy during 2022–2024, and your own timeline (the draft has you in hospice by then).
+- The Mounjaro beat (added post-panel, from you): tirzepatide's shortage ran Dec 2022–Dec 2024, resolved just before semaglutide's — fact-safe as written; swap in Hope's real switching stories if she has them, and confirm Lilly was your competitive counterpart in the territory years.
 - The bridging-plan beat is written with the prescriber in the loop on purpose — keep it that way in any rewrite; a pharmacist adjusting dosing alone is a scope-of-practice problem in most states.
