@@ -35,8 +35,8 @@ node social/seed.mjs        # log in: rob@thecardinal.com / cardinal1
 | **1 — Feed** | ✅ done | Accounts, profiles (name, bio, photo), **posts (text + photo), news feed, likes, comments** |
 | **2 — Friends** | ✅ done | **People search, friend requests/accept/decline, feed scoped to your circle** |
 | **3 — Notifications + Reach out** | ✅ done | **Real-time notification bell (likes, comments, friend events) via server-sent events, plus the "care signal / reach out" feature** |
-| 4 — Messaging | next | Direct messages |
-| 5 — Groups | | Create/join groups, group feeds |
+| **4 — Messaging** | ✅ done | **Direct messages between friends, real-time delivery, unread badge, conversation list** |
+| 5 — Groups | next | Create/join groups, group feeds |
 | 6 — Photos & profiles | | Albums, richer profile pages |
 
 ## Phase 1 — what works today

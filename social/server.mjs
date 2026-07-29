@@ -54,6 +54,11 @@ db.exec(`
     user_id INTEGER NOT NULL, type TEXT NOT NULL, actor_id INTEGER NOT NULL,
     post_id INTEGER, created INTEGER NOT NULL, read INTEGER NOT NULL DEFAULT 0
   );
+  CREATE TABLE IF NOT EXISTS dms (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    from_id INTEGER NOT NULL, to_id INTEGER NOT NULL,
+    body TEXT NOT NULL, created INTEGER NOT NULL, read INTEGER NOT NULL DEFAULT 0
+  );
 `);
 
 // Migration: the "care signal" — a member can quietly tell their circle they could
@@ -117,6 +122,16 @@ const q = {
   unreadCount: db.prepare("SELECT COUNT(*) c FROM notifications WHERE user_id=? AND read=0"),
   markRead: db.prepare("UPDATE notifications SET read=1 WHERE user_id=? AND read=0"),
   setSupport: db.prepare("UPDATE profiles SET need_support=?, support_note=?, support_since=? WHERE user_id=?"),
+  insertDm: db.prepare("INSERT INTO dms (from_id, to_id, body, created) VALUES (?,?,?,?)"),
+  dmThread: db.prepare("SELECT from_id, body, created FROM dms WHERE (from_id=? AND to_id=?) OR (from_id=? AND to_id=?) ORDER BY created ASC LIMIT 300"),
+  dmMarkRead: db.prepare("UPDATE dms SET read=1 WHERE to_id=? AND from_id=? AND read=0"),
+  dmUnreadTotal: db.prepare("SELECT COUNT(*) c FROM dms WHERE to_id=? AND read=0"),
+  dmUnreadFrom: db.prepare("SELECT COUNT(*) c FROM dms WHERE to_id=? AND from_id=? AND read=0"),
+  dmPartners: db.prepare(`SELECT other, MAX(created) last FROM (
+      SELECT to_id AS other, created FROM dms WHERE from_id=?
+      UNION ALL SELECT from_id AS other, created FROM dms WHERE to_id=?
+    ) GROUP BY other ORDER BY last DESC LIMIT 50`),
+  dmLast: db.prepare("SELECT from_id, body, created FROM dms WHERE (from_id=? AND to_id=?) OR (from_id=? AND to_id=?) ORDER BY created DESC LIMIT 1"),
 };
 
 // Relationship of target user t as seen by me: none | friends | outgoing | incoming
@@ -385,6 +400,39 @@ async function api(req, res, path) {
     const other = Number((await readBody(req)).userId);
     if (!other || relationship(user.id, other) !== "friends") return send(res, 403, { error: "You can only reach out to friends." });
     notify(other, "reach_out", user.id);
+    return send(res, 200, { ok: true });
+  }
+
+  /* ---------- Direct messages ---------- */
+  if (path === "/api/dm/threads" && method === "GET") {
+    const threads = q.dmPartners.all(user.id, user.id).map((row) => {
+      const last = q.dmLast.get(user.id, row.other, row.other, user.id);
+      return {
+        with: author(row.other),
+        last: last ? { body: last.body, mine: last.from_id === user.id, created: last.created } : null,
+        unread: q.dmUnreadFrom.get(user.id, row.other).c,
+      };
+    });
+    return send(res, 200, { threads });
+  }
+  if (path === "/api/dm/unread" && method === "GET") {
+    return send(res, 200, { unread: q.dmUnreadTotal.get(user.id).c });
+  }
+  if (path === "/api/dm" && method === "GET") {
+    const other = Number(new URL(req.url, "http://x").searchParams.get("with"));
+    if (!other || !q.profileById.get(other)) return send(res, 404, { error: "No such person." });
+    q.dmMarkRead.run(user.id, other);
+    const messages = q.dmThread.all(user.id, other, other, user.id).map((m) => ({ mine: m.from_id === user.id, body: m.body, created: m.created }));
+    return send(res, 200, { with: author(other), messages });
+  }
+  if (path === "/api/dm" && method === "POST") {
+    const b = await readBody(req);
+    const toId = Number(b.toId);
+    if (!toId || relationship(user.id, toId) !== "friends") return send(res, 403, { error: "You can only message friends." });
+    const body = String(b.body || "").trim().slice(0, 4000);
+    if (!body) return send(res, 400, { error: "Message is empty." });
+    q.insertDm.run(user.id, toId, body, Date.now());
+    pushEvent(toId, "dm", { from: author(user.id), body, created: Date.now() });
     return send(res, 200, { ok: true });
   }
 

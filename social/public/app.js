@@ -66,6 +66,7 @@
     if (view === "feed") loadFeed();
     if (view === "profile") loadProfile();
     if (view === "friends") loadFriends(el("peopleSearch").value);
+    if (view === "messages") { showThreadList(); loadThreads(); }
     show(view);
   }
 
@@ -109,7 +110,10 @@
     const btn = (label, cls, fn) => { const b = document.createElement("button"); b.className = "btn " + cls; b.textContent = label; b.onclick = fn; return b; };
     const rel = p.rel;
     const reload = () => loadFriends(el("peopleSearch").value);
-    if (rel === "friends") actions.innerHTML = `<span class="tag">✓ Friends</span>`;
+    if (rel === "friends") {
+      const t = document.createElement("span"); t.className = "tag"; t.textContent = "✓ Friends"; actions.appendChild(t);
+      actions.appendChild(btn("Message", "ghost", () => openThread(p.id, p.name)));
+    }
     else if (rel === "outgoing") actions.appendChild(btn("Requested", "ghost", async () => { await api("/api/friends/remove", { method: "POST", body: { userId: p.id } }); reload(); }));
     else if (rel === "incoming") {
       actions.appendChild(btn("Accept", "primary", async () => { await api("/api/friends/request", { method: "POST", body: { toId: p.id } }); toast("You're now friends with " + p.name.split(" ")[0]); reload(); }));
@@ -325,9 +329,64 @@
       if (n.type === "friend_request") refreshReqBadge();
       if (n.type === "reach_out") toast(`${(n.actor.name || "Someone").split(" ")[0]} reached out to you 💛`);
     });
+    es.addEventListener("dm", (ev) => {
+      let m; try { m = JSON.parse(ev.data); } catch { return; }
+      if (currentDm === m.from.id && !el("chatCard").hidden) {
+        const log = el("chatLog"); const empty = log.querySelector(".chat-empty"); if (empty) empty.remove();
+        const b = document.createElement("div"); b.className = "msg them"; b.textContent = m.body; log.appendChild(b); log.scrollTop = log.scrollHeight;
+      } else {
+        setDmBadge((parseInt(el("dmBadge").textContent) || 0) + 1);
+        if (!el("view-messages").hidden) loadThreads();
+        toast(`${(m.from.name || "Someone").split(" ")[0]}: ${m.body.slice(0, 40)}`);
+      }
+    });
     es.onerror = () => {};
   }
   function closeStream() { if (es) { es.close(); es = null; } }
+
+  /* ---------- Messages ---------- */
+  let currentDm = null;
+  function showThreadList() { el("threadListCard").hidden = false; el("chatCard").hidden = true; currentDm = null; }
+  async function loadThreads() {
+    let d; try { d = await api("/api/dm/threads"); } catch { return; }
+    const list = el("threadList"); list.innerHTML = "";
+    el("threadEmpty").hidden = d.threads.length > 0;
+    d.threads.forEach((t) => {
+      const av = avatarInner(t.with);
+      const row = document.createElement("button"); row.className = "thread";
+      const preview = t.last ? (t.last.mine ? "You: " : "") + t.last.body : "Say hi";
+      row.innerHTML = `<div class="avatar" ${av.style ? `style="${av.style}"` : ""}>${av.text}</div>
+        <div class="who"><div class="t-name">${esc(t.with.name)}</div><div class="t-last ${t.unread ? "unread" : ""}">${esc(preview)}</div></div>
+        ${t.unread ? '<span class="dot"></span>' : ""}`;
+      row.onclick = () => openThread(t.with.id, t.with.name);
+      list.appendChild(row);
+    });
+  }
+  async function openThread(id, name) {
+    currentDm = id; el("chatWith").textContent = name;
+    el("threadListCard").hidden = true; el("chatCard").hidden = false;
+    show("messages");
+    await renderThread(); refreshDmBadge();
+  }
+  async function renderThread() {
+    const log = el("chatLog");
+    let d; try { d = await api("/api/dm?with=" + currentDm); } catch { return; }
+    el("chatWith").textContent = d.with.name;
+    log.innerHTML = "";
+    if (!d.messages.length) log.innerHTML = '<p class="chat-empty">No messages yet. Send the first one.</p>';
+    d.messages.forEach((m) => { const b = document.createElement("div"); b.className = "msg " + (m.mine ? "me" : "them"); b.textContent = m.body; log.appendChild(b); });
+    log.scrollTop = log.scrollHeight;
+  }
+  el("chatBack").onclick = () => { showThreadList(); loadThreads(); };
+  el("chatForm").onsubmit = async (e) => {
+    e.preventDefault();
+    const input = el("chatInput"); const body = input.value.trim(); if (!body || !currentDm) return; input.value = "";
+    const log = el("chatLog"); const empty = log.querySelector(".chat-empty"); if (empty) empty.remove();
+    const b = document.createElement("div"); b.className = "msg me"; b.textContent = body; log.appendChild(b); log.scrollTop = log.scrollHeight;
+    try { await api("/api/dm", { method: "POST", body: { toId: currentDm, body } }); } catch (err) { toast(err.message); }
+  };
+  function setDmBadge(n) { const b = el("dmBadge"); if (n > 0) { b.textContent = n; b.hidden = false; } else b.hidden = true; }
+  async function refreshDmBadge() { try { setDmBadge((await api("/api/dm/unread")).unread); } catch {} }
 
   /* ---------- Boot ---------- */
   async function boot() {
@@ -338,6 +397,7 @@
       if (!me.profile.name) { show("profile"); loadProfile(); return; }
       refreshReqBadge();
       refreshNotifBadge();
+      refreshDmBadge();
       openStream();
       go("feed");
     } catch { me = null; el("topbar").hidden = true; setMode("signup"); show("auth"); }

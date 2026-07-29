@@ -181,6 +181,28 @@ textarea{resize:vertical}
 .people-empty{text-align:center;padding:1.5rem}
 .muted{color:var(--muted)}
 
+/* Messages */
+.msg-list-card{padding:1.1rem}
+.thread-list{display:flex;flex-direction:column}
+.thread{display:flex;align-items:center;gap:.75rem;padding:.7rem 0;cursor:pointer;text-align:left;width:100%;border:0;background:none;font:inherit;color:inherit}
+.thread+.thread{border-top:1px solid var(--line)}
+.thread .who{flex:1;min-width:0}
+.thread .t-name{font-weight:700}
+.thread .t-last{color:var(--muted);font-size:.87rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.thread .t-last.unread{color:var(--ink);font-weight:600}
+.thread .dot{width:9px;height:9px;border-radius:50%;background:var(--brand);flex:0 0 auto}
+.chat-card{padding:1rem 1.1rem;display:flex;flex-direction:column;min-height:60vh}
+.chat-head{display:flex;align-items:center;gap:.8rem;padding-bottom:.7rem;border-bottom:1px solid var(--line);margin-bottom:.7rem}
+.chat-with{font-weight:800;font-size:1.1rem}
+.chat-log{flex:1;display:flex;flex-direction:column;gap:.4rem;overflow-y:auto;max-height:52vh;padding:.3rem 0}
+.msg{max-width:76%;padding:.5rem .85rem;border-radius:16px;line-height:1.4;word-wrap:break-word}
+.msg.them{align-self:flex-start;background:var(--bg);border:1px solid var(--line);border-bottom-left-radius:5px}
+.msg.me{align-self:flex-end;background:var(--brand);color:#fff;border-bottom-right-radius:5px}
+.chat-form{display:flex;gap:.5rem;margin-top:.7rem}
+.chat-form input{flex:1;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:.6rem 1rem}
+.chat-form input:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-soft)}
+.chat-empty{color:var(--muted);text-align:center;margin:auto}
+
 .empty{padding:2.5rem 1rem;text-align:center;color:var(--muted)}
 .empty h3{color:var(--ink);margin-bottom:.3rem}
 .profile-card{padding:1.4rem}
