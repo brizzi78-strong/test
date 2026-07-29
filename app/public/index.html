@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cardinal — women-first, safety-first dating</title>
+<meta name="theme-color" content="#21304f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 21s-7-4.35-9.5-8.5C1 9 2.5 5.5 6 5.5c2 0 3.2 1.2 4 2.3.8-1.1 2-2.3 4-2.3 3.5 0 5 3.5 3.5 7C19 16.65 12 21 12 21z' fill='%23C41E3A'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="#" id="brandHome">Cardinal</a>
+  <nav class="tabs" id="tabs" hidden>
+    <button class="tab" data-view="discover">Discover</button>
+    <button class="tab" data-view="matches">Matches <span class="badge" id="matchCount" hidden>0</span></button>
+    <button class="tab" data-view="profile">Profile</button>
+    <button class="tab ghost" id="logout">Sign out</button>
+  </nav>
+</header>
+
+<main id="app">
+  <!-- AUTH -->
+  <section class="view" id="view-auth">
+    <div class="auth-card">
+      <p class="eyebrow">Invite only · women-first · safety-first</p>
+      <h1>Cardinals mate for life.<br>Find yours.</h1>
+      <p class="sub">Create your account to build a profile, get matched, and message the people you choose.</p>
+      <div class="seg">
+        <button class="seg-btn active" id="segSignup">Create account</button>
+        <button class="seg-btn" id="segLogin">Sign in</button>
+      </div>
+      <form id="authForm" class="form">
+        <label id="nameField">First name
+          <input name="name" autocomplete="given-name" placeholder="Ava">
+        </label>
+        <label>Email
+          <input name="email" type="email" autocomplete="email" required placeholder="you@email.com">
+        </label>
+        <label>Password
+          <input name="password" type="password" autocomplete="current-password" required placeholder="At least 6 characters">
+        </label>
+        <p class="err" id="authErr" hidden></p>
+        <button class="btn primary" type="submit" id="authSubmit">Create account</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- PROFILE -->
+  <section class="view" id="view-profile" hidden>
+    <h2 class="view-title">Your profile</h2>
+    <p class="view-note" id="profileNote">One honest profile is how a cardinal calls. This is what others see.</p>
+    <form id="profileForm" class="form card">
+      <div class="row">
+        <label>Name <input name="name" required maxlength="60"></label>
+        <label>Age <input name="age" type="number" min="18" max="99" required></label>
+      </div>
+      <div class="row">
+        <label>I am a
+          <select name="gender">
+            <option value="">—</option><option>woman</option><option>man</option><option>nonbinary</option>
+          </select>
+        </label>
+        <label>Looking for
+          <select name="seeking">
+            <option value="">—</option><option>women</option><option>men</option><option>everyone</option>
+          </select>
+        </label>
+      </div>
+      <label>City / campus <input name="city" maxlength="60" placeholder="Chapel Hill"></label>
+      <label>About you <textarea name="bio" maxlength="600" rows="3" placeholder="What matters to you, what a good weekend looks like…"></textarea></label>
+      <label>One prompt: "You should message me if…" <input name="prompt" maxlength="300" placeholder="…you also think coffee is a personality trait."></label>
+      <p class="err" id="profileErr" hidden></p>
+      <button class="btn primary" type="submit">Save profile</button>
+    </form>
+  </section>
+
+  <!-- DISCOVER -->
+  <section class="view" id="view-discover" hidden>
+    <h2 class="view-title">Discover</h2>
+    <div id="deck" class="deck"></div>
+    <div id="deckEmpty" class="empty" hidden>
+      <p>That's everyone for now.</p>
+      <p class="muted">New members join all the time — check back soon.</p>
+    </div>
+  </section>
+
+  <!-- MATCHES -->
+  <section class="view" id="view-matches" hidden>
+    <h2 class="view-title">Matches</h2>
+    <div id="matchList" class="match-list"></div>
+    <div id="matchEmpty" class="empty" hidden>
+      <p>No matches yet.</p>
+      <p class="muted">When you and someone both like each other, they'll show up here.</p>
+    </div>
+  </section>
+
+  <!-- CHAT -->
+  <section class="view" id="view-chat" hidden>
+    <div class="chat-head">
+      <button class="link-back" id="chatBack">← Matches</button>
+      <span class="chat-with" id="chatWith"></span>
+    </div>
+    <div class="chat-log" id="chatLog"></div>
+    <form class="chat-form" id="chatForm">
+      <input id="chatInput" placeholder="Say something real…" autocomplete="off" maxlength="2000">
+      <button class="btn primary" type="submit">Send</button>
+    </form>
+  </section>
+</main>
+
+<div class="toast" id="toast" hidden></div>
+<script src="app.js"></script>
+</body>
+</html>
