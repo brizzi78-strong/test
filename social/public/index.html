@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nest — where your people are</title>
+<meta name="theme-color" content="#4f46e5">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%234f46e5'/%3E%3Cpath d='M9 22V13l7-4 7 4v9h-5v-6h-4v6z' fill='white'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar" id="topbar" hidden>
+  <a class="brand" href="#" id="brandHome"><span class="brand-mark">N</span><span class="brand-word">Nest</span></a>
+  <div class="top-actions">
+    <button class="top-tab active" data-view="feed" title="Home">Home</button>
+    <button class="top-tab" data-view="profile" title="Profile">Profile</button>
+    <button class="avatar-btn" id="meAvatar" title="You"></button>
+    <button class="ghost-btn" id="logout">Sign out</button>
+  </div>
+</header>
+
+<main id="app">
+  <!-- AUTH -->
+  <section class="view auth" id="view-auth">
+    <div class="auth-hero">
+      <div class="hero-mark">N</div>
+      <h1>Where your people are.</h1>
+      <p>Share what's happening, see what your friends are up to, and stay close — all in one place.</p>
+      <ul class="hero-points">
+        <li>Post updates and photos</li>
+        <li>Like and comment in real time</li>
+        <li>Your feed, your circle</li>
+      </ul>
+    </div>
+    <div class="auth-card">
+      <div class="seg">
+        <button class="seg-btn active" id="segSignup">Create account</button>
+        <button class="seg-btn" id="segLogin">Log in</button>
+      </div>
+      <form id="authForm" class="stack">
+        <label id="nameField" class="field">Your name<input name="name" autocomplete="name" placeholder="Ava Stone"></label>
+        <label class="field">Email<input name="email" type="email" autocomplete="email" required placeholder="you@email.com"></label>
+        <label class="field">Password<input name="password" type="password" autocomplete="current-password" required placeholder="At least 6 characters"></label>
+        <p class="err" id="authErr" hidden></p>
+        <button class="btn primary lg" type="submit" id="authSubmit">Create account</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FEED -->
+  <section class="view feed" id="view-feed" hidden>
+    <div class="composer card">
+      <div class="composer-top">
+        <div class="avatar" id="composerAvatar"></div>
+        <button class="composer-open" id="composerOpen">What's on your mind?</button>
+      </div>
+      <form class="composer-form" id="composerForm" hidden>
+        <textarea id="postBody" rows="3" placeholder="What's on your mind?" maxlength="5000"></textarea>
+        <div class="composer-photo" id="composerPhotoWrap" hidden><img id="composerPhoto" alt=""><button type="button" class="photo-x" id="photoRemove">✕</button></div>
+        <div class="composer-actions">
+          <label class="chip"><input type="file" id="postPhotoInput" accept="image/png,image/jpeg,image/webp" hidden>📷 Photo</label>
+          <div class="spacer"></div>
+          <button type="button" class="btn ghost" id="composerCancel">Cancel</button>
+          <button class="btn primary" type="submit" id="postSubmit">Post</button>
+        </div>
+      </form>
+    </div>
+    <div id="posts" class="posts"></div>
+    <div id="feedEmpty" class="empty card" hidden><h3>It's quiet in here.</h3><p>Be the first to post something.</p></div>
+  </section>
+
+  <!-- PROFILE -->
+  <section class="view profile" id="view-profile" hidden>
+    <div class="card profile-card">
+      <h2>Your profile</h2>
+      <div class="photo-pick">
+        <div class="avatar xl" id="profileAvatar"></div>
+        <label class="btn ghost sm">Change photo<input type="file" id="profilePhotoInput" accept="image/png,image/jpeg,image/webp" hidden></label>
+      </div>
+      <form id="profileForm" class="stack">
+        <label class="field">Name<input name="name" required maxlength="60"></label>
+        <label class="field">Bio<textarea name="bio" rows="2" maxlength="300" placeholder="A line about you"></textarea></label>
+        <p class="err" id="profileErr" hidden></p>
+        <button class="btn primary" type="submit">Save profile</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<div class="toast" id="toast" hidden></div>
+<script src="app.js"></script>
+</body>
+</html>
