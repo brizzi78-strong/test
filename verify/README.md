@@ -49,7 +49,11 @@ npm run typecheck
 | `VERIFY_DB` | SQLite file path; unset uses the in-memory store. |
 | `VERIFY_USER` / `VERIFY_PASSWORD` | Optional password gate on the console. The consent and verifier links are never gated. |
 | `VERIFY_BASE_URL` | Absolute URL used in the links inside emails, e.g. `https://verify.blueridgepressllc.com`. Defaults to `http://localhost:$PORT`. |
-| `SENDGRID_API_KEY` + `VERIFY_MAIL_FROM` | Set both to send real email via SendGrid. `VERIFY_MAIL_FROM_NAME` optionally sets the display name. Unset → links are logged to the console instead. |
+| `SENDGRID_API_KEY` + `VERIFY_MAIL_FROM` | Send real email via SendGrid (HTTP API). `VERIFY_MAIL_FROM_NAME` optionally sets the display name. |
+| `SMTP_HOST` + `VERIFY_MAIL_FROM` | Send real email via SMTP instead — works with a domain mailbox, Gmail, Fastmail, iCloud, etc. Also honors `SMTP_PORT` (default 587), `SMTP_USER`, `SMTP_PASSWORD`, `SMTP_SECURE` (`true` for implicit TLS on 465; otherwise STARTTLS is used when offered). |
+
+With no mail config set, links are logged to the console instead of sent. When
+both a SendGrid key and SMTP host are present, SendGrid is used.
 
 ## Sending the links — automatic
 

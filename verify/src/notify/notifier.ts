@@ -13,6 +13,8 @@
  * Any other provider (Postmark, Mailgun, raw SMTP) is a drop-in `Notifier`.
  */
 
+import { smtpFromEnv } from './smtpNotifier.ts';
+
 export interface OutboundEmail {
   to: string;
   subject: string;
@@ -77,13 +79,16 @@ export class SendGridNotifier implements Notifier {
 }
 
 /**
- * Choose a transport from the environment:
- *   SENDGRID_API_KEY + VERIFY_MAIL_FROM  → real email via SendGrid
+ * Choose a transport from the environment, in order of preference:
+ *   SENDGRID_API_KEY + VERIFY_MAIL_FROM  → real email via SendGrid (HTTP API)
+ *   SMTP_HOST + VERIFY_MAIL_FROM         → real email via SMTP
  *   otherwise                            → console (links stay copy-pasteable)
  */
 export function notifierFromEnv(env: NodeJS.ProcessEnv = process.env): Notifier {
   if (env.SENDGRID_API_KEY && env.VERIFY_MAIL_FROM) {
     return new SendGridNotifier(env.SENDGRID_API_KEY, env.VERIFY_MAIL_FROM, env.VERIFY_MAIL_FROM_NAME);
   }
+  const smtp = smtpFromEnv(env);
+  if (smtp) return smtp;
   return new ConsoleNotifier();
 }

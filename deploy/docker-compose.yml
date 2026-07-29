@@ -125,10 +125,16 @@ services:
       VERIFY_PASSWORD: ${VERIFY_PASSWORD:-}
       # Absolute URL used in the emailed consent/verifier links.
       VERIFY_BASE_URL: ${VERIFY_BASE_URL:-}
-      # Set both to send real email via SendGrid; unset logs links instead.
+      # Real email: set SENDGRID_API_KEY (HTTP API) or SMTP_HOST (SMTP), both
+      # with VERIFY_MAIL_FROM. Unset → links are logged to the console instead.
       SENDGRID_API_KEY: ${SENDGRID_API_KEY:-}
       VERIFY_MAIL_FROM: ${VERIFY_MAIL_FROM:-}
       VERIFY_MAIL_FROM_NAME: ${VERIFY_MAIL_FROM_NAME:-}
+      SMTP_HOST: ${SMTP_HOST:-}
+      SMTP_PORT: ${SMTP_PORT:-}
+      SMTP_USER: ${SMTP_USER:-}
+      SMTP_PASSWORD: ${SMTP_PASSWORD:-}
+      SMTP_SECURE: ${SMTP_SECURE:-}
     ports: ["4600:4600"]
     volumes: ["verify-data:/data"]
 
