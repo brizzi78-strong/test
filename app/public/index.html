@@ -57,6 +57,15 @@
     <h2 class="view-title">Your profile</h2>
     <p class="view-note" id="profileNote">One honest profile is how a cardinal calls. This is what others see.</p>
     <form id="profileForm" class="form card">
+      <div class="photo-pick">
+        <div class="photo-avatar" id="photoAvatar" aria-hidden="true"></div>
+        <div>
+          <label class="photo-btn">Add a photo
+            <input type="file" name="photo" id="photoInput" accept="image/png,image/jpeg,image/webp" hidden>
+          </label>
+          <p class="photo-hint">One clear photo of you. PNG or JPEG.</p>
+        </div>
+      </div>
       <div class="row">
         <label>Name <input name="name" required maxlength="60"></label>
         <label>Age <input name="age" type="number" min="18" max="99" required></label>

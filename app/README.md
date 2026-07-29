@@ -16,9 +16,14 @@ sign up for, nobody to pay.
   date of birth, and consent to a background check. Until they're **verified**, they cannot
   see anyone or be seen. Only verified members appear in Discover. Status flows
   `unverified → in_review → verified | rejected`.
+- **Photos** — one profile photo, uploaded and stored in the app's own database and
+  served from the app itself. No image host, no CDN, no vendor.
 - **Discover** — browse other *verified* members with complete profiles (people you haven't acted on yet).
 - **Matching** — like or pass. A **match** is created only when *both* people like each other.
 - **Messaging** — matched people can message each other; messages persist and are private to that pair.
+- **Live updates** — new matches and new messages arrive **in real time** (via server-sent
+  events, again pure Node built-ins — no WebSocket library, no push vendor). A toast and a
+  badge appear instantly, and an open chat updates on its own.
 
 ## Verification / background checks
 
@@ -84,9 +89,16 @@ Least-"vendor" options, in order:
    computer's local IP, and on the phone open `http://<computer-ip>:3000`. Works
    immediately on the same network — good for testing on your own phone. (Add-to-Home-Screen
    and the service worker want HTTPS on most phones, so use option 2/3 for the real thing.)
-2. **Your own server (recommended, still no SaaS):** run it on a small VPS or a machine
-   you control, put a domain in front, and terminate HTTPS with a free Let's Encrypt
-   certificate. You own the box and the code end to end — nobody to sign up with.
+2. **Your own server (recommended, still no SaaS):** one command does the whole thing —
+   installs Node, runs the app as a hardened service, and sets up automatic HTTPS with a
+   free Let's Encrypt certificate. On a fresh Ubuntu/Debian server whose domain points at it:
+
+   ```bash
+   sudo bash deploy/setup.sh yourdomain.com
+   ```
+
+   You own the box and the code end to end — nobody to sign up with. See `deploy/` for the
+   script, the systemd service, and the Caddy (HTTPS) config it installs.
 3. **A platform host** (Render/Railway/Fly/etc.) is the fastest path but *is* a third-party
    vendor — listed only for completeness.
 

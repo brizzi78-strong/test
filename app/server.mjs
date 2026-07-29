@@ -74,6 +74,9 @@ db.exec(`
   if (!cols.includes("legal_name")) add("ALTER TABLE users ADD COLUMN legal_name TEXT DEFAULT ''");
   if (!cols.includes("dob")) add("ALTER TABLE users ADD COLUMN dob TEXT DEFAULT ''");
   if (!cols.includes("consent_at")) add("ALTER TABLE users ADD COLUMN consent_at INTEGER");
+  const pcols = db.prepare("PRAGMA table_info(profiles)").all().map((c) => c.name);
+  if (!pcols.includes("photo")) add("ALTER TABLE profiles ADD COLUMN photo BLOB");
+  if (!pcols.includes("photo_mime")) add("ALTER TABLE profiles ADD COLUMN photo_mime TEXT");
 }
 
 /* ----------------------------- Auth helpers ----------------------------- */
@@ -118,6 +121,8 @@ const q = {
   messagesFor: db.prepare("SELECT * FROM messages WHERE match_id=? ORDER BY created ASC"),
   submitVerif: db.prepare("UPDATE users SET verif='in_review', legal_name=?, dob=?, consent_at=? WHERE id=?"),
   setVerif: db.prepare("UPDATE users SET verif=? WHERE id=?"),
+  setPhoto: db.prepare("UPDATE profiles SET photo=?, photo_mime=? WHERE user_id=?"),
+  getPhoto: db.prepare("SELECT photo, photo_mime FROM profiles WHERE user_id=?"),
 };
 
 function createSession(userId) {
@@ -134,6 +139,28 @@ function userFromReq(req) {
   return q.userById.get(s.user_id) || null;
 }
 
+/* ----------------------------- Realtime (SSE) ----------------------------- */
+// Each connected member holds an open event-stream; we push live events to it.
+const streams = new Map(); // userId -> Set<res>
+function addStream(userId, res) {
+  if (!streams.has(userId)) streams.set(userId, new Set());
+  streams.get(userId).add(res);
+}
+function removeStream(userId, res) {
+  const set = streams.get(userId);
+  if (set) { set.delete(res); if (!set.size) streams.delete(userId); }
+}
+function pushEvent(userId, event, data) {
+  const set = streams.get(userId);
+  if (!set) return;
+  const payload = `event: ${event}\ndata: ${JSON.stringify(data)}\n\n`;
+  for (const res of set) { try { res.write(payload); } catch {} }
+}
+// Heartbeat keeps proxies from closing idle streams.
+setInterval(() => {
+  for (const set of streams.values()) for (const res of set) { try { res.write(":ping\n\n"); } catch {} }
+}, 25000).unref();
+
 /* ----------------------------- HTTP helpers ----------------------------- */
 function send(res, status, body, headers = {}) {
   const data = typeof body === "string" ? body : JSON.stringify(body);
@@ -145,7 +172,7 @@ function readBody(req) {
     let raw = "";
     req.on("data", (c) => {
       raw += c;
-      if (raw.length > 1e6) req.destroy();
+      if (raw.length > 6e6) req.destroy(); // ~6MB, enough for a photo as base64
     });
     req.on("end", () => {
       try { resolve(raw ? JSON.parse(raw) : {}); }
@@ -187,7 +214,12 @@ async function serveStatic(res, urlPath) {
 function publicProfile(userId) {
   const p = q.profileById.get(userId);
   if (!p) return null;
-  return { id: userId, name: p.name, age: p.age, gender: p.gender, seeking: p.seeking, city: p.city, bio: p.bio, prompt: p.prompt };
+  return { id: userId, name: p.name, age: p.age, gender: p.gender, seeking: p.seeking, city: p.city, bio: p.bio, prompt: p.prompt, photo: !!p.photo };
+}
+// The signed-in member's own profile, without the raw photo bytes.
+function selfProfile(userId) {
+  const p = q.profileById.get(userId) || {};
+  return { name: p.name, age: p.age, gender: p.gender, seeking: p.seeking, city: p.city, bio: p.bio, prompt: p.prompt, complete: p.complete, photo: !!p.photo };
 }
 
 /* ----------------------------- API routes ----------------------------- */
@@ -230,7 +262,7 @@ async function api(req, res, path) {
   if (path === "/api/me" && method === "GET") {
     return send(res, 200, {
       user: { id: user.id, email: user.email, verif: user.verif || "unverified" },
-      profile: q.profileById.get(user.id),
+      profile: selfProfile(user.id),
     });
   }
 
@@ -240,6 +272,19 @@ async function api(req, res, path) {
       return send(res, 400, { error: "Enter your legal name and date of birth, and agree to the background check." });
     q.submitVerif.run(String(legalName).slice(0, 100), String(dob).slice(0, 20), Date.now(), user.id);
     return send(res, 200, { ok: true, verif: "in_review" });
+  }
+
+  if (path === "/api/stream" && method === "GET") {
+    res.writeHead(200, {
+      "Content-Type": "text/event-stream; charset=utf-8",
+      "Cache-Control": "no-cache",
+      Connection: "keep-alive",
+      "X-Accel-Buffering": "no",
+    });
+    res.write("retry: 3000\n\n");
+    addStream(user.id, res);
+    req.on("close", () => removeStream(user.id, res));
+    return; // stream stays open
   }
 
   // The community (discover, matching, messaging) is gated behind verification.
@@ -255,7 +300,25 @@ async function api(req, res, path) {
       String(b.seeking || "").slice(0, 20), String(b.city || "").slice(0, 60),
       String(b.bio || "").slice(0, 600), String(b.prompt || "").slice(0, 300), user.id
     );
-    return send(res, 200, { ok: true, profile: q.profileById.get(user.id) });
+    return send(res, 200, { ok: true, profile: selfProfile(user.id) });
+  }
+
+  if (path === "/api/profile/photo" && method === "PUT") {
+    const { dataUrl } = await readBody(req);
+    const m = /^data:(image\/(?:png|jpeg|webp));base64,([A-Za-z0-9+/=]+)$/.exec(dataUrl || "");
+    if (!m) return send(res, 400, { error: "Please choose a PNG, JPEG, or WebP image." });
+    const buf = Buffer.from(m[2], "base64");
+    if (buf.length > 4_000_000) return send(res, 400, { error: "That image is too large (max ~4MB)." });
+    q.setPhoto.run(buf, m[1], user.id);
+    return send(res, 200, { ok: true });
+  }
+
+  if (path.startsWith("/api/photo/") && method === "GET") {
+    const pid = Number(path.slice("/api/photo/".length));
+    const row = pid ? q.getPhoto.get(pid) : null;
+    if (!row || !row.photo) return send(res, 404, { error: "No photo." });
+    res.writeHead(200, { "Content-Type": row.photo_mime || "image/jpeg", "Cache-Control": "private, max-age=60" });
+    return res.end(Buffer.from(row.photo));
   }
 
   if (path === "/api/discover" && method === "GET") {
@@ -283,6 +346,8 @@ async function api(req, res, path) {
         const [a, b] = user.id < tId ? [user.id, tId] : [tId, user.id];
         q.insertMatch.run(a, b, Date.now());
         matched = true;
+        pushEvent(tId, "match", { with: publicProfile(user.id) });
+        pushEvent(user.id, "match", { with: publicProfile(tId) });
       }
     }
     return send(res, 200, { ok: true, matched });
@@ -320,6 +385,8 @@ async function api(req, res, path) {
     const text = String(body || "").trim().slice(0, 2000);
     if (!text) return send(res, 400, { error: "Message is empty." });
     q.insertMessage.run(mt.id, user.id, text, Date.now());
+    const otherId = mt.a_id === user.id ? mt.b_id : mt.a_id;
+    pushEvent(otherId, "message", { matchId: mt.id, from: publicProfile(user.id).name, body: text });
     return send(res, 200, { ok: true });
   }
 

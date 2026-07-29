@@ -26,6 +26,8 @@
   function initials(name) {
     return (name || "?").trim().split(/\s+/).map((w) => w[0]).slice(0, 2).join("").toUpperCase();
   }
+  function avatarStyle(p) { return p.photo ? ` style="background-image:url('/api/photo/${p.id}')"` : ""; }
+  function avatarText(p) { return p.photo ? "" : initials(p.name); }
   function show(view) {
     document.querySelectorAll(".view").forEach((v) => (v.hidden = true));
     el("view-" + view).hidden = false;
@@ -61,6 +63,7 @@
   };
 
   el("logout").onclick = async () => {
+    closeStream();
     await api("/api/logout", { method: "POST" });
     me = null; setAuthed(false); show("auth");
   };
@@ -105,6 +108,21 @@
   };
 
   /* ---------- Profile ---------- */
+  let pendingPhoto = null; // data URL awaiting save
+  function setAvatar(hasPhoto, name) {
+    const a = el("photoAvatar");
+    if (pendingPhoto) { a.style.backgroundImage = `url('${pendingPhoto}')`; a.textContent = ""; }
+    else if (hasPhoto) { a.style.backgroundImage = `url('/api/photo/${me.user.id}?t=${Date.now()}')`; a.textContent = ""; }
+    else { a.style.backgroundImage = "none"; a.textContent = initials(name); }
+  }
+  el("photoInput").onchange = (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    if (file.size > 4_000_000) return toast("That image is too large (max ~4MB).");
+    const reader = new FileReader();
+    reader.onload = () => { pendingPhoto = reader.result; setAvatar(true, (me.profile || {}).name); };
+    reader.readAsDataURL(file);
+  };
   function loadProfileForm() {
     const p = me.profile || {};
     const form = el("profileForm");
@@ -115,6 +133,8 @@
     form.city.value = p.city || "";
     form.bio.value = p.bio || "";
     form.prompt.value = p.prompt || "";
+    pendingPhoto = null;
+    setAvatar(p.photo, p.name);
     el("profileNote").textContent = p.complete
       ? "One honest profile is how a cardinal calls. This is what others see."
       : "Finish your profile to start meeting people.";
@@ -122,10 +142,14 @@
   el("profileForm").onsubmit = async (e) => {
     e.preventDefault();
     const f = new FormData(e.target);
-    const body = Object.fromEntries(f.entries());
+    const body = { name: f.get("name"), age: f.get("age"), gender: f.get("gender"), seeking: f.get("seeking"), city: f.get("city"), bio: f.get("bio"), prompt: f.get("prompt") };
     try {
       const r = await api("/api/profile", { method: "PUT", body });
       me.profile = r.profile;
+      if (pendingPhoto) {
+        await api("/api/profile/photo", { method: "PUT", body: { dataUrl: pendingPhoto } });
+        me.profile.photo = true; pendingPhoto = null;
+      }
       toast("Profile saved.");
       go("discover");
     } catch (err) {
@@ -147,7 +171,7 @@
     const card = document.createElement("div");
     card.className = "pcard";
     card.innerHTML = `
-      <div class="avatar">${initials(p.name)}</div>
+      <div class="avatar"${avatarStyle(p)}>${avatarText(p)}</div>
       <h3>${escape(p.name)}${p.age ? ", " + p.age : ""}</h3>
       <div class="meta">${[p.city, p.seeking ? "seeking " + p.seeking : ""].filter(Boolean).map(escape).join(" · ")}</div>
       ${p.bio ? `<p class="bio">${escape(p.bio)}</p>` : ""}
@@ -180,7 +204,7 @@
       const row = document.createElement("button");
       row.className = "match-row";
       row.innerHTML = `
-        <span class="avatar">${initials(m.with.name)}</span>
+        <span class="avatar"${avatarStyle(m.with)}>${avatarText(m.with)}</span>
         <span>
           <div class="who">${escape(m.with.name)}${m.with.age ? ", " + m.with.age : ""}</div>
           <div class="last">${m.lastMessage ? escape(m.lastMessage) : "Say hello — you matched!"}</div>
@@ -223,6 +247,31 @@
     catch (err) { toast(err.message); }
   };
 
+  /* ---------- Live updates (SSE) ---------- */
+  let es = null;
+  function openStream() {
+    if (es) return;
+    es = new EventSource("/api/stream");
+    es.addEventListener("message", (ev) => {
+      let d = {}; try { d = JSON.parse(ev.data); } catch { return; }
+      const onThisChat = !el("view-chat").hidden && currentMatch === d.matchId;
+      if (onThisChat) { renderChat(); }
+      else {
+        toast("New message from " + (d.from || "a match"));
+        refreshBadge();
+        if (!el("view-matches").hidden) loadMatches();
+      }
+    });
+    es.addEventListener("match", (ev) => {
+      let d = {}; try { d = JSON.parse(ev.data); } catch { return; }
+      toast("New match" + (d.with && d.with.name ? " with " + d.with.name : "") + "! 🎉");
+      refreshBadge();
+      if (!el("view-matches").hidden) loadMatches();
+    });
+    es.onerror = () => {}; // EventSource auto-reconnects
+  }
+  function closeStream() { if (es) { es.close(); es = null; } }
+
   async function refreshBadge() {
     try {
       const d = await api("/api/matches");
@@ -244,6 +293,7 @@
       if (!me.profile || !me.profile.complete) { show("profile"); loadProfileForm(); return; }
       if (!verified()) { renderVerify(); show("verify"); return; }
       refreshBadge();
+      openStream();
       go("discover");
     } catch {
       me = null; setAuthed(false); setMode("signup"); show("auth");
