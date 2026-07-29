@@ -63,6 +63,19 @@ db.exec(`
   );
 `);
 
+// Migration: verification fields. `verif` gates access to the community.
+//   unverified -> in_review -> verified | rejected
+// The transition out of `in_review` is where a background-check provider
+// (e.g. the operator's own background-check company) returns its decision.
+{
+  const cols = db.prepare("PRAGMA table_info(users)").all().map((c) => c.name);
+  const add = (sql) => { try { db.exec(sql); } catch {} };
+  if (!cols.includes("verif")) add("ALTER TABLE users ADD COLUMN verif TEXT NOT NULL DEFAULT 'unverified'");
+  if (!cols.includes("legal_name")) add("ALTER TABLE users ADD COLUMN legal_name TEXT DEFAULT ''");
+  if (!cols.includes("dob")) add("ALTER TABLE users ADD COLUMN dob TEXT DEFAULT ''");
+  if (!cols.includes("consent_at")) add("ALTER TABLE users ADD COLUMN consent_at INTEGER");
+}
+
 /* ----------------------------- Auth helpers ----------------------------- */
 function hashPassword(password) {
   const salt = randomBytes(16);
@@ -103,6 +116,8 @@ const q = {
     "INSERT INTO messages (match_id, sender_id, body, created) VALUES (?, ?, ?, ?)"
   ),
   messagesFor: db.prepare("SELECT * FROM messages WHERE match_id=? ORDER BY created ASC"),
+  submitVerif: db.prepare("UPDATE users SET verif='in_review', legal_name=?, dob=?, consent_at=? WHERE id=?"),
+  setVerif: db.prepare("UPDATE users SET verif=? WHERE id=?"),
 };
 
 function createSession(userId) {
@@ -211,8 +226,24 @@ async function api(req, res, path) {
   if (!user) return send(res, 401, { error: "Please sign in." });
 
   if (path === "/api/me" && method === "GET") {
-    return send(res, 200, { user: { id: user.id, email: user.email }, profile: q.profileById.get(user.id) });
+    return send(res, 200, {
+      user: { id: user.id, email: user.email, verif: user.verif || "unverified" },
+      profile: q.profileById.get(user.id),
+    });
   }
+
+  if (path === "/api/verify/submit" && method === "POST") {
+    const { legalName, dob, consent } = await readBody(req);
+    if (!legalName || !dob || !consent)
+      return send(res, 400, { error: "Enter your legal name and date of birth, and agree to the background check." });
+    q.submitVerif.run(String(legalName).slice(0, 100), String(dob).slice(0, 20), Date.now(), user.id);
+    return send(res, 200, { ok: true, verif: "in_review" });
+  }
+
+  // The community (discover, matching, messaging) is gated behind verification.
+  const GATED = new Set(["/api/discover", "/api/like", "/api/matches", "/api/messages"]);
+  if (GATED.has(path) && (user.verif || "unverified") !== "verified")
+    return send(res, 403, { error: "Your account is still being verified.", verif: user.verif || "unverified" });
 
   if (path === "/api/profile" && method === "PUT") {
     const b = await readBody(req);
@@ -229,6 +260,7 @@ async function api(req, res, path) {
     // Other users with complete profiles that this user hasn't acted on yet.
     const rows = db.prepare(`
       SELECT p.user_id FROM profiles p
+      JOIN users u ON u.id = p.user_id AND u.verif = 'verified'
       WHERE p.user_id != ? AND p.complete = 1
         AND p.user_id NOT IN (SELECT target_id FROM likes WHERE user_id = ?)
       ORDER BY p.user_id DESC LIMIT 50

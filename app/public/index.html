@@ -75,6 +75,34 @@
     </form>
   </section>
 
+  <!-- VERIFY -->
+  <section class="view" id="view-verify" hidden>
+    <h2 class="view-title">Get verified</h2>
+    <div id="verifyForm-wrap">
+      <p class="view-note">Cardinal is safety-first. Every member is background-checked before they can meet anyone — no exceptions. Your details are used only for the check and are never shown on your profile.</p>
+      <form id="verifyForm" class="form card">
+        <label>Legal name <input name="legalName" required maxlength="100" placeholder="As it appears on your ID"></label>
+        <label>Date of birth <input name="dob" type="date" required></label>
+        <label class="check">
+          <input type="checkbox" name="consent" required>
+          <span>I consent to a background check and confirm the information above is accurate.</span>
+        </label>
+        <p class="err" id="verifyErr" hidden></p>
+        <button class="btn primary" type="submit">Submit for verification</button>
+      </form>
+    </div>
+    <div id="verifyPending" class="card pending" hidden>
+      <div class="pending-badge">In review</div>
+      <h3>Your verification is being reviewed.</h3>
+      <p class="muted">We run a background check on every applicant before they join the community. You'll get access as soon as it clears. This protects everyone here — including you.</p>
+    </div>
+    <div id="verifyRejected" class="card pending" hidden>
+      <div class="pending-badge rej">Not approved</div>
+      <h3>We couldn't approve your account.</h3>
+      <p class="muted">If you believe this is a mistake, reply to your verification email and we'll take another look.</p>
+    </div>
+  </section>
+
   <!-- DISCOVER -->
   <section class="view" id="view-discover" hidden>
     <h2 class="view-title">Discover</h2>

@@ -12,9 +12,28 @@ sign up for, nobody to pay.
 
 - **Accounts** — sign up / sign in / sign out, with securely hashed passwords and cookie sessions.
 - **Profiles** — name, age, gender, who you're seeking, city/campus, bio, and one prompt.
-- **Discover** — browse other members with complete profiles (people you haven't acted on yet).
+- **Verification gate** — after building a profile, a member must submit their legal name,
+  date of birth, and consent to a background check. Until they're **verified**, they cannot
+  see anyone or be seen. Only verified members appear in Discover. Status flows
+  `unverified → in_review → verified | rejected`.
+- **Discover** — browse other *verified* members with complete profiles (people you haven't acted on yet).
 - **Matching** — like or pass. A **match** is created only when *both* people like each other.
 - **Messaging** — matched people can message each other; messages persist and are private to that pair.
+
+## Verification / background checks
+
+The transition out of `in_review` is the single seam where a background-check
+provider — the operator's **own background-check company** — plugs in. When a check
+returns PASS/FAIL, that decision is applied via `app/admin.mjs`:
+
+```bash
+node app/admin.mjs list             # applicants and their status
+node app/admin.mjs verify <email>   # check passed  -> verified
+node app/admin.mjs reject <email>   # check failed  -> rejected
+```
+
+Nothing is auto-approved. In production the same call is made by a webhook or an
+internal dashboard when the provider responds. No third-party service is baked in.
 
 ## Run it
 
@@ -35,9 +54,9 @@ The database file is created automatically on first run and is git-ignored.
 This is the real foundation of the product. A few things are deliberately **not**
 built yet, and two of them genuinely can't be "no-vendor":
 
-- **Background checks / identity verification** — running real checks requires a data
-  source. The plan is to use your own background-check company as that source, wired
-  in behind a verification step before an account can go live.
+- **Background checks / identity verification** — the *gate* is built (see above); running
+  the actual check requires a data source. The plan is to use your own background-check
+  company as that source, wired into the `in_review → verified/rejected` transition.
 - **Payments (Cardinal+ for men)** — charging a card legally requires a payment
   processor. That's the one unavoidable outside service if/when you charge.
 - **Photos, real-time chat, notifications, events, referrals** — straightforward

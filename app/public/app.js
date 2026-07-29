@@ -68,12 +68,41 @@
 
   document.querySelectorAll(".tab[data-view]").forEach((t) => (t.onclick = () => go(t.dataset.view)));
 
+  function verified() {
+    return me && me.user && me.user.verif === "verified";
+  }
   function go(view) {
+    // The community is gated behind verification.
+    if ((view === "discover" || view === "matches") && !verified()) {
+      renderVerify();
+      return show("verify");
+    }
     if (view === "discover") loadDiscover();
     if (view === "matches") loadMatches();
     if (view === "profile") loadProfileForm();
     show(view);
   }
+
+  /* ---------- Verification ---------- */
+  function renderVerify() {
+    const status = (me.user && me.user.verif) || "unverified";
+    el("verifyForm-wrap").hidden = status !== "unverified";
+    el("verifyPending").hidden = status !== "in_review";
+    el("verifyRejected").hidden = status !== "rejected";
+  }
+  el("verifyForm").onsubmit = async (e) => {
+    e.preventDefault();
+    const f = new FormData(e.target);
+    const body = { legalName: f.get("legalName"), dob: f.get("dob"), consent: f.get("consent") === "on" };
+    try {
+      const r = await api("/api/verify/submit", { method: "POST", body });
+      me.user.verif = r.verif;
+      renderVerify();
+      toast("Submitted — we'll review your background check.");
+    } catch (err) {
+      const p = el("verifyErr"); p.textContent = err.message; p.hidden = false;
+    }
+  };
 
   /* ---------- Profile ---------- */
   function loadProfileForm() {
@@ -212,9 +241,10 @@
     try {
       me = await api("/api/me");
       setAuthed(true);
+      if (!me.profile || !me.profile.complete) { show("profile"); loadProfileForm(); return; }
+      if (!verified()) { renderVerify(); show("verify"); return; }
       refreshBadge();
-      if (me.profile && me.profile.complete) go("discover");
-      else go("profile");
+      go("discover");
     } catch {
       me = null; setAuthed(false); setMode("signup"); show("auth");
     }
