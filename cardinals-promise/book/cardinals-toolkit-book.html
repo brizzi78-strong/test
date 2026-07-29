@@ -11,7 +11,7 @@
     --yellow: #6b21a8; --yellow-bg: #f3e8ff; --yellow-dark: #4c1d95;
     --blue: #1d4e89;   --blue-bg: #eaf1f8;   --blue-dark: #143a67;
     --gray: #57534e;   --gray-bg: #f5f2ee;
-    --ink: #1f2328;    --rule: #d9cec4;
+    --ink: #16233f;    --rule: #d9cec4;
   }
   body {
     font-family: Georgia, "Times New Roman", serif;
@@ -49,7 +49,7 @@
   .legendbox .lrow:last-child { margin-bottom: 0; }
   .lswatch { flex: 0 0 auto; width: 19px; height: 19px; border-radius: 4px; transform: translateY(3px); }
   .lname { font-weight: 700; font-size: 14pt; }
-  .ldesc { font-size: 12pt; color: #444; }
+  .ldesc { font-size: 12pt; color: var(--ink); }
 
   /* ---- Contents ---- */
   .toc { font-family: Helvetica, Arial, sans-serif; font-size: 10.5pt; }
@@ -80,7 +80,7 @@
   .toc .tchap .tocpg { color: var(--ink); font-weight: 700; }
   .toc .tsecs { margin: 0 0 5px; }
   .toc .tsec { display: flex; align-items: baseline; gap: 8px; padding: 1.5px 0 1.5px 24px;
-    font-size: 9.5pt; color: #3a3632; break-inside: avoid; }
+    font-size: 9.5pt; color: var(--ink); break-inside: avoid; }
   /* ---- Cardinal Moment: a one-page reflection at a chapter's close ---- */
   .cardmoment { page-break-before: always; margin: 0.9in 0 0; padding: 34px 30px 30px;
     background: #faf7f2; border-top: 3px solid var(--red); border-bottom: 3px solid var(--red);
@@ -89,7 +89,7 @@
     letter-spacing: 0.3em; text-transform: uppercase; color: var(--red); margin-bottom: 8px; }
   .cardmoment .cm-orn { color: var(--red); font-size: 13pt; margin-bottom: 16px; }
   .cardmoment p { font-family: Georgia, "Times New Roman", serif; font-style: italic;
-    font-size: 12.5pt; line-height: 1.72; max-width: 5in; margin: 0 auto 12px; color: #2a2622;
+    font-size: 12.5pt; line-height: 1.72; max-width: 5in; margin: 0 auto 12px; color: var(--ink);
     text-align: left; }
   .cardmoment .cm-attr { font-style: normal; font-family: Helvetica, Arial, sans-serif;
     font-size: 8pt; letter-spacing: 0.04em; color: #8a8279; margin-top: 18px; }
