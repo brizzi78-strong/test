@@ -82,6 +82,15 @@ textarea{resize:vertical}
 .chat-form{display:flex;gap:.5rem;margin-top:.75rem}
 .chat-form input{flex:1}
 
+/* Founder */
+.founder{max-width:520px;margin:2.5rem auto 0;padding-top:2rem;border-top:1px solid var(--line);display:flex;gap:1.1rem;align-items:flex-start}
+.founder-photo{width:104px;height:140px;object-fit:cover;border-radius:12px;flex:0 0 auto;box-shadow:0 6px 20px rgba(33,48,79,.18)}
+.founder-eyebrow{font-size:.7rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.founder-name{font-size:1.25rem;color:var(--navy);margin-top:.15rem}
+.founder-title{font-weight:700;color:var(--red-deep);font-size:.9rem;margin-bottom:.5rem}
+.founder-note{font-size:.92rem;color:var(--muted);line-height:1.6}
+@media(max-width:480px){.founder{flex-direction:column;align-items:center;text-align:center}.founder-photo{width:120px;height:160px}}
+
 /* Photo picker */
 .photo-pick{display:flex;align-items:center;gap:1rem}
 .photo-avatar{width:76px;height:76px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:800;font-size:1.6rem;background-size:cover;background-position:center;flex:0 0 auto}
