@@ -212,6 +212,24 @@ services:
     depends_on:
       - accounting
 
+  # Cardinal Payroll: an ADP-style Run Payroll console. Add employees, run a
+  # whole pay period at once, and see every paycheck gross-to-net plus company
+  # totals (gross, withholding, net, employer tax, cash to remit). A BFF over the
+  # Payroll service — the engine does the real math. Reachable at :4700.
+  runpay:
+    <<: *service
+    command: node runpay/src/index.ts
+    environment:
+      PORT: "4700"
+      PAYROLL_URL: http://payroll:3500
+      BUSINESS_COMPANY_ID: ${PAYROLL_COMPANY_ID:-}
+      BUSINESS_NAME: ${BUSINESS_NAME:-Blue Ridge Press LLC}
+      RUNPAY_USER: ${RUNPAY_USER:-}
+      RUNPAY_PASSWORD: ${RUNPAY_PASSWORD:-}
+    ports: ["4700:4700"]
+    depends_on:
+      - payroll
+
   # Human-facing admin console: a single-page HR UI plus a backend-for-frontend
   # that proxies to the orchestrator server-side (so no credentials reach the
   # browser). Register a company, hire employees, and watch one record resolve

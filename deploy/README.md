@@ -32,6 +32,7 @@ That starts:
 | Client booking site (public self-book) | http://localhost:4300 |
 | Cardinal Books (bookkeeping UI) | http://localhost:4500 |
 | Cardinal Verify (consent-based checks) | http://localhost:4600 |
+| Cardinal Payroll (Run Payroll console) | http://localhost:4700 |
 
 Health-check any service at `GET /health`. Data persists in per-service named
 volumes (`docker volume ls`); remove them with `docker compose ... down -v`.

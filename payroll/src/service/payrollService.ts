@@ -63,6 +63,14 @@ export class PayrollService {
     return company;
   }
 
+  getCompany(id: string): Company {
+    return this.requireCompany(id);
+  }
+
+  listCompanies(filter?: { name?: string }): Company[] {
+    return this.store.companies.list((c) => !filter?.name || c.name === filter.name);
+  }
+
   // --- Employees ---------------------------------------------------------
 
   createEmployee(input: {
