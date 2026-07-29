@@ -1,0 +1,42 @@
+# Samples, No Credit
+
+*The pharma years — the insulin in my trunk counted for nothing. That's not how the offices saw it.*
+
+> **Draft chapter — for Rob's review.** The anchor is yours and true: you
+> carried insulin samples but got no credit for them — insulin wasn't your
+> number. The scenes are stand-ins. One legal note baked into the draft:
+> samples go to licensed prescribers, never rep-to-patient — the chapter is
+> written that way on purpose; keep it that way. Panel review pending.
+> Details to confirm at the bottom.
+
+---
+
+My paycheck was a GLP-1. My trunk was full of insulin.
+
+That's how sampling worked. The bag carried what the company made, and the company made insulin — had made it for almost a century. But my number, the one on the list, the one that decided the plaque and the ballroom and the bonus, only moved when doctors wrote the drug I was assigned. The insulin samples were just something I stocked. No quota. No credit. Nothing in the dashboard changed when I dropped them off.
+
+Which would be a boring detail about sales-force compensation, except for what was happening to insulin in America while I was driving it around.
+
+The list price had gone up and up until a vial cost hundreds of dollars, and by then the news had a word for what people were doing about it: rationing. Stretching doses. Skipping days. There were people dying of a drug that existed in warehouses — dying of the *price*, which is a different thing than dying of a disease. Congress held hearings. Eventually the prices came down. But in the years I'm telling you about, the fix hadn't come yet, and the gap between the warehouse and the patient was being bridged, quietly, all over the country, by one thing.
+
+The sample closet.
+
+Every office had one. A cabinet, a mini-fridge, a shelf the MA guarded like a vault. And in office after office, there were patients — the nurses knew exactly who — living month to month on what was in it. Not officially. There's no program called that. Just a nurse keeping a mental list, a doctor writing "samples" in a chart, and a rep who kept showing up with a trunk.
+
+So here is what my week actually looked like, some weeks. The calls that fed my number, the hallways, the question, the prior auths — that was the job. And then the stops that fed nothing: the office on the county road that always, always asked if I had insulin with me. The nurse who met me in the parking lot once because a patient was in the waiting room down to his last units and she didn't want him to hear her asking. I signed the forms. The doctor signed the forms. Nothing about it ever appeared on any scoreboard I was measured by.
+
+I want to be careful not to make myself the hero of this, because I wasn't. The company made the insulin and let us give it away by the trunkload — that was them. The doctor took the liability. The nurse kept the list. All I did was drive it there instead of leaving it in the trunk, and any rep in my shoes did the same. It cost me nothing but weight in the car.
+
+But I'll tell you what it did to me, over the years. Every week, the dashboard told me what I was worth: one number, one drug, one ranking. And every week there was this other ledger — the county-road office, the nurse in the parking lot, the closet — that no dashboard anywhere was keeping. The most important thing in my trunk was the thing I got no credit for.
+
+I've been in rooms since where nothing I do shows up on any scoreboard at all. Turns out that was the part of the job I was training for.
+
+---
+
+## Details to confirm or replace (Rob)
+
+- **The anchor, precisely:** which insulins rode in your trunk (NovoLog, Levemir?), and the credit structure — insulin truly uncomped for you, or comped to a counterpart rep? Keep specifics general per `nda-guardrails.md` (no quota mechanics, no internal comp-plan detail — "no credit" as lived fact is yours to tell).
+- The county-road office and the parking-lot nurse are stand-ins — swap in the real offices and moments. Composites with changed details for anything patient-adjacent.
+- The rationing era framing (prices in the hundreds per vial, hearings, eventual cuts) is public record and kept vague on purpose — the panel should verify the vagueness stays accurate for your actual territory years.
+- "Any rep in my shoes did the same" — true to what you saw, or generous? The panel will push on the humility either way; the honest version wins.
+- The last two lines — earned, or cut to end at "no credit for"? Read them aloud.
