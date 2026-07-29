@@ -10,9 +10,12 @@ import type { AddressInfo } from 'node:net';
 
 import { createApp } from '../api/server.ts';
 import { createInMemoryStore } from '../store/store.ts';
+import type { Notifier } from '../notify/notifier.ts';
+
+const silent: Notifier = { kind: 'silent', async send() {} };
 
 async function withServer(run: (base: string) => Promise<void>, opts?: { user?: string; password?: string }) {
-  const { server } = createApp({ store: createInMemoryStore(), ...opts });
+  const { server } = createApp({ store: createInMemoryStore(), notifier: silent, ...opts });
   await new Promise<void>((r) => server.listen(0, r));
   const { port } = server.address() as AddressInfo;
   try {

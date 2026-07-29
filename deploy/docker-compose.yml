@@ -123,6 +123,12 @@ services:
       VERIFY_DB: /data/verify.db
       VERIFY_USER: ${VERIFY_USER:-}
       VERIFY_PASSWORD: ${VERIFY_PASSWORD:-}
+      # Absolute URL used in the emailed consent/verifier links.
+      VERIFY_BASE_URL: ${VERIFY_BASE_URL:-}
+      # Set both to send real email via SendGrid; unset logs links instead.
+      SENDGRID_API_KEY: ${SENDGRID_API_KEY:-}
+      VERIFY_MAIL_FROM: ${VERIFY_MAIL_FROM:-}
+      VERIFY_MAIL_FROM_NAME: ${VERIFY_MAIL_FROM_NAME:-}
     ports: ["4600:4600"]
     volumes: ["verify-data:/data"]
 

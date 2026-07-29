@@ -21,6 +21,7 @@ import { DomainError, ValidationError } from '../service/errors.ts';
 import { createInMemoryStore, type Store } from '../store/store.ts';
 import { createSqliteStore } from '../store/sqliteStore.ts';
 import { APP_PAGE, CONSENT_PAGE, VERIFIER_PAGE } from '../ui/pages.ts';
+import { notifierFromEnv, type Notifier } from '../notify/notifier.ts';
 
 export interface AppServer {
   server: Server;
@@ -31,14 +32,25 @@ export interface AppOptions {
   store?: Store;
   user?: string;
   password?: string;
+  notifier?: Notifier;
+  baseUrl?: string;
 }
 
 export function storeFromEnv(env: NodeJS.ProcessEnv = process.env): Store {
   return env.VERIFY_DB ? createSqliteStore(env.VERIFY_DB) : createInMemoryStore();
 }
 
+/** Absolute base for links in emails: VERIFY_BASE_URL, else localhost:PORT. */
+export function baseUrlFromEnv(env: NodeJS.ProcessEnv = process.env): string {
+  return env.VERIFY_BASE_URL ?? `http://localhost:${env.PORT ?? 4600}`;
+}
+
 export function createApp(opts: AppOptions = {}): AppServer {
-  const service = new VerifyService({ store: opts.store ?? storeFromEnv() });
+  const service = new VerifyService({
+    store: opts.store ?? storeFromEnv(),
+    notifier: opts.notifier ?? notifierFromEnv(),
+    baseUrl: opts.baseUrl ?? baseUrlFromEnv(),
+  });
   const user = opts.user ?? process.env.VERIFY_USER;
   const password = opts.password ?? process.env.VERIFY_PASSWORD;
   const gate = user && password ? { user, password } : undefined;
@@ -115,7 +127,7 @@ async function api(
   if (method === 'GET' && path === '/api/candidates')
     return json(res, 200, service.listCandidates({ companyId: q.get('companyId') ?? undefined }));
 
-  if (method === 'POST' && path === '/api/requests') return json(res, 201, service.createRequest(body as never));
+  if (method === 'POST' && path === '/api/requests') return json(res, 201, await service.createRequest(body as never));
   if (method === 'GET' && path === '/api/requests')
     return json(res, 200, service.listRequests({
       companyId: q.get('companyId') ?? undefined,
@@ -141,7 +153,7 @@ async function api(
     }
     if (method === 'POST') {
       const ip = (req.headers['x-forwarded-for'] as string | undefined)?.split(',')[0]?.trim() ?? req.socket.remoteAddress ?? undefined;
-      service.recordConsent(seg[2], { signedName: String(body.signedName ?? ''), ip });
+      await service.recordConsent(seg[2], { signedName: String(body.signedName ?? ''), ip });
       return json(res, 200, { ok: true });
     }
   }

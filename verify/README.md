@@ -48,12 +48,27 @@ npm run typecheck
 | `PORT` | Listen port (default 4600). |
 | `VERIFY_DB` | SQLite file path; unset uses the in-memory store. |
 | `VERIFY_USER` / `VERIFY_PASSWORD` | Optional password gate on the console. The consent and verifier links are never gated. |
+| `VERIFY_BASE_URL` | Absolute URL used in the links inside emails, e.g. `https://verify.blueridgepressllc.com`. Defaults to `http://localhost:$PORT`. |
+| `SENDGRID_API_KEY` + `VERIFY_MAIL_FROM` | Set both to send real email via SendGrid. `VERIFY_MAIL_FROM_NAME` optionally sets the display name. Unset → links are logged to the console instead. |
 
-## Sending the links
+## Sending the links — automatic
 
-Today the console gives you each consent/verifier link to copy and send. Wiring
-an email sender (SMTP/SendGrid) so it auto-emails is a small, localized add
-behind a `Notifier` interface — the natural next step.
+The links are emailed for you, on the same consent-first schedule the API
+enforces:
+
+- **You create a request** → the **candidate** is emailed their consent link.
+  No source is contacted yet.
+- **The candidate e-signs** → each **source** is emailed their private
+  verifier link — never before.
+
+Delivery goes through a small `Notifier` interface (`src/notify/`). With no
+mail config it logs each message (so links stay copy-pasteable from the
+console); set `SENDGRID_API_KEY` + `VERIFY_MAIL_FROM` to send real email via
+SendGrid's HTTP API — no SDK, still zero-dependency. Any other transport
+(Postmark, Mailgun, raw SMTP) is a drop-in implementation of the same
+interface. Every send is recorded on the request's history as `*.emailed` or
+`*.email_failed`, and a failed send never blocks consent — the link can always
+be re-sent or copied from the console.
 
 ## Scope, honestly
 

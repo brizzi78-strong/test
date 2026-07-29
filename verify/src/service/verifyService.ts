@@ -32,6 +32,8 @@ import { ITEM_TYPES } from '../domain/types.ts';
 import { allItemsResolved, canTransition, progressOf, type Progress } from '../domain/workflow.ts';
 import type { Collection, Store } from '../store/store.ts';
 import { ConflictError, NotFoundError, ValidationError } from './errors.ts';
+import { ConsoleNotifier, type Notifier } from '../notify/notifier.ts';
+import { consentEmail, verifierEmail } from '../notify/messages.ts';
 
 /** The disclosure text version the candidate consents to (bump when it changes). */
 export const DISCLOSURE_VERSION = '2026-07';
@@ -42,6 +44,10 @@ export interface ServiceOptions {
   store: Store;
   now?: () => Date;
   newId?: (prefix: string) => string;
+  /** How links are sent (default: log them so they stay copy-pasteable). */
+  notifier?: Notifier;
+  /** Absolute base for the links in emails, e.g. https://verify.example.com. */
+  baseUrl?: string;
 }
 
 export interface ItemInput {
@@ -70,11 +76,15 @@ export class VerifyService {
   private readonly store: Store;
   private readonly now: () => Date;
   private readonly newId: (prefix: string) => string;
+  private readonly notifier: Notifier;
+  private readonly baseUrl: string;
 
   constructor(opts: ServiceOptions) {
     this.store = opts.store;
     this.now = opts.now ?? (() => new Date());
     this.newId = opts.newId ?? ((prefix) => `${prefix}_${randomUUID().replace(/-/g, '')}`);
+    this.notifier = opts.notifier ?? new ConsoleNotifier();
+    this.baseUrl = (opts.baseUrl ?? 'http://localhost:4600').replace(/\/+$/, '');
   }
 
   // --- Companies / candidates -------------------------------------------
@@ -115,7 +125,7 @@ export class VerifyService {
 
   // --- Requests ----------------------------------------------------------
 
-  createRequest(input: { companyId: string; candidateId: string; items: ItemInput[] }): VerificationRequest {
+  async createRequest(input: { companyId: string; candidateId: string; items: ItemInput[] }): Promise<VerificationRequest> {
     const company = this.requireCompany(input.companyId);
     const candidate = this.require(this.store.candidates, 'Candidate', input.candidateId);
     if (candidate.companyId !== company.id) {
@@ -135,7 +145,17 @@ export class VerifyService {
       updatedAt: ts,
     };
     this.store.requests.put(request);
-    return request;
+
+    // Email the candidate their consent link. No source is contacted yet.
+    await this.deliver(request, candidate.email, 'consent', () =>
+      consentEmail({
+        to: candidate.email,
+        companyName: company.name,
+        candidateFirstName: candidate.firstName,
+        url: this.link('/c/', request.consentToken),
+      }),
+    );
+    return this.save(request);
   }
 
   getRequest(id: string): VerificationRequest {
@@ -182,7 +202,7 @@ export class VerifyService {
   }
 
   /** Record the candidate's e-signed authorization; unlocks collection. */
-  recordConsent(token: string, input: { signedName: string; ip?: string }): VerificationRequest {
+  async recordConsent(token: string, input: { signedName: string; ip?: string }): Promise<VerificationRequest> {
     const request = this.findRequest((r) => r.consentToken === token, 'consent link');
     if (request.status !== 'awaiting_consent') {
       throw new ConflictError(`consent already recorded or request is '${request.status}'`);
@@ -196,6 +216,25 @@ export class VerifyService {
     request.consent = consent;
     this.transition(request, 'in_progress');
     this.record(request, { event: 'consented', note: consent.signedName });
+    this.save(request);
+
+    // Consent is the gate: only now are the sources emailed their links.
+    const company = this.requireCompany(request.companyId);
+    const candidate = this.getCandidate(request.candidateId);
+    const candidateName = `${candidate.firstName} ${candidate.lastName}`;
+    for (const item of request.items) {
+      if (item.status !== 'pending') continue;
+      await this.deliver(request, item.contactEmail, 'verifier', () =>
+        verifierEmail({
+          to: item.contactEmail,
+          companyName: company.name,
+          candidateName,
+          itemType: item.type,
+          subject: item.subject,
+          url: this.link('/v/', item.token),
+        }),
+      );
+    }
     return this.save(request);
   }
 
@@ -260,6 +299,30 @@ export class VerifyService {
   }
 
   // --- internals ---------------------------------------------------------
+
+  private link(prefix: string, token: string): string {
+    return `${this.baseUrl}${prefix}${token}`;
+  }
+
+  /**
+   * Send one email and record the outcome on the request's history. A failed
+   * send never throws — consent and request creation still succeed, and the
+   * failure is visible so the link can be re-sent (or copied from the console).
+   */
+  private async deliver(
+    request: VerificationRequest,
+    to: string,
+    kind: 'consent' | 'verifier',
+    build: () => { to: string; subject: string; text: string; html?: string },
+  ): Promise<void> {
+    try {
+      await this.notifier.send(build());
+      this.record(request, { event: `${kind}.emailed`, note: `${to} via ${this.notifier.kind}` });
+    } catch (err) {
+      const message = err instanceof Error ? err.message : String(err);
+      this.record(request, { event: `${kind}.email_failed`, note: `${to}: ${message}`.slice(0, 300) });
+    }
+  }
 
   private buildItems(items: ItemInput[]): Item[] {
     if (!Array.isArray(items) || items.length === 0) {

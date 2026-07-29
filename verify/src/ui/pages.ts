@@ -94,7 +94,7 @@ const APP_SCRIPT =
   'b.className="";b.textContent="";document.getElementById("create").disabled=true;' +
   'api("POST","/api/candidates",{companyId:CO,firstName:fn,lastName:ln,email:em}).then(function(cand){' +
   'return api("POST","/api/requests",{companyId:CO,candidateId:cand.id,items:items});}).then(function(){' +
-  'document.getElementById("fn").value="";document.getElementById("ln").value="";document.getElementById("em").value="";draft=[{type:"reference",subject:"",contactEmail:""}];renderItems();toast("Request created \\u2014 send the candidate their consent link");return load();})' +
+  'document.getElementById("fn").value="";document.getElementById("ln").value="";document.getElementById("em").value="";draft=[{type:"reference",subject:"",contactEmail:""}];renderItems();toast("Request created \\u2014 consent link emailed to the candidate");return load();})' +
   '.catch(function(e){b.className="banner err";b.textContent=e.message;}).then(function(){document.getElementById("create").disabled=false;});};' +
   'function origin(){return location.origin;}' +
   'function copyLink(v){navigator.clipboard&&navigator.clipboard.writeText(v);toast("Link copied");}' +
@@ -102,7 +102,7 @@ const APP_SCRIPT =
   'var consentUrl=origin()+"/c/"+r.consentToken;' +
   'var head="<div class=\\"ch\\"><div><b>"+esc(c.firstName+" "+c.lastName)+"</b> <span class=\\"dim mono\\">"+esc(c.email)+"</span></div><span class=\\"pill s-"+r.status+"\\">"+r.status.replace(/_/g," ")+"</span></div>";' +
   'var body="";' +
-  'if(!r.consent){body+="<div class=\\"link\\"><input readonly value=\\""+esc(consentUrl)+"\\"><button class=\\"btn ghost sm\\" onclick=\\"copyLink(this.previousElementSibling.value)\\">Copy consent link</button></div><p class=\\"dim\\" style=\\"font-size:.8rem\\">Send this to the candidate. Nothing is contacted until they sign.</p>";}' +
+  'if(!r.consent){body+="<div class=\\"link\\"><input readonly value=\\""+esc(consentUrl)+"\\"><button class=\\"btn ghost sm\\" onclick=\\"copyLink(this.previousElementSibling.value)\\">Copy consent link</button></div><p class=\\"dim\\" style=\\"font-size:.8rem\\">Emailed to the candidate \\u2014 copy it here if you\\u2019d rather send it yourself. Nothing is contacted until they sign.</p>";}' +
   'else{body+="<p class=\\"dim\\" style=\\"font-size:.8rem\\">\\u2713 Consented by "+esc(r.consent.signedName)+" \\u00b7 "+new Date(r.consent.signedAt).toLocaleString()+" \\u00b7 "+p.completed+"/"+p.total+" back</p>";' +
   'body+="<table><thead><tr><th>Type</th><th>Who</th><th>Status</th><th>Result / link</th></tr></thead><tbody>";' +
   'body+=r.items.map(function(it){var verUrl=origin()+"/v/"+it.token;var res="";' +
