@@ -5,6 +5,7 @@
 
 import { createServer, type Server } from 'node:http';
 import { EquifaxProvider } from '../providers/equifaxProvider.ts';
+import { CheckrProvider } from '../providers/checkrProvider.ts';
 import { MockProvider } from '../providers/mockProvider.ts';
 import type { ScreeningProvider } from '../providers/provider.ts';
 import { ScreeningService } from '../service/screeningService.ts';
@@ -20,12 +21,22 @@ export interface AppServer {
 /**
  * Select a screening provider from the environment.
  *
- * `HIRECHECK_PROVIDER=equifax` uses the Equifax adapter (requires
- * `EQUIFAX_BASE_URL` and `EQUIFAX_API_KEY`); anything else falls back to the
+ * `HIRECHECK_PROVIDER=checkr` uses the Checkr adapter (requires `CHECKR_API_KEY`;
+ * optional `CHECKR_BASE_URL` for the sandbox) — the automated option, incl. drug
+ * screening. `HIRECHECK_PROVIDER=equifax` uses the Equifax adapter (requires
+ * `EQUIFAX_BASE_URL` and `EQUIFAX_API_KEY`). Anything else falls back to the
  * deterministic MockProvider, which is the safe default for tests and demos.
  */
 export function providerFromEnv(env: NodeJS.ProcessEnv = process.env): ScreeningProvider {
-  if ((env.HIRECHECK_PROVIDER ?? '').toLowerCase() === 'equifax') {
+  const which = (env.HIRECHECK_PROVIDER ?? '').toLowerCase();
+  if (which === 'checkr') {
+    const apiKey = env.CHECKR_API_KEY;
+    if (!apiKey) {
+      throw new Error('HIRECHECK_PROVIDER=checkr requires CHECKR_API_KEY');
+    }
+    return new CheckrProvider({ apiKey, baseUrl: env.CHECKR_BASE_URL });
+  }
+  if (which === 'equifax') {
     const baseUrl = env.EQUIFAX_BASE_URL;
     const apiKey = env.EQUIFAX_API_KEY;
     if (!baseUrl || !apiKey) {

@@ -31,8 +31,13 @@ services:
     environment:
       PORT: "3000"
       HIRECHECK_DB: /data/hirecheck.db
-      # Set HIRECHECK_PROVIDER=equifax (+ EQUIFAX_BASE_URL / EQUIFAX_API_KEY)
-      # to use the real provider instead of the mock.
+      # Automated real screening (incl. drug testing): set
+      # HIRECHECK_PROVIDER=checkr + CHECKR_API_KEY (CHECKR_BASE_URL optional for
+      # sandbox). Or HIRECHECK_PROVIDER=equifax + EQUIFAX_BASE_URL/EQUIFAX_API_KEY.
+      # Unset → deterministic mock (safe default for demos).
+      HIRECHECK_PROVIDER: ${HIRECHECK_PROVIDER:-}
+      CHECKR_API_KEY: ${CHECKR_API_KEY:-}
+      CHECKR_BASE_URL: ${CHECKR_BASE_URL:-}
     ports: ["3000:3000"]
     volumes: ["hirecheck-data:/data"]
 
