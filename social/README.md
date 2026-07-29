@@ -52,6 +52,17 @@ photo and a welcome post so a fresh database isn't empty:
 node social/seed.mjs        # log in: rob@thecardinal.com / cardinal1
 ```
 
+**Or seed a whole living demo community** (optional, idempotent) — six fictional
+people, friendships, posts with likes and comments, a group with its own thread, and
+one care signal raised, so you can see every feature working at once:
+
+```bash
+node social/demo.mjs        # every demo account's password is: cardinal1
+```
+
+Log in as `rob@thecardinal.com` to see the full feed and the "someone could use
+support" strip; the demo people are sample data, not real members.
+
 ## Roadmap
 
 | Phase | Status | What |
