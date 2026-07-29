@@ -30,10 +30,10 @@
   h1 em{font-style:italic}
   .lead{max-width:32rem;color:var(--mist);font-size:clamp(1.05rem,2.2vw,1.3rem);margin:1.9rem 0 0}
   .lead b{color:var(--snow);font-weight:600}
-  .soon{margin-top:2.6rem;display:inline-flex;align-items:center;gap:.6rem;font-size:.72rem;letter-spacing:.28em;
-    text-transform:uppercase;color:var(--gold);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:.6rem 1.2rem}
+  .soon{margin-top:2.6rem;display:inline-flex;align-items:center;gap:.6rem;font-size:.72rem;letter-spacing:.26em;
+    text-transform:uppercase;color:var(--gold);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:.6rem 1.2rem;text-align:center}
   .soon .dot{width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 10px var(--gold);
-    animation:pulse 2.4s ease-in-out infinite}
+    animation:pulse 2.4s ease-in-out infinite;flex:0 0 auto}
   @keyframes pulse{0%,100%{opacity:.4}50%{opacity:1}}
   .cue{margin-top:2rem;color:var(--faint);font-size:.7rem;letter-spacing:.3em;text-transform:uppercase}
 
@@ -62,22 +62,24 @@
   .signature p{color:var(--mist);max-width:34rem;margin:0 auto;font-size:1.08rem}
   .signature p b{color:var(--snow)}
 
-  /* founding-50 offer */
-  .offer{padding:0 0 clamp(4rem,9vh,6rem)}
-  .offer-card{display:flex;align-items:center;gap:clamp(1.4rem,4vw,2.6rem);flex-wrap:wrap;justify-content:center;
-    text-align:left;background:
-      radial-gradient(60rem 30rem at 100% 0,rgba(226,55,68,.14),transparent),
-      linear-gradient(180deg,var(--panel),var(--ink));
-    border:1px solid var(--gold-line);border-radius:24px;padding:clamp(1.8rem,4vw,2.8rem)}
-  .offer-seal{flex:0 0 auto;width:118px;height:118px;border-radius:50%;display:grid;place-items:center;
-    border:2px solid var(--gold-line);color:var(--gold);font-family:var(--serif);line-height:.9;text-align:center;
-    box-shadow:inset 0 0 30px rgba(242,204,204,.08)}
-  .offer-seal b{font-size:2.5rem;font-weight:500;letter-spacing:-.02em}
-  .offer-seal span{display:block;font-family:var(--sans);font-size:.66rem;letter-spacing:.34em;text-transform:uppercase;margin-top:.35rem}
-  .offer-body{flex:1;min-width:16rem}
-  .offer-body h3{font-family:var(--serif);font-weight:500;font-size:clamp(1.5rem,3.4vw,2.2rem);letter-spacing:-.01em;margin:.2rem 0 .7rem;text-wrap:balance}
-  .offer-body p{color:var(--mist);margin:0;font-size:1.06rem;max-width:38ch}
-  .offer-body p b{color:var(--snow)}
+  /* founding-50 offer — choose your gift */
+  .offer{padding:clamp(3.5rem,8vh,5.5rem) 0 clamp(4rem,9vh,6rem);text-align:center}
+  .offer h2{font-family:var(--serif);font-weight:500;font-size:clamp(1.9rem,4.6vw,2.9rem);letter-spacing:-.015em;
+    margin:0 0 .7rem;text-wrap:balance}
+  .offer .sub{color:var(--mist);max-width:34rem;margin:0 auto 2.6rem;font-size:1.05rem}
+  .gifts{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,3vw,1.6rem)}
+  .gift{background:linear-gradient(180deg,var(--panel),var(--ink));border:1px solid var(--gold-line);
+    border-radius:22px;padding:clamp(1.6rem,4vw,2.2rem);display:flex;flex-direction:column;align-items:center;gap:.2rem}
+  .gift-seal{width:104px;height:104px;border-radius:50%;display:grid;place-items:center;margin-bottom:1rem;
+    border:2px solid var(--gold-line);color:var(--gold);font-family:var(--serif);line-height:.88;text-align:center;
+    box-shadow:inset 0 0 26px rgba(242,204,204,.08)}
+  .gift-seal b{font-size:2.1rem;font-weight:500;letter-spacing:-.02em}
+  .gift-seal span{display:block;font-family:var(--sans);font-size:.6rem;letter-spacing:.32em;text-transform:uppercase;margin-top:.35rem}
+  .gift h3{font-family:var(--serif);font-weight:500;font-size:clamp(1.3rem,2.8vw,1.7rem);letter-spacing:-.01em;margin:.1rem 0 .5rem}
+  .gift p{color:var(--mist);margin:0;font-size:1rem;max-width:26ch}
+  .gift p b{color:var(--snow)}
+  .gift em{color:var(--gold)}
+  .or{display:inline-block;margin:1.8rem 0 0;color:var(--faint);font-size:.8rem;letter-spacing:.18em;text-transform:uppercase}
 
   footer{border-top:1px solid rgba(255,255,255,.1);padding:2.4rem 0 3rem;text-align:center;color:var(--faint);font-size:.82rem;letter-spacing:.04em}
   @media(max-width:640px){
@@ -86,7 +88,7 @@
     .col-head{display:none}
     .fb::before{content:"Facebook — ";color:var(--faint);font-weight:600}
     .us::before{content:"The Cardinal — ";color:var(--gold);font-weight:700}
-    .offer-card{text-align:center}
+    .gifts{grid-template-columns:1fr}
   }
   @media(prefers-reduced-motion:reduce){.soon .dot{animation:none}}
 </style>
@@ -100,7 +102,7 @@
     <p class="eyebrow">For the woke and the unwoke</p>
     <h1>It's what<br><em>you asked for.</em></h1>
     <p class="lead">A social network of <b>real, verified people</b> — your actual circle, no outrage algorithm. <b>No sides. Just people.</b></p>
-    <span class="soon"><span class="dot"></span> Launching soon · Founding 50 get 50% off the book</span>
+    <span class="soon"><span class="dot"></span> Launching soon · Founding 50 get a gift</span>
     <div class="cue">Why not just Facebook? ↓</div>
   </section>
 
@@ -123,14 +125,22 @@
   </section>
 
   <section class="wrap offer">
-    <div class="offer-card">
-      <div class="offer-seal"><b>50%</b><span>off</span></div>
-      <div class="offer-body">
-        <p class="kicker">The founding 50</p>
-        <h3>Be one of the first 50 — the book's on us, half off.</h3>
-        <p>As a thank-you for being early, the <b>first 50 members</b> get <b>50% off <em>The Cardinal's Promise</em></b> — Rob Brizzi's book on showing up for the people you love, all the way to the end. The same reason this place exists.</p>
+    <p class="kicker">The founding 50</p>
+    <h2>Be one of the first 50. Pick your thank-you.</h2>
+    <p class="sub">A little something for the people who show up first.</p>
+    <div class="gifts">
+      <div class="gift">
+        <div class="gift-seal"><b>50%</b><span>off</span></div>
+        <h3>The book, half off</h3>
+        <p>50% off <em>The Cardinal's Promise</em> — Rob Brizzi's book on showing up for the people you love.</p>
+      </div>
+      <div class="gift">
+        <div class="gift-seal"><b>17</b><span>of 17</span></div>
+        <h3>A free Cardinal hat</h3>
+        <p>The limited <b>17/17</b> edition — a numbered Cardinal cap, yours free. Only a handful will ever exist.</p>
       </div>
     </div>
+    <span class="or">Your choice — one per founding member</span>
   </section>
 
   <footer>Invite-only · verified members · no ads, ever · © The Cardinal</footer>
