@@ -33,7 +33,7 @@ The two files KDP asks for are in this folder:
 
 ## At kdp.amazon.com (Bookshelf → Create → Paperback)
 
-1. **Title:** It's Not Your Fault · **Subtitle:** A Practical Guide for Families Caring for an Aging Parent
+1. **Title:** It's Not Your Fault · **Subtitle:** Helping Caregivers with Aging Loved Ones *(this matches the cover and title page exactly — KDP metadata must match what's printed)*
 2. **Series:** Cardinal's Promise (optional but set it — the memoir joins it later)
 3. **Author:** Rob Brizzi · **Contributor:** Hope Brizzi, PharmD (add her in KDP's Contributor field, role **Contributor**). She is now credited on the **front cover** ("with Hope Brizzi, PharmD"), the **title page** (Contributor & Project Consultant), the **dedication**, and the **back-cover bio**. Keep the credit as contributor/consultant — do **not** label it a clinical/pharmaceutical review, which was not completed.
 4. **Description:** paste the ready HTML from `marketing/amazon-listing.md` (first 200 characters are the visible hook; no URLs allowed)
