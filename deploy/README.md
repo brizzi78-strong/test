@@ -30,6 +30,8 @@ That starts:
 | Booking (scheduling + references) | http://localhost:4100 |
 | Live Schedule (day-view UI) | http://localhost:4200 |
 | Client booking site (public self-book) | http://localhost:4300 |
+| Cardinal Books (bookkeeping UI) | http://localhost:4500 |
+| Cardinal Verify (consent-based checks) | http://localhost:4600 |
 
 Health-check any service at `GET /health`. Data persists in per-service named
 volumes (`docker volume ls`); remove them with `docker compose ... down -v`.
@@ -69,6 +71,55 @@ curl -s -H "authorization: Bearer $KEY" localhost:8080/directory/health
 - **`docker-compose.yml`** — the seven services (each with its own port and
   SQLite volume) plus an nginx container serving `cardinal-hr/`.
 - **`.dockerignore`** (repo root) — keeps the image to just the HR modules.
+
+## Cardinal Verify — turning on email (and getting it delivered)
+
+Cardinal Verify (http://localhost:4600) emails the candidate their consent link
+when a request is created, and each source their verifier link the moment the
+candidate signs. Point the links at your real host and pick a transport:
+
+```bash
+# Where the emailed links point (your public URL for the verify service):
+VERIFY_BASE_URL=https://verify.blueridgepressllc.com
+VERIFY_MAIL_FROM=no-reply@blueridgepressllc.com
+VERIFY_MAIL_FROM_NAME="Blue Ridge Press LLC"
+
+# Option A — SMTP (works with a mailbox you already have):
+SMTP_HOST=smtp.example.com
+SMTP_PORT=587            # 587 = STARTTLS (default); 465 = implicit TLS
+SMTP_USER=no-reply@blueridgepressllc.com
+SMTP_PASSWORD=…          # an app-specific password for Gmail/iCloud/Fastmail
+# SMTP_SECURE=true       # set only for port 465
+
+# Option B — SendGrid (HTTP API, no SMTP):
+# SENDGRID_API_KEY=SG.…  (used in preference to SMTP if both are set)
+```
+
+With none of these set, links are logged to the console instead of sent (fine
+for local/testing) — and the console UI still shows every link to copy by hand.
+
+### Deliverability — read before going live
+
+Getting mail *sent* is not the same as getting it *delivered to the inbox*. Two
+levels:
+
+- **Fine for low volume / personal use:** sending through a personal mailbox
+  (iCloud, Gmail) over SMTP works, but these enforce **low daily send limits**
+  and mail is **more likely to land in spam** — especially when the visible
+  `From` domain (e.g. `blueridgepressllc.com`) doesn't match the sending
+  account. Use an **app-specific password**, not your login password.
+- **Recommended for anything real:** send from an address **on your own domain**
+  (`no-reply@blueridgepressllc.com`) through a proper relay — **SendGrid**,
+  Postmark, Amazon SES, or your domain host's SMTP. Then publish **SPF, DKIM,
+  and DMARC** DNS records for `blueridgepressllc.com` so receivers can verify the
+  mail is really from you. Without those, verification emails to candidates and
+  references will frequently be filtered — which quietly defeats the whole flow.
+
+Either transport is a drop-in behind the same `Notifier` interface
+(`verify/src/notify/`), so you can start on SMTP and move to a relay later
+without touching application code. Every send is recorded on the request's
+history as `*.emailed` / `*.email_failed`, and a failed send never blocks
+consent — the link can always be re-sent or copied from the console.
 
 ## Notes toward production
 
