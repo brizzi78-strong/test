@@ -34,6 +34,19 @@ your accountant) to close that gap. See [`payroll/README.md`](../payroll/README.
 | `/api/time/*` | employer | Proxied to the Timeclock service (record / list / delete hours). |
 | `/api/*` | employer | Transparently proxied to the Payroll service (employees, payslips, …). |
 
+### Benefits & deductions
+
+The employee setup takes per-paycheck **benefits and deductions**, wired to the
+engine's exact tax semantics:
+
+- **401(k)** — pre-tax for income tax, **still FICA-taxed**.
+- **Health / HSA premium (Section 125)** — pre-tax for income tax **and FICA**.
+- **Other post-tax** — a named deduction taken after taxes (e.g. garnishment).
+
+These flow through the real gross-to-net engine, so FICA wages, federal/state
+taxable wages, and net pay all reflect them correctly, and each pay stub itemizes
+the pre- and post-tax amounts.
+
 ### Time & attendance → payroll
 
 Hourly hours don't have to be typed in at run time. Log them through the

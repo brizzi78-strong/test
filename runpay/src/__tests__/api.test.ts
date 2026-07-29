@@ -128,6 +128,39 @@ test('hourly employee is paid when hours are supplied, and pay stubs are queryab
   });
 });
 
+test('benefits deductions flow through the engine with correct FICA semantics', async () => {
+  await withApp(async (base) => {
+    const co = (await j(base, 'GET', '/api/app')).json.companyId;
+    // $52k biweekly, single, with a $200 401(k) (pre-income-tax, still FICA) and a
+    // $100 Section-125 health premium (pre-income-tax AND pre-FICA).
+    const emp = (await j(base, 'POST', '/api/employees', {
+      companyId: co, firstName: 'Jordan', lastName: 'Rivera', payType: 'salary',
+      annualSalaryCents: 5200000, payFrequency: 'biweekly', filingStatus: 'single',
+      preTaxDeductions: [
+        { name: '401(k)', amountCents: 20000, reducesFederalTaxable: true, reducesStateTaxable: true, reducesFica: false },
+        { name: 'Health / HSA', amountCents: 10000, reducesFederalTaxable: true, reducesStateTaxable: true, reducesFica: true },
+      ],
+      postTaxDeductions: [{ name: 'Union dues', amountCents: 2500 }],
+    })).json;
+    assert.equal(emp.preTaxDeductions.length, 2);
+
+    const run = (await j(base, 'POST', '/api/run-batch', { payDate: '2026-01-15' })).json;
+    const p = run.lines[0].payslip;
+
+    // Gross is unchanged at $2,000.
+    assert.equal(p.grossCents, 200000);
+    // FICA wages: gross minus only the FICA-reducing (Section-125) deduction → $2,000 - $100 = $1,900.
+    assert.equal(p.ficaWagesCents, 190000);
+    assert.equal(p.socialSecurityCents, Math.round(190000 * 0.062)); // 6.2% of FICA wages
+    // Federal taxable base is reduced by both pre-tax deductions ($300 total).
+    assert.equal(p.federalTaxableCents, 200000 - 30000);
+    assert.equal(p.preTaxDeductionsCents, 30000);
+    assert.equal(p.postTaxDeductionsCents, 2500);
+    // Net is lower than the no-deductions example ($1,585.48) — real money came out.
+    assert.ok(p.netCents < 158548);
+  });
+});
+
 test('run-batch rejects a bad pay date', async () => {
   await withApp(async (base) => {
     const r = await j(base, 'POST', '/api/run-batch', { payDate: 'nope' });

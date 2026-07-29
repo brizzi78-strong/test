@@ -93,6 +93,12 @@ details summary{cursor:pointer;font-size:.8rem;color:var(--brand)}
     <div><label>NC-4 allowances</label><input id="allow" inputmode="numeric" value="0"></div>
     <div><label>Extra federal w/h per check ($)</label><input id="extra" inputmode="decimal" value="0"></div>
   </div>
+  <label style="margin-top:14px">Benefits &amp; deductions <span class="dim" style="font-weight:400">— per paycheck, optional</span></label>
+  <div class="row3">
+    <div><label>401(k) contribution ($)</label><input id="d401k" inputmode="decimal" placeholder="0"><div class="dim" style="font-size:.72rem">Pre-tax for income tax; still FICA-taxed.</div></div>
+    <div><label>Health / HSA premium ($)</label><input id="dhealth" inputmode="decimal" placeholder="0"><div class="dim" style="font-size:.72rem">Section&nbsp;125 — pre-tax for income tax <b>and</b> FICA.</div></div>
+    <div><label>Other post-tax ($)</label><input id="dpost" inputmode="decimal" placeholder="0"><input id="dpostName" placeholder="e.g. garnishment" style="margin-top:4px"></div>
+  </div>
   <div id="addErr"></div>
   <div style="margin-top:14px"><button class="btn" id="addBtn">Add employee</button></div>
 </div>
@@ -171,12 +177,22 @@ document.getElementById('addBtn').onclick=function(){
   var payType=document.getElementById('ptype').value;
   var emp={companyId:APP.companyId,firstName:document.getElementById('fn').value.trim(),lastName:document.getElementById('ln').value.trim(),payType:payType,payFrequency:document.getElementById('freq').value,filingStatus:document.getElementById('filing').value,ncAllowances:parseInt(document.getElementById('allow').value||'0',10)||0,federalExtraWithholdingCents:dollarsToCents(document.getElementById('extra').value)};
   if(payType==='salary'){emp.annualSalaryCents=dollarsToCents(document.getElementById('salary').value);}else{emp.hourlyRateCents=dollarsToCents(document.getElementById('rate').value);}
+  var pre=[];var post=[];
+  var c401k=dollarsToCents(document.getElementById('d401k').value);
+  if(c401k>0)pre.push({name:'401(k)',amountCents:c401k,reducesFederalTaxable:true,reducesStateTaxable:true,reducesFica:false});
+  var chealth=dollarsToCents(document.getElementById('dhealth').value);
+  if(chealth>0)pre.push({name:'Health / HSA',amountCents:chealth,reducesFederalTaxable:true,reducesStateTaxable:true,reducesFica:true});
+  var cpost=dollarsToCents(document.getElementById('dpost').value);
+  if(cpost>0)post.push({name:document.getElementById('dpostName').value.trim()||'Post-tax deduction',amountCents:cpost});
+  if(pre.length)emp.preTaxDeductions=pre;
+  if(post.length)emp.postTaxDeductions=post;
   if(!emp.firstName||!emp.lastName){errEl.innerHTML='<div class="banner err">First and last name are required.</div>';return;}
   if(payType==='salary'&&!emp.annualSalaryCents){errEl.innerHTML='<div class="banner err">Enter an annual salary.</div>';return;}
   if(payType==='hourly'&&!emp.hourlyRateCents){errEl.innerHTML='<div class="banner err">Enter an hourly rate.</div>';return;}
   this.disabled=true;var btn=this;
   api('POST','/api/employees',emp).then(function(){
-    document.getElementById('fn').value='';document.getElementById('ln').value='';document.getElementById('salary').value='';document.getElementById('rate').value='';document.getElementById('allow').value='0';document.getElementById('extra').value='0';
+    ['fn','ln','salary','rate','d401k','dhealth','dpost','dpostName'].forEach(function(id){document.getElementById(id).value='';});
+    document.getElementById('allow').value='0';document.getElementById('extra').value='0';
     toast('Employee added');loadEmployees();
   }).catch(function(e){errEl.innerHTML='<div class="banner err">'+esc(e.message)+'</div>';}).then(function(){btn.disabled=false;});
 };
@@ -209,14 +225,16 @@ document.getElementById('tsAdd').onclick=function(){
 };
 
 function compLine(e){
-  if(e.payType==='salary'){return fmt(e.annualSalaryCents)+'/yr';}
-  return fmt(e.hourlyRateCents)+'/hr';
+  var base=e.payType==='salary'?(fmt(e.annualSalaryCents)+'/yr'):(fmt(e.hourlyRateCents)+'/hr');
+  var ded=[].concat(e.preTaxDeductions||[],e.postTaxDeductions||[]);
+  if(ded.length){base+=' &middot; '+ded.map(function(d){return esc(d.name)+' '+fmt(d.amountCents);}).join(', ');}
+  return base;
 }
 function renderEmployees(){
   var box=document.getElementById('empList');
   if(!EMPLOYEES.length){box.innerHTML='<p class="dim">No employees yet.</p>';return;}
   var rows=EMPLOYEES.map(function(e){
-    return '<tr><td><b>'+esc(e.firstName+' '+e.lastName)+'</b><div class="dim">'+prettyFreq(e.payFrequency)+' &middot; '+prettyFiling(e.filingStatus)+'</div></td><td>'+esc(compLine(e))+'</td><td style="white-space:nowrap"><button class="btn ghost sm" data-stub="'+esc(e.id)+'">Pay stubs</button> <button class="btn ghost sm" data-self="'+esc(e.id)+'">Self-service link</button></td></tr>';
+    return '<tr><td><b>'+esc(e.firstName+' '+e.lastName)+'</b><div class="dim">'+prettyFreq(e.payFrequency)+' &middot; '+prettyFiling(e.filingStatus)+'</div></td><td>'+compLine(e)+'</td><td style="white-space:nowrap"><button class="btn ghost sm" data-stub="'+esc(e.id)+'">Pay stubs</button> <button class="btn ghost sm" data-self="'+esc(e.id)+'">Self-service link</button></td></tr>';
   }).join('');
   box.innerHTML='<table><thead><tr><th>Employee</th><th>Pay</th><th></th></tr></thead><tbody>'+rows+'</tbody></table><div id="stubs"></div>';
   var btns=box.querySelectorAll('[data-stub]');
