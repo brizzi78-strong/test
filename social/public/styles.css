@@ -203,6 +203,24 @@ textarea{resize:vertical}
 .chat-form input:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-soft)}
 .chat-empty{color:var(--muted);text-align:center;margin:auto}
 
+/* Groups */
+.group-create-card{padding:1.1rem;margin-bottom:1.1rem}
+.group-create{display:flex;flex-wrap:wrap;gap:.6rem}
+.group-create input{flex:1;min-width:12rem;background:var(--bg);border:1px solid var(--line);border-radius:11px;padding:.7rem .9rem}
+.group-create input:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 4px var(--brand-soft)}
+.groups-card{padding:1.1rem}
+.group-badge{width:44px;height:44px;border-radius:13px;flex:0 0 auto;display:grid;place-items:center;color:#fff;font-weight:800;
+  background:linear-gradient(135deg,#f472b6,var(--brand));background-size:cover;background-position:center}
+.group-header{padding:1.2rem}
+.group-header .link-btn{margin-bottom:.9rem}
+.group-title-row{display:flex;align-items:center;gap:.8rem}
+.group-title-main{flex:1;min-width:0}
+.group-title-main h2{font-size:1.4rem}
+.group-meta{color:var(--muted);font-size:.85rem;font-weight:600;margin-top:.1rem}
+.group-about{color:var(--muted);margin-top:.8rem;line-height:1.5}
+.group-members{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:1rem}
+.avatar.mini{width:32px;height:32px;font-size:.75rem;border:2px solid var(--card);box-shadow:var(--shadow-sm)}
+
 .empty{padding:2.5rem 1rem;text-align:center;color:var(--muted)}
 .empty h3{color:var(--ink);margin-bottom:.3rem}
 .profile-card{padding:1.4rem}

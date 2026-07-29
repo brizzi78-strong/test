@@ -14,6 +14,7 @@
   <div class="top-actions">
     <button class="top-tab active" data-view="feed" title="Home">Home</button>
     <button class="top-tab" data-view="friends" title="Friends">Friends <span class="badge" id="reqBadge" hidden>0</span></button>
+    <button class="top-tab" data-view="groups" title="Groups">Groups</button>
     <button class="top-tab" data-view="messages" title="Messages">Messages <span class="badge" id="dmBadge" hidden>0</span></button>
     <div class="bell-wrap">
       <button class="icon-btn" id="bell" title="Notifications" aria-label="Notifications">
@@ -109,6 +110,54 @@
       <div id="peopleList" class="people-list"></div>
       <p id="peopleEmpty" class="muted people-empty" hidden>No one found.</p>
     </div>
+  </section>
+
+  <!-- GROUPS -->
+  <section class="view groups" id="view-groups" hidden>
+    <div class="card group-create-card">
+      <h3 class="section-h">Start a group</h3>
+      <form id="groupForm" class="group-create">
+        <input id="groupName" placeholder="Group name — e.g. Blue Ridge Hikers" maxlength="60" autocomplete="off" required>
+        <input id="groupAbout" placeholder="What's it about? (optional)" maxlength="300" autocomplete="off">
+        <button class="btn primary" type="submit">Create</button>
+      </form>
+    </div>
+    <div class="card groups-card">
+      <h3 class="section-h">Groups on The Cardinal</h3>
+      <div id="groupsList" class="people-list"></div>
+      <p id="groupsEmpty" class="muted people-empty" hidden>No groups yet. Start the first one above.</p>
+    </div>
+  </section>
+
+  <!-- GROUP DETAIL -->
+  <section class="view group" id="view-group" hidden>
+    <div class="card group-header">
+      <button class="link-btn" id="groupBack">← Groups</button>
+      <div class="group-title-row">
+        <div class="group-badge" id="groupBadge"></div>
+        <div class="group-title-main">
+          <h2 id="groupTitle"></h2>
+          <div class="group-meta" id="groupMembersCount"></div>
+        </div>
+        <button class="btn sm" id="groupJoinBtn" hidden></button>
+      </div>
+      <p id="groupAboutText" class="group-about" hidden></p>
+      <div id="groupMembers" class="group-members"></div>
+    </div>
+
+    <div class="composer card" id="groupComposerCard" hidden>
+      <form class="composer-form" id="groupComposerForm" style="display:block">
+        <textarea id="groupPostBody" rows="2" placeholder="Share something with the group…" maxlength="5000"></textarea>
+        <div class="composer-actions">
+          <div class="spacer"></div>
+          <button class="btn primary" type="submit" id="groupPostSubmit">Post to group</button>
+        </div>
+      </form>
+    </div>
+
+    <div id="groupPosts" class="posts"></div>
+    <div id="groupFeedEmpty" class="empty card" hidden><h3>No posts yet.</h3><p>Be the first to share something with this group.</p></div>
+    <div id="groupLockedMsg" class="empty card" hidden><h3>Members only.</h3><p>Join this group to see the conversation and post.</p></div>
   </section>
 
   <!-- MESSAGES -->

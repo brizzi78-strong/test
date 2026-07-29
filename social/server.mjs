@@ -59,6 +59,16 @@ db.exec(`
     from_id INTEGER NOT NULL, to_id INTEGER NOT NULL,
     body TEXT NOT NULL, created INTEGER NOT NULL, read INTEGER NOT NULL DEFAULT 0
   );
+  CREATE TABLE IF NOT EXISTS groups (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL, about TEXT DEFAULT '',
+    owner_id INTEGER NOT NULL, created INTEGER NOT NULL
+  );
+  CREATE TABLE IF NOT EXISTS group_members (
+    group_id INTEGER NOT NULL, user_id INTEGER NOT NULL,
+    role TEXT NOT NULL DEFAULT 'member', created INTEGER NOT NULL,
+    PRIMARY KEY (group_id, user_id)
+  );
 `);
 
 // Migration: the "care signal" — a member can quietly tell their circle they could
@@ -69,6 +79,12 @@ db.exec(`
   if (!cols.includes("need_support")) add("ALTER TABLE profiles ADD COLUMN need_support INTEGER NOT NULL DEFAULT 0");
   if (!cols.includes("support_note")) add("ALTER TABLE profiles ADD COLUMN support_note TEXT DEFAULT ''");
   if (!cols.includes("support_since")) add("ALTER TABLE profiles ADD COLUMN support_since INTEGER");
+}
+
+// Migration: posts can belong to a group (Phase 5). NULL group_id = a normal circle post.
+{
+  const cols = db.prepare("PRAGMA table_info(posts)").all().map((c) => c.name);
+  if (!cols.includes("group_id")) { try { db.exec("ALTER TABLE posts ADD COLUMN group_id INTEGER"); } catch {} }
 }
 
 /* ----------------------------- Auth helpers ----------------------------- */
@@ -97,7 +113,7 @@ const q = {
   insertSession: db.prepare("INSERT INTO sessions (token, user_id, created) VALUES (?,?,?)"),
   sessionByToken: db.prepare("SELECT * FROM sessions WHERE token=?"),
   deleteSession: db.prepare("DELETE FROM sessions WHERE token=?"),
-  insertPost: db.prepare("INSERT INTO posts (author_id, body, photo, photo_mime, created) VALUES (?,?,?,?,?)"),
+  insertPost: db.prepare("INSERT INTO posts (author_id, body, photo, photo_mime, created, group_id) VALUES (?,?,?,?,?,?)"),
   postById: db.prepare("SELECT * FROM posts WHERE id=?"),
   getPostPhoto: db.prepare("SELECT photo, photo_mime FROM posts WHERE id=?"),
   feed: db.prepare("SELECT id, author_id, body, (photo IS NOT NULL) AS has_photo, created FROM posts ORDER BY created DESC LIMIT 100"),
@@ -132,6 +148,15 @@ const q = {
       UNION ALL SELECT from_id AS other, created FROM dms WHERE to_id=?
     ) GROUP BY other ORDER BY last DESC LIMIT 50`),
   dmLast: db.prepare("SELECT from_id, body, created FROM dms WHERE (from_id=? AND to_id=?) OR (from_id=? AND to_id=?) ORDER BY created DESC LIMIT 1"),
+  insertGroup: db.prepare("INSERT INTO groups (name, about, owner_id, created) VALUES (?,?,?,?)"),
+  groupById: db.prepare("SELECT * FROM groups WHERE id=?"),
+  allGroups: db.prepare("SELECT id, name, about, owner_id, created FROM groups ORDER BY created DESC LIMIT 100"),
+  addMember: db.prepare("INSERT OR IGNORE INTO group_members (group_id, user_id, role, created) VALUES (?,?,?,?)"),
+  removeMember: db.prepare("DELETE FROM group_members WHERE group_id=? AND user_id=?"),
+  isMember: db.prepare("SELECT role FROM group_members WHERE group_id=? AND user_id=?"),
+  groupMemberCount: db.prepare("SELECT COUNT(*) c FROM group_members WHERE group_id=?"),
+  groupMembers: db.prepare("SELECT user_id AS id FROM group_members WHERE group_id=? ORDER BY created ASC LIMIT 100"),
+  groupFeed: db.prepare("SELECT id, author_id, body, (photo IS NOT NULL) AS has_photo, created FROM posts WHERE group_id=? ORDER BY created DESC LIMIT 100"),
 };
 
 // Relationship of target user t as seen by me: none | friends | outgoing | incoming
@@ -296,7 +321,7 @@ async function api(req, res, path) {
     const placeholders = ids.map(() => "?").join(",");
     const rows = db.prepare(
       `SELECT id, author_id, body, (photo IS NOT NULL) AS has_photo, created
-       FROM posts WHERE author_id IN (${placeholders}) ORDER BY created DESC LIMIT 100`
+       FROM posts WHERE author_id IN (${placeholders}) AND group_id IS NULL ORDER BY created DESC LIMIT 100`
     ).all(...ids);
     const posts = rows.map((r) => ({
       id: r.id, author: author(r.author_id), body: r.body, photo: !!r.has_photo, created: r.created,
@@ -310,7 +335,12 @@ async function api(req, res, path) {
     const img = b.photo ? decodeImage(b.photo) : null;
     if (!body && !img) return send(res, 400, { error: "Write something or add a photo." });
     if (b.photo && !img) return send(res, 400, { error: "That image must be a PNG, JPEG, or WebP under 4MB." });
-    const id = q.insertPost.run(user.id, body, img ? img.buf : null, img ? img.mime : null, Date.now()).lastInsertRowid;
+    let groupId = b.groupId ? Number(b.groupId) : null;
+    if (groupId) {
+      if (!q.groupById.get(groupId) || !q.isMember.get(groupId, user.id))
+        return send(res, 403, { error: "You're not a member of that group." });
+    }
+    const id = q.insertPost.run(user.id, body, img ? img.buf : null, img ? img.mime : null, Date.now(), groupId).lastInsertRowid;
     return send(res, 200, { ok: true, id });
   }
   const likeM = path.match(/^\/api\/posts\/(\d+)\/like$/);
@@ -379,6 +409,62 @@ async function api(req, res, path) {
     const other = Number((await readBody(req)).userId);
     q.removeEdge.run(user.id, other, other, user.id);
     return send(res, 200, { ok: true, rel: "none" });
+  }
+
+  /* ---------- Groups ---------- */
+  const groupView = (g) => ({
+    id: g.id, name: g.name, about: g.about, owner: g.owner_id,
+    members: q.groupMemberCount.get(g.id).c,
+    joined: !!q.isMember.get(g.id, user.id), mine: g.owner_id === user.id,
+  });
+
+  if (path === "/api/groups" && method === "GET") {
+    return send(res, 200, { groups: q.allGroups.all().map(groupView) });
+  }
+  if (path === "/api/groups" && method === "POST") {
+    const b = await readBody(req);
+    const name = String(b.name || "").trim().slice(0, 60);
+    if (!name) return send(res, 400, { error: "Give your group a name." });
+    const about = String(b.about || "").trim().slice(0, 300);
+    const gid = q.insertGroup.run(name, about, user.id, Date.now()).lastInsertRowid;
+    q.addMember.run(gid, user.id, "owner", Date.now());
+    return send(res, 200, { ok: true, id: gid });
+  }
+  const gM = path.match(/^\/api\/groups\/(\d+)$/);
+  if (gM && method === "GET") {
+    const g = q.groupById.get(Number(gM[1]));
+    if (!g) return send(res, 404, { error: "No such group." });
+    const view = groupView(g);
+    view.memberList = q.groupMembers.all(g.id).map((r) => author(r.id));
+    return send(res, 200, { group: view });
+  }
+  const joinM = path.match(/^\/api\/groups\/(\d+)\/join$/);
+  if (joinM && method === "POST") {
+    const gid = Number(joinM[1]);
+    if (!q.groupById.get(gid)) return send(res, 404, { error: "No such group." });
+    q.addMember.run(gid, user.id, "member", Date.now());
+    return send(res, 200, { ok: true, joined: true });
+  }
+  const leaveM = path.match(/^\/api\/groups\/(\d+)\/leave$/);
+  if (leaveM && method === "POST") {
+    const gid = Number(leaveM[1]);
+    const g = q.groupById.get(gid);
+    if (!g) return send(res, 404, { error: "No such group." });
+    if (g.owner_id === user.id) return send(res, 400, { error: "As the owner, you can't leave your own group." });
+    q.removeMember.run(gid, user.id);
+    return send(res, 200, { ok: true, joined: false });
+  }
+  const gfM = path.match(/^\/api\/groups\/(\d+)\/feed$/);
+  if (gfM && method === "GET") {
+    const gid = Number(gfM[1]);
+    const g = q.groupById.get(gid);
+    if (!g) return send(res, 404, { error: "No such group." });
+    if (!q.isMember.get(gid, user.id)) return send(res, 403, { error: "Join the group to see its posts." });
+    const posts = q.groupFeed.all(gid).map((r) => ({
+      id: r.id, author: author(r.author_id), body: r.body, photo: !!r.has_photo, created: r.created,
+      likes: q.likeCount.get(r.id).c, liked: !!q.likedByMe.get(r.id, user.id), comments: q.commentCount.get(r.id).c,
+    }));
+    return send(res, 200, { posts });
   }
 
   /* ---------- Care signal ("reach out / check in") ---------- */

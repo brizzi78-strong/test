@@ -66,6 +66,7 @@
     if (view === "feed") loadFeed();
     if (view === "profile") loadProfile();
     if (view === "friends") loadFriends(el("peopleSearch").value);
+    if (view === "groups") loadGroups();
     if (view === "messages") { showThreadList(); loadThreads(); }
     show(view);
   }
@@ -124,6 +125,109 @@
 
   function setReqBadge(n) { const b = el("reqBadge"); if (n > 0) { b.textContent = n; b.hidden = false; } else b.hidden = true; }
   async function refreshReqBadge() { try { setReqBadge((await api("/api/friends/requests")).requests.length); } catch {} }
+
+  /* ---------- Groups ---------- */
+  let currentGroup = null;
+
+  async function loadGroups() {
+    let d; try { d = await api("/api/groups"); } catch { return; }
+    const list = el("groupsList"); list.innerHTML = "";
+    el("groupsEmpty").hidden = d.groups.length > 0;
+    d.groups.forEach((g) => list.appendChild(renderGroupCard(g)));
+  }
+  function renderGroupCard(g) {
+    const row = document.createElement("div");
+    row.className = "person";
+    row.innerHTML = `
+      <div class="group-badge">${esc(initials(g.name))}</div>
+      <div class="who">
+        <div class="p-name">${esc(g.name)}</div>
+        <div class="p-bio">${g.members} member${g.members === 1 ? "" : "s"}${g.about ? " · " + esc(g.about) : ""}</div>
+      </div>
+      <div class="person-actions"></div>`;
+    row.querySelector(".who").style.cursor = "pointer";
+    row.querySelector(".who").onclick = () => openGroup(g.id);
+    const actions = row.querySelector(".person-actions");
+    if (g.joined) {
+      const tag = document.createElement("span"); tag.className = "tag";
+      tag.textContent = g.mine ? "★ Owner" : "✓ Member"; actions.appendChild(tag);
+    }
+    const open = document.createElement("button");
+    open.className = "btn " + (g.joined ? "ghost" : "primary");
+    open.textContent = g.joined ? "Open" : "View";
+    open.onclick = () => openGroup(g.id);
+    actions.appendChild(open);
+    return row;
+  }
+  el("groupForm").onsubmit = async (e) => {
+    e.preventDefault();
+    const name = el("groupName").value.trim();
+    if (!name) return;
+    try {
+      const r = await api("/api/groups", { method: "POST", body: { name, about: el("groupAbout").value.trim() } });
+      el("groupName").value = ""; el("groupAbout").value = "";
+      toast("Group created."); openGroup(r.id);
+    } catch (err) { toast(err.message); }
+  };
+
+  async function openGroup(id) {
+    currentGroup = id;
+    show("group");
+    document.querySelectorAll(".top-tab").forEach((t) => t.classList.toggle("active", t.dataset.view === "groups"));
+    let d; try { d = await api("/api/groups/" + id); } catch (e) { toast(e.message); return go("groups"); }
+    const g = d.group;
+    el("groupBadge").textContent = initials(g.name);
+    el("groupTitle").textContent = g.name;
+    el("groupMembersCount").textContent = g.members + " member" + (g.members === 1 ? "" : "s");
+    el("groupAboutText").textContent = g.about || "";
+    el("groupAboutText").hidden = !g.about;
+
+    const mem = el("groupMembers"); mem.innerHTML = "";
+    g.memberList.forEach((a) => {
+      const av = avatarInner(a);
+      const chip = document.createElement("div");
+      chip.className = "avatar mini"; chip.title = a.name;
+      if (av.style) chip.style.cssText = av.style;
+      chip.textContent = av.text;
+      mem.appendChild(chip);
+    });
+
+    const jb = el("groupJoinBtn");
+    if (g.mine) { jb.hidden = true; }
+    else {
+      jb.hidden = false;
+      jb.className = "btn sm " + (g.joined ? "ghost" : "primary");
+      jb.textContent = g.joined ? "Leave" : "Join group";
+      jb.onclick = async () => {
+        try {
+          await api(`/api/groups/${id}/${g.joined ? "leave" : "join"}`, { method: "POST" });
+          toast(g.joined ? "Left " + g.name : "Joined " + g.name);
+          openGroup(id);
+        } catch (e) { toast(e.message); }
+      };
+    }
+
+    el("groupComposerCard").hidden = !g.joined;
+    el("groupLockedMsg").hidden = g.joined;
+    if (g.joined) await loadGroupFeed(id);
+    else { el("groupPosts").innerHTML = ""; el("groupFeedEmpty").hidden = true; }
+  }
+  async function loadGroupFeed(id) {
+    let d; try { d = await api(`/api/groups/${id}/feed`); } catch { return; }
+    const wrap = el("groupPosts"); wrap.innerHTML = "";
+    el("groupFeedEmpty").hidden = d.posts.length > 0;
+    d.posts.forEach((p) => wrap.appendChild(renderPost(p)));
+  }
+  el("groupBack").onclick = () => go("groups");
+  el("groupComposerForm").onsubmit = async (e) => {
+    e.preventDefault();
+    const body = el("groupPostBody").value.trim();
+    if (!body || !currentGroup) return;
+    el("groupPostSubmit").disabled = true;
+    try { await api("/api/posts", { method: "POST", body: { body, groupId: currentGroup } }); el("groupPostBody").value = ""; await loadGroupFeed(currentGroup); }
+    catch (err) { toast(err.message); }
+    finally { el("groupPostSubmit").disabled = false; }
+  };
 
   /* ---------- Profile ---------- */
   let pendingProfilePhoto = null;
