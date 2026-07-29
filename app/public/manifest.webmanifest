@@ -1,0 +1,16 @@
+{
+  "name": "Cardinal — women-first dating",
+  "short_name": "Cardinal",
+  "description": "An invite-only, women-first, safety-first dating community. Every member verified and background-checked.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f7f3ea",
+  "theme_color": "#21304f",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

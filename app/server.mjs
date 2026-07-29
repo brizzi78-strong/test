@@ -160,6 +160,8 @@ const MIME = {
   ".svg": "image/svg+xml",
   ".png": "image/png",
   ".ico": "image/x-icon",
+  ".webmanifest": "application/manifest+json; charset=utf-8",
+  ".json": "application/json; charset=utf-8",
 };
 async function serveStatic(res, urlPath) {
   let rel = normalize(urlPath).replace(/^(\.\.[/\\])+/, "");

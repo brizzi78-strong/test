@@ -35,6 +35,17 @@ node app/admin.mjs reject <email>   # check failed  -> rejected
 Nothing is auto-approved. In production the same call is made by a webhook or an
 internal dashboard when the provider responds. No third-party service is baked in.
 
+## Install on a phone (it's a PWA)
+
+Cardinal is an installable app — no App Store, no Apple/Google fees, no build tools.
+Once it's reachable at a URL, on a phone you **open it in the browser → Share →
+"Add to Home Screen."** It then launches fullscreen from a home-screen icon (red
+heart on navy), works like a native app, and loads instantly (the interface is
+cached by a service worker; live data still comes from the server).
+
+The one requirement is that the phone can reach the server over the network — see
+"Making it reachable" below.
+
 ## Run it
 
 ```bash
@@ -63,3 +74,19 @@ built yet, and two of them genuinely can't be "no-vendor":
   next additions on top of this same self-hosted base.
 
 Nothing here depends on a third party to function.
+
+## Making it reachable (so the phone can open it)
+
+The app is installable; to install it on a phone, the phone has to reach the server.
+Least-"vendor" options, in order:
+
+1. **Same Wi-Fi (try it today):** run `node app/server.mjs` on a computer, find that
+   computer's local IP, and on the phone open `http://<computer-ip>:3000`. Works
+   immediately on the same network — good for testing on your own phone. (Add-to-Home-Screen
+   and the service worker want HTTPS on most phones, so use option 2/3 for the real thing.)
+2. **Your own server (recommended, still no SaaS):** run it on a small VPS or a machine
+   you control, put a domain in front, and terminate HTTPS with a free Let's Encrypt
+   certificate. You own the box and the code end to end — nobody to sign up with.
+3. **A platform host** (Render/Railway/Fly/etc.) is the fastest path but *is* a third-party
+   vendor — listed only for completeness.
+
