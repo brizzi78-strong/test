@@ -59,6 +59,13 @@ function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){retur
 function fmt(c){return '$'+((c||0)/100).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});}
 function prettyFreq(f){return {weekly:'Weekly',biweekly:'Biweekly',semimonthly:'Semi-monthly',monthly:'Monthly'}[f]||f;}
 function prettyFiling(s){return {single:'Single',married_joint:'Married filing jointly',head_of_household:'Head of household'}[s]||s;}
+function renderEntries(entries){
+  var host=document.getElementById('entries');if(!host)return;
+  if(!entries.length){host.innerHTML='<p class="sub">No hours logged yet.</p>';return;}
+  host.innerHTML='<div class="bd">'+entries.map(function(en){
+    return '<div><span>'+esc(en.date)+'</span><span>'+(en.minutes/60)+'h</span></div>';
+  }).join('')+'</div>';
+}
 var parts=location.pathname.split('/').filter(Boolean);
 var token=parts.length>1?parts.slice(1).join('/'):'';
 fetch('/api/me/'+encodeURIComponent(token)).then(function(r){return r.text().then(function(t){var j=t?JSON.parse(t):null;if(r.status>=300)throw new Error((j&&j.error&&j.error.message)||('HTTP '+r.status));return j;});}).then(function(d){
@@ -69,6 +76,15 @@ fetch('/api/me/'+encodeURIComponent(token)).then(function(r){return r.text().the
   var html='<div class="card"><h2>This year so far</h2><div class="tiles">'
     +'<div class="tile"><div class="k">YTD gross</div><div class="v">'+fmt(d.ytd.grossCents)+'</div></div>'
     +'<div class="tile"><div class="k">YTD take-home</div><div class="v">'+fmt(d.ytd.netCents)+'</div></div></div></div>';
+  if(e.payType==='hourly'){
+    html+='<div class="card" id="hoursCard"><h2>Log hours</h2>'
+      +'<div style="display:flex;gap:8px;flex-wrap:wrap;align-items:flex-end">'
+      +'<div style="flex:1;min-width:130px"><div class="k" style="font-size:.72rem;color:var(--muted)">Date</div><input id="hDate" type="date" style="width:100%;padding:.5rem;border:1px solid var(--line);border-radius:8px;background:var(--paper);color:var(--ink)"></div>'
+      +'<div style="width:110px"><div class="k" style="font-size:.72rem;color:var(--muted)">Hours</div><input id="hHours" inputmode="decimal" placeholder="8" style="width:100%;padding:.5rem;border:1px solid var(--line);border-radius:8px;background:var(--paper);color:var(--ink)"></div>'
+      +'<button id="hAdd" style="background:var(--brand);color:#fff;border:0;border-radius:8px;padding:.6rem 1rem;font-weight:600;cursor:pointer">Add</button></div>'
+      +'<div id="hMsg" class="sub" style="margin-top:8px"></div>'
+      +'<div id="entries" style="margin-top:10px"></div></div>';
+  }
   if(!d.payslips.length){
     html+='<div class="card"><h2>Pay stubs</h2><p class="sub">No pay stubs yet.</p></div>';
   }else{
@@ -87,6 +103,20 @@ fetch('/api/me/'+encodeURIComponent(token)).then(function(r){return r.text().the
     html+='<div class="card"><h2>Pay stubs</h2>'+stubs+'</div>';
   }
   document.getElementById('main').innerHTML=html;
+  if(e.payType==='hourly'){
+    var dEl=document.getElementById('hDate'); if(dEl&&!dEl.value)dEl.value=new Date().toISOString().slice(0,10);
+    renderEntries(d.entries||[]);
+    document.getElementById('hAdd').onclick=function(){
+      var date=document.getElementById('hDate').value;var hours=parseFloat(document.getElementById('hHours').value);
+      var msg=document.getElementById('hMsg');
+      if(!date||isNaN(hours)||hours<=0){msg.textContent='Enter a date and a positive number of hours.';return;}
+      this.disabled=true;var btn=this;
+      fetch('/api/me/'+encodeURIComponent(token)+'/hours',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({date:date,hours:hours})}).then(function(r){return r.text().then(function(t){var j=t?JSON.parse(t):null;if(r.status>=300)throw new Error((j&&j.error&&j.error.message)||('HTTP '+r.status));return j;});}).then(function(){
+        msg.textContent='Added '+hours+'h on '+date+'.';document.getElementById('hHours').value='';
+        return fetch('/api/me/'+encodeURIComponent(token)).then(function(r){return r.json();}).then(function(nd){renderEntries(nd.entries||[]);});
+      }).catch(function(er){msg.textContent=er.message;}).then(function(){btn.disabled=false;});
+    };
+  }
 }).catch(function(err){
   document.getElementById('setup').textContent='';
   document.getElementById('main').innerHTML='<div class="banner err">This pay link isn\\u2019t valid: '+esc(err.message)+'</div>';

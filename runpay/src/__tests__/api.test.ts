@@ -13,6 +13,8 @@ import type { AddressInfo } from 'node:net';
 import { createApp as createRunpay } from '../api/server.ts';
 import { createApp as createPayroll } from '../../../payroll/src/api/server.ts';
 import { createInMemoryStore } from '../../../payroll/src/store/store.ts';
+import { createApp as createTimeclock } from '../../../timeclock/src/api/server.ts';
+import { createInMemoryStore as createTimeclockStore } from '../../../timeclock/src/store/store.ts';
 
 async function listen(server: { listen: Function; address: Function; close: Function }) {
   await new Promise<void>((r) => server.listen(0, r));
@@ -175,6 +177,75 @@ test('employee self-service: token link shows only that employee, scoped and rea
 
     // A tampered token is rejected.
     assert.equal((await j(base, 'GET', `/api/me/${encodeURIComponent(jordan.id + '.deadbeef')}`)).status, 401);
+  });
+});
+
+async function withFullStack(run: (base: string) => Promise<void>) {
+  const payroll = createPayroll(createInMemoryStore());
+  const payPort = await listen(payroll.server);
+  const timeclock = createTimeclock(createTimeclockStore());
+  const timePort = await listen(timeclock.server);
+  const runpay = createRunpay({
+    payrollBase: `http://127.0.0.1:${payPort}`,
+    timeclockBase: `http://127.0.0.1:${timePort}`,
+    businessName: 'Blue Ridge Press LLC',
+  });
+  const runPort = await listen(runpay.server);
+  try {
+    await run(`http://127.0.0.1:${runPort}`);
+  } finally {
+    await new Promise<void>((r) => runpay.server.close(() => r()));
+    await new Promise<void>((r) => timeclock.server.close(() => r()));
+    await new Promise<void>((r) => payroll.server.close(() => r()));
+  }
+}
+
+test('logged hours flow from the timeclock straight into a Run Payroll batch', async () => {
+  await withFullStack(async (base) => {
+    const co = (await j(base, 'GET', '/api/app')).json.companyId;
+    const sam = (await j(base, 'POST', '/api/employees', {
+      companyId: co, firstName: 'Sam', lastName: 'Cole', payType: 'hourly',
+      hourlyRateCents: 2500, payFrequency: 'biweekly', filingStatus: 'single',
+    })).json;
+
+    // Log hours two ways: the manager via /api/time, the employee via their link.
+    await j(base, 'POST', '/api/time/entries', { companyId: co, employeeId: sam.id, date: '2026-01-05', hours: 8 });
+    const link = (await j(base, 'GET', `/api/employees/${sam.id}/selflink`)).json;
+    assert.equal((await j(base, 'POST', `/api/me/${encodeURIComponent(link.token)}/hours`, { date: '2026-01-06', hours: 8 })).status, 201);
+
+    // Run payroll for the period — hours are pulled from the timeclock (16h * $25 = $2,000).
+    const run = (await j(base, 'POST', '/api/run-batch', {
+      payDate: '2026-01-15', periodStart: '2026-01-01', periodEnd: '2026-01-15',
+    })).json;
+    const line = run.lines[0];
+    assert.equal(line.ok, true);
+    assert.equal(line.hoursSource, 'timeclock');
+    assert.equal(line.hours, 16);
+    assert.equal(line.payslip.grossCents, 40000); // 16h * $25.00
+    assert.equal(run.totals.grossCents, 40000);
+
+    // The employee sees their logged entries in self-service.
+    const meView = (await j(base, 'GET', `/api/me/${encodeURIComponent(link.token)}`)).json;
+    assert.equal(meView.entries.length, 2);
+  });
+});
+
+test('explicitly entered hours win over the timeclock', async () => {
+  await withFullStack(async (base) => {
+    const co = (await j(base, 'GET', '/api/app')).json.companyId;
+    const sam = (await j(base, 'POST', '/api/employees', {
+      companyId: co, firstName: 'Sam', lastName: 'Cole', payType: 'hourly',
+      hourlyRateCents: 2500, payFrequency: 'biweekly', filingStatus: 'single',
+    })).json;
+    await j(base, 'POST', '/api/time/entries', { companyId: co, employeeId: sam.id, date: '2026-01-05', hours: 8 });
+
+    const run = (await j(base, 'POST', '/api/run-batch', {
+      payDate: '2026-01-15', periodStart: '2026-01-01', periodEnd: '2026-01-15',
+      hours: { [sam.id]: 40 }, // manager override
+    })).json;
+    assert.equal(run.lines[0].hoursSource, 'entered');
+    assert.equal(run.lines[0].hours, 40);
+    assert.equal(run.lines[0].payslip.grossCents, 100000); // 40h * $25
   });
 });
 

@@ -31,6 +31,7 @@ export interface AppServer {
 
 export interface AppOptions {
   payrollBase?: string;
+  timeclockBase?: string;
   businessName?: string;
   jurisdiction?: string;
   /** Existing company id to use; when unset, one is created/reused on first use. */
@@ -52,6 +53,7 @@ interface Primary {
 
 export function createApp(opts: AppOptions = {}): AppServer {
   const base = (opts.payrollBase ?? process.env.PAYROLL_URL ?? 'http://payroll:3500').replace(/\/$/, '');
+  const timeBase = (opts.timeclockBase ?? process.env.TIMECLOCK_URL ?? 'http://timeclock:4800').replace(/\/$/, '');
   const businessName = opts.businessName ?? process.env.BUSINESS_NAME ?? 'Blue Ridge Press LLC';
   const jurisdiction = opts.jurisdiction ?? process.env.PAYROLL_JURISDICTION ?? 'raleigh_nc';
   const configuredId = opts.companyId ?? process.env.BUSINESS_COMPANY_ID;
@@ -82,22 +84,26 @@ export function createApp(opts: AppOptions = {}): AppServer {
   let primary: Primary | undefined;
   let ensuring: Promise<Primary> | undefined;
 
-  async function call(method: string, path: string, body?: unknown): Promise<any> {
-    const headers: Record<string, string> = { 'content-type': 'application/json' };
-    if (apiKey) headers.authorization = `Bearer ${apiKey}`;
-    const res = await fetchImpl(`${base}${path}`, {
-      method,
-      headers,
-      body: body === undefined ? undefined : JSON.stringify(body),
-    });
-    const text = await res.text();
-    const json = text ? JSON.parse(text) : null;
-    if (res.status >= 300) {
-      const message = (json && json.error && json.error.message) || `HTTP ${res.status}`;
-      throw new Error(message);
-    }
-    return json;
+  function callerFor(target: string) {
+    return async function call(method: string, path: string, body?: unknown): Promise<any> {
+      const headers: Record<string, string> = { 'content-type': 'application/json' };
+      if (apiKey) headers.authorization = `Bearer ${apiKey}`;
+      const res = await fetchImpl(`${target}${path}`, {
+        method,
+        headers,
+        body: body === undefined ? undefined : JSON.stringify(body),
+      });
+      const text = await res.text();
+      const json = text ? JSON.parse(text) : null;
+      if (res.status >= 300) {
+        const message = (json && json.error && json.error.message) || `HTTP ${res.status}`;
+        throw new Error(message);
+      }
+      return json;
+    };
   }
+  const call = callerFor(base); // payroll
+  const timeCall = callerFor(timeBase); // timeclock
 
   async function ensurePrimary(): Promise<Primary> {
     if (primary) return primary;
@@ -121,17 +127,19 @@ export function createApp(opts: AppOptions = {}): AppServer {
   }
 
   const server = createServer(
-    makeListener({ base, apiKey, fetchImpl, ensurePrimary, call, gate, signToken, verifyToken }),
+    makeListener({ base, timeBase, apiKey, fetchImpl, ensurePrimary, call, timeCall, gate, signToken, verifyToken }),
   );
   return { server };
 }
 
 interface ListenerDeps {
   base: string;
+  timeBase: string;
   apiKey: string | undefined;
   fetchImpl: typeof fetch;
   ensurePrimary: () => Promise<Primary>;
   call: (method: string, path: string, body?: unknown) => Promise<any>;
+  timeCall: (method: string, path: string, body?: unknown) => Promise<any>;
   gate: { user: string; password: string } | undefined;
   signToken: (employeeId: string) => string;
   verifyToken: (token: string) => string | null;
@@ -146,7 +154,7 @@ function isPublicPath(pathname: string): boolean {
 }
 
 function makeListener(deps: ListenerDeps) {
-  const { base, apiKey, fetchImpl, ensurePrimary, call, gate, signToken, verifyToken } = deps;
+  const { base, timeBase, apiKey, fetchImpl, ensurePrimary, call, timeCall, gate, signToken, verifyToken } = deps;
   return async (req: IncomingMessage, res: ServerResponse): Promise<void> => {
     try {
       const url = new URL(req.url ?? '/', 'http://localhost');
@@ -185,11 +193,28 @@ function makeListener(deps: ListenerDeps) {
       }
 
       // Employee reads their own profile + pay stubs by token (public, scoped).
-      const me = url.pathname.match(/^\/api\/me\/(.+)$/);
+      // Employee logs their own hours by token (public, scoped to them).
+      const meHours = url.pathname.match(/^\/api\/me\/([^/]+)\/hours$/);
+      if (method === 'POST' && meHours) {
+        const employeeId = verifyToken(decodeURIComponent(meHours[1]));
+        if (!employeeId) return sendJson(res, 401, { error: { code: 'invalid_token', message: 'link is not valid' } });
+        const primary = await ensurePrimary();
+        const b = (await readJson(req)) as { date?: string; hours?: number; note?: string };
+        const entry = await timeCall('POST', '/entries', {
+          companyId: primary.companyId,
+          employeeId,
+          date: b.date,
+          hours: b.hours,
+          note: b.note,
+        });
+        return sendJson(res, 201, entry);
+      }
+      // Employee reads their own profile + pay stubs + recent hours by token.
+      const me = url.pathname.match(/^\/api\/me\/([^/]+)$/);
       if (method === 'GET' && me) {
         const employeeId = verifyToken(decodeURIComponent(me[1]));
         if (!employeeId) return sendJson(res, 401, { error: { code: 'invalid_token', message: 'link is not valid' } });
-        const data = await meView(call, employeeId);
+        const data = await meView(call, timeCall, employeeId);
         return sendJson(res, 200, data);
       }
       if (method === 'GET' && url.pathname === '/api/app') {
@@ -200,8 +225,14 @@ function makeListener(deps: ListenerDeps) {
       if (method === 'POST' && url.pathname === '/api/run-batch') {
         const primary = await ensurePrimary();
         const body = (await readJson(req)) as RunBatchBody;
-        const result = await runBatch(call, primary.companyId, body);
+        const result = await runBatch(call, timeCall, primary.companyId, body);
         return sendJson(res, 200, result);
+      }
+      // Timesheets: proxied to the Timeclock service (add / list / delete hours).
+      if (url.pathname.startsWith('/api/time/')) {
+        const upstreamPath = url.pathname.slice('/api/time'.length); // "/api/time/entries" → "/entries"
+        await proxyTo(timeBase, apiKey, fetchImpl, req, res, upstreamPath, url.search);
+        return;
       }
       if (url.pathname.startsWith('/api/')) {
         await proxy(base, apiKey, fetchImpl, req, res, url);
@@ -226,6 +257,9 @@ interface RunBatchBody {
   hours?: Record<string, number>;
   /** Optional subset of employee ids to pay; default is everyone at the company. */
   employeeIds?: string[];
+  /** Optional pay-period range; hourly hours are pulled from the timeclock for it. */
+  periodStart?: string;
+  periodEnd?: string;
 }
 
 interface RunLine {
@@ -233,23 +267,37 @@ interface RunLine {
   name: string;
   ok: boolean;
   payslip?: any;
+  /** Where an hourly employee's hours came from: explicit input or the timeclock. */
+  hoursSource?: 'entered' | 'timeclock';
+  hours?: number;
   error?: string;
 }
+
+const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
 
 /**
  * Run one pay date across many employees and total it. Each employee is run
  * through the real Payroll engine; a failure on one (e.g. hourly with no hours)
  * is captured per-line and never aborts the batch.
+ *
+ * For an hourly employee whose hours weren't entered explicitly, and when a
+ * pay-period range is given, the hours are pulled from the timeclock — so logged
+ * time flows straight into the run.
  */
 export async function runBatch(
   call: (method: string, path: string, body?: unknown) => Promise<any>,
+  timeCall: (method: string, path: string, body?: unknown) => Promise<any>,
   companyId: string,
   body: RunBatchBody,
 ): Promise<{ payDate: string; lines: RunLine[]; totals: ReturnType<typeof emptyTotals> }> {
   const payDate = String(body?.payDate ?? '').trim();
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(payDate)) {
+  if (!ISO_DATE.test(payDate)) {
     throw new Error('payDate must be an ISO date (YYYY-MM-DD)');
   }
+  const periodStart = String(body?.periodStart ?? '').trim();
+  const periodEnd = String(body?.periodEnd ?? '').trim();
+  const usePeriod = ISO_DATE.test(periodStart) && ISO_DATE.test(periodEnd);
+
   const employees: any[] = await call('GET', `/employees?companyId=${encodeURIComponent(companyId)}`);
   const wanted = Array.isArray(body?.employeeIds) && body.employeeIds.length
     ? employees.filter((e) => body.employeeIds!.includes(e.id))
@@ -261,11 +309,22 @@ export async function runBatch(
     const name = `${emp.firstName} ${emp.lastName}`;
     try {
       const runBody: { payDate: string; hours?: number } = { payDate };
-      const h = body?.hours?.[emp.id];
-      if (typeof h === 'number') runBody.hours = h;
+      let hoursSource: RunLine['hoursSource'];
+      const entered = body?.hours?.[emp.id];
+      if (typeof entered === 'number') {
+        runBody.hours = entered;
+        hoursSource = 'entered';
+      } else if (emp.payType === 'hourly' && usePeriod) {
+        // Pull this employee's logged hours for the pay period from the timeclock.
+        const sum = await timeCall('GET', `/summary?employeeId=${encodeURIComponent(emp.id)}&from=${periodStart}&to=${periodEnd}`);
+        if (sum && typeof sum.hours === 'number' && sum.hours > 0) {
+          runBody.hours = sum.hours;
+          hoursSource = 'timeclock';
+        }
+      }
       const payslip = await call('POST', `/employees/${encodeURIComponent(emp.id)}/payroll`, runBody);
       addToTotals(totals, payslip);
-      lines.push({ employeeId: emp.id, name, ok: true, payslip });
+      lines.push({ employeeId: emp.id, name, ok: true, payslip, hoursSource, hours: runBody.hours });
     } catch (err) {
       lines.push({ employeeId: emp.id, name, ok: false, error: err instanceof Error ? err.message : String(err) });
     }
@@ -281,8 +340,9 @@ export async function runBatch(
  */
 export async function meView(
   call: (method: string, path: string, body?: unknown) => Promise<any>,
+  timeCall: (method: string, path: string, body?: unknown) => Promise<any>,
   employeeId: string,
-): Promise<{ employee: any; payslips: any[]; ytd: { grossCents: number; netCents: number } }> {
+): Promise<{ employee: any; payslips: any[]; ytd: { grossCents: number; netCents: number }; entries: any[] }> {
   const employee = await call('GET', `/employees/${encodeURIComponent(employeeId)}`);
   const payslips: any[] = await call('GET', `/payslips?employeeId=${encodeURIComponent(employeeId)}`);
   payslips.sort((a, b) => (a.payDate < b.payDate ? 1 : -1));
@@ -290,6 +350,14 @@ export async function meView(
     (t, p) => ({ grossCents: t.grossCents + (p.grossCents ?? 0), netCents: t.netCents + (p.netCents ?? 0) }),
     { grossCents: 0, netCents: 0 },
   );
+  // Recent logged hours (best-effort — an unreachable timeclock doesn't break the page).
+  let entries: any[] = [];
+  try {
+    entries = await timeCall('GET', `/entries?employeeId=${encodeURIComponent(employeeId)}`);
+    if (Array.isArray(entries)) entries = entries.slice(-30).reverse();
+  } catch {
+    entries = [];
+  }
   // Return only what an employee should see (no employer-side ids beyond their own).
   const safeEmployee = {
     id: employee.id,
@@ -301,7 +369,7 @@ export async function meView(
     annualSalaryCents: employee.annualSalaryCents,
     hourlyRateCents: employee.hourlyRateCents,
   };
-  return { employee: safeEmployee, payslips, ytd };
+  return { employee: safeEmployee, payslips, ytd, entries };
 }
 
 function emptyTotals() {
@@ -345,13 +413,24 @@ async function proxy(
   url: URL,
 ): Promise<void> {
   const upstreamPath = url.pathname.slice('/api'.length); // "/api/employees" → "/employees"
-  const target = `${base}${upstreamPath}${url.search}`;
+  await proxyTo(base, apiKey, fetchImpl, req, res, upstreamPath, url.search);
+}
+
+/** Proxy the current request to `base + path + search`, server-side. */
+async function proxyTo(
+  base: string,
+  apiKey: string | undefined,
+  fetchImpl: typeof fetch,
+  req: IncomingMessage,
+  res: ServerResponse,
+  path: string,
+  search: string,
+): Promise<void> {
   const method = req.method ?? 'GET';
   const headers: Record<string, string> = { 'content-type': 'application/json' };
   if (apiKey) headers.authorization = `Bearer ${apiKey}`;
-
   const body = method === 'GET' || method === 'HEAD' ? undefined : await readRaw(req);
-  const upstream = await fetchImpl(target, { method, headers, body });
+  const upstream = await fetchImpl(`${base}${path}${search}`, { method, headers, body });
   const text = await upstream.text();
   res.writeHead(upstream.status, { 'content-type': 'application/json' });
   res.end(text);

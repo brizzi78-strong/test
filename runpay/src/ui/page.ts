@@ -99,14 +99,29 @@ details summary{cursor:pointer;font-size:.8rem;color:var(--brand)}
 
 <div class="card">
   <h2>Run payroll</h2>
-  <p class="lead">Pick the check date; every employee is run through the engine and totaled. Enter hours for hourly staff.</p>
-  <div class="row">
+  <p class="lead">Pick the check date and pay period; every employee is run through the engine and totaled. For hourly staff, logged hours are pulled from the timeclock for the period (or enter them below to override).</p>
+  <div class="row3">
+    <div><label>Pay period start</label><input id="periodStart" type="date"></div>
+    <div><label>Pay period end</label><input id="periodEnd" type="date"></div>
     <div><label>Check date</label><input id="payDate" type="date"></div>
-    <div style="display:flex;align-items:flex-end"><button class="btn" id="runBtn">Run this pay period</button></div>
   </div>
   <div id="hoursWrap"></div>
+  <div style="margin-top:12px"><button class="btn" id="runBtn">Run this pay period</button></div>
   <div id="runErr"></div>
   <div id="runOut"></div>
+</div>
+
+<div class="card">
+  <h2>Timesheets</h2>
+  <p class="lead">Log hours for hourly staff. Employees can also log their own via their self-service link.</p>
+  <div class="row3">
+    <div><label>Employee</label><select id="tsEmp"></select></div>
+    <div><label>Date</label><input id="tsDate" type="date"></div>
+    <div><label>Hours</label><input id="tsHours" inputmode="decimal" placeholder="8"></div>
+  </div>
+  <div id="tsErr"></div>
+  <div style="margin-top:12px"><button class="btn ghost" id="tsAdd">Log hours</button></div>
+  <div id="tsOut"></div>
 </div>
 
 <div class="card">
@@ -138,7 +153,9 @@ function boot(){
     fillSelect(document.getElementById('freq'),(META.payFrequencies||['weekly','biweekly','semimonthly','monthly']),prettyFreq);
     document.getElementById('freq').value='biweekly';
     fillSelect(document.getElementById('filing'),(META.filingStatuses||['single','married_jointly','head_of_household']),prettyFiling);
-    var d=document.getElementById('payDate'); if(!d.value){d.value=new Date().toISOString().slice(0,10);}
+    var today=new Date().toISOString().slice(0,10);
+    ['payDate','periodEnd','tsDate'].forEach(function(id){var el=document.getElementById(id);if(el&&!el.value)el.value=today;});
+    var ps=document.getElementById('periodStart');if(ps&&!ps.value){var d0=new Date();d0.setDate(d0.getDate()-13);ps.value=d0.toISOString().slice(0,10);}
     loadEmployees();
   }).catch(function(e){document.getElementById('bizline').textContent='Payroll service unreachable: '+e.message;});
 }
@@ -166,9 +183,30 @@ document.getElementById('addBtn').onclick=function(){
 
 function loadEmployees(){
   return api('GET','/api/employees?companyId='+encodeURIComponent(APP.companyId)).then(function(list){
-    EMPLOYEES=list||[];renderEmployees();renderHoursInputs();
+    EMPLOYEES=list||[];renderEmployees();renderHoursInputs();renderTsEmployees();
   });
 }
+
+function renderTsEmployees(){
+  var sel=document.getElementById('tsEmp');if(!sel)return;
+  var hourly=EMPLOYEES.filter(function(e){return e.payType==='hourly';});
+  if(!hourly.length){sel.innerHTML='<option value="">(no hourly employees)</option>';return;}
+  sel.innerHTML=hourly.map(function(e){return '<option value="'+esc(e.id)+'">'+esc(e.firstName+' '+e.lastName)+'</option>';}).join('');
+}
+
+document.getElementById('tsAdd').onclick=function(){
+  var err=document.getElementById('tsErr');err.innerHTML='';
+  var employeeId=document.getElementById('tsEmp').value;
+  var date=document.getElementById('tsDate').value;
+  var hours=parseFloat(document.getElementById('tsHours').value);
+  if(!employeeId){err.innerHTML='<div class="banner err">Add an hourly employee first.</div>';return;}
+  if(!date||isNaN(hours)||hours<=0){err.innerHTML='<div class="banner err">Enter a date and positive hours.</div>';return;}
+  this.disabled=true;var btn=this;
+  api('POST','/api/time/entries',{companyId:APP.companyId,employeeId:employeeId,date:date,hours:hours}).then(function(){
+    document.getElementById('tsHours').value='';toast('Logged '+hours+'h');
+    document.getElementById('tsOut').innerHTML='<div class="banner note">Logged '+esc(hours)+'h on '+esc(date)+'. It will be pulled into the next run for this pay period.</div>';
+  }).catch(function(e){err.innerHTML='<div class="banner err">'+esc(e.message)+'</div>';}).then(function(){btn.disabled=false;});
+};
 
 function compLine(e){
   if(e.payType==='salary'){return fmt(e.annualSalaryCents)+'/yr';}
@@ -211,8 +249,10 @@ document.getElementById('runBtn').onclick=function(){
   if(!payDate){errEl.innerHTML='<div class="banner err">Pick a check date.</div>';return;}
   var hours={};var hs=document.querySelectorAll('[data-hours]');
   for(var i=0;i<hs.length;i++){var v=parseFloat(hs[i].value);if(!isNaN(v))hours[hs[i].dataset.hours]=v;}
+  var periodStart=document.getElementById('periodStart').value;
+  var periodEnd=document.getElementById('periodEnd').value;
   this.disabled=true;var btn=this;document.getElementById('runOut').innerHTML='<p class="dim">Running&hellip;</p>';
-  api('POST','/api/run-batch',{payDate:payDate,hours:hours}).then(function(res){renderRun(res);}).catch(function(e){document.getElementById('runOut').innerHTML='';errEl.innerHTML='<div class="banner err">'+esc(e.message)+'</div>';}).then(function(){btn.disabled=false;loadEmployees();});
+  api('POST','/api/run-batch',{payDate:payDate,hours:hours,periodStart:periodStart,periodEnd:periodEnd}).then(function(res){renderRun(res);}).catch(function(e){document.getElementById('runOut').innerHTML='';errEl.innerHTML='<div class="banner err">'+esc(e.message)+'</div>';}).then(function(){btn.disabled=false;loadEmployees();});
 };
 
 function renderRun(res){
@@ -228,7 +268,8 @@ function renderRun(res){
   var rows=res.lines.map(function(l){
     if(!l.ok){return '<tr><td>'+esc(l.name)+'</td><td colspan="4"><span class="pill err">skipped</span> <span class="dim">'+esc(l.error)+'</span></td></tr>';}
     var p=l.payslip;var wh=(p.socialSecurityCents+p.medicareCents+(p.additionalMedicareCents||0)+p.federalIncomeTaxCents+p.stateIncomeTaxCents);
-    return '<tr><td>'+esc(l.name)+'</td><td class="num">'+fmt(p.grossCents)+'</td><td class="num">'+fmt(wh)+'</td><td class="num"><b>'+fmt(p.netCents)+'</b></td><td class="num">'+fmt(p.employer.socialSecurityCents+p.employer.medicareCents+p.employer.futaCents+p.employer.sutaCents)+'</td></tr>';
+    var src=l.hoursSource==='timeclock'?' <span class="pill ok" title="pulled from the timeclock">'+esc(l.hours)+'h</span>':(l.hoursSource==='entered'?' <span class="dim">'+esc(l.hours)+'h</span>':'');
+    return '<tr><td>'+esc(l.name)+src+'</td><td class="num">'+fmt(p.grossCents)+'</td><td class="num">'+fmt(wh)+'</td><td class="num"><b>'+fmt(p.netCents)+'</b></td><td class="num">'+fmt(p.employer.socialSecurityCents+p.employer.medicareCents+p.employer.futaCents+p.employer.sutaCents)+'</td></tr>';
   }).join('');
   document.getElementById('runOut').innerHTML='<div class="banner note">Ran payroll for '+esc(res.payDate)+' &mdash; '+t.employees+' employee(s).</div>'+tiles
     +'<table style="margin-top:12px"><thead><tr><th>Employee</th><th class="num">Gross</th><th class="num">Withheld</th><th class="num">Net</th><th class="num">Employer tax</th></tr></thead><tbody>'+rows+'</tbody></table>';

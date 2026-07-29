@@ -27,10 +27,22 @@ your accountant) to close that gap. See [`payroll/README.md`](../payroll/README.
 | `GET /me/:token` | employee | **Self-service**: their own pay stubs + YTD, read-only, no login. Always public. |
 | `GET /health` | — | Liveness. |
 | `GET /api/app` | employer | The configured business `{ companyId, businessName, jurisdiction }` plus upstream tax metadata (filing statuses, pay frequencies). |
-| `POST /api/run-batch` | employer | Run one check date across all (or selected) employees; returns per-employee payslips **and company totals**. |
+| `POST /api/run-batch` | employer | Run one check date across all (or selected) employees; returns per-employee payslips **and company totals**. With `periodStart`/`periodEnd`, hourly hours are pulled from the timeclock (explicitly entered hours override). |
 | `GET /api/employees/:id/selflink` | employer | Mint the employee's self-service link `{ token, path }`. |
-| `GET /api/me/:token` | employee | That employee's profile + pay stubs + YTD. Public; scoped strictly to the token's employee. |
+| `GET /api/me/:token` | employee | That employee's profile + pay stubs + YTD + recent hours. Public; scoped strictly to the token's employee. |
+| `POST /api/me/:token/hours` | employee | Log their own hours `{ date, hours, note? }`. Public; scoped to the token's employee. |
+| `/api/time/*` | employer | Proxied to the Timeclock service (record / list / delete hours). |
 | `/api/*` | employer | Transparently proxied to the Payroll service (employees, payslips, …). |
+
+### Time & attendance → payroll
+
+Hourly hours don't have to be typed in at run time. Log them through the
+console's **Timesheets** card or the employee's own self-service link; they're
+stored in the [`timeclock`](../timeclock) service. When you run a pay period with
+`periodStart`/`periodEnd`, each hourly employee's hours are **pulled from the
+timeclock** for that range and fed into the engine — the result marks whether
+each line's hours came from the timeclock or were entered by hand (an explicit
+entry always wins).
 
 ### Employee self-service (the "MyPay" surface)
 
@@ -81,6 +93,7 @@ npm run typecheck
 |---|---|
 | `PORT` | Listen port (default 4700). |
 | `PAYROLL_URL` | Payroll service base URL (default `http://payroll:3500`). |
+| `TIMECLOCK_URL` | Timeclock service base URL (default `http://timeclock:4800`). |
 | `BUSINESS_NAME` | Company payroll is run for (default "Blue Ridge Press LLC"). |
 | `BUSINESS_COMPANY_ID` | Reuse an existing Payroll company id (recommended in prod). |
 | `PAYROLL_JURISDICTION` | Tax jurisdiction for a newly created company (default `raleigh_nc`). |

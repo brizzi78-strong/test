@@ -212,16 +212,29 @@ services:
     depends_on:
       - accounting
 
+  # Time & attendance: hourly timesheet entries that total per pay period and
+  # feed into payroll. Reachable at :4800.
+  timeclock:
+    <<: *service
+    command: node timeclock/src/index.ts
+    environment:
+      PORT: "4800"
+      TIMECLOCK_DB: /data/timeclock.db
+    ports: ["4800:4800"]
+    volumes: ["timeclock-data:/data"]
+
   # Cardinal Payroll: an ADP-style Run Payroll console. Add employees, run a
   # whole pay period at once, and see every paycheck gross-to-net plus company
   # totals (gross, withholding, net, employer tax, cash to remit). A BFF over the
-  # Payroll service — the engine does the real math. Reachable at :4700.
+  # Payroll service — the engine does the real math. Hourly hours are pulled from
+  # the Timeclock for the pay period. Reachable at :4700.
   runpay:
     <<: *service
     command: node runpay/src/index.ts
     environment:
       PORT: "4700"
       PAYROLL_URL: http://payroll:3500
+      TIMECLOCK_URL: http://timeclock:4800
       BUSINESS_COMPANY_ID: ${PAYROLL_COMPANY_ID:-}
       BUSINESS_NAME: ${BUSINESS_NAME:-Blue Ridge Press LLC}
       RUNPAY_USER: ${RUNPAY_USER:-}
@@ -231,6 +244,7 @@ services:
     ports: ["4700:4700"]
     depends_on:
       - payroll
+      - timeclock
 
   # Human-facing admin console: a single-page HR UI plus a backend-for-frontend
   # that proxies to the orchestrator server-side (so no credentials reach the
@@ -293,4 +307,5 @@ volumes:
   booking-data:
   accounting-data:
   verify-data:
+  timeclock-data:
   gateway-data:
