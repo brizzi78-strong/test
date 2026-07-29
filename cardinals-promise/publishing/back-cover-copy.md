@@ -4,6 +4,20 @@
 > regenerates to match. Front-panel design is now the author's finished
 > **cream** cover (July 2026); see the design brief at the bottom.
 
+> **TITLE LOCKED (July 2026):** the title is **"It's Not Your Fault"** — carried
+> by the crossout device (strike out **ALL**, "Not" written above). It is **not**
+> being retitled to "It's Not All Your Fault." Everywhere the title is written out
+> (spine, back copy, metadata, Amazon) it reads *It's Not Your Fault* — the word
+> "ALL" appears **only** inside the front crossout.
+>
+> **NEW COVER DIRECTION (July 2026):** a **maroon-and-gold** wrap by cover artist
+> **Grace Nobrega** is in progress and, once corrected to spec, supersedes the cream
+> cover for this book. Correction spec sent to Grace: `Cover-Spec-for-Grace.pdf`
+> (fix spine/back title to drop "All"; keep the ALL-crossout front; real ISBN
+> 979-8-9966446-0-5 with the barcode zone left blank for KDP; wrap 17.8626 × 11.25 in,
+> spine 0.6126" for the 261pp interior; restore the CDP bio). The cream files remain
+> as a backup until the corrected maroon print file is delivered and adopted.
+
 ## Endorsement (leads the back panel, above the headline) — ON HOLD (July 2026)
 The physician endorsements (Ferrera, Huet) are pulled "for now" at the
 author's request. The back panel currently leads with the headline; the
