@@ -2,7 +2,7 @@
 <style>
   :root{
     --ink:#460f18; --night:#3a0b12; --panel:#57131f; --snow:#ffffff;
-    --mist:rgba(255,236,236,.82); --faint:rgba(255,236,236,.5); --gold:#f2cccc;
+    --mist:rgba(255,236,236,.82); --faint:rgba(255,236,236,.5); --gold:#f2cccc; --gold-line:rgba(242,204,204,.4);
     --ember:rgba(226,55,68,.30);
     --serif:"Hoefler Text","Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
     --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
@@ -11,6 +11,7 @@
   body{margin:0;background:var(--ink);color:var(--snow);font-family:var(--sans);
     -webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.6}
   ::selection{background:var(--snow);color:var(--ink)}
+  em{font-style:italic}
   .glow{position:fixed;top:-16%;left:50%;transform:translateX(-50%);width:80vw;height:60vh;z-index:0;
     pointer-events:none;filter:blur(90px);border-radius:50%;
     background:radial-gradient(closest-side,var(--ember),transparent)}
@@ -34,21 +35,23 @@
   .soon .dot{width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 10px var(--gold);
     animation:pulse 2.4s ease-in-out infinite}
   @keyframes pulse{0%,100%{opacity:.4}50%{opacity:1}}
-  .cue{margin-top:2.2rem;color:var(--faint);font-size:.7rem;letter-spacing:.3em;text-transform:uppercase}
+  .cue{margin-top:2rem;color:var(--faint);font-size:.7rem;letter-spacing:.3em;text-transform:uppercase}
+
+  .kicker{font-size:.74rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin:0 0 1rem}
 
   /* difference */
   .diff{padding:clamp(4rem,10vh,7rem) 0;border-top:1px solid rgba(255,255,255,.12)}
-  .kicker{font-size:.74rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin:0 0 1rem;text-align:center}
+  .diff .kicker{text-align:center}
   .diff h2{font-family:var(--serif);font-weight:500;font-size:clamp(2rem,5vw,3.2rem);letter-spacing:-.015em;
     text-align:center;margin:0 0 3rem;text-wrap:balance}
-  .rows{display:flex;flex-direction:column;gap:0}
+  .rows{display:flex;flex-direction:column}
   .row{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,5vw,3rem);align-items:center;
     padding:1.2rem 0;border-top:1px solid rgba(255,255,255,.1)}
   .row:last-child{border-bottom:1px solid rgba(255,255,255,.1)}
   .fb{color:var(--faint);text-align:right}
   .fb s{text-decoration-color:rgba(255,255,255,.3)}
   .us{color:var(--snow);font-weight:600}
-  .col-head{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;padding-bottom:.2rem}
+  .col-head{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase}
   .col-head.fb{color:var(--faint)}
   .col-head.us{color:var(--gold)}
 
@@ -59,6 +62,23 @@
   .signature p{color:var(--mist);max-width:34rem;margin:0 auto;font-size:1.08rem}
   .signature p b{color:var(--snow)}
 
+  /* founding-50 offer */
+  .offer{padding:0 0 clamp(4rem,9vh,6rem)}
+  .offer-card{display:flex;align-items:center;gap:clamp(1.4rem,4vw,2.6rem);flex-wrap:wrap;justify-content:center;
+    text-align:left;background:
+      radial-gradient(60rem 30rem at 100% 0,rgba(226,55,68,.14),transparent),
+      linear-gradient(180deg,var(--panel),var(--ink));
+    border:1px solid var(--gold-line);border-radius:24px;padding:clamp(1.8rem,4vw,2.8rem)}
+  .offer-seal{flex:0 0 auto;width:118px;height:118px;border-radius:50%;display:grid;place-items:center;
+    border:2px solid var(--gold-line);color:var(--gold);font-family:var(--serif);line-height:.9;text-align:center;
+    box-shadow:inset 0 0 30px rgba(242,204,204,.08)}
+  .offer-seal b{font-size:2.5rem;font-weight:500;letter-spacing:-.02em}
+  .offer-seal span{display:block;font-family:var(--sans);font-size:.66rem;letter-spacing:.34em;text-transform:uppercase;margin-top:.35rem}
+  .offer-body{flex:1;min-width:16rem}
+  .offer-body h3{font-family:var(--serif);font-weight:500;font-size:clamp(1.5rem,3.4vw,2.2rem);letter-spacing:-.01em;margin:.2rem 0 .7rem;text-wrap:balance}
+  .offer-body p{color:var(--mist);margin:0;font-size:1.06rem;max-width:38ch}
+  .offer-body p b{color:var(--snow)}
+
   footer{border-top:1px solid rgba(255,255,255,.1);padding:2.4rem 0 3rem;text-align:center;color:var(--faint);font-size:.82rem;letter-spacing:.04em}
   @media(max-width:640px){
     .row{grid-template-columns:1fr;gap:.15rem;text-align:center}
@@ -66,6 +86,7 @@
     .col-head{display:none}
     .fb::before{content:"Facebook — ";color:var(--faint);font-weight:600}
     .us::before{content:"The Cardinal — ";color:var(--gold);font-weight:700}
+    .offer-card{text-align:center}
   }
   @media(prefers-reduced-motion:reduce){.soon .dot{animation:none}}
 </style>
@@ -79,7 +100,7 @@
     <p class="eyebrow">For the woke and the unwoke</p>
     <h1>It's what<br><em>you asked for.</em></h1>
     <p class="lead">A social network of <b>real, verified people</b> — your actual circle, no outrage algorithm. <b>No sides. Just people.</b></p>
-    <span class="soon"><span class="dot"></span> Launching soon</span>
+    <span class="soon"><span class="dot"></span> Launching soon · Founding 50 get 50% off the book</span>
     <div class="cue">Why not just Facebook? ↓</div>
   </section>
 
@@ -98,6 +119,17 @@
       <div class="heart">♥</div>
       <h3>The one thing Facebook can't copy.</h3>
       <p>When someone's having a hard time, they raise a quiet signal — <b>“I could use some support.”</b> Only their circle sees it, and it's one tap to be there. A feed that helps you <b>show up for the people you love</b>, instead of just scroll past them.</p>
+    </div>
+  </section>
+
+  <section class="wrap offer">
+    <div class="offer-card">
+      <div class="offer-seal"><b>50%</b><span>off</span></div>
+      <div class="offer-body">
+        <p class="kicker">The founding 50</p>
+        <h3>Be one of the first 50 — the book's on us, half off.</h3>
+        <p>As a thank-you for being early, the <b>first 50 members</b> get <b>50% off <em>The Cardinal's Promise</em></b> — Rob Brizzi's book on showing up for the people you love, all the way to the end. The same reason this place exists.</p>
+      </div>
     </div>
   </section>
 
