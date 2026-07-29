@@ -111,6 +111,21 @@ services:
     ports: ["4400:4400"]
     volumes: ["accounting-data:/data"]
 
+  # Cardinal Verify: consent-based reference / employment / education
+  # verification. One self-contained app with a password-gated employer console
+  # plus public, token-gated candidate-consent and verifier pages. Reachable at
+  # http://localhost:4600. Set VERIFY_USER/VERIFY_PASSWORD to gate the console.
+  verify:
+    <<: *service
+    command: node verify/src/index.ts
+    environment:
+      PORT: "4600"
+      VERIFY_DB: /data/verify.db
+      VERIFY_USER: ${VERIFY_USER:-}
+      VERIFY_PASSWORD: ${VERIFY_PASSWORD:-}
+    ports: ["4600:4600"]
+    volumes: ["verify-data:/data"]
+
   # Shared-identity layer: one canonical company/person that cascades into every
   # service above and records the id map, so "one employee record" resolves
   # across all of them. Reaches the services by their compose names.
@@ -245,4 +260,5 @@ volumes:
   orchestrator-data:
   booking-data:
   accounting-data:
+  verify-data:
   gateway-data:
