@@ -21,6 +21,30 @@ node social/server.mjs      # then open http://localhost:4000
 
 Env: `PORT` (default 4000), `NEST_DB` (default `social/nest.db`, git-ignored).
 
+## Install it on a phone (PWA)
+
+The site is a **progressive web app** — a web-manifest, a service worker that caches
+the app shell (never the API or the live stream), and app icons. Open it in a mobile
+browser and choose **Add to Home Screen**; it launches full-screen like a native app
+and opens instantly. Nothing to install from a store.
+
+## Put it online (your own server, one command)
+
+No SaaS, no vendor lock-in — just Node.js and Caddy for automatic HTTPS. On a fresh
+Ubuntu/Debian server whose domain's DNS already points at it:
+
+```bash
+sudo bash social/deploy/setup.sh yourdomain.com
+```
+
+That installs Node 22, runs the app as a locked-down `cardinal-social` systemd service
+on port 4000, seeds the founder profile, and installs Caddy to fetch a free Let's
+Encrypt certificate. When it finishes, `https://yourdomain.com` is live and installable.
+It runs on port 4000, so it can share a server with the Cardinal dating app (port 3000).
+
+- Logs: `journalctl -u cardinal-social -f`
+- Restart: `systemctl restart cardinal-social`
+
 **Seed the founder profile** (optional, idempotent) — creates Rob Brizzi's account with
 photo and a welcome post so a fresh database isn't empty:
 
