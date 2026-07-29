@@ -1,14 +1,14 @@
 <title>The Cardinal — it's what you asked for</title>
 <style>
   :root{
-    --ink:#460f18; --snow:#ffffff;
-    --mist:rgba(255,236,236,.82); --faint:rgba(255,236,236,.55); --gold:#f2cccc;
+    --ink:#460f18; --night:#3a0b12; --panel:#57131f; --snow:#ffffff;
+    --mist:rgba(255,236,236,.82); --faint:rgba(255,236,236,.5); --gold:#f2cccc;
     --ember:rgba(226,55,68,.30);
     --serif:"Hoefler Text","Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
     --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
   }
   *{box-sizing:border-box}
-  body{margin:0;min-height:100svh;background:var(--ink);color:var(--snow);font-family:var(--sans);
+  body{margin:0;background:var(--ink);color:var(--snow);font-family:var(--sans);
     -webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.6}
   ::selection{background:var(--snow);color:var(--ink)}
   .glow{position:fixed;top:-16%;left:50%;transform:translateX(-50%);width:80vw;height:60vh;z-index:0;
@@ -16,37 +16,90 @@
     background:radial-gradient(closest-side,var(--ember),transparent)}
   .grain{position:fixed;inset:0;z-index:2;pointer-events:none;opacity:.05;mix-blend-mode:overlay;
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E")}
-  .stage{position:relative;z-index:1;min-height:100svh;display:flex;flex-direction:column;
-    justify-content:center;align-items:center;text-align:center;padding:clamp(1.5rem,6vw,3rem)}
-  .brand{display:flex;align-items:center;gap:.55rem;font-weight:600;letter-spacing:.02em;
-    font-size:1.05rem;margin-bottom:2.6rem}
+  .page{position:relative;z-index:1}
+  .wrap{max-width:60rem;margin-inline:auto;padding-inline:clamp(1.5rem,6vw,3rem)}
+
+  .stage{min-height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:center;
+    text-align:center;padding:clamp(1.5rem,6vw,3rem)}
+  .brand{display:flex;align-items:center;gap:.55rem;font-weight:600;letter-spacing:.02em;font-size:1.05rem;margin-bottom:2.4rem}
   .seal{width:20px;height:20px;border-radius:50%;background:var(--snow);box-shadow:0 0 16px rgba(255,255,255,.25)}
   .eyebrow{font-size:.74rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);margin:0 0 1.3rem;font-weight:600}
   h1{font-family:var(--serif);font-weight:500;letter-spacing:-.02em;line-height:.98;margin:0;
-    font-size:clamp(2.8rem,12vw,7.5rem);text-wrap:balance}
+    font-size:clamp(2.8rem,12vw,7rem);text-wrap:balance}
   h1 em{font-style:italic}
-  .lead{max-width:32rem;color:var(--mist);font-size:clamp(1.05rem,2.2vw,1.35rem);margin:1.9rem 0 0}
+  .lead{max-width:32rem;color:var(--mist);font-size:clamp(1.05rem,2.2vw,1.3rem);margin:1.9rem 0 0}
   .lead b{color:var(--snow);font-weight:600}
-  .soon{margin-top:2.8rem;display:inline-flex;align-items:center;gap:.6rem;
-    font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);
-    border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:.6rem 1.2rem}
-  .soon .dot{width:7px;height:7px;border-radius:50%;background:var(--gold);
-    box-shadow:0 0 10px var(--gold);animation:pulse 2.4s ease-in-out infinite}
+  .soon{margin-top:2.6rem;display:inline-flex;align-items:center;gap:.6rem;font-size:.72rem;letter-spacing:.28em;
+    text-transform:uppercase;color:var(--gold);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:.6rem 1.2rem}
+  .soon .dot{width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 10px var(--gold);
+    animation:pulse 2.4s ease-in-out infinite}
   @keyframes pulse{0%,100%{opacity:.4}50%{opacity:1}}
-  .foot{position:fixed;bottom:1.4rem;left:0;right:0;z-index:1;text-align:center;
-    color:var(--faint);font-size:.8rem;letter-spacing:.04em}
+  .cue{margin-top:2.2rem;color:var(--faint);font-size:.7rem;letter-spacing:.3em;text-transform:uppercase}
+
+  /* difference */
+  .diff{padding:clamp(4rem,10vh,7rem) 0;border-top:1px solid rgba(255,255,255,.12)}
+  .kicker{font-size:.74rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin:0 0 1rem;text-align:center}
+  .diff h2{font-family:var(--serif);font-weight:500;font-size:clamp(2rem,5vw,3.2rem);letter-spacing:-.015em;
+    text-align:center;margin:0 0 3rem;text-wrap:balance}
+  .rows{display:flex;flex-direction:column;gap:0}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,5vw,3rem);align-items:center;
+    padding:1.2rem 0;border-top:1px solid rgba(255,255,255,.1)}
+  .row:last-child{border-bottom:1px solid rgba(255,255,255,.1)}
+  .fb{color:var(--faint);text-align:right}
+  .fb s{text-decoration-color:rgba(255,255,255,.3)}
+  .us{color:var(--snow);font-weight:600}
+  .col-head{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;padding-bottom:.2rem}
+  .col-head.fb{color:var(--faint)}
+  .col-head.us{color:var(--gold)}
+
+  .signature{margin-top:3rem;background:linear-gradient(180deg,var(--panel),var(--ink));
+    border:1px solid rgba(255,255,255,.14);border-radius:22px;padding:clamp(1.6rem,4vw,2.4rem);text-align:center}
+  .signature .heart{color:#ff8f8f;font-size:1.4rem}
+  .signature h3{font-family:var(--serif);font-weight:500;font-size:clamp(1.5rem,3.4vw,2.2rem);margin:.5rem 0 .8rem;letter-spacing:-.01em}
+  .signature p{color:var(--mist);max-width:34rem;margin:0 auto;font-size:1.08rem}
+  .signature p b{color:var(--snow)}
+
+  footer{border-top:1px solid rgba(255,255,255,.1);padding:2.4rem 0 3rem;text-align:center;color:var(--faint);font-size:.82rem;letter-spacing:.04em}
+  @media(max-width:640px){
+    .row{grid-template-columns:1fr;gap:.15rem;text-align:center}
+    .fb{text-align:center}
+    .col-head{display:none}
+    .fb::before{content:"Facebook — ";color:var(--faint);font-weight:600}
+    .us::before{content:"The Cardinal — ";color:var(--gold);font-weight:700}
+  }
   @media(prefers-reduced-motion:reduce){.soon .dot{animation:none}}
 </style>
 
 <div class="glow"></div>
 <div class="grain" aria-hidden="true"></div>
 
-<main class="stage">
-  <div class="brand"><span class="seal"></span> The Cardinal</div>
-  <p class="eyebrow">For the woke and the unwoke</p>
-  <h1>It's what<br><em>you asked for.</em></h1>
-  <p class="lead">A social network of <b>real, verified people</b> — your actual circle, no outrage algorithm. <b>No sides. Just people.</b></p>
-  <span class="soon"><span class="dot"></span> Launching soon</span>
-</main>
+<div class="page">
+  <section class="stage">
+    <div class="brand"><span class="seal"></span> The Cardinal</div>
+    <p class="eyebrow">For the woke and the unwoke</p>
+    <h1>It's what<br><em>you asked for.</em></h1>
+    <p class="lead">A social network of <b>real, verified people</b> — your actual circle, no outrage algorithm. <b>No sides. Just people.</b></p>
+    <span class="soon"><span class="dot"></span> Launching soon</span>
+    <div class="cue">Why not just Facebook? ↓</div>
+  </section>
 
-<div class="foot">Invite-only · verified members · no ads, ever</div>
+  <section class="wrap diff">
+    <p class="kicker">The difference</p>
+    <h2>Every network was built to keep you scrolling.<br>This one was built to keep you close.</h2>
+    <div class="rows">
+      <div class="row"><div class="col-head fb">Facebook</div><div class="col-head us">The Cardinal</div></div>
+      <div class="row"><div class="fb"><s>Sells your attention &amp; data — you're the product</s></div><div class="us">No ads, ever — you're the member</div></div>
+      <div class="row"><div class="fb"><s>An algorithm decides what enrages you</s></div><div class="us">Your circle, in order — then you're caught up</div></div>
+      <div class="row"><div class="fb"><s>Bots, burners, strangers</s></div><div class="us">Verified real people — real name, real face</div></div>
+      <div class="row"><div class="fb"><s>A place to perform</s></div><div class="us">A place to show up</div></div>
+    </div>
+
+    <div class="signature">
+      <div class="heart">♥</div>
+      <h3>The one thing Facebook can't copy.</h3>
+      <p>When someone's having a hard time, they raise a quiet signal — <b>“I could use some support.”</b> Only their circle sees it, and it's one tap to be there. A feed that helps you <b>show up for the people you love</b>, instead of just scroll past them.</p>
+    </div>
+  </section>
+
+  <footer>Invite-only · verified members · no ads, ever · © The Cardinal</footer>
+</div>
