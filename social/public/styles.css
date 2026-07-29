@@ -126,6 +126,43 @@ textarea{resize:vertical}
 /* badge */
 .badge{display:inline-grid;place-items:center;min-width:18px;height:18px;padding:0 5px;border-radius:999px;background:var(--like);color:#fff;font-size:.7rem;font-weight:800;vertical-align:1px;margin-left:.15rem}
 
+/* Notification bell + panel */
+.bell-wrap{position:relative}
+.icon-btn{position:relative;border:0;background:none;color:var(--muted);cursor:pointer;padding:.4rem;border-radius:10px;display:grid;place-items:center}
+.icon-btn:hover{background:var(--brand-soft);color:var(--brand-ink)}
+.icon-btn svg{width:22px;height:22px}
+.icon-btn .badge{position:absolute;top:0;right:0;margin:0}
+.notif-panel{position:absolute;right:0;top:calc(100% + .5rem);width:340px;max-width:88vw;padding:.4rem;z-index:40;max-height:70vh;overflow-y:auto}
+.notif-head{font-weight:800;padding:.6rem .7rem;border-bottom:1px solid var(--line)}
+.notif-list{display:flex;flex-direction:column}
+.notif{display:flex;gap:.6rem;align-items:flex-start;padding:.65rem .7rem;border-radius:12px;text-align:left;width:100%;border:0;background:none;cursor:default}
+.notif.unread{background:var(--brand-soft)}
+.notif .avatar{width:38px;height:38px;font-size:.85rem}
+.notif-body{font-size:.9rem;line-height:1.4}
+.notif-body b{font-weight:700}
+.notif-time{color:var(--faint);font-size:.75rem;margin-top:.1rem}
+.notif.reach .notif-body{color:var(--brand-ink);font-weight:600}
+.notif-empty{text-align:center;color:var(--muted);padding:1.5rem}
+
+/* Check-in strip (the signature feature) */
+.checkin{padding:.9rem 1rem;margin-bottom:1rem;border:1px solid color-mix(in srgb,var(--like) 30%,var(--line))}
+.checkin-head{font-weight:800;margin-bottom:.6rem;color:var(--ink)}
+.checkin-person{display:flex;align-items:center;gap:.7rem;padding:.5rem 0}
+.checkin-person+.checkin-person{border-top:1px solid var(--line)}
+.checkin-person .who{flex:1;min-width:0}
+.checkin-person .p-name{font-weight:700}
+.checkin-person .p-note{color:var(--muted);font-size:.85rem}
+.reach-btn{border:0;border-radius:999px;background:var(--like);color:#fff;font-weight:700;padding:.5rem .9rem;cursor:pointer;white-space:nowrap;flex:0 0 auto}
+.reach-btn:hover{filter:brightness(.94)}
+.reach-btn:disabled{opacity:.6;cursor:default}
+
+/* Care banner */
+.care-banner{display:flex;justify-content:center;margin-bottom:1rem;font-size:.9rem;color:var(--muted)}
+.care-banner span{margin-right:.4rem}
+.care-on-text{color:var(--like);font-weight:600}
+.link-btn{border:0;background:none;color:var(--brand);font-weight:700;cursor:pointer;padding:0}
+.link-btn:hover{text-decoration:underline}
+
 /* People / friends */
 .people-card{padding:1.1rem}
 .people-search{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:.7rem 1.1rem;margin-bottom:1rem}

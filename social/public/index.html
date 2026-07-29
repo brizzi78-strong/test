@@ -3,19 +3,29 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Nest — where your people are</title>
+<title>The Cardinal — where your people are</title>
 <meta name="theme-color" content="#4f46e5">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%234f46e5'/%3E%3Cpath d='M9 22V13l7-4 7 4v9h-5v-6h-4v6z' fill='white'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%234f46e5'/%3E%3Ctext x='16' y='23' font-size='20' font-family='Georgia,serif' font-weight='bold' fill='white' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header class="topbar" id="topbar" hidden>
-  <a class="brand" href="#" id="brandHome"><span class="brand-mark">N</span><span class="brand-word">Nest</span></a>
+  <a class="brand" href="#" id="brandHome"><span class="brand-mark">C</span><span class="brand-word">The Cardinal</span></a>
   <div class="top-actions">
     <button class="top-tab active" data-view="feed" title="Home">Home</button>
     <button class="top-tab" data-view="friends" title="Friends">Friends <span class="badge" id="reqBadge" hidden>0</span></button>
-    <button class="top-tab" data-view="profile" title="Profile">Profile</button>
-    <button class="avatar-btn" id="meAvatar" title="You"></button>
+    <div class="bell-wrap">
+      <button class="icon-btn" id="bell" title="Notifications" aria-label="Notifications">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+        <span class="badge" id="notifBadge" hidden>0</span>
+      </button>
+      <div class="notif-panel card" id="notifPanel" hidden>
+        <div class="notif-head">Notifications</div>
+        <div class="notif-list" id="notifList"></div>
+        <p class="notif-empty" id="notifEmpty" hidden>No notifications yet.</p>
+      </div>
+    </div>
+    <button class="avatar-btn" id="meAvatar" title="Your profile"></button>
     <button class="ghost-btn" id="logout">Sign out</button>
   </div>
 </header>
@@ -24,13 +34,13 @@
   <!-- AUTH -->
   <section class="view auth" id="view-auth">
     <div class="auth-hero">
-      <div class="hero-mark">N</div>
+      <div class="hero-mark">C</div>
       <h1>Where your people are.</h1>
-      <p>Share what's happening, see what your friends are up to, and stay close — all in one place.</p>
+      <p>A network of real, verified people — where you share, stay close, and actually show up for each other.</p>
       <ul class="hero-points">
         <li>Post updates and photos</li>
         <li>Like and comment in real time</li>
-        <li>Your feed, your circle</li>
+        <li>Reach out when someone needs you</li>
       </ul>
     </div>
     <div class="auth-card">
@@ -50,6 +60,22 @@
 
   <!-- FEED -->
   <section class="view feed" id="view-feed" hidden>
+    <div class="checkin card" id="checkinStrip" hidden>
+      <div class="checkin-head">💛 Someone in your circle could use support</div>
+      <div id="checkinList"></div>
+    </div>
+
+    <div class="care-banner" id="careBanner">
+      <div id="careOff">
+        <span>Going through something?</span>
+        <button class="link-btn" id="careRaise">Let your circle know →</button>
+      </div>
+      <div id="careOn" hidden>
+        <span class="care-on-text">💛 Your circle can see you could use support.</span>
+        <button class="link-btn" id="careClear">I'm okay now</button>
+      </div>
+    </div>
+
     <div class="composer card">
       <div class="composer-top">
         <div class="avatar" id="composerAvatar"></div>
@@ -78,7 +104,7 @@
         <h3 class="section-h">Friend requests</h3>
         <div id="requestsList" class="people-list"></div>
       </div>
-      <h3 class="section-h" id="peopleHeading">People on Nest</h3>
+      <h3 class="section-h" id="peopleHeading">People on The Cardinal</h3>
       <div id="peopleList" class="people-list"></div>
       <p id="peopleEmpty" class="muted people-empty" hidden>No one found.</p>
     </div>

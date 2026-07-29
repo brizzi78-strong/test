@@ -1,8 +1,17 @@
-# Nest — a social network
+# The Cardinal — a social network
 
-A Facebook-style social site, built in phases. **Zero third-party vendors** — only
-Node.js built-ins (`node:http`, `node:sqlite`, `node:crypto`). "Nest" is a working
-name; rename freely.
+A Facebook-style social site, built in phases, but built around a different idea:
+**real, verified people who actually show up for each other** — not an engagement
+machine. **Zero third-party vendors** — only Node.js built-ins (`node:http`,
+`node:sqlite`, `node:crypto`).
+
+## The signature feature — "Reach out"
+
+The differentiator no other network has: a member can quietly raise a **care signal**
+("I could use some support") with an optional note. Their **friends only** see it at the
+top of their feed and can **Reach out 💛** in one tap, which sends that person a
+notification that someone is thinking of them. It turns a feed into a support network —
+the digital version of showing up for the people you care about.
 
 ## Run it
 
@@ -25,8 +34,8 @@ node social/seed.mjs        # log in: rob@thecardinal.com / cardinal1
 |-------|--------|------|
 | **1 — Feed** | ✅ done | Accounts, profiles (name, bio, photo), **posts (text + photo), news feed, likes, comments** |
 | **2 — Friends** | ✅ done | **People search, friend requests/accept/decline, feed scoped to your circle** |
-| 3 — Notifications | next | Real-time alerts (likes, comments, requests) via server-sent events |
-| 4 — Messaging | | Direct messages |
+| **3 — Notifications + Reach out** | ✅ done | **Real-time notification bell (likes, comments, friend events) via server-sent events, plus the "care signal / reach out" feature** |
+| 4 — Messaging | next | Direct messages |
 | 5 — Groups | | Create/join groups, group feeds |
 | 6 — Photos & profiles | | Albums, richer profile pages |
 

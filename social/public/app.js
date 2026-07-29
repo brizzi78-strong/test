@@ -57,7 +57,7 @@
     try { await api("/api/" + (mode === "signup" ? "signup" : "login"), { method: "POST", body }); await boot(); }
     catch (err) { const p = el("authErr"); p.textContent = err.message; p.hidden = false; }
   };
-  el("logout").onclick = async () => { await api("/api/logout", { method: "POST" }); me = null; el("topbar").hidden = true; show("auth"); };
+  el("logout").onclick = async () => { closeStream(); await api("/api/logout", { method: "POST" }); me = null; el("topbar").hidden = true; show("auth"); };
   el("brandHome").onclick = (e) => { e.preventDefault(); go("feed"); };
   document.querySelectorAll(".top-tab").forEach((t) => (t.onclick = () => go(t.dataset.view)));
   el("meAvatar").onclick = () => go("profile");
@@ -91,7 +91,7 @@
     // When the requests block is shown, don't repeat those people in the main list.
     const reqIds = new Set(requests.map((r) => r.id));
     const listPeople = showRequests ? people.filter((p) => !reqIds.has(p.id)) : people;
-    el("peopleHeading").textContent = searching ? "Results" : "People on Nest";
+    el("peopleHeading").textContent = searching ? "Results" : "People on The Cardinal";
     const list = el("peopleList"); list.innerHTML = "";
     el("peopleEmpty").hidden = listPeople.length > 0;
     listPeople.forEach((p) => list.appendChild(renderPerson(p, false)));
@@ -178,6 +178,8 @@
 
   /* ---------- Feed ---------- */
   async function loadFeed() {
+    renderCare();
+    loadCheckin();
     let data; try { data = await api("/api/feed"); } catch { return; }
     const wrap = el("posts"); wrap.innerHTML = "";
     el("feedEmpty").hidden = data.posts.length > 0;
@@ -244,6 +246,89 @@
     return row;
   }
 
+  /* ---------- Notifications ---------- */
+  el("bell").onclick = (e) => { e.stopPropagation(); toggleNotifs(); };
+  document.addEventListener("click", (e) => { const p = el("notifPanel"); if (!p.hidden && !p.contains(e.target) && !el("bell").contains(e.target)) p.hidden = true; });
+  async function toggleNotifs() {
+    const panel = el("notifPanel");
+    if (panel.hidden) { await loadNotifs(); panel.hidden = false; try { await api("/api/notifications/read", { method: "POST" }); } catch {} setNotifBadge(0); }
+    else panel.hidden = true;
+  }
+  function notifText(n) {
+    const name = esc(n.actor.name || "Someone");
+    return ({
+      like: `<b>${name}</b> liked your post`,
+      comment: `<b>${name}</b> commented on your post`,
+      friend_request: `<b>${name}</b> sent you a friend request`,
+      friend_accept: `<b>${name}</b> accepted your friend request`,
+      reach_out: `<b>${name}</b> reached out to check in on you 💛`,
+    })[n.type] || `<b>${name}</b> did something`;
+  }
+  function renderNotif(n) {
+    const row = document.createElement("div");
+    row.className = "notif" + (n.read ? "" : " unread") + (n.type === "reach_out" ? " reach" : "");
+    const av = avatarInner(n.actor);
+    row.innerHTML = `<div class="avatar" ${av.style ? `style="${av.style}"` : ""}>${av.text}</div>
+      <div><div class="notif-body">${notifText(n)}</div><div class="notif-time">${timeago(n.created)}</div></div>`;
+    return row;
+  }
+  async function loadNotifs() {
+    let d; try { d = await api("/api/notifications"); } catch { return; }
+    const list = el("notifList"); list.innerHTML = "";
+    el("notifEmpty").hidden = d.notifications.length > 0;
+    d.notifications.forEach((n) => list.appendChild(renderNotif(n)));
+  }
+  function setNotifBadge(n) { const b = el("notifBadge"); if (n > 0) { b.textContent = n > 9 ? "9+" : n; b.hidden = false; } else b.hidden = true; }
+  async function refreshNotifBadge() { try { setNotifBadge((await api("/api/notifications")).unread); } catch {} }
+
+  /* ---------- Care signal ---------- */
+  el("careRaise").onclick = async () => {
+    const note = prompt("Add a short note for your circle? (optional)") || "";
+    try { await api("/api/support", { method: "PUT", body: { on: true, note } }); me.profile.support = { on: true, note }; renderCare(); toast("Your circle can see you could use support."); }
+    catch (e) { toast(e.message); }
+  };
+  el("careClear").onclick = async () => {
+    try { await api("/api/support", { method: "PUT", body: { on: false } }); me.profile.support = { on: false, note: "" }; renderCare(); }
+    catch (e) { toast(e.message); }
+  };
+  function renderCare() { const on = !!(me.profile.support && me.profile.support.on); el("careOff").hidden = on; el("careOn").hidden = !on; }
+
+  /* ---------- Check-in strip ---------- */
+  async function loadCheckin() {
+    let d; try { d = await api("/api/support/circle"); } catch { return; }
+    const strip = el("checkinStrip"), list = el("checkinList"); list.innerHTML = "";
+    strip.hidden = d.circle.length === 0;
+    d.circle.forEach((p) => {
+      const av = avatarInner(p);
+      const row = document.createElement("div"); row.className = "checkin-person";
+      row.innerHTML = `<div class="avatar" ${av.style ? `style="${av.style}"` : ""}>${av.text}</div>
+        <div class="who"><div class="p-name">${esc(p.name)}</div>${p.note ? `<div class="p-note">${esc(p.note)}</div>` : ""}</div>
+        <button class="reach-btn">Reach out 💛</button>`;
+      row.querySelector(".reach-btn").onclick = async (ev) => {
+        ev.target.disabled = true;
+        try { await api("/api/support/reach", { method: "POST", body: { userId: p.id } }); ev.target.textContent = "Sent 💛"; }
+        catch (e) { toast(e.message); ev.target.disabled = false; }
+      };
+      list.appendChild(row);
+    });
+  }
+
+  /* ---------- Live stream ---------- */
+  let es = null;
+  function openStream() {
+    if (es) return;
+    es = new EventSource("/api/stream");
+    es.addEventListener("notif", (ev) => {
+      let n; try { n = JSON.parse(ev.data); } catch { return; }
+      setNotifBadge((parseInt(el("notifBadge").textContent) || 0) + 1);
+      if (!el("notifPanel").hidden) { el("notifEmpty").hidden = true; el("notifList").prepend(renderNotif({ ...n, read: false })); }
+      if (n.type === "friend_request") refreshReqBadge();
+      if (n.type === "reach_out") toast(`${(n.actor.name || "Someone").split(" ")[0]} reached out to you 💛`);
+    });
+    es.onerror = () => {};
+  }
+  function closeStream() { if (es) { es.close(); es = null; } }
+
   /* ---------- Boot ---------- */
   async function boot() {
     try {
@@ -252,6 +337,8 @@
       paintMe();
       if (!me.profile.name) { show("profile"); loadProfile(); return; }
       refreshReqBadge();
+      refreshNotifBadge();
+      openStream();
       go("feed");
     } catch { me = null; el("topbar").hidden = true; setMode("signup"); show("auth"); }
   }

@@ -39,6 +39,6 @@ const now = Date.now();
 const uid = db.prepare("INSERT INTO users (email, pass_hash, created) VALUES (?,?,?)").run(EMAIL, hashPassword(PASSWORD), now).lastInsertRowid;
 const photo = readFileSync(join(__dirname, "assets", "rob.jpg"));
 db.prepare("INSERT INTO profiles (user_id, name, bio, photo, photo_mime) VALUES (?,?,?,?,?)").run(uid, NAME, BIO, photo, "image/jpeg");
-db.prepare("INSERT INTO posts (author_id, body, created) VALUES (?,?,?)").run(uid, "Welcome to Nest. Building a place where your people are — and where you actually feel at home. More soon.", now);
+db.prepare("INSERT INTO posts (author_id, body, created) VALUES (?,?,?)").run(uid, "Welcome to The Cardinal. Building a place where your people are — and where you actually feel at home. More soon.", now);
 
 console.log(`Seeded ${NAME} <${EMAIL}> as user #${uid}.  Log in with password: ${PASSWORD}`);

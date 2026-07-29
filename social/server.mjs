@@ -56,6 +56,16 @@ db.exec(`
   );
 `);
 
+// Migration: the "care signal" — a member can quietly tell their circle they could
+// use some support. This is the network's signature, on-brand feature.
+{
+  const cols = db.prepare("PRAGMA table_info(profiles)").all().map((c) => c.name);
+  const add = (s) => { try { db.exec(s); } catch {} };
+  if (!cols.includes("need_support")) add("ALTER TABLE profiles ADD COLUMN need_support INTEGER NOT NULL DEFAULT 0");
+  if (!cols.includes("support_note")) add("ALTER TABLE profiles ADD COLUMN support_note TEXT DEFAULT ''");
+  if (!cols.includes("support_since")) add("ALTER TABLE profiles ADD COLUMN support_since INTEGER");
+}
+
 /* ----------------------------- Auth helpers ----------------------------- */
 function hashPassword(password) {
   const salt = randomBytes(16);
@@ -106,6 +116,7 @@ const q = {
   notifsFor: db.prepare("SELECT id, type, actor_id, post_id, created, read FROM notifications WHERE user_id=? ORDER BY created DESC LIMIT 40"),
   unreadCount: db.prepare("SELECT COUNT(*) c FROM notifications WHERE user_id=? AND read=0"),
   markRead: db.prepare("UPDATE notifications SET read=1 WHERE user_id=? AND read=0"),
+  setSupport: db.prepare("UPDATE profiles SET need_support=?, support_note=?, support_since=? WHERE user_id=?"),
 };
 
 // Relationship of target user t as seen by me: none | friends | outgoing | incoming
@@ -233,7 +244,7 @@ async function api(req, res, path) {
 
   if (path === "/api/me" && method === "GET") {
     const p = q.profileById.get(user.id) || {};
-    return send(res, 200, { user: { id: user.id, email: user.email }, profile: { name: p.name, bio: p.bio, photo: !!p.photo } });
+    return send(res, 200, { user: { id: user.id, email: user.email }, profile: { name: p.name, bio: p.bio, photo: !!p.photo, support: { on: !!p.need_support, note: p.support_note || "" } } });
   }
 
   if (path === "/api/stream" && method === "GET") {
@@ -353,6 +364,28 @@ async function api(req, res, path) {
     const other = Number((await readBody(req)).userId);
     q.removeEdge.run(user.id, other, other, user.id);
     return send(res, 200, { ok: true, rel: "none" });
+  }
+
+  /* ---------- Care signal ("reach out / check in") ---------- */
+  if (path === "/api/support" && method === "PUT") {
+    const b = await readBody(req);
+    const on = !!b.on;
+    q.setSupport.run(on ? 1 : 0, on ? String(b.note || "").slice(0, 200) : "", on ? Date.now() : null, user.id);
+    return send(res, 200, { ok: true, support: { on, note: on ? String(b.note || "").slice(0, 200) : "" } });
+  }
+  if (path === "/api/support/circle" && method === "GET") {
+    // Friends who've raised a care signal — the people to check in on.
+    const circle = [...friendIdSet(user.id)]
+      .map((id) => ({ id, p: q.profileById.get(id) }))
+      .filter((x) => x.p && x.p.need_support)
+      .map((x) => ({ id: x.id, name: x.p.name, photo: !!x.p.photo, note: x.p.support_note || "", since: x.p.support_since }));
+    return send(res, 200, { circle });
+  }
+  if (path === "/api/support/reach" && method === "POST") {
+    const other = Number((await readBody(req)).userId);
+    if (!other || relationship(user.id, other) !== "friends") return send(res, 403, { error: "You can only reach out to friends." });
+    notify(other, "reach_out", user.id);
+    return send(res, 200, { ok: true });
   }
 
   return send(res, 404, { error: "Unknown endpoint." });
