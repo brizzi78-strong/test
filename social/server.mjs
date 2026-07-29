@@ -49,6 +49,11 @@ db.exec(`
     status TEXT NOT NULL, created INTEGER NOT NULL,
     PRIMARY KEY (requester_id, addressee_id)
   );
+  CREATE TABLE IF NOT EXISTS notifications (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER NOT NULL, type TEXT NOT NULL, actor_id INTEGER NOT NULL,
+    post_id INTEGER, created INTEGER NOT NULL, read INTEGER NOT NULL DEFAULT 0
+  );
 `);
 
 /* ----------------------------- Auth helpers ----------------------------- */
@@ -97,6 +102,10 @@ const q = {
   incomingRequests: db.prepare("SELECT requester_id AS id, created FROM friendships WHERE addressee_id=? AND status='pending' ORDER BY created DESC"),
   searchPeople: db.prepare("SELECT user_id AS id FROM profiles WHERE user_id!=? AND name!='' AND lower(name) LIKE ? ORDER BY name LIMIT 40"),
   recentPeople: db.prepare("SELECT user_id AS id FROM profiles WHERE user_id!=? AND name!='' ORDER BY user_id DESC LIMIT 40"),
+  insertNotif: db.prepare("INSERT INTO notifications (user_id, type, actor_id, post_id, created) VALUES (?,?,?,?,?)"),
+  notifsFor: db.prepare("SELECT id, type, actor_id, post_id, created, read FROM notifications WHERE user_id=? ORDER BY created DESC LIMIT 40"),
+  unreadCount: db.prepare("SELECT COUNT(*) c FROM notifications WHERE user_id=? AND read=0"),
+  markRead: db.prepare("UPDATE notifications SET read=1 WHERE user_id=? AND read=0"),
 };
 
 // Relationship of target user t as seen by me: none | friends | outgoing | incoming
@@ -108,6 +117,29 @@ function relationship(meId, t) {
 }
 function friendIdSet(meId) {
   return new Set(q.friendIds.all(meId, meId).map((r) => r.id));
+}
+
+/* ----------------------------- Realtime (SSE) + notifications ----------------------------- */
+const streams = new Map(); // userId -> Set<res>
+function addStream(id, res) { if (!streams.has(id)) streams.set(id, new Set()); streams.get(id).add(res); }
+function removeStream(id, res) { const s = streams.get(id); if (s) { s.delete(res); if (!s.size) streams.delete(id); } }
+function pushEvent(id, event, data) {
+  const s = streams.get(id); if (!s) return;
+  const payload = `event: ${event}\ndata: ${JSON.stringify(data)}\n\n`;
+  for (const res of s) { try { res.write(payload); } catch {} }
+}
+setInterval(() => { for (const s of streams.values()) for (const res of s) { try { res.write(":ping\n\n"); } catch {} } }, 25000).unref();
+
+function notifView(row) {
+  const p = q.profileById.get(row.actor_id) || {};
+  return { id: row.id, type: row.type, actor: { id: row.actor_id, name: p.name, photo: !!p.photo }, postId: row.post_id, created: row.created, read: !!row.read };
+}
+// Create a notification for `userId` from `actorId` and push it live. No self-notify.
+function notify(userId, type, actorId, postId = null) {
+  if (userId === actorId) return;
+  const id = q.insertNotif.run(userId, type, actorId, postId, Date.now()).lastInsertRowid;
+  const row = q.notifsFor.all(userId).find((r) => r.id === id);
+  if (row) pushEvent(userId, "notif", notifView(row));
 }
 
 function createSession(userId) { const t = newToken(); q.insertSession.run(t, userId, Date.now()); return t; }
@@ -203,6 +235,21 @@ async function api(req, res, path) {
     const p = q.profileById.get(user.id) || {};
     return send(res, 200, { user: { id: user.id, email: user.email }, profile: { name: p.name, bio: p.bio, photo: !!p.photo } });
   }
+
+  if (path === "/api/stream" && method === "GET") {
+    res.writeHead(200, { "Content-Type": "text/event-stream; charset=utf-8", "Cache-Control": "no-cache", Connection: "keep-alive", "X-Accel-Buffering": "no" });
+    res.write("retry: 3000\n\n");
+    addStream(user.id, res);
+    req.on("close", () => removeStream(user.id, res));
+    return;
+  }
+  if (path === "/api/notifications" && method === "GET") {
+    return send(res, 200, { notifications: q.notifsFor.all(user.id).map(notifView), unread: q.unreadCount.get(user.id).c });
+  }
+  if (path === "/api/notifications/read" && method === "POST") {
+    q.markRead.run(user.id);
+    return send(res, 200, { ok: true });
+  }
   if (path === "/api/profile" && method === "PUT") {
     const b = await readBody(req);
     if (!b.name) return send(res, 400, { error: "Name is required." });
@@ -243,9 +290,10 @@ async function api(req, res, path) {
   const likeM = path.match(/^\/api\/posts\/(\d+)\/like$/);
   if (likeM && method === "POST") {
     const pid = Number(likeM[1]);
-    if (!q.postById.get(pid)) return send(res, 404, { error: "No such post." });
+    const post = q.postById.get(pid);
+    if (!post) return send(res, 404, { error: "No such post." });
     if (q.likedByMe.get(pid, user.id)) q.deleteLike.run(pid, user.id);
-    else q.insertLike.run(pid, user.id, Date.now());
+    else { q.insertLike.run(pid, user.id, Date.now()); notify(post.author_id, "like", user.id, pid); }
     return send(res, 200, { ok: true, likes: q.likeCount.get(pid).c, liked: !!q.likedByMe.get(pid, user.id) });
   }
   const comM = path.match(/^\/api\/posts\/(\d+)\/comments$/);
@@ -255,10 +303,12 @@ async function api(req, res, path) {
   }
   if (comM && method === "POST") {
     const pid = Number(comM[1]);
-    if (!q.postById.get(pid)) return send(res, 404, { error: "No such post." });
+    const post = q.postById.get(pid);
+    if (!post) return send(res, 404, { error: "No such post." });
     const body = String((await readBody(req)).body || "").trim().slice(0, 2000);
     if (!body) return send(res, 400, { error: "Comment is empty." });
     q.insertComment.run(pid, user.id, body, Date.now());
+    notify(post.author_id, "comment", user.id, pid);
     return send(res, 200, { ok: true, comments: q.commentCount.get(pid).c });
   }
 
@@ -288,13 +338,15 @@ async function api(req, res, path) {
     if (!toId || toId === user.id || !q.profileById.get(toId)) return send(res, 400, { error: "Invalid person." });
     const rel = relationship(user.id, toId);
     if (rel === "friends") return send(res, 200, { ok: true, rel: "friends" });
-    if (rel === "incoming") { q.acceptRequest.run(toId, user.id); return send(res, 200, { ok: true, rel: "friends" }); }
+    if (rel === "incoming") { q.acceptRequest.run(toId, user.id); notify(toId, "friend_accept", user.id); return send(res, 200, { ok: true, rel: "friends" }); }
     q.addRequest.run(user.id, toId, Date.now());
+    notify(toId, "friend_request", user.id);
     return send(res, 200, { ok: true, rel: "outgoing" });
   }
   if (path === "/api/friends/accept" && method === "POST") {
     const fromId = Number((await readBody(req)).fromId);
     q.acceptRequest.run(fromId, user.id);
+    notify(fromId, "friend_accept", user.id);
     return send(res, 200, { ok: true, rel: relationship(user.id, fromId) });
   }
   if (path === "/api/friends/remove" && method === "POST") {
