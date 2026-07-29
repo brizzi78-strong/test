@@ -135,6 +135,18 @@ details summary{cursor:pointer;font-size:.8rem;color:var(--brand)}
   <div id="empList"><p class="dim">No employees yet.</p></div>
 </div>
 
+<div class="card">
+  <h2>Payroll register &amp; tax liability</h2>
+  <p class="lead">Every paycheck in a period, totaled into the figures you file (Form 941 federal deposit + NC withholding). Export the register as CSV for your accountant.</p>
+  <div class="row3">
+    <div><label>From</label><input id="regFrom" type="date"></div>
+    <div><label>To</label><input id="regTo" type="date"></div>
+    <div style="display:flex;align-items:flex-end;gap:8px"><button class="btn" id="regRun">Build report</button><a class="btn ghost" id="regCsv" href="#" style="text-decoration:none">CSV</a></div>
+  </div>
+  <div id="regErr"></div>
+  <div id="regOut"></div>
+</div>
+
 <div class="foot">Cardinal Payroll &middot; Blue Ridge Press LLC &middot; withholding figures must be verified for your tax year</div>
 </div>
 <div class="toast" id="toast"></div>
@@ -162,6 +174,7 @@ function boot(){
     var today=new Date().toISOString().slice(0,10);
     ['payDate','periodEnd','tsDate'].forEach(function(id){var el=document.getElementById(id);if(el&&!el.value)el.value=today;});
     var ps=document.getElementById('periodStart');if(ps&&!ps.value){var d0=new Date();d0.setDate(d0.getDate()-13);ps.value=d0.toISOString().slice(0,10);}
+    regDefaults();
     loadEmployees();
   }).catch(function(e){document.getElementById('bizline').textContent='Payroll service unreachable: '+e.message;});
 }
@@ -293,6 +306,42 @@ function renderRun(res){
     +'<table style="margin-top:12px"><thead><tr><th>Employee</th><th class="num">Gross</th><th class="num">Withheld</th><th class="num">Net</th><th class="num">Employer tax</th></tr></thead><tbody>'+rows+'</tbody></table>';
 }
 function tile(k,v,remit){return '<div class="tile'+(remit?' remit':'')+'"><div class="k">'+esc(k)+'</div><div class="v">'+esc(v)+'</div></div>';}
+
+function regDefaults(){
+  // Default to the current calendar quarter.
+  var now=new Date();var q=Math.floor(now.getMonth()/3);var y=now.getFullYear();
+  var start=new Date(Date.UTC(y,q*3,1));var end=new Date(Date.UTC(y,q*3+3,0));
+  var f=document.getElementById('regFrom');var t=document.getElementById('regTo');
+  if(f&&!f.value)f.value=start.toISOString().slice(0,10);
+  if(t&&!t.value)t.value=end.toISOString().slice(0,10);
+}
+function regParams(){return 'from='+encodeURIComponent(document.getElementById('regFrom').value)+'&to='+encodeURIComponent(document.getElementById('regTo').value);}
+document.getElementById('regCsv').onclick=function(){this.href='/api/register.csv?'+regParams();};
+document.getElementById('regRun').onclick=function(){
+  var err=document.getElementById('regErr');err.innerHTML='';
+  document.getElementById('regOut').innerHTML='<p class="dim">Building&hellip;</p>';
+  api('GET','/api/register?'+regParams()).then(function(reg){renderRegister(reg);}).catch(function(e){document.getElementById('regOut').innerHTML='';err.innerHTML='<div class="banner err">'+esc(e.message)+'</div>';});
+};
+function renderRegister(reg){
+  var l=reg.taxLiability;var t=reg.totals;
+  if(!t.paychecks){document.getElementById('regOut').innerHTML='<div class="banner note">No paychecks in this period.</div>';return;}
+  var tiles='<div class="tiles">'
+    +tile('Paychecks',t.paychecks,false)
+    +tile('Total gross',fmt(t.grossCents),false)
+    +tile('Federal income tax w/h',fmt(l.federalIncomeTaxWithheldCents),false)
+    +tile('Social Security (both halves)',fmt(l.socialSecurityTaxCents),false)
+    +tile('Medicare (both halves)',fmt(l.medicareTaxCents),false)
+    +tile('NC state tax w/h',fmt(l.stateIncomeTaxWithheldCents),false)
+    +tile('Federal deposit (941)',fmt(l.federalDepositCents),true)
+    +tile('FUTA + NC SUTA',fmt(l.futaCents+l.sutaCents),false)
+    +'</div>';
+  var rows=reg.rows.map(function(r){
+    return '<tr><td>'+esc(r.payDate)+'</td><td>'+esc(r.employeeName)+'</td><td class="num">'+fmt(r.grossCents)+'</td><td class="num">'+fmt(r.federalIncomeTaxCents)+'</td><td class="num">'+fmt(r.socialSecurityCents)+'</td><td class="num">'+fmt(r.medicareCents)+'</td><td class="num">'+fmt(r.stateIncomeTaxCents)+'</td><td class="num"><b>'+fmt(r.netCents)+'</b></td></tr>';
+  }).join('');
+  document.getElementById('regOut').innerHTML=tiles
+    +'<table style="margin-top:12px"><thead><tr><th>Pay date</th><th>Employee</th><th class="num">Gross</th><th class="num">Fed tax</th><th class="num">SS</th><th class="num">Medicare</th><th class="num">NC tax</th><th class="num">Net</th></tr></thead><tbody>'+rows+'</tbody></table>'
+    +'<p class="dim" style="margin-top:8px">These are the figures to file — Form 941 (federal) uses the deposit total; NC withholding is filed separately. Cardinal Payroll computes; it does not file or remit.</p>';
+}
 
 function showStubs(empId){
   var host=document.getElementById('stubs');

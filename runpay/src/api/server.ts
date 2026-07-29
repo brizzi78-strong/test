@@ -228,6 +228,22 @@ function makeListener(deps: ListenerDeps) {
         const result = await runBatch(call, timeCall, primary.companyId, body);
         return sendJson(res, 200, result);
       }
+      // Payroll register + tax-liability report over a date range (for filing).
+      if (method === 'GET' && (url.pathname === '/api/register' || url.pathname === '/api/register.csv')) {
+        const primary = await ensurePrimary();
+        const from = url.searchParams.get('from') ?? '';
+        const to = url.searchParams.get('to') ?? '';
+        const register = await buildRegister(call, primary.companyId, from, to);
+        if (url.pathname === '/api/register.csv') {
+          res.writeHead(200, {
+            'content-type': 'text/csv; charset=utf-8',
+            'content-disposition': `attachment; filename="payroll-register-${from || 'all'}-to-${to || 'all'}.csv"`,
+          });
+          res.end(registerCsv(register));
+          return;
+        }
+        return sendJson(res, 200, register);
+      }
       // Timesheets: proxied to the Timeclock service (add / list / delete hours).
       if (url.pathname.startsWith('/api/time/')) {
         const upstreamPath = url.pathname.slice('/api/time'.length); // "/api/time/entries" → "/entries"
@@ -381,6 +397,129 @@ function emptyTotals() {
     employerTaxCents: 0, // employer FICA match + FUTA + SUTA
     totalRemittanceCents: 0, // employee withholding + employer tax = cash to send out
   };
+}
+
+interface RegisterRow {
+  payDate: string;
+  employeeName: string;
+  grossCents: number;
+  federalIncomeTaxCents: number;
+  socialSecurityCents: number; // employee half
+  medicareCents: number; // employee half (incl. additional Medicare)
+  stateIncomeTaxCents: number;
+  netCents: number;
+}
+
+/**
+ * Aggregate every paycheck with a pay date in [from, to] into a payroll
+ * register (one row per paycheck) plus a 941-style tax-liability summary — the
+ * exact figures an accountant files. Cross-period, read-only over the real
+ * payslips the engine produced.
+ */
+export async function buildRegister(
+  call: (method: string, path: string, body?: unknown) => Promise<any>,
+  companyId: string,
+  from: string,
+  to: string,
+): Promise<{
+  from: string;
+  to: string;
+  rows: RegisterRow[];
+  totals: ReturnType<typeof emptyRegisterTotals>;
+  taxLiability: ReturnType<typeof emptyLiability>;
+}> {
+  const employees: any[] = await call('GET', `/employees?companyId=${encodeURIComponent(companyId)}`);
+  const nameById = new Map<string, string>(employees.map((e) => [e.id, `${e.firstName} ${e.lastName}`]));
+  const all: any[] = await call('GET', `/payslips?companyId=${encodeURIComponent(companyId)}`);
+  const inRange = all.filter((p) => (!from || p.payDate >= from) && (!to || p.payDate <= to));
+  inRange.sort((a, b) => (a.payDate < b.payDate ? -1 : a.payDate > b.payDate ? 1 : 0));
+
+  const rows: RegisterRow[] = [];
+  const totals = emptyRegisterTotals();
+  const liability = emptyLiability();
+  for (const p of inRange) {
+    const medicareEmployee = (p.medicareCents ?? 0) + (p.additionalMedicareCents ?? 0);
+    rows.push({
+      payDate: p.payDate,
+      employeeName: nameById.get(p.employeeId) ?? p.employeeId,
+      grossCents: p.grossCents ?? 0,
+      federalIncomeTaxCents: p.federalIncomeTaxCents ?? 0,
+      socialSecurityCents: p.socialSecurityCents ?? 0,
+      medicareCents: medicareEmployee,
+      stateIncomeTaxCents: p.stateIncomeTaxCents ?? 0,
+      netCents: p.netCents ?? 0,
+    });
+    totals.paychecks += 1;
+    totals.grossCents += p.grossCents ?? 0;
+    totals.federalIncomeTaxCents += p.federalIncomeTaxCents ?? 0;
+    totals.socialSecurityCents += p.socialSecurityCents ?? 0;
+    totals.medicareCents += medicareEmployee;
+    totals.stateIncomeTaxCents += p.stateIncomeTaxCents ?? 0;
+    totals.netCents += p.netCents ?? 0;
+
+    const emp = p.employer ?? {};
+    liability.federalIncomeTaxWithheldCents += p.federalIncomeTaxCents ?? 0;
+    liability.socialSecurityWagesCents += p.ficaWagesCents ?? 0;
+    liability.socialSecurityTaxCents += (p.socialSecurityCents ?? 0) + (emp.socialSecurityCents ?? 0);
+    liability.medicareWagesCents += p.ficaWagesCents ?? 0;
+    liability.medicareTaxCents += medicareEmployee + (emp.medicareCents ?? 0);
+    liability.stateIncomeTaxWithheldCents += p.stateIncomeTaxCents ?? 0;
+    liability.futaCents += emp.futaCents ?? 0;
+    liability.sutaCents += emp.sutaCents ?? 0;
+  }
+  // Federal deposit (Form 941): income tax withheld + both halves of SS + Medicare.
+  liability.federalDepositCents =
+    liability.federalIncomeTaxWithheldCents + liability.socialSecurityTaxCents + liability.medicareTaxCents;
+
+  return { from, to, rows, totals, taxLiability: liability };
+}
+
+function emptyRegisterTotals() {
+  return {
+    paychecks: 0,
+    grossCents: 0,
+    federalIncomeTaxCents: 0,
+    socialSecurityCents: 0,
+    medicareCents: 0,
+    stateIncomeTaxCents: 0,
+    netCents: 0,
+  };
+}
+
+function emptyLiability() {
+  return {
+    federalIncomeTaxWithheldCents: 0,
+    socialSecurityWagesCents: 0,
+    socialSecurityTaxCents: 0, // employee + employer
+    medicareWagesCents: 0,
+    medicareTaxCents: 0, // employee + employer
+    federalDepositCents: 0, // 941 total: FIT + SS + Medicare
+    stateIncomeTaxWithheldCents: 0, // NC withholding
+    futaCents: 0,
+    sutaCents: 0,
+  };
+}
+
+function registerCsv(reg: Awaited<ReturnType<typeof buildRegister>>): string {
+  const d = (c: number) => (c / 100).toFixed(2);
+  const esc = (s: string) => (/[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s);
+  const header = ['Pay date', 'Employee', 'Gross', 'Federal income tax', 'Social Security', 'Medicare', 'NC state tax', 'Net pay'];
+  const lines = [header.join(',')];
+  for (const r of reg.rows) {
+    lines.push([
+      r.payDate,
+      esc(r.employeeName),
+      d(r.grossCents),
+      d(r.federalIncomeTaxCents),
+      d(r.socialSecurityCents),
+      d(r.medicareCents),
+      d(r.stateIncomeTaxCents),
+      d(r.netCents),
+    ].join(','));
+  }
+  const t = reg.totals;
+  lines.push(['TOTAL', '', d(t.grossCents), d(t.federalIncomeTaxCents), d(t.socialSecurityCents), d(t.medicareCents), d(t.stateIncomeTaxCents), d(t.netCents)].join(','));
+  return lines.join('\n') + '\n';
 }
 
 function addToTotals(t: ReturnType<typeof emptyTotals>, slip: any): void {

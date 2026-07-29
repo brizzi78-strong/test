@@ -161,6 +161,43 @@ test('benefits deductions flow through the engine with correct FICA semantics', 
   });
 });
 
+test('payroll register aggregates a period into a 941-style tax liability, and exports CSV', async () => {
+  await withApp(async (base) => {
+    const co = (await j(base, 'GET', '/api/app')).json.companyId;
+    await j(base, 'POST', '/api/employees', {
+      companyId: co, firstName: 'Jordan', lastName: 'Rivera', payType: 'salary',
+      annualSalaryCents: 5200000, payFrequency: 'biweekly', filingStatus: 'single',
+    });
+    // Two pay dates in Q1 and one outside it.
+    await j(base, 'POST', '/api/run-batch', { payDate: '2026-01-15' });
+    await j(base, 'POST', '/api/run-batch', { payDate: '2026-02-15' });
+    await j(base, 'POST', '/api/run-batch', { payDate: '2026-05-15' }); // Q2 — excluded below
+
+    const reg = (await j(base, 'GET', '/api/register?from=2026-01-01&to=2026-03-31')).json;
+    assert.equal(reg.rows.length, 2); // only the two Q1 paychecks
+    assert.equal(reg.totals.paychecks, 2);
+    assert.equal(reg.totals.grossCents, 400000); // 2 x $2,000
+
+    // 941-style summary: SS tax is both halves (12.4% of FICA wages), Medicare both halves (2.9%).
+    const l = reg.taxLiability;
+    assert.equal(l.socialSecurityWagesCents, 400000);
+    assert.equal(l.socialSecurityTaxCents, Math.round(400000 * 0.124));
+    assert.equal(l.medicareTaxCents, Math.round(400000 * 0.029));
+    assert.equal(
+      l.federalDepositCents,
+      l.federalIncomeTaxWithheldCents + l.socialSecurityTaxCents + l.medicareTaxCents,
+    );
+
+    // CSV export has a header, one row per paycheck, and a TOTAL line.
+    const csvRes = await fetch(`${base}/api/register.csv?from=2026-01-01&to=2026-03-31`);
+    assert.match(csvRes.headers.get('content-type') ?? '', /text\/csv/);
+    const csv = (await csvRes.text()).trim().split('\n');
+    assert.match(csv[0], /Pay date,Employee,Gross/);
+    assert.equal(csv.length, 1 + 2 + 1); // header + 2 rows + TOTAL
+    assert.match(csv[csv.length - 1], /^TOTAL,,4000\.00/);
+  });
+});
+
 test('run-batch rejects a bad pay date', async () => {
   await withApp(async (base) => {
     const r = await j(base, 'POST', '/api/run-batch', { payDate: 'nope' });

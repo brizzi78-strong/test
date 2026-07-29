@@ -32,7 +32,23 @@ your accountant) to close that gap. See [`payroll/README.md`](../payroll/README.
 | `GET /api/me/:token` | employee | That employee's profile + pay stubs + YTD + recent hours. Public; scoped strictly to the token's employee. |
 | `POST /api/me/:token/hours` | employee | Log their own hours `{ date, hours, note? }`. Public; scoped to the token's employee. |
 | `/api/time/*` | employer | Proxied to the Timeclock service (record / list / delete hours). |
+| `GET /api/register?from&to` | employer | Payroll register + **941-style tax-liability** summary over a date range. |
+| `GET /api/register.csv?from&to` | employer | The register as a CSV download (for a bookkeeper). |
 | `/api/*` | employer | Transparently proxied to the Payroll service (employees, payslips, …). |
+
+### Payroll register & tax liability (what you file)
+
+The **Reports** card totals every paycheck in a period (defaults to the current
+quarter) into the exact figures an accountant files:
+
+- **Form 941 federal deposit** = federal income tax withheld + Social Security
+  (both employee and employer halves, 12.4%) + Medicare (both halves, 2.9%).
+- **NC state income tax** withheld (filed separately).
+- Employer **FUTA + NC SUTA** unemployment.
+
+Plus a per-paycheck register table and a **CSV export**. This is the bridge
+across the "we compute, you file" seam: it produces the numbers, it does not
+remit or file them.
 
 ### Benefits & deductions
 
