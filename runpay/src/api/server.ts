@@ -21,8 +21,9 @@
  */
 
 import { createServer, type IncomingMessage, type Server, type ServerResponse } from 'node:http';
-import { timingSafeEqual } from 'node:crypto';
+import { createHmac, randomBytes, timingSafeEqual } from 'node:crypto';
 import { PAGE } from '../ui/page.ts';
+import { ME_PAGE } from '../ui/me.ts';
 
 export interface AppServer {
   server: Server;
@@ -38,6 +39,8 @@ export interface AppOptions {
   /** Optional HTTP Basic auth gate (recommended when public); both required. */
   user?: string;
   password?: string;
+  /** HMAC secret for employee self-service links. Set for stable links in prod. */
+  tokenSecret?: string;
   fetchImpl?: typeof fetch;
 }
 
@@ -57,6 +60,24 @@ export function createApp(opts: AppOptions = {}): AppServer {
   const authUser = opts.user ?? process.env.RUNPAY_USER;
   const authPassword = opts.password ?? process.env.RUNPAY_PASSWORD;
   const gate = authUser && authPassword ? { user: authUser, password: authPassword } : undefined;
+
+  // Secret for signing employee self-service links. A per-process random
+  // fallback keeps dev working (links just don't survive a restart); set
+  // RUNPAY_TOKEN_SECRET in production so links stay valid.
+  const tokenSecret = opts.tokenSecret ?? process.env.RUNPAY_TOKEN_SECRET ?? randomBytes(32).toString('hex');
+  const signToken = (employeeId: string): string =>
+    `${employeeId}.${createHmac('sha256', tokenSecret).update(employeeId).digest('hex')}`;
+  const verifyToken = (token: string): string | null => {
+    const dot = token.lastIndexOf('.');
+    if (dot <= 0) return null;
+    const employeeId = token.slice(0, dot);
+    const expected = createHmac('sha256', tokenSecret).update(employeeId).digest('hex');
+    const got = token.slice(dot + 1);
+    const a = Buffer.from(got);
+    const b = Buffer.from(expected);
+    if (a.length !== b.length || !timingSafeEqual(a, b)) return null;
+    return employeeId;
+  };
 
   let primary: Primary | undefined;
   let ensuring: Promise<Primary> | undefined;
@@ -99,7 +120,9 @@ export function createApp(opts: AppOptions = {}): AppServer {
     return ensuring;
   }
 
-  const server = createServer(makeListener({ base, apiKey, fetchImpl, ensurePrimary, call, gate }));
+  const server = createServer(
+    makeListener({ base, apiKey, fetchImpl, ensurePrimary, call, gate, signToken, verifyToken }),
+  );
   return { server };
 }
 
@@ -110,16 +133,26 @@ interface ListenerDeps {
   ensurePrimary: () => Promise<Primary>;
   call: (method: string, path: string, body?: unknown) => Promise<any>;
   gate: { user: string; password: string } | undefined;
+  signToken: (employeeId: string) => string;
+  verifyToken: (token: string) => string | null;
+}
+
+/**
+ * Employee self-service links are public (the employee has no console login),
+ * exactly like the health check — so the admin password gate must never apply.
+ */
+function isPublicPath(pathname: string): boolean {
+  return pathname === '/health' || pathname.startsWith('/me/') || pathname.startsWith('/api/me/');
 }
 
 function makeListener(deps: ListenerDeps) {
-  const { base, apiKey, fetchImpl, ensurePrimary, call, gate } = deps;
+  const { base, apiKey, fetchImpl, ensurePrimary, call, gate, signToken, verifyToken } = deps;
   return async (req: IncomingMessage, res: ServerResponse): Promise<void> => {
     try {
       const url = new URL(req.url ?? '/', 'http://localhost');
       const method = req.method ?? 'GET';
 
-      if (gate && url.pathname !== '/health' && !authorized(req, gate)) {
+      if (gate && !isPublicPath(url.pathname) && !authorized(req, gate)) {
         res.writeHead(401, {
           'www-authenticate': 'Basic realm="Cardinal Payroll", charset="UTF-8"',
           'content-type': 'application/json',
@@ -133,8 +166,31 @@ function makeListener(deps: ListenerDeps) {
         res.end(PAGE);
         return;
       }
+      if (method === 'GET' && url.pathname.startsWith('/me/')) {
+        res.writeHead(200, { 'content-type': 'text/html; charset=utf-8' });
+        res.end(ME_PAGE);
+        return;
+      }
       if (method === 'GET' && url.pathname === '/health') {
         return sendJson(res, 200, { status: 'ok' });
+      }
+
+      // Employer mints a self-service link for one employee (admin, gated).
+      const selflink = url.pathname.match(/^\/api\/employees\/([^/]+)\/selflink$/);
+      if (method === 'GET' && selflink) {
+        const employeeId = decodeURIComponent(selflink[1]);
+        const employee = await call('GET', `/employees/${encodeURIComponent(employeeId)}`);
+        const token = signToken(employee.id);
+        return sendJson(res, 200, { token, path: `/me/${token}` });
+      }
+
+      // Employee reads their own profile + pay stubs by token (public, scoped).
+      const me = url.pathname.match(/^\/api\/me\/(.+)$/);
+      if (method === 'GET' && me) {
+        const employeeId = verifyToken(decodeURIComponent(me[1]));
+        if (!employeeId) return sendJson(res, 401, { error: { code: 'invalid_token', message: 'link is not valid' } });
+        const data = await meView(call, employeeId);
+        return sendJson(res, 200, data);
       }
       if (method === 'GET' && url.pathname === '/api/app') {
         const primary = await ensurePrimary();
@@ -215,6 +271,37 @@ export async function runBatch(
     }
   }
   return { payDate, lines, totals };
+}
+
+/**
+ * The employee self-service view: their profile and their own pay stubs, with
+ * YTD totals. Scoped strictly to the (already token-verified) employee id — the
+ * payslip query is always filtered to this one employee, so no link can ever
+ * reveal anyone else's pay.
+ */
+export async function meView(
+  call: (method: string, path: string, body?: unknown) => Promise<any>,
+  employeeId: string,
+): Promise<{ employee: any; payslips: any[]; ytd: { grossCents: number; netCents: number } }> {
+  const employee = await call('GET', `/employees/${encodeURIComponent(employeeId)}`);
+  const payslips: any[] = await call('GET', `/payslips?employeeId=${encodeURIComponent(employeeId)}`);
+  payslips.sort((a, b) => (a.payDate < b.payDate ? 1 : -1));
+  const ytd = payslips.reduce(
+    (t, p) => ({ grossCents: t.grossCents + (p.grossCents ?? 0), netCents: t.netCents + (p.netCents ?? 0) }),
+    { grossCents: 0, netCents: 0 },
+  );
+  // Return only what an employee should see (no employer-side ids beyond their own).
+  const safeEmployee = {
+    id: employee.id,
+    firstName: employee.firstName,
+    lastName: employee.lastName,
+    payType: employee.payType,
+    payFrequency: employee.payFrequency,
+    filingStatus: employee.filingStatus,
+    annualSalaryCents: employee.annualSalaryCents,
+    hourlyRateCents: employee.hourlyRateCents,
+  };
+  return { employee: safeEmployee, payslips, ytd };
 }
 
 function emptyTotals() {

@@ -226,6 +226,8 @@ services:
       BUSINESS_NAME: ${BUSINESS_NAME:-Blue Ridge Press LLC}
       RUNPAY_USER: ${RUNPAY_USER:-}
       RUNPAY_PASSWORD: ${RUNPAY_PASSWORD:-}
+      # Set so employee self-service links survive restarts.
+      RUNPAY_TOKEN_SECRET: ${RUNPAY_TOKEN_SECRET:-}
     ports: ["4700:4700"]
     depends_on:
       - payroll

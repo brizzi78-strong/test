@@ -178,11 +178,22 @@ function renderEmployees(){
   var box=document.getElementById('empList');
   if(!EMPLOYEES.length){box.innerHTML='<p class="dim">No employees yet.</p>';return;}
   var rows=EMPLOYEES.map(function(e){
-    return '<tr><td><b>'+esc(e.firstName+' '+e.lastName)+'</b><div class="dim">'+prettyFreq(e.payFrequency)+' &middot; '+prettyFiling(e.filingStatus)+'</div></td><td>'+esc(compLine(e))+'</td><td><button class="btn ghost sm" data-stub="'+esc(e.id)+'">Pay stubs</button></td></tr>';
+    return '<tr><td><b>'+esc(e.firstName+' '+e.lastName)+'</b><div class="dim">'+prettyFreq(e.payFrequency)+' &middot; '+prettyFiling(e.filingStatus)+'</div></td><td>'+esc(compLine(e))+'</td><td style="white-space:nowrap"><button class="btn ghost sm" data-stub="'+esc(e.id)+'">Pay stubs</button> <button class="btn ghost sm" data-self="'+esc(e.id)+'">Self-service link</button></td></tr>';
   }).join('');
   box.innerHTML='<table><thead><tr><th>Employee</th><th>Pay</th><th></th></tr></thead><tbody>'+rows+'</tbody></table><div id="stubs"></div>';
   var btns=box.querySelectorAll('[data-stub]');
   for(var i=0;i<btns.length;i++){btns[i].onclick=function(){showStubs(this.dataset.stub);};}
+  var sbtns=box.querySelectorAll('[data-self]');
+  for(var s=0;s<sbtns.length;s++){sbtns[s].onclick=function(){selfLink(this.dataset.self);};}
+}
+
+function selfLink(empId){
+  var host=document.getElementById('stubs');
+  host.innerHTML='<p class="dim">Generating link&hellip;</p>';
+  api('GET','/api/employees/'+encodeURIComponent(empId)+'/selflink').then(function(r){
+    var full=location.origin+r.path;
+    host.innerHTML='<div class="card"><h2 style="margin:0 0 4px;font-size:1rem">Employee self-service link</h2><p class="lead" style="margin:0 0 8px">Send this to the employee. They can view their own pay stubs and YTD &mdash; no login, and only their own pay.</p><div style="display:flex;gap:8px"><input readonly value="'+esc(full)+'" style="font-family:ui-monospace,monospace;font-size:.78rem"><button class="btn sm" onclick="copyLink(this.previousElementSibling.value)">Copy</button></div></div>';
+  }).catch(function(e){host.innerHTML='<div class="banner err">'+esc(e.message)+'</div>';});
 }
 
 function renderHoursInputs(){

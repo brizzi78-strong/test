@@ -21,7 +21,7 @@ async function listen(server: { listen: Function; address: Function; close: Func
 
 async function withApp(
   run: (base: string) => Promise<void>,
-  opts: { user?: string; password?: string } = {},
+  opts: { user?: string; password?: string; tokenSecret?: string } = {},
 ) {
   const payroll = createPayroll(createInMemoryStore());
   const payPort = await listen(payroll.server);
@@ -133,14 +133,60 @@ test('run-batch rejects a bad pay date', async () => {
   });
 });
 
-test('password gate blocks the console but leaves health open', async () => {
+test('password gate blocks the console but leaves health and self-service open', async () => {
   await withApp(
     async (base) => {
       assert.equal((await fetch(`${base}/`)).status, 401);
       assert.equal((await fetch(`${base}/health`)).status, 200);
+      assert.equal((await fetch(`${base}/me/anything`)).status, 200); // self-service page public
       const good = 'Basic ' + Buffer.from('admin:s3cret').toString('base64');
       assert.equal((await fetch(`${base}/`, { headers: { authorization: good } })).status, 200);
     },
     { user: 'admin', password: 's3cret' },
   );
+});
+
+test('employee self-service: token link shows only that employee, scoped and read-only', async () => {
+  await withApp(async (base) => {
+    const co = (await j(base, 'GET', '/api/app')).json.companyId;
+    const jordan = (await j(base, 'POST', '/api/employees', {
+      companyId: co, firstName: 'Jordan', lastName: 'Rivera', payType: 'salary',
+      annualSalaryCents: 5200000, payFrequency: 'biweekly', filingStatus: 'single',
+    })).json;
+    const sam = (await j(base, 'POST', '/api/employees', {
+      companyId: co, firstName: 'Sam', lastName: 'Cole', payType: 'salary',
+      annualSalaryCents: 9000000, payFrequency: 'biweekly', filingStatus: 'single',
+    })).json;
+    await j(base, 'POST', '/api/run-batch', { payDate: '2026-01-15' });
+
+    // Employer mints Jordan's self-service link.
+    const link = (await j(base, 'GET', `/api/employees/${jordan.id}/selflink`)).json;
+    assert.ok(link.token && link.path === `/me/${link.token}`);
+    assert.match((await (await fetch(`${base}${link.path}`)).text()), /My Pay/); // page serves
+
+    // The token resolves to Jordan's own data, with a YTD stub — and nobody else's.
+    const meView = (await j(base, 'GET', `/api/me/${encodeURIComponent(link.token)}`)).json;
+    assert.equal(meView.employee.firstName, 'Jordan');
+    assert.equal(meView.employee.id, jordan.id);
+    assert.equal(meView.payslips.length, 1);
+    assert.equal(meView.payslips[0].netCents, 158548);
+    assert.equal(meView.ytd.grossCents, 200000);
+    assert.notEqual(meView.employee.id, sam.id);
+
+    // A tampered token is rejected.
+    assert.equal((await j(base, 'GET', `/api/me/${encodeURIComponent(jordan.id + '.deadbeef')}`)).status, 401);
+  });
+});
+
+test('a self-service token from one server is not valid on another (per-secret)', async () => {
+  await withApp(async (base) => {
+    const co = (await j(base, 'GET', '/api/app')).json.companyId;
+    const e = (await j(base, 'POST', '/api/employees', {
+      companyId: co, firstName: 'Jordan', lastName: 'Rivera', payType: 'salary',
+      annualSalaryCents: 5200000, payFrequency: 'biweekly', filingStatus: 'single',
+    })).json;
+    // A token minted with the wrong secret must not verify.
+    const forged = `${e.id}.` + '0'.repeat(64);
+    assert.equal((await j(base, 'GET', `/api/me/${encodeURIComponent(forged)}`)).status, 401);
+  }, { tokenSecret: 'secret-A' });
 });

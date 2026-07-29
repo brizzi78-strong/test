@@ -21,13 +21,27 @@ your accountant) to close that gap. See [`payroll/README.md`](../payroll/README.
 
 ## Surfaces
 
-| Path | What |
-|---|---|
-| `GET /` | The Run Payroll single-page app (password-gated in production). |
-| `GET /health` | Liveness. |
-| `GET /api/app` | The configured business `{ companyId, businessName, jurisdiction }` plus upstream tax metadata (filing statuses, pay frequencies). |
-| `POST /api/run-batch` | Run one check date across all (or selected) employees; returns per-employee payslips **and company totals**. |
-| `/api/*` | Transparently proxied to the Payroll service (employees, payslips, …). |
+| Path | Who | What |
+|---|---|---|
+| `GET /` | employer | The Run Payroll single-page app (password-gated in production). |
+| `GET /me/:token` | employee | **Self-service**: their own pay stubs + YTD, read-only, no login. Always public. |
+| `GET /health` | — | Liveness. |
+| `GET /api/app` | employer | The configured business `{ companyId, businessName, jurisdiction }` plus upstream tax metadata (filing statuses, pay frequencies). |
+| `POST /api/run-batch` | employer | Run one check date across all (or selected) employees; returns per-employee payslips **and company totals**. |
+| `GET /api/employees/:id/selflink` | employer | Mint the employee's self-service link `{ token, path }`. |
+| `GET /api/me/:token` | employee | That employee's profile + pay stubs + YTD. Public; scoped strictly to the token's employee. |
+| `/api/*` | employer | Transparently proxied to the Payroll service (employees, payslips, …). |
+
+### Employee self-service (the "MyPay" surface)
+
+From the console, each employee has a **Self-service link** button. It mints a
+link like `/me/<token>` where the token is an **HMAC signature of the employee
+id** — stateless, no password store. The employee opens it to see only their own
+pay stubs and year-to-date totals; the data endpoint always filters payslips to
+the token's (verified) employee, so a link can never reveal anyone else's pay. A
+tampered or forged token is rejected (401). Set `RUNPAY_TOKEN_SECRET` in
+production so links stay valid across restarts (a random per-process secret is
+used otherwise).
 
 ### The one thing the BFF adds: `run-batch`
 
@@ -71,7 +85,8 @@ npm run typecheck
 | `BUSINESS_COMPANY_ID` | Reuse an existing Payroll company id (recommended in prod). |
 | `PAYROLL_JURISDICTION` | Tax jurisdiction for a newly created company (default `raleigh_nc`). |
 | `GATEWAY_API_KEY` | Optional Bearer key sent upstream, kept off the browser. |
-| `RUNPAY_USER` / `RUNPAY_PASSWORD` | Optional HTTP Basic gate on the console. |
+| `RUNPAY_USER` / `RUNPAY_PASSWORD` | Optional HTTP Basic gate on the console. The self-service links (`/me/...`) are never gated. |
+| `RUNPAY_TOKEN_SECRET` | HMAC secret for employee self-service links. Set it so links survive restarts; unset uses a per-process random secret. |
 
 On first use it reuses a Payroll company with `BUSINESS_NAME` (or creates one),
 so restarts against a durable Payroll store don't duplicate the company.
