@@ -123,6 +123,27 @@ textarea{resize:vertical}
 .c-form input{flex:1;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:.55rem .9rem}
 .c-form input:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-soft)}
 
+/* badge */
+.badge{display:inline-grid;place-items:center;min-width:18px;height:18px;padding:0 5px;border-radius:999px;background:var(--like);color:#fff;font-size:.7rem;font-weight:800;vertical-align:1px;margin-left:.15rem}
+
+/* People / friends */
+.people-card{padding:1.1rem}
+.people-search{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:.7rem 1.1rem;margin-bottom:1rem}
+.people-search:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 4px var(--brand-soft)}
+.section-h{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--faint);font-weight:800;margin:.6rem 0}
+#requestsBlock{padding-bottom:.6rem;margin-bottom:.6rem;border-bottom:1px solid var(--line)}
+.people-list{display:flex;flex-direction:column}
+.person{display:flex;align-items:center;gap:.75rem;padding:.6rem 0}
+.person+.person{border-top:1px solid var(--line)}
+.person .who{flex:1;min-width:0}
+.person .p-name{font-weight:700}
+.person .p-bio{color:var(--muted);font-size:.85rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.person-actions{display:flex;gap:.4rem;flex:0 0 auto}
+.person-actions .btn{padding:.45rem .85rem;font-size:.85rem}
+.tag{display:inline-flex;align-items:center;gap:.3rem;color:var(--muted);font-weight:700;font-size:.85rem;padding:.45rem .3rem}
+.people-empty{text-align:center;padding:1.5rem}
+.muted{color:var(--muted)}
+
 .empty{padding:2.5rem 1rem;text-align:center;color:var(--muted)}
 .empty h3{color:var(--ink);margin-bottom:.3rem}
 .profile-card{padding:1.4rem}

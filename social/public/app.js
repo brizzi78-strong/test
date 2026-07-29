@@ -65,8 +65,61 @@
   function go(view) {
     if (view === "feed") loadFeed();
     if (view === "profile") loadProfile();
+    if (view === "friends") loadFriends(el("peopleSearch").value);
     show(view);
   }
+
+  /* ---------- Friends ---------- */
+  let searchTimer = null;
+  el("peopleSearch").oninput = (e) => { clearTimeout(searchTimer); const v = e.target.value; searchTimer = setTimeout(() => loadFriends(v), 220); };
+
+  async function loadFriends(term) {
+    let people = [], requests = [];
+    try {
+      [people, requests] = await Promise.all([
+        api("/api/people" + (term && term.trim() ? "?q=" + encodeURIComponent(term.trim()) : "")).then((d) => d.people),
+        api("/api/friends/requests").then((d) => d.requests),
+      ]);
+    } catch { return; }
+    const searching = !!(term && term.trim());
+    const showRequests = requests.length > 0 && !searching;
+    const reqBlock = el("requestsBlock"), reqList = el("requestsList");
+    reqBlock.hidden = !showRequests;
+    reqList.innerHTML = "";
+    requests.forEach((p) => reqList.appendChild(renderPerson(p, true)));
+    setReqBadge(requests.length);
+    // When the requests block is shown, don't repeat those people in the main list.
+    const reqIds = new Set(requests.map((r) => r.id));
+    const listPeople = showRequests ? people.filter((p) => !reqIds.has(p.id)) : people;
+    el("peopleHeading").textContent = searching ? "Results" : "People on Nest";
+    const list = el("peopleList"); list.innerHTML = "";
+    el("peopleEmpty").hidden = listPeople.length > 0;
+    listPeople.forEach((p) => list.appendChild(renderPerson(p, false)));
+  }
+
+  function renderPerson(p, isRequest) {
+    const row = document.createElement("div");
+    row.className = "person";
+    const av = avatarInner(p);
+    row.innerHTML = `
+      <div class="avatar" ${av.style ? `style="${av.style}"` : ""}>${av.text}</div>
+      <div class="who"><div class="p-name">${esc(p.name)}</div>${p.bio ? `<div class="p-bio">${esc(p.bio)}</div>` : ""}</div>
+      <div class="person-actions"></div>`;
+    const actions = row.querySelector(".person-actions");
+    const btn = (label, cls, fn) => { const b = document.createElement("button"); b.className = "btn " + cls; b.textContent = label; b.onclick = fn; return b; };
+    const rel = p.rel;
+    const reload = () => loadFriends(el("peopleSearch").value);
+    if (rel === "friends") actions.innerHTML = `<span class="tag">✓ Friends</span>`;
+    else if (rel === "outgoing") actions.appendChild(btn("Requested", "ghost", async () => { await api("/api/friends/remove", { method: "POST", body: { userId: p.id } }); reload(); }));
+    else if (rel === "incoming") {
+      actions.appendChild(btn("Accept", "primary", async () => { await api("/api/friends/request", { method: "POST", body: { toId: p.id } }); toast("You're now friends with " + p.name.split(" ")[0]); reload(); }));
+      actions.appendChild(btn("Decline", "ghost", async () => { await api("/api/friends/remove", { method: "POST", body: { userId: p.id } }); reload(); }));
+    } else actions.appendChild(btn("Add friend", "primary", async () => { await api("/api/friends/request", { method: "POST", body: { toId: p.id } }); reload(); }));
+    return row;
+  }
+
+  function setReqBadge(n) { const b = el("reqBadge"); if (n > 0) { b.textContent = n; b.hidden = false; } else b.hidden = true; }
+  async function refreshReqBadge() { try { setReqBadge((await api("/api/friends/requests")).requests.length); } catch {} }
 
   /* ---------- Profile ---------- */
   let pendingProfilePhoto = null;
@@ -198,6 +251,7 @@
       el("topbar").hidden = false;
       paintMe();
       if (!me.profile.name) { show("profile"); loadProfile(); return; }
+      refreshReqBadge();
       go("feed");
     } catch { me = null; el("topbar").hidden = true; setMode("signup"); show("auth"); }
   }

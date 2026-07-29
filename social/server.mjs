@@ -44,6 +44,11 @@ db.exec(`
     post_id INTEGER NOT NULL REFERENCES posts(id),
     user_id INTEGER NOT NULL, body TEXT NOT NULL, created INTEGER NOT NULL
   );
+  CREATE TABLE IF NOT EXISTS friendships (
+    requester_id INTEGER NOT NULL, addressee_id INTEGER NOT NULL,
+    status TEXT NOT NULL, created INTEGER NOT NULL,
+    PRIMARY KEY (requester_id, addressee_id)
+  );
 `);
 
 /* ----------------------------- Auth helpers ----------------------------- */
@@ -83,7 +88,27 @@ const q = {
   commentCount: db.prepare("SELECT COUNT(*) c FROM comments WHERE post_id=?"),
   insertComment: db.prepare("INSERT INTO comments (post_id, user_id, body, created) VALUES (?,?,?,?)"),
   commentsFor: db.prepare("SELECT c.user_id, c.body, c.created, p.name FROM comments c JOIN profiles p ON p.user_id=c.user_id WHERE c.post_id=? ORDER BY c.created ASC"),
+  edge: db.prepare("SELECT * FROM friendships WHERE (requester_id=? AND addressee_id=?) OR (requester_id=? AND addressee_id=?)"),
+  addRequest: db.prepare("INSERT OR IGNORE INTO friendships (requester_id, addressee_id, status, created) VALUES (?,?,'pending',?)"),
+  acceptRequest: db.prepare("UPDATE friendships SET status='accepted' WHERE requester_id=? AND addressee_id=? AND status='pending'"),
+  removeEdge: db.prepare("DELETE FROM friendships WHERE (requester_id=? AND addressee_id=?) OR (requester_id=? AND addressee_id=?)"),
+  friendIds: db.prepare(`SELECT addressee_id AS id FROM friendships WHERE requester_id=? AND status='accepted'
+                         UNION SELECT requester_id AS id FROM friendships WHERE addressee_id=? AND status='accepted'`),
+  incomingRequests: db.prepare("SELECT requester_id AS id, created FROM friendships WHERE addressee_id=? AND status='pending' ORDER BY created DESC"),
+  searchPeople: db.prepare("SELECT user_id AS id FROM profiles WHERE user_id!=? AND name!='' AND lower(name) LIKE ? ORDER BY name LIMIT 40"),
+  recentPeople: db.prepare("SELECT user_id AS id FROM profiles WHERE user_id!=? AND name!='' ORDER BY user_id DESC LIMIT 40"),
 };
+
+// Relationship of target user t as seen by me: none | friends | outgoing | incoming
+function relationship(meId, t) {
+  const e = q.edge.get(meId, t, t, meId);
+  if (!e) return "none";
+  if (e.status === "accepted") return "friends";
+  return e.requester_id === meId ? "outgoing" : "incoming";
+}
+function friendIdSet(meId) {
+  return new Set(q.friendIds.all(meId, meId).map((r) => r.id));
+}
 
 function createSession(userId) { const t = newToken(); q.insertSession.run(t, userId, Date.now()); return t; }
 function userFromReq(req) {
@@ -193,7 +218,13 @@ async function api(req, res, path) {
   }
 
   if (path === "/api/feed" && method === "GET") {
-    const rows = q.feed.all();
+    // Feed = your posts + your friends' posts.
+    const ids = [user.id, ...friendIdSet(user.id)];
+    const placeholders = ids.map(() => "?").join(",");
+    const rows = db.prepare(
+      `SELECT id, author_id, body, (photo IS NOT NULL) AS has_photo, created
+       FROM posts WHERE author_id IN (${placeholders}) ORDER BY created DESC LIMIT 100`
+    ).all(...ids);
     const posts = rows.map((r) => ({
       id: r.id, author: author(r.author_id), body: r.body, photo: !!r.has_photo, created: r.created,
       likes: q.likeCount.get(r.id).c, liked: !!q.likedByMe.get(r.id, user.id), comments: q.commentCount.get(r.id).c,
@@ -229,6 +260,47 @@ async function api(req, res, path) {
     if (!body) return send(res, 400, { error: "Comment is empty." });
     q.insertComment.run(pid, user.id, body, Date.now());
     return send(res, 200, { ok: true, comments: q.commentCount.get(pid).c });
+  }
+
+  /* ---------- Friends ---------- */
+  const person = (id) => {
+    const p = q.profileById.get(id) || {};
+    return { id, name: p.name, bio: p.bio, photo: !!p.photo, rel: relationship(user.id, id) };
+  };
+
+  if (path === "/api/people" && method === "GET") {
+    const term = new URL(req.url, "http://x").searchParams.get("q");
+    const rows = term && term.trim()
+      ? q.searchPeople.all(user.id, "%" + term.trim().toLowerCase() + "%")
+      : q.recentPeople.all(user.id);
+    return send(res, 200, { people: rows.map((r) => person(r.id)) });
+  }
+  if (path === "/api/friends" && method === "GET") {
+    const ids = [...friendIdSet(user.id)];
+    return send(res, 200, { friends: ids.map(person) });
+  }
+  if (path === "/api/friends/requests" && method === "GET") {
+    const rows = q.incomingRequests.all(user.id);
+    return send(res, 200, { requests: rows.map((r) => person(r.id)) });
+  }
+  if (path === "/api/friends/request" && method === "POST") {
+    const toId = Number((await readBody(req)).toId);
+    if (!toId || toId === user.id || !q.profileById.get(toId)) return send(res, 400, { error: "Invalid person." });
+    const rel = relationship(user.id, toId);
+    if (rel === "friends") return send(res, 200, { ok: true, rel: "friends" });
+    if (rel === "incoming") { q.acceptRequest.run(toId, user.id); return send(res, 200, { ok: true, rel: "friends" }); }
+    q.addRequest.run(user.id, toId, Date.now());
+    return send(res, 200, { ok: true, rel: "outgoing" });
+  }
+  if (path === "/api/friends/accept" && method === "POST") {
+    const fromId = Number((await readBody(req)).fromId);
+    q.acceptRequest.run(fromId, user.id);
+    return send(res, 200, { ok: true, rel: relationship(user.id, fromId) });
+  }
+  if (path === "/api/friends/remove" && method === "POST") {
+    const other = Number((await readBody(req)).userId);
+    q.removeEdge.run(user.id, other, other, user.id);
+    return send(res, 200, { ok: true, rel: "none" });
   }
 
   return send(res, 404, { error: "Unknown endpoint." });

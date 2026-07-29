@@ -12,13 +12,20 @@ node social/server.mjs      # then open http://localhost:4000
 
 Env: `PORT` (default 4000), `NEST_DB` (default `social/nest.db`, git-ignored).
 
+**Seed the founder profile** (optional, idempotent) — creates Rob Brizzi's account with
+photo and a welcome post so a fresh database isn't empty:
+
+```bash
+node social/seed.mjs        # log in: rob@thecardinal.com / cardinal1
+```
+
 ## Roadmap
 
 | Phase | Status | What |
 |-------|--------|------|
 | **1 — Feed** | ✅ done | Accounts, profiles (name, bio, photo), **posts (text + photo), news feed, likes, comments** |
-| 2 — Friends | next | Friend requests/accept, people search, feed scoped to friends |
-| 3 — Notifications | | Real-time alerts (likes, comments, requests) via server-sent events |
+| **2 — Friends** | ✅ done | **People search, friend requests/accept/decline, feed scoped to your circle** |
+| 3 — Notifications | next | Real-time alerts (likes, comments, requests) via server-sent events |
 | 4 — Messaging | | Direct messages |
 | 5 — Groups | | Create/join groups, group feeds |
 | 6 — Photos & profiles | | Albums, richer profile pages |
