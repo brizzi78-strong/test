@@ -25,7 +25,7 @@
 5. **The Pen and the Pill** — Ozempic and Rybelsus; whose mornings are these
 6. **Samples, No Credit** — the insulin in the trunk; sample prison; the other ledger named
 7. **Number One in the Nation** — the two-week-old number; Universal after dark; Lou's doorway
-8. **The Keynote** — Tom Brady and the roar *(blocking: verify the event)*
+8. **The Keynote** — Tom Brady and the roar *(speaker confirmed by Rob; pin company/city/year)*
 
 ### Part II — The Famous Years
 

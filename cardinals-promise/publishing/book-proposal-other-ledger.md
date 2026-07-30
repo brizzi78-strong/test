@@ -74,7 +74,7 @@ Legal posture built in from day one: NDA guardrails document, PDMA-compliant dep
 
 ## Annotated Table of Contents
 
-**Part I — The Bag.** Hired not knowing type 1 from type 2; the mentor who taught him what the disease costs *(pending family's blessing)*; the prophecy ("the Viagra of diabetes"); the hallway question; the pen and the pill; the insulin in the trunk — samples, no credit; #1 in the nation and the number that was always two weeks old; the celebrity keynote and the roar *(event being verified)*.
+**Part I — The Bag.** Hired not knowing type 1 from type 2; the mentor who taught him what the disease costs *(pending family's blessing)*; the prophecy ("the Viagra of diabetes"); the hallway question; the pen and the pill; the insulin in the trunk — samples, no credit; #1 in the nation and the number that was always two weeks old; Tom Brady's keynote and the roar *(speaker confirmed by the author; date being pinned)*.
 
 **Part II — The Famous Years.** The shortage from the pharmacist's side of the counter; the craze (a company worth more than Denmark; a woman going quiet at a dinner table); the media whiplash a rep was never legally allowed to match; the compounding Wild West and a vial at a cookout.
 

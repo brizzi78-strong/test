@@ -2,13 +2,14 @@
 
 *A scene from the pharma years — Tom Brady at the national sales meeting.*
 
-> **Draft scene — for Rob's review. BLOCKING before publication:** confirm
-> the event itself — which company meeting, which city, which year, and
-> that it was Tom Brady. A checkable celebrity event is a memoir-credibility
-> landmine if any detail is off. Everything beyond the fact that he spoke —
-> the city, the year, the arena, what he said — is a stand-in drawn from
-> his public material (the 199th-pick story, team). Swap in what you
-> actually remember. Details to confirm at the bottom.
+> **Draft scene — for Rob's review.** The speaker is **confirmed by Rob
+> (2026-07-30): it was Tom Brady.** Still needed before publication: which
+> company meeting, which city, which year — a checkable celebrity event
+> needs its date pinned, because Brady's corporate-keynote circuit is
+> mostly post-retirement and a wrong year is the kind of thing fact-
+> checkers catch. Everything beyond the fact that he spoke — the city, the
+> arena, what he said — is a stand-in drawn from his public material.
+> Details to confirm at the bottom.
 
 ---
 
@@ -46,7 +47,7 @@ Nobody leaves alone either.
 
 ## Details to confirm or replace (Rob)
 
-- **BLOCKING:** which event this actually was — company, city, year, and that the speaker was Brady. (Panel note: Brady's corporate-keynote circuit is mostly post-retirement, Feb 2023 on, and big in-person sales meetings went virtual in 2020–21 — so if this was during your selling years, pinning the real date matters. If memory is fuzzy on who or when, hedge or swap in the athlete it actually was.)
+- **Speaker confirmed (Rob, 2026-07-30): Tom Brady.** Remaining: company, city, year. (Panel note stands: Brady's corporate-keynote circuit is mostly post-retirement, Feb 2023 on, and big in-person meetings went virtual 2020–21 — so the year determines whether this scene sits in your selling years or after; the chapter's framing may need to move with it. If it was post-2023, you were already in hospice — which might be the *truer* scene: the former rep in the audience.)
 - One line you actually remember him saying. The draft paraphrases only his publicly attested material (199th pick, six QBs ahead, the scouting report, team) — do not put invented sentences in his mouth in the final either.
 - What you really thought about during the speech — the hallway-doctor cutaway is the drafted stand-in; if your mind went somewhere else, that somewhere is the scene.
 - Whether anything real happened on the flight home. The drafted "list of doctors" epiphany was cut as manufactured; if something true happened, one rough specific beats a tidy turn.
