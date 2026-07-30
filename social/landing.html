@@ -86,8 +86,8 @@
     .row{grid-template-columns:1fr;gap:.15rem;text-align:center}
     .fb{text-align:center}
     .col-head{display:none}
-    .fb::before{content:"Facebook &#8212; ";color:var(--faint);font-weight:600}
-    .us::before{content:"The Cardinal &#8212; ";color:var(--gold);font-weight:700}
+    .fb::before{content:"Facebook: ";color:var(--faint);font-weight:600}
+    .us::before{content:"The Cardinal: ";color:var(--gold);font-weight:700}
     .gifts{grid-template-columns:1fr}
   }
   @media(prefers-reduced-motion:reduce){.soon .dot{animation:none}}
@@ -115,6 +115,17 @@
   .pv-btn{border:0;border-radius:999px;font-weight:700;padding:.55rem 1.05rem;cursor:pointer;font-size:.85rem;white-space:nowrap}
   .pv-btn.p{background:var(--snow);color:var(--ink)}
   .pv-btn.g{background:transparent;color:var(--snow);border:1px solid rgba(255,255,255,.18)}
+  html{scroll-behavior:smooth}
+  a.cue{color:var(--faint);text-decoration:none;cursor:pointer;transition:color .2s}
+  a.cue:hover{color:var(--gold)}
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  .pv-btn{transition:transform .18s,background .18s}
+  .pv-btn.p:hover{transform:translateY(-1px)}
+  .pv-btn.g:hover{background:rgba(255,255,255,.07)}
+  .row{transition:border-color .4s}
+  .row:hover{border-color:rgba(255,255,255,.22)}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}html{scroll-behavior:auto}}
 </style>
 
 <div class="glow"></div>
@@ -127,10 +138,10 @@
     <h1>It's what<br><em>you asked for.</em></h1>
     <p class="lead">A social network of <b>real, verified people</b> &#8212; your actual circle, no outrage algorithm. <b>No sides. Just people.</b></p>
     <span class="soon"><span class="dot"></span> Launching soon</span>
-    <div class="cue">It's different &#8212; and you'll see why &#8595;</div>
+    <a class="cue" href="#diff">It's different &#8212; and you'll see why &#8595;</a>
   </section>
 
-  <section class="wrap diff">
+  <section class="wrap diff reveal" id="diff">
     <p class="kicker">The difference</p>
     <h2>Every network was built to keep you scrolling.<br>This one was built to keep you close.</h2>
     <div class="rows">
@@ -148,7 +159,7 @@
     </div>
   </section>
 
-  <section class="wrap look">
+  <section class="wrap look reveal">
     <p class="kicker">A look inside</p>
     <h2>Real people. Real profiles.</h2>
     <p class="sub">No performance, no strangers &#8212; just your people, showing up.</p>
@@ -172,3 +183,12 @@
 
   <footer>Invite-only &#183; verified members &#183; no ads &#183; we never sell your data &#183; &#169; The Cardinal</footer>
 </div>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
