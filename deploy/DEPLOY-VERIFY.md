@@ -41,8 +41,10 @@ To auto-send:
 See `verify/README.md` and `deploy/README.md` for deliverability notes
 (SPF/DKIM/DMARC).
 
-## What this does NOT deploy
-This blueprint stands up **Verify** (the consent-based portal that works today).
-The automated **Checkr** screening (criminal / drug / MVR) lives in `hirecheck`
-and switches on once you have a Checkr key — that's a follow-up deploy, not part
-of this one.
+## What this deploys
+This blueprint stands up **two** services in one Apply:
+- **cardinal-verify** — the consent-based portal (works today, has the UI).
+- **cardinal-hirecheck** — the automated screening API. It runs the deterministic
+  **mock** until you set `HIRECHECK_PROVIDER=checkr` + `CHECKR_API_KEY`, then it
+  returns real criminal / verification / MVR / **drug** results with no code
+  change. It has no public UI — it's the backend the portal and site call.

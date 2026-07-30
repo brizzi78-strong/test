@@ -54,3 +54,32 @@ services:
         sync: false
       - key: VERIFY_MAIL_FROM
         sync: false
+
+  # Automated screening API (criminal / verifications / MVR / drug). Runs the
+  # deterministic mock until you set a Checkr key, then returns real results with
+  # no code change. No public UI — it's the backend the portal/site calls.
+  - type: web
+    name: cardinal-hirecheck
+    runtime: docker
+    branch: main
+    plan: starter
+    dockerfilePath: ./deploy/Dockerfile
+    dockerContext: .
+    dockerCommand: node hirecheck/src/index.ts
+    healthCheckPath: /health
+    autoDeploy: true
+    disk:
+      name: hirecheck-data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: HIRECHECK_DB
+        value: /data/hirecheck.db
+      # Leave HIRECHECK_PROVIDER unset for the mock. To go live, set it to
+      # "checkr" and add CHECKR_API_KEY (CHECKR_BASE_URL optional for sandbox).
+      - key: HIRECHECK_PROVIDER
+        sync: false
+      - key: CHECKR_API_KEY
+        sync: false
+      - key: CHECKR_BASE_URL
+        sync: false
