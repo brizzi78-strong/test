@@ -1,7 +1,15 @@
 # Title Options — the Ozempic Book
 
-*Working notes on Rob's proposed title and alternatives. Decision is Rob's;
-this maps the trade-offs.*
+> **DECIDED (2026-07-30, final — Rob's pick):**
+> **THE OTHER LEDGER — *An Insider's Story of Ozempic and the People the
+> Numbers Missed***, standing as its own book in the Cardinal's Promise
+> series. Front matter and chapter order: `00-front-matter.md`.
+> Fallback for the publisher conversation if pushed: "Selling Ozempic —
+> An Insider's Story of the Drug That Revolutionized Medicine — and the
+> People It Couldn't Reach."
+
+*Working notes on Rob's proposed title and alternatives; the trade-off map
+that produced the decision.*
 
 ## Rob's proposal
 
