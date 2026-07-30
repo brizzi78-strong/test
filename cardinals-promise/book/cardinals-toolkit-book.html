@@ -99,6 +99,20 @@
   .index { font-family: Helvetica, Arial, sans-serif; font-size: 9pt; columns: 2;
     column-gap: 26px; }
   .index h3 { font-size: 10pt; color: var(--red); margin: 10px 0 3px; break-after: avoid; }
+  /* ---- Glossary / Quotes / References ---- */
+  .glossary { font-size: 10.6pt; line-height: 1.42; }
+  .glossary .grow { margin-bottom: 9px; break-inside: avoid; }
+  .glossary .gterm { font-weight: bold; color: var(--ink); }
+  .glossary .gpg { float: right; font-family: Helvetica, Arial, sans-serif; font-size: 9pt;
+    color: #57534e; font-variant-numeric: tabular-nums; }
+  .glossary .gdef { color: var(--ink); }
+  .quotepage .qrow { margin: 0 auto 22px; max-width: 5.4in; text-align: center; break-inside: avoid; }
+  .quotepage .qq { font-family: Georgia, serif; font-style: italic; font-size: 14pt; line-height: 1.5; color: var(--ink); }
+  .quotepage .qa { font-family: Helvetica, Arial, sans-serif; font-size: 9.5pt; letter-spacing: 0.04em;
+    color: #57534e; margin-top: 6px; }
+  .refs { font-size: 10.3pt; line-height: 1.45; color: var(--ink); }
+  .refs h4 { font-family: Helvetica, Arial, sans-serif; font-size: 10.5pt; color: var(--ink); margin: 13px 0 3px; }
+  .refs p { margin: 0 0 8px; }
   .index h3:first-child { margin-top: 0; }
   .index p { font-size: 9pt; margin: 0 0 2px; padding-left: 14px; text-indent: -14px; }
 
@@ -552,8 +566,9 @@
   <ul>
     <li>About the Author<span class="lead"></span><span class="tocpg" data-key="bm:author">254</span></li>
     <li>Your State Guide<span class="lead"></span><span class="tocpg" data-key="bm:state">255</span></li>
-    <li>Index<span class="lead"></span><span class="tocpg" data-key="bm:index">259</span></li>
-    <li>Numbers That Matter<span class="lead"></span><span class="tocpg" data-key="bm:numbers">261</span></li>
+    <li>Glossary<span class="lead"></span><span class="tocpg" data-key="bm:gloss">259</span></li>
+    <li>Index<span class="lead"></span><span class="tocpg" data-key="bm:index">262</span></li>
+    <li>Numbers That Matter<span class="lead"></span><span class="tocpg" data-key="bm:numbers">264</span></li>
   </ul>
 </div>
 
@@ -8114,6 +8129,40 @@ parent lives in is what governs — not where you live.</p>
 <p><em>More states are added as the Cardinal's Promise Series grows — with every program,
 office, and form for your state named and explained — at thecardinalspromise.com. (Virginia, it
 turns out, calls its Medicaid program Cardinal Care. We take that as a good sign.)</em></p>
+
+<!-- ============ GLOSSARY ============ -->
+<div class="pagebreak"></div>
+<h2 class="fm">Glossary</h2>
+<p style="font-family:Helvetica,Arial,sans-serif; font-size:9pt; color:#666;">Plain-language meanings for the terms families run into most — with the page where each is used.</p>
+<div class="glossary">
+  <div class="grow"><span class="gterm">Activities of Daily Living (ADLs)</span><span class="gpg">p.&nbsp;87</span><div class="gdef">The basic things a person does each day to care for themselves — eating, bathing, dressing, using the toilet, and getting around. How much help someone needs with these usually decides what kind of care they need.</div></div>
+  <div class="grow"><span class="gterm">Adult Protective Services (APS)</span><span class="gpg">p.&nbsp;201</span><div class="gdef">A state agency that looks into reports that an older or disabled adult is being hurt, neglected, or taken advantage of. Call them if you think someone is being harmed.</div></div>
+  <div class="grow"><span class="gterm">Advance Directive</span><span class="gpg">p.&nbsp;52</span><div class="gdef">A paper that says, ahead of time, what medical care a person does or does not want if they cannot speak for themselves. It usually includes a living will and a health care power of attorney.</div></div>
+  <div class="grow"><span class="gterm">Area Agency on Aging</span><span class="gpg">p.&nbsp;144</span><div class="gdef">A local office that helps older adults and families find services like meals, rides, in-home help, and caregiver support. Free to call.</div></div>
+  <div class="grow"><span class="gterm">Assisted Living</span><span class="gpg">p.&nbsp;44</span><div class="gdef">A place where seniors live in their own room or apartment and get help with daily tasks like meals, medicine, and bathing — but not full nursing care.</div></div>
+  <div class="grow"><span class="gterm">Do Not Resuscitate (DNR)</span><span class="gpg">p.&nbsp;205</span><div class="gdef">A doctor’s order not to do CPR (restart the heart) if the person’s heart or breathing stops. It only covers CPR, not other care.</div></div>
+  <div class="grow"><span class="gterm">Financial Power of Attorney</span><span class="gpg">p.&nbsp;50</span><div class="gdef">A legal paper that lets a trusted person handle money, bills, and accounts for someone who cannot. “Durable” means it still works after the person becomes too sick to manage.</div></div>
+  <div class="grow"><span class="gterm">Extra Help</span><span class="gpg">p.&nbsp;90</span><div class="gdef">A Medicare program that helps people with low income pay for their prescription drug costs.</div></div>
+  <div class="grow"><span class="gterm">Guardianship</span><span class="gpg">p.&nbsp;204</span><div class="gdef">When a court names someone to make decisions for an adult who no longer can — and had no power of attorney in place. It takes months and money; good paperwork ahead of time usually avoids it.</div></div>
+  <div class="grow"><span class="gterm">Home Health</span><span class="gpg">p.&nbsp;38</span><div class="gdef">Skilled care (nursing or therapy) given at home for a limited time, usually paid by Medicare after a hospital stay. Not the same as everyday help.</div></div>
+  <div class="grow"><span class="gterm">Hospice</span><span class="gpg">p.&nbsp;57</span><div class="gdef">Comfort care for someone expected to live about six months or less. It eases pain and supports the family instead of trying to cure the illness. Usually fully covered by Medicare.</div></div>
+  <div class="grow"><span class="gterm">Living Will</span><span class="gpg">p.&nbsp;71</span><div class="gdef">A paper that spells out what treatment a person wants, or does not want, near the end of life — like breathing machines or feeding tubes.</div></div>
+  <div class="grow"><span class="gterm">Long-Term Care</span><span class="gpg">p.&nbsp;68</span><div class="gdef">Ongoing help with daily living for months or years — at home, in assisted living, or in a nursing home. Regular insurance and Medicare usually do not pay for it.</div></div>
+  <div class="grow"><span class="gterm">Medicaid</span><span class="gpg">p.&nbsp;71</span><div class="gdef">A government program that pays for health care and long-term care for people with low income and few savings. Run by each state, with different rules.</div></div>
+  <div class="grow"><span class="gterm">Medicaid Look-Back</span><span class="gpg">p.&nbsp;141</span><div class="gdef">When you apply for Medicaid to cover a nursing home, the state checks the last five years for money or property given away. Gifts in that window can delay coverage.</div></div>
+  <div class="grow"><span class="gterm">Medicare</span><span class="gpg">p.&nbsp;43</span><div class="gdef">The federal health insurance for people 65 and older (and some younger people with disabilities). It covers doctors and hospitals but not most long-term care.</div></div>
+  <div class="grow"><span class="gterm">Medicare Advantage</span><span class="gpg">p.&nbsp;134</span><div class="gdef">A private plan that replaces Original Medicare. Often lower cost, but a smaller network of doctors and its own rules.</div></div>
+  <div class="grow"><span class="gterm">Memory Care</span><span class="gpg">p.&nbsp;44</span><div class="gdef">A kind of assisted living made for people with dementia — secured doors and staff trained for memory loss.</div></div>
+  <div class="grow"><span class="gterm">Observation Status</span><span class="gpg">p.&nbsp;134</span><div class="gdef">When a hospital keeps a patient but calls it “observation” instead of “admitted.” This can quietly leave the family paying for the rehab that follows. Always ask which status your parent is under.</div></div>
+  <div class="grow"><span class="gterm">Palliative Care</span><span class="gpg">p.&nbsp;59</span><div class="gdef">Care that eases pain and stress from a serious illness. Unlike hospice, you can have it at any stage — even while still seeking a cure.</div></div>
+  <div class="grow"><span class="gterm">POLST / MOLST</span><span class="gpg">p.&nbsp;71</span><div class="gdef">A doctor’s order on a bright form that says what emergency treatment a seriously ill person wants. It travels with them, and paramedics must follow it.</div></div>
+  <div class="grow"><span class="gterm">Health Care Power of Attorney</span><span class="gpg">p.&nbsp;71</span><div class="gdef">A legal paper that names the person who can make medical decisions for someone who cannot speak for themselves.</div></div>
+  <div class="grow"><span class="gterm">Private Duty Care</span><span class="gpg">p.&nbsp;43</span><div class="gdef">Help you pay for yourself (or with long-term care insurance) — an aide for bathing, meals, or overnight care. Medicare usually does not cover it.</div></div>
+  <div class="grow"><span class="gterm">QIO (Quality Improvement Organization)</span><span class="gpg">p.&nbsp;111</span><div class="gdef">The group you can call for a fast, free appeal if a hospital or rehab tries to send your parent home too soon.</div></div>
+  <div class="grow"><span class="gterm">Skilled Nursing Facility (SNF)</span><span class="gpg">p.&nbsp;42</span><div class="gdef">A place that gives short-term nursing and rehab, often right after a hospital stay. Medicare may pay for a limited time — but only if the hospital “admitted” the patient.</div></div>
+  <div class="grow"><span class="gterm">SHIP (State Health Insurance Assistance Program)</span><span class="gpg">p.&nbsp;137</span><div class="gdef">Free, unbiased help in every state for understanding Medicare choices. Not selling anything.</div></div>
+  <div class="grow"><span class="gterm">Trust</span><span class="gpg">p.&nbsp;143</span><div class="gdef">A legal setup that holds money or property for someone. An “irrevocable” trust cannot be easily changed and is sometimes used, well ahead of time, to protect assets — always with an attorney.</div></div>
+</div>
 
 <!-- ============ INDEX ============ -->
 <div class="pagebreak"></div>
