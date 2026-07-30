@@ -13,7 +13,9 @@
 
 There is a list, in that business, and everyone knows where they are on it.
 
-It arrives in dashboards and district calls and the tone your manager uses in October. You can feel your number the way you can feel weather. I had been climbing it for years — top of the district, top of the region, close-but at the national meeting while somebody else walked across the stage.
+It arrives in dashboards and district calls and the tone your manager uses in October. You can feel your number the way you can feel weather. And the number was always two weeks old — that's how long a prescription took to travel from a pharmacy counter to whoever counted such things to me. You could have the best week of your career and the dashboard wouldn't know it for two more. You worked blind in the gap, and found out later who you'd been.
+
+I had been climbing that list for years — top of the district, top of the region, close-but at the national meeting while somebody else walked across the stage.
 
 Then one year the list ran out of names above mine.
 
@@ -42,6 +44,7 @@ Then it left me, quietly, the way it does when a family holds the door of a room
 - Which company, which year, which product's ranking — and what the award actually was (President's Club is a top-N club; "#1 in the nation" is a single ranking — the anchor is #1). **When filling in specifics, keep insider numbers out** (sales figures, quota attainment, call-plan detail) per `nda-guardrails.md` — the award and year are yours; the metrics aren't.
 - The Universal Studios beat is your true anchor (closed for the sales force, two hours) — confirm which trip/year, and whether it was the same Orlando meeting as the keynote scene.
 - How you actually found out — stage at the national meeting, a call from your manager, the dashboard? The drafted stage moment is a stand-in.
+- **The two-week data lag (added from your fragment):** confirm the lag as you lived it — was it two weeks flat for your products/era, and what did the blind gap actually feel like at quarter's end? (Kept vendor-generic on the page — "whoever counted such things" — which is also the NDA-safe register.)
 - The call to Lou: did it happen? The draft keeps his words out on purpose — if the call is real, write his side yourself when you're ready; if it isn't, cut the beat rather than let it stand as fact.
 - "Close-but" years before the win — real, or compression?
 - The "he waited for you" beat — a real hospice moment or a stand-in? Same rule as always: only the true version goes to print.
