@@ -33,17 +33,18 @@
 10. **The Weight Loss Craze** — the word leaves medicine; Denmark; the dinner table
 11. **The Media Gets Hold of Ozempic** — the rules he lived under, the coverage that lived under none
 12. **Like the Wild West Come the Compounding Pharmacies** — the cookout vial; ten minutes
+13. **Ozempic Babies** — the one wave made of good news; the sonogram at the party; the turn toward Part III
 
 ### Part III — The Other Ledger
 
-13. **Love and Ozempic** — Hope and I; the Parkinson's kitchen table *(gated on Hope's sign-off)*
-14. **The Last Refill** — the hinge; the pen in the refrigerator door; butter pecan at ten in the morning
+14. **Love and Ozempic** — Hope and I; the Parkinson's kitchen table *(gated on Hope's sign-off)*
+15. **The Last Refill** — the hinge; the pen in the refrigerator door; butter pecan at ten in the morning
+
+**Coda: The Needle** — the last page; the pill era pays off the needle-fear thread; ends on "The question still works."
 
 ### Unwritten (see `chapter-gaps.md`)
 
 - *The sober rep and the craving drug* — drafts only when Rob says so
-- *Ozempic babies* — the joy chapter
-- *The pill-era coda* — the woman who feared the needle outlived the needle
 
 ---
 
