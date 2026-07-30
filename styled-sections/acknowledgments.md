@@ -18,6 +18,8 @@ Tyler and Jaye, for letting me tell it.
 
 Scott, my editor, who made these pages better and let them stay mine.
 
+Grace Nobrega, for the cover design.
+
 The rooms, and the people in them, who keep teaching me that the door only had to open once.
 
 And Dad. I kept the promise.
