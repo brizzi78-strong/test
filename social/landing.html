@@ -22,6 +22,7 @@
 
   .stage{min-height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:center;
     text-align:center;padding:clamp(1.5rem,6vw,3rem)}
+  .cardinal{width:clamp(88px,13vw,128px);height:auto;display:block;margin-bottom:1.4rem;filter:drop-shadow(0 10px 28px rgba(0,0,0,.3))}
   .brand{display:flex;align-items:center;gap:.55rem;font-weight:600;letter-spacing:.02em;font-size:1.05rem;margin-bottom:2.4rem}
   .seal{width:20px;height:20px;border-radius:50%;background:var(--snow);box-shadow:0 0 16px rgba(255,255,255,.25)}
   .eyebrow{font-size:.74rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);margin:0 0 1.3rem;font-weight:600}
@@ -133,7 +134,8 @@
 
 <div class="page">
   <section class="stage">
-    <div class="brand"><span class="seal"></span> The Cardinal</div>
+    <svg class="cardinal" viewBox="0 0 260 240" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="#ffffff" d="M40 94 L70 72 C65 57 67 41 77 31 C81 43 88 44 92 38 C93 52 90 62 99 70 C120 82 142 100 154 122 C161 137 166 150 170 150 C182 158 197 178 214 208 C190 196 171 181 155 164 C133 177 107 173 90 158 C74 150 64 132 62 112 L44 98 Z"/><circle cx="64" cy="88" r="3.6" fill="#460f18"/><path fill="#8a1220" d="M40 94 L58 84 L60 104 Z"/></svg>
+    <div class="brand">The Cardinal</div>
     <p class="eyebrow">For the woke and the unwoke</p>
     <h1>It's what<br><em>you asked for.</em></h1>
     <p class="lead">A social network of <b>real, verified people</b> &#8212; your actual circle, no outrage algorithm. <b>No sides. Just people.</b></p>
