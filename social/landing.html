@@ -45,10 +45,15 @@
   .diff .kicker{text-align:center}
   .diff h2{font-family:var(--serif);font-weight:500;font-size:clamp(2rem,5vw,3.2rem);letter-spacing:-.015em;
     text-align:center;margin:0 0 3rem;text-wrap:balance}
-  .rows{display:flex;flex-direction:column}
+  .rows{display:flex;flex-direction:column;position:relative}
   .row{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,5vw,3rem);align-items:center;
-    padding:1.2rem 0;border-top:1px solid rgba(255,255,255,.1)}
+    padding:1.1rem 0;border-top:1px solid rgba(255,255,255,.1)}
   .row:last-child{border-bottom:1px solid rgba(255,255,255,.1)}
+  @media(min-width:641px){
+    .rows::before{content:"";position:absolute;top:2.9rem;bottom:0;left:50%;width:1px;background:rgba(255,255,255,.09)}
+    .row .us:not(.col-head){padding-left:1.6rem;position:relative}
+    .row .us:not(.col-head)::before{content:"\2713";position:absolute;margin-left:-1.6rem;color:var(--gold);font-weight:700;opacity:.9}
+  }
   .fb{color:var(--faint);text-align:right}
   .fb s{text-decoration-color:rgba(255,255,255,.3)}
   .us{color:var(--snow);font-weight:600}
@@ -58,7 +63,10 @@
 
   .signature{margin-top:3rem;background:linear-gradient(180deg,var(--panel),var(--ink));
     border:1px solid rgba(255,255,255,.14);border-radius:22px;padding:clamp(1.6rem,4vw,2.4rem);text-align:center}
-  .signature .heart{color:#ff8f8f;font-size:1.4rem}
+  .signature .heart{line-height:0;margin-bottom:.3rem}
+  .signature .heart svg{filter:drop-shadow(0 0 15px rgba(255,143,143,.5))}
+  .signoff{display:flex;justify-content:center;margin:clamp(3rem,7vh,4.5rem) 0 0}
+  .cardinal-sm{width:54px;height:auto;opacity:.92;filter:drop-shadow(0 6px 16px rgba(0,0,0,.28))}
   .signature h3{font-family:var(--serif);font-weight:500;font-size:clamp(1.5rem,3.4vw,2.2rem);margin:.5rem 0 .8rem;letter-spacing:-.01em}
   .signature p{color:var(--mist);max-width:34rem;margin:0 auto;font-size:1.08rem}
   .signature p b{color:var(--snow)}
@@ -155,7 +163,7 @@
     </div>
 
     <div class="signature">
-      <div class="heart">&#9829;</div>
+      <div class="heart"><svg width="30" height="27" viewBox="0 0 30 27" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="#ff8f8f" d="M15 26.4C7 20.9 1 15.5 1 9.1 1 5 4.2 2 8 2c2.8 0 5.2 1.6 6.4 4 .3.5.9.5 1.2 0C16.8 3.6 19.2 2 22 2c3.8 0 7 3 7 7.1 0 6.4-6 11.8-14 17.3z"/></svg></div>
       <h3>The one thing Facebook can't copy.</h3>
       <p>When someone's having a hard time, they raise a quiet signal &#8212; <b>&#8220;I could use some support.&#8221;</b> Only their circle sees it, and it's one tap to be there. A feed that helps you <b>show up for the people you love</b>, instead of just scroll past them.</p>
     </div>
@@ -183,6 +191,7 @@
     </div>
   </section>
 
+  <div class="signoff"><svg class="cardinal-sm" viewBox="0 0 260 240" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="#ffffff" d="M40 94 L70 72 C65 57 67 41 77 31 C81 43 88 44 92 38 C93 52 90 62 99 70 C120 82 142 100 154 122 C161 137 166 150 170 150 C182 158 197 178 214 208 C190 196 171 181 155 164 C133 177 107 173 90 158 C74 150 64 132 62 112 L44 98 Z"/><circle cx="64" cy="88" r="3.6" fill="#460f18"/><path fill="#8a1220" d="M40 94 L58 84 L60 104 Z"/></svg></div>
   <footer>Invite-only &#183; verified members &#183; no ads &#183; we never sell your data &#183; &#169; The Cardinal</footer>
 </div>
 
