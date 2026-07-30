@@ -80,8 +80,12 @@
   .front { position: absolute; left: 9.2376in; top: 0; width: 8.625in; height: 11.25in;
     padding: 0.62in 0.72in 0.6in 0.62in; text-align: center; }
   /* FRONT = adopted crossout cream design (matches front-cover-print) */
-  .front .frame { left: 0.22in; right: 0.375in; border-color: var(--red); }
-  .front .frame::after { border-color: var(--red); }
+  .front .frame { left: 0.22in; right: 0.375in; border: 3.5px solid var(--red); }
+  .front .frame::after { border: 1.5px solid var(--red); }
+  .front .badge { display: inline-block; margin-top: 0.18in; padding: 0.05in 0.2in;
+    background: var(--red); color: #faf1e4; font-family: Helvetica, Arial, sans-serif;
+    font-size: 11pt; font-weight: bold; letter-spacing: 0.11em; text-transform: uppercase;
+    border-radius: 0.06in; }
   .front .inner { position: absolute; left: 0.62in; right: 0.78in; top: 0.9in; bottom: 0.8in;
     display: flex; flex-direction: column; align-items: center; text-align: center; }
   .front .art { width: 72%; margin: 0 auto; }
@@ -170,6 +174,7 @@
     </div>
     <div class="orn"></div>
     <div class="sub">Helping Caregivers with Aging Loved Ones</div>
+    <div class="badge">Fill-In Workbook &middot; Color-Coded</div>
     <div class="orn"></div>
     <div class="author">ROB BRIZZI</div>
     <div class="withline">with Hope Brizzi, PharmD</div>

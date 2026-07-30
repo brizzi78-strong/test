@@ -55,8 +55,11 @@ async function rasterToPdf(pngPath, wIn, hIn, outPath) {
     body{ background:var(--cream); font-family:Georgia,"Times New Roman",serif;
       position:relative; overflow:hidden; }
     /* frame + content inset by trim(24/70/84) + bleed(12.5) so trim geometry is unchanged */
-    .frame{ position:absolute; inset:${24+B}px; border:2px solid var(--red); }
-    .frame::after{ content:""; position:absolute; inset:5px; border:1px solid var(--red); }
+    .frame{ position:absolute; inset:${24+B}px; border:5px solid var(--red); }
+    .frame::after{ content:""; position:absolute; inset:6px; border:2px solid var(--red); }
+    .badge{ display:inline-block; margin-top:22px; padding:7px 26px; background:var(--red);
+      color:var(--cream); font-family:Helvetica,Arial,sans-serif; font-size:20px; font-weight:bold;
+      letter-spacing:.11em; text-transform:uppercase; border-radius:8px; }
     .inner{ position:absolute; inset:${70+B}px ${66+B}px ${84+B}px; text-align:center;
       display:flex; flex-direction:column; align-items:center; }
     .art{ width:80%; margin:10px auto 0; }
@@ -89,6 +92,7 @@ async function rasterToPdf(pngPath, wIn, hIn, outPath) {
       </div>
       <div class="orn"></div>
       <div class="sub">Helping Caregivers with Aging Loved Ones</div>
+      <div class="badge">Fill-In Workbook &middot; Color-Coded</div>
       <div class="orn"></div>
       <div class="author">ROB BRIZZI</div>
       <div class="withline">with Hope Brizzi, PharmD</div>
