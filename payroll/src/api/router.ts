@@ -57,6 +57,8 @@ export function buildRoutes(service: PayrollService): Route[] {
     ],
 
     ['POST', '/companies', ({ body }) => created(service.createCompany(asObject(body) as never))],
+    ['GET', '/companies', ({ query }) => ok(service.listCompanies({ name: query.get('name') ?? undefined }))],
+    ['GET', '/companies/:id', ({ params }) => ok(service.getCompany(params.id))],
     ['POST', '/employees', ({ body }) => created(service.createEmployee(asObject(body) as never))],
     [
       'GET',

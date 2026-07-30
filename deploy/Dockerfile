@@ -21,10 +21,13 @@ COPY timeoff ./timeoff
 COPY offboarding ./offboarding
 COPY orchestrator ./orchestrator
 COPY accounting ./accounting
+COPY verify ./verify
 COPY booking ./booking
 COPY schedule ./schedule
 COPY book ./book
 COPY books ./books
+COPY timeclock ./timeclock
+COPY runpay ./runpay
 COPY portal ./portal
 COPY gateway ./gateway
 
