@@ -77,7 +77,8 @@ cardinalspromise.com landing page — higher converting, see Channel 4). Start *
 
 ### Audience
 - **Location:** United States
-- **Age:** 45–65 · **Gender:** All (skew female in results, don't pre-exclude men)
+- **Age:** **55–65 core** (test a 52–67 edge) · **Gender:** skew female — this is "Linda," the 55–65 daughter (see `target-customer.md`)
+- **Facebook-first** placement — this buyer lives on Facebook, not IG/TikTok
 - **Detailed targeting (interests):** Caregiver · AARP · Alzheimer's Association · Aging in place · Assisted living · Hospice · Dementia · Family caregivers · Elder law
 - **Later:** build a **Lookalike** from the pixel/page engagers once traffic flows
 - **Placements:** Advantage+ (let Meta optimize), or manual: FB Feed, IG Feed, Stories
