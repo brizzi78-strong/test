@@ -97,7 +97,7 @@ async function rasterToPdf(pngPath, wIn, hIn, outPath) {
       <div class="orn"></div>
       <div class="author">ROB BRIZZI</div>
       <div class="dedline">For Hope Brizzi, PharmD</div>
-      <div class="fromline">From the Author of <b>The Cardinal&rsquo;s Promise</b></div>
+      <div class="fromline">Author of <b>The Cardinal&rsquo;s Promise</b></div>
     </div>
   </body></html>`;
   fs.writeFileSync(`${SCR}/front-bleed.html`, html);
