@@ -12,13 +12,13 @@
 
 The needle is on its way out.
 
-Not for everyone, and not overnight. But the pills came — first the fussy one with its four ounces of water, then, years later, ones that ask almost nothing. Somewhere in a lab the injection I used to carry is becoming a chapter in the history of its own molecule. Medicine does this. The thing itself moves on.
+Not for everyone, and not overnight. But the pills came — first the fussy one with its four ounces of water, then, years later, ones that ask almost nothing. Somewhere in a lab the injection I used to carry is becoming a chapter in the history of its own molecule. The thing itself moves on.
 
-I think about the woman from the hallway — nine years of climbing numbers because a needle looked like her mother's whole ending. I never met her. I never learned her name. She'd be in her sixties now, and if her doctor offered her that medicine today, it could come in a bottle, and the thing that kept her sick for nine years would not even be in the room.
+I think about the woman from the hallway — nine years of climbing numbers because a needle looked like her mother's whole ending. I never met her. I never learned her name. She'd be in her sixties now, and if her doctor offered her that medicine today, it could come in a bottle, and the thing she was afraid of would not even be in the room.
 
-Her fear outlived its object. Fears do that; it's their one great talent. The needle was never really the needle — you know that by now, if you've come this far. It was the verdict she thought it carried. Verdicts don't come in pens or bottles. They come from rooms, and from the people in them, and whether anybody asks.
+Her fear outlived its object.
 
-The pens will end up where the glass syringes went, and the vials before them.
+The pens will end up where the glass syringes went.
 
 The question still works.
 
@@ -26,6 +26,7 @@ The question still works.
 
 ## Details to confirm or replace (Rob)
 
-- Fact base (verify before press, it's a moving target): Rybelsus 2019; first oral GLP-1 approved for weight loss 2026 (orforglipron); higher-dose oral semaglutide filed. The coda deliberately claims "on its way out," not "gone" — injectables aren't ending; keep the hedge.
-- "It was the verdict she thought it carried" — the coda states the book's subtext once, at the very end, on purpose. If the panel or your read finds it one sentence too many, the cut point is after "would not even be in the room," ending on the glass-syringes line and "The question still works."
+- Fact base (verify independently before press — it's a moving target, and the ordering matters): Rybelsus 2019 (confirmed); orforglipron's approval date; and whether high-dose oral semaglutide (the Wegovy pill) was approved *before* orforglipron — if so, any "first oral for weight loss" claim anywhere in the book must name the right drug. The body text survives either outcome; note "ask almost nothing" fits orforglipron only (oral semaglutide keeps the fasting rules).
+- The verdict paragraph was cut per panel (the craze chapter already earned that thesis in scenes; the reader-wink and the aphorisms went with it). "Her fear outlived its object." survives as the planted thread's payoff.
+- The ending stays four words. Rob's option if the spine's second verb should be on the last page: "The question still works. Someone still has to stay for the answer." — panel leaned against it (caption risk); your read decides.
 - Placement: last page of the book, after "The Last Refill."
