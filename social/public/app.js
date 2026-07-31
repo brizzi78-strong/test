@@ -390,16 +390,44 @@
   async function refreshNotifBadge() { try { setNotifBadge((await api("/api/notifications")).unread); } catch {} }
 
   /* ---------- Care signal ---------- */
-  el("careRaise").onclick = async () => {
-    const note = prompt("Add a short note for your circle? (optional)") || "";
-    try { await api("/api/support", { method: "PUT", body: { on: true, note } }); me.profile.support = { on: true, note }; renderCare(); toast("Your circle can see you could use support."); }
-    catch (e) { toast(e.message); }
+  function openSupport() {
+    el("supportNote").value = "";
+    el("supportChips").querySelectorAll(".s-chip").forEach((c) => c.classList.remove("on"));
+    el("supportModal").hidden = false;
+    setTimeout(() => el("supportNote").focus(), 60);
+  }
+  function closeSupport() { el("supportModal").hidden = true; }
+  el("careRaise").onclick = openSupport;
+  el("supportClose").onclick = closeSupport;
+  el("supportCancel").onclick = closeSupport;
+  el("supportModal").addEventListener("click", (e) => { if (e.target === el("supportModal")) closeSupport(); });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !el("supportModal").hidden) closeSupport(); });
+  el("supportChips").querySelectorAll(".s-chip").forEach((chip) => {
+    chip.onclick = () => {
+      const wasOn = chip.classList.contains("on");
+      el("supportChips").querySelectorAll(".s-chip").forEach((c) => c.classList.remove("on"));
+      if (!wasOn) { chip.classList.add("on"); el("supportNote").value = chip.dataset.note; }
+      else { el("supportNote").value = ""; }
+    };
+  });
+  el("supportSubmit").onclick = async () => {
+    const note = el("supportNote").value.trim();
+    el("supportSubmit").disabled = true;
+    try {
+      await api("/api/support", { method: "PUT", body: { on: true, note } });
+      me.profile.support = { on: true, note }; renderCare(); closeSupport();
+      toast("Your circle knows. You're not alone in this. 💛");
+    } catch (e) { toast(e.message); }
+    finally { el("supportSubmit").disabled = false; }
   };
   el("careClear").onclick = async () => {
-    try { await api("/api/support", { method: "PUT", body: { on: false } }); me.profile.support = { on: false, note: "" }; renderCare(); }
+    try { await api("/api/support", { method: "PUT", body: { on: false } }); me.profile.support = { on: false, note: "" }; renderCare(); toast("Turned off. Glad you're okay. 💛"); }
     catch (e) { toast(e.message); }
   };
-  function renderCare() { const on = !!(me.profile.support && me.profile.support.on); el("careOff").hidden = on; el("careOn").hidden = !on; }
+  function renderCare() {
+    const on = !!(me.profile.support && me.profile.support.on);
+    el("careOff").hidden = on; el("careOn").hidden = !on;
+  }
 
   /* ---------- Check-in strip ---------- */
   async function loadCheckin() {

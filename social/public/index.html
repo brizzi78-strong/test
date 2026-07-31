@@ -200,6 +200,25 @@
   </section>
 </main>
 
+<!-- Reach out — the care signal -->
+<div class="modal-overlay" id="supportModal" hidden>
+  <div class="modal support-modal card" role="dialog" aria-modal="true" aria-labelledby="supportTitle">
+    <button class="modal-x" id="supportClose" aria-label="Close">✕</button>
+    <div class="support-mark"><svg viewBox="0 0 260 240" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M40 94 L70 72 C65 57 67 41 77 31 C81 43 88 44 92 38 C93 52 90 62 99 70 C120 82 142 100 154 122 C161 137 166 150 170 150 C182 158 197 178 214 208 C190 196 171 181 155 164 C133 177 107 173 90 158 C74 150 64 132 62 112 L44 98 Z"/><circle cx="64" cy="88" r="4" fill="#460f18"/></svg></div>
+    <h2 id="supportTitle">It's okay to need people.</h2>
+    <p class="support-sub">Only <b>your circle</b> will see this — no feed, no algorithm. Just the people who care about you.</p>
+    <div class="support-chips" id="supportChips">
+      <button type="button" class="s-chip" data-note="Rough week — could use some support.">Rough week</button>
+      <button type="button" class="s-chip" data-note="Could really use a call.">Could use a call</button>
+      <button type="button" class="s-chip" data-note="Just need to know my people are there.">Need my people</button>
+    </div>
+    <textarea id="supportNote" rows="3" maxlength="200" placeholder="Anything you want to say? (optional)"></textarea>
+    <button class="btn primary lg" id="supportSubmit">Let my circle know 💛</button>
+    <button class="link-btn support-never" id="supportCancel">Never mind</button>
+    <p class="support-fine">You can turn this off anytime.</p>
+  </div>
+</div>
+
 <div class="toast" id="toast" hidden></div>
 <script src="app.js"></script>
 <script>if ("serviceWorker" in navigator) addEventListener("load", () => navigator.serviceWorker.register("/sw.js").catch(() => {}));</script>
