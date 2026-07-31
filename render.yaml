@@ -1,0 +1,20 @@
+# Render blueprint for The Cardinal social app.
+# A persistent disk keeps member signups/posts across restarts and deploys.
+services:
+  - type: web
+    name: cardinal-social
+    runtime: node
+    rootDir: social
+    plan: starter
+    buildCommand: ""
+    startCommand: node server.mjs
+    healthCheckPath: /
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: NEST_DB
+        value: /data/nest.db
+    disk:
+      name: cardinal-data
+      mountPath: /data
+      sizeGB: 1

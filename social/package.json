@@ -1,0 +1,14 @@
+{
+  "name": "cardinal-social",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "The Cardinal — a social network built on Node.js built-ins only (http, node:sqlite, crypto).",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node server.mjs",
+    "seed": "node seed.mjs"
+  }
+}
