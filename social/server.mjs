@@ -532,4 +532,14 @@ const server = createServer(async (req, res) => {
     return await serveStatic(res, path);
   } catch { send(res, 500, { error: "Server error." }); }
 });
+// First run: seed the founder profile so a freshly deployed site isn't empty.
+// Idempotent — seed.mjs is a no-op once the account exists.
+try {
+  const empty = db.prepare("SELECT COUNT(*) AS n FROM users").get().n === 0;
+  if (empty) {
+    const { execFileSync } = await import("node:child_process");
+    execFileSync(process.execPath, [join(__dirname, "seed.mjs")], { stdio: "inherit", env: process.env });
+  }
+} catch (e) { console.error("Seed-on-boot skipped:", e.message); }
+
 server.listen(PORT, () => console.log(`Nest running on http://localhost:${PORT}  (db: ${DB_PATH})`));
