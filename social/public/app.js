@@ -259,7 +259,7 @@
     const a = { id: me.user.id, name: me.profile.name, photo: me.profile.photo };
     const av = el("meAvatar"); const i = avatarInner(a);
     av.style.backgroundImage = i.style ? `url('/api/photo/user/${me.user.id}')` : "none";
-    av.style.background = i.style ? `center/cover url('/api/photo/user/${me.user.id}')` : "linear-gradient(135deg,#818cf8,#6366f1)";
+    av.style.background = i.style ? `center/cover url('/api/photo/user/${me.user.id}')` : "linear-gradient(135deg,#b8434f,#8a1220)";
     paintAvatar(el("composerAvatar"), a);
     el("composerOpen").textContent = `What's on your mind, ${(me.profile.name || "").split(" ")[0] || "friend"}?`;
   }
