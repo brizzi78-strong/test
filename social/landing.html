@@ -37,6 +37,10 @@
     animation:pulse 2.4s ease-in-out infinite;flex:0 0 auto}
   @keyframes pulse{0%,100%{opacity:.4}50%{opacity:1}}
   .cue{margin-top:2rem;color:var(--faint);font-size:.7rem;letter-spacing:.3em;text-transform:uppercase}
+  .cta{margin-top:1.9rem;display:inline-flex;align-items:center;gap:.55rem;background:var(--snow);color:var(--ink);font-weight:700;font-size:.98rem;text-decoration:none;padding:.92rem 1.8rem;border-radius:999px;box-shadow:0 14px 32px -12px rgba(0,0,0,.6);transition:transform .18s ease,box-shadow .18s ease}
+  .cta:hover{transform:translateY(-2px);box-shadow:0 18px 38px -12px rgba(0,0,0,.65)}
+  .cta .arrow{transition:transform .18s ease}
+  .cta:hover .arrow{transform:translateX(3px)}
 
   .kicker{font-size:.74rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin:0 0 1rem}
 
@@ -148,6 +152,7 @@
     <h1>It's what<br><em>you asked for.</em></h1>
     <p class="lead">A social network of <b>real, verified people</b> &#8212; your actual circle, no outrage algorithm. <b>No sides. Just people.</b></p>
     <span class="soon"><span class="dot"></span> Just launched</span>
+    <a class="cta" href="https://app.thecardinalpromise.com">Enter The Cardinal <span class="arrow">&#8594;</span></a>
     <a class="cue" href="#diff">It's different &#8212; and you'll see why &#8595;</a>
   </section>
 
