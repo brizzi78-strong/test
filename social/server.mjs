@@ -6,6 +6,7 @@ import { createServer } from "node:http";
 import { DatabaseSync } from "node:sqlite";
 import { scryptSync, randomBytes, timingSafeEqual } from "node:crypto";
 import { readFile } from "node:fs/promises";
+import { mkdirSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join, extname, normalize } from "node:path";
 
@@ -15,6 +16,8 @@ const DB_PATH = process.env.NEST_DB || join(__dirname, "nest.db");
 const PORT = Number(process.env.PORT) || 4000;
 
 /* ----------------------------- Database ----------------------------- */
+// Make sure the database's directory exists (e.g. a mounted /data volume).
+mkdirSync(dirname(DB_PATH), { recursive: true });
 const db = new DatabaseSync(DB_PATH);
 db.exec(`
   PRAGMA journal_mode = WAL;
