@@ -14,6 +14,12 @@ services:
         value: "22"
       - key: NEST_DB
         value: /data/nest.db
+      # Render will prompt you for these when you deploy the blueprint,
+      # so your founder login is private (not the public repo default).
+      - key: SEED_EMAIL
+        sync: false
+      - key: SEED_PASSWORD
+        sync: false
     disk:
       name: cardinal-data
       mountPath: /data
