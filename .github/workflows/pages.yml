@@ -1,0 +1,42 @@
+name: Deploy Cardinal site to Pages
+
+# Publishes the static site in dating/ to GitHub Pages.
+# One-time setup by a repo admin: Settings → Pages → Build and deployment →
+# Source: "GitHub Actions". If deploying from this feature branch is blocked by
+# environment rules, allow the branch in the github-pages environment (or merge
+# to the default branch).
+
+# One-time setup by the repo owner (the workflow token can't do this itself):
+#   Settings → Pages → Build and deployment → Source: "GitHub Actions".
+# Then run this workflow from the Actions tab (Run workflow), or push to main.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "dating/**"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dating
+      - id: deployment
+        uses: actions/deploy-pages@v4

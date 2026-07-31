@@ -1,0 +1,64 @@
+# Cardinal — roadmap (from audience feedback)
+
+What people said is missing in today's dating apps, and what would make them
+stay. Ordered roughly by priority. Items marked ✅ are in the demo now.
+
+## Launch strategy
+- **Seed with women first — the men will follow.** A dating marketplace lives
+  or dies on the harder-to-attract side. Get the women's experience right
+  (safety, quality, no ghosting, respect for intent) and a healthy men's side
+  follows. So early growth, curation, and features prioritize the women's
+  experience; the flock and framing lead with that.
+
+## Membership & safety model
+- **Free for women.** Women join free — that's the real commitment.
+- **30-min/month activity pledge — DEMO MECHANIC ONLY.** The pledge, tracking,
+  pace status, and nudge are illustrative to show a "keep the flock warm"
+  retention idea. It is **not** an enforced rule and no real policy locks anyone
+  out for missing it. Treat it as a prototype of a possible mechanic, not a
+  decision. ✅ (built as a demo)
+- **Men's pricing: Free vs. Cardinal+.** Free gives the full flock but caps
+  likes at 10/day; running out triggers an upsell. **Cardinal+ is $19.99/mo**
+  (confirmed price) — unlimited likes, see-who-liked-you, and a daily take-back.
+  Chosen at the join gate, changeable on the profile. ✅ (price decided; no real
+  billing yet — that needs a payments backend)
+- **"Likes You" surface.** A Likes tab shows who liked you first; like back for
+  an instant match. Women see it free; free men get a blurred teaser + count
+  that converts to the Cardinal+ upsell — so the paywall points at something
+  real. ✅
+- **Background check to sign up.** Every new member clears a confidential
+  background check in the join gate before they can meet the flock. ✅
+  (demo-simulated; real checks need a vendor + backend)
+
+## Guiding principle
+- **Know who you're here for.** You set your own gender and who you're seeking;
+  intent is stated up front. **Built for 18 to 45.** (Campuses are the launch
+  beachhead, but the app serves the whole 18–45 range.) The demo flock is
+  women, ages 18–45. ✅
+
+## Biggest gaps to fix
+1. **Real depth, not photos.** Match on values, intentions, and personality —
+   prompts and compatibility over hot-or-not. ✅ (prompts, bios, interests)
+2. **Safety & verified profiles.** Photo verification (badge), block/report
+   that actually removes people, and privacy controls (incognito, hide-from-
+   Discover, hide age). ✅ (demo-level; real verification needs a backend)
+3. **Fair — no dark patterns.** No pay-to-win paywalls, no infinite addictive
+   swiping, no hiding people to sell a subscription. ✅ (limited flock, no ads)
+4. **No ghosting / dead chats.** Conversation starters, nudges, and light
+   accountability so matches actually talk. ✅ (every match opens on a prompt)
+
+## What keeps people
+1. **Intent-based matching.** Say up front what you want — long-term,
+   marriage-minded, friendship first — and match on it. ✅ (intent field + shown on cards)
+2. **Slow / quality mode.** A few thoughtful matches a day, not infinite
+   swiping — a curated flock. ✅ (small daily deck)
+3. **Better icebreakers.** Every match opens on a shared prompt or question. ✅
+4. **Community & events.** Monthly in-person events (speed dating, group hike,
+   mixer, brunch) with RSVP, shown on an Events tab. Free for women; Cardinal+
+   men get priority RSVP. ✅ (sample events generated monthly; real ticketing/
+   venues need a backend)
+
+## Notes
+This is a client-side demo, so "verification," "events," and real accounts are
+directional — they'd need a backend. The demo bakes in the parts that don't:
+intent, prompts, a curated deck, and honest, balance-forward framing.
