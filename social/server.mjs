@@ -343,7 +343,12 @@ async function api(req, res, path) {
       if (!q.groupById.get(groupId) || !q.isMember.get(groupId, user.id))
         return send(res, 403, { error: "You're not a member of that group." });
     }
-    const id = q.insertPost.run(user.id, body, img ? img.buf : null, img ? img.mime : null, Date.now(), groupId).lastInsertRowid;
+    const pCreated = Date.now();
+    const id = q.insertPost.run(user.id, body, img ? img.buf : null, img ? img.mime : null, pCreated, groupId).lastInsertRowid;
+    if (!groupId) {
+      const payload = { id, author: author(user.id), body, photo: !!img, created: pCreated, likes: 0, liked: false, comments: 0 };
+      for (const fid of friendIdSet(user.id)) pushEvent(fid, "new_post", payload);
+    }
     return send(res, 200, { ok: true, id });
   }
   const likeM = path.match(/^\/api\/posts\/(\d+)\/like$/);
@@ -353,7 +358,9 @@ async function api(req, res, path) {
     if (!post) return send(res, 404, { error: "No such post." });
     if (q.likedByMe.get(pid, user.id)) q.deleteLike.run(pid, user.id);
     else { q.insertLike.run(pid, user.id, Date.now()); notify(post.author_id, "like", user.id, pid); }
-    return send(res, 200, { ok: true, likes: q.likeCount.get(pid).c, liked: !!q.likedByMe.get(pid, user.id) });
+    const likeN = q.likeCount.get(pid).c;
+    if (post.author_id !== user.id) pushEvent(post.author_id, "post_stat", { postId: pid, likes: likeN, comments: q.commentCount.get(pid).c });
+    return send(res, 200, { ok: true, likes: likeN, liked: !!q.likedByMe.get(pid, user.id) });
   }
   const comM = path.match(/^\/api\/posts\/(\d+)\/comments$/);
   if (comM && method === "GET") {
@@ -366,9 +373,12 @@ async function api(req, res, path) {
     if (!post) return send(res, 404, { error: "No such post." });
     const body = String((await readBody(req)).body || "").trim().slice(0, 2000);
     if (!body) return send(res, 400, { error: "Comment is empty." });
-    q.insertComment.run(pid, user.id, body, Date.now());
+    const cCreated = Date.now();
+    q.insertComment.run(pid, user.id, body, cCreated);
     notify(post.author_id, "comment", user.id, pid);
-    return send(res, 200, { ok: true, comments: q.commentCount.get(pid).c });
+    const commentN = q.commentCount.get(pid).c;
+    if (post.author_id !== user.id) pushEvent(post.author_id, "post_stat", { postId: pid, likes: q.likeCount.get(pid).c, comments: commentN, comment: { author: author(user.id), body, created: cCreated } });
+    return send(res, 200, { ok: true, comments: commentN });
   }
 
   /* ---------- Friends ---------- */

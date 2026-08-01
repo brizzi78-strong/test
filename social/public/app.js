@@ -335,6 +335,7 @@
   function renderPost(p) {
     const card = document.createElement("article");
     card.className = "post card";
+    card.dataset.postId = p.id;
     const av = avatarInner(p.author);
     card.innerHTML = `
       <div class="post-head">
@@ -509,6 +510,25 @@
         if (!el("view-messages").hidden) loadThreads();
         toast(`${(m.from.name || "Someone").split(" ")[0]}: ${m.body.slice(0, 40)}`);
       }
+    });
+    es.addEventListener("post_stat", (ev) => {
+      let d; try { d = JSON.parse(ev.data); } catch { return; }
+      const likeTxt = d.likes ? d.likes + (d.likes === 1 ? " like" : " likes") : "";
+      const comTxt = d.comments ? d.comments + (d.comments === 1 ? " comment" : " comments") : "";
+      document.querySelectorAll(`[data-post-id="${d.postId}"]`).forEach((card) => {
+        const sl = card.querySelector(".s-likes"); if (sl) sl.textContent = likeTxt;
+        const sc = card.querySelector(".s-comments"); if (sc) sc.textContent = comTxt;
+        if (d.comment) {
+          const box = card.querySelector(".comments");
+          if (box && !box.hidden) { const form = box.querySelector(".c-form"); const node = renderComment(d.comment); form ? form.before(node) : box.appendChild(node); }
+        }
+      });
+    });
+    es.addEventListener("new_post", (ev) => {
+      let p; try { p = JSON.parse(ev.data); } catch { return; }
+      if (el("view-feed").hidden) return;
+      el("feedEmpty").hidden = true;
+      el("posts").prepend(renderPost(p));
     });
     es.onerror = () => {};
   }
