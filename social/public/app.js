@@ -75,6 +75,8 @@
   async function openUser(id) {
     let d; try { d = await api("/api/users/" + id); } catch (e) { toast(e.message); return; }
     const u = d.user;
+    const cover = document.querySelector("#view-person .pv-cover");
+    if (cover) cover.style.backgroundImage = u.cover ? `url('/api/photo/cover/${u.id}?t=${Date.now()}')` : "";
     paintAvatar(el("pvAvatar"), u);
     el("pvName").textContent = u.name || "Someone";
     el("pvBio").textContent = u.bio || ""; el("pvBio").hidden = !u.bio;
@@ -267,14 +269,17 @@
 
   /* ---------- Profile ---------- */
   let pendingProfilePhoto = null;
+  let pendingProfileCover = null;
   function loadProfile() {
     const p = me.profile || {};
     el("profileForm").name.value = p.name || "";
     el("profileForm").bio.value = p.bio || "";
-    pendingProfilePhoto = null;
+    pendingProfilePhoto = null; pendingProfileCover = null;
     paintAvatar(el("profileAvatar"), { id: me.user.id, name: p.name, photo: p.photo });
+    el("profileCoverPreview").style.backgroundImage = p.cover ? `url('/api/photo/cover/${me.user.id}?t=${Date.now()}')` : "";
   }
   el("profilePhotoInput").onchange = (e) => uploadPreview(e, (url) => { pendingProfilePhoto = url; el("profileAvatar").style.backgroundImage = `url('${url}')`; el("profileAvatar").textContent = ""; });
+  el("profileCoverInput").onchange = (e) => uploadPreview(e, (url) => { pendingProfileCover = url; el("profileCoverPreview").style.backgroundImage = `url('${url}')`; });
   el("profileForm").onsubmit = async (e) => {
     e.preventDefault();
     const f = new FormData(e.target);
@@ -282,7 +287,8 @@
       const r = await api("/api/profile", { method: "PUT", body: { name: f.get("name"), bio: f.get("bio") } });
       me.profile = r.profile;
       if (pendingProfilePhoto) { await api("/api/profile/photo", { method: "PUT", body: { dataUrl: pendingProfilePhoto } }); me.profile.photo = true; pendingProfilePhoto = null; }
-      paintMe(); toast("Profile saved."); go("feed");
+      if (pendingProfileCover) { await api("/api/profile/cover", { method: "PUT", body: { dataUrl: pendingProfileCover } }); me.profile.cover = true; pendingProfileCover = null; }
+      paintMe(); toast("Profile saved."); openUser(me.user.id);
     } catch (err) { const p = el("profileErr"); p.textContent = err.message; p.hidden = false; }
   };
 

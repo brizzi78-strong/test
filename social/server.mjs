@@ -82,6 +82,8 @@ db.exec(`
   if (!cols.includes("need_support")) add("ALTER TABLE profiles ADD COLUMN need_support INTEGER NOT NULL DEFAULT 0");
   if (!cols.includes("support_note")) add("ALTER TABLE profiles ADD COLUMN support_note TEXT DEFAULT ''");
   if (!cols.includes("support_since")) add("ALTER TABLE profiles ADD COLUMN support_since INTEGER");
+  if (!cols.includes("cover")) add("ALTER TABLE profiles ADD COLUMN cover BLOB");
+  if (!cols.includes("cover_mime")) add("ALTER TABLE profiles ADD COLUMN cover_mime TEXT");
 }
 
 // Migration: posts can belong to a group (Phase 5). NULL group_id = a normal circle post.
@@ -113,6 +115,8 @@ const q = {
   updateProfile: db.prepare("UPDATE profiles SET name=?, bio=? WHERE user_id=?"),
   setUserPhoto: db.prepare("UPDATE profiles SET photo=?, photo_mime=? WHERE user_id=?"),
   getUserPhoto: db.prepare("SELECT photo, photo_mime FROM profiles WHERE user_id=?"),
+  setUserCover: db.prepare("UPDATE profiles SET cover=?, cover_mime=? WHERE user_id=?"),
+  getUserCover: db.prepare("SELECT cover, cover_mime FROM profiles WHERE user_id=?"),
   insertSession: db.prepare("INSERT INTO sessions (token, user_id, created) VALUES (?,?,?)"),
   sessionByToken: db.prepare("SELECT * FROM sessions WHERE token=?"),
   deleteSession: db.prepare("DELETE FROM sessions WHERE token=?"),
@@ -282,12 +286,18 @@ async function api(req, res, path) {
     res.writeHead(200, { "Content-Type": row.photo_mime || "image/jpeg", "Cache-Control": "private, max-age=300" });
     return res.end(Buffer.from(row.photo));
   }
+  if (path.startsWith("/api/photo/cover/") && method === "GET") {
+    const row = q.getUserCover.get(Number(path.split("/").pop()));
+    if (!row || !row.cover) return send(res, 404, { error: "none" });
+    res.writeHead(200, { "Content-Type": row.cover_mime || "image/jpeg", "Cache-Control": "private, max-age=60" });
+    return res.end(Buffer.from(row.cover));
+  }
 
   if (!user) return send(res, 401, { error: "Please sign in." });
 
   if (path === "/api/me" && method === "GET") {
     const p = q.profileById.get(user.id) || {};
-    return send(res, 200, { user: { id: user.id, email: user.email }, profile: { name: p.name, bio: p.bio, photo: !!p.photo, support: { on: !!p.need_support, note: p.support_note || "" } } });
+    return send(res, 200, { user: { id: user.id, email: user.email }, profile: { name: p.name, bio: p.bio, photo: !!p.photo, cover: !!p.cover, support: { on: !!p.need_support, note: p.support_note || "" } } });
   }
 
   if (path === "/api/stream" && method === "GET") {
@@ -309,12 +319,18 @@ async function api(req, res, path) {
     if (!b.name) return send(res, 400, { error: "Name is required." });
     q.updateProfile.run(String(b.name).slice(0, 60), String(b.bio || "").slice(0, 300), user.id);
     const p = q.profileById.get(user.id);
-    return send(res, 200, { ok: true, profile: { name: p.name, bio: p.bio, photo: !!p.photo } });
+    return send(res, 200, { ok: true, profile: { name: p.name, bio: p.bio, photo: !!p.photo, cover: !!p.cover } });
   }
   if (path === "/api/profile/photo" && method === "PUT") {
     const img = decodeImage((await readBody(req)).dataUrl);
     if (!img) return send(res, 400, { error: "Please choose a PNG, JPEG, or WebP image under 4MB." });
     q.setUserPhoto.run(img.buf, img.mime, user.id);
+    return send(res, 200, { ok: true });
+  }
+  if (path === "/api/profile/cover" && method === "PUT") {
+    const img = decodeImage((await readBody(req)).dataUrl);
+    if (!img) return send(res, 400, { error: "Please choose a PNG, JPEG, or WebP image under 4MB." });
+    q.setUserCover.run(img.buf, img.mime, user.id);
     return send(res, 200, { ok: true });
   }
 
@@ -411,7 +427,7 @@ async function api(req, res, path) {
     const canSeeSupport = id === user.id || rel === "friends";
     return send(res, 200, {
       user: {
-        id, name: p.name, bio: p.bio, photo: !!p.photo, rel, isMe: id === user.id,
+        id, name: p.name, bio: p.bio, photo: !!p.photo, cover: !!p.cover, rel, isMe: id === user.id,
         friendCount: q.friendIds.all(id, id).length, postCount: rows.length,
         support: canSeeSupport && p.need_support ? { on: true, note: p.support_note || "" } : { on: false },
       },
