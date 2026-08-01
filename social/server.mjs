@@ -384,6 +384,30 @@ async function api(req, res, path) {
       : q.recentPeople.all(user.id);
     return send(res, 200, { people: rows.map((r) => person(r.id)) });
   }
+  const userM = path.match(/^\/api\/users\/(\d+)$/);
+  if (userM && method === "GET") {
+    const id = Number(userM[1]);
+    const p = q.profileById.get(id);
+    if (!p) return send(res, 404, { error: "No such person." });
+    const rel = relationship(user.id, id);
+    const rows = db.prepare(
+      `SELECT id, author_id, body, (photo IS NOT NULL) AS has_photo, created
+       FROM posts WHERE author_id=? AND group_id IS NULL ORDER BY created DESC LIMIT 100`
+    ).all(id);
+    const posts = rows.map((r) => ({
+      id: r.id, author: author(r.author_id), body: r.body, photo: !!r.has_photo, created: r.created,
+      likes: q.likeCount.get(r.id).c, liked: !!q.likedByMe.get(r.id, user.id), comments: q.commentCount.get(r.id).c,
+    }));
+    const canSeeSupport = id === user.id || rel === "friends";
+    return send(res, 200, {
+      user: {
+        id, name: p.name, bio: p.bio, photo: !!p.photo, rel, isMe: id === user.id,
+        friendCount: q.friendIds.all(id, id).length, postCount: rows.length,
+        support: canSeeSupport && p.need_support ? { on: true, note: p.support_note || "" } : { on: false },
+      },
+      posts,
+    });
+  }
   if (path === "/api/friends" && method === "GET") {
     const ids = [...friendIdSet(user.id)];
     return send(res, 200, { friends: ids.map(person) });

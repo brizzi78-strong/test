@@ -198,6 +198,25 @@
       </form>
     </div>
   </section>
+
+  <!-- PERSON / PUBLIC PROFILE -->
+  <section class="view userpage" id="view-person" hidden>
+    <div class="profile-view card">
+      <div class="pv-cover"></div>
+      <div class="pv-top">
+        <div class="avatar xl" id="pvAvatar"></div>
+        <div class="pv-id">
+          <h2 id="pvName"></h2>
+          <p class="pv-bio" id="pvBio" hidden></p>
+          <div class="pv-stats"><span><b id="pvPostCount">0</b> posts</span><span><b id="pvFriends">0</b> friends</span></div>
+        </div>
+        <div class="pv-actions" id="pvActions"></div>
+      </div>
+      <div class="pv-support" id="pvSupport" hidden></div>
+    </div>
+    <div id="pvPostList" class="posts"></div>
+    <div id="pvEmpty" class="empty card" hidden><h3>No posts yet.</h3><p class="muted">When they share something, it'll show up here.</p></div>
+  </section>
 </main>
 
 <!-- Reach out — the care signal -->

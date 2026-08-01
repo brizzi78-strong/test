@@ -253,6 +253,24 @@ textarea{resize:vertical}
 
 .empty{padding:2.5rem 1rem;text-align:center;color:var(--muted)}
 .empty h3{color:var(--ink);margin-bottom:.3rem}
+
+/* Public profile view */
+.profile-view{overflow:hidden;margin-bottom:1.1rem}
+.pv-cover{height:130px;background:radial-gradient(40rem 20rem at 82% -35%,rgba(226,55,68,.42),transparent),linear-gradient(120deg,#6a1826,#3a0b12)}
+.pv-top{display:flex;align-items:flex-end;gap:.6rem 1rem;padding:0 clamp(1rem,4vw,1.4rem) 1.1rem;flex-wrap:wrap}
+.pv-top .avatar.xl{margin-top:-46px;border:4px solid var(--card);box-shadow:var(--shadow);background-image:linear-gradient(135deg,#b8434f,#8a1220)}
+.pv-id{flex:1;min-width:12rem}
+.pv-id h2{font-size:clamp(1.4rem,3.6vw,1.9rem)}
+.pv-bio{color:var(--muted);margin-top:.25rem;line-height:1.5}
+.pv-stats{display:flex;gap:1.4rem;margin-top:.6rem;color:var(--muted);font-size:.9rem}
+.pv-stats b{color:var(--ink);font-weight:700}
+.pv-actions{display:flex;gap:.5rem;align-self:flex-end;margin-left:auto;flex-wrap:wrap}
+.pv-support{margin:0 clamp(1rem,4vw,1.4rem) 1.2rem;padding:.85rem 1.1rem;border-radius:13px;
+  background:linear-gradient(180deg,var(--brand-soft),var(--card));border:1px solid color-mix(in srgb,var(--brand) 20%,var(--line));
+  color:var(--brand-ink);font-weight:600;font-size:.94rem;font-style:italic}
+.clickable{cursor:pointer}
+.clickable:hover .post-who,.clickable:hover{text-decoration:none}
+.post-who.clickable:hover,.p-name.clickable:hover,.c-who.clickable:hover{text-decoration:underline}
 .profile-card{padding:1.4rem}
 .profile-card h2{margin-bottom:1rem}
 .photo-pick{display:flex;align-items:center;gap:1rem;margin-bottom:1.2rem}

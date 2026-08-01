@@ -60,7 +60,7 @@
   el("logout").onclick = async () => { closeStream(); await api("/api/logout", { method: "POST" }); me = null; el("topbar").hidden = true; show("auth"); };
   el("brandHome").onclick = (e) => { e.preventDefault(); go("feed"); };
   document.querySelectorAll(".top-tab").forEach((t) => (t.onclick = () => go(t.dataset.view)));
-  el("meAvatar").onclick = () => go("profile");
+  el("meAvatar").onclick = () => openUser(me.user.id);
 
   function go(view) {
     if (view === "feed") loadFeed();
@@ -69,6 +69,41 @@
     if (view === "groups") loadGroups();
     if (view === "messages") { showThreadList(); loadThreads(); }
     show(view);
+  }
+
+  /* ---------- Public profile ---------- */
+  async function openUser(id) {
+    let d; try { d = await api("/api/users/" + id); } catch (e) { toast(e.message); return; }
+    const u = d.user;
+    paintAvatar(el("pvAvatar"), u);
+    el("pvName").textContent = u.name || "Someone";
+    el("pvBio").textContent = u.bio || ""; el("pvBio").hidden = !u.bio;
+    el("pvPostCount").textContent = u.postCount;
+    el("pvFriends").textContent = u.friendCount;
+    const sup = el("pvSupport");
+    if (u.support && u.support.on) {
+      sup.hidden = false;
+      const first = (u.name || "They").split(" ")[0];
+      sup.textContent = u.support.note ? `💛 “${u.support.note}”` : `💛 ${first} could use some support right now.`;
+    } else sup.hidden = true;
+    const acts = el("pvActions"); acts.innerHTML = "";
+    const btn = (label, cls, fn) => { const b = document.createElement("button"); b.className = "btn " + cls; b.textContent = label; b.onclick = fn; return b; };
+    if (u.isMe) {
+      acts.appendChild(btn("Edit profile", "ghost", () => go("profile")));
+    } else if (u.rel === "friends") {
+      acts.appendChild(btn("Message", "primary", () => openThread(u.id, u.name)));
+      const t = document.createElement("span"); t.className = "tag"; t.textContent = "✓ Friends"; acts.appendChild(t);
+    } else if (u.rel === "outgoing") {
+      acts.appendChild(btn("Requested", "ghost", async () => { await api("/api/friends/remove", { method: "POST", body: { userId: u.id } }); openUser(id); }));
+    } else if (u.rel === "incoming") {
+      acts.appendChild(btn("Accept friend", "primary", async () => { await api("/api/friends/request", { method: "POST", body: { toId: u.id } }); toast("You're now friends with " + (u.name || "").split(" ")[0]); openUser(id); }));
+    } else {
+      acts.appendChild(btn("Add friend", "primary", async () => { await api("/api/friends/request", { method: "POST", body: { toId: u.id } }); openUser(id); }));
+    }
+    const list = el("pvPostList"); list.innerHTML = "";
+    el("pvEmpty").hidden = d.posts.length > 0;
+    for (const p of d.posts) list.appendChild(renderPost(p));
+    show("person");
   }
 
   /* ---------- Friends ---------- */
@@ -120,6 +155,7 @@
       actions.appendChild(btn("Accept", "primary", async () => { await api("/api/friends/request", { method: "POST", body: { toId: p.id } }); toast("You're now friends with " + p.name.split(" ")[0]); reload(); }));
       actions.appendChild(btn("Decline", "ghost", async () => { await api("/api/friends/remove", { method: "POST", body: { userId: p.id } }); reload(); }));
     } else actions.appendChild(btn("Add friend", "primary", async () => { await api("/api/friends/request", { method: "POST", body: { toId: p.id } }); reload(); }));
+    row.querySelectorAll(".avatar, .p-name").forEach((n) => { n.classList.add("clickable"); n.onclick = () => openUser(p.id); });
     return row;
   }
 
@@ -313,6 +349,7 @@
         <button class="act comment">${bubble} Comment</button>
       </div>
       <div class="comments" hidden></div>`;
+    card.querySelectorAll(".post-head .avatar, .post-head .post-who").forEach((n) => { n.classList.add("clickable"); n.onclick = () => openUser(p.author.id); });
     const likeBtn = card.querySelector(".like");
     likeBtn.onclick = async () => {
       try {
@@ -351,6 +388,7 @@
     const av = avatarInner(c.author);
     row.innerHTML = `<div class="avatar" ${av.style ? `style="${av.style}"` : ""}>${av.text}</div>
       <div class="c-bubble"><div class="c-who">${esc(c.author.name)}</div><div class="c-body">${esc(c.body)}</div></div>`;
+    if (c.author && c.author.id) row.querySelectorAll(".avatar, .c-who").forEach((n) => { n.classList.add("clickable"); n.onclick = () => openUser(c.author.id); });
     return row;
   }
 
