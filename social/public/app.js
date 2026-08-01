@@ -337,6 +337,15 @@
   }
   const heart = (f) => `<svg viewBox="0 0 24 24" fill="${f ? "currentColor" : "none"}" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.35-9.5-8.5C1 9 2.5 5.5 6 5.5c2 0 3.2 1.2 4 2.3.8-1.1 2-2.3 4-2.3 3.5 0 5 3.5 3.5 7C19 16.65 12 21 12 21z"/></svg>`;
   const bubble = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7A8.38 8.38 0 0 1 4 11.5 8.5 8.5 0 0 1 12.5 3 8.38 8.38 0 0 1 21 11.5z"/></svg>`;
+  const REACT = { like: { e: "❤️", label: "Like" }, care: { e: "💛", label: "Care" }, celebrate: { e: "🎉", label: "Celebrate" }, strength: { e: "💪", label: "Strength" } };
+  function reactSummaryRaw(total, by) {
+    if (!total) return "";
+    const types = Object.keys(by || {}).sort((a, b) => by[b] - by[a]);
+    const emojis = types.slice(0, 3).map((t) => (REACT[t] ? REACT[t].e : "")).join("");
+    return `${emojis} ${total}`.trim();
+  }
+  const reactSummary = (p) => reactSummaryRaw(p.likes, p.reactBy);
+  const reactBtnLabel = (mine) => (mine && REACT[mine]) ? `<span class="r-emoji">${REACT[mine].e}</span> ${REACT[mine].label}` : `${heart(false)} React`;
 
   function renderPost(p) {
     const card = document.createElement("article");
@@ -350,21 +359,35 @@
       </div>
       ${p.body ? `<div class="post-body">${esc(p.body)}</div>` : ""}
       ${p.photo ? `<div class="post-photo"><img src="/api/photo/post/${p.id}" alt=""></div>` : ""}
-      <div class="post-stats"><span class="s-likes">${p.likes ? p.likes + (p.likes === 1 ? " like" : " likes") : ""}</span><span class="s-comments">${p.comments ? p.comments + (p.comments === 1 ? " comment" : " comments") : ""}</span></div>
+      <div class="post-stats"><span class="s-likes">${reactSummary(p)}</span><span class="s-comments">${p.comments ? p.comments + (p.comments === 1 ? " comment" : " comments") : ""}</span></div>
       <div class="post-actions">
-        <button class="act like ${p.liked ? "liked" : ""}">${heart(p.liked)} Like</button>
+        <div class="react-wrap">
+          <button class="act like ${p.myReaction ? "reacted" : ""}">${reactBtnLabel(p.myReaction)}</button>
+          <div class="react-bar" hidden>
+            <button type="button" data-r="like" title="Like">❤️</button>
+            <button type="button" data-r="care" title="Care">💛</button>
+            <button type="button" data-r="celebrate" title="Celebrate">🎉</button>
+            <button type="button" data-r="strength" title="Strength">💪</button>
+          </div>
+        </div>
         <button class="act comment">${bubble} Comment</button>
       </div>
       <div class="comments" hidden></div>`;
     card.querySelectorAll(".post-head .avatar, .post-head .post-who").forEach((n) => { n.classList.add("clickable"); n.onclick = () => openUser(p.author.id); });
     const likeBtn = card.querySelector(".like");
-    likeBtn.onclick = async () => {
+    const bar = card.querySelector(".react-bar");
+    likeBtn.onclick = (e) => { e.stopPropagation(); const open = bar.hidden; document.querySelectorAll(".react-bar").forEach((b) => (b.hidden = true)); bar.hidden = !open; };
+    async function applyReact(type) {
+      bar.hidden = true;
       try {
-        const r = await api(`/api/posts/${p.id}/like`, { method: "POST" });
-        likeBtn.classList.toggle("liked", r.liked); likeBtn.innerHTML = `${heart(r.liked)} Like`;
-        card.querySelector(".s-likes").textContent = r.likes ? r.likes + (r.likes === 1 ? " like" : " likes") : "";
+        const r = await api(`/api/posts/${p.id}/like`, { method: "POST", body: { type } });
+        p.myReaction = r.myReaction; p.likes = r.likes; p.reactBy = r.reactBy;
+        likeBtn.classList.toggle("reacted", !!r.myReaction);
+        likeBtn.innerHTML = reactBtnLabel(r.myReaction);
+        card.querySelector(".s-likes").textContent = reactSummary(p);
       } catch (e) { toast(e.message); }
-    };
+    }
+    bar.querySelectorAll("button[data-r]").forEach((b) => { b.onclick = (e) => { e.stopPropagation(); applyReact(b.dataset.r); }; });
     const box = card.querySelector(".comments");
     card.querySelector(".comment").onclick = () => { if (box.hidden) openComments(p, box); else box.hidden = true; };
     return card;
@@ -402,6 +425,7 @@
   /* ---------- Notifications ---------- */
   el("bell").onclick = (e) => { e.stopPropagation(); toggleNotifs(); };
   document.addEventListener("click", (e) => { const p = el("notifPanel"); if (!p.hidden && !p.contains(e.target) && !el("bell").contains(e.target)) p.hidden = true; });
+  document.addEventListener("click", (e) => { if (!e.target.closest(".react-wrap")) document.querySelectorAll(".react-bar").forEach((b) => (b.hidden = true)); });
   async function toggleNotifs() {
     const panel = el("notifPanel");
     if (panel.hidden) { await loadNotifs(); panel.hidden = false; try { await api("/api/notifications/read", { method: "POST" }); } catch {} setNotifBadge(0); }
@@ -519,10 +543,9 @@
     });
     es.addEventListener("post_stat", (ev) => {
       let d; try { d = JSON.parse(ev.data); } catch { return; }
-      const likeTxt = d.likes ? d.likes + (d.likes === 1 ? " like" : " likes") : "";
       const comTxt = d.comments ? d.comments + (d.comments === 1 ? " comment" : " comments") : "";
       document.querySelectorAll(`[data-post-id="${d.postId}"]`).forEach((card) => {
-        const sl = card.querySelector(".s-likes"); if (sl) sl.textContent = likeTxt;
+        const sl = card.querySelector(".s-likes"); if (sl && d.reactBy !== undefined) sl.textContent = reactSummaryRaw(d.likes, d.reactBy);
         const sc = card.querySelector(".s-comments"); if (sc) sc.textContent = comTxt;
         if (d.comment) {
           const box = card.querySelector(".comments");

@@ -92,6 +92,13 @@ db.exec(`
   if (!cols.includes("group_id")) { try { db.exec("ALTER TABLE posts ADD COLUMN group_id INTEGER"); } catch {} }
 }
 
+// Migration: a "like" can be a warm reaction (like | care | celebrate | strength).
+{
+  const cols = db.prepare("PRAGMA table_info(likes)").all().map((c) => c.name);
+  if (!cols.includes("type")) { try { db.exec("ALTER TABLE likes ADD COLUMN type TEXT NOT NULL DEFAULT 'like'"); } catch {} }
+}
+const REACTIONS = ["like", "care", "celebrate", "strength"];
+
 /* ----------------------------- Auth helpers ----------------------------- */
 function hashPassword(password) {
   const salt = randomBytes(16);
@@ -126,7 +133,9 @@ const q = {
   feed: db.prepare("SELECT id, author_id, body, (photo IS NOT NULL) AS has_photo, created FROM posts ORDER BY created DESC LIMIT 100"),
   likeCount: db.prepare("SELECT COUNT(*) c FROM likes WHERE post_id=?"),
   likedByMe: db.prepare("SELECT 1 FROM likes WHERE post_id=? AND user_id=?"),
-  insertLike: db.prepare("INSERT OR IGNORE INTO likes (post_id, user_id, created) VALUES (?,?,?)"),
+  myReaction: db.prepare("SELECT type FROM likes WHERE post_id=? AND user_id=?"),
+  reactUpsert: db.prepare("INSERT INTO likes (post_id, user_id, created, type) VALUES (?,?,?,?) ON CONFLICT(post_id, user_id) DO UPDATE SET type=excluded.type, created=excluded.created"),
+  reactBreakdown: db.prepare("SELECT type, COUNT(*) c FROM likes WHERE post_id=? GROUP BY type ORDER BY c DESC"),
   deleteLike: db.prepare("DELETE FROM likes WHERE post_id=? AND user_id=?"),
   commentCount: db.prepare("SELECT COUNT(*) c FROM comments WHERE post_id=?"),
   insertComment: db.prepare("INSERT INTO comments (post_id, user_id, body, created) VALUES (?,?,?,?)"),
@@ -210,6 +219,22 @@ function userFromReq(req) {
 function author(userId) {
   const p = q.profileById.get(userId);
   return { id: userId, name: p ? p.name : "", photo: !!(p && p.photo) };
+}
+function reactionsFor(pid, viewerId) {
+  const mine = (q.myReaction.get(pid, viewerId) || {}).type || null;
+  const by = {};
+  let total = 0;
+  for (const r of q.reactBreakdown.all(pid)) { by[r.type] = r.c; total += r.c; }
+  return { total, mine, by };
+}
+// Shared shape for a post row as seen by `viewerId` (r has id, author_id, body, has_photo, created).
+function postView(r, viewerId) {
+  const rx = reactionsFor(r.id, viewerId);
+  return {
+    id: r.id, author: author(r.author_id), body: r.body, photo: !!r.has_photo, created: r.created,
+    likes: rx.total, liked: !!rx.mine, myReaction: rx.mine, reactBy: rx.by,
+    comments: q.commentCount.get(r.id).c,
+  };
 }
 
 /* ----------------------------- HTTP helpers ----------------------------- */
@@ -342,10 +367,7 @@ async function api(req, res, path) {
       `SELECT id, author_id, body, (photo IS NOT NULL) AS has_photo, created
        FROM posts WHERE author_id IN (${placeholders}) AND group_id IS NULL ORDER BY created DESC LIMIT 100`
     ).all(...ids);
-    const posts = rows.map((r) => ({
-      id: r.id, author: author(r.author_id), body: r.body, photo: !!r.has_photo, created: r.created,
-      likes: q.likeCount.get(r.id).c, liked: !!q.likedByMe.get(r.id, user.id), comments: q.commentCount.get(r.id).c,
-    }));
+    const posts = rows.map((r) => postView(r, user.id));
     return send(res, 200, { posts });
   }
   if (path === "/api/posts" && method === "POST") {
@@ -372,11 +394,14 @@ async function api(req, res, path) {
     const pid = Number(likeM[1]);
     const post = q.postById.get(pid);
     if (!post) return send(res, 404, { error: "No such post." });
-    if (q.likedByMe.get(pid, user.id)) q.deleteLike.run(pid, user.id);
-    else { q.insertLike.run(pid, user.id, Date.now()); notify(post.author_id, "like", user.id, pid); }
-    const likeN = q.likeCount.get(pid).c;
-    if (post.author_id !== user.id) pushEvent(post.author_id, "post_stat", { postId: pid, likes: likeN, comments: q.commentCount.get(pid).c });
-    return send(res, 200, { ok: true, likes: likeN, liked: !!q.likedByMe.get(pid, user.id) });
+    const req0 = String((await readBody(req)).type || "like");
+    const type = REACTIONS.includes(req0) ? req0 : "like";
+    const current = (q.myReaction.get(pid, user.id) || {}).type || null;
+    if (current === type) q.deleteLike.run(pid, user.id); // tapping the same reaction removes it
+    else { q.reactUpsert.run(pid, user.id, Date.now(), type); if (!current) notify(post.author_id, "like", user.id, pid); }
+    const rx = reactionsFor(pid, user.id);
+    if (post.author_id !== user.id) pushEvent(post.author_id, "post_stat", { postId: pid, likes: rx.total, comments: q.commentCount.get(pid).c, reactBy: rx.by });
+    return send(res, 200, { ok: true, likes: rx.total, liked: !!rx.mine, myReaction: rx.mine, reactBy: rx.by });
   }
   const comM = path.match(/^\/api\/posts\/(\d+)\/comments$/);
   if (comM && method === "GET") {
@@ -420,10 +445,7 @@ async function api(req, res, path) {
       `SELECT id, author_id, body, (photo IS NOT NULL) AS has_photo, created
        FROM posts WHERE author_id=? AND group_id IS NULL ORDER BY created DESC LIMIT 100`
     ).all(id);
-    const posts = rows.map((r) => ({
-      id: r.id, author: author(r.author_id), body: r.body, photo: !!r.has_photo, created: r.created,
-      likes: q.likeCount.get(r.id).c, liked: !!q.likedByMe.get(r.id, user.id), comments: q.commentCount.get(r.id).c,
-    }));
+    const posts = rows.map((r) => postView(r, user.id));
     const canSeeSupport = id === user.id || rel === "friends";
     return send(res, 200, {
       user: {
