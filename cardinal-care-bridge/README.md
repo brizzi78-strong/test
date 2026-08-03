@@ -24,11 +24,26 @@ Promise Family Guide*.
   (optional), county, timeline, situation details, and preferred contact
   method — the actual lead-capture point the whole page is built to drive to.
 
-## Use it
+## Use it locally
 
 Open `index.html` in any browser — no build, no dependencies. Design tokens
 match the Cardinal palette used across the other Cardinal apps (light/dark
 via the header's theme toggle).
+
+## Deploy it
+
+Wired into the repo's `../render.yaml` blueprint as a free static site (no
+plan, no disk, no build step needed):
+
+```bash
+# One-time, at https://render.com:
+#   New + -> Blueprint -> connect this GitHub repo -> Apply.
+```
+
+Render provisions it alongside Cardinal Books and gives it its own
+`https://cardinal-care-bridge-*.onrender.com` URL with automatic HTTPS. Add a
+custom domain (e.g. `www.cardinalcarebridge.com`) in that service's Settings
+-> Custom Domains, then point a DNS CNAME at Render.
 
 ## Before this goes live
 

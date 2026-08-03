@@ -1,16 +1,17 @@
-# Render blueprint — deploy Cardinal Books from this repo with no server to manage.
+# Render blueprint — deploy this repo's services with no server to manage.
 #
 # One-time setup at https://render.com :
 #   1. New +  ->  Blueprint  ->  connect this GitHub repo  ->  Apply.
-#   2. When prompted, set BOOKS_PASSWORD to a strong password (BOOKS_USER is
+#   2. Render provisions every service below in one pass. For Cardinal Books,
+#      when prompted, set BOOKS_PASSWORD to a strong password (BOOKS_USER is
 #      "admin" by default; change it here if you like).
-#   3. Render builds the Docker image, attaches a 1 GB disk for the books data,
-#      and gives you an https://cardinal-books-*.onrender.com URL.
-#   4. (Optional) Add a custom domain like books.blueridgepressllc.com in the
-#      service's Settings -> Custom Domains, then point a DNS CNAME at Render.
+#   3. Each service gets its own https://<name>-*.onrender.com URL.
+#   4. (Optional) Add a custom domain per service in Settings -> Custom Domains,
+#      then point a DNS CNAME at Render.
 #
-# HTTPS is automatic. The app is password-gated (BOOKS_USER / BOOKS_PASSWORD), so
-# only you can open it. Data persists on the disk across deploys and restarts.
+# HTTPS is automatic on every service. Cardinal Books is password-gated
+# (BOOKS_USER / BOOKS_PASSWORD) and its data persists on a disk across deploys
+# and restarts; Cardinal Care Bridge is a public static site with no login.
 
 services:
   - type: web
@@ -36,3 +37,19 @@ services:
         value: admin
       - key: BOOKS_PASSWORD
         sync: false            # Render prompts you to set this on first deploy
+
+  # Cardinal Care Bridge — the placement-business landing page (cardinal-care-bridge/).
+  # A static site: no build step, no server, no disk, and free on Render (no `plan`
+  # needed). Same one-time setup as above (Blueprint -> connect repo -> Apply) gives
+  # you an https://cardinal-care-bridge-*.onrender.com URL; add a custom domain like
+  # www.cardinalcarebridge.com the same way, in Settings -> Custom Domains.
+  #
+  # Before pointing real traffic at it: replace the placeholder email
+  # (hello@cardinalcarebridge.example) and phone number in cardinal-care-bridge/index.html
+  # with real contact details — see that folder's README for the full launch checklist.
+  - type: web
+    name: cardinal-care-bridge
+    runtime: static
+    branch: main
+    staticPublishPath: ./cardinal-care-bridge
+    autoDeploy: true
