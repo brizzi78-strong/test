@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Cardinal Care Bridge — Senior Living Advisory for Triangle Families</title>
+<meta name="description" content="Free consultation and a personalized guide to Independent Living, Assisted Living, and Memory Care for Triangle-area families — care navigation, move coordination, and support that doesn't end on move-in day.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23A31B33'/%3E%3Ctext x='16' y='23' font-family='system-ui' font-size='20' font-weight='900' text-anchor='middle' fill='white'%3EC%3C/text%3E%3C/svg%3E">
+<style>
+  :root{--paper:#F7F2E6;--surface:#FFFDF7;--surface-2:#EFE7D3;--ink:#17233F;--muted:#6B6350;--line:#E2D9C3;
+    --brand:#A31B33;--brand-strong:#7E1226;--good:#2E7D4F;--good-bg:#E4F0E8;--warn:#9A6410;--warn-bg:#F6ECD6;
+    --crit:#B23A3A;--crit-bg:#F6E1DE;--shadow:0 1px 2px rgba(23,35,63,.07),0 10px 26px -14px rgba(23,35,63,.24);
+    --font:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --serif:ui-serif,Georgia,"Iowan Old Style","Times New Roman",serif;
+    --maxw:1080px;--r:14px;}
+  @media (prefers-color-scheme:dark){:root{--paper:#101627;--surface:#172033;--surface-2:#1F2A42;--ink:#F3EEE1;
+    --muted:#A9A28F;--line:#2B3855;--brand:#E2586B;--brand-strong:#F27A8B;--good:#4FBE86;--good-bg:#12321f;
+    --warn:#D6A24A;--warn-bg:#33280f;--crit:#E07B6E;--crit-bg:#3a1d1a;--shadow:0 1px 2px rgba(0,0,0,.45),0 12px 32px -14px rgba(0,0,0,.65);}}
+  :root[data-theme="light"]{--paper:#F7F2E6;--surface:#FFFDF7;--surface-2:#EFE7D3;--ink:#17233F;--muted:#6B6350;--line:#E2D9C3;--brand:#A31B33;--brand-strong:#7E1226;--good:#2E7D4F;--good-bg:#E4F0E8;--warn:#9A6410;--warn-bg:#F6ECD6;--crit:#B23A3A;--crit-bg:#F6E1DE;}
+  :root[data-theme="dark"]{--paper:#101627;--surface:#172033;--surface-2:#1F2A42;--ink:#F3EEE1;--muted:#A9A28F;--line:#2B3855;--brand:#E2586B;--brand-strong:#F27A8B;--good:#4FBE86;--good-bg:#12321f;--warn:#D6A24A;--warn-bg:#33280f;--crit:#E07B6E;--crit-bg:#3a1d1a;}
+  *{box-sizing:border-box;} html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);line-height:1.55;}
+  .wrap{max-width:var(--maxw);margin-inline:auto;padding:0 clamp(1rem,4vw,2rem);}
+  header.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+  .top-in{max-width:var(--maxw);margin-inline:auto;padding:.7rem clamp(1rem,4vw,2rem);display:flex;align-items:center;gap:.6rem;}
+  .logo{width:32px;height:32px;border-radius:9px;background:var(--brand);color:#fff;font-weight:900;display:grid;place-items:center;font-size:1.05rem;flex:none;}
+  .brandname{font-size:1.05rem;margin:0;font-weight:800;letter-spacing:-.01em;}
+  .brandname small{display:block;font-weight:600;font-size:.68rem;color:var(--muted);}
+  nav.primary{margin-left:auto;display:flex;gap:1.1rem;align-items:center;}
+  nav.primary a{color:var(--muted);text-decoration:none;font-weight:700;font-size:.86rem;}
+  nav.primary a:hover{color:var(--brand);}
+  nav.primary a.cta{background:var(--brand);color:#fff;padding:.45rem .85rem;border-radius:999px;}
+  nav.primary a.cta:hover{background:var(--brand-strong);color:#fff;}
+  @media(max-width:760px){nav.primary a:not(.cta){display:none;}}
+  .theme{background:transparent;border:1px solid var(--line);border-radius:8px;color:var(--ink);padding:.35rem .55rem;cursor:pointer;margin-left:.6rem;}
+
+  section{padding:clamp(2.4rem,6vw,4.4rem) 0;}
+  section + section{border-top:1px solid var(--line);}
+  h2{font-size:clamp(1.4rem,3vw,1.9rem);margin:0 0 .3rem;font-weight:800;letter-spacing:-.01em;}
+  .kicker{font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--brand);margin:0 0 .5rem;}
+  .lede{color:var(--muted);font-size:1.05rem;max-width:640px;margin:.3rem 0 1.6rem;}
+
+  /* hero */
+  .hero{padding-top:clamp(3rem,8vw,5.5rem);text-align:center;}
+  .hero h1{font-family:var(--serif);font-size:clamp(2rem,5vw,3.1rem);line-height:1.15;margin:0 0 .8rem;font-weight:700;}
+  .hero p.sub{max-width:640px;margin:0 auto 1.8rem;color:var(--muted);font-size:1.08rem;}
+  .hero .ctas{display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap;margin-bottom:.6rem;}
+  .hero .tagline{font-weight:700;color:var(--brand);letter-spacing:.02em;}
+
+  .btn{display:inline-block;background:var(--brand);color:#fff;border:0;border-radius:11px;padding:.75rem 1.3rem;font:inherit;font-weight:700;cursor:pointer;text-decoration:none;}
+  .btn:hover{background:var(--brand-strong);}
+  .btn.ghost{background:transparent;color:var(--brand);border:1px solid var(--line);}
+  .btn.ghost:hover{border-color:var(--brand);}
+  .btn.block{width:100%;text-align:center;}
+
+  /* guide / included */
+  .guide-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:start;}
+  @media(max-width:820px){.guide-grid{grid-template-columns:1fr;}}
+  ul.included{list-style:none;margin:0 0 1.5rem;padding:0;display:grid;gap:.55rem;}
+  ul.included li{display:flex;gap:.55rem;align-items:flex-start;font-size:.98rem;}
+  ul.included li::before{content:"✓";color:var(--good);font-weight:900;flex:none;}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:1.3rem 1.4rem;}
+
+  /* services */
+  .services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;}
+  @media(max-width:700px){.services-grid{grid-template-columns:1fr;}}
+  .svc{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:1.3rem 1.4rem;box-shadow:var(--shadow);}
+  .svc h3{margin:.2rem 0 .4rem;font-size:1.05rem;}
+  .svc p{margin:0;color:var(--muted);font-size:.92rem;}
+  .svc .num{font-size:.72rem;font-weight:800;color:var(--brand);letter-spacing:.08em;}
+
+  /* why us */
+  blockquote.pull{font-family:var(--serif);font-size:clamp(1.3rem,3vw,1.7rem);line-height:1.35;margin:0 0 1.2rem;font-weight:600;color:var(--ink);}
+  .principles{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.2rem;}
+  .principles span{background:var(--surface-2);border:1px solid var(--line);border-radius:999px;padding:.4rem .9rem;font-size:.85rem;font-weight:700;}
+
+  /* promise */
+  .promise{background:var(--surface-2);border-radius:var(--r);padding:clamp(1.6rem,4vw,2.4rem);}
+
+  /* consult form */
+  form.consult{display:grid;gap:.3rem .9rem;}
+  .g2{display:grid;grid-template-columns:1fr 1fr;gap:.3rem .9rem;}
+  @media(max-width:600px){.g2{grid-template-columns:1fr;}}
+  label{display:block;font-size:.74rem;font-weight:700;color:var(--muted);margin:.6rem 0 .22rem;letter-spacing:.02em;}
+  input,select,textarea{width:100%;padding:.65rem .7rem;border:1px solid var(--line);border-radius:10px;background:var(--paper);color:var(--ink);font:inherit;}
+  textarea{resize:vertical;min-height:5rem;}
+  input:focus,select:focus,textarea:focus{outline:2px solid var(--brand);outline-offset:1px;}
+  .radios{display:flex;gap:1rem;flex-wrap:wrap;margin:.5rem 0 .2rem;}
+  .radios label{display:flex;align-items:center;gap:.4rem;font-size:.86rem;font-weight:600;color:var(--ink);margin:0;}
+  .radios input{width:auto;}
+  .formnote{color:var(--muted);font-size:.8rem;margin-top:.9rem;}
+  .banner{display:none;padding:.7rem .9rem;border-radius:10px;margin:.8rem 0;font-size:.88rem;}
+  .banner.show{display:block;background:var(--good-bg);border:1px solid var(--good);color:var(--ink);}
+  .phoneline{margin-top:1rem;color:var(--muted);font-size:.9rem;}
+  .phoneline a{color:var(--brand);font-weight:700;text-decoration:none;}
+
+  footer{color:var(--muted);font-size:.8rem;padding:2.4rem 0 3rem;}
+  footer .fgrid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+  footer a{color:var(--muted);}
+  footer .disclaimer{margin-top:1.2rem;line-height:1.6;max-width:760px;}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <span class="logo" aria-hidden="true">C</span>
+    <h1 class="brandname">Cardinal Care Bridge<small>Senior living advisory, Triangle NC</small></h1>
+    <nav class="primary">
+      <a href="#guide">The Guide</a>
+      <a href="#services">How We Help</a>
+      <a href="#why">Why Us</a>
+      <a href="#consult" class="cta">Schedule a Consultation</a>
+    </nav>
+    <button class="theme" id="themeBtn" title="Toggle theme" aria-label="Toggle theme">◐</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker">Peace of Mind Starts Here</p>
+    <h1>Whether you're planning ahead or facing an urgent decision today, we're ready to help.</h1>
+    <p class="sub">Cardinal Care Bridge helps Triangle families compare senior living options, navigate healthcare transitions, and move forward with a plan built around your loved one — not a list of communities.</p>
+    <div class="ctas">
+      <a class="btn" href="#guide">Read the Guide</a>
+      <a class="btn ghost" href="#consult">Schedule Your Consultation</a>
+    </div>
+    <p class="tagline">Move Forward with Confidence.</p>
+  </div>
+</section>
+
+<section id="guide">
+  <div class="wrap guide-grid">
+    <div>
+      <p class="kicker">Start here</p>
+      <h2>The Cardinal's Promise Family Guide</h2>
+      <p class="lede">A free, no-pressure resource for families weighing Independent Living, Assisted Living, and Memory Care — plus a complimentary 30-minute consultation to talk through your specific situation.</p>
+      <ul class="included">
+        <li>The Cardinal's Promise Family Guide</li>
+        <li>Complimentary 30-minute consultation</li>
+        <li>Personalized recommendations</li>
+        <li>Questions to ask during community tours</li>
+        <li>Practical caregiver resources</li>
+        <li>Clear next steps for your family</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3 style="margin-top:0">Get the free guide</h3>
+      <p class="formnote" style="margin-top:0">We'll email it to you — no spam, no obligation.</p>
+      <form id="guideForm">
+        <label for="gName">Your name</label>
+        <input id="gName" required autocomplete="name">
+        <label for="gEmail">Email</label>
+        <input id="gEmail" type="email" required autocomplete="email">
+        <button class="btn block" type="submit" style="margin-top:.9rem">Send Me the Guide</button>
+      </form>
+      <div class="banner" id="guideBanner"></div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <p class="kicker">How We Help</p>
+    <h2>Four ways we walk with your family</h2>
+    <p class="lede">From the first conversation through the months after move-in.</p>
+    <div class="services-grid">
+      <div class="svc"><div class="num">01</div><h3>Senior Living Advisory</h3><p>Helping families compare Independent Living, Assisted Living, and Memory Care communities with confidence.</p></div>
+      <div class="svc"><div class="num">02</div><h3>Care Navigation</h3><p>Clear guidance through healthcare transitions, hospital discharges, rehabilitation stays, and changing care needs.</p></div>
+      <div class="svc"><div class="num">03</div><h3>Move Coordination</h3><p>Helping make one of life's biggest transitions organized, thoughtful, and less stressful.</p></div>
+      <div class="svc"><div class="num">04</div><h3>Ongoing Family Support</h3><p>Because guidance shouldn't end on move-in day.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap">
+    <p class="kicker">Why Families Choose Cardinal Care Bridge</p>
+    <blockquote class="pull">We don't start with communities.<br>We start with people.</blockquote>
+    <p class="lede" style="margin-bottom:.4rem">We take time to understand your loved one's story, goals, health needs, budget, and preferences before making recommendations.</p>
+    <div class="principles">
+      <span>Every plan is personalized.</span>
+      <span>Every recommendation is thoughtful.</span>
+      <span>Every family is treated with compassion and respect.</span>
+    </div>
+  </div>
+</section>
+
+<section id="promise">
+  <div class="wrap">
+    <div class="promise">
+      <p class="kicker">Our Community Promise</p>
+      <h2>Every family we help creates a lasting impact.</h2>
+      <p class="lede" style="margin-bottom:0">A portion of our proceeds supports organizations advancing healthy aging, caregiver education, dementia research, and programs serving older adults. When you choose Cardinal Care Bridge, you're investing not only in your loved one — but also in stronger communities.</p>
+    </div>
+  </div>
+</section>
+
+<section id="consult">
+  <div class="wrap">
+    <p class="kicker">Peace of Mind Starts Here</p>
+    <h2>Schedule your complimentary consultation</h2>
+    <p class="lede">30 minutes, no cost, no obligation — just a conversation about your family's situation.</p>
+    <div class="card" style="max-width:680px">
+      <form class="consult" id="consultForm">
+        <div class="g2">
+          <div><label for="cName">Your name</label><input id="cName" required autocomplete="name"></div>
+          <div><label for="cPhone">Phone</label><input id="cPhone" type="tel" required autocomplete="tel"></div>
+        </div>
+        <div class="g2">
+          <div><label for="cEmail">Email</label><input id="cEmail" type="email" required autocomplete="email"></div>
+          <div><label for="cLoved">Loved one's first name (optional)</label><input id="cLoved" autocomplete="off"></div>
+        </div>
+        <div class="g2">
+          <div>
+            <label for="cCounty">County / area</label>
+            <select id="cCounty">
+              <option>Wake</option><option>Durham</option><option>Orange</option><option>Chatham</option>
+              <option>Johnston</option><option>Lee</option><option>Moore</option><option>Other</option>
+            </select>
+          </div>
+          <div>
+            <label for="cTimeline">Timeline</label>
+            <select id="cTimeline">
+              <option>Urgent — within days</option>
+              <option>Planning ahead — 1–3 months</option>
+              <option>Just exploring</option>
+            </select>
+          </div>
+        </div>
+        <label for="cDetails">Tell us a bit about your situation</label>
+        <textarea id="cDetails" placeholder="What's prompting this search? Any health or care needs we should know about?"></textarea>
+        <label>Preferred contact method</label>
+        <div class="radios">
+          <label><input type="radio" name="contactPref" value="phone" checked> Phone</label>
+          <label><input type="radio" name="contactPref" value="email"> Email</label>
+          <label><input type="radio" name="contactPref" value="text"> Text</label>
+        </div>
+        <button class="btn block" type="submit" style="margin-top:1rem">Request My Consultation</button>
+        <p class="formnote">By submitting, you agree to be contacted about your request. We never sell your information.</p>
+      </form>
+      <div class="banner" id="consultBanner"></div>
+      <p class="phoneline">Prefer to talk now? Call <a href="tel:+19195550100">(919) 555-0100</a> — placeholder number, update before launch.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div><strong style="color:var(--ink)">Cardinal Care Bridge</strong><br>Senior living advisory &amp; care navigation for Triangle NC families.</div>
+      <div>hello@cardinalcarebridge.example &middot; (919) 555-0100 &middot; Serving Wake, Durham, Orange, Chatham, Johnston, Lee &amp; Moore counties</div>
+    </div>
+    <p class="disclaimer">Cardinal Care Bridge provides senior living advisory and care navigation services and does not provide medical advice or diagnosis. Recommendations are informational and intended to support, not replace, guidance from your loved one's physicians and care team. Contact details on this page are placeholders — replace before this site goes live.</p>
+  </div>
+</footer>
+
+<script>
+"use strict";
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s||"").trim();
+
+function mailtoHref(to, subject, bodyLines) {
+  return "mailto:" + to + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(bodyLines.join("\n"));
+}
+function showBanner(el, msg) {
+  el.textContent = msg;
+  el.className = "banner show";
+}
+
+$("guideForm").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const name = esc($("gName").value), email = esc($("gEmail").value);
+  if (!name || !email) return;
+  const href = mailtoHref(
+    "hello@cardinalcarebridge.example",
+    "Please send The Cardinal's Promise Family Guide",
+    [`Name: ${name}`, `Email: ${email}`, "", "Requested via the Cardinal Care Bridge website guide form."]
+  );
+  window.location.href = href;
+  showBanner($("guideBanner"), "Opening your email client to send the request — we'll get the guide to you shortly.");
+  $("guideForm").reset();
+});
+
+$("consultForm").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const name = esc($("cName").value), phone = esc($("cPhone").value), email = esc($("cEmail").value);
+  if (!name || !phone || !email) return;
+  const loved = esc($("cLoved").value);
+  const county = $("cCounty").value;
+  const timeline = $("cTimeline").value;
+  const details = esc($("cDetails").value);
+  const pref = document.querySelector('input[name="contactPref"]:checked').value;
+  const href = mailtoHref(
+    "hello@cardinalcarebridge.example",
+    "Consultation request — " + name,
+    [
+      `Name: ${name}`, `Phone: ${phone}`, `Email: ${email}`,
+      loved ? `Loved one: ${loved}` : null,
+      `County/area: ${county}`, `Timeline: ${timeline}`, `Preferred contact: ${pref}`,
+      "", "Situation:", details || "(not provided)",
+      "", "Requested via the Cardinal Care Bridge website consultation form.",
+    ].filter(Boolean)
+  );
+  window.location.href = href;
+  showBanner($("consultBanner"), "Opening your email client to send your request — we'll reach out within one business day.");
+  $("consultForm").reset();
+});
+
+$("themeBtn").addEventListener("click", () => {
+  const cur = document.documentElement.getAttribute("data-theme");
+  const next = cur === "dark" ? "light" : cur === "light" ? "" : "dark";
+  if (next) document.documentElement.setAttribute("data-theme", next); else document.documentElement.removeAttribute("data-theme");
+});
+</script>
+</body>
+</html>
