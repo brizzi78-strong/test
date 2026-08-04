@@ -25,19 +25,19 @@ async function rasterToPdf(pngPath, wIn, hIn, outPath) {
 //    Target: 17.8978 x 11.25 in @ 300 DPI  ->  5369 x 3375 px
 // =====================================================================
 {
-  const W = Math.round(17.8978 * DPI); // 5369
-  const H = Math.round(11.25 * DPI);   // 3375
-  const page = await browser.newPage({ viewport: { width: W, height: H }, deviceScaleFactor: 1 });
-  // Force the CSS-in body to fill our pixel viewport exactly regardless of @page.
+  const WIN = 17.8978, HIN = 11.25;
+  // Render at the design's NATURAL CSS size (96px/in) and scale up with deviceScaleFactor.
+  // Forcing body to a pixel width breaks the inch-based absolute layout (content ends up
+  // in the left third with white space to the right) — this keeps the wrap filling the page.
+  const CSSW = Math.round(WIN * 96), CSSH = Math.round(HIN * 96); // ~1718 x 1080
+  const DSF = 600 / 96;                                            // 600 DPI, well above KDP's 300 min
+  const page = await browser.newPage({ viewport: { width: CSSW, height: CSSH }, deviceScaleFactor: DSF });
   await page.goto(`file://${PUB}/kdp-cover-wrap.html`, { waitUntil: 'networkidle' });
-  await page.addStyleTag({ content: `
-    html,body{ margin:0!important; padding:0!important;
-      width:${W}px!important; height:${H}px!important; overflow:hidden!important; }
-  `});
-  await page.screenshot({ path: `${SCR}/wrap-flat.png`, clip: { x:0, y:0, width:W, height:H } });
+  await page.addStyleTag({ content: `html,body{ margin:0!important; padding:0!important; overflow:hidden!important; }` });
+  await page.screenshot({ path: `${SCR}/wrap-flat.png`, clip: { x:0, y:0, width:CSSW, height:CSSH } });
   await page.close();
-  await rasterToPdf(`${SCR}/wrap-flat.png`, 17.8978, 11.25, `${PUB}/kdp-cover-wrap-print.pdf`);
-  console.log(`WRAP  -> ${W}x${H}px  =>  kdp-cover-wrap-print.pdf (17.8978 x 11.25 in)`);
+  await rasterToPdf(`${SCR}/wrap-flat.png`, WIN, HIN, `${PUB}/kdp-cover-wrap-print.pdf`);
+  console.log(`WRAP  -> ${Math.round(CSSW*DSF)}x${Math.round(CSSH*DSF)}px @600dpi  =>  kdp-cover-wrap-print.pdf (${WIN} x ${HIN} in)`);
 }
 
 // =====================================================================
