@@ -52,7 +52,14 @@ export function buildRoutes(service: TradingService): Route[] {
     [
       'GET',
       '/meta',
-      () => ok({ service: 'trading', orderSides: ORDER_SIDES, orderTypes: ORDER_TYPES, orderStatuses: ORDER_STATUSES }),
+      () =>
+        ok({
+          service: 'trading',
+          marketData: service.marketDataName,
+          orderSides: ORDER_SIDES,
+          orderTypes: ORDER_TYPES,
+          orderStatuses: ORDER_STATUSES,
+        }),
     ],
 
     ['POST', '/accounts', ({ body }) => created(service.createAccount(asObject(body) as never))],
@@ -62,27 +69,27 @@ export function buildRoutes(service: TradingService): Route[] {
     ['GET', '/instruments', () => ok(service.listInstruments())],
     ['GET', '/instruments/:symbol', ({ params }) => ok(service.getInstrument(params.symbol))],
 
-    ['GET', '/quotes', () => ok(service.listQuotes())],
-    ['GET', '/quotes/:symbol', ({ params }) => ok(service.getQuote(params.symbol))],
+    ['GET', '/quotes', async () => ok(await service.listQuotes())],
+    ['GET', '/quotes/:symbol', async ({ params }) => ok(await service.getQuote(params.symbol))],
     [
       'GET',
       '/quotes/:symbol/history',
-      ({ params, query }) =>
+      async ({ params, query }) =>
         ok(
-          service.getHistory(params.symbol, {
+          await service.getHistory(params.symbol, {
             points: numberOrUndefined(query.get('points')),
             intervalMinutes: numberOrUndefined(query.get('intervalMinutes')),
           }),
         ),
     ],
 
-    ['POST', '/orders', ({ body }) => created(service.placeOrder(asObject(body) as never))],
+    ['POST', '/orders', async ({ body }) => created(await service.placeOrder(asObject(body) as never))],
     [
       'GET',
       '/orders',
-      ({ query }) =>
+      async ({ query }) =>
         ok(
-          service.listOrders({
+          await service.listOrders({
             accountId: query.get('accountId') ?? undefined,
             status: (query.get('status') as OrderStatus | null) ?? undefined,
             symbol: query.get('symbol') ?? undefined,
@@ -92,10 +99,10 @@ export function buildRoutes(service: TradingService): Route[] {
     ['GET', '/orders/:id', ({ params }) => ok(service.getOrder(params.id))],
     ['POST', '/orders/:id/cancel', ({ params }) => ok(service.cancelOrder(params.id))],
 
-    ['GET', '/portfolio/:accountId', ({ params }) => ok(service.getPortfolio(params.accountId))],
+    ['GET', '/portfolio/:accountId', async ({ params }) => ok(await service.getPortfolio(params.accountId))],
     ['GET', '/realized-pnl/:accountId', ({ params }) => ok(service.getRealizedPnl(params.accountId))],
 
-    ['GET', '/watchlist/:accountId', ({ params }) => ok(service.listWatchlist(params.accountId))],
+    ['GET', '/watchlist/:accountId', async ({ params }) => ok(await service.listWatchlist(params.accountId))],
     [
       'POST',
       '/watchlist/:accountId',

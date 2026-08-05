@@ -17,13 +17,16 @@
 import { randomUUID } from 'node:crypto';
 import type { Account, Instrument, Order, OrderSide, OrderType, WatchlistEntry } from '../domain/types.ts';
 import { INSTRUMENTS, ORDER_SIDES, ORDER_TYPES } from '../domain/types.ts';
-import { history, quote, type PricePoint, type Quote } from '../domain/priceEngine.ts';
+import type { PricePoint, Quote } from '../domain/priceEngine.ts';
+import { createMockSource, type MarketDataSource, type RawQuote } from '../domain/marketData.ts';
 import { computePositions, heldQuantity, type RealizedTrade } from '../domain/portfolioMath.ts';
 import type { Store } from '../store/store.ts';
 import { ConflictError, NotFoundError, ValidationError } from './errors.ts';
 
 export interface ServiceOptions {
   store: Store;
+  /** Where quotes/history come from; defaults to the deterministic mock feed. */
+  marketData?: MarketDataSource;
   now?: () => Date;
   newId?: (prefix: string) => string;
 }
@@ -74,13 +77,20 @@ export interface RealizedPnlReport {
 
 export class TradingService {
   private readonly store: Store;
+  private readonly market: MarketDataSource;
   private readonly now: () => Date;
   private readonly newId: (prefix: string) => string;
 
   constructor(opts: ServiceOptions) {
     this.store = opts.store;
+    this.market = opts.marketData ?? createMockSource();
     this.now = opts.now ?? (() => new Date());
     this.newId = opts.newId ?? ((prefix) => `${prefix}_${randomUUID()}`);
+  }
+
+  /** The active market-data source's name ('mock' or a real provider). */
+  get marketDataName(): string {
+    return this.market.name;
   }
 
   // --- Accounts ------------------------------------------------------------
@@ -120,27 +130,27 @@ export class TradingService {
     return this.getInstrumentOrThrow(symbol);
   }
 
-  getQuote(symbol: string): InstrumentQuote {
+  async getQuote(symbol: string): Promise<InstrumentQuote> {
     const instrument = this.getInstrumentOrThrow(symbol);
-    return { ...quote(instrument, this.now()), name: instrument.name };
+    return this.quoteFor(instrument, this.now());
   }
 
-  listQuotes(): InstrumentQuote[] {
+  async listQuotes(): Promise<InstrumentQuote[]> {
     const now = this.now();
-    return INSTRUMENTS.map((instrument) => ({ ...quote(instrument, now), name: instrument.name }));
+    return Promise.all(INSTRUMENTS.map((instrument) => this.quoteFor(instrument, now)));
   }
 
-  getHistory(symbol: string, opts: { points?: number; intervalMinutes?: number } = {}): PricePoint[] {
+  async getHistory(symbol: string, opts: { points?: number; intervalMinutes?: number } = {}): Promise<PricePoint[]> {
     const instrument = this.getInstrumentOrThrow(symbol);
-    return history(instrument, opts, this.now());
+    return this.market.getHistory(instrument, opts, this.now());
   }
 
   // --- Orders ----------------------------------------------------------------
 
-  placeOrder(input: PlaceOrderInput): Order {
+  async placeOrder(input: PlaceOrderInput): Promise<Order> {
     const now = this.now();
     this.requireAccount(input.accountId);
-    this.settleOpenOrders(input.accountId, now);
+    await this.settleOpenOrders(input.accountId, now);
     const account = this.requireAccount(input.accountId);
     const instrument = this.getInstrumentOrThrow(input.symbol);
     const side = requireEnum(input.side, ORDER_SIDES, 'side');
@@ -149,7 +159,7 @@ export class TradingService {
     const ts = this.timestamp(now);
 
     if (type === 'market') {
-      const q = quote(instrument, now);
+      const q = await this.market.getQuote(instrument, now);
       this.applyFill(account, side, instrument.symbol, quantity, q.priceCents);
       const order: Order = {
         id: this.newId('ord'),
@@ -181,7 +191,7 @@ export class TradingService {
       createdAt: ts,
     };
     this.store.orders.put(order);
-    this.tryFillLimitOrder(order, now);
+    await this.tryFillLimitOrder(order, now);
     return this.store.orders.get(order.id)!;
   }
 
@@ -189,8 +199,8 @@ export class TradingService {
     return this.requireOrder(id);
   }
 
-  listOrders(filter: { accountId?: string; status?: Order['status']; symbol?: string } = {}): Order[] {
-    if (filter.accountId) this.settleOpenOrders(filter.accountId, this.now());
+  async listOrders(filter: { accountId?: string; status?: Order['status']; symbol?: string } = {}): Promise<Order[]> {
+    if (filter.accountId) await this.settleOpenOrders(filter.accountId, this.now());
     return this.store.orders
       .list((o) => {
         if (filter.accountId && o.accountId !== filter.accountId) return false;
@@ -214,9 +224,9 @@ export class TradingService {
 
   // --- Portfolio / P&L ---------------------------------------------------
 
-  getPortfolio(accountId: string): Portfolio {
+  async getPortfolio(accountId: string): Promise<Portfolio> {
     const now = this.now();
-    this.settleOpenOrders(accountId, now);
+    await this.settleOpenOrders(accountId, now);
     const account = this.requireAccount(accountId);
     const orders = this.store.orders.list((o) => o.accountId === accountId);
     const { positions } = computePositions(orders);
@@ -224,16 +234,17 @@ export class TradingService {
     let marketValueCents = 0;
     let dayChangeCents = 0;
     let unrealizedPnlCents = 0;
-    const rows: PortfolioPosition[] = positions.map((p) => {
+    const rows: PortfolioPosition[] = [];
+    for (const p of positions) {
       const instrument = this.getInstrumentOrThrow(p.symbol);
-      const q = quote(instrument, now);
+      const q = await this.quoteFor(instrument, now);
       const positionMarketValueCents = p.quantity * q.priceCents;
       const positionUnrealizedCents = positionMarketValueCents - p.costBasisCents;
       const positionDayChangeCents = p.quantity * q.changeCents;
       marketValueCents += positionMarketValueCents;
       unrealizedPnlCents += positionUnrealizedCents;
       dayChangeCents += positionDayChangeCents;
-      return {
+      rows.push({
         symbol: p.symbol,
         name: instrument.name,
         quantity: p.quantity,
@@ -245,8 +256,8 @@ export class TradingService {
         unrealizedPnlBps:
           p.costBasisCents > 0 ? Math.round((positionUnrealizedCents / p.costBasisCents) * 10000) : 0,
         dayChangeCents: positionDayChangeCents,
-      };
-    });
+      });
+    }
 
     return {
       accountId,
@@ -295,32 +306,44 @@ export class TradingService {
     if (existing) this.store.watchlist.delete(existing.id);
   }
 
-  listWatchlist(accountId: string): InstrumentQuote[] {
+  async listWatchlist(accountId: string): Promise<InstrumentQuote[]> {
     this.requireAccount(accountId);
     const now = this.now();
-    return this.store.watchlist
+    const entries = this.store.watchlist
       .list((w) => w.accountId === accountId)
-      .sort((a, b) => a.createdAt.localeCompare(b.createdAt))
-      .map((entry) => {
-        const instrument = this.getInstrumentOrThrow(entry.symbol);
-        return { ...quote(instrument, now), name: instrument.name };
-      });
+      .sort((a, b) => a.createdAt.localeCompare(b.createdAt));
+    return Promise.all(entries.map((entry) => this.quoteFor(this.getInstrumentOrThrow(entry.symbol), now)));
   }
 
   // --- internals -----------------------------------------------------------
 
+  /** Build a full quote (change vs. previous close) from the market source's raw numbers. */
+  private async quoteFor(instrument: Instrument, now: Date): Promise<InstrumentQuote> {
+    const raw: RawQuote = await this.market.getQuote(instrument, now);
+    const changeCents = raw.priceCents - raw.previousCloseCents;
+    return {
+      symbol: instrument.symbol,
+      name: instrument.name,
+      priceCents: raw.priceCents,
+      previousCloseCents: raw.previousCloseCents,
+      changeCents,
+      changeBps: raw.previousCloseCents > 0 ? Math.round((changeCents / raw.previousCloseCents) * 10000) : 0,
+      asOf: now.toISOString(),
+    };
+  }
+
   /** Attempt to fill every resting limit order on an account against the current feed. */
-  private settleOpenOrders(accountId: string, now: Date): void {
+  private async settleOpenOrders(accountId: string, now: Date): Promise<void> {
     const openOrders = this.store.orders
       .list((o) => o.accountId === accountId && o.status === 'open' && o.type === 'limit')
       .sort((a, b) => a.createdAt.localeCompare(b.createdAt));
-    for (const order of openOrders) this.tryFillLimitOrder(order, now);
+    for (const order of openOrders) await this.tryFillLimitOrder(order, now);
   }
 
-  private tryFillLimitOrder(order: Order, now: Date): void {
+  private async tryFillLimitOrder(order: Order, now: Date): Promise<void> {
     if (order.status !== 'open' || order.limitPriceCents === undefined) return;
     const instrument = this.getInstrumentOrThrow(order.symbol);
-    const q = quote(instrument, now);
+    const q = await this.market.getQuote(instrument, now);
     const crosses =
       order.side === 'buy' ? q.priceCents <= order.limitPriceCents : q.priceCents >= order.limitPriceCents;
     if (!crosses) return;

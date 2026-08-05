@@ -5,6 +5,7 @@
 
 import { createServer, type Server } from 'node:http';
 import { TradingService } from '../service/tradingService.ts';
+import { marketDataFromEnv, type MarketDataSource } from '../domain/marketData.ts';
 import { createInMemoryStore, type Store } from '../store/store.ts';
 import { createSqliteStore } from '../store/sqliteStore.ts';
 import { createRequestListener } from './router.ts';
@@ -23,12 +24,13 @@ export function storeFromEnv(env: NodeJS.ProcessEnv = process.env): Store {
 }
 
 /**
- * Create (but do not start) an HTTP server. The store defaults to the
- * environment selection; pass one explicitly (e.g. in tests) to override.
- * Callers start it with `server.listen(port)`.
+ * Create (but do not start) an HTTP server. The store and market-data source
+ * default to the environment selection (`TRADING_DB`, `MARKET_DATA`); pass
+ * either explicitly (e.g. in tests) to override. Callers start it with
+ * `server.listen(port)`.
  */
-export function createApp(store: Store = storeFromEnv()): AppServer {
-  const service = new TradingService({ store });
+export function createApp(store: Store = storeFromEnv(), marketData: MarketDataSource = marketDataFromEnv()): AppServer {
+  const service = new TradingService({ store, marketData });
   const server = createServer(createRequestListener(service));
   return { server, service };
 }

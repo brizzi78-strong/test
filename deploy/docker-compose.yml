@@ -292,14 +292,16 @@ services:
       - accounting
 
   # Trading: a Robinhood-style commission-free brokerage engine — accounts,
-  # a deterministic mock market feed, market/limit orders, positions with
-  # average-cost basis, and a watchlist. No real money or real market data.
+  # market/limit orders, positions with average-cost basis, and a watchlist.
+  # No real money. Market data defaults to a deterministic mock feed; set
+  # MARKET_DATA=yahoo for live quotes/history from Yahoo Finance (no key).
   trading:
     <<: *service
     command: node trading/src/index.ts
     environment:
       PORT: "4900"
       TRADING_DB: /data/trading.db
+      MARKET_DATA: ${MARKET_DATA:-}
     ports: ["4900:4900"]
     volumes: ["trading-data:/data"]
 

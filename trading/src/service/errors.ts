@@ -32,3 +32,10 @@ export class ConflictError extends DomainError {
     super('conflict', message, 409);
   }
 }
+
+/** An upstream market-data provider failed or returned an unusable response. */
+export class UpstreamError extends DomainError {
+  constructor(message: string) {
+    super('upstream', message, 502);
+  }
+}

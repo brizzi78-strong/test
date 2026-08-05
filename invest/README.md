@@ -7,11 +7,13 @@ and opens to one paper-trading account. No build step: the whole app is one
 HTML file returned by the BFF, and its JavaScript talks only to same-origin
 `/api/*`.
 
-It's a demo, not a real brokerage: the market feed is a deterministic mock
-(see `trading/src/domain/priceEngine.ts`) and the starting cash is paper
-money. Point it at a durable Trading deployment and every order, position,
-and watchlist entry is real and persisted — just not connected to any actual
-market or bank account.
+It's a demo, not a real brokerage: the starting cash is paper money and no
+orders reach any actual market or bank account. Market data defaults to a
+deterministic mock feed, but running the Trading service with
+`MARKET_DATA=yahoo` switches the whole app — quotes, charts, fills — to live
+Yahoo Finance prices (no API key needed). Point it at a durable Trading
+deployment and every order, position, and watchlist entry is real and
+persisted.
 
 ## What it does
 

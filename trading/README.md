@@ -20,16 +20,25 @@ single-page app built on top of this engine.
 | **Position** | Derived, not stored — replayed from filled orders using average-cost basis (`src/domain/portfolioMath.ts`). |
 | **Watchlist** | Per-account list of symbols to track. |
 
-### The mock market feed
+### Market data: mock by default, live via Yahoo Finance
 
-`src/domain/priceEngine.ts` is a pure function of `(symbol, time)`: a small
-sum of sine waves, seeded per symbol, that wanders smoothly and boundedly
-around each instrument's reference price. That makes it deterministic (same
-instant → same price, so fills and quotes are reproducible in tests) and
-"live" (real wall-clock time passing moves the price) without any ticking
-background process or persisted price history. Swap it for a real
-market-data provider without touching the service layer — everything else
-only calls `quote()` / `history()`.
+Quotes and history come from a pluggable `MarketDataSource`
+(`src/domain/marketData.ts`), selected by the `MARKET_DATA` env var:
+
+- **`mock` (default)** — `src/domain/priceEngine.ts`, a pure function of
+  `(symbol, time)`: a small sum of sine waves, seeded per symbol, that
+  wanders smoothly and boundedly around each instrument's reference price.
+  Deterministic (same instant → same price, so fills and quotes are
+  reproducible in tests) and "live" (real wall-clock time passing moves the
+  price) with no ticking background process or persisted price history.
+- **`MARKET_DATA=yahoo`** — real quotes and real intraday history from Yahoo
+  Finance's public chart API. No API key needed. Responses are TTL-cached
+  (quotes 15s, history 60s) so browsing doesn't hammer the endpoint; an
+  unreachable or malformed upstream surfaces as a 502 `upstream` error.
+
+`GET /meta` reports which source is active. Adding another vendor means
+implementing the two-method `MarketDataSource` interface — nothing else in
+the service knows where prices come from.
 
 ### Order lifecycle
 
@@ -78,4 +87,5 @@ npm run typecheck    # tsc --noEmit
 ```
 
 `TRADING_DB=/path/to/data.db` persists to SQLite (built-in `node:sqlite`);
-unset uses an in-memory store.
+unset uses an in-memory store. `MARKET_DATA=yahoo` switches from the
+deterministic mock feed to live Yahoo Finance quotes (no key required).
