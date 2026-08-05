@@ -1,0 +1,98 @@
+<div id="brpp">
+<style>
+  #brpp{--bg:#3E0D16;--bg2:#340A12;--card:#4B121D;--ink:#F4E9DC;--ink-soft:#DBC5BA;--mist:#B58E8E;--hair:rgba(244,233,220,0.16);--cream:#F4E9DC;--cream-ink:#48101A;--rose:#E7A9A9;--gold:#EAC27C;--serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;--sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;--mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,monospace;min-height:100vh;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.65;-webkit-font-smoothing:antialiased;margin:0;display:block}
+  #brpp *{box-sizing:border-box}
+  #brpp a{color:inherit}
+  #brpp ::selection{background:var(--cream);color:var(--cream-ink)}
+  #brpp .wrap{max-width:820px;margin:0 auto;padding-inline:clamp(20px,5vw,40px)}
+  #brpp .topbar{border-bottom:1px solid var(--hair)}
+  #brpp .topbar .row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0;flex-wrap:wrap}
+  #brpp .brand{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-weight:600;font-size:1.05rem;text-decoration:none}
+  #brpp .brand svg{width:30px;height:30px;flex:none}
+  #brpp nav{display:flex;gap:20px;flex-wrap:wrap}
+  #brpp nav a{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mist);text-decoration:none}
+  #brpp nav a:hover{color:var(--rose)}
+  #brpp header.pg{padding:clamp(48px,8vw,88px) 0 8px}
+  #brpp .eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--rose);margin:0 0 16px}
+  #brpp h1{font-family:var(--serif);font-weight:600;font-size:clamp(2.1rem,5.5vw,3.4rem);line-height:1.05;letter-spacing:-.015em;margin:0;text-wrap:balance}
+  #brpp .sub{color:var(--ink-soft);font-size:1.1rem;max-width:60ch;margin:18px 0 0}
+  #brpp main{padding:clamp(30px,5vw,56px) 0 clamp(60px,9vw,110px)}
+  #brpp h2{font-family:var(--serif);font-weight:600;font-size:1.5rem;margin:44px 0 12px;color:var(--ink)}
+  #brpp h3{font-family:var(--serif);font-weight:600;font-size:1.15rem;margin:26px 0 6px}
+  #brpp p{margin:0 0 14px;color:var(--ink-soft)}
+  #brpp .lead{font-size:1.12rem}
+  #brpp ul{color:var(--ink-soft);padding-left:1.2em;margin:0 0 16px}
+  #brpp li{margin:6px 0}
+  #brpp b,#brpp strong{color:var(--ink)}
+  #brpp .muted{color:var(--mist);font-size:.9rem}
+  #brpp .note{border:1px dashed var(--hair);border-radius:12px;padding:18px 20px;margin:26px 0;background:var(--bg2)}
+  #brpp .note p{margin:0;font-size:.95rem}
+  #brpp .btn{font:inherit;font-size:.95rem;font-weight:600;padding:.7rem 1.3rem;border-radius:999px;text-decoration:none;display:inline-block;background:var(--cream);color:var(--cream-ink);border:1px solid transparent}
+  #brpp .btn.ghost{background:transparent;border-color:rgba(244,233,220,.4);color:var(--ink)}
+  #brpp .tiers{display:grid;gap:20px;grid-template-columns:1fr;margin:40px 0 8px}
+  @media(min-width:720px){#brpp .tiers{grid-template-columns:repeat(3,1fr)}}
+  #brpp .tier{background:var(--card);border:1px solid var(--hair);border-radius:18px;padding:28px 24px;display:flex;flex-direction:column}
+  #brpp .tier.feature{border-color:var(--rose);box-shadow:0 20px 50px -30px rgba(0,0,0,.7)}
+  #brpp .tier .name{font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin:0 0 12px}
+  #brpp .tier .price{font-family:var(--serif);font-size:2.6rem;line-height:1;color:var(--ink);margin:0}
+  #brpp .tier .price small{font-size:.9rem;color:var(--mist);font-family:var(--sans)}
+  #brpp .tier .desc{margin:12px 0 16px;font-size:.95rem;color:var(--ink-soft)}
+  #brpp .tier ul{font-size:.92rem;margin-bottom:20px}
+  #brpp .tier .btn{text-align:center}
+  #brpp .tag{display:inline-block;font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--rose);border:1px solid var(--hair);border-radius:999px;padding:3px 9px;margin-bottom:14px}
+  #brpp footer{border-top:1px solid var(--hair);padding:34px 0;color:var(--mist);font-size:.85rem}
+  #brpp footer .row{display:flex;justify-content:space-between;gap:14px 26px;flex-wrap:wrap;align-items:center}
+  #brpp footer nav a{color:var(--mist)}
+  #brpp .brand .bn{line-height:1.12}
+  #brpp .brand .bn small{display:block;font-family:var(--mono);font-size:.54rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mist);margin-top:3px}
+  #brpp footer .foot-rows{display:flex;justify-content:space-between;gap:14px 26px;flex-wrap:wrap;align-items:center}
+  #brpp footer .disc{margin-top:16px;padding-top:16px;border-top:1px solid var(--hair);color:var(--mist);font-size:.76rem;line-height:1.6;max-width:82ch}
+  #brpp .tier .btns{margin-top:auto;display:flex;flex-direction:column;gap:9px}
+</style>
+<div class="topbar"><div class="wrap row"><a class="brand" href="/"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#6E1223"/><path d="M8 22V10h4l4 6 4-6h4v12" stroke="#F4E9DC" stroke-width="2.4" fill="none" stroke-linejoin="round" stroke-linecap="round"/></svg> <span class="bn">Blue Ridge Press LLC<small>Verification &amp; Reference Services</small></span></a><nav><a href="/">Home</a><a href="/pricing">Pricing</a><a href="/about">About</a><a href="/#start">Request a check</a></nav></div></div>
+<header class="pg"><div class="wrap"><p class="eyebrow">Pricing</p><h1>Straightforward prices for straightforward checks.</h1><p class="sub">A fraction of what the big vendors charge &mdash; because you only pay for what we actually confirm.</p></div></header>
+<main><div class="wrap">
+
+<div class="tiers">
+  <div class="tier">
+    <p class="name">Single check</p>
+    <p class="price">$39<small> / candidate</small></p>
+    <p class="desc">One person, verified at the source.</p>
+    <ul><li>Professional references</li><li>Past employment</li><li>Education / credentials</li><li>Consent e-signature on file</li><li>Shareable PDF-style report</li></ul>
+    <div class="btns"><a class="btn" href="https://connect.intuit.com/portal/app/CommerceNetwork/view/scs-v1-af60eb73e57b47e182640f6264db6f470520692e34e9471db0d6b94d252587f8839ffa2fc57a4805b6ab4dec7f5091c0?locale=EN_US">Pay $39 now</a><a class="btn ghost" href="/#start">Request a check first</a></div>
+  </div>
+  <div class="tier feature">
+    <span class="tag">Most popular</span>
+    <p class="name">Five-pack</p>
+    <p class="price">$149<small> / 5 checks</small></p>
+    <p class="desc">For a season of hiring &mdash; just under $30 each.</p>
+    <ul><li>Everything in Single, &times;5</li><li>Use them whenever you need</li><li>One simple invoice</li></ul>
+    <div class="btns"><a class="btn" href="/#start">Get started</a></div>
+  </div>
+  <div class="tier">
+    <p class="name">Ongoing</p>
+    <p class="price">Let&rsquo;s talk</p>
+    <p class="desc">Regular hiring, agencies, and volume.</p>
+    <ul><li>Monthly volume pricing</li><li>Priority turnaround</li><li>Simple monthly billing</li></ul>
+    <div class="btns"><a class="btn ghost" href="/#start">Contact us</a></div>
+  </div>
+</div>
+
+<div class="note"><p><b>Buy the book, your first check is on us.</b> Every Cardinal&rsquo;s Promise book includes one free consent-based check &mdash; a real way to vet the caregiver you&rsquo;re about to trust with a parent.</p></div>
+
+<h2>What every price includes</h2>
+<ul>
+  <li><b>Consent first, always.</b> Nothing runs until the candidate reads a plain disclosure and e-signs. That authorization is recorded with a timestamp.</li>
+  <li><b>Confirmed at the source.</b> Real references, real past employers, real registrars &mdash; not a data broker or a black-box score.</li>
+  <li><b>One clean report.</b> Delivered as a shareable report you can hand to a partner or keep on file. <a href="/sample-report" style="color:var(--rose);text-decoration:underline">See a sample &rarr;</a></li>
+  <li><b>No hidden add-ons.</b> The price is the price. No bundled data you never asked for.</li>
+</ul>
+
+<h2>What we don&rsquo;t charge for &mdash; because we don&rsquo;t do it</h2>
+<p>Criminal, credit, and driving records are regulated and, by law, must run through a credentialed consumer-reporting agency. We don&rsquo;t bill you for those or fake them &mdash; when you need them, we point you to a proper agency. You only pay for what we actually confirm.</p>
+
+<p class="muted" style="margin-top:34px">Prices in US dollars. Volume and ongoing rates by quote. Turnaround depends on how quickly sources respond &mdash; typically a few business days.</p>
+
+</div></main>
+<footer><div class="wrap"><div class="foot-rows"><span>&copy; Blue Ridge Press LLC &middot; Verification &amp; Reference Services</span><nav><a href="/pricing">Pricing</a> &middot; <a href="/about">About</a> &middot; <a href="/sample-report">Sample report</a> &middot; <a href="/privacy">Privacy</a> &middot; <a href="/terms">Terms</a></nav></div><p class="disc">Blue Ridge Press LLC provides independent, consent-based verification of professional references, past employment, and education. It does not provide criminal, credit, or motor-vehicle records and is not a consumer-reporting agency for those regulated reports; where such records are needed, we refer you to a credentialed agency. Reports reflect information confirmed by named sources as of the report date and are one input to your decision. &copy; Blue Ridge Press LLC &middot; Raleigh, North Carolina.</p></div></footer>
+</div>
