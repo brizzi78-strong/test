@@ -19,7 +19,7 @@ import type { Account, Instrument, Order, OrderSide, OrderType, WatchlistEntry }
 import { INSTRUMENTS, ORDER_SIDES, ORDER_TYPES } from '../domain/types.ts';
 import type { PricePoint, Quote } from '../domain/priceEngine.ts';
 import { createMockSource, type MarketDataSource, type RawQuote } from '../domain/marketData.ts';
-import { computePositions, heldQuantity, type RealizedTrade } from '../domain/portfolioMath.ts';
+import { computePositions, heldQuantity, quantizeShares, type RealizedTrade } from '../domain/portfolioMath.ts';
 import type { Store } from '../store/store.ts';
 import { ConflictError, NotFoundError, ValidationError } from './errors.ts';
 
@@ -38,7 +38,10 @@ export interface PlaceOrderInput {
   symbol: string;
   side: OrderSide;
   type: OrderType;
-  quantity: number;
+  /** Fractional shares (up to 6 decimal places). Market orders may pass `amountCents` instead. */
+  quantity?: number;
+  /** Dollar-based market order: spend/receive this many cents at the current quote. */
+  amountCents?: number;
   limitPriceCents?: number;
 }
 
@@ -155,11 +158,21 @@ export class TradingService {
     const instrument = this.getInstrumentOrThrow(input.symbol);
     const side = requireEnum(input.side, ORDER_SIDES, 'side');
     const type = requireEnum(input.type, ORDER_TYPES, 'type');
-    const quantity = requirePositiveInt(input.quantity, 'quantity');
+    if (input.quantity !== undefined && input.amountCents !== undefined) {
+      throw new ValidationError('pass either quantity or amountCents, not both');
+    }
     const ts = this.timestamp(now);
 
     if (type === 'market') {
       const q = await this.market.getQuote(instrument, now);
+      let quantity: number;
+      if (input.amountCents !== undefined) {
+        const amountCents = requirePositiveInt(input.amountCents, 'amountCents');
+        quantity = quantizeShares(amountCents / q.priceCents);
+        if (quantity <= 0) throw new ValidationError('amountCents is too small to buy any fraction of a share');
+      } else {
+        quantity = requireShares(input.quantity, 'quantity');
+      }
       this.applyFill(account, side, instrument.symbol, quantity, q.priceCents);
       const order: Order = {
         id: this.newId('ord'),
@@ -177,6 +190,10 @@ export class TradingService {
       return order;
     }
 
+    if (input.amountCents !== undefined) {
+      throw new ValidationError('dollar-based orders are market only — pass quantity for a limit order');
+    }
+    const quantity = requireShares(input.quantity, 'quantity');
     const limitPriceCents = requirePositiveInt(input.limitPriceCents, 'limitPriceCents');
     this.checkCanRestOrder(account, side, instrument.symbol, quantity, limitPriceCents);
     const order: Order = {
@@ -238,9 +255,9 @@ export class TradingService {
     for (const p of positions) {
       const instrument = this.getInstrumentOrThrow(p.symbol);
       const q = await this.quoteFor(instrument, now);
-      const positionMarketValueCents = p.quantity * q.priceCents;
+      const positionMarketValueCents = Math.round(p.quantity * q.priceCents);
       const positionUnrealizedCents = positionMarketValueCents - p.costBasisCents;
-      const positionDayChangeCents = p.quantity * q.changeCents;
+      const positionDayChangeCents = Math.round(p.quantity * q.changeCents);
       marketValueCents += positionMarketValueCents;
       unrealizedPnlCents += positionUnrealizedCents;
       dayChangeCents += positionDayChangeCents;
@@ -363,7 +380,7 @@ export class TradingService {
   /** Move cash for a fill (buy debits, sell credits) and persist the account. */
   private applyFill(account: Account, side: OrderSide, symbol: string, quantity: number, priceCents: number): void {
     if (side === 'buy') {
-      const cost = quantity * priceCents;
+      const cost = Math.round(quantity * priceCents);
       if (cost > account.cashCents) {
         throw new ValidationError(`insufficient buying power: need ${cost}¢, have ${account.cashCents}¢`);
       }
@@ -373,7 +390,7 @@ export class TradingService {
       if (quantity > held) {
         throw new ValidationError(`insufficient shares: hold ${held}, tried to sell ${quantity}`);
       }
-      account.cashCents += quantity * priceCents;
+      account.cashCents += Math.round(quantity * priceCents);
     }
     this.store.accounts.put(account);
   }
@@ -387,7 +404,7 @@ export class TradingService {
     limitPriceCents: number,
   ): void {
     if (side === 'buy') {
-      const maxCost = quantity * limitPriceCents;
+      const maxCost = Math.round(quantity * limitPriceCents);
       if (maxCost > account.cashCents) {
         throw new ValidationError(
           `insufficient buying power for limit order: need up to ${maxCost}¢, have ${account.cashCents}¢`,
@@ -439,6 +456,16 @@ function requirePositiveInt(value: unknown, field: string): number {
     throw new ValidationError(`${field} must be a positive integer`);
   }
   return value;
+}
+
+/** A positive share quantity, quantized to 6 decimal places (min one micro-share). */
+function requireShares(value: unknown, field: string): number {
+  if (typeof value !== 'number' || !Number.isFinite(value) || value <= 0) {
+    throw new ValidationError(`${field} must be a positive number of shares`);
+  }
+  const quantized = quantizeShares(value);
+  if (quantized <= 0) throw new ValidationError(`${field} must be at least 0.000001 shares`);
+  return quantized;
 }
 
 function requireNonNegativeInt(value: unknown, field: string): number {

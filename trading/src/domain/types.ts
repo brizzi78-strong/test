@@ -64,7 +64,7 @@ export interface Order {
   symbol: string;
   side: OrderSide;
   type: OrderType;
-  /** Whole shares. */
+  /** Shares — fractional, quantized to 6 decimal places (micro-shares). */
   quantity: number;
   /** Required for `type: 'limit'`. */
   limitPriceCents?: number;

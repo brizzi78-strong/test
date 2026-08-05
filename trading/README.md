@@ -16,7 +16,7 @@ single-page app built on top of this engine.
 |---|---|
 | **Account** | Cash / buying power in cents. Starts with $10,000 (paper money) unless `startingCashCents` is given. |
 | **Instrument** | A small fixed universe (`GET /instruments`) — enough to browse and demo with. |
-| **Order** | `market` (fills immediately at the current quote) or `limit` (rests `open` until the feed crosses `limitPriceCents`). |
+| **Order** | `market` (fills immediately at the current quote) or `limit` (rests `open` until the feed crosses `limitPriceCents`). Quantities are **fractional shares** (6 decimal places); a market order can instead be placed in **dollars** (`amountCents`) and the engine computes the fractional quantity. |
 | **Position** | Derived, not stored — replayed from filled orders using average-cost basis (`src/domain/portfolioMath.ts`). |
 | **Watchlist** | Per-account list of symbols to track. |
 
@@ -68,7 +68,7 @@ rather than auto-cancelled.
 | `GET /quotes` | Live quote for every instrument. |
 | `GET /quotes/:symbol` | Live quote for one instrument. |
 | `GET /quotes/:symbol/history?points=&intervalMinutes=` | A price series for a chart. |
-| `POST /orders` | Place an order: `{ accountId, symbol, side, type, quantity, limitPriceCents? }`. |
+| `POST /orders` | Place an order: `{ accountId, symbol, side, type, quantity? | amountCents?, limitPriceCents? }` — `amountCents` (dollar-based, market only) or fractional `quantity`. |
 | `GET /orders?accountId=&status=&symbol=` | List orders, newest first. |
 | `GET /orders/:id` | Read one order. |
 | `POST /orders/:id/cancel` | Cancel a resting (`open`) order. |

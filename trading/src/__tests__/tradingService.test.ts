@@ -181,6 +181,57 @@ test('watchlist add is idempotent and remove is a no-op when absent', async () =
   svc.removeFromWatchlist(account.id, 'AAPL'); // no throw
 });
 
+test('a dollar-based market buy fills a fractional quantity costing at most the amount', async () => {
+  const svc = newService();
+  const account = svc.createAccount({ name: 'Rob' });
+  const price = priceAtCents(AAPL, FIXED_NOW.getTime());
+
+  const order = await svc.placeOrder({
+    accountId: account.id,
+    symbol: 'AAPL',
+    side: 'buy',
+    type: 'market',
+    amountCents: 50_000, // invest $500
+  });
+  assert.equal(order.status, 'filled');
+  assert.equal(order.quantity, Math.round((50_000 / price) * 1e6) / 1e6);
+  const cost = Math.round(order.quantity * price);
+  assert.ok(Math.abs(cost - 50_000) <= Math.ceil(price / 2_000_000) + 1); // within rounding of the target
+  assert.equal(svc.getAccount(account.id).cashCents, 1_000_000 - cost);
+});
+
+test('fractional buys average correctly and sell-all clears the position exactly', async () => {
+  const svc = newService();
+  const account = svc.createAccount({ name: 'Rob' });
+  await svc.placeOrder({ accountId: account.id, symbol: 'AAPL', side: 'buy', type: 'market', quantity: 1.5 });
+  await svc.placeOrder({ accountId: account.id, symbol: 'AAPL', side: 'buy', type: 'market', quantity: 0.25 });
+
+  let portfolio = await svc.getPortfolio(account.id);
+  assert.equal(portfolio.positions[0].quantity, 1.75);
+
+  await svc.placeOrder({ accountId: account.id, symbol: 'AAPL', side: 'sell', type: 'market', quantity: 1.75 });
+  portfolio = await svc.getPortfolio(account.id);
+  assert.equal(portfolio.positions.length, 0); // no phantom micro-share left behind
+});
+
+test('order validation: both quantity and amountCents, dollar limit orders, dust amounts', async () => {
+  const svc = newService();
+  const account = svc.createAccount({ name: 'Rob' });
+  await assert.rejects(
+    () => svc.placeOrder({ accountId: account.id, symbol: 'AAPL', side: 'buy', type: 'market', quantity: 1, amountCents: 100 }),
+    ValidationError,
+  );
+  await assert.rejects(
+    () => svc.placeOrder({ accountId: account.id, symbol: 'AAPL', side: 'buy', type: 'limit', amountCents: 100, limitPriceCents: 1 }),
+    ValidationError,
+  );
+  await assert.rejects(
+    // far below a micro-share of AAPL
+    () => svc.placeOrder({ accountId: account.id, symbol: 'AAPL', side: 'buy', type: 'market', quantity: 0.0000001 }),
+    ValidationError,
+  );
+});
+
 test('listInstruments and listQuotes cover the full mock universe', async () => {
   const svc = newService();
   assert.equal(svc.listInstruments().length, INSTRUMENTS.length);

@@ -7,6 +7,15 @@
 
 import type { Order } from './types.ts';
 
+/**
+ * Quantities are fractional shares, quantized to six decimal places (micro-
+ * shares) after every arithmetic step so float drift can never accumulate
+ * into a phantom fraction of a share.
+ */
+export function quantizeShares(quantity: number): number {
+  return Math.round(quantity * 1e6) / 1e6;
+}
+
 export interface Position {
   symbol: string;
   quantity: number;
@@ -46,12 +55,12 @@ export function computePositions(orders: readonly Order[]): {
     const priceCents = order.filledPriceCents ?? 0;
     const state = bySymbol.get(order.symbol) ?? { qty: 0, costCents: 0 };
     if (order.side === 'buy') {
-      state.qty += order.quantity;
-      state.costCents += order.quantity * priceCents;
+      state.qty = quantizeShares(state.qty + order.quantity);
+      state.costCents += Math.round(order.quantity * priceCents);
     } else {
       const sellQty = Math.min(order.quantity, state.qty);
       const costRemoved = state.qty > 0 ? Math.round((state.costCents * sellQty) / state.qty) : 0;
-      const proceedsCents = sellQty * priceCents;
+      const proceedsCents = Math.round(sellQty * priceCents);
       realized.push({
         symbol: order.symbol,
         quantity: sellQty,
@@ -59,7 +68,7 @@ export function computePositions(orders: readonly Order[]): {
         costBasisCents: costRemoved,
         realizedPnlCents: proceedsCents - costRemoved,
       });
-      state.qty -= sellQty;
+      state.qty = quantizeShares(state.qty - sellQty);
       state.costCents -= costRemoved;
     }
     bySymbol.set(order.symbol, state);
