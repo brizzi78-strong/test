@@ -291,6 +291,36 @@ services:
       - booking
       - accounting
 
+  # Trading: a Robinhood-style commission-free brokerage engine — accounts,
+  # a deterministic mock market feed, market/limit orders, positions with
+  # average-cost basis, and a watchlist. No real money or real market data.
+  trading:
+    <<: *service
+    command: node trading/src/index.ts
+    environment:
+      PORT: "4900"
+      TRADING_DB: /data/trading.db
+    ports: ["4900:4900"]
+    volumes: ["trading-data:/data"]
+
+  # Invest: the Robinhood-style single-page trading app (home/portfolio,
+  # browse, watchlist, orders, buy/sell) — a BFF over the Trading service that
+  # opens to one paper-trading account. Reachable at http://localhost:5000.
+  invest:
+    <<: *service
+    command: node invest/src/index.ts
+    environment:
+      PORT: "5000"
+      TRADING_URL: http://trading:4900
+      ACCOUNT_ID: ${TRADING_ACCOUNT_ID:-}
+      ACCOUNT_NAME: ${TRADING_ACCOUNT_NAME:-Rob}
+      STARTING_CASH_CENTS: ${TRADING_STARTING_CASH_CENTS:-}
+      INVEST_USER: ${INVEST_USER:-}
+      INVEST_PASSWORD: ${INVEST_PASSWORD:-}
+    ports: ["5000:5000"]
+    depends_on:
+      - trading
+
   web:
     image: nginx:alpine
     restart: unless-stopped
@@ -314,3 +344,4 @@ volumes:
   verify-data:
   timeclock-data:
   gateway-data:
+  trading-data:
