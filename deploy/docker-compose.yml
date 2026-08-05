@@ -320,6 +320,13 @@ services:
       # Set both when serving through an HTTPS reverse proxy.
       INVEST_COOKIE_SECURE: ${INVEST_COOKIE_SECURE:-}
       INVEST_TRUST_PROXY: ${INVEST_TRUST_PROXY:-}
+      # Real verification/reset email: SENDGRID_API_KEY + INVEST_MAIL_FROM
+      # (INVEST_MAIL_FROM_NAME optional). Unset → links logged to the console.
+      # INVEST_BASE_URL sets the absolute origin used in emailed links.
+      SENDGRID_API_KEY: ${SENDGRID_API_KEY:-}
+      INVEST_MAIL_FROM: ${INVEST_MAIL_FROM:-}
+      INVEST_MAIL_FROM_NAME: ${INVEST_MAIL_FROM_NAME:-}
+      INVEST_BASE_URL: ${INVEST_BASE_URL:-}
     ports: ["5000:5000"]
     volumes: ["invest-data:/data"]
     depends_on:

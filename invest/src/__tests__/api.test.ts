@@ -14,6 +14,12 @@ import { createApp as createInvest } from '../api/server.ts';
 import { createApp as createTrading } from '../../../trading/src/api/server.ts';
 import { createInMemoryStore } from '../../../trading/src/store/store.ts';
 import { createInMemoryAuthStore, hashPassword, verifyPassword } from '../auth/store.ts';
+import type { Mailer, OutboundEmail } from '../auth/mailer.ts';
+
+function captureMailer(): { mailer: Mailer; sent: OutboundEmail[] } {
+  const sent: OutboundEmail[] = [];
+  return { mailer: { kind: 'test', send: async (email) => void sent.push(email) }, sent };
+}
 
 async function listen(server: { listen: Function; address: Function; close: Function }) {
   await new Promise<void>((r) => server.listen(0, r));
@@ -274,6 +280,76 @@ test('audit trail records auth events and orders', async () => {
     const order = authStore.listAudit().find((e) => e.action === 'order_placed')!;
     assert.match(order.detail ?? '', /AAPL buy market x1 filled/);
     assert.ok(order.ip.length > 0);
+  } finally {
+    await new Promise<void>((r) => invest.server.close(() => r()));
+    await new Promise<void>((r) => trading.server.close(() => r()));
+  }
+});
+
+test('signup emails a verification link; clicking it marks the email verified', async () => {
+  const trading = createTrading(createInMemoryStore());
+  const tradingPort = await listen(trading.server);
+  const { mailer, sent } = captureMailer();
+  const invest = createInvest({ tradingBase: `http://127.0.0.1:${tradingPort}`, mailer });
+  const port = await listen(invest.server);
+  const base = `http://127.0.0.1:${port}`;
+  try {
+    const cookie = await signup(base, 'Rob', 'rob@example.com');
+    assert.equal((await j(base, 'GET', '/api/app', undefined, cookie)).json.emailVerified, false);
+
+    assert.equal(sent.length, 1);
+    assert.equal(sent[0].to, 'rob@example.com');
+    const link = sent[0].text.match(/http:\/\/\S+\/auth\/verify\?token=\S+/)?.[0];
+    assert.ok(link, `no verify link in: ${sent[0].text}`);
+
+    const clicked = await fetch(link!, { redirect: 'manual' });
+    assert.equal(clicked.status, 302);
+    assert.equal(clicked.headers.get('location'), '/?verified=1');
+    assert.equal((await j(base, 'GET', '/api/app', undefined, cookie)).json.emailVerified, true);
+
+    // The token is single-use.
+    const again = await fetch(link!, { redirect: 'manual' });
+    assert.equal(again.headers.get('location'), '/?verified=invalid');
+  } finally {
+    await new Promise<void>((r) => invest.server.close(() => r()));
+    await new Promise<void>((r) => trading.server.close(() => r()));
+  }
+});
+
+test('password reset: emailed token sets a new password and logs out all sessions', async () => {
+  const trading = createTrading(createInMemoryStore());
+  const tradingPort = await listen(trading.server);
+  const { mailer, sent } = captureMailer();
+  const invest = createInvest({ tradingBase: `http://127.0.0.1:${tradingPort}`, mailer });
+  const port = await listen(invest.server);
+  const base = `http://127.0.0.1:${port}`;
+  try {
+    const cookie = await signup(base, 'Rob', 'rob@example.com', 'old-password-1');
+    sent.length = 0;
+
+    // Unknown email: same 200, no mail sent — accounts aren't enumerable.
+    assert.equal((await j(base, 'POST', '/auth/forgot', { email: 'nobody@example.com' })).status, 200);
+    assert.equal(sent.length, 0);
+
+    assert.equal((await j(base, 'POST', '/auth/forgot', { email: 'rob@example.com' })).status, 200);
+    assert.equal(sent.length, 1);
+    const token = sent[0].text.match(/\?reset=(\S+)/)?.[1];
+    assert.ok(token, `no reset token in: ${sent[0].text}`);
+
+    // Too-short new password rejected; then a real reset succeeds.
+    assert.equal((await j(base, 'POST', '/auth/reset', { token, password: 'short' })).status, 400);
+    assert.equal((await j(base, 'POST', '/auth/reset', { token, password: 'new-password-1' })).status, 200);
+
+    // The old session is dead, the old password fails, the new one works.
+    assert.equal((await j(base, 'GET', '/api/app', undefined, cookie)).status, 401);
+    assert.equal((await j(base, 'POST', '/auth/login', { email: 'rob@example.com', password: 'old-password-1' })).status, 401);
+    const login = await j(base, 'POST', '/auth/login', { email: 'rob@example.com', password: 'new-password-1' });
+    assert.equal(login.status, 200);
+
+    // Reset tokens are single-use; opening the link also proved the mailbox.
+    assert.equal((await j(base, 'POST', '/auth/reset', { token, password: 'another-pass-1' })).status, 400);
+    const fresh = login.setCookie.split(';')[0];
+    assert.equal((await j(base, 'GET', '/api/app', undefined, fresh)).json.emailVerified, true);
   } finally {
     await new Promise<void>((r) => invest.server.close(() => r()));
     await new Promise<void>((r) => trading.server.close(() => r()));

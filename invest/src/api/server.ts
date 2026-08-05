@@ -8,6 +8,12 @@
  *                         fresh Trading account for them and starts a session
  * - `POST /auth/login`  → verify credentials, start a session
  * - `POST /auth/logout` → end the session
+ * - `GET  /auth/verify?token=` → confirm the emailed verification link
+ * - `POST /auth/resend-verification` → re-send it (session required)
+ * - `POST /auth/forgot` → email a single-use password-reset link (same
+ *                         200 whether or not the address exists)
+ * - `POST /auth/reset`  → set a new password from a reset token; logs the
+ *                         user out everywhere
  * - `GET /api/app`      → the logged-in user's { accountId, accountName, email, cashCents }
  * - `/api/*`            → proxied to the Trading service, server-side —
  *                         and always scoped to the session's own account
@@ -45,6 +51,7 @@ import {
   type User,
 } from '../auth/store.ts';
 import { createRateLimiter, type RateLimiter } from '../auth/rateLimit.ts';
+import { mailerFromEnv, type Mailer } from '../auth/mailer.ts';
 
 export interface AppServer {
   server: Server;
@@ -62,10 +69,16 @@ export interface AppOptions {
   trustProxy?: boolean;
   /** Auth abuse thresholds; overridable for tests. */
   authLimits?: { windowMs?: number; maxAttemptsPerIp?: number; maxFailuresPerEmail?: number };
+  /** Where verification/reset emails go; defaults from env, console when unset. */
+  mailer?: Mailer;
+  /** Absolute origin used in emailed links (INVEST_BASE_URL); inferred from the request when unset. */
+  baseUrl?: string;
 }
 
 const SESSION_COOKIE = 'invest_session';
 const SESSION_TTL_MS = 30 * 24 * 60 * 60 * 1000; // 30 days
+const VERIFY_TOKEN_TTL_MS = 24 * 60 * 60 * 1000; // 24 hours
+const RESET_TOKEN_TTL_MS = 60 * 60 * 1000; // 1 hour
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const MIN_PASSWORD_LENGTH = 8;
 
@@ -87,6 +100,8 @@ export function createApp(opts: AppOptions = {}): AppServer {
   const store = opts.authStore ?? authStoreFromEnv();
   const secureCookies = opts.secureCookies ?? boolFromEnv(process.env.INVEST_COOKIE_SECURE);
   const trustProxy = opts.trustProxy ?? boolFromEnv(process.env.INVEST_TRUST_PROXY);
+  const mailer = opts.mailer ?? mailerFromEnv();
+  const configuredBaseUrl = (opts.baseUrl ?? process.env.INVEST_BASE_URL ?? '').replace(/\/$/, '');
 
   const windowMs = opts.authLimits?.windowMs ?? 15 * 60 * 1000;
   const ipLimiter: RateLimiter = createRateLimiter({
@@ -152,6 +167,43 @@ export function createApp(opts: AppOptions = {}): AppServer {
     store.appendAudit({ at: new Date().toISOString(), action, ip: clientIp(req), ...fields });
   }
 
+  function linkBase(req: IncomingMessage): string {
+    if (configuredBaseUrl) return configuredBaseUrl;
+    const proto = isHttps(req) ? 'https' : 'http';
+    return `${proto}://${req.headers.host ?? 'localhost'}`;
+  }
+
+  /** Issue a single-use token and email its link; failures are logged, never fatal. */
+  function sendAuthEmail(req: IncomingMessage, user: User, purpose: 'verify' | 'reset'): void {
+    const token = newSessionToken();
+    const ttl = purpose === 'verify' ? VERIFY_TOKEN_TTL_MS : RESET_TOKEN_TTL_MS;
+    store.putEmailToken({ token, userId: user.id, purpose, expiresAt: new Date(Date.now() + ttl).toISOString() });
+    const link =
+      purpose === 'verify'
+        ? `${linkBase(req)}/auth/verify?token=${token}`
+        : `${linkBase(req)}/?reset=${token}`;
+    const email =
+      purpose === 'verify'
+        ? {
+            to: user.email,
+            subject: 'Verify your Invest email',
+            text: `Hi ${user.name},\n\nConfirm this is your email address by opening:\n\n${link}\n\nThe link is good for 24 hours. If you didn't sign up for Invest, ignore this message.`,
+          }
+        : {
+            to: user.email,
+            subject: 'Reset your Invest password',
+            text: `Hi ${user.name},\n\nSet a new password by opening:\n\n${link}\n\nThe link is good for 1 hour and can be used once. If you didn't ask for this, ignore this message — your password is unchanged.`,
+          };
+    mailer.send(email).catch((err) => {
+      // eslint-disable-next-line no-console
+      console.error(`[invest] failed to send ${purpose} email to ${user.email}: ${err instanceof Error ? err.message : err}`);
+    });
+    audit(req, purpose === 'verify' ? 'email_verification_sent' : 'password_reset_requested', {
+      userId: user.id,
+      email: user.email,
+    });
+  }
+
   const server = createServer(async (req, res) => {
     try {
       const url = new URL(req.url ?? '/', 'http://localhost');
@@ -182,7 +234,8 @@ export function createApp(opts: AppOptions = {}): AppServer {
       }
 
       // --- auth ---------------------------------------------------------
-      if (method === 'POST' && (path === '/auth/signup' || path === '/auth/login')) {
+      const rateLimitedAuthPaths = ['/auth/signup', '/auth/login', '/auth/forgot', '/auth/resend-verification'];
+      if (method === 'POST' && rateLimitedAuthPaths.includes(path)) {
         if (!ipLimiter.hit(clientIp(req))) {
           audit(req, 'auth_rate_limited');
           return sendError(res, 429, 'rate_limited', 'too many attempts — try again later');
@@ -212,6 +265,7 @@ export function createApp(opts: AppOptions = {}): AppServer {
         store.putUser(user);
         startSession(req, res, user.id);
         audit(req, 'signup', { userId: user.id, email });
+        sendAuthEmail(req, user, 'verify');
         return sendJson(res, 201, { ok: true });
       }
       if (method === 'POST' && path === '/auth/login') {
@@ -231,6 +285,63 @@ export function createApp(opts: AppOptions = {}): AppServer {
         failLimiter.reset(email);
         startSession(req, res, user.id);
         audit(req, 'login', { userId: user.id, email });
+        return sendJson(res, 200, { ok: true });
+      }
+      // Clicked from the verification email; lands the browser back on the app.
+      if (method === 'GET' && path === '/auth/verify') {
+        const token = url.searchParams.get('token') ?? '';
+        const record = store.getEmailToken(token);
+        if (!record || record.purpose !== 'verify') {
+          res.writeHead(302, { location: '/?verified=invalid' });
+          res.end();
+          return;
+        }
+        store.deleteEmailToken(token);
+        const user = store.getUser(record.userId);
+        if (user && !user.emailVerifiedAt) {
+          user.emailVerifiedAt = new Date().toISOString();
+          store.putUser(user);
+          audit(req, 'email_verified', { userId: user.id, email: user.email });
+        }
+        res.writeHead(302, { location: '/?verified=1' });
+        res.end();
+        return;
+      }
+      if (method === 'POST' && path === '/auth/resend-verification') {
+        const user = sessionUser(req);
+        if (!user) return sendError(res, 401, 'unauthorized', 'log in to continue');
+        if (!user.emailVerifiedAt) sendAuthEmail(req, user, 'verify');
+        return sendJson(res, 200, { ok: true });
+      }
+      if (method === 'POST' && path === '/auth/forgot') {
+        const body = asObject(await readJson(req));
+        const email = requireString(body.email, 'email').toLowerCase();
+        const user = store.getUserByEmail(email);
+        if (user) sendAuthEmail(req, user, 'reset');
+        // Same answer whether or not the email exists — don't leak accounts.
+        return sendJson(res, 200, { ok: true });
+      }
+      if (method === 'POST' && path === '/auth/reset') {
+        const body = asObject(await readJson(req));
+        const token = requireString(body.token, 'token');
+        const password = requireString(body.password, 'password');
+        if (password.length < MIN_PASSWORD_LENGTH) {
+          return sendError(res, 400, 'validation', `password must be at least ${MIN_PASSWORD_LENGTH} characters`);
+        }
+        const record = store.getEmailToken(token);
+        if (!record || record.purpose !== 'reset') {
+          return sendError(res, 400, 'validation', 'this reset link is invalid or has expired — request a new one');
+        }
+        const user = store.getUser(record.userId);
+        if (!user) return sendError(res, 400, 'validation', 'this reset link is invalid or has expired — request a new one');
+        store.deleteEmailToken(token);
+        user.passwordHash = hashPassword(password);
+        // Opening the emailed link proves control of the mailbox.
+        if (!user.emailVerifiedAt) user.emailVerifiedAt = new Date().toISOString();
+        store.putUser(user);
+        store.deleteSessionsForUser(user.id); // log out everywhere
+        failLimiter.reset(user.email);
+        audit(req, 'password_reset', { userId: user.id, email: user.email });
         return sendJson(res, 200, { ok: true });
       }
       if (method === 'POST' && path === '/auth/logout') {
@@ -253,6 +364,7 @@ export function createApp(opts: AppOptions = {}): AppServer {
             accountId: user.accountId,
             accountName: user.name,
             email: user.email,
+            emailVerified: Boolean(user.emailVerifiedAt),
             cashCents: account.cashCents,
           });
         }

@@ -21,7 +21,17 @@ export interface User {
   passwordHash: string;
   /** The Trading account that belongs to this user. */
   accountId: string;
+  /** Set once the user clicks a verification (or reset) link from their inbox. */
+  emailVerifiedAt?: string;
   createdAt: string;
+}
+
+/** A single-use, expiring token mailed to the user for verify/reset flows. */
+export interface EmailToken {
+  token: string;
+  userId: string;
+  purpose: 'verify' | 'reset';
+  expiresAt: string;
 }
 
 export interface Session {
@@ -52,6 +62,12 @@ export interface AuthStore {
   getSession(token: string): Session | undefined;
   putSession(session: Session): void;
   deleteSession(token: string): void;
+  /** Log the user out everywhere (used after a password reset). */
+  deleteSessionsForUser(userId: string): void;
+  putEmailToken(token: EmailToken): void;
+  /** Return the token if it exists and hasn't expired, deleting it either way is the caller's job. */
+  getEmailToken(token: string): EmailToken | undefined;
+  deleteEmailToken(token: string): void;
   appendAudit(event: AuditEvent): void;
   /** Most recent events first, capped at `limit` (default 100). */
   listAudit(limit?: number): AuditEvent[];
@@ -85,6 +101,7 @@ export function newSessionToken(): string {
 export function createInMemoryAuthStore(): AuthStore {
   const users = new Map<string, User>();
   const sessions = new Map<string, Session>();
+  const emailTokens = new Map<string, EmailToken>();
   const audit: AuditEvent[] = [];
   return {
     getUser: (id) => users.get(id),
@@ -93,6 +110,12 @@ export function createInMemoryAuthStore(): AuthStore {
     getSession: (token) => liveSession(sessions.get(token), (t) => sessions.delete(t)),
     putSession: (session) => void sessions.set(session.token, session),
     deleteSession: (token) => void sessions.delete(token),
+    deleteSessionsForUser: (userId) => {
+      for (const [token, session] of sessions) if (session.userId === userId) sessions.delete(token);
+    },
+    putEmailToken: (token) => void emailTokens.set(token.token, token),
+    getEmailToken: (token) => liveToken(emailTokens.get(token)),
+    deleteEmailToken: (token) => void emailTokens.delete(token),
     appendAudit: (event) => void audit.push(event),
     listAudit: (limit = 100) => audit.slice(-limit).reverse(),
   };
@@ -110,6 +133,7 @@ export function createSqliteAuthStore(path: string): SqliteAuthStore {
   db.exec('CREATE TABLE IF NOT EXISTS users (id TEXT PRIMARY KEY, email TEXT UNIQUE NOT NULL, data TEXT NOT NULL)');
   db.exec('CREATE TABLE IF NOT EXISTS sessions (token TEXT PRIMARY KEY, data TEXT NOT NULL)');
   db.exec('CREATE TABLE IF NOT EXISTS audit (seq INTEGER PRIMARY KEY AUTOINCREMENT, data TEXT NOT NULL)');
+  db.exec('CREATE TABLE IF NOT EXISTS email_tokens (token TEXT PRIMARY KEY, data TEXT NOT NULL)');
 
   const getUserStmt = db.prepare('SELECT data FROM users WHERE id = ?');
   const getUserByEmailStmt = db.prepare('SELECT data FROM users WHERE email = ?');
@@ -125,6 +149,13 @@ export function createSqliteAuthStore(path: string): SqliteAuthStore {
   const deleteSessionStmt = db.prepare('DELETE FROM sessions WHERE token = ?');
   const appendAuditStmt = db.prepare('INSERT INTO audit (data) VALUES (?)');
   const listAuditStmt = db.prepare('SELECT data FROM audit ORDER BY seq DESC LIMIT ?');
+  const listSessionsStmt = db.prepare('SELECT token, data FROM sessions');
+  const putEmailTokenStmt = db.prepare(
+    `INSERT INTO email_tokens (token, data) VALUES (?, ?)
+     ON CONFLICT(token) DO UPDATE SET data = excluded.data`,
+  );
+  const getEmailTokenStmt = db.prepare('SELECT data FROM email_tokens WHERE token = ?');
+  const deleteEmailTokenStmt = db.prepare('DELETE FROM email_tokens WHERE token = ?');
 
   const parse = <T>(row: unknown): T | undefined =>
     row ? (JSON.parse((row as { data: string }).data) as T) : undefined;
@@ -136,6 +167,14 @@ export function createSqliteAuthStore(path: string): SqliteAuthStore {
     getSession: (token) => liveSession(parse<Session>(getSessionStmt.get(token)), (t) => deleteSessionStmt.run(t)),
     putSession: (session) => void putSessionStmt.run(session.token, JSON.stringify(session)),
     deleteSession: (token) => void deleteSessionStmt.run(token),
+    deleteSessionsForUser: (userId) => {
+      for (const row of listSessionsStmt.all() as Array<{ token: string; data: string }>) {
+        if ((JSON.parse(row.data) as Session).userId === userId) deleteSessionStmt.run(row.token);
+      }
+    },
+    putEmailToken: (token) => void putEmailTokenStmt.run(token.token, JSON.stringify(token)),
+    getEmailToken: (token) => liveToken(parse<EmailToken>(getEmailTokenStmt.get(token))),
+    deleteEmailToken: (token) => void deleteEmailTokenStmt.run(token),
     appendAudit: (event) => void appendAuditStmt.run(JSON.stringify(event)),
     listAudit: (limit = 100) =>
       (listAuditStmt.all(limit) as Array<{ data: string }>).map((r) => JSON.parse(r.data) as AuditEvent),
@@ -156,4 +195,10 @@ function liveSession(session: Session | undefined, evict: (token: string) => voi
     return undefined;
   }
   return session;
+}
+
+/** Treat an expired email token as absent. */
+function liveToken(token: EmailToken | undefined): EmailToken | undefined {
+  if (!token) return undefined;
+  return token.expiresAt <= new Date().toISOString() ? undefined : token;
 }

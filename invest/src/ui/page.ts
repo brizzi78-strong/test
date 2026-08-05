@@ -125,6 +125,10 @@ export const PAGE = /* html */ `<!doctype html>
   .authtabs button[aria-pressed="true"]{background:var(--surface);color:var(--ink);box-shadow:var(--shadow)}
   .autherr{color:var(--crit);font-size:.82rem;font-weight:600;min-height:1.2em;margin:6px 0 10px}
   .authnote{color:var(--muted);font-size:.74rem;margin-top:14px;text-align:center}
+  .alink{background:transparent;border:0;color:var(--muted);cursor:pointer;font-size:.78rem;text-decoration:underline;padding:0;display:block;margin:10px auto 0}
+  .alink:hover{color:var(--brand)}
+  .vbanner{display:flex;align-items:center;gap:12px;flex-wrap:wrap;background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--brand);border-radius:11px;padding:10px 14px;margin-bottom:18px;font-size:.84rem;color:var(--muted)}
+  .vbanner b{color:var(--ink)}
   .auth .btn{width:100%;justify-content:center;padding:.7rem}
   .foot .logout{background:transparent;border:0;color:var(--muted);cursor:pointer;padding:0;font-size:.72rem;text-decoration:underline}
   .foot .logout:hover{color:var(--crit)}
@@ -168,6 +172,8 @@ export const PAGE = /* html */ `<!doctype html>
     <div class="field"><label>Password</label><input id="a_password" type="password" autocomplete="current-password" placeholder="At least 8 characters"></div>
     <div class="autherr" id="a_err"></div>
     <button class="btn" id="a_submit">Log in</button>
+    <button class="alink" id="a_forgot" type="button">Forgot password?</button>
+    <button class="alink" id="a_back" type="button" style="display:none">&larr; Back to log in</button>
     <div class="authnote">Paper trading demo &mdash; you start with play money, and no real money ever moves.</div>
   </div>
 </div>
@@ -176,7 +182,7 @@ export const PAGE = /* html */ `<!doctype html>
 <script>
 "use strict";
 var $=function(s,r){return (r||document).querySelector(s);};
-var ACCT=null, ACCTNAME="", view="home";
+var ACCT=null, ACCTNAME="", EMAIL="", EMAILVERIFIED=true, view="home";
 var instruments=[], quotes={}, watchlistSymbols={}, orders=[], portfolio=null;
 
 // ---- helpers ----
@@ -216,37 +222,72 @@ function loadAll(){
 function refresh(){return loadAll().then(render);}
 
 // ---- auth ----
-var authMode="login";
+var authMode="login", resetToken=null;
 function showAuth(){ACCT=null;$("#auth").classList.add("on");}
 function hideAuth(){$("#auth").classList.remove("on");}
 function setAuthMode(mode){
   authMode=mode;
+  var tabbed=mode==="login"||mode==="signup";
+  $("#authtabs").style.display=tabbed?"grid":"none";
   var tabs=$("#authtabs").querySelectorAll("button");
   for(var i=0;i<tabs.length;i++)tabs[i].setAttribute("aria-pressed",tabs[i].dataset.mode===mode?"true":"false");
   $("#a_namewrap").style.display=mode==="signup"?"block":"none";
-  $("#a_password").setAttribute("autocomplete",mode==="signup"?"new-password":"current-password");
-  $("#a_submit").textContent=mode==="signup"?"Create account":"Log in";
+  $("#a_email").parentNode.style.display=mode==="reset"?"none":"block";
+  $("#a_password").parentNode.style.display=mode==="forgot"?"none":"block";
+  $("#a_password").setAttribute("autocomplete",mode==="login"?"current-password":"new-password");
+  $("#a_password").setAttribute("placeholder",mode==="reset"?"New password (8+ characters)":"At least 8 characters");
+  $("#a_submit").textContent={login:"Log in",signup:"Create account",forgot:"Send reset link",reset:"Set new password"}[mode];
+  $("#a_forgot").style.display=mode==="login"?"block":"none";
+  $("#a_back").style.display=tabbed?"none":"block";
   $("#a_err").textContent="";
 }
 $("#authtabs").addEventListener("click",function(e){var b=e.target.closest("button");if(b)setAuthMode(b.dataset.mode);});
+$("#a_forgot").onclick=function(){setAuthMode("forgot");};
+$("#a_back").onclick=function(){setAuthMode("login");};
+function authPost(path,body){
+  return fetch(path,{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify(body)})
+    .then(function(r){return r.text().then(function(t){var j=t?JSON.parse(t):null;if(!r.ok)throw new Error((j&&j.error&&j.error.message)||("HTTP "+r.status));});});
+}
 function submitAuth(){
+  $("#a_err").textContent="";$("#a_submit").disabled=true;
+  var done=function(){$("#a_submit").disabled=false;};
+  var fail=function(e){$("#a_err").textContent=e.message;};
+  if(authMode==="forgot"){
+    authPost("/auth/forgot",{email:$("#a_email").value.trim()})
+      .then(function(){toast("If that email exists, a reset link is on its way","good");setAuthMode("login");})
+      .catch(fail).then(done);
+    return;
+  }
+  if(authMode==="reset"){
+    authPost("/auth/reset",{token:resetToken,password:$("#a_password").value})
+      .then(function(){toast("Password updated \\u2014 log in with it","good");$("#a_password").value="";resetToken=null;setAuthMode("login");})
+      .catch(fail).then(done);
+    return;
+  }
   var body={email:$("#a_email").value.trim(),password:$("#a_password").value};
   if(authMode==="signup")body.name=$("#a_name").value.trim();
-  $("#a_err").textContent="";$("#a_submit").disabled=true;
-  fetch("/auth/"+authMode,{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify(body)})
-    .then(function(r){return r.text().then(function(t){var j=t?JSON.parse(t):null;if(!r.ok)throw new Error((j&&j.error&&j.error.message)||("HTTP "+r.status));});})
+  authPost("/auth/"+authMode,body)
     .then(function(){$("#a_password").value="";hideAuth();return boot();})
-    .catch(function(e){$("#a_err").textContent=e.message;})
-    .then(function(){$("#a_submit").disabled=false;});
+    .catch(fail).then(done);
 }
 $("#a_submit").onclick=submitAuth;
 $("#auth").addEventListener("keydown",function(e){if(e.key==="Enter")submitAuth();});
 function logout(){fetch("/auth/logout",{method:"POST"}).then(function(){location.reload();});}
 
+// Links from emails land here with query params: ?verified=1|invalid, ?reset=TOKEN.
+(function(){
+  var qs=new URLSearchParams(location.search);
+  if(qs.get("verified")==="1")toast("Email verified \\u2713","good");
+  else if(qs.get("verified"))toast("That verification link is invalid or expired","err");
+  if(qs.get("reset")){resetToken=qs.get("reset");showAuth();setAuthMode("reset");}
+  if(location.search)history.replaceState(null,"",location.pathname);
+})();
+
 // ---- boot ----
 function boot(){
   return api("GET","/app").then(function(app){
     ACCT=app.accountId; ACCTNAME=app.accountName||"Investor";
+    EMAIL=app.email||""; EMAILVERIFIED=app.emailVerified!==false;
     $("#acctname").textContent=ACCTNAME;
     $("#foot").innerHTML="Paper trading for<br><b>"+esc(ACCTNAME)+"</b><br>No real money moves.<br><button class=\\"logout\\" id=\\"logoutbtn\\">Log out</button>";
     $("#logoutbtn").onclick=logout;
@@ -266,7 +307,8 @@ function render(){
   for(var i=0;i<b.length;i++)b[i].setAttribute("aria-current",b[i].getAttribute("data-view")===view?"true":"false");
   ({home:vHome,browse:vBrowse,watchlist:vWatchlist,orders:vOrders})[view]();
 }
-function head(title,sub,right){return '<div class="top"><div><h1>'+title+'</h1><div class="sub">'+sub+'</div></div>'+(right||"")+'</div>';}
+function banner(){return EMAILVERIFIED?"":'<div class="vbanner">Verify your email \\u2014 we sent a link to <b>'+esc(EMAIL)+'</b>.<button class="btn ghost sm" data-resend>Resend email</button></div>';}
+function head(title,sub,right){return banner()+'<div class="top"><div><h1>'+title+'</h1><div class="sub">'+sub+'</div></div>'+(right||"")+'</div>';}
 function tile(k,v,m){return '<div class="tile"><div class="k">'+k+'</div><div class="v num">'+v+'</div><div class="m">'+m+'</div></div>';}
 function avatar(sym){return '<div class="avatar">'+esc(sym.slice(0,2))+'</div>';}
 function starBtn(sym){var on=!!watchlistSymbols[sym];return '<button class="star'+(on?" on":"")+'" data-star="'+sym+'" aria-label="Toggle watchlist" title="Watchlist">'+(on?"\\u2605":"\\u2606")+'</button>';}
@@ -350,6 +392,12 @@ document.addEventListener("click",function(e){
   var t=e.target.closest("button"); if(!t)return;
   if(t.dataset.view)setView(t.dataset.view);
   else if(t.dataset.cancel)doCancel(t.dataset.cancel);
+  else if(t.dataset.resend!==undefined){
+    t.disabled=true;
+    fetch("/auth/resend-verification",{method:"POST"}).then(function(r){
+      toast(r.ok?"Verification email sent":"Couldn\\u2019t send \\u2014 try again later",r.ok?"good":"err");t.disabled=false;
+    });
+  }
 });
 function toggleWatch(sym){
   var on=!!watchlistSymbols[sym];

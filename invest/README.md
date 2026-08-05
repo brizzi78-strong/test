@@ -20,6 +20,15 @@ Yahoo Finance prices (no API key needed).
   fresh Trading account (default $10,000 buying power). Passwords are
   scrypt-hashed; sessions are opaque random tokens in an HttpOnly cookie,
   stored and expired server-side (30 days).
+- **Email verification** — signup sends a 24-hour, single-use verification
+  link; until it's clicked the app shows a "verify your email" banner with a
+  resend button. With no mailer configured the link is logged to the console
+  (copy-pasteable), so the flow works in dev with zero setup.
+- **Password reset** — "Forgot password?" emails a 1-hour, single-use reset
+  link (the response is the same whether or not the address exists, so
+  accounts can't be enumerated). Setting a new password logs the user out of
+  every session, clears any failed-login lockout, and — since opening the
+  link proves mailbox control — marks the email verified.
 - **Home** — total equity, today's change, buying power, market value,
   unrealized P&L, and a positions table.
 - **Browse** — every instrument with a live quote; click a row to open its
@@ -81,6 +90,8 @@ Config (env vars):
 | `STARTING_CASH_CENTS` | Starting buying power for each new signup (Trading defaults to $10,000). |
 | `INVEST_COOKIE_SECURE` | `1` to always set the `Secure` flag on the session cookie. |
 | `INVEST_TRUST_PROXY` | `1` when behind a reverse proxy: trust `x-forwarded-for` for rate limiting/audit IPs and `x-forwarded-proto` for Secure-cookie detection. |
+| `SENDGRID_API_KEY` + `INVEST_MAIL_FROM` | Send real verification/reset email via SendGrid's HTTP API (`INVEST_MAIL_FROM_NAME` optional). Unset → links are logged to the console. |
+| `INVEST_BASE_URL` | Absolute origin used in emailed links (e.g. `https://invest.example.com`); inferred from the request Host when unset. |
 
 Serve it over HTTPS in any real deployment — the session cookie is HttpOnly
 and SameSite=Lax, but it is only as private as the transport.
