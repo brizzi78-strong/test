@@ -29,6 +29,26 @@ Yahoo Finance prices (no API key needed).
 - **Trade drawer** — quote, an intraday sparkline, buy/sell, market/limit,
   share quantity, and an estimated cost before you submit.
 
+## Hardening
+
+- **Rate limiting** — login/signup attempts are capped per client IP, and
+  repeated *failed* logins lock that email out for the window (a successful
+  login clears the count).
+- **CSRF** — the session cookie is SameSite=Lax, and on top of that any
+  state-changing request carrying a cross-site `Origin` is rejected with a
+  403.
+- **Security headers** — `X-Content-Type-Options: nosniff`,
+  `X-Frame-Options: DENY`, `Referrer-Policy: no-referrer` on every response;
+  a restrictive Content-Security-Policy on the page; `Cache-Control:
+  no-store` on everything under `/auth` and `/api`.
+- **Secure cookies** — set `INVEST_COOKIE_SECURE=1` (or run behind a proxy
+  with `INVEST_TRUST_PROXY=1` and `x-forwarded-proto: https`) and the
+  session cookie gains the `Secure` flag.
+- **Audit trail** — signups, logins, failures, lockouts, logouts, and orders
+  placed/cancelled are appended to an audit log (timestamp, action, client
+  IP, user) in the auth store. It is never exposed over HTTP — read it from
+  the database.
+
 ## Per-user isolation
 
 The browser never holds a Trading credential, and it can never act outside
@@ -57,8 +77,10 @@ Config (env vars):
 | Var | Purpose |
 |---|---|
 | `TRADING_URL` | Trading service base URL (default `http://trading:4900`). |
-| `INVEST_DB` | SQLite path so users and sessions survive restarts (unset → in-memory). |
+| `INVEST_DB` | SQLite path so users, sessions, and the audit trail survive restarts (unset → in-memory). |
 | `STARTING_CASH_CENTS` | Starting buying power for each new signup (Trading defaults to $10,000). |
+| `INVEST_COOKIE_SECURE` | `1` to always set the `Secure` flag on the session cookie. |
+| `INVEST_TRUST_PROXY` | `1` when behind a reverse proxy: trust `x-forwarded-for` for rate limiting/audit IPs and `x-forwarded-proto` for Secure-cookie detection. |
 
 Serve it over HTTPS in any real deployment — the session cookie is HttpOnly
 and SameSite=Lax, but it is only as private as the transport.

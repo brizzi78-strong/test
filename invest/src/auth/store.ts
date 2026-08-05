@@ -30,6 +30,21 @@ export interface Session {
   expiresAt: string;
 }
 
+/**
+ * One line of the append-only audit trail: who did what, from where, when.
+ * Auth events (signup, login, failures, logout) and money-moving actions
+ * (orders placed/cancelled) are recorded; the trail is never exposed over
+ * HTTP — read it straight from the store/database.
+ */
+export interface AuditEvent {
+  at: string;
+  action: string;
+  ip: string;
+  userId?: string;
+  email?: string;
+  detail?: string;
+}
+
 export interface AuthStore {
   getUser(id: string): User | undefined;
   getUserByEmail(email: string): User | undefined;
@@ -37,6 +52,9 @@ export interface AuthStore {
   getSession(token: string): Session | undefined;
   putSession(session: Session): void;
   deleteSession(token: string): void;
+  appendAudit(event: AuditEvent): void;
+  /** Most recent events first, capped at `limit` (default 100). */
+  listAudit(limit?: number): AuditEvent[];
 }
 
 // --- password hashing ---------------------------------------------------
@@ -67,6 +85,7 @@ export function newSessionToken(): string {
 export function createInMemoryAuthStore(): AuthStore {
   const users = new Map<string, User>();
   const sessions = new Map<string, Session>();
+  const audit: AuditEvent[] = [];
   return {
     getUser: (id) => users.get(id),
     getUserByEmail: (email) => [...users.values()].find((u) => u.email === email),
@@ -74,6 +93,8 @@ export function createInMemoryAuthStore(): AuthStore {
     getSession: (token) => liveSession(sessions.get(token), (t) => sessions.delete(t)),
     putSession: (session) => void sessions.set(session.token, session),
     deleteSession: (token) => void sessions.delete(token),
+    appendAudit: (event) => void audit.push(event),
+    listAudit: (limit = 100) => audit.slice(-limit).reverse(),
   };
 }
 
@@ -88,6 +109,7 @@ export function createSqliteAuthStore(path: string): SqliteAuthStore {
   db.exec('PRAGMA journal_mode = WAL');
   db.exec('CREATE TABLE IF NOT EXISTS users (id TEXT PRIMARY KEY, email TEXT UNIQUE NOT NULL, data TEXT NOT NULL)');
   db.exec('CREATE TABLE IF NOT EXISTS sessions (token TEXT PRIMARY KEY, data TEXT NOT NULL)');
+  db.exec('CREATE TABLE IF NOT EXISTS audit (seq INTEGER PRIMARY KEY AUTOINCREMENT, data TEXT NOT NULL)');
 
   const getUserStmt = db.prepare('SELECT data FROM users WHERE id = ?');
   const getUserByEmailStmt = db.prepare('SELECT data FROM users WHERE email = ?');
@@ -101,6 +123,8 @@ export function createSqliteAuthStore(path: string): SqliteAuthStore {
      ON CONFLICT(token) DO UPDATE SET data = excluded.data`,
   );
   const deleteSessionStmt = db.prepare('DELETE FROM sessions WHERE token = ?');
+  const appendAuditStmt = db.prepare('INSERT INTO audit (data) VALUES (?)');
+  const listAuditStmt = db.prepare('SELECT data FROM audit ORDER BY seq DESC LIMIT ?');
 
   const parse = <T>(row: unknown): T | undefined =>
     row ? (JSON.parse((row as { data: string }).data) as T) : undefined;
@@ -112,6 +136,9 @@ export function createSqliteAuthStore(path: string): SqliteAuthStore {
     getSession: (token) => liveSession(parse<Session>(getSessionStmt.get(token)), (t) => deleteSessionStmt.run(t)),
     putSession: (session) => void putSessionStmt.run(session.token, JSON.stringify(session)),
     deleteSession: (token) => void deleteSessionStmt.run(token),
+    appendAudit: (event) => void appendAuditStmt.run(JSON.stringify(event)),
+    listAudit: (limit = 100) =>
+      (listAuditStmt.all(limit) as Array<{ data: string }>).map((r) => JSON.parse(r.data) as AuditEvent),
     close: () => db.close(),
   };
 }

@@ -1,6 +1,6 @@
 /**
  * Invest UI server — a backend-for-frontend over the Trading service, with
- * real multi-user auth.
+ * real multi-user auth and the hardening a public deployment needs.
  *
  * - `GET /`             → the self-contained Invest single-page app
  * - `GET /health`       → liveness
@@ -16,8 +16,21 @@
  * expired) server-side; passwords are scrypt-hashed. The browser never sees
  * a Trading account id it doesn't own being honored: account-scoped paths
  * are rewritten to the session's account, order lookups are ownership-
- * checked, and everything not on the allowlist is a 404. Set
- * `INVEST_DB=/path/to.db` so users and sessions survive restarts.
+ * checked, and everything not on the allowlist is a 404.
+ *
+ * Hardening on top of that:
+ *   - auth endpoints are rate-limited per client IP, and repeated failed
+ *     logins lock the email out for the window (cleared by a success);
+ *   - state-changing requests must not carry a cross-site Origin (CSRF
+ *     defense-in-depth on top of the SameSite=Lax cookie);
+ *   - security headers on every response, a restrictive CSP on the page,
+ *     and `Cache-Control: no-store` on everything under /auth and /api;
+ *   - the session cookie gains `Secure` when INVEST_COOKIE_SECURE is set,
+ *     or automatically behind a trusted proxy (INVEST_TRUST_PROXY) that
+ *     reports `x-forwarded-proto: https`;
+ *   - an append-only audit trail (signups, logins, failures, logouts,
+ *     orders placed/cancelled) with timestamp and client IP, kept in the
+ *     auth store — never exposed over HTTP.
  */
 
 import { createServer, type IncomingMessage, type Server, type ServerResponse } from 'node:http';
@@ -31,6 +44,7 @@ import {
   type AuthStore,
   type User,
 } from '../auth/store.ts';
+import { createRateLimiter, type RateLimiter } from '../auth/rateLimit.ts';
 
 export interface AppServer {
   server: Server;
@@ -42,6 +56,12 @@ export interface AppOptions {
   startingCashCents?: number;
   authStore?: AuthStore;
   fetchImpl?: typeof fetch;
+  /** Always set the Secure flag on the session cookie. */
+  secureCookies?: boolean;
+  /** Trust x-forwarded-* from the reverse proxy (client IP, https detection). */
+  trustProxy?: boolean;
+  /** Auth abuse thresholds; overridable for tests. */
+  authLimits?: { windowMs?: number; maxAttemptsPerIp?: number; maxFailuresPerEmail?: number };
 }
 
 const SESSION_COOKIE = 'invest_session';
@@ -49,11 +69,34 @@ const SESSION_TTL_MS = 30 * 24 * 60 * 60 * 1000; // 30 days
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const MIN_PASSWORD_LENGTH = 8;
 
+const PAGE_CSP = [
+  "default-src 'none'",
+  "script-src 'unsafe-inline'",
+  "style-src 'unsafe-inline'",
+  'img-src data:',
+  "connect-src 'self'",
+  "base-uri 'none'",
+  "form-action 'self'",
+  "frame-ancestors 'none'",
+].join('; ');
+
 export function createApp(opts: AppOptions = {}): AppServer {
   const base = (opts.tradingBase ?? process.env.TRADING_URL ?? 'http://trading:4900').replace(/\/$/, '');
   const startingCashCents = opts.startingCashCents ?? numFromEnv(process.env.STARTING_CASH_CENTS);
   const fetchImpl = opts.fetchImpl ?? fetch;
   const store = opts.authStore ?? authStoreFromEnv();
+  const secureCookies = opts.secureCookies ?? boolFromEnv(process.env.INVEST_COOKIE_SECURE);
+  const trustProxy = opts.trustProxy ?? boolFromEnv(process.env.INVEST_TRUST_PROXY);
+
+  const windowMs = opts.authLimits?.windowMs ?? 15 * 60 * 1000;
+  const ipLimiter: RateLimiter = createRateLimiter({
+    windowMs,
+    max: opts.authLimits?.maxAttemptsPerIp ?? 30,
+  });
+  const failLimiter: RateLimiter = createRateLimiter({
+    windowMs,
+    max: opts.authLimits?.maxFailuresPerEmail ?? 10,
+  });
 
   async function upstream(method: string, path: string, body?: unknown): Promise<any> {
     const res = await fetchImpl(`${base}${path}`, {
@@ -70,6 +113,23 @@ export function createApp(opts: AppOptions = {}): AppServer {
     return json;
   }
 
+  function clientIp(req: IncomingMessage): string {
+    if (trustProxy) {
+      const fwd = req.headers['x-forwarded-for'];
+      const first = (Array.isArray(fwd) ? fwd[0] : fwd)?.split(',')[0]?.trim();
+      if (first) return first;
+    }
+    return req.socket.remoteAddress ?? 'unknown';
+  }
+
+  function isHttps(req: IncomingMessage): boolean {
+    if (trustProxy) {
+      const proto = req.headers['x-forwarded-proto'];
+      if ((Array.isArray(proto) ? proto[0] : proto) === 'https') return true;
+    }
+    return false;
+  }
+
   function sessionUser(req: IncomingMessage): User | undefined {
     const token = readCookie(req, SESSION_COOKIE);
     if (!token) return undefined;
@@ -78,13 +138,18 @@ export function createApp(opts: AppOptions = {}): AppServer {
     return store.getUser(session.userId);
   }
 
-  function startSession(res: ServerResponse, userId: string): void {
+  function startSession(req: IncomingMessage, res: ServerResponse, userId: string): void {
     const token = newSessionToken();
     store.putSession({ token, userId, expiresAt: new Date(Date.now() + SESSION_TTL_MS).toISOString() });
+    const secure = secureCookies || isHttps(req) ? '; Secure' : '';
     res.setHeader(
       'set-cookie',
-      `${SESSION_COOKIE}=${token}; HttpOnly; Path=/; SameSite=Lax; Max-Age=${Math.floor(SESSION_TTL_MS / 1000)}`,
+      `${SESSION_COOKIE}=${token}; HttpOnly; Path=/; SameSite=Lax; Max-Age=${Math.floor(SESSION_TTL_MS / 1000)}${secure}`,
     );
+  }
+
+  function audit(req: IncomingMessage, action: string, fields: { userId?: string; email?: string; detail?: string } = {}): void {
+    store.appendAudit({ at: new Date().toISOString(), action, ip: clientIp(req), ...fields });
   }
 
   const server = createServer(async (req, res) => {
@@ -93,8 +158,22 @@ export function createApp(opts: AppOptions = {}): AppServer {
       const method = req.method ?? 'GET';
       const path = url.pathname;
 
+      res.setHeader('x-content-type-options', 'nosniff');
+      res.setHeader('x-frame-options', 'DENY');
+      res.setHeader('referrer-policy', 'no-referrer');
+      if (path.startsWith('/auth/') || path.startsWith('/api/')) {
+        res.setHeader('cache-control', 'no-store');
+      }
+
+      // CSRF defense-in-depth: a state-changing request arriving with a
+      // cross-site Origin is rejected outright (same-origin browsers and
+      // non-browser clients pass; the SameSite=Lax cookie is the first line).
+      if (method !== 'GET' && method !== 'HEAD' && !originAllowed(req)) {
+        return sendError(res, 403, 'forbidden', 'cross-origin request rejected');
+      }
+
       if (method === 'GET' && (path === '/' || path === '/index.html')) {
-        res.writeHead(200, { 'content-type': 'text/html; charset=utf-8' });
+        res.writeHead(200, { 'content-type': 'text/html; charset=utf-8', 'content-security-policy': PAGE_CSP });
         res.end(PAGE);
         return;
       }
@@ -103,6 +182,12 @@ export function createApp(opts: AppOptions = {}): AppServer {
       }
 
       // --- auth ---------------------------------------------------------
+      if (method === 'POST' && (path === '/auth/signup' || path === '/auth/login')) {
+        if (!ipLimiter.hit(clientIp(req))) {
+          audit(req, 'auth_rate_limited');
+          return sendError(res, 429, 'rate_limited', 'too many attempts — try again later');
+        }
+      }
       if (method === 'POST' && path === '/auth/signup') {
         const body = asObject(await readJson(req));
         const name = requireString(body.name, 'name');
@@ -125,24 +210,35 @@ export function createApp(opts: AppOptions = {}): AppServer {
           createdAt: new Date().toISOString(),
         };
         store.putUser(user);
-        startSession(res, user.id);
+        startSession(req, res, user.id);
+        audit(req, 'signup', { userId: user.id, email });
         return sendJson(res, 201, { ok: true });
       }
       if (method === 'POST' && path === '/auth/login') {
         const body = asObject(await readJson(req));
         const email = requireString(body.email, 'email').toLowerCase();
         const password = requireString(body.password, 'password');
+        if (failLimiter.count(email) >= (opts.authLimits?.maxFailuresPerEmail ?? 10)) {
+          audit(req, 'login_locked', { email });
+          return sendError(res, 429, 'rate_limited', 'too many failed logins — try again later');
+        }
         const user = store.getUserByEmail(email);
         if (!user || !verifyPassword(password, user.passwordHash)) {
+          failLimiter.hit(email);
+          audit(req, 'login_failed', { email });
           return sendError(res, 401, 'unauthorized', 'wrong email or password');
         }
-        startSession(res, user.id);
+        failLimiter.reset(email);
+        startSession(req, res, user.id);
+        audit(req, 'login', { userId: user.id, email });
         return sendJson(res, 200, { ok: true });
       }
       if (method === 'POST' && path === '/auth/logout') {
         const token = readCookie(req, SESSION_COOKIE);
+        const user = sessionUser(req);
         if (token) store.deleteSession(token);
         res.setHeader('set-cookie', `${SESSION_COOKIE}=; HttpOnly; Path=/; SameSite=Lax; Max-Age=0`);
+        if (user) audit(req, 'logout', { userId: user.id, email: user.email });
         return sendJson(res, 200, { ok: true });
       }
 
@@ -161,7 +257,7 @@ export function createApp(opts: AppOptions = {}): AppServer {
           });
         }
 
-        await scopedProxy(base, fetchImpl, upstream, req, res, url, user.accountId);
+        await scopedProxy(base, fetchImpl, upstream, req, res, url, user, audit);
         return;
       }
 
@@ -192,6 +288,7 @@ export function createApp(opts: AppOptions = {}): AppServer {
  *     are stamped with it;
  *   - order-by-id reads/cancels are ownership-checked first (foreign → 404);
  *   - read-only market data passes through; anything else is a 404.
+ * Successful order placement/cancellation is written to the audit trail.
  */
 async function scopedProxy(
   base: string,
@@ -200,13 +297,16 @@ async function scopedProxy(
   req: IncomingMessage,
   res: ServerResponse,
   url: URL,
-  accountId: string,
+  user: User,
+  audit: (req: IncomingMessage, action: string, fields?: { userId?: string; email?: string; detail?: string }) => void,
 ): Promise<void> {
   const method = req.method ?? 'GET';
   const segments = url.pathname.slice('/api'.length).split('/').filter((s) => s.length > 0);
   const query = url.searchParams;
   let body: string | undefined;
+  let auditAction: string | undefined;
 
+  const accountId = user.accountId;
   const acct = encodeURIComponent(accountId);
   let upstreamPath: string | undefined;
 
@@ -234,6 +334,7 @@ async function scopedProxy(
       parsed.accountId = accountId;
       body = JSON.stringify(parsed);
       upstreamPath = '/orders';
+      auditAction = 'order_placed';
     }
   } else if (head === 'orders' && segments.length >= 2) {
     const orderId = second;
@@ -250,7 +351,10 @@ async function scopedProxy(
         return sendError(res, 404, 'not_found', `Order not found: ${orderId}`);
       }
       upstreamPath = '/' + segments.join('/');
-      if (isCancel) body = await readRaw(req);
+      if (isCancel) {
+        body = await readRaw(req);
+        auditAction = 'order_cancelled';
+      }
     }
   }
 
@@ -266,8 +370,37 @@ async function scopedProxy(
     body,
   });
   const text = await upstreamRes.text();
+
+  if (auditAction && upstreamRes.status < 300) {
+    audit(req, auditAction, { userId: user.id, email: user.email, detail: orderSummary(text) });
+  }
+
   res.writeHead(upstreamRes.status, { 'content-type': 'application/json' });
   res.end(text);
+}
+
+/** Compact "id symbol side type xqty status" line for the audit trail. */
+function orderSummary(responseText: string): string | undefined {
+  try {
+    const o = JSON.parse(responseText);
+    return `${o.id} ${o.symbol} ${o.side} ${o.type} x${o.quantity} ${o.status}`;
+  } catch {
+    return undefined;
+  }
+}
+
+/** Reject state-changing requests whose Origin is present and cross-site. */
+function originAllowed(req: IncomingMessage): boolean {
+  const origin = req.headers.origin;
+  if (typeof origin !== 'string' || origin.length === 0) return true; // non-browser clients
+  if (origin === 'null') return false;
+  let originHost: string;
+  try {
+    originHost = new URL(origin).host;
+  } catch {
+    return false;
+  }
+  return originHost === req.headers.host;
 }
 
 // --- small helpers ----------------------------------------------------------
@@ -286,6 +419,10 @@ function numFromEnv(v: string | undefined): number | undefined {
   if (v === undefined || v === '') return undefined;
   const n = Number(v);
   return Number.isFinite(n) ? n : undefined;
+}
+
+function boolFromEnv(v: string | undefined): boolean {
+  return v === '1' || v === 'true' || v === 'yes';
 }
 
 async function readRaw(req: IncomingMessage): Promise<string | undefined> {

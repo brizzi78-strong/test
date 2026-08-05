@@ -317,6 +317,9 @@ services:
       TRADING_URL: http://trading:4900
       INVEST_DB: /data/invest.db
       STARTING_CASH_CENTS: ${TRADING_STARTING_CASH_CENTS:-}
+      # Set both when serving through an HTTPS reverse proxy.
+      INVEST_COOKIE_SECURE: ${INVEST_COOKIE_SECURE:-}
+      INVEST_TRUST_PROXY: ${INVEST_TRUST_PROXY:-}
     ports: ["5000:5000"]
     volumes: ["invest-data:/data"]
     depends_on:

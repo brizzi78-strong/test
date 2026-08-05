@@ -164,6 +164,122 @@ test("one user cannot read, list, or cancel another user's data", async () => {
   });
 });
 
+test('failed logins lock the email out; a success clears the count', async () => {
+  const trading = createTrading(createInMemoryStore());
+  const tradingPort = await listen(trading.server);
+  const invest = createInvest({
+    tradingBase: `http://127.0.0.1:${tradingPort}`,
+    authLimits: { maxFailuresPerEmail: 3, maxAttemptsPerIp: 1000 },
+  });
+  const port = await listen(invest.server);
+  const base = `http://127.0.0.1:${port}`;
+  try {
+    await signup(base, 'Rob', 'rob@example.com', 'hunter2hunter2');
+    for (let i = 0; i < 3; i++) {
+      assert.equal((await j(base, 'POST', '/auth/login', { email: 'rob@example.com', password: 'wrong' })).status, 401);
+    }
+    // Locked now — even the right password is refused.
+    const locked = await j(base, 'POST', '/auth/login', { email: 'rob@example.com', password: 'hunter2hunter2' });
+    assert.equal(locked.status, 429);
+  } finally {
+    await new Promise<void>((r) => invest.server.close(() => r()));
+    await new Promise<void>((r) => trading.server.close(() => r()));
+  }
+});
+
+test('per-IP rate limit caps auth attempts', async () => {
+  const trading = createTrading(createInMemoryStore());
+  const tradingPort = await listen(trading.server);
+  const invest = createInvest({
+    tradingBase: `http://127.0.0.1:${tradingPort}`,
+    authLimits: { maxAttemptsPerIp: 2 },
+  });
+  const port = await listen(invest.server);
+  const base = `http://127.0.0.1:${port}`;
+  try {
+    await j(base, 'POST', '/auth/login', { email: 'a@b.com', password: 'whatever1' });
+    await j(base, 'POST', '/auth/login', { email: 'a@b.com', password: 'whatever1' });
+    const third = await j(base, 'POST', '/auth/login', { email: 'a@b.com', password: 'whatever1' });
+    assert.equal(third.status, 429);
+  } finally {
+    await new Promise<void>((r) => invest.server.close(() => r()));
+    await new Promise<void>((r) => trading.server.close(() => r()));
+  }
+});
+
+test('cross-site Origin on state-changing requests is rejected', async () => {
+  await withApp(async (base) => {
+    const res = await fetch(`${base}/auth/login`, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json', origin: 'https://evil.example' },
+      body: JSON.stringify({ email: 'rob@example.com', password: 'hunter2hunter2' }),
+    });
+    assert.equal(res.status, 403);
+
+    // Same-origin (matching Host) is fine.
+    const host = new URL(base).host;
+    const ok = await fetch(`${base}/auth/signup`, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json', origin: `http://${host}` },
+      body: JSON.stringify({ name: 'Rob', email: 'rob@example.com', password: 'hunter2hunter2' }),
+    });
+    assert.equal(ok.status, 201);
+  });
+});
+
+test('security headers are set; API responses are no-store; page carries a CSP', async () => {
+  await withApp(async (base) => {
+    const page = await fetch(`${base}/`);
+    assert.equal(page.headers.get('x-content-type-options'), 'nosniff');
+    assert.equal(page.headers.get('x-frame-options'), 'DENY');
+    assert.match(page.headers.get('content-security-policy') ?? '', /frame-ancestors 'none'/);
+
+    const api = await fetch(`${base}/api/app`);
+    assert.equal(api.headers.get('cache-control'), 'no-store');
+  });
+});
+
+test('session cookie gains Secure when configured', async () => {
+  const trading = createTrading(createInMemoryStore());
+  const tradingPort = await listen(trading.server);
+  const invest = createInvest({ tradingBase: `http://127.0.0.1:${tradingPort}`, secureCookies: true });
+  const port = await listen(invest.server);
+  const base = `http://127.0.0.1:${port}`;
+  try {
+    const res = await j(base, 'POST', '/auth/signup', { name: 'Rob', email: 'rob@example.com', password: 'hunter2hunter2' });
+    assert.match(res.setCookie, /; Secure/);
+  } finally {
+    await new Promise<void>((r) => invest.server.close(() => r()));
+    await new Promise<void>((r) => trading.server.close(() => r()));
+  }
+});
+
+test('audit trail records auth events and orders', async () => {
+  const trading = createTrading(createInMemoryStore());
+  const tradingPort = await listen(trading.server);
+  const authStore = createInMemoryAuthStore();
+  const invest = createInvest({ tradingBase: `http://127.0.0.1:${tradingPort}`, authStore });
+  const port = await listen(invest.server);
+  const base = `http://127.0.0.1:${port}`;
+  try {
+    const cookie = await signup(base, 'Rob', 'rob@example.com');
+    await j(base, 'POST', '/auth/login', { email: 'rob@example.com', password: 'nope-wrong-1' });
+    await j(base, 'POST', '/api/orders', { symbol: 'AAPL', side: 'buy', type: 'market', quantity: 1 }, cookie);
+    await j(base, 'POST', '/auth/logout', undefined, cookie);
+
+    const actions = authStore.listAudit().map((e) => e.action);
+    for (const expected of ['signup', 'login_failed', 'order_placed', 'logout']) {
+      assert.ok(actions.includes(expected), `missing audit action ${expected} in ${actions.join(',')}`);
+    }
+    const order = authStore.listAudit().find((e) => e.action === 'order_placed')!;
+    assert.match(order.detail ?? '', /AAPL buy market x1 filled/);
+    assert.ok(order.ip.length > 0);
+  } finally {
+    await new Promise<void>((r) => invest.server.close(() => r()));
+    await new Promise<void>((r) => trading.server.close(() => r()));
+  }
+});
+
 test('sessions expire server-side', async () => {
   const trading = createTrading(createInMemoryStore());
   const tradingPort = await listen(trading.server);
