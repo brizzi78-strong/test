@@ -1,8 +1,9 @@
 /**
  * End-to-end: a real Trading service runs in-process; the Invest BFF points
- * at it. The tests drive the app the way the browser does — bootstrap the
- * account, quote a stock, place an order — all through the BFF's proxied
- * `/api/*`, and confirm the data really persists in Trading.
+ * at it. The tests drive the app the way the browser does — sign up, log in,
+ * trade through the session-scoped `/api/*` proxy — and confirm both that the
+ * data persists in Trading and that one user can never reach another user's
+ * account, whatever ids they put in paths, queries, or bodies.
  */
 
 import { test } from 'node:test';
@@ -12,6 +13,7 @@ import type { AddressInfo } from 'node:net';
 import { createApp as createInvest } from '../api/server.ts';
 import { createApp as createTrading } from '../../../trading/src/api/server.ts';
 import { createInMemoryStore } from '../../../trading/src/store/store.ts';
+import { createInMemoryAuthStore, hashPassword, verifyPassword } from '../auth/store.ts';
 
 async function listen(server: { listen: Function; address: Function; close: Function }) {
   await new Promise<void>((r) => server.listen(0, r));
@@ -21,7 +23,7 @@ async function listen(server: { listen: Function; address: Function; close: Func
 async function withApp(run: (base: string) => Promise<void>) {
   const trading = createTrading(createInMemoryStore());
   const tradingPort = await listen(trading.server);
-  const invest = createInvest({ tradingBase: `http://127.0.0.1:${tradingPort}`, accountName: 'Rob' });
+  const invest = createInvest({ tradingBase: `http://127.0.0.1:${tradingPort}` });
   const investPort = await listen(invest.server);
   try {
     await run(`http://127.0.0.1:${investPort}`);
@@ -31,108 +33,153 @@ async function withApp(run: (base: string) => Promise<void>) {
   }
 }
 
-async function j(base: string, method: string, path: string, body?: unknown) {
+async function j(base: string, method: string, path: string, body?: unknown, cookie?: string) {
+  const headers: Record<string, string> = { 'content-type': 'application/json' };
+  if (cookie) headers.cookie = cookie;
   const res = await fetch(`${base}${path}`, {
     method,
-    headers: { 'content-type': 'application/json' },
+    headers,
     body: body === undefined ? undefined : JSON.stringify(body),
   });
-  return { status: res.status, json: (await res.json().catch(() => ({}))) as any };
+  return {
+    status: res.status,
+    json: (await res.json().catch(() => ({}))) as any,
+    setCookie: res.headers.get('set-cookie') ?? '',
+  };
 }
 
-test('password gate: blocks without creds, allows with, health stays open', async () => {
+/** Sign a user up and return the session cookie ("invest_session=..."). */
+async function signup(base: string, name: string, email: string, password = 'hunter2hunter2') {
+  const res = await j(base, 'POST', '/auth/signup', { name, email, password });
+  assert.equal(res.status, 201);
+  const cookie = res.setCookie.split(';')[0];
+  assert.match(cookie, /^invest_session=/);
+  return cookie;
+}
+
+test('password hashing round-trips and rejects wrong passwords', () => {
+  const stored = hashPassword('correct horse battery');
+  assert.ok(verifyPassword('correct horse battery', stored));
+  assert.ok(!verifyPassword('wrong', stored));
+});
+
+test('serves the app shell without a session', async () => {
+  await withApp(async (base) => {
+    const res = await fetch(`${base}/`);
+    assert.equal(res.status, 200);
+    assert.match(await res.text(), /Invest/);
+  });
+});
+
+test('the API requires a session', async () => {
+  await withApp(async (base) => {
+    assert.equal((await j(base, 'GET', '/api/app')).status, 401);
+    assert.equal((await j(base, 'GET', '/api/quotes')).status, 401);
+  });
+});
+
+test('signup opens a trading account and starts a session', async () => {
+  await withApp(async (base) => {
+    const cookie = await signup(base, 'Rob', 'rob@example.com');
+    const app = await j(base, 'GET', '/api/app', undefined, cookie);
+    assert.equal(app.status, 200);
+    assert.equal(app.json.accountName, 'Rob');
+    assert.equal(app.json.email, 'rob@example.com');
+    assert.equal(app.json.cashCents, 1_000_000);
+  });
+});
+
+test('signup validation: bad email, short password, duplicate email', async () => {
+  await withApp(async (base) => {
+    assert.equal((await j(base, 'POST', '/auth/signup', { name: 'X', email: 'nope', password: 'longenough1' })).status, 400);
+    assert.equal((await j(base, 'POST', '/auth/signup', { name: 'X', email: 'x@y.com', password: 'short' })).status, 400);
+    await signup(base, 'Rob', 'rob@example.com');
+    const dup = await j(base, 'POST', '/auth/signup', { name: 'Rob2', email: 'ROB@example.com', password: 'hunter2hunter2' });
+    assert.equal(dup.status, 409);
+  });
+});
+
+test('login verifies credentials; logout ends the session', async () => {
+  await withApp(async (base) => {
+    await signup(base, 'Rob', 'rob@example.com', 'hunter2hunter2');
+    assert.equal((await j(base, 'POST', '/auth/login', { email: 'rob@example.com', password: 'wrong-password' })).status, 401);
+
+    const login = await j(base, 'POST', '/auth/login', { email: 'Rob@Example.com', password: 'hunter2hunter2' });
+    assert.equal(login.status, 200);
+    const cookie = login.setCookie.split(';')[0];
+    assert.equal((await j(base, 'GET', '/api/app', undefined, cookie)).status, 200);
+
+    await j(base, 'POST', '/auth/logout', undefined, cookie);
+    assert.equal((await j(base, 'GET', '/api/app', undefined, cookie)).status, 401);
+  });
+});
+
+test('each user trades in their own account through the scoped proxy', async () => {
+  await withApp(async (base) => {
+    const alice = await signup(base, 'Alice', 'alice@example.com');
+    const bob = await signup(base, 'Bob', 'bob@example.com');
+
+    const buy = await j(base, 'POST', '/api/orders', { symbol: 'AAPL', side: 'buy', type: 'market', quantity: 2 }, alice);
+    assert.equal(buy.status, 201);
+    assert.equal(buy.json.status, 'filled');
+
+    const alicePortfolio = await j(base, 'GET', `/api/portfolio/anything`, undefined, alice);
+    assert.equal(alicePortfolio.json.positions.length, 1);
+
+    const bobPortfolio = await j(base, 'GET', `/api/portfolio/anything`, undefined, bob);
+    assert.equal(bobPortfolio.json.positions.length, 0);
+    assert.equal(bobPortfolio.json.cashCents, 1_000_000);
+  });
+});
+
+test("one user cannot read, list, or cancel another user's data", async () => {
+  await withApp(async (base) => {
+    const alice = await signup(base, 'Alice', 'alice@example.com');
+    const bob = await signup(base, 'Bob', 'bob@example.com');
+
+    const aliceApp = (await j(base, 'GET', '/api/app', undefined, alice)).json;
+    const order = (await j(base, 'POST', '/api/orders', { symbol: 'AAPL', side: 'buy', type: 'market', quantity: 1 }, alice)).json;
+
+    // Path substitution: Bob asking for Alice's account/portfolio gets his own.
+    const viaPath = await j(base, 'GET', `/api/portfolio/${aliceApp.accountId}`, undefined, bob);
+    assert.equal(viaPath.json.positions.length, 0);
+    const viaAccounts = await j(base, 'GET', `/api/accounts/${aliceApp.accountId}`, undefined, bob);
+    assert.notEqual(viaAccounts.json.id, aliceApp.accountId);
+
+    // Query forcing: Bob listing Alice's orders sees only his own (none).
+    const viaQuery = await j(base, 'GET', `/api/orders?accountId=${aliceApp.accountId}`, undefined, bob);
+    assert.deepEqual(viaQuery.json, []);
+
+    // Body stamping: Bob placing an order "as Alice" lands in Bob's account.
+    await j(base, 'POST', '/api/orders', { accountId: aliceApp.accountId, symbol: 'TSLA', side: 'buy', type: 'market', quantity: 1 }, bob);
+    const aliceOrders = (await j(base, 'GET', '/api/orders', undefined, alice)).json as any[];
+    assert.ok(!aliceOrders.some((o) => o.symbol === 'TSLA'));
+
+    // Ownership check: Bob cannot read or cancel Alice's order.
+    assert.equal((await j(base, 'GET', `/api/orders/${order.id}`, undefined, bob)).status, 404);
+    assert.equal((await j(base, 'POST', `/api/orders/${order.id}/cancel`, undefined, bob)).status, 404);
+
+    // Off-allowlist upstream routes are unreachable through the proxy.
+    assert.equal((await j(base, 'POST', '/api/accounts', { name: 'evil' }, bob)).status, 404);
+  });
+});
+
+test('sessions expire server-side', async () => {
   const trading = createTrading(createInMemoryStore());
   const tradingPort = await listen(trading.server);
-  const invest = createInvest({
-    tradingBase: `http://127.0.0.1:${tradingPort}`,
-    accountName: 'Rob',
-    user: 'admin',
-    password: 's3cret',
-  });
+  const authStore = createInMemoryAuthStore();
+  const invest = createInvest({ tradingBase: `http://127.0.0.1:${tradingPort}`, authStore });
   const port = await listen(invest.server);
   const base = `http://127.0.0.1:${port}`;
   try {
-    assert.equal((await fetch(`${base}/`)).status, 401);
-    assert.equal((await fetch(`${base}/health`)).status, 200);
-    const good = 'Basic ' + Buffer.from('admin:s3cret').toString('base64');
-    assert.equal((await fetch(`${base}/`, { headers: { authorization: good } })).status, 200);
-    const bad = 'Basic ' + Buffer.from('admin:wrong').toString('base64');
-    assert.equal((await fetch(`${base}/`, { headers: { authorization: bad } })).status, 401);
+    const cookie = await signup(base, 'Rob', 'rob@example.com');
+    // Forcibly expire the session behind the cookie.
+    const token = cookie.split('=')[1];
+    const session = authStore.getSession(token)!;
+    authStore.putSession({ ...session, expiresAt: new Date(Date.now() - 1000).toISOString() });
+    assert.equal((await j(base, 'GET', '/api/app', undefined, cookie)).status, 401);
   } finally {
     await new Promise<void>((r) => invest.server.close(() => r()));
     await new Promise<void>((r) => trading.server.close(() => r()));
   }
-});
-
-test('serves the app shell', async () => {
-  await withApp(async (base) => {
-    const res = await fetch(`${base}/`);
-    assert.equal(res.status, 200);
-    const html = await res.text();
-    assert.match(html, /Invest/);
-  });
-});
-
-test('bootstraps an account with default paper buying power', async () => {
-  await withApp(async (base) => {
-    const app = await j(base, 'GET', '/api/app');
-    assert.equal(app.status, 200);
-    assert.equal(app.json.accountName, 'Rob');
-    assert.equal(app.json.cashCents, 1_000_000);
-    assert.ok(app.json.accountId);
-  });
-});
-
-test('restart reuses the same account instead of creating a duplicate', async () => {
-  const trading = createTrading(createInMemoryStore());
-  const tradingPort = await listen(trading.server);
-  const tradingBase = `http://127.0.0.1:${tradingPort}`;
-  const mkInvest = () => createInvest({ tradingBase, accountName: 'Rob' });
-
-  const b1 = mkInvest();
-  const p1 = await listen(b1.server);
-  const b2 = mkInvest();
-  const p2 = await listen(b2.server);
-  try {
-    const id1 = (await j(`http://127.0.0.1:${p1}`, 'GET', '/api/app')).json.accountId;
-    const id2 = (await j(`http://127.0.0.1:${p2}`, 'GET', '/api/app')).json.accountId;
-    assert.equal(id1, id2);
-  } finally {
-    await new Promise<void>((r) => b1.server.close(() => r()));
-    await new Promise<void>((r) => b2.server.close(() => r()));
-    await new Promise<void>((r) => trading.server.close(() => r()));
-  }
-});
-
-test('the full trade loop persists through the BFF', async () => {
-  await withApp(async (base) => {
-    const app = (await j(base, 'GET', '/api/app')).json;
-    const acct = app.accountId as string;
-
-    const quote = await j(base, 'GET', '/api/quotes/AAPL');
-    assert.equal(quote.status, 200);
-
-    const buy = await j(base, 'POST', '/api/orders', {
-      accountId: acct,
-      symbol: 'AAPL',
-      side: 'buy',
-      type: 'market',
-      quantity: 3,
-    });
-    assert.equal(buy.status, 201);
-    assert.equal(buy.json.status, 'filled');
-
-    const portfolio = await j(base, 'GET', `/api/portfolio/${acct}`);
-    assert.equal(portfolio.json.positions.length, 1);
-    assert.equal(portfolio.json.positions[0].quantity, 3);
-
-    const watch = await j(base, 'POST', `/api/watchlist/${acct}`, { symbol: 'TSLA' });
-    assert.equal(watch.status, 201);
-    const watchlist = await j(base, 'GET', `/api/watchlist/${acct}`);
-    assert.equal(watchlist.json.length, 1);
-    assert.equal(watchlist.json[0].symbol, 'TSLA');
-
-    const removed = await fetch(`${base}/api/watchlist/${acct}/TSLA`, { method: 'DELETE' });
-    assert.equal(removed.status, 200);
-  });
 });

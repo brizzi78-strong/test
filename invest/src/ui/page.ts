@@ -115,6 +115,19 @@ export const PAGE = /* html */ `<!doctype html>
   .quotebox .p{font-size:2rem;font-weight:800;letter-spacing:-.02em}
   .quotebox .c{font-size:.92rem;font-weight:700;margin-top:4px}
   .spark{width:100%;height:64px;display:block;margin-bottom:16px}
+  .auth{position:fixed;inset:0;background:var(--bg);display:none;align-items:center;justify-content:center;z-index:8;padding:20px}
+  .auth.on{display:flex}
+  .authcard{width:min(400px,94vw);background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:28px}
+  .authcard .logo{display:flex;align-items:center;gap:10px;margin-bottom:18px}
+  .authcard h1{font-size:1.3rem;margin:0}
+  .authtabs{display:grid;grid-template-columns:1fr 1fr;background:var(--surface-2);border-radius:10px;padding:3px;margin-bottom:18px}
+  .authtabs button{border:0;background:transparent;color:var(--muted);font-weight:700;font-size:.86rem;padding:.5rem;border-radius:8px;cursor:pointer}
+  .authtabs button[aria-pressed="true"]{background:var(--surface);color:var(--ink);box-shadow:var(--shadow)}
+  .autherr{color:var(--crit);font-size:.82rem;font-weight:600;min-height:1.2em;margin:6px 0 10px}
+  .authnote{color:var(--muted);font-size:.74rem;margin-top:14px;text-align:center}
+  .auth .btn{width:100%;justify-content:center;padding:.7rem}
+  .foot .logout{background:transparent;border:0;color:var(--muted);cursor:pointer;padding:0;font-size:.72rem;text-decoration:underline}
+  .foot .logout:hover{color:var(--crit)}
   .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--ink);color:var(--bg);padding:.6rem 1rem;border-radius:10px;font-size:.85rem;font-weight:600;opacity:0;pointer-events:none;transition:.25s;z-index:9;box-shadow:var(--shadow)}
   .toast.on{opacity:1;transform:translateX(-50%)}
   .toast.err{background:var(--crit);color:#fff}
@@ -143,6 +156,21 @@ export const PAGE = /* html */ `<!doctype html>
   <div class="body" id="dbody"></div>
   <div class="df" id="dfoot"></div>
 </div>
+<div class="auth" id="auth" role="dialog" aria-labelledby="authtitle">
+  <div class="authcard">
+    <div class="logo"><span class="glyph">&#8599;</span><h1 id="authtitle">Invest</h1></div>
+    <div class="authtabs" id="authtabs">
+      <button data-mode="login" aria-pressed="true">Log in</button>
+      <button data-mode="signup" aria-pressed="false">Sign up</button>
+    </div>
+    <div class="field" id="a_namewrap" style="display:none"><label>Name</label><input id="a_name" autocomplete="name" placeholder="Rob"></div>
+    <div class="field"><label>Email</label><input id="a_email" type="email" autocomplete="email" placeholder="you@example.com"></div>
+    <div class="field"><label>Password</label><input id="a_password" type="password" autocomplete="current-password" placeholder="At least 8 characters"></div>
+    <div class="autherr" id="a_err"></div>
+    <button class="btn" id="a_submit">Log in</button>
+    <div class="authnote">Paper trading demo &mdash; you start with play money, and no real money ever moves.</div>
+  </div>
+</div>
 <div class="toast" id="toast"></div>
 
 <script>
@@ -160,7 +188,13 @@ function fmtDT(iso){return iso?new Date(iso).toLocaleString("en-US",{month:"shor
 
 function api(method,path,body){
   return fetch("/api"+path,{method:method,headers:{"content-type":"application/json"},body:body===undefined?undefined:JSON.stringify(body)})
-    .then(function(r){return r.text().then(function(t){var j=t?JSON.parse(t):null; if(!r.ok)throw new Error((j&&j.error&&j.error.message)||("HTTP "+r.status)); return j;});});
+    .then(function(r){return r.text().then(function(t){
+      var j=t?JSON.parse(t):null;
+      if(!r.ok){
+        if(r.status===401&&ACCT)showAuth(); // session expired mid-use
+        var e=new Error((j&&j.error&&j.error.message)||("HTTP "+r.status)); e.status=r.status; throw e;
+      }
+      return j;});});
 }
 function toast(msg,kind){var t=$("#toast");t.textContent=msg;t.className="toast on"+(kind?" "+kind:"");clearTimeout(t._t);t._t=setTimeout(function(){t.className="toast";},2600);}
 
@@ -181,15 +215,48 @@ function loadAll(){
 }
 function refresh(){return loadAll().then(render);}
 
+// ---- auth ----
+var authMode="login";
+function showAuth(){ACCT=null;$("#auth").classList.add("on");}
+function hideAuth(){$("#auth").classList.remove("on");}
+function setAuthMode(mode){
+  authMode=mode;
+  var tabs=$("#authtabs").querySelectorAll("button");
+  for(var i=0;i<tabs.length;i++)tabs[i].setAttribute("aria-pressed",tabs[i].dataset.mode===mode?"true":"false");
+  $("#a_namewrap").style.display=mode==="signup"?"block":"none";
+  $("#a_password").setAttribute("autocomplete",mode==="signup"?"new-password":"current-password");
+  $("#a_submit").textContent=mode==="signup"?"Create account":"Log in";
+  $("#a_err").textContent="";
+}
+$("#authtabs").addEventListener("click",function(e){var b=e.target.closest("button");if(b)setAuthMode(b.dataset.mode);});
+function submitAuth(){
+  var body={email:$("#a_email").value.trim(),password:$("#a_password").value};
+  if(authMode==="signup")body.name=$("#a_name").value.trim();
+  $("#a_err").textContent="";$("#a_submit").disabled=true;
+  fetch("/auth/"+authMode,{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify(body)})
+    .then(function(r){return r.text().then(function(t){var j=t?JSON.parse(t):null;if(!r.ok)throw new Error((j&&j.error&&j.error.message)||("HTTP "+r.status));});})
+    .then(function(){$("#a_password").value="";hideAuth();return boot();})
+    .catch(function(e){$("#a_err").textContent=e.message;})
+    .then(function(){$("#a_submit").disabled=false;});
+}
+$("#a_submit").onclick=submitAuth;
+$("#auth").addEventListener("keydown",function(e){if(e.key==="Enter")submitAuth();});
+function logout(){fetch("/auth/logout",{method:"POST"}).then(function(){location.reload();});}
+
 // ---- boot ----
-api("GET","/app").then(function(app){
-  ACCT=app.accountId; ACCTNAME=app.accountName||"Investor";
-  $("#acctname").textContent=ACCTNAME;
-  $("#foot").innerHTML="Paper trading for<br><b>"+esc(ACCTNAME)+"</b><br>No real money moves.";
-  return loadAll();
-}).then(function(){render();}).catch(function(e){
-  $("#main").innerHTML='<div class="empty">Couldn\\'t reach the trading service.<br>'+esc(e.message)+'</div>';
-});
+function boot(){
+  return api("GET","/app").then(function(app){
+    ACCT=app.accountId; ACCTNAME=app.accountName||"Investor";
+    $("#acctname").textContent=ACCTNAME;
+    $("#foot").innerHTML="Paper trading for<br><b>"+esc(ACCTNAME)+"</b><br>No real money moves.<br><button class=\\"logout\\" id=\\"logoutbtn\\">Log out</button>";
+    $("#logoutbtn").onclick=logout;
+    return loadAll();
+  }).then(function(){render();}).catch(function(e){
+    if(e.status===401){showAuth();return;}
+    $("#main").innerHTML='<div class="empty">Couldn\\'t reach the trading service.<br>'+esc(e.message)+'</div>';
+  });
+}
+boot();
 setInterval(function(){ if(ACCT) refresh(); },15000);
 
 // ---- nav / render ----

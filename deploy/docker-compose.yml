@@ -305,21 +305,20 @@ services:
     ports: ["4900:4900"]
     volumes: ["trading-data:/data"]
 
-  # Invest: the Robinhood-style single-page trading app (home/portfolio,
-  # browse, watchlist, orders, buy/sell) — a BFF over the Trading service that
-  # opens to one paper-trading account. Reachable at http://localhost:5000.
+  # Invest: the Robinhood-style multi-user trading app (signup/login, then
+  # your own portfolio, watchlist, orders, buy/sell) — a BFF over the Trading
+  # service; each proxied call is scoped server-side to the logged-in user's
+  # account. Reachable at http://localhost:5000.
   invest:
     <<: *service
     command: node invest/src/index.ts
     environment:
       PORT: "5000"
       TRADING_URL: http://trading:4900
-      ACCOUNT_ID: ${TRADING_ACCOUNT_ID:-}
-      ACCOUNT_NAME: ${TRADING_ACCOUNT_NAME:-Rob}
+      INVEST_DB: /data/invest.db
       STARTING_CASH_CENTS: ${TRADING_STARTING_CASH_CENTS:-}
-      INVEST_USER: ${INVEST_USER:-}
-      INVEST_PASSWORD: ${INVEST_PASSWORD:-}
     ports: ["5000:5000"]
+    volumes: ["invest-data:/data"]
     depends_on:
       - trading
 
@@ -347,3 +346,4 @@ volumes:
   timeclock-data:
   gateway-data:
   trading-data:
+  invest-data:
