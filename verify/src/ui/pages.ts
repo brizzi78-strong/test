@@ -168,6 +168,41 @@ const VERIFIER_SCRIPT =
   '}).catch(function(e){document.getElementById("v").innerHTML="<div class=\\"banner err\\">This link is not active: "+esc(e.message)+"</div>";});' +
   '</script>';
 
+// ============================ CERTIFICATE PAGE ============================
+// Public authenticity lookup — the target of a report's tracking number / QR.
+// Reads ?ref=<tracking>&code=<code> and renders a privacy-preserving certificate.
+const CERT_BODY =
+  '<div class="wrap narrow"><div class="head"><span class="glyph">&#10003;</span><div><h1>Verify a report</h1>' +
+  '<div class="hsub">Confirm a Blue Ridge Press LLC verification report is authentic</div></div></div>' +
+  '<div class="card"><p class="lead">Enter the tracking number and verification code printed on the report. We\u2019ll confirm it\u2019s genuine \u2014 without exposing the candidate\u2019s private details.</p>' +
+  '<div class="row"><div class="field"><label>Tracking number</label><input id="ref" placeholder="BRP-2026-XXXXXX" autocapitalize="characters"></div>' +
+  '<div class="field"><label>Verification code</label><input id="code" placeholder="XXXX-XXXX" autocapitalize="characters"></div></div>' +
+  '<div id="cb"></div><button class="btn" id="go">Verify report</button></div>' +
+  '<div id="result"></div>' +
+  '<footer>Blue Ridge Press LLC \u00b7 Consent-based verification of references, employment &amp; education. Not a consumer-reporting agency.</footer>' +
+  '</div><div class="toast" id="toast"></div>';
+
+const CERT_SCRIPT =
+  '<script>' + HELPERS +
+  'var Q=new URLSearchParams(location.search);' +
+  'function label(r){return r==="all_confirmed"?"All sources confirmed":r==="partial"?"Partly confirmed":"Not yet complete";}' +
+  'function cls(r){return r==="all_confirmed"?"completed":r==="partial"?"in_progress":"pending";}' +
+  'function render(d){var el=document.getElementById("result");' +
+  'var rows=[["Issued by",esc(d.issuer)],["Report",esc(d.trackingNumber)],["Requested by",esc(d.requestedBy)],["Candidate",esc(d.candidateInitials)+" (initials)"],["Scope",esc(d.scope.join(", "))],["Sources",d.sources.confirmed+" confirmed \\u00b7 "+d.sources.declined+" declined \\u00b7 "+d.sources.pending+" pending of "+d.sources.total],["Issued",d.issuedAt?new Date(d.issuedAt).toLocaleString():"\\u2014"]];' +
+  'var body=rows.map(function(r){return "<tr><td class=\\"dim\\" style=\\"width:38%\\">"+r[0]+"</td><td><b>"+r[1]+"</b></td></tr>";}).join("");' +
+  'el.innerHTML="<div class=\\"card\\"><div class=\\"big\\" style=\\"padding:14px 8px 8px\\"><div class=\\"em\\">\\u2705</div><h2>Authentic report</h2>"' +
+  '+"<p style=\\"margin:.4rem 0 0\\"><span class=\\"pill s-"+cls(d.result)+"\\">"+esc(label(d.result))+"</span></p></div>"' +
+  '+"<table><tbody>"+body+"</tbody></table>"' +
+  '+"<div class=\\"discl\\"><b>Integrity seal ("+esc(d.integrity.algorithm)+"):</b><div class=\\"mono\\" style=\\"word-break:break-all;margin-top:4px\\">"+esc(d.integrity.hash)+"</div>This seal is computed from the report\\u2019s exact findings. If any finding were altered, it would no longer match \\u2014 proving the report you\\u2019re holding is unchanged.</div></div>";}' +
+  'function lookup(ref,code){var b=document.getElementById("cb");b.textContent="";b.className="";var btn=document.getElementById("go");btn.disabled=true;' +
+  'document.getElementById("result").innerHTML="";' +
+  'api("GET","/api/certificate/"+encodeURIComponent(ref)+"?code="+encodeURIComponent(code)).then(function(d){render(d);}).catch(function(e){' +
+  'document.getElementById("result").innerHTML="<div class=\\"card\\"><div class=\\"big\\"><div class=\\"em\\">\\u26A0\\uFE0F</div><h2>We couldn\\u2019t verify that</h2><p class=\\"dim\\">No report matches that tracking number and code. Check both are typed exactly as printed on the report.</p></div></div>";}).then(function(){btn.disabled=false;});}' +
+  'document.getElementById("go").onclick=function(){var ref=document.getElementById("ref").value.trim();var code=document.getElementById("code").value.trim();var b=document.getElementById("cb");if(!ref||!code){b.className="banner err";b.textContent="Enter both the tracking number and the code.";return;}lookup(ref,code);};' +
+  'var pref=Q.get("ref"),pcode=Q.get("code");if(pref)document.getElementById("ref").value=pref;if(pcode)document.getElementById("code").value=pcode;if(pref&&pcode)lookup(pref,pcode);' +
+  '</script>';
+
 export const APP_PAGE = head('Cardinal Verify') + APP_BODY + APP_SCRIPT + foot;
 export const CONSENT_PAGE = head('Authorize verification') + CONSENT_BODY + CONSENT_SCRIPT + foot;
 export const VERIFIER_PAGE = head('Verification request') + VERIFIER_BODY + VERIFIER_SCRIPT + foot;
+export const CERTIFICATE_PAGE = head('Verify a report \u00b7 Blue Ridge Press LLC') + CERT_BODY + CERT_SCRIPT + foot;
