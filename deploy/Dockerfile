@@ -30,6 +30,8 @@ COPY timeclock ./timeclock
 COPY runpay ./runpay
 COPY portal ./portal
 COPY gateway ./gateway
+COPY trading ./trading
+COPY invest ./invest
 
 # Durable SQLite databases live here; mounted as a volume per service.
 RUN mkdir -p /data && addgroup -S app && adduser -S app -G app && chown -R app /app /data
