@@ -13,23 +13,23 @@ export const PAGE = /* html */ `<!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="dark light">
 <title>Invest</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231467E6'/%3E%3Cpath d='M8 20l6-8 4 5 6-9' stroke='%23fff' stroke-width='2.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2300C805'/%3E%3Cpath d='M8 20l6-8 4 5 6-9' stroke='%23001B06' stroke-width='2.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <style>
   :root{
-    --bg:#0A1120;--surface:#111A2E;--surface-2:#18233A;--ink:#EEF2F9;--muted:#8B96AC;
-    --line:#243049;--brand:#3D8BFD;--brand-ink:#fff;
-    --good:#12C182;--good-bg:#0B2A21;--crit:#FF5247;--crit-bg:#331116;
-    --shadow:0 1px 2px rgba(3,7,15,.5), 0 10px 26px -14px rgba(3,7,15,.7);
+    --bg:#000;--surface:#0E0E0E;--surface-2:#1A1A1A;--ink:#fff;--muted:#8A8D91;
+    --line:#222;--brand:#00C805;--brand-ink:#00220A;
+    --good:#00C805;--good-bg:#0B2311;--crit:#FF5000;--crit-bg:#2B1206;
+    --shadow:0 1px 2px rgba(0,0,0,.35);
     --font:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
     --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;--radius:14px;
   }
   @media (prefers-color-scheme:light){:root{
-    --bg:#F5F7FB;--surface:#fff;--surface-2:#E9EEF6;--ink:#0F1828;--muted:#5C6880;
-    --line:#D8E0EC;--brand:#1467E6;--brand-ink:#fff;
-    --good:#0AA06B;--good-bg:#DFF5EB;--crit:#E5484D;--crit-bg:#FBE4E4;
-    --shadow:0 1px 2px rgba(15,24,40,.06), 0 10px 26px -14px rgba(15,24,40,.2);}}
-  :root[data-theme="light"]{--bg:#F5F7FB;--surface:#fff;--surface-2:#E9EEF6;--ink:#0F1828;--muted:#5C6880;--line:#D8E0EC;--brand:#1467E6;--brand-ink:#fff;--good:#0AA06B;--good-bg:#DFF5EB;--crit:#E5484D;--crit-bg:#FBE4E4;--shadow:0 1px 2px rgba(15,24,40,.06), 0 10px 26px -14px rgba(15,24,40,.2);}
-  :root[data-theme="dark"]{--bg:#0A1120;--surface:#111A2E;--surface-2:#18233A;--ink:#EEF2F9;--muted:#8B96AC;--line:#243049;--brand:#3D8BFD;--brand-ink:#fff;--good:#12C182;--good-bg:#0B2A21;--crit:#FF5247;--crit-bg:#331116;--shadow:0 1px 2px rgba(3,7,15,.5), 0 10px 26px -14px rgba(3,7,15,.7);}
+    --bg:#fff;--surface:#FAFAFA;--surface-2:#F0F0F0;--ink:#000;--muted:#6B6F76;
+    --line:#E6E6E6;--brand:#00A305;--brand-ink:#fff;
+    --good:#00A305;--good-bg:#E4F9E6;--crit:#E04A00;--crit-bg:#FFE9E0;
+    --shadow:0 1px 2px rgba(0,0,0,.05);}}
+  :root[data-theme="light"]{--bg:#fff;--surface:#FAFAFA;--surface-2:#F0F0F0;--ink:#000;--muted:#6B6F76;--line:#E6E6E6;--brand:#00A305;--brand-ink:#fff;--good:#00A305;--good-bg:#E4F9E6;--crit:#E04A00;--crit-bg:#FFE9E0;--shadow:0 1px 2px rgba(0,0,0,.05);}
+  :root[data-theme="dark"]{--bg:#000;--surface:#0E0E0E;--surface-2:#1A1A1A;--ink:#fff;--muted:#8A8D91;--line:#222;--brand:#00C805;--brand-ink:#00220A;--good:#00C805;--good-bg:#0B2311;--crit:#FF5000;--crit-bg:#2B1206;--shadow:0 1px 2px rgba(0,0,0,.35);}
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.5;-webkit-font-smoothing:antialiased}
   .num{font-variant-numeric:tabular-nums;font-family:var(--mono)}
@@ -140,7 +140,7 @@ export const PAGE = /* html */ `<!doctype html>
   .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--ink);color:var(--bg);padding:.6rem 1rem;border-radius:10px;font-size:.85rem;font-weight:600;opacity:0;pointer-events:none;transition:.25s;z-index:9;box-shadow:var(--shadow)}
   .toast.on{opacity:1;transform:translateX(-50%)}
   .toast.err{background:var(--crit);color:#fff}
-  .toast.good{background:var(--good);color:#04160E}
+  .toast.good{background:var(--good);color:#00220A}
   @media (max-width:860px){.app{grid-template-columns:1fr}.rail{position:static;height:auto;flex-direction:row;flex-wrap:wrap;align-items:center;gap:8px}.rail .foot{display:none}.brand{padding-bottom:0}.nav{flex-direction:row;flex-wrap:wrap;margin-left:auto}.tiles{grid-template-columns:1fr}}
   @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
