@@ -1,0 +1,10 @@
+{
+  "name": "drugdiscovery",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Drug Discovery — a computational cheminformatics workbench: register targets, design candidate molecules, score their drug-likeness against the published medicinal-chemistry rules, screen for potency, and advance the survivors through the discovery pipeline",
+  "type": "module",
+  "engines": { "node": ">=22.18" },
+  "scripts": { "start": "node src/index.ts", "test": "node --test", "typecheck": "tsc --noEmit" },
+  "devDependencies": { "@types/node": "^22.8.5", "typescript": "~5.8.0" }
+}

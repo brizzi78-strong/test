@@ -83,3 +83,32 @@ services:
         value: admin
       - key: TAXFILE_PASSWORD
         sync: false            # Render prompts you to set this on first deploy
+
+  # Drug Discovery — the cheminformatics workbench (drugdiscovery/): register
+  # biological targets, design candidate molecules as descriptor profiles,
+  # score their drug-likeness against the published Lipinski/Veber/lead-like
+  # rules, record screening potencies, and rank the candidates. A program's
+  # targets and candidate structures are proprietary IP, so it is password-gated
+  # (DRUGDISCOVERY_USER / DRUGDISCOVERY_PASSWORD — set the password when Render
+  # prompts). Program data persists in SQLite on the mounted disk.
+  - type: web
+    name: drug-discovery
+    runtime: docker
+    branch: main
+    plan: starter            # a persistent disk requires a paid instance
+    dockerfilePath: ./deploy/Dockerfile
+    dockerContext: .
+    dockerCommand: node drugdiscovery/src/index.ts
+    healthCheckPath: /health
+    autoDeploy: true
+    disk:
+      name: drugdiscovery-data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: DRUGDISCOVERY_DB
+        value: /data/drugdiscovery.db
+      - key: DRUGDISCOVERY_USER
+        value: admin
+      - key: DRUGDISCOVERY_PASSWORD
+        sync: false            # Render prompts you to set this on first deploy
