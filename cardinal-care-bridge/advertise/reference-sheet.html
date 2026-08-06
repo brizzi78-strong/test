@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cardinal Care Bridge — Referral Reference Sheet (print)</title>
+<style>
+  /* One page, US Letter. Print with background graphics ON for the header bar. */
+  :root{
+    --brand:#A31B33; --brand-strong:#7E1226; --ink:#17233F; --muted:#5C5647;
+    --line:#D8CFBA; --surface:#FAF6EC;
+    --font:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --serif:ui-serif,Georgia,"Iowan Old Style","Times New Roman",serif;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:#e8e4d8;font-family:var(--font);color:var(--ink);line-height:1.45;}
+  .sheet{background:#fff;width:8.5in;min-height:11in;margin:1rem auto;padding:.55in .6in;box-shadow:0 8px 30px rgba(0,0,0,.2);}
+  @page{size:letter;margin:0;}
+  @media print{
+    body{background:#fff;}
+    .sheet{margin:0;box-shadow:none;width:auto;min-height:auto;}
+    .no-print{display:none;}
+  }
+  .no-print{max-width:8.5in;margin:1rem auto 0;font-size:.85rem;color:#444;background:#fff8dd;border:1px solid #e2d59a;border-radius:8px;padding:.6rem .8rem;}
+
+  header{display:flex;align-items:center;gap:.55rem;border-bottom:3px solid var(--brand);padding-bottom:.45rem;}
+  .logo{width:34px;height:34px;border-radius:9px;background:var(--brand);color:#fff;font-weight:900;display:grid;place-items:center;font-size:1.15rem;flex:none;}
+  header h1{font-size:1.25rem;margin:0;font-weight:800;letter-spacing:-.01em;}
+  header h1 small{display:block;font-weight:600;font-size:.72rem;color:var(--muted);}
+  .contact{margin-left:auto;text-align:right;font-size:.86rem;line-height:1.5;}
+  .contact .phone{font-size:1.15rem;font-weight:900;color:var(--brand);}
+
+  .for{font-size:.72rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--brand);margin:.7rem 0 .15rem;}
+  h2.lead{font-family:var(--serif);font-size:1.32rem;margin:0 0 .35rem;font-weight:700;}
+  p.sub{margin:0 0 .8rem;color:var(--muted);font-size:.92rem;max-width:44rem;}
+
+  .cols{display:grid;grid-template-columns:1.15fr .85fr;gap:.8rem;margin-top:.4rem;}
+  .box{border:1px solid var(--line);border-radius:10px;padding:.7rem .85rem;background:var(--surface);}
+  .box h3{margin:0 0 .4rem;font-size:.95rem;}
+  .box ul{margin:0;padding-left:1.05rem;font-size:.88rem;}
+  .box li{margin:.22rem 0;}
+  .box.white{background:#fff;}
+  .check ul{list-style:none;padding:0;}
+  .check li{padding-left:1.25rem;position:relative;}
+  .check li::before{content:"☐";position:absolute;left:0;top:0;font-size:.95rem;color:var(--brand);}
+
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;margin:.8rem 0 .2rem;}
+  .step{border:1px solid var(--line);border-radius:10px;padding:.6rem .7rem;}
+  .step .n{font-size:.7rem;font-weight:900;color:var(--brand);letter-spacing:.08em;}
+  .step h4{margin:.15rem 0 .2rem;font-size:.9rem;}
+  .step p{margin:0;font-size:.82rem;color:var(--muted);}
+
+  .strip{display:flex;gap:.9rem;flex-wrap:wrap;margin-top:.75rem;font-size:.84rem;}
+  .strip div{flex:1 1 12rem;}
+  .strip strong{display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.07em;color:var(--brand);margin-bottom:.15rem;}
+
+  footer{margin-top:.8rem;border-top:1px solid var(--line);padding-top:.5rem;font-size:.74rem;color:var(--muted);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
+</style>
+</head>
+<body>
+<p class="no-print"><strong>Print me:</strong> one page, US Letter, backgrounds on. Leave a copy with every discharge planning and case management office you visit — this sheet is built to be acted on at 4pm on a Friday, not filed. (Ctrl/Cmd+P to print.)</p>
+
+<div class="sheet">
+  <header>
+    <span class="logo" aria-hidden="true">C</span>
+    <h1>Cardinal Care Bridge<small>Senior living advisory &amp; care navigation — Triangle NC</small></h1>
+    <div class="contact">
+      <div class="phone">(850) 221-7443</div>
+      <div>call or text, same-day response</div>
+      <div>robertbrizzi@gmail.com</div>
+    </div>
+  </header>
+
+  <p class="for">For discharge planners &amp; case managers</p>
+  <h2 class="lead">A patient can't safely return home. We take it from there.</h2>
+  <p class="sub">We help the family compare Independent Living, Assisted Living, and Memory Care options, check real availability, coordinate tours and the move, and stay with them after move-in. No cost to your team or the family.</p>
+
+  <div class="steps">
+    <div class="step"><div class="n">STEP 1</div><h4>Call or text us</h4><p>Same-day response, including Fridays and weekends. If we can't take the case, we say so on that call — not two days later.</p></div>
+    <div class="step"><div class="n">STEP 2</div><h4>We talk to the family</h4><p>Care needs, budget, payer, geography, and what matters to the person moving. Then a short list of communities with confirmed current availability.</p></div>
+    <div class="step"><div class="n">STEP 3</div><h4>We close the loop</h4><p>Tours, paperwork, move coordination — and we tell you where the patient landed, so your file is complete.</p></div>
+  </div>
+
+  <div class="cols">
+    <div class="box white check">
+      <h3>Helpful to have when you call (none required)</h3>
+      <ul>
+        <li>Family decision-maker's name and phone number</li>
+        <li>Level of care being discharged to (IL / AL / Memory Care)</li>
+        <li>Mobility and cognition notes relevant to placement</li>
+        <li>Payer picture: private pay, LTC insurance, VA, Medicaid pending</li>
+        <li>Target discharge date</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>What we don't do</h3>
+      <ul>
+        <li>No pressure on families, ever</li>
+        <li>No steering to a favored facility — the short list fits the person</li>
+        <li>No fee to the hospital, the family, or your team</li>
+        <li>We're paid a standard referral fee by the community a family chooses, and we tell families that plainly</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="strip">
+    <div><strong>Coverage</strong>Wake, Durham, Orange, Chatham, Johnston, Lee &amp; Moore counties</div>
+    <div><strong>Care types</strong>Independent Living · Assisted Living · Memory Care</div>
+    <div><strong>Your contact</strong>Rob Brizzi, founder — hospice and home-health background; he answers his own phone</div>
+  </div>
+
+  <footer>
+    <span>Cardinal Care Bridge · Senior living advisory &amp; care navigation. Not medical advice; recommendations support, never replace, the care team's guidance.</span>
+    <span>Ref: hospital sheet</span>
+  </footer>
+</div>
+</body>
+</html>
