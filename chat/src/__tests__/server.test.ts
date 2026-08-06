@@ -48,3 +48,20 @@ test('unknown routes return 404', () =>
     const res = await fetch(base + '/nope');
     assert.equal(res.status, 404);
   }));
+
+test('basic-auth gate protects everything except /health', async () => {
+  const { server } = createApp({ client: null, user: 'admin', password: 'secret' });
+  await new Promise<void>((resolve) => server.listen(0, resolve));
+  const { port } = server.address() as AddressInfo;
+  const base = `http://127.0.0.1:${port}`;
+  try {
+    assert.equal((await fetch(base + '/')).status, 401);
+    assert.equal((await fetch(base + '/health')).status, 200);
+    const authed = await fetch(base + '/', {
+      headers: { authorization: 'Basic ' + Buffer.from('admin:secret').toString('base64') },
+    });
+    assert.equal(authed.status, 200);
+  } finally {
+    await new Promise<void>((resolve) => server.close(() => resolve()));
+  }
+});

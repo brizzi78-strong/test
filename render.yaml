@@ -83,3 +83,25 @@ services:
         value: admin
       - key: TAXFILE_PASSWORD
         sync: false            # Render prompts you to set this on first deploy
+
+  # Cardinal Chat — self-hosted ChatGPT alternative (chat/), powered by the
+  # Claude API. Password-gated (CHAT_USER / CHAT_PASSWORD — set the password
+  # when Render prompts; the app spends your Anthropic API budget, so never run
+  # it public-facing without the gate). ANTHROPIC_API_KEY comes from
+  # https://platform.claude.com — Render prompts for it on first deploy.
+  # Conversations live in each user's browser, so no disk is needed.
+  - type: web
+    name: cardinal-chat
+    runtime: docker
+    branch: main
+    dockerfilePath: ./deploy/Dockerfile.chat
+    dockerContext: .
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: ANTHROPIC_API_KEY
+        sync: false            # Render prompts you to set this on first deploy
+      - key: CHAT_USER
+        value: admin
+      - key: CHAT_PASSWORD
+        sync: false            # Render prompts you to set this on first deploy
