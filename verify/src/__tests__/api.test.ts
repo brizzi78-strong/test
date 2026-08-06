@@ -90,6 +90,12 @@ test('full consent-gated flow over the API', async () => {
 
     const bad = await j(base, 'GET', `/api/certificate/${encodeURIComponent(cref.trackingNumber)}?code=WRNG-CODE`);
     assert.equal(bad.status, 404);
+
+    // The report's QR endpoint serves a scannable SVG.
+    const qr = await fetch(`${base}/api/certificate/${req.id}/qr`);
+    assert.equal(qr.status, 200);
+    assert.match(qr.headers.get('content-type') ?? '', /image\/svg\+xml/);
+    assert.match(await qr.text(), /^<svg /);
   });
 });
 
@@ -99,6 +105,8 @@ test('the report-verify page and certificate API stay public even when admin is 
       assert.equal((await fetch(`${base}/verify`)).status, 200);
       // Unknown report → 404 (not 401): the endpoint is reachable without login.
       assert.equal((await fetch(`${base}/api/certificate/BRP-2026-XXXXXX?code=AAAA-AAAA`)).status, 404);
+      // The QR sub-route derives from a request id, so it stays admin-gated.
+      assert.equal((await fetch(`${base}/api/certificate/anything/qr`)).status, 401);
     },
     { user: 'admin', password: 'pw' },
   );

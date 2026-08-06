@@ -18,6 +18,7 @@ import { createServer, type IncomingMessage, type Server, type ServerResponse } 
 import { timingSafeEqual } from 'node:crypto';
 import { VerifyService, DISCLOSURE_VERSION } from '../service/verifyService.ts';
 import { CertificateService } from '../service/certificate.ts';
+import { qrSvg } from '../service/qr.ts';
 import { DomainError, ValidationError } from '../service/errors.ts';
 import { createInMemoryStore, type Store } from '../store/store.ts';
 import { createSqliteStore } from '../store/sqliteStore.ts';
@@ -70,14 +71,19 @@ export function createApp(opts: AppOptions = {}): AppServer {
 
 /** Public paths that must never require the admin login. */
 function isPublicPath(path: string): boolean {
+  // The certificate *lookup* (single segment) is public; deeper sub-routes
+  // like .../qr derive from a request id and stay admin-only.
+  if (path.startsWith('/api/certificate/')) {
+    const rest = path.slice('/api/certificate/'.length);
+    return rest.length > 0 && !rest.includes('/');
+  }
   return (
     path === '/health' ||
     path === '/verify' ||
     path.startsWith('/c/') ||
     path.startsWith('/v/') ||
     path.startsWith('/api/consent/') ||
-    path.startsWith('/api/verify/') ||
-    path.startsWith('/api/certificate/')
+    path.startsWith('/api/verify/')
   );
 }
 
@@ -151,6 +157,14 @@ async function api(
     return json(res, 200, { ...service.view(seg[2]), certificate: cert.reference(seg[2]) });
   if (method === 'POST' && seg[1] === 'requests' && seg[3] === 'cancel')
     return json(res, 200, service.cancelRequest(seg[2]));
+
+  // Admin: the report's QR (encodes the verify URL) — for printing on reports.
+  if (method === 'GET' && seg[1] === 'certificate' && seg[2] && seg[3] === 'qr') {
+    const ref = cert.reference(seg[2]);
+    res.writeHead(200, { 'content-type': 'image/svg+xml; charset=utf-8', 'cache-control': 'no-store' });
+    res.end(qrSvg(ref.verifyUrl, { scale: 6, margin: 4 }));
+    return;
+  }
 
   // Public: certificate of authenticity by tracking number (or id) + code
   if (method === 'GET' && seg[1] === 'certificate' && seg[2])
