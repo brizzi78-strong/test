@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Expenses — expense reports without the pain</title>
+<style>
+  :root {
+    --bg: #f6f7f9; --card: #ffffff; --ink: #1c2430; --muted: #66707d;
+    --accent: #175ddc; --accent-ink: #ffffff; --line: #e3e7ec;
+    --ok: #157347; --warn: #b45309; --bad: #b02a37;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; background: var(--bg); color: var(--ink); }
+  header { background: var(--card); border-bottom: 1px solid var(--line); padding: 14px 24px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+  h1 { font-size: 20px; margin: 0; }
+  h1 small { color: var(--muted); font-weight: 400; font-size: 13px; margin-left: 8px; }
+  main { max-width: 980px; margin: 24px auto; padding: 0 16px; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; }
+  .tabs button { border: 1px solid var(--line); background: var(--card); padding: 8px 14px; border-radius: 999px; cursor: pointer; font: inherit; }
+  .tabs button.active { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; margin-bottom: 16px; }
+  .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: end; }
+  label { display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: var(--muted); }
+  input, select { font: inherit; padding: 7px 9px; border: 1px solid var(--line); border-radius: 6px; background: var(--card); color: var(--ink); }
+  button.primary { background: var(--accent); color: var(--accent-ink); border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font: inherit; }
+  button.ghost { background: none; border: 1px solid var(--line); padding: 7px 12px; border-radius: 6px; cursor: pointer; font: inherit; color: var(--ink); }
+  button.danger { border-color: var(--bad); color: var(--bad); }
+  table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+  th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
+  td.amount, th.amount { text-align: right; }
+  .chip { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; }
+  .chip.draft { background: #eef1f5; color: var(--muted); }
+  .chip.submitted { background: #fff4e0; color: var(--warn); }
+  .chip.approved { background: #e2f4ea; color: var(--ok); }
+  .chip.rejected { background: #fbe3e5; color: var(--bad); }
+  .chip.reimbursed { background: #e3ecfc; color: var(--accent); }
+  .flag { color: var(--warn); font-size: 13px; }
+  .flag.dup { color: var(--bad); }
+  .autobadge { color: var(--ok); font-size: 13px; font-weight: 600; }
+  .muted { color: var(--muted); font-size: 13px; }
+  .clickable { cursor: pointer; }
+  .clickable:hover { background: #f2f5f9; }
+  .total { font-size: 17px; font-weight: 700; }
+  .error { color: var(--bad); margin: 8px 0; min-height: 1em; font-size: 14px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+  .stat { border: 1px solid var(--line); border-radius: 8px; padding: 12px; }
+  .stat .n { font-size: 22px; font-weight: 700; }
+  .policy-hint { background: #f0f5ff; border: 1px solid #d5e2fa; border-radius: 8px; padding: 10px 14px; font-size: 13px; color: #2a4a8c; margin-bottom: 12px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Expenses<small>policy checks up front, approvals in seconds</small></h1>
+  <label style="margin-left:auto">Acting as
+    <input id="user" value="ada" size="10" title="x-user-id — switch to an approver id (e.g. manager) to see their queue">
+  </label>
+</header>
+<main>
+  <div class="tabs">
+    <button id="tab-reports" class="active">My reports</button>
+    <button id="tab-approvals">Approvals</button>
+    <button id="tab-analytics">Analytics</button>
+  </div>
+  <div class="error" id="error"></div>
+  <div id="view"></div>
+</main>
+<script>
+const $ = (id) => document.getElementById(id);
+const view = $('view');
+let tab = 'reports';
+let openReportId = null;
+let policy = null;
+
+const money = (c) => '$' + (c / 100).toLocaleString('en-US', { minimumFractionDigits: 2 });
+const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (ch) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
+const today = () => new Date().toISOString().slice(0, 10);
+
+async function api(method, path, body) {
+  const res = await fetch(path, {
+    method,
+    headers: { 'content-type': 'application/json', 'x-user-id': $('user').value.trim() || 'demo' },
+    body: body === undefined ? undefined : JSON.stringify(body),
+  });
+  const json = await res.json();
+  if (!res.ok) throw new Error(json.error || res.statusText);
+  return json;
+}
+
+function setError(message) { $('error').textContent = message || ''; }
+
+async function render() {
+  setError('');
+  try {
+    if (!policy) policy = (await api('GET', '/policy')).policy;
+    if (tab === 'reports') await renderReports();
+    else if (tab === 'approvals') await renderApprovals();
+    else await renderAnalytics();
+  } catch (err) { setError(err.message); }
+}
+
+// ---------- My reports ----------
+
+async function renderReports() {
+  if (openReportId) return renderReportDetail(openReportId);
+  const { reports } = await api('GET', '/reports');
+  view.innerHTML = `
+    <div class="card">
+      <div class="row">
+        <label>Report title <input id="new-title" placeholder="e.g. NYC client trip"></label>
+        <label>Approver <input id="new-approver" value="manager" size="10"></label>
+        <button class="primary" id="new-report">New report</button>
+      </div>
+    </div>
+    <div class="card">
+      ${reports.length === 0 ? '<p class="muted">No reports yet — create one above.</p>' : `
+      <table><thead><tr><th>Title</th><th>Status</th><th>Flags</th><th class="amount">Total</th></tr></thead>
+      <tbody>${reports.map(({ report, evaluation }) => `
+        <tr class="clickable" data-id="${report.id}">
+          <td>${esc(report.title)}<div class="muted">${report.expenses.length} expense(s) · created ${report.createdAt.slice(0, 10)}</div></td>
+          <td><span class="chip ${report.status}">${report.status}</span>${report.autoApproved ? '<div class="autobadge">auto-approved</div>' : ''}</td>
+          <td>${evaluation.violations.length === 0 ? '<span class="muted">none</span>' : `<span class="flag">${evaluation.violations.length} flag(s)</span>`}</td>
+          <td class="amount">${money(evaluation.totalCents)}</td>
+        </tr>`).join('')}
+      </tbody></table>`}
+    </div>`;
+  $('new-report').onclick = async () => {
+    try {
+      const { report } = await api('POST', '/reports', {
+        title: $('new-title').value, approverId: $('new-approver').value.trim() || 'manager',
+      });
+      openReportId = report.id;
+      render();
+    } catch (err) { setError(err.message); }
+  };
+  view.querySelectorAll('tr.clickable').forEach((tr) => {
+    tr.onclick = () => { openReportId = tr.dataset.id; render(); };
+  });
+}
+
+function flagsFor(evaluation, expenseId) {
+  return evaluation.violations.filter((v) => v.expenseId === expenseId)
+    .map((v) => `<div class="flag ${v.code === 'DUPLICATE' ? 'dup' : ''}">⚠ ${esc(v.message)}</div>`).join('');
+}
+
+async function renderReportDetail(id) {
+  const { report, evaluation } = await api('GET', `/reports/${id}`);
+  const editable = report.status === 'draft';
+  const limits = Object.entries(policy.categoryLimitCents)
+    .map(([cat, cap]) => `${cat} ≤ ${money(cap)}`).join(' · ');
+  view.innerHTML = `
+    <button class="ghost" id="back">← All reports</button>
+    <div class="card" style="margin-top:12px">
+      <div class="row" style="justify-content:space-between; align-items:center">
+        <div><strong style="font-size:18px">${esc(report.title)}</strong>
+          <span class="chip ${report.status}">${report.status}</span>
+          ${report.autoApproved ? '<span class="autobadge">auto-approved by policy engine</span>' : ''}
+        </div>
+        <div class="total">${money(evaluation.totalCents)}</div>
+      </div>
+      ${report.rejectionReason ? `<p class="flag dup">Rejected: ${esc(report.rejectionReason)}</p>` : ''}
+      <p class="muted">Approver: ${esc(report.approverId)} · Receipts required from ${money(policy.receiptRequiredCents)} · ${limits} · mileage ${policy.mileageRateCentsPerMile}¢/mi · auto-approval up to ${money(policy.autoApproveCeilingCents)}</p>
+      ${evaluation.autoApprovable && editable && report.expenses.length ? '<div class="policy-hint">✔ Fully compliant and under the ceiling — this report will be <strong>approved instantly</strong> on submit.</div>' : ''}
+      <table><thead><tr><th>Date</th><th>Category</th><th>Merchant / notes</th><th>Receipt</th><th class="amount">Amount</th>${editable ? '<th></th>' : ''}</tr></thead>
+      <tbody>${report.expenses.map((e) => `
+        <tr>
+          <td>${e.date}</td>
+          <td>${e.category}${e.miles ? ` <span class="muted">(${e.miles} mi)</span>` : ''}</td>
+          <td>${esc(e.merchant)}${e.description ? `<div class="muted">${esc(e.description)}</div>` : ''}${flagsFor(evaluation, e.id)}</td>
+          <td>${e.receipt ? '📎 ' + esc(e.receipt) : '<span class="muted">—</span>'}</td>
+          <td class="amount">${money(e.amountCents)}</td>
+          ${editable ? `<td><button class="ghost danger" data-del="${e.id}">✕</button></td>` : ''}
+        </tr>`).join('')}
+      </tbody></table>
+      ${report.expenses.length === 0 ? '<p class="muted">No expenses yet.</p>' : ''}
+    </div>
+    ${editable ? `
+    <div class="card">
+      <strong>Add expense</strong>
+      <div class="row" style="margin-top:8px">
+        <label>Date <input type="date" id="x-date" value="${today()}"></label>
+        <label>Category <select id="x-cat">
+          ${['meals','lodging','airfare','ground_transport','mileage','office_supplies','software','entertainment','other']
+            .map((c) => `<option>${c}</option>`).join('')}
+        </select></label>
+        <label>Merchant <input id="x-merchant" placeholder="e.g. Delta"></label>
+        <label id="amount-label">Amount ($) <input id="x-amount" type="number" step="0.01" min="0"></label>
+        <label id="miles-label" style="display:none">Miles <input id="x-miles" type="number" step="0.1" min="0"></label>
+        <label>Receipt (filename) <input id="x-receipt" placeholder="optional"></label>
+        <label>Notes <input id="x-desc" placeholder="optional"></label>
+        <button class="primary" id="x-add">Add</button>
+      </div>
+    </div>
+    <div class="row">
+      <button class="primary" id="submit">Submit report</button>
+      <button class="ghost danger" id="delete">Delete draft</button>
+    </div>` : `
+    <div class="row">
+      ${report.status === 'submitted' || report.status === 'rejected' ? '<button class="ghost" id="reopen">Reopen as draft</button>' : ''}
+    </div>`}
+  `;
+  $('back').onclick = () => { openReportId = null; render(); };
+  const catSelect = $('x-cat');
+  if (catSelect) {
+    catSelect.onchange = () => {
+      const isMiles = catSelect.value === 'mileage';
+      $('miles-label').style.display = isMiles ? '' : 'none';
+      $('amount-label').style.display = isMiles ? 'none' : '';
+    };
+    $('x-add').onclick = async () => {
+      const body = {
+        date: $('x-date').value, category: catSelect.value,
+        merchant: $('x-merchant').value, description: $('x-desc').value,
+        receipt: $('x-receipt').value || undefined,
+      };
+      if (catSelect.value === 'mileage') body.miles = Number($('x-miles').value);
+      else body.amountCents = Math.round(Number($('x-amount').value) * 100);
+      try { await api('POST', `/reports/${id}/expenses`, body); render(); } catch (err) { setError(err.message); }
+    };
+    $('submit').onclick = async () => {
+      try {
+        const { report: r } = await api('POST', `/reports/${id}/submit`);
+        setError('');
+        if (r.autoApproved) alert('Approved instantly — no human review needed. 🎉');
+        render();
+      } catch (err) { setError(err.message); }
+    };
+    $('delete').onclick = async () => {
+      try { await api('DELETE', `/reports/${id}`); openReportId = null; render(); } catch (err) { setError(err.message); }
+    };
+    view.querySelectorAll('[data-del]').forEach((btn) => {
+      btn.onclick = async () => {
+        try { await api('DELETE', `/reports/${id}/expenses/${btn.dataset.del}`); render(); } catch (err) { setError(err.message); }
+      };
+    });
+  }
+  const reopen = $('reopen');
+  if (reopen) reopen.onclick = async () => {
+    try { await api('POST', `/reports/${id}/reopen`); render(); } catch (err) { setError(err.message); }
+  };
+}
+
+// ---------- Approvals ----------
+
+async function renderApprovals() {
+  const { reports } = await api('GET', '/approvals');
+  view.innerHTML = `
+    <div class="card">
+      <strong>Waiting on you</strong>
+      <p class="muted">Only flagged or over-ceiling reports reach this queue — compliant ones were approved automatically.</p>
+      ${reports.length === 0 ? '<p class="muted">Queue is empty. ✨</p>' : reports.map(({ report, evaluation }) => `
+        <div class="card" style="margin-bottom:10px">
+          <div class="row" style="justify-content:space-between; align-items:center">
+            <div><strong>${esc(report.title)}</strong> <span class="muted">from ${esc(report.ownerId)} · submitted ${report.submittedAt.slice(0, 10)}</span></div>
+            <div class="total">${money(evaluation.totalCents)}</div>
+          </div>
+          ${report.expenses.map((e) => `
+            <div style="padding:4px 0; border-bottom:1px solid var(--line)">
+              ${e.date} · ${e.category} · ${esc(e.merchant)} · <strong>${money(e.amountCents)}</strong>
+              ${e.receipt ? ' 📎' : ''}
+              ${flagsFor(evaluation, e.id)}
+            </div>`).join('')}
+          <div class="row" style="margin-top:10px">
+            <button class="primary" data-approve="${report.id}">Approve</button>
+            <input placeholder="Rejection reason" data-reason="${report.id}" size="30">
+            <button class="ghost danger" data-reject="${report.id}">Reject</button>
+          </div>
+        </div>`).join('')}
+    </div>`;
+  view.querySelectorAll('[data-approve]').forEach((btn) => {
+    btn.onclick = async () => {
+      try { await api('POST', `/reports/${btn.dataset.approve}/approve`); render(); } catch (err) { setError(err.message); }
+    };
+  });
+  view.querySelectorAll('[data-reject]').forEach((btn) => {
+    btn.onclick = async () => {
+      const reason = view.querySelector(`[data-reason="${btn.dataset.reject}"]`).value;
+      try { await api('POST', `/reports/${btn.dataset.reject}/reject`, { reason }); render(); } catch (err) { setError(err.message); }
+    };
+  });
+}
+
+// ---------- Analytics ----------
+
+async function renderAnalytics() {
+  const a = await api('GET', '/analytics');
+  const cats = Object.entries(a.byCategory).sort((x, y) => y[1] - x[1]);
+  const statuses = Object.entries(a.byStatus);
+  view.innerHTML = `
+    <div class="grid">
+      <div class="stat"><div class="muted">Total spend</div><div class="n">${money(a.totalCents)}</div></div>
+      <div class="stat"><div class="muted">Reports</div><div class="n">${a.reportCount}</div></div>
+      <div class="stat"><div class="muted">Auto-approved</div><div class="n">${a.autoApprovedCount}</div></div>
+      <div class="stat"><div class="muted">Open flags</div><div class="n">${a.violationCount}</div></div>
+    </div>
+    <div class="card" style="margin-top:16px">
+      <strong>Spend by category</strong>
+      ${cats.length === 0 ? '<p class="muted">Nothing yet.</p>' : `
+      <table><tbody>${cats.map(([cat, cents]) => `
+        <tr><td>${cat}</td>
+        <td><div style="background:var(--accent); height:10px; border-radius:5px; width:${Math.max(2, Math.round((cents / cats[0][1]) * 100))}%"></div></td>
+        <td class="amount">${money(cents)}</td></tr>`).join('')}
+      </tbody></table>`}
+    </div>
+    <div class="card"><strong>Reports by status</strong>
+      <p>${statuses.map(([s, n]) => `<span class="chip ${s}">${s}: ${n}</span>`).join(' ') || '<span class="muted">Nothing yet.</span>'}</p>
+    </div>`;
+}
+
+// ---------- Wiring ----------
+
+for (const name of ['reports', 'approvals', 'analytics']) {
+  $('tab-' + name).onclick = () => {
+    tab = name;
+    openReportId = null;
+    document.querySelectorAll('.tabs button').forEach((b) => b.classList.remove('active'));
+    $('tab-' + name).classList.add('active');
+    render();
+  };
+}
+$('user').onchange = () => { openReportId = null; render(); };
+render();
+</script>
+</body>
+</html>
