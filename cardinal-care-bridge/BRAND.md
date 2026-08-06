@@ -40,5 +40,6 @@ it doesn't.
 
 ## Status
 
-Noted for later use — not yet placed on the live page. When it goes on,
-it goes where the weight belongs: near the promise, not near the buttons.
+Placed. It has its own section on the page — between "We start with
+people" and the Community Promise. No button next to it. That's where the
+weight belongs: near the promise, not near the asks.
