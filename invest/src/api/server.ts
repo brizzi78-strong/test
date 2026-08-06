@@ -428,6 +428,8 @@ async function scopedProxy(
     upstreamPath = '/' + segments.join('/');
   } else if (method === 'GET' && head === 'portfolio' && segments.length === 2) {
     upstreamPath = `/portfolio/${acct}`;
+  } else if (method === 'GET' && head === 'portfolio' && segments.length === 3 && third === 'history') {
+    upstreamPath = `/portfolio/${acct}/history`;
   } else if (method === 'GET' && head === 'realized-pnl' && segments.length === 2) {
     upstreamPath = `/realized-pnl/${acct}`;
   } else if (method === 'GET' && head === 'accounts' && segments.length === 2) {

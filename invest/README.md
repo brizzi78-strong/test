@@ -29,8 +29,10 @@ Yahoo Finance prices (no API key needed).
   accounts can't be enumerated). Setting a new password logs the user out of
   every session, clears any failed-login lockout, and — since opening the
   link proves mailbox control — marks the email verified.
-- **Home** — total equity, today's change, buying power, market value,
-  unrealized P&L, and a positions table.
+- **Home** — total equity, today's change, and the big portfolio chart
+  (1D/1W/1M/3M) — your equity history replayed from fills and valued at
+  historical prices — plus buying power, market value, unrealized P&L, and a
+  positions table.
 - **Browse** — every instrument with a live quote; click a row to open its
   detail/trade drawer.
 - **Watchlist** — star any stock to track it; toggle again to remove it.

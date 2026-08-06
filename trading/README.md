@@ -74,6 +74,7 @@ rather than auto-cancelled.
 | `GET /orders/:id` | Read one order. |
 | `POST /orders/:id/cancel` | Cancel a resting (`open`) order. |
 | `GET /portfolio/:accountId` | Cash, positions (live-valued), equity, day change, unrealized P&L. |
+| `GET /portfolio/:accountId/history?points=&intervalMinutes=` | Equity over time — fills replayed backwards and valued at historical prices; clipped to the account's age. |
 | `GET /realized-pnl/:accountId` | Realized gain/loss from sells, trade by trade. |
 | `POST /plans` | Start a recurring buy: `{ accountId, symbol, amountCents, cadence }` — the first installment executes immediately. |
 | `GET /plans?accountId=` | List plans (settles due runs first). |

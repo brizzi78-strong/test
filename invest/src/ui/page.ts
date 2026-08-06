@@ -115,8 +115,8 @@ export const PAGE = /* html */ `<!doctype html>
   .quotebox{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:16px}
   .quotebox .p{font-size:2rem;font-weight:800;letter-spacing:-.02em}
   .quotebox .c{font-size:.92rem;font-weight:700;margin-top:4px}
-  #d_chart{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:10px 10px 6px;margin-bottom:10px}
-  .spark{width:100%;height:96px;display:block}
+  .chartbox{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:10px 10px 6px;margin-bottom:10px}
+  .spark{width:100%;display:block}
   .chartmeta{display:flex;justify-content:space-between;font-size:.7rem;color:var(--muted);font-family:var(--mono);margin-top:6px}
   .ranges{display:flex;justify-content:center;margin:0 0 16px}
   .seg.chips button{padding:.3rem .6rem;font-size:.72rem;flex:none}
@@ -332,6 +332,15 @@ function quoteRow(q,extra){
     +'<td style="width:40px">'+starBtn(q.symbol)+'</td></tr>';
 }
 
+var homeRange="1D";
+function loadHomeChart(){
+  var cfg=RANGES[homeRange];
+  api("GET","/portfolio/"+ACCT+"/history?points="+cfg.points+"&intervalMinutes="+cfg.im).then(function(hist){
+    var el=$("#h_chart"); if(!el)return;
+    var pts=(hist||[]).map(function(p){return {atMs:p.atMs,priceCents:p.equityCents};});
+    el.innerHTML=chartHtml(pts,homeRange,150);
+  }).catch(function(){var el=$("#h_chart");if(el)el.innerHTML="";});
+}
 function vHome(){
   var eq=portfolio?portfolio.equityCents:0;
   var dayChg=portfolio?portfolio.dayChangeCents:0;
@@ -339,6 +348,9 @@ function vHome(){
   var html=head("Home","Welcome back, "+esc(ACCTNAME))
     +'<div class="hero"><div class="equity num">'+usd(eq)+'</div>'
     +'<div class="chg '+cls(dayChg)+'">'+(dayChg>=0?"\\u25B2":"\\u25BC")+' '+usd(Math.abs(dayChg))+' ('+pct(dayBps)+') today</div></div>'
+    +'<div class="chartbox" id="h_chart"><div class="dim" style="padding:8px 0">Loading your chart&hellip;</div></div>'
+    +'<div class="ranges" style="justify-content:flex-start;margin-bottom:22px"><div class="seg chips" id="h_ranges">'
+    +Object.keys(RANGES).map(function(r){return '<button data-hrange="'+r+'" aria-pressed="'+(r===homeRange)+'">'+r+'</button>';}).join("")+'</div></div>'
     +'<div class="tiles">'
     +tile("Buying power",usd(portfolio?portfolio.cashCents:0),"Available cash")
     +tile("Market value",usd(portfolio?portfolio.marketValueCents:0),(portfolio?portfolio.positions.length:0)+" holdings")
@@ -358,6 +370,7 @@ function vHome(){
       }).join("")+'</tbody></table></div>':'<div class="empty">No positions yet &mdash; browse stocks and place your first trade.</div>')
     +'</div>';
   $("#main").innerHTML=html;
+  loadHomeChart();
 }
 
 function vBrowse(){
@@ -421,6 +434,12 @@ document.addEventListener("click",function(e){
   if(openRow){openStockDrawer(openRow.getAttribute("data-open"));return;}
   var t=e.target.closest("button"); if(!t)return;
   if(t.dataset.view)setView(t.dataset.view);
+  else if(t.dataset.hrange){
+    homeRange=t.dataset.hrange;
+    var hb=$("#h_ranges").querySelectorAll("button");
+    for(var hi=0;hi<hb.length;hi++)hb[hi].setAttribute("aria-pressed",hb[hi].dataset.hrange===homeRange?"true":"false");
+    loadHomeChart();
+  }
   else if(t.dataset.cancel)doCancel(t.dataset.cancel);
   else if(t.dataset.plantoggle){
     var action=t.dataset.active==="true"?"pause":"resume";
@@ -454,17 +473,18 @@ $("#dclose").onclick=closeDrawer;scrim.onclick=closeDrawer;
 document.addEventListener("keydown",function(e){if(e.key==="Escape")closeDrawer();});
 
 var RANGES={"1D":{points:96,im:15},"1W":{points:84,im:120},"1M":{points:90,im:480},"3M":{points:90,im:1440}};
-function chartHtml(points,range){
+function chartHtml(points,range,h){
+  h=h||96;
   if(!points||points.length<2)return '<div class="dim">No chart data.</div>';
   var vals=points.map(function(p){return p.priceCents;});
   var min=Math.min.apply(null,vals),max=Math.max.apply(null,vals);
-  var span=(max-min)||1, w=400, h=96;
+  var span=(max-min)||1, w=400;
   var step=w/(points.length-1);
   var line=points.map(function(p,i){var x=i*step,y=(h-6)-((p.priceCents-min)/span)*(h-12);return x.toFixed(1)+","+y.toFixed(1);}).join(" ");
   var up=vals[vals.length-1]>=vals[0];
   var color=up?"var(--good)":"var(--crit)";
   var chgBps=vals[0]>0?Math.round((vals[vals.length-1]-vals[0])/vals[0]*10000):0;
-  return '<svg class="spark" viewBox="0 0 '+w+' '+h+'" preserveAspectRatio="none">'
+  return '<svg class="spark" style="height:'+h+'px" viewBox="0 0 '+w+' '+h+'" preserveAspectRatio="none">'
     +'<polygon points="'+line+' '+w+','+h+' 0,'+h+'" fill="'+color+'" opacity="0.08"/>'
     +'<polyline points="'+line+'" fill="none" stroke="'+color+'" stroke-width="2.2" stroke-linejoin="round" vector-effect="non-scaling-stroke"/></svg>'
     +'<div class="chartmeta"><span>low '+usd(min)+'</span><span class="'+(up?"pos":"neg")+'">'+range+' \\u00b7 '+pct(chgBps)+'</span><span>high '+usd(max)+'</span></div>';
@@ -485,7 +505,7 @@ function openStockDrawer(sym){
   $("#dbody").innerHTML='<div class="quotebox"><div><div class="p num">'+usd(q.priceCents)+'</div>'
     +'<div class="c num '+cls(q.changeBps)+'">'+(q.changeCents>=0?"+":"")+usd(q.changeCents)+' ('+pct(q.changeBps)+') today</div></div>'
     +starBtn(sym)+'</div>'
-    +'<div id="d_chart"><div class="dim" style="padding:8px 0">Loading chart&hellip;</div></div>'
+    +'<div class="chartbox" id="d_chart"><div class="dim" style="padding:8px 0">Loading chart&hellip;</div></div>'
     +'<div class="ranges"><div class="seg chips" id="d_ranges">'+Object.keys(RANGES).map(function(r){return '<button data-r="'+r+'" aria-pressed="'+(r===chartRange)+'">'+r+'</button>';}).join("")+'</div></div>'
     +'<div class="row2"><div class="field"><label>Action</label><div class="seg buy" id="d_side"><button data-side="buy" aria-pressed="true">Buy</button><button data-side="sell" aria-pressed="false">Sell</button></div></div>'
     +'<div class="field"><label>Order type</label><div class="seg" id="d_type"><button data-type="market" aria-pressed="true">Market</button><button data-type="limit" aria-pressed="false">Limit</button></div></div></div>'

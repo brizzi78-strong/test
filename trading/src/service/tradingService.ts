@@ -87,6 +87,11 @@ export interface RealizedPnlReport {
   trades: RealizedTrade[];
 }
 
+export interface EquityPoint {
+  atMs: number;
+  equityCents: number;
+}
+
 export class TradingService {
   private readonly store: Store;
   private readonly market: MarketDataSource;
@@ -294,6 +299,86 @@ export class TradingService {
       unrealizedPnlCents,
       positions: rows,
     };
+  }
+
+  /**
+   * The account's equity (cash + live-valued holdings) sampled over a recent
+   * window — the series behind the big Home chart. Computed by replaying the
+   * fill history *backwards* from the current state: at each sample time,
+   * fills that happened after it are undone (a buy returns its cost to cash
+   * and removes its shares; a sell the reverse), and the holdings that remain
+   * are valued at that moment's price from the market-data source. The window
+   * is clipped to the account's age, so a brand-new account shows a short
+   * flat line at its starting cash instead of fictional history.
+   */
+  async getPortfolioHistory(
+    accountId: string,
+    opts: { points?: number; intervalMinutes?: number } = {},
+  ): Promise<EquityPoint[]> {
+    const now = this.now();
+    await this.settleAccount(accountId, now);
+    const account = this.requireAccount(accountId);
+    const points = clampInt(opts.points ?? 96, 2, 500);
+    const intervalMinutes = clampInt(opts.intervalMinutes ?? 15, 1, 1440);
+    const stepMs = intervalMinutes * 60_000;
+    const nowMs = now.getTime();
+    const createdMs = Date.parse(account.createdAt);
+
+    // Sample times, oldest first, clipped to the account's lifetime.
+    const times: number[] = [];
+    for (let i = points - 1; i >= 0; i--) {
+      const atMs = nowMs - i * stepMs;
+      if (atMs >= createdMs - stepMs) times.push(atMs);
+    }
+    if (times.length < 2) {
+      times.length = 0;
+      times.push(nowMs - stepMs, nowMs);
+    }
+
+    const allOrders = this.store.orders.list((o) => o.accountId === accountId);
+    const filledDesc = allOrders
+      .filter((o) => o.status === 'filled')
+      .sort((a, b) => (b.filledAt ?? b.createdAt).localeCompare(a.filledAt ?? a.createdAt));
+
+    // Historical prices for every symbol that ever appears in the history.
+    const symbols = [...new Set(filledDesc.map((o) => o.symbol))];
+    const priceSeries = new Map<string, PricePoint[]>();
+    for (const symbol of symbols) {
+      priceSeries.set(
+        symbol,
+        await this.market.getHistory(this.getInstrumentOrThrow(symbol), { points, intervalMinutes }, now),
+      );
+    }
+
+    // Walk backwards from the current state, undoing fills as we pass them.
+    let cashCents = account.cashCents;
+    const held = new Map<string, number>();
+    for (const p of computePositions(allOrders).positions) held.set(p.symbol, p.quantity);
+
+    const out: EquityPoint[] = new Array(times.length);
+    let orderIdx = 0;
+    for (let ti = times.length - 1; ti >= 0; ti--) {
+      const atMs = times[ti];
+      const atIso = new Date(atMs).toISOString();
+      while (orderIdx < filledDesc.length && (filledDesc[orderIdx].filledAt ?? filledDesc[orderIdx].createdAt) > atIso) {
+        const o = filledDesc[orderIdx];
+        const costCents = Math.round(o.quantity * (o.filledPriceCents ?? 0));
+        if (o.side === 'buy') {
+          cashCents += costCents;
+          held.set(o.symbol, quantizeShares((held.get(o.symbol) ?? 0) - o.quantity));
+        } else {
+          cashCents -= costCents;
+          held.set(o.symbol, quantizeShares((held.get(o.symbol) ?? 0) + o.quantity));
+        }
+        orderIdx++;
+      }
+      let equityCents = cashCents;
+      for (const [symbol, quantity] of held) {
+        if (quantity > 0) equityCents += Math.round(quantity * priceNearest(priceSeries.get(symbol)!, atMs));
+      }
+      out[ti] = { atMs, equityCents };
+    }
+    return out;
   }
 
   getRealizedPnl(accountId: string): RealizedPnlReport {
@@ -562,6 +647,23 @@ export class TradingService {
     if (!found) throw new NotFoundError('Order', id);
     return found;
   }
+}
+
+/** Price at the series point nearest to `atMs` (series is chronological). */
+function priceNearest(series: PricePoint[], atMs: number): number {
+  if (series.length === 0) return 0;
+  let best = series[0];
+  for (const p of series) {
+    if (Math.abs(p.atMs - atMs) <= Math.abs(best.atMs - atMs)) best = p;
+    if (p.atMs > atMs && best.atMs <= atMs && Math.abs(best.atMs - atMs) <= Math.abs(p.atMs - atMs)) break;
+  }
+  return best.priceCents;
+}
+
+function clampInt(value: number, min: number, max: number): number {
+  const n = Math.round(value);
+  if (!Number.isFinite(n)) return min;
+  return Math.min(max, Math.max(min, n));
 }
 
 /** The next scheduled run after a run at `from` (monthly uses calendar months). */

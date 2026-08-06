@@ -114,6 +114,17 @@ export function buildRoutes(service: TradingService): Route[] {
     ],
 
     ['GET', '/portfolio/:accountId', async ({ params }) => ok(await service.getPortfolio(params.accountId))],
+    [
+      'GET',
+      '/portfolio/:accountId/history',
+      async ({ params, query }) =>
+        ok(
+          await service.getPortfolioHistory(params.accountId, {
+            points: numberOrUndefined(query.get('points')),
+            intervalMinutes: numberOrUndefined(query.get('intervalMinutes')),
+          }),
+        ),
+    ],
     ['GET', '/realized-pnl/:accountId', ({ params }) => ok(service.getRealizedPnl(params.accountId))],
 
     ['GET', '/watchlist/:accountId', async ({ params }) => ok(await service.listWatchlist(params.accountId))],

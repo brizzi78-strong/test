@@ -132,6 +132,14 @@ test('each user trades in their own account through the scoped proxy', async () 
     const alicePortfolio = await j(base, 'GET', `/api/portfolio/anything`, undefined, alice);
     assert.equal(alicePortfolio.json.positions.length, 1);
 
+    // Equity history is served through the proxy and scoped the same way.
+    const aliceHistory = await j(base, 'GET', `/api/portfolio/anything/history?points=5&intervalMinutes=60`, undefined, alice);
+    assert.equal(aliceHistory.status, 200);
+    assert.ok(Array.isArray(aliceHistory.json) && aliceHistory.json.length >= 2);
+    // Fetched moments apart on the real clock, so allow a tick of drift.
+    const lastEquity = aliceHistory.json[aliceHistory.json.length - 1].equityCents;
+    assert.ok(Math.abs(lastEquity - alicePortfolio.json.equityCents) <= 100, `equity ${lastEquity}`);
+
     const bobPortfolio = await j(base, 'GET', `/api/portfolio/anything`, undefined, bob);
     assert.equal(bobPortfolio.json.positions.length, 0);
     assert.equal(bobPortfolio.json.cashCents, 1_000_000);

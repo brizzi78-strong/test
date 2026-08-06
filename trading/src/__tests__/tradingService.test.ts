@@ -306,6 +306,46 @@ test('plan validation and deletion', async () => {
   assert.equal((await svc.listPlans({ accountId: account.id })).length, 0);
 });
 
+test('portfolio history replays equity backwards: flat cash before a buy, live-valued after', async () => {
+  let clock = new Date('2026-06-15T15:00:00.000Z');
+  const svc = newService(() => clock);
+  const account = svc.createAccount({ name: 'Rob' });
+
+  clock = new Date('2026-06-15T17:00:00.000Z'); // buy two hours in
+  await svc.placeOrder({ accountId: account.id, symbol: 'AAPL', side: 'buy', type: 'market', quantity: 5 });
+
+  clock = new Date('2026-06-15T19:00:00.000Z');
+  const history = await svc.getPortfolioHistory(account.id, { points: 5, intervalMinutes: 60 });
+  assert.equal(history.length, 5); // 15:00 .. 19:00 hourly
+
+  // Before the buy, equity is exactly the untouched starting cash.
+  assert.equal(history[0].equityCents, 1_000_000);
+  assert.equal(history[1].equityCents, 1_000_000);
+
+  // After the buy, equity = cash + 5 shares at each hour's price.
+  for (let i = 2; i < 5; i++) {
+    const at = history[i].atMs;
+    const expected = svc.getAccount(account.id).cashCents + 5 * priceAtCents(AAPL, at);
+    assert.equal(history[i].equityCents, expected);
+  }
+
+  // The final point agrees with the live portfolio.
+  const portfolio = await svc.getPortfolio(account.id);
+  assert.equal(history[4].equityCents, portfolio.equityCents);
+});
+
+test('portfolio history is clipped to the account age', async () => {
+  let clock = new Date('2026-06-15T15:00:00.000Z');
+  const svc = newService(() => clock);
+  const account = svc.createAccount({ name: 'Rob' });
+  clock = new Date('2026-06-16T15:00:00.000Z'); // account is 24h old
+
+  const history = await svc.getPortfolioHistory(account.id, { points: 200, intervalMinutes: 60 });
+  assert.ok(history.length <= 26, `expected ~25 clipped points, got ${history.length}`);
+  assert.ok(history[0].atMs >= Date.parse('2026-06-15T15:00:00.000Z') - 60 * 60_000);
+  assert.equal(history[history.length - 1].atMs, clock.getTime());
+});
+
 test('listInstruments and listQuotes cover the full mock universe', async () => {
   const svc = newService();
   assert.equal(svc.listInstruments().length, INSTRUMENTS.length);
