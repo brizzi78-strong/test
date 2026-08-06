@@ -1,8 +1,8 @@
 {
-  "name": "goinggreen",
+  "name": "squarefare",
   "private": true,
   "version": "0.1.0",
-  "description": "Going Green — rider- and driver-first ride hailing: published fare formula, itemized quotes, 10% flat platform take, surge capped at 1.5x and always disclosed, 100% of tips to drivers",
+  "description": "SquareFare — rider- and driver-first ride hailing: published fare formula, itemized quotes, 10% flat platform take, surge capped at 1.5x and always disclosed, 100% of tips to drivers",
   "type": "module",
   "engines": {
     "node": ">=22.18"

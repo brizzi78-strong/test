@@ -1,4 +1,4 @@
-/** Shared domain types for the Going Green ride-hailing engine. */
+/** Shared domain types for the SquareFare ride-hailing engine. */
 
 export interface LatLng {
   lat: number;

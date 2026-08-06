@@ -1,13 +1,14 @@
-# Going Green — greener rides, no surprises
+# SquareFare — a square deal on every ride
 
 A ride-hailing platform built to beat Uber where it actually hurts: trust.
 Same core product — tap a map, get matched, ride, pay — but every place Uber
-is opaque or extractive, Going Green is transparent and driver-first by design,
-with a first-class Green (EV) tier baked into the fleet.
+is opaque or extractive, SquareFare is transparent and driver-first by design.
+An EV tier is part of the fleet as a product feature — quiet, clean cars —
+not the brand identity.
 
 ## Why it's superior to Uber
 
-| | Uber | Going Green |
+| | Uber | SquareFare |
 |---|---|---|
 | Platform take | ~25–30%, varies per trip, undisclosed | **Flat 10%**, printed on every quote |
 | Fare formula | Black-box "upfront pricing" | **Public formula** (below) with an itemized quote |
@@ -35,7 +36,7 @@ Requires Node >= 22.18 (runs TypeScript directly — no build step, no
 dependencies).
 
 ```bash
-cd goinggreen
+cd squarefare
 npm start          # serves http://localhost:4700  (PORT env var to change)
 npm test           # engine + end-to-end API tests
 npm run typecheck  # strict TypeScript
