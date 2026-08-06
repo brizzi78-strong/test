@@ -1,21 +1,24 @@
 Category,Service,URL,Login Email,Username,Plan/Tier,MFA Enabled,Billing Cycle,Renewal Date,Monthly Cost,Owner,Notes
+Cloud & Hosting,WordPress.com,https://wordpress.com,brizzi78@icloud.com,myfundguy,,,,,,Rob Brizzi,Site cardinalscarebridge.com; display name Rob Brizzi
+Cloud & Hosting,GoDaddy,https://godaddy.com,,,,,,,,,Domains — connected this session; confirm login
+Cloud & Hosting,AWS Marketplace,https://aws.amazon.com/marketplace,,,,,,,,,Connected this session; confirm login
 Cloud & Hosting,,,,,,,,,,,
-Cloud & Hosting,,,,,,,,,,,
-Cloud & Hosting,,,,,,,,,,,
-Cloud & Hosting,,,,,,,,,,,
-Cloud & Hosting,,,,,,,,,,,
+Dev Tools,GitHub,https://github.com,,brizzi78-strong,,,,,,Rob Brizzi,1 public repo; account created 2025-10-25
+Dev Tools,Zapier,https://zapier.com,,,,,,,,,Automation — connected this session; confirm login
+Dev Tools,Jotform,https://jotform.com,,,,,,,,,Forms — connected this session; confirm login
+Dev Tools,Descript,https://descript.com,,,,,,,,,Media editing — connected this session; confirm login
 Dev Tools,,,,,,,,,,,
-Dev Tools,,,,,,,,,,,
-Dev Tools,,,,,,,,,,,
-Dev Tools,,,,,,,,,,,
-Dev Tools,,,,,,,,,,,
+Productivity & SaaS,Notion,https://notion.so,brizzi78@icloud.com,Robert.Brizzi,,,,,,Rob Brizzi,
+Productivity & SaaS,Kit,https://kit.com,brizzi78@icloud.com,,Creator,,Monthly,2026-09-03,,Rob Brizzi,Account "The Cardinal's Promise"; sending addr robertbrizzi@thecardinalspromise.com
+Productivity & SaaS,Google Workspace,https://workspace.google.com,,,,,,,,,Gmail/Drive/Calendar connected this session; confirm login
+Productivity & SaaS,Slack,https://slack.com,,,,,,,,,Connected this session; confirm login
+Productivity & SaaS,Canva,https://canva.com,,,,,,,,,Connected this session; confirm login
+Productivity & SaaS,Spotify,https://spotify.com,,,,,,,,,Connected this session; confirm login
+Productivity & SaaS,Granola,https://granola.ai,,,,,,,,,Connected but needs re-authorization
 Productivity & SaaS,,,,,,,,,,,
-Productivity & SaaS,,,,,,,,,,,
-Productivity & SaaS,,,,,,,,,,,
-Productivity & SaaS,,,,,,,,,,,
-Productivity & SaaS,,,,,,,,,,,
-Finance & Billing,,,,,,,,,,,
-Finance & Billing,,,,,,,,,,,
-Finance & Billing,,,,,,,,,,,
-Finance & Billing,,,,,,,,,,,
+Finance & Billing,Stripe,https://stripe.com,,,,,,,,,Connected this session; confirm login
+Finance & Billing,PayPal,https://paypal.com,,,,,,,,,Connected this session; confirm login
+Finance & Billing,Intuit QuickBooks,https://quickbooks.intuit.com,,,,,,,,,Connected this session; confirm login
+Finance & Billing,TaxAct,https://taxact.com,,,,,,,,,Connected this session; confirm login
+Finance & Billing,Robinhood,https://robinhood.com,,,,,,,,,Connected but needs re-authorization
 Finance & Billing,,,,,,,,,,,
