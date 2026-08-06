@@ -8,7 +8,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import type { AddressInfo } from 'node:net';
 
-import { createApp } from '../api/server.ts';
+import { createApp, baseUrlFromEnv } from '../api/server.ts';
 import { createInMemoryStore } from '../store/store.ts';
 import type { Notifier } from '../notify/notifier.ts';
 
@@ -33,6 +33,18 @@ async function j(base: string, method: string, path: string, body?: unknown, hea
   });
   return { status: res.status, json: (await res.json().catch(() => ({}))) as any };
 }
+
+test('base URL: explicit setting wins, then the host public URL, then localhost', () => {
+  assert.equal(
+    baseUrlFromEnv({ VERIFY_BASE_URL: 'https://verify.example.com', RENDER_EXTERNAL_URL: 'https://x.onrender.com' } as NodeJS.ProcessEnv),
+    'https://verify.example.com',
+  );
+  assert.equal(
+    baseUrlFromEnv({ RENDER_EXTERNAL_URL: 'https://x.onrender.com' } as NodeJS.ProcessEnv),
+    'https://x.onrender.com',
+  );
+  assert.equal(baseUrlFromEnv({ PORT: '5000' } as NodeJS.ProcessEnv), 'http://localhost:5000');
+});
 
 test('serves the pages, including the public report-verify page', async () => {
   await withServer(async (base) => {

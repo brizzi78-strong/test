@@ -1,39 +1,36 @@
-# Render blueprint (FREE tier) — deploy the Cardinal Verify portal at $0/mo.
+# Render blueprint (FREE tier) — the Blue Ridge Press verify portal at $0/mo.
 #
-# This is the no-cost variant of render-verify.yaml. It drops the persistent
-# disk (the only thing that required a paid plan) and runs both services on
-# Render's free instance type.
+# ONE-CLICK: every value below is set or auto-generated — there is nothing to
+# type during setup and no post-deploy env editing.
 #
-# TRADE-OFFS of the free tier (know these before you rely on it):
-#   * The service SPINS DOWN after ~15 minutes idle; the next request wakes it
-#     and takes ~30-60s (a "cold start"). After that it's fast again.
-#   * Storage is EPHEMERAL: the SQLite database lives in /tmp and is WIPED on
-#     every restart, redeploy, or spin-down. Great for demoing and showing the
-#     portal live — but you will lose stored consent records over time.
+#   1. https://render.com  ->  New +  ->  Blueprint  ->  connect this GitHub
+#      repo  ->  pick this file (deploy/render-verify-free.yaml)  ->  Apply.
+#   2. That's it. Render builds the image and serves
+#      https://cardinal-verify-*.onrender.com — the app reads its own public
+#      URL from RENDER_EXTERNAL_URL, so consent links, verify links, and the
+#      QR codes on PDF reports are correct on the first boot.
 #
-# When you start running real candidates, switch to render-verify.yaml (adds a
-# 1 GB persistent disk on the ~$7/mo Starter plan) so the consent audit trail
-# survives restarts. Nothing else changes.
+# The console login is admin / <generated password> — read the password under
+# the service's Environment tab (VERIFY_PASSWORD). Change it there any time.
 #
-# One-time setup at https://render.com :
-#   1. New +  ->  Blueprint  ->  connect this GitHub repo  ->  pick this file
-#      (render-verify-free.yaml)  ->  Apply.
-#   2. When prompted, set VERIFY_PASSWORD to a strong password (VERIFY_USER is
-#      "admin"). This gates the employer console; the candidate consent and
-#      verifier links stay public (they have no login).
-#   3. Render builds the Docker image and gives you an
-#      https://cardinal-verify-*.onrender.com URL (no disk, no charge).
-#   4. Copy that URL into VERIFY_BASE_URL (edit the env var and redeploy) so the
-#      consent/verifier links point at the right host.
+# TRADE-OFFS of the free tier (fine for demos and your first pilots):
+#   * Spins down after ~15 min idle; the next visit takes ~30-60s to wake.
+#   * Storage is EPHEMERAL: the SQLite file is wiped on restart/redeploy, so
+#     consent records do not survive. Before charging real clients, switch to
+#     deploy/render-verify.yaml (adds a persistent disk, ~$7/mo) — same app,
+#     nothing else changes.
 #
-# HTTPS is automatic.
+# Optional email sending (otherwise links are shown in the console to copy):
+# set SENDGRID_API_KEY + VERIFY_MAIL_FROM in the Environment tab.
+#
+# HTTPS is automatic. Full runbook: deploy/DEPLOY-VERIFY.md
 
 services:
   - type: web
     name: cardinal-verify
     runtime: docker
-    branch: main
-    plan: free               # $0/mo; no persistent disk on this plan
+    branch: claude/background-check-services-rss0ky # switch to main once PR #68 merges
+    plan: free
     dockerfilePath: ./deploy/Dockerfile
     dockerContext: .
     dockerCommand: node verify/src/index.ts
@@ -41,40 +38,10 @@ services:
     autoDeploy: true
     envVars:
       - key: VERIFY_DB
-        value: /tmp/verify.db   # ephemeral on free tier — wiped on restart
+        value: /tmp/verify.db # ephemeral on the free plan — see trade-offs above
       - key: VERIFY_USER
         value: admin
       - key: VERIFY_PASSWORD
-        sync: false            # Render prompts you to set this on first deploy
-      - key: VERIFY_BASE_URL
-        sync: false            # set to your Render URL (or custom domain) after first deploy
-      # Optional email delivery — leave unset to copy links from the console:
-      - key: SENDGRID_API_KEY
-        sync: false
-      - key: VERIFY_MAIL_FROM
-        sync: false
-
-  # Automated screening API (criminal / verifications / MVR / drug). Runs the
-  # deterministic mock until you set a Checkr key, then returns real results with
-  # no code change. No public UI — it's the backend the portal/site calls.
-  - type: web
-    name: cardinal-hirecheck
-    runtime: docker
-    branch: main
-    plan: free
-    dockerfilePath: ./deploy/Dockerfile
-    dockerContext: .
-    dockerCommand: node hirecheck/src/index.ts
-    healthCheckPath: /health
-    autoDeploy: true
-    envVars:
-      - key: HIRECHECK_DB
-        value: /tmp/hirecheck.db   # ephemeral on free tier — wiped on restart
-      # Leave HIRECHECK_PROVIDER unset for the mock. To go live, set it to
-      # "checkr" and add CHECKR_API_KEY (CHECKR_BASE_URL optional for sandbox).
-      - key: HIRECHECK_PROVIDER
-        sync: false
-      - key: CHECKR_API_KEY
-        sync: false
-      - key: CHECKR_BASE_URL
-        sync: false
+        generateValue: true # strong password minted on first deploy; read it in the Environment tab
+      - key: VERIFY_CERT_SECRET
+        generateValue: true # keys tracking numbers, verification codes, and integrity seals — never change it after reports exist

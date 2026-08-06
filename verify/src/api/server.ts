@@ -45,9 +45,13 @@ export function storeFromEnv(env: NodeJS.ProcessEnv = process.env): Store {
   return env.VERIFY_DB ? createSqliteStore(env.VERIFY_DB) : createInMemoryStore();
 }
 
-/** Absolute base for links in emails: VERIFY_BASE_URL, else localhost:PORT. */
+/**
+ * Absolute base for links in emails and on QR codes: an explicit
+ * VERIFY_BASE_URL wins; otherwise the host's own public URL (Render injects
+ * RENDER_EXTERNAL_URL on every deploy); otherwise localhost for dev.
+ */
 export function baseUrlFromEnv(env: NodeJS.ProcessEnv = process.env): string {
-  return env.VERIFY_BASE_URL ?? `http://localhost:${env.PORT ?? 4600}`;
+  return env.VERIFY_BASE_URL ?? env.RENDER_EXTERNAL_URL ?? `http://localhost:${env.PORT ?? 4600}`;
 }
 
 export function createApp(opts: AppOptions = {}): AppServer {
@@ -58,9 +62,14 @@ export function createApp(opts: AppOptions = {}): AppServer {
     notifier: opts.notifier ?? notifierFromEnv(),
     baseUrl,
   });
+  const certSecret = opts.certSecret ?? process.env.VERIFY_CERT_SECRET;
+  if (!certSecret && process.env.NODE_ENV === 'production') {
+    // eslint-disable-next-line no-console
+    console.warn('[verify] VERIFY_CERT_SECRET is not set — report codes and seals are using an insecure dev key');
+  }
   const cert = new CertificateService({
     store,
-    secret: opts.certSecret ?? process.env.VERIFY_CERT_SECRET ?? 'verify-cert-dev-secret-change-me',
+    secret: certSecret ?? 'verify-cert-dev-secret-change-me',
     baseUrl,
   });
   const report = new ReportService({ store, cert });

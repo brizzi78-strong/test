@@ -1,36 +1,36 @@
-# Render blueprint — deploy the Cardinal Verify portal with no server to manage.
+# Render blueprint (PRODUCTION) — the Blue Ridge Press verify portal with a
+# persistent disk, so consent records and reports survive restarts. ~$7/mo.
 #
-# Verify is the consent-first background-check portal: an employer console, the
-# candidate's e-sign/consent page, and a per-source verifier page — all in one
-# zero-dependency Node service backed by a durable SQLite file.
+# ONE-CLICK: every value below is set or auto-generated — nothing to type
+# during setup and no post-deploy env editing.
 #
-# One-time setup at https://render.com :
-#   1. New +  ->  Blueprint  ->  connect this GitHub repo  ->  pick this file
-#      (render-verify.yaml)  ->  Apply.
-#   2. When prompted, set VERIFY_PASSWORD to a strong password (VERIFY_USER is
-#      "admin" by default). This gates the employer console; the candidate
-#      consent and verifier links stay public (they have no login).
-#   3. Render builds the Docker image, attaches a 1 GB disk for the data, and
-#      gives you an https://cardinal-verify-*.onrender.com URL.
-#   4. Copy that URL into VERIFY_BASE_URL (edit the env var and redeploy) so the
-#      emailed consent/verifier links point at the right host. Later, to use a
-#      custom domain like verify.blueridgepressllc.com, add it under Settings ->
-#      Custom Domains, point a DNS CNAME at Render, and update VERIFY_BASE_URL.
-#   5. (Optional, to actually send email) set SENDGRID_API_KEY + VERIFY_MAIL_FROM,
-#      or the SMTP_* vars — otherwise links are shown in the console to copy.
+#   1. https://render.com  ->  New +  ->  Blueprint  ->  connect this GitHub
+#      repo  ->  pick this file (deploy/render-verify.yaml)  ->  Apply.
+#   2. That's it. Render builds the image, attaches a 1 GB disk, and serves
+#      https://cardinal-verify-*.onrender.com — the app reads its own public
+#      URL from RENDER_EXTERNAL_URL, so consent links, verify links, and the
+#      QR codes on PDF reports are correct on the first boot.
 #
-# HTTPS is automatic. Data persists on the disk across deploys and restarts.
+# The console login is admin / <generated password> — read the password under
+# the service's Environment tab (VERIFY_PASSWORD). Change it there any time.
 #
-# NOTE: `branch` is set to main — merge PR #65 first so main contains verify/.
-# To deploy before merging, change `branch` to
-# claude/background-check-services-rss0ky.
+# Custom domain (recommended before marketing):
+#   Settings -> Custom Domains -> add verify.blueridgepressllc.com, then create
+#   the DNS CNAME Render shows you. Set VERIFY_BASE_URL to
+#   https://verify.blueridgepressllc.com in the Environment tab so emailed
+#   links and report QR codes carry your brand, not onrender.com.
+#
+# Email sending (recommended): set SENDGRID_API_KEY + VERIFY_MAIL_FROM in the
+# Environment tab; until then, links are shown in the console to copy.
+#
+# HTTPS is automatic. Full runbook: deploy/DEPLOY-VERIFY.md
 
 services:
   - type: web
     name: cardinal-verify
     runtime: docker
-    branch: main
-    plan: starter            # ~$7/mo; a persistent disk requires a paid instance
+    branch: claude/background-check-services-rss0ky # switch to main once PR #68 merges
+    plan: starter # a persistent disk requires a paid instance
     dockerfilePath: ./deploy/Dockerfile
     dockerContext: .
     dockerCommand: node verify/src/index.ts
@@ -46,40 +46,6 @@ services:
       - key: VERIFY_USER
         value: admin
       - key: VERIFY_PASSWORD
-        sync: false            # Render prompts you to set this on first deploy
-      - key: VERIFY_BASE_URL
-        sync: false            # set to your Render URL (or custom domain) after first deploy
-      # Optional email delivery — leave unset to copy links from the console:
-      - key: SENDGRID_API_KEY
-        sync: false
-      - key: VERIFY_MAIL_FROM
-        sync: false
-
-  # Automated screening API (criminal / verifications / MVR / drug). Runs the
-  # deterministic mock until you set a Checkr key, then returns real results with
-  # no code change. No public UI — it's the backend the portal/site calls.
-  - type: web
-    name: cardinal-hirecheck
-    runtime: docker
-    branch: main
-    plan: starter
-    dockerfilePath: ./deploy/Dockerfile
-    dockerContext: .
-    dockerCommand: node hirecheck/src/index.ts
-    healthCheckPath: /health
-    autoDeploy: true
-    disk:
-      name: hirecheck-data
-      mountPath: /data
-      sizeGB: 1
-    envVars:
-      - key: HIRECHECK_DB
-        value: /data/hirecheck.db
-      # Leave HIRECHECK_PROVIDER unset for the mock. To go live, set it to
-      # "checkr" and add CHECKR_API_KEY (CHECKR_BASE_URL optional for sandbox).
-      - key: HIRECHECK_PROVIDER
-        sync: false
-      - key: CHECKR_API_KEY
-        sync: false
-      - key: CHECKR_BASE_URL
-        sync: false
+        generateValue: true # strong password minted on first deploy; read it in the Environment tab
+      - key: VERIFY_CERT_SECRET
+        generateValue: true # keys tracking numbers, verification codes, and integrity seals — never change it after reports exist

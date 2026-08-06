@@ -16,7 +16,7 @@ import type { Store } from '../store/store.ts';
 import { NotFoundError } from './errors.ts';
 import { CertificateService } from './certificate.ts';
 import { encodeQr } from './qr.ts';
-import { PdfDoc, type PdfPage, type FontName, type RGB, hex, textWidth } from './pdf.ts';
+import { PdfDoc, type PdfPage, type FontName, type RGB, type TextOptions, hex, textWidth } from './pdf.ts';
 
 const MAROON = hex('#6E1223');
 const MAROON_DEEP = hex('#3E0D16');
@@ -264,8 +264,8 @@ class Cursor {
     this.y -= points;
   }
 
-  text(str: string, opts: Parameters<PdfPage['text']>[2] = {}): void {
-    const size = opts?.size ?? 10;
+  text(str: string, opts: TextOptions = {}): void {
+    const size = opts.size ?? 10;
     this.ensure(size + 4);
     this.page.text(str, MARGIN, this.y - size, opts);
     this.y -= size + 4;

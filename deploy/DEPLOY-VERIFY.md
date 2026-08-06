@@ -1,50 +1,105 @@
-# Deploy the Cardinal Verify portal (background checks)
+# Go live: the Blue Ridge Press verify portal
 
-This gets your consent-first background-check portal live at a real HTTPS URL —
-the employer console, the candidate's e-sign/consent page, and the per-source
-verifier page — with a durable database, in about 10 minutes. No server to
-manage.
+This takes the portal from this repo to a real HTTPS URL your clients use —
+the operator console, the candidate consent page, the per-source verifier
+pages, the public report-verification page (`/verify`, the QR target), and
+branded PDF reports — then walks the rest of the way to your first real check.
 
-## Prerequisites
-1. **Merge PR #65** so `main` contains the `verify/` module. (Or, to deploy
-   before merging, edit `deploy/render-verify.yaml` and change `branch: main`
-   to `branch: claude/background-check-services-rss0ky`.)
-2. A **Render account** (render.com) — the free signup is fine; a persistent
-   disk needs the ~$7/mo Starter plan.
+Everything below assumes the **one-click blueprints** in this folder. There is
+nothing to type during deploy: the admin password and the certificate secret
+are auto-generated, and the app discovers its own public URL.
 
-## Steps
-1. At **render.com**: **New +  →  Blueprint**.
-2. **Connect** this GitHub repo (`brizzi78-strong/test`).
-3. When it asks which blueprint, pick **`deploy/render-verify.yaml`** → **Apply**.
-4. Set **`VERIFY_PASSWORD`** when prompted (this gates the employer console;
-   `VERIFY_USER` is `admin`). The candidate/verifier links stay public — they
-   have no login.
-5. Render builds the image, attaches the disk, and gives you a URL like
-   **`https://cardinal-verify-xxxx.onrender.com`**.
-6. Open that URL → log in with `admin` / your password → you're in the console.
-7. **Point the links at the host:** edit the service's `VERIFY_BASE_URL` env var
-   to that URL (or your custom domain) and redeploy, so consent/verifier links
-   are correct.
+## 1 · Deploy (5 minutes)
 
-## Make it verify.blueridgepressllc.com (optional)
-- In the Render service: **Settings → Custom Domains → Add** `verify.blueridgepressllc.com`.
-- Render shows a target host. Add a **CNAME** record for `verify` pointing at it
-  (I can add that DNS record for you on WordPress.com — just ask).
-- Update `VERIFY_BASE_URL` to `https://verify.blueridgepressllc.com` and redeploy.
+1. At **render.com**: **New + → Blueprint** → connect `brizzi78-strong/test`.
+2. Pick a blueprint:
+   - **`deploy/render-verify-free.yaml`** — $0/mo. Perfect for demoing this
+     week. Spins down when idle (~30–60s wake) and the database is **wiped on
+     restart** — do not run paying clients here.
+   - **`deploy/render-verify.yaml`** — ~$7/mo with a persistent 1 GB disk.
+     Use this the day you charge anyone: consent records are your audit trail
+     and must survive restarts.
+3. **Apply.** Render builds and serves `https://cardinal-verify-….onrender.com`.
+4. Log in: user **admin**, password: the service's **Environment** tab →
+   `VERIFY_PASSWORD` (auto-generated; change it there if you like).
 
-## Turn on real email (optional)
-Until you set this, the console shows each consent/verifier link to copy by hand.
-To auto-send:
-- **SendGrid:** set `SENDGRID_API_KEY` + `VERIFY_MAIL_FROM`.
-- **SMTP:** set `SMTP_HOST` (+ `SMTP_PORT`, `SMTP_USER`, `SMTP_PASSWORD`) +
-  `VERIFY_MAIL_FROM`.
-See `verify/README.md` and `deploy/README.md` for deliverability notes
-(SPF/DKIM/DMARC).
+Verify it worked: open `https://<your-url>/health` → `{"status":"ok"}`, then
+create a test request in the console and confirm the consent link opens.
 
-## What this deploys
-This blueprint stands up **two** services in one Apply:
-- **cardinal-verify** — the consent-based portal (works today, has the UI).
-- **cardinal-hirecheck** — the automated screening API. It runs the deterministic
-  **mock** until you set `HIRECHECK_PROVIDER=checkr` + `CHECKR_API_KEY`, then it
-  returns real criminal / verification / MVR / **drug** results with no code
-  change. It has no public UI — it's the backend the portal and site call.
+> Both blueprints currently deploy `branch: claude/background-check-services-rss0ky`.
+> After PR #68 merges, edit that line to `branch: main` (one-word change).
+
+## 2 · Your domain (10 minutes, do before marketing)
+
+1. Render service → **Settings → Custom Domains** → add
+   `verify.blueridgepressllc.com`.
+2. At your DNS host, create the **CNAME** exactly as Render displays it
+   (`verify` → `cardinal-verify-….onrender.com`). HTTPS is automatic once it
+   resolves.
+3. **Environment** tab → add `VERIFY_BASE_URL=https://verify.blueridgepressllc.com`.
+   From then on, consent emails and the QR on every PDF report carry your
+   domain instead of onrender.com.
+4. Add a button on blueridgepressllc.com ("Client portal" / "Verify a report")
+   pointing at the domain — `/verify` is the public report-check page.
+
+## 3 · Real email (15 minutes)
+
+Until this step, the console shows every consent/verifier link for you to
+copy-paste — fully workable, just manual.
+
+1. Create a free **SendGrid** account (100 emails/day — plenty).
+2. Verify a sender: **Settings → Sender Authentication**. Best: authenticate
+   the whole `blueridgepressllc.com` domain (SendGrid gives you 3 CNAMEs to
+   add at your DNS host). Quick start: single-sender verify
+   `rob@blueridgepressllc.com`.
+3. Create an API key (Mail Send permission) and add to the Render
+   **Environment** tab:
+   - `SENDGRID_API_KEY` = the key
+   - `VERIFY_MAIL_FROM` = `rob@blueridgepressllc.com`
+4. Redeploy. Candidates and sources now get the emails directly.
+
+(SMTP instead of SendGrid also works: set `SMTP_HOST`, `SMTP_PORT`,
+`SMTP_USER`, `SMTP_PASSWORD`, `VERIFY_MAIL_FROM`.)
+
+## 4 · Dry run end-to-end (10 minutes)
+
+Run one full check on yourself before any client does:
+
+1. Console → new request: you as candidate, one real reference who's expecting
+   it (or your own second email address).
+2. Open the consent email → e-sign.
+3. Answer the verifier link.
+4. Download the PDF report → **scan the QR with your phone** → confirm the
+   public page says *Authentic report* on your domain.
+
+If all four steps pass, the machinery is live.
+
+## 5 · First paying client checklist
+
+- [ ] Portal on the **starter** (persistent-disk) blueprint, custom domain, email sending
+- [ ] Attorney has reviewed the Terms, disclosure, and authorization (one flat-fee session)
+- [ ] $39 payment link tested end-to-end (QuickBooks)
+- [ ] Google Business Profile submitted
+- [ ] You've done the §4 dry run this week
+
+## Costs
+
+| Item | Monthly |
+|---|---|
+| Render starter (portal + disk) | ~$7 |
+| SendGrid free tier | $0 |
+| Domain (already owned) | — |
+| **Total infrastructure** | **~$7** |
+
+## If something breaks
+
+- **502 / slow first load** on free tier: it's waking from idle; wait a minute.
+- **Links point at onrender.com** after adding your domain: set
+  `VERIFY_BASE_URL` (step 2.3) and redeploy.
+- **Emails not arriving**: check SendGrid → Activity; usually the sender
+  address isn't verified yet (step 3.2).
+- **Data disappeared**: you're on the free blueprint — it's ephemeral by
+  design. Move to `render-verify.yaml`.
+- **Never** rotate `VERIFY_CERT_SECRET` once real reports exist: tracking
+  numbers, verification codes, and integrity seals all derive from it, and
+  rotating it invalidates every QR and code already printed.
