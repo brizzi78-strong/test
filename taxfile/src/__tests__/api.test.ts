@@ -112,6 +112,47 @@ describe('TaxFile API', () => {
     assert.match(badDiv.json.error, /qualified/);
   });
 
+  it('tracks medical expenses entry by entry and reports the AGI-floor gap', async () => {
+    const { json } = await call('POST', '/returns');
+    const id = json.taxReturn.id;
+    await call('PUT', `/returns/${id}/filing-status`, { filingStatus: 'single' });
+    await call('PUT', `/returns/${id}/income`, {
+      w2s: [{ employer: 'Acme', wages: 230000, federalWithholding: 0 }],
+    });
+
+    const saved = await call('PUT', `/returns/${id}/deductions`, {
+      itemized: {
+        medicalExpenseEntries: [
+          { date: '2025-02-01', provider: 'CVS', category: 'prescriptions', amount: 852.75 },
+          { date: '2025-04-18', provider: 'Duke Health', category: 'hospital', amount: 7000 },
+        ],
+      },
+    });
+    assert.equal(saved.status, 200);
+    const medical = saved.json.computation.medical;
+    assert.equal(medical.totalExpenses, 7852.75);
+    assert.equal(medical.agiFloor, 17250); // 7.5% of 230,000
+    assert.equal(medical.deductible, 0);
+    assert.equal(medical.amountToThreshold, 9397.25);
+    assert.equal(saved.json.taxReturn.deductions.itemized.medicalExpenseEntries.length, 2);
+
+    const badCategory = await call('PUT', `/returns/${id}/deductions`, {
+      itemized: {
+        medicalExpenseEntries: [{ date: '2025-02-01', provider: 'CVS', category: 'groceries', amount: 10 }],
+      },
+    });
+    assert.equal(badCategory.status, 400);
+    assert.match(badCategory.json.error, /category/);
+
+    const badDate = await call('PUT', `/returns/${id}/deductions`, {
+      itemized: {
+        medicalExpenseEntries: [{ date: '02/01/2025', provider: 'CVS', category: 'prescriptions', amount: 10 }],
+      },
+    });
+    assert.equal(badDate.status, 400);
+    assert.match(badDate.json.error, /date/);
+  });
+
   it('requires spouse info before filing jointly', async () => {
     const { json } = await call('POST', '/returns');
     const id = json.taxReturn.id;

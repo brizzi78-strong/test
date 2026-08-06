@@ -17,6 +17,10 @@ built-ins only), same layering as the other apps in this repo
   - standard deduction (incl. age-65/blind extras) vs itemized, chosen
     automatically — medical 7.5%-AGI floor, OBBBA SALT cap ($40k with the
     high-income phase-down), mortgage interest, charity
+  - **medical expense tracker** — log each expense (date, provider, category,
+    amount) as the year goes; every computation reports total tracked spend,
+    the 7.5%-of-AGI floor, the deductible excess, and how much more qualifying
+    spend it would take before anything becomes deductible
   - qualified dividends & long-term capital gains via the 0/15/20% worksheet,
     with the $3,000 capital-loss limit
   - self-employment: Schedule C-lite (1099-NEC minus expenses), SE tax with
@@ -57,7 +61,7 @@ npm install && npm run typecheck
 | `PUT /returns/:id/filing-status` | one of `single`, `married-joint`, `married-separate`, `head-of-household` |
 | `PUT /returns/:id/dependents` | dependents array |
 | `PUT /returns/:id/income` | W-2s, 1099-INT/DIV/NEC, gains, unemployment, estimated payments |
-| `PUT /returns/:id/deductions` | itemized amounts + above-the-line adjustments |
+| `PUT /returns/:id/deductions` | itemized amounts (incl. `medicalExpenseEntries`) + above-the-line adjustments |
 | `GET /returns/:id/review` | computation + list of anything blocking e-file |
 | `POST /returns/:id/file` | mock e-file; freezes the return on acceptance |
 | `DELETE /returns/:id` | delete (in-progress returns only) |

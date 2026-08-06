@@ -11,7 +11,14 @@
  */
 
 import * as P from './taxYear2025.ts';
-import type { FilingStatus, IncomeSection, TaxComputation, TaxReturn } from './types.ts';
+import type {
+  FilingStatus,
+  IncomeSection,
+  ItemizedDeductions,
+  MedicalDeductionDetail,
+  TaxComputation,
+  TaxReturn,
+} from './types.ts';
 
 export function round2(n: number): number {
   return Math.round(n * 100) / 100;
@@ -112,6 +119,26 @@ export function studentLoanInterestDeduction(
   return round2(capped * fraction);
 }
 
+/**
+ * Medical expenses against the 7.5%-of-AGI floor: total tracked spend, the
+ * floor itself, the deductible excess, and how far below the floor the
+ * taxpayer still is (for the "you'd need $X more" tracker).
+ */
+export function medicalDeduction(item: ItemizedDeductions, agi: number): MedicalDeductionDetail {
+  // Returns saved before entry tracking existed have no entries array.
+  const entries = item.medicalExpenseEntries ?? [];
+  const totalExpenses = round2(
+    clampMin0(item.medicalExpenses) + entries.reduce((s, e) => s + clampMin0(e.amount), 0),
+  );
+  const agiFloor = round2(clampMin0(agi) * P.MEDICAL_AGI_FLOOR);
+  return {
+    totalExpenses,
+    agiFloor,
+    deductible: round2(clampMin0(totalExpenses - agiFloor)),
+    amountToThreshold: round2(clampMin0(agiFloor - totalExpenses)),
+  };
+}
+
 /** SALT deduction: OBBBA cap with the high-income phase-down. */
 export function saltDeduction(paid: number, magi: number, status: FilingStatus): number {
   let cap = P.SALT_CAP[status];
@@ -204,8 +231,9 @@ export function computeReturn(ret: TaxReturn): TaxComputation {
   // --- Deduction: standard vs itemized ---------------------------------
   const std = standardDeduction(ret, status);
   const item = deductions.itemized;
+  const medical = medicalDeduction(item, agi);
   const itemized = round2(
-    clampMin0(item.medicalExpenses - agi * P.MEDICAL_AGI_FLOOR) +
+    medical.deductible +
       saltDeduction(item.stateLocalTaxes, agi, status) +
       clampMin0(item.mortgageInterest) +
       clampMin0(item.charitableContributions),
@@ -296,6 +324,7 @@ export function computeReturn(ret: TaxReturn): TaxComputation {
     adjustedGrossIncome: agi,
     deductionMethod: useItemized ? 'itemized' : 'standard',
     deduction,
+    medical,
     qbiDeduction,
     taxableIncome,
     incomeTax,

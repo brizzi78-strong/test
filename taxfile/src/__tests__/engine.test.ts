@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {
   childTaxCredit,
   computeReturn,
+  medicalDeduction,
   ordinaryTax,
   saltDeduction,
   selfEmploymentTax,
@@ -11,7 +12,7 @@ import {
   taxWithPreferentialRates,
 } from '../domain/engine.ts';
 import { TAX_YEAR, emptyDeductions, emptyIncome } from '../domain/types.ts';
-import type { FilingStatus, TaxReturn } from '../domain/types.ts';
+import type { FilingStatus, ItemizedDeductions, MedicalExpenseEntry, TaxReturn } from '../domain/types.ts';
 
 function baseReturn(overrides: Partial<TaxReturn> = {}): TaxReturn {
   return {
@@ -152,6 +153,70 @@ describe('student loan interest deduction', () => {
   });
 });
 
+describe('medical expense deduction (7.5% AGI floor)', () => {
+  const itemized = (
+    medicalExpenses: number,
+    entries: MedicalExpenseEntry[] = [],
+  ): ItemizedDeductions => ({
+    medicalExpenses,
+    medicalExpenseEntries: entries,
+    stateLocalTaxes: 0,
+    mortgageInterest: 0,
+    charitableContributions: 0,
+  });
+
+  it('reports the gap when spending is below the floor', () => {
+    // AGI 230,000 -> floor 17,250; 7,852.75 tracked leaves 9,397.25 to go.
+    const m = medicalDeduction(itemized(0, [
+      { date: '2025-03-14', provider: 'CVS', category: 'prescriptions', amount: 7_852.75 },
+    ]), 230_000);
+    assert.equal(m.totalExpenses, 7_852.75);
+    assert.equal(m.agiFloor, 17_250);
+    assert.equal(m.deductible, 0);
+    assert.equal(m.amountToThreshold, 9_397.25);
+  });
+
+  it('deducts only the portion above the floor', () => {
+    const m = medicalDeduction(itemized(10_000), 100_000);
+    assert.equal(m.agiFloor, 7_500);
+    assert.equal(m.deductible, 2_500);
+    assert.equal(m.amountToThreshold, 0);
+  });
+
+  it('sums tracked entries plus the lump amount', () => {
+    const m = medicalDeduction(itemized(1_000, [
+      { date: '2025-01-05', provider: 'Dr. Lee', category: 'doctor-dental', amount: 300 },
+      { date: '2025-02-09', provider: 'Duke Hospital', category: 'hospital', amount: 2_200.5 },
+    ]), 40_000);
+    assert.equal(m.totalExpenses, 3_500.5);
+    assert.equal(m.deductible, 500.5); // floor is 3,000
+  });
+
+  it('tolerates returns saved before entry tracking existed', () => {
+    const legacy = { medicalExpenses: 9_000, stateLocalTaxes: 0, mortgageInterest: 0, charitableContributions: 0 };
+    const m = medicalDeduction(legacy as ItemizedDeductions, 80_000);
+    assert.equal(m.deductible, 3_000);
+  });
+
+  it('flows the deductible portion into the itemized total on the full return', () => {
+    const ret = baseReturn({
+      income: { ...emptyIncome(), w2s: [{ employer: 'A', wages: 100_000, federalWithholding: 0 }] },
+      deductions: {
+        ...emptyDeductions(),
+        itemized: itemized(0, [
+          { date: '2025-06-01', provider: 'Hospital', category: 'hospital', amount: 12_000 },
+        ]),
+      },
+    });
+    const c = computeReturn(ret);
+    assert.equal(c.medical.totalExpenses, 12_000);
+    assert.equal(c.medical.agiFloor, 7_500);
+    assert.equal(c.medical.deductible, 4_500);
+    // 4,500 < standard deduction, so the return still takes the standard.
+    assert.equal(c.deductionMethod, 'standard');
+  });
+});
+
 describe('SALT cap (OBBBA 2025)', () => {
   it('allows up to $40k below the phase-down threshold', () => {
     assert.equal(saltDeduction(35_000, 300_000, 'married-joint'), 35_000);
@@ -257,7 +322,7 @@ describe('computeReturn end-to-end', () => {
       income: { ...emptyIncome(), w2s: [{ employer: 'A', wages: 200_000, federalWithholding: 0 }] },
       deductions: {
         ...emptyDeductions(),
-        itemized: { medicalExpenses: 0, stateLocalTaxes: 15_000, mortgageInterest: 12_000, charitableContributions: 4_000 },
+        itemized: { medicalExpenses: 0, medicalExpenseEntries: [], stateLocalTaxes: 15_000, mortgageInterest: 12_000, charitableContributions: 4_000 },
       },
     });
     const c = computeReturn(ret);
