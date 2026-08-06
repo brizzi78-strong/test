@@ -248,7 +248,7 @@
         <p class="formnote">By submitting, you agree to be contacted about your request. We never sell your information.</p>
       </form>
       <div class="banner" id="consultBanner"></div>
-      <p class="phoneline">Prefer to talk now? Call <a href="tel:+19195550100">(919) 555-0100</a> — placeholder number, update before launch.</p>
+      <p class="phoneline">Prefer to talk now? Call <a href="tel:+18502217443">(850) 221-7443</a>.</p>
     </div>
   </div>
 </section>
@@ -257,9 +257,9 @@
   <div class="wrap">
     <div class="fgrid">
       <div><strong style="color:var(--ink)">Cardinal Care Bridge</strong><br>Senior living advisory &amp; care navigation for Triangle NC families.</div>
-      <div>hello@cardinalcarebridge.example &middot; (919) 555-0100 &middot; Serving Wake, Durham, Orange, Chatham, Johnston, Lee &amp; Moore counties</div>
+      <div>robertbrizzi@gmail.com &middot; (850) 221-7443 &middot; Serving Wake, Durham, Orange, Chatham, Johnston, Lee &amp; Moore counties</div>
     </div>
-    <p class="disclaimer">Cardinal Care Bridge provides senior living advisory and care navigation services and does not provide medical advice or diagnosis. Recommendations are informational and intended to support, not replace, guidance from your loved one's physicians and care team. Contact details on this page are placeholders — replace before this site goes live.</p>
+    <p class="disclaimer">Cardinal Care Bridge provides senior living advisory and care navigation services and does not provide medical advice or diagnosis. Recommendations are informational and intended to support, not replace, guidance from your loved one's physicians and care team.</p>
   </div>
 </footer>
 
@@ -281,7 +281,7 @@ $("guideForm").addEventListener("submit", (e) => {
   const name = esc($("gName").value), email = esc($("gEmail").value);
   if (!name || !email) return;
   const href = mailtoHref(
-    "hello@cardinalcarebridge.example",
+    "robertbrizzi@gmail.com",
     "Please send The Cardinal's Promise Family Guide",
     [`Name: ${name}`, `Email: ${email}`, "", "Requested via the Cardinal Care Bridge website guide form."]
   );
@@ -300,7 +300,7 @@ $("consultForm").addEventListener("submit", (e) => {
   const details = esc($("cDetails").value);
   const pref = document.querySelector('input[name="contactPref"]:checked').value;
   const href = mailtoHref(
-    "hello@cardinalcarebridge.example",
+    "robertbrizzi@gmail.com",
     "Consultation request — " + name,
     [
       `Name: ${name}`, `Phone: ${phone}`, `Email: ${email}`,
