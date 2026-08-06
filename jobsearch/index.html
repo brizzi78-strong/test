@@ -41,7 +41,7 @@
 
   .modes { display:flex; gap:.4rem; margin:1rem 0 .2rem; background:var(--surface-2); padding:.3rem; border-radius:12px; }
   .modes button { flex:1; border:0; background:transparent; color:var(--muted); font:inherit; font-weight:700;
-    padding:.6rem .2rem; border-radius:9px; cursor:pointer; font-size:.9rem; }
+    padding:.55rem .1rem; border-radius:9px; cursor:pointer; font-size:.82rem; }
   .modes button[aria-selected="true"] { background:var(--surface); color:var(--ink); box-shadow:var(--shadow); }
 
   .card { background:var(--surface); border:1px solid var(--line); border-radius:var(--r); box-shadow:var(--shadow); padding:1rem 1.05rem; margin:.8rem 0; }
@@ -82,6 +82,13 @@
   .stat b { display:block; font-size:1.35rem; }
   .stat span { font-size:.74rem; color:var(--muted); font-weight:700; }
 
+  .chip { display:inline-block; margin:.15rem .2rem .15rem 0; padding:.12rem .55rem; border-radius:999px; font-size:.76rem; font-weight:700; border:1px solid var(--line); }
+  .chip.hit { background:var(--good-bg); color:var(--good); border-color:var(--good); }
+  .chip.miss { background:var(--crit-bg); color:var(--crit); border-color:var(--crit); }
+  .bullet { border:1px solid var(--line); border-radius:12px; padding:.65rem .75rem; margin:.5rem 0; }
+  .bullet .tips { margin:.35rem 0 0; padding-left:1.1rem; font-size:.82rem; color:var(--warn); }
+  .bullet .ok { color:var(--good); font-weight:700; font-size:.82rem; margin-top:.35rem; }
+  .score { font-weight:800; }
   .counter { font-size:.8rem; color:var(--muted); font-family:var(--mono); }
   .counter.over { color:var(--crit); font-weight:700; }
   .notice { background:var(--surface-2); border:1px solid var(--line); border-radius:12px; padding:.7rem .9rem; font-size:.85rem; margin:.8rem 0; }
@@ -102,6 +109,8 @@
     <button role="tab" data-tab="today" aria-selected="true">Today</button>
     <button role="tab" data-tab="pipeline" aria-selected="false">Pipeline</button>
     <button role="tab" data-tab="compose" aria-selected="false">Compose</button>
+    <button role="tab" data-tab="resume" aria-selected="false">Resume</button>
+    <button role="tab" data-tab="coach" aria-selected="false">Coach</button>
     <button role="tab" data-tab="profile" aria-selected="false">Profile</button>
   </div>
 
@@ -177,6 +186,62 @@
     </div>
   </section>
 
+  <!-- RESUME -->
+  <section id="tab-resume" hidden>
+    <div class="card">
+      <h2>Your resume, line by line</h2>
+      <p class="hint">Paste your summary and experience bullets (one per line). The coach reads every bullet the way a recruiter does — six seconds, looking for a strong verb and a number — and tells you which lines need an upgrade.</p>
+      <label for="rSummary">Professional summary (top of resume)</label>
+      <textarea id="rSummary" rows="3" placeholder="Care program leader with 10+ years building services families actually use…"></textarea>
+      <label for="rBullets">Experience bullets — one per line</label>
+      <textarea id="rBullets" rows="8" placeholder="Responsible for managing vendor relationships&#10;Launched a caregiver toolkit adopted by 3 NC agencies in year one"></textarea>
+      <div class="btnrow"><button class="btn primary" id="saveResumeBtn">Save &amp; coach</button><span class="copied" id="resumeSavedMsg" hidden>Saved ✓</span></div>
+    </div>
+    <div class="card">
+      <h2>Bullet coach <span class="score" id="resumeScore"></span></h2>
+      <p class="hint">The upgrade formula: <strong>strong verb + what you did + scale + result with a number</strong>. “Responsible for scheduling” becomes “Ran scheduling for a 40-visit/week care team, cutting missed visits 30%.”</p>
+      <div id="bulletCoach"></div>
+    </div>
+    <div class="card">
+      <h2>Tailor to a job</h2>
+      <p class="hint">Pick a job from your pipeline. Keywords come from the role title and your notes on the posting — recruiters and applicant-tracking systems both scan for them. Work the missing ones into your summary and bullets (honestly), then copy the tailored header.</p>
+      <label for="rJob">Job</label><select id="rJob"></select>
+      <div id="keywordMatch"></div>
+      <h3>Tailored resume header</h3>
+      <textarea id="rTailored" rows="5"></textarea>
+      <div class="btnrow"><button class="btn primary" id="rCopyBtn">Copy</button><span class="copied" id="rCopiedMsg" hidden>Copied ✓</span></div>
+    </div>
+  </section>
+
+  <!-- COACH -->
+  <section id="tab-coach" hidden>
+    <div class="card">
+      <h2>STAR story bank</h2>
+      <p class="hint">Interviews are won with stories, not adjectives. Build 4–6 before your first interview: <strong>S</strong>ituation, <strong>T</strong>ask, <strong>A</strong>ction, <strong>R</strong>esult. Each story should prove one of your strengths and end with a number.</p>
+      <label for="sTitle">Story title (the strength it proves)</label><input id="sTitle" placeholder="Turning around a failing program">
+      <div class="row">
+        <div><label for="sS">Situation</label><textarea id="sS" rows="2" placeholder="Where were you, what was at stake?"></textarea></div>
+        <div><label for="sT">Task</label><textarea id="sT" rows="2" placeholder="What were you responsible for?"></textarea></div>
+      </div>
+      <div class="row">
+        <div><label for="sA">Action</label><textarea id="sA" rows="2" placeholder="What did you actually do? Say “I”, not “we”."></textarea></div>
+        <div><label for="sR">Result</label><textarea id="sR" rows="2" placeholder="What changed? End with a number."></textarea></div>
+      </div>
+      <div class="btnrow"><button class="btn primary" id="addStoryBtn">Save story</button></div>
+      <div id="storyList"></div>
+    </div>
+    <div class="card">
+      <h2>Interview prep</h2>
+      <label for="prepJob">Prepping for</label><select id="prepJob"></select>
+      <div id="prepPlan"></div>
+    </div>
+    <div class="card">
+      <h2>Question bank — practice out loud</h2>
+      <p class="hint">Answer each with a story from your bank. If a question has no story that fits, that's your signal to write another one.</p>
+      <ul id="questionBank" style="font-size:.9rem; padding-left:1.2rem;"></ul>
+    </div>
+  </section>
+
   <!-- PROFILE -->
   <section id="tab-profile" hidden>
     <div class="card">
@@ -214,8 +279,15 @@ const STAGE_LABEL = { saved:"Saved", applied:"Applied", outreach:"Outreach sent"
 
 let state = load();
 function load() {
-  try { const s = JSON.parse(localStorage.getItem(LS)); if (s && s.jobs) return s; } catch (e) {}
-  return { profile:{}, jobs:[] };
+  try {
+    const s = JSON.parse(localStorage.getItem(LS));
+    if (s && s.jobs) {
+      s.resume = s.resume || { summary:"", bullets:"" };
+      s.stories = s.stories || [];
+      return s;
+    }
+  } catch (e) {}
+  return { profile:{}, jobs:[], resume:{ summary:"", bullets:"" }, stories:[] };
 }
 function save() { localStorage.setItem(LS, JSON.stringify(state)); }
 
@@ -229,7 +301,7 @@ $("themeBtn").onclick = () => {
 /* ---------- tabs ---------- */
 document.querySelectorAll(".modes button").forEach(b => b.onclick = () => {
   document.querySelectorAll(".modes button").forEach(x => x.setAttribute("aria-selected", x === b));
-  ["today","pipeline","compose","profile"].forEach(t => $("tab-"+t).hidden = (t !== b.dataset.tab));
+  ["today","pipeline","compose","resume","coach","profile"].forEach(t => $("tab-"+t).hidden = (t !== b.dataset.tab));
   render();
 });
 
@@ -422,6 +494,158 @@ $("sentBtn").onclick = () => {
   alert("Logged. Follow-up scheduled for " + j.nextAction + " — it'll appear on Today if you haven't heard back.");
 };
 
+/* ---------- resume coach ---------- */
+const WEAK_OPENERS = /^(responsible for|helped|worked on|assisted( with)?|tasked with|duties included|participated in|involved in|in charge of)\b/i;
+const STRONG_VERBS = "Led, Built, Launched, Ran, Cut, Grew, Drove, Designed, Negotiated, Turned around, Delivered, Streamlined";
+function coachBullet(text) {
+  const tips = [];
+  if (WEAK_OPENERS.test(text)) tips.push("Weak opener — start with a strong verb (" + STRONG_VERBS + ").");
+  if (!/[\d%$]/.test(text)) tips.push("No number. Add scale or a result: how many, how much, how fast, what changed?");
+  if (text.length > 220) tips.push("Too long (" + text.length + " chars). One line, one achievement — aim under ~200.");
+  if (/\bwe\b/i.test(text)) tips.push("Says “we” — a resume bullet is about what *you* did. Use “I”-strength verbs.");
+  return tips;
+}
+function loadResumeForm() { $("rSummary").value = state.resume.summary; $("rBullets").value = state.resume.bullets; }
+$("saveResumeBtn").onclick = () => {
+  state.resume.summary = $("rSummary").value.trim();
+  state.resume.bullets = $("rBullets").value.trim();
+  save();
+  $("resumeSavedMsg").hidden = false; setTimeout(() => $("resumeSavedMsg").hidden = true, 1500);
+  renderResume();
+};
+function bulletLines() { return state.resume.bullets.split("\n").map(s => s.trim()).filter(Boolean); }
+function renderBulletCoach() {
+  const el = $("bulletCoach"); el.innerHTML = "";
+  const lines = bulletLines();
+  if (!lines.length) { el.innerHTML = '<div class="empty">Paste your bullets above and hit Save &amp; coach.</div>'; $("resumeScore").textContent = ""; return; }
+  let strong = 0;
+  lines.forEach(t => {
+    const tips = coachBullet(t);
+    if (!tips.length) strong++;
+    const d = document.createElement("div"); d.className = "bullet";
+    d.innerHTML = "<div>" + esc(t) + "</div>" +
+      (tips.length ? '<ul class="tips">' + tips.map(x => "<li>" + esc(x) + "</li>").join("") + "</ul>"
+                   : '<div class="ok">Strong bullet ✓ — verb, specifics, and a number.</div>');
+    el.append(d);
+  });
+  $("resumeScore").textContent = "— " + strong + " of " + lines.length + " bullets interview-ready";
+}
+const STOPWORDS = new Set(("the,and,for,with,that,this,from,will,have,has,are,our,your,you,who,can,all,but,not,into,per,each,when,where,what,how,why,about,role,job,work,team,company,notes,their,they,them,were,was,been,being,more,most,other,such,than,then,also,able,well,very,must,should,would,could,plus,over,under,across,within,including,strong,experience,years,ability,skills,required,preferred,responsibilities,qualifications").split(","));
+function jobKeywords(j) {
+  const src = (j.role + " " + (j.notes || "")).toLowerCase().replace(/[^a-z0-9\s-]/g, " ");
+  const seen = new Set(), out = [];
+  src.split(/\s+/).forEach(w => {
+    if (w.length > 3 && !STOPWORDS.has(w) && !seen.has(w)) { seen.add(w); out.push(w); }
+  });
+  return out.slice(0, 14);
+}
+function renderTailor() {
+  const kEl = $("keywordMatch");
+  const j = state.jobs.find(x => x.id === $("rJob").value);
+  if (!j) { kEl.innerHTML = '<div class="empty">Add a job in Pipeline first.</div>'; $("rTailored").value = ""; return; }
+  const resumeText = (state.resume.summary + " " + state.resume.bullets + " " + Object.values(state.profile).join(" ")).toLowerCase();
+  const kws = jobKeywords(j);
+  kEl.innerHTML = "<h3>Keyword match</h3>" + (kws.length
+    ? kws.map(k => '<span class="chip ' + (resumeText.includes(k) ? "hit" : "miss") + '">' + esc(k) + "</span>").join("") +
+      '<p class="hint">Green = already in your resume. Red = in the posting but missing from your resume — add the ones that are true of you.</p>'
+    : '<div class="empty">No keywords yet — paste phrases from the posting into this job\'s notes in Pipeline.</div>');
+  const p = profileBits();
+  const hits = kws.filter(k => resumeText.includes(k));
+  $("rTailored").value =
+    p.name + (p.city ? " — " + p.city : "") + "\n" +
+    "Target: " + j.role + " · " + j.company + "\n\n" +
+    (state.resume.summary || p.pitch) +
+    (hits.length ? " Core strengths for this role: " + hits.slice(0, 5).join(", ") + "." : "") +
+    "\n" + p.win;
+}
+$("rJob").onchange = renderTailor;
+$("rCopyBtn").onclick = async () => {
+  try { await navigator.clipboard.writeText($("rTailored").value); }
+  catch (e) { $("rTailored").select(); document.execCommand("copy"); }
+  $("rCopiedMsg").hidden = false; setTimeout(() => $("rCopiedMsg").hidden = true, 1500);
+};
+function renderResume() {
+  renderBulletCoach();
+  const sel = $("rJob"); const prev = sel.value; sel.innerHTML = "";
+  const open = state.jobs.filter(j => j.stage !== "closed");
+  open.forEach(j => { const o = document.createElement("option"); o.value = j.id; o.textContent = j.company + " — " + j.role; if (j.id === prev) o.selected = true; sel.append(o); });
+  renderTailor();
+}
+
+/* ---------- coach: STAR stories + interview prep ---------- */
+$("addStoryBtn").onclick = () => {
+  const title = $("sTitle").value.trim();
+  if (!title) { alert("Give the story a title."); return; }
+  state.stories.push({ id: Date.now().toString(36), title,
+    s: $("sS").value.trim(), t: $("sT").value.trim(), a: $("sA").value.trim(), r: $("sR").value.trim() });
+  ["sTitle","sS","sT","sA","sR"].forEach(k => $(k).value = "");
+  save(); renderCoach();
+};
+function storyText(st) {
+  return st.title + "\nSituation: " + st.s + "\nTask: " + st.t + "\nAction: " + st.a + "\nResult: " + st.r;
+}
+function renderStories() {
+  const el = $("storyList"); el.innerHTML = "";
+  if (!state.stories.length) { el.innerHTML = '<div class="empty" style="margin-top:.6rem">No stories yet. Your first one: the win from your profile.</div>'; return; }
+  state.stories.forEach(st => {
+    const d = document.createElement("div"); d.className = "bullet";
+    const noNumber = st.r && !/[\d%$]/.test(st.r);
+    d.innerHTML = "<div><strong>" + esc(st.title) + "</strong></div>" +
+      '<div class="meta" style="color:var(--muted);font-size:.82rem">' + esc((st.r || st.s || "").slice(0, 110)) + "</div>" +
+      (noNumber ? '<ul class="tips"><li>The result has no number — quantify it and this story doubles in power.</li></ul>' : "");
+    const row = document.createElement("div"); row.className = "btnrow";
+    const copy = document.createElement("button"); copy.className = "btn small"; copy.textContent = "Copy";
+    copy.onclick = async () => { try { await navigator.clipboard.writeText(storyText(st)); } catch (e) {} copy.textContent = "Copied ✓"; setTimeout(() => copy.textContent = "Copy", 1200); };
+    const del = document.createElement("button"); del.className = "btn small danger"; del.textContent = "Delete";
+    del.onclick = () => { if (confirm("Delete story “" + st.title + "”?")) { state.stories = state.stories.filter(x => x.id !== st.id); save(); renderCoach(); } };
+    row.append(copy, del); d.append(row); el.append(d);
+  });
+}
+const QUESTIONS = [
+  "Tell me about yourself. (60–90 seconds: pitch → win → why this role.)",
+  "Why do you want to work here? (Name something specific about *them*.)",
+  "Tell me about a time you led something end to end.",
+  "Tell me about a time something went wrong. What did you do?",
+  "Tell me about a conflict with a colleague or stakeholder.",
+  "What's your biggest professional accomplishment?",
+  "Tell me about a time you had to learn something fast.",
+  "Where do you see yourself in a few years?",
+  "What questions do you have for us? (Always have two ready.)"
+];
+function renderPrep() {
+  const el = $("prepPlan");
+  const j = state.jobs.find(x => x.id === $("prepJob").value);
+  if (!j) { el.innerHTML = '<div class="empty">Add a job in Pipeline first.</div>'; return; }
+  const days = j.interviewDate ? Math.round((new Date(j.interviewDate + "T12:00:00") - new Date(todayStr() + "T12:00:00")) / 86400000) : null;
+  const storyCount = state.stories.length;
+  const checklist = [
+    [storyCount >= 4, "Story bank ready (" + storyCount + "/4 minimum) — every answer should land on a story"],
+    [!!(j.notes && j.notes.trim()), "Posting keywords saved in the job's notes (drives your Resume tailoring and “why here”)"],
+    [!!j.contact, "You know who you're meeting (" + (j.contact ? esc(j.contact) : "add the contact in Pipeline") + ") — read their LinkedIn profile"],
+    [bulletLines().length > 0 && bulletLines().every(b => coachBullet(b).length === 0), "Every resume bullet passes the coach — they *will* ask about your resume"],
+    [false, "Practiced your 60-second “tell me about yourself” out loud, twice"],
+    [false, "Two questions to ask them written down (about the work, not the perks)"]
+  ];
+  el.innerHTML =
+    '<div class="meta" style="color:var(--muted);font-size:.85rem;margin:.3rem 0 .5rem">' +
+      esc(j.company) + " — " + esc(j.role) +
+      (days === null ? " · no interview date yet (set it in Pipeline when scheduled)"
+        : days > 0 ? " · interview in " + days + " day" + (days === 1 ? "" : "s")
+        : days === 0 ? " · interview is TODAY" : " · interview was " + (-days) + " days ago — send the thank-you") +
+    "</div>" +
+    checklist.map(c => '<div style="font-size:.9rem;margin:.3rem 0">' + (c[0] ? "✅" : "⬜") + " " + c[1] + "</div>").join("");
+}
+$("prepJob").onchange = renderPrep;
+function renderCoach() {
+  renderStories();
+  const sel = $("prepJob"); const prev = sel.value; sel.innerHTML = "";
+  const focus = state.jobs.filter(j => !["closed","offer"].includes(j.stage));
+  const ordered = focus.filter(j => j.stage === "interview").concat(focus.filter(j => j.stage !== "interview"));
+  ordered.forEach(j => { const o = document.createElement("option"); o.value = j.id; o.textContent = j.company + " — " + j.role + (j.stage === "interview" ? "  ★" : ""); if (j.id === prev) o.selected = true; sel.append(o); });
+  renderPrep();
+  $("questionBank").innerHTML = QUESTIONS.map(q => "<li>" + esc(q) + "</li>").join("");
+}
+
 /* ---------- today ---------- */
 function renderToday() {
   const jobs = state.jobs;
@@ -460,7 +684,9 @@ $("importFile").onchange = async e => {
   try {
     const s = JSON.parse(await f.text());
     if (!s || !Array.isArray(s.jobs)) throw new Error("bad file");
-    state = s; save(); loadProfileForm(); render();
+    s.resume = s.resume || { summary:"", bullets:"" };
+    s.stories = s.stories || [];
+    state = s; save(); loadProfileForm(); loadResumeForm(); render();
   } catch (err) { alert("That file doesn't look like a Cardinal Job Search export."); }
   e.target.value = "";
 };
@@ -472,10 +698,13 @@ function render() {
   state.jobs.forEach(j => list.append(jobCard(j)));
   fillComposeJobs($("cJob").value);
   if (!$("tab-compose").hidden) generate();
+  renderResume();
+  renderCoach();
   renderToday();
 }
 
 loadProfileForm();
+loadResumeForm();
 fillComposeJobs();
 generate();
 render();

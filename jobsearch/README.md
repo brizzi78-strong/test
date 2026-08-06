@@ -15,8 +15,10 @@ A private, offline single-page app that automates the *work* of a job search —
   - post-interview thank-you
   Edit the draft so it sounds like you, hit **Copy**, paste into LinkedIn, send. Then **Mark sent** logs it and schedules a follow-up 5 days out.
 - **Today** — a daily worklist: every follow-up that's due or overdue, plus upcoming interviews and pipeline stats. Work the list, keep the cadence, and the interviews follow.
+- **Resume** — paste your summary and experience bullets and the bullet coach reads each line the way a recruiter does: it flags weak openers ("responsible for", "helped with"), missing numbers, "we" instead of "I", and overlong lines, and scores how many bullets are interview-ready. The upgrade formula it pushes you toward: *strong verb + what you did + scale + result with a number*. Then pick a job from your pipeline for **tailoring**: keywords pulled from the role and your posting notes are matched against your resume (green = covered, red = missing — work the true ones in), and a tailored resume header for that specific job is generated to copy.
+- **Coach** — a STAR story bank (Situation / Task / Action / Result; it nags you when a result has no number), a per-job interview-prep checklist that reads your real state — story count, posting notes, contact, whether every resume bullet passes the coach, days until the interview — and a question bank of the nine questions you'll actually be asked, each meant to land on one of your stories.
 - **Profile** — your name, target role, one-line pitch, a concrete win, and top strengths: the raw material every draft is personalized from.
-- **Backup** — export/import your whole pipeline as JSON.
+- **Backup** — export/import your whole pipeline, resume, and stories as JSON.
 
 ## Why it doesn't send for you
 
