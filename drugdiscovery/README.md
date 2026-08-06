@@ -54,6 +54,29 @@ This matters, so it's stated plainly:
   `hit → lead → candidate → preclinical → phase 1 → phase 2 → phase 3 →
   approved` — or discontinue it. The state machine rejects skips.
 
+## A worked example: Parkinson's disease
+
+To see the whole loop with real molecules, load the built-in **Parkinson's
+disease** program — a target of **MAO-B** (the enzyme whose inhibition
+preserves dopamine in the Parkinsonian brain) seeded with the marketed MAO-B
+inhibitors **rasagiline**, **selegiline**, and **safinamide** (each with an
+illustrative potency), plus **levodopa**. Descriptor values are the standard
+published figures.
+
+Rasagiline — small, clean, and the most potent seeded screen (14 nM) — tops
+the ranking against MAO-B. Levodopa is the instructive one: it *passes* the
+Rule of Five and scores respectably, yet is famously poorly absorbed passively
+(it crosses the gut and blood–brain barrier on an active amino-acid
+transporter and is co-dosed with carbidopa) — a reminder that drug-likeness
+filters don't catch everything.
+
+Load it from the setup screen's **"Load the Parkinson's disease demo"** button,
+or over the API:
+
+```bash
+curl -X POST http://localhost:4970/api/demo/parkinsons
+```
+
 ## Run it
 
 ```bash
@@ -73,6 +96,7 @@ Ranking tab.
 | Method & path | Purpose |
 |---|---|
 | `GET /health`, `GET /api/meta` | Liveness; status. |
+| `POST /api/demo/parkinsons` | Seed the Parkinson's / MAO-B worked example (program + target + molecules + screens). |
 | `POST /api/programs` · `GET /api/programs` · `GET /api/programs/:id` | Discovery programs. |
 | `POST /api/targets` · `GET /api/targets?programId=` · `GET /api/targets/:id` | Biological targets. |
 | `GET /api/targets/:id/ranking?limit=` | Candidates ranked against this target (potency + drug-likeness). |

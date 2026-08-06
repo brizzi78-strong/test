@@ -196,12 +196,17 @@ function descFromForm(){
 
 function renderSetup(){
   if(!programId){
-    $("setupBody").innerHTML='<p class="hint">Name a discovery program to start registering targets and candidate molecules.</p>'+
+    $("setupBody").innerHTML='<p class="hint">Name a discovery program to start registering targets and candidate molecules — or load the Parkinson’s disease worked example to see the whole loop with real molecules.</p>'+
       '<form id="progForm"><div class="grid g2"><div><label for="pInput">Program name</label><input id="pInput" required placeholder="BTK inhibitors"></div>'+
       '<div><label for="pIndication">Indication</label><input id="pIndication" placeholder="Rheumatoid arthritis"></div></div>'+
-      '<button class="btn" style="margin-top:.6rem">Create program</button></form>';
+      '<button class="btn" style="margin-top:.6rem">Create program</button></form>'+
+      '<div style="margin-top:.8rem;border-top:1px solid var(--line);padding-top:.8rem">'+
+      '<button class="btn ghost small" id="loadDemo">⚗ Load the Parkinson’s disease demo (MAO-B inhibitors)</button>'+
+      '<p class="hint" style="margin-top:.4rem">Seeds a program targeting MAO-B with rasagiline, selegiline, safinamide, and levodopa, each with published descriptors — the MAO-B inhibitors carry an illustrative potency, and levodopa is a reminder that the rules don’t catch everything.</p></div>';
     $("progForm").onsubmit=async(e)=>{e.preventDefault();const name=$("pInput").value.trim();if(!name)return;
       try{const p=await api("POST","/programs",{name,indication:$("pIndication").value.trim()||undefined});programId=p.id;localStorage.setItem("dd.programId",programId);localStorage.setItem("dd.progName",p.name);banner("Created "+p.name,"ok");boot();}catch(err){banner(err.message,"err");}};
+    $("loadDemo").onclick=async()=>{
+      try{const r=await api("POST","/demo/parkinsons");programId=r.program.id;localStorage.setItem("dd.programId",programId);localStorage.setItem("dd.progName",r.program.name);banner("Loaded the Parkinson’s disease demo — "+r.compoundIds.length+" molecules","ok");boot();}catch(err){banner(err.message,"err");}};
   }else{
     $("setupBody").innerHTML='<p class="hint">Working in <strong id="pn"></strong>. <button class="btn mut small" id="switchProg">Switch program</button></p>';
     $("pn").textContent=localStorage.getItem("dd.progName")||programId;

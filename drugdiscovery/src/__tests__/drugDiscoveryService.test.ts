@@ -137,6 +137,36 @@ test('ranking fuses potency with drug-likeness: a screened potent hit beats an u
   assert.ok(ranked[0].overall > ranked[1].overall);
 });
 
+test("seedDemo builds the Parkinson's MAO-B program with molecules, screens, and a sensible ranking", () => {
+  const s = svc();
+  const { program, targetId, compoundIds } = s.seedDemo();
+  assert.match(program.indication ?? '', /Parkinson/);
+  assert.equal(compoundIds.length, 4);
+
+  const compounds = s.listCompounds({ programId: program.id });
+  const names = compounds.map((c) => c.name).sort();
+  assert.deepEqual(names, ['Levodopa', 'Rasagiline', 'Safinamide', 'Selegiline']);
+
+  // Levodopa passes the Rule of Five (the teaching point) but its negative logP
+  // makes it the lowest-scoring of the four.
+  const levodopa = compounds.find((c) => c.name === 'Levodopa')!;
+  assert.equal(levodopa.drugLikeness.rules[0].pass, true); // Lipinski Ro5 passes
+  assert.ok(levodopa.descriptors.logP < 0);
+  const others = compounds.filter((c) => c.name !== 'Levodopa');
+  assert.ok(others.every((c) => c.drugLikeness.score > levodopa.drugLikeness.score));
+  // Rasagiline is small and clean.
+  const rasagiline = compounds.find((c) => c.name === 'Rasagiline')!;
+  assert.equal(rasagiline.drugLikeness.verdict, 'excellent');
+
+  // Rasagiline is the most potent seeded screen (14 nM) and drug-like, so it tops the ranking.
+  const ranked = s.rankCandidates(targetId);
+  assert.equal(ranked[0].compound.name, 'Rasagiline');
+  assert.equal(ranked[0].bestPotencyNanomolar, 14);
+  // Levodopa was seeded without a screen, so it has no potency figure.
+  const levoRank = ranked.find((r) => r.compound.name === 'Levodopa')!;
+  assert.equal(levoRank.bestPotencyNanomolar, undefined);
+});
+
 test('ranking keeps the best (lowest nM) potency across multiple screens and excludes discontinued', () => {
   const s = svc();
   const p = s.createProgram({ name: 'P' });

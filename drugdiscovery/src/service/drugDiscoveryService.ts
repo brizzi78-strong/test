@@ -31,6 +31,7 @@ import {
   type RankedCompound,
 } from '../domain/chem.ts';
 import type { Collection, Store } from '../store/store.ts';
+import { PARKINSONS_DEMO, type DemoProgramSpec } from '../domain/demo.ts';
 import { ConflictError, NotFoundError, ValidationError } from './errors.ts';
 
 export interface ServiceOptions {
@@ -75,6 +76,35 @@ export class DrugDiscoveryService {
 
   listPrograms(): Program[] {
     return this.store.programs.list();
+  }
+
+  /**
+   * Seed a self-contained worked example — by default the Parkinson's disease
+   * MAO-B program — as a real program with a target, candidate molecules, and
+   * illustrative screens, so the workbench opens with something to explore.
+   * Reuses the normal create paths, so seeded data is indistinguishable from
+   * hand-entered data.
+   */
+  seedDemo(spec: DemoProgramSpec = PARKINSONS_DEMO): { program: Program; targetId: string; compoundIds: string[] } {
+    const program = this.createProgram(spec.program);
+    const target = this.createTarget({ programId: program.id, ...spec.target });
+    const compoundIds: string[] = [];
+    for (const c of spec.compounds) {
+      const compound = this.createCompound({
+        programId: program.id,
+        name: c.name,
+        smiles: c.smiles,
+        source: c.source,
+        descriptors: c.descriptors,
+        targetId: target.id,
+        notes: c.note,
+      });
+      compoundIds.push(compound.id);
+      if (c.screen) {
+        this.recordScreen({ compoundId: compound.id, targetId: target.id, metric: c.screen.metric, valueNanomolar: c.screen.valueNanomolar });
+      }
+    }
+    return { program, targetId: target.id, compoundIds };
   }
 
   // --- targets ---------------------------------------------------------------

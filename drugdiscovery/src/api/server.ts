@@ -90,6 +90,9 @@ async function api(
 
   if (method === 'GET' && path === '/api/meta') return json(res, 200, { service: 'drugdiscovery' });
 
+  // seed the Parkinson's disease worked example
+  if (method === 'POST' && path === '/api/demo/parkinsons') return json(res, 201, service.seedDemo());
+
   // programs
   if (method === 'POST' && path === '/api/programs') return json(res, 201, service.createProgram(body as never));
   if (method === 'GET' && path === '/api/programs') return json(res, 200, service.listPrograms());
