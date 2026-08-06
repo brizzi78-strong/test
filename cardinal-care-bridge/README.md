@@ -51,8 +51,8 @@ Both forms currently open the visitor's email client via a `mailto:` link
 pre-filled with what they entered — a working submission path with zero
 backend, but not what a real launch should ship with:
 
-- **Replace `hello@cardinalcarebridge.example`** and the placeholder phone
-  number `(919) 555-0100` with real contact details.
+- ~~Replace the placeholder contact details~~ — done: forms and footer now
+  use the real email and phone.
 - **Wire the forms to a real submission path** — a form backend (e.g.
   Formspree, a serverless function) or, better, into whatever internal tool
   ends up tracking leads per the lead-generation strategy's closing point:
