@@ -264,7 +264,7 @@
   }
 
   /* ---------- State ---------- */
-  let vehicleId = store.get("carsync.vehicle", FLEET[0].id);
+  let vehicleId = store.get("carsync.vehicle", "nissan-sentra");
   // installed versions can advance as the user installs updates; persist per-vehicle
   let installed = store.get("carsync.installed", {});
   function vehicle(){ return FLEET.find(v => v.id === vehicleId) || FLEET[0]; }
