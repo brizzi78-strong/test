@@ -34,11 +34,12 @@ async function j(base: string, method: string, path: string, body?: unknown, hea
   return { status: res.status, json: (await res.json().catch(() => ({}))) as any };
 }
 
-test('serves the three pages', async () => {
+test('serves the pages, including the public report-verify page', async () => {
   await withServer(async (base) => {
     assert.match(await (await fetch(`${base}/`)).text(), /Cardinal Verify/);
     assert.match(await (await fetch(`${base}/c/anything`)).text(), /Authorize verification/);
     assert.match(await (await fetch(`${base}/v/anything`)).text(), /Verification request/);
+    assert.match(await (await fetch(`${base}/verify`)).text(), /Verify a report/);
   });
 });
 
@@ -72,7 +73,53 @@ test('full consent-gated flow over the API', async () => {
     const view = await j(base, 'GET', `/api/requests/${req.id}`);
     assert.equal(view.json.request.status, 'completed');
     assert.equal(view.json.request.items[0].response.confirmed, true);
+
+    // The request view now carries a certificate reference for the report.
+    const cref = view.json.certificate;
+    assert.match(cref.trackingNumber, /^BRP-\d{4}-[A-Z2-7]{6}$/);
+    assert.match(cref.verificationCode, /^[A-Z2-7]{4}-[A-Z2-7]{4}$/);
+    assert.ok(cref.verifyUrl.includes('/verify?ref='));
+
+    // Public authenticity lookup: right code succeeds, wrong code is a 404.
+    const ok = await j(base, 'GET', `/api/certificate/${encodeURIComponent(cref.trackingNumber)}?code=${encodeURIComponent(cref.verificationCode)}`);
+    assert.equal(ok.status, 200);
+    assert.equal(ok.json.authentic, true);
+    assert.equal(ok.json.result, 'all_confirmed');
+    assert.equal(ok.json.candidateInitials, 'JR');
+    assert.ok(!JSON.stringify(ok.json).includes('Rivera')); // privacy-preserving
+
+    const bad = await j(base, 'GET', `/api/certificate/${encodeURIComponent(cref.trackingNumber)}?code=WRNG-CODE`);
+    assert.equal(bad.status, 404);
+
+    // The report's QR endpoint serves a scannable SVG.
+    const qr = await fetch(`${base}/api/certificate/${req.id}/qr`);
+    assert.equal(qr.status, 200);
+    assert.match(qr.headers.get('content-type') ?? '', /image\/svg\+xml/);
+    assert.match(await qr.text(), /^<svg /);
+
+    // And the executive PDF report downloads.
+    const pdf = await fetch(`${base}/api/requests/${req.id}/report.pdf`);
+    assert.equal(pdf.status, 200);
+    assert.equal(pdf.headers.get('content-type'), 'application/pdf');
+    const body = Buffer.from(await pdf.arrayBuffer());
+    assert.match(body.toString('latin1').slice(0, 8), /^%PDF-1\.4/);
+    assert.ok(body.toString('latin1').includes(cref.trackingNumber));
   });
+});
+
+test('the report-verify page and certificate API stay public even when admin is gated', async () => {
+  await withServer(
+    async (base) => {
+      assert.equal((await fetch(`${base}/verify`)).status, 200);
+      // Unknown report → 404 (not 401): the endpoint is reachable without login.
+      assert.equal((await fetch(`${base}/api/certificate/BRP-2026-XXXXXX?code=AAAA-AAAA`)).status, 404);
+      // The QR sub-route derives from a request id, so it stays admin-gated.
+      assert.equal((await fetch(`${base}/api/certificate/anything/qr`)).status, 401);
+      // So does the PDF report.
+      assert.equal((await fetch(`${base}/api/requests/anything/report.pdf`)).status, 401);
+    },
+    { user: 'admin', password: 'pw' },
+  );
 });
 
 test('admin is gated but consent/verify links stay public', async () => {

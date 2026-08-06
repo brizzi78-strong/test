@@ -17,10 +17,13 @@
 import { createServer, type IncomingMessage, type Server, type ServerResponse } from 'node:http';
 import { timingSafeEqual } from 'node:crypto';
 import { VerifyService, DISCLOSURE_VERSION } from '../service/verifyService.ts';
+import { CertificateService } from '../service/certificate.ts';
+import { ReportService } from '../service/report.ts';
+import { qrSvg } from '../service/qr.ts';
 import { DomainError, ValidationError } from '../service/errors.ts';
 import { createInMemoryStore, type Store } from '../store/store.ts';
 import { createSqliteStore } from '../store/sqliteStore.ts';
-import { APP_PAGE, CONSENT_PAGE, VERIFIER_PAGE } from '../ui/pages.ts';
+import { APP_PAGE, CONSENT_PAGE, VERIFIER_PAGE, CERTIFICATE_PAGE } from '../ui/pages.ts';
 import { notifierFromEnv, type Notifier } from '../notify/notifier.ts';
 
 export interface AppServer {
@@ -34,6 +37,8 @@ export interface AppOptions {
   password?: string;
   notifier?: Notifier;
   baseUrl?: string;
+  /** Secret keying report tracking numbers, verification codes, and seals. */
+  certSecret?: string;
 }
 
 export function storeFromEnv(env: NodeJS.ProcessEnv = process.env): Store {
@@ -46,22 +51,37 @@ export function baseUrlFromEnv(env: NodeJS.ProcessEnv = process.env): string {
 }
 
 export function createApp(opts: AppOptions = {}): AppServer {
+  const store = opts.store ?? storeFromEnv();
+  const baseUrl = opts.baseUrl ?? baseUrlFromEnv();
   const service = new VerifyService({
-    store: opts.store ?? storeFromEnv(),
+    store,
     notifier: opts.notifier ?? notifierFromEnv(),
-    baseUrl: opts.baseUrl ?? baseUrlFromEnv(),
+    baseUrl,
   });
+  const cert = new CertificateService({
+    store,
+    secret: opts.certSecret ?? process.env.VERIFY_CERT_SECRET ?? 'verify-cert-dev-secret-change-me',
+    baseUrl,
+  });
+  const report = new ReportService({ store, cert });
   const user = opts.user ?? process.env.VERIFY_USER;
   const password = opts.password ?? process.env.VERIFY_PASSWORD;
   const gate = user && password ? { user, password } : undefined;
-  const server = createServer(makeListener(service, gate));
+  const server = createServer(makeListener(service, cert, report, gate));
   return { server, service };
 }
 
 /** Public paths that must never require the admin login. */
 function isPublicPath(path: string): boolean {
+  // The certificate *lookup* (single segment) is public; deeper sub-routes
+  // like .../qr derive from a request id and stay admin-only.
+  if (path.startsWith('/api/certificate/')) {
+    const rest = path.slice('/api/certificate/'.length);
+    return rest.length > 0 && !rest.includes('/');
+  }
   return (
     path === '/health' ||
+    path === '/verify' ||
     path.startsWith('/c/') ||
     path.startsWith('/v/') ||
     path.startsWith('/api/consent/') ||
@@ -69,7 +89,12 @@ function isPublicPath(path: string): boolean {
   );
 }
 
-function makeListener(service: VerifyService, gate: { user: string; password: string } | undefined) {
+function makeListener(
+  service: VerifyService,
+  cert: CertificateService,
+  report: ReportService,
+  gate: { user: string; password: string } | undefined,
+) {
   return async (req: IncomingMessage, res: ServerResponse): Promise<void> => {
     try {
       const url = new URL(req.url ?? '/', 'http://localhost');
@@ -88,11 +113,12 @@ function makeListener(service: VerifyService, gate: { user: string; password: st
       // --- HTML pages ---
       if (method === 'GET' && (path === '/' || path === '/index.html')) return html(res, APP_PAGE);
       if (method === 'GET' && path === '/health') return json(res, 200, { status: 'ok' });
+      if (method === 'GET' && path === '/verify') return html(res, CERTIFICATE_PAGE);
       if (method === 'GET' && path.startsWith('/c/')) return html(res, CONSENT_PAGE);
       if (method === 'GET' && path.startsWith('/v/')) return html(res, VERIFIER_PAGE);
 
       // --- JSON API ---
-      if (path.startsWith('/api/')) return await api(service, method, path, url, req, res);
+      if (path.startsWith('/api/')) return await api(service, cert, report, method, path, url, req, res);
 
       json(res, 404, { error: { code: 'not_found', message: 'not found' } });
     } catch (err) {
@@ -106,6 +132,8 @@ function makeListener(service: VerifyService, gate: { user: string; password: st
 
 async function api(
   service: VerifyService,
+  cert: CertificateService,
+  report: ReportService,
   method: string,
   path: string,
   url: URL,
@@ -134,9 +162,33 @@ async function api(
       candidateId: q.get('candidateId') ?? undefined,
     }));
   if (method === 'GET' && seg[1] === 'requests' && seg[2] && seg.length === 3)
-    return json(res, 200, service.view(seg[2]));
+    return json(res, 200, { ...service.view(seg[2]), certificate: cert.reference(seg[2]) });
+  // Admin: the executive PDF report — branded findings + consent + authenticity.
+  if (method === 'GET' && seg[1] === 'requests' && seg[2] && seg[3] === 'report.pdf') {
+    const pdf = report.pdf(seg[2]);
+    res.writeHead(200, {
+      'content-type': 'application/pdf',
+      'content-length': pdf.length,
+      'content-disposition': `inline; filename="verification-report-${seg[2]}.pdf"`,
+      'cache-control': 'no-store',
+    });
+    res.end(pdf);
+    return;
+  }
   if (method === 'POST' && seg[1] === 'requests' && seg[3] === 'cancel')
     return json(res, 200, service.cancelRequest(seg[2]));
+
+  // Admin: the report's QR (encodes the verify URL) — for printing on reports.
+  if (method === 'GET' && seg[1] === 'certificate' && seg[2] && seg[3] === 'qr') {
+    const ref = cert.reference(seg[2]);
+    res.writeHead(200, { 'content-type': 'image/svg+xml; charset=utf-8', 'cache-control': 'no-store' });
+    res.end(qrSvg(ref.verifyUrl, { scale: 6, margin: 4 }));
+    return;
+  }
+
+  // Public: certificate of authenticity by tracking number (or id) + code
+  if (method === 'GET' && seg[1] === 'certificate' && seg[2])
+    return json(res, 200, cert.certificate(seg[2], q.get('code')));
 
   // Public: consent by token
   if (seg[1] === 'consent' && seg[2]) {

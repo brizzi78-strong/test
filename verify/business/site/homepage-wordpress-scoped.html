@@ -1,0 +1,364 @@
+<div id="brpv2">
+<style>
+
+  #brpv2{
+    --bg:#340A12; --bg2:#2A070D; --panel:#45111B; --panel2:#4E1420;
+    --ink:#F6ECDF; --ink-soft:#D8C3B7; --mute:#B0897F; --faint:#8C6A64;
+    --line:rgba(246,236,223,.14); --line-2:rgba(246,236,223,.28);
+    --oxblood:#6E1223; --rose:#E7A9A9; --brass:#CBA85E; --brass-2:#E7C87E;
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,"Times New Roman",serif;
+    --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,monospace;
+    --gutter:clamp(22px,5vw,80px); --max:1180px;
+  }
+  #brpv2 *{box-sizing:border-box}
+  #brpv2{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){#brpv2{scroll-behavior:auto}}
+  #brpv2{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  #brpv2 .wrap{max-width:var(--max);margin-inline:auto;padding-inline:var(--gutter)}
+  #brpv2 a{color:inherit;text-decoration:none}
+  #brpv2 ::selection{background:var(--brass);color:#2A070D}
+  #brpv2 .eyebrow{font-family:var(--mono);font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--brass-2)}
+  #brpv2 h1, #brpv2 h2, #brpv2 h3{font-family:var(--serif);font-weight:600;letter-spacing:-.015em;text-wrap:balance;margin:0}
+  #brpv2 p{margin:0}
+
+  #brpv2 /* ---- top bar ---- */
+  .bar{position:sticky;top:0;z-index:50;background:rgba(42,7,13,.72);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  #brpv2 .bar .row{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:15px 0}
+  #brpv2 .brand{display:flex;align-items:center;gap:12px}
+  #brpv2 .brand .mk{width:38px;height:38px;flex:none}
+  #brpv2 .brand .n{font-family:var(--serif);font-size:1.06rem;font-weight:600;line-height:1.05}
+  #brpv2 .brand .n small{display:block;font-family:var(--mono);font-size:.56rem;letter-spacing:.22em;text-transform:uppercase;color:var(--mute);margin-top:3px}
+  #brpv2 .bar nav{display:none;gap:30px}
+  #brpv2 .bar nav a{font-family:var(--mono);font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-soft);transition:color .2s}
+  #brpv2 .bar nav a:hover{color:var(--brass-2)}
+  @media(min-width:920px){#brpv2 .bar nav{display:flex}}
+  #brpv2 .btn{font:inherit;font-weight:600;font-size:.9rem;padding:.62rem 1.25rem;border-radius:2px;display:inline-block;border:1px solid transparent;cursor:pointer;transition:transform .18s,background .2s,color .2s,border-color .2s}
+  #brpv2 .btn.solid{background:var(--brass);color:#2A070D}
+  #brpv2 .btn.solid:hover{background:var(--brass-2);transform:translateY(-1px)}
+  #brpv2 .btn.line{border-color:var(--line-2);color:var(--ink)}
+  #brpv2 .btn.line:hover{border-color:var(--brass);color:var(--brass-2)}
+  #brpv2 .btn.big{padding:.85rem 1.7rem;font-size:.98rem}
+
+  #brpv2 /* ---- hero ---- */
+  .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+  #brpv2 .hero-bg{position:absolute;inset:0;width:100%;height:100%;display:block;z-index:0}
+  #brpv2 .hero .wrap{position:relative;z-index:2;padding:clamp(70px,12vh,140px) var(--gutter) clamp(54px,8vh,96px)}
+  #brpv2 .hero .kick{margin:0 0 22px}
+  #brpv2 .hero h1{font-size:clamp(2.6rem,6.2vw,5rem);line-height:1.02;max-width:17ch}
+  #brpv2 .hero h1 em{font-style:italic;color:var(--rose)}
+  #brpv2 .hero .lede{font-size:clamp(1.08rem,1.7vw,1.34rem);color:var(--ink-soft);max-width:56ch;margin:26px 0 34px;text-wrap:pretty}
+  #brpv2 .hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+  #brpv2 .trust{display:flex;flex-wrap:wrap;gap:14px 30px;margin-top:52px;padding-top:26px;border-top:1px solid var(--line)}
+  #brpv2 .trust div{display:flex;align-items:center;gap:9px;font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
+  #brpv2 .trust svg{width:16px;height:16px;color:var(--brass-2);flex:none}
+
+  #brpv2 section{padding-block:clamp(64px,10vw,120px)}
+  #brpv2 .lab{display:flex;align-items:center;gap:13px;margin:0 0 26px}
+  #brpv2 .lab::before{content:"";width:30px;height:1px;background:var(--brass)}
+  #brpv2 .h2{font-size:clamp(1.9rem,4vw,2.9rem);line-height:1.08;max-width:22ch}
+  #brpv2 .sub{color:var(--ink-soft);font-size:1.06rem;max-width:58ch;margin:18px 0 0}
+
+  #brpv2 /* ---- stance / what we are ---- */
+  .stance{background:var(--bg2);border-block:1px solid var(--line)}
+  #brpv2 .stance .grid{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:3px;overflow:hidden;margin-top:40px}
+  @media(min-width:800px){#brpv2 .stance .grid{grid-template-columns:1fr 1fr}}
+  #brpv2 .stance .cell{background:var(--bg2);padding:clamp(26px,3.4vw,40px)}
+  #brpv2 .stance .cell h3{font-size:1.35rem;margin-bottom:14px;display:flex;align-items:center;gap:11px}
+  #brpv2 .stance .cell.are h3{color:var(--brass-2)} #brpv2 .stance .cell.arent h3{color:var(--rose)}
+  #brpv2 .stance ul{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+  #brpv2 .stance li{display:flex;gap:12px;color:var(--ink-soft);font-size:1rem;line-height:1.45}
+  #brpv2 .stance li svg{width:18px;height:18px;flex:none;margin-top:3px}
+  #brpv2 .are li svg{color:var(--brass)} #brpv2 .arent li svg{color:var(--mute)}
+
+  #brpv2 /* ---- pillars ---- */
+  .pillars{display:grid;gap:24px;grid-template-columns:1fr;margin-top:52px}
+  @media(min-width:680px){#brpv2 .pillars{grid-template-columns:1fr 1fr}}
+  @media(min-width:1000px){#brpv2 .pillars{grid-template-columns:repeat(4,1fr)}}
+  #brpv2 .pillar{border-top:2px solid var(--oxblood);padding-top:22px}
+  #brpv2 .pillar .em{width:34px;height:34px;color:var(--brass-2);margin-bottom:16px}
+  #brpv2 .pillar h3{font-size:1.18rem;margin-bottom:8px}
+  #brpv2 .pillar p{color:var(--ink-soft);font-size:.95rem}
+
+  #brpv2 /* ---- process ---- */
+  .proc{background:var(--bg2);border-block:1px solid var(--line)}
+  #brpv2 .steps{margin-top:48px;display:grid;gap:0}
+  #brpv2 .step{display:grid;grid-template-columns:auto 1fr;gap:22px;padding:26px 0;border-top:1px solid var(--line)}
+  #brpv2 .step:last-child{border-bottom:1px solid var(--line)}
+  #brpv2 .step .no{font-family:var(--serif);font-size:2rem;color:var(--brass);line-height:1;min-width:2.4ch}
+  #brpv2 .step h3{font-size:1.3rem;margin-bottom:6px}
+  #brpv2 .step p{color:var(--ink-soft);font-size:1rem;max-width:64ch}
+  @media(min-width:760px){#brpv2 .step{grid-template-columns:auto 1.1fr 2fr;align-items:baseline;gap:32px}}
+
+  #brpv2 /* ---- verify cards ---- */
+  .plates{display:grid;gap:22px;grid-template-columns:1fr;margin-top:48px}
+  @media(min-width:760px){#brpv2 .plates{grid-template-columns:repeat(3,1fr)}}
+  #brpv2 .plate{background:var(--panel);border:1px solid var(--line);border-radius:3px;padding:clamp(26px,3vw,36px);transition:border-color .3s,transform .3s}
+  #brpv2 .plate:hover{border-color:var(--brass);transform:translateY(-3px)}
+  #brpv2 .plate .em{width:42px;height:42px;color:var(--rose);margin-bottom:18px}
+  #brpv2 .plate h3{font-size:1.35rem;margin-bottom:10px}
+  #brpv2 .plate p{color:var(--ink-soft);font-size:.97rem}
+
+  #brpv2 /* ---- report band ---- */
+  .report{background:linear-gradient(180deg,var(--panel),var(--panel2));border-block:1px solid var(--line)}
+  #brpv2 .report .in{display:grid;gap:34px;align-items:center}
+  @media(min-width:860px){#brpv2 .report .in{grid-template-columns:1.1fr .9fr}}
+  #brpv2 .report h2{font-size:clamp(1.8rem,3.6vw,2.6rem)}
+  #brpv2 .report p{color:var(--ink-soft);font-size:1.06rem;margin-top:16px;max-width:52ch}
+  #brpv2 .report .marks{display:grid;gap:14px;margin-top:26px}
+  #brpv2 .report .marks div{display:flex;gap:12px;align-items:center;font-size:.98rem;color:var(--ink)}
+  #brpv2 .report .marks svg{width:18px;height:18px;color:var(--brass-2);flex:none}
+  #brpv2 .docmock{background:#F6ECDF;color:#3a1119;border-radius:4px;padding:26px;box-shadow:0 30px 70px -32px rgba(0,0,0,.7);font-size:.8rem}
+  #brpv2 .docmock .top{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:2px solid var(--oxblood);padding-bottom:12px;margin-bottom:14px}
+  #brpv2 .docmock .top b{font-family:var(--serif);font-size:1rem;color:var(--oxblood)}
+  #brpv2 .docmock .top span{font-family:var(--mono);font-size:.58rem;letter-spacing:.1em;color:#8a6a63}
+  #brpv2 .docmock .ln{height:8px;background:#e5d6c6;border-radius:2px;margin:8px 0}
+  #brpv2 .docmock .ln.s{width:60%} #brpv2 .docmock .ln.m{width:82%}
+  #brpv2 .docmock .chip{display:inline-block;font-family:var(--mono);font-size:.56rem;letter-spacing:.08em;text-transform:uppercase;color:#2E7D5B;background:#e2efe7;border-radius:99px;padding:3px 9px;margin-top:6px}
+
+  #brpv2 /* ---- audience ---- */
+  .aud{display:flex;flex-wrap:wrap;gap:12px;margin-top:40px}
+  #brpv2 .aud span{border:1px solid var(--line-2);border-radius:2px;padding:.62rem 1.15rem;font-size:.95rem;color:var(--ink-soft)}
+
+  #brpv2 /* ---- pricing strip ---- */
+  .price{background:var(--bg2);border-block:1px solid var(--line);text-align:center}
+  #brpv2 .price .big{font-family:var(--serif);font-size:clamp(3.2rem,8vw,5.4rem);color:var(--brass-2);line-height:1}
+  #brpv2 .price p{color:var(--ink-soft);max-width:48ch;margin:16px auto 26px;font-size:1.06rem}
+
+  #brpv2 /* ---- close ---- */
+  .close{text-align:center}
+  #brpv2 .close h2{margin-inline:auto;font-size:clamp(2rem,4.4vw,3.2rem);max-width:20ch}
+  #brpv2 .close .cta{justify-content:center;display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+  #brpv2 .close .fine{color:var(--faint);font-size:.85rem;margin-top:20px}
+
+  #brpv2 /* ---- footer ---- */
+  footer{border-top:1px solid var(--line);padding-block:44px;color:var(--mute);font-size:.85rem;background:var(--bg2)}
+  #brpv2 .foot-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:22px 40px}
+  #brpv2 .foot-top .brand .n small{color:var(--faint)}
+  #brpv2 footer nav{display:flex;flex-wrap:wrap;gap:8px 18px}
+  #brpv2 footer nav a{color:var(--ink-soft)}
+  #brpv2 footer nav a:hover{color:var(--brass-2)}
+  #brpv2 .disc{margin-top:26px;padding-top:20px;border-top:1px solid var(--line);color:var(--faint);font-size:.78rem;max-width:80ch;line-height:1.6}
+
+  #brpv2 /* reveal */
+  .rv{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+  #brpv2 .rv.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){#brpv2 .rv{opacity:1;transform:none;transition:none}}
+
+#brpv2 .rv{opacity:1 !important;transform:none !important}
+#brpv2 .formcard{max-width:760px;margin:34px auto 0;background:#F6ECDF;border:1px solid var(--line);border-radius:4px;padding:10px;box-shadow:0 26px 60px -30px rgba(0,0,0,.7)}
+#brpv2 .formcard iframe{width:100%;height:900px;border:0;border-radius:3px;display:block;background:#F6ECDF}
+
+</style>
+<!-- ================= TOP BAR ================= -->
+<header class="bar"><div class="wrap row">
+  <a class="brand" href="#top">
+    <svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6" fill="#F6ECDF"/><path d="M8 22V10h4l4 6 4-6h4v12" stroke="#48101A" stroke-width="2.4" fill="none" stroke-linejoin="round" stroke-linecap="round"/></svg>
+    <span class="n">Blue Ridge Press LLC<small>Verification &amp; Reference Services</small></span>
+  </a>
+  <nav>
+    <a href="#standard">Our standard</a>
+    <a href="#process">Process</a>
+    <a href="#verify">What we verify</a>
+    <a href="#pricing">Pricing</a>
+  </nav>
+  <a class="btn solid" href="#start">Request a check</a>
+</div></header>
+
+<!-- ================= HERO ================= -->
+<main id="top">
+<section class="hero">
+  <svg class="hero-bg" viewBox="0 0 1440 760" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2A070D"/><stop offset="1" stop-color="#40101A"/></linearGradient>
+      <radialGradient id="glow" cx="0.74" cy="0.32" r="0.55"><stop offset="0" stop-color="#CBA85E" stop-opacity="0.30"/><stop offset="1" stop-color="#CBA85E" stop-opacity="0"/></radialGradient>
+    </defs>
+    <rect width="1440" height="760" fill="url(#sky)"/><rect width="1440" height="760" fill="url(#glow)"/>
+    <circle cx="1050" cy="220" r="58" fill="#E7C87E" opacity="0.9"/>
+    <circle cx="1050" cy="220" r="92" fill="none" stroke="#E7C87E" stroke-opacity="0.22"/>
+    <path fill="#571620" d="M0,430 C240,405 400,445 600,430 C800,415 1000,385 1200,425 C1320,445 1400,435 1440,430 L1440,760 L0,760 Z"/>
+    <path fill="#4e131d" d="M0,500 C240,477 440,530 660,502 C880,474 1060,467 1240,510 C1360,534 1420,520 1440,504 L1440,760 L0,760 Z"/>
+    <path fill="#45111a" d="M0,565 C260,545 470,600 700,568 C930,540 1080,546 1280,580 C1380,598 1430,586 1440,572 L1440,760 L0,760 Z"/>
+    <path fill="#3a0e16" d="M0,630 C280,610 500,662 780,630 C1040,604 1160,622 1340,644 C1400,652 1430,644 1440,638 L1440,760 L0,760 Z"/>
+    <path fill="#2a070d" d="M0,692 C320,670 560,712 860,686 C1120,664 1260,678 1440,700 L1440,760 L0,760 Z"/>
+  </svg>
+  <div class="wrap">
+    <p class="eyebrow kick">Blue Ridge Press LLC &middot; Raleigh, North Carolina</p>
+    <h1>The verification a serious decision <em>deserves.</em></h1>
+    <p class="lede">Independent, consent‑first verification of professional references, past employment, and education — confirmed straight from the source, documented end to end, and held in confidence. The diligence you mean to do, done properly.</p>
+    <div class="cta">
+      <a class="btn solid big" href="#start">Request a verification</a>
+      <a class="btn line big" href="#sample">See a sample report</a>
+    </div>
+    <div class="trust">
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l7 3v5c0 5-3 8-7 9-4-1-7-4-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg> Consent‑first, always</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 12l9 5 9-5"/></svg> Confirmed at the source</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="4" width="14" height="16" rx="2"/><path d="M9 9h6M9 13h6M9 17h3"/></svg> Documented chain of custody</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg> Independent &amp; accountable</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STANCE ================= -->
+<section class="stance" id="standard">
+  <div class="wrap">
+    <p class="lab eyebrow">Our standard</p>
+    <h2 class="h2">Defined as much by what we won't do as what we will.</h2>
+    <p class="sub">A premium verification firm earns trust through restraint. We confirm what can be confirmed honestly — and we tell you plainly where the line is.</p>
+    <div class="grid">
+      <div class="cell are">
+        <h3><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> What we do</h3>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Verify professional references directly with the people who worked with the candidate.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Confirm past employment — role, dates, and rehire eligibility where the employer will state it.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Confirm education and credentials with the institution.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Record written, time‑stamped consent for every check.</li>
+        </ul>
+      </div>
+      <div class="cell arent">
+        <h3><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg> What we don't</h3>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg> Pull criminal, credit, or driving records — those are regulated and belong with a credentialed consumer‑reporting agency, which we'll refer you to.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg> Scrape social media or purchase third‑party data files.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg> Assign black‑box "risk scores" you can't see behind.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg> Contact anyone before the candidate has authorized it.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PILLARS ================= -->
+<section>
+  <div class="wrap">
+    <p class="lab eyebrow">Principles</p>
+    <h2 class="h2">Four commitments behind every report.</h2>
+    <div class="pillars">
+      <div class="pillar rv">
+        <svg class="em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l7 3v5c0 5-3 8-7 9-4-1-7-4-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+        <h3>Consent first</h3><p>Every check runs only on the candidate's written, e‑signed authorization — recorded with a timestamp and the exact disclosure they agreed to.</p>
+      </div>
+      <div class="pillar rv">
+        <svg class="em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 12l9 5 9-5"/></svg>
+        <h3>Verified at the source</h3><p>Real managers, real employers, real registrars. We confirm with the people who were actually there — never a data broker.</p>
+      </div>
+      <div class="pillar rv">
+        <svg class="em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></svg>
+        <h3>Documented</h3><p>Each report carries a tracking number and a chain of custody — who confirmed what, and when — so it stands up to scrutiny.</p>
+      </div>
+      <div class="pillar rv">
+        <svg class="em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+        <h3>Confidential</h3><p>Reports go only to the requesting party, on a defined retention schedule, handled under a written security policy.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROCESS ================= -->
+<section class="proc" id="process">
+  <div class="wrap">
+    <p class="lab eyebrow">How an engagement runs</p>
+    <h2 class="h2">Five steps. Every one on the record.</h2>
+    <div class="steps">
+      <div class="step rv"><div class="no">01</div><h3>Request</h3><p>You tell us who to verify and which sources to confirm. Nothing is contacted yet.</p></div>
+      <div class="step rv"><div class="no">02</div><h3>Consent</h3><p>The candidate reviews a plain‑language disclosure and e‑signs their authorization. It's recorded and time‑stamped — enforced, not promised.</p></div>
+      <div class="step rv"><div class="no">03</div><h3>Source verification</h3><p>We reach each reference, employer, and institution directly and confirm the facts, following a standardized interview script.</p></div>
+      <div class="step rv"><div class="no">04</div><h3>Quality review</h3><p>Findings are checked for accuracy and completeness against our QA standard before anything is released.</p></div>
+      <div class="step rv"><div class="no">05</div><h3>Delivered report</h3><p>You receive one clean, documented report — tracking number, consent record, and every confirmation in one place.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VERIFY ================= -->
+<section id="verify">
+  <div class="wrap">
+    <p class="lab eyebrow">What we verify</p>
+    <h2 class="h2">The confirmations that actually tell you something.</h2>
+    <div class="plates">
+      <article class="plate rv">
+        <svg class="em" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="17" r="7"/><path d="M11 39c0-7 6-12 13-12s13 5 13 12"/></svg>
+        <h3>References</h3><p>A former manager or colleague speaks to how the candidate actually works — the relationship, the dates, and whether they'd recommend them.</p>
+      </article>
+      <article class="plate rv">
+        <svg class="em" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="16" width="30" height="22" rx="3"/><path d="M18 16v-3a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3v3"/></svg>
+        <h3>Employment</h3><p>The past employer confirms role and dates — and, where they'll state it, whether the person is eligible for rehire.</p>
+      </article>
+      <article class="plate rv">
+        <svg class="em" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 10l18 8-18 8-18-8z"/><path d="M14 22v9c0 2 4 5 10 5s10-3 10-5v-9"/></svg>
+        <h3>Education</h3><p>The institution confirms attendance and the degree or credential earned — straight from the registrar, not a database.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= REPORT ================= -->
+<section class="report" id="sample">
+  <div class="wrap in">
+    <div>
+      <p class="eyebrow">The deliverable</p>
+      <h2>A report built to be trusted — and to be checked.</h2>
+      <p>Clean, executive, and defensible. Every report you receive is documented from request to delivery, so it holds up when it matters.</p>
+      <div class="marks">
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Unique tracking number on every report</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Recorded, time‑stamped consent</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Per‑source findings with clear status</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Documented chain of custody</div>
+      </div>
+      <div style="margin-top:28px"><a class="btn line big" href="https://blueridgepressllc.com/sample-report">View a sample report</a></div>
+    </div>
+    <div class="docmock" aria-hidden="true">
+      <div class="top"><b>Verification Report</b><span>BRP‑2026‑0417<br>Confirmed</span></div>
+      <div class="ln m"></div><div class="ln"></div><div class="ln s"></div>
+      <span class="chip">● Reference · confirmed</span> <span class="chip">● Employment · confirmed</span>
+      <div class="ln" style="margin-top:14px"></div><div class="ln m"></div><div class="ln s"></div>
+      <span class="chip">● Education · confirmed</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AUDIENCE ================= -->
+<section>
+  <div class="wrap">
+    <p class="lab eyebrow">Who we serve</p>
+    <h2 class="h2">Anyone whose next decision has to be trusted.</h2>
+    <p class="sub">When you're putting someone in a home, in front of customers, or near the vulnerable, a real verification isn't a formality — it's the responsible thing.</p>
+    <div class="aud">
+      <span>Families hiring in‑home &amp; senior care</span><span>Small businesses hiring</span><span>Staffing &amp; recruiting</span><span>Property managers &amp; landlords</span><span>Nonprofits &amp; volunteer programs</span><span>Childcare &amp; schools</span><span>Faith &amp; community organizations</span><span>Contractors &amp; trades</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRICING ================= -->
+<section class="price" id="pricing">
+  <div class="wrap">
+    <p class="lab eyebrow" style="justify-content:center">Pricing</p>
+    <div class="big">From $39</div>
+    <p>Per candidate — references, employment, and education, confirmed at the source. A five‑pack is $149. No contracts, no minimums, no bundled data you never asked for.</p>
+    <a class="btn solid big" href="https://blueridgepressllc.com/pricing">See full pricing</a>
+  </div>
+</section>
+
+<!-- ================= CLOSE ================= -->
+<section class="close" id="start"><div class="wrap"><p class="lab eyebrow" style="justify-content:center">Request a verification</p><h2>Verify your next decision &mdash; the way it should be done.</h2><p class="sub" style="margin:16px auto 0;text-align:center">Tell us who to verify. We send the candidate a consent link and take it from there &mdash; nothing happens until they sign.</p><div class="formcard"><iframe src="https://form.jotform.com/262105153679054" title="Request a Verification" loading="lazy"></iframe></div><p class="fine">Consent-first &middot; confirmed at the source &middot; Raleigh, North Carolina</p></div></section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <a class="brand" href="#top">
+        <svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6" fill="#F6ECDF"/><path d="M8 22V10h4l4 6 4-6h4v12" stroke="#48101A" stroke-width="2.4" fill="none" stroke-linejoin="round" stroke-linecap="round"/></svg>
+        <span class="n">Blue Ridge Press LLC<small>Verification &amp; Reference Services</small></span>
+      </a>
+      <nav>
+        <a href="https://blueridgepressllc.com/pricing">Pricing</a>
+        <a href="https://blueridgepressllc.com/about">About</a>
+        <a href="https://blueridgepressllc.com/sample-report">Sample report</a>
+        <a href="https://blueridgepressllc.com/privacy">Privacy</a>
+        <a href="https://blueridgepressllc.com/terms">Terms</a>
+      </nav>
+    </div>
+    <p class="disc">Blue Ridge Press LLC provides independent, consent‑based verification of professional references, past employment, and education. It does not provide criminal, credit, or motor‑vehicle records and is not a consumer‑reporting agency for those regulated reports; where such records are needed, we refer you to a credentialed agency. Reports reflect information confirmed by named sources as of the report date and are one input to your decision. &copy; Blue Ridge Press LLC &middot; Raleigh, North Carolina.</p>
+  </div>
+</footer>
+</div>
