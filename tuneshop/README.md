@@ -1,4 +1,4 @@
-# Johnson Performance — BMW & Mercedes tuning, Orlando FL
+# Velocity Werks — BMW & Mercedes tuning, Orlando FL
 
 A single, self-contained web page for a real-world ECU tuning business:
 customers pick their BMW or Mercedes, see the tune packages available for
@@ -29,8 +29,8 @@ booking requests are confirmed by the shop, which then sends a deposit link.
   and pricing — quoting numbers you can't reproduce is how you get chargebacks.
 - **Wire up the booking form** (mailto:, Formspree, or a booking system) —
   right now requests only persist in the visitor's own browser.
-- **Confirm the business details with Paul & Mechelle** — name, location,
-  contact info, and that they're happy with the claims made on the page.
+- **Pick a real business name** — "Velocity Werks" is a placeholder; register
+  your own name/LLC and update the branding before launch.
 
 ## How it's built
 
