@@ -96,6 +96,14 @@ test('full consent-gated flow over the API', async () => {
     assert.equal(qr.status, 200);
     assert.match(qr.headers.get('content-type') ?? '', /image\/svg\+xml/);
     assert.match(await qr.text(), /^<svg /);
+
+    // And the executive PDF report downloads.
+    const pdf = await fetch(`${base}/api/requests/${req.id}/report.pdf`);
+    assert.equal(pdf.status, 200);
+    assert.equal(pdf.headers.get('content-type'), 'application/pdf');
+    const body = Buffer.from(await pdf.arrayBuffer());
+    assert.match(body.toString('latin1').slice(0, 8), /^%PDF-1\.4/);
+    assert.ok(body.toString('latin1').includes(cref.trackingNumber));
   });
 });
 
@@ -107,6 +115,8 @@ test('the report-verify page and certificate API stay public even when admin is 
       assert.equal((await fetch(`${base}/api/certificate/BRP-2026-XXXXXX?code=AAAA-AAAA`)).status, 404);
       // The QR sub-route derives from a request id, so it stays admin-gated.
       assert.equal((await fetch(`${base}/api/certificate/anything/qr`)).status, 401);
+      // So does the PDF report.
+      assert.equal((await fetch(`${base}/api/requests/anything/report.pdf`)).status, 401);
     },
     { user: 'admin', password: 'pw' },
   );

@@ -18,6 +18,7 @@ import { createServer, type IncomingMessage, type Server, type ServerResponse } 
 import { timingSafeEqual } from 'node:crypto';
 import { VerifyService, DISCLOSURE_VERSION } from '../service/verifyService.ts';
 import { CertificateService } from '../service/certificate.ts';
+import { ReportService } from '../service/report.ts';
 import { qrSvg } from '../service/qr.ts';
 import { DomainError, ValidationError } from '../service/errors.ts';
 import { createInMemoryStore, type Store } from '../store/store.ts';
@@ -62,10 +63,11 @@ export function createApp(opts: AppOptions = {}): AppServer {
     secret: opts.certSecret ?? process.env.VERIFY_CERT_SECRET ?? 'verify-cert-dev-secret-change-me',
     baseUrl,
   });
+  const report = new ReportService({ store, cert });
   const user = opts.user ?? process.env.VERIFY_USER;
   const password = opts.password ?? process.env.VERIFY_PASSWORD;
   const gate = user && password ? { user, password } : undefined;
-  const server = createServer(makeListener(service, cert, gate));
+  const server = createServer(makeListener(service, cert, report, gate));
   return { server, service };
 }
 
@@ -87,7 +89,12 @@ function isPublicPath(path: string): boolean {
   );
 }
 
-function makeListener(service: VerifyService, cert: CertificateService, gate: { user: string; password: string } | undefined) {
+function makeListener(
+  service: VerifyService,
+  cert: CertificateService,
+  report: ReportService,
+  gate: { user: string; password: string } | undefined,
+) {
   return async (req: IncomingMessage, res: ServerResponse): Promise<void> => {
     try {
       const url = new URL(req.url ?? '/', 'http://localhost');
@@ -111,7 +118,7 @@ function makeListener(service: VerifyService, cert: CertificateService, gate: { 
       if (method === 'GET' && path.startsWith('/v/')) return html(res, VERIFIER_PAGE);
 
       // --- JSON API ---
-      if (path.startsWith('/api/')) return await api(service, cert, method, path, url, req, res);
+      if (path.startsWith('/api/')) return await api(service, cert, report, method, path, url, req, res);
 
       json(res, 404, { error: { code: 'not_found', message: 'not found' } });
     } catch (err) {
@@ -126,6 +133,7 @@ function makeListener(service: VerifyService, cert: CertificateService, gate: { 
 async function api(
   service: VerifyService,
   cert: CertificateService,
+  report: ReportService,
   method: string,
   path: string,
   url: URL,
@@ -155,6 +163,18 @@ async function api(
     }));
   if (method === 'GET' && seg[1] === 'requests' && seg[2] && seg.length === 3)
     return json(res, 200, { ...service.view(seg[2]), certificate: cert.reference(seg[2]) });
+  // Admin: the executive PDF report — branded findings + consent + authenticity.
+  if (method === 'GET' && seg[1] === 'requests' && seg[2] && seg[3] === 'report.pdf') {
+    const pdf = report.pdf(seg[2]);
+    res.writeHead(200, {
+      'content-type': 'application/pdf',
+      'content-length': pdf.length,
+      'content-disposition': `inline; filename="verification-report-${seg[2]}.pdf"`,
+      'cache-control': 'no-store',
+    });
+    res.end(pdf);
+    return;
+  }
   if (method === 'POST' && seg[1] === 'requests' && seg[3] === 'cancel')
     return json(res, 200, service.cancelRequest(seg[2]));
 
