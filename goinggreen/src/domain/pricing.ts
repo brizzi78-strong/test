@@ -1,5 +1,5 @@
 /**
- * The FairFare pricing engine.
+ * The Going Green pricing engine.
  *
  * The whole formula is public and fits on a napkin:
  *
@@ -16,7 +16,7 @@
 import type { FareLine, LatLng, Quote, VehicleTier } from './types.ts';
 import { distanceKm, travelMinutes } from './geo.ts';
 
-/** Flat platform take. Uber keeps roughly 25–30%; FairFare keeps 10%. */
+/** Flat platform take. Uber keeps roughly 25–30%; Going Green keeps 10%. */
 export const TAKE_RATE = 0.1;
 
 /** Demand pricing can never exceed 1.5x, full stop. */

@@ -1,4 +1,4 @@
-/** JSON API routing for FairFare. No framework — Node's http module is plenty. */
+/** JSON API routing for Going Green. No framework — Node's http module is plenty. */
 
 import type { IncomingMessage, ServerResponse } from 'node:http';
 import type { LatLng, VehicleTier } from '../domain/types.ts';
@@ -51,7 +51,7 @@ export async function handleApi(
 
   try {
     if (method === 'GET' && path === '/api/health') {
-      send(res, 200, { ok: true, service: 'fairfare' });
+      send(res, 200, { ok: true, service: 'goinggreen' });
       return true;
     }
 

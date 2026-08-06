@@ -1,5 +1,5 @@
 /**
- * Entry point: start the FairFare HTTP service.
+ * Entry point: start the Going Green HTTP service.
  *
  * Run with:  node src/index.ts   (or `npm start`)
  * Configure the port with the PORT environment variable (default 4700).
@@ -12,5 +12,5 @@ const { server } = createApp();
 
 server.listen(port, () => {
   // eslint-disable-next-line no-console
-  console.log(`FairFare listening on http://localhost:${port}`);
+  console.log(`Going Green listening on http://localhost:${port}`);
 });

@@ -64,7 +64,7 @@ describe('platform endpoints', () => {
     const res = await fetch(base + '/');
     assert.equal(res.status, 200);
     const html = await res.text();
-    assert.ok(html.includes('FairFare'));
+    assert.ok(html.includes('Going Green'));
   });
 
   it('rejects malformed requests clearly', async () => {

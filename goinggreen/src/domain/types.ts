@@ -1,4 +1,4 @@
-/** Shared domain types for the FairFare ride-hailing engine. */
+/** Shared domain types for the Going Green ride-hailing engine. */
 
 export interface LatLng {
   lat: number;

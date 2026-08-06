@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FairFare — fair rides, no surprises</title>
+<title>Going Green — fair rides, no surprises</title>
 <style>
   :root {
     --bg: #0e1116; --panel: #171c24; --panel-2: #1e2530; --line: #2a3342;
@@ -68,8 +68,8 @@
 </head>
 <body>
 <header>
-  <h1>Fair<span>Fare</span></h1>
-  <p>Fair rides, no surprises — the fare formula is public, drivers keep 90%, surge is capped at 1.5×.</p>
+  <h1>Going<span>Green</span></h1>
+  <p>Greener rides, no surprises — the fare formula is public, drivers keep 90%, surge is capped at 1.5×.</p>
 </header>
 <main>
   <section class="card">
@@ -80,7 +80,7 @@
   <section>
     <div class="card" id="panel"></div>
     <div class="card" style="margin-top: 14px">
-      <h2>The FairFare pledge</h2>
+      <h2>The Going Green pledge</h2>
       <p class="pledge">
         <b>Every quote is itemized</b> — base, distance, time, and any demand multiplier, line by line.<br>
         <b>Drivers keep 90%</b> of every fare and <b>100% of tips</b>. Uber keeps 25–30%.<br>
@@ -90,7 +90,7 @@
     </div>
   </section>
 </main>
-<footer>FairFare demo — simulated city, simulated fleet, real pricing engine.</footer>
+<footer>Going Green demo — simulated city, simulated fleet, real pricing engine.</footer>
 <script>
 (() => {
   const $ = (sel) => document.querySelector(sel);
@@ -252,7 +252,7 @@
           ${r.quote.lines.map((l) => `<div><span>${l.label}</span><span>${money(l.amount)}</span></div>`).join('')}
           <div class="total"><span>You paid</span><span>${money(r.quote.total)}</span></div>
           <div class="split"><span>${r.driver.name} received${r.tip ? ' (incl. tip)' : ''}</span><b>${money(r.quote.driverEarnings + (r.tip || 0))}</b></div>
-          <div class="split"><span>FairFare kept (10%)</span><span>${money(r.quote.platformFee)}</span></div>
+          <div class="split"><span>Going Green kept (10%)</span><span>${money(r.quote.platformFee)}</span></div>
         </div>
         ${rated ? `<p class="hint">Thanks! You rated this trip ${r.rating}★${r.tip ? ' and tipped ' + money(r.tip) : ''}.</p>` : `
           <p class="hint">Rate ${r.driver.name}:</p>
@@ -311,7 +311,7 @@
           ${state.quote.lines.map((l) => `<div><span>${l.label}</span><span>${money(l.amount)}</span></div>`).join('')}
           <div class="total"><span>Total — locked in</span><span>${money(state.quote.total)}</span></div>
           <div class="split"><span>Your driver will receive</span><b>${money(state.quote.driverEarnings)}</b></div>
-          <div class="split"><span>FairFare keeps (10%)</span><span>${money(state.quote.platformFee)}</span></div>
+          <div class="split"><span>Going Green keeps (10%)</span><span>${money(state.quote.platformFee)}</span></div>
         </div>
         <p class="hint">${state.quote.distanceKm.toFixed(1)} km · about ${state.quote.durationMin} min</p>
         <button class="primary" id="bookBtn">Request ride — ${money(state.quote.total)}</button>`

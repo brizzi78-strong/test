@@ -1,12 +1,13 @@
-# FairFare — fair rides, no surprises
+# Going Green — greener rides, no surprises
 
 A ride-hailing platform built to beat Uber where it actually hurts: trust.
 Same core product — tap a map, get matched, ride, pay — but every place Uber
-is opaque or extractive, FairFare is transparent and driver-first by design.
+is opaque or extractive, Going Green is transparent and driver-first by design,
+with a first-class Green (EV) tier baked into the fleet.
 
 ## Why it's superior to Uber
 
-| | Uber | FairFare |
+| | Uber | Going Green |
 |---|---|---|
 | Platform take | ~25–30%, varies per trip, undisclosed | **Flat 10%**, printed on every quote |
 | Fare formula | Black-box "upfront pricing" | **Public formula** (below) with an itemized quote |
@@ -34,7 +35,7 @@ Requires Node >= 22.18 (runs TypeScript directly — no build step, no
 dependencies).
 
 ```bash
-cd fairfare
+cd goinggreen
 npm start          # serves http://localhost:4700  (PORT env var to change)
 npm test           # engine + end-to-end API tests
 npm run typecheck  # strict TypeScript

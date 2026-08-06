@@ -3,7 +3,7 @@
  *
  * Score = ETA to pickup, minus a small credit for a strong rating. That keeps
  * waits short without turning rating into a winner-takes-all leaderboard.
- * FairFare shows riders who they matched with and why (the ETA), and never
+ * Going Green shows riders who they matched with and why (the ETA), and never
  * deprioritizes drivers for declining trips.
  */
 
