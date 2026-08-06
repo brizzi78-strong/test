@@ -1,23 +1,31 @@
-# SquareFare — a square deal on every ride
+# SquareFare — one search, every ride
 
-A ride-hailing platform built to beat Uber where it actually hurts: trust.
-Same core product — tap a map, get matched, ride, pay — but every place Uber
-is opaque or extractive, SquareFare is transparent and driver-first by design.
-An EV tier is part of the fleet as a product feature — quiet, clean cars —
-not the brand identity.
+The Expedia of ride hailing. SquareFare compares every way to make a trip —
+Uber, Lyft, the local taxi fleet, and SquareFare's own driver network — and
+ranks them by what the rider will actually pay. Book external rides with one
+tap via deep link into the provider's app; book SquareFare-network rides right
+in the app at an exact, itemized, locked-in price.
 
-## Why it's superior to Uber
+## Why this beats Uber and Lyft
 
-| | Uber | SquareFare |
-|---|---|---|
-| Platform take | ~25–30%, varies per trip, undisclosed | **Flat 10%**, printed on every quote |
-| Fare formula | Black-box "upfront pricing" | **Public formula** (below) with an itemized quote |
-| Surge | Unbounded, hidden inside the total | **Capped at 1.5×**, always its own line item |
-| Tips | To the driver, after prompting screens | **100% to the driver**, one tap, no dark patterns |
-| Cancellation fees | Kept partly by the platform | **Paid to the driver**, who lost the time |
-| Booking / service fees | Added on top | **None.** The quote is the price |
+Aggregators win by sitting **above** the suppliers, the way Expedia sits above
+airlines and hotels:
 
-The whole fare formula fits on a napkin, and the app shows every term:
+- **Riders start here** — nobody wants to check three apps to find the fair
+  price. Whoever owns the comparison owns the customer.
+- **Uber and Lyft become suppliers, not competitors.** Their scale works for
+  us: every driver they recruit makes our comparison more useful.
+- **Our own network is the margin play.** Because SquareFare takes a flat 10%
+  (vs their 25–30%), our exact quotes routinely undercut their estimates while
+  paying drivers more — and every comparison screen advertises that fact.
+- **Honesty is the moat.** External prices are shown as estimates from
+  published city rates with the caveat that their surge is uncapped; our
+  prices are exact and itemized. Riders learn fast which number they can trust.
+
+### The SquareFare-network pledge
+
+The whole fare formula for our own drivers fits on a napkin, and the app
+shows every term:
 
 ```
 subtotal   = base + perKm x distance + perMin x duration       (per tier)
@@ -33,19 +41,21 @@ from 10%.
 ## Run it
 
 Requires Node >= 22.18 (runs TypeScript directly — no build step, no
-dependencies).
+runtime dependencies).
 
 ```bash
 cd squarefare
 npm start          # serves http://localhost:4700  (PORT env var to change)
-npm test           # engine + end-to-end API tests
+npm test           # engine + aggregator + end-to-end API tests
 npm run typecheck  # strict TypeScript
 ```
 
-Open http://localhost:4700: click the map to drop pickup and dropoff pins,
-compare tiers, and book. A simulated fleet of 12 drivers accepts the trip,
-drives to you, and completes the ride in accelerated time; the receipt shows
-exactly what you paid, what the driver received, and what the platform kept.
+Open http://localhost:4700: click the map to drop pickup and dropoff pins and
+the comparison appears — UberX, UberXL, Lyft, Lyft XL, metered taxi, and every
+SquareFare tier with a nearby driver, cheapest first. External offers open
+pre-filled in the provider's app; SquareFare offers book in-app, and a
+simulated fleet completes the ride in accelerated time with a receipt showing
+the exact rider/driver/platform split.
 
 ## Architecture
 
@@ -53,24 +63,27 @@ exactly what you paid, what the driver received, and what the platform kept.
 src/
   domain/      pure logic, no I/O — fully unit-tested
     geo.ts       haversine distance, ETAs, interpolation
-    pricing.ts   the published fare engine (tiers, surge cap, 90/10 split)
+    providers.ts THE AGGREGATOR CORE: external rate cards (Uber, Lyft, taxi),
+                 deep-link builders, and price-ranked comparison
+    pricing.ts   the published SquareFare-network fare engine (90/10 split)
     matching.ts  nearest-driver matching with a small rating credit
     trips.ts     trip state machine: matched -> arriving -> in_progress -> completed
   service/     RideService — application layer; injectable clock for tests
   store/       in-memory store with a deterministic seeded demo fleet
   api/         Node http server: JSON API under /api/*, rider SPA elsewhere
-  web/         single-file rider app (canvas map, live trip tracking, receipts)
-  __tests__/   node:test suites: engine unit tests + end-to-end API tests
+  web/         single-file rider app (canvas map, comparison list, live tracking)
+  __tests__/   node:test suites: engine + aggregator unit tests, end-to-end API
 ```
 
 ### API
 
 | Method & path | Purpose |
 |---|---|
+| `POST /api/compare` | `{pickup, dropoff}` → every provider's offer, cheapest first |
 | `GET /api/health` | liveness |
 | `GET /api/config` | city bounds, tier rates, take rate, surge cap |
-| `GET /api/drivers` | live fleet positions and status |
-| `POST /api/quotes` | `{pickup, dropoff, tier}` → itemized quote (5-min TTL) |
+| `GET /api/drivers` | live SquareFare fleet positions and status |
+| `POST /api/quotes` | `{pickup, dropoff, tier}` → itemized network quote (5-min TTL) |
 | `POST /api/trips` | `{quoteId, riderName}` → match a driver, start the trip |
 | `GET /api/trips/:id` | live trip state (driver position, status) |
 | `POST /api/trips/:id/cancel` | free within 2 min; flat $4 to the driver after |
@@ -79,9 +92,10 @@ src/
 
 ## Honest scope
 
-This is a working single-city demo, not a deployed marketplace: the fleet is
-simulated, payments are ledger entries, and state is in-memory. What's real is
-the part that makes it *superior* — the pricing engine, the matching, the trip
-lifecycle, and the transparency guarantees, all tested. Swapping the store for
-a database and the simulator for real driver apps changes none of the
-economics above.
+Uber and Lyft closed their public pricing APIs, so external offers are
+estimates computed from published per-city rate cards — the same approach
+production aggregators like RideGuru and Obi use — and are labelled as
+estimates in the UI, with booking handled by deep link into the provider's
+app. The SquareFare network side is a working single-city demo: simulated
+fleet, ledger-entry payments, in-memory state. The comparison engine, pricing,
+matching, trip lifecycle, and transparency guarantees are real and tested.

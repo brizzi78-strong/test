@@ -31,12 +31,27 @@
   .card h2 { margin: 0 0 10px; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); }
   #map { width: 100%; aspect-ratio: 1; border-radius: var(--radius); background: var(--panel-2); cursor: crosshair; display: block; }
   .hint { color: var(--muted); font-size: 13px; margin: 10px 0 0; }
-  .tiers { display: flex; gap: 8px; margin: 10px 0; }
-  .tiers button {
-    flex: 1; padding: 8px 6px; border-radius: 8px; border: 1px solid var(--line);
-    background: var(--panel-2); color: var(--text); cursor: pointer; font-size: 13px;
+  .offers { display: flex; flex-direction: column; gap: 8px; margin: 10px 0; }
+  .offer {
+    border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px;
+    background: var(--panel-2); display: flex; flex-direction: column; gap: 6px;
   }
-  .tiers button.active { border-color: var(--accent); color: var(--accent); }
+  .offer.best { border-color: var(--accent); }
+  .offer-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+  .offer-head .name { font-weight: 700; font-size: 14px; }
+  .offer-head .price { font-weight: 700; font-size: 16px; }
+  .offer-meta { display: flex; gap: 8px; align-items: center; color: var(--muted); font-size: 12px; flex-wrap: wrap; }
+  .badge { border-radius: 20px; padding: 2px 8px; font-size: 11px; font-weight: 700; }
+  .badge.best { background: var(--accent); color: #05261a; }
+  .badge.exact { border: 1px solid var(--accent); color: var(--accent); }
+  .badge.est { border: 1px solid var(--line); color: var(--muted); }
+  .offer button, .offer a.book {
+    padding: 8px; border-radius: 8px; border: 0; background: var(--accent); color: #05261a;
+    font-weight: 700; font-size: 13px; cursor: pointer; text-align: center; text-decoration: none;
+  }
+  .offer a.book.ext { background: transparent; border: 1px solid var(--line); color: var(--text); }
+  .offer details { font-size: 12.5px; color: var(--muted); }
+  .offer details summary { cursor: pointer; }
   .fare-lines { margin: 10px 0; border-top: 1px solid var(--line); }
   .fare-lines div { display: flex; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid var(--line); font-size: 13px; }
   .fare-lines .total { font-weight: 700; font-size: 15px; }
@@ -69,7 +84,7 @@
 <body>
 <header>
   <h1>Square<span>Fare</span></h1>
-  <p>A square deal on every ride — the fare formula is public, drivers keep 90%, surge is capped at 1.5×.</p>
+  <p>One search, every ride — Uber, Lyft, taxis, and SquareFare's own drivers, ranked by what you'll actually pay.</p>
 </header>
 <main>
   <section class="card">
@@ -82,10 +97,10 @@
     <div class="card" style="margin-top: 14px">
       <h2>The SquareFare pledge</h2>
       <p class="pledge">
-        <b>Every quote is itemized</b> — base, distance, time, and any demand multiplier, line by line.<br>
-        <b>Drivers keep 90%</b> of every fare and <b>100% of tips</b>. Uber keeps 25–30%.<br>
-        <b>Surge is capped at 1.5×</b> and shown as its own line. No hidden booking fees, ever.<br>
-        <b>Cancellation fees go to the driver</b>, not the platform.
+        <b>We show every option</b> — Uber, Lyft, and taxi estimates ranked honestly beside our own network, cheapest first.<br>
+        <b>SquareFare-network prices are exact and itemized</b> — base, distance, time, any demand multiplier, line by line.<br>
+        <b>Our drivers keep 90%</b> of every fare and <b>100% of tips</b>. Uber keeps 25–30% — that's why we're usually cheapest.<br>
+        <b>Surge on our network is capped at 1.5×</b> and shown as its own line. No hidden booking fees, ever.
       </p>
     </div>
   </section>
@@ -99,7 +114,7 @@
 
   const state = {
     config: null, drivers: [], pickup: null, dropoff: null,
-    tier: 'standard', quote: null, trip: null, tipPct: 0, stars: 0, error: '',
+    offers: null, trip: null, tipPct: 0, stars: 0, error: '',
     receipt: null,
   };
 
@@ -166,26 +181,26 @@
     return body;
   }
 
-  async function getQuote() {
-    if (!state.pickup || !state.dropoff) { state.quote = null; render(); return; }
+  async function getOffers() {
+    if (!state.pickup || !state.dropoff) { state.offers = null; render(); return; }
     state.error = '';
     try {
-      state.quote = await api('/api/quotes', {
+      state.offers = (await api('/api/compare', {
         method: 'POST', headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({ pickup: state.pickup, dropoff: state.dropoff, tier: state.tier }),
-      });
+        body: JSON.stringify({ pickup: state.pickup, dropoff: state.dropoff }),
+      })).offers;
     } catch (e) { state.error = e.message; }
     render();
   }
 
-  async function requestRide() {
+  async function requestRide(quoteId) {
     state.error = '';
     try {
       state.trip = await api('/api/trips', {
         method: 'POST', headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({ quoteId: state.quote.id, riderName: 'Demo Rider' }),
+        body: JSON.stringify({ quoteId, riderName: 'Demo Rider' }),
       });
-      state.quote = null;
+      state.offers = null;
       pollTrip();
     } catch (e) { state.error = e.message; }
     render();
@@ -228,7 +243,7 @@
   }
 
   function reset() {
-    state.pickup = state.dropoff = state.quote = state.trip = state.receipt = null;
+    state.pickup = state.dropoff = state.offers = state.trip = state.receipt = null;
     state.stars = 0; state.tipPct = 0; state.error = '';
     clearInterval(pollTimer);
     render();
@@ -301,29 +316,39 @@
       return;
     }
 
-    panel.innerHTML = `
-      <h2>Get a quote</h2>
-      <div class="tiers" id="tiers">
-        ${['standard', 'green', 'xl'].map((k) => `<button data-t="${k}" class="${state.tier === k ? 'active' : ''}">${k === 'xl' ? 'XL' : k[0].toUpperCase() + k.slice(1)}</button>`).join('')}
-      </div>
-      ${state.quote ? `
-        <div class="fare-lines">
-          ${state.quote.lines.map((l) => `<div><span>${l.label}</span><span>${money(l.amount)}</span></div>`).join('')}
-          <div class="total"><span>Total — locked in</span><span>${money(state.quote.total)}</span></div>
-          <div class="split"><span>Your driver will receive</span><b>${money(state.quote.driverEarnings)}</b></div>
-          <div class="split"><span>SquareFare keeps (10%)</span><span>${money(state.quote.platformFee)}</span></div>
+    const offerRow = (o, i) => `
+      <div class="offer ${i === 0 ? 'best' : ''}">
+        <div class="offer-head">
+          <span class="name">${o.provider} · ${o.product}</span>
+          <span class="price">${o.kind === 'estimate' ? '~' : ''}${money(o.total)}</span>
         </div>
-        <p class="hint">${state.quote.distanceKm.toFixed(1)} km · about ${state.quote.durationMin} min</p>
-        <button class="primary" id="bookBtn">Request ride — ${money(state.quote.total)}</button>`
-      : '<p class="hint">Set pickup and dropoff on the map to see an itemized quote.</p>'}
+        <div class="offer-meta">
+          ${i === 0 ? '<span class="badge best">Best price</span>' : ''}
+          <span class="badge ${o.kind === 'exact' ? 'exact' : 'est'}">${o.kind === 'exact' ? 'Exact, locked in' : 'Estimate'}</span>
+          <span>~${o.etaMinutes} min pickup · ${o.seats} seats</span>
+        </div>
+        ${o.lines ? `<details><summary>Fare breakdown</summary>${o.lines.map((l) => `<div class="offer-meta"><span>${l.label}</span><span>${money(l.amount)}</span></div>`).join('')}</details>` : ''}
+        ${o.quoteId
+          ? `<button data-q="${o.quoteId}">Book now — ${money(o.total)}</button>`
+          : o.bookingLink
+            ? `<a class="book ext" href="${o.bookingLink}" target="_blank" rel="noopener">Open in ${o.provider}</a>`
+            : '<span class="offer-meta">Hail on the street or call dispatch</span>'}
+      </div>`;
+
+    panel.innerHTML = `
+      <h2>Compare every ride</h2>
+      ${state.offers ? `
+        <div class="offers" id="offers">${state.offers.map(offerRow).join('')}</div>
+        <p class="hint">SquareFare prices are exact and itemized. Uber, Lyft, and taxi prices are
+        estimates from published city rates — their live surge can be higher.</p>`
+      : '<p class="hint">Set pickup and dropoff on the map to compare Uber, Lyft, taxi, and SquareFare prices side by side.</p>'}
       ${state.pickup ? '<button class="ghost" id="clearBtn">Clear pins</button>' : ''}
       ${state.error ? `<p class="error">${state.error}</p>` : ''}`;
-    $('#tiers').addEventListener('click', (e) => {
-      const k = e.target.dataset.t;
-      if (k) { state.tier = k; getQuote(); }
+    $('#offers')?.addEventListener('click', (e) => {
+      const q = e.target.dataset.q;
+      if (q) requestRide(q);
     });
-    $('#bookBtn')?.addEventListener('click', requestRide);
-    $('#clearBtn')?.addEventListener('click', () => { state.pickup = state.dropoff = state.quote = null; render(); });
+    $('#clearBtn')?.addEventListener('click', () => { state.pickup = state.dropoff = state.offers = null; render(); });
   }
 
   canvas.addEventListener('click', (e) => {
@@ -333,10 +358,10 @@
     const y = ((e.clientY - rect.top) / rect.height) * canvas.height;
     const p = toLatLng(x, y);
     if (!state.pickup || (state.pickup && state.dropoff)) {
-      state.pickup = p; state.dropoff = null; state.quote = null;
+      state.pickup = p; state.dropoff = null; state.offers = null;
     } else {
       state.dropoff = p;
-      getQuote();
+      getOffers();
     }
     render();
   });

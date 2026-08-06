@@ -150,3 +150,34 @@ describe('ride flow end to end', () => {
     service.tick(3600); // let the booked XL trips finish so later tests see a free fleet
   });
 });
+
+describe('aggregator comparison', () => {
+  it('compares all providers, ranks by price, and marks our offers bookable', async () => {
+    const res = await call('POST', '/api/compare', { pickup: PICKUP, dropoff: DROPOFF });
+    assert.equal(res.status, 200);
+    const offers = res.body.offers;
+    assert.ok(offers.length >= 6); // 5 external products + at least 1 SquareFare tier
+
+    const totals = offers.map((o: { total: number }) => o.total);
+    assert.deepEqual(totals, [...totals].sort((a, b) => a - b));
+
+    const ours = offers.filter((o: { provider: string }) => o.provider === 'SquareFare');
+    assert.ok(ours.length >= 1);
+    assert.ok(ours.every((o: { kind: string; quoteId?: string; lines?: unknown[] }) =>
+      o.kind === 'exact' && o.quoteId && Array.isArray(o.lines)));
+
+    const external = offers.filter((o: { provider: string }) => o.provider !== 'SquareFare');
+    assert.ok(external.every((o: { kind: string; quoteId?: string }) => o.kind === 'estimate' && !o.quoteId));
+    assert.ok(external.some((o: { bookingLink?: string }) => o.bookingLink?.includes('m.uber.com')));
+
+    // A SquareFare offer from the comparison is directly bookable.
+    const trip = await call('POST', '/api/trips', { quoteId: ours[0].quoteId, riderName: 'Comparison Shopper' });
+    assert.equal(trip.status, 201);
+    service.tick(3600); // finish it so the fleet is free for other tests
+  });
+
+  it('rejects a comparison with bad coordinates', async () => {
+    const res = await call('POST', '/api/compare', { pickup: { lat: 999, lng: 0 }, dropoff: DROPOFF });
+    assert.equal(res.status, 400);
+  });
+});

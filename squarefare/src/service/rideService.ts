@@ -5,7 +5,8 @@
  */
 
 import type { LatLng, PlatformStats, Quote, Trip, VehicleTier } from '../domain/types.ts';
-import { buildQuote, demandMultiplier, roundMoney, TAKE_RATE } from '../domain/pricing.ts';
+import { buildQuote, demandMultiplier, roundMoney, TAKE_RATE, TIER_RATES } from '../domain/pricing.ts';
+import { externalOffers, rankOffers, type ProviderOffer } from '../domain/providers.ts';
 import { matchDriver } from '../domain/matching.ts';
 import { advanceTrip, cancelTrip, settleTrip } from '../domain/trips.ts';
 import { Store } from '../store/store.ts';
@@ -45,6 +46,31 @@ export class RideService {
     });
     this.store.quotes.set(q.id, q);
     return q;
+  }
+
+  /**
+   * The aggregator view: every way to make this trip — Uber, Lyft, taxi
+   * estimates plus exact, bookable SquareFare-network quotes — cheapest first.
+   */
+  compare(pickup: LatLng, dropoff: LatLng): ProviderOffer[] {
+    const offers = externalOffers(pickup, dropoff);
+    for (const tier of ['standard', 'green', 'xl'] as VehicleTier[]) {
+      const match = matchDriver(this.store.drivers.values(), pickup, tier);
+      if (!match) continue; // no nearby SquareFare driver for this tier — don't fake an offer
+      const q = this.quote(pickup, dropoff, tier);
+      offers.push({
+        provider: 'SquareFare',
+        product: TIER_RATES[tier].label,
+        kind: 'exact',
+        total: q.total,
+        etaMinutes: match.etaMinutes,
+        seats: tier === 'xl' ? 6 : 4,
+        quoteId: q.id,
+        lines: q.lines,
+        note: 'Exact locked-in price, itemized. Driver keeps 90%. Books right here.',
+      });
+    }
+    return rankOffers(offers);
   }
 
   requestRide(quoteId: string, riderName: string): TripView {

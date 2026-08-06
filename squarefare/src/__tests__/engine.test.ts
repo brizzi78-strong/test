@@ -195,3 +195,45 @@ describe('trip lifecycle', () => {
     assert.throws(() => cancelTrip(trip, driver, 0), /in progress/);
   });
 });
+
+describe('aggregator', () => {
+  const far = { lat: 40.79, lng: -73.94 };
+
+  it('prices every external provider from its rate card', async () => {
+    const { externalOffers } = await import('../domain/providers.ts');
+    const offers = externalOffers(A, far);
+    const providers = new Set(offers.map((o) => o.provider));
+    assert.deepEqual([...providers].sort(), ['City Taxi', 'Lyft', 'Uber']);
+    assert.ok(offers.every((o) => o.kind === 'estimate' && o.total > 0));
+  });
+
+  it('applies minimum fare plus booking fee on short hops', async () => {
+    const { externalOffers } = await import('../domain/providers.ts');
+    const nearby = { lat: 40.7502, lng: -73.99 };
+    const uberX = externalOffers(A, nearby).find((o) => o.product === 'UberX');
+    assert.equal(uberX?.total, 8.5 + 2.75);
+  });
+
+  it('ranks offers cheapest first, faster pickup breaking ties', async () => {
+    const { rankOffers } = await import('../domain/providers.ts');
+    const ranked = rankOffers([
+      { provider: 'B', product: 'b', kind: 'estimate', total: 12, etaMinutes: 3, seats: 4, note: '' },
+      { provider: 'A', product: 'a', kind: 'estimate', total: 9, etaMinutes: 9, seats: 4, note: '' },
+      { provider: 'C', product: 'c', kind: 'estimate', total: 9, etaMinutes: 2, seats: 4, note: '' },
+    ]);
+    assert.deepEqual(ranked.map((o) => o.provider), ['C', 'A', 'B']);
+  });
+
+  it('deep links carry the exact pickup and dropoff coordinates', async () => {
+    const { externalOffers } = await import('../domain/providers.ts');
+    const offers = externalOffers(A, far);
+    const uber = offers.find((o) => o.provider === 'Uber');
+    const lyft = offers.find((o) => o.provider === 'Lyft');
+    const taxi = offers.find((o) => o.provider === 'City Taxi');
+    assert.ok(uber?.bookingLink?.includes('m.uber.com'));
+    assert.ok(uber?.bookingLink?.includes(encodeURIComponent('pickup[latitude]') + '=' + A.lat));
+    assert.ok(lyft?.bookingLink?.includes('ride.lyft.com'));
+    assert.ok(lyft?.bookingLink?.includes(encodeURIComponent('destination[latitude]') + '=' + far.lat));
+    assert.equal(taxi?.bookingLink, undefined);
+  });
+});

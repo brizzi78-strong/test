@@ -85,6 +85,14 @@ export async function handleApi(
       return true;
     }
 
+    if (method === 'POST' && path === '/api/compare') {
+      const body = await readJson(req);
+      const pickup = parseLatLng(body.pickup, 'pickup');
+      const dropoff = parseLatLng(body.dropoff, 'dropoff');
+      send(res, 200, { offers: service.compare(pickup, dropoff) });
+      return true;
+    }
+
     if (method === 'POST' && path === '/api/quotes') {
       const body = await readJson(req);
       const tier = String(body.tier ?? 'standard') as VehicleTier;
