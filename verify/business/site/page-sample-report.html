@@ -1,0 +1,261 @@
+<div id="brprpt">
+<style>
+
+  #brprpt{
+    --paper:#F8FAFC; --page:#E3E8F7; --ink:#131F3E; --ink-soft:#49567A; --faint:#6F7DA3;
+    --hair:#D7DEF0; --hair-strong:#c0cae8;
+    --brand:#2B4BC7; --brand-soft:#4169E1; --gold:#B8862F;
+    --ok:#2E7D5B; --ok-bg:#E7F1EA; --warn:#9A6512; --warn-bg:#F6ECD8; --stop:#A63232; --stop-bg:#F4E4E1; --neutral:#5C688C; --neutral-bg:#E4E8F6;
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+    --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,monospace;
+    --shadow:0 18px 50px -24px rgba(13,23,64,.45);
+  }
+  @media (prefers-color-scheme:dark){
+    #brprpt{
+      --paper:#121A36; --page:#0A102A; --ink:#E7EBF8; --ink-soft:#AEBBDD; --faint:#7F8EB8;
+      --hair:#263257; --hair-strong:#32406E;
+      --brand:#A9BDF5; --brand-soft:#8FA8EF; --gold:#EAC27C;
+      --ok:#7FCBA6; --ok-bg:#17281f; --warn:#E3B667; --warn-bg:#2c2213; --stop:#E39a94; --stop-bg:#2e1614; --neutral:#9FABCD; --neutral-bg:#1B2340;
+      --shadow:0 18px 50px -24px rgba(0,0,0,.7);
+    }
+  }
+  #brprpt *{box-sizing:border-box}
+  #brprpt{margin:0;min-height:100vh;background:var(--page);color:var(--ink);font-family:var(--sans);line-height:1.55;-webkit-font-smoothing:antialiased}
+  #brprpt .sheet{max-width:840px;margin:28px auto;background:var(--paper);box-shadow:var(--shadow);border:1px solid var(--hair)}
+  #brprpt .pad{padding:clamp(24px,5vw,52px)}
+
+  #brprpt .banner{background:var(--brand);color:#E9EEFB;font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;text-align:center;padding:9px 16px}
+  #brprpt .banner b{color:#fff}
+
+  #brprpt .head{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;flex-wrap:wrap;padding-bottom:22px;border-bottom:2px solid var(--brand)}
+  #brprpt .mark{display:flex;align-items:center;gap:12px}
+  #brprpt .mark .logo{width:42px;height:42px;flex:none}
+  #brprpt .mark .name{font-family:var(--serif);font-weight:600;font-size:1.18rem;color:var(--ink);line-height:1.1}
+  #brprpt .mark .name span{display:block;font-family:var(--mono);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--faint);margin-top:4px}
+  #brprpt .doctype{text-align:right}
+  #brprpt .doctype h1{font-family:var(--serif);font-weight:600;font-size:1.32rem;margin:0;color:var(--brand);letter-spacing:-.01em}
+  #brprpt .doctype p{margin:4px 0 0;font-family:var(--mono);font-size:.72rem;color:var(--faint);letter-spacing:.04em}
+
+  #brprpt .meta{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--hair);border-radius:10px;overflow:hidden;margin-top:26px}
+  @media(min-width:620px){#brprpt .meta{grid-template-columns:repeat(4,1fr)}}
+  #brprpt .meta div{padding:14px 16px;border-right:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+  #brprpt .meta dt{font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin:0 0 5px}
+  #brprpt .meta dd{margin:0;font-size:.92rem;font-weight:600;font-variant-numeric:tabular-nums}
+
+  #brprpt .summary{display:flex;gap:18px;align-items:center;margin-top:26px;padding:20px 22px;border-radius:12px;background:var(--ok-bg);border:1px solid color-mix(in srgb,var(--ok) 34%, transparent)}
+  #brprpt .summary .tick{width:44px;height:44px;flex:none;border-radius:50%;background:var(--ok);display:grid;place-items:center;color:#fff}
+  #brprpt .summary h2{margin:0;font-family:var(--serif);font-size:1.24rem;color:var(--ink)}
+  #brprpt .summary p{margin:3px 0 0;font-size:.9rem;color:var(--ink-soft)}
+
+  #brprpt section{margin-top:34px}
+  #brprpt .sec-label{font-family:var(--mono);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--brand);display:flex;align-items:center;gap:10px;margin:0 0 14px}
+  #brprpt .sec-label::after{content:"";height:1px;flex:1;background:var(--hair-strong)}
+
+  #brprpt .rows{border:1px solid var(--hair);border-radius:10px;overflow:hidden}
+  #brprpt .rows .r{display:grid;grid-template-columns:1fr;gap:2px;padding:13px 16px;border-bottom:1px solid var(--hair)}
+  @media(min-width:560px){#brprpt .rows .r{grid-template-columns:210px 1fr;gap:16px;align-items:baseline}}
+  #brprpt .rows .r:last-child{border-bottom:0}
+  #brprpt .rows .k{font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);padding-top:2px}
+  #brprpt .rows .v{font-size:.94rem;font-weight:500}
+  #brprpt .rows .v .sub{display:block;font-weight:400;color:var(--ink-soft);font-size:.85rem;margin-top:2px}
+
+  #brprpt .card{border:1px solid var(--hair);border-radius:12px;padding:18px 20px;margin-bottom:14px;background:color-mix(in srgb,var(--paper) 88%, var(--page))}
+  #brprpt .card:last-child{margin-bottom:0}
+  #brprpt .card .top{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;flex-wrap:wrap}
+  #brprpt .card .who{font-family:var(--serif);font-size:1.08rem;font-weight:600;margin:0;color:var(--ink)}
+  #brprpt .card .rel{font-size:.82rem;color:var(--faint);margin:2px 0 0}
+  #brprpt .grid2{display:grid;grid-template-columns:1fr;gap:10px 26px;margin-top:14px}
+  @media(min-width:560px){#brprpt .grid2{grid-template-columns:1fr 1fr}}
+  #brprpt .field .lab{font-family:var(--mono);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin:0 0 3px}
+  #brprpt .field .val{margin:0;font-size:.92rem;font-weight:500;font-variant-numeric:tabular-nums}
+  #brprpt .quote{margin:14px 0 0;padding:12px 16px;border-left:3px solid var(--gold);background:color-mix(in srgb,var(--gold) 12%, transparent);border-radius:0 8px 8px 0;font-size:.9rem;color:var(--ink-soft);font-style:italic}
+
+  #brprpt .chip{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:.66rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:5px 11px;border-radius:999px;white-space:nowrap}
+  #brprpt .chip::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+  #brprpt .chip.ok{color:var(--ok);background:var(--ok-bg)}
+  #brprpt .chip.warn{color:var(--warn);background:var(--warn-bg)}
+  #brprpt .chip.stop{color:var(--stop);background:var(--stop-bg)}
+  #brprpt .chip.neutral{color:var(--neutral);background:var(--neutral-bg)}
+
+  #brprpt .scope{border:1px dashed var(--hair-strong);border-radius:10px;padding:18px 20px;background:transparent}
+  #brprpt .scope p{margin:0;font-size:.88rem;color:var(--ink-soft)}
+  #brprpt .scope p+p{margin-top:10px}
+  #brprpt .scope b{color:var(--ink)}
+
+  #brprpt .cert{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:flex-end;margin-top:14px}
+  #brprpt .sign .line{font-family:var(--serif);font-style:italic;font-size:1.35rem;color:var(--brand);border-bottom:1.5px solid var(--hair-strong);padding-bottom:6px;min-width:230px}
+  #brprpt .sign .cap{font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin-top:7px}
+  #brprpt .seal{text-align:right;font-size:.82rem;color:var(--ink-soft)}
+  #brprpt .seal .id{font-family:var(--mono);font-size:.72rem;color:var(--faint)}
+
+  #brprpt footer{margin-top:30px;padding-top:18px;border-top:1px solid var(--hair);font-size:.74rem;color:var(--faint);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+  @media print{
+    #brprpt{background:#fff}
+    #brprpt .sheet{box-shadow:none;border:0;margin:0;max-width:none}
+    #brprpt .banner{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  }
+  @media (prefers-reduced-motion:reduce){#brprpt *{animation:none!important;transition:none!important}}
+
+</style>
+<div class="sheet">
+  <div class="banner"><b>Sample specimen</b> &middot; illustrative report with a fictional candidate &middot; not a record of any real person</div>
+  <div class="pad">
+
+    <div class="head">
+      <div class="mark">
+        <svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#2B4BC7"/><path d="M8 22V10h4l4 6 4-6h4v12" stroke="#F4E9DC" stroke-width="2.4" fill="none" stroke-linejoin="round" stroke-linecap="round"/></svg>
+        <div class="name">Blue Ridge Press LLC<span>Consent-first screening</span></div>
+      </div>
+      <div class="doctype">
+        <h1>Verification Report</h1>
+        <p>Consent-based &middot; references · employment · education</p>
+      </div>
+    </div>
+
+    <dl class="meta">
+      <div><dt>Report ID</dt><dd>BRP-2026-0417</dd></div>
+      <div><dt>Date issued</dt><dd>Jul 31, 2026</dd></div>
+      <div><dt>Requested by</dt><dd>Coretta Vance</dd></div>
+      <div><dt>Turnaround</dt><dd>3 business days</dd></div>
+    </dl>
+
+    <div class="summary">
+      <div class="tick"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+      <div>
+        <h2>Completed — all requested sources confirmed</h2>
+        <p>3 of 3 references responded · employment verified · education verified · one minor date discrepancy noted below</p>
+      </div>
+    </div>
+
+    <section>
+      <p class="sec-label">Subject &amp; position</p>
+      <div class="rows">
+        <div class="r"><span class="k">Candidate</span><span class="v">Jordan A. Rivera <span class="sub">Sample candidate — fictional, for illustration only</span></span></div>
+        <div class="r"><span class="k">Position sought</span><span class="v">In-Home Caregiver / Companion</span></div>
+        <div class="r"><span class="k">Requested by</span><span class="v">Coretta Vance <span class="sub">Private household · hiring in-home help for a parent</span></span></div>
+        <div class="r"><span class="k">Scope authorized</span><span class="v">Professional references, past employment, education</span></div>
+      </div>
+    </section>
+
+    <section>
+      <p class="sec-label">Authorization &amp; consent record</p>
+      <div class="rows">
+        <div class="r"><span class="k">Consent status</span><span class="v"><span class="chip ok">E-signed</span></span></div>
+        <div class="r"><span class="k">Signed</span><span class="v">Jul 28, 2026 · 2:14 PM ET</span></div>
+        <div class="r"><span class="k">Disclosure shown</span><span class="v">Consent &amp; Disclosure v3 <span class="sub">Plain-language authorization; full text retained with the signed record</span></span></div>
+        <div class="r"><span class="k">Signature reference</span><span class="v">sig_9f42c1a7 · verified at sign-in</span></div>
+      </div>
+    </section>
+
+    <section>
+      <p class="sec-label">Reference checks</p>
+
+      <div class="card">
+        <div class="top">
+          <div><p class="who">Marisol Delgado</p><p class="rel">Former supervisor · Evergreen Home Care</p></div>
+          <span class="chip ok">Confirmed</span>
+        </div>
+        <div class="grid2">
+          <div class="field"><p class="lab">Relationship confirmed</p><p class="val">Direct supervisor, 2 yrs 4 mos</p></div>
+          <div class="field"><p class="lab">Would recommend</p><p class="val">Yes — without reservation</p></div>
+          <div class="field"><p class="lab">Responded</p><p class="val">Jul 30, 2026</p></div>
+          <div class="field"><p class="lab">Contact method</p><p class="val">Private verifier link</p></div>
+        </div>
+        <p class="quote">“Jordan was the aide I asked for by name on our hardest cases. Calm, punctual, and families trusted them. I'd hire them back tomorrow.”</p>
+      </div>
+
+      <div class="card">
+        <div class="top">
+          <div><p class="who">Dr. Aaron Whitfield</p><p class="rel">Professional reference · attending physician</p></div>
+          <span class="chip ok">Confirmed</span>
+        </div>
+        <div class="grid2">
+          <div class="field"><p class="lab">Relationship confirmed</p><p class="val">Worked alongside on patient care</p></div>
+          <div class="field"><p class="lab">Would recommend</p><p class="val">Yes</p></div>
+          <div class="field"><p class="lab">Responded</p><p class="val">Jul 29, 2026</p></div>
+          <div class="field"><p class="lab">Contact method</p><p class="val">Private verifier link</p></div>
+        </div>
+        <p class="quote">“Reliable with medication schedules and unusually good at reading when something was off with a patient. Trustworthy in the home.”</p>
+      </div>
+
+      <div class="card">
+        <div class="top">
+          <div><p class="who">Tanya Brooks</p><p class="rel">Personal reference · former client's daughter</p></div>
+          <span class="chip ok">Confirmed</span>
+        </div>
+        <div class="grid2">
+          <div class="field"><p class="lab">Relationship confirmed</p><p class="val">Family of a prior client</p></div>
+          <div class="field"><p class="lab">Would recommend</p><p class="val">Yes</p></div>
+          <div class="field"><p class="lab">Responded</p><p class="val">Jul 30, 2026</p></div>
+          <div class="field"><p class="lab">Contact method</p><p class="val">Private verifier link</p></div>
+        </div>
+        <p class="quote">“They cared for my father for the last year of his life like he was their own. I have no higher praise to give.”</p>
+      </div>
+    </section>
+
+    <section>
+      <p class="sec-label">Employment verification</p>
+      <div class="card">
+        <div class="top">
+          <div><p class="who">Evergreen Home Care</p><p class="rel">Confirmed directly with HR</p></div>
+          <span class="chip warn">Confirmed · minor discrepancy</span>
+        </div>
+        <div class="grid2">
+          <div class="field"><p class="lab">Title confirmed</p><p class="val">Certified Home Health Aide</p></div>
+          <div class="field"><p class="lab">Eligible for rehire</p><p class="val">Yes</p></div>
+          <div class="field"><p class="lab">Dates (stated by candidate)</p><p class="val">Mar 2022 – Jun 2024</p></div>
+          <div class="field"><p class="lab">Dates (confirmed by employer)</p><p class="val">Apr 2022 – Jun 2024</p></div>
+        </div>
+        <p class="quote">Note: start month differs by ~4 weeks (candidate stated March; employer records show April). No gap in employment; end date and title match. Flagged for your awareness, not as a concern.</p>
+      </div>
+    </section>
+
+    <section>
+      <p class="sec-label">Education verification</p>
+      <div class="card">
+        <div class="top">
+          <div><p class="who">Wake Technical Community College</p><p class="rel">Confirmed with the registrar</p></div>
+          <span class="chip ok">Confirmed</span>
+        </div>
+        <div class="grid2">
+          <div class="field"><p class="lab">Credential</p><p class="val">Certified Nursing Assistant (CNA I)</p></div>
+          <div class="field"><p class="lab">Awarded</p><p class="val">December 2021</p></div>
+          <div class="field"><p class="lab">Status</p><p class="val">Completed · in good standing</p></div>
+          <div class="field"><p class="lab">Verified via</p><p class="val">Registrar's office</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <p class="sec-label">Scope &amp; limitations</p>
+      <div class="scope">
+        <p>This report confirms <b>professional references, past employment, and education</b>, obtained directly from each source after the candidate's written, e-signed authorization. Every response above came from the named source through a private, one-time link.</p>
+        <p>This report does <b>not</b> include criminal history, credit, or motor-vehicle records. Those are regulated consumer reports and, by law, must be run through a credentialed consumer-reporting agency (CRA). If you need them, Blue Ridge Press LLC will refer you to a properly credentialed provider — we do not estimate or infer records we cannot confirm at the source.</p>
+        <p>Use of this report is subject to applicable employment and privacy law. It reflects information confirmed as of the issue date and should be one part of your hiring decision, not the whole of it.</p>
+      </div>
+    </section>
+
+    <section>
+      <p class="sec-label">Certification</p>
+      <div class="cert">
+        <div class="sign">
+          <div class="line">Rob Brizzi</div>
+          <p class="cap">Prepared &amp; certified by · Blue Ridge Press LLC</p>
+        </div>
+        <div class="seal">
+          <div>Consent-based verification</div>
+          <div class="id">Report BRP-2026-0417 · issued Jul 31, 2026</div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span>Confidential — prepared solely for the requesting party.</span>
+      <span>blueridgepressllc.com</span>
+    </footer>
+
+  </div>
+</div>
+</div>

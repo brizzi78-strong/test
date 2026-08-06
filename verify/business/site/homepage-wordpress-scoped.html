@@ -2,10 +2,10 @@
 <style>
 
   #brpv2{
-    --bg:#340A12; --bg2:#2A070D; --panel:#45111B; --panel2:#4E1420;
-    --ink:#F6ECDF; --ink-soft:#D8C3B7; --mute:#B0897F; --faint:#8C6A64;
+    --bg:#101F4D; --bg2:#0A1436; --panel:#182C68; --panel2:#1C3378;
+    --ink:#F6ECDF; --ink-soft:#CBD4EE; --mute:#8FA0CC; --faint:#6E7EAD;
     --line:rgba(246,236,223,.14); --line-2:rgba(246,236,223,.28);
-    --oxblood:#6E1223; --rose:#E7A9A9; --brass:#CBA85E; --brass-2:#E7C87E;
+    --oxblood:#2B4BC7; --rose:#A9BDF5; --brass:#CBA85E; --brass-2:#E7C87E;
     --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,"Times New Roman",serif;
     --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
     --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,monospace;
@@ -17,13 +17,13 @@
   #brpv2{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
   #brpv2 .wrap{max-width:var(--max);margin-inline:auto;padding-inline:var(--gutter)}
   #brpv2 a{color:inherit;text-decoration:none}
-  #brpv2 ::selection{background:var(--brass);color:#2A070D}
+  #brpv2 ::selection{background:var(--brass);color:#0A1436}
   #brpv2 .eyebrow{font-family:var(--mono);font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--brass-2)}
   #brpv2 h1, #brpv2 h2, #brpv2 h3{font-family:var(--serif);font-weight:600;letter-spacing:-.015em;text-wrap:balance;margin:0}
   #brpv2 p{margin:0}
 
   #brpv2 /* ---- top bar ---- */
-  .bar{position:sticky;top:0;z-index:50;background:rgba(42,7,13,.72);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .bar{position:sticky;top:0;z-index:50;background:rgba(10,20,54,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
   #brpv2 .bar .row{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:15px 0}
   #brpv2 .brand{display:flex;align-items:center;gap:12px}
   #brpv2 .brand .mk{width:38px;height:38px;flex:none}
@@ -34,7 +34,7 @@
   #brpv2 .bar nav a:hover{color:var(--brass-2)}
   @media(min-width:920px){#brpv2 .bar nav{display:flex}}
   #brpv2 .btn{font:inherit;font-weight:600;font-size:.9rem;padding:.62rem 1.25rem;border-radius:2px;display:inline-block;border:1px solid transparent;cursor:pointer;transition:transform .18s,background .2s,color .2s,border-color .2s}
-  #brpv2 .btn.solid{background:var(--brass);color:#2A070D}
+  #brpv2 .btn.solid{background:var(--brass);color:#0A1436}
   #brpv2 .btn.solid:hover{background:var(--brass-2);transform:translateY(-1px)}
   #brpv2 .btn.line{border-color:var(--line-2);color:var(--ink)}
   #brpv2 .btn.line:hover{border-color:var(--brass);color:var(--brass-2)}
@@ -108,11 +108,11 @@
   #brpv2 .report .marks{display:grid;gap:14px;margin-top:26px}
   #brpv2 .report .marks div{display:flex;gap:12px;align-items:center;font-size:.98rem;color:var(--ink)}
   #brpv2 .report .marks svg{width:18px;height:18px;color:var(--brass-2);flex:none}
-  #brpv2 .docmock{background:#F6ECDF;color:#3a1119;border-radius:4px;padding:26px;box-shadow:0 30px 70px -32px rgba(0,0,0,.7);font-size:.8rem}
+  #brpv2 .docmock{background:#F6ECDF;color:#14225A;border-radius:4px;padding:26px;box-shadow:0 30px 70px -32px rgba(0,0,0,.7);font-size:.8rem}
   #brpv2 .docmock .top{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:2px solid var(--oxblood);padding-bottom:12px;margin-bottom:14px}
   #brpv2 .docmock .top b{font-family:var(--serif);font-size:1rem;color:var(--oxblood)}
-  #brpv2 .docmock .top span{font-family:var(--mono);font-size:.58rem;letter-spacing:.1em;color:#8a6a63}
-  #brpv2 .docmock .ln{height:8px;background:#e5d6c6;border-radius:2px;margin:8px 0}
+  #brpv2 .docmock .top span{font-family:var(--mono);font-size:.58rem;letter-spacing:.1em;color:#6B7AA6}
+  #brpv2 .docmock .ln{height:8px;background:#d9def2;border-radius:2px;margin:8px 0}
   #brpv2 .docmock .ln.s{width:60%} #brpv2 .docmock .ln.m{width:82%}
   #brpv2 .docmock .chip{display:inline-block;font-family:var(--mono);font-size:.56rem;letter-spacing:.08em;text-transform:uppercase;color:#2E7D5B;background:#e2efe7;border-radius:99px;padding:3px 9px;margin-top:6px}
 
@@ -153,7 +153,7 @@
 <!-- ================= TOP BAR ================= -->
 <header class="bar"><div class="wrap row">
   <a class="brand" href="#top">
-    <svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6" fill="#F6ECDF"/><path d="M8 22V10h4l4 6 4-6h4v12" stroke="#48101A" stroke-width="2.4" fill="none" stroke-linejoin="round" stroke-linecap="round"/></svg>
+    <svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6" fill="#F6ECDF"/><path d="M8 22V10h4l4 6 4-6h4v12" stroke="#101E4E" stroke-width="2.4" fill="none" stroke-linejoin="round" stroke-linecap="round"/></svg>
     <span class="n">Blue Ridge Press LLC<small>Verification &amp; Reference Services</small></span>
   </a>
   <nav>
@@ -170,17 +170,17 @@
 <section class="hero">
   <svg class="hero-bg" viewBox="0 0 1440 760" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
     <defs>
-      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2A070D"/><stop offset="1" stop-color="#40101A"/></linearGradient>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0A1436"/><stop offset="1" stop-color="#1B2F6E"/></linearGradient>
       <radialGradient id="glow" cx="0.74" cy="0.32" r="0.55"><stop offset="0" stop-color="#CBA85E" stop-opacity="0.30"/><stop offset="1" stop-color="#CBA85E" stop-opacity="0"/></radialGradient>
     </defs>
     <rect width="1440" height="760" fill="url(#sky)"/><rect width="1440" height="760" fill="url(#glow)"/>
     <circle cx="1050" cy="220" r="58" fill="#E7C87E" opacity="0.9"/>
     <circle cx="1050" cy="220" r="92" fill="none" stroke="#E7C87E" stroke-opacity="0.22"/>
-    <path fill="#571620" d="M0,430 C240,405 400,445 600,430 C800,415 1000,385 1200,425 C1320,445 1400,435 1440,430 L1440,760 L0,760 Z"/>
-    <path fill="#4e131d" d="M0,500 C240,477 440,530 660,502 C880,474 1060,467 1240,510 C1360,534 1420,520 1440,504 L1440,760 L0,760 Z"/>
-    <path fill="#45111a" d="M0,565 C260,545 470,600 700,568 C930,540 1080,546 1280,580 C1380,598 1430,586 1440,572 L1440,760 L0,760 Z"/>
-    <path fill="#3a0e16" d="M0,630 C280,610 500,662 780,630 C1040,604 1160,622 1340,644 C1400,652 1430,644 1440,638 L1440,760 L0,760 Z"/>
-    <path fill="#2a070d" d="M0,692 C320,670 560,712 860,686 C1120,664 1260,678 1440,700 L1440,760 L0,760 Z"/>
+    <path fill="#2E4FA8" d="M0,430 C240,405 400,445 600,430 C800,415 1000,385 1200,425 C1320,445 1400,435 1440,430 L1440,760 L0,760 Z"/>
+    <path fill="#26418C" d="M0,500 C240,477 440,530 660,502 C880,474 1060,467 1240,510 C1360,534 1420,520 1440,504 L1440,760 L0,760 Z"/>
+    <path fill="#20356F" d="M0,565 C260,545 470,600 700,568 C930,540 1080,546 1280,580 C1380,598 1430,586 1440,572 L1440,760 L0,760 Z"/>
+    <path fill="#17285C" d="M0,630 C280,610 500,662 780,630 C1040,604 1160,622 1340,644 C1400,652 1430,644 1440,638 L1440,760 L0,760 Z"/>
+    <path fill="#0A1436" d="M0,692 C320,670 560,712 860,686 C1120,664 1260,678 1440,700 L1440,760 L0,760 Z"/>
   </svg>
   <div class="wrap">
     <p class="eyebrow kick">Blue Ridge Press LLC &middot; Raleigh, North Carolina</p>
@@ -347,7 +347,7 @@
   <div class="wrap">
     <div class="foot-top">
       <a class="brand" href="#top">
-        <svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6" fill="#F6ECDF"/><path d="M8 22V10h4l4 6 4-6h4v12" stroke="#48101A" stroke-width="2.4" fill="none" stroke-linejoin="round" stroke-linecap="round"/></svg>
+        <svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6" fill="#F6ECDF"/><path d="M8 22V10h4l4 6 4-6h4v12" stroke="#101E4E" stroke-width="2.4" fill="none" stroke-linejoin="round" stroke-linecap="round"/></svg>
         <span class="n">Blue Ridge Press LLC<small>Verification &amp; Reference Services</small></span>
       </a>
       <nav>
