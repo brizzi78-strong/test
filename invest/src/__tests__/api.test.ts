@@ -356,6 +356,35 @@ test('password reset: emailed token sets a new password and logs out all session
   }
 });
 
+test('recurring plans are scoped per user through the proxy', async () => {
+  await withApp(async (base) => {
+    const alice = await signup(base, 'Alice', 'alice@example.com');
+    const bob = await signup(base, 'Bob', 'bob@example.com');
+
+    const created = await j(base, 'POST', '/api/plans', { symbol: 'AAPL', amountCents: 10_000, cadence: 'weekly' }, alice);
+    assert.equal(created.status, 201);
+    assert.equal(created.json.lastRunStatus, 'invested'); // first installment ran immediately
+
+    // Alice sees her plan (and the auto-placed first order); Bob sees neither.
+    assert.equal((await j(base, 'GET', '/api/plans', undefined, alice)).json.length, 1);
+    assert.equal((await j(base, 'GET', '/api/plans', undefined, bob)).json.length, 0);
+    const bobOrders = (await j(base, 'GET', '/api/orders', undefined, bob)).json as any[];
+    assert.equal(bobOrders.length, 0);
+
+    // Bob cannot read, pause, or delete Alice's plan.
+    assert.equal((await j(base, 'GET', `/api/plans/${created.json.id}`, undefined, bob)).status, 404);
+    assert.equal((await j(base, 'POST', `/api/plans/${created.json.id}/pause`, undefined, bob)).status, 404);
+    const bobDelete = await fetch(`${base}/api/plans/${created.json.id}`, { method: 'DELETE', headers: { cookie: bob } });
+    assert.equal(bobDelete.status, 404);
+
+    // Alice pauses and deletes her own.
+    assert.equal((await j(base, 'POST', `/api/plans/${created.json.id}/pause`, undefined, alice)).json.active, false);
+    const aliceDelete = await fetch(`${base}/api/plans/${created.json.id}`, { method: 'DELETE', headers: { cookie: alice } });
+    assert.equal(aliceDelete.status, 200);
+    assert.equal((await j(base, 'GET', '/api/plans', undefined, alice)).json.length, 0);
+  });
+});
+
 test('sessions expire server-side', async () => {
   const trading = createTrading(createInMemoryStore());
   const tradingPort = await listen(trading.server);

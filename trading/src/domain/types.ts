@@ -72,6 +72,34 @@ export interface Order {
   filledPriceCents?: number;
   filledAt?: string;
   cancelledAt?: string;
+  /** Set when this order was placed automatically by a recurring plan. */
+  planId?: string;
+  createdAt: string;
+}
+
+export type RecurringCadence = 'daily' | 'weekly' | 'biweekly' | 'monthly';
+export const RECURRING_CADENCES: readonly RecurringCadence[] = ['daily', 'weekly', 'biweekly', 'monthly'];
+
+/**
+ * A standing dollar-based investment: buy `amountCents` of `symbol` every
+ * cadence period. Plans are executed lazily — any touch of the account first
+ * runs every due plan at the then-current quote (see `runDuePlans`). A run
+ * the account can't afford is skipped, and either way `nextRunAt` advances
+ * from the moment of execution, so missed periods collapse into one buy
+ * rather than piling up.
+ */
+export interface RecurringPlan {
+  id: string;
+  accountId: string;
+  symbol: string;
+  /** Invested per run, in cents. */
+  amountCents: number;
+  cadence: RecurringCadence;
+  active: boolean;
+  nextRunAt: string;
+  lastRunAt?: string;
+  /** 'invested' or 'skipped_insufficient_funds'. */
+  lastRunStatus?: string;
   createdAt: string;
 }
 

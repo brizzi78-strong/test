@@ -6,10 +6,10 @@
  */
 
 import { DatabaseSync } from 'node:sqlite';
-import type { Account, Order, WatchlistEntry } from '../domain/types.ts';
+import type { Account, Order, RecurringPlan, WatchlistEntry } from '../domain/types.ts';
 import type { Collection, Store } from './store.ts';
 
-const TABLES = ['accounts', 'orders', 'watchlist'] as const;
+const TABLES = ['accounts', 'orders', 'watchlist', 'plans'] as const;
 
 class SqliteCollection<T extends { id: string }> implements Collection<T> {
   private readonly getStmt;
@@ -62,6 +62,7 @@ export function createSqliteStore(path: string): SqliteStore {
     accounts: new SqliteCollection<Account>(db, 'accounts'),
     orders: new SqliteCollection<Order>(db, 'orders'),
     watchlist: new SqliteCollection<WatchlistEntry>(db, 'watchlist'),
+    plans: new SqliteCollection<RecurringPlan>(db, 'plans'),
     close: () => db.close(),
   };
 }

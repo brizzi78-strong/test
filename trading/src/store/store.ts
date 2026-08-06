@@ -4,12 +4,13 @@
  * be swapped for a real store without touching business logic.
  */
 
-import type { Account, Order, WatchlistEntry } from '../domain/types.ts';
+import type { Account, Order, RecurringPlan, WatchlistEntry } from '../domain/types.ts';
 
 export interface Store {
   accounts: Collection<Account>;
   orders: Collection<Order>;
   watchlist: Collection<WatchlistEntry>;
+  plans: Collection<RecurringPlan>;
 }
 
 export interface Collection<T> {
@@ -45,5 +46,6 @@ export function createInMemoryStore(): Store {
     accounts: new InMemoryCollection<Account>(),
     orders: new InMemoryCollection<Order>(),
     watchlist: new InMemoryCollection<WatchlistEntry>(),
+    plans: new InMemoryCollection<RecurringPlan>(),
   };
 }

@@ -232,6 +232,80 @@ test('order validation: both quantity and amountCents, dollar limit orders, dust
   );
 });
 
+test('creating a recurring plan invests the first installment immediately', async () => {
+  const svc = newService();
+  const account = svc.createAccount({ name: 'Rob' });
+  const plan = await svc.createPlan({ accountId: account.id, symbol: 'aapl', amountCents: 10_000, cadence: 'weekly' });
+
+  assert.equal(plan.symbol, 'AAPL');
+  assert.equal(plan.lastRunStatus, 'invested');
+  assert.ok(plan.nextRunAt > FIXED_NOW.toISOString());
+
+  const orders = await svc.listOrders({ accountId: account.id });
+  assert.equal(orders.length, 1);
+  assert.equal(orders[0].planId, plan.id);
+  const portfolio = await svc.getPortfolio(account.id);
+  assert.equal(portfolio.positions[0].symbol, 'AAPL');
+});
+
+test('a due plan invests again once the clock passes nextRunAt, and only once per touch', async () => {
+  let clock = new Date('2026-06-15T15:00:00.000Z');
+  const svc = newService(() => clock);
+  const account = svc.createAccount({ name: 'Rob' });
+  await svc.createPlan({ accountId: account.id, symbol: 'AAPL', amountCents: 10_000, cadence: 'weekly' });
+
+  clock = new Date('2026-06-16T15:00:00.000Z'); // one day: not due
+  assert.equal((await svc.listOrders({ accountId: account.id })).length, 1);
+
+  clock = new Date('2026-07-10T15:00:00.000Z'); // several weeks idle: one catch-up buy, not a pile
+  assert.equal((await svc.listOrders({ accountId: account.id })).length, 2);
+  const plans = await svc.listPlans({ accountId: account.id });
+  assert.equal(plans[0].nextRunAt, '2026-07-17T15:00:00.000Z'); // advanced from now, not from the missed date
+});
+
+test('a plan the account cannot afford records a skip and keeps its schedule moving', async () => {
+  let clock = new Date('2026-06-15T15:00:00.000Z');
+  const svc = newService(() => clock);
+  const account = svc.createAccount({ name: 'Rob', startingCashCents: 5 });
+  const plan = await svc.createPlan({ accountId: account.id, symbol: 'AAPL', amountCents: 10_000, cadence: 'daily' });
+
+  assert.equal(plan.lastRunStatus, 'skipped_insufficient_funds');
+  assert.equal((await svc.listOrders({ accountId: account.id })).length, 0);
+  assert.equal(svc.getAccount(account.id).cashCents, 5);
+  assert.ok(plan.nextRunAt > clock.toISOString());
+});
+
+test('paused plans do not run; resuming invests on the next touch', async () => {
+  let clock = new Date('2026-06-15T15:00:00.000Z');
+  const svc = newService(() => clock);
+  const account = svc.createAccount({ name: 'Rob' });
+  const plan = await svc.createPlan({ accountId: account.id, symbol: 'AAPL', amountCents: 10_000, cadence: 'weekly' });
+
+  svc.setPlanActive(plan.id, false);
+  clock = new Date('2026-07-15T15:00:00.000Z');
+  assert.equal((await svc.listOrders({ accountId: account.id })).length, 1); // no run while paused
+
+  svc.setPlanActive(plan.id, true);
+  assert.equal((await svc.listOrders({ accountId: account.id })).length, 2); // past-due run fires on resume
+});
+
+test('plan validation and deletion', async () => {
+  const svc = newService();
+  const account = svc.createAccount({ name: 'Rob' });
+  await assert.rejects(
+    () => svc.createPlan({ accountId: account.id, symbol: 'AAPL', amountCents: 10_000, cadence: 'yearly' as never }),
+    ValidationError,
+  );
+  await assert.rejects(
+    () => svc.createPlan({ accountId: account.id, symbol: 'NOPE', amountCents: 10_000, cadence: 'weekly' }),
+    NotFoundError,
+  );
+  const plan = await svc.createPlan({ accountId: account.id, symbol: 'AAPL', amountCents: 10_000, cadence: 'monthly' });
+  svc.deletePlan(plan.id);
+  assert.throws(() => svc.getPlan(plan.id), NotFoundError);
+  assert.equal((await svc.listPlans({ accountId: account.id })).length, 0);
+});
+
 test('listInstruments and listQuotes cover the full mock universe', async () => {
   const svc = newService();
   assert.equal(svc.listInstruments().length, INSTRUMENTS.length);

@@ -15,8 +15,17 @@
  */
 
 import { randomUUID } from 'node:crypto';
-import type { Account, Instrument, Order, OrderSide, OrderType, WatchlistEntry } from '../domain/types.ts';
-import { INSTRUMENTS, ORDER_SIDES, ORDER_TYPES } from '../domain/types.ts';
+import type {
+  Account,
+  Instrument,
+  Order,
+  OrderSide,
+  OrderType,
+  RecurringCadence,
+  RecurringPlan,
+  WatchlistEntry,
+} from '../domain/types.ts';
+import { INSTRUMENTS, ORDER_SIDES, ORDER_TYPES, RECURRING_CADENCES } from '../domain/types.ts';
 import type { PricePoint, Quote } from '../domain/priceEngine.ts';
 import { createMockSource, type MarketDataSource, type RawQuote } from '../domain/marketData.ts';
 import { computePositions, heldQuantity, quantizeShares, type RealizedTrade } from '../domain/portfolioMath.ts';
@@ -153,7 +162,7 @@ export class TradingService {
   async placeOrder(input: PlaceOrderInput): Promise<Order> {
     const now = this.now();
     this.requireAccount(input.accountId);
-    await this.settleOpenOrders(input.accountId, now);
+    await this.settleAccount(input.accountId, now);
     const account = this.requireAccount(input.accountId);
     const instrument = this.getInstrumentOrThrow(input.symbol);
     const side = requireEnum(input.side, ORDER_SIDES, 'side');
@@ -217,7 +226,7 @@ export class TradingService {
   }
 
   async listOrders(filter: { accountId?: string; status?: Order['status']; symbol?: string } = {}): Promise<Order[]> {
-    if (filter.accountId) await this.settleOpenOrders(filter.accountId, this.now());
+    if (filter.accountId) await this.settleAccount(filter.accountId, this.now());
     return this.store.orders
       .list((o) => {
         if (filter.accountId && o.accountId !== filter.accountId) return false;
@@ -243,7 +252,7 @@ export class TradingService {
 
   async getPortfolio(accountId: string): Promise<Portfolio> {
     const now = this.now();
-    await this.settleOpenOrders(accountId, now);
+    await this.settleAccount(accountId, now);
     const account = this.requireAccount(accountId);
     const orders = this.store.orders.list((o) => o.accountId === accountId);
     const { positions } = computePositions(orders);
@@ -298,6 +307,69 @@ export class TradingService {
     };
   }
 
+  // --- Recurring plans -------------------------------------------------------
+
+  /**
+   * Create a standing dollar-based buy. The first installment executes
+   * immediately (it is due at creation time); subsequent runs execute lazily
+   * whenever the account is touched after `nextRunAt` passes.
+   */
+  async createPlan(input: {
+    accountId: string;
+    symbol: string;
+    amountCents: number;
+    cadence: RecurringCadence;
+  }): Promise<RecurringPlan> {
+    const now = this.now();
+    this.requireAccount(input.accountId);
+    const instrument = this.getInstrumentOrThrow(input.symbol);
+    const amountCents = requirePositiveInt(input.amountCents, 'amountCents');
+    const cadence = requireEnum(input.cadence, RECURRING_CADENCES, 'cadence');
+    const plan: RecurringPlan = {
+      id: this.newId('plan'),
+      accountId: input.accountId,
+      symbol: instrument.symbol,
+      amountCents,
+      cadence,
+      active: true,
+      nextRunAt: this.timestamp(now),
+      createdAt: this.timestamp(now),
+    };
+    this.store.plans.put(plan);
+    await this.runDuePlans(input.accountId, now);
+    return this.store.plans.get(plan.id)!;
+  }
+
+  getPlan(id: string): RecurringPlan {
+    if (typeof id !== 'string' || id.length === 0) throw new ValidationError('plan id is required');
+    const found = this.store.plans.get(id);
+    if (!found) throw new NotFoundError('Plan', id);
+    return found;
+  }
+
+  async listPlans(filter: { accountId?: string } = {}): Promise<RecurringPlan[]> {
+    if (filter.accountId) await this.settleAccount(filter.accountId, this.now());
+    return this.store.plans
+      .list((p) => !filter.accountId || p.accountId === filter.accountId)
+      .sort((a, b) => a.createdAt.localeCompare(b.createdAt));
+  }
+
+  /**
+   * Pause or resume. Resuming with a past-due `nextRunAt` invests on the next
+   * account touch — "resume" means resume investing, not skip a cycle.
+   */
+  setPlanActive(id: string, active: boolean): RecurringPlan {
+    const plan = this.getPlan(id);
+    plan.active = active;
+    this.store.plans.put(plan);
+    return plan;
+  }
+
+  deletePlan(id: string): void {
+    this.getPlan(id);
+    this.store.plans.delete(id);
+  }
+
   // --- Watchlist -----------------------------------------------------------
 
   addToWatchlist(accountId: string, symbol: string): WatchlistEntry {
@@ -347,6 +419,54 @@ export class TradingService {
       changeBps: raw.previousCloseCents > 0 ? Math.round((changeCents / raw.previousCloseCents) * 10000) : 0,
       asOf: now.toISOString(),
     };
+  }
+
+  /** Everything time drives, run lazily on any account touch: limit fills, then due recurring buys. */
+  private async settleAccount(accountId: string, now: Date): Promise<void> {
+    await this.settleOpenOrders(accountId, now);
+    await this.runDuePlans(accountId, now);
+  }
+
+  /**
+   * Execute every active plan whose `nextRunAt` has passed: a dollar-based
+   * market buy at the current quote. A run the account can't afford is
+   * recorded as skipped. Either way the schedule advances from *now*, so a
+   * long-idle account gets one catch-up buy per plan, not a pile.
+   */
+  private async runDuePlans(accountId: string, now: Date): Promise<void> {
+    const nowIso = now.toISOString();
+    const due = this.store.plans
+      .list((p) => p.accountId === accountId && p.active && p.nextRunAt <= nowIso)
+      .sort((a, b) => a.createdAt.localeCompare(b.createdAt));
+    for (const plan of due) {
+      const instrument = this.getInstrumentOrThrow(plan.symbol);
+      const q = await this.market.getQuote(instrument, now);
+      const quantity = quantizeShares(plan.amountCents / q.priceCents);
+      const account = this.requireAccount(accountId);
+      const costCents = Math.round(quantity * q.priceCents);
+      if (quantity > 0 && costCents <= account.cashCents) {
+        this.applyFill(account, 'buy', plan.symbol, quantity, q.priceCents);
+        this.store.orders.put({
+          id: this.newId('ord'),
+          accountId,
+          symbol: plan.symbol,
+          side: 'buy',
+          type: 'market',
+          quantity,
+          status: 'filled',
+          filledPriceCents: q.priceCents,
+          filledAt: nowIso,
+          planId: plan.id,
+          createdAt: nowIso,
+        });
+        plan.lastRunStatus = 'invested';
+      } else {
+        plan.lastRunStatus = 'skipped_insufficient_funds';
+      }
+      plan.lastRunAt = nowIso;
+      plan.nextRunAt = advanceCadence(now, plan.cadence).toISOString();
+      this.store.plans.put(plan);
+    }
   }
 
   /** Attempt to fill every resting limit order on an account against the current feed. */
@@ -442,6 +562,16 @@ export class TradingService {
     if (!found) throw new NotFoundError('Order', id);
     return found;
   }
+}
+
+/** The next scheduled run after a run at `from` (monthly uses calendar months). */
+function advanceCadence(from: Date, cadence: RecurringCadence): Date {
+  const next = new Date(from.getTime());
+  if (cadence === 'daily') next.setUTCDate(next.getUTCDate() + 1);
+  else if (cadence === 'weekly') next.setUTCDate(next.getUTCDate() + 7);
+  else if (cadence === 'biweekly') next.setUTCDate(next.getUTCDate() + 14);
+  else next.setUTCMonth(next.getUTCMonth() + 1);
+  return next;
 }
 
 function requireString(value: unknown, field: string): string {

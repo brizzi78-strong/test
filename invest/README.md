@@ -35,8 +35,12 @@ Yahoo Finance prices (no API key needed).
   detail/trade drawer.
 - **Watchlist** — star any stock to track it; toggle again to remove it.
 - **Orders** — full order history with status; cancel a resting limit order.
-- **Trade drawer** — quote, an intraday sparkline, buy/sell, market/limit,
-  share quantity, and an estimated cost before you submit.
+- **Trade drawer** — quote, a chart with 1D/1W/1M/3M ranges, buy/sell,
+  market/limit, dollars-or-shares entry, and an estimate before you submit.
+- **Recurring** — pick a repeat cadence on any dollar-based buy and it becomes
+  a standing plan (daily/weekly/biweekly/monthly); the Recurring view lists
+  plans with next/last run and pause/resume/delete. Installments execute
+  automatically whenever the account is touched after they come due.
 
 ## Hardening
 

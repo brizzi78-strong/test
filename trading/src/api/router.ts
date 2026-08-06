@@ -99,6 +99,20 @@ export function buildRoutes(service: TradingService): Route[] {
     ['GET', '/orders/:id', ({ params }) => ok(service.getOrder(params.id))],
     ['POST', '/orders/:id/cancel', ({ params }) => ok(service.cancelOrder(params.id))],
 
+    ['POST', '/plans', async ({ body }) => created(await service.createPlan(asObject(body) as never))],
+    ['GET', '/plans', async ({ query }) => ok(await service.listPlans({ accountId: query.get('accountId') ?? undefined }))],
+    ['GET', '/plans/:id', ({ params }) => ok(service.getPlan(params.id))],
+    ['POST', '/plans/:id/pause', ({ params }) => ok(service.setPlanActive(params.id, false))],
+    ['POST', '/plans/:id/resume', ({ params }) => ok(service.setPlanActive(params.id, true))],
+    [
+      'DELETE',
+      '/plans/:id',
+      ({ params }) => {
+        service.deletePlan(params.id);
+        return ok({ removed: true });
+      },
+    ],
+
     ['GET', '/portfolio/:accountId', async ({ params }) => ok(await service.getPortfolio(params.accountId))],
     ['GET', '/realized-pnl/:accountId', ({ params }) => ok(service.getRealizedPnl(params.accountId))],
 

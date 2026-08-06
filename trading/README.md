@@ -19,6 +19,7 @@ single-page app built on top of this engine.
 | **Order** | `market` (fills immediately at the current quote) or `limit` (rests `open` until the feed crosses `limitPriceCents`). Quantities are **fractional shares** (6 decimal places); a market order can instead be placed in **dollars** (`amountCents`) and the engine computes the fractional quantity. |
 | **Position** | Derived, not stored — replayed from filled orders using average-cost basis (`src/domain/portfolioMath.ts`). |
 | **Watchlist** | Per-account list of symbols to track. |
+| **RecurringPlan** | A standing dollar-based buy (`amountCents` of `symbol` every `daily`/`weekly`/`biweekly`/`monthly`). Executed lazily: any account touch first runs every due plan at the current quote; an unaffordable run is recorded as skipped, and the schedule advances from the moment of execution so an idle account gets one catch-up buy, not a pile. |
 
 ### Market data: mock by default, live via Yahoo Finance
 
@@ -74,6 +75,11 @@ rather than auto-cancelled.
 | `POST /orders/:id/cancel` | Cancel a resting (`open`) order. |
 | `GET /portfolio/:accountId` | Cash, positions (live-valued), equity, day change, unrealized P&L. |
 | `GET /realized-pnl/:accountId` | Realized gain/loss from sells, trade by trade. |
+| `POST /plans` | Start a recurring buy: `{ accountId, symbol, amountCents, cadence }` — the first installment executes immediately. |
+| `GET /plans?accountId=` | List plans (settles due runs first). |
+| `GET /plans/:id` | Read one plan. |
+| `POST /plans/:id/pause` · `/resume` | Pause / resume (resuming a past-due plan invests on the next touch). |
+| `DELETE /plans/:id` | Delete a plan. |
 | `GET /watchlist/:accountId` | The account's watchlist, with live quotes. |
 | `POST /watchlist/:accountId` | Add a symbol: `{ symbol }`. |
 | `DELETE /watchlist/:accountId/:symbol` | Remove a symbol. |

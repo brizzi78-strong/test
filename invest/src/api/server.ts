@@ -448,6 +448,36 @@ async function scopedProxy(
       upstreamPath = '/orders';
       auditAction = 'order_placed';
     }
+  } else if (head === 'plans' && segments.length === 1) {
+    if (method === 'GET') {
+      query.set('accountId', accountId);
+      upstreamPath = '/plans';
+    } else if (method === 'POST') {
+      const parsed = asObject(await readJson(req));
+      parsed.accountId = accountId;
+      body = JSON.stringify(parsed);
+      upstreamPath = '/plans';
+      auditAction = 'plan_created';
+    }
+  } else if (head === 'plans' && segments.length >= 2) {
+    const planId = second;
+    const isGet = method === 'GET' && segments.length === 2;
+    const isDelete = method === 'DELETE' && segments.length === 2;
+    const isToggle = method === 'POST' && segments.length === 3 && (third === 'pause' || third === 'resume');
+    if (isGet || isDelete || isToggle) {
+      let plan: any;
+      try {
+        plan = await upstream('GET', `/plans/${encodeURIComponent(planId)}`);
+      } catch {
+        plan = undefined;
+      }
+      if (!plan || plan.accountId !== accountId) {
+        return sendError(res, 404, 'not_found', `Plan not found: ${planId}`);
+      }
+      upstreamPath = '/' + segments.join('/');
+      if (isDelete) auditAction = 'plan_deleted';
+      if (isToggle) auditAction = third === 'pause' ? 'plan_paused' : 'plan_resumed';
+    }
   } else if (head === 'orders' && segments.length >= 2) {
     const orderId = second;
     const isGet = method === 'GET' && segments.length === 2;
@@ -484,7 +514,8 @@ async function scopedProxy(
   const text = await upstreamRes.text();
 
   if (auditAction && upstreamRes.status < 300) {
-    audit(req, auditAction, { userId: user.id, email: user.email, detail: orderSummary(text) });
+    const detail = auditAction.startsWith('order') ? orderSummary(text) : planSummary(text);
+    audit(req, auditAction, { userId: user.id, email: user.email, detail });
   }
 
   res.writeHead(upstreamRes.status, { 'content-type': 'application/json' });
@@ -496,6 +527,16 @@ function orderSummary(responseText: string): string | undefined {
   try {
     const o = JSON.parse(responseText);
     return `${o.id} ${o.symbol} ${o.side} ${o.type} x${o.quantity} ${o.status}`;
+  } catch {
+    return undefined;
+  }
+}
+
+/** Compact "id symbol amount¢ cadence" line for recurring-plan audit events. */
+function planSummary(responseText: string): string | undefined {
+  try {
+    const p = JSON.parse(responseText);
+    return p && p.id ? `${p.id} ${p.symbol} ${p.amountCents}¢ ${p.cadence}` : undefined;
   } catch {
     return undefined;
   }

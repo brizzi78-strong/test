@@ -154,6 +154,7 @@ export const PAGE = /* html */ `<!doctype html>
       <button data-view="browse"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>Browse</button>
       <button data-view="watchlist"><svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.6 1.6-7-5.4-4.7 7.1-.6L12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7z"/></svg>Watchlist</button>
       <button data-view="orders"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>Orders</button>
+      <button data-view="recurring"><svg viewBox="0 0 24 24"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 22l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>Recurring</button>
     </nav>
     <div class="foot" id="foot"></div>
   </aside>
@@ -188,7 +189,7 @@ export const PAGE = /* html */ `<!doctype html>
 "use strict";
 var $=function(s,r){return (r||document).querySelector(s);};
 var ACCT=null, ACCTNAME="", EMAIL="", EMAILVERIFIED=true, view="home";
-var instruments=[], quotes={}, watchlistSymbols={}, orders=[], portfolio=null;
+var instruments=[], quotes={}, watchlistSymbols={}, orders=[], plans=[], portfolio=null;
 
 // ---- helpers ----
 function usd(c){c=c||0;return (c<0?"-":"")+"$"+(Math.abs(c)/100).toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2});}
@@ -217,12 +218,14 @@ function loadAll(){
     api("GET","/portfolio/"+ACCT),
     api("GET","/watchlist/"+ACCT),
     api("GET","/orders?accountId="+ACCT),
+    api("GET","/plans?accountId="+ACCT),
   ]).then(function(r){
     instruments=r[0]||[];
     quotes={}; (r[1]||[]).forEach(function(q){quotes[q.symbol]=q;});
     portfolio=r[2];
     watchlistSymbols={}; (r[3]||[]).forEach(function(w){watchlistSymbols[w.symbol]=true;});
     orders=r[4]||[];
+    plans=r[5]||[];
   });
 }
 function refresh(){return loadAll().then(render);}
@@ -311,7 +314,7 @@ function setView(v){view=v;render();}
 function render(){
   var b=$("#nav").querySelectorAll("button");
   for(var i=0;i<b.length;i++)b[i].setAttribute("aria-current",b[i].getAttribute("data-view")===view?"true":"false");
-  ({home:vHome,browse:vBrowse,watchlist:vWatchlist,orders:vOrders})[view]();
+  ({home:vHome,browse:vBrowse,watchlist:vWatchlist,orders:vOrders,recurring:vRecurring})[view]();
 }
 function banner(){return EMAILVERIFIED?"":'<div class="vbanner">Verify your email \\u2014 we sent a link to <b>'+esc(EMAIL)+'</b>.<button class="btn ghost sm" data-resend>Resend email</button></div>';}
 function head(title,sub,right){return banner()+'<div class="top"><div><h1>'+title+'</h1><div class="sub">'+sub+'</div></div>'+(right||"")+'</div>';}
@@ -389,6 +392,27 @@ function vOrders(){
       }).join("")+'</tbody></table></div>':'<div class="empty">No orders yet.</div>')+'</div>';
 }
 
+var CADENCE_LABEL={daily:"Daily",weekly:"Weekly",biweekly:"Every 2 weeks",monthly:"Monthly"};
+function vRecurring(){
+  var list=plans.slice();
+  $("#main").innerHTML=head("Recurring",list.length+" plans \\u00b7 automatic dollar-based buys")
+    +'<div class="card">'+(list.length?'<div style="overflow-x:auto"><table><thead><tr><th>Stock</th><th class="r">Amount</th><th>Cadence</th><th class="r">Next run</th><th class="r">Last run</th><th>Status</th><th class="r">Actions</th></tr></thead><tbody>'
+      +list.map(function(p){
+        var status=p.active?'<span class="pill filled">active</span>':'<span class="pill open">paused</span>';
+        var lastRun=p.lastRunAt?fmtDT(p.lastRunAt)+(p.lastRunStatus==="skipped_insufficient_funds"?' <span class="neg">skipped</span>':''):"\\u2014";
+        var acts='<button class="btn ghost sm" data-plantoggle="'+p.id+'" data-active="'+p.active+'">'+(p.active?"Pause":"Resume")+'</button>'
+          +'<button class="btn ghost sm" data-plandelete="'+p.id+'">Delete</button>';
+        return '<tr><td><div class="sym"><div class="avatar">'+esc(p.symbol.slice(0,2))+'</div><div class="who">'+esc(p.symbol)+'</div></div></td>'
+          +'<td class="r num">'+usd(p.amountCents)+'</td>'
+          +'<td>'+esc(CADENCE_LABEL[p.cadence]||p.cadence)+'</td>'
+          +'<td class="r dim">'+(p.active?fmtDT(p.nextRunAt):"\\u2014")+'</td>'
+          +'<td class="r dim">'+lastRun+'</td>'
+          +'<td>'+status+'</td>'
+          +'<td class="r"><div class="rowacts" style="display:flex;gap:6px;justify-content:flex-end">'+acts+'</div></td></tr>';
+      }).join("")+'</tbody></table></div>'
+      :'<div class="empty">No recurring investments yet. Open any stock, choose Dollars, and pick a repeat cadence.</div>')+'</div>';
+}
+
 // ---- events ----
 document.addEventListener("click",function(e){
   var star=e.target.closest("[data-star]");
@@ -398,6 +422,16 @@ document.addEventListener("click",function(e){
   var t=e.target.closest("button"); if(!t)return;
   if(t.dataset.view)setView(t.dataset.view);
   else if(t.dataset.cancel)doCancel(t.dataset.cancel);
+  else if(t.dataset.plantoggle){
+    var action=t.dataset.active==="true"?"pause":"resume";
+    api("POST","/plans/"+t.dataset.plantoggle+"/"+action,{}).then(function(){toast(action==="pause"?"Plan paused":"Plan resumed \\u2014 investing on schedule");return refresh();}).catch(function(e){toast(e.message,"err");});
+  }
+  else if(t.dataset.plandelete){
+    fetch("/api/plans/"+t.dataset.plandelete,{method:"DELETE"}).then(function(r){
+      if(!r.ok)throw new Error("HTTP "+r.status);
+      toast("Recurring plan deleted");return refresh();
+    }).catch(function(e){toast(e.message,"err");});
+  }
   else if(t.dataset.resend!==undefined){
     t.disabled=true;
     fetch("/auth/resend-verification",{method:"POST"}).then(function(r){
@@ -459,7 +493,8 @@ function openStockDrawer(sym){
     +'<div class="row2">'
     +'<div class="field" id="d_amtwrap"><label>Amount $</label><input id="d_amt" type="number" min="0.01" step="0.01" placeholder="100.00"></div>'
     +'<div class="field" id="d_qtywrap" style="display:none"><label>Shares</label><input id="d_qty" type="number" min="0.000001" step="any" value="1"></div>'
-    +'<div class="field" id="d_limitwrap" style="display:none"><label>Limit price $</label><input id="d_limit" type="number" min="0.01" step="0.01"></div></div>'
+    +'<div class="field" id="d_limitwrap" style="display:none"><label>Limit price $</label><input id="d_limit" type="number" min="0.01" step="0.01"></div>'
+    +'<div class="field" id="d_repeatwrap"><label>Repeat</label><select id="d_repeat"><option value="once">One time</option><option value="daily">Daily</option><option value="weekly">Weekly</option><option value="biweekly">Every 2 weeks</option><option value="monthly">Monthly</option></select></div></div>'
     +'<div class="sumbox" id="d_sum"></div>';
   $("#dfoot").innerHTML='<button class="btn ghost" id="d_cancel">Cancel</button><button class="btn" id="d_submit">Review order</button>';
   $("#d_cancel").onclick=closeDrawer;
@@ -469,18 +504,21 @@ function openStockDrawer(sym){
   $("#d_side").onclick=function(e){var b=e.target.closest("button");if(!b)return;tradeSide=b.dataset.side;
     var btns=$("#d_side").querySelectorAll("button");for(var i=0;i<btns.length;i++)btns[i].setAttribute("aria-pressed",btns[i].dataset.side===tradeSide?"true":"false");
     $("#d_submit").className="btn"+(tradeSide==="sell"?" crit":"");
-    updateTradeSum();};
+    if(tradeSide==="sell")$("#d_repeat").value="once";
+    syncRepeat();updateTradeSum();};
   $("#d_type").onclick=function(e){var b=e.target.closest("button");if(!b)return;tradeType=b.dataset.type;
     var btns=$("#d_type").querySelectorAll("button");for(var i=0;i<btns.length;i++)btns[i].setAttribute("aria-pressed",btns[i].dataset.type===tradeType?"true":"false");
     // Dollar-based entry is market-only; a limit order is always in shares.
     if(tradeType==="limit"&&tradeMode==="d")setTradeMode("s");
     $("#d_modewrap").style.display=tradeType==="market"?"block":"none";
     $("#d_limitwrap").style.display=tradeType==="limit"?"block":"none";
-    updateTradeSum();};
+    syncRepeat();updateTradeSum();};
   $("#d_mode").onclick=function(e){var b=e.target.closest("button");if(!b)return;setTradeMode(b.dataset.m);};
   $("#d_amt").oninput=updateTradeSum;$("#d_qty").oninput=updateTradeSum;
   var limitInput=$("#d_limit"); if(limitInput)limitInput.oninput=updateTradeSum;
+  $("#d_repeat").onchange=syncRepeat;
   $("#d_submit").onclick=submitTrade;
+  syncRepeat();
   updateTradeSum();
   openDrawer();
   loadChart(sym);
@@ -492,7 +530,15 @@ function setTradeMode(m){
   for(var i=0;i<btns.length;i++)btns[i].setAttribute("aria-pressed",btns[i].dataset.m===m?"true":"false");
   $("#d_amtwrap").style.display=m==="d"?"block":"none";
   $("#d_qtywrap").style.display=m==="s"?"block":"none";
-  updateTradeSum();
+  if(m!=="d")$("#d_repeat").value="once";
+  syncRepeat();updateTradeSum();
+}
+// Repeat is only offered for dollar-based market buys; the button says what will happen.
+function syncRepeat(){
+  var eligible=tradeType==="market"&&tradeMode==="d"&&tradeSide==="buy";
+  $("#d_repeatwrap").style.display=eligible?"block":"none";
+  var repeating=eligible&&$("#d_repeat").value!=="once";
+  $("#d_submit").textContent=repeating?"Start recurring buy":"Review order";
 }
 function updateTradeSum(){
   var q=quotes[currentSymbol]||{};
@@ -513,6 +559,19 @@ function updateTradeSum(){
   $("#d_sum").innerHTML=rows;
 }
 function submitTrade(){
+  // A repeat cadence turns the dollar buy into a recurring plan (its first
+  // installment executes immediately server-side).
+  var repeat=$("#d_repeat")?$("#d_repeat").value:"once";
+  if(tradeType==="market"&&tradeMode==="d"&&tradeSide==="buy"&&repeat!=="once"){
+    var planAmt=Math.round(parseFloat($("#d_amt").value||"0")*100);
+    if(planAmt<=0){toast("Enter a dollar amount","err");return;}
+    $("#d_submit").disabled=true;
+    api("POST","/plans",{symbol:currentSymbol,amountCents:planAmt,cadence:repeat})
+      .then(function(p){toast("Recurring buy started \\u2014 "+usd(p.amountCents)+" of "+p.symbol+" "+(CADENCE_LABEL[p.cadence]||p.cadence).toLowerCase(),"good");closeDrawer();return refresh();})
+      .then(function(){setView("recurring");})
+      .catch(function(e){toast(e.message,"err");$("#d_submit").disabled=false;});
+    return;
+  }
   var body={accountId:ACCT,symbol:currentSymbol,side:tradeSide,type:tradeType};
   if(tradeType==="market"&&tradeMode==="d"){
     var amt=Math.round(parseFloat($("#d_amt").value||"0")*100);
