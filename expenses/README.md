@@ -18,6 +18,11 @@ know about every exception *while typing*, not days later in a rejection email.
 - **Real receipts.** Attach the actual image or PDF (stored as a capped data:
   URL); approvers open it in place. List payloads carry only a marker, not the
   bytes.
+- **Card feed without reconciliation.** Import corporate card charges; a
+  charge auto-matches when you enter the expense (same amount, ±3 days),
+  or becomes an expense in one click with date/merchant/amount prefilled.
+  Dismiss personal spend. Card-paid expenses are excluded from the
+  reimbursable total, so reports show both "total" and "what we owe you".
 - **Mileage done for you.** Enter miles; the server computes the amount at the
   IRS standard rate (70¢/mile for 2025). No receipt demanded for mileage.
 - **An approval queue with the work already done.** Approvers only see flagged
@@ -64,7 +69,7 @@ draft ──submit──▶ approved (auto, when compliant ≤ ceiling)
 | GET | `/reports` | My reports, each with a live policy evaluation |
 | GET | `/reports/:id` | One report + evaluation |
 | DELETE | `/reports/:id` | Delete a draft |
-| POST | `/reports/:id/expenses` | Add expense (mileage: send `miles`, amount is computed; `receipt` is a name or `{ name, dataUrl }` attachment) |
+| POST | `/reports/:id/expenses` | Add expense (mileage: send `miles`, amount is computed; `receipt` is a name or `{ name, dataUrl }` attachment; `paymentMethod` `personal` opts out of card matching, `card` declares card spend) |
 | PUT | `/reports/:id/expenses/:expenseId` | Update expense |
 | DELETE | `/reports/:id/expenses/:expenseId` | Remove expense |
 | POST | `/reports/:id/submit` | Submit; auto-approves when compliant |
@@ -74,8 +79,13 @@ draft ──submit──▶ approved (auto, when compliant ≤ ceiling)
 | POST | `/reports/:id/approve` | Approve (approver only, never the owner) |
 | POST | `/reports/:id/reject` | Reject `{ reason }` |
 | POST | `/reports/:id/reimburse` | Mark approved report paid |
-| GET | `/analytics` | My spend by category/status, auto-approval count |
+| GET | `/analytics` | My spend by category/status, card vs out-of-pocket split |
 | GET | `/export.csv` | My expenses as CSV (`?scope=approvals` for my queue) |
+| POST | `/card-transactions/import` | Import card charges `{ transactions: [{ date, merchant, amountCents, last4 }] }` (re-imports dedupe) |
+| GET | `/card-transactions` | My card feed (`?status=unmatched\|matched\|dismissed`) |
+| POST | `/card-transactions/:id/expense` | One-click expense from a charge `{ reportId, category }` |
+| POST | `/card-transactions/:id/dismiss` | Mark a charge as personal spend |
+| POST | `/card-transactions/:id/restore` | Undo a dismissal |
 
 Amounts are integer cents. Dates are `YYYY-MM-DD`. Receipt attachments are
 image/PDF `data:` URLs capped at ~500 KB; list endpoints replace the bytes

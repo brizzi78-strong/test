@@ -13,8 +13,11 @@ import {
   reportTotalCents,
   type Policy,
 } from '../domain/policy.ts';
+import { findMatchingTransaction } from '../domain/matching.ts';
 import {
   CATEGORIES,
+  type CardTransaction,
+  type CardTransactionStatus,
   type Category,
   type Expense,
   type ExpenseReport,
@@ -32,10 +35,22 @@ export interface ReportWithEvaluation {
 export interface Analytics {
   reportCount: number;
   totalCents: number;
+  /** Out-of-pocket spend owed back to the filer (total minus card charges). */
+  reimbursableCents: number;
+  /** Company-card spend inside reports. */
+  cardCents: number;
   byCategory: Partial<Record<Category, number>>;
   byStatus: Record<string, number>;
   autoApprovedCount: number;
   violationCount: number;
+  /** Card charges still waiting to be expensed or dismissed. */
+  unmatchedTransactionCount: number;
+}
+
+export interface ImportResult {
+  imported: CardTransaction[];
+  /** Charges skipped because an identical one was already in the feed. */
+  duplicateCount: number;
 }
 
 const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
@@ -116,6 +131,10 @@ function stripReceiptData(report: ExpenseReport): ExpenseReport {
   };
 }
 
+/** Identity of a charge for re-import dedupe. */
+const transactionKey = (t: Pick<CardTransaction, 'date' | 'merchant' | 'amountCents' | 'last4'>): string =>
+  `${t.date}|${t.merchant.trim().toLowerCase()}|${t.amountCents}|${t.last4}`;
+
 const csvCell = (value: string | number): string => {
   let s = String(value);
   // Neutralize spreadsheet formula injection: =, +, -, @ prefixes are
@@ -186,31 +205,61 @@ export class ExpenseService {
   deleteReport(userId: string, id: string): void {
     const report = this.owned(userId, id);
     if (report.status !== 'draft') throw conflict('only draft reports can be deleted');
+    for (const expense of report.expenses) {
+      if (expense.cardTransactionId) this.unlinkTransaction(expense.cardTransactionId);
+    }
     this.store.delete(id);
   }
 
   addExpense(userId: string, reportId: string, body: unknown): ReportWithEvaluation {
     const report = this.editable(userId, reportId);
     const expense = this.parseExpense(body, randomUUID());
+    const matched = this.autoMatch(report, expense);
     report.expenses.push(expense);
     this.store.put(report);
+    if (matched) this.store.putTransaction(matched);
     return this.withEvaluation(report);
   }
 
+  /**
+   * Card links are server-derived, never client state: any edit unlinks the
+   * old charge and re-runs matching against the freshly validated fields, so
+   * a stored link always satisfies the matching rules. An unlink that does
+   * not re-match is recorded in the report history for the approver.
+   */
   updateExpense(userId: string, reportId: string, expenseId: string, body: unknown): ReportWithEvaluation {
     const report = this.editable(userId, reportId);
     const index = report.expenses.findIndex((e) => e.id === expenseId);
     if (index === -1) throw notFound('expense');
-    report.expenses[index] = this.parseExpense(body, expenseId, report.expenses[index]);
+    const previous = report.expenses[index]!;
+    const next = this.parseExpense(body, expenseId, previous);
+    if (previous.cardTransactionId) {
+      this.unlinkTransaction(previous.cardTransactionId);
+      // A client-sent 'card' here is a round-tripped copy of the old link's
+      // flag, not a fresh declaration — drop it so matching decides.
+      if (next.paymentMethod === 'card') delete next.paymentMethod;
+    }
+    const matched = this.autoMatch(report, next);
+    if (previous.cardTransactionId && matched?.id !== previous.cardTransactionId) {
+      report.history.push({
+        at: this.now().toISOString(),
+        by: userId,
+        action: 'card-unlinked',
+        note: `${previous.merchant} $${(previous.amountCents / 100).toFixed(2)} edited; its card charge returned to the feed`,
+      });
+    }
+    report.expenses[index] = next;
     this.store.put(report);
+    if (matched) this.store.putTransaction(matched);
     return this.withEvaluation(report);
   }
 
   deleteExpense(userId: string, reportId: string, expenseId: string): ReportWithEvaluation {
     const report = this.editable(userId, reportId);
-    const before = report.expenses.length;
+    const expense = report.expenses.find((e) => e.id === expenseId);
+    if (!expense) throw notFound('expense');
+    if (expense.cardTransactionId) this.unlinkTransaction(expense.cardTransactionId);
     report.expenses = report.expenses.filter((e) => e.id !== expenseId);
-    if (report.expenses.length === before) throw notFound('expense');
     this.store.put(report);
     return this.withEvaluation(report);
   }
@@ -294,6 +343,94 @@ export class ExpenseService {
   }
 
   /**
+   * Import corporate card charges into this user's feed. Re-imports are safe:
+   * a charge identical to one already in the feed (any status) is skipped.
+   */
+  importTransactions(userId: string, body: unknown): ImportResult {
+    const input = asRecord(body);
+    if (!Array.isArray(input.transactions) || input.transactions.length === 0) {
+      throw new DomainError('transactions must be a non-empty array');
+    }
+    if (input.transactions.length > 500) throw new DomainError('at most 500 transactions per import');
+    // Validate the whole batch before persisting anything, so a bad row
+    // rejects the import instead of leaving it half-applied.
+    const parsed = input.transactions.map((raw) => this.parseTransaction(userId, raw));
+    const existing = new Set(
+      this.store.listTransactions((t) => t.ownerId === userId).map(transactionKey),
+    );
+    const imported: CardTransaction[] = [];
+    let duplicateCount = 0;
+    for (const txn of parsed) {
+      const key = transactionKey(txn);
+      if (existing.has(key)) {
+        duplicateCount++;
+        continue;
+      }
+      existing.add(key);
+      this.store.putTransaction(txn);
+      imported.push(txn);
+    }
+    return { imported, duplicateCount };
+  }
+
+  listTransactions(userId: string, status?: CardTransactionStatus): CardTransaction[] {
+    return this.store
+      .listTransactions((t) => t.ownerId === userId && (status === undefined || t.status === status))
+      .sort((a, b) => b.date.localeCompare(a.date));
+  }
+
+  /** Personal spend on the card that will never become an expense. */
+  dismissTransaction(userId: string, id: string): CardTransaction {
+    const txn = this.ownedTransaction(userId, id);
+    if (txn.status !== 'unmatched') throw conflict(`cannot dismiss a ${txn.status} charge`);
+    txn.status = 'dismissed';
+    this.store.putTransaction(txn);
+    return txn;
+  }
+
+  restoreTransaction(userId: string, id: string): CardTransaction {
+    const txn = this.ownedTransaction(userId, id);
+    if (txn.status !== 'dismissed') throw conflict(`cannot restore a ${txn.status} charge`);
+    txn.status = 'unmatched';
+    this.store.putTransaction(txn);
+    return txn;
+  }
+
+  /**
+   * One-click expense from a card charge: date, merchant, and amount come
+   * from the feed; the filer only picks the report and category.
+   */
+  expenseFromTransaction(userId: string, transactionId: string, body: unknown): ReportWithEvaluation {
+    const txn = this.ownedTransaction(userId, transactionId);
+    if (txn.status !== 'unmatched') throw conflict(`charge is already ${txn.status}`);
+    const input = asRecord(body);
+    const report = this.editable(userId, requireString(input.reportId, 'reportId'));
+    const category = requireString(input.category, 'category', 32) as Category;
+    if (!CATEGORIES.includes(category) || category === 'mileage') {
+      throw new DomainError(`category must be one of: ${CATEGORIES.filter((c) => c !== 'mileage').join(', ')}`);
+    }
+    const expense: Expense = {
+      id: randomUUID(),
+      date: txn.date,
+      category,
+      merchant: txn.merchant,
+      description: typeof input.description === 'string' ? input.description.trim() : '',
+      amountCents: txn.amountCents,
+      receipt: parseReceipt(input.receipt),
+      paymentMethod: 'card',
+      cardTransactionId: txn.id,
+    };
+    report.expenses.push(expense);
+    txn.status = 'matched';
+    txn.expenseId = expense.id;
+    txn.reportId = report.id;
+    // Report first: a failed report write must not strand a matched charge.
+    this.store.put(report);
+    this.store.putTransaction(txn);
+    return this.withEvaluation(report);
+  }
+
+  /**
    * Flatten a user's expenses to CSV — one row per expense — for finance
    * tooling. `scope: 'approvals'` exports instead the reports awaiting or past
    * this user's approval (submitted, approved, reimbursed).
@@ -303,7 +440,7 @@ export class ExpenseService {
       scope === 'approvals'
         ? this.query((r) => r.approverId === userId && r.status !== 'draft' && r.status !== 'rejected')
         : this.query((r) => r.ownerId === userId);
-    const header = ['report', 'owner', 'status', 'date', 'category', 'merchant', 'description', 'amount_usd', 'receipt'];
+    const header = ['report', 'owner', 'status', 'date', 'category', 'merchant', 'description', 'amount_usd', 'payment', 'receipt'];
     const rows = reports
       .sort((a, b) => a.createdAt.localeCompare(b.createdAt))
       .flatMap((r) =>
@@ -317,6 +454,7 @@ export class ExpenseService {
             csvCell(e.merchant),
             csvCell(e.description),
             csvCell((e.amountCents / 100).toFixed(2)),
+            csvCell(e.paymentMethod === 'card' ? 'card' : 'personal'),
             csvCell(e.receipt?.name ?? ''),
           ].join(','),
         ),
@@ -329,6 +467,7 @@ export class ExpenseService {
     const byCategory: Partial<Record<Category, number>> = {};
     const byStatus: Record<string, number> = {};
     let totalCents = 0;
+    let cardCents = 0;
     let violationCount = 0;
     let autoApprovedCount = 0;
     for (const report of reports) {
@@ -337,10 +476,23 @@ export class ExpenseService {
       violationCount += this.evaluateAgainst(report, reports).violations.length;
       for (const e of report.expenses) {
         totalCents += e.amountCents;
+        if (e.paymentMethod === 'card') cardCents += e.amountCents;
         byCategory[e.category] = (byCategory[e.category] ?? 0) + e.amountCents;
       }
     }
-    return { reportCount: reports.length, totalCents, byCategory, byStatus, autoApprovedCount, violationCount };
+    return {
+      reportCount: reports.length,
+      totalCents,
+      reimbursableCents: totalCents - cardCents,
+      cardCents,
+      byCategory,
+      byStatus,
+      autoApprovedCount,
+      violationCount,
+      unmatchedTransactionCount: this.store.listTransactions(
+        (t) => t.ownerId === userId && t.status === 'unmatched',
+      ).length,
+    };
   }
 
   private parseExpense(body: unknown, id: string, existing?: Expense): Expense {
@@ -356,6 +508,10 @@ export class ExpenseService {
     const merchant = requireString(input.merchant, 'merchant');
     const description = typeof input.description === 'string' ? input.description.trim() : '';
     const receipt = parseReceipt(input.receipt, existing?.receipt);
+    const paymentMethod = input.paymentMethod;
+    if (paymentMethod !== undefined && paymentMethod !== 'personal' && paymentMethod !== 'card') {
+      throw new DomainError('paymentMethod must be "personal" or "card"');
+    }
 
     if (category === 'mileage') {
       const miles = input.miles;
@@ -383,7 +539,80 @@ export class ExpenseService {
     ) {
       throw new DomainError('amountCents must be a positive integer (max $100,000)');
     }
-    return { id, date, category, merchant, description, amountCents, receipt };
+    return {
+      id,
+      date,
+      category,
+      merchant,
+      description,
+      amountCents,
+      receipt,
+      // 'personal' is an explicit opt-out of card matching; 'card' declares a
+      // company-card purchase whose charge may not be in the feed yet.
+      ...(paymentMethod !== undefined ? { paymentMethod } : {}),
+    };
+  }
+
+  /**
+   * Link a freshly parsed expense to an unmatched charge with the same
+   * amount posted within the match window. Mileage never matches (it is a
+   * computed allowance, not a purchase) and an explicit `personal` payment
+   * method opts out entirely. Mutates the expense and returns the charge for
+   * the caller to persist — AFTER the report write, so a failed report write
+   * can never strand a charge in `matched` with no expense behind it.
+   */
+  private autoMatch(report: ExpenseReport, expense: Expense): CardTransaction | undefined {
+    if (expense.category === 'mileage' || expense.cardTransactionId) return undefined;
+    if (expense.paymentMethod === 'personal') return undefined;
+    const candidates = this.store.listTransactions(
+      (t) => t.ownerId === report.ownerId && t.status === 'unmatched',
+    );
+    const txn = findMatchingTransaction(expense, candidates);
+    if (!txn) return undefined;
+    expense.paymentMethod = 'card';
+    expense.cardTransactionId = txn.id;
+    txn.status = 'matched';
+    txn.expenseId = expense.id;
+    txn.reportId = report.id;
+    return txn;
+  }
+
+  /** Return a charge to the unmatched feed when its expense goes away. */
+  private unlinkTransaction(transactionId: string): void {
+    const txn = this.store.getTransaction(transactionId);
+    if (!txn) return;
+    txn.status = 'unmatched';
+    delete txn.expenseId;
+    delete txn.reportId;
+    this.store.putTransaction(txn);
+  }
+
+  private ownedTransaction(userId: string, id: string): CardTransaction {
+    const txn = this.store.getTransaction(id);
+    if (!txn) throw notFound('card transaction');
+    if (txn.ownerId !== userId) throw forbidden('not your card transaction');
+    return txn;
+  }
+
+  private parseTransaction(userId: string, raw: unknown): CardTransaction {
+    const input = asRecord(raw);
+    const date = requireString(input.date, 'transaction date', 10);
+    if (!ISO_DATE.test(date) || Number.isNaN(Date.parse(date))) {
+      throw new DomainError('transaction date must be a valid YYYY-MM-DD date');
+    }
+    const merchant = requireString(input.merchant, 'transaction merchant');
+    const amountCents = input.amountCents;
+    if (
+      typeof amountCents !== 'number' ||
+      !Number.isInteger(amountCents) ||
+      amountCents <= 0 ||
+      amountCents > 10_000_000
+    ) {
+      throw new DomainError('transaction amountCents must be a positive integer (max $100,000)');
+    }
+    const last4 = requireString(input.last4, 'transaction last4', 4);
+    if (!/^\d{4}$/.test(last4)) throw new DomainError('transaction last4 must be four digits');
+    return { id: randomUUID(), ownerId: userId, date, merchant, amountCents, last4, status: 'unmatched' };
   }
 
   /** All reads flow through here so legacy documents are normalized once. */

@@ -119,8 +119,12 @@ export function evaluateReport(
   }
 
   const totalCents = reportTotalCents(report);
+  const reimbursableCents = report.expenses
+    .filter((e) => e.paymentMethod !== 'card')
+    .reduce((sum, e) => sum + e.amountCents, 0);
   return {
     totalCents,
+    reimbursableCents,
     violations,
     autoApprovable: violations.length === 0 && totalCents <= policy.autoApproveCeilingCents,
   };

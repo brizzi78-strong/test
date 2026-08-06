@@ -41,6 +41,29 @@ export interface Expense {
   miles?: number;
   /** Attached receipt, when one is on file. */
   receipt?: Receipt;
+  /** How it was paid: company card charges are not reimbursed to the filer. */
+  paymentMethod?: 'personal' | 'card';
+  /** Set when this expense is matched to a corporate card charge. */
+  cardTransactionId?: string;
+}
+
+export type CardTransactionStatus = 'unmatched' | 'matched' | 'dismissed';
+
+/** One charge from the corporate card feed. */
+export interface CardTransaction {
+  id: string;
+  /** Cardholder (same lightweight tenancy as reports). */
+  ownerId: string;
+  /** ISO date (YYYY-MM-DD) the charge posted. */
+  date: string;
+  merchant: string;
+  amountCents: number;
+  /** Last four digits of the card, for display. */
+  last4: string;
+  status: CardTransactionStatus;
+  /** Set while status is "matched". */
+  expenseId?: string;
+  reportId?: string;
 }
 
 export interface HistoryEntry {
@@ -83,6 +106,8 @@ export interface Violation {
 
 export interface PolicyEvaluation {
   totalCents: number;
+  /** Total minus company-card charges: what the filer is actually owed. */
+  reimbursableCents: number;
   violations: Violation[];
   /** Compliant and under the auto-approve ceiling: no human review needed. */
   autoApprovable: boolean;

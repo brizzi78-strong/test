@@ -55,6 +55,11 @@
   #modal.open { display: flex; }
   #modal .box { background: var(--card); border-radius: 10px; padding: 14px; max-width: min(720px, 92vw); max-height: 90vh; display: flex; flex-direction: column; gap: 8px; }
   #modal img, #modal embed { max-width: 100%; max-height: 74vh; object-fit: contain; }
+  #toast { position: fixed; left: 50%; bottom: 26px; transform: translateX(-50%);
+    background: var(--ink); color: var(--bg); padding: 10px 18px; border-radius: 8px;
+    font-size: 14px; opacity: 0; transition: opacity .25s; pointer-events: none; }
+  #toast.show { opacity: 1; }
+  @media (prefers-reduced-motion: reduce) { #toast { transition: none; } }
 </style>
 </head>
 <body>
@@ -67,12 +72,14 @@
 <main>
   <div class="tabs">
     <button id="tab-reports" class="active">My reports</button>
+    <button id="tab-cards">Card feed</button>
     <button id="tab-approvals">Approvals</button>
     <button id="tab-analytics">Analytics</button>
   </div>
   <div class="error" id="error"></div>
   <div id="view"></div>
 </main>
+<div id="toast" role="status"></div>
 <div id="modal" role="dialog" aria-modal="true">
   <div class="box">
     <div style="display:flex; justify-content:space-between; align-items:center; gap:12px">
@@ -85,6 +92,8 @@
 <script>
 const $ = (id) => document.getElementById(id);
 const view = $('view');
+// Single client-side copy of the server's category list (types.ts CATEGORIES).
+const CATEGORIES = ['meals','lodging','airfare','ground_transport','mileage','office_supplies','software','entertainment','other'];
 let tab = 'reports';
 let openReportId = null;
 let policy = null;
@@ -106,11 +115,20 @@ async function api(method, path, body) {
 
 function setError(message) { $('error').textContent = message || ''; }
 
+function toastMsg(message) {
+  const t = $('toast');
+  t.textContent = message;
+  t.classList.add('show');
+  clearTimeout(toastMsg._t);
+  toastMsg._t = setTimeout(() => t.classList.remove('show'), 2600);
+}
+
 async function render() {
   setError('');
   try {
     if (!policy) policy = (await api('GET', '/policy')).policy;
     if (tab === 'reports') await renderReports();
+    else if (tab === 'cards') await renderCardFeed();
     else if (tab === 'approvals') await renderApprovals();
     else await renderAnalytics();
   } catch (err) { setError(err.message); }
@@ -236,7 +254,11 @@ async function renderReportDetail(id) {
           <span class="chip ${report.status}">${report.status}</span>
           ${report.autoApproved ? '<span class="autobadge">auto-approved by policy engine</span>' : ''}
         </div>
-        <div class="total">${money(evaluation.totalCents)}</div>
+        <div style="text-align:right">
+          <div class="total">${money(evaluation.totalCents)}</div>
+          ${evaluation.reimbursableCents !== evaluation.totalCents
+            ? `<div class="muted">reimbursable ${money(evaluation.reimbursableCents)} · rest on company card</div>` : ''}
+        </div>
       </div>
       ${report.rejectionReason ? `<p class="flag dup">Rejected: ${esc(report.rejectionReason)}</p>` : ''}
       <p class="muted">Approver: ${esc(report.approverId)} · Receipts required from ${money(policy.receiptRequiredCents)} · ${limits} · mileage ${policy.mileageRateCentsPerMile}¢/mi · auto-approval up to ${money(policy.autoApproveCeilingCents)}</p>
@@ -245,7 +267,7 @@ async function renderReportDetail(id) {
       <tbody>${report.expenses.map((e) => `
         <tr>
           <td>${e.date}</td>
-          <td>${e.category}${e.miles ? ` <span class="muted">(${e.miles} mi)</span>` : ''}</td>
+          <td>${e.category}${e.miles ? ` <span class="muted">(${e.miles} mi)</span>` : ''}${e.paymentMethod === 'card' ? ' <span title="Company card — not reimbursed to you">💳</span>' : ''}</td>
           <td>${esc(e.merchant)}${e.description ? `<div class="muted">${esc(e.description)}</div>` : ''}${flagsFor(evaluation, e.id)}</td>
           <td>${receiptCell(report.id, e)}</td>
           <td class="amount">${money(e.amountCents)}</td>
@@ -262,8 +284,12 @@ async function renderReportDetail(id) {
       <div class="row" style="margin-top:8px">
         <label>Date <input type="date" id="x-date" value="${today()}"></label>
         <label>Category <select id="x-cat">
-          ${['meals','lodging','airfare','ground_transport','mileage','office_supplies','software','entertainment','other']
-            .map((c) => `<option>${c}</option>`).join('')}
+          ${CATEGORIES.map((c) => `<option>${c}</option>`).join('')}
+        </select></label>
+        <label>Paid with <select id="x-pay">
+          <option value="">Auto (match card feed)</option>
+          <option value="personal">Out of pocket</option>
+          <option value="card">Company card</option>
         </select></label>
         <label>Merchant <input id="x-merchant" placeholder="e.g. Delta"></label>
         <label id="amount-label">Amount ($) <input id="x-amount" type="number" step="0.01" min="0"></label>
@@ -293,6 +319,7 @@ async function renderReportDetail(id) {
       const body = {
         date: $('x-date').value, category: catSelect.value,
         merchant: $('x-merchant').value, description: $('x-desc').value,
+        paymentMethod: $('x-pay').value || undefined,
       };
       if (catSelect.value === 'mileage') body.miles = Number($('x-miles').value);
       else body.amountCents = Math.round(Number($('x-amount').value) * 100);
@@ -332,6 +359,100 @@ async function renderReportDetail(id) {
   wireReceiptLinks();
 }
 
+// ---------- Card feed ----------
+
+async function renderCardFeed() {
+  const [{ transactions }, { reports }] = await Promise.all([
+    api('GET', '/card-transactions'),
+    api('GET', '/reports'),
+  ]);
+  const unmatched = transactions.filter((t) => t.status === 'unmatched');
+  const matched = transactions.filter((t) => t.status === 'matched');
+  const dismissed = transactions.filter((t) => t.status === 'dismissed');
+  const drafts = reports.filter((r) => r.report.status === 'draft').map((r) => r.report);
+  const reportOptions = drafts.map((r) => `<option value="${r.id}">${esc(r.title)}</option>`).join('');
+  const categoryOptions = CATEGORIES.filter((c) => c !== 'mileage')
+    .map((c) => `<option>${c}</option>`).join('');
+  view.innerHTML = `
+    <div class="card">
+      <strong>Import charges</strong>
+      <p class="muted">One line per charge: <code>date,merchant,amount,last4</code> — e.g. <code>2026-08-05,Delta,418.00,4242</code>. A real deployment would take the bank feed instead.</p>
+      <div class="row">
+        <textarea id="feed-input" rows="3" style="flex:1; min-width:260px; font:13px/1.5 ui-monospace,monospace; padding:8px; border:1px solid var(--line); border-radius:6px"></textarea>
+        <button class="primary" id="feed-import">Import</button>
+      </div>
+    </div>
+    <div class="card">
+      <strong>Needs attention (${unmatched.length})</strong>
+      <p class="muted">Each charge auto-matches when you enter the expense yourself, or becomes an expense with one click here. Dismiss personal spend.</p>
+      ${unmatched.length === 0 ? '<p class="muted">Nothing waiting. ✨</p>' : unmatched.map((t) => `
+        <div class="row" style="align-items:center; padding:7px 0; border-bottom:1px solid var(--line)">
+          <div style="min-width:200px">${t.date} · <strong>${esc(t.merchant)}</strong> <span class="muted">····${esc(t.last4)}</span></div>
+          <div class="total" style="min-width:90px">${money(t.amountCents)}</div>
+          ${drafts.length ? `
+            <select data-report="${t.id}">${reportOptions}</select>
+            <select data-category="${t.id}">${categoryOptions}</select>
+            <button class="ghost" data-expense="${t.id}">Add to report</button>`
+            : '<span class="muted">Create a draft report to file this</span>'}
+          <button class="ghost danger" data-dismiss="${t.id}">Dismiss</button>
+        </div>`).join('')}
+    </div>
+    ${matched.length ? `<div class="card"><strong>Matched (${matched.length})</strong>
+      ${matched.map((t) => `<div class="muted" style="padding:3px 0">✔ ${t.date} · ${esc(t.merchant)} · ${money(t.amountCents)} — filed</div>`).join('')}
+    </div>` : ''}
+    ${dismissed.length ? `<div class="card"><strong>Dismissed (${dismissed.length})</strong>
+      ${dismissed.map((t) => `<div class="row" style="align-items:center; padding:3px 0">
+        <span class="muted">${t.date} · ${esc(t.merchant)} · ${money(t.amountCents)}</span>
+        <button class="ghost" data-restore="${t.id}">Restore</button>
+      </div>`).join('')}
+    </div>` : ''}`;
+  $('feed-import').onclick = async () => {
+    const lines = $('feed-input').value.split('\n').map((l) => l.trim()).filter(Boolean);
+    if (!lines.length) return setError('Paste at least one charge line first.');
+    const parsed = [];
+    for (const line of lines) {
+      // Anchor from both ends so merchants containing commas still parse:
+      // first field is the date, last is last4, second-to-last the amount.
+      const parts = line.split(',').map((p) => p.trim());
+      const date = parts[0];
+      const last4 = parts[parts.length - 1];
+      const amountCents = Math.round(Number((parts[parts.length - 2] ?? '').replace(/[$\s]/g, '')) * 100);
+      const merchant = parts.slice(1, -2).join(', ');
+      if (parts.length < 4 || !date || !merchant || !(amountCents > 0) || !last4) {
+        return setError(`Could not read line: "${line}" — expected date,merchant,amount,last4`);
+      }
+      parsed.push({ date, merchant, amountCents, last4 });
+    }
+    try {
+      const result = await api('POST', '/card-transactions/import', { transactions: parsed });
+      toastMsg(`Imported ${result.imported.length} charge(s)` +
+        (result.duplicateCount ? `, skipped ${result.duplicateCount} duplicate(s)` : ''));
+      render();
+    } catch (err) { setError(err.message); }
+  };
+  view.querySelectorAll('[data-expense]').forEach((btn) => {
+    btn.onclick = async () => {
+      const id = btn.dataset.expense;
+      const reportId = view.querySelector(`[data-report="${id}"]`).value;
+      const category = view.querySelector(`[data-category="${id}"]`).value;
+      try { await api('POST', `/card-transactions/${id}/expense`, { reportId, category }); render(); }
+      catch (err) { setError(err.message); }
+    };
+  });
+  view.querySelectorAll('[data-dismiss]').forEach((btn) => {
+    btn.onclick = async () => {
+      try { await api('POST', `/card-transactions/${btn.dataset.dismiss}/dismiss`); render(); }
+      catch (err) { setError(err.message); }
+    };
+  });
+  view.querySelectorAll('[data-restore]').forEach((btn) => {
+    btn.onclick = async () => {
+      try { await api('POST', `/card-transactions/${btn.dataset.restore}/restore`); render(); }
+      catch (err) { setError(err.message); }
+    };
+  });
+}
+
 // ---------- Approvals ----------
 
 async function renderApprovals() {
@@ -347,11 +468,15 @@ async function renderApprovals() {
         <div class="card" style="margin-bottom:10px">
           <div class="row" style="justify-content:space-between; align-items:center">
             <div><strong>${esc(report.title)}</strong> <span class="muted">from ${esc(report.ownerId)} · submitted ${report.submittedAt.slice(0, 10)}</span></div>
-            <div class="total">${money(evaluation.totalCents)}</div>
+            <div style="text-align:right">
+              <div class="total">${money(evaluation.totalCents)}</div>
+              ${evaluation.reimbursableCents !== evaluation.totalCents
+                ? `<div class="muted">reimbursable ${money(evaluation.reimbursableCents)}</div>` : ''}
+            </div>
           </div>
           ${report.expenses.map((e) => `
             <div style="padding:4px 0; border-bottom:1px solid var(--line)">
-              ${e.date} · ${e.category} · ${esc(e.merchant)} · <strong>${money(e.amountCents)}</strong>
+              ${e.date} · ${e.category}${e.paymentMethod === 'card' ? ' 💳' : ''} · ${esc(e.merchant)} · <strong>${money(e.amountCents)}</strong>
               ${e.receipt ? ' · ' + receiptCell(report.id, e) : ''}
               ${flagsFor(evaluation, e.id)}
             </div>`).join('')}
@@ -405,9 +530,12 @@ async function renderAnalytics() {
   view.innerHTML = `
     <div class="grid">
       <div class="stat"><div class="muted">Total spend</div><div class="n">${money(a.totalCents)}</div></div>
+      <div class="stat"><div class="muted">Out of pocket</div><div class="n">${money(a.reimbursableCents)}</div></div>
+      <div class="stat"><div class="muted">Company card</div><div class="n">${money(a.cardCents)}</div></div>
       <div class="stat"><div class="muted">Reports</div><div class="n">${a.reportCount}</div></div>
       <div class="stat"><div class="muted">Auto-approved</div><div class="n">${a.autoApprovedCount}</div></div>
       <div class="stat"><div class="muted">Open flags</div><div class="n">${a.violationCount}</div></div>
+      <div class="stat"><div class="muted">Unfiled card charges</div><div class="n">${a.unmatchedTransactionCount}</div></div>
     </div>
     <div class="card" style="margin-top:16px">
       <strong>Spend by category</strong>
@@ -425,7 +553,7 @@ async function renderAnalytics() {
 
 // ---------- Wiring ----------
 
-for (const name of ['reports', 'approvals', 'analytics']) {
+for (const name of ['reports', 'cards', 'approvals', 'analytics']) {
   $('tab-' + name).onclick = () => {
     tab = name;
     openReportId = null;

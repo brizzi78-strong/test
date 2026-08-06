@@ -21,6 +21,11 @@
  *   POST   /reports/:id/reimburse
  *   GET    /analytics                          -> my spend by category/status
  *   GET    /export.csv[?scope=approvals]       -> my expenses (or my queue) as CSV
+ *   POST   /card-transactions/import           -> { transactions: [...] } card feed import
+ *   GET    /card-transactions[?status=...]     -> my card feed
+ *   POST   /card-transactions/:id/expense      -> one-click expense from a charge
+ *   POST   /card-transactions/:id/dismiss      -> personal spend, not expensable
+ *   POST   /card-transactions/:id/restore      -> undo a dismissal
  *
  * The requester is identified by the `x-user-id` header (default "demo") —
  * lightweight tenancy in the same spirit as the other apps in this repo.
@@ -117,6 +122,25 @@ export function createRequestListener(
     ok(service.reimburseReport(ctx.userId, ctx.params.id!)),
   );
   route('GET', '/analytics', (ctx) => ok(service.analytics(ctx.userId)));
+  route('POST', '/card-transactions/import', (ctx) =>
+    created(service.importTransactions(ctx.userId, ctx.body)),
+  );
+  route('GET', '/card-transactions', (ctx) => {
+    const status = ctx.query.get('status');
+    if (status !== null && status !== 'unmatched' && status !== 'matched' && status !== 'dismissed') {
+      return { status: 400, body: { error: 'status must be unmatched, matched, or dismissed' } };
+    }
+    return ok({ transactions: service.listTransactions(ctx.userId, status ?? undefined) });
+  });
+  route('POST', '/card-transactions/:id/expense', (ctx) =>
+    created(service.expenseFromTransaction(ctx.userId, ctx.params.id!, ctx.body)),
+  );
+  route('POST', '/card-transactions/:id/dismiss', (ctx) =>
+    ok({ transaction: service.dismissTransaction(ctx.userId, ctx.params.id!) }),
+  );
+  route('POST', '/card-transactions/:id/restore', (ctx) =>
+    ok({ transaction: service.restoreTransaction(ctx.userId, ctx.params.id!) }),
+  );
 
   const match = (
     method: string,

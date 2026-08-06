@@ -312,7 +312,141 @@ describe('Expenses API', () => {
     assert.deepEqual(detail.json.evaluation.violations, []);
 
     const csv = await fetch(base + '/export.csv', { headers: { 'x-user-id': 'old-timer' } });
-    assert.match(await csv.text(), /Old Cafe,,26\.00,lunch\.jpg/);
+    assert.match(await csv.text(), /Old Cafe,,26\.00,personal,lunch\.jpg/);
+  });
+
+  it('runs the card feed: import, auto-match, one-click expense, dismiss, restore', async () => {
+    const imported = await call('POST', '/card-transactions/import', {
+      transactions: [
+        { date: today, merchant: 'Delta', amountCents: 41_800, last4: '4242' },
+        { date: today, merchant: 'Hertz', amountCents: 9_900, last4: '4242' },
+        { date: today, merchant: 'Spotify', amountCents: 1_099, last4: '4242' },
+      ],
+    }, 'card-user');
+    assert.equal(imported.status, 201);
+    assert.equal(imported.json.imported.length, 3);
+
+    // Re-import of the same feed is a no-op.
+    const again = await call('POST', '/card-transactions/import', {
+      transactions: [{ date: today, merchant: 'delta ', amountCents: 41_800, last4: '4242' }],
+    }, 'card-user');
+    assert.equal(again.json.imported.length, 0);
+    assert.equal(again.json.duplicateCount, 1);
+
+    // Entering an expense with the same amount auto-matches the charge.
+    const { json: createdJson } = await call('POST', '/reports', { title: 'Card trip' }, 'card-user');
+    const reportId = createdJson.report.id;
+    const added = await call('POST', `/reports/${reportId}/expenses`,
+      { date: today, category: 'airfare', merchant: 'Delta Air Lines', amountCents: 41_800, receipt: { name: 't.pdf' } }, 'card-user');
+    const airfare = added.json.report.expenses[0];
+    assert.equal(airfare.paymentMethod, 'card');
+    assert.ok(airfare.cardTransactionId);
+    // Card charges are not reimbursable to the filer.
+    assert.equal(added.json.evaluation.totalCents, 41_800);
+    assert.equal(added.json.evaluation.reimbursableCents, 0);
+
+    // One-click expense straight from a charge.
+    const unmatched = await call('GET', '/card-transactions?status=unmatched', undefined, 'card-user');
+    const hertz = unmatched.json.transactions.find((t: any) => t.merchant === 'Hertz');
+    const fromTxn = await call('POST', `/card-transactions/${hertz.id}/expense`,
+      { reportId, category: 'ground_transport' }, 'card-user');
+    assert.equal(fromTxn.status, 201);
+    const rental = fromTxn.json.report.expenses.find((e: any) => e.merchant === 'Hertz');
+    assert.equal(rental.amountCents, 9_900);
+    assert.equal(rental.paymentMethod, 'card');
+
+    // Personal spend gets dismissed — and can be restored.
+    const spotify = unmatched.json.transactions.find((t: any) => t.merchant === 'Spotify');
+    await call('POST', `/card-transactions/${spotify.id}/dismiss`, undefined, 'card-user');
+    const afterDismiss = await call('GET', '/card-transactions?status=unmatched', undefined, 'card-user');
+    assert.equal(afterDismiss.json.transactions.length, 0);
+    await call('POST', `/card-transactions/${spotify.id}/restore`, undefined, 'card-user');
+
+    // Deleting the expense returns its charge to the feed.
+    await call('DELETE', `/reports/${reportId}/expenses/${rental.id}`, undefined, 'card-user');
+    const restored = await call('GET', '/card-transactions?status=unmatched', undefined, 'card-user');
+    assert.deepEqual(restored.json.transactions.map((t: any) => t.merchant).sort(), ['Hertz', 'Spotify']);
+
+    // Amount edits re-run matching: changing the airfare amount unlinks it.
+    const edited = await call('PUT', `/reports/${reportId}/expenses/${airfare.id}`,
+      { date: today, category: 'airfare', merchant: 'Delta Air Lines', amountCents: 40_000, receipt: { name: 't.pdf' } }, 'card-user');
+    const editedAirfare = edited.json.report.expenses.find((e: any) => e.id === airfare.id);
+    assert.equal(editedAirfare.cardTransactionId, undefined);
+    assert.equal(edited.json.evaluation.reimbursableCents, 40_000);
+
+    // Analytics see the feed and the card/out-of-pocket split.
+    const analytics = await call('GET', '/analytics', undefined, 'card-user');
+    assert.equal(analytics.json.unmatchedTransactionCount, 3);
+    assert.equal(analytics.json.reimbursableCents, 40_000);
+    assert.equal(analytics.json.cardCents, 0);
+
+    // Strangers cannot touch another user's feed.
+    const stranger = await call('POST', `/card-transactions/${spotify.id}/dismiss`, undefined, 'mallory');
+    assert.equal(stranger.status, 403);
+  });
+
+  it('validates card feed imports atomically — a bad row rejects the whole batch', async () => {
+    const empty = await call('POST', '/card-transactions/import', { transactions: [] }, 'atomic-user');
+    assert.equal(empty.status, 400);
+    const midBatchBad = await call('POST', '/card-transactions/import', {
+      transactions: [
+        { date: today, merchant: 'Good Charge', amountCents: 100, last4: '1111' },
+        { date: today, merchant: 'X', amountCents: 100, last4: 'abcd' },
+      ],
+    }, 'atomic-user');
+    assert.equal(midBatchBad.status, 400);
+    const feed = await call('GET', '/card-transactions', undefined, 'atomic-user');
+    assert.deepEqual(feed.json.transactions, []);
+    const badStatus = await fetch(base + '/card-transactions?status=nope', { headers: { 'x-user-id': 'card-user' } });
+    assert.equal(badStatus.status, 400);
+  });
+
+  it('honors an explicit payment method: personal never matches, card is never reimbursed', async () => {
+    await call('POST', '/card-transactions/import', {
+      transactions: [{ date: today, merchant: 'Cafe Charge', amountCents: 1_000, last4: '9999' }],
+    }, 'optout-user');
+    const { json: createdJson } = await call('POST', '/reports', { title: 'Opt out' }, 'optout-user');
+    const id = createdJson.report.id;
+
+    // Same amount as the charge, but explicitly out of pocket: no match.
+    const personal = await call('POST', `/reports/${id}/expenses`,
+      { date: today, category: 'meals', merchant: 'Cash Cafe', amountCents: 1_000, paymentMethod: 'personal' }, 'optout-user');
+    const cash = personal.json.report.expenses[0];
+    assert.equal(cash.paymentMethod, 'personal');
+    assert.equal(cash.cardTransactionId, undefined);
+    assert.equal(personal.json.evaluation.reimbursableCents, 1_000);
+    const feed = await call('GET', '/card-transactions?status=unmatched', undefined, 'optout-user');
+    assert.equal(feed.json.transactions.length, 1);
+
+    // Declared card spend with no feed charge yet: excluded from reimbursement.
+    const declared = await call('POST', `/reports/${id}/expenses`,
+      { date: today, category: 'software', merchant: 'SaaS Co', amountCents: 2_400, paymentMethod: 'card' }, 'optout-user');
+    assert.equal(declared.json.evaluation.reimbursableCents, 1_000);
+  });
+
+  it('drops a round-tripped card flag on edit instead of stranding a phantom card expense', async () => {
+    await call('POST', '/card-transactions/import', {
+      transactions: [{ date: today, merchant: 'Hotel Charge', amountCents: 20_000, last4: '9999' }],
+    }, 'phantom-user');
+    const { json: createdJson } = await call('POST', '/reports', { title: 'Phantom' }, 'phantom-user');
+    const id = createdJson.report.id;
+    const added = await call('POST', `/reports/${id}/expenses`,
+      { date: today, category: 'lodging', merchant: 'Hotel', amountCents: 20_000, receipt: { name: 'h.pdf' } }, 'phantom-user');
+    const linked = added.json.report.expenses[0];
+    assert.equal(linked.paymentMethod, 'card');
+
+    // Round-trip the serialized expense (carrying paymentMethod: 'card') with
+    // a new amount: the link breaks, and the stale flag must not survive.
+    const edited = await call('PUT', `/reports/${id}/expenses/${linked.id}`,
+      { ...linked, amountCents: 19_000 }, 'phantom-user');
+    const expense = edited.json.report.expenses[0];
+    assert.equal(expense.cardTransactionId, undefined);
+    assert.notEqual(expense.paymentMethod, 'card');
+    assert.equal(edited.json.evaluation.reimbursableCents, 19_000);
+    // The charge is back in the feed and the unlink is on the audit trail.
+    const feed = await call('GET', '/card-transactions?status=unmatched', undefined, 'phantom-user');
+    assert.equal(feed.json.transactions.length, 1);
+    assert.ok(edited.json.report.history.some((h: any) => h.action === 'card-unlinked'));
   });
 
   it('exports expenses as CSV for the filer and the approver, neutralizing formula injection', async () => {
@@ -327,8 +461,8 @@ describe('Expenses API', () => {
     assert.equal(mine.status, 200);
     assert.match(mine.headers.get('content-type') ?? '', /text\/csv/);
     const text = await mine.text();
-    assert.match(text, /^report,owner,status,date,category,merchant,description,amount_usd,receipt\n/);
-    assert.match(text, /CSV run,csv-user,approved,.*,meals,"'=HYPERLINK\(""http:\/\/evil""\)",,30\.00,/);
+    assert.match(text, /^report,owner,status,date,category,merchant,description,amount_usd,payment,receipt\n/);
+    assert.match(text, /CSV run,csv-user,approved,.*,meals,"'=HYPERLINK\(""http:\/\/evil""\)",,30\.00,personal,/);
 
     const queue = await fetch(base + '/export.csv?scope=approvals', { headers: { 'x-user-id': 'csv-fin' } });
     assert.match(await queue.text(), /CSV run,csv-user,approved/);
