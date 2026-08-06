@@ -34,6 +34,19 @@ loads and requests return a clear "no key configured" message.
 - `npm test` — endpoint tests (no API key needed)
 - `npm run typecheck` — TypeScript check
 
+## Deploy to Render
+
+The repo's `render.yaml` blueprint includes a `cardinal-chat` service
+(`deploy/Dockerfile.chat`). In the Render dashboard: **New + → Blueprint →
+connect this repo → Apply**, and set two secrets when prompted:
+
+- `ANTHROPIC_API_KEY` — from https://platform.claude.com
+- `CHAT_PASSWORD` — the Basic-auth password (username defaults to `admin`
+  via `CHAT_USER`)
+
+The password gate protects every route except `/health`. Keep it on for any
+public URL — whoever can reach the app spends your API budget.
+
 ## How it works
 
 | Piece | File |

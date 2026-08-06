@@ -12,6 +12,7 @@
 
 import { createServer, type IncomingMessage, type Server, type ServerResponse } from 'node:http';
 import { readFileSync } from 'node:fs';
+import { timingSafeEqual } from 'node:crypto';
 import type Anthropic from '@anthropic-ai/sdk';
 import { createClaudeClient, streamReply, MODEL, type ChatTurn } from './claude.ts';
 
@@ -24,6 +25,17 @@ export interface AppServer {
 export interface AppOptions {
   /** Injected for tests; defaults to a client built from ANTHROPIC_API_KEY. */
   client?: Anthropic | null;
+  /** HTTP Basic auth gate; both must be set to enable it (CHAT_USER/CHAT_PASSWORD). */
+  user?: string;
+  password?: string;
+}
+
+function authorized(req: IncomingMessage, gate: { user: string; password: string }): boolean {
+  const expected = Buffer.from(
+    `Basic ${Buffer.from(`${gate.user}:${gate.password}`).toString('base64')}`,
+  );
+  const given = Buffer.from(req.headers.authorization ?? '');
+  return given.length === expected.length && timingSafeEqual(given, expected);
 }
 
 interface ChatRequestBody {
@@ -126,10 +138,18 @@ async function handleChat(req: IncomingMessage, res: ServerResponse, client: Ant
 
 export function createApp(opts: AppOptions = {}): AppServer {
   const client = opts.client !== undefined ? opts.client : createClaudeClient();
+  const user = opts.user ?? process.env.CHAT_USER;
+  const password = opts.password ?? process.env.CHAT_PASSWORD;
+  const gate = user && password ? { user, password } : undefined;
   const indexHtml = readFileSync(WEB_INDEX, 'utf8');
 
   const server = createServer((req, res) => {
     const url = new URL(req.url ?? '/', 'http://localhost');
+    if (gate && url.pathname !== '/health' && !authorized(req, gate)) {
+      res.writeHead(401, { 'www-authenticate': 'Basic realm="Cardinal Chat"' });
+      res.end('Unauthorized');
+      return;
+    }
     if (req.method === 'GET' && (url.pathname === '/' || url.pathname === '/index.html')) {
       res.writeHead(200, { 'content-type': 'text/html; charset=utf-8' });
       res.end(indexHtml);
