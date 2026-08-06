@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AidFinder — free money for college</title>
+<style>
+  :root {
+    --ink: #1f2933; --muted: #64748b; --line: #e2e8f0; --bg: #f6f8fa;
+    --brand: #1d4ed8; --brand-soft: #dbeafe; --good: #15803d; --warn: #b45309; --bad: #b91c1c;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--ink); background: var(--bg); }
+  header { background: #fff; border-bottom: 1px solid var(--line); padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; gap: 16px; position: sticky; top: 0; z-index: 5; flex-wrap: wrap; }
+  header h1 { font-size: 20px; margin: 0; color: var(--brand); }
+  header h1 small { color: var(--muted); font-weight: 400; font-size: 13px; margin-left: 8px; }
+  #tracker { display: flex; gap: 22px; text-align: right; }
+  #tracker .amount { font-size: 20px; font-weight: 700; }
+  #tracker .label { font-size: 12px; color: var(--muted); }
+  .potential .amount { color: var(--brand); } .submitted .amount { color: var(--warn); } .won .amount { color: var(--good); }
+  main { max-width: 860px; margin: 24px auto 80px; padding: 0 16px; }
+  section.card { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 20px 24px; margin-bottom: 18px; }
+  section.card h2 { margin: 0 0 4px; font-size: 18px; }
+  section.card p.hint { margin: 0 0 16px; color: var(--muted); font-size: 14px; }
+  label { display: block; font-size: 13px; color: var(--muted); margin: 10px 0 2px; }
+  input, select { width: 100%; padding: 8px 10px; border: 1px solid var(--line); border-radius: 6px; font: inherit; }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 0 14px; }
+  .row3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0 14px; }
+  .checks { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 14px; margin-top: 12px; }
+  .checks label { margin: 0; display: flex; gap: 8px; align-items: center; font-size: 14px; color: var(--ink); }
+  .checks input { width: auto; }
+  button { font: inherit; border: 0; border-radius: 8px; padding: 10px 18px; cursor: pointer; }
+  button.primary { background: var(--brand); color: #fff; }
+  button.ghost { background: var(--brand-soft); color: var(--brand); padding: 6px 12px; font-size: 14px; }
+  button.link { background: none; color: var(--bad); padding: 4px; font-size: 13px; }
+  .actions { margin-top: 16px; display: flex; gap: 10px; align-items: center; }
+  .saved { color: var(--good); font-size: 13px; }
+  .error { color: var(--bad); font-size: 14px; margin-top: 8px; }
+  .match { border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; margin-bottom: 12px; display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap; }
+  .match .name { font-weight: 600; }
+  .match .name a { color: inherit; }
+  .match .meta { font-size: 13px; color: var(--muted); margin-top: 2px; }
+  .match .why { font-size: 13px; color: var(--good); margin-top: 4px; }
+  .match .right { text-align: right; min-width: 150px; }
+  .match .est { font-size: 18px; font-weight: 700; color: var(--brand); }
+  .deadline-soon { color: var(--bad); font-weight: 600; }
+  .pill { display: inline-block; background: var(--bg); border: 1px solid var(--line); border-radius: 999px; padding: 2px 10px; font-size: 12px; color: var(--muted); margin-left: 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  td, th { padding: 8px 6px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: middle; }
+  th { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  td select { width: auto; padding: 4px 8px; }
+  td input.amount { width: 110px; padding: 4px 8px; }
+  .empty { color: var(--muted); font-size: 14px; }
+  footer { max-width: 860px; margin: 0 auto 40px; padding: 0 16px; color: var(--muted); font-size: 13px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>AidFinder<small>free money for college — grants, scholarships, credits</small></h1>
+  <div id="tracker">
+    <div class="potential"><div class="amount" id="t-potential">$0</div><div class="label">matched / yr</div></div>
+    <div class="submitted"><div class="amount" id="t-submitted">$0</div><div class="label">applied for</div></div>
+    <div class="won"><div class="amount" id="t-won">$0</div><div class="label">won</div></div>
+  </div>
+</header>
+<main>
+
+  <section class="card" id="sec-profile">
+    <h2>1. Your five-minute profile</h2>
+    <p class="hint">This is the only manual step. Everything below — matches, dollar estimates, and the deadline plan — updates automatically from it.</p>
+    <div class="row3">
+      <div><label>State</label><input id="p_state" placeholder="NC" maxlength="2"></div>
+      <div><label>I am a…</label>
+        <select id="p_level">
+          <option value="high-school-senior">High-school senior</option>
+          <option value="undergraduate">Undergraduate</option>
+          <option value="graduate">Graduate student</option>
+        </select>
+      </div>
+      <div><label>Field of study</label>
+        <select id="p_field">
+          <option value="undecided">Undecided</option>
+          <option value="stem">STEM / computer science</option>
+          <option value="business">Business</option>
+          <option value="education">Education</option>
+          <option value="health">Health</option>
+          <option value="arts-humanities">Arts &amp; humanities</option>
+          <option value="trades">Trades</option>
+        </select>
+      </div>
+    </div>
+    <div class="row3">
+      <div><label>GPA (4.0 scale, blank if unknown)</label><input id="p_gpa" type="number" step="0.01" min="0" max="4" placeholder="3.4"></div>
+      <div><label>Household income ($/yr)</label><input id="p_income" type="number" min="0" placeholder="55000"></div>
+      <div><label>Household size</label><input id="p_size" type="number" min="1" max="20" placeholder="4"></div>
+    </div>
+    <div class="checks">
+      <label><input type="checkbox" id="p_half" checked> Enrolled at least half-time</label>
+      <label><input type="checkbox" id="p_citizen" checked> US citizen or eligible noncitizen</label>
+      <label><input type="checkbox" id="p_firstgen"> First-generation college student</label>
+      <label><input type="checkbox" id="p_service"> Community service / volunteering</label>
+      <label><input type="checkbox" id="p_military"> Military service member, veteran, or dependent</label>
+      <label><input type="checkbox" id="p_employed"> I (or a parent paying) have an employer</label>
+    </div>
+    <div class="actions"><button class="primary" onclick="saveProfile()">Find my money</button><span class="saved" id="ok-profile"></span></div>
+    <div class="error" id="err-profile"></div>
+  </section>
+
+  <section class="card" id="sec-matches">
+    <h2>2. Your matches <span class="pill" id="match-count"></span></h2>
+    <p class="hint">Everything in the catalog you plausibly qualify for, biggest estimated dollars first. Amounts are planning estimates — always verify at the official link. Legit aid never charges an application fee.</p>
+    <div id="matches"><p class="empty">Save your profile to see matches.</p></div>
+  </section>
+
+  <section class="card" id="sec-plan">
+    <h2>3. The automated plan</h2>
+    <p class="hint">Matches and tracked applications merged into one deadline-ordered to-do list. Work it top to bottom.</p>
+    <div id="plan"><p class="empty">Save your profile to build the plan.</p></div>
+  </section>
+
+  <section class="card" id="sec-apps">
+    <h2>4. Application tracker</h2>
+    <p class="hint">Track each application from planned to won. Enter the award when you win — the header tally is the point of all this.</p>
+    <div id="apps"><p class="empty">Nothing tracked yet. Hit “Track” on a match above.</p></div>
+  </section>
+
+</main>
+<footer>
+  AidFinder finds and organizes legitimate aid; it never submits applications for you — scholarship essays and FAFSA signatures must be your own.
+  Figures are estimates that change each award year. Everything federal starts with the FAFSA at studentaid.gov.
+</footer>
+<script>
+const $ = (id) => document.getElementById(id);
+const money = (n) => '$' + Math.round(n).toLocaleString('en-US');
+
+async function api(method, path, body) {
+  const res = await fetch(path, {
+    method,
+    headers: { 'content-type': 'application/json' },
+    body: body === undefined ? undefined : JSON.stringify(body),
+  });
+  const json = await res.json();
+  if (!res.ok) throw new Error(json.error || ('HTTP ' + res.status));
+  return json;
+}
+
+function profileFromForm() {
+  return {
+    state: $('p_state').value,
+    degreeLevel: $('p_level').value,
+    fieldOfStudy: $('p_field').value,
+    gpa: $('p_gpa').value === '' ? null : Number($('p_gpa').value),
+    householdIncome: Number($('p_income').value || 0),
+    householdSize: Number($('p_size').value || 1),
+    enrolledHalfTimePlus: $('p_half').checked,
+    usCitizenOrEligibleNoncitizen: $('p_citizen').checked,
+    firstGeneration: $('p_firstgen').checked,
+    communityService: $('p_service').checked,
+    militaryAffiliation: $('p_military').checked,
+    employed: $('p_employed').checked,
+  };
+}
+
+function fillForm(p) {
+  $('p_state').value = p.state; $('p_level').value = p.degreeLevel; $('p_field').value = p.fieldOfStudy;
+  $('p_gpa').value = p.gpa ?? ''; $('p_income').value = p.householdIncome; $('p_size').value = p.householdSize;
+  $('p_half').checked = p.enrolledHalfTimePlus; $('p_citizen').checked = p.usCitizenOrEligibleNoncitizen;
+  $('p_firstgen').checked = p.firstGeneration; $('p_service').checked = p.communityService;
+  $('p_military').checked = p.militaryAffiliation; $('p_employed').checked = p.employed;
+}
+
+async function saveProfile() {
+  $('err-profile').textContent = ''; $('ok-profile').textContent = '';
+  try {
+    await api('PUT', '/profile', profileFromForm());
+    $('ok-profile').textContent = 'Saved — matches updated below.';
+    await refresh();
+  } catch (e) { $('err-profile').textContent = e.message; }
+}
+
+function deadlineText(iso, days) {
+  if (!iso) return 'rolling — apply any time';
+  const cls = days <= 30 ? ' class="deadline-soon"' : '';
+  return `due ${iso} — <span${cls}>${days} day${days === 1 ? '' : 's'} left</span>`;
+}
+
+function renderMatches(report, trackedIds) {
+  $('match-count').textContent = report.matches.length + ' found · ' + money(report.totalEstimated) + '/yr';
+  if (report.matches.length === 0) {
+    $('matches').innerHTML = '<p class="empty">No matches yet — double-check the profile (GPA blank? income?). The FAFSA is still worth filing.</p>';
+    return;
+  }
+  $('matches').innerHTML = report.matches.map((m) => {
+    const o = m.opportunity;
+    const tracked = trackedIds.has(o.id);
+    return `<div class="match">
+      <div>
+        <div class="name"><a href="${o.url}" target="_blank" rel="noopener">${o.name}</a><span class="pill">${o.kind.replace(/-/g, ' ')}</span></div>
+        <div class="meta">${o.sponsor} · ${o.notes}</div>
+        <div class="why">✓ ${m.whyMatched.join(' · ')}</div>
+      </div>
+      <div class="right">
+        <div class="est">${money(m.estimatedAmount)}<small>/yr</small></div>
+        <div class="meta">${deadlineText(m.nextDeadline, m.daysLeft)}</div>
+        <div style="margin-top:6px">${tracked
+          ? '<span class="saved">tracking ✓</span>'
+          : `<button class="ghost" onclick="track('${o.id}')">Track</button>`}</div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function renderPlan(plan) {
+  if (plan.length === 0) { $('plan').innerHTML = '<p class="empty">Nothing to plan yet.</p>'; return; }
+  $('plan').innerHTML = '<table><tr><th>Opportunity</th><th>Next action</th><th class="num">Est./yr</th></tr>' +
+    plan.map((it) => `<tr>
+      <td>${it.opportunity.name}</td>
+      <td>${it.daysLeft !== null && it.daysLeft <= 30 && ['unstarted','planned','in-progress'].includes(it.status)
+        ? `<span class="deadline-soon">${it.action}</span>` : it.action}</td>
+      <td class="num">${it.estimatedAmount ? money(it.estimatedAmount) : '—'}</td>
+    </tr>`).join('') + '</table>';
+}
+
+const STATUSES = ['planned', 'in-progress', 'submitted', 'won', 'declined'];
+
+function renderApps(data, oppsById) {
+  if (data.applications.length === 0) {
+    $('apps').innerHTML = '<p class="empty">Nothing tracked yet. Hit “Track” on a match above.</p>';
+  } else {
+    $('apps').innerHTML = '<table><tr><th>Opportunity</th><th>Status</th><th class="num">Won</th><th></th></tr>' +
+      data.applications.map((a) => {
+        const name = (oppsById.get(a.opportunityId) || {}).name || a.opportunityId;
+        return `<tr>
+          <td>${name}</td>
+          <td><select onchange="setStatus('${a.id}', this.value)">${STATUSES.map((s) =>
+            `<option value="${s}"${s === a.status ? ' selected' : ''}>${s}</option>`).join('')}</select></td>
+          <td class="num">${a.status === 'won'
+            ? `<input class="amount" type="number" min="0" value="${a.amountWon}" onchange="setWon('${a.id}', this.value)">`
+            : '—'}</td>
+          <td><button class="link" onclick="untrack('${a.id}')">remove</button></td>
+        </tr>`;
+      }).join('') + '</table>';
+  }
+  $('t-potential').textContent = money(data.dashboard.potential);
+  $('t-submitted').textContent = money(data.dashboard.submitted);
+  $('t-won').textContent = money(data.dashboard.won);
+}
+
+async function track(oppId) { await api('POST', '/applications', { opportunityId: oppId }); await refresh(); }
+async function untrack(id) { await api('DELETE', '/applications/' + id); await refresh(); }
+async function setStatus(id, status) { await api('PUT', '/applications/' + id, { status }); await refresh(); }
+async function setWon(id, value) { await api('PUT', '/applications/' + id, { amountWon: Number(value || 0) }); await refresh(); }
+
+async function refresh() {
+  const [{ profile }, { opportunities }, appsData] = await Promise.all([
+    api('GET', '/profile'), api('GET', '/opportunities'), api('GET', '/applications'),
+  ]);
+  const oppsById = new Map(opportunities.map((o) => [o.id, o]));
+  renderApps(appsData, oppsById);
+  if (!profile) return;
+  fillForm(profile);
+  const trackedIds = new Set(appsData.applications.map((a) => a.opportunityId));
+  const [report, { plan }] = await Promise.all([api('GET', '/matches'), api('GET', '/plan')]);
+  renderMatches(report, trackedIds);
+  renderPlan(plan);
+}
+
+refresh().catch((e) => { $('err-profile').textContent = e.message; });
+</script>
+</body>
+</html>
