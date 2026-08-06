@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>CarSync — vehicle software updates</title>
+<meta name="description" content="A simple, self-contained demo of an over-the-air car software updater. Pick your vehicle, check for updates, and install them in a few taps — with the same safety gates a real OTA system enforces. Everything runs offline in your browser; it is a simulation, not a connection to a real car.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232F6DF0'/%3E%3Cpath d='M7 19l1.6-4.6A3 3 0 0111.4 12h9.2a3 3 0 012.8 2.4L25 19v4a1 1 0 01-1 1h-1.5a1 1 0 01-1-1v-1H10.5v1a1 1 0 01-1 1H8a1 1 0 01-1-1z' fill='white'/%3E%3Ccircle cx='10.5' cy='20' r='1.3' fill='%232F6DF0'/%3E%3Ccircle cx='21.5' cy='20' r='1.3' fill='%232F6DF0'/%3E%3C/svg%3E">
+<style>
+  :root {
+    --paper:#F3F5FA; --surface:#FFFFFF; --surface-2:#EAEEF7; --ink:#141B2E; --muted:#5B6683;
+    --line:#DDE3EF; --brand:#2F6DF0; --brand-strong:#1E52C7;
+    --good:#1F8A54; --good-bg:#E2F3E9; --warn:#9A6410; --warn-bg:#F7ECD4; --crit:#C23B3B; --crit-bg:#F8E2E0;
+    --shadow:0 1px 2px rgba(20,27,46,.06), 0 12px 30px -16px rgba(20,27,46,.28);
+    --font:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+    --maxw:660px; --r:14px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper:#0D1120; --surface:#151B2E; --surface-2:#1D2740; --ink:#EEF1F8; --muted:#9AA4C0;
+      --line:#293452; --brand:#5B8DF7; --brand-strong:#7CA4FA;
+      --good:#4CBE84; --good-bg:#12321f; --warn:#D6A24A; --warn-bg:#33280f; --crit:#E27B70; --crit-bg:#3a1d1a;
+      --shadow:0 1px 2px rgba(0,0,0,.45), 0 14px 34px -16px rgba(0,0,0,.7);
+    }
+  }
+  :root[data-theme="light"]{--paper:#F3F5FA;--surface:#FFFFFF;--surface-2:#EAEEF7;--ink:#141B2E;--muted:#5B6683;--line:#DDE3EF;--brand:#2F6DF0;--brand-strong:#1E52C7;--good:#1F8A54;--good-bg:#E2F3E9;--warn:#9A6410;--warn-bg:#F7ECD4;--crit:#C23B3B;--crit-bg:#F8E2E0;}
+  :root[data-theme="dark"]{--paper:#0D1120;--surface:#151B2E;--surface-2:#1D2740;--ink:#EEF1F8;--muted:#9AA4C0;--line:#293452;--brand:#5B8DF7;--brand-strong:#7CA4FA;--good:#4CBE84;--good-bg:#12321f;--warn:#D6A24A;--warn-bg:#33280f;--crit:#E27B70;--crit-bg:#3a1d1a;}
+
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink); font-family:var(--font); line-height:1.5; -webkit-text-size-adjust:100%; }
+  .wrap { max-width:var(--maxw); margin-inline:auto; padding:0 clamp(.9rem,4vw,1.4rem) 3rem; }
+
+  header.top { position:sticky; top:0; z-index:10; background:color-mix(in srgb,var(--paper) 88%,transparent);
+    backdrop-filter:blur(8px); border-bottom:1px solid var(--line); }
+  .top-in { max-width:var(--maxw); margin-inline:auto; padding:.7rem clamp(.9rem,4vw,1.4rem); display:flex; align-items:center; gap:.6rem; }
+  .logo { width:32px; height:32px; border-radius:9px; background:var(--brand); display:grid; place-items:center; flex:none; }
+  .logo svg { width:20px; height:20px; }
+  h1.brand { font-size:1.12rem; margin:0; font-weight:800; letter-spacing:-.01em; }
+  .brand small { display:block; font-weight:600; font-size:.68rem; color:var(--muted); letter-spacing:.02em; }
+  .theme { margin-left:auto; background:transparent; border:1px solid var(--line); border-radius:9px; color:var(--ink); padding:.4rem .6rem; cursor:pointer; font-size:.95rem; }
+
+  .card { background:var(--surface); border:1px solid var(--line); border-radius:var(--r); box-shadow:var(--shadow); padding:1rem 1.05rem; margin:.85rem 0; }
+  .card h2 { margin:0 0 .5rem; font-size:1rem; letter-spacing:-.01em; }
+  .muted { color:var(--muted); }
+  .small { font-size:.85rem; }
+
+  /* vehicle picker + summary */
+  .vehicle { display:flex; align-items:center; gap:.85rem; }
+  .vehicle .badge { width:52px; height:52px; border-radius:12px; background:var(--surface-2); display:grid; place-items:center; font-size:1.6rem; flex:none; }
+  .vehicle .meta { min-width:0; }
+  .vehicle .name { font-weight:800; font-size:1.05rem; }
+  .vehicle .vin { font-family:var(--mono); font-size:.78rem; color:var(--muted); }
+  select, input { font:inherit; color:var(--ink); background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:.55rem .65rem; width:100%; }
+  label { display:block; font-weight:700; font-size:.82rem; margin:.7rem 0 .25rem; }
+
+  /* current version pill */
+  .sw-line { display:flex; align-items:center; justify-content:space-between; gap:.6rem; padding:.35rem 0; border-top:1px solid var(--line); }
+  .sw-line:first-of-type { border-top:0; }
+  .ver { font-family:var(--mono); font-size:.82rem; }
+  .arrow { color:var(--brand); font-weight:800; }
+
+  /* buttons */
+  .btn { display:inline-flex; align-items:center; justify-content:center; gap:.45rem; border:1px solid var(--line); background:var(--surface); color:var(--ink);
+    font:inherit; font-weight:700; padding:.6rem .9rem; border-radius:11px; cursor:pointer; text-decoration:none; }
+  .btn:disabled { opacity:.5; cursor:not-allowed; }
+  .btn.primary { background:var(--brand); border-color:var(--brand); color:#fff; }
+  .btn.primary:not(:disabled):hover { background:var(--brand-strong); border-color:var(--brand-strong); }
+  .btn.big { width:100%; padding:.9rem; font-size:1.02rem; border-radius:13px; }
+  .btn.ghost { background:transparent; }
+  .btn-row { display:flex; gap:.5rem; flex-wrap:wrap; }
+
+  /* status chips */
+  .chip { display:inline-flex; align-items:center; gap:.35rem; font-size:.78rem; font-weight:700; padding:.2rem .55rem; border-radius:999px; border:1px solid var(--line); }
+  .chip.ok { color:var(--good); background:var(--good-bg); border-color:transparent; }
+  .chip.warn { color:var(--warn); background:var(--warn-bg); border-color:transparent; }
+  .chip.crit { color:var(--crit); background:var(--crit-bg); border-color:transparent; }
+
+  /* preconditions */
+  .pre { display:grid; gap:.5rem; }
+  .pre .row { display:flex; align-items:center; gap:.6rem; }
+  .pre .row .ic { width:24px; text-align:center; font-size:1.05rem; flex:none; }
+  .pre .row .lbl { flex:1; }
+  .pre .row .val { font-weight:700; font-size:.85rem; }
+  .pre .row.bad .val { color:var(--crit); }
+  .pre .row.good .val { color:var(--good); }
+
+  /* update list */
+  .upd { border:1px solid var(--line); border-radius:12px; padding:.8rem .85rem; margin:.55rem 0; background:var(--surface); }
+  .upd .head { display:flex; align-items:flex-start; gap:.6rem; }
+  .upd .head .em { font-size:1.3rem; line-height:1; }
+  .upd .head .t { flex:1; min-width:0; }
+  .upd .head .t .n { font-weight:800; }
+  .upd .head .t .v { font-family:var(--mono); font-size:.78rem; color:var(--muted); }
+  .upd .notes { font-size:.88rem; margin:.5rem 0 0; color:var(--muted); }
+  .upd .size { font-size:.76rem; color:var(--muted); margin-top:.3rem; }
+  .tag { font-size:.68rem; font-weight:800; letter-spacing:.03em; text-transform:uppercase; padding:.12rem .4rem; border-radius:6px; }
+  .tag.crit { color:var(--crit); background:var(--crit-bg); }
+  .tag.opt { color:var(--muted); background:var(--surface-2); }
+
+  /* progress */
+  .bar { height:10px; border-radius:999px; background:var(--surface-2); overflow:hidden; margin:.5rem 0 .35rem; }
+  .bar > i { display:block; height:100%; width:0; background:var(--brand); border-radius:999px; transition:width .25s ease; }
+  .stage { font-size:.85rem; font-weight:700; }
+  .steps { list-style:none; margin:.6rem 0 0; padding:0; display:grid; gap:.35rem; }
+  .steps li { display:flex; align-items:center; gap:.55rem; font-size:.88rem; color:var(--muted); }
+  .steps li .dot { width:18px; height:18px; border-radius:50%; border:2px solid var(--line); flex:none; display:grid; place-items:center; font-size:.7rem; }
+  .steps li.done { color:var(--ink); }
+  .steps li.done .dot { background:var(--good); border-color:var(--good); color:#fff; }
+  .steps li.active .dot { border-color:var(--brand); animation:pulse 1s ease-in-out infinite; }
+  @keyframes pulse { 0%,100%{ box-shadow:0 0 0 0 color-mix(in srgb,var(--brand) 45%,transparent);} 50%{ box-shadow:0 0 0 5px transparent;} }
+
+  .banner { display:none; padding:.75rem .85rem; border-radius:12px; margin:.6rem 0; font-size:.9rem; font-weight:600; align-items:center; gap:.55rem; }
+  .banner.show { display:flex; }
+  .banner.ok { background:var(--good-bg); color:var(--good); }
+  .banner.warn { background:var(--warn-bg); color:var(--warn); }
+  .banner.crit { background:var(--crit-bg); color:var(--crit); }
+
+  .hist { list-style:none; margin:.4rem 0 0; padding:0; }
+  .hist li { display:flex; justify-content:space-between; gap:.6rem; padding:.4rem 0; border-top:1px solid var(--line); font-size:.86rem; }
+  .hist li:first-child { border-top:0; }
+  .hist .when { color:var(--muted); font-family:var(--mono); font-size:.76rem; white-space:nowrap; }
+
+  footer { text-align:center; color:var(--muted); font-size:.78rem; margin-top:1.4rem; }
+  .disclaimer { background:var(--warn-bg); color:var(--warn); border-radius:12px; padding:.65rem .8rem; font-size:.82rem; font-weight:600; margin:.85rem 0; }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <span class="logo" aria-hidden="true">
+      <svg viewBox="0 0 32 32"><path d="M7 19l1.6-4.6A3 3 0 0111.4 12h9.2a3 3 0 012.8 2.4L25 19v4a1 1 0 01-1 1h-1.5a1 1 0 01-1-1v-1H10.5v1a1 1 0 01-1 1H8a1 1 0 01-1-1z" fill="#fff"/><circle cx="10.5" cy="20" r="1.3" fill="#2F6DF0"/><circle cx="21.5" cy="20" r="1.3" fill="#2F6DF0"/></svg>
+    </span>
+    <h1 class="brand">CarSync<small>vehicle software updates</small></h1>
+    <button class="theme" id="theme" title="Toggle theme" aria-label="Toggle light/dark">◐</button>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="disclaimer">⚠️ Demo / simulation. CarSync does not connect to a real vehicle. It walks through the update flow — and the safety checks a real over-the-air system enforces — using sample data only.</div>
+
+  <!-- Vehicle -->
+  <section class="card">
+    <div class="vehicle">
+      <div class="badge" id="veh-badge">🚗</div>
+      <div class="meta">
+        <div class="name" id="veh-name">Select a vehicle</div>
+        <div class="vin" id="veh-vin">—</div>
+      </div>
+    </div>
+    <label for="veh-select">Vehicle</label>
+    <select id="veh-select" aria-label="Choose vehicle"></select>
+  </section>
+
+  <!-- Check for updates -->
+  <section class="card">
+    <h2>Software</h2>
+    <div id="sw-current"></div>
+    <div class="btn-row" style="margin-top:.8rem">
+      <button class="btn primary big" id="check">🔄 Check for updates</button>
+    </div>
+    <div class="banner" id="check-banner"></div>
+  </section>
+
+  <!-- Available updates -->
+  <section class="card" id="updates-card" hidden>
+    <h2>Available updates <span class="chip" id="upd-count"></span></h2>
+    <div id="updates-list"></div>
+
+    <!-- Preconditions -->
+    <div style="margin-top:.9rem">
+      <h2 style="font-size:.92rem">Before installing</h2>
+      <div class="pre" id="pre"></div>
+    </div>
+
+    <div class="btn-row" style="margin-top:.9rem">
+      <button class="btn primary big" id="install">⬇️ Download &amp; install all</button>
+    </div>
+    <div class="banner" id="install-banner"></div>
+  </section>
+
+  <!-- Progress -->
+  <section class="card" id="progress-card" hidden>
+    <h2 id="progress-title">Installing…</h2>
+    <div class="stage" id="progress-stage">Preparing…</div>
+    <div class="bar"><i id="progress-fill"></i></div>
+    <div class="small muted" id="progress-pct">0%</div>
+    <ul class="steps" id="progress-steps"></ul>
+    <div class="banner crit" id="progress-warn" style="margin-top:.7rem">🔌 Keep the vehicle parked and powered during installation. Do not switch off.</div>
+  </section>
+
+  <!-- History -->
+  <section class="card">
+    <h2>Update history</h2>
+    <ul class="hist" id="hist"></ul>
+    <p class="small muted" id="hist-empty">No updates installed on this device yet.</p>
+  </section>
+
+  <footer>
+    CarSync runs entirely in your browser. No account, no network calls — a demo of the update experience.
+  </footer>
+</main>
+
+<script>
+"use strict";
+(function () {
+  const $ = (s, r=document) => r.querySelector(s);
+  const el = (t, c) => { const e=document.createElement(t); if(c) e.className=c; return e; };
+  const store = {
+    get(k, d){ try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch { return d; } },
+    set(k, v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch {} }
+  };
+
+  /* ---------- Theme ---------- */
+  const themeBtn = $("#theme");
+  function applyTheme(t){ if(t) document.documentElement.setAttribute("data-theme", t); }
+  applyTheme(store.get("carsync.theme", null));
+  themeBtn.addEventListener("click", () => {
+    const cur = document.documentElement.getAttribute("data-theme");
+    const isDark = cur ? cur === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+    const next = isDark ? "light" : "dark";
+    applyTheme(next); store.set("carsync.theme", next);
+  });
+
+  /* ---------- Sample fleet & catalog ---------- */
+  // Each vehicle carries the currently-installed version of its major modules.
+  const FLEET = [
+    { id:"aster-ev",  emoji:"🚙", name:"Aster EV Long Range", year:2023, vin:"1AST23EV0LR004417",
+      modules:{ infotainment:"7.2.1", "driver-assist":"3.4.0", battery:"2.1.5", climate:"1.8.0" } },
+    { id:"vega-sport", emoji:"🏎️", name:"Vega Sport Turbo", year:2022, vin:"2VEG22SPT0009910",
+      modules:{ infotainment:"6.9.4", "driver-assist":"2.7.1", engine:"4.0.2", climate:"1.7.3" } },
+    { id:"terra-suv", emoji:"🚐", name:"Terra Family SUV", year:2024, vin:"3TER24SUV0021188",
+      modules:{ infotainment:"8.0.0", "driver-assist":"4.1.0", battery:"3.0.1", climate:"2.0.0" } },
+  ];
+
+  // The "cloud" latest versions + release notes. If latest > installed, it's an available update.
+  const CATALOG = {
+    infotainment: { label:"Infotainment & Navigation", emoji:"📺", latest:"8.1.0", sizeMB:812,
+      severity:"optional", notes:"Faster map rendering, redesigned media player, wireless phone projection stability fixes." },
+    "driver-assist": { label:"Driver Assistance", emoji:"🛡️", latest:"4.2.1", sizeMB:640,
+      severity:"critical", notes:"Improved lane-centering on faded markings and a safety fix for adaptive cruise following distance." },
+    battery: { label:"Battery Management", emoji:"🔋", latest:"3.1.0", sizeMB:120,
+      severity:"recommended", notes:"Better cold-weather range estimation and faster DC fast-charge ramp." },
+    engine: { label:"Powertrain Control", emoji:"⚙️", latest:"4.1.0", sizeMB:95,
+      severity:"recommended", notes:"Smoother throttle mapping and reduced turbo lag in Sport mode." },
+    climate: { label:"Climate Control", emoji:"❄️", latest:"2.0.0", sizeMB:70,
+      severity:"optional", notes:"Quieter fan curves and cabin pre-conditioning scheduling." },
+  };
+
+  const SEV = { critical:{cls:"crit",tag:"Safety"}, recommended:{cls:"warn",tag:"Recommended"}, optional:{cls:"opt",tag:"Optional"} };
+
+  function cmpVer(a, b){
+    const pa=a.split(".").map(Number), pb=b.split(".").map(Number);
+    for(let i=0;i<Math.max(pa.length,pb.length);i++){ const d=(pa[i]||0)-(pb[i]||0); if(d) return d; }
+    return 0;
+  }
+
+  /* ---------- State ---------- */
+  let vehicleId = store.get("carsync.vehicle", FLEET[0].id);
+  // installed versions can advance as the user installs updates; persist per-vehicle
+  let installed = store.get("carsync.installed", {});
+  function vehicle(){ return FLEET.find(v => v.id === vehicleId) || FLEET[0]; }
+  function versionsFor(v){
+    const base = { ...v.modules };
+    const saved = installed[v.id] || {};
+    for(const k in saved){ if(cmpVer(saved[k], base[k]||"0.0.0") > 0) base[k] = saved[k]; }
+    return base;
+  }
+  function availableFor(v){
+    const cur = versionsFor(v);
+    const out = [];
+    for(const key in cur){
+      const cat = CATALOG[key];
+      if(cat && cmpVer(cat.latest, cur[key]) > 0){
+        out.push({ key, from:cur[key], to:cat.latest, ...cat });
+      }
+    }
+    // critical first, then recommended, then optional
+    const order = { critical:0, recommended:1, optional:2 };
+    return out.sort((a,b) => order[a.severity]-order[b.severity]);
+  }
+
+  /* ---------- Vehicle picker ---------- */
+  const sel = $("#veh-select");
+  FLEET.forEach(v => { const o=el("option"); o.value=v.id; o.textContent=`${v.year} ${v.name}`; sel.appendChild(o); });
+  sel.value = vehicleId;
+  sel.addEventListener("change", () => {
+    vehicleId = sel.value; store.set("carsync.vehicle", vehicleId);
+    resetFlow(); renderVehicle(); renderCurrent();
+  });
+
+  function renderVehicle(){
+    const v = vehicle();
+    $("#veh-badge").textContent = v.emoji;
+    $("#veh-name").textContent = `${v.year} ${v.name}`;
+    $("#veh-vin").textContent = "VIN " + v.vin;
+  }
+
+  function renderCurrent(){
+    const v = vehicle(), cur = versionsFor(v);
+    const box = $("#sw-current"); box.innerHTML = "";
+    Object.keys(cur).forEach(key => {
+      const cat = CATALOG[key]; if(!cat) return;
+      const row = el("div", "sw-line");
+      const left = el("span"); left.innerHTML = `${cat.emoji} <span>${cat.label}</span>`;
+      const right = el("span", "ver muted"); right.textContent = "v" + cur[key];
+      row.append(left, right); box.appendChild(row);
+    });
+  }
+
+  /* ---------- Preconditions (simulated telemetry) ---------- */
+  // Randomised once per check so the "before installing" gate feels real.
+  let telemetry = null;
+  function readTelemetry(){
+    // Bias toward "ready" but occasionally surface a blocking condition.
+    const battery = 40 + Math.floor(Math.random()*60);      // 40–99 %
+    const parked = Math.random() > 0.12;                    // usually in Park
+    const wifi = Math.random() > 0.15;                      // usually connected
+    const storage = Math.random() > 0.08;                   // usually enough space
+    return { battery, parked, wifi, storage };
+  }
+  function preItems(t, neededMB){
+    return [
+      { ok: t.parked, ic:"🅿️", lbl:"Transmission in Park", val: t.parked ? "In Park" : "Not in Park" },
+      { ok: t.battery >= 50, ic:"🔋", lbl:"Battery charge", val: t.battery + "%" + (t.battery>=50?"":" (need ≥50%)") },
+      { ok: t.wifi, ic:"📶", lbl:"Wi-Fi connection", val: t.wifi ? "Connected" : "Offline" },
+      { ok: t.storage, ic:"💾", lbl:"Storage for " + neededMB + " MB", val: t.storage ? "Available" : "Insufficient" },
+    ];
+  }
+  function renderPre(){
+    const box = $("#pre"); box.innerHTML = "";
+    const neededMB = availableFor(vehicle()).reduce((s,u)=>s+u.sizeMB, 0);
+    const items = preItems(telemetry, neededMB);
+    items.forEach(it => {
+      const row = el("div", "row " + (it.ok ? "good" : "bad"));
+      row.innerHTML = `<span class="ic">${it.ic}</span><span class="lbl">${it.lbl}</span><span class="val">${it.ok?"✓ ":"✗ "}${it.val}</span>`;
+      box.appendChild(row);
+    });
+    const allOk = items.every(i => i.ok);
+    const installBtn = $("#install");
+    installBtn.disabled = !allOk;
+    const banner = $("#install-banner");
+    if(allOk){ banner.className = "banner"; }
+    else {
+      banner.className = "banner crit show";
+      banner.textContent = "⚠️ Resolve the items above before installing. In a real vehicle you'd park, plug in, or connect to Wi-Fi — here you can re-check to resimulate.";
+    }
+    return allOk;
+  }
+
+  /* ---------- Check flow ---------- */
+  const checkBtn = $("#check");
+  checkBtn.addEventListener("click", () => {
+    checkBtn.disabled = true; checkBtn.textContent = "Checking…";
+    const banner = $("#check-banner"); banner.className = "banner";
+    setTimeout(() => {
+      const updates = availableFor(vehicle());
+      telemetry = readTelemetry();
+      checkBtn.disabled = false; checkBtn.textContent = "🔄 Check for updates";
+      if(updates.length === 0){
+        $("#updates-card").hidden = true;
+        banner.className = "banner ok show";
+        banner.textContent = "✓ Your vehicle software is up to date.";
+      } else {
+        banner.className = "banner";
+        renderUpdates(updates);
+        $("#updates-card").hidden = false;
+        $("#updates-card").scrollIntoView({ behavior:"smooth", block:"nearest" });
+      }
+    }, 900);
+  });
+
+  function renderUpdates(updates){
+    const list = $("#updates-list"); list.innerHTML = "";
+    updates.forEach(u => {
+      const s = SEV[u.severity];
+      const card = el("div", "upd");
+      card.innerHTML =
+        `<div class="head">
+           <span class="em">${u.emoji}</span>
+           <div class="t">
+             <div class="n">${u.label} <span class="tag ${s.cls==='crit'?'crit':'opt'}">${s.tag}</span></div>
+             <div class="v">v${u.from} <span class="arrow">→</span> v${u.to}</div>
+           </div>
+         </div>
+         <p class="notes">${u.notes}</p>
+         <div class="size">${u.sizeMB} MB</div>`;
+      list.appendChild(card);
+    });
+    const totalMB = updates.reduce((s,u)=>s+u.sizeMB,0);
+    const cnt = $("#upd-count");
+    cnt.className = "chip " + (updates.some(u=>u.severity==="critical") ? "crit" : "warn");
+    cnt.textContent = `${updates.length} update${updates.length>1?"s":""} · ${totalMB} MB`;
+    $("#install").textContent = `⬇️ Download & install all (${updates.length})`;
+    renderPre();
+  }
+
+  /* ---------- Install flow ---------- */
+  const installBtn = $("#install");
+  installBtn.addEventListener("click", () => {
+    // Re-verify preconditions right before install.
+    if(!renderPre()) return;
+    const updates = availableFor(vehicle());
+    if(updates.length === 0) return;
+    runInstall(updates);
+  });
+
+  const STEPS = ["Downloading", "Verifying signature", "Installing to ECU", "Restarting modules"];
+  let installing = false;
+
+  function runInstall(updates){
+    if(installing) return;
+    installing = true;
+    $("#install").disabled = true; $("#check").disabled = true; sel.disabled = true;
+    const pc = $("#progress-card"); pc.hidden = false;
+    $("#progress-title").textContent = `Installing ${updates.length} update${updates.length>1?"s":""}…`;
+    pc.scrollIntoView({ behavior:"smooth", block:"nearest" });
+
+    const stepsBox = $("#progress-steps"); stepsBox.innerHTML = "";
+    const liByStep = STEPS.map((label,i) => {
+      const li = el("li"); li.innerHTML = `<span class="dot">${i+1}</span><span>${label}</span>`;
+      stepsBox.appendChild(li); return li;
+    });
+
+    const fill = $("#progress-fill"), pct = $("#progress-pct"), stage = $("#progress-stage");
+    const totalUnits = STEPS.length * 100;
+    let stepIdx = 0, within = 0;
+
+    function tick(){
+      within += 6 + Math.floor(Math.random()*10);
+      if(within >= 100){ within = 0; liByStep[stepIdx].classList.remove("active"); liByStep[stepIdx].classList.add("done"); stepIdx++; }
+      if(stepIdx >= STEPS.length){
+        fill.style.width = "100%"; pct.textContent = "100%"; stage.textContent = "Done";
+        finishInstall(updates); return;
+      }
+      liByStep[stepIdx].classList.add("active");
+      stage.textContent = STEPS[stepIdx] + "…";
+      const done = stepIdx*100 + within;
+      const p = Math.min(100, Math.round(done/totalUnits*100));
+      fill.style.width = p + "%"; pct.textContent = p + "%";
+      setTimeout(tick, 130 + Math.random()*120);
+    }
+    tick();
+  }
+
+  function finishInstall(updates){
+    // Advance installed versions.
+    const v = vehicle();
+    installed[v.id] = installed[v.id] || {};
+    updates.forEach(u => { installed[v.id][u.key] = u.to; });
+    store.set("carsync.installed", installed);
+
+    // Log history.
+    const hist = store.get("carsync.history", []);
+    updates.forEach(u => hist.unshift({ veh:`${v.year} ${v.name}`, mod:u.label, to:u.to, ts: Date.now() }));
+    store.set("carsync.history", hist.slice(0, 40));
+
+    installing = false;
+    $("#check").disabled = false; sel.disabled = false;
+    $("#progress-warn").classList.remove("show");
+    $("#progress-title").textContent = "✓ Update complete";
+    $("#progress-stage").textContent = `${updates.length} module${updates.length>1?"s":""} updated successfully.`;
+
+    setTimeout(() => {
+      $("#progress-card").hidden = true;
+      $("#updates-card").hidden = true;
+      const banner = $("#check-banner"); banner.className = "banner ok show";
+      banner.textContent = "✓ Update installed. Your vehicle software is now up to date.";
+      renderCurrent(); renderHistory();
+      $("#install").disabled = false;
+    }, 1100);
+  }
+
+  function renderHistory(){
+    const box = $("#hist"), empty = $("#hist-empty");
+    const hist = store.get("carsync.history", []);
+    box.innerHTML = "";
+    if(hist.length === 0){ empty.style.display = "block"; return; }
+    empty.style.display = "none";
+    hist.slice(0, 12).forEach(h => {
+      const li = el("li");
+      const left = el("span"); left.innerHTML = `<strong>${h.mod}</strong> → v${h.to}<br><span class="muted small">${h.veh}</span>`;
+      const when = el("span", "when"); when.textContent = fmt(h.ts);
+      li.append(left, when); box.appendChild(li);
+    });
+  }
+  function fmt(ts){
+    const d = new Date(ts);
+    return d.toLocaleDateString(undefined,{month:"short",day:"numeric"}) + " " +
+           d.toLocaleTimeString(undefined,{hour:"2-digit",minute:"2-digit"});
+  }
+
+  /* ---------- Reset when switching vehicles ---------- */
+  function resetFlow(){
+    $("#updates-card").hidden = true;
+    $("#progress-card").hidden = true;
+    const b = $("#check-banner"); b.className = "banner"; b.textContent = "";
+    telemetry = null;
+  }
+
+  /* ---------- Init ---------- */
+  renderVehicle(); renderCurrent(); renderHistory();
+})();
+</script>
+</body>
+</html>
