@@ -153,7 +153,14 @@
       <button class="btn primary big" id="book">📅 Request booking</button>
     </div>
     <div class="banner ok" id="book-banner"></div>
-    <p class="small muted" style="margin-bottom:0">Requests go to the shop for confirmation — this page doesn't take payment. We'll confirm your slot and send a deposit link.</p>
+    <p class="small muted" style="margin-bottom:0">Requests go to the shop for confirmation — this page doesn't take payment. We'll confirm your slot and send a deposit link. <span id="book-config-note"></span></p>
+  </section>
+
+  <!-- LogWerks: free post-tune health check -->
+  <section class="card" style="border-color:var(--brand)">
+    <h2>🔬 Free datalog health check</h2>
+    <p class="small muted" style="margin-top:0">Already tuned — by us or anyone else? Drop your ECU datalog into <b>LogWerks</b> and see whether it's <b>safe</b>: knock, boost vs. target, lean spots under load, and heat soak. Runs in your browser, nothing uploaded. Most shops give you nothing after the sale — we give you a tool.</p>
+    <a class="btn primary" href="../datalog/index.html">Open LogWerks →</a>
   </section>
 
   <!-- The honest fine print -->
@@ -180,6 +187,17 @@
   const store = {
     get(k, d){ try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch { return d; } },
     set(k, v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch {} }
+  };
+
+  /* ---------- CONFIG — edit these two lines before launch ----------
+     Bookings need somewhere to go. Two options:
+       1) Create a free form endpoint at https://formspree.io (or similar),
+          paste it into formEndpoint below, and requests are emailed to you.
+       2) Leave formEndpoint "" and set shopEmail — the button then opens the
+          customer's email app with a pre-filled booking message to you.        */
+  const CONFIG = {
+    formEndpoint: "",                       // e.g. "https://formspree.io/f/abcdwxyz"
+    shopEmail: "bookings@example.com"       // where pre-filled emails are addressed
   };
 
   /* ---------- Theme ---------- */
@@ -311,23 +329,65 @@
   }
 
   /* ---------- Booking (request only — no payment on this page) ---------- */
-  $("#book").addEventListener("click", () => {
+  function show(banner, msg){ banner.className = "banner ok show"; banner.textContent = msg; }
+
+  function mailtoFallback(req){
+    const subject = `Booking request — ${req.tune} (${req.model})`;
+    const body =
+      `New booking request from the website:\n\n` +
+      `Name:          ${req.name}\n` +
+      `Contact:       ${req.contact}\n` +
+      `Vehicle:       ${req.model}\n` +
+      `Package:       ${req.tune}  ($${req.price.toLocaleString()})\n` +
+      `Preferred day: ${req.when}\n` +
+      `Notes:         ${req.notes || "—"}\n`;
+    window.location.href = `mailto:${CONFIG.shopEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  }
+
+  const bookBtn = $("#book");
+  bookBtn.addEventListener("click", async () => {
     const name = $("#b-name").value.trim(), contact = $("#b-phone").value.trim();
     const banner = $("#book-banner");
-    if(!selectedTune){ banner.className = "banner ok show"; banner.textContent = "Select a package above first."; return; }
-    if(!name || !contact){ banner.className = "banner ok show"; banner.textContent = "Add your name and a way to reach you."; return; }
+    if(!selectedTune){ show(banner, "Select a package above first."); return; }
+    if(!name || !contact){ show(banner, "Add your name and a way to reach you."); return; }
     const req = {
       name, contact, when: $("#b-when").value || "flexible", notes: $("#b-notes").value.trim(),
       make, model: model().label, tune: selectedTune.name, price: selectedTune.price, ts: Date.now()
     };
+    // keep a local copy either way, so a request is never silently lost
     const all = store.get("jperf.requests", []); all.unshift(req); store.set("jperf.requests", all.slice(0,50));
-    banner.className = "banner ok show";
-    banner.textContent = `✓ Request saved, ${name}. We will confirm your ${selectedTune.name} slot and send a deposit link.`;
-    // NOTE: wire this to a real backend / form service (e.g. a mailto:, Formspree, or the shop's booking system).
+
+    if(CONFIG.formEndpoint){
+      bookBtn.disabled = true; show(banner, "Sending your request…");
+      try {
+        const res = await fetch(CONFIG.formEndpoint, {
+          method:"POST", headers:{ "Accept":"application/json", "Content-Type":"application/json" },
+          body: JSON.stringify({
+            name, contact, vehicle:req.model, package:req.tune, price:req.price,
+            preferred_day:req.when, notes:req.notes,
+            _subject:`Booking request — ${req.tune} (${req.model})`
+          })
+        });
+        if(!res.ok) throw new Error("HTTP "+res.status);
+        show(banner, `✓ Request sent, ${name}. We'll confirm your ${selectedTune.name} slot and send a deposit link.`);
+      } catch(e){
+        show(banner, "Couldn't send automatically — opening your email app as a backup.");
+        mailtoFallback(req);
+      } finally { bookBtn.disabled = false; }
+    } else {
+      mailtoFallback(req);
+      show(banner, `✓ Opening a pre-filled email to send your ${selectedTune.name} request. Hit send and we'll confirm your slot.`);
+    }
   });
 
   /* ---------- Init ---------- */
   fillModels(); render();
+
+  // Discreet setup reminder for the owner — vanishes once bookings are configured.
+  if(!CONFIG.formEndpoint && CONFIG.shopEmail === "bookings@example.com"){
+    const note = $("#book-config-note");
+    if(note){ note.innerHTML = ' <b style="color:var(--warn)">⚙︎ Setup:</b> set <code>formEndpoint</code> or <code>shopEmail</code> in <code>index.html</code> so requests reach you.'; }
+  }
 })();
 </script>
 </body>

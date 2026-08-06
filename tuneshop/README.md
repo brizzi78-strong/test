@@ -27,12 +27,27 @@ booking requests are confirmed by the shop, which then sends a deposit link.
 - **Replace the placeholder numbers.** The gains and prices in `CARS` are
   typical-for-the-platform placeholders. Swap in the shop's own dyno results
   and pricing — quoting numbers you can't reproduce is how you get chargebacks.
-- **Wire up the booking form** (mailto:, Formspree, or a booking system) —
-  right now requests only persist in the visitor's own browser.
+- **Turn on bookings** (one line). Open the `CONFIG` block near the top of the
+  page's script and either paste a form endpoint into `formEndpoint` (create a
+  free one at [Formspree](https://formspree.io) — requests get emailed to you)
+  **or** set `shopEmail` and leave `formEndpoint` empty (the button then opens
+  the customer's email app with a pre-filled booking message). Until one of
+  these is set, an on-page reminder shows and a local backup copy of every
+  request is kept in the browser.
 - **Pick a real business name** — "Velocity Werks" is a placeholder; register
   your own name/LLC and update the branding before launch.
+
+## Free datalog health check (LogWerks)
+
+The storefront links to **LogWerks** (`../datalog/`) as a free "post-tune health
+check" — customers drop in an ECU datalog and see whether it's safe (knock,
+boost vs. target, lean-under-load, heat soak). It's a real retention hook: most
+shops give the customer nothing after the sale. Keep the `datalog/` folder
+deployed alongside `tuneshop/` so the relative link resolves.
 
 ## How it's built
 
 One file, same pattern as the rest of this repo: HTML + CSS design tokens
-(light/dark) + vanilla JavaScript, no frameworks, no external assets.
+(light/dark) + vanilla JavaScript, no frameworks, no external assets. Bookings
+submit via a configurable form endpoint with an email fallback; a local backup
+copy is always kept so a request is never silently lost.
