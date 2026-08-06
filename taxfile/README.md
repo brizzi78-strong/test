@@ -39,6 +39,24 @@ npm start              # http://localhost:4600 (PORT to override)
 TAXFILE_DB=/data/tax.db npm start   # durable SQLite storage instead of memory
 ```
 
+Optional environment:
+
+- `TAXFILE_USER` / `TAXFILE_PASSWORD` — set both to gate every route (except
+  `/health`) behind HTTP Basic auth. Required in any public deployment:
+  returns contain SSNs.
+- `BRAND_NAME` — display name substituted into the web app's title and header
+  (the Render deployment uses "Blue Ridge Tax").
+
+## Deploy (Render)
+
+The repo's `render.yaml` blueprint includes a `blue-ridge-tax` web service:
+Docker runtime running `node taxfile/src/index.ts`, a 1 GB disk mounted at
+`/data` for the SQLite store, and the Basic-auth gate enabled. Apply the
+blueprint at Render (New + → Blueprint → this repo → Apply), set
+`TAXFILE_PASSWORD` when prompted, and the app comes up at
+`https://blue-ridge-tax-*.onrender.com`. If the blueprint was already applied
+for the other services, sync it (or re-Apply) to pick up the new service.
+
 Test and typecheck:
 
 ```sh

@@ -20,10 +20,18 @@
  * lightweight tenancy in the same spirit as the other apps in this repo.
  */
 
+import { timingSafeEqual } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 import type { IncomingMessage, ServerResponse } from 'node:http';
 import { DomainError } from '../service/errors.ts';
 import type { TaxReturnService } from '../service/taxReturnService.ts';
+
+export interface ListenerOptions {
+  /** Optional HTTP Basic auth gate (recommended when public); both required. */
+  gate?: { user: string; password: string };
+  /** Display name substituted into the web app's title and header. */
+  brandName?: string;
+}
 
 interface Ctx {
   userId: string;
@@ -47,9 +55,18 @@ interface Route {
 const ok = (body: unknown): RouteResult => ({ status: 200, body });
 const created = (body: unknown): RouteResult => ({ status: 201, body });
 
+function authorized(req: IncomingMessage, gate: { user: string; password: string }): boolean {
+  const expected = Buffer.from(
+    `Basic ${Buffer.from(`${gate.user}:${gate.password}`).toString('base64')}`,
+  );
+  const given = Buffer.from(req.headers.authorization ?? '');
+  return given.length === expected.length && timingSafeEqual(given, expected);
+}
+
 export function createRequestListener(
   service: TaxReturnService,
   webIndexPath: URL,
+  opts: ListenerOptions = {},
 ): (req: IncomingMessage, res: ServerResponse) => void {
   const routes: Route[] = [];
   const route = (method: string, path: string, handler: Handler): void => {
@@ -116,9 +133,25 @@ export function createRequestListener(
       res.end(payload);
     };
 
+    // The health check stays open so the hosting platform can probe it.
+    if (opts.gate && url.pathname !== '/health' && !authorized(req, opts.gate)) {
+      res.writeHead(401, {
+        'www-authenticate': `Basic realm="${opts.brandName ?? 'TaxFile'}"`,
+        'content-type': 'application/json; charset=utf-8',
+      });
+      res.end(JSON.stringify({ error: 'authentication required' }));
+      return;
+    }
+
     if (req.method === 'GET' && (url.pathname === '/' || url.pathname === '/index.html')) {
       try {
-        send(200, readFileSync(webIndexPath, 'utf8'), 'text/html');
+        let html = readFileSync(webIndexPath, 'utf8');
+        if (opts.brandName) {
+          html = html
+            .replace('<title>TaxFile', `<title>${opts.brandName}`)
+            .replace('<h1>TaxFile<', `<h1>${opts.brandName}<`);
+        }
+        send(200, html, 'text/html');
       } catch {
         send(404, { error: 'web UI not found' });
       }
