@@ -135,6 +135,40 @@ describe('TaxFile API', () => {
     assert.ok(!otherList.json.returns.some((r: any) => r.id === id));
   });
 
+  it('enforces the Basic-auth gate when configured, keeping /health open', async () => {
+    const gated = createApp(createInMemoryStore(), {
+      user: 'admin',
+      password: 'hunter2',
+      brandName: 'Blue Ridge Tax',
+    });
+    await new Promise<void>((resolve) => gated.server.listen(0, resolve));
+    const gatedBase = `http://localhost:${(gated.server.address() as AddressInfo).port}`;
+    try {
+      const health = await fetch(gatedBase + '/health');
+      assert.equal(health.status, 200);
+
+      const denied = await fetch(gatedBase + '/returns');
+      assert.equal(denied.status, 401);
+      assert.match(denied.headers.get('www-authenticate') ?? '', /Blue Ridge Tax/);
+
+      const wrong = await fetch(gatedBase + '/returns', {
+        headers: { authorization: 'Basic ' + Buffer.from('admin:nope').toString('base64') },
+      });
+      assert.equal(wrong.status, 401);
+
+      const auth = { authorization: 'Basic ' + Buffer.from('admin:hunter2').toString('base64') };
+      const allowed = await fetch(gatedBase + '/returns', { headers: auth });
+      assert.equal(allowed.status, 200);
+
+      const home = await fetch(gatedBase + '/', { headers: auth });
+      const html = await home.text();
+      assert.match(html, /<title>Blue Ridge Tax/);
+      assert.match(html, /<h1>Blue Ridge Tax</);
+    } finally {
+      gated.server.close();
+    }
+  });
+
   it('deletes in-progress returns but never accepted ones', async () => {
     const a = await call('POST', '/returns', undefined, 'bob');
     const del = await call('DELETE', `/returns/${a.json.taxReturn.id}`, undefined, 'bob');
