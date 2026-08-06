@@ -48,6 +48,13 @@
   .stat { border: 1px solid var(--line); border-radius: 8px; padding: 12px; }
   .stat .n { font-size: 22px; font-weight: 700; }
   .policy-hint { background: #f0f5ff; border: 1px solid #d5e2fa; border-radius: 8px; padding: 10px 14px; font-size: 13px; color: #2a4a8c; margin-bottom: 12px; }
+  .receipt-link { cursor: pointer; color: var(--accent); text-decoration: underline; background: none; border: none; padding: 0; font: inherit; }
+  .history { margin-top: 12px; border-top: 1px solid var(--line); padding-top: 8px; }
+  .history div { font-size: 13px; color: var(--muted); padding: 2px 0; }
+  #modal { position: fixed; inset: 0; background: rgba(0,0,0,.55); display: none; align-items: center; justify-content: center; padding: 24px; z-index: 10; }
+  #modal.open { display: flex; }
+  #modal .box { background: var(--card); border-radius: 10px; padding: 14px; max-width: min(720px, 92vw); max-height: 90vh; display: flex; flex-direction: column; gap: 8px; }
+  #modal img, #modal embed { max-width: 100%; max-height: 74vh; object-fit: contain; }
 </style>
 </head>
 <body>
@@ -66,6 +73,15 @@
   <div class="error" id="error"></div>
   <div id="view"></div>
 </main>
+<div id="modal" role="dialog" aria-modal="true">
+  <div class="box">
+    <div style="display:flex; justify-content:space-between; align-items:center; gap:12px">
+      <strong id="modal-title"></strong>
+      <button class="ghost" id="modal-close">Close</button>
+    </div>
+    <div id="modal-body"></div>
+  </div>
+</div>
 <script>
 const $ = (id) => document.getElementById(id);
 const view = $('view');
@@ -111,6 +127,7 @@ async function renderReports() {
         <label>Report title <input id="new-title" placeholder="e.g. NYC client trip"></label>
         <label>Approver <input id="new-approver" value="manager" size="10"></label>
         <button class="primary" id="new-report">New report</button>
+        <button class="ghost" id="csv-mine" style="margin-left:auto">Download CSV</button>
       </div>
     </div>
     <div class="card">
@@ -134,6 +151,7 @@ async function renderReports() {
       render();
     } catch (err) { setError(err.message); }
   };
+  $('csv-mine').onclick = () => downloadCsv('mine');
   view.querySelectorAll('tr.clickable').forEach((tr) => {
     tr.onclick = () => { openReportId = tr.dataset.id; render(); };
   });
@@ -142,6 +160,67 @@ async function renderReports() {
 function flagsFor(evaluation, expenseId) {
   return evaluation.violations.filter((v) => v.expenseId === expenseId)
     .map((v) => `<div class="flag ${v.code === 'DUPLICATE' ? 'dup' : ''}">⚠ ${esc(v.message)}</div>`).join('');
+}
+
+function receiptCell(reportId, e) {
+  if (!e.receipt) return '<span class="muted">—</span>';
+  if (e.receipt.dataUrl || e.receipt.hasData) {
+    return `<button class="receipt-link" data-view-receipt="${reportId}:${e.id}">📎 ${esc(e.receipt.name)}</button>`;
+  }
+  return '📎 ' + esc(e.receipt.name);
+}
+
+// Modal content is built with DOM APIs, never innerHTML — receipt names and
+// data URLs are user-controlled and cross the filer→approver trust boundary.
+function openModal(title, node) {
+  $('modal-title').textContent = title;
+  $('modal-body').replaceChildren(node);
+  $('modal').classList.add('open');
+}
+$('modal-close').onclick = () => $('modal').classList.remove('open');
+$('modal').onclick = (ev) => { if (ev.target === $('modal')) $('modal').classList.remove('open'); };
+
+async function viewReceipt(reportId, expenseId) {
+  try {
+    const { report } = await api('GET', `/reports/${reportId}`);
+    const e = report.expenses.find((x) => x.id === expenseId);
+    if (!e?.receipt?.dataUrl) return setError('No receipt attachment on file for that expense.');
+    let node;
+    if (e.receipt.dataUrl.startsWith('data:application/pdf')) {
+      node = document.createElement('embed');
+      node.type = 'application/pdf';
+      node.style.cssText = 'width:70vw;height:74vh';
+    } else {
+      node = document.createElement('img');
+      node.alt = e.receipt.name;
+    }
+    node.src = e.receipt.dataUrl;
+    openModal(e.receipt.name, node);
+  } catch (err) { setError(err.message); }
+}
+
+function wireReceiptLinks() {
+  view.querySelectorAll('[data-view-receipt]').forEach((btn) => {
+    btn.onclick = () => {
+      const [reportId, expenseId] = btn.dataset.viewReceipt.split(':');
+      viewReceipt(reportId, expenseId);
+    };
+  });
+}
+
+async function downloadCsv(scope) {
+  try {
+    const res = await fetch('/export.csv' + (scope === 'approvals' ? '?scope=approvals' : ''), {
+      headers: { 'x-user-id': $('user').value.trim() || 'demo' },
+    });
+    if (!res.ok) throw new Error('export failed');
+    const blob = await res.blob();
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = scope === 'approvals' ? 'expenses-queue.csv' : 'expenses.csv';
+    a.click();
+    URL.revokeObjectURL(a.href);
+  } catch (err) { setError(err.message); }
 }
 
 async function renderReportDetail(id) {
@@ -168,12 +247,14 @@ async function renderReportDetail(id) {
           <td>${e.date}</td>
           <td>${e.category}${e.miles ? ` <span class="muted">(${e.miles} mi)</span>` : ''}</td>
           <td>${esc(e.merchant)}${e.description ? `<div class="muted">${esc(e.description)}</div>` : ''}${flagsFor(evaluation, e.id)}</td>
-          <td>${e.receipt ? '📎 ' + esc(e.receipt) : '<span class="muted">—</span>'}</td>
+          <td>${receiptCell(report.id, e)}</td>
           <td class="amount">${money(e.amountCents)}</td>
           ${editable ? `<td><button class="ghost danger" data-del="${e.id}">✕</button></td>` : ''}
         </tr>`).join('')}
       </tbody></table>
       ${report.expenses.length === 0 ? '<p class="muted">No expenses yet.</p>' : ''}
+      ${report.history.length ? `<div class="history">${report.history.map((h) =>
+        `<div>${h.at.slice(0, 10)} · ${esc(h.by)} ${esc(h.action)}${h.note ? ` — ${esc(h.note)}` : ''}</div>`).join('')}</div>` : ''}
     </div>
     ${editable ? `
     <div class="card">
@@ -187,7 +268,7 @@ async function renderReportDetail(id) {
         <label>Merchant <input id="x-merchant" placeholder="e.g. Delta"></label>
         <label id="amount-label">Amount ($) <input id="x-amount" type="number" step="0.01" min="0"></label>
         <label id="miles-label" style="display:none">Miles <input id="x-miles" type="number" step="0.1" min="0"></label>
-        <label>Receipt (filename) <input id="x-receipt" placeholder="optional"></label>
+        <label>Receipt <input id="x-receipt" type="file" accept="image/*,application/pdf"></label>
         <label>Notes <input id="x-desc" placeholder="optional"></label>
         <button class="primary" id="x-add">Add</button>
       </div>
@@ -212,10 +293,19 @@ async function renderReportDetail(id) {
       const body = {
         date: $('x-date').value, category: catSelect.value,
         merchant: $('x-merchant').value, description: $('x-desc').value,
-        receipt: $('x-receipt').value || undefined,
       };
       if (catSelect.value === 'mileage') body.miles = Number($('x-miles').value);
       else body.amountCents = Math.round(Number($('x-amount').value) * 100);
+      const file = $('x-receipt').files[0];
+      if (file) {
+        if (file.size > 500_000) return setError('Receipt file is too large (max 500 KB).');
+        body.receipt = { name: file.name, dataUrl: await new Promise((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onload = () => resolve(reader.result);
+          reader.onerror = () => reject(new Error('could not read receipt file'));
+          reader.readAsDataURL(file);
+        }) };
+      }
       try { await api('POST', `/reports/${id}/expenses`, body); render(); } catch (err) { setError(err.message); }
     };
     $('submit').onclick = async () => {
@@ -239,12 +329,16 @@ async function renderReportDetail(id) {
   if (reopen) reopen.onclick = async () => {
     try { await api('POST', `/reports/${id}/reopen`); render(); } catch (err) { setError(err.message); }
   };
+  wireReceiptLinks();
 }
 
 // ---------- Approvals ----------
 
 async function renderApprovals() {
-  const { reports } = await api('GET', '/approvals');
+  const [{ reports }, { reports: payable }] = await Promise.all([
+    api('GET', '/approvals'),
+    api('GET', '/reimbursements'),
+  ]);
   view.innerHTML = `
     <div class="card">
       <strong>Waiting on you</strong>
@@ -258,13 +352,27 @@ async function renderApprovals() {
           ${report.expenses.map((e) => `
             <div style="padding:4px 0; border-bottom:1px solid var(--line)">
               ${e.date} · ${e.category} · ${esc(e.merchant)} · <strong>${money(e.amountCents)}</strong>
-              ${e.receipt ? ' 📎' : ''}
+              ${e.receipt ? ' · ' + receiptCell(report.id, e) : ''}
               ${flagsFor(evaluation, e.id)}
             </div>`).join('')}
           <div class="row" style="margin-top:10px">
             <button class="primary" data-approve="${report.id}">Approve</button>
             <input placeholder="Rejection reason" data-reason="${report.id}" size="30">
             <button class="ghost danger" data-reject="${report.id}">Reject</button>
+          </div>
+        </div>`).join('')}
+    </div>
+    <div class="card">
+      <div class="row" style="justify-content:space-between; align-items:center">
+        <strong>Approved — ready to pay</strong>
+        <button class="ghost" id="csv-queue">Download queue CSV</button>
+      </div>
+      ${payable.length === 0 ? '<p class="muted">Nothing awaiting reimbursement.</p>' : payable.map(({ report, evaluation }) => `
+        <div class="row" style="justify-content:space-between; align-items:center; padding:7px 0; border-bottom:1px solid var(--line)">
+          <div>${esc(report.title)} <span class="muted">from ${esc(report.ownerId)}${report.autoApproved ? ' · auto-approved' : ''} · approved ${(report.decidedAt ?? '').slice(0, 10)}</span></div>
+          <div class="row" style="align-items:center">
+            <span class="total">${money(evaluation.totalCents)}</span>
+            <button class="ghost" data-pay="${report.id}">Mark reimbursed</button>
           </div>
         </div>`).join('')}
     </div>`;
@@ -279,6 +387,13 @@ async function renderApprovals() {
       try { await api('POST', `/reports/${btn.dataset.reject}/reject`, { reason }); render(); } catch (err) { setError(err.message); }
     };
   });
+  view.querySelectorAll('[data-pay]').forEach((btn) => {
+    btn.onclick = async () => {
+      try { await api('POST', `/reports/${btn.dataset.pay}/reimburse`); render(); } catch (err) { setError(err.message); }
+    };
+  });
+  $('csv-queue').onclick = () => downloadCsv('approvals');
+  wireReceiptLinks();
 }
 
 // ---------- Analytics ----------

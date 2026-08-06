@@ -53,7 +53,7 @@ describe('policy engine', () => {
   it('requires a receipt at and above the threshold, but not below', () => {
     assert.deepEqual(codes(report([expense({ amountCents: 2_499 })])), []);
     assert.deepEqual(codes(report([expense({ amountCents: 2_500 })])), ['MISSING_RECEIPT']);
-    assert.deepEqual(codes(report([expense({ amountCents: 2_500, receipt: 'lunch.jpg' })])), []);
+    assert.deepEqual(codes(report([expense({ amountCents: 2_500, receipt: { name: 'lunch.jpg' } })])), []);
   });
 
   it('never demands a receipt for mileage', () => {
@@ -62,9 +62,9 @@ describe('policy engine', () => {
   });
 
   it('flags category limit overruns', () => {
-    const rep = report([expense({ amountCents: 7_501, receipt: 'dinner.jpg' })]);
+    const rep = report([expense({ amountCents: 7_501, receipt: { name: 'dinner.jpg' } })]);
     assert.deepEqual(codes(rep), ['OVER_CATEGORY_LIMIT']);
-    const uncapped = report([expense({ category: 'airfare', amountCents: 80_000, receipt: 'ticket.pdf' })]);
+    const uncapped = report([expense({ category: 'airfare', amountCents: 80_000, receipt: { name: 'ticket.pdf' } })]);
     assert.deepEqual(codes(uncapped), []);
   });
 
@@ -80,9 +80,9 @@ describe('policy engine', () => {
   });
 
   it('detects duplicates against the owner’s other reports', () => {
-    const other = expense({ merchant: 'Hilton', category: 'lodging', amountCents: 20_000, receipt: 'a.pdf' });
+    const other = expense({ merchant: 'Hilton', category: 'lodging', amountCents: 20_000, receipt: { name: 'a.pdf' } });
     const rep = report([
-      expense({ merchant: 'Hilton', category: 'lodging', amountCents: 20_000, receipt: 'b.pdf' }),
+      expense({ merchant: 'Hilton', category: 'lodging', amountCents: 20_000, receipt: { name: 'b.pdf' } }),
     ]);
     const evaluation = evaluateReport(rep, [other], DEFAULT_POLICY, TODAY);
     assert.deepEqual(
@@ -99,7 +99,7 @@ describe('policy engine', () => {
 
   it('withholds auto-approval above the ceiling even when compliant', () => {
     const rep = report([
-      expense({ category: 'airfare', amountCents: 20_001, receipt: 'ticket.pdf' }),
+      expense({ category: 'airfare', amountCents: 20_001, receipt: { name: 'ticket.pdf' } }),
     ]);
     const evaluation = evaluateReport(rep, [], DEFAULT_POLICY, TODAY);
     assert.deepEqual(evaluation.violations, []);

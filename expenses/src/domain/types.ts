@@ -19,6 +19,15 @@ export type Category = (typeof CATEGORIES)[number];
 
 export type ReportStatus = 'draft' | 'submitted' | 'approved' | 'rejected' | 'reimbursed';
 
+export interface Receipt {
+  /** Display name, e.g. the uploaded filename. */
+  name: string;
+  /** data: URL (image/* or application/pdf) holding the attachment itself. */
+  dataUrl?: string;
+  /** Set in list views in place of dataUrl so payloads stay small. */
+  hasData?: boolean;
+}
+
 export interface Expense {
   id: string;
   /** ISO date (YYYY-MM-DD) the expense was incurred. */
@@ -30,8 +39,8 @@ export interface Expense {
   amountCents: number;
   /** Only present for category "mileage". */
   miles?: number;
-  /** Whether a receipt is attached/on file (a note such as a filename). */
-  receipt?: string;
+  /** Attached receipt, when one is on file. */
+  receipt?: Receipt;
 }
 
 export interface HistoryEntry {

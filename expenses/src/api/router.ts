@@ -15,10 +15,12 @@
  *   POST   /reports/:id/submit                 -> submit (auto-approves when compliant)
  *   POST   /reports/:id/reopen                 -> back to draft (submitted/rejected)
  *   GET    /approvals                          -> reports waiting on my approval
+ *   GET    /reimbursements                     -> approved reports I can pay out
  *   POST   /reports/:id/approve
  *   POST   /reports/:id/reject                 -> { reason }
  *   POST   /reports/:id/reimburse
  *   GET    /analytics                          -> my spend by category/status
+ *   GET    /export.csv[?scope=approvals]       -> my expenses (or my queue) as CSV
  *
  * The requester is identified by the `x-user-id` header (default "demo") —
  * lightweight tenancy in the same spirit as the other apps in this repo.
@@ -40,12 +42,15 @@ export interface ListenerOptions {
 interface Ctx {
   userId: string;
   params: Record<string, string>;
+  query: URLSearchParams;
   body: unknown;
 }
 
 interface RouteResult {
   status: number;
   body: unknown;
+  /** Defaults to application/json; set for raw responses such as CSV. */
+  contentType?: string;
 }
 
 type Handler = (ctx: Ctx) => RouteResult;
@@ -98,6 +103,12 @@ export function createRequestListener(
   route('POST', '/reports/:id/submit', (ctx) => ok(service.submitReport(ctx.userId, ctx.params.id!)));
   route('POST', '/reports/:id/reopen', (ctx) => ok(service.reopenReport(ctx.userId, ctx.params.id!)));
   route('GET', '/approvals', (ctx) => ok({ reports: service.listApprovals(ctx.userId) }));
+  route('GET', '/reimbursements', (ctx) => ok({ reports: service.listReimbursable(ctx.userId) }));
+  route('GET', '/export.csv', (ctx) => ({
+    status: 200,
+    body: service.exportCsv(ctx.userId, ctx.query.get('scope') === 'approvals' ? 'approvals' : 'mine'),
+    contentType: 'text/csv',
+  }));
   route('POST', '/reports/:id/approve', (ctx) => ok(service.approveReport(ctx.userId, ctx.params.id!)));
   route('POST', '/reports/:id/reject', (ctx) =>
     ok(service.rejectReport(ctx.userId, ctx.params.id!, ctx.body)),
@@ -182,8 +193,8 @@ export function createRequestListener(
       }
       const userId = String(req.headers['x-user-id'] ?? 'demo');
       try {
-        const result = found.handler({ userId, params: found.params, body });
-        send(result.status, result.body);
+        const result = found.handler({ userId, params: found.params, query: url.searchParams, body });
+        send(result.status, result.body, result.contentType ?? 'application/json');
       } catch (err) {
         if (err instanceof DomainError) send(err.status, { error: err.message });
         else {

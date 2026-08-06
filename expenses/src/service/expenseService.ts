@@ -19,6 +19,7 @@ import {
   type Expense,
   type ExpenseReport,
   type PolicyEvaluation,
+  type Receipt,
 } from '../domain/types.ts';
 import type { Store } from '../store/store.ts';
 import { DomainError, conflict, forbidden, notFound } from './errors.ts';
@@ -38,6 +39,13 @@ export interface Analytics {
 }
 
 const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
+/**
+ * Anchored end to end: the payload may contain only base64 characters, so a
+ * stored value can never smuggle HTML/attribute metacharacters to a viewer.
+ */
+const RECEIPT_DATA_URL = /^data:(image\/[\w.+-]+|application\/pdf);base64,[A-Za-z0-9+/]+={0,2}$/;
+/** ~500 KB of base64 — keeps report documents and payloads bounded. */
+const RECEIPT_MAX_CHARS = 700_000;
 
 function asRecord(body: unknown): Record<string, unknown> {
   if (typeof body !== 'object' || body === null || Array.isArray(body)) {
@@ -53,6 +61,68 @@ function requireString(value: unknown, field: string, maxLength = 200): string {
   if (value.length > maxLength) throw new DomainError(`${field} is too long`);
   return value.trim();
 }
+
+/**
+ * Accept a receipt as either a bare name (kept for API ergonomics) or a
+ * `{ name, dataUrl }` attachment. Attachments must be image or PDF data:
+ * URLs and are capped so a single report stays a reasonable payload.
+ */
+function parseReceipt(value: unknown, existing?: Receipt): Receipt | undefined {
+  if (value === undefined || value === null || value === '') return undefined;
+  if (typeof value === 'string') {
+    return value.trim() ? { name: value.trim().slice(0, 200) } : undefined;
+  }
+  if (typeof value !== 'object' || Array.isArray(value)) {
+    throw new DomainError('receipt must be a filename or { name, dataUrl }');
+  }
+  const input = value as Record<string, unknown>;
+  const name = requireString(input.name, 'receipt.name');
+  if (input.dataUrl === undefined || input.dataUrl === null || input.dataUrl === '') {
+    // A list-view receipt ({ name, hasData: true }) round-tripped back through
+    // an update means "keep the stored attachment", not "drop it".
+    if (input.hasData === true && existing?.dataUrl) return { name, dataUrl: existing.dataUrl };
+    return { name };
+  }
+  if (typeof input.dataUrl !== 'string') {
+    throw new DomainError('receipt.dataUrl must be a base64 image or PDF data: URL');
+  }
+  if (input.dataUrl.length > RECEIPT_MAX_CHARS) {
+    throw new DomainError('receipt attachment is too large (max ~500 KB)');
+  }
+  if (!RECEIPT_DATA_URL.test(input.dataUrl)) {
+    throw new DomainError('receipt.dataUrl must be a base64 image or PDF data: URL');
+  }
+  return { name, dataUrl: input.dataUrl };
+}
+
+/** Pre-attachment documents stored receipts as bare strings; normalize on read. */
+function normalizeReport(report: ExpenseReport): ExpenseReport {
+  for (const e of report.expenses) {
+    const receipt = e.receipt as unknown;
+    if (typeof receipt === 'string') {
+      e.receipt = receipt.trim() ? { name: receipt.trim() } : undefined;
+    }
+  }
+  return report;
+}
+
+/** Replace receipt attachment bytes with a `hasData` marker for list payloads. */
+function stripReceiptData(report: ExpenseReport): ExpenseReport {
+  return {
+    ...report,
+    expenses: report.expenses.map((e) =>
+      e.receipt?.dataUrl ? { ...e, receipt: { name: e.receipt.name, hasData: true } } : e,
+    ),
+  };
+}
+
+const csvCell = (value: string | number): string => {
+  let s = String(value);
+  // Neutralize spreadsheet formula injection: =, +, -, @ prefixes are
+  // evaluated by Excel/Sheets, so escape them with a leading apostrophe.
+  if (/^[=+\-@]/.test(s)) s = `'${s}`;
+  return /[",\r\n]/.test(s) ? `"${s.replaceAll('"', '""')}"` : s;
+};
 
 export class ExpenseService {
   readonly policy: Policy;
@@ -85,19 +155,28 @@ export class ExpenseService {
     return this.withEvaluation(report);
   }
 
+  /** List views strip receipt attachment bytes; fetch one report for the full data. */
   listReports(userId: string): ReportWithEvaluation[] {
-    return this.store
-      .list((r) => r.ownerId === userId)
+    // One store read for the whole list: each report is evaluated against the
+    // same pre-fetched set instead of re-querying the store per report.
+    const mine = this.query((r) => r.ownerId === userId);
+    return mine
       .sort((a, b) => b.createdAt.localeCompare(a.createdAt))
-      .map((r) => this.withEvaluation(r));
+      .map((r) => ({ report: stripReceiptData(r), evaluation: this.evaluateAgainst(r, mine) }));
   }
 
   /** Reports waiting on this user's approval, oldest submission first. */
   listApprovals(userId: string): ReportWithEvaluation[] {
-    return this.store
-      .list((r) => r.status === 'submitted' && r.approverId === userId)
+    return this.query((r) => r.status === 'submitted' && r.approverId === userId)
       .sort((a, b) => (a.submittedAt ?? '').localeCompare(b.submittedAt ?? ''))
-      .map((r) => this.withEvaluation(r));
+      .map((r) => ({ report: stripReceiptData(r), evaluation: this.evaluate(r) }));
+  }
+
+  /** Approved reports this user can mark reimbursed, oldest decision first. */
+  listReimbursable(userId: string): ReportWithEvaluation[] {
+    return this.query((r) => r.status === 'approved' && r.approverId === userId)
+      .sort((a, b) => (a.decidedAt ?? '').localeCompare(b.decidedAt ?? ''))
+      .map((r) => ({ report: stripReceiptData(r), evaluation: this.evaluate(r) }));
   }
 
   getReport(userId: string, id: string): ReportWithEvaluation {
@@ -122,7 +201,7 @@ export class ExpenseService {
     const report = this.editable(userId, reportId);
     const index = report.expenses.findIndex((e) => e.id === expenseId);
     if (index === -1) throw notFound('expense');
-    report.expenses[index] = this.parseExpense(body, expenseId);
+    report.expenses[index] = this.parseExpense(body, expenseId, report.expenses[index]);
     this.store.put(report);
     return this.withEvaluation(report);
   }
@@ -214,8 +293,39 @@ export class ExpenseService {
     return this.withEvaluation(report);
   }
 
+  /**
+   * Flatten a user's expenses to CSV — one row per expense — for finance
+   * tooling. `scope: 'approvals'` exports instead the reports awaiting or past
+   * this user's approval (submitted, approved, reimbursed).
+   */
+  exportCsv(userId: string, scope: 'mine' | 'approvals' = 'mine'): string {
+    const reports =
+      scope === 'approvals'
+        ? this.query((r) => r.approverId === userId && r.status !== 'draft' && r.status !== 'rejected')
+        : this.query((r) => r.ownerId === userId);
+    const header = ['report', 'owner', 'status', 'date', 'category', 'merchant', 'description', 'amount_usd', 'receipt'];
+    const rows = reports
+      .sort((a, b) => a.createdAt.localeCompare(b.createdAt))
+      .flatMap((r) =>
+        r.expenses.map((e) =>
+          [
+            csvCell(r.title),
+            csvCell(r.ownerId),
+            csvCell(r.status),
+            csvCell(e.date),
+            csvCell(e.category),
+            csvCell(e.merchant),
+            csvCell(e.description),
+            csvCell((e.amountCents / 100).toFixed(2)),
+            csvCell(e.receipt?.name ?? ''),
+          ].join(','),
+        ),
+      );
+    return [header.join(','), ...rows].join('\n') + '\n';
+  }
+
   analytics(userId: string): Analytics {
-    const reports = this.store.list((r) => r.ownerId === userId);
+    const reports = this.query((r) => r.ownerId === userId);
     const byCategory: Partial<Record<Category, number>> = {};
     const byStatus: Record<string, number> = {};
     let totalCents = 0;
@@ -224,7 +334,7 @@ export class ExpenseService {
     for (const report of reports) {
       byStatus[report.status] = (byStatus[report.status] ?? 0) + 1;
       if (report.autoApproved) autoApprovedCount++;
-      violationCount += this.evaluate(report).violations.length;
+      violationCount += this.evaluateAgainst(report, reports).violations.length;
       for (const e of report.expenses) {
         totalCents += e.amountCents;
         byCategory[e.category] = (byCategory[e.category] ?? 0) + e.amountCents;
@@ -233,7 +343,7 @@ export class ExpenseService {
     return { reportCount: reports.length, totalCents, byCategory, byStatus, autoApprovedCount, violationCount };
   }
 
-  private parseExpense(body: unknown, id: string): Expense {
+  private parseExpense(body: unknown, id: string, existing?: Expense): Expense {
     const input = asRecord(body);
     const date = requireString(input.date, 'date', 10);
     if (!ISO_DATE.test(date) || Number.isNaN(Date.parse(date))) {
@@ -245,7 +355,7 @@ export class ExpenseService {
     }
     const merchant = requireString(input.merchant, 'merchant');
     const description = typeof input.description === 'string' ? input.description.trim() : '';
-    const receipt = typeof input.receipt === 'string' && input.receipt.trim() ? input.receipt.trim() : undefined;
+    const receipt = parseReceipt(input.receipt, existing?.receipt);
 
     if (category === 'mileage') {
       const miles = input.miles;
@@ -276,11 +386,26 @@ export class ExpenseService {
     return { id, date, category, merchant, description, amountCents, receipt };
   }
 
-  private evaluate(report: ExpenseReport): PolicyEvaluation {
-    const otherExpenses = this.store
-      .list((r) => r.ownerId === report.ownerId && r.id !== report.id && r.status !== 'rejected')
+  /** All reads flow through here so legacy documents are normalized once. */
+  private read(id: string): ExpenseReport | undefined {
+    const report = this.store.get(id);
+    return report ? normalizeReport(report) : undefined;
+  }
+
+  private query(predicate: (r: ExpenseReport) => boolean): ExpenseReport[] {
+    return this.store.list(predicate).map(normalizeReport);
+  }
+
+  /** Evaluate against a pre-fetched set of the owner's reports. */
+  private evaluateAgainst(report: ExpenseReport, ownersReports: ExpenseReport[]): PolicyEvaluation {
+    const otherExpenses = ownersReports
+      .filter((r) => r.id !== report.id && r.status !== 'rejected')
       .flatMap((r) => r.expenses);
     return evaluateReport(report, otherExpenses, this.policy, this.today());
+  }
+
+  private evaluate(report: ExpenseReport): PolicyEvaluation {
+    return this.evaluateAgainst(report, this.query((r) => r.ownerId === report.ownerId));
   }
 
   private withEvaluation(report: ExpenseReport): ReportWithEvaluation {
@@ -288,14 +413,14 @@ export class ExpenseService {
   }
 
   private owned(userId: string, id: string): ExpenseReport {
-    const report = this.store.get(id);
+    const report = this.read(id);
     if (!report) throw notFound('report');
     if (report.ownerId !== userId) throw forbidden('not your report');
     return report;
   }
 
   private reviewed(userId: string, id: string): ExpenseReport {
-    const report = this.store.get(id);
+    const report = this.read(id);
     if (!report) throw notFound('report');
     if (report.approverId !== userId) throw forbidden('you are not the approver for this report');
     if (report.ownerId === userId) throw forbidden('you cannot review your own report');
@@ -303,7 +428,7 @@ export class ExpenseService {
   }
 
   private ownedOrReviewed(userId: string, id: string): ExpenseReport {
-    const report = this.store.get(id);
+    const report = this.read(id);
     if (!report) throw notFound('report');
     if (report.ownerId !== userId && report.approverId !== userId) throw forbidden('not your report');
     return report;
