@@ -524,6 +524,14 @@ He didn't connect with me only on the big things. One time I asked for White Cas
 
 And once, it was far bigger than a tournament, a sack of burgers, or a dentist's chair. I was in college in Oxford, Ohio, and I was in a dark place, the kind where I couldn't find my way out, where it had taken everything I had just to admit I needed help. Dad got in the car and drove to Ohio. He came the way he always had, except this time it wasn't for a game. He came because he loved me.
 
+Somewhere on that drive, just the two of us in the car, I said it for the first time.
+
+"Dad, thank you for saving my life."
+
+"You saved mine."
+
+That was the whole exchange. We would trade those same two lines maybe ten more times over the years. His answer never changed.
+
 Then there was the time I lived in West Palm Beach. By then, I wasn't a kid anymore. I was a grown man, deep in addiction, and out of options. Dad flew down and pulled me, his dying son, out of it. He didn't shame me. He showed up one more time, when showing up meant saving my life.
 
 I broke down in front of him once. I don't remember anymore what had pushed me there, just that I was undone, the way you only let yourself be in front of someone safe. He didn't tell me to pull it together. He let me get it out, and then he looked at me and said it plain.
