@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Cardinal Job Search — outreach copilot</title>
+<meta name="description" content="A private, offline job-search copilot: track applications, generate personalized LinkedIn messages ready to send, and never miss a follow-up. Your data never leaves your device.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23A31B33'/%3E%3Cpath d='M9 22V10h4.5a4 4 0 0 1 0 8H13l6 4h-4l-5-3.5V22z' fill='white'/%3E%3C/svg%3E">
+<style>
+  :root {
+    --paper:#F7F2E6; --surface:#FFFDF7; --surface-2:#EFE7D3; --ink:#17233F; --muted:#6B6350;
+    --line:#E2D9C3; --brand:#A31B33; --brand-strong:#7E1226;
+    --good:#2E7D4F; --good-bg:#E4F0E8; --warn:#9A6410; --warn-bg:#F6ECD6; --crit:#B23A3A; --crit-bg:#F6E1DE;
+    --shadow:0 1px 2px rgba(23,35,63,.07), 0 10px 26px -14px rgba(23,35,63,.24);
+    --font:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+    --maxw:720px; --r:14px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper:#101627; --surface:#172033; --surface-2:#1F2A42; --ink:#F3EEE1; --muted:#A9A28F;
+      --line:#2B3855; --brand:#E2586B; --brand-strong:#F27A8B;
+      --good:#4FBE86; --good-bg:#12321f; --warn:#D6A24A; --warn-bg:#33280f; --crit:#E07B6E; --crit-bg:#3a1d1a;
+      --shadow:0 1px 2px rgba(0,0,0,.45), 0 12px 32px -14px rgba(0,0,0,.65);
+    }
+  }
+  :root[data-theme="light"]{--paper:#F7F2E6;--surface:#FFFDF7;--surface-2:#EFE7D3;--ink:#17233F;--muted:#6B6350;--line:#E2D9C3;--brand:#A31B33;--brand-strong:#7E1226;--good:#2E7D4F;--good-bg:#E4F0E8;--warn:#9A6410;--warn-bg:#F6ECD6;--crit:#B23A3A;--crit-bg:#F6E1DE;}
+  :root[data-theme="dark"]{--paper:#101627;--surface:#172033;--surface-2:#1F2A42;--ink:#F3EEE1;--muted:#A9A28F;--line:#2B3855;--brand:#E2586B;--brand-strong:#F27A8B;--good:#4FBE86;--good-bg:#12321f;--warn:#D6A24A;--warn-bg:#33280f;--crit:#E07B6E;--crit-bg:#3a1d1a;}
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink); font-family:var(--font); line-height:1.5; -webkit-text-size-adjust:100%; }
+  .wrap { max-width:var(--maxw); margin-inline:auto; padding:0 clamp(.9rem,4vw,1.4rem) 3rem; }
+  header.top { position:sticky; top:0; z-index:10; background:color-mix(in srgb,var(--paper) 88%,transparent);
+    backdrop-filter:blur(8px); border-bottom:1px solid var(--line); }
+  .top-in { max-width:var(--maxw); margin-inline:auto; padding:.7rem clamp(.9rem,4vw,1.4rem); display:flex; align-items:center; gap:.6rem; }
+  .logo { width:30px; height:30px; border-radius:8px; background:var(--brand); display:grid; place-items:center; flex:none; }
+  .logo svg { width:18px; height:18px; }
+  h1.brand { font-size:1.1rem; margin:0; font-weight:800; letter-spacing:-.01em; }
+  .brand small { display:block; font-weight:600; font-size:.68rem; color:var(--muted); letter-spacing:.02em; }
+  .theme { margin-left:auto; background:transparent; border:1px solid var(--line); border-radius:8px; color:var(--ink); padding:.35rem .55rem; cursor:pointer; font-size:.9rem; }
+
+  .modes { display:flex; gap:.4rem; margin:1rem 0 .2rem; background:var(--surface-2); padding:.3rem; border-radius:12px; }
+  .modes button { flex:1; border:0; background:transparent; color:var(--muted); font:inherit; font-weight:700;
+    padding:.6rem .2rem; border-radius:9px; cursor:pointer; font-size:.9rem; }
+  .modes button[aria-selected="true"] { background:var(--surface); color:var(--ink); box-shadow:var(--shadow); }
+
+  .card { background:var(--surface); border:1px solid var(--line); border-radius:var(--r); box-shadow:var(--shadow); padding:1rem 1.05rem; margin:.8rem 0; }
+  .card h2 { margin:.1rem 0 .6rem; font-size:1rem; }
+  .card h3 { margin:.6rem 0 .3rem; font-size:.9rem; }
+  .hint { color:var(--muted); font-size:.85rem; margin:.3rem 0 .6rem; }
+  label { display:block; font-weight:700; font-size:.82rem; margin:.6rem 0 .2rem; }
+  input, select, textarea { width:100%; font:inherit; color:var(--ink); background:var(--surface); border:1px solid var(--line); border-radius:9px; padding:.55rem .65rem; }
+  textarea { min-height:6.5rem; resize:vertical; }
+  .row { display:grid; grid-template-columns:1fr 1fr; gap:.7rem; }
+  @media (max-width:560px) { .row { grid-template-columns:1fr; } }
+  .btn { display:inline-block; border:1px solid var(--line); background:var(--surface); color:var(--ink); border-radius:9px;
+    padding:.5rem .85rem; font:inherit; font-weight:700; font-size:.88rem; cursor:pointer; text-decoration:none; }
+  .btn.primary { background:var(--brand); border-color:var(--brand); color:#fff; }
+  .btn.primary:hover { background:var(--brand-strong); }
+  .btn.small { padding:.3rem .6rem; font-size:.8rem; }
+  .btn.danger { color:var(--crit); border-color:var(--crit); background:transparent; }
+  .btnrow { display:flex; gap:.5rem; flex-wrap:wrap; margin-top:.7rem; align-items:center; }
+
+  .pill { display:inline-block; padding:.1rem .55rem; border-radius:999px; font-size:.74rem; font-weight:700; border:1px solid var(--line); background:var(--surface-2); }
+  .pill.applied { background:var(--warn-bg); color:var(--warn); border-color:var(--warn); }
+  .pill.outreach { background:var(--warn-bg); color:var(--warn); border-color:var(--warn); }
+  .pill.replied, .pill.interview { background:var(--good-bg); color:var(--good); border-color:var(--good); }
+  .pill.offer { background:var(--good-bg); color:var(--good); border-color:var(--good); }
+  .pill.closed { background:var(--crit-bg); color:var(--crit); border-color:var(--crit); }
+
+  .job { border:1px solid var(--line); border-radius:12px; padding:.7rem .8rem; margin:.6rem 0; background:var(--surface); }
+  .job .head { display:flex; align-items:baseline; gap:.5rem; flex-wrap:wrap; }
+  .job .head strong { font-size:.95rem; }
+  .job .meta { color:var(--muted); font-size:.82rem; }
+  .job .log { font-size:.78rem; color:var(--muted); margin-top:.35rem; font-family:var(--mono); white-space:pre-wrap; }
+  .due { border-left:4px solid var(--warn); }
+  .overdue { border-left:4px solid var(--crit); }
+
+  .stats { display:grid; grid-template-columns:repeat(4,1fr); gap:.5rem; margin:.8rem 0; }
+  @media (max-width:560px) { .stats { grid-template-columns:repeat(2,1fr); } }
+  .stat { background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:.6rem; text-align:center; }
+  .stat b { display:block; font-size:1.35rem; }
+  .stat span { font-size:.74rem; color:var(--muted); font-weight:700; }
+
+  .counter { font-size:.8rem; color:var(--muted); font-family:var(--mono); }
+  .counter.over { color:var(--crit); font-weight:700; }
+  .notice { background:var(--surface-2); border:1px solid var(--line); border-radius:12px; padding:.7rem .9rem; font-size:.85rem; margin:.8rem 0; }
+  .empty { color:var(--muted); font-size:.9rem; padding:.6rem 0; }
+  .copied { color:var(--good); font-weight:700; font-size:.85rem; }
+  section[hidden] { display:none; }
+</style>
+</head>
+<body>
+<header class="top"><div class="top-in">
+  <div class="logo"><svg viewBox="0 0 32 32" fill="none"><path d="M9 24V8h5a4.5 4.5 0 0 1 1.6 8.7L22 24h-4.4l-5-6H12.6v6z" fill="#fff"/></svg></div>
+  <h1 class="brand">Cardinal Job Search<small>outreach copilot — drafts, tracking &amp; follow-ups. You hit send.</small></h1>
+  <button class="theme" id="themeBtn" aria-label="Toggle theme">◐</button>
+</div></header>
+
+<div class="wrap">
+  <div class="modes" role="tablist">
+    <button role="tab" data-tab="today" aria-selected="true">Today</button>
+    <button role="tab" data-tab="pipeline" aria-selected="false">Pipeline</button>
+    <button role="tab" data-tab="compose" aria-selected="false">Compose</button>
+    <button role="tab" data-tab="profile" aria-selected="false">Profile</button>
+  </div>
+
+  <!-- TODAY -->
+  <section id="tab-today">
+    <div class="stats" id="stats"></div>
+    <div class="card">
+      <h2>Follow-ups due</h2>
+      <p class="hint">Consistent, polite follow-up is what turns applications into interviews. Anything due or overdue shows here.</p>
+      <div id="dueList"></div>
+    </div>
+    <div class="card">
+      <h2>Upcoming interviews</h2>
+      <div id="interviewList"></div>
+    </div>
+    <div class="notice">Everything is drafted here and sent by <em>you</em> on LinkedIn — no bots touch your account, so it never risks a LinkedIn restriction, and every message goes out personalized.</div>
+  </section>
+
+  <!-- PIPELINE -->
+  <section id="tab-pipeline" hidden>
+    <div class="card">
+      <h2>Add a target job</h2>
+      <div class="row">
+        <div><label for="jCompany">Company</label><input id="jCompany" placeholder="Acme Health"></div>
+        <div><label for="jRole">Role</label><input id="jRole" placeholder="Operations Manager"></div>
+      </div>
+      <div class="row">
+        <div><label for="jContact">Contact name (recruiter / hiring manager)</label><input id="jContact" placeholder="Jordan Lee"></div>
+        <div><label for="jContactTitle">Contact title</label><input id="jContactTitle" placeholder="Senior Recruiter"></div>
+      </div>
+      <label for="jLink">Job / LinkedIn link</label><input id="jLink" placeholder="https://www.linkedin.com/jobs/view/…">
+      <label for="jNotes">Notes (why this one, keywords from the posting)</label><textarea id="jNotes" rows="2"></textarea>
+      <div class="btnrow"><button class="btn primary" id="addJobBtn">Add to pipeline</button></div>
+    </div>
+    <div class="card">
+      <h2>Pipeline</h2>
+      <div id="jobList"></div>
+    </div>
+    <div class="card">
+      <h2>Backup</h2>
+      <div class="btnrow">
+        <button class="btn" id="exportBtn">Export JSON</button>
+        <label class="btn" style="margin:0">Import JSON<input type="file" id="importFile" accept="application/json" hidden></label>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPOSE -->
+  <section id="tab-compose" hidden>
+    <div class="card">
+      <h2>Generate a message</h2>
+      <p class="hint">Pick the job and the moment. The draft below is built from your profile + that job's details — edit it so it sounds like you, then copy and send it on LinkedIn.</p>
+      <label for="cJob">Job</label><select id="cJob"></select>
+      <label for="cTemplate">Message type</label>
+      <select id="cTemplate">
+        <option value="connect">Connection request note (300-char limit)</option>
+        <option value="firstMessage">First message after connecting</option>
+        <option value="appliedFollowup">Follow-up after applying</option>
+        <option value="referral">Referral ask (someone you know at the company)</option>
+        <option value="nudge">Gentle nudge (no reply after ~1 week)</option>
+        <option value="scheduling">Interview scheduling reply</option>
+        <option value="thanks">Thank-you after interview</option>
+      </select>
+      <label for="cText">Draft</label>
+      <textarea id="cText" rows="9"></textarea>
+      <div class="btnrow">
+        <button class="btn primary" id="copyBtn">Copy</button>
+        <button class="btn" id="regenBtn">Regenerate</button>
+        <button class="btn" id="sentBtn">Mark sent → schedule follow-up</button>
+        <span class="counter" id="charCount"></span>
+        <span class="copied" id="copiedMsg" hidden>Copied ✓</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROFILE -->
+  <section id="tab-profile" hidden>
+    <div class="card">
+      <h2>Your profile</h2>
+      <p class="hint">This is the raw material every message is personalized from. Saved only on this device.</p>
+      <div class="row">
+        <div><label for="pName">Full name</label><input id="pName" placeholder="Rob Brizzi"></div>
+        <div><label for="pRole">Target role</label><input id="pRole" placeholder="Operations / Care Program Manager"></div>
+      </div>
+      <label for="pPitch">One-line pitch (who you are, in one sentence)</label>
+      <input id="pPitch" placeholder="I build and run programs that families and care teams actually use.">
+      <label for="pWin">A concrete, provable win (numbers help)</label>
+      <input id="pWin" placeholder="Launched a caregiver toolkit adopted by 3 NC agencies in its first year.">
+      <label for="pStrengths">Top strengths (comma-separated, 2–3)</label>
+      <input id="pStrengths" placeholder="program launches, family communication, vendor management">
+      <div class="row">
+        <div><label for="pCity">Location</label><input id="pCity" placeholder="Raleigh, NC"></div>
+        <div><label for="pAvail">Availability</label><input id="pAvail" placeholder="available immediately"></div>
+      </div>
+      <div class="btnrow"><button class="btn primary" id="saveProfileBtn">Save profile</button><span class="copied" id="savedMsg" hidden>Saved ✓</span></div>
+    </div>
+  </section>
+</div>
+
+<script>
+"use strict";
+const LS = "cardinal.jobsearch.v1";
+const $ = id => document.getElementById(id);
+const todayStr = () => new Date().toISOString().slice(0,10);
+const addDays = (d, n) => { const t = new Date(d + "T12:00:00"); t.setDate(t.getDate()+n); return t.toISOString().slice(0,10); };
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+const STAGES = ["saved","applied","outreach","replied","interview","offer","closed"];
+const STAGE_LABEL = { saved:"Saved", applied:"Applied", outreach:"Outreach sent", replied:"Replied", interview:"Interview", offer:"Offer", closed:"Closed" };
+
+let state = load();
+function load() {
+  try { const s = JSON.parse(localStorage.getItem(LS)); if (s && s.jobs) return s; } catch (e) {}
+  return { profile:{}, jobs:[] };
+}
+function save() { localStorage.setItem(LS, JSON.stringify(state)); }
+
+/* ---------- theme ---------- */
+$("themeBtn").onclick = () => {
+  const cur = document.documentElement.dataset.theme;
+  const next = cur === "dark" ? "light" : cur === "light" ? "" : (matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "dark");
+  if (next) document.documentElement.dataset.theme = next; else delete document.documentElement.dataset.theme;
+};
+
+/* ---------- tabs ---------- */
+document.querySelectorAll(".modes button").forEach(b => b.onclick = () => {
+  document.querySelectorAll(".modes button").forEach(x => x.setAttribute("aria-selected", x === b));
+  ["today","pipeline","compose","profile"].forEach(t => $("tab-"+t).hidden = (t !== b.dataset.tab));
+  render();
+});
+
+/* ---------- profile ---------- */
+const PF = ["pName","pRole","pPitch","pWin","pStrengths","pCity","pAvail"];
+function loadProfileForm() { PF.forEach(k => { $(k).value = state.profile[k] || ""; }); }
+$("saveProfileBtn").onclick = () => {
+  PF.forEach(k => state.profile[k] = $(k).value.trim());
+  save();
+  $("savedMsg").hidden = false; setTimeout(() => $("savedMsg").hidden = true, 1500);
+  render();
+};
+
+/* ---------- pipeline ---------- */
+$("addJobBtn").onclick = () => {
+  const company = $("jCompany").value.trim(), role = $("jRole").value.trim();
+  if (!company || !role) { alert("Company and role are required."); return; }
+  state.jobs.unshift({
+    id: Date.now().toString(36) + Math.random().toString(36).slice(2,6),
+    company, role,
+    contact: $("jContact").value.trim(),
+    contactTitle: $("jContactTitle").value.trim(),
+    link: $("jLink").value.trim(),
+    notes: $("jNotes").value.trim(),
+    stage: "saved",
+    added: todayStr(),
+    nextAction: todayStr(),          // do something about a new job today
+    interviewDate: "",
+    log: []
+  });
+  ["jCompany","jRole","jContact","jContactTitle","jLink","jNotes"].forEach(k => $(k).value = "");
+  save(); render();
+};
+
+function setStage(id, stage) {
+  const j = state.jobs.find(x => x.id === id); if (!j) return;
+  j.stage = stage;
+  j.log.push(todayStr() + "  stage → " + STAGE_LABEL[stage]);
+  if (stage === "interview" && !j.interviewDate) j.interviewDate = prompt("Interview date (YYYY-MM-DD)?", addDays(todayStr(), 3)) || "";
+  if (stage === "offer" || stage === "closed") j.nextAction = "";
+  save(); render();
+}
+function delJob(id) {
+  const j = state.jobs.find(x => x.id === id);
+  if (j && confirm("Remove " + j.company + " — " + j.role + " from the pipeline?")) {
+    state.jobs = state.jobs.filter(x => x.id !== id); save(); render();
+  }
+}
+
+function jobCard(j) {
+  const due = j.nextAction && j.nextAction <= todayStr();
+  const overdue = j.nextAction && j.nextAction < todayStr();
+  const div = document.createElement("div");
+  div.className = "job" + (overdue ? " overdue" : due ? " due" : "");
+  div.innerHTML =
+    '<div class="head"><strong>' + esc(j.company) + '</strong> — ' + esc(j.role) +
+    ' <span class="pill ' + j.stage + '">' + STAGE_LABEL[j.stage] + '</span></div>' +
+    '<div class="meta">' +
+      (j.contact ? esc(j.contact) + (j.contactTitle ? " (" + esc(j.contactTitle) + ")" : "") + " · " : "") +
+      (j.nextAction ? "next action " + j.nextAction + " · " : "") +
+      (j.interviewDate ? "interview " + j.interviewDate + " · " : "") +
+      "added " + j.added +
+    '</div>' +
+    (j.link ? '<div class="meta"><a href="' + esc(j.link) + '" target="_blank" rel="noopener">job posting ↗</a></div>' : "") +
+    (j.log.length ? '<div class="log">' + esc(j.log.slice(-3).join("\n")) + '</div>' : "");
+  const row = document.createElement("div"); row.className = "btnrow";
+  const sel = document.createElement("select");
+  sel.style.width = "auto";
+  STAGES.forEach(s => { const o = document.createElement("option"); o.value = s; o.textContent = STAGE_LABEL[s]; if (s === j.stage) o.selected = true; sel.append(o); });
+  sel.onchange = () => setStage(j.id, sel.value);
+  const compose = document.createElement("button"); compose.className = "btn small"; compose.textContent = "Compose ✍";
+  compose.onclick = () => { openCompose(j.id); };
+  const del = document.createElement("button"); del.className = "btn small danger"; del.textContent = "Remove";
+  del.onclick = () => delJob(j.id);
+  row.append(sel, compose, del);
+  div.append(row);
+  return div;
+}
+
+/* ---------- compose ---------- */
+function profileBits() {
+  const p = state.profile;
+  const first = (p.pName || "").split(" ")[0] || "";
+  const strengths = (p.pStrengths || "").split(",").map(s => s.trim()).filter(Boolean);
+  return {
+    name: p.pName || "[your name]", first: first || "[first name]",
+    role: p.pRole || "[target role]",
+    pitch: p.pPitch || "[one-line pitch]",
+    win: p.pWin || "[a concrete win]",
+    s1: strengths[0] || "[strength]", s2: strengths[1] || strengths[0] || "[strength]",
+    city: p.pCity || "", avail: p.pAvail || "available to start soon"
+  };
+}
+function contactFirst(j) { return (j.contact || "").split(" ")[0] || "there"; }
+
+const TEMPLATES = {
+  connect: (p, j) =>
+`Hi ${contactFirst(j)} — I just applied for the ${j.role} role at ${j.company}. ${p.pitch} I'd love to connect and am happy to share more. — ${p.first}`,
+
+  firstMessage: (p, j) =>
+`Hi ${contactFirst(j)}, thanks for connecting! I applied for the ${j.role} opening at ${j.company} and wanted to reach out directly.
+
+${p.pitch} Most recently: ${p.win}
+
+I think my background in ${p.s1} and ${p.s2} lines up well with what the posting describes${j.notes ? " — especially " + j.notes.split("\n")[0] : ""}. I'm ${p.avail} and would welcome even a brief call to see if it's a fit. Either way, glad to be connected!
+
+${p.first}`,
+
+  appliedFollowup: (p, j) =>
+`Hi ${contactFirst(j)}, I applied for the ${j.role} position at ${j.company} earlier this week and wanted to follow up while it's fresh.
+
+Quick version of why I'm a strong match: ${p.win} My core strengths — ${p.s1} and ${p.s2} — map directly onto the role.
+
+If it's useful, I'm happy to send anything else or find 15 minutes to talk. Thanks for your time!
+
+${p.first}`,
+
+  referral: (p, j) =>
+`Hi ${contactFirst(j)}! Hope you're doing well. I saw that ${j.company} has an opening for ${j.role}, and it looks like a genuinely good fit — ${p.pitch}
+
+Would you be comfortable referring me, or pointing me to the right person to talk to? Happy to send you my resume and a short blurb to make it zero work on your end. And of course, no pressure at all if not.
+
+Thanks either way!
+${p.first}`,
+
+  nudge: (p, j) =>
+`Hi ${contactFirst(j)}, just floating this back to the top of your inbox — I know hiring weeks get busy. Still very interested in the ${j.role} role at ${j.company} and ${p.avail}. If there's a better person to speak with, I'd appreciate a pointer. Thanks!
+
+${p.first}`,
+
+  scheduling: (p, j) =>
+`Hi ${contactFirst(j)}, that's great news — I'd be glad to interview for the ${j.role} role. I'm flexible this week and next; mornings generally work best, but I'll fit your team's schedule. Just send a time (and a calendar invite if that's easiest) and I'll be there. Looking forward to it!
+
+${p.first}`,
+
+  thanks: (p, j) =>
+`Hi ${contactFirst(j)}, thank you for taking the time to talk with me about the ${j.role} role today. Our conversation reinforced how much the work at ${j.company} lines up with what I do best — ${p.s1} in particular.
+
+If anything else would be helpful from my side, just say the word. Looking forward to next steps!
+
+${p.first}`
+};
+
+function fillComposeJobs(selectedId) {
+  const sel = $("cJob"); sel.innerHTML = "";
+  const open = state.jobs.filter(j => j.stage !== "closed");
+  if (!open.length) { const o = document.createElement("option"); o.textContent = "— add a job in Pipeline first —"; o.value = ""; sel.append(o); return; }
+  open.forEach(j => {
+    const o = document.createElement("option");
+    o.value = j.id; o.textContent = j.company + " — " + j.role;
+    if (j.id === selectedId) o.selected = true;
+    sel.append(o);
+  });
+}
+function generate() {
+  const j = state.jobs.find(x => x.id === $("cJob").value);
+  if (!j) { $("cText").value = "Add a job to the pipeline first, then come back here."; updateCount(); return; }
+  $("cText").value = TEMPLATES[$("cTemplate").value](profileBits(), j);
+  updateCount();
+}
+function updateCount() {
+  const n = $("cText").value.length;
+  const isConnect = $("cTemplate").value === "connect";
+  const el = $("charCount");
+  el.textContent = isConnect ? (n + " / 300 chars") : (n + " chars");
+  el.classList.toggle("over", isConnect && n > 300);
+}
+function openCompose(jobId) {
+  document.querySelector('.modes button[data-tab="compose"]').click();
+  fillComposeJobs(jobId);
+  generate();
+}
+$("cJob").onchange = generate;
+$("cTemplate").onchange = generate;
+$("regenBtn").onclick = generate;
+$("cText").oninput = updateCount;
+$("copyBtn").onclick = async () => {
+  try { await navigator.clipboard.writeText($("cText").value); }
+  catch (e) { $("cText").select(); document.execCommand("copy"); }
+  $("copiedMsg").hidden = false; setTimeout(() => $("copiedMsg").hidden = true, 1500);
+};
+$("sentBtn").onclick = () => {
+  const j = state.jobs.find(x => x.id === $("cJob").value);
+  if (!j) return;
+  const type = $("cTemplate").options[$("cTemplate").selectedIndex].text;
+  j.log.push(todayStr() + "  sent: " + type);
+  if (j.stage === "saved" || j.stage === "applied") j.stage = "outreach";
+  j.nextAction = addDays(todayStr(), 5);   // follow up in 5 days if no reply
+  save(); render();
+  alert("Logged. Follow-up scheduled for " + j.nextAction + " — it'll appear on Today if you haven't heard back.");
+};
+
+/* ---------- today ---------- */
+function renderToday() {
+  const jobs = state.jobs;
+  const active = jobs.filter(j => !["offer","closed"].includes(j.stage));
+  const stats = [
+    [active.length, "active"],
+    [jobs.filter(j => ["applied","outreach","replied","interview"].includes(j.stage)).length, "applied"],
+    [jobs.filter(j => j.stage === "interview").length, "interviews"],
+    [jobs.filter(j => j.stage === "offer").length, "offers"]
+  ];
+  $("stats").innerHTML = stats.map(s => '<div class="stat"><b>' + s[0] + '</b><span>' + s[1] + '</span></div>').join("");
+
+  const dueEl = $("dueList"); dueEl.innerHTML = "";
+  const due = active.filter(j => j.nextAction && j.nextAction <= todayStr())
+                    .sort((a,b) => a.nextAction.localeCompare(b.nextAction));
+  if (!due.length) dueEl.innerHTML = '<div class="empty">Nothing due — add jobs to the pipeline or enjoy the quiet.</div>';
+  due.forEach(j => dueEl.append(jobCard(j)));
+
+  const ivEl = $("interviewList"); ivEl.innerHTML = "";
+  const iv = jobs.filter(j => j.stage === "interview" && j.interviewDate)
+                 .sort((a,b) => a.interviewDate.localeCompare(b.interviewDate));
+  if (!iv.length) ivEl.innerHTML = '<div class="empty">No interviews scheduled yet. That\'s what the follow-ups are for.</div>';
+  iv.forEach(j => ivEl.append(jobCard(j)));
+}
+
+/* ---------- backup ---------- */
+$("exportBtn").onclick = () => {
+  const blob = new Blob([JSON.stringify(state, null, 2)], { type: "application/json" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "cardinal-jobsearch-" + todayStr() + ".json";
+  a.click(); URL.revokeObjectURL(a.href);
+};
+$("importFile").onchange = async e => {
+  const f = e.target.files[0]; if (!f) return;
+  try {
+    const s = JSON.parse(await f.text());
+    if (!s || !Array.isArray(s.jobs)) throw new Error("bad file");
+    state = s; save(); loadProfileForm(); render();
+  } catch (err) { alert("That file doesn't look like a Cardinal Job Search export."); }
+  e.target.value = "";
+};
+
+/* ---------- render ---------- */
+function render() {
+  const list = $("jobList"); list.innerHTML = "";
+  if (!state.jobs.length) list.innerHTML = '<div class="empty">No jobs yet — add your first target above.</div>';
+  state.jobs.forEach(j => list.append(jobCard(j)));
+  fillComposeJobs($("cJob").value);
+  if (!$("tab-compose").hidden) generate();
+  renderToday();
+}
+
+loadProfileForm();
+fillComposeJobs();
+generate();
+render();
+</script>
+</body>
+</html>
