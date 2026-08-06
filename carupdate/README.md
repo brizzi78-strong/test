@@ -54,5 +54,13 @@ Open `index.html` in any browser — no build, no dependencies, works offline.
 One file: HTML + CSS custom-property design tokens (light/dark, matching the
 Cardinal HR palette family) + vanilla JavaScript. A small in-page `CATALOG`
 holds the "latest" versions and release notes; `FLEET` holds sample vehicles and
-their installed versions. Preconditions are randomised per check to make the
-safety gate feel real. No frameworks, no external assets.
+their installed versions. The real-world vehicles carry a `names` map that
+overrides the generic module labels with each brand's actual system names
+(e.g. the Nissan Sentra shows *NissanConnect Infotainment* and *Safety Shield
+360 / ProPILOT Assist*; the Toyota RAV4 shows *Toyota Safety Sense 2.0*; the
+Lexus RX shows *Lexus Safety System+ 2.0*). Preconditions are randomised per
+check to make the safety gate feel real. No frameworks, no external assets.
+
+The version numbers themselves remain illustrative sample data — manufacturers
+don't publish per-module OTA version strings — so the demo reads true-to-life
+without claiming to be a real vehicle connection.

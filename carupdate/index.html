@@ -234,11 +234,17 @@
     { id:"terra-suv", emoji:"🚐", name:"Terra Family SUV", year:2024, vin:"3TER24SUV0021188",
       modules:{ infotainment:"8.0.0", "driver-assist":"4.1.0", battery:"3.0.1", climate:"2.0.0" } },
     { id:"nissan-sentra", emoji:"🚗", name:"Nissan Sentra", year:2026, vin:"3N1AB8CV6RY100126",
-      modules:{ infotainment:"7.8.2", "driver-assist":"3.9.0", engine:"3.8.1", climate:"1.9.0" } },
+      modules:{ infotainment:"7.8.2", "driver-assist":"3.9.0", engine:"3.8.1", climate:"1.9.0" },
+      names:{ infotainment:"NissanConnect Infotainment", "driver-assist":"Safety Shield 360 / ProPILOT Assist",
+              engine:"Engine Control Module (ECM)", climate:"Automatic Climate Control" } },
     { id:"toyota-rav4", emoji:"🚙", name:"Toyota RAV4", year:2020, vin:"2T3P1RFV0LW100420",
-      modules:{ infotainment:"6.4.0", "driver-assist":"2.9.2", engine:"3.5.0", climate:"1.6.1" } },
+      modules:{ infotainment:"6.4.0", "driver-assist":"2.9.2", engine:"3.5.0", climate:"1.6.1" },
+      names:{ infotainment:"Entune 3.0 Audio", "driver-assist":"Toyota Safety Sense 2.0",
+              engine:"Engine Control Module (ECM)", climate:"Automatic Climate Control" } },
     { id:"lexus-rx350", emoji:"🚙", name:"Lexus RX 350", year:2019, vin:"2T2BZMCA0KC100119",
-      modules:{ infotainment:"6.1.0", "driver-assist":"2.6.0", engine:"3.6.0", climate:"1.5.0" } },
+      modules:{ infotainment:"6.1.0", "driver-assist":"2.6.0", engine:"3.6.0", climate:"1.5.0" },
+      names:{ infotainment:"Lexus Display Audio / Enform", "driver-assist":"Lexus Safety System+ 2.0",
+              engine:"Engine Control Module (ECM)", climate:"Climate Concierge" } },
   ];
 
   // The "cloud" latest versions + release notes. If latest > installed, it's an available update.
@@ -280,7 +286,7 @@
     for(const key in cur){
       const cat = CATALOG[key];
       if(cat && cmpVer(cat.latest, cur[key]) > 0){
-        out.push({ key, from:cur[key], to:cat.latest, ...cat });
+        out.push({ key, from:cur[key], to:cat.latest, ...cat, label: (v.names && v.names[key]) || cat.label });
       }
     }
     // critical first, then recommended, then optional
@@ -309,8 +315,9 @@
     const box = $("#sw-current"); box.innerHTML = "";
     Object.keys(cur).forEach(key => {
       const cat = CATALOG[key]; if(!cat) return;
+      const label = (v.names && v.names[key]) || cat.label;
       const row = el("div", "sw-line");
-      const left = el("span"); left.innerHTML = `${cat.emoji} <span>${cat.label}</span>`;
+      const left = el("span"); left.innerHTML = `${cat.emoji} <span>${label}</span>`;
       const right = el("span", "ver muted"); right.textContent = "v" + cur[key];
       row.append(left, right); box.appendChild(row);
     });
