@@ -1,0 +1,10 @@
+{
+  "name": "scout",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Cardinal Scout — book scouting console: a demand catalog, an appraisal engine (buy/pass with margin math), and an inventory tracked from bought to listed to sold",
+  "type": "module",
+  "engines": { "node": ">=22.18" },
+  "scripts": { "start": "node src/index.ts", "test": "node --test", "typecheck": "tsc --noEmit" },
+  "devDependencies": { "@types/node": "^22.8.5", "typescript": "~5.8.0" }
+}
