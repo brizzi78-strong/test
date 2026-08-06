@@ -2,12 +2,14 @@
 
 *The pharma years — the year the ranking said I was the best at this.*
 
-> **Draft scene — for Rob's review.** The anchor fact is yours and true:
-> you became the number one rep in the nation. The stand-ins: which company
-> and year, how you found out, the stage, and the call afterward. The Lou
-> beat is deliberately left as a doorway, not dialogue — his words are
-> sacred material and only you can write them. Panel review pending.
-> Details to confirm at the bottom.
+> **Draft scene — for Rob's review.** Now anchored in your voice note (see
+> `robs-fragments.md`): an underperforming split territory, accounts nobody
+> had been calling on, 200+ reps in the diabetes division — and **Santa
+> Rosa County, #1 in the country for Ozempic sales, Q3 2024.** Your frame
+> is collective: "believing, working together, inspiring each other."
+> Remaining stand-ins: how you found out, the stage/ballroom, the call
+> afterward. The Lou beat stays a doorway, not dialogue — his words are
+> sacred and only you can write them. Details to confirm at the bottom.
 
 ---
 
@@ -15,11 +17,15 @@ There is a list, in that business, and everyone knows where they are on it.
 
 It arrives in dashboards and district calls and the tone your manager uses in October. You can feel your number the way you can feel weather. And the number was always two weeks old — that's how long a prescription took to travel from a pharmacy counter to whoever counted such things to me. You could have the best week of your career and the dashboard wouldn't know it for two more. You worked blind in the gap, and found out later who you'd been.
 
-I had been climbing that list for years — top of the district, top of the region, close-but at the national meeting while somebody else walked across the stage.
+Nobody expected it from my territory. It was the leftover of a split — an underperforming stretch of accounts that mostly hadn't been called on in anyone's recent memory. Santa Rosa County. A little county most of the country couldn't find on a map. The kind of territory you hand somebody and wish them luck.
 
-Then one year the list ran out of names above mine.
+There were over two hundred reps in the diabetes division. I'll be conservative and leave it at that.
 
-Number one in the nation. Out of everybody, carrying the same bag, saying the same words, working the same hallways. Me. The kid from New Jersey who started this job in a parking lot, looking up the disease on his phone.
+It took time. It took every hallway trick in this book and a few this book hasn't gotten to. And it wasn't a solo act, whatever the ranking said — it was believing the thing could be done, and a handful of us working together and inspiring each other in a place nobody was watching.
+
+Third quarter of 2024, the list ran out of names above ours.
+
+Number one in the country for Ozempic sales. Out of everybody, carrying the same bag, saying the same words, working better zip codes. A little county. Me — the kid from New Jersey who started this job in a parking lot, looking up the disease on his phone. Mind-boggling is the word I still use, because I was there and I still half don't believe it.
 
 I'd like to tell you I took it in stride. I didn't. I wanted it the way I had wanted my hand raised on a mat — wanted it in my body, since the wrestling room. When they said my name, the roar in that ballroom was for me, and I stood there inside it and thought: *so this is the top of the list.*
 
@@ -41,7 +47,8 @@ Then it left me, quietly, the way it does when a family holds the door of a room
 
 ## Details to confirm or replace (Rob)
 
-- Which company, which year, which product's ranking — and what the award actually was (President's Club is a top-N club; "#1 in the nation" is a single ranking — the anchor is #1). **When filling in specifics, keep insider numbers out** (sales figures, quota attainment, call-plan detail) per `nda-guardrails.md` — the award and year are yours; the metrics aren't.
+- **Anchored (your voice note):** Santa Rosa County; the split/underperforming territory; 200+ reps; #1 in the country for Ozempic sales, Q3 2024; the collective frame. Still needed: when you took the territory, who "together" was, how you found out, and what recognition followed (ballroom/stage/Universal — which trip goes with which achievement). **Keep insider numbers out** (sales figures, quota attainment, call-plan detail) per `nda-guardrails.md`.
+- **Timeline cascade (book-wide):** Q3 2024 in the field means the craze/media/Wild West chapters' "after I turned in my bag" framing is wrong — you lived those eras carrying the bag. Your actual departure date re-points those chapters. Also the hallway chapter's "New Jersey, fall of 2019" needs your territory geography and dates.
 - The Universal Studios beat is your true anchor (closed for the sales force, two hours) — confirm which trip/year, and whether it was the same Orlando meeting as the keynote scene.
 - How you actually found out — stage at the national meeting, a call from your manager, the dashboard? The drafted stage moment is a stand-in.
 - **The two-week data lag (added from your fragment):** confirm the lag as you lived it — was it two weeks flat for your products/era, and what did the blind gap actually feel like at quarter's end? (Kept vendor-generic on the page — "whoever counted such things" — which is also the NDA-safe register.)

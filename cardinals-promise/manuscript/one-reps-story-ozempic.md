@@ -15,6 +15,8 @@
 
 I carried the pitch in my bag for a year and a half. I knew it cold. The clinical data. The A1C reductions. The once-a-week dosing. The objection handlers, in order, like wrestling drills. I could deliver the whole thing in ninety seconds in a hallway while a doctor walked away from me.
 
+And underneath the pitch was the part that still amazes me. People who had been on insulin for years — who still had some pancreas left — could move to one injection a week and watch their A1C come down under seven for the first time in a decade. Some came off insulin altogether. And the studies kept landing, public knowledge, one after another: kidneys preserved, cardiac events down, early trials about memory itself. Behind every call was the clinical version of the question I'd eventually learn to ask out loud: *who are these people?* Which names in this office's panel could this still reach?
+
 Most days, that's exactly what selling Ozempic looked like. A hallway. A walking doctor. Ninety seconds.
 
 Then one Tuesday I stopped doing it.
@@ -68,6 +70,7 @@ Hospice taught me what comes after. I still ask the question. Now I stay for the
 - The real office, town, and year — the draft assumes fall 2019 (Ozempic launched in the US in February 2018; the panel flagged that "two years in" would collide with COVID lockouts).
 - The real patient story you remember most from the Ozempic years — and decide whether she gets a name. If not, keep the not-knowing as part of the story; it's doing honest work now.
 - The real first question you used to open doors when you dropped the pitch — exact words.
+- **Anchored addition (your voice note, 2026-07-30):** the insulin-to-once-weekly wonder, the emerging studies (kidney, cardiac, Alzheimer's trials), and "who are these people?" — the A1C is rendered "under seven" (you said "three," assumed slip — confirm), and note the on-label line: the Alzheimer's material was public science, not something you could sell with.
 - The plaque / ranking / bonus details — replace with what you actually earned, or cut.
 - Whether the doctor's "you have never once let me down" beat matches anything you witnessed — it's the panel's proposal for where the unspoken words land; swap in the true version if there is one.
 - Whether this scene lands in the memoir's pharma-years chapter or stands alone as a talk/email piece.

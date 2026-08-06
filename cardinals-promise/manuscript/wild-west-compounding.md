@@ -2,19 +2,29 @@
 
 *A chapter from the pharma years — what happened after the drug I sold became famous.*
 
-> **Draft chapter — for Rob's review.** Built from your arc: you sold the
-> real thing, then left the bag behind for home health and hospice, and
-> watched the compounding boom from the outside. The cookout scene is a
-> stand-in; swap in the real person who asked you. This draft has been
-> through the three-reviewer panel (craft, facts, mission); the report is
-> in `reviews/wild-west-panel-report.md`. Details to confirm are at the
+> **Draft chapter — for Rob's review.** The opening is now **anchored in
+> your voice note** (see `robs-fragments.md`): the lunch in Pace, Florida,
+> the rival rep, "compounded Ozempic," and your exact thought. Major
+> timeline correction baked in: you were IN the field during the
+> compounding era (Santa Rosa territory, through Q3 2024), not watching
+> from outside. The cookout scene remains a composite (the demand side)
+> pending a real equivalent. Earlier panel report:
+> `reviews/wild-west-panel-report.md`. Details to confirm are at the
 > bottom.
 
 ---
 
-By the time the drug I used to sell got famous, I had been out of the bag a couple of years.
+I had a lunch scheduled with an important physician in Pace, Florida. I was carrying it in myself — that's the arrangement; the rep brings lunch, the office gives minutes — and there was another rep already standing in the office. You size up another rep's bag on instinct. I asked what product he had.
 
-I found out how famous at a cookout. A friend of a friend heard I used to work for Novo Nordisk and crossed the yard holding her phone like it was evidence. On the screen was a glass vial with a printed label. Semaglutide, it said. Two hundred dollars a month. A telehealth visit that took eleven minutes. She hadn't been able to get Ozempic for four months — the pharmacy kept saying backordered — and her insurance had stopped covering it anyway.
+"Compounded Ozempic," he said.
+
+I sat back, and the thought arrived in exactly these words: *this man is an illegal drug dealer.*
+
+Because Ozempic is a patented medication. There is no such thing as compounded Ozempic. There's the drug — made in factories the FDA walks through, sold in a sealed pen I was federally accountable for down to the box — and there's something else wearing its name. And the something else had reps now. Detailing the same offices. Bringing lunch to my doctors.
+
+That was the supply side, standing in a hallway I'd worked for years. The demand side found me at a cookout.
+
+A friend of a friend heard I worked for Novo Nordisk and crossed the yard holding her phone like it was evidence. On the screen was a glass vial with a printed label. Semaglutide, it said. Two hundred dollars a month. A telehealth visit that took eleven minutes. She hadn't been able to get Ozempic for four months — the pharmacy kept saying backordered — and her insurance had stopped covering it anyway.
 
 "You sold this stuff," she said. "Is this the same thing?"
 
@@ -70,7 +80,9 @@ I still wonder what was in her vial.
 
 ## Details to confirm or replace (Rob)
 
-- The real person who asked you about compounded semaglutide — cookout, church, a hospice family member? Swap in the true moment, what they showed you, and the advice you actually gave (exact words).
+- **Anchored (your voice note):** the Pace lunch, the rival rep, "Compounded Ozempic," and your exact thought. Still needed: what happened next — did you say anything to the rep, the physician, your manager, the company? (Novo's public lawsuits against compounders may intersect your dates.) Note the drafting balance: your gut verdict ("illegal drug dealer") stays as your lived reaction; the chapter's legal nuance (the narrow shortage-era compounding lane, and that "compounded Ozempic" as a phrase was never a real thing — Ozempic is a brand) stays as narration.
+- The cookout scene remains a composite (the demand side) — swap in the real person who asked you, what they showed you, and the advice you actually gave (exact words), or cut it if the chapter stands on Pace alone.
+- **Timeline:** "I was back in hospice rooms by then" (at the early-2025 shortage end) now depends on your actual departure date — you were still in the field Q3 2024. Confirm when you left and adjust that line to the truth.
 - Was there a second encounter — did you ever learn how it turned out? A true second beat would be stronger than the drafted not-knowing; if there wasn't one, the confession as written is the honest version.
 - Your dates: when you left Novo/pharma, so "out of the bag a couple of years" matches your real timeline against the 2022–2024 boom.
 - Whether the systemic detail (shortage rule, salt forms, counterfeit pens, 2025 wind-down) is at the right depth, or should thin further with the weight staying on the two of you.
