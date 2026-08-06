@@ -6,11 +6,14 @@ import {
   checkEligibility,
   daysUntil,
   estimatePell,
+  explainEligibility,
   matchProfile,
+  nearMisses,
   nextDeadline,
   povertyGuideline,
   totalEstimated,
 } from '../domain/engine.ts';
+import { buildIcs } from '../domain/ics.ts';
 import type { Opportunity, StudentProfile } from '../domain/types.ts';
 
 const TODAY = new Date('2026-08-06T12:00:00Z');
@@ -172,6 +175,119 @@ describe('matchProfile', () => {
       matches.reduce((s, m) => s + m.estimatedAmount, 0),
     );
     assert.ok(totalEstimated(matches) > 50000); // strong profile finds serious money
+  });
+});
+
+describe('near misses', () => {
+  it('surfaces opportunities blocked only by fixable criteria, biggest first', () => {
+    // Default test profile: GPA 3.6 (0.1 under Cameron Impact's 3.7), not employed.
+    const misses = nearMisses(profile());
+    const ids = misses.map((m) => m.opportunity.id);
+    assert.ok(ids.includes('cameron-impact'));
+    assert.ok(ids.includes('employer-tuition-127'));
+    for (let i = 1; i < misses.length; i++) {
+      assert.ok(misses[i - 1]!.potentialAmount >= misses[i]!.potentialAmount);
+    }
+    const cameron = misses.find((m) => m.opportunity.id === 'cameron-impact')!;
+    assert.equal(cameron.blockers.length, 1);
+    assert.equal(cameron.blockers[0]!.code, 'gpa');
+    assert.ok(cameron.blockers.every((b) => b.fixable));
+  });
+
+  it('excludes unfixable blockers: state, income, military, degree level', () => {
+    const ids = nearMisses(profile()).map((m) => m.opportunity.id);
+    assert.ok(!ids.includes('gi-bill')); // military affiliation isn't fixable
+    assert.ok(!ids.includes('cal-grant')); // NC resident can't fix CA residency
+    assert.ok(!ids.includes('lifetime-learning-credit')); // HS senior, grad/undergrad only
+  });
+
+  it('treats a GPA more than 0.5 under the cutoff as out of reach', () => {
+    const ids = nearMisses(profile({ gpa: 3.0 })).map((m) => m.opportunity.id);
+    assert.ok(!ids.includes('cameron-impact')); // 3.0 vs 3.7 — not a near miss
+    const report = explainEligibility(
+      profile({ gpa: 3.0 }),
+      CATALOG.find((o) => o.id === 'cameron-impact')!,
+    );
+    assert.equal(report.blockers[0]!.fixable, false);
+  });
+
+  it('flags an unknown GPA as fixable — entering it may unlock money', () => {
+    const misses = nearMisses(profile({ gpa: null }));
+    const cocaCola = misses.find((m) => m.opportunity.id === 'coca-cola-scholars');
+    assert.ok(cocaCola);
+    assert.match(cocaCola.blockers[0]!.message, /enter yours/);
+  });
+
+  it('never lists something the student already matches', () => {
+    const p = profile();
+    const matchedIds = new Set(matchProfile(p, TODAY).map((m) => m.opportunity.id));
+    for (const miss of nearMisses(p)) {
+      assert.ok(!matchedIds.has(miss.opportunity.id));
+    }
+  });
+});
+
+describe('state grants', () => {
+  it('each state grant only matches its own residents', () => {
+    const byState: Array<[string, string]> = [
+      ['CA', 'cal-grant'],
+      ['NY', 'ny-tap'],
+      ['TX', 'texas-grant'],
+      ['FL', 'fl-bright-futures'],
+      ['GA', 'ga-hope'],
+      ['NC', 'next-nc-scholarship'],
+    ];
+    for (const [state, id] of byState) {
+      const opp = CATALOG.find((o) => o.id === id)!;
+      assert.ok(checkEligibility(profile({ state }), opp), `${id} should match ${state}`);
+      assert.equal(checkEligibility(profile({ state: state === 'CA' ? 'NY' : 'CA' }), opp), null);
+    }
+  });
+});
+
+describe('iCalendar export', () => {
+  it('builds one all-day event per deadline with two reminders', () => {
+    const ics = buildIcs(
+      [
+        {
+          id: 'dell-scholars',
+          name: 'Dell Scholars Program',
+          date: '2026-12-01',
+          estimatedAmount: 20000,
+          url: 'https://www.dellscholars.org/scholarship/',
+        },
+      ],
+      TODAY,
+    );
+    assert.ok(ics.startsWith('BEGIN:VCALENDAR'));
+    assert.ok(ics.trimEnd().endsWith('END:VCALENDAR'));
+    assert.equal(ics.match(/BEGIN:VEVENT/g)?.length, 1);
+    assert.equal(ics.match(/BEGIN:VALARM/g)?.length, 2);
+    assert.match(ics, /UID:dell-scholars@aidfinder/);
+    assert.match(ics, /DTSTART;VALUE=DATE:20261201/);
+    assert.match(ics, /DTEND;VALUE=DATE:20261202/); // exclusive end = next day
+    assert.match(ics, /TRIGGER:-P7D/);
+    assert.match(ics, /TRIGGER:-P1D/);
+    assert.match(ics, /est\. \$20\\,000\/yr/); // comma escaped per RFC 5545
+    assert.ok(ics.includes('\r\n')); // CRLF line endings
+  });
+
+  it('folds long lines to 75 octets', () => {
+    const ics = buildIcs(
+      [
+        {
+          id: 'x',
+          name: 'A scholarship with an extremely long name that will absolutely exceed the seventy-five octet line limit',
+          date: '2026-09-15',
+          estimatedAmount: 0,
+          url: 'https://example.com/',
+        },
+      ],
+      TODAY,
+    );
+    for (const line of ics.split('\r\n')) {
+      assert.ok(line.length <= 75, `line too long: ${line}`);
+    }
   });
 });
 

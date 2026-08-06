@@ -9,7 +9,15 @@
 
 import { randomUUID } from 'node:crypto';
 import { CATALOG, findOpportunity } from '../domain/catalog.ts';
-import { daysUntil, matchProfile, nextDeadline, totalEstimated } from '../domain/engine.ts';
+import {
+  daysUntil,
+  matchProfile,
+  nearMisses,
+  nextDeadline,
+  totalEstimated,
+} from '../domain/engine.ts';
+import type { NearMiss } from '../domain/engine.ts';
+import { buildIcs } from '../domain/ics.ts';
 import {
   APPLICATION_STATUSES,
   DEGREE_LEVELS,
@@ -82,6 +90,38 @@ export class AidService {
     const profile = this.requireProfile(ownerId);
     const matches = matchProfile(profile, this.now());
     return { matches, totalEstimated: totalEstimated(matches) };
+  }
+
+  /**
+   * Opportunities the student could realistically unlock (every blocker is
+   * fixable), with what's standing in the way and the dollars at stake.
+   */
+  getNearMisses(ownerId: string): { nearMisses: NearMiss[]; totalPotential: number } {
+    const profile = this.requireProfile(ownerId);
+    const misses = nearMisses(profile);
+    return {
+      nearMisses: misses,
+      totalPotential: misses.reduce((sum, m) => sum + m.potentialAmount, 0),
+    };
+  }
+
+  /** The dated, still-actionable plan items as an iCalendar file with reminders. */
+  getPlanCalendar(ownerId: string): string {
+    const actionable = this.getPlan(ownerId).filter(
+      (item) =>
+        item.nextDeadline !== null &&
+        (item.status === 'unstarted' || item.status === 'planned' || item.status === 'in-progress'),
+    );
+    return buildIcs(
+      actionable.map((item) => ({
+        id: item.opportunity.id,
+        name: item.opportunity.name,
+        date: item.nextDeadline!,
+        estimatedAmount: item.estimatedAmount,
+        url: item.opportunity.url,
+      })),
+      this.now(),
+    );
   }
 
   /**

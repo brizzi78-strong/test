@@ -66,51 +66,175 @@ function startOfUtcDay(d: Date): Date {
 
 // --- matching --------------------------------------------------------------
 
+export interface Blocker {
+  code:
+    | 'degree-level'
+    | 'state'
+    | 'field'
+    | 'gpa'
+    | 'income'
+    | 'citizenship'
+    | 'half-time'
+    | 'community-service'
+    | 'military'
+    | 'employment';
+  message: string;
+  /** True when the student could realistically clear this themselves. */
+  fixable: boolean;
+}
+
+export interface EligibilityReport {
+  /** Criteria the student satisfies, in plain language. */
+  why: string[];
+  /** Criteria that rule the student out; empty means eligible. */
+  blockers: Blocker[];
+}
+
+/** How far under a GPA cutoff still counts as "within reach". */
+const GPA_REACH = 0.5;
+
 /**
- * Check one opportunity against the profile. Returns the reasons it fits, or
- * null if any hard criterion rules it out. Unknown GPA (null) is treated as
- * not meeting a GPA cutoff — better to under-promise.
+ * Check one opportunity against the profile, recording both what fits and
+ * every criterion that doesn't (with whether it's realistically fixable).
+ * Unknown GPA (null) is treated as not meeting a GPA cutoff — better to
+ * under-promise — but flagged fixable, since entering it may unlock money.
  */
-export function checkEligibility(profile: StudentProfile, opp: Opportunity): string[] | null {
+export function explainEligibility(profile: StudentProfile, opp: Opportunity): EligibilityReport {
   const c = opp.criteria;
   const why: string[] = [];
+  const blockers: Blocker[] = [];
 
-  if (c.degreeLevels) {
-    if (!c.degreeLevels.includes(profile.degreeLevel)) return null;
+  if (c.degreeLevels && !c.degreeLevels.includes(profile.degreeLevel)) {
+    blockers.push({
+      code: 'degree-level',
+      message: `only for ${c.degreeLevels.join(' / ')} students`,
+      fixable: false,
+    });
   }
   if (c.states) {
-    if (!c.states.includes(profile.state)) return null;
-    why.push(`open to ${profile.state} residents`);
+    if (!c.states.includes(profile.state)) {
+      blockers.push({
+        code: 'state',
+        message: `only for residents of ${c.states.join(', ')}`,
+        fixable: false,
+      });
+    } else why.push(`open to ${profile.state} residents`);
   }
   if (c.fields) {
-    if (!c.fields.includes(profile.fieldOfStudy)) return null;
-    why.push(`for ${profile.fieldOfStudy} students`);
+    if (!c.fields.includes(profile.fieldOfStudy)) {
+      blockers.push({
+        code: 'field',
+        message: `only for ${c.fields.join(' / ')} majors`,
+        fixable: false,
+      });
+    } else why.push(`for ${profile.fieldOfStudy} students`);
   }
   if (c.minGpa !== undefined) {
-    if (profile.gpa === null || profile.gpa < c.minGpa) return null;
-    why.push(`your GPA meets the ${c.minGpa.toFixed(1)} minimum`);
+    if (profile.gpa === null) {
+      blockers.push({
+        code: 'gpa',
+        message: `requires a ${c.minGpa.toFixed(1)} GPA — enter yours to find out`,
+        fixable: true,
+      });
+    } else if (profile.gpa < c.minGpa) {
+      blockers.push({
+        code: 'gpa',
+        message: `requires a ${c.minGpa.toFixed(1)} GPA (you're at ${profile.gpa.toFixed(2)})`,
+        fixable: c.minGpa - profile.gpa <= GPA_REACH,
+      });
+    } else why.push(`your GPA meets the ${c.minGpa.toFixed(1)} minimum`);
   }
   if (c.maxHouseholdIncome !== undefined) {
-    if (profile.householdIncome > c.maxHouseholdIncome) return null;
-    why.push('your household income fits the need requirement');
+    if (profile.householdIncome > c.maxHouseholdIncome) {
+      blockers.push({
+        code: 'income',
+        message: `need-based: household income above ~$${c.maxHouseholdIncome.toLocaleString('en-US')}`,
+        fixable: false,
+      });
+    } else why.push('your household income fits the need requirement');
   }
-  if (c.requiresCitizenOrEligibleNoncitizen && !profile.usCitizenOrEligibleNoncitizen) return null;
-  if (c.requiresHalfTimePlus && !profile.enrolledHalfTimePlus) return null;
+  if (c.requiresCitizenOrEligibleNoncitizen && !profile.usCitizenOrEligibleNoncitizen) {
+    blockers.push({
+      code: 'citizenship',
+      message: 'requires US citizenship or FAFSA-eligible noncitizen status',
+      fixable: false,
+    });
+  }
+  if (c.requiresHalfTimePlus && !profile.enrolledHalfTimePlus) {
+    blockers.push({
+      code: 'half-time',
+      message: 'requires at least half-time enrollment',
+      fixable: true,
+    });
+  }
   if (c.requiresCommunityService) {
-    if (!profile.communityService) return null;
-    why.push('your community service counts here');
+    if (!profile.communityService) {
+      blockers.push({
+        code: 'community-service',
+        message: 'wants a community-service record — start volunteering now',
+        fixable: true,
+      });
+    } else why.push('your community service counts here');
   }
   if (c.requiresMilitaryAffiliation) {
-    if (!profile.militaryAffiliation) return null;
-    why.push('based on your military affiliation');
+    if (!profile.militaryAffiliation) {
+      blockers.push({
+        code: 'military',
+        message: 'requires military service or a service-member family',
+        fixable: false,
+      });
+    } else why.push('based on your military affiliation');
   }
   if (c.requiresEmployment) {
-    if (!profile.employed) return null;
-    why.push('ask the employer’s HR about tuition assistance');
+    if (!profile.employed) {
+      blockers.push({
+        code: 'employment',
+        message: 'needs an employer offering tuition assistance (many entry-level jobs do)',
+        fixable: true,
+      });
+    } else why.push('ask the employer’s HR about tuition assistance');
   }
 
-  if (why.length === 0) why.push('open eligibility — worth the application');
-  return why;
+  if (blockers.length === 0 && why.length === 0) {
+    why.push('open eligibility — worth the application');
+  }
+  return { why, blockers };
+}
+
+/** Reasons the opportunity fits, or null if anything rules the student out. */
+export function checkEligibility(profile: StudentProfile, opp: Opportunity): string[] | null {
+  const report = explainEligibility(profile, opp);
+  return report.blockers.length === 0 ? report.why : null;
+}
+
+export interface NearMiss {
+  opportunity: Opportunity;
+  /** Everything standing in the way (all fixable, by construction). */
+  blockers: Blocker[];
+  /** What it would be worth once unlocked. */
+  potentialAmount: number;
+}
+
+/**
+ * Opportunities the student does NOT currently match but could realistically
+ * unlock: every blocker is fixable (raise a near-cutoff GPA, log community
+ * service, enroll half-time, use an employer benefit, or just enter a GPA).
+ * Sorted by money at stake.
+ */
+export function nearMisses(
+  profile: StudentProfile,
+  catalog: Opportunity[] = CATALOG,
+): NearMiss[] {
+  const misses: NearMiss[] = [];
+  for (const opp of catalog) {
+    const report = explainEligibility(profile, opp);
+    if (report.blockers.length === 0) continue;
+    if (!report.blockers.every((b) => b.fixable)) continue;
+    const potentialAmount = estimateAmount(profile, opp);
+    if (potentialAmount <= 0) continue;
+    misses.push({ opportunity: opp, blockers: report.blockers, potentialAmount });
+  }
+  return misses.sort((a, b) => b.potentialAmount - a.potentialAmount);
 }
 
 /** Best-guess annual value: Pell is computed; anything else uses the range midpoint. */

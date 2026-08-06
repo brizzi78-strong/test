@@ -8,7 +8,9 @@
  *   PUT    /profile                -> create/replace the profile
  *   GET    /opportunities          -> the full curated catalog
  *   GET    /matches                -> opportunities this student qualifies for
+ *   GET    /near-misses            -> almost-qualified opportunities + what would unlock them
  *   GET    /plan                   -> deadline-ordered action plan
+ *   GET    /plan.ics               -> the plan's deadlines as an iCalendar file with reminders
  *   POST   /applications           -> start tracking an opportunity
  *   GET    /applications           -> tracked applications + money dashboard
  *   PUT    /applications/:id       -> update status / amount won / note
@@ -40,6 +42,8 @@ interface Ctx {
 interface RouteResult {
   status: number;
   body: unknown;
+  /** Defaults to application/json. */
+  contentType?: string;
 }
 
 type Handler = (ctx: Ctx) => RouteResult;
@@ -76,7 +80,13 @@ export function createRequestListener(
   route('PUT', '/profile', (ctx) => ok({ profile: service.updateProfile(ctx.userId, ctx.body) }));
   route('GET', '/opportunities', () => ok({ opportunities: service.listOpportunities() }));
   route('GET', '/matches', (ctx) => ok(service.getMatches(ctx.userId)));
+  route('GET', '/near-misses', (ctx) => ok(service.getNearMisses(ctx.userId)));
   route('GET', '/plan', (ctx) => ok({ plan: service.getPlan(ctx.userId) }));
+  route('GET', '/plan.ics', (ctx) => ({
+    status: 200,
+    body: service.getPlanCalendar(ctx.userId),
+    contentType: 'text/calendar',
+  }));
   route('POST', '/applications', (ctx) => created(service.trackApplication(ctx.userId, ctx.body)));
   route('GET', '/applications', (ctx) => ok(service.listApplications(ctx.userId)));
   route('PUT', '/applications/:id', (ctx) =>
@@ -163,7 +173,7 @@ export function createRequestListener(
       const userId = String(req.headers['x-user-id'] ?? 'demo');
       try {
         const result = found.handler({ userId, params: found.params, body });
-        send(result.status, result.body);
+        send(result.status, result.body, result.contentType ?? 'application/json');
       } catch (err) {
         if (err instanceof DomainError) send(err.status, { error: err.message });
         else {

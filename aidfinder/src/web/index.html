@@ -113,14 +113,21 @@
     <div id="matches"><p class="empty">Save your profile to see matches.</p></div>
   </section>
 
+  <section class="card" id="sec-near">
+    <h2>3. Almost yours <span class="pill" id="near-count"></span></h2>
+    <p class="hint">Money you don’t qualify for <em>yet</em> — but every blocker here is one you could actually fix.</p>
+    <div id="near"><p class="empty">Save your profile to see what’s within reach.</p></div>
+  </section>
+
   <section class="card" id="sec-plan">
-    <h2>3. The automated plan</h2>
-    <p class="hint">Matches and tracked applications merged into one deadline-ordered to-do list. Work it top to bottom.</p>
+    <h2>4. The automated plan</h2>
+    <p class="hint">Matches and tracked applications merged into one deadline-ordered to-do list. Work it top to bottom — or push every deadline into your calendar with week-before and day-before reminders.</p>
+    <div class="actions" style="margin:0 0 12px"><a href="/plan.ics" download="college-money-deadlines.ics"><button class="ghost">📅 Add all deadlines to my calendar (.ics)</button></a></div>
     <div id="plan"><p class="empty">Save your profile to build the plan.</p></div>
   </section>
 
   <section class="card" id="sec-apps">
-    <h2>4. Application tracker</h2>
+    <h2>5. Application tracker</h2>
     <p class="hint">Track each application from planned to won. Enter the award when you win — the header tally is the point of all this.</p>
     <div id="apps"><p class="empty">Nothing tracked yet. Hit “Track” on a match above.</p></div>
   </section>
@@ -211,6 +218,30 @@ function renderMatches(report, trackedIds) {
   }).join('');
 }
 
+function renderNearMisses(data) {
+  $('near-count').textContent = data.nearMisses.length
+    ? data.nearMisses.length + ' within reach · ' + money(data.totalPotential) + '/yr locked'
+    : '';
+  if (data.nearMisses.length === 0) {
+    $('near').innerHTML = '<p class="empty">Nothing on the bubble — every fixable opportunity already matches.</p>';
+    return;
+  }
+  $('near').innerHTML = data.nearMisses.map((n) => {
+    const o = n.opportunity;
+    return `<div class="match">
+      <div>
+        <div class="name"><a href="${o.url}" target="_blank" rel="noopener">${o.name}</a><span class="pill">${o.kind.replace(/-/g, ' ')}</span></div>
+        <div class="meta">${o.sponsor} · ${o.notes}</div>
+        <div class="why" style="color:var(--warn)">🔓 ${n.blockers.map((b) => b.message).join(' · ')}</div>
+      </div>
+      <div class="right">
+        <div class="est" style="color:var(--warn)">${money(n.potentialAmount)}<small>/yr</small></div>
+        <div class="meta">if unlocked</div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
 function renderPlan(plan) {
   if (plan.length === 0) { $('plan').innerHTML = '<p class="empty">Nothing to plan yet.</p>'; return; }
   $('plan').innerHTML = '<table><tr><th>Opportunity</th><th>Next action</th><th class="num">Est./yr</th></tr>' +
@@ -261,8 +292,11 @@ async function refresh() {
   if (!profile) return;
   fillForm(profile);
   const trackedIds = new Set(appsData.applications.map((a) => a.opportunityId));
-  const [report, { plan }] = await Promise.all([api('GET', '/matches'), api('GET', '/plan')]);
+  const [report, near, { plan }] = await Promise.all([
+    api('GET', '/matches'), api('GET', '/near-misses'), api('GET', '/plan'),
+  ]);
   renderMatches(report, trackedIds);
+  renderNearMisses(near);
   renderPlan(plan);
 }
 

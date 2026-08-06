@@ -51,12 +51,14 @@ describe('AidFinder API', () => {
   it('exposes the opportunity catalog without a profile', async () => {
     const res = await call('GET', '/opportunities');
     assert.equal(res.status, 200);
-    assert.ok(res.json.opportunities.length >= 14);
+    assert.ok(res.json.opportunities.length >= 24);
   });
 
   it('requires a profile before matching or planning', async () => {
     assert.equal((await call('GET', '/matches')).status, 400);
+    assert.equal((await call('GET', '/near-misses')).status, 400);
     assert.equal((await call('GET', '/plan')).status, 400);
+    assert.equal((await call('GET', '/plan.ics')).status, 400);
   });
 
   it('validates the profile', async () => {
@@ -126,6 +128,31 @@ describe('AidFinder API', () => {
     const removed = await call('DELETE', `/applications/${appId}`);
     assert.equal(removed.status, 200);
     assert.equal((await call('GET', '/applications')).json.applications.length, 0);
+  });
+
+  it('reports near misses with what would unlock them', async () => {
+    await call('PUT', '/profile', goodProfile);
+    const res = await call('GET', '/near-misses');
+    assert.equal(res.status, 200);
+    // GPA 3.6 is 0.1 under Cameron Impact's 3.7 cutoff.
+    const cameron = res.json.nearMisses.find((n: any) => n.opportunity.id === 'cameron-impact');
+    assert.ok(cameron);
+    assert.equal(cameron.blockers[0].code, 'gpa');
+    assert.ok(res.json.totalPotential >= cameron.potentialAmount);
+  });
+
+  it('exports the plan as an iCalendar file', async () => {
+    await call('PUT', '/profile', goodProfile);
+    await call('POST', '/applications', { opportunityId: 'coca-cola-scholars' });
+    const res = await fetch(base + '/plan.ics', { headers: { 'x-user-id': 'demo' } });
+    assert.equal(res.status, 200);
+    assert.match(res.headers.get('content-type') ?? '', /text\/calendar/);
+    const ics = await res.text();
+    assert.match(ics, /BEGIN:VCALENDAR/);
+    assert.match(ics, /UID:coca-cola-scholars@aidfinder/);
+    assert.match(ics, /BEGIN:VALARM/);
+    // Rolling-deadline items (e.g. tax credits) have no date and are excluded.
+    assert.ok(!ics.includes('UID:aotc@aidfinder'));
   });
 
   it('keeps a tracked application in the plan after the profile stops matching it', async () => {

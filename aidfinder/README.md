@@ -11,13 +11,19 @@ other apps in this repo (domain / service / store / api).
 
 ## What it automates
 
-- **Matching** — a curated catalog of 15 legitimate free-money sources
-  (federal grants, the Next NC Scholarship, national scholarships like
-  Coca-Cola Scholars / Gates / Jack Kent Cooke / Dell / Horatio Alger,
-  the AOTC and Lifetime Learning tax credits, §127 employer tuition
-  assistance, GI Bill) is screened against the student profile: state,
-  degree level, field, GPA, household income/size, service, military
-  affiliation. Every match explains *why* it matched.
+- **Matching** — a curated catalog of 24 legitimate free-money sources
+  (federal grants, the six biggest state programs — Next NC, Cal Grant,
+  NY TAP, TEXAS Grant, Florida Bright Futures, Georgia HOPE — national
+  scholarships like Coca-Cola Scholars / Gates / Jack Kent Cooke / Dell /
+  QuestBridge / Cameron Impact / GE-Reagan / Horatio Alger, the AOTC and
+  Lifetime Learning tax credits, §127 employer tuition assistance, the
+  AmeriCorps Segal award, GI Bill) is screened against the student
+  profile: state, degree level, field, GPA, household income/size,
+  service, military affiliation. Every match explains *why* it matched.
+- **Near misses** — money the student *almost* qualifies for, where every
+  blocker is realistically fixable: a GPA within 0.5 of the cutoff, missing
+  community-service hours, sub-half-time enrollment, or an unused employer
+  benefit. Each shows exactly what would unlock it and the dollars at stake.
 - **Dollar estimates** — each match carries a best-guess annual value. The
   Pell Grant is actually computed (a simplified post-2024 model: full award
   at ≤175% of the federal poverty line, tapering to zero at 400%); the rest
@@ -26,6 +32,10 @@ other apps in this repo (domain / service / store / api).
   deadline-ordered to-do list. Recurring deadlines roll to the correct next
   calendar date automatically, with days-left counts and a single next
   action per item ("Finish and submit — due 2026-12-01 (117 days)").
+- **Calendar reminders** — one click exports every still-actionable
+  deadline as an iCalendar file (`GET /plan.ics`) with week-before and
+  day-before alarms, so the deadlines chase the student instead of the
+  other way around.
 - **The money tracker** — a pipeline (planned → in-progress → submitted →
   won/declined) with a header tally of matched, applied-for, and won
   dollars.
@@ -69,7 +79,9 @@ tenancy style of the sibling apps.
 | `GET /profile` / `PUT /profile` | read / replace the student profile |
 | `GET /opportunities` | the full curated catalog |
 | `GET /matches` | opportunities this student qualifies for, biggest first, with estimates and next deadlines |
+| `GET /near-misses` | almost-qualified opportunities, what would unlock each, and the dollars at stake |
 | `GET /plan` | deadline-ordered action plan across matches + tracked applications |
+| `GET /plan.ics` | the plan's dated deadlines as an iCalendar file with -7d/-1d reminders |
 | `POST /applications` | start tracking an opportunity (`{ "opportunityId": "dell-scholars" }`) |
 | `GET /applications` | tracked applications + money dashboard (potential / submitted / won) |
 | `PUT /applications/:id` | update `status`, `amountWon`, `note` |
