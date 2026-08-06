@@ -1,0 +1,19 @@
+{
+  "name": "fairfare",
+  "private": true,
+  "version": "0.1.0",
+  "description": "FairFare — rider- and driver-first ride hailing: published fare formula, itemized quotes, 10% flat platform take, surge capped at 1.5x and always disclosed, 100% of tips to drivers",
+  "type": "module",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "start": "node src/index.ts",
+    "test": "node --test",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.8.5",
+    "typescript": "~5.8.0"
+  }
+}
