@@ -64,3 +64,15 @@ check to make the safety gate feel real. No frameworks, no external assets.
 The version numbers themselves remain illustrative sample data — manufacturers
 don't publish per-module OTA version strings — so the demo reads true-to-life
 without claiming to be a real vehicle connection.
+
+### Manufacturer-managed vehicles
+
+The real-world vehicles are marked `managed` (with a `manufacturer`). For those,
+CarSync deliberately does **not** offer a click-to-install flow: when updates are
+available it shows them, then explains that this software is delivered by the
+manufacturer over-the-air or at the dealer — not by this page. This is especially
+true for the driver-assistance / safety systems (Safety Shield 360 / ProPILOT
+Assist, Toyota Safety Sense, Lexus Safety System+): those are safety-critical and
+only the manufacturer signs and ships them. The fictional demo vehicles keep the
+full interactive install flow so the mechanics are still visible. This keeps the
+demo honest about what a driver can and can't "upgrade" themselves.
