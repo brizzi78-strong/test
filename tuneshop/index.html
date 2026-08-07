@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
 <title>Velocity Werks — BMW &amp; Mercedes tuning, Orlando FL</title>
-<meta name="description" content="Premium ECU tuning for BMW and Mercedes-Benz in Orlando, Florida. Pick your car, see real dyno-backed gains, and book your tune. Stage 1 and Stage 2 performance software, transmission tuning, and more.">
+<meta name="description" content="Premium ECU tuning for BMW and Mercedes-Benz in Orlando, Florida. Pick your car, see estimated platform gains, and book your tune. Stage 1 and Stage 2 performance software, transmission tuning, and more.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23111827'/%3E%3Cpath d='M6 22L16 8l10 14h-5l-5-7-5 7z' fill='%23F59E0B'/%3E%3C/svg%3E">
 <style>
   :root {
@@ -113,12 +113,12 @@
 <main class="wrap">
   <section class="hero">
     <h2>Your car is capable of <em>more</em>.</h2>
-    <p>Dyno-developed ECU &amp; TCU software for BMW and Mercedes-Benz. Pick your car, see the gains, book your slot. Flashed in-house in Orlando on our dyno — not mail-order guesswork.</p>
+    <p>Dyno-developed ECU &amp; TCU software for BMW and Mercedes-Benz. Pick your car, see estimated gains, book your slot. Flashed in-house in Orlando — not mail-order guesswork.</p>
   </section>
 
   <div class="steps-row">
     <div class="s"><span class="em">🚗</span><b>1. Pick your car</b><small>chassis &amp; engine</small></div>
-    <div class="s"><span class="em">📈</span><b>2. See the gains</b><small>dyno-backed numbers</small></div>
+    <div class="s"><span class="em">📈</span><b>2. See the gains</b><small>typical estimates</small></div>
     <div class="s"><span class="em">📅</span><b>3. Book your tune</b><small>deposit holds the slot</small></div>
   </div>
 
@@ -135,6 +135,7 @@
   <section class="card">
     <h2>Available for <span id="car-label"></span> <span class="chip" id="stock-chip"></span></h2>
     <div id="tunes"></div>
+    <p class="small muted" style="margin:.6rem 0 0">Figures marked <b>est.</b> are <b>typical gains for this platform</b> from the tuning software vendors — not yet measured on your specific car. We confirm actual numbers on the dyno; your results will vary with fuel, mods, and conditions.</p>
   </section>
 
   <!-- Booking -->
@@ -175,7 +176,7 @@
   </section>
 
   <footer>
-    Velocity Werks · Orlando, FL · placeholder brand — rename before launch · quoted gains are typical dyno results for a healthy stock car on 93 octane; individual results vary.
+    Velocity Werks · Orlando, FL · placeholder brand — rename before launch · gains shown are typical platform estimates on 93 octane, not measured on your vehicle; individual results vary.
   </footer>
 </main>
 
@@ -299,8 +300,8 @@
       const card = el("div", "tune");
       const gainRow = (t.hp || t.tq) ?
         `<div class="gains">
-           <div class="g"><b>${m.stock.hp + t.hp} <span>+${t.hp}</span></b><small>hp</small></div>
-           <div class="g"><b>${m.stock.tq + t.tq} <span>+${t.tq}</span></b><small>lb-ft</small></div>
+           <div class="g"><b>${m.stock.hp + t.hp} <span>+${t.hp}</span></b><small>hp · est.</small></div>
+           <div class="g"><b>${m.stock.tq + t.tq} <span>+${t.tq}</span></b><small>lb-ft · est.</small></div>
          </div>` : "";
       card.innerHTML =
         `<div class="head">
