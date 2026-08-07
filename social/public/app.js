@@ -301,7 +301,7 @@
     const a = { id: me.user.id, name: me.profile.name, photo: me.profile.photo };
     const av = el("meAvatar"); const i = avatarInner(a);
     av.style.backgroundImage = i.style ? `url('/api/photo/user/${me.user.id}')` : "none";
-    av.style.background = i.style ? `center/cover url('/api/photo/user/${me.user.id}')` : "linear-gradient(135deg,#5f79e8,#2f4fd4)";
+    av.style.background = i.style ? `center/cover url('/api/photo/user/${me.user.id}')` : "linear-gradient(135deg,#4b57a8,#242c63)";
     paintAvatar(el("composerAvatar"), a);
     el("composerOpen").textContent = `What's on your mind, ${(me.profile.name || "").split(" ")[0] || "friend"}?`;
   }
