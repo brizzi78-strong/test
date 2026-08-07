@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cardinal Rounds — leader rounding that closes the loop</title>
+<style>
+  :root {
+    --red: #b3282d; --red-dark: #8e1f23; --ink: #1e2430; --muted: #66707f;
+    --bg: #f5f6f8; --card: #ffffff; --line: #e3e6ea;
+    --g: #1d8a4e; --y: #c98a00; --r: #c0392b;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--ink); }
+  header { background: var(--red); color: #fff; padding: 18px 24px 0; }
+  header h1 { margin: 0 0 2px; font-size: 22px; }
+  header p { margin: 0 0 14px; opacity: .85; font-size: 13px; }
+  nav { display: flex; gap: 4px; flex-wrap: wrap; }
+  nav button { border: 0; background: rgba(255,255,255,.12); color: #fff; padding: 9px 16px; font-size: 14px; cursor: pointer; border-radius: 8px 8px 0 0; }
+  nav button.active { background: var(--bg); color: var(--ink); font-weight: 600; }
+  main { max-width: 1080px; margin: 0 auto; padding: 22px 24px 60px; }
+  h2 { font-size: 18px; margin: 0 0 14px; }
+  h3 { font-size: 14px; margin: 18px 0 8px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-bottom: 20px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+  .card .big { font-size: 28px; font-weight: 700; }
+  .card .label { font-size: 12px; color: var(--muted); }
+  table { width: 100%; border-collapse: collapse; background: var(--card); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+  th, td { text-align: left; padding: 9px 12px; font-size: 14px; border-top: 1px solid var(--line); }
+  thead th { border-top: 0; background: #fafbfc; font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+  .meter { background: #edeff2; border-radius: 6px; height: 8px; width: 120px; display: inline-block; vertical-align: middle; overflow: hidden; }
+  .meter i { display: block; height: 100%; background: var(--g); }
+  .pill { display: inline-block; border-radius: 999px; padding: 2px 10px; font-size: 12px; font-weight: 600; color: #fff; }
+  .pill.g { background: var(--g); } .pill.y { background: var(--y); } .pill.r { background: var(--r); }
+  form, .panel { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 18px; }
+  label { display: block; font-size: 13px; font-weight: 600; margin: 12px 0 4px; }
+  input, select, textarea { width: 100%; padding: 8px 10px; font-size: 14px; border: 1px solid var(--line); border-radius: 8px; font-family: inherit; }
+  textarea { min-height: 60px; resize: vertical; }
+  .row { display: flex; gap: 12px; } .row > div { flex: 1; }
+  .scale { display: flex; gap: 6px; }
+  .scale button { flex: 1; padding: 8px 0; border: 1px solid var(--line); background: #fff; border-radius: 8px; cursor: pointer; font-size: 14px; }
+  .scale button.sel, .yn button.sel { background: var(--red); color: #fff; border-color: var(--red); }
+  .yn { display: flex; gap: 6px; } .yn button { flex: 1; padding: 8px 0; border: 1px solid var(--line); background: #fff; border-radius: 8px; cursor: pointer; }
+  button.primary { margin-top: 16px; background: var(--red); color: #fff; border: 0; padding: 10px 22px; font-size: 15px; font-weight: 600; border-radius: 8px; cursor: pointer; }
+  button.primary:hover { background: var(--red-dark); }
+  button.small { background: #fff; border: 1px solid var(--line); border-radius: 7px; padding: 5px 10px; font-size: 12px; cursor: pointer; }
+  .harvest { border: 1px dashed var(--line); border-radius: 8px; padding: 10px 12px; margin-top: 8px; }
+  .board { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+  .col { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px; }
+  .col h3 { margin-top: 0; }
+  .issue { border: 1px solid var(--line); border-left: 4px solid var(--muted); border-radius: 8px; padding: 10px 12px; margin-bottom: 10px; font-size: 14px; background: #fff; }
+  .issue.g { border-left-color: var(--g); } .issue.y { border-left-color: var(--y); } .issue.r { border-left-color: var(--r); }
+  .issue .meta { font-size: 12px; color: var(--muted); margin-top: 4px; }
+  .issue .why { font-size: 12px; color: var(--r); margin-top: 4px; font-style: italic; }
+  .kudos { background: #fff8f0; border: 1px solid #f2dcc0; border-radius: 10px; padding: 12px 14px; margin-bottom: 10px; }
+  .kudos .to { font-weight: 700; } .kudos .meta { font-size: 12px; color: var(--muted); margin-top: 4px; }
+  .round-item { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 16px; margin-bottom: 10px; }
+  .round-item summary { cursor: pointer; font-size: 14px; font-weight: 600; }
+  .round-item dl { font-size: 13px; margin: 8px 0 0; }
+  .round-item dt { color: var(--muted); margin-top: 6px; } .round-item dd { margin: 0; }
+  .empty { color: var(--muted); font-size: 14px; padding: 12px 0; }
+  .toast { position: fixed; bottom: 20px; right: 20px; background: var(--ink); color: #fff; padding: 12px 18px; border-radius: 10px; font-size: 14px; opacity: 0; transition: opacity .25s; pointer-events: none; max-width: 380px; }
+  .toast.show { opacity: 1; }
+  @media (max-width: 760px) { .board { grid-template-columns: 1fr; } .row { flex-direction: column; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>Cardinal Rounds</h1>
+  <p>Leader rounding that closes the loop — every round becomes visible follow-through.</p>
+  <nav id="nav"></nav>
+</header>
+<main id="main"></main>
+<div class="toast" id="toast"></div>
+
+<script>
+const api = async (method, path, body) => {
+  const res = await fetch(path, {
+    method,
+    headers: { 'content-type': 'application/json', 'x-user-id': 'demo' },
+    body: body === undefined ? undefined : JSON.stringify(body),
+  });
+  const json = await res.json();
+  if (!res.ok) throw new Error(json.error || res.statusText);
+  return json;
+};
+const el = (tag, attrs = {}, ...children) => {
+  const node = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (k === 'onclick') node.onclick = v;
+    else if (k === 'class') node.className = v;
+    else node.setAttribute(k, v);
+  }
+  for (const child of children.flat()) {
+    node.append(child instanceof Node ? child : document.createTextNode(String(child)));
+  }
+  return node;
+};
+const toast = (msg) => {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(t._h);
+  t._h = setTimeout(() => t.classList.remove('show'), 3500);
+};
+const fmtDate = (iso) => new Date(iso).toLocaleString(undefined, { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' });
+
+const TABS = [
+  ['dashboard', 'Dashboard', renderDashboard],
+  ['round', 'New Round', renderNewRound],
+  ['rounds', 'Round Log', renderRounds],
+  ['stoplight', 'Stoplight Board', renderStoplight],
+  ['recognition', 'Recognition Wall', renderRecognition],
+  ['units', 'Units', renderUnits],
+];
+let activeTab = 'dashboard';
+function nav() {
+  const bar = document.getElementById('nav');
+  bar.replaceChildren(...TABS.map(([id, label]) =>
+    el('button', { class: id === activeTab ? 'active' : '', onclick: () => show(id) }, label)));
+}
+async function show(id) {
+  activeTab = id;
+  nav();
+  const main = document.getElementById('main');
+  main.replaceChildren(el('div', { class: 'empty' }, 'Loading…'));
+  try {
+    await TABS.find(([tid]) => tid === id)[2](main);
+  } catch (err) {
+    main.replaceChildren(el('div', { class: 'empty' }, 'Error: ' + err.message));
+  }
+}
+
+// ---- Dashboard ----
+async function renderDashboard(main) {
+  const s = await api('GET', '/summary');
+  const cards = el('div', { class: 'cards' },
+    el('div', { class: 'card' }, el('div', { class: 'big' }, s.totals.rounds30Days), el('div', { class: 'label' }, 'Rounds, last 30 days')),
+    el('div', { class: 'card' }, el('div', { class: 'big' }, s.totals.issues.yellow + s.totals.issues.red), el('div', { class: 'label' }, 'Open issues (yellow + red)')),
+    el('div', { class: 'card' }, el('div', { class: 'big' }, s.totals.issues.red), el('div', { class: 'label' }, 'Red — waiting on a "why"')),
+    el('div', { class: 'card' }, el('div', { class: 'big' }, s.totals.recognitions), el('div', { class: 'label' }, 'Recognitions captured')),
+  );
+  const rows = s.units.map((u) => {
+    const pct = Math.min(100, Math.round((u.rounds30Days / u.cadenceGoal) * 100));
+    return el('tr', {},
+      el('td', {}, u.unitName),
+      el('td', {}, `${u.rounds30Days} / ${u.cadenceGoal} `, el('span', { class: 'meter' }, el('i', { style: `width:${pct}%` }))),
+      el('td', {}, u.avgScore === null ? '—' : u.avgScore.toFixed(2)),
+      el('td', {}, String(u.openIssues), u.redIssues ? el('span', { class: 'pill r', style: 'margin-left:8px' }, `${u.redIssues} red`) : ''),
+      el('td', {}, String(u.recognitions30Days)),
+    );
+  });
+  main.replaceChildren(
+    el('h2', {}, 'How every unit is doing'),
+    cards,
+    s.units.length === 0
+      ? el('div', { class: 'empty' }, 'No units yet — add one under the Units tab, then conduct your first round.')
+      : el('table', {},
+          el('thead', {}, el('tr', {}, el('th', {}, 'Unit'), el('th', {}, 'Rounding cadence (30d)'), el('th', {}, 'Avg score (1–5)'), el('th', {}, 'Open issues'), el('th', {}, 'Kudos (30d)'))),
+          el('tbody', {}, rows)),
+  );
+}
+
+// ---- New Round ----
+async function renderNewRound(main) {
+  const [{ units }, { templates }] = await Promise.all([api('GET', '/units'), api('GET', '/templates')]);
+  if (units.length === 0) {
+    main.replaceChildren(el('div', { class: 'empty' }, 'Add a unit first (Units tab), then come back to round.'));
+    return;
+  }
+  const answers = {};   // questionId -> value
+  const issues = [];    // {description, owner}
+  const recognitions = []; // {recipient, message}
+
+  const unitSel = el('select', {}, units.map((u) => el('option', { value: u.id }, u.name)));
+  const tmplSel = el('select', {}, templates.map((t) => el('option', { value: t.id }, `${t.name} (${t.audience})`)));
+  const leader = el('input', { placeholder: 'e.g. Dana Whitfield, Nurse Manager' });
+  const subject = el('input', { placeholder: 'Employee name or patient room' });
+  const notes = el('textarea', { placeholder: 'Anything else worth remembering…' });
+  const questionsBox = el('div', {});
+  const issuesBox = el('div', {});
+  const recogBox = el('div', {});
+
+  const renderQuestions = () => {
+    const tmpl = templates.find((t) => t.id === tmplSel.value);
+    for (const key of Object.keys(answers)) delete answers[key];
+    questionsBox.replaceChildren(...tmpl.questions.map((q) => {
+      const wrap = el('div', {});
+      wrap.append(el('label', {}, q.prompt));
+      if (q.kind === 'scale') {
+        const scale = el('div', { class: 'scale' });
+        for (let n = 1; n <= 5; n++) {
+          const b = el('button', { type: 'button', onclick: () => {
+            answers[q.id] = n;
+            [...scale.children].forEach((c, i) => c.classList.toggle('sel', i === n - 1));
+          } }, n);
+          scale.append(b);
+        }
+        wrap.append(scale);
+      } else if (q.kind === 'yesNo') {
+        const yn = el('div', { class: 'yn' });
+        const mk = (label, val) => el('button', { type: 'button', onclick: () => {
+          answers[q.id] = val;
+          [...yn.children].forEach((c) => c.classList.toggle('sel', c.textContent === label));
+        } }, label);
+        yn.append(mk('Yes', true), mk('No', false));
+        wrap.append(yn);
+      } else {
+        const input = el('input', { placeholder: 'Their words, not a summary' });
+        input.oninput = () => { if (input.value.trim()) answers[q.id] = input.value; else delete answers[q.id]; };
+        wrap.append(input);
+      }
+      return wrap;
+    }));
+  };
+  tmplSel.onchange = renderQuestions;
+  renderQuestions();
+
+  const renderHarvest = (box, list, fields, hint) => {
+    box.replaceChildren(
+      ...list.map((item, i) => el('div', { class: 'harvest' },
+        Object.values(item).filter(Boolean).join(' — '),
+        ' ', el('button', { class: 'small', type: 'button', onclick: () => { list.splice(i, 1); renderHarvest(box, list, fields, hint); } }, 'remove'))),
+      el('button', { class: 'small', type: 'button', style: 'margin-top:8px', onclick: () => {
+        const values = fields.map(([f]) => prompt(f));
+        if (values.some((v) => !v || !v.trim())) return;
+        list.push(Object.fromEntries(fields.map(([, key], i) => [key, values[i].trim()])));
+        renderHarvest(box, list, fields, hint);
+      } }, hint),
+    );
+  };
+  renderHarvest(issuesBox, issues, [['What needs fixing?', 'description'], ['Who owns it?', 'owner']], '+ log an issue heard in this round');
+  renderHarvest(recogBox, recognitions, [['Who should be recognized?', 'recipient'], ['For what?', 'message']], '+ capture a recognition');
+
+  const submit = async () => {
+    try {
+      const payload = {
+        unitId: unitSel.value, templateId: tmplSel.value,
+        leader: leader.value, subject: subject.value, notes: notes.value,
+        answers: Object.entries(answers).map(([questionId, value]) => ({ questionId, value })),
+        issues, recognitions,
+      };
+      const result = await api('POST', '/rounds', payload);
+      toast(`Round saved — ${result.issues.length} issue(s) on the stoplight board, ${result.recognitions.length} recognition(s) posted.`);
+      show('dashboard');
+    } catch (err) { toast(err.message); }
+  };
+
+  main.replaceChildren(
+    el('h2', {}, 'Conduct a round'),
+    el('form', { onsubmit: 'return false' },
+      el('div', { class: 'row' },
+        el('div', {}, el('label', {}, 'Unit'), unitSel),
+        el('div', {}, el('label', {}, 'Template'), tmplSel)),
+      el('div', { class: 'row' },
+        el('div', {}, el('label', {}, 'Leader'), leader),
+        el('div', {}, el('label', {}, 'Rounding on'), subject)),
+      el('h3', {}, 'Questions'),
+      questionsBox,
+      el('label', {}, 'Notes'), notes,
+      el('h3', {}, 'Harvest — turn what you heard into action'),
+      issuesBox, recogBox,
+      el('button', { class: 'primary', type: 'button', onclick: submit }, 'Save round'),
+    ),
+  );
+}
+
+// ---- Round Log ----
+async function renderRounds(main) {
+  const [{ rounds }, { units }, { templates }] = await Promise.all([
+    api('GET', '/rounds'), api('GET', '/units'), api('GET', '/templates')]);
+  const unitName = (id) => (units.find((u) => u.id === id) || { name: '?' }).name;
+  const tmpl = (id) => templates.find((t) => t.id === id);
+  main.replaceChildren(
+    el('h2', {}, 'Round log'),
+    rounds.length === 0 ? el('div', { class: 'empty' }, 'No rounds yet.') :
+    el('div', {}, rounds.map((r) => {
+      const t = tmpl(r.templateId);
+      const prompt = (qid) => (t && t.questions.find((q) => q.id === qid) || { prompt: qid }).prompt;
+      return el('details', { class: 'round-item' },
+        el('summary', {}, `${fmtDate(r.conductedAt)} — ${unitName(r.unitId)} — ${r.leader} rounded on ${r.subject}`),
+        el('dl', {},
+          r.answers.map((a) => [el('dt', {}, prompt(a.questionId)), el('dd', {}, String(a.value))]).flat(),
+          r.notes ? [el('dt', {}, 'Notes'), el('dd', {}, r.notes)] : [],
+          el('dt', {}, 'Harvested'),
+          el('dd', {}, `${r.issueIds.length} issue(s), ${r.recognitionIds.length} recognition(s)`)));
+    })),
+  );
+}
+
+// ---- Stoplight Board ----
+async function renderStoplight(main) {
+  const [{ issues }, { units }] = await Promise.all([api('GET', '/issues'), api('GET', '/units')]);
+  const unitName = (id) => (units.find((u) => u.id === id) || { name: '?' }).name;
+  const move = async (issue, status) => {
+    try {
+      let statusReason = '';
+      if (status === 'red') {
+        statusReason = prompt('Red means "we can\'t do this right now." Tell staff why:') || '';
+        if (!statusReason.trim()) return;
+      }
+      await api('PUT', '/issues/' + issue.id, { status, statusReason });
+      show('stoplight');
+    } catch (err) { toast(err.message); }
+  };
+  const card = (issue) => el('div', { class: 'issue ' + issue.status[0] },
+    issue.description,
+    el('div', { class: 'meta' }, `${unitName(issue.unitId)} · owner: ${issue.owner} · updated ${fmtDate(issue.updatedAt)}`),
+    issue.status === 'red' && issue.statusReason ? el('div', { class: 'why' }, 'Why: ' + issue.statusReason) : '',
+    el('div', { style: 'margin-top:8px; display:flex; gap:6px' },
+      ...['green', 'yellow', 'red'].filter((s) => s !== issue.status).map((s) =>
+        el('button', { class: 'small', onclick: () => move(issue, s) }, '→ ' + s))));
+  const col = (status, title, blurb) => {
+    const list = issues.filter((i) => i.status === status);
+    return el('div', { class: 'col' },
+      el('h3', {}, title + ` (${list.length})`),
+      el('div', { class: 'empty', style: 'font-size:12px;padding:0 0 8px' }, blurb),
+      list.length ? list.map(card) : el('div', { class: 'empty' }, 'Nothing here.'));
+  };
+  const addIssue = async () => {
+    if (units.length === 0) { toast('Add a unit first.'); return; }
+    const description = prompt('What needs fixing?');
+    if (!description || !description.trim()) return;
+    const owner = prompt('Who owns it?') || 'unassigned';
+    const pick = units.length === 1 ? units[0]
+      : units[Math.max(0, units.findIndex((u) => u.name === prompt('Which unit? ' + units.map((x) => x.name).join(' / '))))];
+    try {
+      await api('POST', '/issues', { unitId: pick.id, description, owner });
+      show('stoplight');
+    } catch (err) { toast(err.message); }
+  };
+  main.replaceChildren(
+    el('h2', {}, 'Stoplight board — what we heard, and what we\'re doing about it'),
+    el('div', { style: 'margin-bottom:12px' }, el('button', { class: 'small', onclick: addIssue }, '+ add an issue directly')),
+    el('div', { class: 'board' },
+      col('red', '🔴 Red', 'Can\'t do right now — the honest "why" is posted for staff.'),
+      col('yellow', '🟡 Yellow', 'In progress — someone owns it.'),
+      col('green', '🟢 Green', 'Done. Say it out loud on the unit.')),
+  );
+}
+
+// ---- Recognition Wall ----
+async function renderRecognition(main) {
+  const [{ recognitions }, { units }] = await Promise.all([api('GET', '/recognitions'), api('GET', '/units')]);
+  const unitName = (id) => (units.find((u) => u.id === id) || { name: '?' }).name;
+  const add = async () => {
+    if (units.length === 0) { toast('Add a unit first.'); return; }
+    const recipient = prompt('Who are we recognizing?');
+    if (!recipient || !recipient.trim()) return;
+    const message = prompt('For what? Be specific — specific praise sticks.');
+    if (!message || !message.trim()) return;
+    const pick = units.length === 1 ? units[0]
+      : units[Math.max(0, units.findIndex((u) => u.name === prompt('Which unit? ' + units.map((x) => x.name).join(' / '))))];
+    try {
+      await api('POST', '/recognitions', { unitId: pick.id, recipient, message });
+      show('recognition');
+    } catch (err) { toast(err.message); }
+  };
+  main.replaceChildren(
+    el('h2', {}, 'Recognition wall'),
+    el('div', { style: 'margin-bottom:12px' }, el('button', { class: 'small', onclick: add }, '+ add recognition')),
+    recognitions.length === 0 ? el('div', { class: 'empty' }, 'No recognitions yet — ask "Is there anyone I should recognize?" on your next round.') :
+    el('div', {}, recognitions.map((k) => el('div', { class: 'kudos' },
+      el('span', { class: 'to' }, k.recipient), ' — ', k.message,
+      el('div', { class: 'meta' }, `${unitName(k.unitId)} · ${fmtDate(k.createdAt)}${k.sourceRoundId ? ' · captured during a round' : ''}`)))),
+  );
+}
+
+// ---- Units ----
+async function renderUnits(main) {
+  const { units } = await api('GET', '/units');
+  const name = el('input', { placeholder: 'e.g. 4 West — Med/Surg' });
+  const goal = el('input', { type: 'number', min: '1', value: '10' });
+  const add = async () => {
+    try {
+      await api('POST', '/units', { name: name.value, cadenceGoal: Number(goal.value) || 10 });
+      toast('Unit added.');
+      show('units');
+    } catch (err) { toast(err.message); }
+  };
+  main.replaceChildren(
+    el('h2', {}, 'Units'),
+    el('div', { class: 'panel', style: 'margin-bottom:16px' },
+      el('div', { class: 'row' },
+        el('div', {}, el('label', {}, 'Unit name'), name),
+        el('div', {}, el('label', {}, 'Rounding goal (rounds / 30 days)'), goal)),
+      el('button', { class: 'primary', onclick: add }, 'Add unit')),
+    units.length === 0 ? el('div', { class: 'empty' }, 'No units yet.') :
+    el('table', {},
+      el('thead', {}, el('tr', {}, el('th', {}, 'Unit'), el('th', {}, 'Cadence goal / 30 days'))),
+      el('tbody', {}, units.map((u) => el('tr', {}, el('td', {}, u.name), el('td', {}, String(u.cadenceGoal)))))),
+  );
+}
+
+show('dashboard');
+</script>
+</body>
+</html>
