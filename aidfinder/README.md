@@ -69,7 +69,7 @@ Optional environment:
 - `BRAND_NAME` — display name substituted into the web app's title and
   header.
 
-## Deploy (Render + cardinalspromise.blog)
+## Deploy (Render + thecardinalspromise.blog)
 
 The repo's `render.yaml` blueprint includes an `aidfinder` web service:
 Docker runtime running `node aidfinder/src/index.ts`, a 1 GB disk mounted at
@@ -79,9 +79,9 @@ blueprint is already applied for the other services), set
 `AIDFINDER_PASSWORD` when prompted, and the app comes up at
 `https://aidfinder-*.onrender.com`.
 
-To serve it at **cardinalspromise.blog**: blueprints can't declare custom
+To serve it at **thecardinalspromise.blog**: blueprints can't declare custom
 domains, so open the service → Settings → Custom Domains → add
-`cardinalspromise.blog` and `www.cardinalspromise.blog`. Render shows the
+`thecardinalspromise.blog` and `www.thecardinalspromise.blog`. Render shows the
 DNS records to create at the domain registrar (an A/ALIAS record for the
 apex and a CNAME for `www` pointing at the onrender.com host). HTTPS
 certificates are issued automatically once DNS propagates. More domains

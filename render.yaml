@@ -55,20 +55,15 @@ services:
     staticPublishPath: ./cardinal-care-bridge
     autoDeploy: true
 
-  # Blue Ridge Tax — the TaxFile app (taxfile/): guided 2025 federal 1040 with
-  # a live refund tracker and mock e-file. Password-gated (TAXFILE_USER /
-  # TAXFILE_PASSWORD — set the password when Render prompts; returns contain
-  # SSNs, so never run this public-facing without the gate). Return data
-  # persists in SQLite on the mounted disk.
   # AidFinder — the free-money-for-college app (aidfinder/): scholarship/grant
   # matching, near-miss report, deadline plan with calendar export, and an
   # application tracker. Password-gated (AIDFINDER_USER / AIDFINDER_PASSWORD —
   # set the password when Render prompts; profiles contain household income).
   # Profiles and tracked applications persist in SQLite on the mounted disk.
   #
-  # Custom domain (cardinalspromise.blog): Render blueprints can't declare
+  # Custom domain (thecardinalspromise.blog): Render blueprints can't declare
   # domains, so after Apply, open this service -> Settings -> Custom Domains
-  # -> add cardinalspromise.blog (and www.cardinalspromise.blog). Render
+  # -> add thecardinalspromise.blog (and www.thecardinalspromise.blog). Render
   # shows the DNS records to create at the registrar: an A record for the
   # apex (or ALIAS/ANAME to the onrender.com host) and a CNAME for www.
   # HTTPS certs are automatic once DNS propagates. Additional domains (e.g.
@@ -97,6 +92,11 @@ services:
       - key: AIDFINDER_PASSWORD
         sync: false            # Render prompts you to set this on first deploy
 
+  # Blue Ridge Tax — the TaxFile app (taxfile/): guided 2025 federal 1040 with
+  # a live refund tracker and mock e-file. Password-gated (TAXFILE_USER /
+  # TAXFILE_PASSWORD — set the password when Render prompts; returns contain
+  # SSNs, so never run this public-facing without the gate). Return data
+  # persists in SQLite on the mounted disk.
   - type: web
     name: blue-ridge-tax
     runtime: docker
