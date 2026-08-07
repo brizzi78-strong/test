@@ -18,7 +18,6 @@
   #brpp .sub{color:var(--ink-soft);font-size:1.1rem;max-width:60ch;margin:18px 0 0}
   #brpp main{padding:clamp(30px,5vw,56px) 0 clamp(60px,9vw,110px)}
   #brpp h2{font-family:var(--serif);font-weight:600;font-size:1.5rem;margin:44px 0 12px;color:var(--ink)}
-  #brpp h3{font-family:var(--serif);font-weight:600;font-size:1.15rem;margin:26px 0 6px}
   #brpp p{margin:0 0 14px;color:var(--ink-soft)}
   #brpp .lead{font-size:1.12rem}
   #brpp ul{color:var(--ink-soft);padding-left:1.2em;margin:0 0 16px}
@@ -29,19 +28,13 @@
   #brpp .note p{margin:0;font-size:.95rem}
   #brpp .btn{font:inherit;font-size:.95rem;font-weight:600;padding:.7rem 1.3rem;border-radius:999px;text-decoration:none;display:inline-block;background:var(--cream);color:var(--cream-ink);border:1px solid transparent}
   #brpp .btn.ghost{background:transparent;border-color:rgba(244,233,220,.4);color:var(--ink)}
-  #brpp .tiers{display:grid;gap:20px;grid-template-columns:1fr;margin:40px 0 8px}
-  @media(min-width:720px){#brpp .tiers{grid-template-columns:repeat(3,1fr)}}
-  #brpp .tier{background:var(--card);border:1px solid var(--hair);border-radius:18px;padding:28px 24px;display:flex;flex-direction:column}
-  #brpp .tier.feature{border-color:var(--rose);box-shadow:0 20px 50px -30px rgba(0,0,0,.7)}
-  #brpp .tier .name{font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin:0 0 12px}
-  #brpp .tier .price{font-family:var(--serif);font-size:2.6rem;line-height:1;color:var(--ink);margin:0}
-  #brpp .tier .price small{font-size:.9rem;color:var(--mist);font-family:var(--sans)}
-  #brpp .tier .desc{margin:12px 0 16px;font-size:.95rem;color:var(--ink-soft)}
-  #brpp .tier ul{font-size:.92rem;margin-bottom:20px}
-  #brpp .tier .btn{margin-top:auto;text-align:center}
-  #brpp .tag{display:inline-block;font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--rose);border:1px solid var(--hair);border-radius:999px;padding:3px 9px;margin-bottom:14px}
+  #brpp .steps{counter-reset:step;display:grid;gap:16px;margin:36px 0 8px}
+  #brpp .step{background:var(--card);border:1px solid var(--hair);border-radius:16px;padding:22px 24px;display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start}
+  #brpp .step .no{font-family:var(--serif);font-size:1.9rem;line-height:1;color:var(--gold);min-width:2ch}
+  #brpp .step h3{font-family:var(--serif);font-weight:600;font-size:1.2rem;margin:0 0 6px;color:var(--ink)}
+  #brpp .step p{margin:0;font-size:.96rem}
+  #brpp .step .who{display:inline-block;font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--rose);margin-bottom:8px}
   #brpp footer{border-top:1px solid var(--hair);padding:34px 0;color:var(--mist);font-size:.85rem}
-  #brpp footer .row{display:flex;justify-content:space-between;gap:14px 26px;flex-wrap:wrap;align-items:center}
   #brpp footer nav a{color:var(--mist)}
   #brpp .brand .bn{line-height:1.12}
   #brpp .brand .bn small{display:block;font-family:var(--mono);font-size:.54rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mist);margin-top:3px}
@@ -49,44 +42,28 @@
   #brpp footer .disc{margin-top:16px;padding-top:16px;border-top:1px solid var(--hair);color:var(--mist);font-size:.76rem;line-height:1.6;max-width:82ch}
 </style>
 <div class="topbar"><div class="wrap row"><a class="brand" href="/"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#3D4EC6"/><path d="M8 22V10h4l4 6 4-6h4v12" stroke="#F4E9DC" stroke-width="2.4" fill="none" stroke-linejoin="round" stroke-linecap="round"/></svg> <span class="bn">Blue Ridge Press LLC<small>Verification &amp; Reference Services</small></span></a><nav><a href="/">Home</a><a href="/how-it-works">How it works</a><a href="/pricing">Pricing</a><a href="/about">About</a><a href="/#start">Request a check</a></nav></div></div>
-<header class="pg"><div class="wrap"><p class="eyebrow">Terms of Service</p><h1>The terms, in plain language.</h1></div></header>
+<header class="pg"><div class="wrap"><p class="eyebrow">How it works</p><h1>Six steps. Consent first. Proof at the end.</h1><p class="sub">From your request to a report anyone can verify is genuine &mdash; here is exactly what happens, and what never does.</p></div></header>
 <main><div class="wrap">
 
-<p class="muted">Last updated: July 31, 2026</p>
-<p class="lead">These terms govern your use of Blue Ridge Press LLC&rsquo;s consent-based verification services. By requesting a check, you agree to them.</p>
+<div class="steps">
+  <div class="step"><div class="no">1</div><div><span class="who">You &middot; 2 minutes</span><h3>Tell us who to verify</h3><p>Send the candidate&rsquo;s name and email, and who should confirm what &mdash; references, past employers, schools. Nothing is contacted yet.</p></div></div>
+  <div class="step"><div class="no">2</div><div><span class="who">The candidate</span><h3>They consent &mdash; or nothing happens</h3><p>The candidate receives a private link, reads a plain-language disclosure listing exactly who will be contacted and about what, and e-signs. The signature is recorded with a timestamp and the exact disclosure they saw. Until they sign, every verification link is locked &mdash; enforced by the system, not by promise.</p></div></div>
+  <div class="step"><div class="no">3</div><div><span class="who">The sources</span><h3>Each source answers directly</h3><p>Every reference, employer, and registrar gets their own private, one-time link &mdash; a two-minute form to confirm the relationship, dates, and whether they&rsquo;d recommend or rehire. Straight from the people who were actually there. No data brokers, ever.</p></div></div>
+  <div class="step"><div class="no">4</div><div><span class="who">Quality review</span><h3>We check it before you see it</h3><p>Findings are reviewed for accuracy and completeness against our QA standard. Anything a source declined or contradicted is stated plainly &mdash; flagged for your awareness, never smoothed over.</p></div></div>
+  <div class="step"><div class="no">5</div><div><span class="who">Your report</span><h3>One clean, sealed report</h3><p>You receive an executive PDF: every finding, the consent record, a unique tracking number, and a cryptographic integrity seal computed from the exact findings &mdash; alter one word and the seal breaks.</p></div></div>
+  <div class="step"><div class="no">6</div><div><span class="who">Anyone, any time</span><h3>The report proves itself</h3><p>Every report carries a QR code and verification code. Scan it and our public verify page confirms the report is authentic and unaltered &mdash; showing only the candidate&rsquo;s initials and the result, never their private details. Share it with a partner, a co-owner, a board: it holds up.</p></div></div>
+</div>
 
-<h2>1. What the service is</h2>
-<p>We verify professional references, past employment, and education, at the source, after the candidate&rsquo;s written consent. We deliver a report of what we were able to confirm as of the report date.</p>
-
-<h2>2. Permitted use</h2>
-<p>You may use our reports only for a lawful, permissible purpose you have disclosed to the candidate &mdash; such as evaluating them for employment, a tenancy, or a volunteer or care role &mdash; and only with their authorization. You agree to comply with all applicable employment, tenant-screening, and privacy laws.</p>
-
-<h2>3. Prohibited use</h2>
+<h2>What we never do</h2>
 <ul>
-  <li>No checks on a person who has not consented.</li>
-  <li>No use for stalking, harassment, or any unlawful, discriminatory, or harmful purpose.</li>
-  <li>No reselling, republishing, or using a report for a purpose other than the one disclosed to the candidate.</li>
+  <li><b>No checks without consent.</b> Not one call, not one email, before the candidate signs.</li>
+  <li><b>No criminal, credit, or driving records.</b> Those are regulated consumer reports that belong with a credentialed agency &mdash; we&rsquo;ll refer you to one instead of pretending.</li>
+  <li><b>No SSNs, no scraping, no purchased files, no black-box scores.</b> We confirm what real people attest to, and nothing else.</li>
 </ul>
 
-<h2>4. Scope and accuracy</h2>
-<p>Our reports reflect information confirmed by the named sources as of the report date. Sources may decline to respond or may be mistaken. A report is one input to your decision &mdash; not a guarantee, endorsement, or complete account of any person. We are not a consumer-reporting agency and do not provide criminal, credit, or driving records.</p>
+<div class="note"><p><b>Typical turnaround:</b> a few business days &mdash; it depends on how quickly sources respond. You can see status at every step, and the report notes exactly who responded and when.</p></div>
 
-<h2>5. No warranty</h2>
-<p>The service is provided &ldquo;as is.&rdquo; To the fullest extent permitted by law, we disclaim implied warranties and do not warrant that every source will respond or that confirmations are error-free.</p>
-
-<h2>6. Limitation of liability</h2>
-<p>To the fullest extent permitted by law, our total liability for any claim arising from the service is limited to the amount you paid for the check at issue. We are not liable for indirect or consequential damages, or for hiring, tenancy, or other decisions you make.</p>
-
-<h2>7. Fees</h2>
-<p>Fees are as quoted at the time of your request and are due as invoiced. Published prices may change; the price that applies is the one shown when you place a request.</p>
-
-<h2>8. Governing law</h2>
-<p>These terms are governed by the laws of the State of North Carolina, without regard to conflict-of-law rules.</p>
-
-<h2>9. Contact</h2>
-<p>Questions: reach us through <a href="/#start" style="color:var(--rose);text-decoration:underline">blueridgepressllc.com</a>.</p>
-
-<div class="note"><p><b>Note:</b> These terms are a good-faith starting point, not legal advice. Background screening is regulated; have an attorney review these terms for your business and jurisdiction before relying on them.</p></div>
+<p style="margin-top:30px"><a class="btn" href="/#start">Request a check &mdash; $39</a> &nbsp; <a class="btn ghost" href="/sample-report">See a sample report</a></p>
 
 </div></main>
 <footer><div class="wrap"><div class="foot-rows"><span>&copy; Blue Ridge Press LLC &middot; Verification &amp; Reference Services</span><nav><a href="/how-it-works">How it works</a> &middot; <a href="/pricing">Pricing</a> &middot; <a href="/about">About</a> &middot; <a href="/sample-report">Sample report</a> &middot; <a href="/privacy">Privacy</a> &middot; <a href="/terms">Terms</a></nav></div><p class="disc">Blue Ridge Press LLC provides independent, consent-based verification of professional references, past employment, and education. It does not provide criminal, credit, or motor-vehicle records and is not a consumer-reporting agency for those regulated reports; where such records are needed, we refer you to a credentialed agency. Reports reflect information confirmed by named sources as of the report date and are one input to your decision. &copy; Blue Ridge Press LLC &middot; Raleigh, North Carolina.</p></div></footer>
