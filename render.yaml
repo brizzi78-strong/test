@@ -66,12 +66,13 @@ services:
   # set the password when Render prompts; profiles contain household income).
   # Profiles and tracked applications persist in SQLite on the mounted disk.
   #
-  # Custom domain (robertbrizzi.com): Render blueprints can't declare domains,
-  # so after Apply, open this service -> Settings -> Custom Domains -> add
-  # robertbrizzi.com (and www.robertbrizzi.com). Render shows the DNS records
-  # to create at the registrar: an A record for the apex (or ALIAS/ANAME to
-  # the onrender.com host) and a CNAME for www. HTTPS certs are automatic
-  # once DNS propagates.
+  # Custom domain (cardinalspromise.blog): Render blueprints can't declare
+  # domains, so after Apply, open this service -> Settings -> Custom Domains
+  # -> add cardinalspromise.blog (and www.cardinalspromise.blog). Render
+  # shows the DNS records to create at the registrar: an A record for the
+  # apex (or ALIAS/ANAME to the onrender.com host) and a CNAME for www.
+  # HTTPS certs are automatic once DNS propagates. Additional domains (e.g.
+  # robertbrizzi.com) can be added to the same service the same way.
   - type: web
     name: aidfinder
     runtime: docker

@@ -69,7 +69,7 @@ Optional environment:
 - `BRAND_NAME` — display name substituted into the web app's title and
   header.
 
-## Deploy (Render + robertbrizzi.com)
+## Deploy (Render + cardinalspromise.blog)
 
 The repo's `render.yaml` blueprint includes an `aidfinder` web service:
 Docker runtime running `node aidfinder/src/index.ts`, a 1 GB disk mounted at
@@ -79,12 +79,13 @@ blueprint is already applied for the other services), set
 `AIDFINDER_PASSWORD` when prompted, and the app comes up at
 `https://aidfinder-*.onrender.com`.
 
-To serve it at **robertbrizzi.com**: blueprints can't declare custom
+To serve it at **cardinalspromise.blog**: blueprints can't declare custom
 domains, so open the service → Settings → Custom Domains → add
-`robertbrizzi.com` and `www.robertbrizzi.com`. Render shows the DNS records
-to create at the domain registrar (an A/ALIAS record for the apex and a
-CNAME for `www` pointing at the onrender.com host). HTTPS certificates are
-issued automatically once DNS propagates.
+`cardinalspromise.blog` and `www.cardinalspromise.blog`. Render shows the
+DNS records to create at the domain registrar (an A/ALIAS record for the
+apex and a CNAME for `www` pointing at the onrender.com host). HTTPS
+certificates are issued automatically once DNS propagates. More domains
+(e.g. `robertbrizzi.com`) can be added to the same service the same way.
 
 Note on the gate: the Basic-auth login is shared, and requests are scoped by
 an `x-user-id` header that browsers don't set — so everyone using the site
