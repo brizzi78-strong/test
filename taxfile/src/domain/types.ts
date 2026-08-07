@@ -101,8 +101,29 @@ export interface IncomeSection {
   estimatedTaxPayments: number; // 1040-ES payments made during the year
 }
 
+export const MEDICAL_EXPENSE_CATEGORIES = [
+  'doctor-dental',
+  'prescriptions',
+  'hospital',
+  'vision',
+  'insurance-premiums',
+  'equipment-supplies',
+  'medical-travel',
+  'other',
+] as const;
+export type MedicalExpenseCategory = (typeof MEDICAL_EXPENSE_CATEGORIES)[number];
+
+/** One tracked medical expense, kept entry-by-entry for records. */
+export interface MedicalExpenseEntry {
+  date: string; // YYYY-MM-DD
+  provider: string; // who was paid (pharmacy, doctor, insurer, …)
+  category: MedicalExpenseCategory;
+  amount: number;
+}
+
 export interface ItemizedDeductions {
-  medicalExpenses: number; // gross; only the part over 7.5% of AGI counts
+  medicalExpenses: number; // lump-sum medical not tracked entry-by-entry
+  medicalExpenseEntries: MedicalExpenseEntry[]; // itemized tracker entries
   stateLocalTaxes: number; // SALT, subject to the cap
   mortgageInterest: number;
   charitableContributions: number;
@@ -152,6 +173,14 @@ export interface ComputationLine {
   amount: number;
 }
 
+/** How tracked medical expenses fare against the 7.5%-of-AGI floor. */
+export interface MedicalDeductionDetail {
+  totalExpenses: number; // lump sum + all tracked entries
+  agiFloor: number; // 7.5% of AGI; expenses below this never count
+  deductible: number; // portion above the floor that itemizing can use
+  amountToThreshold: number; // further spend needed before anything counts
+}
+
 export interface TaxComputation {
   taxYear: number;
   filingStatus: FilingStatus;
@@ -160,6 +189,7 @@ export interface TaxComputation {
   adjustedGrossIncome: number;
   deductionMethod: 'standard' | 'itemized';
   deduction: number;
+  medical: MedicalDeductionDetail;
   qbiDeduction: number;
   taxableIncome: number;
   incomeTax: number; // regular tax incl. preferential LTCG/QDI rates
@@ -200,6 +230,7 @@ export function emptyDeductions(): DeductionsSection {
     method: 'auto',
     itemized: {
       medicalExpenses: 0,
+      medicalExpenseEntries: [],
       stateLocalTaxes: 0,
       mortgageInterest: 0,
       charitableContributions: 0,

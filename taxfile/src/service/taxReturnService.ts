@@ -10,6 +10,7 @@ import { randomUUID } from 'node:crypto';
 import { computeReturn } from '../domain/engine.ts';
 import {
   FILING_STATUSES,
+  MEDICAL_EXPENSE_CATEGORIES,
   RELATIONSHIPS,
   TAX_YEAR,
   emptyDeductions,
@@ -20,6 +21,7 @@ import type {
   DeductionsSection,
   FilingStatus,
   IncomeSection,
+  MedicalExpenseEntry,
   PersonalSection,
   Person,
   Section,
@@ -30,6 +32,7 @@ import { ConflictError, NotFoundError, ValidationError } from './errors.ts';
 import type { Store } from '../store/store.ts';
 
 const SSN_PATTERN = /^\d{3}-\d{2}-\d{4}$/;
+const DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
 const STATE_PATTERN = /^[A-Z]{2}$/;
 const ZIP_PATTERN = /^\d{5}(-\d{4})?$/;
 
@@ -337,6 +340,27 @@ function parseIncome(input: unknown): IncomeSection {
   };
 }
 
+function parseMedicalExpenseEntry(input: unknown, index: number): MedicalExpenseEntry {
+  const label = `itemized.medicalExpenseEntries[${index}]`;
+  const obj = asObject(input);
+  const date = requireString(obj, 'date', label);
+  if (!DATE_PATTERN.test(date)) {
+    throw new ValidationError(`${label}.date must be YYYY-MM-DD`);
+  }
+  const category = requireString(obj, 'category', label);
+  if (!MEDICAL_EXPENSE_CATEGORIES.includes(category as MedicalExpenseEntry['category'])) {
+    throw new ValidationError(
+      `${label}.category must be one of: ${MEDICAL_EXPENSE_CATEGORIES.join(', ')}`,
+    );
+  }
+  return {
+    date,
+    provider: requireString(obj, 'provider', label),
+    category: category as MedicalExpenseEntry['category'],
+    amount: money(obj, 'amount', label),
+  };
+}
+
 function parseDeductions(input: unknown): DeductionsSection {
   const obj = asObject(input);
   const method = (obj.method ?? 'auto') as DeductionsSection['method'];
@@ -345,10 +369,15 @@ function parseDeductions(input: unknown): DeductionsSection {
   }
   const itemized = asObject(obj.itemized ?? {});
   const adjustments = asObject(obj.adjustments ?? {});
+  const rawEntries = itemized.medicalExpenseEntries ?? [];
+  if (!Array.isArray(rawEntries)) {
+    throw new ValidationError('itemized.medicalExpenseEntries must be an array');
+  }
   return {
     method,
     itemized: {
       medicalExpenses: money(itemized, 'medicalExpenses', 'itemized'),
+      medicalExpenseEntries: rawEntries.map((raw, i) => parseMedicalExpenseEntry(raw, i)),
       stateLocalTaxes: money(itemized, 'stateLocalTaxes', 'itemized'),
       mortgageInterest: money(itemized, 'mortgageInterest', 'itemized'),
       charitableContributions: money(itemized, 'charitableContributions', 'itemized'),
