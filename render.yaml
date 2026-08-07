@@ -60,6 +60,42 @@ services:
   # TAXFILE_PASSWORD — set the password when Render prompts; returns contain
   # SSNs, so never run this public-facing without the gate). Return data
   # persists in SQLite on the mounted disk.
+  # AidFinder — the free-money-for-college app (aidfinder/): scholarship/grant
+  # matching, near-miss report, deadline plan with calendar export, and an
+  # application tracker. Password-gated (AIDFINDER_USER / AIDFINDER_PASSWORD —
+  # set the password when Render prompts; profiles contain household income).
+  # Profiles and tracked applications persist in SQLite on the mounted disk.
+  #
+  # Custom domain (robertbrizzi.com): Render blueprints can't declare domains,
+  # so after Apply, open this service -> Settings -> Custom Domains -> add
+  # robertbrizzi.com (and www.robertbrizzi.com). Render shows the DNS records
+  # to create at the registrar: an A record for the apex (or ALIAS/ANAME to
+  # the onrender.com host) and a CNAME for www. HTTPS certs are automatic
+  # once DNS propagates.
+  - type: web
+    name: aidfinder
+    runtime: docker
+    branch: main
+    plan: starter            # a persistent disk requires a paid instance
+    dockerfilePath: ./deploy/Dockerfile
+    dockerContext: .
+    dockerCommand: node aidfinder/src/index.ts
+    healthCheckPath: /health
+    autoDeploy: true
+    disk:
+      name: aid-data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: BRAND_NAME
+        value: AidFinder
+      - key: AIDFINDER_DB
+        value: /data/aidfinder.db
+      - key: AIDFINDER_USER
+        value: admin
+      - key: AIDFINDER_PASSWORD
+        sync: false            # Render prompts you to set this on first deploy
+
   - type: web
     name: blue-ridge-tax
     runtime: docker

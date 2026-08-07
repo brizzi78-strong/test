@@ -56,16 +56,40 @@ never charges an application fee.
 ```sh
 cd aidfinder
 npm start              # http://localhost:4700 (PORT to override)
+AIDFINDER_DB=/data/aid.db npm start   # durable SQLite storage instead of memory
 ```
 
 Optional environment:
 
+- `AIDFINDER_DB` — path to a SQLite file for durable storage (profiles and
+  tracked applications survive restarts). Unset = in-memory.
 - `AIDFINDER_USER` / `AIDFINDER_PASSWORD` — set both to gate every route
-  (except `/health`) behind HTTP Basic auth.
+  (except `/health`) behind HTTP Basic auth. Recommended in any public
+  deployment: profiles contain household income.
 - `BRAND_NAME` — display name substituted into the web app's title and
   header.
 
-Storage is in-memory (this is a demo; restart clears it).
+## Deploy (Render + robertbrizzi.com)
+
+The repo's `render.yaml` blueprint includes an `aidfinder` web service:
+Docker runtime running `node aidfinder/src/index.ts`, a 1 GB disk mounted at
+`/data` for the SQLite store, and the Basic-auth gate enabled. Apply the
+blueprint at Render (New + → Blueprint → this repo → Apply; or Sync if the
+blueprint is already applied for the other services), set
+`AIDFINDER_PASSWORD` when prompted, and the app comes up at
+`https://aidfinder-*.onrender.com`.
+
+To serve it at **robertbrizzi.com**: blueprints can't declare custom
+domains, so open the service → Settings → Custom Domains → add
+`robertbrizzi.com` and `www.robertbrizzi.com`. Render shows the DNS records
+to create at the domain registrar (an A/ALIAS record for the apex and a
+CNAME for `www` pointing at the onrender.com host). HTTPS certificates are
+issued automatically once DNS propagates.
+
+Note on the gate: the Basic-auth login is shared, and requests are scoped by
+an `x-user-id` header that browsers don't set — so everyone using the site
+shares one profile. That's fine for a family or a pilot; a real multi-student
+launch needs per-student accounts first.
 
 ## API
 

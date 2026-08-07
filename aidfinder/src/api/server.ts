@@ -6,6 +6,7 @@
 import { createServer, type Server } from 'node:http';
 import { AidService } from '../service/aidService.ts';
 import { createInMemoryStore, type Store } from '../store/store.ts';
+import { createSqliteStore } from '../store/sqliteStore.ts';
 import { createRequestListener, type ListenerOptions } from './router.ts';
 
 export interface AppServer {
@@ -24,10 +25,18 @@ export interface AppOptions {
 const WEB_INDEX = new URL('../web/index.html', import.meta.url);
 
 /**
+ * Select a store from the environment: `AIDFINDER_DB=/path/to/data.db` uses
+ * the durable SQLite store; unset falls back to the in-memory store.
+ */
+export function storeFromEnv(env: NodeJS.ProcessEnv = process.env): Store {
+  return env.AIDFINDER_DB ? createSqliteStore(env.AIDFINDER_DB) : createInMemoryStore();
+}
+
+/**
  * Create (but do not start) an HTTP server. The store and options default to
  * the environment selection; pass them explicitly (e.g. in tests) to override.
  */
-export function createApp(store: Store = createInMemoryStore(), opts: AppOptions = {}): AppServer {
+export function createApp(store: Store = storeFromEnv(), opts: AppOptions = {}): AppServer {
   const user = opts.user ?? process.env.AIDFINDER_USER;
   const password = opts.password ?? process.env.AIDFINDER_PASSWORD;
   const listenerOpts: ListenerOptions = {
