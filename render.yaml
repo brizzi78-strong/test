@@ -53,3 +53,15 @@ services:
     branch: main
     staticPublishPath: ./cardinal-care-bridge
     autoDeploy: true
+
+  # Memory Care Music Program demo — an interactive, client-side walkthrough of
+  # the program that runs on the Sing Along app (singalong/PROGRAM.md): sample
+  # residents, the public-domain song kit with lyrics, the weekly playlists, a
+  # working sing-along prompter, and live engagement insights. Static and free,
+  # like Cardinal Care Bridge; sample data only, nothing is stored.
+  - type: web
+    name: music-program-demo
+    runtime: static
+    branch: main
+    staticPublishPath: ./singalong/demo
+    autoDeploy: true

@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Interactive demo of the Memory Care Music Program — personalized sing-along sessions for dementia and memory care, built on public-domain music.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23A31B33'/%3E%3Ctext x='16' y='23' font-family='system-ui' font-size='20' font-weight='900' text-anchor='middle' fill='white'%3E%E2%99%AA%3C/text%3E%3C/svg%3E">
+<title>Memory Care Music Program — Demo</title>
+<style>
+  :root{
+    --paper:#F7F2E6;--surface:#FFFDF7;--surface-2:#EFE7D3;--ink:#17233F;--muted:#6B6350;
+    --line:#E2D9C3;--brand:#A31B33;--brand-strong:#7E1226;--good:#2E7D4F;--good-bg:#E4F0E8;
+    --warn:#9A6410;--warn-bg:#F6ECD6;--crit:#B23A3A;--crit-bg:#F6E1DE;
+    --shadow:0 1px 2px rgba(23,35,63,.06),0 12px 32px -18px rgba(23,35,63,.18);
+    --font:ui-rounded,"SF Pro Rounded",system-ui,-apple-system,"Segoe UI",sans-serif;
+    --maxw:960px;--r:13px;
+  }
+  @media (prefers-color-scheme:dark){:root{
+    --paper:#101627;--surface:#172033;--surface-2:#1F2A42;--ink:#F3EEE1;--muted:#A9A28F;
+    --line:#2B3855;--brand:#E2586B;--brand-strong:#F27A8B;--good:#4FBE86;--good-bg:#12321F;
+    --warn:#D6A24A;--warn-bg:#33280F;--crit:#E07B6E;--crit-bg:#3A1D1A;
+    --shadow:0 1px 2px rgba(0,0,0,.45),0 12px 32px -14px rgba(0,0,0,.65);}}
+  :root[data-theme="light"]{
+    --paper:#F7F2E6;--surface:#FFFDF7;--surface-2:#EFE7D3;--ink:#17233F;--muted:#6B6350;
+    --line:#E2D9C3;--brand:#A31B33;--brand-strong:#7E1226;--good:#2E7D4F;--good-bg:#E4F0E8;
+    --warn:#9A6410;--warn-bg:#F6ECD6;--crit:#B23A3A;--crit-bg:#F6E1DE;
+    --shadow:0 1px 2px rgba(23,35,63,.06),0 12px 32px -18px rgba(23,35,63,.18);}
+  :root[data-theme="dark"]{
+    --paper:#101627;--surface:#172033;--surface-2:#1F2A42;--ink:#F3EEE1;--muted:#A9A28F;
+    --line:#2B3855;--brand:#E2586B;--brand-strong:#F27A8B;--good:#4FBE86;--good-bg:#12321F;
+    --warn:#D6A24A;--warn-bg:#33280F;--crit:#E07B6E;--crit-bg:#3A1D1A;
+    --shadow:0 1px 2px rgba(0,0,0,.45),0 12px 32px -14px rgba(0,0,0,.65);}
+
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);line-height:1.5}
+  .wrap{max-width:var(--maxw);margin-inline:auto;padding:0 clamp(.8rem,3vw,1.4rem) 3.5rem}
+  header.top{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .top-in{max-width:var(--maxw);margin-inline:auto;padding:.7rem clamp(.8rem,3vw,1.4rem);display:flex;align-items:center;gap:.6rem}
+  .logo{width:32px;height:32px;border-radius:9px;background:var(--brand);color:#fff;font-weight:900;display:grid;place-items:center;font-size:1.05rem}
+  h1{font-size:1.05rem;margin:0;font-weight:800}
+  h1 small{display:block;font-weight:600;font-size:.7rem;color:var(--muted)}
+  .demo-flag{margin-left:auto;font-size:.64rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--warn);background:var(--warn-bg);border-radius:999px;padding:.22rem .6rem;white-space:nowrap}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:1rem 1.15rem;margin:.9rem 0}
+  h2{font-size:1rem;margin:.1rem 0 .5rem}
+  h3{font-size:.85rem;margin:.9rem 0 .3rem}
+  p{margin:.35rem 0}
+  .hint{color:var(--muted);font-size:.83rem}
+  .stats{display:flex;gap:.6rem;flex-wrap:wrap;margin:.8rem 0 .2rem}
+  .stat{flex:1 1 130px;background:var(--surface-2);border:1px solid var(--line);border-radius:10px;padding:.55rem .7rem}
+  .stat b{display:block;font-size:1.15rem;font-variant-numeric:tabular-nums}
+  .stat span{font-size:.72rem;color:var(--muted);font-weight:700}
+  .tabs{display:flex;gap:.35rem;flex-wrap:wrap;margin:1rem 0 .2rem}
+  .tab{background:transparent;border:1px solid var(--line);border-radius:999px;padding:.38rem .85rem;font:inherit;font-weight:700;font-size:.82rem;color:var(--muted);cursor:pointer}
+  .tab.active{background:var(--brand);color:#fff;border-color:var(--brand)}
+  .tab:focus-visible,button:focus-visible,select:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+  .row{border:1px solid var(--line);border-radius:10px;padding:.6rem .75rem;margin:.4rem 0;background:var(--surface)}
+  .row .t{font-weight:700}
+  .row .s{color:var(--muted);font-size:.82rem}
+  .chips{display:flex;flex-wrap:wrap;gap:.3rem;margin:.3rem 0 0}
+  .chip{background:var(--surface-2);border:1px solid var(--line);border-radius:999px;padding:.12rem .55rem;font-size:.73rem}
+  .pill{display:inline-block;font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em;padding:.14rem .5rem;border-radius:999px}
+  .pill.pd{background:var(--good-bg);color:var(--good)}
+  .pill.done{background:var(--good-bg);color:var(--good)}
+  .pill.live{background:var(--warn-bg);color:var(--warn)}
+  label{display:block;font-size:.72rem;font-weight:700;color:var(--muted);margin:.5rem 0 .2rem}
+  select{width:100%;padding:.5rem .55rem;border:1px solid var(--line);border-radius:9px;background:var(--paper);color:var(--ink);font:inherit}
+  .grid{display:grid;gap:.3rem .7rem}
+  .g3{grid-template-columns:1fr 1fr 1fr}
+  @media(max-width:600px){.g3{grid-template-columns:1fr}}
+  .btn{background:var(--brand);color:#fff;border:0;border-radius:9px;padding:.55rem .95rem;font:inherit;font-weight:700;cursor:pointer}
+  .btn:hover{background:var(--brand-strong)}
+  .btn.ghost{background:transparent;color:var(--brand);border:1px solid var(--line)}
+  .btn.small{padding:.32rem .65rem;font-size:.78rem}
+  .btn.good{background:var(--good)}
+  .btn.mut{background:transparent;color:var(--muted);border:1px solid var(--line)}
+  .btn.crit{background:var(--crit)}
+  .prompter{text-align:center;padding:1.6rem .8rem}
+  .prompter .progress{font-size:.75rem;font-weight:700;color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
+  .prompter .song{font-size:clamp(1.3rem,4vw,1.7rem);font-weight:800;margin:.25rem 0 .1rem;text-wrap:balance}
+  .prompter .artist{color:var(--muted);margin:0 0 .9rem}
+  .lyrics{font-size:clamp(1.05rem,2.6vw,1.3rem);line-height:1.75;white-space:pre-line;margin:1rem auto;max-width:34em}
+  .engage{display:flex;gap:.45rem;flex-wrap:wrap;justify-content:center;margin-top:1.1rem}
+  .arc{list-style:none;margin:.5rem 0 0;padding:0}
+  .arc li{display:flex;gap:.7rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+  .arc li:last-child{border-bottom:0}
+  .arc .k{flex:0 0 7.5em;font-weight:800;font-size:.78rem;color:var(--brand);text-transform:uppercase;letter-spacing:.04em;padding-top:.15rem}
+  .weeks{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.6rem;margin-top:.6rem}
+  .week{border:1px solid var(--line);border-radius:10px;background:var(--surface-2);padding:.6rem .7rem}
+  .week b{display:block;margin-bottom:.15rem}
+  .week p{font-size:.78rem;color:var(--muted);margin:.1rem 0 0}
+  .insight{display:flex;align-items:baseline;gap:.5rem;padding:.4rem .1rem;border-bottom:1px solid var(--line)}
+  .insight:last-child{border-bottom:0}
+  .insight .n{flex:1}
+  .insight .c{color:var(--muted);font-size:.78rem}
+  .insight .v{font-weight:800;font-variant-numeric:tabular-nums}
+  .insight .v.hi{color:var(--good)}
+  .insight .v.lo{color:var(--muted)}
+  .bar{height:5px;border-radius:99px;background:var(--surface-2);flex:0 0 90px;overflow:hidden}
+  .bar i{display:block;height:100%;background:var(--good)}
+  .empty{color:var(--muted);font-size:.85rem;padding:.4rem 0}
+  .foot{color:var(--muted);font-size:.75rem;margin-top:2rem;border-top:1px solid var(--line);padding-top:.8rem}
+  [hidden]{display:none !important}
+  @media (prefers-reduced-motion:no-preference){
+    .panel{animation:fade .18s ease}
+    @keyframes fade{from{opacity:0;transform:translateY(3px)}to{opacity:1;transform:none}}
+  }
+</style>
+</head>
+<body>
+<header class="top"><div class="top-in">
+  <div class="logo">♪</div>
+  <h1>Sing Along <small>The Memory Care Music Program — Willow Grove Memory Care (sample)</small></h1>
+  <span class="demo-flag">Interactive demo</span>
+</div></header>
+
+<div class="wrap">
+  <div class="card">
+    <h2>A complete music program, without the $100k price tag</h2>
+    <p class="hint">This is a working, click-through copy of the program running in the Sing Along app: personalized resident
+    profiles, a public-domain song library with lyrics, four themed weekly playlists, a live sing-along prompter, and the
+    logging loop that makes next week's session better than this one. Sample facility and residents — no real data.</p>
+    <div class="stats">
+      <div class="stat"><b>20</b><span>public-domain songs, lyrics included</span></div>
+      <div class="stat"><b>4</b><span>weekly themes on rotation</span></div>
+      <div class="stat"><b>2×/wk</b><span>sing-along circles, same time, same room</span></div>
+      <div class="stat"><b>$0</b><span>music licensing, by design</span></div>
+    </div>
+  </div>
+
+  <div class="tabs" role="tablist" id="tabs">
+    <button class="tab active" data-tab="program">The program</button>
+    <button class="tab" data-tab="residents">Residents</button>
+    <button class="tab" data-tab="library">Song library</button>
+    <button class="tab" data-tab="playlists">Playlists</button>
+    <button class="tab" data-tab="player">Run a session</button>
+    <button class="tab" data-tab="history">History &amp; insights</button>
+  </div>
+
+  <section class="card panel" id="panel-program">
+    <h2>How a session runs</h2>
+    <p class="hint">Every circle follows the same 30–40 minute arc. In memory care the routine <em>is</em> the program —
+    residents who can't hold "Tuesday at 2" can still feel "this is the singing time" when the gathering song starts.</p>
+    <ol class="arc">
+      <li><span class="k">Gather</span><span><b>Hail, Hail, the Gang's All Here</b> — the same opener every session, sung while everyone settles.</span></li>
+      <li><span class="k">Greet</span><span>Around the circle, each resident greeted by name.</span></li>
+      <li><span class="k">Core songs</span><span>Four familiar songs on the week's theme, lyrics on the shared screen. Slower and lower than the recordings — leave room for residents' voices.</span></li>
+      <li><span class="k">Move</span><span>One up-tempo number with a simple motion: clap, sway, wave when she comes 'round the mountain.</span></li>
+      <li><span class="k">Close</span><span><b>Good Night, Ladies</b>, softer, as a goodbye ritual. End calm, not on a peak.</span></li>
+    </ol>
+    <h3>The four-week cycle</h3>
+    <div class="weeks" id="weekCards"></div>
+    <h3>The rules that keep it safe (and free)</h3>
+    <p class="hint">Every song was published before 1931 or is traditional, so the music and these lyrics are public
+    domain — nothing to license. Recordings stay whatever the facility already owns. Resident profiles are musical
+    biography only: eras, genres, favorite artists, stories. Never diagnoses, medications, or care-plan data.</p>
+  </section>
+
+  <section class="card panel" id="panel-residents" hidden>
+    <h2>Residents</h2>
+    <p class="hint">Musical background only — the intake questions that matter: What was playing when they were 15–25?
+    What was sung at home, at church, at dances? What was their first-dance song?</p>
+    <div id="residentList"></div>
+  </section>
+
+  <section class="card panel" id="panel-library" hidden>
+    <h2>Song library</h2>
+    <p class="hint">The seeded kit: 20 sing-along standards with verse-and-chorus lyrics for the prompter. Tap a song to read them.</p>
+    <div id="songList"></div>
+  </section>
+
+  <section class="card panel" id="panel-playlists" hidden>
+    <h2>Playlists</h2>
+    <label for="plResident">Resident</label>
+    <select id="plResident"></select>
+    <div id="playlistList"></div>
+  </section>
+
+  <section class="card panel" id="panel-player" hidden>
+    <h2>Run a session</h2>
+    <div id="playerSetup">
+      <p class="hint">Pick a resident and a week, note the mood as you start, then step through the songs — logging each
+      response with one tap. Try it: the history tab updates live.</p>
+      <div class="grid g3">
+        <div><label for="pvResident">Resident</label><select id="pvResident"></select></div>
+        <div><label for="pvPlaylist">Playlist</label><select id="pvPlaylist"></select></div>
+        <div><label for="pvMood">Mood before</label><select id="pvMood"><option>calm</option><option selected>neutral</option><option>agitated</option><option>withdrawn</option></select></div>
+      </div>
+      <button class="btn" id="startBtn" style="margin-top:.7rem">Start session</button>
+    </div>
+    <div id="playerRun" hidden></div>
+  </section>
+
+  <section class="card panel" id="panel-history" hidden>
+    <h2>History &amp; insights</h2>
+    <label for="hResident">Resident</label>
+    <select id="hResident"></select>
+    <p class="hint">Songs ranked by logged response (sang along = 3 · moved or listened = 2 · no response = 0 · agitated = −2),
+    from completed sessions. This is the Friday review: promote what lands, retire what doesn't, watch the mood change.</p>
+    <div id="insightsBox"></div>
+    <h3>Past sessions</h3>
+    <div id="sessionList"></div>
+  </section>
+
+  <p class="foot">Demo of the Memory Care Music Program (Sing Along app) with sample data. The real app runs the same
+  flow against a facility's own database — this page keeps everything in your browser and saves nothing.</p>
+</div>
+
+<script>
+const SONGS = [
+  {t:"Hail, Hail, the Gang's All Here",a:"Theodore Morse & D. A. Esrom",e:"1910s",g:["gathering","upbeat","ritual"],
+   l:"Hail! Hail! The gang's all here,\nWhat the heck do we care,\nWhat the heck do we care,\nHail! Hail! The gang's all here,\nWhat the heck do we care now!"},
+  {t:"Good Night, Ladies",a:"Traditional",e:"traditional",g:["closing","gentle","ritual"],
+   l:"Good night, ladies! Good night, ladies!\nGood night, ladies! We're going to leave you now.\nMerrily we roll along, roll along, roll along,\nMerrily we roll along, o'er the deep blue sea."},
+  {t:"Home on the Range",a:"Traditional (Higley & Kelley)",e:"traditional",g:["home","gentle","western"],
+   l:"Oh, give me a home where the buffalo roam,\nWhere the deer and the antelope play,\nWhere seldom is heard a discouraging word,\nAnd the skies are not cloudy all day.\n\nHome, home on the range,\nWhere the deer and the antelope play,\nWhere seldom is heard a discouraging word,\nAnd the skies are not cloudy all day."},
+  {t:"Oh! Susanna",a:"Stephen Foster",e:"1840s",g:["home","upbeat","folk"],
+   l:"I come from Alabama with a banjo on my knee,\nI'm going to Louisiana, my true love for to see.\n\nOh! Susanna, oh don't you cry for me,\nFor I come from Alabama with a banjo on my knee."},
+  {t:"My Wild Irish Rose",a:"Chauncey Olcott",e:"1890s",g:["home","love","waltz"],
+   l:"My wild Irish rose, the sweetest flower that grows.\nYou may search everywhere, but none can compare\nWith my wild Irish rose.\nMy wild Irish rose, the dearest flower that grows.\nAnd some day for my sake, she may let me take\nThe bloom from my wild Irish rose."},
+  {t:"Down by the Old Mill Stream",a:"Tell Taylor",e:"1910s",g:["home","love","gentle"],
+   l:"Down by the old mill stream, where I first met you,\nWith your eyes of blue, dressed in gingham too.\nIt was there I knew that you loved me true.\nYou were sixteen, my village queen,\nDown by the old mill stream."},
+  {t:"Let Me Call You Sweetheart",a:"Leo Friedman & Beth Slater Whitson",e:"1910s",g:["love","waltz","gentle"],
+   l:"Let me call you sweetheart, I'm in love with you.\nLet me hear you whisper that you love me too.\nKeep the love-light glowing in your eyes so true.\nLet me call you sweetheart, I'm in love with you."},
+  {t:"Take Me Out to the Ball Game",a:"Jack Norworth & Albert Von Tilzer",e:"1900s",g:["fun","upbeat","baseball"],
+   l:"Take me out to the ball game,\nTake me out with the crowd.\nBuy me some peanuts and Cracker Jack,\nI don't care if I never get back.\nLet me root, root, root for the home team,\nIf they don't win it's a shame.\nFor it's one, two, three strikes, you're out\nAt the old ball game."},
+  {t:"Daisy Bell (A Bicycle Built for Two)",a:"Harry Dacre",e:"1890s",g:["fun","love","waltz"],
+   l:"Daisy, Daisy, give me your answer, do.\nI'm half crazy all for the love of you.\nIt won't be a stylish marriage,\nI can't afford a carriage,\nBut you'll look sweet upon the seat\nOf a bicycle built for two."},
+  {t:"In the Good Old Summertime",a:"George Evans & Ren Shields",e:"1900s",g:["fun","seasons","waltz"],
+   l:"In the good old summertime, in the good old summertime,\nStrolling through the shady lanes with your baby mine.\nYou hold her hand and she holds yours, and that's a very good sign\nThat she's your tootsie-wootsie in the good old summertime."},
+  {t:"I've Been Working on the Railroad",a:"Traditional",e:"traditional",g:["fun","upbeat","folk"],
+   l:"I've been working on the railroad, all the livelong day.\nI've been working on the railroad, just to pass the time away.\nCan't you hear the whistle blowing? Rise up so early in the morn.\nCan't you hear the captain shouting, \"Dinah, blow your horn!\""},
+  {t:"Camptown Races",a:"Stephen Foster",e:"1850s",g:["movement","upbeat","folk"],
+   l:"The Camptown ladies sing this song, doo-dah, doo-dah,\nThe Camptown racetrack five miles long, oh, doo-dah day.\n\nGoin' to run all night, goin' to run all day,\nI'll bet my money on the bobtail nag,\nSomebody bet on the bay."},
+  {t:"She'll Be Comin' 'Round the Mountain",a:"Traditional",e:"traditional",g:["movement","upbeat","folk"],
+   l:"She'll be comin' 'round the mountain when she comes,\nShe'll be comin' 'round the mountain when she comes,\nShe'll be comin' 'round the mountain,\nShe'll be comin' 'round the mountain,\nShe'll be comin' 'round the mountain when she comes."},
+  {t:"Shine On, Harvest Moon",a:"Nora Bayes & Jack Norworth",e:"1900s",g:["evening","love","gentle"],
+   l:"Shine on, shine on, harvest moon, up in the sky.\nI ain't had no lovin' since January, February, June, or July.\nSnow time ain't no time to stay outdoors and spoon,\nSo shine on, shine on, harvest moon, for me and my gal."},
+  {t:"By the Light of the Silvery Moon",a:"Gus Edwards & Edward Madden",e:"1900s",g:["evening","love","gentle"],
+   l:"By the light of the silvery moon,\nI want to spoon, to my honey I'll croon love's tune.\nHoneymoon, keep a-shining in June.\nYour silvery beams will bring love's dreams,\nWe'll be cuddling soon, by the silvery moon."},
+  {t:"Beautiful Dreamer",a:"Stephen Foster",e:"1860s",g:["evening","gentle","lullaby"],
+   l:"Beautiful dreamer, wake unto me,\nStarlight and dewdrops are waiting for thee.\nSounds of the rude world, heard in the day,\nLulled by the moonlight have all passed away."},
+  {t:"Amazing Grace",a:"John Newton (Traditional melody)",e:"traditional",g:["comfort","hymn","gentle"],
+   l:"Amazing grace, how sweet the sound,\nThat saved a wretch like me.\nI once was lost, but now am found,\nWas blind, but now I see."},
+  {t:"Swing Low, Sweet Chariot",a:"Traditional (spiritual)",e:"traditional",g:["comfort","spiritual","gentle"],
+   l:"Swing low, sweet chariot, comin' for to carry me home,\nSwing low, sweet chariot, comin' for to carry me home.\nI looked over Jordan, and what did I see,\nComin' for to carry me home?\nA band of angels comin' after me,\nComin' for to carry me home."},
+  {t:"Danny Boy",a:"Frederic Weatherly (trad. melody)",e:"1910s",g:["comfort","gentle","irish"],
+   l:"Oh Danny boy, the pipes, the pipes are calling\nFrom glen to glen, and down the mountain side.\nThe summer's gone, and all the roses falling,\n'Tis you, 'tis you must go, and I must bide."},
+  {t:"When the Saints Go Marching In",a:"Traditional (spiritual)",e:"traditional",g:["movement","spiritual","upbeat"],
+   l:"Oh, when the saints go marching in,\nOh, when the saints go marching in,\nOh Lord, I want to be in that number,\nWhen the saints go marching in."},
+];
+const GATHER = "Hail, Hail, the Gang's All Here", CLOSE = "Good Night, Ladies";
+const PLANS = [
+  {name:"Week 1 — Songs of Home & Heart", focus:"Belonging and warmth: home, sweethearts, and the places people came from.",
+   core:["Home on the Range","Oh! Susanna","My Wild Irish Rose","Down by the Old Mill Stream"], move:"She'll Be Comin' 'Round the Mountain"},
+  {name:"Week 2 — Out & About", focus:"Energy and fun: ball games, bicycles, summer strolls — the crowd-pleasers.",
+   core:["Take Me Out to the Ball Game","Daisy Bell (A Bicycle Built for Two)","In the Good Old Summertime","I've Been Working on the Railroad"], move:"Camptown Races"},
+  {name:"Week 3 — Moon & Stars", focus:"Winding down: moonlight songs and lullabies, sung softer and slower.",
+   core:["Shine On, Harvest Moon","By the Light of the Silvery Moon","Beautiful Dreamer","Let Me Call You Sweetheart"], move:"She'll Be Comin' 'Round the Mountain"},
+  {name:"Week 4 — Comfort & Joy", focus:"Reassurance: hymns and spirituals many residents have sung their whole lives.",
+   core:["Amazing Grace","Swing Low, Sweet Chariot","Danny Boy"], move:"When the Saints Go Marching In"},
+];
+const RESIDENTS = [
+  {name:"Eleanor W.", eras:["1940s","1950s"], genres:["big band","swing","hymns"], artists:["Bing Crosby","Doris Day"],
+   notes:"Sang in her church choir for 30 years. Met her husband at a USO dance in 1952."},
+  {name:"Frank D.", eras:["1950s"], genres:["country","gospel"], artists:["Hank Williams"],
+   notes:"Grew up on a farm outside Raleigh. Lifelong Durham Bulls fan — never misses a game on the radio."},
+];
+const planSongs = (p) => [GATHER, ...p.core, p.move, CLOSE];
+const ENGAGE = [
+  {k:"sang_along", label:"Sang along", cls:"good", score:3},
+  {k:"listened_attentively", label:"Listened attentively", cls:"", score:2},
+  {k:"moved_or_tapped", label:"Moved / tapped", cls:"", score:2},
+  {k:"no_visible_response", label:"No response", cls:"mut", score:0},
+  {k:"agitated", label:"Agitated", cls:"crit", score:-2},
+];
+// One completed circle for Eleanor, pre-logged (mirrors the app's seeded demo).
+const sessions = [{
+  resident:"Eleanor W.", playlist:PLANS[0].name, status:"completed", when:"Last Tuesday, 2:00 PM",
+  moodBefore:"agitated", moodAfter:"calm",
+  entries: planSongs(PLANS[0]).map((t,i)=>({song:t, engagement:[
+    "listened_attentively","moved_or_tapped","sang_along","sang_along","no_visible_response","moved_or_tapped","listened_attentively"][i]})),
+}];
+
+const $ = (id) => document.getElementById(id);
+const esc = (s) => s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+const song = (t) => SONGS.find(s=>s.t===t);
+
+// Tabs
+document.querySelectorAll("#tabs .tab").forEach(b=>{
+  b.onclick = () => {
+    document.querySelectorAll("#tabs .tab").forEach(x=>x.classList.toggle("active",x===b));
+    document.querySelectorAll(".panel").forEach(p=>p.hidden = p.id !== "panel-"+b.dataset.tab);
+    if (b.dataset.tab==="history") renderHistory();
+  };
+});
+
+// Program tab
+$("weekCards").innerHTML = PLANS.map(p =>
+  '<div class="week"><b>'+esc(p.name)+'</b><p>'+esc(p.focus)+'</p>'+
+  '<div class="chips">'+p.core.map(c=>'<span class="chip">'+esc(c)+'</span>').join("")+'</div></div>').join("");
+
+// Residents tab
+$("residentList").innerHTML = RESIDENTS.map(r =>
+  '<div class="row"><div class="t">'+esc(r.name)+'</div>'+
+  '<div class="chips">'+[...r.eras,...r.genres,...r.artists].map(c=>'<span class="chip">'+esc(c)+'</span>').join("")+'</div>'+
+  '<div class="s">'+esc(r.notes)+'</div></div>').join("");
+
+// Library tab
+$("songList").innerHTML = SONGS.map((s,i) =>
+  '<div class="row"><div class="t">'+esc(s.t)+' <span class="s">— '+esc(s.a)+'</span></div>'+
+  '<div class="s">'+esc(s.e)+' · <span class="pill pd">public domain</span></div>'+
+  '<div class="chips">'+s.g.map(c=>'<span class="chip">'+esc(c)+'</span>').join("")+'</div>'+
+  '<details><summary class="s" style="cursor:pointer;margin-top:.3rem">Lyrics</summary>'+
+  '<div class="lyrics" style="font-size:.95rem;text-align:left;margin:.4rem 0 0">'+esc(s.l)+'</div></details></div>').join("");
+
+// Playlists tab
+const resOptions = RESIDENTS.map(r=>'<option>'+esc(r.name)+'</option>').join("");
+$("plResident").innerHTML = resOptions;
+function renderPlaylists(){
+  $("playlistList").innerHTML = PLANS.map(p =>
+    '<div class="row"><div class="t">'+esc(p.name)+'</div>'+
+    '<div class="s">'+planSongs(p).map(esc).join(", ")+'</div></div>').join("");
+}
+$("plResident").onchange = renderPlaylists;
+renderPlaylists();
+
+// Player tab
+$("pvResident").innerHTML = resOptions;
+$("pvPlaylist").innerHTML = PLANS.map((p,i)=>'<option value="'+i+'">'+esc(p.name)+'</option>').join("");
+let live = null;
+$("startBtn").onclick = () => {
+  const plan = PLANS[$("pvPlaylist").value];
+  live = { resident:$("pvResident").value, playlist:plan.name, status:"in progress", when:"Just now",
+           moodBefore:$("pvMood").value, moodAfter:null, entries:[], list:planSongs(plan), i:0 };
+  sessions.unshift(live);
+  $("playerSetup").hidden = true; $("playerRun").hidden = false;
+  step();
+};
+function step(){
+  const el = $("playerRun");
+  if (live.i >= live.list.length) {
+    el.innerHTML = '<div class="prompter"><div class="song">All songs done</div>'+
+      '<p class="hint">How does '+esc(live.resident.split(" ")[0])+' seem now?</p>'+
+      '<div style="max-width:220px;margin:0 auto"><select id="moodAfter"><option>calm</option><option>neutral</option><option>agitated</option><option>withdrawn</option></select></div>'+
+      '<div style="margin-top:.9rem"><button class="btn" id="doneBtn">Complete session</button></div></div>';
+    $("doneBtn").onclick = () => {
+      live.moodAfter = $("moodAfter").value; live.status = "completed"; live = null;
+      $("playerRun").hidden = true; $("playerSetup").hidden = false;
+      document.querySelector('#tabs .tab[data-tab="history"]').click();
+    };
+    return;
+  }
+  const s = song(live.list[live.i]);
+  el.innerHTML = '<div class="prompter">'+
+    '<div class="progress">Song '+(live.i+1)+' of '+live.list.length+' · '+esc(live.resident)+'</div>'+
+    '<div class="song">'+esc(s.t)+'</div><div class="artist">'+esc(s.a)+'</div>'+
+    '<p class="hint">Sing from the lyrics, or play from the facility’s own device — then log the response.</p>'+
+    '<div class="lyrics">'+esc(s.l)+'</div>'+
+    '<div class="engage">'+ENGAGE.map(e=>'<button class="btn small '+e.cls+'" data-e="'+e.k+'">'+e.label+'</button>').join("")+'</div>'+
+    '<div style="margin-top:1rem"><button class="btn ghost small" id="endEarly">Finish early</button></div></div>';
+  el.querySelectorAll("button[data-e]").forEach(b=>{
+    b.onclick = () => { live.entries.push({song:s.t, engagement:b.dataset.e}); live.i++; step(); };
+  });
+  $("endEarly").onclick = () => { live.i = live.list.length; step(); };
+}
+
+// History tab
+$("hResident").innerHTML = resOptions;
+$("hResident").onchange = renderHistory;
+function renderHistory(){
+  const who = $("hResident").value;
+  const done = sessions.filter(s=>s.resident===who && s.status==="completed");
+  const agg = {};
+  for (const s of done) for (const e of s.entries) {
+    const sc = ENGAGE.find(x=>x.k===e.engagement).score;
+    (agg[e.song] ??= {n:0,sum:0}); agg[e.song].n++; agg[e.song].sum += sc;
+  }
+  const ranked = Object.entries(agg).map(([t,v])=>({t, n:v.n, avg:v.sum/v.n})).sort((a,b)=>b.avg-a.avg);
+  $("insightsBox").innerHTML = ranked.length ? ranked.map(r=>
+    '<div class="insight"><span class="n">'+esc(r.t)+' <span class="c">('+r.n+'×)</span></span>'+
+    '<span class="bar"><i style="width:'+Math.max(0,Math.round(r.avg/3*100))+'%"></i></span>'+
+    '<span class="v '+(r.avg>=2?'hi':(r.avg<=0?'lo':''))+'">'+r.avg.toFixed(1)+'</span></div>').join("")
+    : '<div class="empty">No completed sessions yet for '+esc(who)+' — run one from the "Run a session" tab.</div>';
+  const mine = sessions.filter(s=>s.resident===who);
+  $("sessionList").innerHTML = mine.length ? mine.map(s=>
+    '<div class="row"><div class="t">'+esc(s.when)+' — <span class="pill '+(s.status==="completed"?"done":"live")+'">'+esc(s.status)+'</span></div>'+
+    '<div class="s">'+esc(s.playlist)+' · mood before: '+esc(s.moodBefore)+(s.moodAfter?' · mood after: <b>'+esc(s.moodAfter)+'</b>':'')+
+    ' · '+s.entries.length+' song(s) logged</div></div>').join("")
+    : '<div class="empty">No sessions yet.</div>';
+}
+renderHistory();
+</script>
+</body>
+</html>

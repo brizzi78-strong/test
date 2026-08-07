@@ -51,6 +51,10 @@ SINGALONG_DB=/path/data.db npm run seed:program -- --facility ID   # into an exi
 npm run seed:program -- --demo-resident                            # dry run incl. the 4 session playlists
 ```
 
+[`demo/index.html`](demo/index.html) is a self-contained, client-side
+walkthrough of the program with sample data — open it in any browser, or let
+the repo's `../render.yaml` blueprint serve it as a free static site.
+
 ## Run it
 
 ```bash
