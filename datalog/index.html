@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>LogWerks — ECU datalog analyzer</title>
+<meta name="description" content="Drop in a BMW/Mercedes ECU datalog (MHD, bootmod3, JB4, or generic CSV) and see whether the tune is safe: knock and timing pulled, boost vs. target, lean spots under load, and intake heat soak. Runs entirely in your browser — logs never leave your device.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230B1220'/%3E%3Cpath d='M5 21l6-8 5 5 4-7 6 10' fill='none' stroke='%2338BDF8' stroke-width='2.4' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+  :root {
+    --paper:#F4F6FA; --surface:#FFFFFF; --surface-2:#EAEEF6; --ink:#131824; --muted:#5C667C;
+    --line:#DCE2EC; --brand:#0369A1; --brand-strong:#075985; --accent:#38BDF8;
+    --good:#1F8A54; --good-bg:#E2F3E9; --warn:#9A6410; --warn-bg:#F7ECD4; --crit:#C23B3B; --crit-bg:#F8E2E0;
+    --boost:#0EA5E9; --rpm:#64748B; --timing:#16A34A; --knock:#DC2626; --lambda:#D97706; --iat:#9333EA; --target:#94A3B8;
+    --shadow:0 1px 2px rgba(19,24,36,.06), 0 12px 30px -16px rgba(19,24,36,.3);
+    --font:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+    --maxw:900px; --r:14px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper:#0A0E17; --surface:#121826; --surface-2:#1A2131; --ink:#EEF2F9; --muted:#93A0B5;
+      --line:#252E40; --brand:#38BDF8; --brand-strong:#7DD3FC; --accent:#38BDF8;
+      --good:#4CBE84; --good-bg:#12321f; --warn:#D6A24A; --warn-bg:#33280f; --crit:#E27B70; --crit-bg:#3a1d1a;
+      --boost:#38BDF8; --rpm:#94A3B8; --timing:#4ADE80; --knock:#F87171; --lambda:#FBBF24; --iat:#C084FC; --target:#64748B;
+      --shadow:0 1px 2px rgba(0,0,0,.5), 0 14px 34px -16px rgba(0,0,0,.7);
+    }
+  }
+  :root[data-theme="light"]{--paper:#F4F6FA;--surface:#FFFFFF;--surface-2:#EAEEF6;--ink:#131824;--muted:#5C667C;--line:#DCE2EC;--brand:#0369A1;--brand-strong:#075985;--boost:#0EA5E9;--rpm:#64748B;--timing:#16A34A;--knock:#DC2626;--lambda:#D97706;--iat:#9333EA;--target:#94A3B8;}
+  :root[data-theme="dark"]{--paper:#0A0E17;--surface:#121826;--surface-2:#1A2131;--ink:#EEF2F9;--muted:#93A0B5;--line:#252E40;--brand:#38BDF8;--brand-strong:#7DD3FC;--boost:#38BDF8;--rpm:#94A3B8;--timing:#4ADE80;--knock:#F87171;--lambda:#FBBF24;--iat:#C084FC;--target:#64748B;}
+
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink); font-family:var(--font); line-height:1.5; -webkit-text-size-adjust:100%; }
+  .wrap { max-width:var(--maxw); margin-inline:auto; padding:0 clamp(.9rem,4vw,1.4rem) 3rem; }
+
+  header.top { position:sticky; top:0; z-index:10; background:color-mix(in srgb,var(--paper) 88%,transparent);
+    backdrop-filter:blur(8px); border-bottom:1px solid var(--line); }
+  .top-in { max-width:var(--maxw); margin-inline:auto; padding:.7rem clamp(.9rem,4vw,1.4rem); display:flex; align-items:center; gap:.6rem; }
+  .logo { width:32px; height:32px; border-radius:9px; background:#0B1220; display:grid; place-items:center; flex:none; }
+  .logo svg { width:22px; height:22px; }
+  h1.brand { font-size:1.1rem; margin:0; font-weight:800; letter-spacing:-.01em; }
+  .brand small { display:block; font-weight:600; font-size:.68rem; color:var(--muted); letter-spacing:.04em; text-transform:uppercase; }
+  .theme { margin-left:auto; background:transparent; border:1px solid var(--line); border-radius:9px; color:var(--ink); padding:.4rem .6rem; cursor:pointer; font-size:.95rem; }
+
+  .card { background:var(--surface); border:1px solid var(--line); border-radius:var(--r); box-shadow:var(--shadow); padding:1rem 1.05rem; margin:.85rem 0; }
+  .card h2 { margin:0 0 .5rem; font-size:1rem; letter-spacing:-.01em; }
+  .muted { color:var(--muted); }
+  .small { font-size:.85rem; }
+
+  /* dropzone */
+  .drop { border:2px dashed var(--line); border-radius:var(--r); padding:2rem 1rem; text-align:center; cursor:pointer; transition:border-color .15s, background .15s; }
+  .drop.hot { border-color:var(--brand); background:color-mix(in srgb,var(--accent) 10%,transparent); }
+  .drop .em { font-size:2rem; }
+  .drop h3 { margin:.4rem 0 .2rem; font-size:1.05rem; }
+  .drop p { margin:0; color:var(--muted); font-size:.88rem; }
+  .drop .browse { color:var(--brand); font-weight:700; text-decoration:underline; }
+
+  label.fld { display:block; font-weight:700; font-size:.78rem; margin:.5rem 0 .2rem; color:var(--muted); text-transform:uppercase; letter-spacing:.04em; }
+  select, input[type=number] { font:inherit; color:var(--ink); background:var(--surface); border:1px solid var(--line); border-radius:9px; padding:.45rem .55rem; width:100%; }
+
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:.5rem .8rem; }
+  .grid3 { display:grid; grid-template-columns:repeat(3,1fr); gap:.5rem .8rem; }
+  @media (max-width:560px){ .grid3 { grid-template-columns:1fr 1fr; } }
+
+  .btn { display:inline-flex; align-items:center; justify-content:center; gap:.4rem; border:1px solid var(--line); background:var(--surface); color:var(--ink);
+    font:inherit; font-weight:700; padding:.5rem .8rem; border-radius:10px; cursor:pointer; }
+  .btn.primary { background:var(--brand); border-color:var(--brand); color:#fff; }
+  @media (prefers-color-scheme: dark){ .btn.primary { color:#04121c; } }
+  .btn:disabled { opacity:.5; cursor:not-allowed; }
+  .btn-row { display:flex; gap:.5rem; flex-wrap:wrap; align-items:center; }
+
+  /* verdict */
+  .verdict { display:flex; align-items:center; gap:.7rem; padding:.85rem 1rem; border-radius:12px; font-weight:800; font-size:1.05rem; }
+  .verdict .em { font-size:1.5rem; }
+  .verdict.good { background:var(--good-bg); color:var(--good); }
+  .verdict.warn { background:var(--warn-bg); color:var(--warn); }
+  .verdict.crit { background:var(--crit-bg); color:var(--crit); }
+
+  /* stat tiles */
+  .tiles { display:grid; grid-template-columns:repeat(4,1fr); gap:.55rem; }
+  @media (max-width:620px){ .tiles { grid-template-columns:1fr 1fr; } }
+  .tile { background:var(--surface-2); border-radius:11px; padding:.6rem .7rem; }
+  .tile b { display:block; font-size:1.15rem; letter-spacing:-.02em; }
+  .tile small { color:var(--muted); font-size:.7rem; text-transform:uppercase; letter-spacing:.04em; }
+
+  /* pulls */
+  .pulls { display:flex; gap:.45rem; flex-wrap:wrap; }
+  .pull { border:1px solid var(--line); background:var(--surface); border-radius:9px; padding:.4rem .6rem; cursor:pointer; font-weight:700; font-size:.85rem; }
+  .pull[aria-selected="true"] { background:var(--brand); border-color:var(--brand); color:#fff; }
+  @media (prefers-color-scheme: dark){ .pull[aria-selected="true"] { color:#04121c; } }
+
+  /* chart */
+  .chartwrap { position:relative; overflow-x:auto; }
+  canvas { width:100%; height:340px; display:block; border-radius:10px; }
+  .legend { display:flex; gap:.8rem; flex-wrap:wrap; margin-top:.5rem; font-size:.8rem; }
+  .legend span { display:inline-flex; align-items:center; gap:.35rem; cursor:pointer; user-select:none; }
+  .legend span.off { opacity:.4; text-decoration:line-through; }
+  .legend i { width:14px; height:3px; border-radius:2px; display:inline-block; }
+  .readout { font-family:var(--mono); font-size:.78rem; color:var(--muted); min-height:1.1em; margin-top:.35rem; }
+
+  /* findings */
+  .find { display:flex; gap:.6rem; padding:.6rem .2rem; border-top:1px solid var(--line); }
+  .find:first-child { border-top:0; }
+  .find .ic { font-size:1.1rem; flex:none; width:22px; text-align:center; }
+  .find .b { flex:1; }
+  .find .b .t { font-weight:700; }
+  .find .b .d { font-size:.86rem; color:var(--muted); }
+  .find.crit .t { color:var(--crit); }
+  .find.warn .t { color:var(--warn); }
+  .find.good .t { color:var(--good); }
+
+  .hidden { display:none; }
+  footer { text-align:center; color:var(--muted); font-size:.78rem; margin-top:1.5rem; }
+  .disclaimer { background:var(--surface-2); color:var(--muted); border-radius:12px; padding:.65rem .8rem; font-size:.8rem; margin:.85rem 0; }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <span class="logo" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M5 21l6-8 5 5 4-7 6 10" fill="none" stroke="#38BDF8" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/></svg></span>
+    <h1 class="brand">LogWerks<small>ECU datalog analyzer</small></h1>
+    <button class="theme" id="theme" title="Toggle theme" aria-label="Toggle light/dark">◐</button>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- Load -->
+  <section class="card" id="load-card">
+    <h2>Load a datalog</h2>
+    <div class="drop" id="drop" tabindex="0" role="button" aria-label="Drop a CSV datalog or browse">
+      <div class="em">📈</div>
+      <h3>Drop your CSV datalog here</h3>
+      <p>MHD, bootmod3, JB4, or any CSV with a header row — or <span class="browse">browse</span>.<br>Your log is read in your browser and never uploaded.</p>
+      <input type="file" id="file" accept=".csv,text/csv,text/plain" class="hidden">
+    </div>
+    <div class="btn-row" style="margin-top:.7rem">
+      <button class="btn" id="sample">Try a sample log</button>
+      <span class="small muted" id="loadinfo"></span>
+    </div>
+  </section>
+
+  <!-- Channel mapping -->
+  <section class="card hidden" id="map-card">
+    <h2>Channels <span class="small muted" id="map-auto"></span></h2>
+    <p class="small muted" style="margin-top:0">Auto-detected from the header. Fix any that look wrong — analysis updates instantly.</p>
+    <div class="grid3" id="map-grid"></div>
+    <div class="grid3" style="margin-top:.6rem">
+      <div><label class="fld" for="wot-thresh">WOT throttle ≥ (%)</label><input type="number" id="wot-thresh" value="92" min="50" max="100"></div>
+      <div><label class="fld" for="knock-thresh">Knock flag: timing pulled ≥ (°)</label><input type="number" id="knock-thresh" value="1.5" min="0.1" step="0.1"></div>
+      <div><label class="fld" for="lean-thresh">Lean flag: lambda ≥</label><input type="number" id="lean-thresh" value="0.90" min="0.7" max="1.2" step="0.01"></div>
+    </div>
+  </section>
+
+  <!-- Verdict + stats -->
+  <section class="card hidden" id="result-card">
+    <div class="verdict" id="verdict"><span class="em">⏳</span><span id="verdict-text">Analyzing…</span></div>
+    <div class="tiles" id="tiles" style="margin-top:.8rem"></div>
+  </section>
+
+  <!-- Pulls + chart -->
+  <section class="card hidden" id="chart-card">
+    <h2>Wide-open-throttle pulls</h2>
+    <div class="pulls" id="pulls"></div>
+    <div class="chartwrap" style="margin-top:.7rem">
+      <canvas id="chart" width="1600" height="680"></canvas>
+    </div>
+    <div class="legend" id="legend"></div>
+    <div class="readout" id="readout">Hover the chart to read values.</div>
+  </section>
+
+  <!-- Findings -->
+  <section class="card hidden" id="find-card">
+    <h2>Findings</h2>
+    <div id="findings"></div>
+  </section>
+
+  <div class="disclaimer" id="disc">
+    LogWerks reads and analyzes datalogs — it does <b>not</b> flash, modify, or connect to any vehicle. It's an analysis aid for a qualified tuner, not a substitute for one. Thresholds are conservative defaults; a knock/lean flag warrants a look at the data, not automatic panic. Nothing here is a guarantee an engine is safe.
+  </div>
+
+  <footer>Runs entirely in your browser. No upload, no account, no network calls.</footer>
+</main>
+
+<script>
+"use strict";
+(function () {
+  const $ = (s, r=document) => r.querySelector(s);
+  const el = (t,c)=>{ const e=document.createElement(t); if(c) e.className=c; return e; };
+  const store = {
+    get(k,d){ try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch { return d; } },
+    set(k,v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch {} }
+  };
+
+  /* ---------- Theme ---------- */
+  const themeBtn = $("#theme");
+  const applyTheme = t => { if(t) document.documentElement.setAttribute("data-theme", t); };
+  applyTheme(store.get("logwerks.theme", null));
+  themeBtn.addEventListener("click", () => {
+    const cur = document.documentElement.getAttribute("data-theme");
+    const isDark = cur ? cur==="dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+    const next = isDark ? "light" : "dark"; applyTheme(next); store.set("logwerks.theme", next);
+    if(state.rows) draw();
+  });
+
+  /* ---------- Channel definitions ---------- */
+  // key: internal name; syn: header substrings (lowercased) that map to it; unit label.
+  const CHANNELS = [
+    { key:"time",    label:"Time",             syn:["time","timestamp","seconds","elapsed"], unit:"s" },
+    { key:"rpm",     label:"Engine RPM",        syn:["rpm","engine speed","enginespeed","revs"], unit:"rpm" },
+    { key:"throttle",label:"Throttle / Pedal",  syn:["accelerator pedal","pedal","throttle","tps","load %","aps"], unit:"%" },
+    { key:"boost",   label:"Boost (actual)",    syn:["boost pressure actual","actual boost","boost (psi","boost psi","boost","manifold pressure","map ","charge pressure","ladedruck"], unit:"psi" },
+    { key:"target",  label:"Boost (target)",    syn:["boost pressure target","target boost","boost target","desired boost","spec boost"], unit:"psi" },
+    { key:"timing",  label:"Ignition timing",   syn:["ignition angle","ignition timing","timing avg","spark advance","ign angle","zündwinkel"], unit:"°" },
+    { key:"knock",   label:"Timing pulled",     syn:["ignition correction","timing correction","knock retard","ign correction","knock sum","knock avg","knock"], unit:"°" },
+    { key:"lambda",  label:"Lambda / AFR",      syn:["lambda","afr","air fuel","air-fuel","air/fuel"], unit:"λ" },
+    { key:"iat",     label:"Intake air temp",   syn:["intake air temp","charge air temp","iat","air temp","ansauglufttemp"], unit:"°" },
+  ];
+  // channels we chart, with their CSS colour var
+  const PLOT = [
+    { key:"rpm",     cvar:"--rpm" },
+    { key:"boost",   cvar:"--boost" },
+    { key:"target",  cvar:"--target", dash:true },
+    { key:"timing",  cvar:"--timing" },
+    { key:"knock",   cvar:"--knock" },
+    { key:"lambda",  cvar:"--lambda" },
+    { key:"iat",     cvar:"--iat" },
+  ];
+
+  const state = { headers:[], rows:null, map:{}, pulls:[], activePull:0, hidden:{}, fileName:"" };
+
+  /* ---------- CSV parse (handles quotes, commas, semicolons, tabs) ---------- */
+  function detectDelim(line){
+    const counts = { ",":0, ";":0, "\t":0 };
+    let q=false;
+    for(const ch of line){ if(ch==='"') q=!q; else if(!q && ch in counts) counts[ch]++; }
+    return Object.entries(counts).sort((a,b)=>b[1]-a[1])[0][0];
+  }
+  function parseCSV(text){
+    // strip BOM, split lines but respect quoted newlines minimally (datalogs rarely quote newlines)
+    text = text.replace(/^﻿/, "");
+    const firstLine = (text.split(/\r?\n/).find(l => l.trim().length) || "");
+    const delim = detectDelim(firstLine);
+    const rows = [];
+    for(const raw of text.split(/\r?\n/)){
+      if(!raw.trim()) continue;
+      const out=[]; let cur=""; let q=false;
+      for(let i=0;i<raw.length;i++){ const ch=raw[i];
+        if(ch==='"'){ if(q && raw[i+1]==='"'){ cur+='"'; i++; } else q=!q; }
+        else if(ch===delim && !q){ out.push(cur); cur=""; }
+        else cur+=ch;
+      }
+      out.push(cur);
+      rows.push(out.map(s=>s.trim()));
+    }
+    return rows;
+  }
+
+  // Some logs have a units row under the header; skip a 2nd row that is mostly non-numeric.
+  function toTable(cells){
+    if(cells.length < 2) return null;
+    let header = cells[0];
+    let dataStart = 1;
+    const numericFrac = r => { let n=0,t=0; for(const v of r){ if(v==="") continue; t++; if(!isNaN(parseFloat(v.replace(/[^0-9eE.+-]/g,"")))) n++; } return t? n/t : 0; };
+    if(cells[1] && numericFrac(cells[1]) < 0.4 && cells.length > 2) dataStart = 2; // units row
+    const rows = [];
+    for(let i=dataStart;i<cells.length;i++){
+      const r = cells[i]; if(r.length < 2) continue;
+      const obj = r.map(v => { const f=parseFloat(String(v).replace(/[^0-9eE.+-]/g,"")); return isNaN(f)? null : f; });
+      rows.push(obj);
+    }
+    return { header, rows };
+  }
+
+  function autoMap(header){
+    const map = {};
+    const used = new Set();
+    const norm = header.map(h => (h||"").toLowerCase());
+    for(const ch of CHANNELS){
+      let best=-1, bestScore=1e9;
+      for(let i=0;i<norm.length;i++){
+        if(used.has(i)) continue;
+        for(const syn of ch.syn){
+          const idx = norm[i].indexOf(syn);
+          if(idx>=0){ const score = idx*100 + norm[i].length - syn.length; if(score<bestScore){ bestScore=score; best=i; } }
+        }
+      }
+      if(best>=0){ map[ch.key]=best; used.add(best); }
+    }
+    return map;
+  }
+
+  /* ---------- Boost unit normalisation ---------- */
+  // Guess if a "boost" column is absolute kPa/bar/psi and convert to gauge psi.
+  function boostToPsi(vals){
+    const finite = vals.filter(v=>v!=null && isFinite(v));
+    if(!finite.length) return { vals, note:"" };
+    const max = Math.max(...finite), min = Math.min(...finite);
+    // Heuristics: kPa absolute ~ 100 baseline, up to ~250; bar ~1-3; psi gauge -15..30
+    if(max > 40){ // likely kPa absolute
+      return { vals: vals.map(v=> v==null? null : (v-101.3)*0.145038), note:"converted from kPa abs" };
+    }
+    if(max <= 4 && min >= 0.5){ // likely bar absolute
+      return { vals: vals.map(v=> v==null? null : (v-1.0)*14.5038), note:"converted from bar abs" };
+    }
+    return { vals, note:"" }; // assume already gauge psi
+  }
+
+  /* ---------- Build series from mapping ---------- */
+  function col(key){ const i = state.map[key]; return (i==null||i<0)? null : state.rows.map(r => r[i]); }
+
+  function buildSeries(){
+    const s = {};
+    for(const ch of CHANNELS){ s[ch.key] = col(ch.key); }
+    // synth time if missing: assume 20Hz
+    if(!s.time){ s.time = state.rows.map((_,i)=> i*0.05); }
+    // boost normalise
+    if(s.boost){ const c = boostToPsi(s.boost); s.boost = c.vals; state.boostNote = c.note; }
+    if(s.target){ const c = boostToPsi(s.target); s.target = c.vals; }
+    // lambda: if looks like AFR (values ~10-20), convert to lambda (gas stoich 14.7)
+    if(s.lambda){
+      const f = s.lambda.filter(v=>v!=null&&isFinite(v)); const mx = f.length?Math.max(...f):0;
+      if(mx > 5){ s.lambda = s.lambda.map(v=> v==null? null : v/14.7); state.lambdaFromAFR=true; }
+    }
+    return s;
+  }
+
+  /* ---------- WOT pull detection ---------- */
+  function detectPulls(s, wotPct){
+    const n = state.rows.length;
+    const thr = s.throttle;
+    const rpm = s.rpm || [];
+    const pulls = [];
+    let i=0;
+    const isWot = k => thr ? (thr[k]!=null && thr[k] >= wotPct) : (rpm[k]!=null && rpm[k] > 2500);
+    while(i<n){
+      if(isWot(i)){
+        // walk to the last WOT sample, tolerating brief (<=3 sample) dropouts within a pull
+        let j=i, last=i, gap=0;
+        while(j<n){
+          if(isWot(j)){ last=j; gap=0; }
+          else { gap++; if(gap>3) break; }
+          j++;
+        }
+        const seg = { start:i, end:last };
+        const span = seg.end - seg.start;
+        let rmin=Infinity, rmax=-Infinity;
+        if(rpm.length) for(let k=seg.start;k<=seg.end;k++){ const v=rpm[k]; if(v!=null&&isFinite(v)){ if(v<rmin)rmin=v; if(v>rmax)rmax=v; } }
+        // a real pull spans some samples and climbs the tach
+        if(span >= 8 && (!rpm.length || (rmax - rmin) > 800)){ pulls.push(seg); }
+        i = Math.max(j, seg.end+1);
+      } else i++;
+    }
+    // fallback: nothing clearly WOT — treat the whole log as one span
+    if(!pulls.length){ pulls.push({ start:0, end:n-1 }); }
+    return pulls;
+  }
+
+  /* ---------- Analysis ---------- */
+  function analyze(){
+    const s = state.series;
+    const wotPct = clampNum($("#wot-thresh").value, 92);
+    const knockThr = clampNum($("#knock-thresh").value, 1.5);
+    const leanThr = clampNum($("#lean-thresh").value, 0.90);
+    state.pulls = detectPulls(s, wotPct);
+    if(state.activePull >= state.pulls.length) state.activePull = 0;
+
+    const findings = [];
+    const rangeAll = { start:0, end:state.rows.length-1 };
+
+    // knock: timing pulled during WOT
+    let worstKnock = 0, worstKnockAt = null, knockEvents = 0;
+    if(s.knock){
+      for(const p of state.pulls){
+        for(let k=p.start;k<=p.end;k++){
+          const v = s.knock[k]; if(v==null) continue;
+          const pulled = Math.abs(v) * (v<0? 1 : (avgSign(s.knock)<0? 1 : 1)); // correction usually negative = retard
+          const retard = v<0 ? -v : (avgSign(s.knock)>0 ? v : 0); // if channel positive-as-retard
+          const mag = Math.max(v<0? -v : 0, retard);
+          if(mag >= knockThr){ knockEvents++; if(mag>worstKnock){ worstKnock=mag; worstKnockAt=k; } }
+        }
+      }
+    }
+
+    // boost vs target overshoot/undershoot at WOT
+    let maxBoost=-99, maxOver=0, maxUnder=0;
+    if(s.boost){
+      for(const p of state.pulls) for(let k=p.start;k<=p.end;k++){
+        const b=s.boost[k]; if(b==null) continue; if(b>maxBoost)maxBoost=b;
+        if(s.target && s.target[k]!=null){ const d=b-s.target[k]; if(d>maxOver)maxOver=d; if(-d>maxUnder)maxUnder=-d; }
+      }
+    }
+
+    // lean under load
+    let leanest=0, leanAt=null, leanestWot=null;
+    if(s.lambda){
+      for(const p of state.pulls) for(let k=p.start;k<=p.end;k++){
+        const l=s.lambda[k]; if(l==null||!isFinite(l)) continue;
+        if(leanestWot==null || l>leanestWot) leanestWot=l;
+        if(l>=leanThr && l>leanest){ leanest=l; leanAt=k; }
+      }
+    }
+
+    // IAT / heat soak
+    let maxIat=null;
+    if(s.iat){ for(let k=0;k<state.rows.length;k++){ const v=s.iat[k]; if(v!=null && (maxIat==null||v>maxIat)) maxIat=v; } }
+
+    // peak timing
+    let peakTiming=null; if(s.timing){ for(const p of state.pulls) for(let k=p.start;k<=p.end;k++){ const v=s.timing[k]; if(v!=null&&(peakTiming==null||v>peakTiming)) peakTiming=v; } }
+
+    // ---- findings ----
+    if(s.knock){
+      if(knockEvents===0) findings.push({sev:"good", ic:"✅", t:"No significant knock", d:`No timing pull ≥ ${knockThr}° during WOT. Clean.`});
+      else if(worstKnock < knockThr+2) findings.push({sev:"warn", ic:"⚠️", t:`Minor knock — ${worstKnock.toFixed(1)}° max pull`, d:`${knockEvents} sample(s) with timing pulled ≥ ${knockThr}°${worstKnockAt!=null? " (worst near "+fmtAt(worstKnockAt)+")":""}. Watch fuel quality and IATs; usually not alarming in isolation.`});
+      else findings.push({sev:"crit", ic:"🛑", t:`Knock — ${worstKnock.toFixed(1)}° timing pulled`, d:`${knockEvents} knock sample(s), worst near ${fmtAt(worstKnockAt)}. Back off, check fuel/plugs/IAT before further WOT.`});
+    } else findings.push({sev:"warn", ic:"❓", t:"No knock/timing-correction channel", d:"Map an 'ignition correction' or 'knock' column to check for knock — it's the most important safety signal."});
+
+    if(s.boost && s.target){
+      if(maxOver >= 2.5) findings.push({sev:"crit", ic:"🛑", t:`Boost overshoot +${maxOver.toFixed(1)} psi`, d:"Actual boost spiked well over target — check wastegate/boost control before more pulls."});
+      else if(maxUnder >= 3) findings.push({sev:"warn", ic:"⚠️", t:`Boost undershoot −${maxUnder.toFixed(1)} psi`, d:"Falling short of target under load — possible boost leak, weak wastegate, or fuel-cut/torque limiting."});
+      else findings.push({sev:"good", ic:"✅", t:"Boost tracks target", d:`Peak ${maxBoost.toFixed(1)} psi, within ±${Math.max(maxOver,maxUnder).toFixed(1)} psi of target.`});
+    } else if(s.boost){
+      findings.push({sev:"good", ic:"📊", t:`Peak boost ${maxBoost.toFixed(1)} psi`, d:"No target channel mapped, so over/undershoot isn't checked."});
+    }
+
+    if(s.lambda){
+      if(leanest >= leanThr+0.06) findings.push({sev:"crit", ic:"🛑", t:`Lean under load — λ ${leanest.toFixed(2)}`, d:`Leaner than ${leanThr.toFixed(2)} at WOT near ${fmtAt(leanAt)}. Lean + boost is how pistons die — address fueling.`});
+      else if(leanest >= leanThr) findings.push({sev:"warn", ic:"⚠️", t:`Slightly lean — λ ${leanest.toFixed(2)}`, d:`Touches ${leanest.toFixed(2)} at WOT. Target is typically ~0.80–0.86 λ under boost.`});
+      else findings.push({sev:"good", ic:"✅", t:"Fueling looks safe under load", d:`Stays richer than ${leanThr.toFixed(2)} λ at WOT.`});
+    }
+
+    if(maxIat!=null){
+      if(maxIat >= 65) findings.push({sev:"warn", ic:"🌡️", t:`High intake temps — ${maxIat.toFixed(0)}°`, d:"Heat soak raises knock risk and pulls timing. Let it cool between pulls / check the intercooler."});
+      else findings.push({sev:"good", ic:"✅", t:`Intake temps OK — peak ${maxIat.toFixed(0)}°`, d:"No obvious heat soak."});
+    }
+
+    // ---- tiles ----
+    const tiles = [];
+    if(s.rpm){ let mr=null; for(let k=0;k<state.rows.length;k++){const v=s.rpm[k]; if(v!=null&&(mr==null||v>mr))mr=v;} tiles.push(["Peak RPM", mr!=null? mr.toFixed(0):"—"]); }
+    if(s.boost) tiles.push(["Peak boost", maxBoost>-99? maxBoost.toFixed(1)+" psi":"—"]);
+    if(peakTiming!=null) tiles.push(["Peak timing", peakTiming.toFixed(1)+"°"]);
+    if(s.knock) tiles.push(["Max knock", worstKnock>0? "−"+worstKnock.toFixed(1)+"°":"0°"]);
+    if(s.lambda) tiles.push(["Leanest @WOT", leanestWot!=null? leanestWot.toFixed(2)+" λ":"—"]);
+    if(maxIat!=null) tiles.push(["Peak IAT", maxIat.toFixed(0)+"°"]);
+    tiles.push(["WOT pulls", String(state.pulls.length)]);
+    tiles.push(["Samples", String(state.rows.length)]);
+
+    // ---- verdict ----
+    const hasCrit = findings.some(f=>f.sev==="crit");
+    const hasWarn = findings.some(f=>f.sev==="warn");
+    let verdict;
+    if(hasCrit) verdict = { cls:"crit", em:"🛑", txt:"Needs attention before more WOT" };
+    else if(hasWarn) verdict = { cls:"warn", em:"⚠️", txt:"Mostly healthy — a few things to watch" };
+    else verdict = { cls:"good", em:"✅", txt:"Log looks healthy" };
+
+    state.findings = findings; state.tiles = tiles; state.verdict = verdict;
+  }
+
+  function avgSign(arr){ let s=0,n=0; for(const v of arr){ if(v!=null&&isFinite(v)&&v!==0){ s+=v; n++; } } return n? s/n : 0; }
+  function fmtAt(k){ const t=state.series.time[k], r=state.series.rpm?state.series.rpm[k]:null; return (r!=null? r.toFixed(0)+" rpm":"") + (t!=null? " / "+t.toFixed(1)+"s":""); }
+  function clampNum(v,d){ const f=parseFloat(v); return isNaN(f)? d : f; }
+
+  /* ---------- Rendering ---------- */
+  function renderMap(){
+    const grid = $("#map-grid"); grid.innerHTML="";
+    for(const ch of CHANNELS){
+      const wrap = el("div");
+      const lab = el("label","fld"); lab.textContent = ch.label + (ch.unit?` (${ch.unit})`:""); lab.htmlFor="m_"+ch.key;
+      const sel = el("select"); sel.id="m_"+ch.key;
+      const none = el("option"); none.value="-1"; none.textContent="— none —"; sel.appendChild(none);
+      state.headers.forEach((h,i)=>{ const o=el("option"); o.value=String(i); o.textContent=h||("col "+i); sel.appendChild(o); });
+      sel.value = String(state.map[ch.key]!=null? state.map[ch.key] : -1);
+      sel.addEventListener("change", ()=>{ const v=parseInt(sel.value,10); if(v<0) delete state.map[ch.key]; else state.map[ch.key]=v; recompute(); });
+      wrap.append(lab, sel); grid.appendChild(wrap);
+    }
+    const detected = Object.keys(state.map).length;
+    $("#map-auto").textContent = `· ${detected}/${CHANNELS.length} auto-mapped`;
+  }
+
+  function renderResults(){
+    $("#verdict").className = "verdict "+state.verdict.cls;
+    $("#verdict .em").textContent = state.verdict.em;
+    $("#verdict-text").textContent = state.verdict.txt;
+    const tiles = $("#tiles"); tiles.innerHTML="";
+    for(const [label,val] of state.tiles){ const t=el("div","tile"); t.innerHTML=`<b>${val}</b><small>${label}</small>`; tiles.appendChild(t); }
+    // pulls
+    const pb = $("#pulls"); pb.innerHTML="";
+    state.pulls.forEach((p,i)=>{
+      const rs = state.series.rpm? state.series.rpm[p.start] : null, re = state.series.rpm? state.series.rpm[p.end] : null;
+      const b = el("button","pull"); b.setAttribute("aria-selected", i===state.activePull?"true":"false");
+      b.textContent = `Pull ${i+1}` + (rs!=null&&re!=null? ` · ${rs.toFixed(0)}→${re.toFixed(0)} rpm`:"");
+      b.addEventListener("click", ()=>{ state.activePull=i; renderResults(); draw(); });
+      pb.appendChild(b);
+    });
+    // findings
+    const fb = $("#findings"); fb.innerHTML="";
+    for(const f of state.findings){ const d=el("div","find "+f.sev); d.innerHTML=`<span class="ic">${f.ic}</span><div class="b"><div class="t">${f.t}</div><div class="d">${f.d}</div></div>`; fb.appendChild(d); }
+    // legend
+    renderLegend();
+  }
+
+  function cssColor(v){ return getComputedStyle(document.documentElement).getPropertyValue(v).trim() || "#888"; }
+
+  function renderLegend(){
+    const lg = $("#legend"); lg.innerHTML="";
+    for(const p of PLOT){
+      if(!state.series[p.key]) continue;
+      const ch = CHANNELS.find(c=>c.key===p.key);
+      const span = el("span"); if(state.hidden[p.key]) span.classList.add("off");
+      span.innerHTML = `<i style="background:${cssColor(p.cvar)}"></i>${ch.label}`;
+      span.addEventListener("click", ()=>{ state.hidden[p.key]=!state.hidden[p.key]; span.classList.toggle("off"); draw(); });
+      lg.appendChild(span);
+    }
+  }
+
+  // Draw multi-channel chart for the active pull, x-axis = RPM if available else time.
+  function draw(){
+    const cv = $("#chart"), ctx = cv.getContext("2d");
+    const W = cv.width, H = cv.height, padL=54, padR=54, padT=18, padB=42;
+    ctx.clearRect(0,0,W,H);
+    ctx.fillStyle = cssColor("--surface"); ctx.fillRect(0,0,W,H);
+    const p = state.pulls[state.activePull] || {start:0,end:state.rows.length-1};
+    const s = state.series;
+    const xkey = s.rpm ? "rpm" : "time";
+    const xs = s[xkey];
+    // x range
+    let x0=Infinity,x1=-Infinity;
+    for(let k=p.start;k<=p.end;k++){ const v=xs[k]; if(v!=null){ if(v<x0)x0=v; if(v>x1)x1=v; } }
+    if(!isFinite(x0)||x1<=x0){ x0=0; x1=1; }
+    const X = v => padL + (v-x0)/(x1-x0)*(W-padL-padR);
+
+    // grid + x labels
+    ctx.strokeStyle = cssColor("--line"); ctx.lineWidth=1; ctx.font="20px "+cssColor("--font")||"20px sans-serif";
+    ctx.fillStyle = cssColor("--muted"); ctx.textAlign="center"; ctx.textBaseline="top";
+    const xticks=6;
+    for(let t=0;t<=xticks;t++){ const xv=x0+(x1-x0)*t/xticks; const px=X(xv); ctx.globalAlpha=.5; ctx.beginPath(); ctx.moveTo(px,padT); ctx.lineTo(px,H-padB); ctx.stroke(); ctx.globalAlpha=1;
+      ctx.fillText(xkey==="rpm"? xv.toFixed(0) : xv.toFixed(1)+"s", px, H-padB+6); }
+    ctx.textAlign="left"; ctx.fillText(xkey==="rpm"?"RPM":"Time", padL, H-padB+22);
+
+    // each channel scaled to its own min/max within the pull
+    const scales = {};
+    for(const pl of PLOT){
+      const arr = s[pl.key]; if(!arr || state.hidden[pl.key]) continue;
+      let mn=Infinity,mx=-Infinity; for(let k=p.start;k<=p.end;k++){ const v=arr[k]; if(v!=null&&isFinite(v)){ if(v<mn)mn=v; if(v>mx)mx=v; } }
+      if(!isFinite(mn)||mx<=mn){ mn= (mn===Infinity?0:mn)-1; mx=mn+2; }
+      scales[pl.key]={mn,mx};
+    }
+    const Y = (key,v)=>{ const sc=scales[key]; return padT + (1-(v-sc.mn)/(sc.mx-sc.mn))*(H-padT-padB); };
+
+    for(const pl of PLOT){
+      const arr=s[pl.key]; if(!arr || state.hidden[pl.key] || !scales[pl.key]) continue;
+      ctx.strokeStyle=cssColor(pl.cvar); ctx.lineWidth= pl.key==="knock"?3.5:2.4;
+      if(pl.dash) ctx.setLineDash([8,6]); else ctx.setLineDash([]);
+      ctx.beginPath(); let started=false;
+      for(let k=p.start;k<=p.end;k++){ const v=arr[k]; if(v==null||!isFinite(v)){ started=false; continue; } const px=X(xs[k]), py=Y(pl.key,v); if(!started){ ctx.moveTo(px,py); started=true; } else ctx.lineTo(px,py); }
+      ctx.stroke();
+    }
+    ctx.setLineDash([]);
+    state.chartGeom = { padL,padR,padT,padB,W,H,x0,x1,X,xkey,p };
+  }
+
+  // hover readout
+  $("#chart").addEventListener("mousemove", (e)=>{
+    if(!state.series) return; const g=state.chartGeom; if(!g) return;
+    const cv=$("#chart"); const rect=cv.getBoundingClientRect();
+    const px = (e.clientX-rect.left)/rect.width*cv.width;
+    const s=state.series, p=g.p, xs=s[g.xkey];
+    // nearest sample by x pixel
+    let best=p.start, bd=Infinity;
+    for(let k=p.start;k<=p.end;k++){ const v=xs[k]; if(v==null) continue; const d=Math.abs(g.X(v)-px); if(d<bd){bd=d;best=k;} }
+    const parts=[];
+    const put=(key,fmt)=>{ const a=s[key]; if(a&&a[best]!=null&&isFinite(a[best])) parts.push(fmt(a[best])); };
+    put("rpm",v=>v.toFixed(0)+" rpm"); put("boost",v=>v.toFixed(1)+" psi"); put("target",v=>"tgt "+v.toFixed(1)); put("timing",v=>v.toFixed(1)+"° ign"); put("knock",v=>v.toFixed(1)+"° corr"); put("lambda",v=>v.toFixed(2)+" λ"); put("iat",v=>v.toFixed(0)+"° iat");
+    $("#readout").textContent = parts.join("   ·   ") || "—";
+  });
+
+  /* ---------- Pipeline ---------- */
+  function recompute(){ if(!state.rows) return; state.series = buildSeries(); analyze(); renderResults(); draw(); }
+
+  function loadTable(tbl, fileName){
+    state.headers = tbl.header; state.rows = tbl.rows; state.fileName = fileName||"";
+    state.map = autoMap(tbl.header); state.hidden={}; state.activePull=0;
+    $("#map-card").classList.remove("hidden"); $("#result-card").classList.remove("hidden");
+    $("#chart-card").classList.remove("hidden"); $("#find-card").classList.remove("hidden");
+    $("#loadinfo").textContent = `${fileName? fileName+" — ":""}${tbl.rows.length} rows, ${tbl.header.length} columns`;
+    renderMap(); recompute();
+    $("#result-card").scrollIntoView({behavior:"smooth", block:"nearest"});
+  }
+
+  function handleText(text, fileName){
+    const cells = parseCSV(text); const tbl = toTable(cells);
+    if(!tbl || !tbl.rows.length){ $("#loadinfo").textContent="Couldn't read that as a CSV with a header row."; return; }
+    loadTable(tbl, fileName);
+  }
+
+  /* ---------- File / drop wiring ---------- */
+  const drop=$("#drop"), file=$("#file");
+  drop.addEventListener("click", ()=>file.click());
+  drop.addEventListener("keydown", e=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); file.click(); } });
+  file.addEventListener("change", ()=>{ const f=file.files[0]; if(f) f.text().then(t=>handleText(t,f.name)); });
+  ;["dragenter","dragover"].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.add("hot");}));
+  ;["dragleave","drop"].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.remove("hot");}));
+  drop.addEventListener("drop", e=>{ const f=e.dataTransfer.files[0]; if(f) f.text().then(t=>handleText(t,f.name)); });
+
+  ["wot-thresh","knock-thresh","lean-thresh"].forEach(id=>$("#"+id).addEventListener("input", recompute));
+
+  /* ---------- Sample log (synthetic but realistic) ---------- */
+  function sampleCSV(){
+    const rows = [["Time","RPM","Accelerator Pedal","Boost Pressure (psi)","Boost Target (psi)","Ignition Angle","Ignition Correction","Lambda","Intake Air Temp"]];
+    let t=0;
+    // idle/cruise
+    for(let i=0;i<20;i++){ rows.push([t.toFixed(2),(800+Math.random()*60).toFixed(0),"8","0.5","0","18","0","1.00","32"]); t+=0.05; }
+    // WOT pull 1 (healthy)
+    let rpm=2200;
+    for(let i=0;i<70;i++){ rpm+=Math.round(75+Math.random()*10);
+      const boost=Math.min(19,(rpm-2000)/220*19), tgt=Math.min(18.5,(rpm-2000)/220*18.5);
+      rows.push([t.toFixed(2),rpm,"98",(boost+ (Math.random()*.4-.2)).toFixed(1),tgt.toFixed(1),(12+ (rpm-2200)/400).toFixed(1),(Math.random()<.05?-0.5:0).toFixed(1),(0.86-(boost/19)*0.04).toFixed(2),(38+i*0.3).toFixed(0)]);
+      t+=0.05; if(rpm>6800)break; }
+    // cruise
+    for(let i=0;i<25;i++){ rows.push([t.toFixed(2),(2200+Math.random()*200).toFixed(0),"10","1.0","0","20","0","1.00",(52-i*0.2).toFixed(0)]); t+=0.05; }
+    // WOT pull 2 (knock + heat soak later in run)
+    rpm=2400;
+    for(let i=0;i<70;i++){ rpm+=Math.round(72+Math.random()*10);
+      const boost=Math.min(20,(rpm-2100)/210*20), tgt=Math.min(18.5,(rpm-2100)/210*18.5);
+      const knock = rpm>5200 ? -(1.6+Math.random()*1.8) : (Math.random()<.05?-0.5:0);
+      rows.push([t.toFixed(2),rpm,"99",(boost+(Math.random()*.5-.15)).toFixed(1),tgt.toFixed(1),(12+(rpm-2400)/380).toFixed(1),knock.toFixed(1),(0.88-(boost/20)*0.03 + (rpm>6000?0.05:0)).toFixed(2),(55+i*0.35).toFixed(0)]);
+      t+=0.05; if(rpm>6900)break; }
+    return rows.map(r=>r.join(",")).join("\n");
+  }
+  $("#sample").addEventListener("click", ()=>handleText(sampleCSV(),"sample-pull.csv"));
+
+})();
+</script>
+</body>
+</html>
