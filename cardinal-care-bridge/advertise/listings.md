@@ -24,7 +24,7 @@ single highest-leverage free listing — it's what shows in the map pack for
 - **Service area** (no storefront — choose "service area business"):
   Wake, Durham, Orange, Chatham, Johnston, Lee, and Moore counties, NC
 - **Phone:** (850) 221-7443 · **Email:** robertbrizzi@gmail.com
-- **Website:** the Cardinal Care Bridge site URL (Render or custom domain)
+- **Website:** https://cardinalscarebridge.com/
 - **Tracking tag:** "Google" — and turn on the profile's built-in call
   history so Google-sourced calls are counted even when nobody asks.
 
@@ -51,8 +51,8 @@ questions is an intended feature):**
 > that in the first conversation.
 
 > **Q: Do you help with urgent hospital discharges?**
-> A: Yes. Call or text (850) 221-7443 — we respond the same day, including
-> Fridays and weekends, and we can check real availability quickly.
+> A: Yes. Call or text (850) 221-7443. We will confirm whether we can
+> assist and begin checking appropriate options as quickly as possible.
 
 **First post (profiles with posts rank and convert better):**
 
@@ -60,7 +60,8 @@ questions is an intended feature):**
 > confusing — and most families are doing it for the first time, often on
 > a deadline. We put together a free family guide: how to compare
 > communities, what to ask on a tour, and what happens next. Request it at
-> [site URL] or call (850) 221-7443. No cost, no pressure.
+> https://cardinalscarebridge.com/ or call (850) 221-7443. No cost,
+> no pressure.
 
 While you're at it: the same info pasted into **Bing Places**
 ([bingplaces.com](https://www.bingplaces.com/)) takes five minutes and is
@@ -139,7 +140,8 @@ Every email Rob sends is an ad nobody has to pay for:
 
 > **Rob Brizzi** · Cardinal Care Bridge
 > Senior living advisory & care navigation for Triangle families
-> Free family guide & 30-min consultation: [site URL] · (850) 221-7443
+> Free family guide & 30-min consultation:
+> https://cardinalscarebridge.com/ · (850) 221-7443
 
 ---
 
