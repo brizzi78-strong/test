@@ -19,11 +19,12 @@ import { timingSafeEqual } from 'node:crypto';
 import { VerifyService, DISCLOSURE_VERSION } from '../service/verifyService.ts';
 import { CertificateService } from '../service/certificate.ts';
 import { ReportService } from '../service/report.ts';
+import { PortalService } from '../service/portal.ts';
 import { qrSvg } from '../service/qr.ts';
 import { DomainError, ValidationError } from '../service/errors.ts';
 import { createInMemoryStore, type Store } from '../store/store.ts';
 import { createSqliteStore } from '../store/sqliteStore.ts';
-import { APP_PAGE, CONSENT_PAGE, VERIFIER_PAGE, CERTIFICATE_PAGE } from '../ui/pages.ts';
+import { APP_PAGE, CONSENT_PAGE, VERIFIER_PAGE, CERTIFICATE_PAGE, CLIENT_PAGE } from '../ui/pages.ts';
 import { notifierFromEnv, type Notifier } from '../notify/notifier.ts';
 
 export interface AppServer {
@@ -73,11 +74,25 @@ export function createApp(opts: AppOptions = {}): AppServer {
     baseUrl,
   });
   const report = new ReportService({ store, cert });
+  const portal = new PortalService({
+    store,
+    cert,
+    secret: certSecret ?? 'verify-cert-dev-secret-change-me',
+    baseUrl,
+  });
   const user = opts.user ?? process.env.VERIFY_USER;
   const password = opts.password ?? process.env.VERIFY_PASSWORD;
   const gate = user && password ? { user, password } : undefined;
-  const server = createServer(makeListener(service, cert, report, gate));
+  const server = createServer(makeListener({ service, cert, report, portal }, gate));
   return { server, service };
+}
+
+/** The services the request handlers need, passed as one bag. */
+interface Deps {
+  service: VerifyService;
+  cert: CertificateService;
+  report: ReportService;
+  portal: PortalService;
 }
 
 /** Public paths that must never require the admin login. */
@@ -93,17 +108,16 @@ function isPublicPath(path: string): boolean {
     path === '/verify' ||
     path.startsWith('/c/') ||
     path.startsWith('/v/') ||
+    // The client portal's own token IS the credential — it must not sit behind
+    // the operator login, since clients have no operator account.
+    path.startsWith('/client/') ||
+    path.startsWith('/api/client/') ||
     path.startsWith('/api/consent/') ||
     path.startsWith('/api/verify/')
   );
 }
 
-function makeListener(
-  service: VerifyService,
-  cert: CertificateService,
-  report: ReportService,
-  gate: { user: string; password: string } | undefined,
-) {
+function makeListener(deps: Deps, gate: { user: string; password: string } | undefined) {
   return async (req: IncomingMessage, res: ServerResponse): Promise<void> => {
     try {
       const url = new URL(req.url ?? '/', 'http://localhost');
@@ -125,9 +139,10 @@ function makeListener(
       if (method === 'GET' && path === '/verify') return html(res, CERTIFICATE_PAGE);
       if (method === 'GET' && path.startsWith('/c/')) return html(res, CONSENT_PAGE);
       if (method === 'GET' && path.startsWith('/v/')) return html(res, VERIFIER_PAGE);
+      if (method === 'GET' && path.startsWith('/client/')) return html(res, CLIENT_PAGE);
 
       // --- JSON API ---
-      if (path.startsWith('/api/')) return await api(service, cert, report, method, path, url, req, res);
+      if (path.startsWith('/api/')) return await api(deps, method, path, url, req, res);
 
       json(res, 404, { error: { code: 'not_found', message: 'not found' } });
     } catch (err) {
@@ -140,15 +155,14 @@ function makeListener(
 }
 
 async function api(
-  service: VerifyService,
-  cert: CertificateService,
-  report: ReportService,
+  deps: Deps,
   method: string,
   path: string,
   url: URL,
   req: IncomingMessage,
   res: ServerResponse,
 ): Promise<void> {
+  const { service, cert, report, portal } = deps;
   const q = url.searchParams;
   const seg = path.split('/').filter(Boolean); // ["api", ...]
   const body = method === 'GET' ? {} : ((await readJson(req)) as Record<string, unknown>);
@@ -186,6 +200,29 @@ async function api(
   }
   if (method === 'POST' && seg[1] === 'requests' && seg[3] === 'cancel')
     return json(res, 200, service.cancelRequest(seg[2]));
+
+  // Admin: the client-portal link to hand a company.
+  if (method === 'GET' && seg[1] === 'companies' && seg[2] && seg[3] === 'client-link')
+    return json(res, 200, portal.accessLink(seg[2]));
+
+  // Client portal (public — the token is the credential).
+  if (seg[1] === 'client' && seg[2] && method === 'GET') {
+    // .../report/:id.pdf — that client's own report, scoped to their company.
+    if (seg[3] === 'report' && seg[4]) {
+      const requestId = seg[4].replace(/\.pdf$/, '');
+      portal.requestFor(seg[2], requestId); // throws 404 unless it's theirs
+      const pdf = report.pdf(requestId);
+      res.writeHead(200, {
+        'content-type': 'application/pdf',
+        'content-length': pdf.length,
+        'content-disposition': `inline; filename="verification-report-${requestId}.pdf"`,
+        'cache-control': 'no-store',
+      });
+      res.end(pdf);
+      return;
+    }
+    if (seg.length === 3) return json(res, 200, portal.history(seg[2]));
+  }
 
   // Admin: the report's QR (encodes the verify URL) — for printing on reports.
   if (method === 'GET' && seg[1] === 'certificate' && seg[2] && seg[3] === 'qr') {

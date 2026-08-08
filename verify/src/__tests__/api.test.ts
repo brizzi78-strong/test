@@ -119,6 +119,64 @@ test('full consent-gated flow over the API', async () => {
   });
 });
 
+test('the client portal serves a scoped history and PDF, and blocks other clients', async () => {
+  await withServer(async (base) => {
+    // Two separate clients, each with one completed check.
+    const made: Record<string, { companyId: string; requestId: string; token: string }> = {};
+    for (const [key, name] of [['a', 'Company A'], ['b', 'Company B']] as const) {
+      const co = (await j(base, 'POST', '/api/companies', { name })).json;
+      const cand = (await j(base, 'POST', '/api/candidates', {
+        companyId: co.id, firstName: key === 'a' ? 'Jordan' : 'Taylor', lastName: 'Rivera',
+        email: `${key}@example.com`,
+      })).json;
+      const req = (await j(base, 'POST', '/api/requests', {
+        companyId: co.id, candidateId: cand.id,
+        items: [{ type: 'reference', subject: 'Pat Lee', contactEmail: 'pat@example.com' }],
+      })).json;
+      await j(base, 'POST', `/api/consent/${req.consentToken}`, { signedName: 'Signed Name' });
+      await j(base, 'POST', `/api/verify/${req.items[0].token}`, { verifierName: 'Pat Lee', confirmed: true });
+      const link = (await j(base, 'GET', `/api/companies/${co.id}/client-link`)).json;
+      made[key] = { companyId: co.id, requestId: req.id, token: link.token };
+    }
+
+    // The portal page is served for any token shape.
+    assert.match(await (await fetch(`${base}/client/${made.a.token}`)).text(), /Your verifications/);
+
+    // Client A sees exactly their own one check.
+    const histA = await j(base, 'GET', `/api/client/${made.a.token}`);
+    assert.equal(histA.status, 200);
+    assert.equal(histA.json.companyName, 'Company A');
+    assert.equal(histA.json.reports.length, 1);
+    assert.equal(histA.json.reports[0].candidateName, 'Jordan Rivera');
+    assert.ok(!JSON.stringify(histA.json).includes('Taylor')); // no cross-client leak
+
+    // They can download their own report.
+    const own = await fetch(`${base}/api/client/${made.a.token}/report/${made.a.requestId}.pdf`);
+    assert.equal(own.status, 200);
+    assert.equal(own.headers.get('content-type'), 'application/pdf');
+
+    // But not Company B's, even with a valid request id.
+    const theirs = await fetch(`${base}/api/client/${made.a.token}/report/${made.b.requestId}.pdf`);
+    assert.equal(theirs.status, 404);
+
+    // A bogus token gets nothing.
+    assert.equal((await fetch(`${base}/api/client/${'Z'.repeat(32)}`)).status, 404);
+  });
+});
+
+test('the client portal stays reachable when the operator console is gated', async () => {
+  await withServer(
+    async (base) => {
+      // Public: the page and the API are reachable without the admin login…
+      assert.equal((await fetch(`${base}/client/sometoken`)).status, 200);
+      assert.equal((await fetch(`${base}/api/client/${'Z'.repeat(32)}`)).status, 404); // 404, not 401
+      // …while minting a client link stays an operator-only action.
+      assert.equal((await fetch(`${base}/api/companies/co_x/client-link`)).status, 401);
+    },
+    { user: 'admin', password: 'pw' },
+  );
+});
+
 test('the report-verify page and certificate API stay public even when admin is gated', async () => {
   await withServer(
     async (base) => {

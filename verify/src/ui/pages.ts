@@ -68,7 +68,7 @@ const APP_BODY =
   '<div class="field"><label>Candidate email</label><input id="em" type="email" placeholder="candidate@email.com"></div>' +
   '<label>Who to verify</label><div class="items" id="items"></div><button class="btn ghost sm" id="add" type="button">+ Add reference / employer / school</button>' +
   '<div id="rqbanner"></div><div style="margin-top:14px"><button class="btn" id="create">Create request</button></div></div>' +
-  '<div class="card"><h2>Requests</h2><div id="list"><p class="dim">Loading…</p></div></div>' +
+  '<div class="card"><h2>Requests</h2><div id="clink"></div><div id="list"><p class="dim">Loading…</p></div></div>' +
   '<footer>Consent-based verification only \u00b7 no criminal or credit data. For those, connect a CRA.</footer></div><div class="toast" id="toast"></div>';
 
 const APP_SCRIPT =
@@ -113,7 +113,10 @@ const APP_SCRIPT =
   'body+="</tbody></table>";}' +
   'if(v.certificate){var ct=v.certificate;body+="<div class=\\"discl\\" style=\\"display:flex;gap:15px;align-items:center;flex-wrap:wrap\\"><img alt=\\"Report QR code\\" width=\\"104\\" height=\\"104\\" style=\\"background:#fff;border-radius:8px;padding:5px\\" src=\\"/api/certificate/"+encodeURIComponent(r.id)+"/qr\\"><div style=\\"min-width:200px;flex:1\\"><div class=\\"dim\\" style=\\"font-size:.66rem;text-transform:uppercase;letter-spacing:.06em\\">Report authenticity \\u2014 scan to verify</div><div class=\\"mono\\" style=\\"font-size:.98rem;margin-top:2px\\"><b>"+esc(ct.trackingNumber)+"</b></div><div class=\\"mono dim\\" style=\\"font-size:.78rem\\">code "+esc(ct.verificationCode)+"</div><div class=\\"link\\"><input readonly value=\\""+esc(ct.verifyUrl)+"\\"><button class=\\"btn ghost sm\\" onclick=\\"copyLink(this.previousElementSibling.value)\\">Copy link</button></div><div style=\\"margin-top:8px\\"><a class=\\"btn sm\\" style=\\"text-decoration:none\\" href=\\"/api/requests/"+encodeURIComponent(r.id)+"/report.pdf\\" target=\\"_blank\\">Download PDF report</a></div></div></div>";}' +
   'return "<div class=\\"card\\">"+head+body+"</div>";}' +
-  'function load(){return api("GET","/api/requests?companyId="+encodeURIComponent(CO)).then(function(rs){' +
+  'function clientLink(){return api("GET","/api/companies/"+encodeURIComponent(CO)+"/client-link").then(function(l){' +
+  'document.getElementById("clink").innerHTML="<div class=\\"discl\\" style=\\"margin:0 0 14px\\"><div class=\\"dim\\" style=\\"font-size:.66rem;text-transform:uppercase;letter-spacing:.06em\\">Client portal \\u2014 share this link so they can track their own checks</div><div class=\\"link\\"><input readonly value=\\""+esc(l.url)+"\\"><button class=\\"btn ghost sm\\" onclick=\\"copyLink(this.previousElementSibling.value)\\">Copy</button></div></div>";' +
+  '}).catch(function(){});}' +
+  'function load(){clientLink();return api("GET","/api/requests?companyId="+encodeURIComponent(CO)).then(function(rs){' +
   'var el=document.getElementById("list");if(!rs.length){el.innerHTML="<p class=\\"dim\\">No requests yet. Create one above.</p>";return;}' +
   'rs.sort(function(a,b){return (b.createdAt||"").localeCompare(a.createdAt||"");});' +
   'return Promise.all(rs.map(function(r){return api("GET","/api/requests/"+r.id);})).then(function(views){el.innerHTML=views.map(reqCard).join("");});});}' +
@@ -203,7 +206,38 @@ const CERT_SCRIPT =
   'var pref=Q.get("ref"),pcode=Q.get("code");if(pref)document.getElementById("ref").value=pref;if(pcode)document.getElementById("code").value=pcode;if(pref&&pcode)lookup(pref,pcode);' +
   '</script>';
 
+// ============================ CLIENT PORTAL ============================
+// A client's own read-only history at /client/:token. The token is the
+// credential — no login, same model as the consent and verifier links.
+const CLIENT_BODY =
+  '<div class="wrap"><div class="head"><span class="glyph">&#10003;</span><div><h1 id="co">Your verifications</h1>' +
+  '<div class="hsub">Blue Ridge Press LLC &middot; status and reports for your checks</div></div></div>' +
+  '<div id="c"><p class="dim">Loading…</p></div>' +
+  '<footer>Consent-based verification of references, employment &amp; education \u00b7 not a consumer-reporting agency.</footer>' +
+  '</div><div class="toast" id="toast"></div>';
+
+const CLIENT_SCRIPT =
+  '<script>' + HELPERS +
+  'var TK=tokenFromPath();' +
+  'function resultLabel(r){return r==="all_confirmed"?"All confirmed":r==="partial"?"Partly confirmed":"In progress";}' +
+  'function when(s){return s?new Date(s).toLocaleDateString():"\\u2014";}' +
+  'api("GET","/api/client/"+TK).then(function(d){' +
+  'document.getElementById("co").textContent=d.companyName;' +
+  'var el=document.getElementById("c");' +
+  'if(!d.reports.length){el.innerHTML="<div class=\\"card\\"><p class=\\"dim\\">No checks yet. Once we start one for you, it will appear here.</p></div>";return;}' +
+  'var rows=d.reports.map(function(r){' +
+  'var act=r.reportReady?"<a class=\\"btn sm\\" style=\\"text-decoration:none\\" href=\\"/api/client/"+encodeURIComponent(TK)+"/report/"+encodeURIComponent(r.requestId)+".pdf\\" target=\\"_blank\\">Download PDF</a>":"<span class=\\"dim\\" style=\\"font-size:.8rem\\">"+r.progress.completed+" of "+r.progress.total+" sources back</span>";' +
+  'return "<tr><td><b>"+esc(r.candidateName)+"</b><div class=\\"dim mono\\" style=\\"font-size:.72rem\\">"+esc(r.trackingNumber)+"</div></td>"' +
+  '+"<td><span class=\\"pill s-"+r.status+"\\">"+r.status.replace(/_/g," ")+"</span></td>"' +
+  '+"<td>"+esc(resultLabel(r.result))+"</td>"' +
+  '+"<td class=\\"dim\\">"+when(r.requestedAt)+"</td>"' +
+  '+"<td>"+act+"</td></tr>";}).join("");' +
+  'el.innerHTML="<div class=\\"card\\"><table><thead><tr><th>Candidate</th><th>Status</th><th>Result</th><th>Requested</th><th></th></tr></thead><tbody>"+rows+"</tbody></table></div>";' +
+  '}).catch(function(){document.getElementById("c").innerHTML="<div class=\\"card\\"><div class=\\"big\\"><div class=\\"em\\">\\u26A0\\uFE0F</div><h2>This link isn\\u2019t valid</h2><p class=\\"dim\\">Check that you used the full link we sent you, or contact us for a new one.</p></div></div>";});' +
+  '</script>';
+
 export const APP_PAGE = head('Cardinal Verify') + APP_BODY + APP_SCRIPT + foot;
+export const CLIENT_PAGE = head('Your verifications \u00b7 Blue Ridge Press LLC') + CLIENT_BODY + CLIENT_SCRIPT + foot;
 export const CONSENT_PAGE = head('Authorize verification') + CONSENT_BODY + CONSENT_SCRIPT + foot;
 export const VERIFIER_PAGE = head('Verification request') + VERIFIER_BODY + VERIFIER_SCRIPT + foot;
 export const CERTIFICATE_PAGE = head('Verify a report \u00b7 Blue Ridge Press LLC') + CERT_BODY + CERT_SCRIPT + foot;
