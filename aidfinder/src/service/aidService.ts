@@ -18,6 +18,8 @@ import {
 } from '../domain/engine.ts';
 import type { NearMiss } from '../domain/engine.ts';
 import { buildIcs } from '../domain/ics.ts';
+import { buildDigest } from '../domain/digest.ts';
+import type { Digest, DigestActivityEntry, DigestDeadline, DigestInput } from '../domain/digest.ts';
 import {
   APPLICATION_STATUSES,
   DEGREE_LEVELS,
@@ -34,8 +36,15 @@ import type {
 } from '../domain/types.ts';
 import { ConflictError, NotFoundError, ValidationError } from './errors.ts';
 import type { Store } from '../store/store.ts';
+import { ConsoleNotifier } from '../notify/notifier.ts';
+import type { Notifier } from '../notify/notifier.ts';
 
 const STATE_PATTERN = /^[A-Z]{2}$/;
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const MAX_PARENT_EMAILS = 5;
+
+/** Status changes worth waking a parent up for — not every keystroke. */
+const NOTIFY_ON_STATUS = new Set<ApplicationStatus>(['submitted', 'won', 'declined']);
 
 export interface MatchReport {
   matches: Match[];
@@ -62,10 +71,12 @@ export interface Dashboard {
 export class AidService {
   private readonly store: Store;
   private readonly now: () => Date;
+  private readonly notifier: Notifier;
 
-  constructor(opts: { store: Store; now?: () => Date }) {
+  constructor(opts: { store: Store; now?: () => Date; notifier?: Notifier }) {
     this.store = opts.store;
     this.now = opts.now ?? (() => new Date());
+    this.notifier = opts.notifier ?? new ConsoleNotifier();
   }
 
   // --- profile ------------------------------------------------------------
@@ -175,6 +186,7 @@ export class AidService {
       status: 'planned',
       amountWon: 0,
       note: '',
+      history: [{ status: 'planned', at: timestamp }],
       createdAt: timestamp,
       updatedAt: timestamp,
     };
@@ -192,6 +204,7 @@ export class AidService {
   updateApplication(ownerId: string, id: string, input: unknown): Application {
     const app = this.loadApplication(ownerId, id);
     const obj = asObject(input);
+    const previousStatus = app.status;
     if (obj.status !== undefined) {
       if (
         typeof obj.status !== 'string' ||
@@ -213,13 +226,83 @@ export class AidService {
     }
     if (app.status !== 'won') app.amountWon = 0;
     app.updatedAt = this.now().toISOString();
+    if (app.status !== previousStatus) {
+      app.history = [...app.history, { status: app.status, at: app.updatedAt }];
+    }
     this.store.putApplication(app);
+
+    if (app.status !== previousStatus && NOTIFY_ON_STATUS.has(app.status)) {
+      // Fire-and-forget: a flaky mail provider should never block or fail a status update.
+      this.autoNotify(ownerId).catch((err: unknown) => {
+        // eslint-disable-next-line no-console
+        console.error('[aidfinder] auto-digest failed:', err);
+      });
+    }
+
     return app;
   }
 
   deleteApplication(ownerId: string, id: string): void {
     this.loadApplication(ownerId, id);
     this.store.deleteApplication(id);
+  }
+
+  // --- family digest ---------------------------------------------------------
+
+  /** Build the parent/guardian digest without sending it — for an in-app preview. */
+  previewDigest(ownerId: string): Digest {
+    const profile = this.requireProfile(ownerId);
+    return buildDigest(this.buildDigestInput(ownerId, profile));
+  }
+
+  /** Send the digest to every parent/guardian email on file. */
+  async sendDigest(ownerId: string): Promise<{ sent: string[]; kind: string }> {
+    const profile = this.requireProfile(ownerId);
+    if (profile.parentEmails.length === 0) {
+      throw new ValidationError('add a parent or guardian email to your profile first');
+    }
+    const digest = buildDigest(this.buildDigestInput(ownerId, profile));
+    for (const to of profile.parentEmails) {
+      await this.notifier.send({ to, subject: digest.subject, text: digest.text, html: digest.html });
+    }
+    return { sent: profile.parentEmails, kind: this.notifier.kind };
+  }
+
+  private async autoNotify(ownerId: string): Promise<void> {
+    const profile = this.store.getProfile(ownerId);
+    if (!profile || profile.parentEmails.length === 0) return;
+    await this.sendDigest(ownerId);
+  }
+
+  private buildDigestInput(ownerId: string, profile: StudentProfile): DigestInput {
+    const applications = this.store.listApplications(ownerId);
+    const dashboard = this.dashboard(ownerId, applications);
+    const activity: DigestActivityEntry[] = applications
+      .flatMap((a) => {
+        const name = findOpportunity(a.opportunityId)?.name ?? a.opportunityId;
+        return a.history.map((h) => ({ opportunityName: name, status: h.status, at: h.at }));
+      })
+      .sort((a, b) => b.at.localeCompare(a.at));
+    const upcoming: DigestDeadline[] = this.getPlan(ownerId)
+      .filter(
+        (item) =>
+          item.nextDeadline !== null &&
+          (item.status === 'unstarted' || item.status === 'planned' || item.status === 'in-progress'),
+      )
+      .map((item) => ({
+        opportunityName: item.opportunity.name,
+        nextDeadline: item.nextDeadline!,
+        daysLeft: item.daysLeft!,
+        estimatedAmount: item.estimatedAmount,
+      }));
+    return {
+      studentName: profile.studentName,
+      potential: dashboard.potential,
+      submitted: dashboard.submitted,
+      won: dashboard.won,
+      activity,
+      upcoming,
+    };
   }
 
   // --- internals ------------------------------------------------------------
@@ -345,6 +428,7 @@ function parseProfile(ownerId: string, input: unknown, updatedAt: string): Stude
 
   return {
     ownerId,
+    studentName: parseStudentName(obj),
     state,
     degreeLevel: degreeLevel as DegreeLevel,
     fieldOfStudy: fieldOfStudy as FieldOfStudy,
@@ -357,6 +441,36 @@ function parseProfile(ownerId: string, input: unknown, updatedAt: string): Stude
     communityService: obj.communityService === true,
     militaryAffiliation: obj.militaryAffiliation === true,
     employed: obj.employed === true,
+    studentIsMinor: obj.studentIsMinor === true,
+    parentEmails: parseParentEmails(obj),
     updatedAt,
   };
+}
+
+function parseStudentName(obj: Record<string, unknown>): string {
+  const raw = obj.studentName;
+  if (raw === undefined || raw === null || raw === '') return '';
+  if (typeof raw !== 'string') throw new ValidationError('studentName must be a string');
+  // Strip control characters (incl. CR/LF) so this can never inject headers
+  // once it lands in an email Subject line.
+  // eslint-disable-next-line no-control-regex
+  return raw.replace(/[\x00-\x1F\x7F]/g, ' ').trim().slice(0, 80);
+}
+
+function parseParentEmails(obj: Record<string, unknown>): string[] {
+  const raw = obj.parentEmails;
+  if (raw === undefined || raw === null) return [];
+  if (!Array.isArray(raw)) throw new ValidationError('parentEmails must be an array of email addresses');
+  if (raw.length > MAX_PARENT_EMAILS) {
+    throw new ValidationError(`parentEmails can list at most ${MAX_PARENT_EMAILS} addresses`);
+  }
+  const emails = raw.map((e, i) => {
+    if (typeof e !== 'string') throw new ValidationError(`parentEmails[${i}] must be a string`);
+    const trimmed = e.trim();
+    if (!EMAIL_PATTERN.test(trimmed)) {
+      throw new ValidationError(`parentEmails[${i}] is not a valid email address`);
+    }
+    return trimmed;
+  });
+  return [...new Set(emails)];
 }

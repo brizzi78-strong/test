@@ -3,6 +3,20 @@ import assert from 'node:assert/strict';
 import type { AddressInfo } from 'node:net';
 import { createApp, type AppServer } from '../api/server.ts';
 import { createInMemoryStore } from '../store/store.ts';
+import type { Notifier, OutboundEmail } from '../notify/notifier.ts';
+
+class FakeNotifier implements Notifier {
+  readonly kind = 'fake';
+  sent: OutboundEmail[] = [];
+  async send(email: OutboundEmail): Promise<void> {
+    this.sent.push(email);
+  }
+}
+
+/** Fire-and-forget auto-notify only needs microtask/event-loop turns to settle. */
+function flushAsync(): Promise<void> {
+  return new Promise((resolve) => setTimeout(resolve, 20));
+}
 
 let app: AppServer;
 let base: string;
@@ -177,6 +191,38 @@ describe('AidFinder API', () => {
     );
   });
 
+  it('reports required fields on the profile: studentName, studentIsMinor, parentEmails', async () => {
+    const res = await call('PUT', '/profile', {
+      ...goodProfile,
+      studentName: 'Ada',
+      studentIsMinor: true,
+      parentEmails: ['Mom@Example.com', ' dad@example.com '],
+    });
+    assert.equal(res.status, 200);
+    assert.equal(res.json.profile.studentName, 'Ada');
+    assert.equal(res.json.profile.studentIsMinor, true);
+    assert.deepEqual(res.json.profile.parentEmails, ['Mom@Example.com', 'dad@example.com']); // trimmed
+
+    const badEmail = await call('PUT', '/profile', { ...goodProfile, parentEmails: ['not-an-email'] });
+    assert.equal(badEmail.status, 400);
+
+    const tooMany = await call('PUT', '/profile', {
+      ...goodProfile,
+      parentEmails: Array.from({ length: 6 }, (_, i) => `p${i}@example.com`),
+    });
+    assert.equal(tooMany.status, 400);
+  });
+
+  it('strips control characters from studentName so it cannot inject an email header', async () => {
+    const res = await call('PUT', '/profile', {
+      ...goodProfile,
+      studentName: 'Ada\r\nBcc: attacker@evil.com',
+    });
+    assert.equal(res.status, 200);
+    assert.ok(!res.json.profile.studentName.includes('\r'));
+    assert.ok(!res.json.profile.studentName.includes('\n'));
+  });
+
   it('gates every route except /health behind Basic auth when configured', async () => {
     const gated = createApp(createInMemoryStore(), { user: 'u', password: 'p' });
     await new Promise<void>((resolve) => gated.server.listen(0, resolve));
@@ -191,5 +237,135 @@ describe('AidFinder API', () => {
     } finally {
       gated.server.close();
     }
+  });
+});
+
+describe('Family digest', () => {
+  let digestApp: AppServer;
+  let digestBase: string;
+  let notifier: FakeNotifier;
+
+  before(async () => {
+    notifier = new FakeNotifier();
+    digestApp = createApp(createInMemoryStore(), { notifier });
+    await new Promise<void>((resolve) => digestApp.server.listen(0, resolve));
+    digestBase = `http://localhost:${(digestApp.server.address() as AddressInfo).port}`;
+  });
+
+  after(() => digestApp.server.close());
+
+  async function digestCall(
+    method: string,
+    path: string,
+    body?: unknown,
+    user = 'demo',
+  ): Promise<{ status: number; json: any }> {
+    const res = await fetch(digestBase + path, {
+      method,
+      headers: { 'content-type': 'application/json', 'x-user-id': user },
+      body: body === undefined ? undefined : JSON.stringify(body),
+    });
+    return { status: res.status, json: await res.json() };
+  }
+
+  it('requires a profile before previewing or sending', async () => {
+    assert.equal((await digestCall('GET', '/digest/preview', undefined, 'nopro')).status, 400);
+    assert.equal((await digestCall('POST', '/digest/send', undefined, 'nopro')).status, 400);
+  });
+
+  it('previews the digest without sending anything', async () => {
+    await digestCall('PUT', '/profile', { ...goodProfile, studentName: 'Ada' }, 'preview-user');
+    const before = notifier.sent.length;
+    const res = await digestCall('GET', '/digest/preview', undefined, 'preview-user');
+    assert.equal(res.status, 200);
+    assert.match(res.json.subject, /Ada/);
+    assert.ok(res.json.text.includes('Matched (estimated/yr)'));
+    assert.equal(notifier.sent.length, before); // nothing sent
+  });
+
+  it('requires a parent/guardian email before sending', async () => {
+    await digestCall('PUT', '/profile', goodProfile, 'noparent');
+    const res = await digestCall('POST', '/digest/send', undefined, 'noparent');
+    assert.equal(res.status, 400);
+    assert.match(res.json.error, /parent/i);
+  });
+
+  it('sends one email per parent address on manual send', async () => {
+    await digestCall(
+      'PUT',
+      '/profile',
+      { ...goodProfile, studentName: 'Ada', parentEmails: ['mom@example.com', 'dad@example.com'] },
+      'send-user',
+    );
+    const res = await digestCall('POST', '/digest/send', undefined, 'send-user');
+    assert.equal(res.status, 200);
+    assert.deepEqual(res.json.sent, ['mom@example.com', 'dad@example.com']);
+    assert.equal(res.json.kind, 'fake');
+    const toThisUser = notifier.sent.filter((e) => res.json.sent.includes(e.to));
+    assert.equal(toThisUser.length, 2);
+  });
+
+  it('auto-sends when an application is submitted, won, or declined — not on planned/in-progress', async () => {
+    await digestCall(
+      'PUT',
+      '/profile',
+      { ...goodProfile, parentEmails: ['auto-parent@example.com'] },
+      'auto-user',
+    );
+    const tracked = await digestCall('POST', '/applications', { opportunityId: 'dell-scholars' }, 'auto-user');
+    const appId = tracked.json.id;
+
+    const beforeInProgress = notifier.sent.length;
+    await digestCall('PUT', `/applications/${appId}`, { status: 'in-progress' }, 'auto-user');
+    await flushAsync();
+    assert.equal(notifier.sent.length, beforeInProgress, 'in-progress should not trigger an email');
+
+    await digestCall('PUT', `/applications/${appId}`, { status: 'submitted' }, 'auto-user');
+    await flushAsync();
+    const afterSubmitted = notifier.sent.filter((e) => e.to === 'auto-parent@example.com');
+    assert.equal(afterSubmitted.length, 1, 'submitted should trigger exactly one email');
+
+    await digestCall('PUT', `/applications/${appId}`, { status: 'won', amountWon: 20000 }, 'auto-user');
+    await flushAsync();
+    const afterWon = notifier.sent.filter((e) => e.to === 'auto-parent@example.com');
+    assert.equal(afterWon.length, 2, 'won should trigger a second email');
+    assert.match(afterWon[1]!.subject, /won \$20,000/);
+  });
+
+  it('never auto-sends when no parent email is on file', async () => {
+    await digestCall('PUT', '/profile', goodProfile, 'no-parent-auto');
+    const tracked = await digestCall(
+      'POST',
+      '/applications',
+      { opportunityId: 'coca-cola-scholars' },
+      'no-parent-auto',
+    );
+    const before = notifier.sent.length;
+    await digestCall('PUT', `/applications/${tracked.json.id}`, { status: 'submitted' }, 'no-parent-auto');
+    await flushAsync();
+    assert.equal(notifier.sent.length, before);
+  });
+
+  it('reflects the activity log — every status change, newest first', async () => {
+    await digestCall(
+      'PUT',
+      '/profile',
+      { ...goodProfile, parentEmails: ['activity-parent@example.com'] },
+      'activity-user',
+    );
+    const tracked = await digestCall(
+      'POST',
+      '/applications',
+      { opportunityId: 'dell-scholars' },
+      'activity-user',
+    );
+    await digestCall('PUT', `/applications/${tracked.json.id}`, { status: 'in-progress' }, 'activity-user');
+    await digestCall('PUT', `/applications/${tracked.json.id}`, { status: 'submitted' }, 'activity-user');
+    const preview = await digestCall('GET', '/digest/preview', undefined, 'activity-user');
+    const submittedIdx = preview.json.text.indexOf('submitted Dell Scholars');
+    const startedTrackingIdx = preview.json.text.indexOf('started tracking Dell Scholars');
+    const startedWorkingIdx = preview.json.text.indexOf('started working on Dell Scholars');
+    assert.ok(submittedIdx >= 0 && startedTrackingIdx >= 0 && startedWorkingIdx >= 0);
+    assert.ok(submittedIdx < startedWorkingIdx && startedWorkingIdx < startedTrackingIdx); // newest first
   });
 });

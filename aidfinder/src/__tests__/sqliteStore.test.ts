@@ -13,6 +13,7 @@ after(() => rmSync(dir, { recursive: true, force: true }));
 
 const profile: StudentProfile = {
   ownerId: 'demo',
+  studentName: 'Ada',
   state: 'NC',
   degreeLevel: 'high-school-senior',
   fieldOfStudy: 'stem',
@@ -25,6 +26,8 @@ const profile: StudentProfile = {
   communityService: true,
   militaryAffiliation: false,
   employed: false,
+  studentIsMinor: true,
+  parentEmails: ['parent@example.com'],
   updatedAt: '2026-08-06T00:00:00.000Z',
 };
 
@@ -35,6 +38,7 @@ const application: Application = {
   status: 'planned',
   amountWon: 0,
   note: '',
+  history: [{ status: 'planned', at: '2026-08-06T00:00:00.000Z' }],
   createdAt: '2026-08-06T00:00:00.000Z',
   updatedAt: '2026-08-06T00:00:00.000Z',
 };

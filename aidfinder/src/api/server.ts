@@ -7,6 +7,7 @@ import { createServer, type Server } from 'node:http';
 import { AidService } from '../service/aidService.ts';
 import { createInMemoryStore, type Store } from '../store/store.ts';
 import { createSqliteStore } from '../store/sqliteStore.ts';
+import { notifierFromEnv, type Notifier } from '../notify/notifier.ts';
 import { createRequestListener, type ListenerOptions } from './router.ts';
 
 export interface AppServer {
@@ -20,6 +21,8 @@ export interface AppOptions {
   password?: string;
   /** Site display name (BRAND_NAME). */
   brandName?: string;
+  /** Family-digest email transport; defaults to the environment selection. */
+  notifier?: Notifier;
 }
 
 const WEB_INDEX = new URL('../web/index.html', import.meta.url);
@@ -43,7 +46,7 @@ export function createApp(store: Store = storeFromEnv(), opts: AppOptions = {}):
     gate: user && password ? { user, password } : undefined,
     brandName: opts.brandName ?? process.env.BRAND_NAME,
   };
-  const service = new AidService({ store });
+  const service = new AidService({ store, notifier: opts.notifier ?? notifierFromEnv() });
   const server = createServer(createRequestListener(service, WEB_INDEX, listenerOpts));
   return { server, service };
 }

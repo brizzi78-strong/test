@@ -21,6 +21,7 @@ const TODAY = new Date('2026-08-06T12:00:00Z');
 function profile(overrides: Partial<StudentProfile> = {}): StudentProfile {
   return {
     ownerId: 'demo',
+    studentName: '',
     state: 'NC',
     degreeLevel: 'high-school-senior',
     fieldOfStudy: 'stem',
@@ -33,6 +34,8 @@ function profile(overrides: Partial<StudentProfile> = {}): StudentProfile {
     communityService: true,
     militaryAffiliation: false,
     employed: false,
+    studentIsMinor: false,
+    parentEmails: [],
     updatedAt: TODAY.toISOString(),
     ...overrides,
   };

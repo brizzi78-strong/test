@@ -70,6 +70,11 @@
     <h2>1. Your five-minute profile</h2>
     <p class="hint">This is the only manual step. Everything below — matches, dollar estimates, and the deadline plan — updates automatically from it.</p>
     <div class="row3">
+      <div><label>Your first name (optional)</label><input id="p_name" placeholder="Ada"></div>
+      <div><label style="visibility:hidden">.</label><label style="margin:8px 0 0;display:flex;gap:8px;align-items:center;font-size:14px;color:var(--ink)"><input type="checkbox" id="p_minor" style="width:auto" onchange="toggleMinorHint()"> I'm under 18</label></div>
+      <div></div>
+    </div>
+    <div class="row3">
       <div><label>State</label><input id="p_state" placeholder="NC" maxlength="2"></div>
       <div><label>I am a…</label>
         <select id="p_level">
@@ -103,6 +108,8 @@
       <label><input type="checkbox" id="p_military"> Military service member, veteran, or dependent</label>
       <label><input type="checkbox" id="p_employed"> I (or a parent paying) have an employer</label>
     </div>
+    <label style="margin-top:14px">Parent / guardian email(s), comma-separated <span id="minor-hint" style="display:none;color:var(--warn)">— add one so they're kept in the loop automatically</span></label>
+    <input id="p_parents" placeholder="mom@example.com, dad@example.com">
     <div class="actions"><button class="primary" onclick="saveProfile()">Find my money</button><span class="saved" id="ok-profile"></span></div>
     <div class="error" id="err-profile"></div>
   </section>
@@ -132,6 +139,14 @@
     <div id="apps"><p class="empty">Nothing tracked yet. Hit “Track” on a match above.</p></div>
   </section>
 
+  <section class="card" id="sec-digest">
+    <h2>6. Family update</h2>
+    <p class="hint">Add a parent/guardian email above and this app keeps them in the loop on its own — an email goes out automatically whenever an application is submitted, won, or declined. Preview it here, or send one right now.</p>
+    <div id="digest"><p class="empty">Save your profile to preview a family update.</p></div>
+    <div class="actions"><button class="ghost" onclick="sendDigestNow()">📧 Email my parent(s) an update now</button><span class="saved" id="ok-digest"></span></div>
+    <div class="error" id="err-digest"></div>
+  </section>
+
 </main>
 <footer>
   AidFinder finds and organizes legitimate aid; it never submits applications for you — scholarship essays and FAFSA signatures must be your own.
@@ -152,8 +167,14 @@ async function api(method, path, body) {
   return json;
 }
 
+function toggleMinorHint() {
+  $('minor-hint').style.display = $('p_minor').checked ? 'inline' : 'none';
+}
+
 function profileFromForm() {
   return {
+    studentName: $('p_name').value,
+    studentIsMinor: $('p_minor').checked,
     state: $('p_state').value,
     degreeLevel: $('p_level').value,
     fieldOfStudy: $('p_field').value,
@@ -166,15 +187,18 @@ function profileFromForm() {
     communityService: $('p_service').checked,
     militaryAffiliation: $('p_military').checked,
     employed: $('p_employed').checked,
+    parentEmails: $('p_parents').value.split(',').map((s) => s.trim()).filter(Boolean),
   };
 }
 
 function fillForm(p) {
+  $('p_name').value = p.studentName || ''; $('p_minor').checked = p.studentIsMinor; toggleMinorHint();
   $('p_state').value = p.state; $('p_level').value = p.degreeLevel; $('p_field').value = p.fieldOfStudy;
   $('p_gpa').value = p.gpa ?? ''; $('p_income').value = p.householdIncome; $('p_size').value = p.householdSize;
   $('p_half').checked = p.enrolledHalfTimePlus; $('p_citizen').checked = p.usCitizenOrEligibleNoncitizen;
   $('p_firstgen').checked = p.firstGeneration; $('p_service').checked = p.communityService;
   $('p_military').checked = p.militaryAffiliation; $('p_employed').checked = p.employed;
+  $('p_parents').value = (p.parentEmails || []).join(', ');
 }
 
 async function saveProfile() {
@@ -283,6 +307,27 @@ async function untrack(id) { await api('DELETE', '/applications/' + id); await r
 async function setStatus(id, status) { await api('PUT', '/applications/' + id, { status }); await refresh(); }
 async function setWon(id, value) { await api('PUT', '/applications/' + id, { amountWon: Number(value || 0) }); await refresh(); }
 
+function escapeHtml(s) { return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+
+function renderDigest(digest) {
+  // digest.html comes pre-escaped from the server; digest.subject is plain text, escaped here before insertion.
+  $('digest').innerHTML = `
+    <div style="border:1px solid var(--line);border-radius:8px;padding:14px 16px">
+      <div style="font-weight:600;margin-bottom:8px;color:var(--muted);font-size:13px">Subject: ${escapeHtml(digest.subject)}</div>
+      ${digest.html}
+    </div>`;
+}
+
+async function sendDigestNow() {
+  $('err-digest').textContent = ''; $('ok-digest').textContent = '';
+  try {
+    const result = await api('POST', '/digest/send');
+    $('ok-digest').textContent = result.kind === 'console'
+      ? 'Sent (no mailer configured yet — check the server log for the content).'
+      : `Sent to ${result.sent.join(', ')} via ${result.kind}.`;
+  } catch (e) { $('err-digest').textContent = e.message; }
+}
+
 async function refresh() {
   const [{ profile }, { opportunities }, appsData] = await Promise.all([
     api('GET', '/profile'), api('GET', '/opportunities'), api('GET', '/applications'),
@@ -292,12 +337,13 @@ async function refresh() {
   if (!profile) return;
   fillForm(profile);
   const trackedIds = new Set(appsData.applications.map((a) => a.opportunityId));
-  const [report, near, { plan }] = await Promise.all([
-    api('GET', '/matches'), api('GET', '/near-misses'), api('GET', '/plan'),
+  const [report, near, { plan }, digest] = await Promise.all([
+    api('GET', '/matches'), api('GET', '/near-misses'), api('GET', '/plan'), api('GET', '/digest/preview'),
   ]);
   renderMatches(report, trackedIds);
   renderNearMisses(near);
   renderPlan(plan);
+  renderDigest(digest);
 }
 
 refresh().catch((e) => { $('err-profile').textContent = e.message; });

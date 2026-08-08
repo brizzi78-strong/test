@@ -15,6 +15,8 @@
  *   GET    /applications           -> tracked applications + money dashboard
  *   PUT    /applications/:id       -> update status / amount won / note
  *   DELETE /applications/:id
+ *   GET    /digest/preview         -> the parent/guardian digest, without sending it
+ *   POST   /digest/send            -> email the digest to every parentEmails address
  *
  * The requester is identified by the `x-user-id` header (default "demo") —
  * lightweight tenancy in the same spirit as the other apps in this repo.
@@ -46,7 +48,7 @@ interface RouteResult {
   contentType?: string;
 }
 
-type Handler = (ctx: Ctx) => RouteResult;
+type Handler = (ctx: Ctx) => RouteResult | Promise<RouteResult>;
 
 interface Route {
   method: string;
@@ -96,6 +98,8 @@ export function createRequestListener(
     service.deleteApplication(ctx.userId, ctx.params.id!);
     return ok({ deleted: true });
   });
+  route('GET', '/digest/preview', (ctx) => ok(service.previewDigest(ctx.userId)));
+  route('POST', '/digest/send', async (ctx) => ok(await service.sendDigest(ctx.userId)));
 
   const match = (
     method: string,
@@ -171,17 +175,19 @@ export function createRequestListener(
         }
       }
       const userId = String(req.headers['x-user-id'] ?? 'demo');
-      try {
-        const result = found.handler({ userId, params: found.params, body });
-        send(result.status, result.body, result.contentType ?? 'application/json');
-      } catch (err) {
-        if (err instanceof DomainError) send(err.status, { error: err.message });
-        else {
-          send(500, { error: 'internal error' });
-          // eslint-disable-next-line no-console
-          console.error(err);
+      void (async () => {
+        try {
+          const result = await found.handler({ userId, params: found.params, body });
+          send(result.status, result.body, result.contentType ?? 'application/json');
+        } catch (err) {
+          if (err instanceof DomainError) send(err.status, { error: err.message });
+          else {
+            send(500, { error: 'internal error' });
+            // eslint-disable-next-line no-console
+            console.error(err);
+          }
         }
-      }
+      })();
     });
   };
 }

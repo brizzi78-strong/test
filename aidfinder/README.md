@@ -39,6 +39,16 @@ other apps in this repo (domain / service / store / api).
 - **The money tracker** — a pipeline (planned → in-progress → submitted →
   won/declined) with a header tally of matched, applied-for, and won
   dollars.
+- **Family updates** — add a parent/guardian email (or several) and the app
+  emails them on its own whenever an application is submitted, won, or
+  declined — no need for the student to remember to share news. The digest
+  is a money summary, a recent-activity log (every status change, newest
+  first), and upcoming deadlines; previewable in-app or sent on demand.
+  Especially aimed at students under 18: the profile has an "I'm under 18"
+  checkbox that nudges toward adding a guardian address, though anyone can
+  use it. With no email provider configured, digests still "send" — they
+  print to the server log instead of an inbox, so the feature is usable
+  (and testable) with zero setup.
 
 ## What it deliberately does not automate
 
@@ -68,6 +78,13 @@ Optional environment:
   deployment: profiles contain household income.
 - `BRAND_NAME` — display name substituted into the web app's title and
   header.
+- Family-digest email transport (all optional — omit everything and digests
+  log to the console instead of sending): `SENDGRID_API_KEY` +
+  `AIDFINDER_MAIL_FROM` for SendGrid's HTTP API, or `SMTP_HOST` (+
+  `SMTP_PORT`, `SMTP_USER`, `SMTP_PASSWORD`, `SMTP_SECURE`) +
+  `AIDFINDER_MAIL_FROM` to send over plain SMTP with any mailbox. Either way
+  add `AIDFINDER_MAIL_FROM_NAME` to set the display name on outgoing mail.
+  SendGrid is tried first if both are configured.
 
 ## Deploy (Render + thecardinalspromise.blog)
 
@@ -109,16 +126,21 @@ tenancy style of the sibling apps.
 | `GET /plan.ics` | the plan's dated deadlines as an iCalendar file with -7d/-1d reminders |
 | `POST /applications` | start tracking an opportunity (`{ "opportunityId": "dell-scholars" }`) |
 | `GET /applications` | tracked applications + money dashboard (potential / submitted / won) |
-| `PUT /applications/:id` | update `status`, `amountWon`, `note` |
+| `PUT /applications/:id` | update `status`, `amountWon`, `note` (auto-emails parents on submitted/won/declined) |
 | `DELETE /applications/:id` | stop tracking |
+| `GET /digest/preview` | the family digest (subject/text/html), without sending it |
+| `POST /digest/send` | email the digest to every address in `parentEmails` now |
 
 ## Test
 
 ```sh
-npm test          # engine + API suites (node:test)
+npm test          # engine + digest + notifier + SQLite + API suites (node:test)
 npm run typecheck
 ```
 
-The engine (Pell model, deadline math, eligibility screening, sorting) is
-pure and fully unit-tested; the API suite walks profile → matches → plan →
-tracked application → won.
+The engine (Pell model, deadline math, eligibility screening, sorting) and
+the digest builder are pure and fully unit-tested; the notifier suite covers
+the SendGrid HTTP call shape and the env-based transport selection; the API
+suite walks profile → matches → plan → tracked application → won, plus the
+family-digest routes and the auto-send-on-status-change behavior (using an
+injected fake transport — no real email is ever sent by the test suite).

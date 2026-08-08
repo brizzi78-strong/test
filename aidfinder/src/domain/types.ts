@@ -20,6 +20,8 @@ export type FieldOfStudy = (typeof FIELDS_OF_STUDY)[number];
 
 export interface StudentProfile {
   ownerId: string;
+  /** Optional first name, used only to personalize the parent digest. */
+  studentName: string;
   /** 2-letter state of residence, e.g. "NC". */
   state: string;
   degreeLevel: DegreeLevel;
@@ -39,6 +41,10 @@ export interface StudentProfile {
   militaryAffiliation: boolean;
   /** Student (or the person paying) has a W-2 employer. */
   employed: boolean;
+  /** Self-reported: under 18. Drives whether the UI pushes parent updates. */
+  studentIsMinor: boolean;
+  /** Parent/guardian addresses to keep in the loop; empty = nobody's watching. */
+  parentEmails: string[];
   updatedAt: string;
 }
 
@@ -110,6 +116,11 @@ export const APPLICATION_STATUSES = [
 ] as const;
 export type ApplicationStatus = (typeof APPLICATION_STATUSES)[number];
 
+export interface ApplicationHistoryEntry {
+  status: ApplicationStatus;
+  at: string;
+}
+
 export interface Application {
   id: string;
   ownerId: string;
@@ -118,6 +129,8 @@ export interface Application {
   /** Dollars actually awarded; only meaningful once status is "won". */
   amountWon: number;
   note: string;
+  /** Every status this application has held, oldest first — the activity log. */
+  history: ApplicationHistoryEntry[];
   createdAt: string;
   updatedAt: string;
 }

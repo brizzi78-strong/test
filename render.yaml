@@ -91,6 +91,11 @@ services:
         value: admin
       - key: AIDFINDER_PASSWORD
         sync: false            # Render prompts you to set this on first deploy
+      # Family-digest emails (parent/guardian updates) print to this
+      # service's logs until a real transport is configured. To send actual
+      # email, add SENDGRID_API_KEY + AIDFINDER_MAIL_FROM (or SMTP_HOST +
+      # AIDFINDER_MAIL_FROM for plain SMTP) as extra envVars here — see
+      # aidfinder/README.md for the full list.
 
   # Blue Ridge Tax — the TaxFile app (taxfile/): guided 2025 federal 1040 with
   # a live refund tracker and mock e-file. Password-gated (TAXFILE_USER /
