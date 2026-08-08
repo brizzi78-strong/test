@@ -42,24 +42,48 @@ create a test request in the console and confirm the consent link opens.
 4. Add a button on blueridgepressllc.com ("Client portal" / "Verify a report")
    pointing at the domain — `/verify` is the public report-check page.
 
-## 3 · Real email (15 minutes)
+## 3 · Real email (5 minutes)
 
 Until this step, the console shows every consent/verifier link for you to
 copy-paste — fully workable, just manual.
 
-1. Create a free **SendGrid** account (100 emails/day — plenty).
-2. Verify a sender: **Settings → Sender Authentication**. Best: authenticate
-   the whole `blueridgepressllc.com` domain (SendGrid gives you 3 CNAMEs to
-   add at your DNS host). Quick start: single-sender verify
-   `rob@blueridgepressllc.com`.
-3. Create an API key (Mail Send permission) and add to the Render
-   **Environment** tab:
-   - `SENDGRID_API_KEY` = the key
-   - `VERIFY_MAIL_FROM` = `rob@blueridgepressllc.com`
-4. Redeploy. Candidates and sources now get the emails directly.
+### Option A (recommended): your existing Professional Email mailbox
 
-(SMTP instead of SendGrid also works: set `SMTP_HOST`, `SMTP_PORT`,
-`SMTP_USER`, `SMTP_PASSWORD`, `VERIFY_MAIL_FROM`.)
+You already pay for Professional Email (Titan) on the WordPress.com domains,
+and the app speaks SMTP natively — so there is nothing new to sign up for.
+
+In the Render **Environment** tab, add:
+
+| Key | Value |
+|---|---|
+| `SMTP_HOST` | `smtp.titan.email` |
+| `SMTP_PORT` | `465` |
+| `SMTP_USER` | your full mailbox address |
+| `SMTP_PASSWORD` | that mailbox's password |
+| `VERIFY_MAIL_FROM` | the same address |
+
+Port 465 uses implicit TLS (the app sets `secure` automatically from the
+port; `587` with STARTTLS also works). Redeploy and candidates/sources get
+their links directly.
+
+**Prerequisite:** the domain must actually have Titan MX records — confirm
+mail to that address works from your phone first. A paid subscription alone
+is not enough; the mailbox has to exist.
+
+**Sending limits:** Titan caps daily volume (a few hundred messages), which
+is ample at this stage but not for bulk marketing. If you outgrow it, switch
+to Option B without touching any code.
+
+### Option B: SendGrid
+
+1. Create a free **SendGrid** account (100 emails/day).
+2. Verify a sender: **Settings → Sender Authentication** — ideally the whole
+   domain; quickest is single-sender verification.
+3. Create an API key (Mail Send permission) and set in Render:
+   - `SENDGRID_API_KEY` = the key
+   - `VERIFY_MAIL_FROM` = your from address
+
+If both SendGrid and SMTP are configured, SendGrid wins.
 
 ## 4 · Dry run end-to-end (10 minutes)
 
