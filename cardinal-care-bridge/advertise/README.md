@@ -14,10 +14,14 @@ days should be made of.
 | [`reference-sheet.html`](reference-sheet.html) | Hospital discharge planners & rehab/SNF case managers — the print-ready one-page leave-behind ("something they can act on at 4pm on a Friday") | **#1** |
 | [`flyer.html`](flyer.html) | Senior centers, libraries, churches, county resource fairs — a print-ready bulletin-board flyer with tear-off phone tabs | **#3** |
 | [`listings.md`](listings.md) | Google Business Profile, Bing Places, Nextdoor, Facebook, TJCOG / NC 211 / community directories, email signature — copy-paste text for every free listing and post | **#3 / #4** |
+| [`social/graphics.html`](social/graphics.html) + [`social/captions.md`](social/captions.md) | Instagram / Facebook / LinkedIn — three screenshot-ready 1080×1080 post graphics with matching captions and a starter posting cadence | **#3 / #4** |
 | [`../index.html`](../index.html) | The landing page itself — already live as the organic-search home for all of the above to point at | **#4** |
 
-Both HTML assets are self-contained: open in a browser, Ctrl/Cmd+P, print
-with background graphics on. No build step, no design tool.
+Both print assets are self-contained: open in a browser, Ctrl/Cmd+P, print
+with background graphics on. `social/graphics.html` is the same
+no-build-step idea for screens instead of paper — see that page's own
+instructions banner for how to capture each card. No design tool needed
+anywhere in this kit.
 
 ## How to run it (a morning, not a quarter)
 
@@ -32,8 +36,10 @@ with background graphics on. No build step, no design tool.
    libraries on the way — front desk permission first.
 4. **This week, from the couch:** Nextdoor and Facebook pages plus the
    introduction posts, then the TJCOG and NC 211 directory asks
-   (`listings.md` §§ 2–4).
-5. **Forever:** the email signature (`listings.md` § 5).
+   (`listings.md` §§ 2–4). Post the first `social/` graphic on the new
+   Facebook/Instagram pages while you're there.
+5. **Forever:** the email signature (`listings.md` § 5), and three posts a
+   week from `social/captions.md` to keep the pages active.
 
 ## The part that makes it advertising instead of littering
 
