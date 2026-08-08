@@ -59,10 +59,9 @@ is enough. But never skip it.
 - Say plainly, everywhere, that communities pay the referral fee. Honesty
   about the business model is part of the brand, not a disclosure burden.
 
-## Costs $0, still needs doing
+## Launch details
 
-- Update the `[site URL]` placeholders in `listings.md` and the email
-  signature once the Render URL (or custom domain) is final.
-- The same-day-response promise printed on the reference sheet is a real
-  commitment — the strategy is blunt that one slow response is how the
-  hospital channel dies. Only print it if it will be kept.
+- Public website: https://cardinalscarebridge.com/
+- The referral sheet promises prompt follow-up without guaranteeing
+  same-day or weekend availability. Review that wording again before
+  adopting a specific response-time commitment.
