@@ -5,10 +5,10 @@
  */
 
 import { DatabaseSync } from 'node:sqlite';
-import type { Candidate, Company, VerificationRequest } from '../domain/types.ts';
+import type { Candidate, Company, Intake, VerificationRequest } from '../domain/types.ts';
 import type { Collection, Store } from './store.ts';
 
-const TABLES = ['companies', 'candidates', 'requests'] as const;
+const TABLES = ['companies', 'candidates', 'requests', 'intakes'] as const;
 
 class SqliteCollection<T extends { id: string }> implements Collection<T> {
   private readonly getStmt;
@@ -52,6 +52,7 @@ export function createSqliteStore(path: string): SqliteStore {
     companies: new SqliteCollection<Company>(db, 'companies'),
     candidates: new SqliteCollection<Candidate>(db, 'candidates'),
     requests: new SqliteCollection<VerificationRequest>(db, 'requests'),
+    intakes: new SqliteCollection<Intake>(db, 'intakes'),
     close: () => db.close(),
   };
 }

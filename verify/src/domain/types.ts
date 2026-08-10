@@ -73,6 +73,44 @@ export interface Item {
   response?: ItemResponse;
 }
 
+/**
+ * An order placed from the public website, awaiting the operator's approval.
+ *
+ * Deliberately NOT a VerificationRequest: an anonymous visitor must never be
+ * able to make us email a stranger an official-looking "authorize a background
+ * check" message. An intake stores the request and notifies the operator; only
+ * their approval creates the real request and starts any outbound contact.
+ */
+export type IntakeStatus = 'pending' | 'approved' | 'declined';
+
+export interface IntakeSource {
+  type: ItemType;
+  subject: string;
+  detail?: string;
+  contactEmail: string;
+}
+
+export interface Intake {
+  id: string;
+  status: IntakeStatus;
+  /** Who is asking for the check. */
+  requesterName: string;
+  requesterEmail: string;
+  companyName: string;
+  /** Who is being verified. */
+  candidateFirstName: string;
+  candidateLastName: string;
+  candidateEmail: string;
+  sources: IntakeSource[];
+  note?: string;
+  createdAt: string;
+  decidedAt?: string;
+  /** Set once approved — the request this intake became. */
+  requestId?: string;
+  /** Why it was declined, for the record. */
+  declineReason?: string;
+}
+
 export interface RequestEvent {
   at: string;
   /** e.g. 'created', 'consented', 'item.completed', 'item.declined', 'completed', 'canceled'. */

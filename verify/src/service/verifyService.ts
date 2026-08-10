@@ -61,6 +61,8 @@ export interface ItemInput {
 export interface RequestView {
   request: VerificationRequest;
   candidate: Candidate;
+  /** The requesting client — the console lists checks across all of them. */
+  company: Company;
   progress: Progress;
 }
 
@@ -175,6 +177,7 @@ export class VerifyService {
     return {
       request,
       candidate: this.getCandidate(request.candidateId),
+      company: this.require(this.store.companies, 'Company', request.companyId),
       progress: progressOf(request.items),
     };
   }

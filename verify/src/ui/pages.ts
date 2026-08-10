@@ -68,6 +68,7 @@ const APP_BODY =
   '<div class="field"><label>Candidate email</label><input id="em" type="email" placeholder="candidate@email.com"></div>' +
   '<label>Who to verify</label><div class="items" id="items"></div><button class="btn ghost sm" id="add" type="button">+ Add reference / employer / school</button>' +
   '<div id="rqbanner"></div><div style="margin-top:14px"><button class="btn" id="create">Create request</button></div></div>' +
+  '<div id="inbox"></div>' +
   '<div class="card"><h2>Requests</h2><div id="clink"></div><div id="list"><p class="dim">Loading…</p></div></div>' +
   '<footer>Consent-based verification only \u00b7 no criminal or credit data. For those, connect a CRA.</footer></div><div class="toast" id="toast"></div>';
 
@@ -100,7 +101,8 @@ const APP_SCRIPT =
   'function copyLink(v){navigator.clipboard&&navigator.clipboard.writeText(v);toast("Link copied");}' +
   'function reqCard(v){var r=v.request,c=v.candidate,p=v.progress;' +
   'var consentUrl=origin()+"/c/"+r.consentToken;' +
-  'var head="<div class=\\"ch\\"><div><b>"+esc(c.firstName+" "+c.lastName)+"</b> <span class=\\"dim mono\\">"+esc(c.email)+"</span></div><span class=\\"pill s-"+r.status+"\\">"+r.status.replace(/_/g," ")+"</span></div>";' +
+  'var head="<div class=\\"ch\\"><div><b>"+esc(c.firstName+" "+c.lastName)+"</b> <span class=\\"dim mono\\">"+esc(c.email)+"</span>"' +
+  '+"<div class=\\"dim\\" style=\\"font-size:.78rem\\">for "+esc(v.company?v.company.name:"")+"</div></div><span class=\\"pill s-"+r.status+"\\">"+r.status.replace(/_/g," ")+"</span></div>";' +
   'var body="";' +
   'if(!r.consent){body+="<div class=\\"link\\"><input readonly value=\\""+esc(consentUrl)+"\\"><button class=\\"btn ghost sm\\" onclick=\\"copyLink(this.previousElementSibling.value)\\">Copy consent link</button></div><p class=\\"dim\\" style=\\"font-size:.8rem\\">Emailed to the candidate \\u2014 copy it here if you\\u2019d rather send it yourself. Nothing is contacted until they sign.</p>";}' +
   'else{body+="<p class=\\"dim\\" style=\\"font-size:.8rem\\">\\u2713 Consented by "+esc(r.consent.signedName)+" \\u00b7 "+new Date(r.consent.signedAt).toLocaleString()+" \\u00b7 "+p.completed+"/"+p.total+" back</p>";' +
@@ -113,10 +115,29 @@ const APP_SCRIPT =
   'body+="</tbody></table>";}' +
   'if(v.certificate){var ct=v.certificate;body+="<div class=\\"discl\\" style=\\"display:flex;gap:15px;align-items:center;flex-wrap:wrap\\"><img alt=\\"Report QR code\\" width=\\"104\\" height=\\"104\\" style=\\"background:#fff;border-radius:8px;padding:5px\\" src=\\"/api/certificate/"+encodeURIComponent(r.id)+"/qr\\"><div style=\\"min-width:200px;flex:1\\"><div class=\\"dim\\" style=\\"font-size:.66rem;text-transform:uppercase;letter-spacing:.06em\\">Report authenticity \\u2014 scan to verify</div><div class=\\"mono\\" style=\\"font-size:.98rem;margin-top:2px\\"><b>"+esc(ct.trackingNumber)+"</b></div><div class=\\"mono dim\\" style=\\"font-size:.78rem\\">code "+esc(ct.verificationCode)+"</div><div class=\\"link\\"><input readonly value=\\""+esc(ct.verifyUrl)+"\\"><button class=\\"btn ghost sm\\" onclick=\\"copyLink(this.previousElementSibling.value)\\">Copy link</button></div><div style=\\"margin-top:8px\\"><a class=\\"btn sm\\" style=\\"text-decoration:none\\" href=\\"/api/requests/"+encodeURIComponent(r.id)+"/report.pdf\\" target=\\"_blank\\">Download PDF report</a></div></div></div>";}' +
   'return "<div class=\\"card\\">"+head+body+"</div>";}' +
+  'function inbox(){return api("GET","/api/intakes?status=pending").then(function(list){' +
+  'var el=document.getElementById("inbox");' +
+  'if(!list.length){el.innerHTML="";return;}' +
+  'var rows=list.map(function(k){' +
+  'var src=k.sources.map(function(s){return "<div class=\\"dim\\" style=\\"font-size:.8rem\\">"+esc(s.type)+": <b style=\\"color:var(--ink)\\">"+esc(s.subject)+"</b> \\u00b7 "+esc(s.contactEmail)+"</div>";}).join("");' +
+  'return "<div style=\\"border-top:1px solid var(--line);padding:14px 0\\">"' +
+  '+"<div style=\\"display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap\\"><div><b>"+esc(k.candidateFirstName+" "+k.candidateLastName)+"</b> <span class=\\"dim mono\\" style=\\"font-size:.75rem\\">"+esc(k.candidateEmail)+"</span>"' +
+  '+"<div class=\\"dim\\" style=\\"font-size:.8rem\\">for "+esc(k.companyName)+" \\u00b7 requested by "+esc(k.requesterName)+" ("+esc(k.requesterEmail)+")</div></div>"' +
+  '+"<div style=\\"display:flex;gap:8px;align-items:flex-start\\"><button class=\\"btn sm\\" data-ok=\\""+k.id+"\\">Approve &amp; start</button><button class=\\"btn ghost sm\\" data-no=\\""+k.id+"\\">Decline</button></div></div>"' +
+  '+"<div style=\\"margin-top:8px\\">"+src+"</div>"' +
+  '+(k.note?"<div class=\\"dim\\" style=\\"font-size:.8rem;margin-top:6px;font-style:italic\\">\\u201c"+esc(k.note)+"\\u201d</div>":"")' +
+  '+"</div>";}).join("");' +
+  'el.innerHTML="<div class=\\"card\\"><div class=\\"ch\\"><h2>New requests from the website</h2><span class=\\"pill s-awaiting_consent\\">"+list.length+" waiting</span></div>"' +
+  '+"<p class=\\"lead\\" style=\\"margin:0\\">Nobody has been contacted yet. Approving sends the candidate their consent link.</p>"+rows+"</div>";' +
+  'var oks=el.querySelectorAll("[data-ok]");for(var i=0;i<oks.length;i++)oks[i].onclick=function(){var b=this;b.disabled=true;' +
+  'api("POST","/api/intakes/"+b.dataset.ok+"/approve",{}).then(function(){toast("Check started \\u2014 consent link emailed");return load();}).catch(function(e){toast(e.message);b.disabled=false;});};' +
+  'var nos=el.querySelectorAll("[data-no]");for(var j=0;j<nos.length;j++)nos[j].onclick=function(){var b=this;b.disabled=true;' +
+  'api("POST","/api/intakes/"+b.dataset.no+"/decline",{}).then(function(){toast("Declined \\u2014 nobody was contacted");return inbox();}).catch(function(e){toast(e.message);b.disabled=false;});};' +
+  '}).catch(function(){});}' +
   'function clientLink(){return api("GET","/api/companies/"+encodeURIComponent(CO)+"/client-link").then(function(l){' +
   'document.getElementById("clink").innerHTML="<div class=\\"discl\\" style=\\"margin:0 0 14px\\"><div class=\\"dim\\" style=\\"font-size:.66rem;text-transform:uppercase;letter-spacing:.06em\\">Client portal \\u2014 share this link so they can track their own checks</div><div class=\\"link\\"><input readonly value=\\""+esc(l.url)+"\\"><button class=\\"btn ghost sm\\" onclick=\\"copyLink(this.previousElementSibling.value)\\">Copy</button></div></div>";' +
   '}).catch(function(){});}' +
-  'function load(){clientLink();return api("GET","/api/requests?companyId="+encodeURIComponent(CO)).then(function(rs){' +
+  'function load(){inbox();return api("GET","/api/requests").then(function(rs){' +
   'var el=document.getElementById("list");if(!rs.length){el.innerHTML="<p class=\\"dim\\">No requests yet. Create one above.</p>";return;}' +
   'rs.sort(function(a,b){return (b.createdAt||"").localeCompare(a.createdAt||"");});' +
   'return Promise.all(rs.map(function(r){return api("GET","/api/requests/"+r.id);})).then(function(views){el.innerHTML=views.map(reqCard).join("");});});}' +

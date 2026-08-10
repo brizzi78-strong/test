@@ -20,6 +20,7 @@ import { VerifyService, DISCLOSURE_VERSION } from '../service/verifyService.ts';
 import { CertificateService } from '../service/certificate.ts';
 import { ReportService } from '../service/report.ts';
 import { PortalService } from '../service/portal.ts';
+import { IntakeService } from '../service/intakeService.ts';
 import { qrSvg } from '../service/qr.ts';
 import { DomainError, ValidationError } from '../service/errors.ts';
 import { createInMemoryStore, type Store } from '../store/store.ts';
@@ -40,6 +41,8 @@ export interface AppOptions {
   baseUrl?: string;
   /** Secret keying report tracking numbers, verification codes, and seals. */
   certSecret?: string;
+  /** Where new website orders are announced. */
+  operatorEmail?: string;
 }
 
 export function storeFromEnv(env: NodeJS.ProcessEnv = process.env): Store {
@@ -80,10 +83,17 @@ export function createApp(opts: AppOptions = {}): AppServer {
     secret: certSecret ?? 'verify-cert-dev-secret-change-me',
     baseUrl,
   });
+  const intake = new IntakeService({
+    store,
+    verify: service,
+    notifier: opts.notifier ?? notifierFromEnv(),
+    operatorEmail: opts.operatorEmail ?? process.env.VERIFY_OPERATOR_EMAIL,
+    baseUrl,
+  });
   const user = opts.user ?? process.env.VERIFY_USER;
   const password = opts.password ?? process.env.VERIFY_PASSWORD;
   const gate = user && password ? { user, password } : undefined;
-  const server = createServer(makeListener({ service, cert, report, portal }, gate));
+  const server = createServer(makeListener({ service, cert, report, portal, intake }, gate));
   return { server, service };
 }
 
@@ -93,6 +103,7 @@ interface Deps {
   cert: CertificateService;
   report: ReportService;
   portal: PortalService;
+  intake: IntakeService;
 }
 
 /** Public paths that must never require the admin login. */
@@ -112,6 +123,7 @@ function isPublicPath(path: string): boolean {
     // the operator login, since clients have no operator account.
     path.startsWith('/client/') ||
     path.startsWith('/api/client/') ||
+    path === '/api/intake' ||
     path.startsWith('/api/consent/') ||
     path.startsWith('/api/verify/')
   );
@@ -162,7 +174,7 @@ async function api(
   req: IncomingMessage,
   res: ServerResponse,
 ): Promise<void> {
-  const { service, cert, report, portal } = deps;
+  const { service, cert, report, portal, intake } = deps;
   const q = url.searchParams;
   const seg = path.split('/').filter(Boolean); // ["api", ...]
   const body = method === 'GET' ? {} : ((await readJson(req)) as Record<string, unknown>);
@@ -171,6 +183,38 @@ async function api(
   if (method === 'GET' && path === '/api/meta') {
     return json(res, 200, { service: 'verify', disclosureVersion: DISCLOSURE_VERSION });
   }
+
+  // Public: an order from the website. Records it and tells the operator —
+  // deliberately does NOT start a check or contact anyone (see IntakeService).
+  if (path === '/api/intake') {
+    if (method === 'OPTIONS') {
+      res.writeHead(204, corsHeaders());
+      res.end();
+      return;
+    }
+    if (method === 'POST') {
+      const ip = clientIp(req);
+      if (!intakeLimiter.allow(ip)) {
+        res.writeHead(429, { ...corsHeaders(), 'content-type': 'application/json', 'retry-after': '3600' });
+        res.end(
+          JSON.stringify({ error: { code: 'rate_limited', message: 'too many requests — please try again later' } }),
+        );
+        return;
+      }
+      const created = await intake.submit(body as never);
+      res.writeHead(201, { ...corsHeaders(), 'content-type': 'application/json' });
+      res.end(JSON.stringify(created));
+      return;
+    }
+  }
+
+  // Admin: review the queue of website orders.
+  if (method === 'GET' && path === '/api/intakes')
+    return json(res, 200, intake.list({ status: (q.get('status') as never) ?? undefined }));
+  if (method === 'POST' && seg[1] === 'intakes' && seg[2] && seg[3] === 'approve')
+    return json(res, 201, await intake.approve(seg[2]));
+  if (method === 'POST' && seg[1] === 'intakes' && seg[2] && seg[3] === 'decline')
+    return json(res, 200, intake.decline(seg[2], typeof body.reason === 'string' ? body.reason : undefined));
 
   // Admin: companies / candidates / requests
   if (method === 'POST' && path === '/api/companies') return json(res, 201, service.createCompany(body as never));
@@ -265,6 +309,63 @@ async function api(
 
   json(res, 404, { error: { code: 'not_found', message: 'route not found' } });
 }
+
+/**
+ * The public order form lives on the marketing site, a different origin, so
+ * the browser needs permission to post here. Only the intake endpoint is
+ * opened up, and only for a simple JSON POST.
+ */
+function corsHeaders(): Record<string, string> {
+  return {
+    'access-control-allow-origin': '*',
+    'access-control-allow-methods': 'POST, OPTIONS',
+    'access-control-allow-headers': 'content-type',
+    'access-control-max-age': '86400',
+  };
+}
+
+function clientIp(req: IncomingMessage): string {
+  const fwd = req.headers['x-forwarded-for'];
+  const first = (Array.isArray(fwd) ? fwd[0] : fwd)?.split(',')[0]?.trim();
+  return first || req.socket.remoteAddress || 'unknown';
+}
+
+/**
+ * A small fixed-window limiter, per client address. Submitting an order is
+ * cheap for a visitor and costs us an operator's attention, so it needs a
+ * ceiling — but a generous one, since a household and a small office can
+ * legitimately share an address.
+ */
+class RateLimiter {
+  private readonly hits = new Map<string, { count: number; resetAt: number }>();
+  private readonly limit: number;
+  private readonly windowMs: number;
+  private readonly now: () => number;
+
+  constructor(limit: number, windowMs: number, now: () => number = Date.now) {
+    this.limit = limit;
+    this.windowMs = windowMs;
+    this.now = now;
+  }
+
+  allow(key: string): boolean {
+    const t = this.now();
+    const entry = this.hits.get(key);
+    if (!entry || t >= entry.resetAt) {
+      // Opportunistically drop expired keys so the map can't grow without end.
+      if (this.hits.size > 5000) {
+        for (const [k, v] of this.hits) if (t >= v.resetAt) this.hits.delete(k);
+      }
+      this.hits.set(key, { count: 1, resetAt: t + this.windowMs });
+      return true;
+    }
+    if (entry.count >= this.limit) return false;
+    entry.count++;
+    return true;
+  }
+}
+
+const intakeLimiter = new RateLimiter(10, 60 * 60 * 1000); // 10 orders per hour, per address
 
 function authorized(req: IncomingMessage, gate: { user: string; password: string }): boolean {
   const header = req.headers.authorization;

@@ -146,8 +146,31 @@
   @media (prefers-reduced-motion:reduce){#brpv2 .rv{opacity:1;transform:none;transition:none}}
 
 #brpv2 .rv{opacity:1 !important;transform:none !important}
-#brpv2 .formcard{max-width:760px;margin:34px auto 0;background:#F6ECDF;border:1px solid var(--line);border-radius:4px;padding:10px;box-shadow:0 26px 60px -30px rgba(0,0,0,.7)}
-#brpv2 .formcard iframe{width:100%;height:900px;border:0;border-radius:3px;display:block;background:#F6ECDF}
+#brpv2 .formcard{max-width:760px;margin:34px auto 0;background:#F6ECDF;color:#14225A;border:1px solid var(--line);border-radius:4px;padding:clamp(22px,3vw,34px);box-shadow:0 26px 60px -30px rgba(0,0,0,.7);text-align:left}
+#brpv2 .formcard h3{font-family:var(--serif);font-size:1.15rem;margin:0 0 4px;color:#14225A}
+#brpv2 .formcard .hint{font-size:.85rem;color:#5b6494;margin:0 0 20px}
+#brpv2 .formcard fieldset{border:0;padding:0;margin:0 0 18px}
+#brpv2 .formcard legend{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:#6b74a8;padding:0;margin-bottom:10px}
+#brpv2 .formcard label{display:block;font-size:.72rem;font-weight:700;color:#4a5387;margin:0 0 4px}
+#brpv2 .formcard input,#brpv2 .formcard select,#brpv2 .formcard textarea{width:100%;padding:.6rem .65rem;border:1px solid #c9cfe8;border-radius:4px;background:#fff;color:#14225A;font:inherit;font-size:.95rem}
+#brpv2 .formcard input:focus,#brpv2 .formcard select:focus,#brpv2 .formcard textarea:focus{outline:2px solid #3D4EC6;outline-offset:1px}
+#brpv2 .formcard .fgrid{display:grid;gap:12px;grid-template-columns:1fr}
+@media(min-width:620px){#brpv2 .formcard .fgrid.two{grid-template-columns:1fr 1fr}}
+#brpv2 .formcard .srow{display:grid;gap:8px;grid-template-columns:1fr;margin-bottom:10px;padding-bottom:10px;border-bottom:1px dashed #d7dcef}
+@media(min-width:620px){#brpv2 .formcard .srow{grid-template-columns:150px 1fr 1fr auto;align-items:end}}
+#brpv2 .formcard .srow:last-of-type{border-bottom:0}
+#brpv2 .formcard .rm{background:transparent;border:0;color:#8a91b8;cursor:pointer;font-size:1.1rem;padding:.4rem}
+#brpv2 .formcard .rm:hover{color:#A63232}
+#brpv2 .formcard .add{background:transparent;border:1px solid #c9cfe8;border-radius:999px;color:#3D4EC6;font:inherit;font-size:.82rem;font-weight:600;padding:.45rem 1rem;cursor:pointer}
+#brpv2 .formcard .submit{background:#3D4EC6;color:#fff;border:0;border-radius:999px;font:inherit;font-weight:700;font-size:1rem;padding:.85rem 2rem;cursor:pointer;width:100%}
+#brpv2 .formcard .submit:hover{background:#2F3EAE}
+#brpv2 .formcard .submit:disabled{opacity:.6;cursor:progress}
+#brpv2 .formcard .msg{border-radius:4px;padding:.7rem .9rem;font-size:.9rem;margin-bottom:14px}
+#brpv2 .formcard .msg.bad{background:#F7E5E2;border:1px solid #A63232;color:#7d2626}
+#brpv2 .formcard .consent-note{font-size:.78rem;color:#5b6494;margin:14px 0 0;line-height:1.5}
+#brpv2 .formcard .done{text-align:center;padding:26px 8px}
+#brpv2 .formcard .done h3{font-size:1.4rem;margin-bottom:8px}
+#brpv2 .formcard .done p{color:#4a5387;font-size:.95rem;margin:0 auto;max-width:44ch}
 
 </style>
 <!-- ================= TOP BAR ================= -->
@@ -339,7 +362,96 @@
 </section>
 
 <!-- ================= CLOSE ================= -->
-<section class="close" id="start"><div class="wrap"><p class="lab eyebrow" style="justify-content:center">Request a verification</p><h2>Verify your next decision &mdash; the way it should be done.</h2><p class="sub" style="margin:16px auto 0;text-align:center">Tell us who to verify. We send the candidate a consent link and take it from there &mdash; nothing happens until they sign.</p><div class="formcard"><iframe src="https://form.jotform.com/262105153679054" title="Request a Verification" loading="lazy"></iframe></div><p class="fine">Consent-first &middot; confirmed at the source &middot; Raleigh, North Carolina</p></div></section>
+<section class="close" id="start"><div class="wrap"><p class="lab eyebrow" style="justify-content:center">Request a verification</p><h2>Verify your next decision &mdash; the way it should be done.</h2><p class="sub" style="margin:16px auto 0;text-align:center">Tell us who to verify. We send the candidate a consent link and take it from there &mdash; nothing happens until they sign.</p><div class="formcard">
+<form id="brpForm" novalidate>
+  <h3>Request a verification</h3>
+  <p class="hint">We&rsquo;ll review your request and send the candidate a consent link. Nobody is contacted until they authorize it.</p>
+  <div id="brpMsg"></div>
+  <fieldset>
+    <legend>About you</legend>
+    <div class="fgrid two">
+      <div><label for="brpRN">Your name</label><input id="brpRN" autocomplete="name"></div>
+      <div><label for="brpRE">Your email</label><input id="brpRE" type="email" autocomplete="email"></div>
+    </div>
+    <div style="margin-top:12px"><label for="brpCN">Business or household name <span style="font-weight:400;color:#8a91b8">(optional)</span></label><input id="brpCN" autocomplete="organization"></div>
+  </fieldset>
+  <fieldset>
+    <legend>Who to verify</legend>
+    <div class="fgrid two">
+      <div><label for="brpCF">Candidate first name</label><input id="brpCF"></div>
+      <div><label for="brpCL">Candidate last name</label><input id="brpCL"></div>
+    </div>
+    <div style="margin-top:12px"><label for="brpCE">Candidate email</label><input id="brpCE" type="email"></div>
+  </fieldset>
+  <fieldset>
+    <legend>Who should confirm</legend>
+    <div id="brpSources"></div>
+    <button type="button" class="add" id="brpAdd">+ Add another</button>
+  </fieldset>
+  <fieldset>
+    <legend>Anything else</legend>
+    <textarea id="brpNote" rows="3" placeholder="What the role is, or anything we should know."></textarea>
+  </fieldset>
+  <button type="submit" class="submit" id="brpGo">Request the check</button>
+  <p class="consent-note">By submitting, you confirm you have a lawful reason to verify this person and that they are expecting to hear from us. We contact the candidate for written authorization before reaching any source.</p>
+</form>
+</div>
+<script>
+(function(){
+  /* Point this at the deployed verify app. */
+  var VERIFY_API = "https://cardinal-verify.onrender.com";
+
+  var box=document.getElementById("brpSources"), form=document.getElementById("brpForm"),
+      msg=document.getElementById("brpMsg"), go=document.getElementById("brpGo");
+  if(!form) return;
+  function row(){
+    var d=document.createElement("div"); d.className="srow";
+    d.innerHTML='<div><label>Type</label><select class="s-type"><option value="reference">Reference</option><option value="employment">Past employer</option><option value="education">School</option></select></div>'+
+      '<div><label>Name</label><input class="s-subject" placeholder="Person or organization"></div>'+
+      '<div><label>Their email</label><input class="s-email" type="email" placeholder="name@example.com"></div>'+
+      '<button type="button" class="rm" aria-label="Remove">&times;</button>';
+    d.querySelector(".rm").onclick=function(){ if(box.children.length>1) d.remove(); };
+    return d;
+  }
+  box.appendChild(row());
+  document.getElementById("brpAdd").onclick=function(){ box.appendChild(row()); };
+
+  function fail(t){ msg.className="msg bad"; msg.textContent=t; }
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault(); msg.className=""; msg.textContent="";
+    var sources=[], rows=box.querySelectorAll(".srow"), i, subj, mail;
+    for(i=0;i<rows.length;i++){
+      subj=rows[i].querySelector(".s-subject").value.trim();
+      mail=rows[i].querySelector(".s-email").value.trim();
+      if(!subj && !mail) continue;
+      if(!subj || !mail){ fail("Each row needs both a name and an email."); return; }
+      sources.push({type:rows[i].querySelector(".s-type").value, subject:subj, contactEmail:mail});
+    }
+    if(!sources.length){ fail("Add at least one reference, employer, or school."); return; }
+    var payload={
+      requesterName:document.getElementById("brpRN").value.trim(),
+      requesterEmail:document.getElementById("brpRE").value.trim(),
+      companyName:document.getElementById("brpCN").value.trim(),
+      candidateFirstName:document.getElementById("brpCF").value.trim(),
+      candidateLastName:document.getElementById("brpCL").value.trim(),
+      candidateEmail:document.getElementById("brpCE").value.trim(),
+      sources:sources, note:document.getElementById("brpNote").value.trim()
+    };
+    if(!payload.requesterName||!payload.requesterEmail){ fail("Please give us your name and email."); return; }
+    if(!payload.candidateFirstName||!payload.candidateLastName||!payload.candidateEmail){ fail("Please give the candidate\u2019s name and email."); return; }
+    go.disabled=true; go.textContent="Sending\u2026";
+    fetch(VERIFY_API+"/api/intake",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify(payload)})
+      .then(function(r){ return r.text().then(function(t){ var j=t?JSON.parse(t):null; if(!r.ok) throw new Error((j&&j.error&&j.error.message)||("Something went wrong ("+r.status+")")); return j; }); })
+      .then(function(){
+        form.parentNode.innerHTML='<div class="done"><h3>Request received</h3><p>We\u2019ll review it and email <b>'+
+          payload.candidateFirstName+'</b> a consent link. Nobody is contacted until they authorize it. You\u2019ll hear from us shortly at '+
+          payload.requesterEmail+'.</p></div>';
+      })
+      .catch(function(err){ go.disabled=false; go.textContent="Request the check"; fail(err.message); });
+  });
+})();
+</script><p class="fine">Consent-first &middot; confirmed at the source &middot; Raleigh, North Carolina</p></div></section>
 </main>
 
 <!-- ================= FOOTER ================= -->

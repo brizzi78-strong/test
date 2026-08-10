@@ -119,6 +119,61 @@ test('full consent-gated flow over the API', async () => {
   });
 });
 
+test('a public website order is queued for approval and starts nothing on its own', async () => {
+  await withServer(async (base) => {
+    const order = {
+      requesterName: 'Coretta Vance',
+      requesterEmail: 'coretta@example.com',
+      companyName: 'Vance Household',
+      candidateFirstName: 'Jordan',
+      candidateLastName: 'Rivera',
+      candidateEmail: 'jordan@example.com',
+      sources: [{ type: 'reference', subject: 'Pat Lee', contactEmail: 'pat@example.com' }],
+    };
+
+    // The browser preflights a cross-origin post from the marketing site.
+    const pre = await fetch(`${base}/api/intake`, { method: 'OPTIONS' });
+    assert.equal(pre.status, 204);
+    assert.equal(pre.headers.get('access-control-allow-origin'), '*');
+
+    const posted = await j(base, 'POST', '/api/intake', order);
+    assert.equal(posted.status, 201);
+    assert.equal(posted.json.status, 'pending');
+
+    // Nothing exists yet — no request was created.
+    assert.equal((await j(base, 'GET', '/api/requests')).json.length, 0);
+
+    const queue = await j(base, 'GET', '/api/intakes?status=pending');
+    assert.equal(queue.json.length, 1);
+    assert.equal(queue.json[0].candidateFirstName, 'Jordan');
+
+    // Approving is what creates the real, consent-gated request.
+    const approved = await j(base, 'POST', `/api/intakes/${queue.json[0].id}/approve`, {});
+    assert.equal(approved.status, 201);
+    assert.equal(approved.json.status, 'awaiting_consent');
+    assert.equal((await j(base, 'GET', '/api/requests')).json.length, 1);
+
+    // And it can't be approved twice.
+    assert.equal((await j(base, 'POST', `/api/intakes/${queue.json[0].id}/approve`, {})).status, 409);
+
+    // Garbage is refused.
+    assert.equal((await j(base, 'POST', '/api/intake', { ...order, candidateEmail: 'nope' })).status, 400);
+  });
+});
+
+test('the intake endpoint is public but rate limited; the queue is operator-only', async () => {
+  await withServer(
+    async (base) => {
+      // Public: reachable without the operator login (400 for junk, not 401).
+      assert.equal((await j(base, 'POST', '/api/intake', {})).status, 400);
+      // The review queue and decisions require the login.
+      assert.equal((await fetch(`${base}/api/intakes`)).status, 401);
+      assert.equal((await j(base, 'POST', '/api/intakes/x/approve', {})).status, 401);
+    },
+    { user: 'admin', password: 'pw' },
+  );
+});
+
 test('the client portal serves a scoped history and PDF, and blocks other clients', async () => {
   await withServer(async (base) => {
     // Two separate clients, each with one completed check.

@@ -4,12 +4,14 @@
  * without touching business logic.
  */
 
-import type { Candidate, Company, VerificationRequest } from '../domain/types.ts';
+import type { Candidate, Company, Intake, VerificationRequest } from '../domain/types.ts';
 
 export interface Store {
   companies: Collection<Company>;
   candidates: Collection<Candidate>;
   requests: Collection<VerificationRequest>;
+  /** Orders placed from the public site, awaiting operator approval. */
+  intakes: Collection<Intake>;
 }
 
 export interface Collection<T> {
@@ -37,5 +39,6 @@ export function createInMemoryStore(): Store {
     companies: new InMemoryCollection<Company>(),
     candidates: new InMemoryCollection<Candidate>(),
     requests: new InMemoryCollection<VerificationRequest>(),
+    intakes: new InMemoryCollection<Intake>(),
   };
 }
