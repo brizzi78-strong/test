@@ -14,6 +14,7 @@ tools, and the operational reference they're built on.
 | --- | --- |
 | `index.html` | Marketing / lead-generation landing page — **buyer-facing** |
 | `investors.html` | Investor presentation deck — **investor-facing** |
+| `one-pager.html` | Single-page executive summary / leave-behind — **investor-facing** |
 | `tracker.html` | **Working prototype** — the authorization dashboard the landing page advertises |
 | `appeal-letters.html` | **Working prototype** — denial and termination appeal letter builder |
 | `docs/nc-snf-ma-reference.md` | North Carolina filing routes, PT documentation standards, appeal data |
@@ -47,15 +48,26 @@ guardrails.
 
 ## `investors.html` — investor presentation
 
-A 15-slide deck that presents in the browser: arrow keys or space to advance,
+A 16-slide deck that presents in the browser: arrow keys or space to advance,
 **N** toggles speaker notes, **P** prints to PDF (one slide per page). A progress
 bar and slide counter sit bottom-right.
 
 Narrative arc: the shift (55% of Medicare is now MA) → the problem (facilities
 absorb the authorization burden as unpaid labor) → the insight (the denials are
 mostly wrong, so this is a workflow problem software can win) → why now (the
-2024–2026 regulatory floor) → product and working proof → market and beachhead →
-go-to-market, model, traction, team, risks, and the ask.
+regulatory floor already in force, plus the CMS-0057-F Prior Authorization FHIR
+API mandate landing 1 Jan 2027) → product and working proof → market and
+beachhead → competition → go-to-market, model, traction, team, risks, and the ask.
+
+The competition slide names PointClickCare and MatrixCare directly and concedes
+what they genuinely do — record authorization numbers and coverage dates as a
+billing field — before drawing the category line: everyone else is downstream of
+the denial, working the claim after it is refused; this product is upstream of
+it, working the stay while it is happening. Hedging that slide costs credibility
+with anyone who knows the market.
+
+Slide numbers are generated from document order at load, so inserting a slide
+cannot desync the labels.
 
 **Every market and problem statistic on the deck is sourced and cited on-slide** —
 KFF enrollment data, the AHCA/NCAL provider survey, the 2026 HHS OIG report, and
@@ -67,6 +79,14 @@ for what belongs there. That is deliberate: fabricated metrics in an investor
 deck are both checkable and unrecoverable. Fill them in before showing this to
 anyone, and where the honest answer is "pre-traction," the notes recommend saying
 so and demonstrating the prototype instead.
+
+## `one-pager.html` — executive summary
+
+The leave-behind for after a meeting. Prints to exactly one page: market shift,
+problem, the insight that denials are mostly wrong, product, why now, and
+competition — with a consolidated source line in the footer. Same fill-in
+discipline: traction, team, and the ask are a single dashed block that must be
+completed before the document is sent to anyone.
 
 ## `tracker.html` — authorization tracker
 
@@ -83,6 +103,11 @@ noon on the day before the effective date. Date arithmetic is local-midnight
 based and DST-safe.
 
 Built for short-interval plans — the auth cycle defaults to 3 days.
+
+**Demo data.** The *Demo data* button loads a five-case anonymised caseload dated
+relative to today, so two cases always read red (one with a QIO fast-track
+deadline at noon today), two amber, one green, at $7,050 exposure. It exists for
+walkthroughs and the investor demo; it prompts before overwriting real data.
 
 ## `appeal-letters.html` — appeal letter builder
 

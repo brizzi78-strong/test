@@ -105,6 +105,7 @@
     <button class="btn" id="addBtn">+ Add case</button>
     <button class="btn ghost" id="printBtn">Print</button>
     <button class="btn ghost" id="exportBtn">Export</button>
+    <button class="btn ghost" id="demoBtn" title="Load anonymised demo caseload">Demo data</button>
     <button class="btn ghost" id="themeBtn" title="Toggle theme" aria-label="Toggle theme">◐</button>
   </div>
 </header>
@@ -398,7 +399,33 @@ $("delBtn").addEventListener("click", () => {
   save(); render(); $("dlg").close();
 });
 
+/* Demo caseload — fabricated, anonymised, dated relative to today so a deadline
+   always reads red. For walkthroughs and presentations, never for real cases. */
+function loadDemo(){
+  if (cases.length && !confirm("Replace the current caseload with demo data? Export first if you need to keep it.")) return;
+  const t = today(), d = (n) => toISO(addD(t, n));
+  cases = [
+    { cid:"214-B", plan:"Aetna MA", admit:d(-12), cycle:3, lead:1, covered:d(0), note:d(-6), cert:d(-12),
+      status:"Denied — appeal open", exposure:4980, order:"PT 5x/week × 21 days",
+      notes:"Cut letter day 12. QIO fast-track deadline is today at noon. Plan cited 'maximum functional potential' — Jimmo rebuttal drafted." },
+    { cid:"301-A", plan:"WellCare MA", admit:d(-4), cycle:3, lead:1, covered:d(1), note:d(-2), cert:d(-4),
+      status:"Recert pending", exposure:1240, order:"PT 5x/week × 14 days",
+      notes:"Third 3-day authorization this stay. Short-auth challenge letter queued." },
+    { cid:"118", plan:"Aetna MA", admit:d(-19), cycle:3, lead:1, covered:d(2), note:d(-5), cert:d(-19),
+      status:"NOMNC issued", exposure:830, order:"PT 5x/week × 21 days",
+      notes:"Day-14 recertification overdue — clean technical denial if not corrected." },
+    { cid:"227-C", plan:"WellCare MA", admit:d(-1), cycle:3, lead:1, covered:d(2), note:d(-1), cert:d(-1),
+      status:"Awaiting initial auth", exposure:0, order:"PT 5x/week × 14 days",
+      notes:"Admitted yesterday. Plan response window running." },
+    { cid:"105-B", plan:"Aetna MA", admit:d(-6), cycle:5, lead:1, covered:d(5), note:d(-1), cert:d(-6),
+      status:"Authorized", exposure:0, order:"PT 5x/week × 21 days", notes:"" },
+  ].map(c => ({ id: crypto.randomUUID(), ...c }));
+  save(); render();
+  window.scrollTo({top:0, behavior:"smooth"});
+}
+
 $("addBtn").addEventListener("click", () => openDlg(null));
+$("demoBtn").addEventListener("click", loadDemo);
 $("printBtn").addEventListener("click", () => window.print());
 $("exportBtn").addEventListener("click", () => {
   const blob = new Blob([JSON.stringify(cases,null,2)], {type:"application/json"});

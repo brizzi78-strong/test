@@ -111,7 +111,7 @@
 </section>
 
 <section class="slide" id="s2">
-  <span class="slideno">01 · The shift</span>
+  <span class="slideno" data-title="The shift"></span>
   <div class="inner">
     <p class="kicker">The shift</p>
     <h2>Medicare stopped being a government program and became <em>an insurance market</em>.</h2>
@@ -127,7 +127,7 @@
 </section>
 
 <section class="slide" id="s3">
-  <span class="slideno">02 · The problem</span>
+  <span class="slideno" data-title="The problem"></span>
   <div class="inner">
     <p class="kicker">The problem</p>
     <h2>Skilled nursing facilities are absorbing the cost of that shift <em>as unpaid labor</em>.</h2>
@@ -143,7 +143,7 @@
 </section>
 
 <section class="slide" id="s4">
-  <span class="slideno">03 · The insight</span>
+  <span class="slideno" data-title="The insight"></span>
   <div class="inner">
     <p class="kicker">The insight</p>
     <h2>Here is what makes this a <em>software problem</em> and not just a hard job: the denials are mostly wrong.</h2>
@@ -159,25 +159,37 @@
 </section>
 
 <section class="slide" id="s5">
-  <span class="slideno">04 · Why now</span>
+  <span class="slideno" data-title="Why now"></span>
   <div class="inner">
     <p class="kicker">Why now</p>
-    <h2>Regulation just handed facilities a <em>legal floor</em> — and nobody has tooling to stand on it.</h2>
-    <ul class="pts">
-      <li><b>CMS-4201-F (effective Jan 1, 2024).</b> MA plans must apply Traditional Medicare coverage criteria and may not use more restrictive internal guidelines where those criteria are established.</li>
-      <li><b>42 CFR 422.138.</b> An authorization must remain valid as long as medically necessary, keyed to the treating provider's recommendation — putting short-interval reauthorization on contested ground.</li>
-      <li><b>42 CFR 422.626.</b> On a service termination appeal, the burden of proof sits with the plan, which must give a specific and detailed explanation.</li>
-      <li><b>Revised NOMNC and DENC forms</b> took effect in 2025, expanding enrollee fast-track appeal rights.</li>
-      <li><b>Medicare Advantage Improvement Act of 2026</b> introduced with AHCA/NCAL backing; CMS has signaled utilization-management compliance audits.</li>
-    </ul>
-    <p class="lede" style="margin-top:1.3rem;">The rules changed in the facility's favor. The facility's workflow did not. That gap is the opportunity.</p>
-    <p class="src">Sources: CMS-4201-F; 42 CFR §§ 422.138, 422.624, 422.626; AHCA/NCAL press release on the Medicare Advantage Improvement Act of 2026.</p>
-    <div class="notes"><b>Say:</b> Investors will ask "why hasn't this been built." Answer: the legal leverage is two years old, the appeal data is months old, and incumbent SNF software was built for Traditional Medicare billing, not payer litigation workflow.</div>
+    <h2>Regulation just handed facilities a <em>legal floor</em> — and is about to hand us <em>the data pipe</em>.</h2>
+    <div class="two">
+      <div>
+        <h3 style="font-size:.95rem;margin:0 0 .5rem;color:var(--brand);">The leverage — already in force</h3>
+        <ul class="pts" style="gap:.55rem;">
+          <li><b>CMS-4201-F (Jan 2024).</b> MA plans must apply Traditional Medicare coverage criteria; no more restrictive internal guidelines.</li>
+          <li><b>42 CFR 422.138.</b> Authorization must stay valid as long as medically necessary, keyed to the treating provider's recommendation.</li>
+          <li><b>42 CFR 422.626.</b> On a termination appeal, the burden of proof sits with the plan.</li>
+          <li><b>Revised NOMNC/DENC forms (2025)</b> expanded enrollee fast-track appeal rights.</li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="font-size:.95rem;margin:0 0 .5rem;color:var(--brand);">The clock — CMS-0057-F</h3>
+        <ul class="pts" style="gap:.55rem;">
+          <li><b>Jan 1, 2026 (now).</b> MA plans must decide in 72 hours expedited / 7 calendar days standard, with a specific reason on every denial.</li>
+          <li><b>Mar 31, 2026.</b> Plans must publicly report prior-authorization metrics — denial rates become public data.</li>
+          <li><b>Jan 1, 2027.</b> Every MA plan must run a production <b>Prior Authorization FHIR API</b>, plus Provider Access and Patient Access APIs.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="lede" style="margin-top:1.3rem;">The rules changed in the facility's favor; the facility's workflow did not. And in twelve months the manual portal-chasing that makes this hard becomes an API integration — which rewards whoever already owns the facility-side workflow when the pipe opens.</p>
+    <p class="src">Sources: CMS-4201-F; CMS-0057-F Interoperability and Prior Authorization Final Rule; 42 CFR §§ 422.138, 422.624, 422.626; AHCA/NCAL on the Medicare Advantage Improvement Act of 2026.</p>
+    <div class="notes"><b>Say:</b> This is the timing slide — spend real time here. Two arguments: the legal leverage exists today and nobody has tooling for it, and the 2027 API mandate turns our hardest technical problem (getting status out of payer portals) into a solved integration. <b>If asked "why hasn't PointClickCare done this":</b> the leverage is two years old, the appeal data is months old, and their auth tracking is a billing field, not a deadline engine — next slide.</div>
   </div>
 </section>
 
 <section class="slide" id="s6">
-  <span class="slideno">05 · The product</span>
+  <span class="slideno" data-title="The product"></span>
   <div class="inner">
     <p class="kicker">The product</p>
     <h2>One dashboard. Every resident. <em>Admission through discharge.</em></h2>
@@ -202,7 +214,7 @@
 </section>
 
 <section class="slide" id="s7">
-  <span class="slideno">06 · Proof</span>
+  <span class="slideno" data-title="Proof"></span>
   <div class="inner">
     <p class="kicker">Proof it is real</p>
     <h2>Working software, not a mockup.</h2>
@@ -225,7 +237,7 @@
 </section>
 
 <section class="slide" id="s8">
-  <span class="slideno">07 · Market</span>
+  <span class="slideno" data-title="Market"></span>
   <div class="inner">
     <p class="kicker">Market</p>
     <h2>Roughly <em>15,000</em> certified nursing facilities nationally. <em>419</em> in the beachhead.</h2>
@@ -249,8 +261,37 @@
   </div>
 </section>
 
+<section class="slide" id="s8b">
+  <span class="slideno" data-title="Competition"></span>
+  <div class="inner">
+    <p class="kicker">Competition</p>
+    <h2>Everyone works the claim <em>after</em> it is denied. Nobody works the stay <em>while it is happening</em>.</h2>
+    <div class="two">
+      <div class="card">
+        <h3>EHR platforms — PointClickCare, MatrixCare</h3>
+        <p>Do record authorization numbers, coverage dates, and authorized service types against a resident, and can surface an expired auth before a claim goes out. That is a <b>billing data field</b>: it catches the gap at claim time. It does not run a NOMNC clock, a QIO fast-track deadline, or an appeal.</p>
+      </div>
+      <div class="card">
+        <h3>RCM analytics — SNF Metrics, primeCLAIMS, Inovalon</h3>
+        <p>Aggregate reimbursement and AR data across facilities, report on denials and collections. Retrospective by design: they tell you how much you lost last quarter. They do not help you keep it during the stay.</p>
+      </div>
+      <div class="card">
+        <h3>Outsourced prior-auth services</h3>
+        <p>BPO firms staff the authorization work for you. Real demand signal — facilities are paying humans to solve this today — but cost scales linearly with volume, and the facility still owns the missed deadline.</p>
+      </div>
+      <div class="card" style="border-color:var(--brand);border-width:2px;">
+        <h3 style="color:var(--brand);">Cardinal Coverage</h3>
+        <p>Prospective, during the stay: the deadline engine and the appeal workflow. The layer between the chart and the plan — where the money is actually won or lost, and where no one currently sits.</p>
+      </div>
+    </div>
+    <p class="lede" style="margin-top:1.2rem;"><b>The category boundary:</b> everyone else is downstream of the denial. We are upstream of it.</p>
+    <p class="src">Sources: vendor product documentation for PointClickCare, MatrixCare, SNF Metrics, and primeCLAIMS; SNF billing platform comparisons.</p>
+    <div class="notes"><b>Say:</b> Name PointClickCare first and concede what it genuinely does — investors already know it and hedging here costs you the room. Then draw the line: billing field versus deadline engine, retrospective versus prospective. <b>The follow-up will be "what stops PCC building this."</b> Honest answer: nothing structural, but it is a specialist workflow with regulatory depth inside a platform that serves dozens of workflows, and our beachhead speed plus the 2027 API shift is the window.</div>
+  </div>
+</section>
+
 <section class="slide" id="s9">
-  <span class="slideno">08 · Go to market</span>
+  <span class="slideno" data-title="Go to market"></span>
   <div class="inner">
     <p class="kicker">Go to market</p>
     <h2>Start where the operator already has <em>standing</em>.</h2>
@@ -269,7 +310,7 @@
 </section>
 
 <section class="slide" id="s10">
-  <span class="slideno">09 · Business model</span>
+  <span class="slideno" data-title="Business model"></span>
   <div class="inner">
     <p class="kicker">Business model</p>
     <h2>Priced against recovered revenue, <em>not seats</em>.</h2>
@@ -289,7 +330,7 @@
 </section>
 
 <section class="slide" id="s11">
-  <span class="slideno">10 · Traction</span>
+  <span class="slideno" data-title="Traction"></span>
   <div class="inner">
     <p class="kicker">Traction</p>
     <h2>Where we actually are.</h2>
@@ -309,7 +350,7 @@
 </section>
 
 <section class="slide" id="s12">
-  <span class="slideno">11 · Team</span>
+  <span class="slideno" data-title="Team"></span>
   <div class="inner">
     <p class="kicker">Team</p>
     <h2>Operators who live inside the problem.</h2>
@@ -328,7 +369,7 @@
 </section>
 
 <section class="slide" id="s13">
-  <span class="slideno">12 · Risks</span>
+  <span class="slideno" data-title="Risks"></span>
   <div class="inner">
     <p class="kicker">What we are watching</p>
     <h2>The honest risk list.</h2>
@@ -355,7 +396,7 @@
 </section>
 
 <section class="slide" id="s14">
-  <span class="slideno">13 · The ask</span>
+  <span class="slideno" data-title="The ask"></span>
   <div class="inner">
     <p class="kicker">The ask</p>
     <h2>What we are raising, and what it buys.</h2>
@@ -375,7 +416,7 @@
 </section>
 
 <section class="slide" id="s15">
-  <span class="slideno">14 · Close</span>
+  <span class="slideno" data-title="Close"></span>
   <div class="inner">
     <p class="kicker">In one sentence</p>
     <blockquote class="pull">Every Medicare Advantage day a facility can't confirm is a day it may never get paid for. We give skilled nursing one place to see every resident's authorization status, covered days, deadlines, and appeals — from admission through discharge — so teams stop chasing plans by phone and spreadsheet, and start capturing the reimbursement they already earned.</blockquote>
@@ -410,6 +451,12 @@ function sync(){
   $("count").textContent = `${idx+1} / ${slides.length}`;
   $("bar").style.width = ((idx)/(slides.length-1)*100) + "%";
 }
+
+/* number the slide labels from document order so inserting a slide can't desync them */
+slides.forEach((s, i) => {
+  const tag = s.querySelector(".slideno");
+  if (tag) tag.textContent = `${String(i).padStart(2,"0")} · ${tag.dataset.title || ""}`;
+});
 
 /* keep the counter honest when the user scrolls manually */
 const io = new IntersectionObserver((entries) => {
