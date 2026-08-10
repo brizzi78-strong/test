@@ -23,11 +23,33 @@ export type ReturnStatus = (typeof RETURN_STATUSES)[number];
 export const SECTIONS = [
   'personal',
   'filing-status',
+  'situations',
   'dependents',
   'income',
   'deductions',
 ] as const;
 export type Section = (typeof SECTIONS)[number];
+
+/**
+ * Situations the filer declares up front. Each one puts the return outside
+ * what this engine can compute — see domain/scope.ts.
+ */
+export const SITUATIONS = [
+  'retirement-income',
+  'social-security',
+  'marketplace-insurance',
+  'rental-or-royalty',
+  'k1-partnership-s-corp',
+  'farm-income',
+  'education-expenses',
+  'child-care-expenses',
+  'digital-assets',
+  'foreign-income-or-accounts',
+  'household-employer',
+  'prior-year-carryover',
+  'multi-state',
+] as const;
+export type Situation = (typeof SITUATIONS)[number];
 
 export interface Address {
   street: string;
@@ -140,6 +162,8 @@ export interface TaxReturn {
   completedSections: Section[];
   filingStatus?: FilingStatus;
   personal?: PersonalSection;
+  /** Declared out-of-scope situations; empty means "none of these apply". */
+  situations: Situation[];
   dependents: Dependent[];
   income: IncomeSection;
   deductions: DeductionsSection;
