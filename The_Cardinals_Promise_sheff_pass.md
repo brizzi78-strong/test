@@ -1141,7 +1141,7 @@ She kept sending it anyway. I think she knew, and she couldn't make herself stop
 
 I was down to about a hundred and forty-five pounds. I hadn't eaten in days. I wasn't drinking water. I wasn't sleeping in any way that counted. I'd stopped looking in mirrors. I'd stopped answering most calls.
 
-By then I was doing things that made no sense even to me. Writing checks to myself I knew would bounce, floating money I didn't have just to get through one more night. One of those nights I ended up at a club with a tab I couldn't cover, running on myself the same con I'd run on everyone else. I came back to the apartment as the sun was coming up, and I got down on my knees on the floor. I want to be careful and honest about how I say this. I didn't pray for help. I asked God to end it. God, please, end this for me. I wanted to die. It wasn't a plan and it wasn't a method — I didn't have that in me either. I was already a dead man, no soul left in him, without even the courage to do anything about it. That's the lowest I have ever been: on my knees at dawn, asking to be let out of my own life, and too far gone even to manage that.
+By then I was doing things that made no sense even to me. Writing checks to myself I knew would bounce, floating money I didn't have just to get through one more night. One of those nights I ended up at a club with a tab I couldn't cover, running on myself the same con I'd run on everyone else. I came back to the apartment as the sun was coming up, and I got down on my knees on the floor. I want to be careful and honest about how I say this. I didn't pray for help. I asked God to end it. God, please, end this for me. I wanted to die. It wasn't a plan and it wasn't a method — I didn't have that in me either. I was already a dead man, no soul left in him, nothing left in me to act with. That's the lowest I have ever been: on my knees at dawn, asking to be let out of my own life.
 
 Then Lou was at the door.
 
@@ -1580,7 +1580,7 @@ When everything else in my life had sunk, Hope floated.
 *"Beareth all things, believeth all things, hopeth all things, endureth all things."*
 *— 1 Corinthians 13:7*
 
-**Pensacola, 2018**
+**Pensacola and Raleigh, 2017–2026**
 
 We'd been dating about a month when Dave Ramsey's voice filled the car. Neither of us reached to change it. When the segment ended she said: I have a hundred thousand dollars in student loans. Not embarrassed, not defensive. Factual. We could pay it off, I said. We? That word again. If this goes where I think it's going, yeah. The two of us. That's my debt, she said, from before I met you. If we do this, it's our debt. She was quiet a long time. Finally: I want to be free. Then we'll get free, I said.
 
@@ -1947,7 +1947,7 @@ My father always made a big deal of my sobriety anniversary. Every January 9. My
 *"Thou preparest a table before me in the presence of mine enemies."*
 *— Psalm 23:5*
 
-**Raleigh, 2025**
+**Raleigh, January 2026**
 
 A few days after we buried my father, grief caught me somewhere I didn't expect it. You never know when it's going to hit, or who's going to be standing there when it does.
 
