@@ -240,8 +240,12 @@
     </div>
     <div class="row">
       <div><label>Charitable donations</label><input id="d_charity" type="number" value="0"></div>
-      <div><label>Medical expenses</label><input id="d_medical" type="number" value="0"></div>
+      <div><label>Other medical expenses (single total)</label><input id="d_medical" type="number" value="0"></div>
     </div>
+    <h3 style="font-size:15px;margin:16px 0 0">Medical expense tracker</h3>
+    <p class="hint" id="medTracker">Add each expense as it happens — only the part above 7.5% of your AGI is deductible, and we&rsquo;ll show how close you are.</p>
+    <div id="medList"></div>
+    <button class="ghost" style="margin-top:8px" onclick="addMedical()">+ Add medical expense</button>
     <div class="row">
       <div><label>Student loan interest paid</label><input id="d_studentloan" type="number" value="0"></div>
       <div><label>Traditional IRA contributions</label><input id="d_ira" type="number" value="0"></div>
@@ -269,6 +273,7 @@ let returnId = localStorage.getItem('taxfile.returnId');
 const num = (id) => Number(document.getElementById(id).value || 0);
 const val = (id) => document.getElementById(id).value.trim();
 const fmt = (n) => (n < 0 ? '-' : '') + '$' + Math.abs(n).toLocaleString(undefined, { maximumFractionDigits: 0 });
+const fmtc = (n) => '$' + n.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
 async function ensureReturn() {
   if (returnId) {
@@ -297,6 +302,12 @@ function render(data) {
     tracker.className = refund ? 'refund' : 'owed';
     tracker.querySelector('.amount').textContent = fmt(refund ? c.refund : c.amountOwed);
     tracker.querySelector('.label').textContent = refund ? 'estimated refund' : 'you would owe';
+  }
+  if (c && c.medical && c.medical.totalExpenses > 0) {
+    const m = c.medical;
+    document.getElementById('medTracker').textContent = m.deductible > 0
+      ? fmtc(m.totalExpenses) + ' tracked — ' + fmtc(m.deductible) + ' clears the 7.5% AGI floor (' + fmtc(m.agiFloor) + ') and counts toward itemizing.'
+      : fmtc(m.totalExpenses) + ' tracked — you’d need another ' + fmtc(m.amountToThreshold) + ' in qualifying expenses to clear the 7.5% AGI floor (' + fmtc(m.agiFloor) + ') before any of it is deductible. Keep tracking!';
   }
   const tbody = document.querySelector('#reviewTable tbody');
   tbody.innerHTML = '';
@@ -414,10 +425,48 @@ function saveIncome() {
   };
   saveSection('income', '/income', body);
 }
+const MED_CATEGORIES = [
+  ['doctor-dental', 'Doctor / dental'],
+  ['prescriptions', 'Prescriptions'],
+  ['hospital', 'Hospital'],
+  ['vision', 'Vision'],
+  ['insurance-premiums', 'Insurance premiums'],
+  ['equipment-supplies', 'Equipment & supplies'],
+  ['medical-travel', 'Medical travel'],
+  ['other', 'Other'],
+];
+function addMedical(entry) {
+  const div = document.createElement('div');
+  div.className = 'subform med';
+  const options = MED_CATEGORIES.map(([v, l]) => '<option value="' + v + '">' + l + '</option>').join('');
+  div.innerHTML = '<div class="row"><div><label>Date</label><input class="m_date" type="date"></div>' +
+    '<div><label>Provider</label><input class="m_provider" placeholder="CVS, Dr. Lee, hospital…"></div></div>' +
+    '<div class="row"><div><label>Category</label><select class="m_cat">' + options + '</select></div>' +
+    '<div><label>Amount</label><input class="m_amount" type="number" step="0.01" value="0"></div></div>' +
+    '<button class="link" onclick="this.parentElement.remove()">remove</button>';
+  if (entry) {
+    div.querySelector('.m_date').value = entry.date;
+    div.querySelector('.m_provider').value = entry.provider;
+    div.querySelector('.m_cat').value = entry.category;
+    div.querySelector('.m_amount').value = entry.amount;
+  }
+  document.getElementById('medList').appendChild(div);
+}
 function saveDeductions() {
   saveSection('deductions', '/deductions', {
     method: 'auto',
-    itemized: { medicalExpenses: num('d_medical'), stateLocalTaxes: num('d_salt'), mortgageInterest: num('d_mortgage'), charitableContributions: num('d_charity') },
+    itemized: {
+      medicalExpenses: num('d_medical'),
+      medicalExpenseEntries: [...document.querySelectorAll('#medList .med')].map((el) => ({
+        date: el.querySelector('.m_date').value,
+        provider: el.querySelector('.m_provider').value.trim(),
+        category: el.querySelector('.m_cat').value,
+        amount: Number(el.querySelector('.m_amount').value || 0),
+      })),
+      stateLocalTaxes: num('d_salt'),
+      mortgageInterest: num('d_mortgage'),
+      charitableContributions: num('d_charity'),
+    },
     adjustments: { studentLoanInterest: num('d_studentloan'), traditionalIraContributions: num('d_ira'), hsaContributions: 0, educatorExpenses: 0 },
   });
 }
@@ -437,7 +486,15 @@ document.getElementById('hasSpouse').addEventListener('change', (e) => {
   document.getElementById('spouseForm').style.display = e.target.checked ? 'block' : 'none';
 });
 
-ensureReturn().then(render).catch((e) => { document.getElementById('err-personal').textContent = e.message; });
+function hydrateMedical(ret) {
+  const item = (ret.deductions && ret.deductions.itemized) || {};
+  (item.medicalExpenseEntries || []).forEach(addMedical);
+  if (item.medicalExpenses) document.getElementById('d_medical').value = item.medicalExpenses;
+}
+
+ensureReturn()
+  .then((data) => { hydrateMedical(data.taxReturn); render(data); })
+  .catch((e) => { document.getElementById('err-personal').textContent = e.message; });
 </script>
 </body>
 </html>
