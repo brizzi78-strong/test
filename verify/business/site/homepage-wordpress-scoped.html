@@ -398,12 +398,15 @@
 </div>
 <script>
 (function(){
-  /* Point this at the deployed verify app. */
-  var VERIFY_API = "https://cardinal-verify.onrender.com";
+  /* The deployed verify app. Until this is live, submissions fall back to
+     email so a customer is never lost. */
+  var VERIFY_API = "";
+  var FALLBACK_EMAIL = "Robert@thecardinalspromise.com";
 
   var box=document.getElementById("brpSources"), form=document.getElementById("brpForm"),
       msg=document.getElementById("brpMsg"), go=document.getElementById("brpGo");
   if(!form) return;
+
   function row(){
     var d=document.createElement("div"); d.className="srow";
     d.innerHTML='<div><label>Type</label><select class="s-type"><option value="reference">Reference</option><option value="employment">Past employer</option><option value="education">School</option></select></div>'+
@@ -416,7 +419,50 @@
   box.appendChild(row());
   document.getElementById("brpAdd").onclick=function(){ box.appendChild(row()); };
 
-  function fail(t){ msg.className="msg bad"; msg.textContent=t; }
+  function fail(t){ msg.className="msg bad"; msg.innerHTML=t; }
+  function esc(s){ return String(s==null?"":s).replace(/[&<>"]/g,function(m){
+    return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]; }); }
+
+  function summary(p){
+    var lines = ["Verification request", "",
+      "From: "+p.requesterName+" <"+p.requesterEmail+">",
+      p.companyName ? "Business/household: "+p.companyName : "",
+      "", "Candidate: "+p.candidateFirstName+" "+p.candidateLastName+" <"+p.candidateEmail+">",
+      "", "To verify:"];
+    for(var i=0;i<p.sources.length;i++){
+      lines.push("  - "+p.sources[i].type+": "+p.sources[i].subject+" <"+p.sources[i].contactEmail+">");
+    }
+    if(p.note) lines.push("", "Note: "+p.note);
+    return lines.filter(function(l){ return l !== ""; }).join("\n");
+  }
+
+  /* Never lose the order: hand the visitor a pre-filled email instead. */
+  function offerEmailFallback(p){
+    var href = "mailto:"+FALLBACK_EMAIL+
+      "?subject="+encodeURIComponent("Verification request \u2014 "+p.candidateFirstName+" "+p.candidateLastName)+
+      "&body="+encodeURIComponent(summary(p));
+    form.parentNode.innerHTML =
+      '<div class="done"><h3>Almost there</h3>'+
+      '<p>We couldn\u2019t submit that automatically just now. Your details are saved in the message below \u2014 '+
+      'send it and we\u2019ll pick it up right away.</p>'+
+      '<p style="margin-top:18px"><a class="submit" style="display:inline-block;text-decoration:none;width:auto" href="'+
+      href+'">Send it by email instead</a></p>'+
+      '<p style="margin-top:14px;font-size:.85rem">Or write to <b>'+esc(FALLBACK_EMAIL)+'</b> and we\u2019ll take it from there.</p></div>';
+  }
+
+  function post(payload, timeoutMs){
+    return new Promise(function(resolve, reject){
+      var done=false;
+      var timer=setTimeout(function(){ if(!done){ done=true; reject(new Error("timeout")); } }, timeoutMs);
+      fetch(VERIFY_API+"/api/intake",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify(payload)})
+        .then(function(r){ return r.text().then(function(t){
+          var j=null; try{ j=t?JSON.parse(t):null; }catch(e){}
+          if(!r.ok){ var err=new Error((j&&j.error&&j.error.message)||("Something went wrong ("+r.status+")")); err.status=r.status; throw err; }
+          return j; }); })
+        .then(function(j){ if(!done){ done=true; clearTimeout(timer); resolve(j); } })
+        .catch(function(e){ if(!done){ done=true; clearTimeout(timer); reject(e); } });
+    });
+  }
 
   form.addEventListener("submit", function(e){
     e.preventDefault(); msg.className=""; msg.textContent="";
@@ -440,15 +486,30 @@
     };
     if(!payload.requesterName||!payload.requesterEmail){ fail("Please give us your name and email."); return; }
     if(!payload.candidateFirstName||!payload.candidateLastName||!payload.candidateEmail){ fail("Please give the candidate\u2019s name and email."); return; }
+
+    /* Not wired up yet — go straight to email rather than pretend to submit. */
+    if(!VERIFY_API){ offerEmailFallback(payload); return; }
+
     go.disabled=true; go.textContent="Sending\u2026";
-    fetch(VERIFY_API+"/api/intake",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify(payload)})
-      .then(function(r){ return r.text().then(function(t){ var j=t?JSON.parse(t):null; if(!r.ok) throw new Error((j&&j.error&&j.error.message)||("Something went wrong ("+r.status+")")); return j; }); })
+    /* The host sleeps when idle, so the first request can take a while to
+       wake it. Give it room, then retry once, before falling back. */
+    post(payload, 20000)
+      .catch(function(err){
+        if(err.status) throw err;                    // a real rejection: do not retry
+        go.textContent="Still working\u2026";
+        return post(payload, 45000);
+      })
       .then(function(){
         form.parentNode.innerHTML='<div class="done"><h3>Request received</h3><p>We\u2019ll review it and email <b>'+
-          payload.candidateFirstName+'</b> a consent link. Nobody is contacted until they authorize it. You\u2019ll hear from us shortly at '+
-          payload.requesterEmail+'.</p></div>';
+          esc(payload.candidateFirstName)+'</b> a consent link. Nobody is contacted until they authorize it. You\u2019ll hear from us shortly at '+
+          esc(payload.requesterEmail)+'.</p></div>';
       })
-      .catch(function(err){ go.disabled=false; go.textContent="Request the check"; fail(err.message); });
+      .catch(function(err){
+        go.disabled=false; go.textContent="Request the check";
+        if(err.status===429){ fail("That\u2019s a lot of requests from your connection \u2014 please try again in a little while."); return; }
+        if(err.status>=400 && err.status<500 && err.message){ fail(esc(err.message)); return; }
+        offerEmailFallback(payload);                 // network/server trouble: never lose the order
+      });
   });
 })();
 </script><p class="fine">Consent-first &middot; confirmed at the source &middot; Raleigh, North Carolina</p></div></section>
