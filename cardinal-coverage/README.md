@@ -12,10 +12,15 @@ tools, and the operational reference they're built on.
 
 | File | What it is |
 | --- | --- |
-| `index.html` | Marketing / lead-generation landing page |
+| `index.html` | Marketing / lead-generation landing page — **buyer-facing** |
+| `investors.html` | Investor presentation deck — **investor-facing** |
 | `tracker.html` | **Working prototype** — the authorization dashboard the landing page advertises |
 | `appeal-letters.html` | **Working prototype** — denial and termination appeal letter builder |
 | `docs/nc-snf-ma-reference.md` | North Carolina filing routes, PT documentation standards, appeal data |
+
+`index.html` and `investors.html` are deliberately separate documents for two
+different audiences, and neither links to the other — a buyer should not land on
+the raise, and an investor should not be read the sales pitch.
 
 Every page is self-contained: open it in any browser, no build, no
 dependencies, no network calls. Design tokens match the Cardinal palette used
@@ -39,6 +44,29 @@ The dashboard table on this page uses **sample data only** and says so; the
 footer carries a plain-language disclaimer (no outcome guarantees, no
 clinical/legal/billing advice) consistent with the messaging doc's ethical
 guardrails.
+
+## `investors.html` — investor presentation
+
+A 15-slide deck that presents in the browser: arrow keys or space to advance,
+**N** toggles speaker notes, **P** prints to PDF (one slide per page). A progress
+bar and slide counter sit bottom-right.
+
+Narrative arc: the shift (55% of Medicare is now MA) → the problem (facilities
+absorb the authorization burden as unpaid labor) → the insight (the denials are
+mostly wrong, so this is a workflow problem software can win) → why now (the
+2024–2026 regulatory floor) → product and working proof → market and beachhead →
+go-to-market, model, traction, team, risks, and the ask.
+
+**Every market and problem statistic on the deck is sourced and cited on-slide** —
+KFF enrollment data, the AHCA/NCAL provider survey, the 2026 HHS OIG report, and
+the Acentra BFCC-QIO focused study.
+
+**Nothing about the business is invented.** Traction, team, pricing, TAM math,
+and the raise are dashed-border `FILL IN BEFORE PRESENTING` blocks with prompts
+for what belongs there. That is deliberate: fabricated metrics in an investor
+deck are both checkable and unrecoverable. Fill them in before showing this to
+anyone, and where the honest answer is "pre-traction," the notes recommend saying
+so and demonstrating the prototype instead.
 
 ## `tracker.html` — authorization tracker
 
