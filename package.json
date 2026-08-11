@@ -10,9 +10,7 @@
     "verify": "node scripts/verify-claims.mjs",
     "rehearse": "hardhat run scripts/rehearse-launch.ts",
     "deploy:sepolia": "hardhat ignition deploy ignition/modules/CardinalsPromise.ts --network sepolia",
-    "deploy:mainnet": "hardhat ignition deploy ignition/modules/CardinalsPromise.ts --network mainnet",
-    "deploy:hopecoin:sepolia": "hardhat ignition deploy ignition/modules/HopeCoin.ts --network sepolia",
-    "deploy:hopecoin:mainnet": "hardhat ignition deploy ignition/modules/HopeCoin.ts --network mainnet"
+    "deploy:mainnet": "hardhat ignition deploy ignition/modules/CardinalsPromise.ts --network mainnet"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-ignition": "^3.1.8",
