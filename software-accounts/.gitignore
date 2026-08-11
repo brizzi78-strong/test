@@ -1,0 +1,8 @@
+# This repository is PUBLIC. Never commit real account data here.
+# Keep any filled/private copy of the inventory in one of these ignored paths.
+
+local/
+private/
+*FILLED*.csv
+*private*.csv
+software-accounts.filled.csv

@@ -35,6 +35,20 @@ The template is pre-grouped into four sections (add or remove rows as needed):
 Dev Tools,GitHub,https://github.com,you@example.com,yourhandle,Pro,Yes,Monthly,2026-07-01,4.00,Me,Personal account
 ```
 
+## ⚠️ This repository is public — keep real data out of it
+
+The `software-accounts.csv` checked in here is a **blank template only**. This
+repo is public, so account details (emails, usernames, plans) do **not** belong
+in the committed file.
+
+To keep a filled-in copy alongside the template without exposing it, save it to
+one of the git-ignored paths (see `.gitignore` in this folder): a `local/` or
+`private/` subfolder, or a filename like `software-accounts.filled.csv`. Git
+will refuse to commit those, so a filled copy stays on your machine only.
+
+For a truly durable private home, keep the filled copy in a password manager
+vault, a private drive, or a **private** GitHub repo.
+
 ## Tips
 
 - **Never store passwords here.** Use a dedicated password manager (1Password, Bitwarden, etc.) for secrets. This file is for inventory and organization only.
