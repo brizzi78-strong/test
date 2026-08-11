@@ -73,7 +73,7 @@ Prologue
 
 **Part Six — The Last Chapter**
 
-28. The Viagra of Diabetes Meds
+28. The Detour
 29. Five Weeks
 30. The Days After
 31. The First Honest Mile
@@ -1703,7 +1703,7 @@ PART SIX
 
 **CHAPTER 28**
 
-## **The Viagra of Diabetes Meds**
+## **The Detour**
 
 *"My thoughts are not your thoughts, neither are your ways my ways."*
 *— Isaiah 55:8*
@@ -2072,13 +2072,9 @@ This part belongs to you — the one who loves someone you can't fix, the one si
 
 The plan is short on purpose.
 
-Show up. You do not have to be ready.
-
 Say the words now. I love you. I'm sorry. Thank you. I forgive you. There is no better time coming.
 
 Put the person in the bed first, not what's easiest for you.
-
-Stay. You cannot save anyone. You can be there, and being there is the whole thing.
 
 Leave the door open a crack. Keep coming back.
 
@@ -2088,7 +2084,7 @@ If you love someone who is dying, go sit with them. If you don't know where to b
 
 Then do the smallest brave thing in front of you. Make the call. Cross the parking lot. Open the door.
 
-Love shows up where it's needed, not where it's earned. That is the cardinal's promise. It was done for me. Now go and do it for somebody else.
+Love shows up where it's needed, not where it's earned. That is the cardinal's promise. It was done for me.
 
 # **LOU'S WAY**
 

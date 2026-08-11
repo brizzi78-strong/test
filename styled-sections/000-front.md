@@ -73,7 +73,7 @@ Prologue
 
 **Part Six — The Last Chapter**
 
-28. The Viagra of Diabetes Meds
+28. The Detour
 29. Five Weeks
 30. The Days After
 31. The First Honest Mile
