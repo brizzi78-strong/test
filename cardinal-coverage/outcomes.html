@@ -123,7 +123,7 @@
   <div class="tw" id="tableWrap"></div>
 
   <footer>
-    <p><b>How the metrics are computed.</b> On-time rate counts authorization submissions logged on time against all submissions logged. Appeal win rate counts decided appeals only — pending appeals are excluded from both numerator and denominator, so the rate is not diluted by open cases. Covered days recovered and dollars protected sum only the values you enter on won-appeal and recovered-days events.</p>
+    <p><b>How the metrics are computed.</b> On-time rate counts authorization submissions logged on time against all submissions logged. Appeal win rate counts decided appeals only — pending appeals are excluded from both numerator and denominator, so the rate is not diluted by open cases. Covered days recovered and dollars protected sum only won-appeal and recovered-days events; the fields are disabled on every other event type. Pending appeals are counted per case across all events, not just the selected window, and a win rate is withheld below five decided appeals. Future-dated or unreadable entries are excluded from every total and flagged.</p>
     <p>This is a working measurement aid, not an accounting system. Before any figure is used in an investor conversation or a price negotiation, reconcile it against remittance advice and your billing system.</p>
   </footer>
 </div>
@@ -185,8 +185,12 @@ const toISO = (d) => `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0"
 const today = () => { const n = new Date(); return new Date(n.getFullYear(),n.getMonth(),n.getDate()); };
 const addD = (d,n) => { const r = new Date(d.getFullYear(),d.getMonth(),d.getDate()); r.setDate(r.getDate()+n); return r; };
 const diffD = (a,b) => Math.round((a-b)/86400000);
-const fmtD = (d) => d.toLocaleDateString(undefined,{month:"short",day:"numeric",year:"numeric"});
+const fmtD = (d) => d ? d.toLocaleDateString(undefined,{month:"short",day:"numeric",year:"numeric"}) : "—";
 const esc = (s) => String(s).replace(/[&<>"']/g, m => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[m]));
+
+const uid = () => (self.crypto && crypto.randomUUID)
+  ? crypto.randomUUID()
+  : "id-" + Date.now().toString(36) + "-" + Math.random().toString(36).slice(2,10);
 
 let events = [], editingId = null, periodDays = 90;
 
@@ -196,10 +200,18 @@ function save(){ try { localStorage.setItem(KEY, JSON.stringify(events)); }
   catch { alert("Could not save — browser storage may be full or blocked."); } }
 
 function inPeriod(e){
-  if (!periodDays) return true;
   const d = parseD(e.date); if (!d) return false;
-  return diffD(today(), d) < periodDays && diffD(today(), d) >= 0 - 3650;
+  const age = diffD(today(), d);
+  if (age < 0) return false;                 // future-dated: a typo, not data
+  return !periodDays || age < periodDays;
 }
+function excludedCount(){
+  return events.filter(e => { const d = parseD(e.date); return !d || diffD(today(), d) < 0; }).length;
+}
+
+const RECOVERY = new Set(["Appeal won","Covered days recovered"]);
+const FILED    = new Set(["Appeal filed — QIO","Appeal filed — plan"]);
+const DECIDED  = new Set(["Appeal won","Appeal lost"]);
 
 function metrics(list){
   const n = (t) => list.filter(e => e.type === t).length;
@@ -207,15 +219,28 @@ function metrics(list){
   const subs = onTime + late;
   const won = n("Appeal won"), lost = n("Appeal lost");
   const decided = won + lost;
-  const filed = n("Appeal filed — QIO") + n("Appeal filed — plan");
-  const days = list.reduce((s,e) => s + (+e.days || 0), 0);
-  const amt  = list.reduce((s,e) => s + (+e.amt  || 0), 0);
+  const filed = list.filter(e => FILED.has(e.type)).length;
+  // Only recovery events carry recovered days and protected dollars.
+  const days = list.reduce((s,e) => s + (RECOVERY.has(e.type) ? (+e.days||0) : 0), 0);
+  const amt  = list.reduce((s,e) => s + (RECOVERY.has(e.type) ? (+e.amt ||0) : 0), 0);
   const cases = new Set(list.map(e => e.case)).size;
+
+  // Appeals span periods, so pending is computed per case across ALL events.
+  let pending = 0, orphanDecisions = 0;
+  const byCase = {};
+  for (const e of events){
+    if (!FILED.has(e.type) && !DECIDED.has(e.type)) continue;
+    (byCase[e.case] = byCase[e.case] || {f:0,d:0})[FILED.has(e.type) ? "f" : "d"]++;
+  }
+  for (const k in byCase){
+    const {f,d} = byCase[k];
+    if (f > d) pending += f - d; else if (d > f) orphanDecisions += d - f;
+  }
   return { onTime, late, subs, won, lost, decided, filed,
     denials: n("Denial received"), nomnc: n("NOMNC issued"), days, amt, cases,
     onTimeRate: subs ? Math.round(onTime/subs*100) : null,
     winRate: decided ? Math.round(won/decided*100) : null,
-    pending: Math.max(0, filed - decided) };
+    pending, orphanDecisions };
 }
 
 function streakInfo(){
@@ -242,6 +267,7 @@ function render(){
 
   const list = events.filter(inPeriod);
   const m = metrics(list);
+  const dropped = excludedCount();
   const label = periodDays ? `last ${periodDays} days` : "all time";
 
   $("cards").innerHTML = `
@@ -249,15 +275,21 @@ function render(){
     <div class="c ${m.onTimeRate!==null && m.onTimeRate<90 ? "bad":"good"}"><div class="k">On-time submission</div>
       <div class="v">${m.onTimeRate===null ? "—" : m.onTimeRate+"%"}</div><div class="d">${m.onTime} on time · ${m.late} late</div></div>
     <div class="c"><div class="k">Denials &amp; NOMNCs</div><div class="v">${m.denials + m.nomnc}</div><div class="d">${m.denials} denials · ${m.nomnc} NOMNCs</div></div>
-    <div class="c ${m.winRate!==null && m.winRate>=50 ? "good":""}"><div class="k">Appeal win rate</div>
-      <div class="v">${m.winRate===null ? "—" : m.winRate+"%"}</div><div class="d">${m.won}W · ${m.lost}L${m.pending?` · ${m.pending} pending`:""}</div></div>
+    <div class="c ${m.winRate!==null && m.decided>=5 && m.winRate>=50 ? "good":""}"><div class="k">Appeal win rate</div>
+      <div class="v">${m.winRate===null ? "—" : (m.decided < 5 ? `${m.won}/${m.decided}` : m.winRate+"%")}</div>
+      <div class="d">${m.won}W · ${m.lost}L${m.pending?` · ${m.pending} pending`:""}${m.decided&&m.decided<5?" · too few to rate":""}${m.orphanDecisions?` · ⚠ ${m.orphanDecisions} decision${m.orphanDecisions===1?"":"s"} with no logged filing`:""}</div></div>
     <div class="c good"><div class="k">Covered days recovered</div><div class="v">${m.days}</div><div class="d">from won appeals</div></div>
     <div class="c money"><div class="k">Dollars protected</div><div class="v">$${m.amt.toLocaleString()}</div><div class="d">reconcile vs remittance</div></div>`;
 
+  if (dropped){
+    $("cards").insertAdjacentHTML("beforeend",
+      `<div class="c bad" style="grid-column:1/-1;"><div class="k">Excluded from every total</div>
+       <div class="v">${dropped}</div><div class="d">event${dropped===1?"":"s"} with a future or unreadable date — open and correct them</div></div>`);
+  }
   $("sentence").innerHTML = `
     <div class="k">Your traction sentence — generated from the log above</div>
-    <p>${m.subs || m.filed || m.days
-      ? `Across the ${label}, we tracked <b>${m.cases}</b> Medicare Advantage case${m.cases===1?"":"s"}, submitted <b>${m.onTimeRate===null?"—":m.onTimeRate+"%"}</b> of authorizations on time, absorbed <b>${m.denials + m.nomnc}</b> denial${m.denials+m.nomnc===1?"":"s"} or termination notice${m.denials+m.nomnc===1?"":"s"}, filed <b>${m.filed}</b> appeal${m.filed===1?"":"s"} and won <b>${m.winRate===null?"—":m.winRate+"%"}</b> of those decided — recovering <b>${m.days}</b> covered day${m.days===1?"":"s"} and <b>$${m.amt.toLocaleString()}</b> in protected revenue.`
+    <p>${(m.subs || m.filed || m.days || m.amt || m.decided)
+      ? `Across the ${label}, we tracked <b>${m.cases}</b> Medicare Advantage case${m.cases===1?"":"s"}, submitted <b>${m.onTimeRate===null?"—":m.onTimeRate+"%"}</b> of authorizations on time${m.subs?` (${m.onTime} of ${m.subs})`:""}, absorbed <b>${m.denials + m.nomnc}</b> denial${m.denials+m.nomnc===1?"":"s"} or termination notice${m.denials+m.nomnc===1?"":"s"}, filed <b>${m.filed}</b> appeal${m.filed===1?"":"s"} and won <b>${m.decided ? `${m.won} of ${m.decided}` : "—"}</b> decided${m.decided>=5?` (${m.winRate}%)`:""} — recovering <b>${m.days}</b> covered day${m.days===1?"":"s"} and <b>$${m.amt.toLocaleString()}</b> in protected revenue.`
       : `Log a few events and this becomes the sentence you put on the traction slide — generated from real cases instead of estimated.`}</p>
     <p class="note">Copy this only once the dollar figure reconciles against remittance advice. An unsourced number in an investor meeting is worse than admitting you are pre-traction.</p>`;
 
@@ -293,6 +325,7 @@ function openDlg(id){
   $("fCase").value = e?.case ?? "";
   $("fPlan").value = e?.plan ?? "";
   $("fType").value = e?.type ?? "Auth submitted — on time";
+  syncRecoveryFields();
   $("fDays").value = e?.days ?? 0;
   $("fAmt").value  = e?.amt ?? 0;
   $("fNote").value = e?.note ?? "";
@@ -300,7 +333,8 @@ function openDlg(id){
 }
 
 $("evForm").addEventListener("submit", () => {
-  const rec = { id: editingId || crypto.randomUUID(), date: $("fDate").value,
+  if (!parseD($("fDate").value)) { alert("Enter a valid date."); return; }
+  const rec = { id: editingId || uid(), date: $("fDate").value,
     case: $("fCase").value.trim() || "—", plan: $("fPlan").value.trim(),
     type: $("fType").value, days: +$("fDays").value || 0, amt: +$("fAmt").value || 0,
     note: $("fNote").value.trim() };
@@ -308,6 +342,15 @@ $("evForm").addEventListener("submit", () => {
   if (i >= 0) events[i] = rec; else events.push(rec);
   save(); render();
 });
+function syncRecoveryFields(){
+  const on = RECOVERY.has($("fType").value);
+  ["fDays","fAmt"].forEach(id => {
+    $(id).disabled = !on;
+    $(id).title = on ? "" : "Only recorded on won appeals and recovery events";
+    if (!on) $(id).value = 0;
+  });
+}
+$("fType").addEventListener("change", syncRecoveryFields);
 $("cancelBtn").addEventListener("click", () => $("dlg").close());
 $("delBtn").addEventListener("click", () => {
   if (!editingId || !confirm("Delete this event?")) return;
@@ -318,14 +361,17 @@ $("delBtn").addEventListener("click", () => {
 $("addBtn").addEventListener("click", () => openDlg(null));
 $("printBtn").addEventListener("click", () => window.print());
 $("csvBtn").addEventListener("click", () => {
-  const q = (s) => `"${String(s ?? "").replace(/"/g,'""')}"`;
+  // Neutralise spreadsheet formula injection — these files get emailed to billing.
+  const q = (s) => { let v = String(s ?? ""); if (/^[=+\-@\t\r]/.test(v)) v = "'" + v;
+                     return `"${v.replace(/"/g,'""')}"`; };
+  const rows = events.filter(inPeriod).sort((a,b) => a.date < b.date ? -1 : a.date > b.date ? 1 : 0);
   const csv = ["Date,Case,Plan,Event,DaysRecovered,DollarsProtected,Note"]
-    .concat([...events].sort((a,b)=>a.date<b.date?-1:1)
-      .map(e => [e.date,e.case,e.plan,e.type,e.days||0,e.amt||0,e.note].map(q).join(",")))
-    .join("\n");
+    .concat(rows.map(e => [e.date,e.case,e.plan,e.type,e.days||0,e.amt||0,e.note].map(q).join(",")))
+    .join("\r\n");
   const a = document.createElement("a");
-  a.href = URL.createObjectURL(new Blob([csv], {type:"text/csv"}));
-  a.download = `cc-outcomes-${toISO(today())}.csv`; a.click(); URL.revokeObjectURL(a.href);
+  a.href = URL.createObjectURL(new Blob(["\uFEFF" + csv], {type:"text/csv;charset=utf-8"}));
+  a.download = `cc-outcomes-${periodDays ? periodDays+"d" : "all"}-${toISO(today())}.csv`;
+  a.click(); URL.revokeObjectURL(a.href);
 });
 $("period").querySelectorAll("button").forEach(b => b.addEventListener("click", () => {
   $("period").querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed","false"));

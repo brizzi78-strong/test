@@ -19,6 +19,8 @@ tools, and the operational reference they're built on.
 | `appeal-letters.html` | **Working prototype** — denial and termination appeal letter builder |
 | `outcomes.html` | **Working prototype** — outcomes log; the measurement instrument behind the traction number |
 | `docs/nc-snf-ma-reference.md` | North Carolina filing routes, PT documentation standards, appeal data |
+| `docs/gap-analysis.md` | Honest distance between these artifacts and a fundable company |
+| `docs/audit-2026-08.md` | Independent 20-agent audit, with remediation status |
 
 `index.html` and `investors.html` are deliberately separate documents for two
 different audiences, and neither links to the other — a buyer should not land on
@@ -54,8 +56,8 @@ A 16-slide deck that presents in the browser: arrow keys or space to advance,
 bar and slide counter sit bottom-right.
 
 Narrative arc: the shift (55% of Medicare is now MA) → the problem (facilities
-absorb the authorization burden as unpaid labor) → the insight (the denials are
-mostly wrong, so this is a workflow problem software can win) → why now (the
+absorb the authorization burden as unpaid labor) → the insight (these denials do
+not survive appeal, so this is a workflow problem software can win) → why now (the
 regulatory floor already in force, plus the CMS-0057-F Prior Authorization FHIR
 API mandate landing 1 Jan 2027) → product and working proof → market and
 beachhead → competition → go-to-market, model, traction, team, risks, and the ask.
@@ -84,7 +86,7 @@ so and demonstrating the prototype instead.
 ## `one-pager.html` — executive summary
 
 The leave-behind for after a meeting. Prints to exactly one page: market shift,
-problem, the insight that denials are mostly wrong, product, why now, and
+problem, the insight that denials do not survive appeal, product, why now, and
 competition — with a consolidated source line in the footer. Same fill-in
 discipline: traction, team, and the ask are a single dashed block that must be
 completed before the document is sent to anyone.
@@ -98,17 +100,27 @@ colour-coded by urgency, sorted most-urgent-first, with a summary bar for
 deadlines inside 48 hours and total exposure at risk.
 
 Deadline conventions, stated in the page footer: "covered through" is the last
-covered day; the effective date of non-coverage is the day after; NOMNC
-deliver-by is two calendar days before the effective date; the QIO deadline is
-noon on the day before the effective date. Date arithmetic is local-midnight
-based and DST-safe.
+covered day, **which is the Effective Date printed on the NOMNC (CMS-10123)** —
+CMS defines that date as the last day of covered services, not the first
+uncovered day. NOMNC deliver-by is two calendar days before it; the printed QIO
+deadline is noon on the day before it. A second clock runs from 42 CFR 422.626,
+which starts at *delivery* of the notice — earlier than the printed deadline
+whenever the notice went out before the two-day minimum — so the tool takes a
+delivery date and colours urgency off whichever falls first. Date arithmetic is
+local-midnight based and DST-safe, and verified against CMS's worked example.
+
+The recertification clock treats the admission day as day 1 (42 CFR 424.20(d)),
+and the page carries a caveat that CMS counts *covered* days rather than
+calendar days, which this tool cannot yet express.
 
 Built for short-interval plans — the auth cycle defaults to 3 days.
 
 **Demo data.** The *Demo data* button loads a five-case anonymised caseload dated
-relative to today, so two cases always read red (one with a QIO fast-track
-deadline at noon today), two amber, one green, at $7,050 exposure. It exists for
-walkthroughs and the investor demo; it prompts before overwriting real data.
+relative to today: **two red, two amber, one green**, at $7,050 exposure. The two
+reds fail for different reasons on purpose — one has a QIO fast-track deadline at
+noon today, the other a physician recertification six days overdue — so a
+walkthrough can show both a forfeited-rights clock and a technical-denial clock.
+It prompts before overwriting real data.
 
 ## `appeal-letters.html` — appeal letter builder
 
@@ -121,9 +133,17 @@ termination risk, and an optional *Jimmo* maintenance section):
 - **B — Plan reconsideration.** Expedited appeal of a denial, anchored on the
   CMS-4201-F requirement to apply Traditional Medicare criteria, with a formal
   demand for the specific criteria relied upon.
-- **C — Short-auth challenge.** Argues under 42 CFR 422.138 that authorization
-  duration must track the treating provider's recommendation, and that approved
-  concurrent determinations may not be reopened.
+- **C — Short-auth challenge.** Argues under 42 CFR 422.112(b)(8) that
+  authorization duration must track the certified plan of care, and under
+  42 CFR 422.138(c) that approved determinations may not be reopened.
+
+> **Have counsel review before first use.** The audit flagged an unresolved
+> standing question: parties to a plan reconsideration under 42 CFR 422.574 are
+> the enrollee, an appointed representative, or a non-contracted provider acting
+> as assignee — a facility signature alone may be dismissed without reaching the
+> merits. Expedited handling under 422.584(c)(2) is mandatory only on a
+> *physician* request. The page carries this warning; the letters do not yet
+> resolve it.
 
 ## `outcomes.html` — outcomes log
 
@@ -144,10 +164,27 @@ Two things make it more than a spreadsheet:
   count, because the measurement only compounds if it actually happens daily.
   Missing today does not break the streak until the day ends.
 
-Metric definitions are stated in the page footer. Appeal win rate counts decided
-appeals only, so pending appeals dilute neither numerator nor denominator. CSV
-export exists for reconciling against remittance advice — which the page repeatedly
-insists on before any figure is quoted to an investor.
+Metric definitions are stated in the page footer and match the implementation:
+recovered days and protected dollars sum **only** won-appeal and recovery events
+(the fields are disabled on every other event type); appeal win rate counts
+decided appeals only and is withheld below five, showing a raw fraction instead,
+because a "100%" off one appeal is an unrecoverable claim in a deck; pending
+appeals are tracked per case across all events rather than within the selected
+window, and decisions with no matching filing are surfaced rather than silently
+clamped. Future-dated and unreadable entries are excluded from every total and
+flagged. CSV export covers the selected period — matching what is on screen —
+carries a UTF-8 BOM, uses CRLF, and neutralises leading `=`/`+`/`-`/`@` so the
+file is safe to email to billing.
+
+## Audit
+
+An independent twenty-agent audit ran in August 2026 — full report and
+remediation status in [`docs/audit-2026-08.md`](docs/audit-2026-08.md). It found
+a safety-critical error in the deadline engine (both notice deadlines computed a
+day late), several miscited regulations, and overstated statistics; those are
+fixed. The appeal letters carry an unresolved standing question flagged on the
+page and awaiting counsel. Findings in the HIGH and STRATEGIC sections remain
+partly open and are tracked in that document.
 
 ## Data handling
 

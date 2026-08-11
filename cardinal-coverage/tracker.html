@@ -149,6 +149,7 @@
 
   <footer>
     <p><b>Deadline conventions used here.</b> "Covered through" is the <i>last covered day</i> — which is the <b>Effective Date printed on the NOMNC (CMS-10123)</b>. CMS defines that date as the last day the beneficiary receives covered services, not the first uncovered day. NOMNC deliver-by is 2 calendar days before it. The deadline printed on the notice is noon on the day before it. Separately, 42 CFR 422.626 requires the fast-track request by noon of the first day after the notice was <i>delivered</i> — the same date only when the notice went out at the two-day minimum. Where they differ, this tool shows the earlier and colours urgency from it. Confirm against each plan's current notice instructions; these are calculated aids, not legal determinations.</p>
+    <p><b>Recertification caveat.</b> The recert clock counts calendar days from admission. CMS counts <i>covered Medicare days</i> — leaves of absence and non-covered days do not advance it. Treat the recert date as an early warning and confirm against the covered-day count in your MDS record.</p>
     <p>Not clinical, legal, or billing advice.</p>
   </footer>
 </div>
@@ -235,6 +236,7 @@ const diffD  = (a,b) => Math.round((a-b)/86400000);
 const fmtD   = (d) => d.toLocaleDateString(undefined,{weekday:"short",month:"short",day:"numeric"});
 
 function relText(days, noonSuffix){
+  if (noonSuffix && days === 0 && new Date().getHours() >= 12) return "MISSED — noon cutoff passed";
   const suffix = noonSuffix ? " (by noon)" : "";
   if (days < -1) return `${Math.abs(days)} days overdue`;
   if (days === -1) return "Overdue — yesterday";
@@ -242,11 +244,19 @@ function relText(days, noonSuffix){
   if (days === 1) return "Tomorrow" + suffix;
   return `in ${days} days`;
 }
-function sev(days){ return days <= 0 ? "crit" : days <= 2 ? "warn" : "ok"; }
+function sev(days, noon){
+  if (noon && days === 0 && new Date().getHours() >= 12) return "crit";
+  return days <= 0 ? "crit" : days <= 2 ? "warn" : "ok";
+}
 
 /* ---------- state ---------- */
+const uid = () => (self.crypto && crypto.randomUUID)
+  ? crypto.randomUUID()
+  : "id-" + Date.now().toString(36) + "-" + Math.random().toString(36).slice(2,10);
+
 let cases = [];
 let editingId = null;
+let saveBroken = false;
 
 function load(){
   try { cases = JSON.parse(localStorage.getItem(KEY)) || []; }
@@ -254,17 +264,38 @@ function load(){
   if (!Array.isArray(cases)) cases = [];
 }
 function save(){
-  try { localStorage.setItem(KEY, JSON.stringify(cases)); }
-  catch { alert("Could not save — browser storage may be full or blocked."); }
+  // Merge against whatever another tab may have written since we loaded.
+  try {
+    const onDisk = JSON.parse(localStorage.getItem(KEY) || "[]");
+    if (Array.isArray(onDisk)){
+      const mine = new Set(cases.map(c => c.id));
+      const theirs = onDisk.filter(c => c && !mine.has(c.id));
+      if (theirs.length) cases = cases.concat(theirs);
+    }
+  } catch {}
+  try { localStorage.setItem(KEY, JSON.stringify(cases)); saveBroken = false; }
+  catch { saveBroken = true; }
+  banner();
+}
+function banner(){
+  let el = document.getElementById("saveWarn");
+  if (!saveBroken){ if (el) el.remove(); return; }
+  if (el) return;
+  el = document.createElement("p");
+  el.id = "saveWarn"; el.className = "phi";
+  el.style.cssText = "background:var(--crit-bg);border-color:var(--crit);";
+  el.innerHTML = "<b style=\"color:var(--crit)\">Not saving.</b> This browser is refusing to store data (private mode, quota, or policy). Anything you enter is lost when the tab closes — use <b>Export</b> now.";
+  const host = document.querySelector(".wrap");
+  host.insertBefore(el, host.firstChild);
 }
 function seedIfEmpty(){
   if (cases.length) return;
   const t = today();
   cases = [
-    { id: crypto.randomUUID(), cid:"Case 1", plan:"Aetna MA", admit:toISO(t), cycle:3, lead:1,
+    { id: uid(), cid:"Case 1", plan:"Aetna MA", admit:toISO(t), cycle:3, lead:1,
       covered:toISO(addD(t,3)), note:toISO(t), cert:toISO(t), status:"Authorized", exposure:0,
       order:"", notes:"Starter row — replace with your real dates." },
-    { id: crypto.randomUUID(), cid:"Case 2", plan:"WellCare MA", admit:toISO(t), cycle:3, lead:1,
+    { id: uid(), cid:"Case 2", plan:"WellCare MA", admit:toISO(t), cycle:3, lead:1,
       covered:toISO(addD(t,3)), note:toISO(t), cert:toISO(t), status:"Awaiting initial auth", exposure:0,
       order:"", notes:"Starter row — replace with your real dates." },
   ];
@@ -296,6 +327,8 @@ function clocksFor(c){
     const qio = (byDelivery && byDelivery < byEffective) ? byDelivery : byEffective;
     out.push({ lab: byDelivery ? "QIO deadline (earlier of two)" : "QIO deadline (per NOMNC)",
                date:qio, days:diffD(qio,t), noon:true });
+    const cyc = Number.isFinite(+c.cycle) && +c.cycle > 0 ? +c.cycle : null;
+    if (cyc) out.push({ lab:`Next window ends (+${cyc}d cycle)`, date:addD(covered,cyc), days:diffD(addD(covered,cyc),t), quiet:true });
     if (byDelivery && +byDelivery !== +byEffective){
       out.push({ lab:"— 422.626, from delivery", date:byDelivery, days:diffD(byDelivery,t), noon:true, quiet:true });
     }
@@ -304,8 +337,10 @@ function clocksFor(c){
   }
 
   if (admit){
-    const d14 = addD(admit,14), since = diffD(t,admit);
-    out.push({ lab:"Benefit day", plain:`Day ${since+1} of stay` });
+    // 42 CFR 424.20(d): first recert by the 14th day of care, and the admission
+    // day counts as day 1 — so the 14th day of care is admit+13, not admit+14.
+    const d14 = addD(admit,13), since = diffD(t,admit);
+    out.push({ lab:"Stay day", plain: since < 0 ? "Admission date is in the future" : `Day ${since+1} of stay` });
     if (cert){
       // First recert due day 14; afterward every 30 days from the last certification.
       const next = (cert < d14) ? d14 : addD(cert,30);
@@ -348,9 +383,9 @@ function render(){
   host.innerHTML = scored.map(({c,cl,min}) => {
     const clockHTML = cl.map(x => {
       if (x.plain) return `<div class="clock"><div class="lab">${esc(x.lab)}</div><div class="date">${esc(x.plain)}</div></div>`;
-      if (x.quiet) return `<div class="clock ${sev(x.days)} quiet"><div class="lab">${esc(x.lab)}</div><div class="date">${fmtD(x.date)}</div><div class="rel">${relText(x.days, x.noon)}</div></div>`;
+      if (x.quiet) return `<div class="clock ${sev(x.days, x.noon)} quiet"><div class="lab">${esc(x.lab)}</div><div class="date">${fmtD(x.date)}</div><div class="rel">${relText(x.days, x.noon)}</div></div>`;
       if (x.none)  return `<div class="clock none"><div class="lab">${esc(x.lab)}</div><div class="date">not set</div></div>`;
-      return `<div class="clock ${sev(x.days)}">
+      return `<div class="clock ${sev(x.days, x.noon)}">
                 <div class="lab">${esc(x.lab)}</div>
                 <div class="date">${fmtD(x.date)}</div>
                 <div class="rel">${relText(x.days, x.noon)}</div>
@@ -401,7 +436,7 @@ function openDlg(id){
 
 $("caseForm").addEventListener("submit", () => {
   const rec = {
-    id: editingId || crypto.randomUUID(),
+    id: editingId || uid(),
     cid: $("fId").value.trim() || "Untitled",
     plan: $("fPlan").value.trim(),
     admit: $("fAdmit").value, cycle: +$("fCycle").value || 3,
@@ -429,21 +464,21 @@ function loadDemo(){
   if (cases.length && !confirm("Replace the current caseload with demo data? Export first if you need to keep it.")) return;
   const t = today(), d = (n) => toISO(addD(t, n));
   cases = [
-    { cid:"214-B", plan:"Aetna MA", admit:d(-12), cycle:3, lead:1, covered:d(0), note:d(-6), cert:d(-12),
+    { cid:"214-B", plan:"Aetna MA", admit:d(-12), cycle:3, lead:1, covered:d(1), nomnc:d(-1), note:d(-6), cert:d(-12),
       status:"Denied — appeal open", exposure:4980, order:"PT 5x/week × 21 days",
-      notes:"Cut letter day 12. QIO fast-track window is closing — verify against the delivered NOMNC. Plan cited 'maximum functional potential' — Jimmo rebuttal drafted." },
-    { cid:"301-A", plan:"WellCare MA", admit:d(-4), cycle:3, lead:1, covered:d(1), note:d(-2), cert:d(-4),
+      notes:"Cut letter day 12. QIO fast-track deadline is TODAY at noon. Plan cited 'maximum functional potential' — Jimmo rebuttal drafted." },
+    { cid:"118", plan:"Aetna MA", admit:d(-19), cycle:3, lead:1, covered:d(5), note:d(-5), cert:d(-19),
+      status:"NOMNC issued", exposure:830, order:"PT 5x/week × 21 days",
+      notes:"Day-14 physician recertification is overdue — a clean technical denial if it is not corrected." },
+    { cid:"301-A", plan:"WellCare MA", admit:d(-4), cycle:3, lead:1, covered:d(3), note:d(-2), cert:d(-4),
       status:"Recert pending", exposure:1240, order:"PT 5x/week × 14 days",
       notes:"Third 3-day authorization this stay. Short-auth challenge letter queued." },
-    { cid:"118", plan:"Aetna MA", admit:d(-19), cycle:3, lead:1, covered:d(2), note:d(-5), cert:d(-19),
-      status:"NOMNC issued", exposure:830, order:"PT 5x/week × 21 days",
-      notes:"Day-14 recertification overdue — clean technical denial if not corrected." },
-    { cid:"227-C", plan:"WellCare MA", admit:d(-1), cycle:3, lead:1, covered:d(2), note:d(-1), cert:d(-1),
+    { cid:"227-C", plan:"WellCare MA", admit:d(-1), cycle:3, lead:1, covered:d(4), note:d(-1), cert:d(-1),
       status:"Awaiting initial auth", exposure:0, order:"PT 5x/week × 14 days",
       notes:"Admitted yesterday. Plan response window running." },
-    { cid:"105-B", plan:"Aetna MA", admit:d(-6), cycle:5, lead:1, covered:d(5), note:d(-1), cert:d(-6),
+    { cid:"105-B", plan:"Aetna MA", admit:d(-6), cycle:5, lead:1, covered:d(7), note:d(-1), cert:d(-6),
       status:"Authorized", exposure:0, order:"PT 5x/week × 21 days", notes:"" },
-  ].map(c => ({ id: crypto.randomUUID(), ...c }));
+  ].map(c => ({ id: uid(), ...c }));
   save(); render();
   window.scrollTo({top:0, behavior:"smooth"});
 }
@@ -466,12 +501,16 @@ $("themeBtn").addEventListener("click", () => {
 });
 
 /* re-render at midnight so the clocks roll over on their own */
-(function scheduleMidnight(){
-  const n = new Date(), next = new Date(n.getFullYear(),n.getMonth(),n.getDate()+1,0,0,30);
-  setTimeout(() => { render(); scheduleMidnight(); }, next - n);
+(function scheduleRollover(){
+  const n = new Date();
+  const noon = new Date(n.getFullYear(),n.getMonth(),n.getDate(),12,0,5);
+  const midnight = new Date(n.getFullYear(),n.getMonth(),n.getDate()+1,0,0,5);
+  const next = (n < noon) ? noon : midnight;
+  setTimeout(() => { render(); scheduleRollover(); }, Math.max(1000, next - n));
 })();
 
-load(); seedIfEmpty(); render();
+try { load(); seedIfEmpty(); } catch (e) { console.error("bootstrap", e); }
+render(); banner();
 </script>
 </body>
 </html>
