@@ -120,6 +120,23 @@ export const PAGE = /* html */ `<!doctype html>
   .xhair{position:absolute;top:26px;bottom:28px;width:1px;background:var(--muted);opacity:.7;display:none;pointer-events:none}
   .xlabel{position:absolute;top:4px;transform:translateX(-50%);background:var(--surface-2);border:1px solid var(--line);border-radius:6px;padding:1px 7px;font-size:.68rem;font-family:var(--mono);color:var(--muted);display:none;pointer-events:none;white-space:nowrap;z-index:2}
   .spark{width:100%;display:block}
+  .poscard{background:var(--surface-2);border-radius:11px;padding:12px 14px;margin-bottom:14px}
+  .poscard .ph{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}
+  .poscard .ph b{font-size:.82rem}
+  .poscard .pg{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;font-size:.82rem}
+  .poscard .pg div{display:flex;justify-content:space-between;gap:10px}
+  .poscard .pg span:first-child{color:var(--muted)}
+  .stats{margin-top:16px;border-top:1px solid var(--line);padding-top:12px}
+  .stats h3{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0 0 8px}
+  .stats .sg{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;font-size:.82rem}
+  .stats .sg div{display:flex;justify-content:space-between;gap:10px}
+  .stats .sg span:first-child{color:var(--muted)}
+  .movers{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:20px}
+  .mover{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;cursor:pointer;box-shadow:var(--shadow)}
+  .mover:hover{border-color:var(--muted)}
+  .mover .ms{font-weight:800;font-size:.9rem}
+  .mover .mp{font-size:.82rem;margin-top:5px}
+  .movehd{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:700;margin:0 0 10px}
   .chartmeta{display:flex;justify-content:space-between;font-size:.7rem;color:var(--muted);font-family:var(--mono);margin-top:6px}
   .ranges{display:flex;justify-content:center;margin:0 0 16px}
   .seg.chips button{padding:.3rem .6rem;font-size:.72rem;flex:none}
@@ -400,9 +417,20 @@ function vHome(){
   loadHomeChart();
 }
 
+function moverCard(q){
+  return '<div class="mover" data-open="'+q.symbol+'"><div class="ms">'+esc(q.symbol)+'</div>'
+    +'<div class="mp num">'+usd(q.priceCents)+'</div>'
+    +'<div class="mp num '+cls(q.changeBps)+'">'+pctOf(q.changeBps,q.changeCents)+'</div></div>';
+}
 function vBrowse(){
   var list=instruments.map(function(i){return quotes[i.symbol]||{symbol:i.symbol,name:i.name,priceCents:0,changeBps:0};});
-  $("#main").innerHTML=head("Browse",list.length+" stocks in the mock market")
+  var ranked=list.slice().sort(function(a,b){return (b.changeBps||0)-(a.changeBps||0);});
+  var gainers=ranked.filter(function(q){return (q.changeBps||0)>0;}).slice(0,4);
+  var losers=ranked.filter(function(q){return (q.changeBps||0)<0;}).slice(-4).reverse();
+  var movers="";
+  if(gainers.length)movers+='<div class="movehd">Today\u2019s gainers</div><div class="movers">'+gainers.map(moverCard).join("")+'</div>';
+  if(losers.length)movers+='<div class="movehd">Today\u2019s losers</div><div class="movers">'+losers.map(moverCard).join("")+'</div>';
+  $("#main").innerHTML=head("Browse",list.length+" stocks in the mock market")+movers
     +'<div class="card">'+(list.length?'<div style="overflow-x:auto"><table><thead><tr><th>Stock</th><th class="r">Price</th><th class="r">Today</th><th></th></tr></thead><tbody>'
       +list.map(function(q){return quoteRow(q);}).join("")+'</tbody></table></div>':'<div class="empty">No instruments.</div>')+'</div>';
 }
@@ -526,9 +554,9 @@ function attachScrub(boxId,points,onPoint,onLeave){
   var svg=box.querySelector("svg"); if(!svg)return;
   var xh=document.createElement("div");xh.className="xhair";box.appendChild(xh);
   var xl=document.createElement("div");xl.className="xlabel";box.appendChild(xl);
-  box.addEventListener("mousemove",function(e){
+  function at(clientX){
     var r=svg.getBoundingClientRect(); if(!r.width)return;
-    var f=Math.min(1,Math.max(0,(e.clientX-r.left)/r.width));
+    var f=Math.min(1,Math.max(0,(clientX-r.left)/r.width));
     var i=Math.round(f*(points.length-1));
     var x=(r.left-box.getBoundingClientRect().left)+f*r.width;
     scrubbing=true;
@@ -536,12 +564,49 @@ function attachScrub(boxId,points,onPoint,onLeave){
     xl.style.display="block";xl.style.left=Math.min(Math.max(x,44),box.clientWidth-44)+"px";
     xl.textContent=fmtDT(new Date(points[i].atMs).toISOString());
     onPoint(points[i],points[0]);
-  });
-  box.addEventListener("mouseleave",function(){
+  }
+  function end(){
     scrubbing=false;
     xh.style.display="none";xl.style.display="none";
     if(onLeave)onLeave();
-  });
+  }
+  box.addEventListener("mousemove",function(e){at(e.clientX);});
+  box.addEventListener("mouseleave",end);
+  // Touch: scrub with a finger, and swallow the scroll while doing it.
+  box.addEventListener("touchstart",function(e){if(e.touches[0])at(e.touches[0].clientX);},{passive:true});
+  box.addEventListener("touchmove",function(e){if(e.touches[0]){at(e.touches[0].clientX);e.preventDefault();}},{passive:false});
+  box.addEventListener("touchend",end);
+  box.addEventListener("touchcancel",end);
+}
+
+function positionFor(sym){
+  var list=portfolio?portfolio.positions:[];
+  for(var i=0;i<list.length;i++)if(list[i].symbol===sym)return list[i];
+  return null;
+}
+// "Your position" — only rendered when the user actually holds the stock.
+function positionCard(sym){
+  var p=positionFor(sym); if(!p)return "";
+  return '<div class="poscard"><div class="ph"><b>Your position</b>'
+    +'<span class="num '+cls(p.unrealizedPnlCents)+'">'+usd(p.unrealizedPnlCents)+' ('+pctOf(p.unrealizedPnlBps,p.unrealizedPnlCents)+')</span></div>'
+    +'<div class="pg">'
+    +'<div><span>Shares</span><span class="num">'+fmtQty(p.quantity)+'</span></div>'
+    +'<div><span>Market value</span><span class="num">'+usd(p.marketValueCents)+'</span></div>'
+    +'<div><span>Average cost</span><span class="num">'+usd(p.avgCostCents)+'</span></div>'
+    +'<div><span>Total cost</span><span class="num">'+usd(p.costBasisCents)+'</span></div>'
+    +'</div></div>';
+}
+// Key stats; day low/high come from the loaded 1D series, so they fill in
+// once the chart lands (hence the id the chart loader updates).
+function statsBlock(sym){
+  var q=quotes[sym]||{};
+  var openOrders=orders.filter(function(o){return o.symbol===sym&&o.status==="open";}).length;
+  return '<div class="stats"><h3>'+esc(sym)+' stats</h3><div class="sg">'
+    +'<div><span>Previous close</span><span class="num">'+usd(q.previousCloseCents)+'</span></div>'
+    +'<div><span>Today</span><span class="num '+cls(q.changeBps)+'">'+pctOf(q.changeBps,q.changeCents)+'</span></div>'
+    +'<div><span>Day range</span><span class="num" id="d_range">&mdash;</span></div>'
+    +'<div><span>Open orders</span><span class="num">'+openOrders+'</span></div>'
+    +'</div></div>';
 }
 
 var tradeSide="buy", tradeType="market", tradeMode="d", chartRange="1D", currentSymbol=null;
@@ -551,6 +616,11 @@ function loadChart(sym){
   api("GET","/quotes/"+sym+"/history?points="+cfg.points+"&intervalMinutes="+cfg.im).then(function(hist){
     if(currentSymbol!==sym)return;
     $("#d_chart").innerHTML=chartHtml(hist,chartRange);
+    if(chartRange==="1D"&&hist&&hist.length){
+      var lows=hist.map(function(h){return h.priceCents;});
+      var rEl=$("#d_range");
+      if(rEl)rEl.textContent=usd(Math.min.apply(null,lows))+" \u2013 "+usd(Math.max.apply(null,lows));
+    }
     var mid=$("#d_chart .chartmeta") && $("#d_chart .chartmeta").children[1];
     var orig=mid?mid.textContent:"";
     attachScrub("d_chart",hist,function(pt){ if(mid)mid.textContent=usd(pt.priceCents); },function(){ if(mid)mid.textContent=orig; });
@@ -565,6 +635,7 @@ function openStockDrawer(sym){
     +starBtn(sym)+'</div>'
     +'<div class="chartbox" id="d_chart"><div class="dim" style="padding:8px 0">Loading chart&hellip;</div></div>'
     +'<div class="ranges"><div class="seg chips" id="d_ranges">'+Object.keys(RANGES).map(function(r){return '<button data-r="'+r+'" aria-pressed="'+(r===chartRange)+'">'+r+'</button>';}).join("")+'</div></div>'
+    +positionCard(sym)
     +'<div class="row2"><div class="field"><label>Action</label><div class="seg buy" id="d_side"><button data-side="buy" aria-pressed="true">Buy</button><button data-side="sell" aria-pressed="false">Sell</button></div></div>'
     +'<div class="field"><label>Order type</label><div class="seg" id="d_type"><button data-type="market" aria-pressed="true">Market</button><button data-type="limit" aria-pressed="false">Limit</button></div></div></div>'
     +'<div class="field" id="d_modewrap"><label>Invest in</label><div class="seg" id="d_mode" style="width:100%"><button data-m="d" aria-pressed="true">Dollars</button><button data-m="s" aria-pressed="false">Shares</button></div></div>'
@@ -573,7 +644,8 @@ function openStockDrawer(sym){
     +'<div class="field" id="d_qtywrap" style="display:none"><label>Shares</label><input id="d_qty" type="number" min="0.000001" step="any" value="1"></div>'
     +'<div class="field" id="d_limitwrap" style="display:none"><label>Limit price $</label><input id="d_limit" type="number" min="0.01" step="0.01"></div>'
     +'<div class="field" id="d_repeatwrap"><label>Repeat</label><select id="d_repeat"><option value="once">One time</option><option value="daily">Daily</option><option value="weekly">Weekly</option><option value="biweekly">Every 2 weeks</option><option value="monthly">Monthly</option></select></div></div>'
-    +'<div class="sumbox" id="d_sum"></div>';
+    +'<div class="sumbox" id="d_sum"></div>'
+    +statsBlock(sym);
   $("#dfoot").innerHTML='<button class="btn ghost" id="d_cancel">Cancel</button><button class="btn" id="d_submit">Review order</button>';
   $("#d_cancel").onclick=closeDrawer;
   $("#d_ranges").onclick=function(e){var b=e.target.closest("button");if(!b)return;chartRange=b.dataset.r;
