@@ -17,6 +17,7 @@ tools, and the operational reference they're built on.
 | `one-pager.html` | Single-page executive summary / leave-behind — **investor-facing** |
 | `tracker.html` | **Working prototype** — the authorization dashboard the landing page advertises |
 | `appeal-letters.html` | **Working prototype** — denial and termination appeal letter builder |
+| `outcomes.html` | **Working prototype** — outcomes log; the measurement instrument behind the traction number |
 | `docs/nc-snf-ma-reference.md` | North Carolina filing routes, PT documentation standards, appeal data |
 
 `index.html` and `investors.html` are deliberately separate documents for two
@@ -124,13 +125,37 @@ termination risk, and an optional *Jimmo* maintenance section):
   duration must track the treating provider's recommendation, and that approved
   concurrent determinations may not be reopened.
 
+## `outcomes.html` — outcomes log
+
+Built to answer the finding in [`docs/gap-analysis.md`](docs/gap-analysis.md):
+the value proposition is entirely unmeasured, and measuring it at one facility
+for a quarter is worth more than another quarter of engineering.
+
+Log one event per authorization, denial, or appeal — about thirty seconds each —
+and the page computes the scorecard: cases touched, on-time submission rate,
+denials and NOMNCs absorbed, appeal win rate, covered days recovered, and dollars
+protected, over 30/90/365 days or all time.
+
+Two things make it more than a spreadsheet:
+
+- **It generates the traction sentence.** The exact sentence the investor deck's
+  weakest slide needs, assembled from real logged events rather than estimated.
+- **It tracks the logging streak.** A fourteen-day dot strip and a consecutive-day
+  count, because the measurement only compounds if it actually happens daily.
+  Missing today does not break the streak until the day ends.
+
+Metric definitions are stated in the page footer. Appeal win rate counts decided
+appeals only, so pending appeals dilute neither numerator nor denominator. CSV
+export exists for reconciling against remittance advice — which the page repeatedly
+insists on before any figure is quoted to an investor.
+
 ## Data handling
 
-These prototypes are deliberately backend-free. `tracker.html` keeps case data
-in browser `localStorage` and prompts for initials or a room number rather than
-full names. `appeal-letters.html` persists **only** facility letterhead details;
-member name, ID, dates, and clinical narrative are held in memory and cleared on
-reload. Nothing is transmitted anywhere.
+These prototypes are deliberately backend-free. `tracker.html` and
+`outcomes.html` keep data in browser `localStorage` and prompt for initials or a
+room number rather than full names. `appeal-letters.html` persists **only**
+facility letterhead details; member name, ID, dates, and clinical narrative are
+held in memory and cleared on reload. Nothing is transmitted anywhere.
 
 Both are working aids for tracking deadlines and drafting correspondence. A
 facility's EHR and medical record remain the system of record, and neither tool
