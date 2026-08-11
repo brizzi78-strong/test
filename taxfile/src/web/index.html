@@ -128,6 +128,20 @@
     border-radius: 999px; padding: 3px 11px; font-size: 12px; font-weight: 500; color: var(--royal-700);
   }
 
+  /* ---- scope screening ------------------------------------------------- */
+  .situation { display: flex; align-items: flex-start; gap: 10px; padding: 9px 12px; border-radius: 9px; font-size: 14.5px; cursor: pointer; transition: background .15s; }
+  .situation:hover { background: var(--royal-50); }
+  .situation input { margin-top: 3px; }
+  .finding { border-radius: 11px; padding: 13px 16px; margin-bottom: 10px; font-size: 14px; border: 1px solid; }
+  .finding .f-title { font-weight: 700; margin-bottom: 3px; }
+  .finding.blocking { background: #fff2f2; border-color: #f3b4b4; color: #7d1d1d; }
+  .finding.caution { background: #fffaeb; border-color: #f0dda2; color: #7a5b12; }
+  .finding .f-effect { display: inline-block; margin-top: 6px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; opacity: .8; }
+  #scopeVerdict { border-radius: 12px; padding: 15px 18px; margin-bottom: 14px; font-weight: 600; }
+  #scopeVerdict.unsupported { background: #7d1d1d; color: #fff; }
+  #scopeVerdict.review { background: var(--royal-100); color: var(--royal-900); }
+  .disclaimer { margin: 18px 0 0; padding-top: 14px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12.5px; }
+
   @media (max-width: 640px) {
     header { padding: 14px 18px; }
     #progressWrap { top: 84px; }
@@ -138,7 +152,7 @@
 </head>
 <body>
 <header>
-  <h1>TaxFile<small>2025 federal return — five steps, no upsells</small></h1>
+  <h1>TaxFile<small>2025 federal estimate — six steps, no upsells, no filing</small></h1>
   <div id="tracker" class="refund"><div class="amount">$0</div><div class="label">estimated refund</div></div>
   <div id="progressWrap"><div id="progressBar"></div></div>
 </header>
@@ -191,8 +205,18 @@
     <div class="error" id="err-status"></div>
   </section>
 
+  <section class="card" id="sec-situations">
+    <h2><span class="step">3</span>Does any of this apply? <span class="pill">important</span></h2>
+    <p class="hint">Check everything that happened in your tax year. If any of it applies, this
+      estimator can't handle your return correctly — and we'd rather tell you than hand you a
+      wrong number.</p>
+    <div id="situationList"></div>
+    <div class="actions"><button class="primary" onclick="saveSituations()">Save</button><span class="saved" id="ok-situations"></span></div>
+    <div class="error" id="err-situations"></div>
+  </section>
+
   <section class="card" id="sec-dependents">
-    <h2><span class="step">3</span>Dependents <span class="pill">skip if none</span></h2>
+    <h2><span class="step">4</span>Dependents <span class="pill">skip if none</span></h2>
     <p class="hint">Kids under 17 usually get the $2,200 child tax credit automatically.</p>
     <div id="depList"></div>
     <div class="actions">
@@ -203,7 +227,7 @@
   </section>
 
   <section class="card" id="sec-income">
-    <h2><span class="step">4</span>Income</h2>
+    <h2><span class="step">5</span>Income</h2>
     <p class="hint">Copy the boxes straight off your forms. Leave anything that doesn't apply at $0.</p>
     <h3 style="font-size:15px;margin:16px 0 0">W-2 jobs</h3>
     <div id="w2List"></div>
@@ -232,7 +256,7 @@
   </section>
 
   <section class="card" id="sec-deductions">
-    <h2><span class="step">5</span>Deductions <span class="pill">skip if unsure</span></h2>
+    <h2><span class="step">6</span>Deductions <span class="pill">skip if unsure</span></h2>
     <p class="hint">We compare itemizing against your standard deduction and automatically take whichever saves more.</p>
     <div class="row">
       <div><label>State & local taxes paid</label><input id="d_salt" type="number" value="0"></div>
@@ -251,12 +275,16 @@
   </section>
 
   <section class="card" id="sec-review">
-    <h2><span class="step done">&#10003;</span>Review &amp; file</h2>
+    <h2><span class="step done">&#10003;</span>Review your estimate</h2>
     <p class="hint">Your whole return, one screen.</p>
+    <div id="scopePanel"></div>
     <table id="reviewTable"><tbody></tbody></table>
     <div class="error" id="blockers"></div>
-    <div class="actions"><button class="primary" id="fileBtn" onclick="fileReturn()">File my return</button><span class="saved" id="ok-file"></span></div>
+    <div class="actions"><button class="primary" id="fileBtn" onclick="fileReturn()">Finish my estimate</button><span class="saved" id="ok-file"></span></div>
     <div class="error" id="err-file"></div>
+    <p class="disclaimer">This is an estimate, not a tax filing. Nothing here is sent to the IRS
+      and no return is filed on your behalf. When you're ready to file, take these numbers to
+      IRS Direct File, a commercial filing service, or a tax professional.</p>
   </section>
 </main>
 
@@ -284,20 +312,106 @@ async function ensureReturn() {
 const STEPS = [
   ['personal', 'sec-personal'],
   ['filing-status', 'sec-status'],
+  ['situations', 'sec-situations'],
   ['dependents', 'sec-dependents'],
   ['income', 'sec-income'],
   ['deductions', 'sec-deductions'],
 ];
 
+// The screening questionnaire. Keys must match domain/types.ts SITUATIONS.
+const SITUATION_QUESTIONS = [
+  ['retirement-income', 'Pension, annuity, IRA or 401(k) withdrawal (Form 1099-R)'],
+  ['social-security', 'Social Security benefits (Form SSA-1099)'],
+  ['marketplace-insurance', 'Health insurance bought through a marketplace (Form 1095-A)'],
+  ['rental-or-royalty', 'Rental property or royalty income'],
+  ['k1-partnership-s-corp', 'Income from a partnership, S-corp, estate, or trust (Schedule K-1)'],
+  ['farm-income', 'Farm income'],
+  ['education-expenses', 'Tuition or student expenses for school (Form 1098-T)'],
+  ['child-care-expenses', 'Paid child or dependent care so you could work'],
+  ['digital-assets', 'Sold or exchanged crypto or other digital assets'],
+  ['foreign-income-or-accounts', 'Foreign income, foreign accounts, or lived abroad'],
+  ['household-employer', 'Paid a nanny or household employee'],
+  ['prior-year-carryover', 'A carryover from last year (capital loss, credits)'],
+  ['multi-state', 'Moved between states or worked in more than one'],
+];
+
+function buildSituations() {
+  const list = document.getElementById('situationList');
+  SITUATION_QUESTIONS.forEach(([key, label]) => {
+    const row = document.createElement('label');
+    row.className = 'situation';
+    row.innerHTML = '<input type="checkbox" class="sit" value="' + key + '"><span>' + label + '</span>';
+    list.appendChild(row);
+  });
+}
+
+function saveSituations() {
+  const situations = [...document.querySelectorAll('#situationList .sit')]
+    .filter((el) => el.checked).map((el) => el.value);
+  saveSection('situations', '/situations', { situations });
+}
+
+const EFFECT_LABEL = {
+  'understates-refund': 'your real refund is likely higher',
+  'understates-tax': 'you may owe more than shown',
+  'overstates-tax': 'you may owe less than shown',
+};
+
+function renderScope(scope) {
+  const panel = document.getElementById('scopePanel');
+  panel.innerHTML = '';
+  if (!scope || !scope.findings.length) return;
+
+  const verdict = document.createElement('div');
+  verdict.id = 'scopeVerdict';
+  verdict.className = scope.status;
+  verdict.textContent = scope.status === 'unsupported'
+    ? "We can't estimate this return — here's why, and what to do instead."
+    : 'Your estimate is shown below, with a few things worth knowing.';
+  panel.appendChild(verdict);
+
+  scope.findings.forEach((f) => {
+    const el = document.createElement('div');
+    el.className = 'finding ' + f.severity;
+    el.innerHTML = '<div class="f-title">' + f.title + '</div><div>' + f.detail + '</div>' +
+      (EFFECT_LABEL[f.effect] ? '<div class="f-effect">' + EFFECT_LABEL[f.effect] + '</div>' : '');
+    panel.appendChild(el);
+  });
+
+  if (scope.status === 'unsupported') {
+    const next = document.createElement('div');
+    next.className = 'finding blocking';
+    next.innerHTML = '<div class="f-title">What to do instead</div><div>Use IRS Direct File ' +
+      '(free, at directfile.irs.gov), a commercial filing service, or a tax professional. ' +
+      'Uncheck a box above if you checked it by mistake.</div>';
+    panel.appendChild(next);
+  }
+}
+
 function render(data) {
-  const { computation: c, taxReturn: ret, fileBlockers } = data;
+  const { computation: c, taxReturn: ret, fileBlockers, scope } = data;
   const tracker = document.getElementById('tracker');
-  if (c) {
+  const unsupported = scope && scope.status === 'unsupported';
+  if (unsupported) {
+    // Show no figure at all rather than a confident wrong one.
+    tracker.className = '';
+    tracker.querySelector('.amount').textContent = '—';
+    tracker.querySelector('.label').textContent = 'estimate unavailable';
+  } else if (c) {
     const refund = c.refund > 0;
     tracker.className = refund ? 'refund' : 'owed';
     tracker.querySelector('.amount').textContent = fmt(refund ? c.refund : c.amountOwed);
     tracker.querySelector('.label').textContent = refund ? 'estimated refund' : 'you would owe';
   }
+  renderScope(scope);
+  document.getElementById('reviewTable').style.display = unsupported ? 'none' : '';
+  document.getElementById('fileBtn').style.display = unsupported ? 'none' : '';
+
+  // Reflect saved declarations back into the questionnaire.
+  const declared = new Set(ret.situations || []);
+  document.querySelectorAll('#situationList .sit').forEach((el) => {
+    el.checked = declared.has(el.value);
+  });
   const tbody = document.querySelector('#reviewTable tbody');
   tbody.innerHTML = '';
   (c ? c.lines : []).forEach((line, i, arr) => {
@@ -324,7 +438,8 @@ function render(data) {
   if (ret.status === 'accepted' && ret.efile) {
     const banner = document.getElementById('filedBanner');
     banner.style.display = 'block';
-    banner.textContent = '✓ Return filed and accepted — confirmation ' + ret.efile.submissionId;
+    banner.textContent = '✓ Estimate finished — reference ' + ret.efile.submissionId +
+      '. This is not a filed return; nothing was sent to the IRS.';
     document.getElementById('fileBtn').disabled = true;
   }
 }
@@ -436,6 +551,8 @@ async function fileReturn() {
 document.getElementById('hasSpouse').addEventListener('change', (e) => {
   document.getElementById('spouseForm').style.display = e.target.checked ? 'block' : 'none';
 });
+
+buildSituations();
 
 ensureReturn().then(render).catch((e) => { document.getElementById('err-personal').textContent = e.message; });
 </script>

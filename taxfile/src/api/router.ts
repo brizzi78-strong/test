@@ -10,6 +10,7 @@
  *   DELETE /returns/:id
  *   PUT    /returns/:id/personal
  *   PUT    /returns/:id/filing-status
+ *   PUT    /returns/:id/situations       -> declared out-of-scope situations
  *   PUT    /returns/:id/dependents
  *   PUT    /returns/:id/income
  *   PUT    /returns/:id/deductions
@@ -87,6 +88,9 @@ export function createRequestListener(
   route('PUT', '/returns/:id/filing-status', (ctx) =>
     ok(service.updateFilingStatus(ctx.userId, ctx.params.id!, ctx.body)),
   );
+  route('PUT', '/returns/:id/situations', (ctx) =>
+    ok(service.updateSituations(ctx.userId, ctx.params.id!, ctx.body)),
+  );
   route('PUT', '/returns/:id/dependents', (ctx) =>
     ok(service.updateDependents(ctx.userId, ctx.params.id!, ctx.body)),
   );
@@ -97,8 +101,8 @@ export function createRequestListener(
     ok(service.updateDeductions(ctx.userId, ctx.params.id!, ctx.body)),
   );
   route('GET', '/returns/:id/review', (ctx) => {
-    const { taxReturn, computation } = service.getReturn(ctx.userId, ctx.params.id!);
-    return ok({ taxReturn, computation, fileBlockers: service.fileBlockers(taxReturn) });
+    const { taxReturn, computation, scope } = service.getReturn(ctx.userId, ctx.params.id!);
+    return ok({ taxReturn, computation, scope, fileBlockers: service.fileBlockers(taxReturn) });
   });
   route('POST', '/returns/:id/file', (ctx) =>
     ok(service.fileReturn(ctx.userId, ctx.params.id!)),
