@@ -3,7 +3,7 @@ import { getDocument } from 'pdfjs-dist/legacy/build/pdf.mjs';
 import fs from 'fs';
 
 const BOOK = '/home/user/test/cardinals-promise/book/cardinals-toolkit-book.html';
-const EXE = '/opt/pw-browsers/chromium-1194/chrome-linux/chrome';
+const EXE = '/opt/pw-browsers/chromium';
 const SCR = '/tmp/claude-0/-home-user-test/f033ae22-6343-5f45-bb02-1ac0346c5634/scratchpad';
 
 const esc = s => s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
@@ -12,7 +12,6 @@ const esc = s => s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;
 const raw = fs.readFileSync(BOOK, 'utf8');
 const firstChap = raw.indexOf('<section class="chapter');
 const body = raw.slice(firstChap);
-// Walk h1/h2 in order
 const headings = [];
 const re = /<(h1|h2)\b([^>]*)>([\s\S]*?)<\/\1>/g;
 let m;
@@ -23,8 +22,6 @@ while ((m = re.exec(body))) {
     .replace(/\s+/g,' ').trim();
   headings.push({ tag, attrs, text, fm: /class="[^"]*\bfm\b/.test(attrs) });
 }
-// Group into chapters: an h1 whose text starts with "Chapter N".
-// Skip fm-class h2s (back matter: About the Author, Index, ...) and close on them.
 const chapters = [];
 let cur = null;
 for (const h of headings) {
@@ -33,7 +30,7 @@ for (const h of headings) {
     cur = { num: +cm[1], title: cm[2].trim(), secs: [] };
     chapters.push(cur);
   } else if (h.tag === 'h2' && h.fm) {
-    cur = null; // back-matter heading closes the chapter grouping
+    cur = null;
   } else if (h.tag === 'h2' && cur) {
     cur.secs.push(h.text);
   } else if (h.tag === 'h1') {
@@ -61,12 +58,8 @@ const byNum = Object.fromEntries(chapters.map(c=>[c.num,c]));
 const P = '<span class="lead"></span>';
 const pg = key => `<span class="tocpg" data-key="${key}">000</span>`;
 let html = `<h2 class="fm">Contents</h2>\n<div class="toc">\n`;
-// front matter (kept as-is)
 html += `  <ul>
-    <li>Why I Wrote This Toolkit${P}${pg('fm:why')}</li>
-    <li>You Are Not Alone${P}${pg('fm:notalone')}</li>
-    <li>Before You Begin: Aging Whispers Before It Shouts${P}${pg('fm:begin')}</li>
-    <li>How to Use This Handbook${P}${pg('fm:howto')}</li>
+    <li>How to Use This Guide${P}${pg('fm:howto')}</li>
     <li>Start Here: What Are You Facing? — The First 24–72 Hours${P}${pg('fm:starthere')}</li>
     <li>Find Your Situation: Five Pathways${P}${pg('fm:pathways')}</li>
     <li><span class="tocdot d-blue"></span>For the Future Planners${P}${pg('fm:future')}</li>
@@ -84,33 +77,38 @@ for (const part of parts) {
     html += `  </div>\n`;
   }
 }
-// back matter
 html += `  <div class="tocpart">Back of the Book</div>
   <ul>
     <li>About the Author${P}${pg('bm:author')}</li>
     <li>Your State Guide${P}${pg('bm:state')}</li>
+    <li>Find Your Worry${P}${pg('bm:worry')}</li>
+    <li>Glossary${P}${pg('bm:gloss')}</li>
     <li>Index${P}${pg('bm:index')}</li>
     <li>Numbers That Matter${P}${pg('bm:numbers')}</li>
   </ul>\n</div>\n\n`;
 
 // ---- 4. Splice into book, replacing old Contents ----
+// NOTE: the end marker MUST be the "Why I Wrote (front)" comment, NOT COPYRIGHT.
+// Using COPYRIGHT deletes the "Why I Wrote This Book" front page on every rebuild.
 const start = raw.indexOf('<h2 class="fm">Contents</h2>');
-const end = raw.indexOf('<!-- ============ COPYRIGHT ============ -->');
+const END_MARKER = '<!-- ============ WHY I WROTE (FRONT) ============ -->';
+const end = raw.indexOf(END_MARKER);
+if (start < 0 || end < 0 || end <= start) {
+  throw new Error(`splice markers bad: start=${start} end=${end} — refusing to write`);
+}
 let newHtml = raw.slice(0, start) + html + raw.slice(end);
 fs.writeFileSync(`${SCR}/book-expanded.html`, newHtml);
 
-// ---- 5. Pager: instrument headings + TOC page-number spans, render, read sheets ----
+// ---- 5. Pager: instrument headings, render, read sheets ----
 const fmKey = {
-  'Why I Wrote This Toolkit':'fm:why', 'You Are Not Alone':'fm:notalone',
+  'Why I Wrote This Guide':'fm:why', 'You Are Not Alone':'fm:notalone',
   'Aging Whispers Before It Shouts':'fm:begin',
-  'How to Use This Handbook':'fm:howto', 'What Are You Facing?':'fm:starthere',
+  'How to Use This Guide':'fm:howto', 'What Are You Facing?':'fm:starthere',
   'Find Your Situation':'fm:pathways', 'For the Future Planners':'fm:future',
-  'About the Author':'bm:author', 'Your State Guide':'bm:state',
-  'Index':'bm:index', 'Numbers That Matter':'bm:numbers',
+  'About the Author':'bm:author', 'Your State Guide':'bm:state', 'Find Your Worry':'bm:worry',
+  'Glossary':'bm:gloss', 'Index':'bm:index', 'Numbers That Matter':'bm:numbers',
 };
 async function renderPages(inputHtml) {
-  // Instrument every heading in the whole document with a keyed sentinel.
-  // Prose mentions of these phrases live outside <h1>/<h2> tags, so they're never touched.
   const anchors = [];
   let curNum = null, secIdx = 0;
   const inst = inputHtml.replace(/<(h1|h2)\b([^>]*)>([\s\S]*?)<\/\1>/g, (mm, tag, attrs, inner) => {
@@ -147,31 +145,19 @@ async function renderPages(inputHtml) {
   return { numPages: doc.numPages, pageByKey, txt };
 }
 
-// front/back matter keys → locate by their heading text on the page
-function locateText(txt, needle) {
-  const n = needle.replace(/\s+/g,' ').toLowerCase();
-  for (let i=0;i<txt.length;i++) if (txt[i].toLowerCase().replace(/\s+/g,' ').includes(n)) return i+1;
-  return -1;
-}
-const fmProbe = {
-  'fm:why':'Why I Wrote This Toolkit', 'fm:begin':'Aging Whispers Before It Shouts',
-  'fm:howto':'How to Use This Handbook', 'fm:starthere':'What Are You Facing',
-  'fm:pathways':'Mom had a stroke', 'fm:future':'For the Future Planners',
-  'bm:author':'About the Author', 'bm:state':'Your State Guide',
-  'bm:index':'Index', 'bm:numbers':'Numbers That Matter',
-};
-
 function fill(htmlStr, pageMap) {
-  return htmlStr.replace(/(<span class="tocpg" data-key=")([^"]+)(">)000(<\/span>)/g,
-    (mm,a,key,b,c) => a+key+b+(pageMap[key]!=null?pageMap[key]:'000')+c);
+  return htmlStr
+    .replace(/(<span class="tocpg" data-key=")([^"]+)(">)000(<\/span>)/g,
+      (mm,a,key,b,c) => a+key+b+(pageMap[key]!=null?pageMap[key]:'000')+c)
+    .replace(/(<span class="xref" data-key=")([^"]+)(">)000(<\/span>)/g,
+      (mm,a,key,b,c) => a+key+b+(pageMap[key]!=null?pageMap[key]:'000')+c);
 }
 
-// iterate to convergence (numbers filled don't change layout, but verify)
 let prev = null, filled = newHtml, pass = 0, pmap = null;
 while (pass < 3) {
   pass++;
-  const src = pass === 1 ? newHtml : filled; // render the filled version from pass 2 on
-  const { numPages, pageByKey, txt } = await renderPages(src);
+  const src = pass === 1 ? newHtml : filled;
+  const { numPages, pageByKey } = await renderPages(src);
   pmap = { ...pageByKey };
   const key = JSON.stringify(pmap);
   console.log(`pass ${pass}: numPages=${numPages}`);
@@ -181,6 +167,16 @@ while (pass < 3) {
 }
 fs.writeFileSync(`${SCR}/book-final.html`, filled);
 fs.writeFileSync(`${SCR}/pagemap.json`, JSON.stringify(pmap,null,2));
-console.log('wrote book-final.html');
-// sanity print chapter pages
+
+// ---- headmap.json: per-sheet running-head data ----
+const partShort = {1:'Something Has Changed',2:'Care Options',3:'Paying for Care',
+  4:'The Documents That Matter',5:'Hospice & the Last Days'};
+const partOf = n => parts.findIndex(p=>p.chs.includes(n))+1;
+const headmap = {
+  firstStart: pmap['c1'], aboutSheet: pmap['bm:author'],
+  chapters: chapters.map(c=>({ num:c.num, title:c.title, start:pmap['c'+c.num],
+    color: color[c.num], part: partOf(c.num), partShort: partShort[partOf(c.num)] })),
+};
+fs.writeFileSync(`${SCR}/headmap.json`, JSON.stringify(headmap,null,2));
+console.log('wrote book-final.html + headmap.json (firstStart', headmap.firstStart, 'about', headmap.aboutSheet, ')');
 for (const c of chapters) console.log('  Ch'+c.num, '->', pmap['c'+c.num], '('+c.secs.length+' secs)');
