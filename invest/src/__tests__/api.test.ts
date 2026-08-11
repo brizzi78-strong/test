@@ -1,5 +1,5 @@
 /**
- * End-to-end: a real Trading service runs in-process; the Invest BFF points
+ * End-to-end: a real Trading service runs in-process; the Cardinal Trading BFF points
  * at it. The tests drive the app the way the browser does — sign up, log in,
  * trade through the session-scoped `/api/*` proxy — and confirm both that the
  * data persists in Trading and that one user can never reach another user's
@@ -73,7 +73,7 @@ test('serves the app shell without a session', async () => {
   await withApp(async (base) => {
     const res = await fetch(`${base}/`);
     assert.equal(res.status, 200);
-    assert.match(await res.text(), /Invest/);
+    assert.match(await res.text(), /Cardinal Trading/);
   });
 });
 

@@ -1,5 +1,5 @@
 /**
- * The Invest single-page app, served whole (no external assets) by the BFF.
+ * The Cardinal Trading single-page app, served whole (no external assets) by the BFF.
  * Its JavaScript talks only to same-origin `/api/*`, which the server proxies
  * to the Trading service — so every quote, order, and position is real
  * (within the mock market) and persisted upstream. The account id and name
@@ -12,12 +12,12 @@ export const PAGE = /* html */ `<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="dark light">
-<title>Invest</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2300C805'/%3E%3Cpath d='M8 20l6-8 4 5 6-9' stroke='%23001B06' stroke-width='2.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<title>Cardinal Trading</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23A31B33'/%3E%3Cg fill='%23fff'%3E%3Cpolygon%20points=%2238,30%2044,4%2052,30%22%2F%3E%3Ccircle%20cx=%2244%22%20cy=%2240%22%20r=%2215%22%2F%3E%3Cpolygon%20points=%2230,39%2012,47%2030,53%22%2F%3E%3Cellipse%20cx=%2258%22%20cy=%2264%22%20rx=%2224%22%20ry=%2221%22%2F%3E%3Cpolygon%20points=%2272,72%2098,92%2086,96%2066,82%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
 <style>
   :root{
     --bg:#000;--surface:#0E0E0E;--surface-2:#1A1A1A;--ink:#fff;--muted:#8A8D91;
-    --line:#222;--brand:#00C805;--brand-ink:#00220A;
+    --line:#222;--brand:#00C805;--brand-ink:#00220A;--cardinal:#C31F3C;
     --good:#00C805;--good-bg:#0B2311;--crit:#FF5000;--crit-bg:#2B1206;
     --shadow:0 1px 2px rgba(0,0,0,.35);
     --font:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
@@ -25,11 +25,11 @@ export const PAGE = /* html */ `<!doctype html>
   }
   @media (prefers-color-scheme:light){:root{
     --bg:#fff;--surface:#FAFAFA;--surface-2:#F0F0F0;--ink:#000;--muted:#6B6F76;
-    --line:#E6E6E6;--brand:#00A305;--brand-ink:#fff;
+    --line:#E6E6E6;--brand:#00A305;--brand-ink:#fff;--cardinal:#A31B33;
     --good:#00A305;--good-bg:#E4F9E6;--crit:#E04A00;--crit-bg:#FFE9E0;
     --shadow:0 1px 2px rgba(0,0,0,.05);}}
-  :root[data-theme="light"]{--bg:#fff;--surface:#FAFAFA;--surface-2:#F0F0F0;--ink:#000;--muted:#6B6F76;--line:#E6E6E6;--brand:#00A305;--brand-ink:#fff;--good:#00A305;--good-bg:#E4F9E6;--crit:#E04A00;--crit-bg:#FFE9E0;--shadow:0 1px 2px rgba(0,0,0,.05);}
-  :root[data-theme="dark"]{--bg:#000;--surface:#0E0E0E;--surface-2:#1A1A1A;--ink:#fff;--muted:#8A8D91;--line:#222;--brand:#00C805;--brand-ink:#00220A;--good:#00C805;--good-bg:#0B2311;--crit:#FF5000;--crit-bg:#2B1206;--shadow:0 1px 2px rgba(0,0,0,.35);}
+  :root[data-theme="light"]{--bg:#fff;--surface:#FAFAFA;--surface-2:#F0F0F0;--ink:#000;--muted:#6B6F76;--line:#E6E6E6;--brand:#00A305;--brand-ink:#fff;--cardinal:#A31B33;--good:#00A305;--good-bg:#E4F9E6;--crit:#E04A00;--crit-bg:#FFE9E0;--shadow:0 1px 2px rgba(0,0,0,.05);}
+  :root[data-theme="dark"]{--bg:#000;--surface:#0E0E0E;--surface-2:#1A1A1A;--ink:#fff;--muted:#8A8D91;--line:#222;--brand:#00C805;--brand-ink:#00220A;--cardinal:#C31F3C;--good:#00C805;--good-bg:#0B2311;--crit:#FF5000;--crit-bg:#2B1206;--shadow:0 1px 2px rgba(0,0,0,.35);}
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.5;-webkit-font-smoothing:antialiased}
   .num{font-variant-numeric:tabular-nums;font-family:var(--mono)}
@@ -37,8 +37,9 @@ export const PAGE = /* html */ `<!doctype html>
   .app{display:grid;grid-template-columns:224px 1fr;min-height:100vh}
   .rail{background:var(--surface);border-right:1px solid var(--line);padding:20px 16px;display:flex;flex-direction:column;gap:6px;position:sticky;top:0;height:100vh}
   .brand{display:flex;align-items:center;gap:10px;padding:4px 6px 18px}
-  .glyph{width:34px;height:34px;border-radius:9px;background:var(--brand);color:var(--brand-ink);display:grid;place-items:center;font-weight:800;font-size:1.1rem;box-shadow:var(--shadow)}
-  .brand b{font-size:1.02rem;letter-spacing:-.01em;display:block}
+  .glyph{width:34px;height:34px;border-radius:9px;background:var(--cardinal);display:grid;place-items:center;box-shadow:var(--shadow);flex:none}
+  .glyph svg{width:21px;height:21px;fill:#fff;display:block}
+  .brand b{font-size:.95rem;letter-spacing:-.02em;display:block;white-space:nowrap}
   .brand span{font-size:.72rem;color:var(--muted)}
   .nav{display:flex;flex-direction:column;gap:2px}
   .nav button{display:flex;align-items:center;gap:11px;width:100%;text-align:left;background:transparent;border:0;color:var(--muted);padding:.62rem .7rem;border-radius:10px;font-size:.9rem;font-weight:600;cursor:pointer}
@@ -130,6 +131,7 @@ export const PAGE = /* html */ `<!doctype html>
   .authtabs{display:grid;grid-template-columns:1fr 1fr;background:var(--surface-2);border-radius:10px;padding:3px;margin-bottom:18px}
   .authtabs button{border:0;background:transparent;color:var(--muted);font-weight:700;font-size:.86rem;padding:.5rem;border-radius:8px;cursor:pointer}
   .authtabs button[aria-pressed="true"]{background:var(--surface);color:var(--ink);box-shadow:var(--shadow)}
+  .tagline{font-size:.88rem;font-weight:600;color:var(--muted);margin:-8px 0 16px}
   .autherr{color:var(--crit);font-size:.82rem;font-weight:600;min-height:1.2em;margin:6px 0 10px}
   .authnote{color:var(--muted);font-size:.74rem;margin-top:14px;text-align:center}
   .alink{background:transparent;border:0;color:var(--muted);cursor:pointer;font-size:.78rem;text-decoration:underline;padding:0;display:block;margin:10px auto 0}
@@ -150,7 +152,7 @@ export const PAGE = /* html */ `<!doctype html>
 <body>
 <div class="app">
   <aside class="rail">
-    <div class="brand"><span class="glyph">&#8599;</span><span><b>Invest</b><span id="acctname">Loading&hellip;</span></span></div>
+    <div class="brand"><span class="glyph"><svg viewBox="0 0 100 100" aria-hidden="true"><polygon points="38,30 44,4 52,30"/><circle cx="44" cy="40" r="15"/><polygon points="30,39 12,47 30,53"/><ellipse cx="58" cy="64" rx="24" ry="21"/><polygon points="72,72 98,92 86,96 66,82"/></svg></span><span><b>Cardinal Trading</b><span id="acctname">Loading&hellip;</span></span></div>
     <nav class="nav" id="nav">
       <button data-view="home" aria-current="true"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>Home</button>
       <button data-view="browse"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>Browse</button>
@@ -170,7 +172,8 @@ export const PAGE = /* html */ `<!doctype html>
 </div>
 <div class="auth" id="auth" role="dialog" aria-labelledby="authtitle">
   <div class="authcard">
-    <div class="logo"><span class="glyph">&#8599;</span><h1 id="authtitle">Invest</h1></div>
+    <div class="logo"><span class="glyph"><svg viewBox="0 0 100 100" aria-hidden="true"><polygon points="38,30 44,4 52,30"/><circle cx="44" cy="40" r="15"/><polygon points="30,39 12,47 30,53"/><ellipse cx="58" cy="64" rx="24" ry="21"/><polygon points="72,72 98,92 86,96 66,82"/></svg></span><h1 id="authtitle">Cardinal Trading</h1></div>
+    <div class="tagline">Don't ever trade alone again.</div>
     <div class="authtabs" id="authtabs">
       <button data-mode="login" aria-pressed="true">Log in</button>
       <button data-mode="signup" aria-pressed="false">Sign up</button>
@@ -197,6 +200,9 @@ var instruments=[], quotes={}, watchlistSymbols={}, orders=[], plans=[], portfol
 function usd(c){c=c||0;return (c<0?"-":"")+"$"+(Math.abs(c)/100).toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2});}
 function fmtQty(n){return (Math.round((n||0)*1e6)/1e6).toString();}
 function pct(bps){bps=bps||0;return (bps>=0?"+":"")+(bps/100).toFixed(2)+"%";}
+// Percent signed by its own dollar figure — independent rounding must never
+// print a red "-$0.11" next to a "+0.00%".
+function pctOf(bps,cents){var neg=cents<0||(cents===0&&bps<0);return (neg?"-":"+")+(Math.abs(bps||0)/100).toFixed(2)+"%";}
 function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(m){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m];});}
 function cls(n){return n>0?"pos":n<0?"neg":"flat";}
 function fmtDT(iso){return iso?new Date(iso).toLocaleString("en-US",{month:"short",day:"numeric",hour:"numeric",minute:"2-digit"}):"\\u2014";}
@@ -300,7 +306,7 @@ function boot(){
     ACCT=app.accountId; ACCTNAME=app.accountName||"Investor";
     EMAIL=app.email||""; EMAILVERIFIED=app.emailVerified!==false;
     $("#acctname").textContent=ACCTNAME;
-    $("#foot").innerHTML="Paper trading for<br><b>"+esc(ACCTNAME)+"</b><br>No real money moves.<br><button class=\\"logout\\" id=\\"logoutbtn\\">Log out</button>";
+    $("#foot").innerHTML="Don\u2019t ever trade alone again.<br><br>Paper account for<br><b>"+esc(ACCTNAME)+"</b><br>No real money moves.<br><button class=\\"logout\\" id=\\"logoutbtn\\">Log out</button>";
     $("#logoutbtn").onclick=logout;
     return loadAll();
   }).then(function(){render();}).catch(function(e){
@@ -387,7 +393,7 @@ function vHome(){
           +'<td class="r num">'+usd(p.avgCostCents)+'</td>'
           +'<td class="r num">'+usd(p.priceCents)+'</td>'
           +'<td class="r num">'+usd(p.marketValueCents)+'</td>'
-          +'<td class="r num '+cls(p.unrealizedPnlCents)+'">'+usd(p.unrealizedPnlCents)+' ('+pct(p.unrealizedPnlBps)+')</td></tr>';
+          +'<td class="r num '+cls(p.unrealizedPnlCents)+'">'+usd(p.unrealizedPnlCents)+' ('+pctOf(p.unrealizedPnlBps,p.unrealizedPnlCents)+')</td></tr>';
       }).join("")+'</tbody></table></div>':'<div class="empty">No positions yet &mdash; browse stocks and place your first trade.</div>')
     +'</div>';
   $("#main").innerHTML=html;

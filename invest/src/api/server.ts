@@ -1,8 +1,8 @@
 /**
- * Invest UI server — a backend-for-frontend over the Trading service, with
+ * Cardinal Trading UI server — a backend-for-frontend over the Trading service, with
  * real multi-user auth and the hardening a public deployment needs.
  *
- * - `GET /`             → the self-contained Invest single-page app
+ * - `GET /`             → the self-contained Cardinal Trading single-page app
  * - `GET /health`       → liveness
  * - `POST /auth/signup` → create a user (name, email, password); opens a
  *                         fresh Trading account for them and starts a session
@@ -186,12 +186,12 @@ export function createApp(opts: AppOptions = {}): AppServer {
       purpose === 'verify'
         ? {
             to: user.email,
-            subject: 'Verify your Invest email',
-            text: `Hi ${user.name},\n\nConfirm this is your email address by opening:\n\n${link}\n\nThe link is good for 24 hours. If you didn't sign up for Invest, ignore this message.`,
+            subject: 'Verify your Cardinal Trading email',
+            text: `Hi ${user.name},\n\nConfirm this is your email address by opening:\n\n${link}\n\nThe link is good for 24 hours. If you didn't sign up for Cardinal Trading, ignore this message.`,
           }
         : {
             to: user.email,
-            subject: 'Reset your Invest password',
+            subject: 'Reset your Cardinal Trading password',
             text: `Hi ${user.name},\n\nSet a new password by opening:\n\n${link}\n\nThe link is good for 1 hour and can be used once. If you didn't ask for this, ignore this message — your password is unchanged.`,
           };
     mailer.send(email).catch((err) => {

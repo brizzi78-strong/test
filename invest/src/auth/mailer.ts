@@ -1,5 +1,5 @@
 /**
- * Mailer — how Invest sends email-verification and password-reset links.
+ * Mailer — how Cardinal Trading sends email-verification and password-reset links.
  *
  * Same shape as the Cardinal Verify notifier: zero dependencies, and the
  * default transport just logs the message — so with no config, the links
@@ -30,7 +30,7 @@ export class ConsoleMailer implements Mailer {
     this.log = log;
   }
   async send(email: OutboundEmail): Promise<void> {
-    this.log(`[invest] (no mailer configured) would email ${email.to} — ${email.subject}\n${email.text}`);
+    this.log(`[cardinal-trading] (no mailer configured) would email ${email.to} — ${email.subject}\n${email.text}`);
   }
 }
 

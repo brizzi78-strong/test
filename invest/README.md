@@ -1,4 +1,6 @@
-# Invest — a Robinhood-style trading UI
+# Cardinal Trading — a Robinhood-style trading UI
+
+> **Don't ever trade alone again.**
 
 A usable multi-user trading app — sign up, log in, and get your own
 paper-trading account with its own portfolio, watchlist, and order history.

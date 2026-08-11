@@ -1,5 +1,5 @@
 /**
- * Entry point: start the Invest UI (BFF over the Trading service).
+ * Entry point: start the Cardinal Trading UI (BFF over the Trading service).
  *
  * Run with:  node src/index.ts   (or `npm start`)
  * Config:
@@ -16,5 +16,5 @@ const { server } = createApp();
 
 server.listen(port, () => {
   // eslint-disable-next-line no-console
-  console.log(`Invest listening on http://localhost:${port}`);
+  console.log(`Cardinal Trading listening on http://localhost:${port}`);
 });
