@@ -25,8 +25,20 @@ Not clinical, legal, or billing advice.
 This is the number that belongs on every NOMNC you issue, and the number the
 resident or their representative calls to start a fast-track appeal.
 
-**The deadline: noon the day before coverage ends.** Not the day of. If the
-NOMNC says coverage ends Friday, the call must happen by noon Thursday.
+**The deadline: noon the day before the NOMNC effective date.** CMS defines the
+effective date as the *last covered day*, not the first uncovered day. Last
+covered day Friday → NOMNC delivered by Wednesday → QIO call by noon Thursday.
+
+**A second clock runs from delivery.** 42 CFR 422.626 requires the request by
+noon of the first day after the notice was *delivered*. That matches the printed
+deadline only when the notice went out at the two-day minimum; deliver earlier
+and the real deadline moves earlier. Act on whichever falls first.
+
+**If the deadline is missed, still call.** Since January 1, 2025 (CMS-4205-F,
+amending 42 CFR 422.624/422.626) the BFCC-QIO must accept and decide an
+*untimely* fast-track request, and an enrollee no longer forfeits the appeal by
+leaving the facility. A late filing loses the guaranteed decision timeframe and
+the automatic financial-liability protection — not the review.
 
 ---
 
@@ -155,11 +167,16 @@ still cut on it. That is the denial you win.
 
 ## 7. Two arguments that win NC appeals
 
-**CMS-4201-F (effective January 1, 2024).** MA plans must apply Traditional
-Medicare coverage criteria and may not use internal criteria more restrictive
-than 42 CFR 409.31–409.35 where Medicare's rules are fully established. An
-approved authorization must remain valid for the full course of medically
-necessary treatment. **When a denial arrives, request the specific criteria
+**CMS-4201-F** (effective June 5, 2023; coverage-criteria provisions apply to
+coverage beginning January 1, 2024). MA plans must apply Traditional Medicare
+coverage criteria and may not substitute internal criteria where Medicare's
+rules are fully established (42 CFR 422.101(b)(6)). Separately, 42 CFR
+422.112(b)(8) requires that approval of a course of treatment stay valid as long
+as medically necessary to avoid disruptions in care — judged against applicable
+coverage criteria, the patient's history, **and** the treating provider's
+recommendation. Note the plan will argue the criteria are *not* fully
+established; that is the contested question, so ask them to say so in writing
+and name the subparagraph they rely on. **When a denial arrives, request the specific criteria
 applied.** If it's a stricter internal guideline, that is the appeal.
 
 **Jimmo v. Sebelius.** No improvement standard. "Plateaued," "no further
@@ -175,21 +192,26 @@ Carolina, plus the 2026 HHS OIG report:
 
 - MA members are roughly **52%** of the Medicare population in Acentra's
   regions but generate **93%** of SNF-based appeals.
-- Acentra physician reviewers **disagreed with the plan's denial 48% of the
-  time** — higher than the 42% rate for Traditional Medicare appeals.
+- Of **appealed** MA skilled-nursing denials that Acentra reviewed, physician
+  reviewers **disagreed with the plan 48% of the time** — against 42% in the much
+  smaller Traditional Medicare appeal pool. This is a share of appeals reviewed,
+  not of denials issued.
 - **27%** of MA notices of non-coverage were *repeats* within the same stay,
   averaging **2.7 repeat notices per beneficiary**. One patient received
   **12 notices** after winning previous appeals.
-- On those repeat appeals, reviewers sided **against the plan 77% of the
-  time**.
-- HHS OIG (2026): MA organizations **overturned nearly all** appealed prior
-  authorization denials for SNF admission — which is itself evidence the
-  initial denials were wrong.
+- On those repeat **appeals**, reviewers sided against the plan **77%** of the time.
+- HHS OIG (OEI-09-24-00331, June 2026), 19 largest MAOs, June 2024 data: **12%**
+  of SNF admission requests denied; **18%** of those denials appealed; **95%** of
+  appealed denials overturned. OIG's own conclusion is deliberately bounded — the
+  rate indicates *some* enrollees were denied medically necessary care and raises
+  concerns about the 82% of denials never appealed.
 
-**The operational takeaway:** a first denial is close to a coin flip, and a
-re-issued NOMNC after you already won is a better-than-three-in-four bet in
-your favor. Appealing is the default, not the exception. Build the
-documentation above so the reviewer has something to rule on.
+**The operational takeaway:** once a denial is appealed and a QIO physician
+actually reads the record, the plan loses about half the time — and better than
+three in four times on a re-issued NOMNC. These are outcomes among *appealed*
+cases, not base rates across all denials; the odds turn on whether the record
+gets in front of a reviewer at all. Appealing is the default, not the exception.
+Build the documentation above so the reviewer has something to rule on.
 
 ---
 

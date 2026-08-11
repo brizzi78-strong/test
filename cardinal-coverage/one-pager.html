@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
 <title>Cardinal Coverage — Executive Summary</title>
-<meta name="description" content="One-page executive summary: Medicare Advantage now covers 55% of Medicare, skilled nursing facilities absorb the authorization burden, and the denials are mostly wrong.">
+<meta name="description" content="One-page executive summary: Medicare Advantage now covers 55% of Medicare, skilled nursing facilities absorb the authorization burden, and the denials do not survive appeal.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23A31B33'/%3E%3Ctext x='16' y='23' font-family='system-ui' font-size='20' font-weight='900' text-anchor='middle' fill='white'%3EC%3C/text%3E%3C/svg%3E">
 <style>
   :root{--paper:#F7F2E6;--surface:#FFFDF7;--surface-2:#EFE7D3;--ink:#17233F;--muted:#6B6350;--line:#E2D9C3;
@@ -86,7 +86,7 @@
   <div class="stats">
     <div class="st"><div class="n">55%</div><div class="l">of eligible Medicare beneficiaries now in Medicare Advantage</div></div>
     <div class="st"><div class="n">35M</div><div class="l">MA enrollees as of Feb 2026, +1.1M year over year</div></div>
-    <div class="st"><div class="n">99%</div><div class="l">of MA enrollees in plans requiring SNF prior authorization</div></div>
+    <div class="st"><div class="n">95%</div><div class="l">of MA enrollees in plans requiring SNF prior authorization</div></div>
     <div class="st"><div class="n">~15,000</div><div class="l">CMS-certified nursing facilities nationally</div></div>
   </div>
 
@@ -94,7 +94,7 @@
   <p>More than half of Medicare is now administered by private plans that each run their own utilization management. Facilities absorb that shift as unpaid administrative labor: <b>29% of nursing homes report Medicare Advantage denials every single day</b>, another 37% weekly, and <b>67% have had a resident's coverage pulled too soon</b> during the stay — often against medical advice. Some plans reauthorize in three-day increments, roughly seven submissions on a twenty-day stay. The work is tracked today in spreadsheets, sticky notes, and repeated phone calls.</p>
 
   <h2>The insight — this is a workflow problem, not a clinical one</h2>
-  <p>The denials are largely wrong. HHS OIG found in 2026 that MA organizations <b>overturned nearly all appealed prior-authorization denials for SNF admission</b>. Independent QIO physician reviewers rejected <b>48%</b> of MA skilled-nursing denials, and <b>77%</b> of repeat termination notices — of which there are many, since 27% of notices are repeats within the same stay, averaging 2.7 per resident. MA members are about 52% of the Medicare population in the reviewed region yet generate <b>93% of SNF appeals</b>. Money is being lost for procedural reasons, which is precisely what software fixes.</p>
+  <p>These denials do not survive appeal. HHS OIG (OEI-09-24-00331, June 2026) found across the 19 largest MA organizations that <b>12%</b> of SNF admission requests were denied, only <b>18%</b> of those denials were appealed — and <b>95% of appeals were overturned</b>. The opportunity is as much the 82% never appealed as the 95% that win. Among appealed skilled-nursing denials reviewed by QIO physicians in Acentra's service regions, reviewers rejected the plan <b>48%</b> of the time, and <b>77%</b> of the time on repeat appeals — of which there are many, since 27% of notices are repeats within the same stay. Money is being lost for procedural reasons, which is what software fixes.</p>
 
   <h2>The product</h2>
   <div class="two">
@@ -111,7 +111,7 @@
 
   <h2>Why now</h2>
   <ul>
-    <li><b>The legal floor exists and is unexploited.</b> CMS-4201-F (2024) bars MA plans from applying criteria more restrictive than Traditional Medicare; 42 CFR 422.138 ties authorization duration to the treating provider's recommendation; 42 CFR 422.626 puts the burden of proof on the plan in a termination appeal.</li>
+    <li><b>The legal floor exists and is unexploited.</b> CMS-4201-F (2024) bars MA plans from applying criteria more restrictive than Traditional Medicare; 42 CFR 422.112(b)(8) ties authorization duration for a course of treatment to applicable coverage criteria and the treating provider's recommendation; 42 CFR 422.626 puts the burden of proof on the plan in a termination appeal.</li>
     <li><b>CMS-0057-F is already biting.</b> Since January 2026, plans must decide in 72 hours expedited / 7 days standard with a specific reason on every denial, and must publish prior-authorization metrics.</li>
     <li><b>The data pipe opens January 1, 2027.</b> Every MA plan must run a production Prior Authorization FHIR API. The manual portal-chasing that makes this hard today becomes an integration — rewarding whoever already owns the facility-side workflow.</li>
   </ul>
@@ -126,7 +126,7 @@
   </div>
 
   <footer>
-    <b>Sources.</b> KFF, <i>Medicare Advantage in 2026: Enrollment Update and Key Trends</i> · AHCA/NCAL provider survey of 363 nursing homes (May 2025), via Skilled Nursing News · HIDA on SNF prior-authorization prevalence · HHS OIG (2026), <i>MA Organizations Overturned Nearly All Appealed Prior Authorization Denials for SNF Admission</i> · Acentra Health BFCC-QIO CMS-approved focused study, via McKnight's · CMS-4201-F and CMS-0057-F final rules · 42 CFR §§ 422.138, 422.624, 422.626 · CMS certified facility counts and North Carolina state SNF directories.<br>
+    <b>Sources.</b> KFF, <i>Medicare Advantage in 2026: Enrollment Update and Key Trends</i> · AHCA/NCAL provider survey of 363 nursing homes (May 2025), via Skilled Nursing News · HHS OIG (OEI-09-24-00331, June 2026), <i>MA Organizations Overturned Nearly All Appealed Prior Authorization Denials for SNF Admission</i> · Acentra Health BFCC-QIO CMS-approved focused study, via McKnight's · CMS-4201-F and CMS-0057-F final rules · 42 CFR §§ 422.101(b), 422.112(b)(8), 422.138(c), 422.624, 422.626 · CMS-4205-F · CMS certified facility counts and North Carolina state SNF directories.<br>
     Market and problem statistics are cited public data. Business-side figures are the fill-in block above and must be completed before distribution. Cardinal Coverage is a working product name.
   </footer>
 </div>

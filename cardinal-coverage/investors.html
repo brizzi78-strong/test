@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
 <title>Cardinal Coverage — Investor Presentation</title>
-<meta name="description" content="Medicare Advantage now covers 55% of Medicare. Skilled nursing facilities are absorbing the authorization burden — and the denials are mostly wrong. Cardinal Coverage is the system of record for SNF Medicare Advantage cases.">
+<meta name="description" content="Medicare Advantage now covers 55% of Medicare. Skilled nursing facilities are absorbing the authorization burden — and the denials do not survive appeal. Cardinal Coverage is the system of record for SNF Medicare Advantage cases.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23A31B33'/%3E%3Ctext x='16' y='23' font-family='system-ui' font-size='20' font-weight='900' text-anchor='middle' fill='white'%3EC%3C/text%3E%3C/svg%3E">
 <style>
   :root{--paper:#F7F2E6;--surface:#FFFDF7;--surface-2:#EFE7D3;--ink:#17233F;--muted:#6B6350;--line:#E2D9C3;
@@ -118,10 +118,10 @@
     <div class="figs">
       <div class="fig dark"><div class="n">55%</div><div class="l">of eligible Medicare beneficiaries are now in Medicare Advantage</div><div class="s">Up from 19% in 2007</div></div>
       <div class="fig"><div class="n">35M</div><div class="l">people enrolled in MA as of February 2026</div><div class="s">+1.1M year over year</div></div>
-      <div class="fig"><div class="n">99%</div><div class="l">of MA enrollees are in plans requiring prior authorization for a SNF stay</div><div class="s">Not an edge case — the default</div></div>
+      <div class="fig"><div class="n">95%</div><div class="l">of MA enrollees are in plans requiring prior authorization for a skilled nursing stay</div><div class="s">Not an edge case — the default</div></div>
     </div>
     <p class="lede">Every one of those 35 million people is a potential skilled nursing resident whose stay must be authorized, re-authorized, documented, and defended — by the facility, at the facility's expense.</p>
-    <p class="src">Sources: KFF, <i>Medicare Advantage in 2026: Enrollment Update and Key Trends</i>; HIDA, <i>Medicare Advantage Plans Frequently Deny Skilled Nursing Facility Coverage</i>.</p>
+    <p class="src">Source: KFF, <i>Medicare Advantage in 2026: Enrollment Update and Key Trends</i>. The 95% figure is SNF-specific; the widely-quoted 99% covers prior authorization for <i>any</i> service.</p>
     <div class="notes"><b>Say:</b> Don't open with the product. Open with the market structure change. Everything downstream — the denials, the admin burden, the software need — follows from more than half of Medicare moving to private plans that each run their own utilization management.</div>
   </div>
 </section>
@@ -146,13 +146,13 @@
   <span class="slideno" data-title="The insight"></span>
   <div class="inner">
     <p class="kicker">The insight</p>
-    <h2>Here is what makes this a <em>software problem</em> and not just a hard job: the denials are mostly wrong.</h2>
+    <h2>What makes this a <em>software problem</em> and not just a hard job: when these denials are appealed, they mostly fall apart.</h2>
     <div class="figs">
-      <div class="fig dark"><div class="n">~All</div><div class="l">appealed SNF prior-authorization denials were overturned by MA plans</div><div class="s">HHS OIG, 2026</div></div>
-      <div class="fig"><div class="n">48%</div><div class="l">of SNF denials were rejected by independent QIO physician reviewers</div><div class="s">vs. 42% under Traditional Medicare</div></div>
-      <div class="fig"><div class="n">77%</div><div class="l">reviewer disagreement rate on <b>repeat</b> termination notices</div><div class="s">27% of notices are repeats — avg 2.7 per resident</div></div>
+      <div class="fig dark"><div class="n">12→18→95</div><div class="l">% of SNF requests denied → % of denials appealed → % of appeals won</div><div class="s">HHS OIG OEI-09-24-00331, 19 largest MAOs, June 2024</div></div>
+      <div class="fig"><div class="n">48%</div><div class="l">of <b>appealed</b> SNF denials were rejected by independent QIO physician reviewers</div><div class="s">vs. 42% in the smaller Traditional Medicare appeal pool · Acentra service regions</div></div>
+      <div class="fig"><div class="n">77%</div><div class="l">reviewer disagreement rate on <b>repeat appeals</b></div><div class="s">27% of notices are repeats — avg 2.7 per resident · Acentra service regions</div></div>
     </div>
-    <p class="lede">MA members are roughly 52% of the Medicare population in the reviewed region but generate 93% of skilled nursing appeals. The denials are not a signal of over-utilization. They are a workflow the facility can win — if it can see the deadline before it passes.</p>
+    <p class="lede">The opportunity is not only the 95% that get overturned — it is the <b>82% of denials nobody ever appeals</b>. OIG says as much: the overturn rate raises concerns about the denials that were never challenged. That is a workflow the facility can win, if it can see the deadline before it passes.</p>
     <p class="src">Sources: HHS OIG (2026), <i>MA Organizations Overturned Nearly All Appealed Prior Authorization Denials for SNF Admission</i>; Acentra Health BFCC-QIO CMS-approved focused study, reported by McKnight's.</p>
     <div class="notes"><b>Say:</b> This is the slide that turns a sob story into an investment thesis. Money is being left on the table for a procedural reason, not a clinical one. Procedural problems are exactly what software fixes. Pause here.</div>
   </div>
@@ -168,9 +168,9 @@
         <h3 style="font-size:.95rem;margin:0 0 .5rem;color:var(--brand);">The leverage — already in force</h3>
         <ul class="pts" style="gap:.55rem;">
           <li><b>CMS-4201-F (Jan 2024).</b> MA plans must apply Traditional Medicare coverage criteria; no more restrictive internal guidelines.</li>
-          <li><b>42 CFR 422.138.</b> Authorization must stay valid as long as medically necessary, keyed to the treating provider's recommendation.</li>
+          <li><b>42 CFR 422.112(b)(8).</b> An approved course of treatment must stay authorized as long as medically necessary to avoid disruptions in care — judged against applicable coverage criteria, the patient's history, and the treating provider's recommendation.</li>
           <li><b>42 CFR 422.626.</b> On a termination appeal, the burden of proof sits with the plan.</li>
-          <li><b>Revised NOMNC/DENC forms (2025)</b> expanded enrollee fast-track appeal rights.</li>
+          <li><b>CMS-4205-F (Jan 1, 2025).</b> The BFCC-QIO must now review <i>untimely</i> fast-track appeals, and enrollees no longer forfeit the appeal by leaving the facility. Revised NOMNC/DENC forms carry the new language.</li>
         </ul>
       </div>
       <div>
@@ -183,7 +183,7 @@
       </div>
     </div>
     <p class="lede" style="margin-top:1.3rem;">The rules changed in the facility's favor; the facility's workflow did not. And in twelve months the manual portal-chasing that makes this hard becomes an API integration — which rewards whoever already owns the facility-side workflow when the pipe opens.</p>
-    <p class="src">Sources: CMS-4201-F; CMS-0057-F Interoperability and Prior Authorization Final Rule; 42 CFR §§ 422.138, 422.624, 422.626; AHCA/NCAL on the Medicare Advantage Improvement Act of 2026.</p>
+    <p class="src">Sources: CMS-4201-F; CMS-0057-F Interoperability and Prior Authorization Final Rule; 42 CFR §§ 422.101(b), 422.112(b)(8), 422.138(c), 422.624, 422.626; CMS-4205-F; AHCA/NCAL on the Medicare Advantage Improvement Act of 2026.</p>
     <div class="notes"><b>Say:</b> This is the timing slide — spend real time here. Two arguments: the legal leverage exists today and nobody has tooling for it, and the 2027 API mandate turns our hardest technical problem (getting status out of payer portals) into a solved integration. <b>If asked "why hasn't PointClickCare done this":</b> the leverage is two years old, the appeal data is months old, and their auth tracking is a billing field, not a deadline engine — next slide.</div>
   </div>
 </section>
@@ -244,7 +244,7 @@
     <div class="figs">
       <div class="fig"><div class="n">~15,000</div><div class="l">CMS-certified nursing facilities in the United States</div><div class="s">Total addressable</div></div>
       <div class="fig"><div class="n">419</div><div class="l">certified skilled nursing facilities in North Carolina</div><div class="s">~43,900 certified beds — the beachhead</div></div>
-      <div class="fig"><div class="n">99%</div><div class="l">of MA enrollees sit in plans that require SNF prior authorization</div><div class="s">Every facility has this problem</div></div>
+      <div class="fig"><div class="n">95%</div><div class="l">of MA enrollees sit in plans that require SNF prior authorization</div><div class="s">KFF, Medicare Advantage in 2026</div></div>
     </div>
     <div class="todo">
       <span class="tag">Fill in before presenting</span>

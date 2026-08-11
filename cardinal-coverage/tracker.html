@@ -60,6 +60,7 @@
   .clock.ok{background:var(--good-bg);border-color:var(--good);} .clock.ok .rel{color:var(--good);}
   .clock.warn{background:var(--warn-bg);border-color:var(--warn);} .clock.warn .rel{color:var(--warn);}
   .clock.crit{background:var(--crit-bg);border-color:var(--crit);} .clock.crit .rel{color:var(--crit);}
+  .clock.quiet{opacity:.72;}
   .clock.none .date{color:var(--muted);font-weight:600;font-style:italic;font-size:.84rem;}
 
   .cnotes{margin-top:.7rem;font-size:.86rem;color:var(--muted);white-space:pre-wrap;}
@@ -121,19 +122,20 @@
 
     <h3>Fast-track appeal (North Carolina)</h3>
     <p>BFCC-QIO is <b>Acentra Health</b> · Phone <span class="num">1-888-317-0751</span> · Fax <span class="num">1-844-878-7921</span> · TTY 711. Voicemail accepted 24/7; translation available. Serves AL, FL, GA, KY, MS, NC, SC, TN.</p>
-    <p><b>The resident or their representative must call by noon the day before coverage ends.</b> The tracker computes this as the QIO deadline below.</p>
+    <p><b>The resident or their representative should call by noon the day before the NOMNC effective date.</b> The tracker computes this, and cross-checks it against the 42 CFR 422.626 clock that runs from the date the notice was delivered.</p>
+    <p><b>If the deadline is missed, still call.</b> Since January 1, 2025 (CMS-4205-F, amending 42 CFR 422.624/422.626) the BFCC-QIO — not the plan — must accept and decide an <i>untimely</i> fast-track request, and an enrollee no longer forfeits the appeal by leaving the facility. What a late filing loses is the guaranteed decision timeframe and the automatic financial-liability protection, not the review itself.</p>
 
     <h3>Filing routes</h3>
     <p><b>Aetna MA (NC):</b> Availity provider portal or EDI Precertification Request transaction. Provider line <span class="num">888-632-3862</span>. <b>Do not route NC through EviCore</b> — the 2026 EviCore post-acute program covers NJ, NY, PA, and WV only.</p>
     <p><b>WellCare MA (NC):</b> secure Provider Portal → <b>Care Management</b> tab → <b>Create New Authorization</b>. Fax/phone for expedited only. Confirm requirements in the NC authorization lookup tool and NC Prior Authorization Guide. Note: <span class="num">marketplace.wellcarenc.com</span> is the Medicaid path, not Medicare Advantage.</p>
 
-    <h3>Against 3-day authorization cycles — 42 CFR 422.138</h3>
-    <blockquote>An approval of a prior authorization request for a course of treatment "must be valid for as long as medically reasonable and necessary to avoid disruptions in care in accordance with applicable coverage criteria, the patient's medical history, and <b>the treating provider's recommendation</b>."</blockquote>
+    <h3>Against 3-day authorization cycles — 42 CFR 422.112(b)(8)</h3>
+    <blockquote>Under CMS-4201-F, approval of a prior authorization request for a course of treatment must remain valid for as long as medically necessary to avoid disruptions in care, in accordance with <b>applicable coverage criteria</b>, the individual patient's medical history, and <b>the treating provider's recommendation</b>. Codified at 42 CFR 422.112(b)(8) (Access to services / continuity of care) — <i>not</i> at 422.138. Verify the exact codified wording on eCFR before quoting it inside a letter.</blockquote>
     <p>Because duration is keyed to the treating provider's recommendation, <b>state the ordered duration explicitly in the plan of care</b> ("PT 5x/week × 21 days"). That makes every 3-day grant a documented departure from a physician's order. Request the clinically indicated duration and make the plan shorten it in writing.</p>
-    <p>The same section bars the plan from later denying an approved service on medical-necessity grounds, or reopening the decision absent good cause or fraud — and that protection covers <b>concurrent determinations</b> made during the stay, not just up-front prior auth.</p>
+    <p>A separate provision, <b>42 CFR 422.138(c)</b>, bars the plan from later denying an approved service on medical-necessity grounds, or reopening the decision absent good cause or fraud — and that protection covers <b>concurrent determinations</b> made during the stay, not just up-front prior auth.</p>
 
     <h3>Notice rules — an expiring auth is not a valid termination</h3>
-    <p>If coverage is ending, the resident is owed a <b>NOMNC</b> (CMS-10123) at least <b>2 calendar days before the effective date of non-coverage</b>, with QIO appeal rights. A plan cannot use a lapsed short authorization to skip the notice. If the QIO takes the appeal, the plan must issue a <b>DENC</b> (CMS-10124) by close of business that day.</p>
+    <p>If coverage is ending, the resident is owed a <b>NOMNC</b> (CMS-10123) at least <b>2 calendar days before the effective date</b> — the last covered day — with QIO appeal rights. A plan cannot use a lapsed short authorization to skip the notice. If the QIO takes the appeal, the plan must issue a <b>DENC</b> (CMS-10124) by close of business that day.</p>
 
     <h3>Why appealing is the default</h3>
     <p>Acentra's CMS-approved study of its region: MA members are ~52% of the Medicare population but generate <b>93%</b> of SNF appeals; reviewers disagreed with the denial <b>48%</b> of the time; <b>27%</b> of MA non-coverage notices were repeats within the same stay (avg 2.7 each, one resident received 12 after winning prior appeals); and on repeat appeals reviewers sided against the plan <b>77%</b> of the time. HHS OIG (2026) found MA organizations overturned nearly all appealed SNF admission denials.</p>
@@ -146,7 +148,7 @@
   </details>
 
   <footer>
-    <p><b>Deadline conventions used here.</b> "Covered through" is the <i>last covered day</i>. The effective date of non-coverage is the day after that. NOMNC deliver-by is 2 calendar days before the effective date. The QIO fast-track deadline is noon on the day before the effective date. Confirm against each plan's current notice instructions — these are calculated aids, not legal determinations.</p>
+    <p><b>Deadline conventions used here.</b> "Covered through" is the <i>last covered day</i> — which is the <b>Effective Date printed on the NOMNC (CMS-10123)</b>. CMS defines that date as the last day the beneficiary receives covered services, not the first uncovered day. NOMNC deliver-by is 2 calendar days before it. The deadline printed on the notice is noon on the day before it. Separately, 42 CFR 422.626 requires the fast-track request by noon of the first day after the notice was <i>delivered</i> — the same date only when the notice went out at the two-day minimum. Where they differ, this tool shows the earlier and colours urgency from it. Confirm against each plan's current notice instructions; these are calculated aids, not legal determinations.</p>
     <p>Not clinical, legal, or billing advice.</p>
   </footer>
 </div>
@@ -191,6 +193,11 @@
       <div><label for="fNote">Last progress note</label><input id="fNote" type="date"></div>
       <div><label for="fCert">Last physician certification</label><input id="fCert" type="date"></div>
     </div>
+    <div>
+      <label for="fNomnc">Date NOMNC delivered to resident</label>
+      <input id="fNomnc" type="date">
+      <p class="hint">42 CFR 422.626 runs the fast-track clock from delivery, not the effective date. A notice sent early makes the real deadline earlier than the one printed on it.</p>
+    </div>
     <div class="g2">
       <div>
         <label for="fStatus">Authorization status</label>
@@ -203,7 +210,7 @@
       <div><label for="fExp">Financial exposure ($)</label><input id="fExp" type="number" min="0" step="1" value="0"></div>
     </div>
     <div>
-      <label for="fOrder">Ordered POC duration (the 422.138 benchmark)</label>
+      <label for="fOrder">Ordered POC duration (the 422.112(b)(8) benchmark)</label>
       <input id="fOrder" maxlength="90" placeholder="PT 5x/week × 21 days">
     </div>
     <div><label for="fNotes">Notes</label><textarea id="fNotes" maxlength="1200"></textarea></div>
@@ -272,11 +279,26 @@ function clocksFor(c){
   const lead = Number.isFinite(+c.lead) ? +c.lead : 1;
 
   if (covered){
-    const effective = addD(covered, 1);                 // first non-covered day
+    // CMS-10123 instructions: the Effective Date is the LAST day of covered
+    // services, not the first uncovered day. Deadlines count back from it.
+    const effective = covered;
+    const delivered = parseD(c.nomnc);
     out.push({ lab:"Auth covered through", date:covered, days:diffD(covered,t) });
     out.push({ lab:"Next submission due",  date:addD(covered,-lead), days:diffD(addD(covered,-lead),t) });
     out.push({ lab:"NOMNC deliver by",     date:addD(effective,-2),  days:diffD(addD(effective,-2),t) });
-    out.push({ lab:"QIO fast-track deadline", date:addD(effective,-1), days:diffD(addD(effective,-1),t), noon:true });
+
+    // Two independent QIO clocks. The NOMNC prints the effective-date version;
+    // 42 CFR 422.626 runs from delivery. They coincide only when the notice went
+    // out at the two-day minimum. Early delivery moves the real deadline earlier,
+    // so drive urgency off whichever falls first.
+    const byEffective = addD(effective, -1);
+    const byDelivery  = delivered ? addD(delivered, 1) : null;
+    const qio = (byDelivery && byDelivery < byEffective) ? byDelivery : byEffective;
+    out.push({ lab: byDelivery ? "QIO deadline (earlier of two)" : "QIO deadline (per NOMNC)",
+               date:qio, days:diffD(qio,t), noon:true });
+    if (byDelivery && +byDelivery !== +byEffective){
+      out.push({ lab:"— 422.626, from delivery", date:byDelivery, days:diffD(byDelivery,t), noon:true, quiet:true });
+    }
   } else {
     out.push({ lab:"Auth covered through", none:true });
   }
@@ -326,6 +348,7 @@ function render(){
   host.innerHTML = scored.map(({c,cl,min}) => {
     const clockHTML = cl.map(x => {
       if (x.plain) return `<div class="clock"><div class="lab">${esc(x.lab)}</div><div class="date">${esc(x.plain)}</div></div>`;
+      if (x.quiet) return `<div class="clock ${sev(x.days)} quiet"><div class="lab">${esc(x.lab)}</div><div class="date">${fmtD(x.date)}</div><div class="rel">${relText(x.days, x.noon)}</div></div>`;
       if (x.none)  return `<div class="clock none"><div class="lab">${esc(x.lab)}</div><div class="date">not set</div></div>`;
       return `<div class="clock ${sev(x.days)}">
                 <div class="lab">${esc(x.lab)}</div>
@@ -368,6 +391,7 @@ function openDlg(id){
   $("fLead").value = c?.lead ?? 1;
   $("fNote").value = c?.note ?? "";
   $("fCert").value = c?.cert ?? "";
+  $("fNomnc").value = c?.nomnc ?? "";
   $("fStatus").value = c?.status ?? "Authorized";
   $("fExp").value = c?.exposure ?? 0;
   $("fOrder").value = c?.order ?? "";
@@ -382,7 +406,7 @@ $("caseForm").addEventListener("submit", () => {
     plan: $("fPlan").value.trim(),
     admit: $("fAdmit").value, cycle: +$("fCycle").value || 3,
     covered: $("fCovered").value, lead: +$("fLead").value || 0,
-    note: $("fNote").value, cert: $("fCert").value,
+    note: $("fNote").value, cert: $("fCert").value, nomnc: $("fNomnc").value,
     status: $("fStatus").value, exposure: +$("fExp").value || 0,
     order: $("fOrder").value.trim(), notes: $("fNotes").value.trim(),
   };
@@ -407,7 +431,7 @@ function loadDemo(){
   cases = [
     { cid:"214-B", plan:"Aetna MA", admit:d(-12), cycle:3, lead:1, covered:d(0), note:d(-6), cert:d(-12),
       status:"Denied — appeal open", exposure:4980, order:"PT 5x/week × 21 days",
-      notes:"Cut letter day 12. QIO fast-track deadline is today at noon. Plan cited 'maximum functional potential' — Jimmo rebuttal drafted." },
+      notes:"Cut letter day 12. QIO fast-track window is closing — verify against the delivered NOMNC. Plan cited 'maximum functional potential' — Jimmo rebuttal drafted." },
     { cid:"301-A", plan:"WellCare MA", admit:d(-4), cycle:3, lead:1, covered:d(1), note:d(-2), cert:d(-4),
       status:"Recert pending", exposure:1240, order:"PT 5x/week × 14 days",
       notes:"Third 3-day authorization this stay. Short-auth challenge letter queued." },
