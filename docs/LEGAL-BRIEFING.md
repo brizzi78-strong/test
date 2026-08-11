@@ -7,12 +7,31 @@
 
 ## Facts of the planned launch (what counsel will ask first)
 
+- **Issuer residence and tax domicile: North Carolina, United States.**
 - Fixed-supply ERC-20 on Ethereum mainnet: 250M hard cap, all minted at
   deploy, ownership renounced immediately (no ongoing issuer control).
 - No sale by the issuer: 80% of supply placed into a Uniswap V2 pool
   (LP locked 12 months), 20% held in a disclosed treasury wallet.
 - No promised returns, dividends, staking yield, or buybacks; no
   fundraising round; trading is peer-to-pool on a DEX.
+- **No marketing campaign.** Public communications are limited to factual
+  disclosures: contract address, supply, the renouncement transaction, the
+  LP lock, and risk warnings. No price commentary, no growth or return
+  language, no promotional push.
+- **Treasury policy: charitable donation only, never sold by the issuer.**
+  The 50M treasury allocation is to be distributed to five selected
+  nonprofit organizations on a rotating basis, with dated records kept of
+  each transfer (recipient, token amount, and fair market value at the time
+  of transfer). The issuer does not intend to sell treasury tokens into the
+  market at any time. Recipients identified so far: **Goodwill**, **The
+  Salvation Army**, and **the Napoleon Hill Foundation**; two further
+  organizations are undecided.
+
+The last two facts matter disproportionately. The residual securities risk
+in this design was concentrated in marketing conduct and in treasury
+disposition; the stated policy on both is the conservative option in each
+case. Counsel should confirm the policies are sufficient and advise on how
+to document them durably.
 
 ## United States — securities law
 
@@ -47,9 +66,65 @@ characterization if it is ever sold into the market.
 
 Questions for US counsel:
 1. Does seeding a DEX pool constitute an "offer or sale" by the deployer under Securities Act §5?
-2. How should the 50M treasury be handled (lockup, disclosure, OTC vs. market sales)?
+2. Does donating treasury tokens to nonprofits (rather than selling them)
+   avoid "sale by the issuer" characterization entirely — and can the
+   recipients' own subsequent sales be attributed back to the issuer?
 3. Does the name "Promise" itself create marketing risk, and what disclaimer language mitigates it?
-4. State-level (blue sky) and money-transmission exposure?
+4. State-level (blue sky) and money-transmission exposure — see the North
+   Carolina section below.
+
+## North Carolina — state law
+
+**Blue sky / securities registration.** North Carolina's Securities Act is
+[Chapter 78A of the General Statutes](https://www.ncleg.net/EnactedLegislation/Statutes/PDF/ByArticle/Chapter_78A/Article_3.pdf).
+The state counterpart to the federal registration requirement is
+[N.C.G.S. § 78A-24](https://www.sosnc.gov/divisions/securities/for_securities_professionals),
+administered by the Securities Division of the NC Secretary of State.
+"Investment contract" is not separately defined by statute in a way that
+displaces *Howey*, so the federal analysis above is the starting point, but
+state exemptions and anti-fraud provisions apply independently of the
+federal ones — a transaction can be federally exempt and still raise state
+issues.
+
+Questions for NC counsel:
+1. If CARD is an investment contract, is any § 78A-16 or Article 3
+   exemption available, and does anything need to be filed with the
+   Securities Division?
+2. Do the state anti-fraud provisions (e.g. § 78A-10, unlawful
+   representations) reach the project's disclosure page as drafted?
+
+**Money transmission.** This is the North Carolina item most likely to
+surprise. Under the
+[Money Transmitters Act, Article 16B of Chapter 53](https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/ByArticle/Chapter_53/Article_16B.html),
+"virtual currency" is a defined term in
+[§ 53-208.42](https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_53/GS_53-208.42.html),
+and North Carolina treats parties transmitting virtual currency for others
+as money transmitters requiring licensure. Licensure is not trivial: per the
+[NC Commissioner of Banks](https://nccob.nc.gov/financial-institutions/money-transmitters/money-transmitter-frequently-asked-questions),
+application runs through NMLS with a nonrefundable filing fee and a surety
+bond starting at $150,000.
+
+The likely position — **to be confirmed by counsel, not assumed** — is that
+this project does not trigger licensure, because the issuer never holds,
+transmits, or exchanges virtual currency *on behalf of another person*: it
+deploys a contract, seeds a pool, and donates from its own holdings.
+Money-transmission regimes generally target custody and transmission for
+third parties. But the definition should be read against these specific
+facts by someone licensed in the state before mainnet.
+
+Question for NC counsel:
+3. Do any of (a) seeding a Uniswap pool, (b) holding the treasury wallet, or
+   (c) transferring tokens to nonprofits constitute "money transmission"
+   under Article 16B requiring licensure?
+
+**Charitable donation mechanics.** The treasury policy is charitable
+donation of appreciated property, which raises federal tax questions worth
+one line of the consult: non-cash charitable contributions above the IRS
+threshold generally require a qualified appraisal and Form 8283 substantiation
+to support a deduction, and cryptocurrency is treated as property rather
+than currency. Counsel or a CPA should confirm the substantiation
+requirements before the first transfer, and whether the intended recipients
+can accept crypto at all.
 
 ## European Union — MiCA
 
@@ -94,8 +169,26 @@ Points to verify with EU counsel:
 
 ## Suggested engagement
 
-One consult (1–2 hours) with a crypto-specialized lawyer in your country of
-residence, bringing: this briefing, the one-page site, LAUNCH.md, and the
-answers to (a) where you live and pay tax, (b) where you'll market, and
-(c) what the treasury will be used for. Those three facts determine most of
-the analysis above.
+One consult (1–2 hours) with a lawyer admitted in **North Carolina** who has
+securities or digital-asset experience. The three facts that drive most of
+the analysis are now settled and stated at the top of this document:
+North Carolina residence, disclosure-only communications, and a
+donate-never-sell treasury policy.
+
+Bring to the consult:
+
+- this briefing,
+- the one-page disclosure site (`site/index.html`),
+- `LAUNCH.md` (the launch runbook, including the treasury and LP-lock plan),
+- `contracts/CardinalsPromise.sol` — it is about twenty lines and counsel can
+  read it in two minutes.
+
+If the first lawyer contacted has no digital-asset background, ask whether
+the firm can refer one and whether any membership or plan discount applies to
+the referral — the specialization is real, and a generalist will spend
+billable time reaching the same starting point this document already provides.
+
+Afterwards, email counsel your own written summary of what you were told and
+ask them to confirm it in writing. That record costs nothing extra and is
+worth considerably more than an unrecorded conversation if the launch is ever
+questioned.
