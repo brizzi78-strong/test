@@ -35,8 +35,7 @@ who shows up, asks sharper questions, and knows when to call in help. This book
 makes sure you know what to ask.
 
 <b>Large 8.5" × 11" full-color workbook format</b> — write in it, copy the
-worksheets, take them to appointments. With Hope Brizzi, PharmD, contributor
-and project consultant. Book one of the Cardinal's Promise series.
+worksheets, take them to appointments. Book one of the Cardinal's Promise series.
 ```
 
 ## The hook line (A+ content banner, ads, social — panel-tested)
