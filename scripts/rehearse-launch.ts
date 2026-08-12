@@ -4,7 +4,7 @@
  * stack (WETH9, factory, router from the official build artifacts), then
  * runs the exact steps LAUNCH.md prescribes for mainnet:
  *
- *   1. deploy CardinalsPromise (full 250M supply to the deployer)
+ *   1. deploy Cardinal (full 250M supply to the deployer)
  *   2. create + seed the CARD/WETH pool
  *   3. execute a buyer swap (ETH -> CARD) to prove the market works
  *   4. renounceOwnership to lock the supply
@@ -64,7 +64,7 @@ async function main() {
   console.log(`Uniswap V2 deployed — router at ${router.address}`);
 
   // --- Step 1: deploy CARD --------------------------------------------
-  const token = await viem.deployContract("CardinalsPromise");
+  const token = await viem.deployContract("Cardinal");
   console.log(`CARD deployed at ${token.address}`);
   const totalSupply = (await token.read.totalSupply()) as bigint;
   console.log(`  totalSupply: ${formatEther(totalSupply)} CARD`);

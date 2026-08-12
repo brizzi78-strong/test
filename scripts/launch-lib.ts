@@ -19,7 +19,7 @@ export interface LaunchConfig {
 }
 
 // The subset of the Hardhat viem contract instance the scripts use.
-interface CardinalsPromise {
+interface Cardinal {
   read: {
     name: () => Promise<string>;
     symbol: () => Promise<string>;
@@ -43,7 +43,7 @@ export function loadLaunchConfig(url: URL): LaunchConfig {
   const raw = JSON.parse(readFileSync(url, "utf8"));
   if (!raw.token) {
     throw new Error(
-      "launch.json: fill in \"token\" with the deployed CardinalsPromise address first.",
+      "launch.json: fill in \"token\" with the deployed Cardinal address first.",
     );
   }
   if (!raw.treasury) {
@@ -83,7 +83,7 @@ export interface LaunchState {
 }
 
 export async function readState(
-  token: CardinalsPromise,
+  token: Cardinal,
   deployer: `0x${string}`,
   treasury: `0x${string}`,
   pool?: `0x${string}`,
@@ -107,9 +107,9 @@ export function describeStage(
 ): { stage: string; problems: string[] } {
   const problems: string[] = [];
 
-  if (s.name !== "Cardinals Promise" || s.symbol !== "CARD") {
+  if (s.name !== "The Cardinal" || s.symbol !== "CARD") {
     problems.push(
-      `token name/symbol is ${s.name}/${s.symbol}, expected "Cardinals Promise"/CARD — is the token address right?`,
+      `token name/symbol is ${s.name}/${s.symbol}, expected "The Cardinal"/CARD — is the token address right?`,
     );
   }
   if (s.totalSupply !== TOTAL_SUPPLY) {
@@ -161,7 +161,7 @@ export function printState(
 // unless the token is in the untouched just-deployed state, so it can't
 // double-send or fire mid-sequence.
 export async function transferTreasury(
-  token: CardinalsPromise,
+  token: Cardinal,
   publicClient: PublicClientLike,
   deployer: `0x${string}`,
   treasury: `0x${string}`,
@@ -202,7 +202,7 @@ export async function transferTreasury(
 // instead. Guards mirror transferTreasury: runs only from the
 // treasury-funded state, never twice.
 export async function fundPoolSim(
-  token: CardinalsPromise,
+  token: Cardinal,
   publicClient: PublicClientLike,
   deployer: `0x${string}`,
   treasury: `0x${string}`,
@@ -244,7 +244,7 @@ export async function fundPoolSim(
 // it can verify on-chain, makes the human confirm the ones it can't (source
 // verified, LP locked), then renounces and confirms the owner is zero.
 export async function renounce(
-  token: CardinalsPromise,
+  token: Cardinal,
   publicClient: PublicClientLike,
   deployer: `0x${string}`,
   config: { treasury: `0x${string}`; pool?: `0x${string}` },

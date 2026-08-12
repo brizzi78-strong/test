@@ -1,6 +1,6 @@
 # Hardline Rules — CARD
 
-Bright-line rules for the conduct of the Cardinals Promise token project.
+Bright-line rules for the conduct of The Cardinal token project.
 
 These are written as absolutes on purpose. A rule that requires judgment in
 the moment is a rule that fails in the moment, because the moment you are

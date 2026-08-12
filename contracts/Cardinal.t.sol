@@ -2,19 +2,19 @@
 pragma solidity ^0.8.28;
 
 import {Test} from "forge-std/Test.sol";
-import {CardinalsPromise} from "./CardinalsPromise.sol";
+import {Cardinal} from "./Cardinal.sol";
 
-contract CardinalsPromiseTest is Test {
-    CardinalsPromise token;
+contract CardinalTest is Test {
+    Cardinal token;
     address alice = makeAddr("alice");
     address bob = makeAddr("bob");
 
     function setUp() public {
-        token = new CardinalsPromise();
+        token = new Cardinal();
     }
 
     function test_Metadata() public view {
-        assertEq(token.name(), "Cardinals Promise");
+        assertEq(token.name(), "The Cardinal");
         assertEq(token.symbol(), "CARD");
         assertEq(token.decimals(), 18);
     }

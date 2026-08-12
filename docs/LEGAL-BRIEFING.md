@@ -1,4 +1,4 @@
-# Legal Briefing — Cardinals Promise (CARD) Token Launch
+# Legal Briefing — The Cardinal (CARD) Token Launch
 
 > **This is research, not legal advice.** It was prepared to make the
 > conversation with a qualified lawyer faster and cheaper, and every claim
@@ -69,7 +69,10 @@ Questions for US counsel:
 2. Does donating treasury tokens to nonprofits (rather than selling them)
    avoid "sale by the issuer" characterization entirely — and can the
    recipients' own subsequent sales be attributed back to the issuer?
-3. Does the name "Promise" itself create marketing risk, and what disclaimer language mitigates it?
+3. The token was renamed from "Cardinals Promise" to "The Cardinal" before
+   deployment, specifically to remove the implied assurance in the word
+   "promise." Is the new name free of that problem, and what disclaimer
+   language should accompany it?
 4. State-level (blue sky) and money-transmission exposure — see the North
    Carolina section below.
 
@@ -180,7 +183,7 @@ Bring to the consult:
 - this briefing,
 - the one-page disclosure site (`site/index.html`),
 - `LAUNCH.md` (the launch runbook, including the treasury and LP-lock plan),
-- `contracts/CardinalsPromise.sol` — it is about twenty lines and counsel can
+- `contracts/Cardinal.sol` — it is about twenty lines and counsel can
   read it in two minutes.
 
 If the first lawyer contacted has no digital-asset background, ask whether
