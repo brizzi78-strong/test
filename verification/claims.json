@@ -1,26 +1,26 @@
 {
-  "$comment": "Machine-checkable security claims for CardinalsPromise. Every trust claim made in TOKEN_LAUNCH_STRATEGY.md and the contract natspec must appear here, mapped to executable evidence. Run `npm run verify` \u2014 it fails if any claim's evidence is missing, stale, or failing. Do not edit a claim without editing the code/tests that back it, and vice versa.",
-  "contract": "CardinalsPromise",
-  "artifact": "artifacts/contracts/CardinalsPromise.sol/CardinalsPromise.json",
+  "$comment": "Machine-checkable security claims for Presence. Every trust claim made in TOKEN_LAUNCH_STRATEGY.md and the contract natspec must appear here, mapped to executable evidence. Run `npm run verify` \u2014 it fails if any claim's evidence is missing, stale, or failing. Do not edit a claim without editing the code/tests that back it, and vice versa.",
+  "contract": "Presence",
+  "artifact": "artifacts/contracts/Presence.sol/Presence.json",
   "claims": [
     {
       "id": "fixed-supply",
-      "statement": "Total supply is exactly 250,000,000 CARD, minted once at deployment to the deployer.",
+      "statement": "Total supply is exactly 250,000,000 HERE, minted once at deployment to the deployer.",
       "source": "TOKEN_LAUNCH_STRATEGY.md \u00a7 Token Parameters",
       "evidence": [
         {
           "type": "solidity-test",
-          "file": "contracts/CardinalsPromise.t.sol",
+          "file": "contracts/Presence.t.sol",
           "name": "test_FullSupplyMintedToDeployer"
         },
         {
           "type": "node-test",
-          "file": "test/CardinalsPromise.ts",
+          "file": "test/Presence.ts",
           "title": "mints the full fixed supply to the deployer"
         },
         {
           "type": "invariant",
-          "file": "contracts/CardinalsPromiseInvariants.t.sol",
+          "file": "contracts/PresenceInvariants.t.sol",
           "name": "invariant_TotalSupplyConstant"
         }
       ]
@@ -28,7 +28,7 @@
     {
       "id": "supply-immutable",
       "statement": "No code path can ever increase or decrease the supply: there is no mint, burn, or rebase function.",
-      "source": "CardinalsPromise.sol natspec; TOKEN_LAUNCH_STRATEGY.md \u00a7 Launch Sequence step 1",
+      "source": "Presence.sol natspec; TOKEN_LAUNCH_STRATEGY.md \u00a7 Launch Sequence step 1",
       "evidence": [
         {
           "type": "abi-absent",
@@ -41,12 +41,12 @@
         },
         {
           "type": "invariant",
-          "file": "contracts/CardinalsPromiseInvariants.t.sol",
+          "file": "contracts/PresenceInvariants.t.sol",
           "name": "invariant_TotalSupplyConstant"
         },
         {
           "type": "invariant",
-          "file": "contracts/CardinalsPromiseInvariants.t.sol",
+          "file": "contracts/PresenceInvariants.t.sol",
           "name": "invariant_BalancesSumToTotalSupply"
         }
       ]
@@ -54,7 +54,7 @@
     {
       "id": "no-pause",
       "statement": "Transfers can never be paused or frozen.",
-      "source": "CardinalsPromise.sol natspec",
+      "source": "Presence.sol natspec",
       "evidence": [
         {
           "type": "abi-absent",
@@ -68,7 +68,7 @@
     {
       "id": "no-blacklist",
       "statement": "No address can be blacklisted or blocked from transferring.",
-      "source": "CardinalsPromise.sol natspec; TOKEN_LAUNCH_STRATEGY.md \u00a7 Launch Sequence step 1",
+      "source": "Presence.sol natspec; TOKEN_LAUNCH_STRATEGY.md \u00a7 Launch Sequence step 1",
       "evidence": [
         {
           "type": "abi-absent",
@@ -84,25 +84,25 @@
     {
       "id": "no-transfer-tax",
       "statement": "Transfers move exactly the requested amount; there is no tax, fee, or skim.",
-      "source": "CardinalsPromise.sol natspec; TOKEN_LAUNCH_STRATEGY.md \u00a7 Launch Sequence step 1",
+      "source": "Presence.sol natspec; TOKEN_LAUNCH_STRATEGY.md \u00a7 Launch Sequence step 1",
       "evidence": [
         {
           "type": "solidity-test",
-          "file": "contracts/CardinalsPromise.t.sol",
+          "file": "contracts/Presence.t.sol",
           "name": "test_Transfer"
         },
         {
           "type": "invariant",
-          "file": "contracts/CardinalsPromiseInvariants.t.sol",
+          "file": "contracts/PresenceInvariants.t.sol",
           "name": "invariant_BalancesSumToTotalSupply"
         }
       ],
-      "notes": "The CardinalsPromiseHandler additionally asserts exact-amount deltas inside every fuzzed transfer/transferFrom sequence."
+      "notes": "The PresenceHandler additionally asserts exact-amount deltas inside every fuzzed transfer/transferFrom sequence."
     },
     {
       "id": "owner-powerless",
       "statement": "Ownership grants no power over the token: the only state-changing functions are the standard ERC-20 surface plus the two Ownable handover functions, none of which touch balances or supply.",
-      "source": "CardinalsPromise.sol natspec",
+      "source": "Presence.sol natspec",
       "evidence": [
         {
           "type": "abi-write-surface",
@@ -116,7 +116,7 @@
         },
         {
           "type": "solidity-test",
-          "file": "contracts/CardinalsPromise.t.sol",
+          "file": "contracts/Presence.t.sol",
           "name": "test_TransfersStillWorkAfterRenounce"
         }
       ]
@@ -128,17 +128,17 @@
       "evidence": [
         {
           "type": "solidity-test",
-          "file": "contracts/CardinalsPromise.t.sol",
+          "file": "contracts/Presence.t.sol",
           "name": "test_RenounceOwnershipSetsOwnerToZero"
         },
         {
           "type": "node-test",
-          "file": "test/CardinalsPromise.ts",
+          "file": "test/Presence.ts",
           "title": "renounces ownership to the zero address"
         },
         {
           "type": "invariant",
-          "file": "contracts/CardinalsPromiseInvariants.t.sol",
+          "file": "contracts/PresenceInvariants.t.sol",
           "name": "invariant_RenounceIsPermanent"
         }
       ]
@@ -150,12 +150,12 @@
       "evidence": [
         {
           "type": "solidity-test",
-          "file": "contracts/CardinalsPromise.t.sol",
+          "file": "contracts/Presence.t.sol",
           "name": "test_RevertWhen_TransferExceedsBalance"
         },
         {
           "type": "node-test",
-          "file": "test/CardinalsPromise.ts",
+          "file": "test/Presence.ts",
           "title": "reverts when transferring more than the sender's balance"
         }
       ]

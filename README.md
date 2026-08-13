@@ -5,8 +5,8 @@ This repository holds several projects. Jump to the one you need:
 | Project | Where | What |
 |---|---|---|
 | **The Cardinal's Toolkit — iPhone app** | `CardinalPress/` + `CardinalPress.xcodeproj` | Companion app to the NC Family Caregiver Handbook ([below](#the-cardinals-toolkit--iphone-app)) |
-| **The Cardinal's Promise / Toolkit book** | `cardinals-promise/` | Manuscript, samples, and marketing for the book |
-| **Cardinals Promise (CARD) token** | `contracts/`, `test/`, `verification/`, `site/` | Fixed-supply ERC-20 with a complete launch kit ([below](#cardinals-promise-card-token)) |
+| **The Presence / Toolkit book** | `cardinals-promise/` | Manuscript, samples, and marketing for the book |
+| **Presence (HERE) token** | `contracts/`, `test/`, `verification/`, `site/` | Fixed-supply ERC-20 with a complete launch kit ([below](#cardinals-promise-card-token)) |
 | **HireCheck — background screening service** | `hirecheck/` | Standalone service for running FCRA-aware pre-employment background checks on new hires (see `hirecheck/README.md`) |
 | **Cardinal Verify — consent-based checks** | `verify/` | A working site for consent-first reference / employment / education verification: the candidate e-signs a disclosure, then each source confirms via a private link. No CRA vendor, no criminal/credit data. Employer console + candidate-consent + verifier pages (see `verify/README.md`) |
 | **MyHR — new-hire paperwork service** | `myhr/` | Standalone onboarding service: e-signed new-hire forms (I-9, W-4, consent, etc.) with HR review and an audit trail (see `myhr/README.md`) |
@@ -118,11 +118,11 @@ This app supports organization and caregiver self-care. It is not medical, legal
 
 ---
 
-# Cardinals Promise (CARD) Token
+# Presence (HERE) Token
 
 [![verify-claims](https://github.com/brizzi78-strong/test/actions/workflows/verify.yml/badge.svg)](https://github.com/brizzi78-strong/test/actions/workflows/verify.yml)
 
-**Cardinals Promise (CARD)** — a fixed-supply ERC-20 on Ethereum. The full
+**Presence (HERE)** — a fixed-supply ERC-20 on Ethereum. The full
 250,000,000 supply is minted to the deployer at construction; there is **no
 mint function, no burn, no transfer tax, no blacklist, and no pausing** —
 the supply can never change. `Ownable` is inherited solely so
@@ -137,15 +137,15 @@ launch-day sequence in [LAUNCH_DAY_CHECKLIST.md](LAUNCH_DAY_CHECKLIST.md)).
 ## Layout
 
 ```
-contracts/CardinalsPromise.sol             # the token (OpenZeppelin ERC20 + Ownable)
-contracts/CardinalsPromise.t.sol           # Foundry-style Solidity tests (forge-std)
-contracts/CardinalsPromiseInvariants.t.sol # stateful fuzz/invariant suite (handler-based)
-test/CardinalsPromise.ts                   # TypeScript tests (node:test + viem)
+contracts/Presence.sol             # the token (OpenZeppelin ERC20 + Ownable)
+contracts/Presence.t.sol           # Foundry-style Solidity tests (forge-std)
+contracts/PresenceInvariants.t.sol # stateful fuzz/invariant suite (handler-based)
+test/Presence.ts                   # TypeScript tests (node:test + viem)
 verification/claims.json                   # launch-claims registry (claim → evidence)
 scripts/verify-claims.mjs                  # claims verifier (run via `npm run verify`)
 scripts/rehearse-launch.ts                 # full local launch rehearsal (real Uniswap V2 stack)
-scripts/add-liquidity.ts                   # create/seed the Uniswap V2 CARD/ETH pool
-ignition/modules/CardinalsPromise.ts       # Hardhat Ignition deployment module
+scripts/add-liquidity.ts                   # create/seed the Uniswap V2 HERE/ETH pool
+ignition/modules/Presence.ts       # Hardhat Ignition deployment module
 docs/AUDIT-SCOPE.md                        # cold-start package for an auditor
 docs/LEGAL-BRIEFING.md                     # cited research briefing for counsel (US + EU)
 docs/AI_VERIFICATION_GAP.md                # why the claims ledger exists
@@ -224,7 +224,7 @@ network to prove the guardrails work — no real network or funds involved.
 Source verification (step 2 of `LAUNCH_DAY_CHECKLIST.md`) goes through
 `hardhat-verify`, which ships with the toolbox. Store an
 [Etherscan API key](https://etherscan.io/apis) the same way as the RPC
-secrets, then verify the deployed address — `CardinalsPromise` takes no
+secrets, then verify the deployed address — `Presence` takes no
 constructor arguments:
 
 ```bash

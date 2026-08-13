@@ -5,7 +5,7 @@ background checks on a candidate and drive the result through a compliant
 hiring decision.
 
 It is a **standalone project** in this workspace — it has nothing to do with
-the Cardinal caregiver app, the book, or the CARD token. It lives here only
+the Cardinal caregiver app, the book, or the HERE token. It lives here only
 because that's where the work was requested.
 
 ## What it does
