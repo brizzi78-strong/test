@@ -227,13 +227,10 @@ footer a { color: var(--muted); }
 
 .crest {
   display: block;
-  margin: 0 0 2.2rem;
-  width: 3.4rem;
+  width: clamp(7rem, 22vw, 9.5rem);
   height: auto;
-  color: var(--cardinal);
+  margin: 0 0 1.6rem -0.6rem;
 }
-
-.crest svg { display: block; width: 100%; height: auto; }
 
 /* ---------- opening ---------- */
 
