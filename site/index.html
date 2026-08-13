@@ -4,92 +4,124 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Cardinal (CARD)</title>
-<meta name="description" content="The Cardinal (CARD) — a fixed-supply ERC-20 token on Ethereum. 250M hard cap, ownership renounced, liquidity locked.">
+<meta name="description" content="The Cardinal (CARD) — a fixed-supply ERC-20 token on Ethereum. Disclosure page. 250,000,000 fixed supply, ownership renounced, liquidity locked. Not offered for sale.">
 <style>
   :root {
-    --red: #D7263D; --red-deep: #8E1B2C;
-    --bg: #ffffff; --fg: #1a1a1a; --muted: #666; --card: #f7f7f8; --border: #e5e5e8;
+    --red: #B3202F; --bg: #ffffff; --fg: #17171a; --muted: #5c5c66;
+    --card: #f6f6f7; --border: #e2e2e6;
+    --warn-bg: #fdf3f2; --warn-border: #B3202F; --warn-fg: #7d1721;
   }
   @media (prefers-color-scheme: dark) {
-    :root { --bg: #121214; --fg: #ececec; --muted: #9a9aa2; --card: #1c1c20; --border: #2b2b30; }
+    :root {
+      --red: #E86172; --bg: #111113; --fg: #ececee; --muted: #9a9aa4;
+      --card: #1b1b1f; --border: #2b2b31;
+      --warn-bg: #2a1518; --warn-border: #E86172; --warn-fg: #F2AAB3;
+    }
   }
   * { margin: 0; box-sizing: border-box; }
-  body { background: var(--bg); color: var(--fg); font: 17px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
-  main { max-width: 680px; margin: 0 auto; padding: 4rem 1.25rem 5rem; }
-  .hero { text-align: center; margin-bottom: 3.5rem; }
-  .hero svg { width: 128px; height: 128px; }
-  h1 { font-size: 2.2rem; margin: 1rem 0 0.25rem; letter-spacing: -0.02em; }
+  body { background: var(--bg); color: var(--fg); font: 17px/1.65 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 660px; margin: 0 auto; padding: 3rem 1.25rem 5rem; }
+  header { border-bottom: 1px solid var(--border); padding-bottom: 1.5rem; margin-bottom: 2rem; }
+  h1 { font-size: 2rem; letter-spacing: -0.02em; margin-bottom: 0.15rem; }
   .ticker { color: var(--red); font-weight: 700; }
-  .tagline { color: var(--muted); font-size: 1.1rem; }
-  h2 { font-size: 1.3rem; margin: 2.75rem 0 0.75rem; color: var(--red); }
-  p { margin: 0.75rem 0; }
+  .sub { color: var(--muted); font-size: 1.02rem; }
+  h2 { font-size: 1.18rem; margin: 2.5rem 0 0.6rem; letter-spacing: -0.01em; }
+  p { margin: 0.7rem 0; }
+  .notice {
+    background: var(--warn-bg); border: 1px solid var(--warn-border);
+    border-left-width: 4px; border-radius: 6px;
+    padding: 1.15rem 1.35rem; margin: 1.5rem 0;
+  }
+  .notice h2 { margin-top: 0; color: var(--warn-fg); font-size: 1.05rem; }
+  .notice p { color: var(--warn-fg); margin: 0.5rem 0 0; }
+  .notice p:first-of-type { margin-top: 0.35rem; }
   table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
-  td { padding: 0.55rem 0.75rem; border-bottom: 1px solid var(--border); }
-  td:first-child { color: var(--muted); white-space: nowrap; }
-  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem 1.5rem; margin: 1rem 0; }
-  .addr { font-family: ui-monospace, monospace; font-size: 0.85rem; word-break: break-all; background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 0.6rem 0.8rem; display: block; margin: 0.5rem 0; }
-  .check { list-style: none; padding: 0; }
-  .check li { padding-left: 1.6rem; position: relative; margin: 0.5rem 0; }
-  .check li::before { content: "✓"; position: absolute; left: 0; color: var(--red); font-weight: 700; }
-  .disclaimer { font-size: 0.85rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: 3rem; padding-top: 1.5rem; }
-  a { color: var(--red); }
-  .todo { outline: 2px dashed var(--red); outline-offset: 4px; border-radius: 4px; }
+  td { padding: 0.55rem 0.7rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+  td:first-child { color: var(--muted); white-space: nowrap; width: 10.5rem; }
+  .addr { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.82rem; word-break: break-all; }
+  .pending { color: var(--muted); font-style: italic; }
+  ul { padding-left: 1.15rem; }
+  li { margin: 0.45rem 0; }
+  .none { list-style: none; padding: 0; }
+  .none li { padding-left: 1.5rem; position: relative; }
+  .none li::before { content: "—"; position: absolute; left: 0; color: var(--red); font-weight: 700; }
+  .fine { font-size: 0.87rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: 3rem; padding-top: 1.5rem; }
+  a { color: var(--red); text-underline-offset: 2px; }
+  a:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; border-radius: 2px; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.86em; background: var(--card); padding: 0.1em 0.35em; border-radius: 3px; }
 </style>
 </head>
 <body>
 <main>
-  <div class="hero">
-    <svg viewBox="0 0 256 256" role="img" aria-label="The Cardinal logo">
-      <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0" stop-color="#D7263D"/><stop offset="1" stop-color="#8E1B2C"/>
-      </linearGradient></defs>
-      <circle cx="128" cy="128" r="124" fill="url(#bg)"/>
-      <circle cx="128" cy="128" r="124" fill="none" stroke="#FFF" stroke-opacity="0.18" stroke-width="6"/>
-      <path fill="#FFF" d="M76 160c0-44 26-74 62-78l6-26 14 22c22 4 38 20 44 40l22 8-20 12c-2 34-30 60-66 60-14 0-27-4-38-11l-24 9 8-24c-5-9-8-13-8-12z"/>
-      <circle cx="150" cy="118" r="8" fill="#8E1B2C"/>
-      <path fill="none" stroke="#FFF" stroke-width="10" stroke-linecap="round" d="M70 196 q58 26 116 0"/>
-    </svg>
-    <h1>The Cardinal <span class="ticker">$CARD</span></h1>
-    <p class="tagline">A fixed-supply token on Ethereum. 250 million. Ever.</p>
-  </div>
 
-  <h2>The promise</h2>
-  <!-- TODO: this is the most important section on the page. Replace with the
-       real story: what The Cardinal means, who is behind it, and what
-       holders are part of. Everything else here is mechanics. -->
-  <p class="todo">[Write the story here — what is the promise, who is making
-  it, and why does it matter? One honest paragraph beats ten pages of
-  buzzwords.]</p>
+<header>
+  <h1>The Cardinal <span class="ticker">$CARD</span></h1>
+  <p class="sub">A fixed-supply ERC-20 token on Ethereum. This page exists so that anyone who encounters CARD can verify exactly what it is.</p>
+</header>
 
-  <h2>What's promised on-chain</h2>
-  <ul class="check">
-    <li><strong>250,000,000 CARD, fixed forever.</strong> The full supply is minted once at deployment — the contract has no mint function at all, so the supply can never change.</li>
-    <li><strong>Ownership renounced.</strong> Minting rights were destroyed at launch — no one, including the creators, can ever issue more.</li>
-    <li><strong>Liquidity locked for 12 months.</strong> The Uniswap LP tokens are time-locked; the pool cannot be withdrawn.</li>
-    <li><strong>No tricks in the contract.</strong> No transfer fees, no blocklist, no pause switch, no hidden hooks. Verified source, audited, Slither-clean.</li>
-  </ul>
+<div class="notice">
+  <h2>We are not asking you to buy this</h2>
+  <p>CARD is not offered for sale by its creator. No tokens are sold, no funds are raised, and there is no pre-sale, private round, or allocation of any kind. When people ask whether they should buy CARD, the answer given is no.</p>
+  <p>If you acquire CARD anyway, understand that it is not a stock. There is no company behind it, no earnings, no dividend, no oversight, and no one obligated to buy it back. Its price can fall to zero and stay there. Because the supply and liquidity are small, the price can be moved substantially by a single trade. Never use money you cannot afford to lose entirely.</p>
+  <p>No return of any kind is promised or implied. Nothing on this page is financial, investment, legal, or tax advice.</p>
+</div>
 
-  <h2>Token</h2>
-  <table>
-    <tr><td>Contract</td><td><span class="addr todo">[deployed address goes here after launch]</span></td></tr>
-    <tr><td>Network</td><td>Ethereum mainnet</td></tr>
-    <tr><td>Symbol</td><td>CARD</td></tr>
-    <tr><td>Decimals</td><td>18</td></tr>
-    <tr><td>Max supply</td><td>250,000,000 (fixed)</td></tr>
-    <tr><td>Distribution</td><td>80% Uniswap pool (LP locked) · 20% treasury (address published)</td></tr>
-  </table>
+<h2>What CARD is</h2>
+<p>A fixed-supply ERC-20 token. The entire supply was created once, in a single transaction, when the contract was deployed. The contract has no mint function, so no more can ever exist. After deployment, ownership of the contract was renounced — the owner address is set to zero, which means no person, including its creator, can alter the contract, the supply, or anyone's balance.</p>
+<p>There is no roadmap, no development team, no planned features, and no future work. The token is finished. That is the design, not an omission.</p>
 
-  <h2>How to get CARD</h2>
-  <div class="card">
-    <p>CARD trades on <a href="https://app.uniswap.org" rel="noopener">Uniswap</a>. Paste the contract address above into the token selector — never trust a search result or a link from strangers. Verify the address against this page and Etherscan every time.</p>
-  </div>
+<h2>What the contract cannot do</h2>
+<p>These are properties of the deployed code, not intentions. Each is verifiable by reading the source.</p>
+<ul class="none">
+  <li><strong>It cannot create more tokens.</strong> No mint function exists.</li>
+  <li><strong>It cannot destroy or move your tokens.</strong> No burn, no clawback, no admin transfer.</li>
+  <li><strong>It cannot tax your transfers.</strong> A transfer of any amount moves exactly that amount.</li>
+  <li><strong>It cannot freeze or block an address.</strong> No blocklist exists.</li>
+  <li><strong>It cannot be paused.</strong> No pause function exists.</li>
+  <li><strong>It cannot be upgraded or changed.</strong> The code is immutable.</li>
+</ul>
 
-  <p class="disclaimer">The only official pages for this token are on
-  thecardinalspromise.com — treat any other site claiming to be Cardinals
-  Promise as fake. CARD is a cryptocurrency; its price can go to zero.
-  Nothing on this page is financial advice, and no returns are promised or
-  implied. Do your own research and never spend what you cannot afford to
-  lose.</p>
+<h2>Token details</h2>
+<table>
+  <tr><td>Name</td><td>The Cardinal</td></tr>
+  <tr><td>Symbol</td><td>CARD</td></tr>
+  <tr><td>Network</td><td>Ethereum mainnet</td></tr>
+  <tr><td>Decimals</td><td>18</td></tr>
+  <tr><td>Total supply</td><td>250,000,000 CARD — fixed, unchangeable</td></tr>
+  <tr><td>Contract</td><td><span class="addr pending">[published here after deployment]</span></td></tr>
+  <tr><td>Renouncement tx</td><td><span class="addr pending">[published here after deployment]</span></td></tr>
+  <tr><td>Liquidity lock</td><td><span class="pending">[locker, expiry date, and proof published here]</span></td></tr>
+  <tr><td>Treasury address</td><td><span class="addr pending">[published here after deployment]</span></td></tr>
+</table>
+
+<h2>Where the supply is</h2>
+<p>80% of the supply was placed into a Uniswap V2 liquidity pool. The liquidity provider tokens are locked, with the locker and expiry published above.</p>
+<p>The remaining 20% is held in the treasury address published above. <strong>The treasury will never be sold.</strong> It is donated to registered nonprofit organizations on a fixed schedule, published in advance. Every donation is recorded below with its date, recipient, amount, and transaction hash, so the policy can be checked rather than believed.</p>
+
+<h2>Donation record</h2>
+<table>
+  <tr><td>Schedule</td><td><span class="pending">[published before the first donation]</span></td></tr>
+  <tr><td>Donations to date</td><td><span class="pending">[each donation listed here with transaction hash]</span></td></tr>
+</table>
+
+<h2>Verifying this yourself</h2>
+<p>Do not take any statement on this page on trust. Every claim above can be checked independently:</p>
+<ul>
+  <li>Read the contract source, verified on Etherscan at the address above.</li>
+  <li>Read the full source repository, including the test suite, at <span class="pending">[repository link]</span>.</li>
+  <li>The repository contains a machine-checked claims ledger: each public claim about the token is linked to an executable test that must pass in continuous integration.</li>
+  <li>Confirm the renouncement transaction shows the owner set to the zero address.</li>
+  <li>Confirm the liquidity lock directly with the locking service.</li>
+</ul>
+<p>Static analysis has been run against the contract with Slither. An independent third-party security audit <strong>has not</strong> been performed. If that changes, the report will be linked here.</p>
+
+<h2>Fake tokens</h2>
+<p>Anyone can deploy a contract and call it "The Cardinal" or "CARD". Tokens impersonating this one are likely to exist. The address published on this page is the only one. Verify any address against this page before interacting with it, and treat every other source — search results, social media posts, direct messages, and links from strangers — as untrustworthy.</p>
+
+<p class="fine">
+  This page is the only official source of information about CARD. It is published by the token's creator and contains only statements that can be independently verified against the Ethereum blockchain or the public source repository. It makes no claim about the token's value, present or future. CARD is a cryptocurrency and its price can go to zero. Nothing here is an offer to sell, a solicitation to buy, or financial, investment, legal, or tax advice. Do your own research, and never spend what you cannot afford to lose.
+</p>
+
 </main>
 </body>
 </html>
