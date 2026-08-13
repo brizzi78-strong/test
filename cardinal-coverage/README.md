@@ -30,6 +30,15 @@ Every page is self-contained: open it in any browser, no build, no
 dependencies, no network calls. Design tokens match the Cardinal palette used
 across the other Cardinal apps, with a light/dark toggle in each header.
 
+**The three tools are one product, not three files.** Each carries a nav strip
+linking the other two, they share a single plan list, and the tracker hands off
+directly to the outcomes log: the *Log outcome* button on any case opens
+`outcomes.html` with the case ID, plan, and a suggested event type already
+filled from that case's current status. Recording what happened is one click and
+a note, rather than retyping a case into a second tool — which matters, because
+the measurement habit is the thing the gap analysis identifies as most valuable
+and most fragile.
+
 ## `index.html` — landing page
 
 Built directly from the messaging framework in

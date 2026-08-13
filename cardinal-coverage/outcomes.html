@@ -24,6 +24,10 @@
   .logo{width:32px;height:32px;border-radius:9px;background:var(--brand);color:#fff;font-weight:900;display:grid;place-items:center;flex:none;}
   h1{font-size:1.02rem;margin:0;font-weight:800;}
   h1 small{display:block;font-weight:600;font-size:.68rem;color:var(--muted);}
+  .toolnav{display:flex;gap:.15rem;margin-left:.4rem;}
+  .toolnav a{font-size:.78rem;font-weight:700;color:var(--muted);text-decoration:none;padding:.3rem .6rem;border-radius:8px;}
+  .toolnav a:hover{color:var(--brand);background:var(--surface-2);}
+  .toolnav a[aria-current]{background:var(--brand);color:#fff;}
   .spacer{margin-left:auto;}
   .btn{background:var(--brand);color:#fff;border:0;border-radius:10px;padding:.5rem .9rem;font:inherit;font-weight:700;cursor:pointer;}
   .btn:hover{background:var(--brand-strong);}
@@ -97,6 +101,11 @@
   <div class="top-in">
     <span class="logo" aria-hidden="true">C</span>
     <h1>Outcomes Log<small>The number that sets your price and fixes your traction slide</small></h1>
+    <nav class="toolnav">
+      <a href="tracker.html">Tracker</a>
+      <a href="appeal-letters.html">Letters</a>
+      <a href="outcomes.html" aria-current="page">Outcomes</a>
+    </nav>
     <span class="spacer"></span>
     <button class="btn" id="addBtn">+ Log event</button>
     <button class="btn ghost" id="csvBtn">Export CSV</button>
@@ -138,7 +147,7 @@
     </div>
     <div class="g2">
       <div><label for="fPlan">Plan</label><input id="fPlan" list="planL" placeholder="Aetna MA">
-        <datalist id="planL"><option>Aetna MA</option><option>WellCare MA</option><option>Humana MA</option><option>UnitedHealthcare MA</option></datalist></div>
+        <datalist id="planL"><option>Aetna MA</option><option>WellCare MA</option><option>Humana MA</option><option>UnitedHealthcare MA</option><option>Blue Cross NC MA</option><option>Cigna MA</option><option>Traditional Medicare</option></datalist></div>
       <div><label for="fType">Event</label>
         <select id="fType">
           <optgroup label="Authorization">
@@ -385,6 +394,21 @@ $("themeBtn").addEventListener("click", () => {
 });
 
 load(); render();
+
+// Handoff from the tracker: outcomes.html?case=214-B&plan=Aetna%20MA&suggest=Appeal%20won
+(function fromTracker(){
+  const q = new URLSearchParams(location.search);
+  const c = q.get("case");
+  if (!c) return;
+  openDlg(null);
+  $("fCase").value = c;
+  if (q.get("plan")) $("fPlan").value = q.get("plan");
+  const sug = q.get("suggest");
+  if (sug && [...$("fType").options].some(o => o.value === sug)) $("fType").value = sug;
+  syncRecoveryFields();
+  $("fNote").focus();
+  history.replaceState(null, "", location.pathname);   // don't re-fire on reload
+})();
 </script>
 </body>
 </html>
