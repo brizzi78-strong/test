@@ -32,6 +32,8 @@ Establish which situation applies before doing anything else. Ask the dealer dir
 
 3. *Reasonable cause.* Largely unavailable. Reasonable cause excuses penalties; it does not manufacture eligibility for a credit whose statutory definition is unmet.
 
+The one precedential decision located on the credit, *Moon v. Commissioner*, 165 T.C. No. 4 (2025), does not address seller reports, but it reads the credit's timing condition as a hard statutory limit rather than a formality open to equitable adjustment. That posture does not favor any of the three arguments above. Chapter 11 sets out the full litigation and complaint record.
+
 **Why no case law exists.** The amount in dispute is $7,500 or less. That is far below the threshold at which it is rational to litigate a federal tax case, even in the Tax Court's small case procedure, where representation costs would exceed the recovery. So the claims are individually too small to litigate, the doctrine never develops, and the agency's informal accommodation is the only law there is. This is a structural feature of consumer tax credits and it is worth naming: making a benefit small and dispersed makes its legal boundaries unenforceable in practice.
 
 ## 10.4 State law: where the enforceable rights are
@@ -44,7 +46,9 @@ Establish which situation applies before doing anything else. Ask the dealer dir
 
 **Small claims court.** Often the right answer in Situation B and a credible threat in Situation A. Limits vary by state, commonly between $5,000 and $12,500, with some higher and some lower, so $7,500 is within reach in many places and $4,000 in nearly all. No lawyer is needed, filing costs are trivial, and a dealership that will ignore a customer's phone calls will usually respond to a summons.
 
-**Do not rely on the FTC's CARS Rule.** The Combating Auto Retail Scams Rule was reported vacated by the Fifth Circuit in early 2025 on procedural grounds, and in any event §5 of the FTC Act carries no private right of action. Complaints to the FTC are worth filing as a matter of record, not as a remedy.
+**Do not rely on the FTC's CARS Rule.** The Combating Auto Retail Scams Rule was vacated by the Fifth Circuit in January 2025 on procedural grounds, the Commission having failed to issue an advance notice of proposed rulemaking. The court made no finding that the conduct the rule addressed was lawful, and §5 of the FTC Act still reaches deceptive dealer advertising, as the Commission's March 2026 warning letters to 97 dealership groups confirm. But §5 carries no private right of action, so complaints to the FTC are worth filing as a matter of record rather than as a remedy.
+
+**Where the credit was advertised rather than merely unfiled**, the analysis shifts and improves. A dealer that promoted a price net of "$7,500 off" to a buyer who never qualified, or that continues to quote the federal credit after its September 30, 2025 termination, is exposed on deceptive advertising grounds independent of any filing failure. That is the FTC's stated enforcement position and it maps onto state dealer advertising regulations and UDAP statutes, which unlike §5 are privately enforceable. Chapter 11 develops this.
 
 ## 10.5 The pressure that actually works
 

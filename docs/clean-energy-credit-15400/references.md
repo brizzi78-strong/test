@@ -19,6 +19,30 @@ I.R.C. §§6417, 6418 (elective payment and transfer of certain credits).
 I.R.C. §§6721, 6722 (information return penalties).
 I.R.C. §§7431, 7433, 7434 (limited private rights of action).
 
+## Cases
+
+*Moon v. Commissioner*, 165 T.C. No. 4 (2025) (clean vehicle credit available only for the taxable year in which the vehicle is placed in service; credit denied on a 2019 return for a vehicle placed in service in 2013). **[secondary]**
+
+*National Automobile Dealers Association v. FTC* (5th Cir., January 2025) (vacating the Combating Auto Retail Scams Rule for failure to issue an advance notice of proposed rulemaking). **[secondary]** Case name and citation to be verified.
+
+## Oversight, enforcement, and complaint record
+
+Treasury Inspector General for Tax Administration, audits of the plug-in electric drive motor vehicle and clean vehicle credits, including the finding of 7,547 returns claiming approximately $23 million above the allowable threshold in processing years 2019–2022, an earlier finding that approximately 20% of alternative fuel motor vehicle credits were claimed in error, and a later report recommending changes to clean vehicle credit implementation. **[secondary]**
+
+National Taxpayer Advocate, *Electric Vehicle Tax Credits Issues and Pitfalls*, NTA Blog (June 2024); Taxpayer Advocate Service, *TAS Tax Tip: Clean Vehicle Credits*. **[secondary]**
+
+Letter from Sen. Ron Johnson and colleagues to the Commissioner of Internal Revenue on misuse of the electric vehicle tax credit (2020). **[secondary]**
+
+Federal Trade Commission, *FTC Warns 97 Auto Dealership Groups About Deceptive Pricing* (March 13, 2026), and accompanying commentary on advertising that stacks incentives, including clean vehicle credit eligibility, unavailable to a single buyer. **[secondary]**
+
+Federal Trade Commission, sweep against ten auto dealers for deceptive advertising (January 2014). **[secondary]**
+
+Holland & Knight, *Fifth Circuit Strikes Down FTC's Auto Retail Scam Rule* (February 2025); Crowell & Moring, *Auto Dealers: The FTC Is Back in the Driver's Seat* (2026). **[secondary]**
+
+National Automobile Dealers Association, *Clean Vehicle Credit Time of Sale Reporting Issues* (regulatory compliance position and advocacy for reopening the filing window). **[secondary]**
+
+NPR, reporting on denied electric vehicle credit returns (February 28, 2025); WRAL 5 On Your Side, *EV tax credit rejected, IRS explains what owners can do* (March 2025); Kelley Blue Book, *IRS Offers Help for EV Buyers With Rejected Tax Returns*. **[secondary]**
+
 ## Regulations and administrative guidance
 
 Treas. Reg. §1.30D-2 (definitions, including the seller report at §1.30D-2(b)(46)). **[secondary]**

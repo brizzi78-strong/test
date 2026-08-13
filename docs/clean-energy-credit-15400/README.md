@@ -31,10 +31,11 @@ Form 15400 is the smallest observable unit of this transformation, and reading t
 | 8 | What the form teaches about tax administration | [08-lessons-for-tax-administration.md](08-lessons-for-tax-administration.md) |
 | 9 | Conclusion, recommendations, and a research agenda | [09-conclusion.md](09-conclusion.md) |
 | 10 | Practitioner annex: legal position when a dealership refuses to file | [10-remedies-when-dealer-refuses.md](10-remedies-when-dealer-refuses.md) |
+| 11 | The documented record: litigation, complaints, and enforcement | [11-litigation-and-complaints.md](11-litigation-and-complaints.md) |
 | — | Appendices A–E | [appendices.md](appendices.md) |
 | — | References | [references.md](references.md) |
 
-Approximate length: 20,000 words including appendices.
+Approximate length: 22,000 words including appendices.
 
 ## How to read this
 
