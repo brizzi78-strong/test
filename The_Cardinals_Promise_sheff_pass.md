@@ -1795,9 +1795,9 @@ There was a stretch in late 2024, about a year before the end, when I was sure w
 
 That spring, Hope and I told him we were moving to Raleigh. I could tell he was disappointed. I'd lived close to him in Pensacola for eighteen years, almost nineteen. But he understood, and he told me to go. That was always his way, even at the end, more concerned about whether we were okay than whether we were close. The last time I saw him before the move we went to McGuire's. He looked fine. He said he wasn't worried, said as long as Donna was there he was okay. Part of me looks back and wonders if I should have stayed longer. I wouldn't have known that five weeks into my new job he'd take a turn and go downhill fast.
 
-He got pneumonia on December 23. His immune system had nothing left to fight with. Donna had been calling, and I could hear in her voice what she was trying to tell me without saying it. My mother was in Raleigh visiting, she'd made the trip from Lantana, where she'd lived since 2019, with Parkinson's making every mile harder than it used to be. I thought I could do both: go down Saturday, have a day with her, still get there in time. I was wrong about the timeline. I stayed.
+He got pneumonia on December 23. His immune system had nothing left to fight with. Donna had been calling, and I could hear in her voice what she was trying to tell me without saying it. My mother was in Raleigh visiting, she'd made the trip from Lantana, where she'd lived since 2019, with Parkinson's making every mile harder than it used to be. So I did the math the way I'd done it for ten years. He had come back from the surgery. He had come back from the pacemaker, from three rounds of immunotherapy, from the year we all flew in because I was sure we were losing him. He always came back. We would drive down Friday, I told myself, and I would have a day with my mother first, and he would still be there.
 
-My father died on Christmas Day, 2025.
+My father died on Christmas Day, 2025. A Thursday.
 
 **CHAPTER 30**
 
