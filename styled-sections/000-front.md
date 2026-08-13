@@ -86,8 +86,6 @@ Epilogue: The Cardinal's Promise
 
 A Note to the One Who Loves an Addict
 
-Tyler and Jaye
-
 The Empty Chair
 
 Lou's Way

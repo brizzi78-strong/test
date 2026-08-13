@@ -107,7 +107,11 @@ umbrella all pseudonyms live under.
 - Dave Meyer afterword: verify NFL roster claims independently + written sign-off on afterword and Ch. 6 bio claims (already pending, now flagged major by marketer).
 - Del Taco hit-and-run (Ch. 13): attorney says acceptable to keep (limitations expired); optional trim of timestamp/location if author wants zero residue.
 - Addiction-MD safety item: extend Resources disclaimer with one sentence that stopping alcohol suddenly can be medically dangerous and withdrawal may need medical supervision; clinician sign-off on Resources page.
-- Tyler and Jaye: SIGNED OFF (author confirmed 2026-07-13). Still confirm no proceeding pending over the May 30 incident before print.
+- Tyler and Jaye: SECTION REMOVED FROM THE BOOK 2026-08-13 at the author's direction — the
+  piece sat after the Epilogue and introduced an unresolved story about living people in the
+  reader's exit path. Their acknowledgment line ('for letting me tell it') was removed with it,
+  since nothing is now told. No consent question remains. Prior status, for the record:
+  SIGNED OFF (author confirmed 2026-07-13). Still confirm no proceeding pending over the May 30 incident before print.
 - Horacio/Balderas: author decision 2026-07-13 — KEEP real name. Counsel awareness noted; mother's written confirmation of the slap/threat accounts still recommended.
 - Lynda (stepmother): RENAMED to pseudonym "Donna" throughout the book, 2026-07-13, at author's direction (they are not in contact; passage review not possible). Real name preserved in this ledger and git history. The ch33 "no relation to my stepmom" aside was removed (no longer needed). Author's Note's changed-names language covers this.
 - Dave Meyer credential VERIFIED against public record 2026-07-13: Virginia Tech QB behind Jim Druckenmiller and Michael Vick; relieved injured Vick to beat Pittsburgh 37-34 in 2000; undrafted 2001; signed Indianapolis Colts 4/27/2001 (behind Peyton Manning); signed Green Bay Packers 2002 offseason. Sources: everybodywiki.com David Meyer (football player); cbssports.com player page 237159; americanfootball.fandom.com. NUANCE: no confirmation of a regular-season game appearance — "former NFL quarterback" is defensible (two NFL contracts) but ask Dave how he styles himself and use his wording. His written sign-off on the afterword + Ch. 6 still required.

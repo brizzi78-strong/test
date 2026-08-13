@@ -14,8 +14,6 @@ Dave Meyer, for thirty-five years of friendship and for the words that close thi
 
 Dr. Huet, and every nurse, aide, chaplain, and social worker I get to stand beside in the last chapter. You taught me what showing up looks like when it's a profession.
 
-Tyler and Jaye, for letting me tell it.
-
 Scott, my editor, who made these pages better and let them stay mine.
 
 Grace Nobrega, for the cover design.
