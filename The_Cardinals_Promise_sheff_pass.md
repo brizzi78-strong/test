@@ -90,8 +90,6 @@ Tyler and Jaye
 
 The Empty Chair
 
-What I'm Asking You to Do
-
 Lou's Way
 
 Afterword
@@ -2058,29 +2056,9 @@ There's an empty chair tonight, and the only thing any of us can do with it is w
 
 Rest easy, AJ. We'll keep the seat warm and the coffee bad.
 
-# **WHAT I'M ASKING YOU TO DO**
-
-This part belongs to you — the one who loves someone you can't fix, the one sitting in a parking lot afraid to walk into the room, the one still carrying the words you never got to say. I was guided through the dark by a man who would not leave. His name was Lou. Now it's my turn to hand you the map and point you at the door.
-
-The plan is short on purpose.
-
-Say the words now. I love you. I'm sorry. Thank you. I forgive you. There is no better time coming.
-
-Put the person in the bed first, not what's easiest for you.
-
-Leave the door open a crack. Keep coming back.
-
-And if the fight is yours, if it's the disease that has you, walk into the room with the folding chairs and the bad coffee, and then keep walking in. Do that, one day at a time, and I can tell you what happened to me. A past you can look at without flinching. The day you stop performing your life and start living it. And something bigger than you, carrying you the whole time.
-
-If you love someone who is dying, go sit with them. If you don't know where to begin, CaringInfo, at caringinfo.org, will help you find care and find the words. If you or someone you love is drowning in addiction, call the SAMHSA National Helpline at 1-800-662-4357. It is free, it is confidential, and someone is there.
-
-Then do the smallest brave thing in front of you. Make the call. Cross the parking lot. Open the door.
-
-Love shows up where it's needed, not where it's earned. That is the cardinal's promise. It was done for me.
-
 # **LOU'S WAY**
 
-Not things he said. Things he did, distilled. My father never gave a speech in his life, and I won't put one in his mouth now. But if you asked me what Lou knew, this is it.
+Not things he said. Things he did, distilled. If you asked me what Lou knew, this is it.
 
 He showed up before he explained.
 

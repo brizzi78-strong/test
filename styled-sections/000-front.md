@@ -90,8 +90,6 @@ Tyler and Jaye
 
 The Empty Chair
 
-What I'm Asking You to Do
-
 Lou's Way
 
 Afterword

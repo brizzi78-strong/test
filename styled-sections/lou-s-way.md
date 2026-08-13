@@ -1,6 +1,6 @@
 # **LOU'S WAY**
 
-Not things he said. Things he did, distilled. My father never gave a speech in his life, and I won't put one in his mouth now. But if you asked me what Lou knew, this is it.
+Not things he said. Things he did, distilled. If you asked me what Lou knew, this is it.
 
 He showed up before he explained.
 
