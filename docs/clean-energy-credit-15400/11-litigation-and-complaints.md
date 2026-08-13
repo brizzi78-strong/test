@@ -42,17 +42,72 @@ That asymmetry is not a criticism of TIGTA, whose statutory mandate runs to reve
 
 ## 11.4 Deceptive marketing: the live enforcement front
 
-The one area with genuine, current enforcement activity is advertising, and it lands directly on the credit.
+The one area with genuine, current enforcement activity is advertising, and it lands directly on the credit. It also, unusually for this dissertation, required no new law: the regulatory grammar that governs deceptive incentive advertising already fit the clean vehicle credit exactly, because the credit behaved like a factory rebate with eligibility strings.
 
-**The FTC's March 2026 warning letters.** On March 13, 2026 the Federal Trade Commission sent warning letters to 97 auto dealership groups concerning deceptive pricing and advertising. The letters restate the total-price principle: an advertised price must reflect what the consumer will actually be required to pay, including mandatory dealer-imposed fees.
+### 11.4.1 Why this credit was structurally prone to deceptive advertising
 
-The commentary accompanying that sweep names the EV credit specifically. Advertising that promotes "$7,500 OFF" by stacking incentives that no single buyer can simultaneously claim is deceptive, and clean vehicle credit eligibility appears in the enforcement discussion alongside conquest, loyalty, military, and college-graduate incentives as exactly this kind of ingredient. The underlying rule is long-standing: an incentive that is not available to everyone, or that is mutually exclusive with another, may not be baked into an advertised price as though it were.
+The point made in Chapter 4 returns here in a consumer-protection register. Point-of-sale transfer simplified the *payment* of the credit and did nothing whatsoever to simplify *eligibility*. Four independent qualification axes determined what any given reader of an advertisement would actually receive:
 
-**Why this credit was unusually well suited to that abuse.** The point made in Chapter 4 returns here in a consumer-protection register. Point-of-sale transfer simplified the *payment* of the credit and did nothing whatsoever to simplify *eligibility*. Whether a given buyer would receive $7,500, $3,750, or nothing depended on adjusted gross income, the vehicle's price against a cap that turned on a contested SUV classification, the plant of final assembly, two independently escalating sourcing thresholds, and foreign-entity exclusions phasing in across two years. An advertisement quoting a price "after the $7,500 federal tax credit" was therefore false as to a substantial share of the people who read it, and the seller frequently could not have known which share.
+1. **The buyer's income.** Adjusted gross income above $300,000 joint, $225,000 head of household, or $150,000 otherwise disqualified the buyer entirely, and the test could be satisfied by the current or prior year, so even the buyer often did not know the answer at the moment of purchase.
+2. **The vehicle's price.** Above $80,000 for vans, SUVs, and pickups, or $55,000 for everything else, the credit was zero. Whether a given crossover counted as an SUV moved the cap by $25,000 and was itself contested.
+3. **Where it was built and sourced.** Final assembly outside North America disqualified the vehicle. The two $3,750 halves turned on critical-mineral and battery-component thresholds that escalated every January, with foreign-entity exclusions phasing in for components in 2024 and minerals in 2025.
+4. **Purchase versus lease.** A lease routed the benefit through §45W to the lessor, with no consumer eligibility conditions and no obligation to pass anything through.
 
-**The CARS Rule is gone, and the standard is not.** The FTC's Combating Auto Retail Scams Rule, which would have codified offering-price disclosure, add-on consent, and related requirements, was vacated by the Fifth Circuit in January 2025 on procedural grounds: the Commission had not issued an advance notice of proposed rulemaking. The court made no finding that the conduct the rule addressed was lawful. Section 5 of the FTC Act continues to reach deceptive dealer advertising, as the 2026 warning letters demonstrate and as earlier enforcement sweeps against auto dealers had already established. For a private buyer this matters less than it appears, because §5 carries no private right of action. State dealer advertising regulations and state UDAP statutes remain the enforceable route for an individual, which returns the analysis to Chapter 10.
+The outcome for any individual was therefore $7,500, $3,750, or nothing, determined by facts the advertisement could not know and the buyer often could not either. An advertisement quoting a price "after the $7,500 federal tax credit" was consequently false as to a substantial share of the people who read it. This is not incidental to the credit's design. A subsidy with four independent eligibility axes and a headline number is an advertising problem waiting to happen, and it duly happened.
 
-**A live 2026 problem.** After September 30, 2025 there is no federal clean vehicle credit for a new purchase. Any advertising that continues to quote a price net of the federal credit, or that implies the credit remains available, is now straightforwardly false rather than merely conditional. Stale creative, dealer websites, and third-party listing feeds are slow to update, and the population most likely to rely on such an advertisement is the population least likely to know the statute was repealed. This is the most tractable deceptive-marketing exposure in the entire area and it should be a priority for state enforcers.
+### 11.4.2 The federal standard
+
+**The FTC's March 2026 warning letters.** On March 13, 2026 the Federal Trade Commission sent warning letters to 97 auto dealership groups concerning deceptive pricing and advertising. The letters restate the total-price principle: an advertised price must reflect what the consumer will actually be required to pay, including mandatory dealer-imposed fees, excluding only government charges such as taxes. The scale of the action, 97 groups in a single wave, indicates a systematic review rather than complaint-driven investigation.
+
+The commentary accompanying that sweep names the EV credit specifically. Advertising that promotes "$7,500 OFF" by stacking incentives that no single buyer can simultaneously claim is deceptive, and clean vehicle credit eligibility appears in the enforcement discussion alongside conquest, loyalty, military, and college-graduate incentives as exactly this kind of ingredient. The underlying rule is long-standing: an incentive that is not available to everyone, or that is mutually exclusive with another, may not be folded into an advertised price as though it were universally available.
+
+**The CARS Rule is gone, and the standard is not.** The Combating Auto Retail Scams Rule, which would have codified offering-price disclosure, add-on consent, and related requirements, was vacated by the Fifth Circuit in January 2025 on procedural grounds: the Commission had not issued an advance notice of proposed rulemaking. The court made no finding that the conduct the rule addressed was lawful. Section 5 of the FTC Act continues to reach deceptive dealer advertising, as the 2026 letters demonstrate and as earlier sweeps against auto dealers, including a ten-dealer action in January 2014 and a 2015 Ohio settlement, had already established.
+
+For a private buyer this matters less than it appears, because §5 carries no private right of action. The federal standard sets the norm; it does not give the individual a remedy.
+
+### 11.4.3 The state layer, which is the enforceable one
+
+State motor vehicle advertising regulation is where this becomes actionable for an individual, and the fit is close enough to be striking.
+
+These rules were written decades ago for factory rebates: loyalty cash, military discounts, college-graduate programs, captive-finance incentives. Their consistent structure is that an incentive may be built into an advertised price only if it is generally available, and that any eligibility limitation must be separately and conspicuously disclosed. Washington's formulation requires that a rebate be available to the general public, available in combination with other advertised rebates, and expressed as a component part of the advertised price. The broader principle across jurisdictions is that a dealer may not represent that a discount, rebate, bonus, incentive, or price is available unless it is available to all consumers or every qualification and restriction is disclosed. Comparable provisions appear in Oregon's administrative rule on motor vehicle advertising, Virginia's statutory regulation of advertising practices, the Ohio Attorney General's motor vehicle advertising guidelines, the Texas DMV's advertising rules, and the Mississippi Motor Vehicle Commission's advertising chapter.
+
+The clean vehicle credit slotted into that template without modification. It was an incentive not available to all consumers, subject to disclosed-or-not eligibility restrictions, frequently advertised as a component of price. Every element the state rules were built to police was present.
+
+Two consequences follow. First, no new consumer-protection legislation was needed, and none was passed, because the existing regime already covered the conduct. Second, and more usefully for an individual buyer, these state rules are typically enforceable through the state's UDAP statute, which means private suit with fee-shifting rather than a complaint to an agency that may or may not act. This is the concrete content of the recommendation in Chapter 10 that the state route is the real one.
+
+### 11.4.4 The lease channel, where the label itself was wrong
+
+The sharpest deceptive-marketing question in the whole area arises on leases, and it is a labeling problem rather than an eligibility problem.
+
+Under §45W the *lessor* was the taxpayer and the credit was the lessor's. Nothing required any of it to reach the lessee. Where a lessor chose to pass value through, it appeared as capitalized cost reduction, usually marketed under a name like "EV lease bonus" or, less accurately, as "the $7,500 federal tax credit."
+
+The reported example that makes the point cleanly is Hyundai's advertised "$7,500 EV Lease Bonus" on an Ioniq 5 that was not manufactured in North America. The vehicle was categorically ineligible for the consumer credit under §30D. The money was real, and it was not the consumer's tax credit; it was the lessor's commercial credit, passed through at the lessor's discretion, on a vehicle the consumer could not have claimed a cent for by buying it.
+
+Three features compound the problem.
+
+**The consumer never had the tax attribute.** Describing the pass-through as the consumer's "tax credit" misstates whose credit it is and implies an entitlement the consumer does not hold. If the lessor had reduced or withdrawn the pass-through, the consumer would have had no claim to it.
+
+**Pass-through was discretionary and unverifiable.** Capitalized cost reduction is a negotiated figure inside a lease. A consumer cannot readily determine whether the full $7,500 reached them, some fraction did, or the number was absorbed into a residual or money-factor adjustment that gave back part of it. Chapter 6 notes that pass-through appears to have been common because lease markets are competitive; common is not verifiable, and the advertising asserted a specific number.
+
+**The disclosure regime long predates the credit.** Consumer lease advertising is governed by the Consumer Leasing Act and Regulation M, which require disclosure of amounts due at lease inception, including any capitalized cost reduction. The FTC has enforced this repeatedly, including coordinated actions in the late 1990s against dealers and national advertising agencies over lease advertising that obscured inception costs. A lease advertisement that headlines a $7,500 credit while leaving the actual capitalized cost reduction unstated engages a disclosure obligation that has existed for thirty years.
+
+The lease channel therefore combined a discretionary benefit, a misleading label, a figure the consumer could not verify, and an established disclosure regime. It is the most promising unexplored enforcement target in this area and, as §11.6 records, no reported action has addressed it.
+
+### 11.4.5 The live 2026 exposure
+
+After September 30, 2025 there is no federal clean vehicle credit for a new purchase or a new lease. Advertising that continues to quote a price net of the federal credit, or that implies the credit remains available, is now straightforwardly false rather than merely conditional on the reader's circumstances.
+
+This is the most tractable deceptive-marketing problem in the entire area, for three reasons. The falsity is objective and requires no inquiry into any individual buyer's income or the vehicle's sourcing. The evidence is public and archived, since it sits on dealer websites, third-party listing feeds, and social accounts. And the harm falls disproportionately on buyers who do not follow tax legislation, which is to say the population least equipped to detect the error themselves.
+
+Stale creative persists. Listing feeds propagate old incentive data through syndication, and a dealer that updated its own site may still appear elsewhere with a credit-inclusive price. State enforcers with existing motor vehicle advertising authority could address this with a sweep modeled on the FTC's March 2026 letters, and none appears to have done so.
+
+### 11.4.6 The recurring asymmetry
+
+One structural observation ties this back to the dissertation's argument.
+
+Enforcement lands on the dealer. The dealer is the party that ran the advertisement, and under the state rules it is the dealer's obligation to disclose the eligibility limitations. But the dealer could not know the buyer's adjusted gross income, could not resolve a contested SUV classification with certainty, and depended on manufacturer representations for sourcing compliance that changed every January. The party legally exposed for the accuracy of the disclosure was, on several of the four axes, not the party with the information.
+
+That is the same pattern identified in Chapter 5 for the seller report, arriving through a different door. In both cases the retail intermediary was made to carry a compliance obligation whose inputs it did not control, and in both cases the consumer's protection depended on that intermediary getting right something it was poorly positioned to get right. A credit with four independent eligibility axes and a single headline number distributes risk this way by construction, whatever the enforcement posture.
 
 ## 11.5 The complaint that worked
 

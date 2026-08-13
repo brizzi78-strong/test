@@ -35,7 +35,13 @@ Letter from Sen. Ron Johnson and colleagues to the Commissioner of Internal Reve
 
 Federal Trade Commission, *FTC Warns 97 Auto Dealership Groups About Deceptive Pricing* (March 13, 2026), and accompanying commentary on advertising that stacks incentives, including clean vehicle credit eligibility, unavailable to a single buyer. **[secondary]**
 
-Federal Trade Commission, sweep against ten auto dealers for deceptive advertising (January 2014). **[secondary]**
+Federal Trade Commission, sweep against ten auto dealers for deceptive advertising (January 2014); Ohio auto dealers settlement (November 2015); coordinated actions on deceptive automobile lease advertising against dealers and national advertising agencies (1998). **[secondary]**
+
+Consumer Leasing Act and Regulation M, disclosure requirements for consumer lease advertising, including amounts due at lease inception and capitalized cost reduction. **[secondary]**
+
+State motor vehicle advertising regulations governing rebate and incentive disclosure, including Or. Admin. Code §137-020-0050; Va. Code §46.2-1581; Washington Attorney General dealer advertising guidance; Ohio Attorney General, *Guidelines for Motor Vehicle Advertising*; Texas DMV motor vehicle advertising rules; Mississippi Motor Vehicle Commission, Chapter 4, Vehicle Advertising Regulation. **[secondary]**
+
+Consumer Reports, *What to Know About Leasing an EV or PHEV With a Tax Credit*, and reporting on manufacturer "EV lease bonus" promotions including the Hyundai Ioniq 5 example. **[secondary]**
 
 Holland & Knight, *Fifth Circuit Strikes Down FTC's Auto Retail Scam Rule* (February 2025); Crowell & Moring, *Auto Dealers: The FTC Is Back in the Driver's Seat* (2026). **[secondary]**
 
