@@ -18,9 +18,11 @@ tools, and the operational reference they're built on.
 | `tracker.html` | **Working prototype** — the authorization dashboard the landing page advertises |
 | `appeal-letters.html` | **Working prototype** — denial and termination appeal letter builder |
 | `outcomes.html` | **Working prototype** — outcomes log; the measurement instrument behind the traction number |
+| `rules.html` | **Working prototype** — plan rules registry; what each payer requires, dated and sourced |
 | `docs/nc-snf-ma-reference.md` | North Carolina filing routes, PT documentation standards, appeal data |
 | `docs/gap-analysis.md` | Honest distance between these artifacts and a fundable company |
 | `docs/audit-2026-08.md` | Independent 20-agent audit, with remediation status |
+| `docs/rules-registry.md` | What a production plan-rules registry requires — and why it is the moat |
 
 `index.html` and `investors.html` are deliberately separate documents for two
 different audiences, and neither links to the other — a buyer should not land on
@@ -30,7 +32,7 @@ Every page is self-contained: open it in any browser, no build, no
 dependencies, no network calls. Design tokens match the Cardinal palette used
 across the other Cardinal apps, with a light/dark toggle in each header.
 
-**The three tools are one product, not three files.** Each carries a nav strip
+**The four tools are one product, not four files.** Each carries a nav strip
 linking the other two, they share a single plan list, and the tracker hands off
 directly to the outcomes log: the *Log outcome* button on any case opens
 `outcomes.html` with the case ID, plan, and a suggested event type already
@@ -194,6 +196,30 @@ day late), several miscited regulations, and overstated statistics; those are
 fixed. The appeal letters carry an unresolved standing question flagged on the
 page and awaiting counsel. Findings in the HIGH and STRATEGIC sections remain
 partly open and are tracked in that document.
+
+## `rules.html` — plan rules registry
+
+Every payer runs its own submission routes, turnaround times, reauthorization
+cadences, appeal fax numbers, and clinical criteria, and they change without
+notice. This tracks them with the provenance that makes them safe to rely on:
+every entry carries its **source**, the date a **human last confirmed it**, and a
+**review interval**. Past review an entry turns amber; at twice the interval it
+turns red and the page says plainly not to rely on it. Superseded values are
+retained with the date they lapsed — that history is what proves a plan moved its
+own requirement mid-stay.
+
+Seeded with eight rules confirmed against named sources during research: the
+Aetna and WellCare NC submission routes (including the warning that the 2026
+EviCore post-acute program does *not* cover NC), the Acentra QIO contact and
+region, and the federal layer — CMS-0057-F turnaround, 42 CFR 422.112(b)(8)
+duration, 422.101(b)(6) criteria, the NOMNC effective-date convention, and the
+422.626 burden of proof with the CMS-4205-F untimely-appeal right. Nothing is
+scraped or inferred.
+
+Import/export is JSON so the registry can migrate to a shared backend without
+retyping. [`docs/rules-registry.md`](docs/rules-registry.md) covers what that
+production version requires — and argues this registry, not the deadline engine,
+is the defensible asset.
 
 ## Data handling
 
