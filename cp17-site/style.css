@@ -221,3 +221,53 @@ footer a { color: var(--muted); }
 }
 
 .legal { font-size: 0.76rem; line-height: 1.6; color: var(--faint); margin-top: 1.6rem; }
+
+
+/* ---------- the cardinal ---------- */
+
+.crest {
+  display: block;
+  margin: 0 0 2.2rem;
+  width: 3.4rem;
+  height: auto;
+  color: var(--cardinal);
+}
+
+.crest svg { display: block; width: 100%; height: auto; }
+
+/* ---------- opening ---------- */
+
+.lede::first-letter {
+  float: left;
+  font-size: 3.35em;
+  line-height: 0.82;
+  padding: 0.06em 0.1em 0 0;
+  font-weight: 400;
+  color: var(--cardinal);
+}
+
+/* ---------- section labels ---------- */
+
+h2 {
+  padding-top: 1.6rem;
+  border-top: 1px solid var(--rule);
+}
+
+h2:first-of-type { border-top: 0; padding-top: 0; }
+
+/* ---------- refinements ---------- */
+
+.give li:last-child { margin-bottom: 0; }
+
+.mark {
+  border-left-width: 3px;
+  font-size: 1.02rem;
+}
+
+blockquote { margin: 2rem 0; padding: 0; font-style: italic; color: var(--muted); }
+
+::selection { background: var(--cardinal); color: var(--paper); }
+
+@media (prefers-reduced-motion: no-preference) {
+  a { transition: color 120ms ease; }
+}
