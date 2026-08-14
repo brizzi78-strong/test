@@ -105,3 +105,19 @@ The research environment for this dissertation had restricted access to primary-
 Wayback targets for confirmation: `tesla.com/modely` for January 2024 and November 2024, and `tesla.com` for late September 2025. Preserve captures with URL and archive timestamp visible in frame.
 
 **Negative findings requiring independent confirmation.** Chapter 11 §11.6 reports that no published decision on entitlement where the seller report went unfiled, no certified buyer class action, no state attorney general action specific to EV credit advertising, no decision on §45W lease pass-through, and no publicized enforcement action for fraudulent seller reports could be located. These are absences in the sources reachable from this research environment, not confirmed absences in the litigation record. Each should be re-run against a full-text litigation database before any submitted version relies on them.
+
+## Appendix F. Evidence retrieval status
+
+The advertising material in Chapter 11 §11.4 rests on secondary reporting. No archived capture was retrieved, because the research environment's network policy blocked outbound HTTP to `web.archive.org`, `archive.ph`, `timetravel.mementoweb.org`, `tesla.com`, and every other general host attempted; only a search tool was available, returning summaries rather than page content or images.
+
+`evidence/RETRIEVAL.md` sets out a claim-by-claim confirmation checklist in six groups, and `evidence/fetch-captures.sh` retrieves nineteen target captures from the Wayback availability API when run on a machine with ordinary internet access. Until that is done, every specific advertising claim in §11.4.6 should be read as reported rather than established.
+
+Three items in that checklist are load-bearing for arguments that now run through other chapters, and should be confirmed first:
+
+1. **Group B2**, the February 2023 MSRP reclassification and Tesla's price increase, which supplies the seller-capture counter-evidence in Chapter 6 §6.2 and the multi-episode caution in Chapter 9 research item 4.
+2. **Group C3**, the October 15, 2018 order deadline, which supplies the low-salience control event in Chapter 7 Design 3b.
+3. **Group D3**, the Model Y Standard content deletions, which supply the quality-adjustment argument running through Chapters 6, 7, and 9.
+
+If any of the three cannot be confirmed, the dependent passages in those chapters must be revised rather than merely footnoted.
+
+A further correction is recorded here for transparency. An earlier draft of §11.4.6 asserted that Tesla headlined the credit-inclusive price and relegated the eligibility qualification to a footnote. Further research showed the picture to be mixed: the configurator displayed the actual price first, larger and bolded, with the savings figure smaller and greyed beneath it, while the landing and inventory pages led with the credit-inclusive figure. The section was rewritten accordingly, and the resulting claim, that a single seller ran different prominence conventions on different surfaces simultaneously, is both more defensible and more interesting than the original. Checklist rows B2, B3, and B7 exist to settle it.

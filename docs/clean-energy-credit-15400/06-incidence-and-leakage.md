@@ -26,6 +26,12 @@ That is not a price cut. It is a quality-adjusted price increase presented as on
 
 The episode also speaks to the direction of incidence, and it points the same way as the discount evidence. A firm that had been capturing the subsidy as producer surplus would have had no need to restructure its product line when the subsidy vanished. Restructuring within a week is the behavior of a firm that had been passing the money through and suddenly had to find $7,500 of consumer-facing value somewhere else.
 
+**Evidence pointing the other way, which should not be suppressed.** In February 2023, when Treasury reclassified certain crossovers as SUVs and thereby raised the applicable MSRP cap from $55,000 to $80,000, Tesla raised the price of the Model Y within days. The reclassification widened eligibility; the seller immediately captured part of the widening.
+
+That is direct evidence of seller capture, and it sits uncomfortably beside the October 2025 evidence of pass-through. The two are reconcilable, and the reconciliation is instructive. The February 2023 change relaxed a *cap*, which mechanically created headroom between the old price and the new ceiling: a seller facing a binding constraint that is loosened will move into the space, and demand conditions in early 2023 were strong. The October 2025 change removed the *subsidy itself* under weak demand conditions. Incidence is not a constant of the market; it is a function of whether supply or demand is binding at the moment the policy moves, and it can run in opposite directions within the same program and the same firm inside three years.
+
+The practical consequence for research is that any single-episode estimate of pass-through for this credit should be treated as local to its episode. The February 2023 reclassification and the September 2025 termination are two natural experiments on the same instrument with apparently opposite signs, and a study using only one will reach a confident and misleading conclusion. Chapter 9's research agenda should be read with that in mind.
+
 ## 6.3 Marginality: most recipients were inframarginal
 
 The uncomfortable finding is that most people who received the credit would have bought the vehicle without it. Estimates reported in the Congressional Research Service's review of the economics of these credits put the inframarginal share at roughly 70%, drawing on the work of Xing, Leard and Li.

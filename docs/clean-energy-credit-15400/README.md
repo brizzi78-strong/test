@@ -32,10 +32,17 @@ Form 15400 is the smallest observable unit of this transformation, and reading t
 | 9 | Conclusion, recommendations, and a research agenda | [09-conclusion.md](09-conclusion.md) |
 | 10 | Practitioner annex: legal position when a dealership refuses to file | [10-remedies-when-dealer-refuses.md](10-remedies-when-dealer-refuses.md) |
 | 11 | The documented record: litigation, complaints, and enforcement | [11-litigation-and-complaints.md](11-litigation-and-complaints.md) |
-| — | Appendices A–E | [appendices.md](appendices.md) |
+| — | Appendices A–F | [appendices.md](appendices.md) |
 | — | References | [references.md](references.md) |
+| — | Evidence retrieval kit: confirmation checklist and capture script | [evidence/RETRIEVAL.md](evidence/RETRIEVAL.md) |
 
-Approximate length: 22,000 words including appendices.
+Approximate length: 36,000 words including appendices.
+
+## Evidence status
+
+The advertising material in Chapter 11 §11.4 could not be confirmed against archived captures, because the research environment's network policy blocked every general outbound host, including `web.archive.org` and `tesla.com`. It rests on secondary reporting and is flagged throughout.
+
+`evidence/RETRIEVAL.md` is a claim-by-claim confirmation checklist in six groups; `evidence/fetch-captures.sh` pulls nineteen target captures from the Wayback availability API when run on a machine with normal internet access. Appendix F records which three checklist items are load-bearing for arguments in other chapters, and what must be revised if they fail.
 
 ## How to read this
 
