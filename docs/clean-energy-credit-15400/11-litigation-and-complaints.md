@@ -101,13 +101,83 @@ This is the most tractable deceptive-marketing problem in the entire area, for t
 
 Stale creative persists. Listing feeds propagate old incentive data through syndication, and a dealer that updated its own site may still appear elsewhere with a credit-inclusive price. State enforcers with existing motor vehicle advertising authority could address this with a sweep modeled on the FTC's March 2026 letters, and none appears to have done so.
 
-### 11.4.6 The recurring asymmetry
+### 11.4.6 Case study: Tesla and the Model Y
+
+The single best-documented instance of credit-inclusive advertising in the United States is Tesla's, and it repays close attention for reasons that go beyond volume. Every claim in this subsection is drawn from secondary reporting; none has been confirmed against an archived capture, and Appendix E flags the whole subsection accordingly.
+
+**Why Tesla is the decisive test case.** Three features make it so.
+
+First, Tesla sells directly. Manufacturer and seller are the same legal person, which inverts the information asymmetry described in §11.4.7 below. A franchised dealer running a credit-inclusive advertisement depends on manufacturer representations about assembly and battery sourcing that change every January. Tesla knew where its vehicles were assembled, knew its battery supply chain, and set its own prices against the MSRP cap. On three of the four eligibility axes, the accuracy of Tesla's advertising was entirely within Tesla's knowledge. That isolates the fourth axis, the buyer's income, more cleanly than any other seller in the market.
+
+Second, the Model Y was the volume vehicle. It sold 163,454 units in the first half of 2026 alone, and Tesla held roughly half the U.S. electric vehicle market. Tesla's advertising conventions were, to a first approximation, the market's advertising conventions.
+
+Third, Tesla has the longest continuous record of net-of-subsidy price display of any seller in the industry, and that record includes a prior adverse regulatory finding.
+
+**The prior finding: gas-savings pricing, 2019.** Long before the Inflation Reduction Act, Tesla's website displayed vehicle prices net of estimated future fuel savings and government incentives, which made the cars appear thousands of dollars cheaper than their actual purchase price. In March 2019 Germany's fair competition body, the Wettbewerbszentrale, told Tesla to stop including projected fuel savings in displayed cost, giving a deadline of March 20. Tesla's German site was reported as adjusted to show only the base purchase price by March 8. Tesla retained the gas-savings pricing on its U.S. site.
+
+This episode is the strongest comparative evidence in the chapter and deserves to be stated as such. The same firm ran the same pricing display in two jurisdictions. One regulator identified it as misleading and stopped it within weeks, using ordinary competition law and no new rulemaking. The other did not act, and the practice continued in the United States for years afterward. Whatever explains the divergence, it is not that the practice was analytically difficult to characterize.
+
+It also establishes the baseline into which the clean vehicle credit arrived. By 2023 Tesla was operating a price display that already netted out one contested category of hypothetical consumer savings. The federal credit was inserted as an additional deduction into a presentation format whose premise had been rejected elsewhere.
+
+**The credit-inclusive display, 2023 to 2025.** The documented record runs as follows.
+
+In July 2023 Tesla's configurator carried a note that a reduction in the credit amount was "likely" after December 31, reflecting the tightening sourcing thresholds. This is significant in two directions. It is a disclosure, and a reasonably forthright one. It is also evidence that Tesla understood the vehicle-side eligibility to be volatile and time-limited while continuing to headline the full credit in price displays.
+
+Contemporaneous listings preserve the advertised framing with dates and figures: a 2023 Model Y at $47,240 "for qualifying buyers" after the $7,500 credit; a 2024 Model Y at $40,490 "for qualified buyers"; a Long Range All-Wheel Drive at $48,490 less $7,500 for qualifying buyers, presented as $37,080.
+
+By November 2024, with the credit under political threat, Tesla was reported to be putting incentives "on blast," with the credit-inclusive price displayed front and center in bold print on the inventory page, before the click-through to purchase or lease.
+
+Three observations follow.
+
+*Placement is the legal question.* The state standard is that eligibility limitations be disclosed clearly and conspicuously. A credit-inclusive figure in bold at the top of an inventory page, with the qualification carried in a short phrase or a downstream page, inverts the prominence the rule contemplates. The headline is the inclusive number; the limitation is the footnote. That is the structure the rules exist to prevent.
+
+*"For qualified buyers" is the whole case in four words.* Against three adjusted-gross-income thresholds testable in either of two years, an MSRP cap turning on vehicle classification, a final assembly requirement, and two annually escalating sourcing thresholds with foreign-entity exclusions phasing in across 2024 and 2025, a bare "for qualified buyers" is very unlikely to satisfy a standard requiring that every qualification and restriction be disclosed. Whether it does is the cleanest available test case in the entire record, and it was never litigated.
+
+*Tesla's exposure is narrower than a franchised dealer's, and not zero.* Because Tesla controlled assembly, sourcing, and price, its claims on those axes were within its knowledge and, for the Model Y across most of 2024 and 2025, substantially accurate. The income axis was not knowable by Tesla or by any seller. So the residual misdescription attributable to Tesla is close to a pure income-eligibility problem, uncontaminated by the sourcing volatility that muddies every franchised-dealer example. For a researcher, that is a feature.
+
+**September 2025: the deadline banner.** As termination approached, Tesla added "Order by September 30 to Qualify" to the federal tax advertisement on its homepage, and published a clarification that orders placed on September 30 would qualify with no delivery required.
+
+That clarification is the statutory acquisition rule, written binding contract plus payment, translated into marketing copy and pushed to consumers at national scale. Chapter 7 argues that a conventional regression discontinuity at September 30 is invalid because the running variable was deliberately manipulated, and that the bunching is therefore the estimand rather than the nuisance. The Tesla homepage is documentary proof of that manipulation. The pile-up of contracts against the deadline was not an artifact of consumer behavior discovered after the fact; it was actively produced by sellers advertising the boundary.
+
+There is an irony worth recording. The most consequential credit advertising Tesla ran was also its most precise. The deadline was objective, knowable, and identical for every reader, so the copy could be exact. Eligibility was subjective, buyer-specific, and unknowable, so the copy could not be. The advertising was accurate in inverse proportion to how much it mattered to any individual buyer's actual entitlement.
+
+**October 2025: the response, and what it reveals about incidence.** On October 7, 2025, one week after termination, Tesla introduced "Standard" versions of the Model 3 and Model Y. The Model Y Standard was priced at $39,990, roughly $5,000 below the renamed "Premium" trim.
+
+The price reduction was achieved by removing content. Reported deletions include vegan leather seats replaced by textile and leather-look materials, the fifteen-speaker audio system replaced by seven speakers, no AM/FM radio, no rear entertainment touchscreen, manual rather than automatic rear air vents, no front seat ventilation, no rear seat heating, manual steering wheel adjustment, and manual folding mirrors.
+
+This is the most analytically valuable event in the case study, and its significance is easy to miss because it was reported as a price cut. It is not a price cut. It is a quality-adjusted price increase presented as one.
+
+Consider what it does to the incidence analysis in Chapter 6. Standard estimation holds the product constant and measures how the transaction price moves when the subsidy is withdrawn. Tesla instead held the price approximately constant and removed content. The $7,500 withdrawal was therefore absorbed through three channels, not two: some by manufacturer margin, some by consumers paying more, and some by consumers receiving less for the same money. The third channel is invisible to any specification that regresses price on subsidy without hedonic controls, and it will bias the estimated pass-through and the implied elasticity in ways that are not obviously signed.
+
+Chapter 7's research agenda should be amended accordingly: any estimate of the termination's effect must control for content, because at least one major manufacturer responded on the content margin rather than the price margin, and did so within a week.
+
+The episode also speaks to the direction of incidence, and it points the same way as the discount evidence in Chapter 6. A firm that had been capturing the subsidy as producer surplus would have had no need to restructure its product line when the subsidy vanished. Restructuring within seven days is the behavior of a firm that had been passing the money through and now had to find $7,500 of consumer-facing value somewhere else.
+
+**The lease channel at Tesla.** Tesla's captive finance entity claimed the §45W commercial credit on consumer leases and reflected it in advertised lease pricing, in the ordinary industry pattern described in §11.4.4. The credit belonged to the Tesla lessor entity, never to the lessee, and the pass-through was Tesla's to set.
+
+Tesla's lease-end purchase policy sharpens the labeling problem, subject to verification. Tesla is reported to have prohibited lease-end buyouts on certain models for a period, later reinstating them. Where that policy applied, a consumer was paying a monthly rate reduced by a credit attached to a vehicle they were contractually barred from ever owning, advertised to them as a tax credit. The exact models and dates should be confirmed against Tesla's lease agreements before this is asserted in a submitted version, and it is flagged in Appendix E.
+
+**March 2026: the practice ends.** Reports in March 2026 indicate Tesla removed the estimated gas savings element from its U.S. website, seven years after the German regulator ordered the equivalent practice stopped there.
+
+The timing invites an inference that should be resisted without more. The FTC's warning letters went to 97 auto dealership groups on March 13, 2026. Tesla is not a franchised dealership group, and there is no evidence in the sources consulted that Tesla received a letter. The coincidence is consistent with a general chill on net-of-savings pricing across the industry rather than with direct causation, and it may be partly mechanical in any event, since by March 2026 there was no federal credit left to include. Anyone developing this point should confirm whether Tesla was among the recipients before drawing a line between the two events.
+
+**The jurisdictional wrinkle, which is a genuine gap.** State motor vehicle advertising regulations bind licensed dealers. Tesla's status under them varies by state in a way no franchised dealer's does. Tesla holds dealer licenses in some states, has been blocked from direct sales in others including Texas, South Carolina, and New Jersey, has litigated the question in Louisiana, and has operated through structures such as out-of-state transaction processing, lease-only arrangements, and stores on tribal land.
+
+The consequence is that a single national website advertised a credit-inclusive price into fifty states from a seller that was a licensed dealer in some, prohibited from selling in others, and operating through a workaround in the rest. The state advertising regimes assume a locally licensed dealer running local advertising, and they have no clean answer to that configuration.
+
+This is worth stating as a finding rather than an aside. The most consequential credit advertising in the market was run by the seller least clearly subject to the regulatory regime that governs credit advertising. The federal standard under §5 reaches it but gives individuals no remedy; the state standards give individuals a remedy but bind dealers, and whether they bind this seller depends on which state the reader was sitting in. That is a structural enforcement gap, and it has nothing to do with the clean vehicle credit specifically. The credit merely made it visible.
+
+**What to obtain.** The following captures would convert this subsection from secondary reporting into documented evidence: the Model Y configurator and inventory pages for January 2024, the first month of point-of-sale transfer; November 2024, when the credit-inclusive display was reported as most prominent; and the homepage for late September 2025, carrying the order-by-deadline banner. Captures should be preserved with the URL and the archive timestamp visible in frame, since the timestamp is what makes them citable.
+
+### 11.4.7 The recurring asymmetry
 
 One structural observation ties this back to the dissertation's argument.
 
 Enforcement lands on the dealer. The dealer is the party that ran the advertisement, and under the state rules it is the dealer's obligation to disclose the eligibility limitations. But the dealer could not know the buyer's adjusted gross income, could not resolve a contested SUV classification with certainty, and depended on manufacturer representations for sourcing compliance that changed every January. The party legally exposed for the accuracy of the disclosure was, on several of the four axes, not the party with the information.
 
 That is the same pattern identified in Chapter 5 for the seller report, arriving through a different door. In both cases the retail intermediary was made to carry a compliance obligation whose inputs it did not control, and in both cases the consumer's protection depended on that intermediary getting right something it was poorly positioned to get right. A credit with four independent eligibility axes and a single headline number distributes risk this way by construction, whatever the enforcement posture.
+
+The Tesla case in §11.4.6 is the exception that confirms the mechanism. A direct seller holds the sourcing, assembly, and pricing facts itself, so three of the four axes collapse into a single party's knowledge and the asymmetry largely disappears. What remains is the income axis, which no seller can know. That residual is the irreducible floor: even a perfectly informed, vertically integrated seller advertising in complete good faith could not state what any particular reader would actually receive. A subsidy conditioned on the recipient's tax position cannot be accurately advertised at the point of sale by anyone. That is a design fact, not an enforcement failure, and it deserves to sit alongside the recommendations in Chapter 8.
 
 ## 11.5 The complaint that worked
 

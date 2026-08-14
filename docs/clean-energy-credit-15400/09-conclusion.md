@@ -43,7 +43,7 @@ The following are ordered by value, with the data each requires.
 
 **4. Pass-through and incidence around January 1, 2024.** Requires transaction prices by model. Point-of-sale transfer raised salience; whether it also shifted incidence toward sellers is theoretically ambiguous and empirically open.
 
-**5. The elasticity implied by termination.** Requires monthly volume and net-of-discount transaction prices through 2026, with the manufacturer discounting that replaced part of the subsidy handled explicitly. Bounds are available from public data; a credible point estimate is not.
+**5. The elasticity implied by termination.** Requires monthly volume and net-of-discount transaction prices through 2026, with the manufacturer discounting that replaced part of the subsidy handled explicitly, and with hedonic controls for content. The constant-quality assumption fails here: Tesla met the withdrawal by introducing a decontented Model Y within a week rather than by moving price, so part of the adjustment ran through product specification and is invisible to a price-on-subsidy regression. Bounds are available from public data; a credible point estimate is not.
 
 **6. Contract-date bunching at September 30, 2025.** Requires Form 15400 sale dates. The mass of contracts piled against the deadline is a direct measure of how many marginal buyers the subsidy was moving, and the manipulation that invalidates a conventional discontinuity design is itself the estimand.
 

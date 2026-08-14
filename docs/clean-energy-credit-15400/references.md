@@ -43,6 +43,24 @@ State motor vehicle advertising regulations governing rebate and incentive discl
 
 Consumer Reports, *What to Know About Leasing an EV or PHEV With a Tax Credit*, and reporting on manufacturer "EV lease bonus" promotions including the Hyundai Ioniq 5 example. **[secondary]**
 
+## Tesla case study sources (Chapter 11 §11.4.6)
+
+Wettbewerbszentrale action requiring Tesla to cease including projected fuel savings in displayed prices in Germany, March 2019; Alan Ohnsman, *Tesla Keeps 'Gas Savings' Pricing on U.S. Website After Germany Tells It to Stop*, Forbes (March 10, 2019). **[secondary]**
+
+TechCrunch, reporting on Tesla's July 2023 configurator notice that Model 3 and Model Y credits were likely to be reduced in 2024. **[secondary]**
+
+Brooke Crothers, *Tesla Puts Incentives on Blast as Tax Credit Comes Under Threat*, Forbes (November 17, 2024), and *That $7,500 Tax Credit on a Tesla Model Y Could Go Away*, Forbes (November 10, 2024). **[secondary]**
+
+Contemporaneous consumer deal listings preserving Tesla's advertised credit-inclusive pricing and qualifying language for the 2023 and 2024 Model Y. **[secondary]** Cited as evidence of advertised framing; to be replaced with archived captures of Tesla's own pages.
+
+Electrek, *Tesla Is About to Lose the $7,500 EV Tax Credit — Again*, (July 30, 2025); Autoblog, *Tesla Drops Updated U.S. Incentives With EV Tax Credit Set to Expire*; Notebookcheck, reporting Tesla's confirmation that orders placed September 30, 2025 qualified without delivery. **[secondary]**
+
+Bloomberg, *Tesla Unveils $39,990 Model Y to Counter Loss of US Tax Credits* (October 7, 2025); CNN Business, CNBC, Cars.com, and Automotive World reporting on the Model 3 and Model Y "Standard" trims and their content reductions. **[secondary]**
+
+ArenaEV, reporting the removal of estimated savings from Tesla's U.S. price display (March 2026). **[secondary]** The temporal relationship to the FTC's March 13, 2026 warning letters is noted in the text and expressly not asserted as causal.
+
+*Tesla US Dealership Disputes* and related sources on state direct-sales prohibitions, dealer licensing, and Tesla's operating workarounds. **[secondary]**
+
 Holland & Knight, *Fifth Circuit Strikes Down FTC's Auto Retail Scam Rule* (February 2025); Crowell & Moring, *Auto Dealers: The FTC Is Back in the Driver's Seat* (2026). **[secondary]**
 
 National Automobile Dealers Association, *Clean Vehicle Credit Time of Sale Reporting Issues* (regulatory compliance position and advocacy for reopening the filing window). **[secondary]**
