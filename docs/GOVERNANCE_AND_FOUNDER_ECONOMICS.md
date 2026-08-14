@@ -27,8 +27,9 @@ that *adds* to the asset, because it converts "trust us with the treasury" into 
 people have to agree," and it keeps a token dispute from ever reaching the book.
 
 **Form the new LLC and give it a boring name. Seat three people. Replace the bare 100M
-hold with a public timelock. Skip the fee. Pay yourself — from the treasury, under board
-approval, disclosed on the ledger page.**
+hold with a public timelock. Skip the fee. Get paid — but from the book and the software,
+as owner's draws from an operating entity, while CP17 LLC pays operating costs directly and
+leaves the treasury untouched.**
 
 ---
 
@@ -367,17 +368,101 @@ make worse decisions with the treasury than a salaried founder ever would. `cp17
 says part of the treasury covers "legal, accounting, **the work itself**" — the disclosure
 is in place. The questions are source, amount, and sequence.
 
-### Source, ranked
+### From where — the money has to exist first
 
-1. **The book, speaking, and the software.** Your best answer. Ordinary business revenue,
-   ordinary tax treatment, no securities question, no conflict with anything published.
-2. **The treasury allocation, by board approval.** Legitimate if disclosed and constrained
-   — see below.
-3. **A trade fee.** Ties your income to trading volume and price, which is precisely the
-   incentive the whole design exists to disclaim. Also, per Part III, it doesn't work.
-4. **Selling your personal 100M into the pool.** Not a salary. At this liquidity it is the
-   dump scenario, and `LEGAL-BRIEFING.md` already flags treasury sales as the asset most
-   exposed to a "sale by the issuer" characterization.
+A salary is dollars leaving a bank account on a specific day. Before anything else, look at
+what CP17 LLC would actually have to pay from:
+
+| Asset | Amount | Can it pay a salary? |
+|---|---|---|
+| Your $10,000 capital contribution | $10,000 cash | **No.** It is earmarked for the pool and launch costs, and paying yourself from your own contributed capital is moving money between your pockets while creating a taxable-looking event and a bad ledger line |
+| 50M CARD treasury | ~$4,000 at spot | **No.** Illiquid. Selling it into an $8,000 pool crashes the price, and `LEGAL-BRIEFING.md` flags treasury sales as the asset most exposed to a "sale by the issuer" characterization |
+| Trade fee revenue | $2,190–$10,950/yr, if you add a fee | **No** — and see Part III for why the fee shouldn't exist |
+| Book, speaking, app revenue | Whatever it actually is | **Yes.** This is the only real source |
+
+So the answer to "from where" for at least the next year is: **from the book and the
+software, not from CARD.** The token has no cash and cannot generate any without doing the
+one thing the whole design was built to make impossible.
+
+### The structural catch: the entity that pays you shouldn't be the token entity
+
+There's a tension between two things already decided. CP17 LLC exists to isolate token
+risk. But the only money that can actually pay you is book and app revenue — and routing
+that revenue *through* CP17 LLC in order to pay yourself from it would drag those earnings
+back inside the entity carrying the token's liability. That undoes the separation you
+formed the LLC to get.
+
+So:
+
+- **Book royalties stay out of CP17 LLC.** They flow to you personally, or to a separate
+  operating entity. Not through the token LLC.
+- **The apps in this repo, if they earn**, belong in an operating entity too — either your
+  existing arrangement or a second LLC. CP17 LLC holds the token, the treasury, the domain,
+  and the gift program. Nothing else.
+- **CP17 LLC pays you nothing for now.** It reimburses documented expenses (below) and
+  holds a board-approved comp agreement that activates if and when it ever has non-token
+  cash. That agreement being on the shelf, unused and disclosed, is itself a good signal.
+
+The practical read: you get paid from the book and the software, in the ordinary way, and
+CARD stays a thing you fund rather than a thing that funds you.
+
+### The step that works right now: an accountable plan
+
+Before there is profit to draw, the correct and immediate move is **expense
+reimbursement**, not salary. Under an accountable plan, CP17 LLC reimburses you for
+documented business costs you paid personally — the liquidity lock, gas, the audit,
+formation fees, the domain, legal and accounting. Substantiated reimbursements are not
+income to you and are deductible to the LLC.
+
+Requirements are simple and non-negotiable: a business purpose for each item, receipts, and
+submission within a reasonable time. Keep the receipts in the same place as the board
+minutes. This is how you stop personally absorbing the cost of the project without touching
+the salary question at all.
+
+### Operational costs — the cleanest category, and the one already disclosed
+
+Better still: **have CP17 LLC pay its vendors directly** rather than reimbursing you. The
+lock fee, the audit, the gas, formation, the domain, legal, accounting — paid from the LLC
+account to the vendor, no money passing through your hands at all. Cleanest audit trail,
+no reimbursement paperwork, and nothing that looks like founder extraction because nothing
+reaches the founder.
+
+This is also the only spending category already covered by what you've published.
+`cp17-site/index.html` says the treasury covers "the liquidity lock, network fees, legal,
+accounting, the work itself." Operational spend is squarely inside that sentence. A salary
+is arguably inside "the work itself," but it is the part a skeptic will read hardest — so
+operational costs need no new disclosure, while a salary needs an explicit one.
+
+Three tiers, in order of how much explaining they require:
+
+| Tier | What it is | Disclosure needed |
+|---|---|---|
+| **Direct vendor payment** | LLC pays the audit firm, the lock service, the registered agent | Ledger line item. No further explanation |
+| **Expense reimbursement** | LLC repays you for costs you fronted, with receipts | Ledger line item, accountable-plan records on file |
+| **Salary or draw** | LLC pays you for your time | Board resolution with you recused, written scope, hours, explicit ledger disclosure |
+
+Work down that list, not up. Most of what you need money for in year one is tier one.
+
+### The constraint that governs all three — and the gifts
+
+Every one of these — vendor payments, reimbursements, salary, **and the gifts themselves** —
+needs *dollars*. The treasury holds 50M CARD, not cash. So each of them implies the same
+prior act: converting CARD into money, which means selling into a pool that cannot absorb
+it, or an off-market sale that is unambiguously a sale by the issuer.
+
+**The treasury is not a budget. It is a claim on a budget that doesn't exist yet.** That
+single fact should shape what you promise:
+
+- Fund year-one operations from the remaining capital contribution and from revenue, and
+  treat the 50M as untouched reserve.
+- Do not commit to a gift schedule, a spending plan, or a salary that assumes the treasury
+  is spendable — it isn't, at current liquidity, in any amount that matters.
+- If the treasury ever does get sold, that is a board decision with counsel involved, made
+  in daylight and announced before it happens, not a routine funding step.
+
+The page already gets this right by refusing to name a charity percentage. Apply the same
+discipline to your own compensation and to operating spend: describe intentions, commit to
+disclosure, promise no numbers you'd have to walk back.
 
 ### If it comes from the treasury, constrain it
 
@@ -393,6 +478,53 @@ is in place. The questions are source, amount, and sequence.
 - **Not before the first gift.** Whatever the order of operations actually is, if the ledger
   shows you paid yourself before you gave anything away, that is the story — permanently,
   and fairly.
+
+### The mechanics — "salary" is the wrong word for what you'd be doing
+
+For a **single-member LLC**, there is no salary. The IRS treats it as a disregarded entity
+by default: you cannot put yourself on payroll, there is no W-2, and there is no paycheck.
+What you take is an **owner's draw** — a transfer from the business account to your personal
+account. Three consequences people get wrong:
+
+1. **A draw is not a deductible expense.** It doesn't reduce the LLC's taxable income. It's
+   just you moving your own money.
+2. **You're taxed on profit, not on what you draw.** Net profit flows to Schedule C on your
+   personal return whether you take it out or leave it in the account. Drawing $0 does not
+   mean owing $0.
+3. **Nothing is withheld.** Draws carry no withholding, and self-employment tax runs 15.3%
+   (Social Security up to the annual wage base, plus Medicare on everything) on top of
+   income tax. You handle it with **quarterly estimated payments** — Form 1040-ES, roughly
+   April 15, June 15, September 15, and January 15. Set aside 25–35% of profit as it comes
+   in. Missing these is the most common and most expensive first-year mistake.
+
+**An actual W-2 salary requires an S-corp election** (Form 2553). Then you *must* pay
+yourself "reasonable compensation" as a W-2 employee, and remaining profit can be
+distributed without self-employment tax — which is the whole point of doing it. But it
+brings a payroll provider, quarterly 941s, a year-end W-2, a separate 1120-S return, and
+often extra state fees. The rule of thumb is that it starts paying for itself somewhere
+around **$50,000 of consistent net profit**. CP17 LLC will not be near that. Revisit it
+when the book and the software are, and note that the election would sit with whichever
+entity actually earns — not the token LLC.
+
+So the practical answer: **draws from the operating side, quarterly estimates, and an
+S-corp conversation later.**
+
+### The setup, in order
+
+1. Form the LLC, get the **EIN**, open a **dedicated business bank account**. Never pay a
+   personal expense from it.
+2. Record the **$10,000 as a capital contribution**, in writing, into that account.
+3. Adopt the **accountable plan** and start paying vendors directly.
+4. Get **bookkeeping running from transaction one** — chart of accounts with `Owner's Draw`
+   and `Owner's Contribution` as equity accounts, distinct from expense accounts. Draws
+   miscoded as wages is the error that makes a first tax return expensive.
+5. When there is profit to draw: **board resolution** setting the amount, you recused,
+   dated and minuted, with a written scope and an hours log behind it.
+6. Pay it as a **scheduled recurring transfer** — same date each month, consistent amount,
+   memo'd. Irregular ad-hoc transfers of round numbers are what an auditor notices and what
+   a skeptical holder screenshots.
+7. **Quarterly estimates** from day one of profitability.
+8. **Post it to the ledger page** with amount and date, alongside gifts and operating spend.
 
 ### The honest framing
 
@@ -417,7 +549,8 @@ fundraising campaign.
 | Liability reaching the book | Token and memoir sharing one entity | Separate LLC; book IP and royalties stay out of it |
 | LLC shield pierced | Commingled funds from day one | Own EIN and bank account; the $10k in as a documented capital contribution |
 | Trademark collision | "Cardinal" is crowded in healthcare and finance | Boring legal name (CP17 LLC); clear it before filing, not after launch |
-| Tax surprise | Token receipts and treasury spends are taxable events | Accountant before launch, not after |
+| Tax surprise | No withholding on draws; SE tax and quarterly estimates | Set aside 25–35% of profit; Form 1040-ES quarterly; accountant before launch |
+| Book income pulled into token risk | Routing royalties through CP17 LLC to fund a salary | Keep book and app revenue in a separate operating entity |
 
 ---
 
