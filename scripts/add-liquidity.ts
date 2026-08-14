@@ -1,10 +1,10 @@
 /**
- * Creates (if needed) and seeds a HERE/WETH pool on Uniswap V2.
+ * Creates (if needed) and seeds a CARD/WETH pool on Uniswap V2.
  *
  * Usage:
  *   CARD_NETWORK=sepolia \
  *   CARD_TOKEN_ADDRESS=0x... \
- *   CARD_AMOUNT=1000000 \        # HERE to deposit (whole tokens)
+ *   CARD_AMOUNT=1000000 \        # CARD to deposit (whole tokens)
  *   ETH_AMOUNT=1.5 \             # ETH to pair with it
  *   npx hardhat run scripts/add-liquidity.ts
  *
@@ -44,7 +44,7 @@ async function main() {
 
   if (!tokenAddress || !cardAmount || !ethAmount) {
     throw new Error(
-      "Set CARD_TOKEN_ADDRESS, CARD_AMOUNT (whole HERE) and ETH_AMOUNT (ETH) env vars",
+      "Set CARD_TOKEN_ADDRESS, CARD_AMOUNT (whole CARD) and ETH_AMOUNT (ETH) env vars",
     );
   }
   const routerAddress = ROUTERS[networkName];

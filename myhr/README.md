@@ -7,7 +7,7 @@ here) and follows the same shape: explicit state machines and an append-only
 audit trail rather than opaque flags.
 
 Like HireCheck, it's a **standalone project** in this workspace — it does not
-depend on the Cardinal caregiver app, the book, or the HERE token.
+depend on the Cardinal caregiver app, the book, or the CARD token.
 
 ## What it does
 

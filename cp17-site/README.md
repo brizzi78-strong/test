@@ -1,4 +1,4 @@
-# cp17.org — the Presence coin site
+# cp17.org — the Cardinals Promise coin site
 
 Three static pages. No build step, no dependencies, no JavaScript.
 
