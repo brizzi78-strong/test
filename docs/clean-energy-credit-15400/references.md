@@ -21,7 +21,39 @@ I.R.C. §§7431, 7433, 7434 (limited private rights of action).
 
 ## Cases
 
-*Moon v. Commissioner*, 165 T.C. No. 4 (2025) (clean vehicle credit available only for the taxable year in which the vehicle is placed in service; credit denied on a 2019 return for a vehicle placed in service in 2013). **[secondary]**
+Entries below marked **[verified]** were retrieved from a legal database indexing the issuing court's own record, and the holdings stated in the text are drawn from the opinion text rather than from reporting about it.
+
+### Clean vehicle and plug-in credits
+
+*Moon v. Commissioner*, 165 T.C. No. 4, Docket No. 21998-21 (T.C. Sept. 10, 2025) (Foley, J.) (§30D provides a one-time credit for a vehicle placed in service during the taxable year; taxpayers who bought a Chevrolet Volt in 2013 and claimed the maximum $7,500 credit on returns for 2013 through 2019 held not entitled to the credit for 2019; notice of deficiency dated May 18, 2021; submitted fully stipulated under Rule 122; petitioners pro se). **[verified]**
+
+*Trout v. Commissioner*, T.C. Summary Op. 2015-66, Docket No. 10576-13S (T.C. Nov. 19, 2015) (Paris, J.) (deficiency of $6,497 for 2009; eligibility for the §30D plug-in electric drive motor vehicle credit for a Spark NEV-48 EX manufactured by Zone Electric Car, LLC, which had submitted a certification request to the IRS on October 1, 2009 under Notice 2009-54, 2009-26 I.R.B. 1124; submitted fully stipulated under Rule 122; decision entered for respondent). **[verified]** Not precedent for any other case, I.R.C. §7463(b).
+
+*Podraza v. Commissioner*, T.C. Summary Op. 2015-67, Docket No. 9461-13S (T.C. Nov. 19, 2015) (Paris, J.) (companion to *Trout*; facts to be confirmed independently). **[partially verified]** Not precedent, §7463(b).
+
+Oklahoma Tax Commission, Decisions 2011-05-05-09 through 2011-05-05-17 (May 5, 2011) (non-precedential; electric car income tax credit; Ruff & Tuff "test case" series across several low-speed vehicle models; disposition recorded as "Sustained," convention to be confirmed). **[partially verified]**
+
+Oklahoma Tax Commission, Decision 2006-09-05-05 (Sept. 5, 2006) (precedential; qualified electric motor vehicle credit). **[partially verified]**
+
+West Virginia Office of Tax Appeals, Decisions 12-443 P-M, 12-452 P-M, 12-453 P-M, 12-488 P-M, 12-490 P-M, 12-491 P-W, and 12-502 RP-M (issued Dec. 9, 2014), and consolidated Decision 14-286 AFTC, 15-147 AFTC, 16-230 AFTC, 17-125 P (2020) (alternative fuel tax credit). **[partially verified]**
+
+*Martin Distributing Co. v. Matkovich*, 238 W. Va. 300, 794 S.E.2d 21 (2016), Nos. 15-0842, 15-0857, 15-0867, 15-0869 (alternative fuel tax credit). **[partially verified]**
+
+### Motor vehicle advertising and consumer protection
+
+*Barry v. Arrow Pontiac, Inc.*, 100 N.J. 57 (1985), aff'g in relevant part 193 N.J. Super. 613 (App. Div. 1984) (New Jersey Consumer Fraud Act and motor vehicle advertising regulation N.J.A.C. 13:45A-2.2(a)(7)(iv) upheld over dissents contending the regulation suppressed truthful price information and legitimate competition). **[verified]**
+
+*Virachack v. University Ford*, 259 F. Supp. 2d 1089 (S.D. Cal. Apr. 30, 2003) (putative consumer class action against a dealer over advertising; summary judgment granted for defendant, plaintiffs' partial summary judgment denied). **[verified]**
+
+*Adams Ford Belton, Inc. v. Missouri Motor Vehicle Commission*, 946 S.W.2d 199 (Mo. banc 1997) (dealer discipline arising from advertising). **[partially verified]**
+
+*Audi of Smithtown, Inc. v. Volkswagen Group of America Inc.*, 32 Misc. 3d 409 (Sup. Ct. Suffolk Cty. 2011) (case of first impression on manufacturer bonus incentive programs under state dealer-protection law). **[partially verified]**
+
+*Caldor, Inc. v. Heslin*, 215 Conn. 590 (1990) (state consumer protection advertising regulation). **[partially verified]**
+
+Utah State Tax Commission, Decision in Appeal Nos. 00-1539 and 01-0170 (June 4, 2002) ("Advertisement Violations," motor vehicle dealer). **[partially verified]**
+
+Florida Attorney General Opinion (Dec. 20, 1988) (construing Rule 2-19.005(16), F.A.C., on motor vehicle dealer price advertising). **[partially verified]**
 
 *National Automobile Dealers Association v. FTC* (5th Cir., January 2025) (vacating the Combating Auto Retail Scams Rule for failure to issue an advance notice of proposed rulemaking). **[secondary]** Case name and citation to be verified.
 

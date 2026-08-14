@@ -12,17 +12,53 @@ Three structural reasons explain it, and they compound.
 
 **Arbitration clauses stand in the way.** Retail installment contracts in automotive sales commonly contain arbitration provisions with class-action waivers. A buyer whose dispute is with the selling dealer is likely to find the forum already chosen and aggregation already foreclosed. This is well-established as a feature of the industry's contracting practice and should be verified against the specific documents in any individual case.
 
+The one adjacent precedent found is not encouraging. In *Virachack v. University Ford*, 259 F. Supp. 2d 1089 (S.D. Cal. 2003), consumers brought a putative class action against a dealer over advertising practices; the court granted the dealer summary judgment and denied the plaintiffs' cross-motion. Dealer-advertising class actions are brought. They are also lost.
+
 The result is a body of harm with no judicial record. What exists instead is a complaint record, and the complaint record is where the program's failures were actually surfaced and, in one significant instance, fixed.
 
-## 11.2 The one precedential decision
+## 11.2 The case law
 
-**Moon v. Commissioner, 165 T.C. No. 4 (2025).** The Tax Court held that a couple could not claim the clean vehicle credit on their 2019 return for a plug-in electric vehicle they had purchased and placed in service in 2013. The credit is available for the taxable year in which the vehicle is placed in service, and only that year. It is not an annual benefit that recurs while the vehicle remains in use.
+Searching the federal and state case databases produces three lines of authority. None addresses the seller report directly. Two of them bear on it closely, and one of them is bad news for the arguments in Chapter 10.
 
-The holding is unsurprising on the statutory text, which conditions the credit on a vehicle "placed in service by the taxpayer during the taxable year." Its interest for this dissertation lies in the interpretive posture rather than the outcome. The court read the timing condition as a hard statutory limit rather than as a procedural formality subject to equitable adjustment, and it did so in a reviewed opinion carrying precedential weight.
+### 11.2.1 Moon v. Commissioner: the only precedential decision, and an accidental argument for the register
 
-That posture is bad news for the arguments sketched in Chapter 10. A buyer arguing that a missing seller report should be excused because they did everything right is asking a court to treat a statutory condition as directory. Moon does not decide that question, and it involves an entirely different condition. But it signals how the Tax Court approaches the timing and eligibility architecture of this credit, and the signal does not favor flexibility.
+*Moon v. Commissioner*, 165 T.C. No. 4 (Sept. 10, 2025), Docket No. 21998-21 (Foley, J.), is the sole precedential Tax Court opinion on §30D located by this research. The facts, taken from the opinion, are more striking than the holding.
 
-What Moon conspicuously does not address is the seller report. As far as this research could determine, **no published decision addresses whether a taxpayer may claim the credit where the dealer failed to file Form 15400.** The central legal question raised by the program's principal failure mode has never been answered by a court, and now probably never will be, because the credit was terminated before the volume of disputes could produce a test case worth funding.
+In 2013 the petitioners bought a new Chevrolet Volt. On their returns for 2013 **through 2019** they claimed the maximum $7,500 §30D credit for that vehicle, every year, seven years running. In a notice of deficiency dated May 18, 2021, the Commissioner disallowed the credit **relating to 2019**. The case was submitted fully stipulated under Rule 122, the petitioners appearing pro se. The court held they were not entitled to the credit for 2019 because the vehicle had been placed in service in 2013, §30D providing a one-time credit for a vehicle placed in service during the taxable year.
+
+Two things follow, and the second is more important than the first.
+
+**On doctrine**, the court read the placed-in-service condition as a hard statutory limit, not a formality open to equitable adjustment. That posture is unfavorable to the arguments sketched in Chapter 10. A buyer contending that a missing seller report should be excused because they personally did everything right is asking a court to treat a statutory condition as directory. Moon does not decide that question and concerns a different condition. But it is the only precedential signal available on how this court approaches §30D's eligibility architecture, and the signal does not favor flexibility.
+
+**On administration**, notice what the timeline shows. A taxpayer claimed a one-time credit seven consecutive times on a single vehicle, and the Service disallowed the seventh. Whatever happened to the first six, the case is documentary evidence of exactly the detection gap that TIGTA identified across processing years 2019 through 2022, when 7,547 returns claiming roughly $23 million above the allowable threshold passed through the filters.
+
+That makes Moon an unintentional argument for the apparatus this dissertation is about. A VIN-keyed register in which each vehicle is matched to one named buyer, of the kind Form 15400 created from 2024, makes a repeat claim on the same vehicle structurally detectable rather than dependent on a filter catching an anomaly. Chapter 3 identifies anti-duplication as the second of the form's four legal functions and counts it as a genuine administrative gain. Moon is what the absence of that function looked like in practice, litigated.
+
+### 11.2.2 The 2015 neighborhood-electric-vehicle line: the closest analogue, decided against the buyer
+
+Two summary opinions issued the same day are the nearest thing in the case law to the Form 15400 problem, and they should temper any optimism about how that problem would have been resolved.
+
+In *Trout v. Commissioner*, T.C. Summary Op. 2015-66 (Nov. 19, 2015), Docket No. 10576-13S (Paris, J.), the Service determined a $6,497 deficiency for 2009, the issue being the petitioners' eligibility for the §30D plug-in electric drive motor vehicle credit. The vehicle was a Spark NEV-48 EX, a neighborhood electric vehicle manufactured by Zone Electric Car, LLC. Under Notice 2009-54, Zone Electric had submitted a request to the IRS on October 1, 2009 to certify its vehicles as qualifying for §30D. The case was submitted fully stipulated under Rule 122, the petitioners pro se and resident in Nebraska, and decision was entered for the Commissioner. *Podraza v. Commissioner*, T.C. Summary Op. 2015-67, Docket No. 9461-13S, was issued the same day on what appears to be the same issue; its facts should be confirmed independently.
+
+Note the structure, because it is the structure of this entire dissertation. A consumer bought a vehicle. Whether the credit was available turned on a **certification obtained by a third party from the government**, in that instance the manufacturer's request under Notice 2009-54 rather than a dealer's report under §30D(d)(1)(H). The third party's certification did not carry the vehicle across the line. The buyer, who had no control over the certification and no ability to cure it, lost the credit.
+
+That is the seller-report problem in its earlier form, and the courts resolved it against the buyer. The mechanism differs, the outcome does not, and anyone advancing the substantial-compliance argument in Chapter 10 should reckon with the fact that the closest available analogue failed.
+
+Two qualifications are essential. Under §7463(b) a summary opinion is not reviewable by any other court and **may not be treated as precedent for any other case**, so these decisions have no authoritative weight. And a certification that a vehicle qualifies is a statement about the vehicle, whereas a seller report is a statement about a transaction that indisputably occurred, which is a materially stronger position for a buyer. The analogy is instructive, not controlling.
+
+### 11.2.3 State analogues
+
+The state records show the same administrative pattern playing out below the federal level, and they are worth mining by anyone extending this work.
+
+The Oklahoma Tax Commission decided a cluster of electric-vehicle income tax credit protests on May 5, 2011, docketed as a manufacturer's "test case" series for Ruff & Tuff low-speed vehicles across several models, all recorded as non-precedential and disposed of as "SUSTAINED." An earlier precedential decision, 2006-09-05-05, addressed the qualified electric motor vehicle credit. The disposition convention should be confirmed before the outcomes are characterized, since "sustained" in that forum may refer to the assessment rather than the protest.
+
+West Virginia produced a substantial body of alternative fuel tax credit decisions before its Office of Tax Appeals, including dockets 12-443, 12-452, 12-453, 12-488, 12-490, 12-491 and 12-502, decided together and delayed pending calculation settlements, and a later consolidated matter spanning 2014 to 2017 dockets. Several were appealed, producing *Martin Distributing Co. v. Matkovich*, 238 W. Va. 300, 794 S.E.2d 21 (2016).
+
+The federal clean vehicle credits generated almost no litigation. The state alternative-fuel credits generated a great deal. The likely explanation is amount: state credits in these programs could run to five and six figures per claimant, which crosses the threshold at which litigation is rational, whereas $7,500 does not. That is the same economic point made in §11.1, confirmed from the other direction.
+
+### 11.2.4 What no court has decided
+
+As far as this research could determine, **no decision anywhere addresses whether a taxpayer may claim the clean vehicle credit where the dealer failed to file Form 15400.** The central legal question raised by the program's principal failure mode has never been answered, and now probably never will be, because the credit was terminated before the volume of disputes could produce a test case worth funding.
 
 ## 11.3 The complaint record
 
@@ -69,7 +105,13 @@ For a private buyer this matters less than it appears, because §5 carries no pr
 
 State motor vehicle advertising regulation is where this becomes actionable for an individual, and the fit is close enough to be striking.
 
-These rules were written decades ago for factory rebates: loyalty cash, military discounts, college-graduate programs, captive-finance incentives. Their consistent structure is that an incentive may be built into an advertised price only if it is generally available, and that any eligibility limitation must be separately and conspicuously disclosed. Washington's formulation requires that a rebate be available to the general public, available in combination with other advertised rebates, and expressed as a component part of the advertised price. The broader principle across jurisdictions is that a dealer may not represent that a discount, rebate, bonus, incentive, or price is available unless it is available to all consumers or every qualification and restriction is disclosed. Comparable provisions appear in Oregon's administrative rule on motor vehicle advertising, Virginia's statutory regulation of advertising practices, the Ohio Attorney General's motor vehicle advertising guidelines, the Texas DMV's advertising rules, and the Mississippi Motor Vehicle Commission's advertising chapter.
+**These rules are real, enforced, and have survived constitutional challenge.** That matters, because an argument resting on state advertising regulation is worth little if the regulations are dead letters. They are not.
+
+The anchor is *Barry v. Arrow Pontiac, Inc.*, 100 N.J. 57 (1985), affirming in relevant part 193 N.J. Super. 613 (App. Div. 1984). The Director of Consumer Affairs proceeded against a dealer under the New Jersey Consumer Fraud Act and its implementing motor vehicle advertising regulation, N.J.A.C. 13:45A-2.2(a)(7)(iv). The Supreme Court upheld the regulation over vigorous dissents in both courts, which argued that it suppressed truthful and useful price information and so restricted legitimate competition. The case establishes both that these regulations are enforceable instruments of consumer protection and that the objection a seller would raise against applying them to credit-inclusive pricing, namely that the information is true and the consumer benefits from having it, has been made and rejected.
+
+Enforcement is not theoretical either. *Adams Ford Belton, Inc. v. Missouri Motor Vehicle Commission*, 946 S.W.2d 199 (Mo. banc 1997), concerns dealer discipline arising from advertising. State tax and licensing bodies pursue the same conduct administratively, as in the Utah State Tax Commission's consolidated decision in appeals 00-1539 and 01-0170 (June 4, 2002), captioned "Advertisement Violations" against a motor vehicle dealer. Attorneys general issue interpretive guidance on dealer price advertising, and have done so for decades.
+
+These rules were written for factory rebates: loyalty cash, military discounts, college-graduate programs, captive-finance incentives. Their consistent structure is that an incentive may be built into an advertised price only if it is generally available, and that any eligibility limitation must be separately and conspicuously disclosed. Washington's formulation requires that a rebate be available to the general public, available in combination with other advertised rebates, and expressed as a component part of the advertised price. The broader principle across jurisdictions is that a dealer may not represent that a discount, rebate, bonus, incentive, or price is available unless it is available to all consumers or every qualification and restriction is disclosed. Comparable provisions appear in Oregon's administrative rule on motor vehicle advertising, Virginia's statutory regulation of advertising practices, the Ohio Attorney General's motor vehicle advertising guidelines, the Texas DMV's advertising rules, and the Mississippi Motor Vehicle Commission's advertising chapter.
 
 The clean vehicle credit slotted into that template without modification. It was an incentive not available to all consumers, subject to disclosed-or-not eligibility restrictions, frequently advertised as a component of price. Every element the state rules were built to police was present.
 
@@ -207,12 +249,12 @@ That is the clearest available demonstration of the risk-allocation argument in 
 
 ## 11.6 What the record does not contain
 
-For completeness, and because absence of evidence is easy to misreport as evidence of absence, the following were searched for and not found. Each should be re-verified against a litigation database before any submitted version relies on the negative.
+The searches behind §11.2 ran against a legal database covering federal and state case law, including the Tax Court, CourtListener, the Caselaw Access Project, and state tax tribunals. The following were searched for and not found. Each should still be re-verified before any submitted version relies on the negative, since a semantic search over a large corpus can miss a case that uses different vocabulary.
 
-- Any published decision addressing entitlement to the credit where the seller report was not filed.
-- Any certified class action by buyers against dealers arising from time-of-sale reporting failures.
-- Any reported state attorney general enforcement action specifically directed at EV tax credit advertising, as distinct from the FTC's general dealer-pricing sweeps.
-- Any published decision on the §45W leasing structure or on pass-through of the commercial credit to lessees.
+- Any decision addressing entitlement to the credit where the seller report was not filed.
+- Any certified class action by buyers against dealers arising from time-of-sale reporting failures. Note that dealer-advertising class actions are brought and lost on other facts, as in *Virachack*.
+- Any reported state attorney general enforcement action specifically directed at EV tax credit advertising, as distinct from the general dealer-pricing enforcement described in §11.4.3.
+- Any decision on the §45W leasing structure or on pass-through of the commercial credit to lessees.
 - Any prosecution or civil enforcement action against a dealer for fraudulent seller reports or improper advance payment claims.
 
 The last of these is the most surprising. A system that advanced money to fifteen thousand registered sellers on the strength of self-reported attestations, on a seventy-two hour cycle, with verification deferred to a later return, is a system with obvious fraud exposure, and TIGTA's earlier findings on erroneous claims suggest the exposure was not theoretical. Whether enforcement occurred and was simply not publicized, or did not occur, cannot be determined from public sources. Both answers would be interesting.
