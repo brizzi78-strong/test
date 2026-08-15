@@ -58,8 +58,9 @@ needed it, when the price had become infinite.
 | [04 — Eight operating principles](04-operating-principles.md) | The generalizable findings, with the evidence for each |
 | [05 — The counter-thesis](05-counter-thesis.md) | Tether, and the strongest case against everything above |
 | [06 — A scorecard](06-scorecard.md) | A weighted rubric for grading a crypto company, with worked examples |
-| [07 — Application to a small launch](07-application.md) | What the rubric says about a 250M-supply fair-launch token |
-| [08 — Sources](08-sources.md) | Full source list with retrieval dates |
+| [07 — Application to a small launch](07-application.md) | What the rubric says about a 250M-supply fair-launch token, and what the missing points cost |
+| [08 — The gap, and the yield](08-the-gap.md) | What the token path actually returns, and the distance to a company that launched |
+| [09 — Sources](09-sources.md) | Full source list with retrieval dates |
 
 ## Scope and honesty about it
 

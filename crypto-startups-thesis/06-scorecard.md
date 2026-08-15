@@ -4,22 +4,24 @@ The point of a rubric is to force a judgment before the outcome is known. This o
 answerable from public information about a company you are considering joining, funding, building,
 or trusting with assets.
 
-Ten questions, weighted. Each scores 0, 1, or 2. Maximum 100.
+Ten questions. Each scores 0, 1, or 2, multiplied by its weight. The weights sum to 50, so a
+perfect score is 100.
 
 ## The rubric
 
-| # | Question | Weight | 0 points | 1 point | 2 points |
-|---|---|---|---|---|---|
-| 1 | **Would customers pay if the token/market fell 80%?** | ×10 | Revenue is emissions, airdrop-driven activity, or own-token appreciation | Mixed; a real product exists but usage tracks price | Customers pay for an outcome they need regardless of price |
-| 2 | **Can the company's own losses reach customer assets?** | ×10 | Commingled or lent against | Segregated by policy, not by structure | Bankruptcy-remote, qualified custodian, no rehypothecation |
-| 3 | **Are reserves sized to the worst plausible loss?** | ×8 | No stated buffer | Buffer sized to routine losses | Excess capital explicitly held against total-breach scenarios |
-| 4 | **Is there disclosure beyond what is required?** | ×8 | None | Periodic marketing-grade updates | Recurring third-party attestation or audit on a fixed schedule |
-| 5 | **Does the company state its own weakest line item?** | ×6 | Not discussed | Acknowledged when asked | Quantified in recurring public reporting |
-| 6 | **Is the signing path inventoried and independently verified?** | ×8 | Single vendor flow, no out-of-band verification | Multisig, but the same UI for all signers | Independent hardware verification; vendor components in the path are inventoried and reviewed |
-| 7 | **Are constraints machine-enforced or promised?** | ×8 | "Trust us" | Contractual or policy commitment | On-chain and irreversible: renounced owner, locked LP, timelock/multisig |
-| 8 | **Is the regulatory posture licensure or arbitrage?** | ×6 | Jurisdiction-shopping | Registered where forced | Licensed ahead of requirement in its primary market |
-| 9 | **Can the company decline a bad financing or listing window?** | ×4 | Needs money within 12 months | 12–24 months of runway | Profitable or funded through a full cycle |
-| 10 | **Is the token, if any, load-bearing in the product?** | ×4 | Token is the fundraise | Token has a use but the product works without it | No token, or the token is a required mechanism with disclosed economics |
+| # | Question | Weight | Max | 0 points | 1 point | 2 points |
+|---|---|---|---|---|---|---|
+| 1 | **Would customers pay if the token/market fell 80%?** | ×7 | 14 | Revenue is emissions, airdrop-driven activity, or own-token appreciation | Mixed; a real product exists but usage tracks price | Customers pay for an outcome they need regardless of price |
+| 2 | **Can the company's own losses reach customer assets?** | ×7 | 14 | Commingled or lent against | Segregated by policy, not by structure | Bankruptcy-remote, qualified custodian, no rehypothecation |
+| 3 | **Are reserves sized to the worst plausible loss?** | ×6 | 12 | No stated buffer | Buffer sized to routine losses | Excess capital explicitly held against total-loss scenarios |
+| 4 | **Is there disclosure beyond what is required?** | ×5 | 10 | None | Periodic marketing-grade updates | Recurring third-party attestation or audit on a fixed schedule |
+| 5 | **Does the company state its own weakest line item?** | ×4 | 8 | Not discussed | Acknowledged when asked | Quantified in recurring public reporting |
+| 6 | **Is the signing path inventoried and independently verified?** | ×6 | 12 | Single vendor flow, no out-of-band verification | Multisig, but the same UI for all signers | Independent hardware verification; vendor components in the path inventoried and reviewed |
+| 7 | **Are constraints machine-enforced or promised?** | ×5 | 10 | "Trust us" | Contractual or policy commitment | On-chain and irreversible: renounced owner, locked LP, timelock/multisig |
+| 8 | **Is the regulatory posture licensure or arbitrage?** | ×4 | 8 | Jurisdiction-shopping | Registered where forced | Licensed ahead of requirement in its primary market |
+| 9 | **Can the company decline a bad financing or listing window?** | ×3 | 6 | Needs money within 12 months | 12–24 months of runway | Profitable or funded through a full cycle |
+| 10 | **Is the token, if any, load-bearing in the product?** | ×3 | 6 | Token is the fundraise | Token has a use but the product works without it | No token, or the token is a required mechanism with disclosed economics |
+| | **Total** | **50** | **100** | | | |
 
 **Interpretation.** Above 80: institutionally trustworthy. 60–80: sound but with a named structural
 weakness — find it before committing. 40–60: an ordinary startup carrying crypto-specific tail risk
@@ -31,56 +33,76 @@ because it is the failure mode with no gradual version.
 
 ## Worked examples
 
-Scores below are my judgments from public information as of August 2026, not the companies' own
-claims. Reasonable people will differ by a band; the exercise is the reasoning, not the number.
+Scores are my judgments from public information as of August 2026, not the companies' own claims.
+Reasonable people will differ by a band on individual items; the item-by-item breakdown is given so
+the disagreement can be located rather than argued in the aggregate.
 
-### Circle — 88
+| | Circle | Coinbase | Bridge | Bybit | Tether | Typical 2026 shutdown |
+|---|---|---|---|---|---|---|
+| 1. Revenue independence (14) | 7 | 7 | 14 | 7 | 14 | 0 |
+| 2. Asset segregation (14) | 14 | 14 | 7 | 14 | 7 | 7 |
+| 3. Reserves vs worst loss (12) | 12 | 12 | 6 | 12 | 12 | 0 |
+| 4. Disclosure beyond required (10) | 10 | 10 | 5 | 10 | 5 | 0 |
+| 5. States weakest line (8) | 8 | 8 | 4 | 8 | 4 | 0 |
+| 6. Signing path (12) | 6 | 12 | 6 | 0 | 6 | 0 |
+| 7. Machine-enforced constraints (10) | 5 | 5 | 5 | 5 | 0 | 5 |
+| 8. Licensure vs arbitrage (8) | 8 | 8 | 8 | 4 | 0 | 0 |
+| 9. Can decline a bad window (6) | 6 | 6 | 6 | 6 | 6 | 0 |
+| 10. Token load-bearing (6) | 6 | 6 | 6 | 3 | 6 | 0 |
+| **Total** | **82** | **88** | **67** | **69** | **60** | **12** |
 
-Strong on 1 (customers use USDC for settlement, not speculation), 2 (segregated, regulated), 4
-(recurring attestation, now public-company reporting), 5 (distribution cost disclosed every
-quarter), 8 (licensed years ahead of the GENIUS Act). Loses points on 1 for rate sensitivity and
-distribution concentration — 59% of gross revenue leaving the building to a single dominant partner
-is a real dependency, and the ARC push is the company saying so.
+### Reading the columns
 
-### Coinbase — 86
+**Coinbase (88)** and **Circle (82)** score highest, and both lose the same 7 points on question 1 —
+roughly half of Coinbase's revenue is still transaction-linked, and Circle's reserve income is
+interest income, so a rate-cutting cycle compresses it regardless of execution. Coinbase's 6-point
+edge is question 6: it has run institutional custody at scale for a decade without a material
+breach, and publishes enough about its key architecture to score it. Both lose half of question 7,
+because their constraints are legal and audited rather than machine-enforced — USDC in particular
+has an upgradeable contract with a freeze function, which is the opposite of irreversible restraint
+and is required of it by the regime it chose.
 
-Strong across 2, 4, 5, 8, 9. Loses on 1 because roughly half of revenue is still transaction-linked,
-and part of the "durable" half is itself rate- and price-exposed. The Q2 2026 miss is the honest
-evidence: diversification is a buffer, not a hedge.
+**Bridge (67)** is the case that shows the rubric's bias most clearly. It scores maximum on question
+1 and lost 15 points across questions 4, 5, and 6 almost entirely for being private. A company that
+returned 5.5x on $58 million in three years scores in the "named structural weakness" band. That is
+not a mistake in the reading — it is a limitation of the instrument, stated in the next section.
 
-### Bridge (at acquisition) — 84
+**Bybit (69)** is the single most informative column. It scores maximum on questions 3 and 4, which
+is why it survived the largest theft in the sector's history, and zero on question 6, which is why
+it had to. The column is a portrait of a firm that bought exactly one form of insurance and needed
+precisely that one.
 
-Near-perfect on 1 and 10, strong on 9. Unscored on 2 and 3 in the custody sense. Loses on 4 as a
-private company, though a $1.1 billion acquirer's diligence is a reasonable substitute signal.
+**Tether (60)** sits mid-band while earning roughly $100 million of profit per employee. That gap is
+the entire subject of [Chapter 05](05-counter-thesis.md). The rubric measures durability of access
+and the size of the tail, not the size of the profit, and a 60 here should not be read as predicting
+the profit will stop.
 
-### Bybit — 74
+## What the rubric systematically gets wrong
 
-Exceptional on 3, demonstrated under maximum stress, and strong on 5 during the incident. Scores 0
-on 6 by its own published account: the signing path contained a third-party component that
-displayed a false transaction. Middling on 8. The score is a fair summary of the firm — it survived
-because of the one thing it got right, and needed to because of the one thing it did not.
+Three known biases, worth stating so the score is used correctly.
 
-### Tether — 58
+**It under-scores private companies by roughly 10–20 points.** Questions 4 and 5, worth 18 combined,
+reward public reporting that a private company has no mechanism to produce. Bridge and Privy both
+lose points for the disclosure regime they were never in. The correction is to compare private
+companies against each other, not against public ones.
 
-Maximum on 1 and 9. Strong on 3. Weak on 4 (attestation is not audit, no completed Big Four audit),
-partial on 2 (gold and bitcoin in a dollar-pegged reserve), weak on 8. The number is the point of
-[Chapter 05](05-counter-thesis.md): 58 alongside $10 billion of annual profit. The rubric measures
-the durability of access and the size of the tail, not the size of the profit, and it should not be
-read as predicting the profit will stop.
+**It measures durability, not return.** A high score predicts that a company will still exist and
+still have access to its markets in five years. It says nothing about upside. Bridge scored 67 and
+produced the best risk-adjusted outcome in the study; Tether scored 60 and is the most profitable
+company per employee in the history of finance. Do not use this to pick investments.
 
-### A typical 2026 shutdown — 18
-
-Token-funded, users left with the airdrop, no independent revenue, no reserve, no disclosure beyond
-a Medium post. Zero on 1 and 3, 0–1 on everything else, 2 on question 7 if liquidity happened to be
-locked. This is the modal crypto company, and 18 is roughly the modal score.
+**Question 3 is nearly unreachable for small companies.** "Excess capital held against total-loss
+scenarios" assumes a balance sheet. A two-person launch has no way to score 2 on it, which caps
+small projects around 88 no matter how well run. Chapter 07 works through what the question
+translates to at that scale.
 
 ## Using it
 
 The rubric is most useful applied twice: once to a company you are evaluating, and once to your own.
 The second application is uncomfortable, which is the reason to do it. Most founders discover they
-have scored themselves 2 on question 7 — because locking liquidity and renouncing a contract are
-cheap, one-time, and visible — and 0 on question 1, because building revenue that survives an 80%
-drawdown is expensive, ongoing, and invisible.
+have scored 2 on question 7 — because locking liquidity and renouncing a contract are cheap,
+one-time, and visible — and 0 on question 1, because building revenue that survives an 80% drawdown
+is expensive, ongoing, and invisible.
 
 That inversion is the single most common structural error in the sector, and it is the subject of
 [Chapter 07](07-application.md).
