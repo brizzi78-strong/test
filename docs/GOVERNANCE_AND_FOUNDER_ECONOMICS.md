@@ -28,9 +28,9 @@ proposal that *adds* to the asset, because it converts "trust us with the treasu
 book.
 
 **Form the new LLC and give it a boring name. Seat five, filling three before launch.
-Replace the bare 100M hold with a public timelock. Skip the fee. Get paid — but from the
-book and the software, as owner's draws from an operating entity, while CP17 LLC pays
-operating costs directly and leaves the treasury untouched.**
+Disclose the unlocked 100M hold and put a written sell policy around it. Skip the fee. Get
+paid — but from the book and the software, as owner's draws from an operating entity, while
+CP17 LLC pays operating costs directly and leaves the treasury untouched.**
 
 ---
 
@@ -134,9 +134,10 @@ renounced ownership and the locked LP.
 | The gift program and its records | Personal accounts of any kind |
 | The board, the gift policy, your comp agreement | |
 
-On your personal 100M: **hold it personally and timelock it**, rather than contributing it
-to the LLC. Keeping it out means the LLC — the entity a regulator or plaintiff would call
-"the issuer" — discloses a clean 20% treasury rather than a 60% position. Either choice is
+On your personal 100M: **hold it personally** rather than contributing it to the LLC (and,
+by decision, unlocked — see Part II). Keeping it out means the LLC — the entity a regulator
+or plaintiff would call "the issuer" — discloses a clean 20% treasury rather than a 60%
+position. Either choice is
 defensible, but pick one *before* launch and publish which one it is. Silence on this
 question is worse than either answer.
 
@@ -214,7 +215,7 @@ good and helps nobody.*
 **Seat 3 — The Verifier.** Someone who can read Solidity and independently confirm what the
 contract actually does. This seat only becomes possible at five, and it closes the largest
 hole in the current design: every trust claim you make — supply is fixed, ownership is
-renounced, liquidity is locked, the founder position is timelocked — currently rests on
+renounced, liquidity is locked, the founder's holding is exactly what it is said to be — currently rests on
 *you* saying so. A technically competent board member who has checked the chain themselves,
 and who would resign publicly if a claim stopped being true, is the difference between a
 promise and an audit. Look for: a smart-contract developer, a security engineer, anyone who
@@ -321,7 +322,7 @@ you cannot undo.
 The token is now **Mager Coin (MAGR)**, named for Jeff Mager and carrying the tagline
 **"Built to hold,"** drawn from his finishing a 140.6-mile triathlon. The endurance framing
 is genuinely well matched to the design — fixed supply, locked liquidity, renounced
-ownership, a founder position under timelock. A coin built to be held rather than flipped
+ownership. A coin built to be held rather than flipped
 is the honest description of what was actually built.
 
 Four things this decision requires, none of them optional:
@@ -347,7 +348,7 @@ Four things this decision requires, none of them optional:
 4. **Accept the pattern cost.** Tokens named after people are, as a category, associated
    with pump-and-dumps, and some readers will discount the project on the name alone. The
    defence is not an argument, it is the evidence: renounced ownership, locked liquidity, a
-   timelocked founder position, a real board, and a published ledger. That evidence is
+   a real board, a disclosed founder wallet, and a published ledger. That evidence is
    stronger here than the name is weak — but it has to actually exist before launch, not
    after.
 
@@ -430,24 +431,54 @@ price would collapse. Every scanner will surface this. Every skeptical buyer che
 first. And it directly contradicts the reasoning already published in
 `TOKEN_LAUNCH_STRATEGY.md`.
 
-**The fix costs you nothing you actually want.** If your intent is genuinely to hold, then
-prove it, using the same tools already in the launch plan:
+A timelock was the recommended fix — 24 to 48 months, linear release, publicly verifiable —
+on the reasoning that if you never intended to sell soon, a lock takes away nothing and
+converts the largest liability into the second-strongest trust signal after renouncement.
 
-- Put the 100M in a **vesting or timelock contract** — 24 to 48 months, linear release,
-  publicly verifiable. If you never intended to sell soon, a lock takes away nothing.
-- **Publish the address and the unlock schedule** on the ledger page alongside the LP lock.
-- **Announce the schedule before launch**, not after someone asks.
+### Decision taken: no timelock
 
-That converts your largest liability into your second-strongest trust signal, right behind
-the renounced ownership. "The founder locked 40% of supply for four years, here is the
-contract" is a materially better sentence than "80% went into the pool" — but only if the
-lock exists. Without it, holding 40% is strictly worse than the original 80%-in-pool plan.
+**The 100M is held unlocked, in a disclosed wallet.** The recommendation is recorded above
+and was not adopted; this section documents what that means rather than re-arguing it.
 
-One more consequence: with only 100M in the pool and 100M in your hands, the *float* is 40%
-of supply and your position equals the entire pool's MAGR side. Thin float amplifies both
-directions — it is why the price will look exciting early and why a single seller can erase
-it. Do not read an early price rise as validation of the model. It is a measure of how
-little liquidity there is.
+Consequences, stated plainly so they are not discovered later:
+
+- **This is now the weakest point in the design**, and it is the only item on the launch
+  strategy's "what this deliberately avoids" list that is no longer avoided. The launch
+  materials say so in those words.
+- **Scanners will flag it, and they will be right to.** Do not treat the flag as unfair or
+  try to argue it down. A project whose entire pitch is verifiability cannot dispute a true
+  on-chain observation about itself.
+- **The float is 40% and your position equals the entire pool's MAGR side.** Thin float
+  amplifies both directions — it is why the price will look exciting early and why a single
+  seller can erase it. Do not read an early price rise as validation of the model. It is a
+  measure of how little liquidity there is.
+- **You now carry the risk personally.** With a lock, "I can't sell" is enforced by code and
+  nobody has to trust you. Without one, every accusation of an impending dump is answerable
+  only by your conduct over time, and a single large sale — even a justified one — ends the
+  project's credibility permanently.
+
+### What to do instead, since code is no longer doing the work
+
+None of these is as strong as a lock. Together they are the best available substitute, and
+they cost almost nothing:
+
+1. **Publish the wallet address before launch**, on the ledger page, labelled as the
+   founder's holding and labelled as unlocked. A watchable risk is enormously better than a
+   hidden one, and it is the difference between "he disclosed it" and "someone found it."
+2. **Adopt a written sell policy, approved by the board, published on the site.** Something
+   like: no sales in the first N months; any sale announced at least 14 days in advance;
+   no more than X% of the position in any 90-day window; every sale posted to the ledger
+   with a transaction link. It is a promise rather than a constraint — say so — but it is a
+   promise the board can hold you to and the ledger can audit.
+3. **Require board notification before any sale**, with the notice minuted and published.
+   This is the one place the board can partially substitute for the missing lock: four other
+   people knowing in advance, on the record, is real friction.
+4. **Say it first, in your own words, on the coin page.** The disclosure is already written
+   there. Leading with your own weakest fact is the single most credible thing a project in
+   this position can do, and it is much cheaper than being caught with it.
+5. **Keep the option open.** A timelock can be deployed at any time, including after launch.
+   "The founder locked his position in month three" is a genuinely strong announcement, and
+   nothing about today's decision forecloses it.
 
 ---
 
@@ -695,7 +726,7 @@ fundraising campaign.
 
 | Risk | Driver | Mitigation |
 |---|---|---|
-| Rug-pull perception | 60% of supply team-controlled | Timelock the 100M, publish the schedule pre-launch |
+| Rug-pull perception | 60% of supply team-controlled, founder's 40% unlocked | **Not mitigated by code — decision taken.** Publish the wallet pre-launch, adopt a board-approved sell policy, disclose it first on the coin page |
 | Scanner red flags | Fee-on-transfer mechanics | Ship the plain ERC-20; skip the fee |
 | Securities exposure worsens | Founder rake + promotion incentive + unlocked position | No fee; lock the founder position; no price talk in marketing — see `docs/LEGAL-BRIEFING.md` |
 | Published claims become false | 3% fee contradicts `cp17-site/index.html` | Either don't add the fee, or rewrite the page *before* launch |
@@ -728,7 +759,8 @@ fundraising campaign.
    one person can say no. Then the Domain seat. Adopt the tie-fails rule before the first
    meeting.
 5. Decide the fee question. The recommendation is no fee, plain ERC-20, ownership renounced.
-6. Deploy the founder timelock for the 100M and publish the unlock schedule.
+6. Publish the founder's wallet address and adopt the written sell policy — board-approved,
+   on the site — before launch, not after.
 7. Update `cp17-site` — new name, supply split, founder lock, board members, treasury
    policy — so the page matches reality on day one. Commission a MAGR mark; the cardinal
    crest belongs to the book.

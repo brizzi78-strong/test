@@ -10,7 +10,7 @@ token scanners, screeners, and skeptical buyers have nothing to flag.
 |---|---|---|
 | Supply at launch | Mint all 250M, then **renounce ownership immediately** | "Nobody can ever print more" is the single strongest trust signal a small token can have, and it costs nothing |
 | Into the Uniswap pool | **100M MAGR (40%)** | The tradeable float. Halving it from the original 200M doubles the launch price but does not deepen the book — see the slippage table in `docs/GOVERNANCE_AND_FOUNDER_ECONOMICS.md` |
-| Founder-held | **100M (40%), in a public timelock** | A bare hold of 40% reads on-chain as a pending dump. The timelock, with a published release schedule, is what converts it into a trust signal instead |
+| Founder-held | **100M (40%), unlocked, in a disclosed wallet** | Decision taken: no timelock. This is the weakest point in the design and it is deliberate. Mitigation is disclosure plus a written sell policy, not code — see `docs/GOVERNANCE_AND_FOUNDER_ECONOMICS.md` |
 | Treasury | 50M (20%) behind a Safe multisig, publicly announced | Any more looks extractive; label it, and require more than one signature to move it |
 | ETH into the pool | **2–5 ETH** to start | Enough that a few-hundred-dollar buy doesn't spike the price ~20%; small enough not to risk savings on an experiment |
 | LP tokens | **Lock for 12 months** (Team Finance or UNCX) | The pool being yankable is the #1 thing token scanners and buyers check |
@@ -21,7 +21,7 @@ token scanners, screeners, and skeptical buyers have nothing to flag.
 - **Total supply:** 250,000,000 (fixed — minted once at deployment, no mint function reachable after renounce)
 - **Distribution:**
   - 100,000,000 (40%) → Uniswap liquidity pool
-  - 100,000,000 (40%) → founder, held in a public timelock with a disclosed release schedule
+  - 100,000,000 (40%) → founder, held unlocked in a publicly disclosed wallet
   - 50,000,000 (20%) → treasury, behind a Safe multisig, publicly disclosed
 - **Ownership:** renounced immediately after setup is complete
 
@@ -66,7 +66,7 @@ The 20% held back is the only part of this setup that requires ongoing trust, so
 ## What This Setup Deliberately Avoids
 
 - **Mintable supply** — renounced, so impossible.
-- **Deployer holding an unlocked large share** — 40% is in the pool and the founder's 40% is timelocked.
+- ~~**Deployer holding a large share**~~ — **not avoided.** The founder holds 40% unlocked. This is the one item on this list the design does not solve, and the launch materials say so in those words rather than working around it.
 - **Yankable liquidity** — LP locked 12 months.
 - **Hidden team allocation** — the 20% is announced and labeled.
 - **Tax/fee/blacklist mechanics** — none; keeps scanner scores clean.
