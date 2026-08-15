@@ -9,18 +9,20 @@ token scanners, screeners, and skeptical buyers have nothing to flag.
 | Decision | Call | Rationale |
 |---|---|---|
 | Supply at launch | Mint all 250M, then **renounce ownership immediately** | "Nobody can ever print more" is the single strongest trust signal a small token can have, and it costs nothing |
-| Into the Uniswap pool | **200M MAGR (80%)** | Screeners flag deployer-heavy tokens as rug risks; putting most of the supply in the locked pool is what "fair launch" looks like on-chain |
-| Kept back | 50M (20%) in a publicly announced treasury/team wallet | Any more looks extractive; label it or it looks like a dump waiting to happen |
+| Into the Uniswap pool | **100M MAGR (40%)** | The tradeable float. Halving it from the original 200M doubles the launch price but does not deepen the book — see the slippage table in `docs/GOVERNANCE_AND_FOUNDER_ECONOMICS.md` |
+| Founder-held | **100M (40%), in a public timelock** | A bare hold of 40% reads on-chain as a pending dump. The timelock, with a published release schedule, is what converts it into a trust signal instead |
+| Treasury | 50M (20%) behind a Safe multisig, publicly announced | Any more looks extractive; label it, and require more than one signature to move it |
 | ETH into the pool | **2–5 ETH** to start | Enough that a few-hundred-dollar buy doesn't spike the price ~20%; small enough not to risk savings on an experiment |
 | LP tokens | **Lock for 12 months** (Team Finance or UNCX) | The pool being yankable is the #1 thing token scanners and buyers check |
 
 ## Token Parameters
 
-- **Name / Symbol:** MAGR
+- **Name / Symbol:** Mager Coin / MAGR
 - **Total supply:** 250,000,000 (fixed — minted once at deployment, no mint function reachable after renounce)
 - **Distribution:**
-  - 200,000,000 (80%) → Uniswap liquidity pool
-  - 50,000,000 (20%) → treasury/team wallet, publicly disclosed
+  - 100,000,000 (40%) → Uniswap liquidity pool
+  - 100,000,000 (40%) → founder, held in a public timelock with a disclosed release schedule
+  - 50,000,000 (20%) → treasury, behind a Safe multisig, publicly disclosed
 - **Ownership:** renounced immediately after setup is complete
 
 ## Launch Sequence
@@ -34,8 +36,11 @@ Order matters — several of these steps are only trustworthy if done in the rig
    hostile by default.
 3. **Transfer 50M to the treasury wallet.** Do this *before* renouncing and *before* the pool
    exists, so the transfer is visibly a setup step rather than a post-launch extraction.
-4. **Create the Uniswap pool** with 200M MAGR + 2–5 ETH. The ETH amount sets the launch
-   price; with 200M in the pool, 3 ETH implies a starting price of 0.000000015 ETH/MAGR.
+4. **Create the Uniswap V2 pool** with 100M MAGR + 2–5 ETH, via `addLiquidityETH` on the
+   router (`scripts/add-liquidity.ts`). This is not a swap — you are depositing both sides
+   and thereby *setting* the opening price, not paying one. The MAGR/ETH ratio is the price:
+   with 100M in the pool, 3 ETH implies 0.00000003 ETH/MAGR. Check the ratio twice; it is the
+   one number here that cannot be undone without trading against your own pool.
 5. **Lock the LP tokens for 12 months** via Team Finance or UNCX. Save the lock URL — it's
    the first link to publish.
 6. **Renounce ownership** of the token contract (`renounceOwnership()` / transfer owner to
@@ -61,7 +66,7 @@ The 20% held back is the only part of this setup that requires ongoing trust, so
 ## What This Setup Deliberately Avoids
 
 - **Mintable supply** — renounced, so impossible.
-- **Deployer holding a large share** — 80% is in the pool.
+- **Deployer holding an unlocked large share** — 40% is in the pool and the founder's 40% is timelocked.
 - **Yankable liquidity** — LP locked 12 months.
 - **Hidden team allocation** — the 20% is announced and labeled.
 - **Tax/fee/blacklist mechanics** — none; keeps scanner scores clean.
