@@ -1,7 +1,7 @@
 # Cardinal's Promise — Governance and Money. Spoken Summary.
 
 *A plain-language version of the governance and founder economics analysis, written to be
-listened to rather than read. No tables, no addresses, no file names. About nine minutes.*
+listened to rather than read. No tables, no addresses, no file names. About twelve minutes.*
 
 ---
 
@@ -43,16 +43,24 @@ there is almost no money in the pool.
 
 Now, the board.
 
-You said small, and small is right. Three people. Three is an odd number, so nothing ever
-deadlocks. Two people is not a board, it is a standoff. Five is what you build when there
-is real money and real legal exposure, and at this size you would not be able to find five
-good people willing to actually show up.
+You've settled on five members. Five is an odd number, so nothing deadlocks, and it buys
+you two things a smaller board cannot. Four independent voices against one founder is a
+much stronger signal than two against one. And it protects the money: on a three key
+wallet, losing two keys locks the treasury away forever, while a five key wallet can lose
+two and keep working. For a project whose whole pitch is that the money is safe from any
+one person, that matters.
+
+The cost is recruiting. A seat filled by someone who will not show up is worse than an
+empty seat, because it creates the appearance of oversight without any of the substance.
+So fill them in order rather than all at once. Three before launch, two within ninety days,
+and say publicly which seats are still open and what they are for.
 
 Design the seats first, then go find people. Choosing people first and inventing their
-roles afterward is how boards fill up with friends.
+roles afterward is how boards fill up with friends. Each of these five covers a way this
+can fail that none of the others can see.
 
-The first seat is the important one. Call it the constraint. This is someone with financial
-or legal or fiduciary experience who holds none of the coin and has no upside if the price
+The first seat is the important one. Call it the constraint. Someone with financial or
+legal or fiduciary experience who holds none of the coin and has no upside if the price
 goes up. Their entire job is to be able to tell you no and mean it. A retired accountant.
 An estate attorney. Someone who has served on a credit union board. If you only ever fill
 one seat, fill this one, because this is the seat that makes the board real instead of
@@ -64,14 +72,53 @@ To choose who receives, and to say out loud when a gift would actually help a fa
 when it would just look good. Given the book and the mission, this person is also your
 strongest credibility signal to everyone who does not care about crypto at all.
 
-The third seat is you.
+The third seat is the verifier, and this one only becomes possible at five. Someone who can
+actually read the contract code and confirm what it does. Right now every trust claim you
+make rests on you saying it. Supply is fixed. Ownership is given up. The pool is locked.
+Your coins are locked. Somebody other than you needs to be able to check those on the
+blockchain and say so, and to resign loudly if one of them stops being true. That is the
+difference between a promise and an audit.
+
+The fourth seat is the recipient voice. Someone who has been through it. A bereaved family
+member, a former caregiver, someone a gift like this would have reached. They are the only
+person in the room representing the people the project exists for, and they are the one who
+will notice when a decision starts optimizing for how it looks instead of who it helps.
+
+The fifth seat is you.
 
 Now, here is the part worth sitting with. On any question where you have a personal
 interest, your own pay, a spend that benefits you, selling any of the treasury, you step
-out and the other two decide. Which means you can be outvoted two to nothing on your own
-compensation. If that sentence makes you want to redesign the board, then the board is not
-actually the thing you want, and it is much better to learn that now than after you have
-asked two people to serve.
+out and the other four decide. Which means you can be outvoted four to one, or four to
+nothing with you not voting at all, on your own compensation. If that makes you want to
+redesign the board, then the board is not actually the thing you want, and it is much
+better to learn that now than after you have asked four people to serve.
+
+One wrinkle to solve before your first meeting. Five is odd, but the moment you step out
+it is four, and four can tie. Write the rule down in advance: when someone is recused, a
+tied vote fails. The motion just does not carry. Applied to your pay, a deadlocked board
+leaves your compensation exactly where it is. It cannot go up without a real majority and
+it cannot be cut by a minority. Conservative in both directions, and nobody ever has to
+personally cast the deciding vote on what the founder earns.
+
+You've named four people. Chris Brizzi, Jeff Mager, Matt Campbell, and Charles Cole. With
+you that fills every seat. But do not assign anyone yet, because a seat is defined by what
+that person can do that nobody else in the room can. So four questions first. Who among
+them can genuinely tell you no. Who can actually read the contract code. Who brings real
+hospice credibility. And does any of them hold the coin, or plan to, which rules them out
+of the constraint and verifier seats.
+
+One thing to name directly. Chris Brizzi shares your last name, so I assume family. That is
+not a reason to keep anyone off the board, and family often brings the most real commitment
+to something like this. But it does rule that person out of the constraint seat
+specifically, because someone who will be at Thanksgiving cannot be the person whose job is
+to publicly refuse your pay request. Put family somewhere their judgment helps instead of
+conflicts, disclose the relationship on the ledger page, and make sure the constraint seat
+goes to someone with no tie to you at all.
+
+And if all four turn out to be friends and family, then what you have is five people who
+like you, not a board. The shared wallet becomes a formality where everybody signs
+everything. At least one member has to be a genuine outsider for any of this to mean
+anything.
 
 When you interview candidates, there is one question that works better than any other. Ask
 them what would make them resign. A good answer comes fast and is specific. If you moved
@@ -84,7 +131,9 @@ with a vote. And nobody who cannot say no to you. Warmth is not the qualificatio
 Friction is.
 
 Pay board members in cash or not at all. A few hundred dollars a meeting, or just expenses.
-Never in coins.
+Never in coins. And note that five people at a few hundred dollars a meeting is a few
+thousand dollars a year, which the coin company does not have. So for now it is expenses
+only, and you should say that plainly when you ask.
 
 On the company itself. A separate new limited liability company is the right call, and the
 separate part is doing most of the work. The coin is the riskiest thing you are building.
@@ -205,9 +254,13 @@ back. Apply exactly that discipline to your own pay.
 So, what to do, in order.
 
 Clear the name. Form the company, get the tax ID, open its bank account, and document the
-ten thousand dollars going in. Open the two of three shared wallet so no money moves
-without a second signature. Recruit the constraint seat, because everything gets easier
-once one person can tell you no, and then the hospice seat. Drop the fee. Lock your one
+ten thousand dollars going in. Open the shared wallet so no money moves without a second
+signature. Start it at two of three, and move it to three of five once all five seats are
+actually filled. Do not build a three of five wallet around three people, because a
+threshold you cannot meet is a treasury you cannot use. Screen your four candidates, then
+assign seats. Fill the constraint seat first, with someone who has no tie to you, because
+everything gets easier once one person can tell you no. Then the hospice seat. And adopt
+the tie fails rule before the first meeting. Drop the fee. Lock your one
 hundred million and publish the schedule. Update the website so it describes what is
 actually true on day one. Put the giving policy and your compensation agreement in writing
 before either one is needed. Then launch. Then publish, every quarter, the gifts, the

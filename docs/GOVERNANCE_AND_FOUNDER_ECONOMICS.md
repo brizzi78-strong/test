@@ -22,14 +22,15 @@ nothing with it: a 3% fee at realistic volume for a token this size funds roughl
 to $11,000 a year**, which is not a salary. You would be trading the entire trust story for
 less than the cost of the legal work you already need.
 
-The board is the opposite case. A small board inside a separate LLC is the one proposal
-that *adds* to the asset, because it converts "trust us with the treasury" into "two other
-people have to agree," and it keeps a token dispute from ever reaching the book.
+The board is the opposite case. A five-member board inside a separate LLC is the one
+proposal that *adds* to the asset, because it converts "trust us with the treasury" into
+"three other people have to agree," and it keeps a token dispute from ever reaching the
+book.
 
-**Form the new LLC and give it a boring name. Seat three people. Replace the bare 100M
-hold with a public timelock. Skip the fee. Get paid — but from the book and the software,
-as owner's draws from an operating entity, while CP17 LLC pays operating costs directly and
-leaves the treasury untouched.**
+**Form the new LLC and give it a boring name. Seat five, filling three before launch.
+Replace the bare 100M hold with a public timelock. Skip the fee. Get paid — but from the
+book and the software, as owner's draws from an operating entity, while CP17 LLC pays
+operating costs directly and leaves the treasury untouched.**
 
 ---
 
@@ -77,11 +78,20 @@ when combined with the next section.
 
 ## Part I — The board
 
-You said **small**. Correct, and the right number is **three**.
+**Decision taken: five members.**
 
-Three is odd, so nothing deadlocks. Two is not a board, it's a standoff. Five is right when
-there is real money and real liability; at a $20,000 FDV, five people is theater and you
-will not be able to get five good ones to show up.
+Five is odd, so nothing deadlocks, and it buys two things three cannot. It gives you four
+independent voices against one founder, which is a far stronger signal than two against
+one. And it makes the treasury survivable: on a three-key wallet, losing two keys locks the
+money away permanently, while a five-key wallet can lose two and keep operating. For a
+project whose entire pitch is that the money is safe from any single person, that
+resilience is worth real money.
+
+The cost is recruiting. Five people who are genuinely independent, genuinely qualified, and
+genuinely willing to spend four hours a month on a twenty-thousand-dollar project is a hard
+ask, and a seat filled by someone who will not show up is worse than an empty one — it
+launders the appearance of oversight without the substance. So fill them in order rather
+than all at once. See the staging note below.
 
 ### Before you can have a board, you need something for it to be a board *of*
 
@@ -103,16 +113,16 @@ That is the right call, and the "separate" part is doing most of the work:
   any say over the book or the rest of your work.
 - **A clean exit.** If CARD goes nowhere, you dissolve one LLC. Nothing else is affected.
 
-**Structure: new LLC + a 2-of-3 Safe multisig on the treasury.** Skip the nonprofit for
-now — do not file a 501(c)(3) for a $20,000 project; the formation cost, exemption
-application, and annual filings would exceed the treasury's entire value at spot. If the
-giving grows enough to need real charitable standing, use **fiscal sponsorship** (an
-existing 501(c)(3) receives and disburses the gifts for a percentage) rather than building
-your own.
+**Structure: new LLC + a Safe multisig on the treasury** — 2-of-3 at launch, 3-of-5 once
+all five seats are filled. Skip the nonprofit for now — do not file a 501(c)(3) for a
+$20,000 project; the formation cost, exemption application, and annual filings would exceed
+the treasury's entire value at spot. If the giving grows enough to need real charitable
+standing, use **fiscal sponsorship** (an existing 501(c)(3) receives and disburses the gifts
+for a percentage) rather than building your own.
 
-The multisig is what makes the governance real. A corporate bylaw is a promise; a 2-of-3
-Safe is checkable on-chain by a stranger at 2am. Same design principle as the renounced
-ownership and the locked LP.
+The multisig is what makes the governance real. A corporate bylaw is a promise; a Safe with
+a signing threshold is checkable on-chain by a stranger at 2am. Same design principle as the
+renounced ownership and the locked LP.
 
 ### What the LLC should and should not hold
 
@@ -180,31 +190,123 @@ software, financial services, and charitable or care services — and a **domain
 trademark screen costs a small fraction of a rebrand after launch, and after launch the
 name is on a contract address that cannot be edited.
 
-### The three seats
+### The five seats
 
 Design the seats first, then find people for them. Choosing people first and inventing
-roles afterward is how boards fill up with friends.
+roles afterward is how boards fill up with friends. Each seat below covers a way this
+project can fail that no other seat can see.
 
 **Seat 1 — The Constraint.** Someone with financial, legal, or fiduciary experience who
 holds **no CARD** and has no upside if the price rises. Their entire job is to be able to
 say no to you and mean it. This is the seat that makes the board real; if you fill only one
 seat, fill this one. Look for: a CPA, an estate or nonprofit attorney, a retired finance
-officer, a credit-union or community-bank board veteran.
+officer, a credit-union or community-bank board veteran. *Guards against: money moving for
+bad reasons.*
 
 **Seat 2 — The Domain.** A hospice or palliative-care professional — a chaplain, a hospice
 social worker, a bereavement coordinator, a volunteer director. Their job is to make the
 giving real: to choose recipients, to say which gifts actually help a family and which are
 performative, and to lend their professional reputation to the claim that this project
 knows what it is talking about. Given the book and the mission, this seat is also your
-strongest credibility signal to non-crypto audiences.
+strongest credibility signal to non-crypto audiences. *Guards against: giving that looks
+good and helps nobody.*
 
-**Seat 3 — You.** Vision, execution, and the only person doing the daily work.
+**Seat 3 — The Verifier.** Someone who can read Solidity and independently confirm what the
+contract actually does. This seat only becomes possible at five, and it closes the largest
+hole in the current design: every trust claim you make — supply is fixed, ownership is
+renounced, liquidity is locked, the founder position is timelocked — currently rests on
+*you* saying so. A technically competent board member who has checked the chain themselves,
+and who would resign publicly if a claim stopped being true, is the difference between a
+promise and an audit. Look for: a smart-contract developer, a security engineer, anyone who
+has shipped or reviewed an ERC-20 in production. They must hold no CARD either. *Guards
+against: a claim on the website drifting out of line with the chain.*
 
-Note the structural consequence: on any question where you are conflicted — your own
-salary, a treasury spend that benefits you, selling treasury tokens — you recuse, and the
-other two decide. **That means you can be outvoted 2-0 on your own compensation.** If that
-sentence makes you want to redesign the board, the board is not the thing you actually
-want, and it is better to know that before you recruit anyone.
+**Seat 4 — The Recipient Voice.** Someone who has been through it — a bereaved family
+member, a former caregiver, someone a gift like this would have reached. They are the only
+person in the room representing the constituency the project exists for, and they are the
+one who will notice when a decision starts optimizing for how it looks rather than who it
+helps. This is also the seat where "no" is most likely to be the right answer and least
+likely to be said by anyone else. *Guards against: the mission quietly becoming marketing.*
+
+**Seat 5 — You.** Vision, execution, and the only person doing the daily work.
+
+Note the structural consequence: on any question where you are conflicted — your own pay, a
+spend that benefits you, selling treasury tokens — you recuse and the other four decide.
+**That means you can be outvoted 4-1, or overruled 4-0 with you not voting at all, on your
+own compensation.** If that sentence makes you want to redesign the board, the board is not
+the thing you actually want, and it is better to know that before you ask anyone to serve.
+
+### The even-number problem, and the rule that solves it
+
+Five is odd, but the moment you recuse it is four — and four ties. A 2-2 split on your
+compensation, or on any conflicted question, has to resolve somehow, and inventing the rule
+in the moment is how boards break.
+
+**Adopt this in writing before the first meeting: on any motion where a member is recused,
+a tied vote fails.** The motion does not carry. Applied to your pay, that means a deadlocked
+board leaves your compensation where it is — it cannot be raised without a real majority,
+and it cannot be cut by a minority either. It is the conservative default in both
+directions, it needs no tie-breaker with a casting vote, and it never puts one member in
+the position of personally deciding what the founder earns.
+
+### Staging the seats
+
+Do not hold the launch hostage to five signatures, and do not seat five people quickly just
+to have five.
+
+- **Before launch, fill three:** the Constraint, the Domain, and you. This is the minimum
+  that makes the multisig meaningful and the gift policy real.
+- **Within 90 days, fill the Verifier and the Recipient Voice.** Name the seats publicly as
+  vacant with a target date rather than leaving them undescribed. A published "two seats
+  open, here is what they are for" reads as a plan; five names where two never attend reads
+  as decoration.
+- **Run the multisig as 2-of-3 until the board is five, then migrate to 3-of-5.** Announce
+  the migration and link the transaction. Do not build a 3-of-5 wallet around three people —
+  a threshold you cannot meet is a treasury you cannot use.
+
+### The candidate slate
+
+Four names are under consideration, which with you fills all five seats:
+
+| Candidate | Seat | Status |
+|---|---|---|
+| Chris Brizzi | unassigned | **Independence question — see below** |
+| Jeff Mager | unassigned | Background needed |
+| Matt Campbell | unassigned | Background needed |
+| Charles Cole | unassigned | Background needed |
+| *(founder)* | Seat 5 | Filled |
+
+Nothing can be assigned yet, because seats are defined by what a person can do that the
+others cannot, and that requires knowing each person's profession, their relationship to
+you, and whether they hold or intend to hold CARD. Run all four through the scorecard above
+and the three conversations below before assigning anyone. Specifically, the slate needs to
+answer:
+
+- **Who can genuinely say no?** At least one member must have no personal or financial
+  relationship with you at all. If all four are friends and family, you have five people who
+  like you rather than a board, and the multisig becomes a formality — everyone signs
+  everything.
+- **Who can read the contract?** The Verifier seat needs actual technical capability. If
+  nobody on the slate can read Solidity, either recruit outside the slate for that seat or
+  drop it and buy a third-party audit instead — do not fill it with someone who will nod.
+- **Who brings hospice credibility?** Same test. This seat is the project's strongest
+  signal to non-crypto audiences, and only if the person actually works in the field.
+- **Does anyone hold CARD, or expect to?** Disqualifying for the Constraint and Verifier
+  seats. Ask before offering, not after.
+
+**On Chris Brizzi specifically:** the shared surname suggests family. That is not a
+disqualification for the board, and family often brings the most genuine commitment to a
+mission like this one — but it is disqualifying for the **Constraint seat**, whose entire
+function is independence from you. Someone who will be at Thanksgiving cannot be the person
+whose job is to publicly refuse your compensation request. Seat family somewhere their
+judgment is an asset rather than a conflict, disclose the relationship on the ledger page
+alongside the other board members, and make sure the Constraint seat goes to someone with
+no tie to you at all.
+
+Disclosing relationships is not an embarrassment to manage — an undisclosed one discovered
+later is. "Two of five are family, here is who and why" is a fact a reasonable person can
+accept. Silence on it, followed by someone noticing the surname, is a credibility problem
+you cannot undo.
 
 ### Who must not be on it
 
@@ -246,14 +348,19 @@ regardless of the total.
 
 ### What the seat comes with
 
-- **A key on a 2-of-3 Safe multisig holding the 50M treasury.** No treasury movement — no
-  gift, no listing fee, no salary — happens with one signature.
+- **A key on the Safe multisig holding the 50M treasury** — 2-of-3 at launch, 3-of-5 once
+  all five seats are filled. No treasury movement — no gift, no listing fee, no
+  compensation — happens with one signature.
 - **A written gift policy** adopted before the first gift, not after.
-- **Sole authority over founder compensation**, with you recused.
+- **Sole authority over founder compensation**, with you recused and ties failing.
+- **Quorum of three**, with a majority of those present carrying an ordinary motion. Below
+  three, the meeting is a conversation, not a decision.
 - **Quarterly minutes published** to `cp17-site/ledger.html`, including dissents by name.
-- **A one-year renewable term**, and a standing commitment that any resignation letter is
-  published unedited. That last clause is what gives a board member real leverage and gives
-  buyers a real signal.
+- **Staggered terms.** One year, renewable — but stagger the initial terms so the whole
+  board cannot turn over at once: give two members two-year first terms and the rest one
+  year. Five seats make staggering possible; three did not.
+- **A standing commitment that any resignation letter is published unedited.** That clause
+  is what gives a board member real leverage and gives buyers a real signal.
 
 ### Compensation for board members
 
@@ -544,8 +651,11 @@ fundraising campaign.
 | Scanner red flags | Fee-on-transfer mechanics | Ship the plain ERC-20; skip the fee |
 | Securities exposure worsens | Founder rake + promotion incentive + unlocked position | No fee; lock the founder position; no price talk in marketing — see `docs/LEGAL-BRIEFING.md` |
 | Published claims become false | 3% fee contradicts `cp17-site/index.html` | Either don't add the fee, or rewrite the page *before* launch |
-| Treasury discretion | Single-signer wallet | 2-of-3 Safe, written gift policy, published minutes |
+| Treasury discretion | Single-signer wallet | Safe multisig (2-of-3, then 3-of-5), written gift policy, published minutes |
 | Board capture | Members hold tokens or depend on you | No token comp; independence weighted ×3 in scoring |
+| Board of friends and family | A slate drawn entirely from one circle | At least one member with no tie to you; relationships disclosed on the ledger page |
+| Deadlock on conflicted votes | Recusal leaves an even four | Written rule adopted up front: a tied vote fails |
+| Empty seats read as oversight | Five named, two never attend | Stage the seats; publish vacancies with target dates |
 | Liability reaching the book | Token and memoir sharing one entity | Separate LLC; book IP and royalties stay out of it |
 | LLC shield pierced | Commingled funds from day one | Own EIN and bank account; the $10k in as a documented capital contribution |
 | Trademark collision | "Cardinal" is crowded in healthcare and finance | Boring legal name (CP17 LLC); clear it before filing, not after launch |
@@ -559,9 +669,11 @@ fundraising campaign.
 1. Clear the name (state search, USPTO, domain), form the new LLC, get an EIN, open its
    bank account, and document the $10,000 as a capital contribution. *Before* launch —
    retrofitting an issuer onto a live token is visibly a patch.
-2. Open the 2-of-3 Safe and decide who deploys.
-3. Recruit the Constraint seat. Everything else is easier once someone can say no. Then the
-   Domain seat.
+2. Open the Safe (2-of-3 to start) and decide who deploys.
+3. Screen the slate — Chris Brizzi, Jeff Mager, Matt Campbell, Charles Cole — against the
+   scorecard and the three conversations, then assign seats. Fill the Constraint seat first
+   with someone who has no tie to you; everything else is easier once one person can say no.
+   Then the Domain seat. Adopt the tie-fails rule before the first meeting.
 4. Decide the fee question. The recommendation is no fee, plain ERC-20, ownership renounced.
 5. Deploy the founder timelock for the 100M and publish the unlock schedule.
 6. Update `cp17-site` — new supply split, founder lock, board members, treasury policy — so
