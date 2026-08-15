@@ -1,4 +1,4 @@
-# Mager Coin — Governance and Money. Spoken Summary.
+# Cardinals Promise — Governance and Money. Spoken Summary.
 
 *A plain-language version of the governance and founder economics analysis, written to be
 listened to rather than read. No tables, no addresses, no file names. About fifteen minutes.*
@@ -43,128 +43,88 @@ there is almost no money in the pool.
 
 Now, the board.
 
-You've settled on five members. Five is an odd number, so nothing deadlocks, and it buys
-you two things a smaller board cannot. Four independent voices against one founder is a
-much stronger signal than two against one. And it protects the money: on a three key
-wallet, losing two keys locks the treasury away forever, while a five key wallet can lose
-two and keep working. For a project whose whole pitch is that the money is safe from any
-one person, that matters.
+You've settled on three people. Three is an odd number, so nothing deadlocks. Two is not a
+board, it is a standoff. Five would have been stronger on paper, but you cannot recruit five
+unpaid people to put their names on a coin, and five names where two never show up is worse
+than three people who actually do the work.
 
-The cost is recruiting. A seat filled by someone who will not show up is worse than an
-empty seat, because it creates the appearance of oversight without any of the substance.
-So fill them in order rather than all at once. Three before launch, two within ninety days,
-and say publicly which seats are still open and what they are for.
+But here is the important distinction, and it is easy to miss. Three people and three keys
+are two different questions.
 
-Design the seats first, then go find people. Choosing people first and inventing their
-roles afterward is how boards fill up with friends. Each of these five covers a way this
-can fail that none of the others can see.
+The giving committee is three people. You, a hospice or palliative care professional, and
+one more. They decide which families get money. That money comes from book revenue, not
+from the coin, which means none of them ever touch a wallet, hold a coin, or appear on the
+coin page at all. Those are the easy seats to fill, because there is no crypto in the ask.
 
-The first seat is the important one. Call it the constraint. Someone with financial or
-legal or fiduciary experience who holds none of the coin and has no upside if the price
-goes up. Their entire job is to be able to tell you no and mean it. A retired accountant.
-An estate attorney. Someone who has served on a credit union board. If you only ever fill
-one seat, fill this one, because this is the seat that makes the board real instead of
-decorative.
+The treasury wallet is three keys, and it takes two of them to move anything. You, a paid
+reviewer, and one person who is comfortable with crypto. Never two keys, because two can
+deadlock, and if either one is lost the money is gone forever. The third key is as much
+about survival as oversight.
 
-The second seat is the domain seat. A hospice or palliative care professional. A chaplain,
-a hospice social worker, a bereavement coordinator. Their job is to make the giving real.
-To choose who receives, and to say out loud when a gift would actually help a family versus
-when it would just look good. Given the book and the mission, this person is also your
-strongest credibility signal to everyone who does not care about crypto at all.
+The two groups only overlap in you. And a key holder does not have to be a public board
+member, which is exactly what makes that role fillable.
 
-The third seat is the verifier, and this one only becomes possible at five. Someone who can
-actually read the contract code and confirm what it does. Right now every trust claim you
-make rests on you saying it. Supply is fixed. Ownership is given up. The pool is locked.
-Your coins are locked. Somebody other than you needs to be able to check those on the
-blockchain and say so, and to resign loudly if one of them stops being true. That is the
-difference between a promise and an audit.
+Why would anyone say yes to any of this? There is no money in it and no coins, so the offer
+has to be something else, and it is. Most volunteer board seats are advisory theater. You
+attend, you give an opinion, somebody else decides. This one comes with a key and a vote. A
+person can actually stop a spend. For the right person, being told you will help decide
+which grieving families get money, and you can block me, is a better offer than a few
+hundred dollars a meeting.
 
-The fourth seat is the recipient voice. Someone who has been through it. A bereaved family
-member, a former caregiver, someone a gift like this would have reached. They are the only
-person in the room representing the people the project exists for, and they are the one who
-will notice when a decision starts optimizing for how it looks instead of who it helps.
+The thing that actually closes it, though, is the exit. Four hours a month. One year. Resign
+any time, and the resignation letter gets published exactly as written, nothing edited out.
+People turn these things down because they are afraid of getting stuck defending something
+they stopped believing in. Tell them they can walk out the front door and say why, and that
+fear goes away.
 
-The fifth seat is you.
+Now, the crypto problem, because it is real. Serious professionals do not want their names
+next to a cryptocurrency, and being unpaid makes it worse, because an unpaid public
+association reads as an endorsement while a paid engagement reads as a job. That is not
+them being squeamish. That is them being right.
 
-Now, here is the part worth sitting with. On any question where you have a personal
-interest, your own pay, a spend that benefits you, selling any of the treasury, you step
-out and the other four decide. Which means you can be outvoted four to one, or four to
-nothing with you not voting at all, on your own compensation. If that makes you want to
-redesign the board, then the board is not actually the thing you want, and it is much
-better to learn that now than after you have asked four people to serve.
+The fix is not better wording, it is the structure above. The giving committee has nothing
+to do with the coin, so a chaplain can join it with no exposure at all. And for the hard
+role, the independent financial one, pay for it instead of asking for a favor. An accountant
+who will not lend his name to a coin for free will take a paid engagement to review your
+treasury every quarter, because a professional engagement is not an endorsement and he can
+say so to anyone who asks.
 
-One wrinkle to solve before your first meeting. Five is odd, but the moment you step out
-it is four, and four can tie. Write the rule down in advance: when someone is recused, a
-tied vote fails. The motion just does not carry. Applied to your pay, a deadlocked board
-leaves your compensation exactly where it is. It cannot go up without a real majority and
-it cannot be cut by a minority. Conservative in both directions, and nobody ever has to
-personally cast the deciding vote on what the founder earns.
+On that, you have a name. Jeff Middleton, a C P A, at around fifteen hundred dollars a year.
 
-Now, the people. Jeff Mager is off the board, and that is the right call, because the coin
-is being named after him. A namesake cannot also be an independent director of the thing
-named after him. His reputation is tied to the coin's price and behavior, which is exactly
-the entanglement an independent seat exists to prevent. Keeping the name and giving up the
-seat costs you nothing structural. Keeping both would have cost the board its independence.
+That number is defensible but honestly below market. C P A time usually runs a hundred fifty
+to four hundred dollars an hour, so fifteen hundred buys somewhere between four and ten
+hours, which is about right for four quarterly reviews plus being reachable. Bill it three
+seventy five a quarter rather than one lump, so there is a record each time the work
+actually happened. Pay it from the company straight to his firm and post it on the ledger.
 
-So that leaves Chris Brizzi, Matt Campbell, and Charles Cole, plus you. Four of five. One
-seat still open, and it should go to an outsider, somebody with no personal or financial
-tie to you at all. That is now the single most important recruiting job on the list.
+What is in it for him. It is an engagement, not an endorsement, and that is the whole point.
+It is small and defined and he can end it. If he already does your books it is easy money on
+work he half knows already. And crypto treasury work is a niche that accountants are getting
+asked about more and more, and a twenty thousand dollar treasury is a very forgiving place
+to learn it.
 
-Do not assign the other seats yet, because a seat is defined by what that person can do
-that nobody else in the room can. So, four questions first. Who among them can genuinely
-tell you no. Who can actually read the contract code. Who brings real hospice credibility.
-And does any of them hold the coin, or plan to, which rules them out of the constraint and
-verifier seats.
+Three cautions, and the first one matters most. If he is already your accountant, he is not
+independent. He depends on you financially, which is exactly the conflict the role exists to
+remove. He can be a very good paid reviewer and a very good second signature. Just do not
+call him the independent director in public, because that is the kind of claim somebody
+checks.
 
-One thing to name directly. Chris Brizzi shares your last name, so I assume family. That is
-not a reason to keep anyone off the board, and family often brings the most real commitment
-to something like this. But it does rule that person out of the constraint seat
-specifically, because someone who will be at Thanksgiving cannot be the person whose job is
-to publicly refuse your pay request. Put family somewhere their judgment helps instead of
-conflicts, disclose the relationship on the ledger page, and make sure the constraint seat
-goes to someone with no tie to you at all.
+Second, do not call his work an audit or a review. Those words mean specific things in
+accounting and carry requirements he may not be able to meet here. Call it treasury
+oversight.
 
-And if the whole board turns out to be friends and family, then what you have is five
-people who like you, not a board. The shared wallet becomes a formality where everybody
-signs everything. At least one member has to be a genuine outsider for any of this to mean
-anything.
+Third, holding a key to the wallet may be a problem for him professionally, because having
+custody of a client's assets is a real independence issue for accountants and his firm may
+have rules about it. Ask him to clear both the engagement and the key with his firm before
+he says yes. If the key is a problem, that is easy. He does the oversight, and the third key
+goes to somebody else.
 
-While we are on the name. The coin is now Mager Coin, ticker M A G R, and the tagline is
-built to hold, which comes from Jeff finishing a one hundred forty point six mile
-triathlon. The endurance idea genuinely fits what you built. Fixed supply, locked pool,
-ownership given up, your own coins under lock. A coin built to be held rather than flipped
-is an honest description of it.
-
-Four things that decision requires, though, and none of them are optional.
-
-First, get Jeff's permission in writing before anything is deployed. His last name goes onto
-a contract at a permanent address that nobody can ever edit. If the price goes to zero,
-which is the outcome your own coin page tells people to expect, his name is on that forever.
-Make sure he is agreeing to that version, not the good one.
-
-Second, do not use the word Ironman anywhere in the branding. It is a registered trademark
-and the owner enforces it hard, and a coin, a website, and merchandise are exactly what
-draws a letter. Describing the distance plainly, a one hundred forty point six mile
-triathlon, swim then bike then marathon, carries the whole story without touching the mark.
-Same goes for race photos. Those usually belong to the event photographer, not the athlete,
-so do not put one on the site without permission.
-
-Third, keep built to hold about how the thing is made, not about the price. As a statement
-about the contract it is accurate and anyone can check it. As a suggestion to buy and wait,
-it turns into the exact marketing risk your legal briefing warns about, because the
-remaining legal exposure in this design is almost entirely about what you say, not what you
-built. On the site the tagline sits right next to the souvenir language for that reason.
-Keep them together everywhere.
-
-Fourth, accept that naming a coin after a person carries a pattern problem. That is what
-pump and dumps do, and some people will discount you for it before reading a word. The
-answer is not an argument, it is the evidence. Ownership renounced, pool locked, your coins
-locked, a real board, a published ledger. That evidence is stronger than the name is weak,
-but it has to actually exist before launch, not after.
-
-One good side effect. The coin no longer shares a name with the book, which makes the
-separation stronger, not weaker. The memoir keeps its own name and its own domain, and a
-fight about the coin no longer shows up wearing the book's title.
+One last thing on the name. The coin was briefly going to be called Mager Coin, and it is
+back to Cardinals Promise, ticker C A R D. Nothing was deployed under either name, so the
+change cost nothing. Going back also removes three problems at once: no need for anyone's
+written permission, no trademark question about the word Ironman, and none of the baggage
+that comes with naming a coin after a person. And Jeff Mager is eligible for the board again
+now, because the only reason he was ruled out was that the coin carried his name.
 
 When you interview candidates, there is one question that works better than any other. Ask
 them what would make them resign. A good answer comes fast and is specific. If you moved
@@ -207,8 +167,8 @@ because your project is hospice adjacent, which is their exact territory. Cardin
 crowded in financial services.
 
 So my suggestion is C P seventeen L L C for the company, which already matches the web
-address you own, with Mager Coin as the public name of the coin. And notice the good side
-effect. With the coin called Mager Coin and the company called C P seventeen, the book's
+address you own, with Cardinals Promise as the public name of the coin. And notice the good side
+effect. With the coin called Cardinals Promise and the company called C P seventeen, the book's
 name appears nowhere in the coin's legal identity or its public one. That is a stronger
 version of the separation you formed the company to get.
 

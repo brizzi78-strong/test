@@ -1,12 +1,12 @@
-# Mager Coin (MAGR) — Launch Runbook
+# Cardinals Promise (CARD) — Launch Runbook
 
 ## Decided launch parameters
 
 | Decision | Value |
 | --- | --- |
 | Supply | Mint all 250M at deploy, `renounceOwnership()` immediately after verification |
-| Uniswap pool | 200M MAGR (80%) paired with 2–5 ETH |
-| Treasury | 50M MAGR (20%) in a publicly announced wallet |
+| Uniswap pool | 200M CARD (80%) paired with 2–5 ETH |
+| Treasury | 50M CARD (20%) in a publicly announced wallet |
 | LP tokens | Locked 12 months (Team Finance or UNCX) |
 | Timeline | Week 0: Sepolia rehearsal → Weeks 1–2: independent audit + legal consult → Week 3: mainnet |
 | Before mainnet | Publish the one-page site (`site/index.html`) at **thecardinalspromise.com/card** (the book's established domain — best trust signal; cp17.org can redirect there) and fill in the story section |
@@ -19,17 +19,17 @@ repo; items marked 🔑 need something only the project owner can provide
 
 | Step | Where |
 | --- | --- |
-| Token contract (250M fixed supply — no mint, no burn; OpenZeppelin ERC20 + Ownable) | `contracts/MagerCoin.sol` |
-| Test suite — 17 tests (Foundry-style Solidity incl. fuzz + invariants, plus node:test/viem), all passing | `contracts/*.t.sol`, `test/MagerCoin.ts` |
+| Token contract (250M fixed supply — no mint, no burn; OpenZeppelin ERC20 + Ownable) | `contracts/CardinalsPromise.sol` |
+| Test suite — 17 tests (Foundry-style Solidity incl. fuzz + invariants, plus node:test/viem), all passing | `contracts/*.t.sol`, `test/CardinalsPromise.ts` |
 | Machine-checkable launch-claims ledger — 8/8 claims verified in CI (`npm run verify`) | `verification/claims.json` |
 | Static analysis — Slither v0.11.5, all 101 detectors, **0 findings** | run locally, see below to reproduce |
-| Local deployment rehearsal (Ignition) | `ignition/modules/MagerCoin.ts` |
+| Local deployment rehearsal (Ignition) | `ignition/modules/CardinalsPromise.ts` |
 | CI — build + full test suite + claims verification on every push/PR | `.github/workflows/verify.yml` |
 | Sepolia + mainnet network config | `hardhat.config.ts` |
 | Etherscan verification config | `hardhat.config.ts` (`verify.etherscan`) |
 | Uniswap V2 liquidity script | `scripts/add-liquidity.ts` |
 | Logo (SVG + 256px/32px PNG) and token metadata | `assets/` |
-| **Full launch dress rehearsal** — real Uniswap V2 stack deployed locally; deploy → seed 10M MAGR/100 ETH pool → buyer swap (price verified incl. 0.3% fee) → renounceOwnership, all green | `scripts/rehearse-launch.ts` |
+| **Full launch dress rehearsal** — real Uniswap V2 stack deployed locally; deploy → seed 10M CARD/100 ETH pool → buyer swap (price verified incl. 0.3% fee) → renounceOwnership, all green | `scripts/rehearse-launch.ts` |
 
 ### Reproducing the Slither run
 
@@ -69,7 +69,7 @@ npx hardhat keystore set SEPOLIA_RPC_URL
 npx hardhat keystore set SEPOLIA_PRIVATE_KEY     # fund it from a Sepolia faucet first
 npx hardhat keystore set ETHERSCAN_API_KEY
 
-npx hardhat ignition deploy ignition/modules/MagerCoin.ts --network sepolia
+npx hardhat ignition deploy ignition/modules/CardinalsPromise.ts --network sepolia
 npx hardhat verify --network sepolia <deployed-address>
 ```
 
@@ -86,7 +86,7 @@ professional firm. Do not skip this if the token will hold real value.
 ## 🔑 Step 4 — Legal review (owner engages, before mainnet)
 
 Token issuance can be a regulated activity (US: Howey test; EU: MiCA).
-Engage a crypto-literate lawyer on: what MAGR is for, how it's distributed,
+Engage a crypto-literate lawyer on: what CARD is for, how it's distributed,
 whether it's sold, and required disclosures. Keep marketing free of any
 implied returns — the name "Promise" makes this doubly important.
 
@@ -96,7 +96,7 @@ implied returns — the name "Promise" makes this doubly important.
 npx hardhat keystore set MAINNET_RPC_URL
 npx hardhat keystore set MAINNET_PRIVATE_KEY
 
-npx hardhat ignition deploy ignition/modules/MagerCoin.ts --network mainnet
+npx hardhat ignition deploy ignition/modules/CardinalsPromise.ts --network mainnet
 npx hardhat verify --network mainnet <deployed-address>
 ```
 
@@ -113,7 +113,7 @@ CARD_NETWORK=mainnet CARD_TOKEN_ADDRESS=0x... CARD_AMOUNT=... ETH_AMOUNT=... \
   npx hardhat run scripts/add-liquidity.ts
 ```
 
-- [ ] The MAGR/ETH ratio you pass sets the launch price — sanity-check it.
+- [ ] The CARD/ETH ratio you pass sets the launch price — sanity-check it.
 - [ ] Lock the LP tokens (Unicrypt, Team Finance) and publish the lock.
 - [ ] Submit logo + info to Etherscan (token update form, uses
       `assets/logo-32.png`), CoinGecko, and a Uniswap token list.

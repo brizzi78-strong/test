@@ -1,4 +1,4 @@
-# cp17.org — the Mager Coin coin site
+# cp17.org — the Cardinals Promise coin site
 
 Three static pages. No build step, no dependencies, no JavaScript.
 

@@ -1,4 +1,4 @@
-# Governance and Founder Economics — MAGR
+# Governance and Founder Economics — CARD
 
 How to choose a board, what the revised supply split does, whether to charge a 3% trade
 fee, and whether to pay yourself a salary.
@@ -11,7 +11,7 @@ fee, and whether to pay yourself a salary.
 
 ## Thesis
 
-**The only asset MAGR has is that its claims are checkable.** At a ~$20,000 fully diluted
+**The only asset CARD has is that its claims are checkable.** At a ~$20,000 fully diluted
 valuation, the token has no liquidity moat, no user base, and no network effect. What it
 has is a contract with nothing hidden in it, a locked pool, a renounced owner, and a page
 that tells people not to buy. That verifiability *is* the product.
@@ -41,11 +41,11 @@ reading this document uses:
 
 | Your words | Interpretation | Source |
 |---|---|---|
-| "250,000 coins" | 250,000,000 MAGR total supply | `contracts/MagerCoin.sol` — `TOTAL_SUPPLY = 250_000_000e18` |
+| "250,000 coins" | 250,000,000 CARD total supply | `contracts/CardinalsPromise.sol` — `TOTAL_SUPPLY = 250_000_000e18` |
 | "I invested 10k" | ~$10,000 of your own money: ETH for the pool plus launch costs | `TOKEN_LAUNCH_STRATEGY.md` budgets 2–5 ETH into the pool |
-| "hold onto 100 mill" | 100,000,000 MAGR (40%) retained by you personally | New — supersedes the old split |
-| "only 100 mill initially released" | 100,000,000 MAGR (40%) into the Uniswap pool at launch | New — was 200M (80%) |
-| Remainder | 50,000,000 MAGR (20%) treasury | Unchanged from `TOKEN_LAUNCH_STRATEGY.md` |
+| "hold onto 100 mill" | 100,000,000 CARD (40%) retained by you personally | New — supersedes the old split |
+| "only 100 mill initially released" | 100,000,000 CARD (40%) into the Uniswap pool at launch | New — was 200M (80%) |
+| Remainder | 50,000,000 CARD (20%) treasury | Unchanged from `TOKEN_LAUNCH_STRATEGY.md` |
 
 **This is a material change from the shipped plan.** The launch strategy puts 80% in the
 pool specifically because "screeners flag deployer-heavy tokens as rug risks," and warns
@@ -55,21 +55,21 @@ personally *on top of* the 20% treasury — 60% of supply in team-controlled han
 Assuming ~$8,000 of the $10,000 goes into the pool and ~$2,000 covers the lock, gas,
 verification, and fees:
 
-- Launch spot price: **$0.00008 per MAGR**
+- Launch spot price: **$0.00008 per CARD**
 - Fully diluted valuation: **$20,000**
 - Value of your 100M retained: **$8,000 on paper** — exactly equal to the entire pool, which
   is the problem in one line
 
 ### What $8,000 of liquidity actually feels like
 
-| Buy size | MAGR received | Average price paid | Spot price move |
+| Buy size | CARD received | Average price paid | Spot price move |
 |---|---|---|---|
 | $100 | 1.23M | $0.000081 | +2.5% |
 | $500 | 5.88M | $0.000085 | +12.9% |
 | $1,000 | 11.11M | $0.000090 | +26.6% |
 | $5,000 | 38.46M | $0.000130 | +164% |
 
-Halving the pool from 200M to 100M MAGR doubles the launch price but does not deepen the
+Halving the pool from 200M to 100M CARD doubles the launch price but does not deepen the
 book — a $1,000 buy still moves spot ~27%, and a $1,000 sell moves it down comparably. The
 pool is thin in both directions. That is survivable and honest. It only becomes dangerous
 when combined with the next section.
@@ -131,7 +131,7 @@ That is the right call, and the "separate" part is doing most of the work:
   page is verifiable and the board cannot certify anything.
 - **A clean handoff.** You can give the board real power over the LLC without giving them
   any say over the book or the rest of your work.
-- **A clean exit.** If MAGR goes nowhere, you dissolve one LLC. Nothing else is affected.
+- **A clean exit.** If CARD goes nowhere, you dissolve one LLC. Nothing else is affected.
 
 **Structure: new LLC + a 2-of-3 Safe multisig on the treasury.** Skip the nonprofit for
 now — do not file a 501(c)(3) for a $20,000 project; the formation cost, exemption
@@ -148,7 +148,7 @@ renounced ownership and the locked LP.
 | Put it in the LLC | Keep it out |
 |---|---|
 | The 50M treasury (via the Safe) | The book, its royalties, and its IP |
-| The `cp17.org` domain and the coin site | Your personal 100M MAGR position (see below) |
+| The `cp17.org` domain and the coin site | Your personal 100M CARD position (see below) |
 | Deployment ops, the lock, listings, audits | The other apps and businesses in this repo |
 | The gift program and its records | Personal accounts of any kind |
 | The board, the gift policy, your comp agreement | |
@@ -174,9 +174,9 @@ question is worse than either answer.
 
 ### On the entity name
 
-You'd considered "Cardinal" or "Cardinals Platform" for the LLC. The token rename to Mager
-Coin resolves most of that question, but the entity still needs a name, and the
-recommendation is unchanged: **make the LLC name boring.** The entity name is the one place
+You'd considered "Cardinal" or "Cardinals Platform" for the LLC. The recommendation is
+unchanged, and matters more now that the token has reverted to Cardinals Promise: **make the
+LLC name boring.** The entity name is the one place
 where distinctiveness buys you nothing, and a complaint about the token should not arrive
 carrying a brand you care about.
 
@@ -193,10 +193,10 @@ Why not "Cardinal" for the entity:
 | Option | Assessment |
 |---|---|
 | **CP17 LLC** | **Recommended.** Already matches `cp17.org` and the `cp17-site` folder in this repo. Distinctive, uncrowded, and says nothing a plaintiff can quote |
-| **Mager Coin LLC** | Workable, but it welds the entity to the token *and* to a private individual's surname. If the token fails, the entity's name fails with it |
+| **Cardinals Promise LLC** | Workable, but it welds the entity to the token *and* to a private individual's surname. If the token fails, the entity's name fails with it |
 | **Cardinal's Promise LLC / Cardinals Platform LLC** | No longer appropriate. The token is not Cardinal-branded any more, and this would re-entangle the book with the entity carrying the token's liability |
 
-The rename has a clean side effect worth naming: with the token called Mager Coin and the
+The rename has a clean side effect worth naming: with the token called Cardinals Promise and the
 entity called CP17 LLC, **the book's brand appears nowhere in the token's legal or public
 identity.** That is a stronger version of the separation the LLC was formed to create.
 
@@ -217,7 +217,7 @@ roles afterward is how boards fill up with friends. Each seat below covers a way
 project can fail that no other seat can see.
 
 **Seat 1 — The Constraint.** Someone with financial, legal, or fiduciary experience who
-holds **no MAGR** and has no upside if the price rises. Their entire job is to be able to
+holds **no CARD** and has no upside if the price rises. Their entire job is to be able to
 say no to you and mean it. This is the seat that makes the board real; if you fill only one
 seat, fill this one. Look for: a CPA, an estate or nonprofit attorney, a retired finance
 officer, a credit-union or community-bank board veteran. *Guards against: money moving for
@@ -239,7 +239,7 @@ renounced, liquidity is locked, the founder's holding is exactly what it is said
 *you* saying so. A technically competent board member who has checked the chain themselves,
 and who would resign publicly if a claim stopped being true, is the difference between a
 promise and an audit. Look for: a smart-contract developer, a security engineer, anyone who
-has shipped or reviewed an ERC-20 in production. They must hold no MAGR either. *Guards
+has shipped or reviewed an ERC-20 in production. They must hold no CARD either. *Guards
 against: a claim on the website drifting out of line with the chain.*
 
 **Seat 4 — The Recipient Voice.** Someone who has been through it — a bereaved family
@@ -289,26 +289,21 @@ have it filled.
 
 | Candidate | Seat | Status |
 |---|---|---|
-| Chris Brizzi | unassigned | **Not the Constraint seat — see below** |
-| Matt Campbell | unassigned | Background needed |
-| Charles Cole | unassigned | Background needed |
-| *(founder)* | Seat 5 | Filled |
-| *(vacant)* | one seat | **Recruit an outsider** |
-| ~~Jeff Mager~~ | — | Off the board — namesake instead |
+| *(founder)* | Giving Committee + Safe key | Filled |
+| Chris Brizzi | Giving Committee | **Not the paid-reviewer role — see below** |
+| Matt Campbell | Giving Committee | Background needed |
+| Charles Cole | Giving Committee | Background needed |
+| Jeff Middleton, CPA | Paid reviewer + Safe key | Under discussion — see the paid-reviewer section |
+| Jeff Mager | eligible again | The namesake conflict disappeared with the rename |
+| *(vacant)* | third Safe key | Needs a crypto-literate signer |
 
-**Jeff Mager is off the board by decision, and that is the right resolution.** The token
-carries his name, and a namesake cannot also be an independent director of the thing named
-after him: his personal reputation is fused to the token's price and conduct, which is
-exactly the entanglement an independent seat exists to prevent. Keeping the name and losing
-the seat costs nothing structural. Keeping both would have cost the board its independence.
-
-That leaves three named candidates plus you, and **one seat still open. Fill it with an
-outsider** — someone with no personal or financial relationship to you at all. This is now
-the most important recruiting task on the list, because of the next point.
+Note this is more names than seats. Three sit on the Giving Committee; the Safe has three
+keys; the two rosters overlap only in you. Some of these people will not be placed, and
+that is fine — a shortlist longer than the structure is the healthy direction to be wrong in.
 
 Nothing else can be assigned yet, because seats are defined by what a person can do that
 the others cannot, and that requires knowing each person's profession, their relationship
-to you, and whether they hold or intend to hold MAGR. Run all three named candidates
+to you, and whether they hold or intend to hold CARD. Run all three named candidates
 through the scorecard above and the three conversations below before assigning anyone. The
 slate still needs to answer:
 
@@ -320,7 +315,7 @@ slate still needs to answer:
   and buy a third-party audit instead — do not fill it with someone who will nod.
 - **Who brings hospice credibility?** Same test, and only if the person actually works in
   the field.
-- **Does anyone hold MAGR, or expect to?** Disqualifying for the Constraint and Verifier
+- **Does anyone hold CARD, or expect to?** Disqualifying for the Constraint and Verifier
   seats. Ask before offering, not after.
 
 **On Chris Brizzi specifically:** the shared surname suggests family. That is not a
@@ -337,49 +332,37 @@ later is. "One of the three is my brother, here is why" is a fact a reasonable p
 accept. Silence on it, followed by someone noticing the surname, is a credibility problem
 you cannot undo.
 
-### The name — what it costs and what it needs
+### The name — reverted to Cardinals Promise (CARD)
 
-The token is now **Mager Coin (MAGR)**, named for Jeff Mager and carrying the tagline
-**"Built to hold,"** drawn from his finishing a 140.6-mile triathlon. The endurance framing
-is genuinely well matched to the design — fixed supply, locked liquidity, renounced
-ownership. A coin built to be held rather than flipped
-is the honest description of what was actually built.
+The token was briefly renamed Cardinals Promise (CARD) and has been **reverted to Cardinals Promise
+(CARD)**. Nothing was deployed under either name, so the reversal is free; after deployment
+it would have been impossible.
 
-Four things this decision requires, none of them optional:
+What the reversal removes: the requirement for Jeff Mager's written consent, the IRONMAN
+trademark exposure and the race-photography licensing question, and the pattern cost that
+person-named tokens carry. What it restores: the link to the book and the mission, which is
+where this project's credibility actually comes from.
 
-1. **Written permission from Jeff Mager, before deployment.** His surname goes onto an
-   immutable contract at a permanent address. If the price goes to zero — the outcome the
-   coin page itself tells people to expect — his name is attached to that forever and
-   nobody can edit it. Get the consent in writing, and make sure he understands that
-   specific scenario rather than the good one.
-2. **Do not use the word "Ironman" in any branding.** IRONMAN is a registered trademark and
-   the rights holder enforces it aggressively; a token, a website, and any merchandise are
-   exactly the surfaces that draw a letter. Describing the accomplishment factually — "a
-   140.6-mile triathlon," "swim, bike, marathon" — carries the whole story without using the
-   mark, which is why the site copy is written that way. The same goes for race photography:
-   event photos are usually the photographer's copyright, not the athlete's, so do not put
-   one on the site without a licence.
-3. **Keep "built to hold" about construction, not price.** As a claim about how the contract
-   is made, it is accurate and checkable. As an instruction to buy and wait, it becomes the
-   marketing risk `docs/LEGAL-BRIEFING.md` flags — the residual securities exposure in this
-   design concentrates almost entirely in what the project *says*, not what it does. The
-   coin page pairs the tagline with the souvenir framing in the same breath for that reason.
-   Keep them together everywhere.
-4. **Accept the pattern cost.** Tokens named after people are, as a category, associated
-   with pump-and-dumps, and some readers will discount the project on the name alone. The
-   defence is not an argument, it is the evidence: renounced ownership, locked liquidity, a
-   a real board, a disclosed founder wallet, and a published ledger. That evidence is
-   stronger here than the name is weak — but it has to actually exist before launch, not
-   after.
+**One consequence for the slate below.** Jeff Mager was removed as a director *because* he
+was the namesake, and a namesake cannot be independent of the thing named after him. That
+reason no longer exists, so he is eligible again if you want him. The independence test
+still applies to him exactly as it does to everyone else.
 
-A consequence worth noting: the coin no longer shares a name with the book, which
-*strengthens* the separation the LLC was formed to create. The memoir keeps its own domain
-and its own brand, and a dispute about the token no longer arrives wearing the book's name.
-That was the recommendation for the entity name, and the rename extends it to the token.
+**What survives from the Mager episode, and should not be lost:**
+
+- The token still should not live on the book's domain. `assets/token-metadata.json` points
+  at `cp17.org`, not `thecardinalspromise.com`, and that stays: the memoir's brand belongs
+  outside the token's public identity even when the two share a name. The LLC's separation is
+  legal; this one is reputational, and both are worth keeping.
+- The entity name should still be boring — `CP17 LLC`, not a Cardinal variant — for the
+  reasons in the entity-name section above. With the token named Cardinals Promise, keeping
+  the *entity* out of that brand matters more, not less.
+- The naming lesson generalizes: a name that can only be defended by explaining it is a name
+  to reconsider before deployment, because the contract address is permanent.
 
 ### Who must not be on it
 
-- **Anyone paid in MAGR.** A board member holding tokens is a trader with a vote. It
+- **Anyone paid in CARD.** A board member holding tokens is a trader with a vote. It
   destroys the independence of the only body whose independence matters.
 - **Crypto influencers or "advisors" who want an allocation.** The ask itself is the
   disqualification.
@@ -544,7 +527,7 @@ stronger signal than an unpaid friend regardless of stigma.
 **Smaller things that lower the barrier:**
 
 - **Publish a non-endorsement line beside every name.** "Serves on the Giving Committee.
-  Does not hold MAGR, does not endorse it, and receives no compensation." One sentence they
+  Does not hold CARD, does not endorse it, and receives no compensation." One sentence they
   can point at forever.
 - **Ask them to clear it with their firm first**, rather than discovering a conflict later.
   Many firms restrict outside financial affiliations, and being the one who raised it is far
@@ -577,10 +560,10 @@ The honest position today:
 | Possible source | Real? |
 |---|---|
 | The 50M treasury | **Not yet.** It is coins, not cash — about $4,000 at spot, and selling it into an $8,000 pool wrecks the price and raises the sale-by-the-issuer problem |
-| Money from people buying MAGR | **No, and this matters.** Buyers' ETH goes into the liquidity pool, not to the project. The coin page says so explicitly. Buying the coin does not fund the giving |
+| Money from people buying CARD | **No, and this matters.** Buyers' ETH goes into the liquidity pool, not to the project. The coin page says so explicitly. Buying the coin does not fund the giving |
 | Book, speaking, and app revenue | **Yes.** This is the one source that exists |
 | Soliciting donations | **No.** Taking charitable donations without a charitable vehicle brings solicitation-registration and tax questions that a $20,000 project should not go near. Keep pointing people at the charities directly, as the site already does |
-| Gifting MAGR to families instead of cash | **No.** That hands a struggling family an illiquid asset that may go to zero. The same objection as paying board members in tokens, only worse |
+| Gifting CARD to families instead of cash | **No.** That hands a struggling family an illiquid asset that may go to zero. The same objection as paying board members in tokens, only worse |
 
 **So: fund the giving from the book and the software, not from the coin.** The committee's
 job is real either way — deciding where money goes is the substance of the seat, and the
@@ -593,7 +576,7 @@ utility bill. What destroys the relationship is implying a budget that does not 
 then convening a meeting with nothing to allocate.
 
 **The stronger move: start the giving before the token launches.** Nothing about the gifts
-depends on MAGR existing. Fund a small quarterly amount out of book revenue, convene the
+depends on CARD existing. Fund a small quarterly amount out of book revenue, convene the
 committee, make the first gifts, and post them to the ledger page — all of it before launch
 day. Three consequences, each worth more than it costs:
 
@@ -602,13 +585,70 @@ day. Three consequences, each worth more than it costs:
 2. **The ledger page launches with actual gifts on it** instead of promises. For a project
    whose entire argument is "check the receipts," arriving on day one with receipts is worth
    more than any amount of copy.
-3. **The giving stops being contingent on the coin succeeding.** If MAGR goes nowhere,
+3. **The giving stops being contingent on the coin succeeding.** If CARD goes nowhere,
    families were still helped — which is the outcome the project says it cares about, and
    the strongest possible answer to anyone who calls the whole thing a pretext.
 
 If the giving later outgrows what you can fund personally, that is the point to revisit
 **fiscal sponsorship** (Part I) so gifts become tax-deductible and sit inside a real
 charitable vehicle. Not before.
+
+### The paid reviewer — sizing it, and what the CPA gets
+
+A named candidate is under discussion: **Jeff Middleton, CPA**, at roughly **$1,500 a year**.
+
+**Is $1,500 right?** It is a defensible stipend and it is honestly below market rate, which
+is worth saying out loud rather than pretending otherwise. CPA billing commonly runs
+$150–$400 an hour, so $1,500 buys something like four to ten hours — which is about right
+for four quarterly reviews of a treasury holding one asset, plus being reachable. Structure
+it as **$375 a quarter, invoiced**, rather than an annual lump: an invoice per quarter
+creates the record that the work happened, and it gives either side a clean exit four times
+a year. Pay it from the LLC directly to his firm, which is the cleanest disclosure tier in
+Part IV, and post it to the ledger page like any other spend.
+
+If he is doing you a favour at that number, say thank you rather than pretending it is a
+market engagement. If he wants market rate, the honest options are to narrow the scope or
+to accept that this line costs $3,000–$4,000 instead.
+
+**What is actually in it for him:**
+
+- **It is an engagement, not an endorsement.** This is the whole reason paying works. He can
+  describe it to anyone — a partner, a client, his own board — as professional services for
+  a client, which carries none of the reputational cost of lending a name to a token for
+  free.
+- **Bounded and defined.** Four touchpoints a year, a written scope, no open-ended
+  obligation, terminable.
+- **Marginal work on an existing relationship**, if he already handles your books — he knows
+  the context, so the hours are cheap for him and the fee is close to free money.
+- **A low-stakes education in a growing niche.** Crypto treasury and digital-asset
+  engagements are work CPAs are increasingly asked for and few have done. A $20,000 treasury
+  is a very forgiving place to learn.
+- **The mission**, if he cares about it.
+
+**Three cautions, and the first is the important one:**
+
+1. **If he is already your accountant, he is not "independent."** He depends on you
+   financially, which is precisely the conflict the Constraint role exists to remove. He can
+   be an excellent *paid reviewer and signer* — a competent second pair of eyes with
+   professional standards — but do not describe him publicly as the independent director.
+   Calling a dependent relationship independent is the kind of claim this project cannot
+   afford, and it is the sort of thing a critic checks.
+2. **Do not call it an "audit" or a "review" in the technical sense.** Those words have
+   defined meanings in accounting and imply standards and independence requirements he may
+   not be able to meet here. Call it *treasury oversight* or a *controls check* and describe
+   the actual work.
+3. **Holding a multisig key may be a professional problem for him.** Custody of client
+   assets is a recognised independence issue for CPAs, and his firm may have policy on
+   outside engagements or on holding client property. **Ask him to clear both the engagement
+   and the key with his firm before he agrees** — being the one who raised it is far better
+   than discovering it later. If the key turns out to be a problem, the fix is easy: he does
+   the paid oversight, and the third key goes to the crypto-literate signer instead.
+
+**A reasonable scope to put in writing:** each quarter, reconcile treasury movements against
+the published ledger; confirm the founder's wallet balance against the sell policy; review
+the gift records; and sign a one-paragraph statement that gets published with the minutes.
+That last part is what converts a private engagement into a public trust signal — and it is
+also why the scope has to be small enough that he can actually stand behind the statement.
 
 ### Can board members be gifted tokens?
 
@@ -687,7 +727,7 @@ Consequences, stated plainly so they are not discovered later:
 - **Scanners will flag it, and they will be right to.** Do not treat the flag as unfair or
   try to argue it down. A project whose entire pitch is verifiability cannot dispute a true
   on-chain observation about itself.
-- **The float is 40% and your position equals the entire pool's MAGR side.** Thin float
+- **The float is 40% and your position equals the entire pool's CARD side.** Thin float
   amplifies both directions — it is why the price will look exciting early and why a single
   seller can erase it. Do not read an early price rise as validation of the model. It is a
   measure of how little liquidity there is.
@@ -749,7 +789,7 @@ auditing the mechanism that collects it.
    false. Rewriting it before launch is honest; shipping it as-is is not, and the tone of
    the whole site rests on that paragraph being true.
 
-2. **It breaks the contract's core promise.** `MagerCoin.sol` has no tax hook, and
+2. **It breaks the contract's core promise.** `CardinalsPromise.sol` has no tax hook, and
    `TOKEN_LAUNCH_STRATEGY.md` lists "tax/fee/blacklist mechanics" under *What This Setup
    Deliberately Avoids*, noting exotic mechanics are "the second thing scanners flag after
    unlocked liquidity." A fee-on-transfer token needs different, more complex, unaudited
@@ -801,12 +841,12 @@ what CP17 LLC would actually have to pay from:
 | Asset | Amount | Can it pay a salary? |
 |---|---|---|
 | Your $10,000 capital contribution | $10,000 cash | **No.** It is earmarked for the pool and launch costs, and paying yourself from your own contributed capital is moving money between your pockets while creating a taxable-looking event and a bad ledger line |
-| 50M MAGR treasury | ~$4,000 at spot | **No.** Illiquid. Selling it into an $8,000 pool crashes the price, and `LEGAL-BRIEFING.md` flags treasury sales as the asset most exposed to a "sale by the issuer" characterization |
+| 50M CARD treasury | ~$4,000 at spot | **No.** Illiquid. Selling it into an $8,000 pool crashes the price, and `LEGAL-BRIEFING.md` flags treasury sales as the asset most exposed to a "sale by the issuer" characterization |
 | Trade fee revenue | $2,190–$10,950/yr, if you add a fee | **No** — and see Part III for why the fee shouldn't exist |
 | Book, speaking, app revenue | Whatever it actually is | **Yes.** This is the only real source |
 
 So the answer to "from where" for at least the next year is: **from the book and the
-software, not from MAGR.** The token has no cash and cannot generate any without doing the
+software, not from CARD.** The token has no cash and cannot generate any without doing the
 one thing the whole design was built to make impossible.
 
 ### The structural catch: the entity that pays you shouldn't be the token entity
@@ -829,7 +869,7 @@ So:
   cash. That agreement being on the shelf, unused and disclosed, is itself a good signal.
 
 The practical read: you get paid from the book and the software, in the ordinary way, and
-MAGR stays a thing you fund rather than a thing that funds you.
+CARD stays a thing you fund rather than a thing that funds you.
 
 ### The step that works right now: an accountable plan
 
@@ -871,8 +911,8 @@ Work down that list, not up. Most of what you need money for in year one is tier
 ### The constraint that governs all three — and the gifts
 
 Every one of these — vendor payments, reimbursements, salary, **and the gifts themselves** —
-needs *dollars*. The treasury holds 50M MAGR, not cash. So each of them implies the same
-prior act: converting MAGR into money, which means selling into a pool that cannot absorb
+needs *dollars*. The treasury holds 50M CARD, not cash. So each of them implies the same
+prior act: converting CARD into money, which means selling into a pool that cannot absorb
 it, or an off-market sale that is unambiguously a sale by the issuer.
 
 **The treasury is not a budget. It is a claim on a budget that doesn't exist yet.** That
@@ -892,7 +932,7 @@ disclosure, promise no numbers you'd have to walk back.
 ### If it comes from the treasury, constrain it
 
 - **Set it by the two non-founder members, with you recused and the recusal in the minutes.**
-- **Cash, not MAGR.** Paying yourself in tokens makes you a seller later, which is the one
+- **Cash, not CARD.** Paying yourself in tokens makes you a seller later, which is the one
   thing your holders will be watching for.
 - **Modest and defensible against the actual work** — hours logged, a written scope. If the
   entity ever becomes a nonprofit, "reasonable compensation" stops being good practice and
@@ -955,7 +995,7 @@ S-corp conversation later.**
 
 At a $20,000 FDV, there is no salary in this token. The treasury is worth $4,000 at spot and
 cannot be sold into an $8,000 pool without destroying it. Any real compensation for the next
-year comes from the book and the businesses in this repo, not from MAGR. Plan accordingly,
+year comes from the book and the businesses in this repo, not from CARD. Plan accordingly,
 and let the token be what the site already says it is — not an investment, and not a
 fundraising campaign.
 
@@ -973,9 +1013,6 @@ fundraising campaign.
 | Board capture | Members hold tokens or depend on you | No token comp; independence weighted ×3 in scoring |
 | Board insider trading | The sell policy gives the board advance notice of price-moving events | No tokens to board members; blackout policy if any member ever holds |
 | Board of friends and family | A slate drawn entirely from one circle | At least one member with no tie to you; relationships disclosed on the ledger page |
-| Namesake without consent | Jeff Mager's surname on an immutable contract | Written permission before deployment, covering the go-to-zero case |
-| Trademark letter | "Ironman" used in branding | Describe the distance factually; never use the mark; licence any race photo |
-| "Built to hold" read as price advice | Tagline detached from the souvenir framing | Keep the two paired in every use; see `docs/LEGAL-BRIEFING.md` on marketing risk |
 | Deadlock on conflicted votes | Recusal leaves an even four | Written rule adopted up front: a tied vote fails |
 | Empty seats read as oversight | Names listed who never attend | Three real people, not a longer list; publish any vacancy with a target date |
 | Cannot recruit — crypto stigma | Unpaid public affiliation reads as endorsement | Split the Giving Committee from the Treasury Signers; pay for the Constraint function; publish a non-endorsement line per name |
@@ -989,25 +1026,21 @@ fundraising campaign.
 
 ## Sequence
 
-1. Clear the name (state search, USPTO, domain), form the new LLC, get an EIN, open its
-   bank account, and document the $10,000 as a capital contribution. *Before* launch —
+1. Clear the entity name (state search, USPTO, domain), form the new LLC, get an EIN, open
+   its bank account, and document the $10,000 as a capital contribution. *Before* launch —
    retrofitting an issuer onto a live token is visibly a patch.
-2. Open the Safe (2-of-3 to start) and decide who deploys.
-3. Get Jeff Mager's written permission for the name, before anything is deployed.
-4. Screen the slate — Chris Brizzi, Matt Campbell, Charles Cole — against the scorecard and
-   the three conversations, and recruit an outsider for the open fifth seat. Fill the
-   Constraint seat first, with someone who has no tie to you; everything else is easier once
-   one person can say no. Then the Domain seat. Adopt the tie-fails rule before the first
-   meeting.
+2. Seat the Giving Committee — three people, no crypto in the ask — and make the first
+   gifts from book revenue before launch, so the ledger opens with receipts rather than
+   promises.
+3. Engage the paid reviewer and open the 2-of-3 Safe. Decide who deploys.
+4. Adopt, in writing and before they are needed: the tie-fails rule, the gift policy, the
+   founder sell policy, and the compensation clause.
 5. Decide the fee question. The recommendation is no fee, plain ERC-20, ownership renounced.
-6. Publish the founder's wallet address and adopt the written sell policy — board-approved,
-   on the site — before launch, not after.
-7. Update `cp17-site` — new name, supply split, founder lock, board members, treasury
-   policy — so the page matches reality on day one. Commission a MAGR mark; the cardinal
-   crest belongs to the book.
-8. Adopt the gift policy and the compensation clause in writing, before either is needed.
-9. Launch per `TOKEN_LAUNCH_STRATEGY.md`, with the amended split.
-10. Publish quarterly: gifts, spends, minutes, compensation.
+6. Publish the founder's wallet address, labelled unlocked, alongside the sell policy.
+7. Update `cp17-site` so the page matches reality on day one — supply split, unlocked
+   founder position, multisig, committee members.
+8. Launch per `TOKEN_LAUNCH_STRATEGY.md`, with the amended split.
+9. Publish quarterly: gifts, spends, minutes, compensation.
 
 ---
 

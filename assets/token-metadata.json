@@ -1,8 +1,8 @@
 {
-  "name": "Mager Coin",
-  "symbol": "MAGR",
+  "name": "Cardinals Promise",
+  "symbol": "CARD",
   "decimals": 18,
-  "description": "Mager Coin (MAGR) is a fixed-cap ERC-20 token on Ethereum. Maximum supply is hard-capped on-chain at 250,000,000 MAGR; the contract has no fees, hooks, blocklists, or pausing.",
+  "description": "Cardinals Promise (CARD) is a fixed-cap ERC-20 token on Ethereum. Maximum supply is hard-capped on-chain at 250,000,000 CARD; the contract has no fees, hooks, blocklists, or pausing.",
   "totalSupplyCap": "250000000",
   "logo": "assets/logo.svg",
   "contract": {
@@ -14,6 +14,5 @@
     "repository": "https://github.com/brizzi78-strong/test",
     "twitter": null
   },
-  "notes": "Official site: cp17.org. The token is deliberately NOT hosted on the book's domain (thecardinalspromise.com) — keeping the memoir's brand separate from the token is the same separation the LLC provides legally. Fill in contract addresses after deployment before submitting to Etherscan token update, CoinGecko, or a Uniswap token list. Etherscan requires a 32x32 PNG icon — use assets/logo-32.png.",
-  "tagline": "Built to hold."
+  "notes": "Official site: cp17.org. The token is deliberately NOT hosted on the book's domain (thecardinalspromise.com) — keeping the memoir's brand separate from the token is the same separation the LLC provides legally. Fill in contract addresses after deployment before submitting to Etherscan token update, CoinGecko, or a Uniswap token list. Etherscan requires a 32x32 PNG icon — use assets/logo-32.png."
 }
