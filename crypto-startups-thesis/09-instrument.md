@@ -1,4 +1,9 @@
-# 06 — A scorecard
+# 9. An instrument
+
+*This chapter answers RQ3 by operationalising the four conditions of §3.3 into a ten-item scorecard.
+Its construct validity is unestablished (§13.6): it is a formalisation of the argument, not a
+validated measurement. Coding rules and the full item-by-item matrix are in
+[Appendix A](appendix-a-scoring.md).*
 
 The point of a rubric is to force a judgment before the outcome is known. This one is designed to be
 answerable from public information about a company you are considering joining, funding, building,
@@ -73,7 +78,7 @@ it had to. The column is a portrait of a firm that bought exactly one form of in
 precisely that one.
 
 **Tether (60)** sits mid-band while earning roughly $100 million of profit per employee. That gap is
-the entire subject of [Chapter 05](05-counter-thesis.md). The rubric measures durability of access
+the entire subject of [Chapter 8](08-counter-case.md). The rubric measures durability of access
 and the size of the tail, not the size of the profit, and a 60 here should not be read as predicting
 the profit will stop.
 
@@ -93,7 +98,7 @@ company per employee in the history of finance. Do not use this to pick investme
 
 **Question 3 is nearly unreachable for small companies.** "Excess capital held against total-loss
 scenarios" assumes a balance sheet. A two-person launch has no way to score 2 on it, which caps
-small projects around 88 no matter how well run. Chapter 07 works through what the question
+small projects around 88 no matter how well run. Chapter 10 works through what the question
 translates to at that scale.
 
 ## Using it
@@ -105,4 +110,4 @@ one-time, and visible — and 0 on question 1, because building revenue that sur
 is expensive, ongoing, and invisible.
 
 That inversion is the single most common structural error in the sector, and it is the subject of
-[Chapter 07](07-application.md).
+[Chapter 10](10-application.md).

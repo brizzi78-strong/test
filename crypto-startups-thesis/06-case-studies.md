@@ -1,7 +1,10 @@
-# 03 — Case studies
+# 6. Case studies
 
-Eight cases, chosen because each one isolates a different variable. Where a case cuts against the
-thesis, that is said rather than smoothed over.
+*Eight cases drawn from the sampling frames of §4.3, each selected because it isolates a different
+variable. §6.1 and §6.8 bear on H4, §6.7 on H3, §6.3 and §6.5 on H1. Where a case cuts against the
+thesis, that is said rather than smoothed over; the case that cuts hardest is held for Chapter 8.*
+
+Sections are numbered in order below. Each closes with a reading against the four conditions of §3.3.
 
 ---
 
@@ -127,7 +130,7 @@ that needed the capability and could not build it fast enough.
 The lesson is uncomfortable for the token-native worldview. Both companies captured a large fraction
 of the value they created, in cash, with a fraction of the capital and none of the regulatory
 exposure that a token would have attached. The pattern's ceiling is lower than a Circle or a
-Coinbase. Its expected value, adjusted for the base rate in Chapter 02, is much higher.
+Coinbase. Its expected value, adjusted for the base rate in Chapter 5, is much higher.
 
 **Reads:** revenue independence — total; customers paid for a service. Segregation — n/a to the
 model. Survivability — n/a. Disclosure — private, but the acquirer's diligence substituted.
@@ -137,7 +140,7 @@ model. Survivability — n/a. Disclosure — private, but the acquirer's diligen
 ## Tether — profit without any of the rest
 
 **What it isolates:** the strongest evidence against the thesis. Treated at length in
-[Chapter 05](05-counter-thesis.md); the facts are recorded here.
+[Chapter 8](08-counter-case.md); the facts are recorded here.
 
 Tether reported over $10 billion in net profit for 2025, against $186.5 billion of USDT liabilities,
 with $6.3 billion in excess reserves, up to $141 billion of US Treasury exposure, more than 140 tons
@@ -223,7 +226,7 @@ Two lessons, in order of importance.
 First, and this is the whole point: **the outcome was determined before the attack.** Bybit could
 say "we are still solvent" because it had capital in excess of the largest theft in history sitting
 idle for exactly this purpose. That capital had a cost, paid every quarter for years, in a business
-where competitors deployed theirs. Chapter 02's failure mode #3 is the same event at a firm that had
+where competitors deployed theirs. Chapter 5's failure mode #3 is the same event at a firm that had
 not paid it.
 
 Second, the failure itself is a governance finding, not just a technical one. The compromise came

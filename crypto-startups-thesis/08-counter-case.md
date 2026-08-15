@@ -1,4 +1,8 @@
-# 05 — The counter-thesis
+# 8. The counter-case
+
+*A theory-testing chapter. H4 (§3.5) predicts that firms satisfying C4 retain market access at
+higher rates than firms that do not, independently of profitability. This chapter examines the
+observation that comes closest to falsifying it, and states the narrowing it forces on the thesis.*
 
 A thesis that cannot be attacked has not been tested. This chapter makes the strongest case against
 the argument in this dissertation, then says what survives.
@@ -14,7 +18,7 @@ reserves, up to $141 billion of US Treasury exposure, more than 140 tons of gold
 billion, about $8.4 billion of bitcoin, and a claimed 500 million-plus users. Approximately 100
 employees.
 
-Now run it against the four conditions from Chapter 01:
+Now run it against the four conditions from Chapter 4:
 
 - **Revenue independence:** strong. Float income on Treasuries.
 - **Segregation:** partial. Reserves exist and are attested, but gold and bitcoin in the reserve of
@@ -79,14 +83,14 @@ a story about someone who had one.
 
 ## The other objection: survivorship, again
 
-A second attack is simpler. Every firm praised in Chapter 03 is praised partly because it survived,
+A second attack is simpler. Every firm praised in Chapter 6 is praised partly because it survived,
 and survival in a fat-tailed sector is substantially luck. Circle's IPO landed six weeks before the
 GENIUS Act. Coinbase's Deribit acquisition was funded with stock at a favorable price. Kalshi's
 regulatory bet paid off partly because a new CFTC chair withdrew restrictive proposed rules in
 January 2026.
 
 This objection is correct and cannot be fully answered with a sample of two dozen. The partial
-defense is the one from Chapter 01: the failure analysis is more robust than the success analysis,
+defense is the one from Chapter 4: the failure analysis is more robust than the success analysis,
 because the failures cluster on a small number of identifiable missing controls, while the successes
 are heterogeneous. It is safer to say **what reliably kills these companies** than to say what
 reliably makes them great. This dissertation is best read as the former with the latter attached.

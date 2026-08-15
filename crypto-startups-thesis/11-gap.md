@@ -1,4 +1,4 @@
-# 08 — The gap, and the yield
+# 11. The gap and the yield
 
 Two questions this study exists to answer, stated bluntly: what does the token path actually return,
 and how far is this project from a company that launched successfully?
@@ -8,7 +8,7 @@ and how far is this project from a company that launched successfully?
 The CARD launch as specified puts 2–5 ETH into a pool alongside 200M tokens, locks the LP for twelve
 months, renounces the contract, and publishes the proof links. Cost is the ETH, gas, and a lock fee.
 
-The realistic outcome distribution, from the base rate in [Chapter 02](02-failure-base-rate.md) and
+The realistic outcome distribution, from the base rate in [Chapter 5](05-failure-base-rate.md) and
 the 2025–26 shutdown data:
 
 - **Most likely.** A handful of buyers trade against the pool in the first days because it is
@@ -21,7 +21,7 @@ the 2025–26 shutdown data:
   there is nothing behind it.
 - **Downside.** The deployer key is compromised during the sequence, or the treasury address was
   wrong when you signed. Both are permanent, both are unrecoverable after the renounce, and both are
-  in the current plan's blind spot ([Chapter 07](07-application.md), item 1).
+  in the current plan's blind spot ([Chapter 10](10-application.md), item 1).
 
 So the expected yield on the token path *by itself* rounds to slightly negative, with a small
 lottery attached. That is not a criticism of the plan's execution. The plan is well built. It is a
@@ -33,7 +33,7 @@ one worth optimizing.
 
 ## The gap, in five dimensions
 
-Against the companies in [Chapter 03](03-case-studies.md), here is the honest distance.
+Against the companies in [Chapter 6](06-case-studies.md), here is the honest distance.
 
 **1. Revenue: zero, versus any positive number.** This is not a difference of degree. Every firm in
 the study that lasted had someone paying it for an outcome before it had anything else notable.
@@ -45,7 +45,7 @@ comparatively easy.
 **2. Distribution: none, and no budget for it.** Circle pays out roughly 59% of gross revenue to
 rent distribution from Coinbase, and it does that because distribution is the scarcest thing in this
 industry. A token launch appears to solve distribution — you can pay people to show up with
-emissions or an airdrop — but that is renting attention with an instrument you print, and Chapter 02
+emissions or an airdrop — but that is renting attention with an instrument you print, and Chapter 5
 is a list of what happens when the rent stops.
 
 **3. Buffer: none.** Bybit survived the largest theft on record because the excess reserves existed
@@ -81,7 +81,7 @@ In order:
    invoice, to one customer, this quarter. This is the step that converts a portfolio of projects
    into a company, and it is worth more than every other item in this document combined.
 3. **Then decide about the token.** With revenue, the question becomes answerable on the merits: is
-   the token load-bearing in this product, or is it a fundraise? [Chapter 07](07-application.md)
+   the token load-bearing in this product, or is it a fundraise? [Chapter 10](10-application.md)
    notes the asymmetry — having no token scores the same as having an essential one. Only the middle
    scores zero.
 4. **Fix the signing path regardless.** Twelve rubric points for an afternoon, and it closes the one
@@ -98,4 +98,4 @@ behind it.
 
 The distance to a successful launch company is one paying customer and the discipline to ignore
 thirty-nine of the forty directories until that customer exists. Every company in
-[Chapter 03](03-case-studies.md) is a version of that sentence.
+[Chapter 6](06-case-studies.md) is a version of that sentence.

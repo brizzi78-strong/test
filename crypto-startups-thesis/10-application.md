@@ -1,4 +1,4 @@
-# 07 — Application to a small launch
+# 10. Application to a small launch
 
 The preceding chapters are about companies with balance sheets. This one applies the same rubric at
 the other end of the scale, to the kind of launch a two-person team can actually execute — using the
@@ -22,7 +22,7 @@ specified in enough detail to grade.
 | | **Total** | | **48** | **100** | |
 
 That is a genuinely above-average score for a fair-launch token — the modal comparable scores around
-12. It earns it in exactly the place Chapter 06 predicted: full marks on question 7, because
+12. It earns it in exactly the place Chapter 9 predicted: full marks on question 7, because
 machine-enforced constraints are cheap, one-time, and visible.
 
 And it fails in exactly the predicted place too. Zeros on 1 and 10 are the same zero stated twice.
@@ -99,7 +99,7 @@ are none. It means the pool is drained by a contract or router bug, or the treas
 Scoring 1 (6 points) is achievable: hold ETH back, outside the pool, explicitly earmarked to re-seed
 liquidity, and publish the amount and the policy for using it. Scoring 2 requires excess capital
 sized to the total loss, which a 2–5 ETH launch does not have and cannot pretend to have. This is
-the item Chapter 06 flagged as nearly unreachable at small scale, and the honest ceiling here is 6.
+the item Chapter 9 flagged as nearly unreachable at small scale, and the honest ceiling here is 6.
 
 ### 6. Independent revenue — 14 points, a year
 
@@ -129,7 +129,7 @@ in the current plan that is both irreversible and total.
 
 ## The general lesson, restated at small scale
 
-Chapter 04's through-line was that well-run firms buy a floor by giving up upside. A small launch has
+Chapter 7's through-line was that well-run firms buy a floor by giving up upside. A small launch has
 no balance sheet to buy a floor with, so it substitutes machine-enforced constraints — which is
 correct, and this plan does it well. But those constraints only floor the *downside from
 misbehavior*. They do nothing about the downside from indifference, and indifference is what

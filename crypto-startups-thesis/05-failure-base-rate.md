@@ -1,4 +1,8 @@
-# 02 — The failure base rate
+# 5. The failure base rate
+
+*This chapter reports the first body of findings and tests H1 and H2 (§3.5). Per the design in §4.2,
+the failure population is analysed for the absence of specified conditions rather than survivors for
+the presence of shared traits.*
 
 Before asking what the best-run companies do, it is worth being precise about what the ordinary
 outcome is, because in this sector the ordinary outcome is death and the distribution of causes is
@@ -33,7 +37,7 @@ stage." A company in this position has no independent revenue and therefore no a
 drawdown, because the drawdown reduces both the treasury and the demand simultaneously. The two
 failures are perfectly correlated by construction.
 
-This maps directly onto condition 1 of the definition in Chapter 01, and it is why that condition is
+This maps directly onto condition 1 of the definition in Chapter 4, and it is why that condition is
 listed first.
 
 **2. Commingled or rehypothecated customer assets.** Less frequent, vastly more destructive. FTX,
@@ -53,7 +57,7 @@ and the shortfall becomes a customer loss, which becomes a run, which becomes a 
 and Mt. Gox failures are the archetypes.
 
 Crucially, this is the failure mode that a well-run firm converts into a survivable event by holding
-excess reserves against exactly this scenario. Chapter 03's Bybit case is the demonstration: same
+excess reserves against exactly this scenario. Chapter 6's Bybit case is the demonstration: same
 attack class, same order of magnitude, opposite outcome, and the difference was entirely
 pre-committed balance sheet.
 
@@ -77,5 +81,5 @@ when-not-if event.
 
 The generalization, which the rest of this dissertation elaborates: **well-run crypto companies are
 distinguished less by what they do on good days than by how much of a good day they deliberately
-give up in order to have a floor under the bad ones.** Every principle in Chapter 04 is a version of
+give up in order to have a floor under the bad ones.** Every principle in Chapter 7 is a version of
 paying for a floor.
