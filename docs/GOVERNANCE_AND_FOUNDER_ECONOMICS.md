@@ -475,6 +475,50 @@ thing that makes the seat acceptable to the person you most need. Second, if nob
 independent will take the seat after a genuine search, that is information about the
 package rather than about the labour market, and the answer is to change the package.
 
+### Where does the money the committee decides on actually come from?
+
+This question exposes a real gap between the recruiting pitch above and the treasury
+arithmetic in Part IV, and it has to be closed before anyone is asked to serve. The Domain
+seat is being sold on deciding who receives gifts. **So there has to be something to give.**
+
+The honest position today:
+
+| Possible source | Real? |
+|---|---|
+| The 50M treasury | **Not yet.** It is coins, not cash — about $4,000 at spot, and selling it into an $8,000 pool wrecks the price and raises the sale-by-the-issuer problem |
+| Money from people buying MAGR | **No, and this matters.** Buyers' ETH goes into the liquidity pool, not to the project. The coin page says so explicitly. Buying the coin does not fund the giving |
+| Book, speaking, and app revenue | **Yes.** This is the one source that exists |
+| Soliciting donations | **No.** Taking charitable donations without a charitable vehicle brings solicitation-registration and tax questions that a $20,000 project should not go near. Keep pointing people at the charities directly, as the site already does |
+| Gifting MAGR to families instead of cash | **No.** That hands a struggling family an illiquid asset that may go to zero. The same objection as paying board members in tokens, only worse |
+
+**So: fund the giving from the book and the software, not from the coin.** The committee's
+job is real either way — deciding where money goes is the substance of the seat, and the
+budget's origin does not change that. What changes is what you are allowed to promise.
+
+**Tell the committee the actual number before they join.** "It is five hundred dollars a
+quarter right now, and it may stay that way" is a fine thing to say, and someone who works
+in hospice knows exactly how much good a few hundred dollars does for a family behind on a
+utility bill. What destroys the relationship is implying a budget that does not exist and
+then convening a meeting with nothing to allocate.
+
+**The stronger move: start the giving before the token launches.** Nothing about the gifts
+depends on MAGR existing. Fund a small quarterly amount out of book revenue, convene the
+committee, make the first gifts, and post them to the ledger page — all of it before launch
+day. Three consequences, each worth more than it costs:
+
+1. **The committee becomes real immediately**, with a track record, rather than a list of
+   names waiting on a token that may never trade.
+2. **The ledger page launches with actual gifts on it** instead of promises. For a project
+   whose entire argument is "check the receipts," arriving on day one with receipts is worth
+   more than any amount of copy.
+3. **The giving stops being contingent on the coin succeeding.** If MAGR goes nowhere,
+   families were still helped — which is the outcome the project says it cares about, and
+   the strongest possible answer to anyone who calls the whole thing a pretext.
+
+If the giving later outgrows what you can fund personally, that is the point to revisit
+**fiscal sponsorship** (Part I) so gifts become tax-deductible and sit inside a real
+charitable vehicle. Not before.
+
 ### Can board members be gifted tokens?
 
 Nothing prevents the transfer. The question is what it costs, and here the answer is worse
