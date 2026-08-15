@@ -475,6 +475,79 @@ thing that makes the seat acceptable to the person you most need. Second, if nob
 independent will take the seat after a genuine search, that is information about the
 package rather than about the labour market, and the answer is to change the package.
 
+### The stigma problem, and the structural fix
+
+Serious professionals do not want their names next to a cryptocurrency. A hospice chaplain,
+a CPA, an estate attorney — each has a reputation built over decades in a field where "he's
+involved in some crypto thing" is a cost with no offsetting benefit. Unpaid makes it worse,
+because **an unpaid public affiliation reads as an endorsement**, while a paid engagement
+reads as a service. That is not squeamishness on their part; it is a correct assessment.
+
+Two responses. The first is structural and matters more than any wording.
+
+**Split the two bodies. They are not the same job.**
+
+Once the giving is funded from book and software revenue rather than the treasury (see
+below), the body that decides which families receive money **has nothing to do with the
+token at all**. So stop asking it to.
+
+| Body | What it does | Funded by | Crypto exposure |
+|---|---|---|---|
+| **The Giving Committee** | Decides which families and organizations receive gifts; sets the gift policy | Book, speaking, and software revenue | **None.** Its members never touch a wallet, hold a token, or appear on the coin page |
+| **The Treasury Signers** | Hold keys on the Safe; approve any movement of the 50M and any founder-compensation motion | The token treasury | Full. These people must be comfortable with crypto |
+
+The Domain seat and the Recipient Voice belong to the **Giving Committee**. Their public
+description is "helps decide grants to families facing end-of-life care" — accurate,
+complete, and containing no coin. A chaplain can accept that with no professional exposure
+whatsoever, and it is not a euphemism: it is what they actually do.
+
+The Constraint and the Verifier belong to the **Treasury Signers**, and they should be
+recruited from a pool where crypto carries no stigma in the first place — a security
+engineer, a crypto-literate accountant, someone who already holds a wallet.
+
+This costs something honest: the Giving Committee no longer constrains the treasury. But the
+multisig was always what constrained the treasury; the committee's power over the giving is
+real and separate. Two smaller bodies, each recruited from people for whom the ask is easy,
+beats one body recruited from people for whom it is impossible.
+
+**Second: for the Constraint seat, buy the function rather than begging for it.**
+
+The stigma and the no-pay problem compound each other, and paying dissolves both at once. A
+CPA who will not lend their name to a token for free will absolutely take a paid engagement
+to review quarterly treasury statements and hold a signing key — because a professional
+engagement is not an endorsement, and they can say so to anyone who asks. Budget a few
+hundred dollars a quarter; it is an operating cost the LLC can pay a vendor directly (the
+cleanest disclosure tier in Part IV), and it likely runs one to two thousand dollars a year.
+
+That is real money against a treasury with none, so fund it from book revenue like
+everything else. It buys the single hardest seat, and a paid independent reviewer is a
+stronger signal than an unpaid friend regardless of stigma.
+
+**Smaller things that lower the barrier:**
+
+- **Publish a non-endorsement line beside every name.** "Serves on the Giving Committee.
+  Does not hold MAGR, does not endorse it, and receives no compensation." One sentence they
+  can point at forever.
+- **Ask them to clear it with their firm first**, rather than discovering a conflict later.
+  Many firms restrict outside financial affiliations, and being the one who raised it is far
+  better than being the one who hid it.
+- **Recruit where the cost is lowest**: retired professionals with no firm policy and no
+  career runway to protect, clergy who are mission-motivated, people who already know the
+  book, and crypto-native people for the technical seat.
+- **Offer role-only listing.** Name the seat publicly and the person privately until they
+  are comfortable. This genuinely weakens the trust signal — say so — but a real committee
+  half-named beats a fake one fully named.
+- **Make the gifts first.** Recruiting is transformed once the ledger shows real gifts to
+  real families: the ask stops being "join my crypto project" and becomes "help me decide
+  who gets the next one."
+
+**And the honest fallback: five may not be achievable, and forcing it is worse than not.**
+A board of people who joined reluctantly and never attend is oversight theater — the thing
+this whole structure exists to avoid. If independent people decline after a genuine search,
+the answer is a smaller real body plus a paid professional reviewer, disclosed exactly as
+that. "Two committee members and a paid independent accountant" is a true sentence that
+earns more trust than five names that do not mean anything.
+
 ### Where does the money the committee decides on actually come from?
 
 This question exposes a real gap between the recruiting pitch above and the treasury
@@ -887,6 +960,7 @@ fundraising campaign.
 | "Built to hold" read as price advice | Tagline detached from the souvenir framing | Keep the two paired in every use; see `docs/LEGAL-BRIEFING.md` on marketing risk |
 | Deadlock on conflicted votes | Recusal leaves an even four | Written rule adopted up front: a tied vote fails |
 | Empty seats read as oversight | Five named, two never attend | Stage the seats; publish vacancies with target dates |
+| Cannot recruit — crypto stigma | Unpaid public affiliation reads as endorsement | Split the Giving Committee from the Treasury Signers; pay for the Constraint function; publish a non-endorsement line per name |
 | Liability reaching the book | Token and memoir sharing one entity | Separate LLC; book IP and royalties stay out of it |
 | LLC shield pierced | Commingled funds from day one | Own EIN and bank account; the $10k in as a documented capital contribution |
 | Trademark collision | "Cardinal" is crowded in healthcare and finance | Boring legal name (CP17 LLC); clear it before filing, not after launch |
