@@ -681,6 +681,58 @@ are the exceptions. And a volunteer mentor will advise; **almost none will hold 
 key or accept a named oversight role**, because that is a liability question rather than a
 generosity question. Expect free advice and paid responsibility to be different people.
 
+### If you do not want strangers in this
+
+Bringing in an outsider means inviting someone you do not know to check you, and being
+uneasy about that is a reasonable reaction rather than a failure of nerve. The discomfort
+*is* the mechanism — an overseer who never makes you uncomfortable is not overseeing
+anything. So it is worth being precise about how much power the seat actually carries,
+because "they will triangulate me" describes something larger than what is on offer.
+
+**What one outside signer can actually do:**
+
+- Refuse to co-sign a treasury movement — of a treasury worth about $4,000, in illiquid
+  tokens, that mostly cannot be spent anyway
+- Publish a quarterly opinion
+- Resign, loudly, with the letter published
+
+**What they cannot do:** touch your 100M, touch the book or its royalties, stop you selling,
+remove you from anything, spend a dollar of your money, direct the project, or bind you to
+anything. They hold one key of three and an opinion.
+
+Set that against the actual asymmetry: **you hold 40% of supply, unlocked, worth roughly the
+entire pool.** They hold a third of a signature on the smallest pot in the structure. Calling
+that arrangement "them triangulating you" inverts who has the leverage — and the reason an
+outsider's word carries weight is precisely that everyone can see the imbalance.
+
+**But if the answer is still no, that is a legitimate structure — with one condition.**
+
+Plenty of small projects are run by one person and their family. It is honest as long as it
+is stated. What breaks is claiming oversight you do not have.
+
+The no-outsiders path, done properly:
+
+1. **Say it in plain words on the coin page.** "This project is run by me, with my family.
+   Nobody independent oversees it. Here is who everyone is and how they are related to me."
+   That sentence costs less than most people fear and it is unfalsifiable, which is the
+   whole currency of this project.
+2. **Buy independence instead of recruiting it.** A published third-party contract audit is
+   independence as a one-time purchase: no stranger enters your life, no ongoing
+   relationship, no meetings. A real firm with no tie to you examines the code and you
+   publish whatever they find, including anything unflattering. For a plain fixed-supply
+   ERC-20 this is a small engagement, and it is the single highest-value thing available to
+   a project in this position.
+3. **Let the chain do the oversight a person would have done.** Renounced ownership, locked
+   liquidity, a multisig, a published founder wallet, and a ledger of every movement are all
+   checkable by strangers who never have to be invited anywhere. That is oversight without
+   overseers, and it is most of what an outside signer would have provided.
+4. **Keep the family signature anyway.** It still stops a hacked key, and it is worth having
+   for that alone.
+
+Between an outside director and nothing, there is a middle that most people miss: **buy the
+audit, publish the disclosure, skip the stranger.** It is coherent, it is honest, and it
+does not require anyone new in your life.
+
 ### The bigger problem this exposes
 
 Count the slate. Chris Brizzi is family. Jeff Middleton is family. That leaves Matt Campbell
