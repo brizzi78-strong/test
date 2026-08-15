@@ -55,6 +55,44 @@ services:
     staticPublishPath: ./cardinal-care-bridge
     autoDeploy: true
 
+  # Cardinal Coverage — SNF Medicare Advantage management. Deployed as TWO
+  # services on purpose.
+  #
+  # 1) The buyer-facing marketing page is a public static site (site/). Free on
+  #    Render, no build step, no server.
+  # 2) Everything else — the four working tools plus the investor deck and
+  #    one-pager — sits behind HTTP Basic auth (app/, served by
+  #    cardinal-coverage/deploy/server.mjs). It is gated because the tools are
+  #    where resident data gets typed and there is no BAA behind them, and
+  #    because the investor materials still contain FILL IN blocks that must not
+  #    be indexed. Every gated page also carries a noindex meta and the server
+  #    sends X-Robots-Tag: noindex.
+  #
+  # Set CC_PASSWORD when Render prompts on first deploy (CC_USER defaults to
+  # "cardinal"). The service refuses to start without a password rather than
+  # coming up ungated.
+  - type: web
+    name: cardinal-coverage
+    runtime: static
+    branch: main
+    staticPublishPath: ./cardinal-coverage/site
+    autoDeploy: true
+
+  - type: web
+    name: cardinal-coverage-app
+    runtime: docker
+    branch: main
+    plan: starter
+    dockerfilePath: ./cardinal-coverage/deploy/Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: CC_USER
+        value: cardinal
+      - key: CC_PASSWORD
+        sync: false            # Render prompts you to set this on first deploy
+
   # Blue Ridge Tax — the TaxFile app (taxfile/): guided 2025 federal 1040 with
   # a live refund tracker and mock e-file. Password-gated (TAXFILE_USER /
   # TAXFILE_PASSWORD — set the password when Render prompts; returns contain
