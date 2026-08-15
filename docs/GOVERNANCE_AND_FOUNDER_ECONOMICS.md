@@ -418,6 +418,63 @@ paid from the treasury. **Never tokens.** At this scale, most of the right peopl
 serve for free because they believe in the mission; if someone needs an equity-like stake
 to serve, they are the wrong person for the Constraint seat by definition.
 
+### Why would anyone say yes?
+
+There is no money in this seat and no upside in the token, so the ask has to rest on what
+is actually being offered. It is more than it looks, but it is different for each seat, and
+a generic pitch will fail.
+
+**The real currency is power over the giving.** Most volunteer board seats are advisory
+theater — you attend, you opine, someone else decides. This one comes with a key on a
+multisig. A member can genuinely stop a spend. For the right person, "you will have a vote
+on which grieving families get money, and you can block me" is a far better offer than a
+few hundred dollars a meeting, and it is an offer almost nobody else is making.
+
+What each seat is actually being sold:
+
+- **The Constraint** — the job of being the adult in the room, with real authority rather
+  than the appearance of it. People who have sat on credit-union or nonprofit boards know
+  how rare that is. Frame it as oversight, not endorsement: they are not vouching for the
+  token, they are the reason the treasury cannot move without a second signature.
+- **The Domain** — a direct say in who receives gifts. For a hospice chaplain, social
+  worker, or bereavement coordinator, this is the pitch, and it has nothing to do with
+  crypto: money exists, it will go to families, and you get to decide which ones. Lead with
+  that sentence and never with the token.
+- **The Verifier** — a small, clean public credential. "I check this contract and I would
+  resign publicly if a claim stopped being true" is a good thing for a security engineer to
+  have their name on, and the work is a few hours a quarter.
+- **The Recipient Voice** — being heard. Someone who went through it, given a formal say in
+  how the next family is treated. For many people that is the whole reason to do it.
+- **Anyone who knows you** — they want to help. Legitimate, and often the strongest motive
+  of all. Just not for the Constraint seat.
+
+**What makes it safe enough to say yes to.** Independent people decline because the
+downside is unbounded, so bound it explicitly in the ask:
+
+- **Four hours a month, one-year term.** Small and finite.
+- **Resign at any time, and the resignation letter is published unedited.** This is the
+  clause that does the most recruiting work. It means they can leave loudly, on their own
+  terms, with their reasons intact — so joining is not a bet on you never disappointing
+  them.
+- **No tokens, so no conflict and no tax bill.** Say this up front; it reassures the
+  cautious rather than disappointing them.
+- **Expenses covered, honorarium if the LLC ever has cash.**
+
+**Expect the Constraint seat to be hard, and expect some refusals.** You are asking someone
+to attach a professional reputation to a token with an unlocked 40% founder position, for
+free. That is a real ask, and the honest way to make it is to lead with the disclosure
+rather than the pitch: send them the coin page — the one that says the position is unlocked
+and tells people not to buy — before you send them anything else. A skeptic's first question
+about any token is whether it is a scam, and handing them the document that already says the
+weakest parts out loud answers it faster than any argument you could make.
+
+Two consequences worth naming. First, the unlocked 100M **makes this recruitment harder**,
+because the person best suited to the Constraint seat is exactly the person most likely to
+balk at it. The written sell policy is therefore not only a signal to buyers — it is the
+thing that makes the seat acceptable to the person you most need. Second, if nobody
+independent will take the seat after a genuine search, that is information about the
+package rather than about the labour market, and the answer is to change the package.
+
 ### Can board members be gifted tokens?
 
 Nothing prevents the transfer. The question is what it costs, and here the answer is worse
