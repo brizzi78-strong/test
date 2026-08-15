@@ -22,15 +22,15 @@ nothing with it: a 3% fee at realistic volume for a token this size funds roughl
 to $11,000 a year**, which is not a salary. You would be trading the entire trust story for
 less than the cost of the legal work you already need.
 
-The board is the opposite case. A five-member board inside a separate LLC is the one
-proposal that *adds* to the asset, because it converts "trust us with the treasury" into
-"three other people have to agree," and it keeps a token dispute from ever reaching the
-book.
+The board is the opposite case. A small board inside a separate LLC is the one proposal
+that *adds* to the asset, because it converts "trust us with the treasury" into "someone
+else has to agree," and it keeps a token dispute from ever reaching the book.
 
-**Form the new LLC and give it a boring name. Seat five, filling three before launch.
-Disclose the unlocked 100M hold and put a written sell policy around it. Skip the fee. Get
-paid — but from the book and the software, as owner's draws from an operating entity, while
-CP17 LLC pays operating costs directly and leaves the treasury untouched.**
+**Form the new LLC and give it a boring name. Three on the Giving Committee, a 2-of-3 Safe
+on the treasury. Disclose the unlocked 100M hold and put a written sell policy around it.
+Skip the fee. Get paid — but from the book and the software, as owner's draws from an
+operating entity, while CP17 LLC pays operating costs directly and leaves the treasury
+untouched.**
 
 ---
 
@@ -78,20 +78,40 @@ when combined with the next section.
 
 ## Part I — The board
 
-**Decision taken: five members.**
+**Decision taken: three.** Five was considered and set aside once the recruiting reality
+became clear.
 
-Five is odd, so nothing deadlocks, and it buys two things three cannot. It gives you four
-independent voices against one founder, which is a far stronger signal than two against
-one. And it makes the treasury survivable: on a three-key wallet, losing two keys locks the
-money away permanently, while a five-key wallet can lose two and keep operating. For a
-project whose entire pitch is that the money is safe from any single person, that
-resilience is worth real money.
+Five had two genuine advantages — four independent voices instead of two, and a five-key
+wallet that survives losing two keys where a three-key wallet does not. Neither survives
+contact with the constraint that actually binds here: **you cannot recruit five unpaid
+people to attach their names to a token.** A seat filled by someone who will not show up is
+worse than an empty one, because it launders the appearance of oversight without the
+substance. Three real people beat five names, and this is the rare case where the smaller
+structure is also the more honest one.
 
-The cost is recruiting. Five people who are genuinely independent, genuinely qualified, and
-genuinely willing to spend four hours a month on a twenty-thousand-dollar project is a hard
-ask, and a seat filled by someone who will not show up is worse than an empty one — it
-launders the appearance of oversight without the substance. So fill them in order rather
-than all at once. See the staging note below.
+Three is odd, so nothing deadlocks. Two is not a board, it is a standoff.
+
+**But "three people" and "three keys" are different questions, and conflating them is the
+one mistake to avoid here.** A signer is not the same role as a committee member:
+
+- **The Giving Committee: three.** You, the hospice or palliative-care professional, and one
+  more — a recipient voice, or a second person from that world. This body decides which
+  families receive money. Funded from book revenue, so **none of its members touch a wallet,
+  hold a token, or appear on the coin page.** These are the easy seats to fill, because the
+  ask contains no crypto at all.
+- **The treasury Safe: 2-of-3 keys.** You, the paid independent reviewer, and one
+  crypto-literate signer. **Never 2-of-2** — an even threshold deadlocks, and losing either
+  key locks the treasury permanently. The third key exists for survivability as much as
+  oversight.
+
+The two rosters overlap in you and need not overlap anywhere else. A signer can be a paid
+professional or a quiet technical person who is never presented publicly as a director,
+which is exactly what makes those roles fillable.
+
+One consequence of three: when you recuse on the Giving Committee, two remain and can tie.
+The tie-fails rule below still resolves it. In practice most conflicted questions — your
+compensation, treasury movements — sit with the Safe signers rather than the committee, so
+the situation is rarer than it looks.
 
 ### Before you can have a board, you need something for it to be a board *of*
 
@@ -113,10 +133,9 @@ That is the right call, and the "separate" part is doing most of the work:
   any say over the book or the rest of your work.
 - **A clean exit.** If MAGR goes nowhere, you dissolve one LLC. Nothing else is affected.
 
-**Structure: new LLC + a Safe multisig on the treasury** — 2-of-3 at launch, 3-of-5 once
-all five seats are filled. Skip the nonprofit for now — do not file a 501(c)(3) for a
-$20,000 project; the formation cost, exemption application, and annual filings would exceed
-the treasury's entire value at spot. If the giving grows enough to need real charitable
+**Structure: new LLC + a 2-of-3 Safe multisig on the treasury.** Skip the nonprofit for
+now — do not file a 501(c)(3) for a $20,000 project; the formation cost, exemption
+application, and annual filings would exceed the treasury's entire value at spot. If the giving grows enough to need real charitable
 standing, use **fiscal sponsorship** (an existing 501(c)(3) receives and disburses the gifts
 for a percentage) rather than building your own.
 
@@ -191,7 +210,7 @@ software, financial services, and charitable or care services — and a **domain
 trademark screen costs a small fraction of a rebrand after launch, and after launch the
 name is on a contract address that cannot be edited.
 
-### The five seats
+### The seats
 
 Design the seats first, then find people for them. Choosing people first and inventing
 roles afterward is how boards fill up with friends. Each seat below covers a way this
@@ -213,7 +232,8 @@ strongest credibility signal to non-crypto audiences. *Guards against: giving th
 good and helps nobody.*
 
 **Seat 3 — The Verifier.** Someone who can read Solidity and independently confirm what the
-contract actually does. This seat only becomes possible at five, and it closes the largest
+contract actually does. At three this is the crypto-literate Safe signer rather than a
+separate committee seat, and it closes the largest
 hole in the current design: every trust claim you make — supply is fixed, ownership is
 renounced, liquidity is locked, the founder's holding is exactly what it is said to be — currently rests on
 *you* saying so. A technically competent board member who has checked the chain themselves,
@@ -239,7 +259,7 @@ the thing you actually want, and it is better to know that before you ask anyone
 
 ### The even-number problem, and the rule that solves it
 
-Five is odd, but the moment you recuse it is four — and four ties. A 2-2 split on your
+Three is odd, but the moment you recuse it is two — and two ties. A deadlock on your
 compensation, or on any conflicted question, has to resolve somehow, and inventing the rule
 in the moment is how boards break.
 
@@ -252,8 +272,8 @@ the position of personally deciding what the founder earns.
 
 ### Staging the seats
 
-Do not hold the launch hostage to five signatures, and do not seat five people quickly just
-to have five.
+Do not hold the launch hostage to a full roster, and do not fill a seat quickly just to
+have it filled.
 
 - **Before launch, fill three:** the Constraint, the Domain, and you. This is the minimum
   that makes the multisig meaningful and the gift policy real.
@@ -261,9 +281,9 @@ to have five.
   vacant with a target date rather than leaving them undescribed. A published "two seats
   open, here is what they are for" reads as a plan; five names where two never attend reads
   as decoration.
-- **Run the multisig as 2-of-3 until the board is five, then migrate to 3-of-5.** Announce
-  the migration and link the transaction. Do not build a 3-of-5 wallet around three people —
-  a threshold you cannot meet is a treasury you cannot use.
+- **Keep the Safe at 2-of-3.** Never 2-of-2: an even threshold deadlocks, and losing either
+  key locks the treasury forever. If the group ever grows, migrate to 3-of-5 and link the
+  transaction — but never build a threshold you cannot actually meet.
 
 ### The candidate slate
 
@@ -293,7 +313,7 @@ through the scorecard above and the three conversations below before assigning a
 slate still needs to answer:
 
 - **Who can genuinely say no?** At least one member must have no personal or financial tie
-  to you. If the whole board is friends and family, you have five people who like you rather
+  to you. If the whole board is friends and family, you have a group of people who like you rather
   than a board, and the multisig becomes a formality where everyone signs everything.
 - **Who can read the contract?** The Verifier seat needs real technical capability. If
   nobody on the slate can read Solidity, recruit outside the slate for that seat or drop it
@@ -313,7 +333,7 @@ alongside the other board members, and make sure the Constraint seat goes to som
 no tie to you at all.
 
 Disclosing relationships is not an embarrassment to manage — an undisclosed one discovered
-later is. "Two of five are family, here is who and why" is a fact a reasonable person can
+later is. "One of the three is my brother, here is why" is a fact a reasonable person can
 accept. Silence on it, followed by someone noticing the surname, is a credibility problem
 you cannot undo.
 
@@ -397,17 +417,15 @@ regardless of the total.
 
 ### What the seat comes with
 
-- **A key on the Safe multisig holding the 50M treasury** — 2-of-3 at launch, 3-of-5 once
-  all five seats are filled. No treasury movement — no gift, no listing fee, no
-  compensation — happens with one signature.
+- **For signers, a key on the 2-of-3 Safe holding the 50M treasury.** No treasury movement —
+  no gift, no listing fee, no compensation — happens with one signature.
 - **A written gift policy** adopted before the first gift, not after.
 - **Sole authority over founder compensation**, with you recused and ties failing.
-- **Quorum of three**, with a majority of those present carrying an ordinary motion. Below
-  three, the meeting is a conversation, not a decision.
+- **Quorum of two on the Giving Committee**, with a tie failing where anyone is recused.
+  Below two, the meeting is a conversation, not a decision.
 - **Quarterly minutes published** to `cp17-site/ledger.html`, including dissents by name.
-- **Staggered terms.** One year, renewable — but stagger the initial terms so the whole
-  board cannot turn over at once: give two members two-year first terms and the rest one
-  year. Five seats make staggering possible; three did not.
+- **Staggered terms.** One year, renewable — but give one member a two-year first term so
+  the whole committee cannot turn over at once.
 - **A standing commitment that any resignation letter is published unedited.** That clause
   is what gives a board member real leverage and gives buyers a real signal.
 
@@ -541,12 +559,12 @@ stronger signal than an unpaid friend regardless of stigma.
   real families: the ask stops being "join my crypto project" and becomes "help me decide
   who gets the next one."
 
-**And the honest fallback: five may not be achievable, and forcing it is worse than not.**
-A board of people who joined reluctantly and never attend is oversight theater — the thing
-this whole structure exists to avoid. If independent people decline after a genuine search,
-the answer is a smaller real body plus a paid professional reviewer, disclosed exactly as
-that. "Two committee members and a paid independent accountant" is a true sentence that
-earns more trust than five names that do not mean anything.
+**And the honest fallback: even three may not be achievable, and forcing it is worse than
+not.** People who joined reluctantly and never attend are oversight theater — the thing this
+whole structure exists to avoid. If independent people decline after a genuine search, the
+answer is a smaller real body plus a paid professional reviewer, disclosed exactly as that.
+"Two committee members and a paid independent accountant" is a true sentence that earns more
+trust than a longer list of names that do not mean anything.
 
 ### Where does the money the committee decides on actually come from?
 
@@ -959,7 +977,7 @@ fundraising campaign.
 | Trademark letter | "Ironman" used in branding | Describe the distance factually; never use the mark; licence any race photo |
 | "Built to hold" read as price advice | Tagline detached from the souvenir framing | Keep the two paired in every use; see `docs/LEGAL-BRIEFING.md` on marketing risk |
 | Deadlock on conflicted votes | Recusal leaves an even four | Written rule adopted up front: a tied vote fails |
-| Empty seats read as oversight | Five named, two never attend | Stage the seats; publish vacancies with target dates |
+| Empty seats read as oversight | Names listed who never attend | Three real people, not a longer list; publish any vacancy with a target date |
 | Cannot recruit — crypto stigma | Unpaid public affiliation reads as endorsement | Split the Giving Committee from the Treasury Signers; pay for the Constraint function; publish a non-endorsement line per name |
 | Liability reaching the book | Token and memoir sharing one entity | Separate LLC; book IP and royalties stay out of it |
 | LLC shield pierced | Commingled funds from day one | Own EIN and bank account; the $10k in as a documented capital contribution |
