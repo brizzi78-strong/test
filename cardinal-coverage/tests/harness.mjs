@@ -11,8 +11,11 @@ import { dirname, resolve } from "node:path";
 import vm from "node:vm";
 
 export const DIR = resolve(dirname(fileURLToPath(import.meta.url)), "..");
-export const page = (name) => `file://${DIR}/${name}`;
-export const html = (name) => readFileSync(`${DIR}/${name}`, "utf8");
+// The tools live under app/ (gated deploy root); the public marketing page is
+// under site/ and is served separately.
+export const APP = `${DIR}/app`;
+export const page = (name) => `file://${APP}/${name}`;
+export const html = (name) => readFileSync(`${APP}/${name}`, "utf8");
 
 /* ---------------------------------------------------------------- results */
 

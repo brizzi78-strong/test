@@ -170,7 +170,8 @@ await test("nav strip marks exactly one current page, and it is this page", asyn
         value: cur[0] ? cur[0].getAttribute("aria-current") : null,
       };
     });
-    if (got.total !== 4 || got.count !== 1 || got.href !== f || got.value !== "page")
+    // 5 links: Home (the gated hub) + the four tools. Exactly one is current.
+    if (got.total !== 5 || got.count !== 1 || got.href !== f || got.value !== "page")
       wrong.push(`${f} -> ${JSON.stringify(got)}`);
     await p.__ctx.close();
   }

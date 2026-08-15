@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="robots" content="noindex, nofollow">
+<title>Cardinal Coverage — Tools</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23A31B33'/%3E%3Ctext x='16' y='23' font-family='system-ui' font-size='20' font-weight='900' text-anchor='middle' fill='white'%3EC%3C/text%3E%3C/svg%3E">
+<style>
+  :root{--paper:#F7F2E6;--surface:#FFFDF7;--surface-2:#EFE7D3;--ink:#17233F;--muted:#6B6350;--line:#E2D9C3;
+    --brand:#A31B33;--brand-strong:#7E1226;--warn:#9A6410;--warn-bg:#F6ECD6;
+    --shadow:0 1px 2px rgba(23,35,63,.07),0 10px 26px -14px rgba(23,35,63,.24);
+    --font:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --serif:ui-serif,Georgia,"Iowan Old Style","Times New Roman",serif;--r:14px;}
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#101627;--surface:#172033;--surface-2:#1F2A42;
+    --ink:#F3EEE1;--muted:#A9A28F;--line:#2B3855;--brand:#E2586B;--brand-strong:#F27A8B;--warn:#D6A24A;--warn-bg:#33280f;
+    --shadow:0 1px 2px rgba(0,0,0,.45),0 12px 32px -14px rgba(0,0,0,.65);}}
+  :root[data-theme="dark"]{--paper:#101627;--surface:#172033;--surface-2:#1F2A42;--ink:#F3EEE1;--muted:#A9A28F;--line:#2B3855;--brand:#E2586B;--brand-strong:#F27A8B;--warn:#D6A24A;--warn-bg:#33280f;}
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);line-height:1.55;}
+  .wrap{max-width:940px;margin-inline:auto;padding:clamp(1.6rem,5vw,3.4rem) clamp(1rem,4vw,2rem) 4rem;}
+  header{display:flex;align-items:center;gap:.8rem;margin-bottom:.4rem;}
+  .logo{width:44px;height:44px;border-radius:12px;background:var(--brand);color:#fff;font-weight:900;display:grid;place-items:center;font-size:1.5rem;flex:none;}
+  h1{font-family:var(--serif);font-size:clamp(1.7rem,4vw,2.3rem);margin:0;font-weight:700;letter-spacing:-.01em;}
+  .tag{color:var(--brand);font-weight:800;font-size:.9rem;}
+  .themeBtn{margin-left:auto;background:transparent;border:1px solid var(--line);border-radius:9px;color:var(--ink);padding:.4rem .6rem;cursor:pointer;font:inherit;}
+  p.lede{color:var(--muted);max-width:62ch;margin:.8rem 0 0;}
+
+  h2{font-size:.7rem;font-weight:900;letter-spacing:.13em;text-transform:uppercase;color:var(--brand);margin:2.2rem 0 .7rem;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:.9rem;}
+  a.card{display:block;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+    padding:1.1rem 1.2rem;box-shadow:var(--shadow);text-decoration:none;color:inherit;border-left:5px solid var(--brand);}
+  a.card:hover{border-color:var(--brand);transform:translateY(-1px);}
+  a.card h3{margin:0 0 .3rem;font-size:1.02rem;}
+  a.card p{margin:0;color:var(--muted);font-size:.87rem;}
+  a.card.quiet{border-left-color:var(--line);}
+
+  .phi{background:var(--warn-bg);border:1px solid var(--warn);border-radius:10px;padding:.75rem .95rem;font-size:.85rem;margin:1.6rem 0 0;}
+  .phi b{color:var(--warn);}
+  footer{color:var(--muted);font-size:.76rem;margin-top:2.4rem;line-height:1.65;border-top:1px solid var(--line);padding-top:1rem;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <span class="logo" aria-hidden="true">C</span>
+    <div>
+      <h1>Cardinal Coverage</h1>
+      <div class="tag">Know every covered day. Keep every earned dollar.</div>
+    </div>
+    <button class="themeBtn" id="themeBtn" aria-label="Toggle theme">◐</button>
+  </header>
+
+  <p class="lede">Working prototypes for managing Medicare Advantage authorizations from admission through discharge. This area is private — it is password-gated and marked no-index.</p>
+
+  <h2>Daily tools</h2>
+  <div class="grid">
+    <a class="card" href="tracker.html">
+      <h3>Authorization tracker</h3>
+      <p>Every resident's covered days, next submission, NOMNC deliver-by, QIO fast-track deadline, recertification and progress note — sorted most urgent first.</p>
+    </a>
+    <a class="card" href="appeal-letters.html">
+      <h3>Appeal letters</h3>
+      <p>Fast-track QIO appeal, plan reconsideration, and short-authorization challenge, assembled around your clinical record.</p>
+    </a>
+    <a class="card" href="outcomes.html">
+      <h3>Outcomes log</h3>
+      <p>Thirty seconds per event. Builds the recovered-days and protected-dollars figure that sets pricing.</p>
+    </a>
+    <a class="card" href="rules.html">
+      <h3>Plan rules registry</h3>
+      <p>What each payer requires, with the source, who confirmed it, and when it expires.</p>
+    </a>
+  </div>
+
+  <h2>Investor materials — not for public distribution</h2>
+  <div class="grid">
+    <a class="card quiet" href="investors.html">
+      <h3>Presentation deck</h3>
+      <p>Sixteen slides. Arrow keys to advance, <b>N</b> for speaker notes, <b>P</b> to print. Still contains FILL IN blocks.</p>
+    </a>
+    <a class="card quiet" href="one-pager.html">
+      <h3>Executive summary</h3>
+      <p>One-page leave-behind. Complete the traction and ask block before sending it to anyone.</p>
+    </a>
+  </div>
+
+  <p class="phi"><b>Before entering real resident data.</b> These prototypes store what you type in your own browser — nothing is transmitted to this server, which only sends the pages. That also means there is no backup, no audit log, and no Business Associate Agreement. Use initials or a room number rather than names, and read <i>docs/gap-analysis.md</i> on what a HIPAA-grade version requires before a second facility touches this.</p>
+
+  <footer>
+    <p>Working prototypes, not a system of record. Your EHR and medical record remain authoritative. Not clinical, legal, or billing advice.</p>
+  </footer>
+</div>
+<script>
+document.getElementById("themeBtn").addEventListener("click", () => {
+  const cur = document.documentElement.getAttribute("data-theme");
+  const next = cur === "dark" ? "light" : cur === "light" ? "" : "dark";
+  if (next) document.documentElement.setAttribute("data-theme", next);
+  else document.documentElement.removeAttribute("data-theme");
+});
+</script>
+</body>
+</html>

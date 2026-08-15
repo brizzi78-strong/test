@@ -12,13 +12,15 @@ tools, and the operational reference they're built on.
 
 | File | What it is |
 | --- | --- |
-| `index.html` | Marketing / lead-generation landing page — **buyer-facing** |
-| `investors.html` | Investor presentation deck — **investor-facing** |
-| `one-pager.html` | Single-page executive summary / leave-behind — **investor-facing** |
-| `tracker.html` | **Working prototype** — the authorization dashboard the landing page advertises |
-| `appeal-letters.html` | **Working prototype** — denial and termination appeal letter builder |
-| `outcomes.html` | **Working prototype** — outcomes log; the measurement instrument behind the traction number |
-| `rules.html` | **Working prototype** — plan rules registry; what each payer requires, dated and sourced |
+| `site/index.html` | Marketing / lead-generation landing page — **public** |
+| `app/index.html` | Hub for the gated tools — **gated** |
+| `app/tracker.html` | **Working prototype** — the authorization dashboard the landing page advertises |
+| `app/appeal-letters.html` | **Working prototype** — denial and termination appeal letter builder |
+| `app/outcomes.html` | **Working prototype** — outcomes log; the measurement instrument behind the traction number |
+| `app/rules.html` | **Working prototype** — plan rules registry; what each payer requires, dated and sourced |
+| `app/investors.html` | Investor presentation deck — **gated** |
+| `app/one-pager.html` | Executive summary / leave-behind — **gated** |
+| `deploy/` | Gated static server (zero-dependency Node) + Dockerfile |
 | `docs/nc-snf-ma-reference.md` | North Carolina filing routes, PT documentation standards, appeal data |
 | `docs/gap-analysis.md` | Honest distance between these artifacts and a fundable company |
 | `docs/audit-2026-08.md` | Independent 20-agent audit, with remediation status |
@@ -26,9 +28,34 @@ tools, and the operational reference they're built on.
 | `docs/test-report-2026-08.md` | Ten-agent test pass: 17 defects found, all fixed |
 | `tests/` | Executable suite — 179 tests, sandboxed logic + real-browser E2E |
 
-`index.html` and `investors.html` are deliberately separate documents for two
-different audiences, and neither links to the other — a buyer should not land on
-the raise, and an investor should not be read the sales pitch.
+`site/index.html` and `app/investors.html` are deliberately separate documents for
+two different audiences, and neither links to the other — a buyer should not land
+on the raise, and an investor should not be read the sales pitch.
+
+## Deploying
+
+Two Render services, defined in the repo-root `render.yaml`:
+
+| Service | Root | Access |
+| --- | --- | --- |
+| `cardinal-coverage` | `site/` | **Public** static site, free tier |
+| `cardinal-coverage-app` | `app/` | **HTTP Basic auth**, via `deploy/server.mjs` |
+
+The split is deliberate. The tools are where resident data gets typed and there
+is no Business Associate Agreement behind them, and the investor materials still
+carry `FILL IN BEFORE PRESENTING` blocks — neither belongs on the open web. Every
+gated page also carries a `noindex` meta tag and the server sends
+`X-Robots-Tag: noindex`.
+
+Set `CC_PASSWORD` when Render prompts on first deploy (`CC_USER` defaults to
+`cardinal`). **The server exits rather than start without a password**, so a
+misconfiguration fails closed instead of publishing the tools.
+
+`deploy/server.mjs` is zero-dependency Node — timing-safe credential comparison,
+path-traversal guard, an unauthenticated `/health` for Render's check, and a
+restrictive CSP (the pages are self-contained, so `default-src 'none'` holds).
+Verified locally: refuses to start with no password, 401 unauthenticated, 401 on
+a wrong password, 404 on traversal attempts, 200 with the credential.
 
 Every page is self-contained: open it in any browser, no build, no
 dependencies, no network calls. Design tokens match the Cardinal palette used
@@ -203,6 +230,9 @@ persistence, outcomes metrics and CSV, the rules registry's freshness discipline
 letter generation and the PHI-persistence promise, two end-to-end browser lanes,
 output escaping against injection payloads in every field, and
 accessibility/print/responsive.
+
+Tests resolve pages against `app/` (see `APP` in `harness.mjs`), since that is the
+gated deploy root.
 
 Playwright is installed in the session scratchpad rather than as a devDependency,
 so the browser lanes will not run from a fresh clone until that is fixed.

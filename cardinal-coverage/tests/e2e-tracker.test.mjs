@@ -1,6 +1,6 @@
 // Lane: e2e-tracker — drive tracker.html in a real browser the way a user does.
 import { existsSync } from "node:fs";
-import { suite, test, expect, open, dayFromToday, DIR } from "./harness.mjs";
+import { suite, test, expect, open, dayFromToday, DIR, APP } from "./harness.mjs";
 
 suite("e2e tracker");
 
@@ -275,11 +275,12 @@ await test("cross-tool nav links point at files that exist on disk", async () =>
   expect(byText["Outcomes"].href).toBe("outcomes.html");
   expect(byText["Rules"].href).toBe("rules.html");
   expect(byText["Tracker"].cur).toBe(true);
-  for (const l of links) expect(existsSync(`${DIR}/${l.href}`)).toBe(true);
+  expect(byText["Home"].href).toBe("index.html");   // the gated hub
+  for (const l of links) expect(existsSync(`${APP}/${l.href}`)).toBe(true);
 
   // the per-case "Log outcome" deep link must also resolve to a real file
   const deep = await p.locator("article.case a.btn").first().getAttribute("href");
-  expect(existsSync(`${DIR}/${deep.split("?")[0]}`)).toBe(true);
+  expect(existsSync(`${APP}/${deep.split("?")[0]}`)).toBe(true);
   expect(deep).toContain("suggest=");
 
   expect(p.__errors.length).toBe(0);
