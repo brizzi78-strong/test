@@ -1,7 +1,7 @@
-# Cardinal's Promise — Governance and Money. Spoken Summary.
+# Mager Coin — Governance and Money. Spoken Summary.
 
 *A plain-language version of the governance and founder economics analysis, written to be
-listened to rather than read. No tables, no addresses, no file names. About twelve minutes.*
+listened to rather than read. No tables, no addresses, no file names. About fifteen minutes.*
 
 ---
 
@@ -100,12 +100,21 @@ leaves your compensation exactly where it is. It cannot go up without a real maj
 it cannot be cut by a minority. Conservative in both directions, and nobody ever has to
 personally cast the deciding vote on what the founder earns.
 
-You've named four people. Chris Brizzi, Jeff Mager, Matt Campbell, and Charles Cole. With
-you that fills every seat. But do not assign anyone yet, because a seat is defined by what
-that person can do that nobody else in the room can. So four questions first. Who among
-them can genuinely tell you no. Who can actually read the contract code. Who brings real
-hospice credibility. And does any of them hold the coin, or plan to, which rules them out
-of the constraint and verifier seats.
+Now, the people. Jeff Mager is off the board, and that is the right call, because the coin
+is being named after him. A namesake cannot also be an independent director of the thing
+named after him. His reputation is tied to the coin's price and behavior, which is exactly
+the entanglement an independent seat exists to prevent. Keeping the name and giving up the
+seat costs you nothing structural. Keeping both would have cost the board its independence.
+
+So that leaves Chris Brizzi, Matt Campbell, and Charles Cole, plus you. Four of five. One
+seat still open, and it should go to an outsider, somebody with no personal or financial
+tie to you at all. That is now the single most important recruiting job on the list.
+
+Do not assign the other seats yet, because a seat is defined by what that person can do
+that nobody else in the room can. So, four questions first. Who among them can genuinely
+tell you no. Who can actually read the contract code. Who brings real hospice credibility.
+And does any of them hold the coin, or plan to, which rules them out of the constraint and
+verifier seats.
 
 One thing to name directly. Chris Brizzi shares your last name, so I assume family. That is
 not a reason to keep anyone off the board, and family often brings the most real commitment
@@ -115,10 +124,47 @@ to publicly refuse your pay request. Put family somewhere their judgment helps i
 conflicts, disclose the relationship on the ledger page, and make sure the constraint seat
 goes to someone with no tie to you at all.
 
-And if all four turn out to be friends and family, then what you have is five people who
-like you, not a board. The shared wallet becomes a formality where everybody signs
-everything. At least one member has to be a genuine outsider for any of this to mean
+And if the whole board turns out to be friends and family, then what you have is five
+people who like you, not a board. The shared wallet becomes a formality where everybody
+signs everything. At least one member has to be a genuine outsider for any of this to mean
 anything.
+
+While we are on the name. The coin is now Mager Coin, ticker M A G R, and the tagline is
+built to hold, which comes from Jeff finishing a one hundred forty point six mile
+triathlon. The endurance idea genuinely fits what you built. Fixed supply, locked pool,
+ownership given up, your own coins under lock. A coin built to be held rather than flipped
+is an honest description of it.
+
+Four things that decision requires, though, and none of them are optional.
+
+First, get Jeff's permission in writing before anything is deployed. His last name goes onto
+a contract at a permanent address that nobody can ever edit. If the price goes to zero,
+which is the outcome your own coin page tells people to expect, his name is on that forever.
+Make sure he is agreeing to that version, not the good one.
+
+Second, do not use the word Ironman anywhere in the branding. It is a registered trademark
+and the owner enforces it hard, and a coin, a website, and merchandise are exactly what
+draws a letter. Describing the distance plainly, a one hundred forty point six mile
+triathlon, swim then bike then marathon, carries the whole story without touching the mark.
+Same goes for race photos. Those usually belong to the event photographer, not the athlete,
+so do not put one on the site without permission.
+
+Third, keep built to hold about how the thing is made, not about the price. As a statement
+about the contract it is accurate and anyone can check it. As a suggestion to buy and wait,
+it turns into the exact marketing risk your legal briefing warns about, because the
+remaining legal exposure in this design is almost entirely about what you say, not what you
+built. On the site the tagline sits right next to the souvenir language for that reason.
+Keep them together everywhere.
+
+Fourth, accept that naming a coin after a person carries a pattern problem. That is what
+pump and dumps do, and some people will discount you for it before reading a word. The
+answer is not an argument, it is the evidence. Ownership renounced, pool locked, your coins
+locked, a real board, a published ledger. That evidence is stronger than the name is weak,
+but it has to actually exist before launch, not after.
+
+One good side effect. The coin no longer shares a name with the book, which makes the
+separation stronger, not weaker. The memoir keeps its own name and its own domain, and a
+fight about the coin no longer shows up wearing the book's title.
 
 When you interview candidates, there is one question that works better than any other. Ask
 them what would make them resign. A good answer comes fast and is specific. If you moved
@@ -150,17 +196,27 @@ Not you personally paying bills on the company's behalf. Mixing personal and com
 at the very first transaction is the single most common way a company's legal protection
 gets stripped away later.
 
-On the name. You asked if Cardinal is a problem, and said you would change it. Short
-answer, it is a moderate risk, and the fix is cheap. The real collision is not the baseball
-or football teams. It is Cardinal Health, a Fortune twenty healthcare company. Your project
-is hospice adjacent, which is exactly their territory, and name conflicts get serious where
-the services overlap. Cardinal is also crowded in financial services.
+On the entity name. You had considered calling the company Cardinal, or Cardinals Platform.
+Renaming the coin settles most of that, but the company still needs a name and the advice is
+the same: make it boring. The company name is the one place where being distinctive buys you
+nothing, and a complaint about the coin should not arrive carrying a name you care about.
 
-So make the legal name boring and keep Cardinal as the public story. My suggestion is C P
-seventeen L L C, which already matches the web address you own, and then use the Cardinal's
-Promise as the public name of the project. A boring legal name is a feature, not a
-compromise. If someone ever files a complaint about the coin, you do not want the book's
-name in the title of it.
+For what it is worth, the reason I would have steered you off Cardinal was never the
+baseball or football teams. It was Cardinal Health, a Fortune twenty healthcare company,
+because your project is hospice adjacent, which is their exact territory. Cardinal is also
+crowded in financial services.
+
+So my suggestion is C P seventeen L L C for the company, which already matches the web
+address you own, with Mager Coin as the public name of the coin. And notice the good side
+effect. With the coin called Mager Coin and the company called C P seventeen, the book's
+name appears nowhere in the coin's legal identity or its public one. That is a stronger
+version of the separation you formed the company to get.
+
+Before you file, do three cheap things in this order. A state name availability search,
+which is free and takes minutes. A trademark search covering software, financial services,
+and charitable or care services. And a domain check. A trademark screen costs a small
+fraction of what a rebrand costs after launch, and after launch the name is attached to a
+contract address that can never be edited.
 
 Now the one hundred million you want to hold.
 
@@ -257,8 +313,8 @@ Clear the name. Form the company, get the tax ID, open its bank account, and doc
 ten thousand dollars going in. Open the shared wallet so no money moves without a second
 signature. Start it at two of three, and move it to three of five once all five seats are
 actually filled. Do not build a three of five wallet around three people, because a
-threshold you cannot meet is a treasury you cannot use. Screen your four candidates, then
-assign seats. Fill the constraint seat first, with someone who has no tie to you, because
+threshold you cannot meet is a treasury you cannot use. Screen your three candidates and recruit an outsider for the fifth
+seat, then assign seats. Fill the constraint seat first, with someone who has no tie to you, because
 everything gets easier once one person can tell you no. Then the hospice seat. And adopt
 the tie fails rule before the first meeting. Drop the fee. Lock your one
 hundred million and publish the schedule. Update the website so it describes what is

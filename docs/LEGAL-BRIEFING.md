@@ -1,4 +1,4 @@
-# Legal Briefing — Cardinals Promise (CARD) Token Launch
+# Legal Briefing — Mager Coin (MAGR) Token Launch
 
 > **This is research, not legal advice.** It was prepared to make the
 > conversation with a qualified lawyer faster and cheaper, and every claim
@@ -16,7 +16,7 @@
 
 ## United States — securities law
 
-The threshold question is whether offers and sales of CARD are
+The threshold question is whether offers and sales of MAGR are
 "investment contracts" under the four-part test of
 [SEC v. W.J. Howey Co., 328 U.S. 293 (1946)](https://www.courtlistener.com/opinion/8201185/securities-exchange-commission-v-w-j-howey-co/):
 an investment of money, in a common enterprise, with a reasonable
@@ -36,7 +36,7 @@ Key points from recent litigation:
 - The SEC has also charged intermediaries facilitating token markets, e.g.
   [SEC v. Payward, Inc. (Kraken) (N.D. Cal. 2024)](https://www.courtlistener.com/opinion/10294772/securities-and-exchange-commission-v-payward-inc/).
 
-**What this means for CARD's design** (to verify with counsel): the launch
+**What this means for MAGR's design** (to verify with counsel): the launch
 deliberately weakens several Howey prongs — no capital is raised by the
 issuer, ownership renouncement removes ongoing "efforts of others," and no
 profits are promised. The residual risk concentrates in **marketing**: if
@@ -56,7 +56,7 @@ Questions for US counsel:
 Since 30 December 2024, offers of crypto-assets to the public in the EU are
 governed by
 [Regulation (EU) 2023/1114 (MiCA)](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R1114).
-CARD is neither asset-referenced nor e-money, so Title II ("crypto-assets
+MAGR is neither asset-referenced nor e-money, so Title II ("crypto-assets
 other than asset-referenced tokens or e-money tokens") is the relevant
 regime: an "offer to the public" triggers a white paper obligation
 (drafting, notification to a national competent authority, publication) and

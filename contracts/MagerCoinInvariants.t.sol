@@ -3,25 +3,25 @@ pragma solidity ^0.8.28;
 
 import {Test} from "forge-std/Test.sol";
 import {Vm} from "forge-std/Vm.sol";
-import {CardinalsPromise} from "./CardinalsPromise.sol";
+import {MagerCoin} from "./MagerCoin.sol";
 
-/// @notice Fuzz handler for CardinalsPromise invariant testing. The invariant runner
+/// @notice Fuzz handler for MagerCoin invariant testing. The invariant runner
 ///         calls these entry points in random sequences from random senders;
 ///         the handler narrows that randomness onto valid token operations so
 ///         sequences exercise real state transitions instead of reverting.
 ///         Deliberately NOT a Test subclass: its only public surface is the
 ///         operations we want fuzzed (plus view helpers), so the runner cannot
 ///         wander into inherited helpers.
-contract CardinalsPromiseHandler {
+contract MagerCoinHandler {
     Vm private constant vm =
         Vm(address(uint160(uint256(keccak256("hevm cheat code")))));
 
-    CardinalsPromise public immutable token;
+    MagerCoin public immutable token;
     address[] public actors;
     bool public renounced;
 
     constructor(uint256 numActors) {
-        token = new CardinalsPromise();
+        token = new MagerCoin();
         uint256 share = token.totalSupply() / (numActors * 2);
         for (uint256 i = 0; i < numActors; i++) {
             address actor = address(uint160(0xCA4D0000 + i));
@@ -92,17 +92,17 @@ contract CardinalsPromiseHandler {
     }
 }
 
-/// @notice Stateful verification of CardinalsPromise's launch-critical properties.
+/// @notice Stateful verification of MagerCoin's launch-critical properties.
 ///         Each invariant is re-checked after every randomized call sequence
 ///         against the handler above (256 sequences by default).
-contract CardinalsPromiseInvariantTest is Test {
+contract MagerCoinInvariantTest is Test {
     uint256 internal constant NUM_ACTORS = 8;
 
-    CardinalsPromiseHandler handler;
-    CardinalsPromise token;
+    MagerCoinHandler handler;
+    MagerCoin token;
 
     function setUp() public {
-        handler = new CardinalsPromiseHandler(NUM_ACTORS);
+        handler = new MagerCoinHandler(NUM_ACTORS);
         token = handler.token();
         targetContract(address(handler));
     }

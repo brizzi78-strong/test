@@ -122,7 +122,7 @@ the review bottleneck: shrink what requires judgment, mechanize the rest.
 
 ## Part 3: What Was Built in This Repo
 
-The CARD launch strategy is explicitly trust-first: its pitch to buyers and
+The MAGR launch strategy is explicitly trust-first: its pitch to buyers and
 token scanners is "no mint, no tax, no blacklist, no pause, renounced
 ownership." Those are exactly the kind of claims that are cheap to make and
 expensive to verify by eye — which makes this repo a perfect testbed.
