@@ -418,6 +418,53 @@ paid from the treasury. **Never tokens.** At this scale, most of the right peopl
 serve for free because they believe in the mission; if someone needs an equity-like stake
 to serve, they are the wrong person for the Constraint seat by definition.
 
+### Can board members be gifted tokens?
+
+Nothing prevents the transfer. The question is what it costs, and here the answer is worse
+than the general case for one specific reason of your own making.
+
+**The sell policy hands the board advance knowledge of price-moving events.** The founder
+notifies the board before selling; the board approves gifts and treasury spends before they
+happen; the board knows about listings and locks first. That is exactly the design intent —
+advance notice is the friction substituting for the timelock you declined. But it means
+**every board member is, by construction, someone who knows what is about to move the price
+before the market does.** Give that person tokens and you have manufactured a textbook
+insider fact pattern: a holder with material non-public information, on a public ledger,
+where every trade they make is visible and timestamped forever. One board member selling
+three days before an announcement ends the project, whether or not the timing was innocent.
+
+The general objections stack on top:
+
+- **The Constraint and Verifier seats are disqualified outright.** The Constraint's entire
+  function is having no financial upside; a member who profits when the price rises is a
+  trader with a vote. The Verifier's job is to publicly confirm or deny the trust claims,
+  and a Verifier with a position has a motive not to find problems. These two are not
+  negotiable — they are the seats that make the board worth having.
+- **It weakens the disclosure you just committed to.** You already carry an unlocked 40%.
+  Adding board holdings raises team-controlled supply and undercuts the independence claim
+  at precisely the point where it is doing the most work.
+- **It is taxable income to them.** Tokens received for services are income at fair market
+  value on receipt. You would be handing a volunteer a tax bill on an illiquid asset they
+  probably cannot sell without moving the price — a genuinely bad gift.
+- **It is a distribution for services**, which is the kind of transfer counsel will want to
+  look at under the analysis in `docs/LEGAL-BRIEFING.md`. Do not create the question for a
+  benefit this small.
+
+**Buying on the open market is a different question** and a slightly cleaner one — their own
+money, no gift, no income event. Still disqualifying for the Constraint and Verifier seats;
+for the others, permit it only with disclosure of the wallet and a blackout rule around
+board knowledge.
+
+**What to give instead.** Recognition and things with no market: name them on the ledger
+page, give them a signed copy of the book, cover their expenses, pay a cash honorarium if
+the LLC ever has cash. All of it carries the thanks without carrying a position.
+
+**If you decide to do it anyway,** the guardrails are: a small fixed amount agreed before
+they join rather than granted later; the Constraint and Verifier seats still excluded with
+no exceptions; the wallet and amount published on the ledger page; the tokens locked for
+their full term plus six to twelve months; and a written blackout policy covering the
+periods when the board knows something the market does not.
+
 ---
 
 ## Part II — Holding 100M personally
@@ -732,6 +779,7 @@ fundraising campaign.
 | Published claims become false | 3% fee contradicts `cp17-site/index.html` | Either don't add the fee, or rewrite the page *before* launch |
 | Treasury discretion | Single-signer wallet | Safe multisig (2-of-3, then 3-of-5), written gift policy, published minutes |
 | Board capture | Members hold tokens or depend on you | No token comp; independence weighted ×3 in scoring |
+| Board insider trading | The sell policy gives the board advance notice of price-moving events | No tokens to board members; blackout policy if any member ever holds |
 | Board of friends and family | A slate drawn entirely from one circle | At least one member with no tie to you; relationships disclosed on the ledger page |
 | Namesake without consent | Jeff Mager's surname on an immutable contract | Written permission before deployment, covering the go-to-zero case |
 | Trademark letter | "Ironman" used in branding | Describe the distance factually; never use the mark; licence any race photo |
