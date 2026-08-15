@@ -290,12 +290,12 @@ have it filled.
 | Candidate | Seat | Status |
 |---|---|---|
 | *(founder)* | Giving Committee + Safe key | Filled |
-| Chris Brizzi | Giving Committee | **Not the paid-reviewer role — see below** |
+| Chris Brizzi | Giving Committee | Family — not the independent role |
 | Matt Campbell | Giving Committee | Background needed |
 | Charles Cole | Giving Committee | Background needed |
-| Jeff Middleton, CPA | Paid reviewer + Safe key | Under discussion — see the paid-reviewer section |
+| Jeff Middleton, CPA | Paid accountant + Safe key | **Father-in-law — not the independent role.** See the paid-reviewer section |
 | Jeff Mager | eligible again | The namesake conflict disappeared with the rename |
-| *(vacant)* | third Safe key | Needs a crypto-literate signer |
+| *(vacant)* | third Safe key | **Needs one genuine outsider** — or buy a third-party audit instead |
 
 Note this is more names than seats. Three sit on the Giving Committee; the Safe has three
 keys; the two rosters overlap only in you. Some of these people will not be placed, and
@@ -593,62 +593,115 @@ If the giving later outgrows what you can fund personally, that is the point to 
 **fiscal sponsorship** (Part I) so gifts become tax-deductible and sit inside a real
 charitable vehicle. Not before.
 
-### The paid reviewer — sizing it, and what the CPA gets
+### The paid reviewer — and why paying family does not buy independence
 
-A named candidate is under discussion: **Jeff Middleton, CPA**, at roughly **$1,500 a year**.
+The named candidate is **Jeff Middleton, CPA — the founder's father-in-law**, at roughly
+**$1,500 a year**. The relationship changes the analysis, and it changes it in a way money
+cannot fix.
 
-**Is $1,500 right?** It is a defensible stipend and it is honestly below market rate, which
-is worth saying out loud rather than pretending otherwise. CPA billing commonly runs
-$150–$400 an hour, so $1,500 buys something like four to ten hours — which is about right
-for four quarterly reviews of a treasury holding one asset, plus being reachable. Structure
-it as **$375 a quarter, invoiced**, rather than an annual lump: an invoice per quarter
-creates the record that the work happened, and it gives either side a clean exit four times
-a year. Pay it from the LLC directly to his firm, which is the cleanest disclosure tier in
-Part IV, and post it to the ledger page like any other spend.
+**Paying a stranger solves a different problem than paying family.** The fee works on an
+outsider because it converts an endorsement into an engagement — it removes the reputational
+cost that makes professionals decline. A father-in-law was never going to decline for
+reputational reasons, so the fee buys none of that. What it cannot buy at any price is the
+thing the role exists for: **someone whose judgment does not sit inside your family.**
 
-If he is doing you a favour at that number, say thank you rather than pretending it is a
-market engagement. If he wants market rate, the honest options are to narrow the scope or
-to accept that this line costs $3,000–$4,000 instead.
+So be exact about what he is and is not:
 
-**What is actually in it for him:**
+| Role | Jeff Middleton | Why |
+|---|---|---|
+| Paid accountant / bookkeeper | **Yes — genuinely valuable** | A real CPA doing real work on the LLC's books. Competence is competence, and family will actually show up |
+| Safe key holder | **Yes, with a caveat below** | A second signature stops a compromised key, a phishing attack, and a single person moving money alone |
+| The independent constraint | **No.** Not at $1,500, not at $15,000 | Independence is a fact about the relationship, not a price point. It cannot be purchased from a relative |
 
-- **It is an engagement, not an endorsement.** This is the whole reason paying works. He can
-  describe it to anyone — a partner, a client, his own board — as professional services for
-  a client, which carries none of the reputational cost of lending a name to a token for
-  free.
-- **Bounded and defined.** Four touchpoints a year, a written scope, no open-ended
-  obligation, terminable.
-- **Marginal work on an existing relationship**, if he already handles your books — he knows
-  the context, so the hours are cheap for him and the fee is close to free money.
-- **A low-stakes education in a growing niche.** Crypto treasury and digital-asset
-  engagements are work CPAs are increasingly asked for and few have done. A $20,000 treasury
-  is a very forgiving place to learn.
-- **The mission**, if he cares about it.
+**The distinction that matters: a family signer buys security, not governance.** A second key
+held by your father-in-law genuinely protects the treasury against theft, a lost device, and
+a hacked wallet — those are real risks and this is a real mitigation. What it does not do is
+protect against a decision you and he both think is fine. Governance friction requires
+someone willing to be unpopular at Thanksgiving. Do not let a filled seat create the feeling
+that the independence problem is solved. It is not; it is still open.
 
-**Three cautions, and the first is the important one:**
+**Then say so publicly rather than being caught.** "Our accountant is my father-in-law, he
+is paid $1,500 a year, and he holds one of three keys" is a sentence a reasonable person
+accepts. The same fact discovered by a stranger reads as concealment. Disclose the
+relationship on the ledger page beside his name, disclose the fee, and **never describe him
+as independent oversight** — that is the claim that would actually damage the project.
 
-1. **If he is already your accountant, he is not "independent."** He depends on you
-   financially, which is precisely the conflict the Constraint role exists to remove. He can
-   be an excellent *paid reviewer and signer* — a competent second pair of eyes with
-   professional standards — but do not describe him publicly as the independent director.
-   Calling a dependent relationship independent is the kind of claim this project cannot
-   afford, and it is the sort of thing a critic checks.
-2. **Do not call it an "audit" or a "review" in the technical sense.** Those words have
-   defined meanings in accounting and imply standards and independence requirements he may
-   not be able to meet here. Call it *treasury oversight* or a *controls check* and describe
-   the actual work.
-3. **Holding a multisig key may be a professional problem for him.** Custody of client
-   assets is a recognised independence issue for CPAs, and his firm may have policy on
-   outside engagements or on holding client property. **Ask him to clear both the engagement
-   and the key with his firm before he agrees** — being the one who raised it is far better
-   than discovering it later. If the key turns out to be a problem, the fix is easy: he does
-   the paid oversight, and the third key goes to the crypto-literate signer instead.
+**Related-party payment, so document it.** A payment from the LLC to a family member is a
+related-party transaction. Keep the written scope, the quarterly invoices, and the ledger
+line. Bill it **$375 a quarter rather than one annual lump**, so there is a record each time
+the work happened. Pay it from the LLC directly to him or his firm.
 
-**A reasonable scope to put in writing:** each quarter, reconcile treasury movements against
-the published ledger; confirm the founder's wallet balance against the sell policy; review
-the gift records; and sign a one-paragraph statement that gets published with the minutes.
-That last part is what converts a private engagement into a public trust signal — and it is
-also why the scope has to be small enough that he can actually stand behind the statement.
+Two cautions carry over unchanged: **do not call his work an "audit" or a "review"** — those
+are defined terms in accounting with independence requirements attached, and he will not
+meet them here, so call it *bookkeeping* and *treasury oversight* and describe the actual
+work. And **ask him to clear the multisig key with his firm**: custody of a client's assets
+is a recognised professional issue, and being the one who raised it beats discovering it
+later.
+
+### What $1,500 buys at $200 an hour
+
+At his rate, **$1,500 is 7.5 hours a year** — roughly two hours a quarter. That is a real
+engagement, not a token gesture, but it is small enough that the scope has to be written
+down or it will drift into unbilled work and quiet resentment.
+
+Two hours a quarter buys about this much, and no more:
+
+- Reconcile the quarter's treasury movements against the published ledger
+- Confirm the founder's wallet balance against the sell policy
+- Check the gift records and the accountable-plan receipts
+- Sign a one-paragraph statement published with the minutes
+
+It does **not** buy a full bookkeeping engagement, tax preparation, entity formation advice,
+or an audit. If you want those, they are separate line items at his rate — budget them
+honestly rather than letting them arrive as favours, which is how family working
+relationships go wrong.
+
+### On finding a CPA who would do it for free
+
+I cannot name one. I do not know any accountant's willingness to work unpaid on this, and
+inventing a name — or guessing at a real person's availability — would be worse than
+useless. What can be named is where this help actually exists:
+
+- **SCORE** (score.org) — free mentoring for small businesses, SBA-affiliated, with a large
+  bench of retired CPAs and finance executives. The best fit here, because it serves
+  for-profit small businesses rather than only nonprofits.
+- **Your state CPA society's volunteer or pro bono program.** Most states run one. Ask
+  specifically for a retired member — retirees have the judgment, the time, no firm policy
+  to clear, and no career runway to protect.
+- **The local Small Business Development Center**, usually hosted at a university, free
+  counselling.
+- **A university accounting department.** Faculty and graduate clinics sometimes take small
+  engagements, and a professor is genuinely independent.
+- **Your own community.** A congregation or a service club of any size contains retired
+  finance people. This is the highest-yield channel and the one most often overlooked.
+
+Two honest limits. Most **pro bono** programs are scoped to nonprofits and low-income
+individuals, so an LLC with a token will not qualify for many of them — SCORE and the SBDC
+are the exceptions. And a volunteer mentor will advise; **almost none will hold a multisig
+key or accept a named oversight role**, because that is a liability question rather than a
+generosity question. Expect free advice and paid responsibility to be different people.
+
+### The bigger problem this exposes
+
+Count the slate. Chris Brizzi is family. Jeff Middleton is family. That leaves Matt Campbell
+and Charles Cole, and if either is a close friend, **there is no independent person anywhere
+in this structure.** That is the exact failure mode flagged earlier: a group of people who
+like you rather than a board, and a multisig where everyone signs everything.
+
+Two honest ways forward, and they are not mutually exclusive:
+
+1. **Recruit one genuine outsider for one key**, and accept a smaller role for them than a
+   full seat — a single signature and a quarterly look is enough. One stranger is worth more
+   than three relatives for this specific purpose.
+2. **Buy verification instead of trust.** If independence cannot be recruited, purchase what
+   it would have provided: a **third-party contract audit** from a firm with no relationship
+   to you, published in full including anything it finds. An audit is a one-time cost, it is
+   genuinely independent, and it is checkable by strangers — which is the project's whole
+   thesis. For a plain fixed-supply ERC-20 this is a small engagement.
+
+The second option deserves emphasis: it converts an unfillable governance seat into a
+purchasable artifact, and a published audit from a real firm outranks a board seat filled by
+someone's relative. If you do only one thing about independence, do that.
 
 ### Can board members be gifted tokens?
 
@@ -1012,7 +1065,8 @@ fundraising campaign.
 | Treasury discretion | Single-signer wallet | Safe multisig (2-of-3, then 3-of-5), written gift policy, published minutes |
 | Board capture | Members hold tokens or depend on you | No token comp; independence weighted ×3 in scoring |
 | Board insider trading | The sell policy gives the board advance notice of price-moving events | No tokens to board members; blackout policy if any member ever holds |
-| Board of friends and family | A slate drawn entirely from one circle | At least one member with no tie to you; relationships disclosed on the ledger page |
+| Board of friends and family | Slate is family plus friends; no outsider anywhere | Recruit one outsider for one key, or buy a published third-party audit as the substitute; disclose every relationship on the ledger |
+| Family signer mistaken for oversight | A relative's key reads as independence | A family key buys security, not governance — say so, and never describe him as independent |
 | Deadlock on conflicted votes | Recusal leaves an even four | Written rule adopted up front: a tied vote fails |
 | Empty seats read as oversight | Names listed who never attend | Three real people, not a longer list; publish any vacancy with a target date |
 | Cannot recruit — crypto stigma | Unpaid public affiliation reads as endorsement | Split the Giving Committee from the Treasury Signers; pay for the Constraint function; publish a non-endorsement line per name |
