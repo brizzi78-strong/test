@@ -215,9 +215,8 @@ function inPeriod(e){
   if (age < 0) return false;                 // future-dated: a typo, not data
   return !periodDays || age < periodDays;
 }
-function excludedCount(){
-  return events.filter(e => { const d = parseD(e.date); return !d || diffD(today(), d) < 0; }).length;
-}
+function isExcluded(e){ const d = parseD(e.date); return !d || diffD(today(), d) < 0; }
+function excludedCount(){ return events.filter(isExcluded).length; }
 
 const RECOVERY = new Set(["Appeal won","Covered days recovered"]);
 const FILED    = new Set(["Appeal filed — QIO","Appeal filed — plan"]);
@@ -240,6 +239,7 @@ function metrics(list){
   const byCase = {};
   for (const e of events){
     if (!FILED.has(e.type) && !DECIDED.has(e.type)) continue;
+    if (isExcluded(e)) continue;          // flagged for correction — not real activity yet
     (byCase[e.case] = byCase[e.case] || {f:0,d:0})[FILED.has(e.type) ? "f" : "d"]++;
   }
   for (const k in byCase){
@@ -298,27 +298,31 @@ function render(){
   }
   $("sentence").innerHTML = `
     <div class="k">Your traction sentence — generated from the log above</div>
-    <p>${(m.subs || m.filed || m.days || m.amt || m.decided)
+    <p>${list.length
       ? `Across the ${label}, we tracked <b>${m.cases}</b> Medicare Advantage case${m.cases===1?"":"s"}, submitted <b>${m.onTimeRate===null?"—":m.onTimeRate+"%"}</b> of authorizations on time${m.subs?` (${m.onTime} of ${m.subs})`:""}, absorbed <b>${m.denials + m.nomnc}</b> denial${m.denials+m.nomnc===1?"":"s"} or termination notice${m.denials+m.nomnc===1?"":"s"}, filed <b>${m.filed}</b> appeal${m.filed===1?"":"s"} and won <b>${m.decided ? `${m.won} of ${m.decided}` : "—"}</b> decided${m.decided>=5?` (${m.winRate}%)`:""} — recovering <b>${m.days}</b> covered day${m.days===1?"":"s"} and <b>$${m.amt.toLocaleString()}</b> in protected revenue.`
       : `Log a few events and this becomes the sentence you put on the traction slide — generated from real cases instead of estimated.`}</p>
     <p class="note">Copy this only once the dollar figure reconciles against remittance advice. An unsourced number in an investor meeting is worse than admitting you are pre-traction.</p>`;
 
-  const rows = [...list].sort((a,b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
+  // Excluded rows are pinned on top: the banner tells the user to correct them,
+  // so they must have a reachable Edit button even though they count for nothing.
+  const bad = events.filter(isExcluded);
+  const rows = bad.concat([...list].sort((a,b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0)));
   $("tableWrap").innerHTML = !rows.length
     ? `<div class="empty">No events in this period. Choose <b>+ Log event</b> after each authorization, denial, or appeal — it takes about thirty seconds.</div>`
     : `<table><thead><tr><th>Date</th><th>Case</th><th>Plan</th><th>Event</th><th>Days</th><th>Dollars</th><th>Note</th><th></th></tr></thead><tbody>
        ${rows.map(e => {
          const cls = e.type === "Appeal won" ? "win" : (e.type === "Appeal lost" || e.type === "Denial received") ? "loss"
                    : e.type === "Auth submitted — late" ? "late" : "";
-         return `<tr>
-           <td class="num">${fmtD(parseD(e.date))}</td>
+         const flagged = isExcluded(e);
+         return `<tr${flagged ? ' style="background:var(--crit-bg);"' : ""}>
+           <td class="num">${flagged ? `<span class="pill loss">needs fixing</span> ` : ""}${esc(e.date) && parseD(e.date) ? fmtD(parseD(e.date)) : esc(e.date || "—")}</td>
            <td><b>${esc(e.case)}</b></td>
            <td>${esc(e.plan||"—")}</td>
            <td><span class="pill ${cls}">${esc(e.type)}</span></td>
            <td class="num">${+e.days ? e.days : ""}</td>
            <td class="num">${+e.amt ? "$"+(+e.amt).toLocaleString() : ""}</td>
            <td>${esc(e.note||"")}</td>
-           <td><button class="btn ghost sm" data-edit="${e.id}">Edit</button></td>
+           <td><button class="btn ghost sm" data-edit="${esc(e.id)}">Edit</button></td>
          </tr>`;
        }).join("")}</tbody></table>`;
 
@@ -374,7 +378,8 @@ $("csvBtn").addEventListener("click", () => {
   // Neutralise spreadsheet formula injection — these files get emailed to billing.
   const q = (s) => { let v = String(s ?? ""); if (/^[=+\-@\t\r]/.test(v)) v = "'" + v;
                      return `"${v.replace(/"/g,'""')}"`; };
-  const rows = events.filter(inPeriod).sort((a,b) => a.date < b.date ? -1 : a.date > b.date ? 1 : 0);
+  const rows = events.filter(e => inPeriod(e) || (!periodDays && isExcluded(e)))
+                     .sort((a,b) => a.date < b.date ? -1 : a.date > b.date ? 1 : 0);
   const csv = ["Date,Case,Plan,Event,DaysRecovered,DollarsProtected,Note"]
     .concat(rows.map(e => [e.date,e.case,e.plan,e.type,e.days||0,e.amt||0,e.note].map(q).join(",")))
     .join("\r\n");

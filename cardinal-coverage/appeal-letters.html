@@ -9,13 +9,14 @@
 <style>
   :root{--paper:#F7F2E6;--surface:#FFFDF7;--surface-2:#EFE7D3;--ink:#17233F;--muted:#6B6350;--line:#E2D9C3;
     --brand:#A31B33;--brand-strong:#7E1226;--good:#2E7D4F;--good-bg:#E4F0E8;--warn:#9A6410;--warn-bg:#F6ECD6;
+    --crit:#B23A3A;--crit-bg:#F6E1DE;
     --shadow:0 1px 2px rgba(23,35,63,.07),0 10px 26px -14px rgba(23,35,63,.24);
     --font:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
     --serif:ui-serif,Georgia,"Times New Roman",serif;--r:14px;}
   @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#101627;--surface:#172033;--surface-2:#1F2A42;--ink:#F3EEE1;
     --muted:#A9A28F;--line:#2B3855;--brand:#E2586B;--brand-strong:#F27A8B;--good:#4FBE86;--good-bg:#12321f;
-    --warn:#D6A24A;--warn-bg:#33280f;--shadow:0 1px 2px rgba(0,0,0,.45),0 12px 32px -14px rgba(0,0,0,.65);}}
-  :root[data-theme="dark"]{--paper:#101627;--surface:#172033;--surface-2:#1F2A42;--ink:#F3EEE1;--muted:#A9A28F;--line:#2B3855;--brand:#E2586B;--brand-strong:#F27A8B;--good:#4FBE86;--good-bg:#12321f;--warn:#D6A24A;--warn-bg:#33280f;}
+    --warn:#D6A24A;--warn-bg:#33280f;--crit:#E07B6E;--crit-bg:#3a1d1a;--shadow:0 1px 2px rgba(0,0,0,.45),0 12px 32px -14px rgba(0,0,0,.65);}}
+  :root[data-theme="dark"]{--paper:#101627;--surface:#172033;--surface-2:#1F2A42;--ink:#F3EEE1;--muted:#A9A28F;--line:#2B3855;--brand:#E2586B;--brand-strong:#F27A8B;--good:#4FBE86;--good-bg:#12321f;--warn:#D6A24A;--warn-bg:#33280f;--crit:#E07B6E;--crit-bg:#3a1d1a;}
   *{box-sizing:border-box;}
   body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);line-height:1.5;}
   header.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
@@ -88,7 +89,7 @@
 </header>
 
 <div class="wrap">
-  <p class="phi"><b>PHI stays in this browser.</b> Case fields are held in memory only and are cleared when you reload — nothing case-specific is saved or transmitted. Only your facility letterhead details persist (localStorage), so avoid entering resident data on a shared machine. Review every generated letter before sending; the regulatory language is boilerplate, the clinical argument is yours.</p>
+  <p class="phi"><b>PHI stays in this browser.</b> Resident fields — name, member ID, dates and every clinical field — are held in memory only and cleared on reload. Nothing case-specific is saved or transmitted. What persists is your reusable letterhead: facility details <i>and</i> the plan name and appeals fax, since those are the same on every letter. Avoid entering resident data on a shared machine. Review every generated letter before sending; the regulatory language is boilerplate, the clinical argument is yours.</p>
 
   <p class="phi" style="background:var(--crit-bg);border-color:var(--crit);"><b style="color:var(--crit);">Have counsel review before first use.</b> An independent audit flagged two issues these drafts do not yet resolve. <b>Standing:</b> parties to a plan reconsideration under 42 CFR 422.574 are the enrollee, an appointed representative (Form CMS-1696), or a non-contracted provider acting as assignee with a signed waiver of liability — a facility signature alone may be dismissed without reaching the merits. <b>Expedited handling:</b> under 42 CFR 422.584(c)(2) the plan must expedite when a <i>physician</i> indicates the standard is met, and may decline when an enrollee asks; an "expedited review requested" header over a nursing signature secures nothing. Confirm filing capacity and add physician support before sending Letter B.</p>
   <div class="tabs" role="tablist">
@@ -121,7 +122,7 @@
       </fieldset>
 
       <fieldset>
-        <legend>Plan &amp; case</legend>
+        <legend>Plan (saved) &amp; case</legend>
         <div class="g2">
           <div><label for="fPlan">Plan name</label><input id="fPlan" list="planL" placeholder="Aetna Medicare Advantage">
             <datalist id="planL"><option>Aetna MA</option><option>WellCare MA</option><option>Humana MA</option><option>UnitedHealthcare MA</option><option>Blue Cross NC MA</option><option>Cigna MA</option><option>Traditional Medicare</option></datalist></div>

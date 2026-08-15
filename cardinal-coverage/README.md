@@ -23,6 +23,8 @@ tools, and the operational reference they're built on.
 | `docs/gap-analysis.md` | Honest distance between these artifacts and a fundable company |
 | `docs/audit-2026-08.md` | Independent 20-agent audit, with remediation status |
 | `docs/rules-registry.md` | What a production plan-rules registry requires — and why it is the moat |
+| `docs/test-report-2026-08.md` | Ten-agent test pass: 17 defects found, all fixed |
+| `tests/` | Executable suite — 179 tests, sandboxed logic + real-browser E2E |
 
 `index.html` and `investors.html` are deliberately separate documents for two
 different audiences, and neither links to the other — a buyer should not land on
@@ -186,6 +188,24 @@ clamped. Future-dated and unreadable entries are excluded from every total and
 flagged. CSV export covers the selected period — matching what is on screen —
 carries a UTF-8 BOM, uses CRLF, and neutralises leading `=`/`+`/`-`/`@` so the
 file is safe to email to billing.
+
+## Tests
+
+`node cardinal-coverage/tests/run.mjs` — **179 tests, 11 lanes, currently green.**
+Exits non-zero on failure. Two styles: `sandbox()` pulls pure helpers out of a
+page's inline `<script>` and exercises them with no DOM; `open()` drives the real
+`file://` page in Chromium via Playwright with seedable `localStorage`, collecting
+page exceptions and console errors so a test can assert the page stayed quiet.
+
+Coverage: the deadline engine (including DST, leap day and year boundaries, and
+regression tests pinning the NOMNC effective-date convention), tracker state and
+persistence, outcomes metrics and CSV, the rules registry's freshness discipline,
+letter generation and the PHI-persistence promise, two end-to-end browser lanes,
+output escaping against injection payloads in every field, and
+accessibility/print/responsive.
+
+Playwright is installed in the session scratchpad rather than as a devDependency,
+so the browser lanes will not run from a fresh clone until that is fixed.
 
 ## Audit
 

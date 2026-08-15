@@ -96,7 +96,7 @@
   footer{color:var(--muted);font-size:.75rem;padding:1rem 0 3rem;line-height:1.6;}
 
   @media print{
-    header.top{position:static;} .btn,.phi,details.ref,.chead .spacer{display:none!important;}
+    header.top{position:static;} .btn,.phi,details.ref,.chead .spacer,.toolnav{display:none!important;}
     body{background:#fff;} .case{break-inside:avoid;box-shadow:none;}
   }
 </style>
@@ -264,11 +264,17 @@ const uid = () => (self.crypto && crypto.randomUUID)
 let cases = [];
 let editingId = null;
 let saveBroken = false;
+// Ids deliberately removed this session. Without this the cross-tab merge below
+// cannot tell a locally deleted case from one another tab just added, and
+// re-adopts it — making delete a no-op and Demo data append instead of replace.
+const tombstones = new Set();
 
 function load(){
   try { cases = JSON.parse(localStorage.getItem(KEY)) || []; }
   catch { cases = []; }
   if (!Array.isArray(cases)) cases = [];
+  // A single null/!object row would throw in clocksFor and blank the board.
+  cases = cases.filter(c => c && typeof c === "object" && !Array.isArray(c));
 }
 function save(){
   // Merge against whatever another tab may have written since we loaded.
@@ -276,7 +282,7 @@ function save(){
     const onDisk = JSON.parse(localStorage.getItem(KEY) || "[]");
     if (Array.isArray(onDisk)){
       const mine = new Set(cases.map(c => c.id));
-      const theirs = onDisk.filter(c => c && !mine.has(c.id));
+      const theirs = onDisk.filter(c => c && !mine.has(c.id) && !tombstones.has(c.id));
       if (theirs.length) cases = cases.concat(theirs);
     }
   } catch {}
@@ -334,13 +340,23 @@ function clocksFor(c){
     const qio = (byDelivery && byDelivery < byEffective) ? byDelivery : byEffective;
     out.push({ lab: byDelivery ? "QIO deadline (earlier of two)" : "QIO deadline (per NOMNC)",
                date:qio, days:diffD(qio,t), noon:true });
+
     const cyc = Number.isFinite(+c.cycle) && +c.cycle > 0 ? +c.cycle : null;
     if (cyc) out.push({ lab:`Next window ends (+${cyc}d cycle)`, date:addD(covered,cyc), days:diffD(addD(covered,cyc),t), quiet:true });
     if (byDelivery && +byDelivery !== +byEffective){
-      out.push({ lab:"— 422.626, from delivery", date:byDelivery, days:diffD(byDelivery,t), noon:true, quiet:true });
+      // Show whichever date is NOT the primary, so both stay cross-checkable.
+      const other = (qio === byDelivery) ? byEffective : byDelivery;
+      const lab = (qio === byDelivery) ? "— per NOMNC (effective−1)" : "— 422.626, from delivery";
+      out.push({ lab, date:other, days:diffD(other,t), noon:true, quiet:true });
     }
   } else {
     out.push({ lab:"Auth covered through", none:true });
+    // 422.626 runs from delivery, so this deadline exists with no covered-through date.
+    const delivered = parseD(c.nomnc);
+    if (delivered){
+      const byDelivery = addD(delivered, 1);
+      out.push({ lab:"QIO deadline (422.626, from delivery)", date:byDelivery, days:diffD(byDelivery,t), noon:true });
+    }
   }
 
   if (admit){
@@ -367,7 +383,7 @@ function clocksFor(c){
 // Pre-select the likeliest outcome event from where the case already stands.
 function suggestEvent(c){
   switch (c.status){
-    case "Denied — appeal open": return "Appeal won";
+    case "Denied — appeal open": return "Appeal filed — plan";
     case "NOMNC issued":         return "Appeal filed — QIO";
     case "Awaiting initial auth":
     case "Recert pending":       return "Auth submitted — on time";
@@ -410,17 +426,18 @@ function render(){
               </div>`;
     }).join("");
     const sevClass = min < 9999 ? `sev-${sev(min)}` : "";
+    const cycN = Number.isFinite(+c.cycle) && +c.cycle > 0 ? +c.cycle : 3;
     const exp = (+c.exposure||0) > 0 ? ` · exposure $${(+c.exposure).toLocaleString()}` : "";
     const ord = c.order ? ` · ordered: ${esc(c.order)}` : "";
     return `<article class="case ${sevClass}">
       <div class="chead">
         <span class="cid">${esc(c.cid)}</span>
         <span class="plan">${esc(c.plan||"—")}</span>
-        <span class="cmeta">${esc(c.status||"")} · ${c.cycle||3}-day cycle${exp}${ord}</span>
+        <span class="cmeta">${esc(c.status||"")} · ${cycN}-day cycle${exp}${ord}</span>
         <span class="spacer"></span>
         <a class="btn ghost sm" style="text-decoration:none;" title="Record what happened on this case"
            href="outcomes.html?case=${encodeURIComponent(c.cid)}&plan=${encodeURIComponent(c.plan||"")}&suggest=${encodeURIComponent(suggestEvent(c))}">Log outcome</a>
-        <button class="btn ghost sm" data-edit="${c.id}">Edit</button>
+        <button class="btn ghost sm" data-edit="${esc(c.id)}">Edit</button>
       </div>
       <div class="clocks">${clockHTML}</div>
       <div class="cnotes">${esc(c.notes||"")}</div>
@@ -474,6 +491,7 @@ $("delBtn").addEventListener("click", () => {
   if (!editingId) return;
   const c = cases.find(x => x.id === editingId);
   if (!confirm(`Delete "${c?.cid}"? This cannot be undone.`)) return;
+  tombstones.add(editingId);
   cases = cases.filter(x => x.id !== editingId);
   save(); render(); $("dlg").close();
 });
@@ -482,6 +500,7 @@ $("delBtn").addEventListener("click", () => {
    always reads red. For walkthroughs and presentations, never for real cases. */
 function loadDemo(){
   if (cases.length && !confirm("Replace the current caseload with demo data? Export first if you need to keep it.")) return;
+  cases.forEach(c => tombstones.add(c.id));   // the prompt promises replacement
   const t = today(), d = (n) => toISO(addD(t, n));
   cases = [
     { cid:"214-B", plan:"Aetna MA", admit:d(-12), cycle:3, lead:1, covered:d(1), nomnc:d(-1), note:d(-6), cert:d(-12),
@@ -530,7 +549,12 @@ $("themeBtn").addEventListener("click", () => {
 })();
 
 try { load(); seedIfEmpty(); } catch (e) { console.error("bootstrap", e); }
-render(); banner();
+try { render(); } catch (e) {
+  console.error("render", e);
+  document.getElementById("cases").innerHTML =
+    `<p class="empty">Could not render the saved caseload. Use <b>Export</b> to recover the raw data, then clear it and re-enter.</p>`;
+}
+banner();
 </script>
 </body>
 </html>

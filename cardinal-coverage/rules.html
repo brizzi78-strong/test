@@ -121,16 +121,16 @@
 
   <div class="filters">
     <span class="lbl">Filter</span>
-    <select id="fPlanSel"><option value="">All plans</option></select>
-    <select id="fStateSel"><option value="">All states</option></select>
-    <select id="fTypeSel"><option value="">All rule types</option></select>
-    <select id="fFreshSel">
+    <select id="fPlanSel" aria-label="Filter by plan"><option value="">All plans</option></select>
+    <select id="fStateSel" aria-label="Filter by state"><option value="">All states</option></select>
+    <select id="fTypeSel" aria-label="Filter by rule type"><option value="">All rule types</option></select>
+    <select id="fFreshSel" aria-label="Filter by freshness">
       <option value="">Any freshness</option>
       <option value="stale">Stale only</option>
       <option value="due">Due for review</option>
       <option value="fresh">Fresh only</option>
     </select>
-    <input id="fSearch" type="search" placeholder="Search rules…" style="min-width:180px;">
+    <input id="fSearch" aria-label="Search rules" type="search" placeholder="Search rules…" style="min-width:180px;">
   </div>
 
   <div id="list"></div>
@@ -258,9 +258,16 @@ const SEED = [
 ];
 
 function load(){
-  try { rules = JSON.parse(localStorage.getItem(KEY)) || []; } catch { rules = []; }
+  // An absent key means first ever visit. An explicit [] means the user emptied
+  // the registry on purpose — re-seeding it would resurrect deleted rules.
+  const raw = localStorage.getItem(KEY);
+  const firstVisit = raw === null;
+  try { rules = JSON.parse(raw) || []; } catch { rules = []; }
   if (!Array.isArray(rules)) rules = [];
-  if (!rules.length) { rules = SEED.map(r => ({ id: uid(), history: [], ...r })); save(); }
+  rules = rules.filter(r => r && typeof r === "object" && !Array.isArray(r));
+  // Seed once, ever. Re-seeding an intentionally emptied registry silently
+  // resurrects eight rules the user deleted.
+  if (firstVisit) { rules = SEED.map(r => ({ id: uid(), history: [], ...r })); save(); }
 }
 function save(){ try { localStorage.setItem(KEY, JSON.stringify(rules)); } catch {
   alert("Could not save — browser storage may be full or blocked. Export before closing."); } }
@@ -315,13 +322,22 @@ function render(){
   const host = $("list");
   if (!shown.length){ host.innerHTML = `<p class="empty">No rules match. Adjust the filters, or choose <b>+ Add rule</b>.</p>`; return; }
 
+  // Group by plan, but order the groups by their worst freshness so a stale rule
+  // is never pushed below a fresh one by alphabetical plan order.
+  const rank = {stale:0, due:1, fresh:2};
+  const needsReview = shown.filter(r => freshness(r).k !== "fresh")
+                           .sort((a,b) => rank[freshness(a).k] - rank[freshness(b).k]);
   const groups = {};
-  shown.forEach(r => (groups[r.plan] = groups[r.plan] || []).push(r));
-  host.innerHTML = Object.entries(groups).map(([plan, rs]) => `
+  shown.filter(r => freshness(r).k === "fresh")
+       .forEach(r => (groups[r.plan] = groups[r.plan] || []).push(r));
+  const ordered = Object.entries(groups).sort((a,b) => a[0].localeCompare(b[0]));
+  if (needsReview.length) ordered.unshift(["⚠ Needs review — do not rely on these", needsReview]);
+  host.innerHTML = ordered.map(([plan, rs]) => `
     <section class="grp">
       <h2>${esc(plan)} <span class="sub">${rs.length} rule${rs.length===1?"":"s"}</span></h2>
       ${rs.map(r => {
         const f = freshness(r);
+        // Only http(s) becomes a link — javascript:/data: sources render as text.
         const src = /^https?:\/\//i.test(r.source||"")
           ? `<a href="${esc(r.source)}" target="_blank" rel="noopener noreferrer">source</a>`
           : `source: ${esc(r.source)}`;
@@ -331,7 +347,7 @@ function render(){
             <span class="rscope">${esc(r.state)} · ${esc(r.product)}${r.effective?` · effective ${fmtD(parseD(r.effective))}`:""}</span>
             <span class="spacer"></span>
             <span class="badge ${f.k}">${f.k==="fresh"?"fresh":f.k==="due"?"due for review":"STALE"}</span>
-            <button class="btn ghost sm" data-edit="${r.id}">Edit</button>
+            <button class="btn ghost sm" data-edit="${esc(r.id)}">Edit</button>
           </div>
           <p class="rval">${esc(r.value)}</p>
           ${r.note ? `<p class="rval" style="font-size:.85rem;color:var(--muted);">${esc(r.note)}</p>` : ""}
@@ -416,7 +432,12 @@ $("fileIn").addEventListener("change", async (e) => {
     const byId = new Map(rules.map(r => [r.id, r]));
     let added = 0, updated = 0;
     for (const r of incoming){
-      if (!r || !r.id || !r.value) continue;
+      // Whitelist the id: it lands in an HTML attribute and is used for identity,
+      // so a crafted one can both inject and collide with an existing rule.
+      if (!r || !r.value) continue;
+      // The id lands in an HTML attribute and drives identity. Anything that is
+      // not a plain token gets re-keyed rather than dropped.
+      if (typeof r.id !== "string" || !/^[A-Za-z0-9_-]{1,64}$/.test(r.id)) r.id = uid();
       if (byId.has(r.id)) { Object.assign(byId.get(r.id), r); updated++; }
       else { rules.push(r); added++; }
     }
