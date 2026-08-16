@@ -9,9 +9,10 @@
 #   4. (Optional) Add a custom domain per service in Settings -> Custom Domains,
 #      then point a DNS CNAME at Render.
 #
-# HTTPS is automatic on every service. Cardinal Books is password-gated
-# (BOOKS_USER / BOOKS_PASSWORD) and its data persists on a disk across deploys
-# and restarts; Cardinal Care Bridge is a public static site with no login.
+# HTTPS is automatic on every service. Cardinal Books (BOOKS_USER /
+# BOOKS_PASSWORD) and Blue Ridge Tax (TAXFILE_USER / TAXFILE_PASSWORD) are
+# password-gated and persist data on disks across deploys and restarts;
+# Cardinal Care Bridge is a public static site with no login.
 
 services:
   - type: web
@@ -65,3 +66,55 @@ services:
     branch: main
     staticPublishPath: ./singalong/demo
     autoDeploy: true
+
+  # Blue Ridge Tax — the TaxFile app (taxfile/): guided 2025 federal 1040 with
+  # a live refund tracker and mock e-file. Password-gated (TAXFILE_USER /
+  # TAXFILE_PASSWORD — set the password when Render prompts; returns contain
+  # SSNs, so never run this public-facing without the gate). Return data
+  # persists in SQLite on the mounted disk.
+  - type: web
+    name: blue-ridge-tax
+    runtime: docker
+    branch: main
+    plan: starter            # a persistent disk requires a paid instance
+    dockerfilePath: ./deploy/Dockerfile
+    dockerContext: .
+    dockerCommand: node taxfile/src/index.ts
+    healthCheckPath: /health
+    autoDeploy: true
+    disk:
+      name: tax-data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: BRAND_NAME
+        value: Blue Ridge Tax
+      - key: TAXFILE_DB
+        value: /data/taxfile.db
+      - key: TAXFILE_USER
+        value: admin
+      - key: TAXFILE_PASSWORD
+        sync: false            # Render prompts you to set this on first deploy
+
+  # Cardinal Chat — self-hosted ChatGPT alternative (chat/), powered by the
+  # Claude API. Password-gated (CHAT_USER / CHAT_PASSWORD — set the password
+  # when Render prompts; the app spends your Anthropic API budget, so never run
+  # it public-facing without the gate). ANTHROPIC_API_KEY comes from
+  # https://platform.claude.com — Render prompts for it on first deploy.
+  # Conversations live in each user's browser, so no disk is needed.
+  - type: web
+    name: cardinal-chat
+    runtime: docker
+    branch: main
+    dockerfilePath: ./deploy/Dockerfile.chat
+    dockerContext: .
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: ANTHROPIC_API_KEY
+        sync: false            # Render prompts you to set this on first deploy
+      - key: CHAT_USER
+        value: admin
+      - key: CHAT_PASSWORD
+        sync: false            # Render prompts you to set this on first deploy
+>>>>>>> origin/main
