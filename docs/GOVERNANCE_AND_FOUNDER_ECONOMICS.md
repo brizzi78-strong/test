@@ -904,19 +904,25 @@ one-grant line above lasted a day; the drift it warned about arrived as a delibe
 decision rather than a slide, which is at least the honest version. Recorded, with the
 mechanics that keep it survivable:
 
-- **Assumed scope: the four non-founder seats** — the founder already holds 100M and takes
-  no grant. Four grants × 5M = **20,000,000 HOP, which is 40% of the treasury.** (If the
-  founder is meant to receive one too, say so; it changes the arithmetic, not the rules.)
+- **Source, by decision: the founder's personal 100M — the treasury stays untouched at
+  50M.** The four non-founder seats each receive 5M (the founder takes no grant from
+  himself): 20,000,000 HOP out of his stack, leaving the founder's unlocked position at
+  **80M**. A quiet improvement hiding in this: the 20M carved out becomes the first part
+  of the founder's holding under any lock at all — the members' two-year vesting.
 - **What it is worth, said out loud to every candidate: about $400 at launch prices.** The
   grant is real upside only if the coin becomes real. Recruit with that sentence, not with
   a dream — anyone who joins for the 5M has misunderstood the project or is the wrong
   person.
 - **Vesting is on-chain, not a promise.** One OpenZeppelin `VestingWallet` per member: 5M
-  deposited from the treasury, releasing linearly over 24 months, address published on the
+  deposited from the founder's wallet, releasing linearly over 24 months, address published on the
   ledger beside their name. Anyone can verify what has vested and what remains. Leaving
   the board forfeits nothing already vested and (by written agreement) waives the
   unvested remainder back to the treasury.
-- **Funded by one minuted Safe decision**, all four wallets at once, each a ledger row.
+- **Funded personally by the founder** — four VestingWallets loaded in one published
+  transaction set, each a ledger row. No treasury movement, so no Safe approval is
+  required; disclosure does the work. One accountant question to settle before the first
+  vest: the founder personally paying the LLC's board in coins is a related-party
+  compensation arrangement, and how it books matters.
 - **The paid reviewer still receives nothing.** Jeff Middleton holds a key and reviews the
   treasury; a reviewer holding the asset he attests to is the one conflict this structure
   cannot absorb. His compensation stays cash.
