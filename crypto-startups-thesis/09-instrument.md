@@ -12,7 +12,7 @@ or trusting with assets.
 Ten questions. Each scores 0, 1, or 2, multiplied by its weight. The weights sum to 50, so a
 perfect score is 100.
 
-## The rubric
+## 9.1 The rubric
 
 | # | Question | Weight | Max | 0 points | 1 point | 2 points |
 |---|---|---|---|---|---|---|
@@ -36,7 +36,7 @@ death.
 Question 2 is effectively disqualifying. A zero there caps the useful score regardless of the rest,
 because it is the failure mode with no gradual version.
 
-## Worked examples
+## 9.2 Worked examples
 
 Scores are my judgments from public information as of August 2026, not the companies' own claims.
 Reasonable people will differ by a band on individual items; the item-by-item breakdown is given so
@@ -56,7 +56,7 @@ the disagreement can be located rather than argued in the aggregate.
 | 10. Token load-bearing (6) | 6 | 6 | 6 | 3 | 6 | 0 |
 | **Total** | **82** | **88** | **67** | **69** | **60** | **12** |
 
-### Reading the columns
+## 9.3 Reading the columns
 
 **Coinbase (88)** and **Circle (82)** score highest, and both lose the same 7 points on question 1 —
 roughly half of Coinbase's revenue is still transaction-linked, and Circle's reserve income is
@@ -82,7 +82,7 @@ the entire subject of [Chapter 8](08-counter-case.md). The rubric measures durab
 and the size of the tail, not the size of the profit, and a 60 here should not be read as predicting
 the profit will stop.
 
-## What the rubric systematically gets wrong
+## 9.4 What the rubric systematically gets wrong
 
 Three known biases, worth stating so the score is used correctly.
 
@@ -101,7 +101,7 @@ scenarios" assumes a balance sheet. A two-person launch has no way to score 2 on
 small projects around 88 no matter how well run. Chapter 10 works through what the question
 translates to at that scale.
 
-## Using it
+## 9.5 Using it
 
 The rubric is most useful applied twice: once to a company you are evaluating, and once to your own.
 The second application is uncomfortable, which is the reason to do it. Most founders discover they

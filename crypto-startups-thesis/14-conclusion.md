@@ -22,7 +22,7 @@ the framework into ten weighted items applied to six firms. Its construct validi
 (§13.6) and it is best understood as a structured argument rather than a measurement.
 
 **RQ4 — Does the framework hold at small scale?** Partially, and the failure is instructive. A firm
-without a balance sheet cannot purchase C3 at all, capping its attainable score near 94 (§10.6). But
+without a balance sheet cannot purchase C3 at all, capping its attainable score near 94 (§10.3). But
 the mechanically enforced constraints of C4 remain fully available and nearly free, which produces
 the sector's characteristic pathology: small projects score maximum marks on the cheapest signal and
 zero on the expensive one, and the market has learned to read the cheap signal as sufficient.

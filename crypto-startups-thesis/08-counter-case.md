@@ -7,7 +7,7 @@ observation that comes closest to falsifying it, and states the narrowing it for
 A thesis that cannot be attacked has not been tested. This chapter makes the strongest case against
 the argument in this dissertation, then says what survives.
 
-## The case against: Tether
+## 8.1 The case against: Tether
 
 The thesis says disclosure, segregation, and licensure are what compound. Tether is the most
 profitable company per employee in the history of finance and satisfies the weakest version of each.
@@ -18,7 +18,7 @@ reserves, up to $141 billion of US Treasury exposure, more than 140 tons of gold
 billion, about $8.4 billion of bitcoin, and a claimed 500 million-plus users. Approximately 100
 employees.
 
-Now run it against the four conditions from Chapter 4:
+Now run it against the four conditions of §3.3:
 
 - **Revenue independence:** strong. Float income on Treasuries.
 - **Segregation:** partial. Reserves exist and are attested, but gold and bitcoin in the reserve of
@@ -38,7 +38,7 @@ while jurisdiction-shopping, and remains enormous after a $4.3 billion US settle
 largest offshore venues out-earn their licensed competitors on identical products, because the
 compliance cost differential is real and flows straight to margin.
 
-## What the counter-thesis actually proves
+## 8.2 What the counter-thesis actually proves
 
 Three things, and they matter.
 
@@ -63,7 +63,7 @@ from paying yield to holders. What was a voluntary constraint for Circle in 2019
 requirement for anyone serving the US market. Firms that adopted it early paid a cost for years and
 then found their competitors compelled to adopt it too, without the head start.
 
-## The revised, narrower thesis
+## 8.3 The revised, narrower thesis
 
 The original claim was that governance discipline compounds. That is too strong. The revised version:
 
@@ -81,7 +81,7 @@ requirement for a network effect that almost nobody gets. For the overwhelming m
 who will not have a first-mover monetary network to defend, it is not an available strategy — it is
 a story about someone who had one.
 
-## The other objection: survivorship, again
+## 8.4 The other objection: survivorship, again
 
 A second attack is simpler. Every firm praised in Chapter 6 is praised partly because it survived,
 and survival in a fat-tailed sector is substantially luck. Circle's IPO landed six weeks before the
@@ -90,7 +90,7 @@ regulatory bet paid off partly because a new CFTC chair withdrew restrictive pro
 January 2026.
 
 This objection is correct and cannot be fully answered with a sample of two dozen. The partial
-defense is the one from Chapter 4: the failure analysis is more robust than the success analysis,
+defense is the one from §4.2: the failure analysis is more robust than the success analysis,
 because the failures cluster on a small number of identifiable missing controls, while the successes
 are heterogeneous. It is safer to say **what reliably kills these companies** than to say what
 reliably makes them great. This dissertation is best read as the former with the latter attached.

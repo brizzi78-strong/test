@@ -4,7 +4,7 @@ Every chapter so far has been diagnostic. This one draws the positive picture: w
 scores 100 on [Chapter 9](09-instrument.md) actually looks like, whether it can exist, and whether
 you would want to build it.
 
-## Nobody scores 100
+## 12.1 Nobody scores 100
 
 The highest score in the study is Coinbase at 88, against a $6.9 billion revenue base and fifteen
 years of building. Circle is 82. The best financial outcome in the entire sample — Bridge, 5.5x on
@@ -14,7 +14,7 @@ So the perfect company is not an observed thing. It is a composite, assembled fr
 different firms, and the assembly is the interesting part: each of the ten questions has a real
 company that has solved it, and no company has solved more than eight.
 
-## The composite, item by item
+## 12.2 The composite, item by item
 
 | # | Question | Copy from | The move |
 |---|---|---|---|
@@ -29,7 +29,7 @@ company that has solved it, and no company has solved more than eight.
 | 9 | Optionality | Kraken | Be able to say no to a financing or a listing window. Kraken paused a $20B IPO in March 2026 because it could |
 | 10 | Token | Bridge | None, or one that is genuinely required by the product with disclosed economics. Both score full marks |
 
-## The three tensions that make 100 hard
+## 12.3 The three tensions that make 100 hard
 
 Expense is not the interesting obstacle. These are.
 
@@ -57,7 +57,7 @@ a signal with no immediate buyer. Bridge lost 15 points across questions 4, 5, a
 being private, and still produced the best outcome in the study. A perfect score effectively
 requires being public or behaving as if you were, years before there is any reason to.
 
-## The portrait
+## 12.4 The portrait
 
 Stripped of the scoring apparatus, the firm that scores 100 is unglamorous and specific:
 
@@ -84,7 +84,7 @@ startups are the ones that treat crypto as an input to a business, and the close
 perfect score, the more it resembles a boring financial institution that happens to settle on public
 infrastructure.
 
-## Would you want to build it?
+## 12.5 Would you want to build it?
 
 Honestly: only if durability is your objective function.
 

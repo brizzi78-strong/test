@@ -8,7 +8,7 @@ Before asking what the best-run companies do, it is worth being precise about wh
 outcome is, because in this sector the ordinary outcome is death and the distribution of causes is
 narrower than the folklore suggests.
 
-## The raw numbers
+## 5.1 The raw numbers
 
 Roughly 176 crypto projects shut down in 2025. By late July 2026 the running count for the year was
 between 95 and 110, depending on whose list you use
@@ -26,7 +26,7 @@ a 50% decline in capital from the prior quarter
 ([Galaxy Research](https://www.galaxy.com/insights)). The capital that remained concentrated in
 infrastructure and payments rather than consumer applications.
 
-## The causes, ordered by frequency
+## 5.2 The causes, ordered by frequency
 
 **1. Revenue that was a derivative of the company's own token.** This is the modal failure and it is
 not close. The pattern: raise on a token, use the token to bootstrap users through emissions or an
@@ -37,7 +37,7 @@ stage." A company in this position has no independent revenue and therefore no a
 drawdown, because the drawdown reduces both the treasury and the demand simultaneously. The two
 failures are perfectly correlated by construction.
 
-This maps directly onto condition 1 of the definition in Chapter 4, and it is why that condition is
+This maps directly onto condition C1 as defined in §3.3, and it is why that condition is
 listed first.
 
 **2. Commingled or rehypothecated customer assets.** Less frequent, vastly more destructive. FTX,
@@ -71,7 +71,7 @@ in crypto commentary because it is boring, but it is a large share of the 2026 s
 wallets, analytics tools, NFT platforms and games that simply never found paying customers. These
 firms did nothing dishonorable. They were just companies, and most companies fail.
 
-## What the ordering implies
+## 5.3 What the ordering implies
 
 The first three causes are all failures of the same underlying thing: the company had no buffer
 between a bad day and an existential day. Token-derived revenue means no buffer against price.

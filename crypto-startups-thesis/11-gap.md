@@ -3,7 +3,7 @@
 Two questions this study exists to answer, stated bluntly: what does the token path actually return,
 and how far is this project from a company that launched successfully?
 
-## The yield on the plan as written
+## 11.1 The yield on the plan as written
 
 The CARD launch as specified puts 2–5 ETH into a pool alongside 200M tokens, locks the LP for twelve
 months, renounces the contract, and publishes the proof links. Cost is the ETH, gas, and a lock fee.
@@ -31,7 +31,7 @@ shutdown list is a record of.
 The yield on the *product* path is a different question with a different answer, and it is the only
 one worth optimizing.
 
-## The gap, in five dimensions
+## 11.2 The gap, in five dimensions
 
 Against the companies in [Chapter 6](06-case-studies.md), here is the honest distance.
 
@@ -69,7 +69,7 @@ at one surface until someone pays for it.
 
 That is the uncomfortable finding, and it is the only one on this list entirely within your control.
 
-## What closes it
+## 11.3 What closes it
 
 In order:
 
@@ -88,7 +88,7 @@ In order:
    failure mode in the current plan that is irreversible and total. Do this even if the token never
    launches, because the same key discipline applies to any treasury.
 
-## The honest summary
+## 11.4 The honest summary
 
 The token plan is well built and solves the wrong problem. It optimizes for *not being distrusted*,
 which it achieves — renounce, lock, verify, disclose is the complete set of moves available at this

@@ -8,7 +8,7 @@ Sections are numbered in order below. Each closes with a reading against the fou
 
 ---
 
-## Circle — the disclosure trade, priced in public
+## 6.1 Circle — the disclosure trade, priced in public
 
 **What it isolates:** whether disclosure-ahead-of-requirement actually pays, and what it costs.
 
@@ -63,7 +63,7 @@ Survivability — strong. Disclosure — best in class, and it was the moat.
 
 ---
 
-## Coinbase — diversification as an operating discipline
+## 6.2 Coinbase — diversification as an operating discipline
 
 **What it isolates:** whether a firm whose core business is inherently cyclical can engineer its way
 out of the cycle.
@@ -105,7 +105,7 @@ Survivability — strong. Disclosure — strong, including the misses.
 
 ---
 
-## Bridge — the highest risk-adjusted outcome in the sector
+## 6.3 Bridge — the highest risk-adjusted outcome in the sector
 
 **What it isolates:** what the best exit actually looks like now, and how little capital it took.
 
@@ -137,7 +137,7 @@ model. Survivability — n/a. Disclosure — private, but the acquirer's diligen
 
 ---
 
-## Tether — profit without any of the rest
+## 6.4 Tether — profit without any of the rest
 
 **What it isolates:** the strongest evidence against the thesis. Treated at length in
 [Chapter 8](08-counter-case.md); the facts are recorded here.
@@ -159,7 +159,7 @@ the profit figure, which is the point of the case.
 
 ---
 
-## Fireblocks and Chainalysis — selling the shovels, and who pays for them
+## 6.5 Fireblocks and Chainalysis — selling the shovels, and who pays for them
 
 **What it isolates:** whether the "infrastructure is safer" claim survives a bear market.
 
@@ -181,7 +181,7 @@ whose seat counts are stable, and away from crypto-native customers, whose seat 
 
 ---
 
-## Kraken — discipline includes not going public
+## 6.6 Kraken — discipline includes not going public
 
 **What it isolates:** whether a well-run firm can be recognized by what it declines to do.
 
@@ -203,7 +203,7 @@ The general form: **optionality is an operating asset, and it is created by not 
 
 ---
 
-## Bybit — the crisis-response case
+## 6.7 Bybit — the crisis-response case
 
 **What it isolates:** whether pre-committed reserves convert a catastrophe into an incident.
 
@@ -237,7 +237,7 @@ security of the least-examined component in the signing path, including the ones
 
 ---
 
-## Kalshi and Polymarket — does the pattern generalize to a new category?
+## 6.8 Kalshi and Polymarket — does the pattern generalize to a new category?
 
 **What it isolates:** whether these findings are about crypto or about 2021–2024 specifically.
 
