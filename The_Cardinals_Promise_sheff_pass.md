@@ -603,7 +603,7 @@ He was always in the stands. He almost never missed a match in four years of hig
 
 Freshman year I finished two and four. That nineteen-second pin was one of the losses.
 
-Sophomore year I entered districts as the fifth seed. I won the tournament, became district champion, and was named Athlete of the Month.
+Sophomore year I entered districts as the fifth seed, which meant fifth of the eight wrestlers in the bracket. Nobody expected me to place in the top three. I won the tournament, became district champion, and was named Athlete of the Month.
 
 Junior year I entered regions as the seventh seed and made the finals.
 
