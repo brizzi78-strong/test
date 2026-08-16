@@ -275,7 +275,7 @@ My grandfather was strict, or so my mother said. He'd never approved of the marr
 
 Still, I missed my papa.
 
-When we first moved, she told me that we'd be back home in two weeks. I believed her.
+When we first moved, she told me that we'd be back home in two weeks. I believed her. I was four. I don't know if she believed it too.
 
 Crammed inside my tiny red suitcase was everything from my past life. The Mickey Mouse shirt became part of my last memory of home.
 
