@@ -291,6 +291,54 @@ services:
       - booking
       - accounting
 
+  # Trading: a Robinhood-style commission-free brokerage engine — accounts,
+  # market/limit orders, positions with average-cost basis, and a watchlist.
+  # No real money. Market data defaults to a deterministic mock feed; set
+  # MARKET_DATA=yahoo for live quotes/history from Yahoo Finance (no key).
+  trading:
+    <<: *service
+    command: node trading/src/index.ts
+    environment:
+      PORT: "4900"
+      TRADING_DB: /data/trading.db
+      MARKET_DATA: ${MARKET_DATA:-}
+      # Live on-chain CARD pricing from its Uniswap pool: set all three once
+      # the pool exists (any public Ethereum RPC works; no key, no custody).
+      ETH_RPC_URL: ${ETH_RPC_URL:-}
+      CARD_POOL_ADDRESS: ${CARD_POOL_ADDRESS:-}
+      CARD_TOKEN_ADDRESS: ${CARD_TOKEN_ADDRESS:-}
+    ports: ["4900:4900"]
+    volumes: ["trading-data:/data"]
+
+  # Invest: the Robinhood-style multi-user trading app (signup/login, then
+  # your own portfolio, watchlist, orders, buy/sell) — a BFF over the Trading
+  # service; each proxied call is scoped server-side to the logged-in user's
+  # account. Reachable at http://localhost:5000.
+  invest:
+    <<: *service
+    command: node invest/src/index.ts
+    environment:
+      PORT: "5000"
+      TRADING_URL: http://trading:4900
+      INVEST_DB: /data/invest.db
+      STARTING_CASH_CENTS: ${TRADING_STARTING_CASH_CENTS:-}
+      # Set both when serving through an HTTPS reverse proxy.
+      INVEST_COOKIE_SECURE: ${INVEST_COOKIE_SECURE:-}
+      INVEST_TRUST_PROXY: ${INVEST_TRUST_PROXY:-}
+      # Real verification/reset email: SENDGRID_API_KEY + INVEST_MAIL_FROM
+      # (INVEST_MAIL_FROM_NAME optional). Unset → links logged to the console.
+      # INVEST_BASE_URL sets the absolute origin used in emailed links.
+      SENDGRID_API_KEY: ${SENDGRID_API_KEY:-}
+      INVEST_MAIL_FROM: ${INVEST_MAIL_FROM:-}
+      INVEST_MAIL_FROM_NAME: ${INVEST_MAIL_FROM_NAME:-}
+      INVEST_BASE_URL: ${INVEST_BASE_URL:-}
+      # When set, the CARD page shows real one-tap Buy/Sell-on-Uniswap links.
+      CARD_TOKEN_ADDRESS: ${CARD_TOKEN_ADDRESS:-}
+    ports: ["5000:5000"]
+    volumes: ["invest-data:/data"]
+    depends_on:
+      - trading
+
   web:
     image: nginx:alpine
     restart: unless-stopped
@@ -314,3 +362,5 @@ volumes:
   verify-data:
   timeclock-data:
   gateway-data:
+  trading-data:
+  invest-data:
