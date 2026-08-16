@@ -706,7 +706,11 @@ Junior year I cut nineteen pounds the week of the tournament, then binged so har
 
 That season in Regions I drew a kid who almost never lost, a Bergen County name everyone knew, dominant and smart, the kind who wins because he rarely makes a mistake. Quarterfinals, he was the two seed, I was the seven. Six minutes. Ten seconds left, I was down 6–5. He let me up, experienced guys do that with a lead, sure they can ride it out on their feet. He shouldn't have. Three seconds on the clock I shot a single-leg, dropped low and took his lead leg and pulled it tight to my chest, my arms there before my brain caught up. He was standing on one foot. His balance was gone. Takedown, 7–6, final. The paper the next day: "Late Takedown Keeps Ramsey's Brizzi Going."
 
-I won my semi, lost a close one in the finals, still went to States. Finished 18–4. After that match Lou sat with me while I caught my breath and the bracket moved on without us. Then: "That's who you are." Not great match. Not I knew you could do it. That's who you are. I just nodded. That was enough for him.
+I won my semi, lost a close one in the finals, still went to States. Finished 18–4. After that match Lou sat with me while I caught my breath and the bracket moved on without us.
+
+"Rob, I'm proud of you."
+
+Not great match. Not I knew you could do it. I just nodded. That was enough for him.
 
 ### *Charlie*
 
