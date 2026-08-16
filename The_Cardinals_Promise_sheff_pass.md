@@ -271,7 +271,7 @@ My aunt Nancey picked us up in her small red Honda Civic and drove us to Cedar G
 
 My Spanish disappeared almost overnight. English was everywhere. I picked it up the way kids do, without deciding to. Back home I'd had a lisp. In New Jersey they sent me to speech therapy twice a week to fix the way I talked. Decades later it still comes out at the worst times.
 
-My grandfather was strict. He'd never approved of the marriage, but he let us stay with him. We paid him eight hundred a month. He was hard on her and soft on us. My nana mostly stayed in the background. My aunts Nancey or Terry, or my grandfather, watched us when my mother had to find work. My mom started over with no degree and nobody to fall back on, and she worked. That's her story to tell, in her own voice, and I hope she does. This book is here because of her. She picked us.
+My grandfather was strict. He'd never approved of the marriage, but he let us stay with him. We paid him eight hundred a month. He was hard on her and soft on us. My nana mostly stayed in the background. My aunts Nancey or Terry, or Grandpa, watched us when my mother had to find work. My mom started over with no degree and nobody to fall back on, and she worked. That's her story to tell, in her own voice, and I hope she does. This book is here because of her. She picked us.
 
 Still, I missed my papa.
 
@@ -309,7 +309,7 @@ At night I thought about Horacio, not with anger, with confusion, half-expecting
 
 My grandparents gave me what they had, which was steadiness, a house that stayed where it was, meals that came when they were supposed to. Not the warmth my mother gave, but reliability, and that counts for a lot when the ground has just moved. There's a wedding photograph of them walking down the aisle, Grandpa in a white dinner jacket, dark hair slicked back, grinning like he'd won something; Nana on his arm in satin, red lipstick, an armful of white roses. The two of them could have passed for movie stars. They'd aged into it gracefully — Grandpa bald by then, green-eyed, still a handsome face, a cigarette usually going somewhere in the house; Nana's high cheekbones still carrying the pretty face from that picture.
 
-My grandfather taught high school history. At home he was a simple man, and I loved him for it. He was devoted to Wendy's, the Frosties most of all, and told me once, dead serious, that the one hole in his life was that Wendy's wouldn't sell hot dogs. He and my nana drank port wine every night out of paper cups, from a jug they kept. And ketchup was less a condiment than a way of life. It went on everything — ketchup on the ketchup — a habit I took whole.
+Grandpa taught high school history. At home he was a simple man, and I loved him for it. He was devoted to Wendy's, the Frosties most of all, and told me once, dead serious, that the one hole in his life was that Wendy's wouldn't sell hot dogs. He and my nana drank port wine every night out of paper cups, from a jug they kept. And ketchup was less a condiment than a way of life. It went on everything — ketchup on the ketchup — a habit I took whole.
 
 While he taught history, he also made me interested in science. Once he took me to the railroad tracks and showed me how to lay a quarter on the rail. Then we ran off and came back after the train passed to find it flattened smooth. My mother didn't agree when she found out, but he never saw the problem.
 
@@ -451,13 +451,13 @@ He's also the family's historian, the one who remembers all the stories about me
 
 Jon and I found each other through wrestling. His stepkids wrestled, I had wrestled, and that was the bridge. There is a shorthand between wrestling people. You don't have to explain the weight cuts, or the losing, or what it takes to walk back out for the next period. Jon understood it without my having to say it. He is also one of the quietest overachievers I know. He started out at Juniata College getting C's and finished as a partner at a major software company. More reserved than the rest of us, Jon is kind all the way through. His story rhymes with Chris's, the underdog who becomes the success. Lou's people don't stay down.
 
-I remember the three of us driving down to Philadelphia for a Giants game once, Jon twenty-five at the time, all of us grown men by then. No occasion, just an excuse to be together. That was Lou's way, even beyond childhood: make a regular Sunday feel like it mattered.
+I remember the three of us driving down to Philadelphia for a Giants game once, all of us grown men by then. No occasion, just an excuse to be together. That was Lou's way, even beyond childhood: make a regular Sunday feel like it mattered.
 
 The moment I felt closest to him came years later, both of us grown. He was successful by then, getting close to retirement. I was up in New Jersey for a work training, and I took an hour-and-a-half Uber ride just to go see him. We ended up walking, the two of us, and he told me about a guy he'd mentored at his company, how grateful the man was for the chance, and what it had done for his whole family. The way Jon told it, the thing he was proud of wasn't the success. It was having been of use to somebody. That was a side of him I'd only seen in pieces. That day I got the whole of it.
 
 That's the part that still gets me. Lisa, Joel, and Jon could have kept us at the edge of the family, at a small distance that never quite closes. They never drew that line. We were siblings. We still are.
 
-Not everything from those years was heavy. We lived on Woodridge Street, and Domino's was our pizza. Back then they ran the promise: thirty minutes or it's free. What they didn't account for was that our town had a Woodridge Street and a Woodridge Avenue, and the driver went to the Avenue every single time. He'd turn up at our door late and apologizing, and he'd hand us the pizza and our money back. Free Domino's, over and over, because a guy couldn't tell a street from an avenue. Chris and I were sure we'd beaten the system.
+We lived on Woodridge Street, and Domino's was our pizza. Back then they ran the promise: thirty minutes or it's free. What they didn't account for was that our town had a Woodridge Street and a Woodridge Avenue, and the driver went to the Avenue every single time. He'd turn up at our door late and apologizing, and he'd hand us the pizza and our money back. Free Domino's, over and over, because a guy couldn't tell a street from an avenue. Chris and I were sure we'd beaten the system.
 
 ### *Claudio and Rob*
 
