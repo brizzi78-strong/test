@@ -544,7 +544,7 @@ Neither of us said anything else. We would trade those same two lines maybe ten 
 
 Then there was the time I lived in West Palm Beach. By then, I wasn't a kid anymore. I was a grown man, deep in addiction, and out of options. Dad flew down and pulled me, his dying son, out of it. He didn't shame me. He came one more time, when coming meant saving my life.
 
-I broke down in front of him once. I don't remember anymore what had pushed me there, just that I was undone, the way you only let yourself be in front of someone safe. He didn't tell me to pull it together. He let me get it out, and then he looked at me and said it plain.
+I broke down in front of him once. I don't remember anymore what had pushed me there. I let him see me like that because I trusted him. He didn't tell me to pull it together. He let me get it out, and then he looked at me and said it plain.
 
 "I love you as much as I love my own kids."
 
