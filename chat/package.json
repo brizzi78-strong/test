@@ -1,0 +1,22 @@
+{
+  "name": "cardinal-chat",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Cardinal Chat — self-hosted ChatGPT alternative powered by Claude: streaming chat UI, markdown rendering, saved conversations, system-prompt presets",
+  "type": "module",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "start": "node src/index.ts",
+    "test": "node --test",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.70.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.8.5",
+    "typescript": "~5.8.0"
+  }
+}

@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Velocity Werks — BMW &amp; Mercedes tuning, Orlando FL</title>
+<meta name="description" content="Premium ECU tuning for BMW and Mercedes-Benz in Orlando, Florida. Pick your car, see estimated platform gains, and book your tune. Stage 1 and Stage 2 performance software, transmission tuning, and more.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23111827'/%3E%3Cpath d='M6 22L16 8l10 14h-5l-5-7-5 7z' fill='%23F59E0B'/%3E%3C/svg%3E">
+<style>
+  :root {
+    --paper:#F5F4F1; --surface:#FFFFFF; --surface-2:#ECEAE4; --ink:#15171C; --muted:#5F6672;
+    --line:#DFDCD4; --brand:#B45309; --brand-strong:#92400E; --accent:#F59E0B;
+    --good:#1F8A54; --good-bg:#E2F3E9; --warn:#9A6410; --warn-bg:#F7ECD4; --crit:#C23B3B; --crit-bg:#F8E2E0;
+    --shadow:0 1px 2px rgba(21,23,28,.06), 0 12px 30px -16px rgba(21,23,28,.3);
+    --font:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+    --maxw:680px; --r:14px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper:#101216; --surface:#181B21; --surface-2:#20242C; --ink:#F0EFEC; --muted:#9AA1AD;
+      --line:#2C313B; --brand:#F59E0B; --brand-strong:#FBBF24; --accent:#F59E0B;
+      --good:#4CBE84; --good-bg:#12321f; --warn:#D6A24A; --warn-bg:#33280f; --crit:#E27B70; --crit-bg:#3a1d1a;
+      --shadow:0 1px 2px rgba(0,0,0,.5), 0 14px 34px -16px rgba(0,0,0,.7);
+    }
+  }
+  :root[data-theme="light"]{--paper:#F5F4F1;--surface:#FFFFFF;--surface-2:#ECEAE4;--ink:#15171C;--muted:#5F6672;--line:#DFDCD4;--brand:#B45309;--brand-strong:#92400E;}
+  :root[data-theme="dark"]{--paper:#101216;--surface:#181B21;--surface-2:#20242C;--ink:#F0EFEC;--muted:#9AA1AD;--line:#2C313B;--brand:#F59E0B;--brand-strong:#FBBF24;}
+
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink); font-family:var(--font); line-height:1.55; -webkit-text-size-adjust:100%; }
+  .wrap { max-width:var(--maxw); margin-inline:auto; padding:0 clamp(.9rem,4vw,1.4rem) 3rem; }
+
+  header.top { position:sticky; top:0; z-index:10; background:color-mix(in srgb,var(--paper) 88%,transparent);
+    backdrop-filter:blur(8px); border-bottom:1px solid var(--line); }
+  .top-in { max-width:var(--maxw); margin-inline:auto; padding:.7rem clamp(.9rem,4vw,1.4rem); display:flex; align-items:center; gap:.6rem; }
+  .logo { width:32px; height:32px; border-radius:9px; background:#111827; display:grid; place-items:center; flex:none; }
+  .logo svg { width:20px; height:20px; }
+  h1.brand { font-size:1.1rem; margin:0; font-weight:800; letter-spacing:-.01em; }
+  .brand small { display:block; font-weight:600; font-size:.68rem; color:var(--muted); letter-spacing:.04em; text-transform:uppercase; }
+  .theme { margin-left:auto; background:transparent; border:1px solid var(--line); border-radius:9px; color:var(--ink); padding:.4rem .6rem; cursor:pointer; font-size:.95rem; }
+
+  .hero { padding:2rem 0 .6rem; }
+  .hero h2 { font-size:clamp(1.5rem,5vw,2.1rem); margin:0 0 .4rem; letter-spacing:-.02em; line-height:1.15; }
+  .hero h2 em { font-style:normal; color:var(--brand); }
+  .hero p { color:var(--muted); margin:0; max-width:34rem; }
+
+  .card { background:var(--surface); border:1px solid var(--line); border-radius:var(--r); box-shadow:var(--shadow); padding:1rem 1.05rem; margin:.85rem 0; }
+  .card h2 { margin:0 0 .5rem; font-size:1rem; letter-spacing:-.01em; }
+  .muted { color:var(--muted); }
+  .small { font-size:.85rem; }
+
+  label { display:block; font-weight:700; font-size:.82rem; margin:.7rem 0 .25rem; }
+  select, input, textarea { font:inherit; color:var(--ink); background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:.55rem .65rem; width:100%; }
+  textarea { resize:vertical; min-height:70px; }
+
+  .btn { display:inline-flex; align-items:center; justify-content:center; gap:.45rem; border:1px solid var(--line); background:var(--surface); color:var(--ink);
+    font:inherit; font-weight:700; padding:.6rem .9rem; border-radius:11px; cursor:pointer; text-decoration:none; }
+  .btn:disabled { opacity:.5; cursor:not-allowed; }
+  .btn.primary { background:var(--brand); border-color:var(--brand); color:#fff; }
+  :root[data-theme="dark"] .btn.primary, .btn.primary.dk { color:#1a1408; }
+  @media (prefers-color-scheme: dark){ .btn.primary { color:#1a1408; } }
+  .btn.primary:not(:disabled):hover { background:var(--brand-strong); border-color:var(--brand-strong); }
+  .btn.big { width:100%; padding:.9rem; font-size:1.02rem; border-radius:13px; }
+
+  /* tune cards */
+  .tune { border:1px solid var(--line); border-radius:12px; padding:.85rem .9rem; margin:.55rem 0; background:var(--surface); }
+  .tune .head { display:flex; align-items:baseline; gap:.6rem; flex-wrap:wrap; }
+  .tune .head .n { font-weight:800; font-size:1.02rem; }
+  .tune .head .price { margin-left:auto; font-weight:800; color:var(--brand); white-space:nowrap; }
+  .gains { display:flex; gap:1.2rem; margin:.5rem 0 .2rem; }
+  .gains .g { text-align:center; }
+  .gains .g b { display:block; font-size:1.25rem; letter-spacing:-.02em; }
+  .gains .g b span { font-size:.8rem; font-weight:700; color:var(--good); }
+  .gains .g small { color:var(--muted); font-size:.7rem; text-transform:uppercase; letter-spacing:.05em; }
+  .tune .desc { font-size:.88rem; color:var(--muted); margin:.4rem 0 0; }
+  .tag { font-size:.68rem; font-weight:800; letter-spacing:.03em; text-transform:uppercase; padding:.12rem .45rem; border-radius:6px; }
+  .tag.stage { color:var(--brand); background:color-mix(in srgb,var(--accent) 16%,transparent); }
+  .tag.offroad { color:var(--crit); background:var(--crit-bg); }
+  .tune .foot { display:flex; align-items:center; gap:.5rem; margin-top:.6rem; flex-wrap:wrap; }
+  .tune .foot .note { font-size:.75rem; color:var(--muted); }
+
+  .chip { display:inline-flex; align-items:center; gap:.35rem; font-size:.78rem; font-weight:700; padding:.2rem .55rem; border-radius:999px; border:1px solid var(--line); }
+
+  .banner { display:none; padding:.75rem .85rem; border-radius:12px; margin:.6rem 0; font-size:.9rem; font-weight:600; align-items:center; gap:.55rem; }
+  .banner.show { display:flex; }
+  .banner.ok { background:var(--good-bg); color:var(--good); }
+
+  .fine { background:var(--warn-bg); color:var(--warn); border-radius:12px; padding:.75rem .9rem; font-size:.82rem; font-weight:600; margin:.85rem 0; }
+  .fine ul { margin:.4rem 0 0 1.1rem; padding:0; }
+  .fine li { margin:.25rem 0; }
+
+  .steps-row { display:grid; grid-template-columns:repeat(3,1fr); gap:.6rem; margin:.6rem 0; }
+  .steps-row .s { background:var(--surface-2); border-radius:12px; padding:.7rem .6rem; text-align:center; }
+  .steps-row .s .em { font-size:1.4rem; }
+  .steps-row .s b { display:block; font-size:.82rem; margin-top:.2rem; }
+  .steps-row .s small { color:var(--muted); font-size:.72rem; }
+
+  footer { text-align:center; color:var(--muted); font-size:.78rem; margin-top:1.6rem; }
+  footer .cfg { font-family:var(--mono); font-size:.7rem; }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <span class="logo" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M6 22L16 8l10 14h-5l-5-7-5 7z" fill="#F59E0B"/></svg></span>
+    <h1 class="brand">Velocity Werks<small>BMW &amp; Mercedes tuning · Orlando, FL</small></h1>
+    <button class="theme" id="theme" title="Toggle theme" aria-label="Toggle light/dark">◐</button>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <h2>Your car is capable of <em>more</em>.</h2>
+    <p>Dyno-developed ECU &amp; TCU software for BMW and Mercedes-Benz. Pick your car, see estimated gains, book your slot. Flashed in-house in Orlando — not mail-order guesswork.</p>
+  </section>
+
+  <div class="steps-row">
+    <div class="s"><span class="em">🚗</span><b>1. Pick your car</b><small>chassis &amp; engine</small></div>
+    <div class="s"><span class="em">📈</span><b>2. See the gains</b><small>typical estimates</small></div>
+    <div class="s"><span class="em">📅</span><b>3. Book your tune</b><small>deposit holds the slot</small></div>
+  </div>
+
+  <!-- Car picker -->
+  <section class="card">
+    <h2>Your car</h2>
+    <label for="make">Make</label>
+    <select id="make"><option value="bmw">BMW</option><option value="mercedes">Mercedes-Benz</option></select>
+    <label for="model">Model / engine</label>
+    <select id="model"></select>
+  </section>
+
+  <!-- Available tunes -->
+  <section class="card">
+    <h2>Available for <span id="car-label"></span> <span class="chip" id="stock-chip"></span></h2>
+    <div id="tunes"></div>
+    <p class="small muted" style="margin:.6rem 0 0">Figures marked <b>est.</b> are <b>typical gains for this platform</b> from the tuning software vendors — not yet measured on your specific car. We confirm actual numbers on the dyno; your results will vary with fuel, mods, and conditions.</p>
+  </section>
+
+  <!-- Booking -->
+  <section class="card" id="book-card">
+    <h2>Book it</h2>
+    <p class="small muted" id="book-summary">Select a package above, then book your slot. A deposit holds your appointment and comes off the final price.</p>
+    <label for="b-name">Name</label>
+    <input id="b-name" autocomplete="name" placeholder="Your name">
+    <label for="b-phone">Phone or email</label>
+    <input id="b-phone" autocomplete="tel" placeholder="How we reach you">
+    <label for="b-when">Preferred day</label>
+    <input id="b-when" type="date">
+    <label for="b-notes">Notes (mods already done, goals, etc.)</label>
+    <textarea id="b-notes" placeholder="e.g. catless downpipe already installed; want pops &amp; bangs"></textarea>
+    <div style="margin-top:.8rem">
+      <button class="btn primary big" id="book">📅 Request booking</button>
+    </div>
+    <div class="banner ok" id="book-banner"></div>
+    <p class="small muted" style="margin-bottom:0">Requests go to the shop for confirmation — this page doesn't take payment. We'll confirm your slot and send a deposit link. <span id="book-config-note"></span></p>
+  </section>
+
+  <!-- LogWerks: free post-tune health check -->
+  <section class="card" style="border-color:var(--brand)">
+    <h2>🔬 Free datalog health check</h2>
+    <p class="small muted" style="margin-top:0">Already tuned — by us or anyone else? Drop your ECU datalog into <b>LogWerks</b> and see whether it's <b>safe</b>: knock, boost vs. target, lean spots under load, and heat soak. Runs in your browser, nothing uploaded. Most shops give you nothing after the sale — we give you a tool.</p>
+    <a class="btn primary" href="../datalog/index.html">Open LogWerks →</a>
+  </section>
+
+  <!-- The honest fine print -->
+  <section class="fine">
+    ⚠️ <b>Know before you tune</b>
+    <ul>
+      <li><b>Warranty:</b> performance software can void portions of your factory powertrain warranty. Magnuson-Moss protects you from blanket denials, but tune-related failures are on you.</li>
+      <li><b>Emissions:</b> tunes marked <i>off-road</i> alter or require emissions-relevant hardware and are for closed-course use only. Not legal for street use in CARB states (California and others) — and increasingly enforced elsewhere.</li>
+      <li><b>Fuel:</b> quoted gains assume 93 octane (91 for some maps). Running lower octane on a performance map can cause knock and engine damage.</li>
+      <li><b>Health check first:</b> every tune starts with a full diagnostic scan and logs. We don't flash cars with pre-existing faults — fixing those comes first.</li>
+    </ul>
+  </section>
+
+  <footer>
+    Velocity Werks · Orlando, FL · placeholder brand — rename before launch · gains shown are typical platform estimates on 93 octane, not measured on your vehicle; individual results vary.
+  </footer>
+</main>
+
+<script>
+"use strict";
+(function () {
+  const $ = (s, r=document) => r.querySelector(s);
+  const el = (t, c) => { const e=document.createElement(t); if(c) e.className=c; return e; };
+  const store = {
+    get(k, d){ try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch { return d; } },
+    set(k, v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch {} }
+  };
+
+  /* ---------- CONFIG — edit these two lines before launch ----------
+     Bookings need somewhere to go. Two options:
+       1) Create a free form endpoint at https://formspree.io (or similar),
+          paste it into formEndpoint below, and requests are emailed to you.
+       2) Leave formEndpoint "" and set shopEmail — the button then opens the
+          customer's email app with a pre-filled booking message to you.        */
+  const CONFIG = {
+    formEndpoint: "",                       // e.g. "https://formspree.io/f/abcdwxyz"
+    shopEmail: "bookings@example.com"       // where pre-filled emails are addressed
+  };
+
+  /* ---------- Theme ---------- */
+  const themeBtn = $("#theme");
+  function applyTheme(t){ if(t) document.documentElement.setAttribute("data-theme", t); }
+  applyTheme(store.get("jperf.theme", null));
+  themeBtn.addEventListener("click", () => {
+    const cur = document.documentElement.getAttribute("data-theme");
+    const isDark = cur ? cur === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+    const next = isDark ? "light" : "dark";
+    applyTheme(next); store.set("jperf.theme", next);
+  });
+
+  /* ---------- Catalog ----------
+     Placeholder numbers in the typical range for each platform.
+     REPLACE with the shop's own dyno results before going live. */
+  const CARS = {
+    bmw: [
+      { id:"b48", label:"330i / 430i / X3 30i (B48 2.0T)", stock:{hp:255, tq:295},
+        tunes:[
+          { id:"s1", name:"Stage 1", stage:"Stage 1", price:695, hp:45, tq:70,
+            desc:"Software only. Crisper throttle, stronger midrange, speed limiter removed. 93 octane map." },
+          { id:"s2", name:"Stage 2", stage:"Stage 2", price:1195, hp:75, tq:100, offroad:true,
+            desc:"Requires downpipe + intake. Full turbo utilization, burble on decel optional." },
+          { id:"tcu", name:"ZF8 Transmission Tune", stage:"TCU", price:495, hp:0, tq:0,
+            desc:"Faster shifts, higher torque limit in D, better launch control. Pairs with any stage." },
+        ]},
+      { id:"b58", label:"340i / 440i / M340i / X3 M40i (B58 3.0T)", stock:{hp:382, tq:369},
+        tunes:[
+          { id:"s1", name:"Stage 1", stage:"Stage 1", price:795, hp:80, tq:110,
+            desc:"Software only — the B58 sweet spot. Big midrange, raised limiter, 93 octane." },
+          { id:"s2", name:"Stage 2", stage:"Stage 2", price:1395, hp:130, tq:150, offroad:true,
+            desc:"Requires downpipe; intake + FMIC recommended. Serious M-car-baiting power." },
+          { id:"tcu", name:"ZF8 Transmission Tune", stage:"TCU", price:495, hp:0, tq:0,
+            desc:"Faster shifts, raised torque limiter, improved launch control." },
+        ]},
+      { id:"s55", name:"", label:"M3 / M4 (S55 3.0TT)", stock:{hp:425, tq:406},
+        tunes:[
+          { id:"s1", name:"Stage 1", stage:"Stage 1", price:995, hp:90, tq:120,
+            desc:"Software only. Sharper response, more boost, raised limiters. 93 octane." },
+          { id:"s2", name:"Stage 2", stage:"Stage 2", price:1695, hp:140, tq:160, offroad:true,
+            desc:"Requires downpipes; recommend charge cooler service. Track-day weapon." },
+        ]},
+    ],
+    mercedes: [
+      { id:"m264", label:"C300 / E300 / GLC300 (M264 2.0T)", stock:{hp:255, tq:273},
+        tunes:[
+          { id:"s1", name:"Stage 1", stage:"Stage 1", price:745, hp:50, tq:75,
+            desc:"Software only. Livelier throttle and strong midrange pull. 93 octane map." },
+          { id:"s2", name:"Stage 2", stage:"Stage 2", price:1245, hp:80, tq:105, offroad:true,
+            desc:"Requires downpipe + intake. Transforms the character of the car." },
+        ]},
+      { id:"m256", label:"E450 / GLE450 / CLS450 (M256 3.0T)", stock:{hp:362, tq:369},
+        tunes:[
+          { id:"s1", name:"Stage 1", stage:"Stage 1", price:845, hp:70, tq:95,
+            desc:"Software only. Smooth, effortless surge everywhere in the rev range." },
+          { id:"s2", name:"Stage 2", stage:"Stage 2", price:1445, hp:110, tq:135, offroad:true,
+            desc:"Requires downpipe; intake recommended. Sleeper-fast luxury." },
+        ]},
+      { id:"m177", label:"AMG C63 / E63 / GT (M177/M178 4.0TT)", stock:{hp:469, tq:479},
+        tunes:[
+          { id:"s1", name:"Stage 1", stage:"Stage 1", price:1195, hp:100, tq:130,
+            desc:"Software only. Wakes the V8 up properly — hard pull to redline. 93 octane." },
+          { id:"s2", name:"Stage 2", stage:"Stage 2", price:1995, hp:160, tq:200, offroad:true,
+            desc:"Requires downpipes + intake. Supercar-pace numbers on the street... track." },
+          { id:"tcu", name:"MCT/9G Transmission Tune", stage:"TCU", price:595, hp:0, tq:0,
+            desc:"Faster, harder shifts and improved launch behavior." },
+        ]},
+    ],
+  };
+
+  /* ---------- State & picker ---------- */
+  let make = store.get("jperf.make", "bmw");
+  let modelId = store.get("jperf.model", null);
+  let selectedTune = null;
+
+  const makeSel = $("#make"), modelSel = $("#model");
+  makeSel.value = make;
+
+  function models(){ return CARS[make]; }
+  function model(){ return models().find(m => m.id === modelId) || models()[0]; }
+
+  function fillModels(){
+    modelSel.innerHTML = "";
+    models().forEach(m => { const o = el("option"); o.value = m.id; o.textContent = m.label; modelSel.appendChild(o); });
+    if(!models().some(m => m.id === modelId)) modelId = models()[0].id;
+    modelSel.value = modelId;
+  }
+  makeSel.addEventListener("change", () => { make = makeSel.value; store.set("jperf.make", make); modelId = null; selectedTune = null; fillModels(); render(); });
+  modelSel.addEventListener("change", () => { modelId = modelSel.value; store.set("jperf.model", modelId); selectedTune = null; render(); });
+
+  /* ---------- Render tunes ---------- */
+  function render(){
+    const m = model();
+    $("#car-label").textContent = m.label;
+    $("#stock-chip").textContent = `stock ${m.stock.hp} hp / ${m.stock.tq} lb-ft`;
+    const box = $("#tunes"); box.innerHTML = "";
+    m.tunes.forEach(t => {
+      const card = el("div", "tune");
+      const gainRow = (t.hp || t.tq) ?
+        `<div class="gains">
+           <div class="g"><b>${m.stock.hp + t.hp} <span>+${t.hp}</span></b><small>hp · est.</small></div>
+           <div class="g"><b>${m.stock.tq + t.tq} <span>+${t.tq}</span></b><small>lb-ft · est.</small></div>
+         </div>` : "";
+      card.innerHTML =
+        `<div class="head">
+           <span class="n">${t.name}</span>
+           <span class="tag stage">${t.stage}</span>
+           ${t.offroad ? '<span class="tag offroad">Off-road only</span>' : ""}
+           <span class="price">$${t.price.toLocaleString()}</span>
+         </div>
+         ${gainRow}
+         <p class="desc">${t.desc}</p>
+         <div class="foot">
+           <button class="btn ${""}" data-tune="${t.id}">Select</button>
+           <span class="note">${t.offroad ? "Closed-course use only. Not street-legal in CARB states." : "Emissions hardware untouched."}</span>
+         </div>`;
+      box.appendChild(card);
+    });
+    box.querySelectorAll("button[data-tune]").forEach(b => {
+      b.addEventListener("click", () => {
+        selectedTune = model().tunes.find(t => t.id === b.dataset.tune);
+        box.querySelectorAll("button[data-tune]").forEach(x => { x.classList.remove("primary"); x.textContent = "Select"; });
+        b.classList.add("primary"); b.textContent = "✓ Selected";
+        $("#book-summary").innerHTML = `Booking: <b>${selectedTune.name}</b> for <b>${model().label}</b> — $${selectedTune.price.toLocaleString()}. A deposit holds your appointment and comes off the final price.`;
+        $("#book-card").scrollIntoView({ behavior:"smooth", block:"nearest" });
+      });
+    });
+  }
+
+  /* ---------- Booking (request only — no payment on this page) ---------- */
+  function show(banner, msg){ banner.className = "banner ok show"; banner.textContent = msg; }
+
+  function mailtoFallback(req){
+    const subject = `Booking request — ${req.tune} (${req.model})`;
+    const body =
+      `New booking request from the website:\n\n` +
+      `Name:          ${req.name}\n` +
+      `Contact:       ${req.contact}\n` +
+      `Vehicle:       ${req.model}\n` +
+      `Package:       ${req.tune}  ($${req.price.toLocaleString()})\n` +
+      `Preferred day: ${req.when}\n` +
+      `Notes:         ${req.notes || "—"}\n`;
+    window.location.href = `mailto:${CONFIG.shopEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  }
+
+  const bookBtn = $("#book");
+  bookBtn.addEventListener("click", async () => {
+    const name = $("#b-name").value.trim(), contact = $("#b-phone").value.trim();
+    const banner = $("#book-banner");
+    if(!selectedTune){ show(banner, "Select a package above first."); return; }
+    if(!name || !contact){ show(banner, "Add your name and a way to reach you."); return; }
+    const req = {
+      name, contact, when: $("#b-when").value || "flexible", notes: $("#b-notes").value.trim(),
+      make, model: model().label, tune: selectedTune.name, price: selectedTune.price, ts: Date.now()
+    };
+    // keep a local copy either way, so a request is never silently lost
+    const all = store.get("jperf.requests", []); all.unshift(req); store.set("jperf.requests", all.slice(0,50));
+
+    if(CONFIG.formEndpoint){
+      bookBtn.disabled = true; show(banner, "Sending your request…");
+      try {
+        const res = await fetch(CONFIG.formEndpoint, {
+          method:"POST", headers:{ "Accept":"application/json", "Content-Type":"application/json" },
+          body: JSON.stringify({
+            name, contact, vehicle:req.model, package:req.tune, price:req.price,
+            preferred_day:req.when, notes:req.notes,
+            _subject:`Booking request — ${req.tune} (${req.model})`
+          })
+        });
+        if(!res.ok) throw new Error("HTTP "+res.status);
+        show(banner, `✓ Request sent, ${name}. We'll confirm your ${selectedTune.name} slot and send a deposit link.`);
+      } catch(e){
+        show(banner, "Couldn't send automatically — opening your email app as a backup.");
+        mailtoFallback(req);
+      } finally { bookBtn.disabled = false; }
+    } else {
+      mailtoFallback(req);
+      show(banner, `✓ Opening a pre-filled email to send your ${selectedTune.name} request. Hit send and we'll confirm your slot.`);
+    }
+  });
+
+  /* ---------- Init ---------- */
+  fillModels(); render();
+
+  // Discreet setup reminder for the owner — vanishes once bookings are configured.
+  if(!CONFIG.formEndpoint && CONFIG.shopEmail === "bookings@example.com"){
+    const note = $("#book-config-note");
+    if(note){ note.innerHTML = ' <b style="color:var(--warn)">⚙︎ Setup:</b> set <code>formEndpoint</code> or <code>shopEmail</code> in <code>index.html</code> so requests reach you.'; }
+  }
+})();
+</script>
+</body>
+</html>

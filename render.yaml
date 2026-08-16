@@ -1,16 +1,18 @@
-# Render blueprint — deploy Cardinal Books from this repo with no server to manage.
+# Render blueprint — deploy this repo's services with no server to manage.
 #
 # One-time setup at https://render.com :
 #   1. New +  ->  Blueprint  ->  connect this GitHub repo  ->  Apply.
-#   2. When prompted, set BOOKS_PASSWORD to a strong password (BOOKS_USER is
+#   2. Render provisions every service below in one pass. For Cardinal Books,
+#      when prompted, set BOOKS_PASSWORD to a strong password (BOOKS_USER is
 #      "admin" by default; change it here if you like).
-#   3. Render builds the Docker image, attaches a 1 GB disk for the books data,
-#      and gives you an https://cardinal-books-*.onrender.com URL.
-#   4. (Optional) Add a custom domain like books.blueridgepressllc.com in the
-#      service's Settings -> Custom Domains, then point a DNS CNAME at Render.
+#   3. Each service gets its own https://<name>-*.onrender.com URL.
+#   4. (Optional) Add a custom domain per service in Settings -> Custom Domains,
+#      then point a DNS CNAME at Render.
 #
-# HTTPS is automatic. The app is password-gated (BOOKS_USER / BOOKS_PASSWORD), so
-# only you can open it. Data persists on the disk across deploys and restarts.
+# HTTPS is automatic on every service. Cardinal Books (BOOKS_USER /
+# BOOKS_PASSWORD) and Blue Ridge Tax (TAXFILE_USER / TAXFILE_PASSWORD) are
+# password-gated and persist data on disks across deploys and restarts;
+# Cardinal Care Bridge is a public static site with no login.
 
 services:
   - type: web
@@ -35,4 +37,86 @@ services:
       - key: BOOKS_USER
         value: admin
       - key: BOOKS_PASSWORD
+        sync: false            # Render prompts you to set this on first deploy
+
+  # Cardinal Care Bridge — the placement-business landing page (cardinal-care-bridge/).
+  # A static site: no build step, no server, no disk, and free on Render (no `plan`
+  # needed). Same one-time setup as above (Blueprint -> connect repo -> Apply) gives
+  # you an https://cardinal-care-bridge-*.onrender.com URL; add a custom domain like
+  # www.cardinalcarebridge.com the same way, in Settings -> Custom Domains.
+  #
+  # Before pointing real traffic at it: replace the placeholder email
+  # (hello@cardinalcarebridge.example) and phone number in cardinal-care-bridge/index.html
+  # with real contact details — see that folder's README for the full launch checklist.
+  - type: web
+    name: cardinal-care-bridge
+    runtime: static
+    branch: main
+    staticPublishPath: ./cardinal-care-bridge
+    autoDeploy: true
+
+  # Memory Care Music Program demo — an interactive, client-side walkthrough of
+  # the program that runs on the Sing Along app (singalong/PROGRAM.md): sample
+  # residents, the public-domain song kit with lyrics, the weekly playlists, a
+  # working sing-along prompter, and live engagement insights. Static and free,
+  # like Cardinal Care Bridge; sample data only, nothing is stored.
+  - type: web
+    name: music-program-demo
+    runtime: static
+    branch: main
+    staticPublishPath: ./singalong/demo
+    autoDeploy: true
+
+  # Blue Ridge Tax — the TaxFile app (taxfile/): guided federal tax estimator
+  # (2025 + 2026 projection) with a live refund tracker, scope screening, user
+  # accounts, and a Stripe-ready Pro tier (planning scenarios). No SSNs are
+  # collected. Password-gated (TAXFILE_USER / TAXFILE_PASSWORD — set the
+  # password when Render prompts). Data persists in SQLite on the mounted
+  # disk. To enable real billing, add STRIPE_SECRET_KEY, STRIPE_PRICE_ID,
+  # STRIPE_WEBHOOK_SECRET, and PUBLIC_BASE_URL in the service's environment;
+  # until then upgrades run in instant dev mode.
+  - type: web
+    name: blue-ridge-tax
+    runtime: docker
+    branch: main
+    plan: starter            # a persistent disk requires a paid instance
+    dockerfilePath: ./deploy/Dockerfile
+    dockerContext: .
+    dockerCommand: node taxfile/src/index.ts
+    healthCheckPath: /health
+    autoDeploy: true
+    disk:
+      name: tax-data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: BRAND_NAME
+        value: Blue Ridge Tax
+      - key: TAXFILE_DB
+        value: /data/taxfile.db
+      - key: TAXFILE_USER
+        value: admin
+      - key: TAXFILE_PASSWORD
+        sync: false            # Render prompts you to set this on first deploy
+
+  # Cardinal Chat — self-hosted ChatGPT alternative (chat/), powered by the
+  # Claude API. Password-gated (CHAT_USER / CHAT_PASSWORD — set the password
+  # when Render prompts; the app spends your Anthropic API budget, so never run
+  # it public-facing without the gate). ANTHROPIC_API_KEY comes from
+  # https://platform.claude.com — Render prompts for it on first deploy.
+  # Conversations live in each user's browser, so no disk is needed.
+  - type: web
+    name: cardinal-chat
+    runtime: docker
+    branch: main
+    dockerfilePath: ./deploy/Dockerfile.chat
+    dockerContext: .
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: ANTHROPIC_API_KEY
+        sync: false            # Render prompts you to set this on first deploy
+      - key: CHAT_USER
+        value: admin
+      - key: CHAT_PASSWORD
         sync: false            # Render prompts you to set this on first deploy
