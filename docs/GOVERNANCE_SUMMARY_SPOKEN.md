@@ -1,4 +1,4 @@
-# Cardinals Promise — Governance and Money. Spoken Summary.
+# CP17 — Governance and Money. Spoken Summary.
 
 *A plain-language version of the governance and founder economics analysis, written to be
 listened to rather than read. No tables, no addresses, no file names. About fifteen minutes.*
@@ -89,7 +89,14 @@ who will not lend his name to a coin for free will take a paid engagement to rev
 treasury every quarter, because a professional engagement is not an endorsement and he can
 say so to anyone who asks.
 
-On that, you have a name. Jeff Middleton, a C P A, at around fifteen hundred dollars a year.
+On that, you have a name. Jeff Middleton, a C P A, at around fifteen hundred dollars a
+year. And he is your father in law, which changes what the money buys. Paying a stranger
+works because it turns an endorsement into a job. Family was never declining for
+reputational reasons, so the fee does not buy that, and no fee at any price buys the thing
+the role exists for, which is judgment from outside your family. He is genuinely valuable as
+a paid accountant and as a second signature on the wallet. A family key protects the money
+from theft and lost devices. It does not protect against a decision you both think is fine.
+Say on the ledger that he is family and what he is paid, and never call him independent.
 
 That number is defensible but honestly below market. C P A time usually runs a hundred fifty
 to four hundred dollars an hour, so fifteen hundred buys somewhere between four and ten
@@ -103,13 +110,7 @@ work he half knows already. And crypto treasury work is a niche that accountants
 asked about more and more, and a twenty thousand dollar treasury is a very forgiving place
 to learn it.
 
-Three cautions, and the first one matters most. If he is already your accountant, he is not
-independent. He depends on you financially, which is exactly the conflict the role exists to
-remove. He can be a very good paid reviewer and a very good second signature. Just do not
-call him the independent director in public, because that is the kind of claim somebody
-checks.
-
-Second, do not call his work an audit or a review. Those words mean specific things in
+Two more cautions. Do not call his work an audit or a review. Those words mean specific things in
 accounting and carry requirements he may not be able to meet here. Call it treasury
 oversight.
 
@@ -119,12 +120,16 @@ have rules about it. Ask him to clear both the engagement and the key with his f
 he says yes. If the key is a problem, that is easy. He does the oversight, and the third key
 goes to somebody else.
 
-One last thing on the name. The coin was briefly going to be called Mager Coin, and it is
-back to Cardinals Promise, ticker C A R D. Nothing was deployed under either name, so the
-change cost nothing. Going back also removes three problems at once: no need for anyone's
-written permission, no trademark question about the word Ironman, and none of the baggage
-that comes with naming a coin after a person. And Jeff Mager is eligible for the board again
-now, because the only reason he was ruled out was that the coin carried his name.
+One last thing on the name. The coin has had three names. It started as Cardinals Promise,
+was briefly Mager Coin, and has landed on its final name: C P Coin Platform seventeen,
+ticker C P seventeen. Nothing was ever deployed under the earlier names, so every change was
+free, and after launch none of them would have been, so this one is the last. The new name
+lines everything up. The coin is C P seventeen, the company is C P seventeen L L C, and the
+website is c p seventeen dot org. One name, one site, one address. And C P now stands for
+Coin Platform, not for the book, which finishes the separation between the coin and the
+memoir. The name is plain on purpose. It has no story to defend, and the mission lives in
+the giving and the ledger instead of the branding. Jeff Mager stays eligible for the board,
+because the only thing that ever ruled him out was the coin carrying his name.
 
 When you interview candidates, there is one question that works better than any other. Ask
 them what would make them resign. A good answer comes fast and is specific. If you moved
@@ -167,8 +172,8 @@ because your project is hospice adjacent, which is their exact territory. Cardin
 crowded in financial services.
 
 So my suggestion is C P seventeen L L C for the company, which already matches the web
-address you own, with Cardinals Promise as the public name of the coin. And notice the good side
-effect. With the coin called Cardinals Promise and the company called C P seventeen, the book's
+address you own, with CP Coin Platform 17 as the public name of the coin. And notice the good side
+effect. With the coin called CP Coin Platform 17 and the company called C P seventeen, the book's
 name appears nowhere in the coin's legal identity or its public one. That is a stronger
 version of the separation you formed the company to get.
 

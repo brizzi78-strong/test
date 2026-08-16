@@ -1,4 +1,4 @@
-# CARD Launch Day Checklist
+# CP17 Launch Day Checklist
 
 Companion to [TOKEN_LAUNCH_STRATEGY.md](TOKEN_LAUNCH_STRATEGY.md). Work top to bottom;
 the order is deliberate — each step closes a door before buyers arrive. Don't skip ahead,
@@ -44,7 +44,7 @@ and don't announce anything until every box in sections 1–6 is checked.
 
 ## 3. Treasury transfer
 
-- [ ] Send 50,000,000 CARD to the treasury wallet:
+- [ ] Send 50,000,000 CP17 to the treasury wallet:
       `npx hardhat run scripts/transfer-treasury.ts` (sends exactly 50M; refuses to
       run twice or if any balance is off)
 - [ ] Record the tx hash (this is a proof link)
@@ -52,9 +52,9 @@ and don't announce anything until every box in sections 1–6 is checked.
 
 ## 4. Create the Uniswap pool
 
-- [ ] Create the pool with 200,000,000 CARD + your chosen ETH amount (2–5 ETH)
+- [ ] Create the pool with 200,000,000 CP17 + your chosen ETH amount (2–5 ETH)
 - [ ] Double-check both amounts **before** confirming — the ratio sets the launch price
-      and cannot be un-set (e.g. 3 ETH ÷ 200M = 0.000000015 ETH/CARD starting price)
+      and cannot be un-set (e.g. 3 ETH ÷ 200M = 0.000000015 ETH/CP17 starting price)
 - [ ] Record: pool/pair address, LP token balance received
 - [ ] Do one tiny test swap (~0.01 ETH) from a different wallet to confirm trading works
       both directions
@@ -92,7 +92,7 @@ pool live and trading, LP locked. After this, nothing about the contract can eve
 ## 8. First 48 hours
 
 - [ ] Watch the pair page (DexScreener) for trading activity and price
-- [ ] Watch for copycat/scam tokens using the CARD name; warn in your channels if any appear
+- [ ] Watch for copycat/scam tokens using the CP17 name; warn in your channels if any appear
 - [ ] Don't touch the treasury wallet at all in the first days — early outflows from the
       team wallet are the worst possible signal
 - [ ] Save a permanent record of all addresses, tx hashes, and the lock URL somewhere safe

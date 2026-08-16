@@ -1,4 +1,4 @@
-# cp17.org — the Cardinals Promise coin site
+# cp17.org — the CP Coin Platform 17 coin site
 
 Three static pages. No build step, no dependencies, no JavaScript.
 

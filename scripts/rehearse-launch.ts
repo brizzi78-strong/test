@@ -1,12 +1,12 @@
 /**
- * Full offline dress rehearsal of the CARD launch sequence against a local
+ * Full offline dress rehearsal of the CP17 launch sequence against a local
  * Hardhat node — no external network needed. It deploys a real Uniswap V2
  * stack (WETH9, factory, router from the official build artifacts), then
  * runs the exact steps LAUNCH.md prescribes for mainnet:
  *
- *   1. deploy CardinalsPromise (full 250M supply to the deployer)
- *   2. create + seed the CARD/WETH pool
- *   3. execute a buyer swap (ETH -> CARD) to prove the market works
+ *   1. deploy CP17 (full 250M supply to the deployer)
+ *   2. create + seed the CP17/WETH pool
+ *   3. execute a buyer swap (ETH -> CP17) to prove the market works
  *   4. renounceOwnership to lock the supply
  *
  * Run with: npx hardhat run scripts/rehearse-launch.ts
@@ -25,7 +25,7 @@ function loadBuild(pkg: string, name: string): { abi: Abi; bytecode: Hex } {
   return { abi: json.abi, bytecode: json.bytecode };
 }
 
-const POOL_CARD = parseEther("10000000"); // 10M CARD into the pool
+const POOL_CP17 = parseEther("10000000"); // 10M CP17 into the pool
 const POOL_ETH = parseEther("100"); // paired with 100 ETH
 
 async function main() {
@@ -63,28 +63,28 @@ async function main() {
   ]);
   console.log(`Uniswap V2 deployed — router at ${router.address}`);
 
-  // --- Step 1: deploy CARD --------------------------------------------
-  const token = await viem.deployContract("CardinalsPromise");
-  console.log(`CARD deployed at ${token.address}`);
+  // --- Step 1: deploy CP17 --------------------------------------------
+  const token = await viem.deployContract("CP17");
+  console.log(`CP17 deployed at ${token.address}`);
   const totalSupply = (await token.read.totalSupply()) as bigint;
-  console.log(`  totalSupply: ${formatEther(totalSupply)} CARD`);
+  console.log(`  totalSupply: ${formatEther(totalSupply)} CP17`);
 
-  // --- Step 2: seed the CARD/WETH pool --------------------------------
-  let hash = await token.write.approve([router.address, POOL_CARD]);
+  // --- Step 2: seed the CP17/WETH pool --------------------------------
+  let hash = await token.write.approve([router.address, POOL_CP17]);
   await publicClient.waitForTransactionReceipt({ hash });
 
   const deadline = BigInt(Math.floor(Date.now() / 1000) + 20 * 60);
   hash = await router.write.addLiquidityETH(
-    [token.address, POOL_CARD, POOL_CARD, POOL_ETH, deployer.account.address, deadline],
+    [token.address, POOL_CP17, POOL_CP17, POOL_ETH, deployer.account.address, deadline],
     { value: POOL_ETH },
   );
   await publicClient.waitForTransactionReceipt({ hash });
 
   const pair = await factory.read.getPair([token.address, weth.address]);
-  console.log(`Pool seeded: 10,000,000 CARD + 100 ETH, pair at ${pair}`);
-  console.log(`  implied launch price: 1 ETH = 100,000 CARD`);
+  console.log(`Pool seeded: 10,000,000 CP17 + 100 ETH, pair at ${pair}`);
+  console.log(`  implied launch price: 1 ETH = 100,000 CP17`);
 
-  // --- Step 3: a buyer swaps ETH for CARD ------------------------------
+  // --- Step 3: a buyer swaps ETH for CP17 ------------------------------
   const buyerRouter = getContract({
     address: router.address,
     abi: router.abi,
@@ -96,7 +96,7 @@ async function main() {
   );
   await publicClient.waitForTransactionReceipt({ hash });
   const bought = (await token.read.balanceOf([buyer.account.address])) as bigint;
-  console.log(`Buyer swapped 1 ETH -> ${formatEther(bought)} CARD`);
+  console.log(`Buyer swapped 1 ETH -> ${formatEther(bought)} CP17`);
 
   // --- Step 4: lock the supply -----------------------------------------
   hash = await token.write.renounceOwnership();

@@ -24,8 +24,8 @@ const deployer = deployerWallet.account.address;
 const treasury = treasuryWallet.account.address;
 const pool = poolWallet.account.address; // stands in for the Uniswap pair
 
-const token = await viem.deployContract("CardinalsPromise");
-console.log("deployed CardinalsPromise at", token.address);
+const token = await viem.deployContract("CP17");
+console.log("deployed CP17 at", token.address);
 
 // Fresh deploy → stage 1, no problems
 let state = await readState(token, deployer, treasury, pool);

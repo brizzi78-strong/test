@@ -1,6 +1,6 @@
 // PRACTICE ONLY — Sepolia dry run, step 4 (simulated pool).
 //
-// Sends the remaining 200,000,000 CARD from the deployer to the practice
+// Sends the remaining 200,000,000 CP17 from the deployer to the practice
 // "pool" wallet named in launch.json, so the balances look like a funded
 // Uniswap pool to launch-check and renounce. On the real launch day you do
 // NOT run this — you create an actual Uniswap pool instead.
@@ -22,7 +22,7 @@ if (config.network === "mainnet") {
 const { viem } = await network.create(config.network);
 const [wallet] = await viem.getWalletClients();
 const deployer = wallet.account.address;
-const token = await viem.getContractAt("CardinalsPromise", config.token);
+const token = await viem.getContractAt("CP17", config.token);
 const publicClient = await viem.getPublicClient();
 
 console.log(`network:  ${config.network} (practice)`);

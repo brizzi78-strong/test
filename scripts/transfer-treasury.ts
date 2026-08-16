@@ -1,4 +1,4 @@
-// Checklist step 3: send exactly 50,000,000 CARD (20%) from the deployer to
+// Checklist step 3: send exactly 50,000,000 CP17 (20%) from the deployer to
 // the treasury wallet. Refuses to run if anything has already moved, so it
 // cannot double-send.
 //
@@ -15,7 +15,7 @@ const { viem } = await network.create(config.network);
 
 const [wallet] = await viem.getWalletClients();
 const deployer = wallet.account.address;
-const token = await viem.getContractAt("CardinalsPromise", config.token);
+const token = await viem.getContractAt("CP17", config.token);
 const publicClient = await viem.getPublicClient();
 
 console.log(`network:  ${config.network}`);

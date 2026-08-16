@@ -1,8 +1,8 @@
 {
-  "name": "Cardinals Promise",
-  "symbol": "CARD",
+  "name": "CP Coin Platform 17",
+  "symbol": "CP17",
   "decimals": 18,
-  "description": "Cardinals Promise (CARD) is a fixed-cap ERC-20 token on Ethereum. Maximum supply is hard-capped on-chain at 250,000,000 CARD; the contract has no fees, hooks, blocklists, or pausing.",
+  "description": "CP Coin Platform 17 (CP17) is a fixed-cap ERC-20 token on Ethereum. Maximum supply is hard-capped on-chain at 250,000,000 CP17; the contract has no fees, hooks, blocklists, or pausing.",
   "totalSupplyCap": "250000000",
   "logo": "assets/logo.svg",
   "contract": {
