@@ -10,6 +10,11 @@ in this repository. The prior version of this plan solved trust and ignored dema
 scoring of that version ([48/100, with the missing points enumerated](crypto-startups-thesis/10-application.md))
 drives every change below.
 
+**Allocation update:** supply is now allocated 100M released / 100M treasury / 50M vesting reserve.
+The full argument for that design — and the timelock/vesting architecture that makes 60% retained
+supply credible — is in [`CARD-DISSERTATION.md`](CARD-DISSERTATION.md), which governs where the two
+documents differ.
+
 ## Launch Gate — the demand test (new, and it comes first)
 
 The study's central empirical finding: the modal dead crypto project of 2025–26 was
@@ -35,8 +40,9 @@ study found no-token outcomes (Bridge, Privy) were the sector's best risk-adjust
 |---|---|---|
 | Launch condition | **Demand gate above must pass** | Indifference, not rugging, is what kills small tokens |
 | Supply at launch | Mint all 250M, then **renounce ownership immediately** | "Nobody can ever print more" is the single strongest trust signal a small token can have |
-| Into the Uniswap pool | **200M CARD (80%)** | Screeners flag deployer-heavy tokens as rug risks |
-| Kept back | 50M (20%) in a **multisig** treasury, publicly announced | Any more looks extractive; the multisig is mandatory, not optional (see Treasury) |
+| Released | **100M (40%)** — 80–90M into the locked Uniswap pool, remainder only to published product/partner distribution | A thin pool against a large loose float invites the first sellers to consume all liquidity |
+| Treasury | **100M (40%)** in a **multisig + timelock**, publicly announced | 60% retained supply is only credible under machine-enforced schedule — see CARD-DISSERTATION.md §2 |
+| Reserve | **50M (20%)** in an **on-chain vesting contract**, 12-month cliff then scheduled release, no acceleration path | The tranche most likely to read as "team dump waiting"; the constraint removes the capacity, not just the intent |
 | ETH into the pool | **2–5 ETH** to start | Small enough not to risk savings on an experiment |
 | Recovery reserve | **Additional ETH held outside the pool**, amount and policy published | Buffer sized to the worst outcome (pool drained), not the average one |
 | LP tokens | **Lock for 12 months** (Team Finance or UNCX) | The pool being yankable is the #1 thing scanners check |
@@ -47,8 +53,9 @@ study found no-token outcomes (Bridge, Privy) were the sector's best risk-adjust
 - **Name / Symbol:** CARD
 - **Total supply:** 250,000,000 (fixed — minted once at deployment, no mint function reachable after renounce)
 - **Distribution:**
-  - 200,000,000 (80%) → Uniswap liquidity pool
-  - 50,000,000 (20%) → treasury multisig, publicly disclosed
+  - 100,000,000 (40%) → released: 80–90M to the Uniswap liquidity pool, remainder only to published product/partner distribution
+  - 100,000,000 (40%) → treasury multisig with timelocked spends, publicly disclosed
+  - 50,000,000 (20%) → vesting reserve contract, 12-month cliff, published schedule, no early-release function
 - **Ownership:** renounced immediately after setup is complete
 
 ## Key Ceremony (new — mandatory)
@@ -82,20 +89,25 @@ Order matters — several of these steps are only trustworthy if done in the rig
    the second thing scanners flag after unlocked liquidity.
 3. **Verify the source code** on Etherscan immediately. Unverified contracts are treated as hostile
    by default.
-4. **Transfer 50M to the treasury multisig.** Do this *before* renouncing and *before* the pool
-   exists, so the transfer is visibly a setup step rather than a post-launch extraction. Address
-   verified per the Key Ceremony.
-5. **Create the Uniswap pool** with 200M CARD + 2–5 ETH. The ETH amount sets the launch price.
-6. **Lock the LP tokens for 12 months** via Team Finance or UNCX. Save the lock URL — it's the first
-   link to publish. Separate session from step 7.
-7. **Renounce ownership** of the token contract. Last among the contract steps, and it must happen
+4. **Deploy the vesting contract and fund it with 50M.** Use a standard audited implementation
+   (OpenZeppelin vesting wallet) — 12-month cliff, published schedule, no early-release function.
+   Do this *before* the pool exists, so it is visibly a setup step. Address verified per the Key
+   Ceremony.
+5. **Transfer 100M to the treasury multisig** (Safe with a standard timelock module on spends).
+   Same visibility logic, same address verification.
+6. **Create the Uniswap pool** with 80–90M CARD + 2–5 ETH from the released tranche. The ETH amount
+   sets the launch price.
+7. **Lock the LP tokens for 12 months** via Team Finance or UNCX. Save the lock URL — it's the first
+   link to publish. Separate session from step 8.
+8. **Renounce ownership** of the token contract. Last among the contract steps, and it must happen
    *before* announcing.
-8. **Announce.** See Disclosure below for what the announcement must contain.
+9. **Announce.** See Disclosure below for what the announcement must contain.
 
 ## Treasury Wallet Policy
 
-The 20% held back is the only part of this setup that requires ongoing trust after the renounce —
-it is the *entire* remaining trust surface — so it is constrained accordingly:
+The retained 60% (treasury plus reserve) is the part of this setup that requires ongoing trust
+after the renounce — it is the *entire* remaining trust surface, and at this allocation it is
+three times the size it was in the prior plan — so it is constrained accordingly:
 
 - **Safe multisig, mandatory.** Signers on physically separate devices. An EOA treasury is not
   acceptable in this plan.
@@ -103,9 +115,13 @@ it is the *entire* remaining trust surface — so it is constrained accordingly:
 - State what it's for (development, listings, liquidity top-ups) before launch, not after.
 - Any spend from it is announced before or as it happens. Silent outflows from a known team wallet
   read as a slow rug.
-- Optional strengthener on top of the multisig: a timelock, so every spend is visible before it
-  executes. Discretion that is enumerated, delayed, and announced is a different object from
-  discretion that merely exists.
+- **Timelock on spends, mandatory at this allocation** (48–72h queue, visible on-chain before
+  execution). At 40% of supply, "trust the signers" is not a sufficient answer; every outflow must
+  be visible before it can move. Discretion that is enumerated, delayed, and announced is a
+  different object from discretion that merely exists.
+- The 50M reserve is stricter still: it sits in the vesting contract and *cannot* move before the
+  cliff, by construction. Its schedule and purpose (or an honest "undecided, cannot move before
+  [date]") are published at launch.
 
 ## Recovery Reserve (new)
 
@@ -124,8 +140,12 @@ The announcement leads with the verifiable claims and their proof links:
 
 - Ownership renounced → link to the renounce transaction
 - Liquidity locked 12 months → link to the Team Finance/UNCX lock
-- Treasury is X (20%), multisig → link to the labeled Safe
+- Treasury is 100M (40%), multisig + timelocked spends → link to the labeled Safe and timelock
+- Reserve is 50M (20%), vesting with a 12-month cliff → link to the contract and schedule
 - Recovery reserve is Y ETH → link to the address and the policy
+
+The honest one-line summary these artifacts support, and the announcement should say it: **not one
+CARD token is movable by any single person's decision.**
 
 And then it states the weakest item plainly, because a disclosed weakness beats a discovered one
 (the study's best operators publish the number that most damages them, every quarter):
@@ -149,7 +169,8 @@ Silence is not a neutral position. Before launch:
 - **Launching on trust mechanics alone** — the demand gate exists because scanner-clean tokens with
   no reason to be bought are the modal dead project of 2025–26.
 - **Mintable supply** — renounced, so impossible.
-- **Deployer holding a large share** — 80% is in the pool.
+- **Retained supply under anyone's discretion** — the 60% held back is entirely under multisig,
+  timelock, and vesting contracts; the deployer key holds nothing after launch.
 - **Yankable liquidity** — LP locked 12 months.
 - **Hidden team allocation** — the 20% is announced, labeled, and multisig.
 - **Single-key custody of anything that persists** — the deployer key retires at renounce; the
