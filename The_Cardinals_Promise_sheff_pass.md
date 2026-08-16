@@ -627,7 +627,7 @@ Junior year I entered regions as the seventh seed and made the finals.
 
 Senior year I went thirty-one and zero at one point on my way to county champion. Chris and I wrestled together by then.
 
-I graduated eighty-one and eighteen, one of the highest win totals in Ramsey wrestling history. But the victories were never only about wrestling. Somewhere along the way I had learned that success was how I gained acceptance. If I kept winning, people would value me. If I stopped, I feared they might not.
+But the victories were never only about wrestling. Somewhere along the way I had learned that success was how I gained acceptance. If I kept winning, people would value me. If I stopped, I feared they might not.
 
 For years I thought wrestling was making me into someone. Looking back, I realize it was also teaching me something dangerous. I was beginning to believe that winning was who I was.
 
