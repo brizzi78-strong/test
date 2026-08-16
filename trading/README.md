@@ -15,7 +15,7 @@ single-page app built on top of this engine.
 | Entity | Notes |
 |---|---|
 | **Account** | Cash / buying power in cents. Starts with $10,000 (paper money) unless `startingCashCents` is given. |
-| **Instrument** | A small fixed universe (`GET /instruments`) — enough to browse and demo with. |
+| **Instrument** | A small fixed universe (`GET /instruments`): stocks, an ETF, and **crypto pairs** (`BTC-USD`, `ETH-USD`, `SOL-USD`, `DOGE-USD`) with a `kind` field. Crypto uses Yahoo's pair-symbol form, so `MARKET_DATA=yahoo` serves live 24/7 crypto prices with no extra provider code. |
 | **Order** | `market` (fills immediately at the current quote) or `limit` (rests `open` until the feed crosses `limitPriceCents`). Quantities are **fractional shares** (6 decimal places); a market order can instead be placed in **dollars** (`amountCents`) and the engine computes the fractional quantity. |
 | **Position** | Derived, not stored — replayed from filled orders using average-cost basis (`src/domain/portfolioMath.ts`). |
 | **Watchlist** | Per-account list of symbols to track. |

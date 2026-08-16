@@ -35,8 +35,9 @@ Yahoo Finance prices (no API key needed).
   (1D/1W/1M/3M) — your equity history replayed from fills and valued at
   historical prices — plus buying power, market value, unrealized P&L, and a
   positions table.
-- **Browse** — today's gainers and losers up top, then every instrument with a
-  live quote; click any card or row to open its detail/trade drawer.
+- **Browse** — today's gainers and losers up top, then Stocks & ETFs and a
+  **Crypto** section (trades 24/7); click any card or row to open its
+  detail/trade drawer.
 - **Watchlist** — star any stock to track it; toggle again to remove it.
 - **Orders** — full order history with status; cancel a resting limit order.
 - **Trade drawer** — quote, a chart with 1D/1W/1M/3M ranges (scrub it with a

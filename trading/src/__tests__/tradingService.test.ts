@@ -346,6 +346,29 @@ test('portfolio history is clipped to the account age', async () => {
   assert.equal(history[history.length - 1].atMs, clock.getTime());
 });
 
+test('crypto trades like everything else: dollar-based, fractional, pair symbols', async () => {
+  const svc = newService();
+  const account = svc.createAccount({ name: 'Rob' });
+
+  const btc = svc.listInstruments().find((i) => i.symbol === 'BTC-USD');
+  assert.equal(btc?.kind, 'crypto');
+
+  const order = await svc.placeOrder({
+    accountId: account.id,
+    symbol: 'btc-usd', // case-insensitive like every other symbol
+    side: 'buy',
+    type: 'market',
+    amountCents: 25_000, // $250 of Bitcoin
+  });
+  assert.equal(order.status, 'filled');
+  assert.equal(order.symbol, 'BTC-USD');
+  assert.ok(order.quantity > 0 && order.quantity < 1, `fractional coin, got ${order.quantity}`);
+
+  const portfolio = await svc.getPortfolio(account.id);
+  assert.equal(portfolio.positions[0].symbol, 'BTC-USD');
+  assert.equal(portfolio.positions[0].name, 'Bitcoin');
+});
+
 test('listInstruments and listQuotes cover the full mock universe', async () => {
   const svc = newService();
   assert.equal(svc.listInstruments().length, INSTRUMENTS.length);

@@ -430,9 +430,17 @@ function vBrowse(){
   var movers="";
   if(gainers.length)movers+='<div class="movehd">Today\u2019s gainers</div><div class="movers">'+gainers.map(moverCard).join("")+'</div>';
   if(losers.length)movers+='<div class="movehd">Today\u2019s losers</div><div class="movers">'+losers.map(moverCard).join("")+'</div>';
-  $("#main").innerHTML=head("Browse",list.length+" stocks in the mock market")+movers
-    +'<div class="card">'+(list.length?'<div style="overflow-x:auto"><table><thead><tr><th>Stock</th><th class="r">Price</th><th class="r">Today</th><th></th></tr></thead><tbody>'
-      +list.map(function(q){return quoteRow(q);}).join("")+'</tbody></table></div>':'<div class="empty">No instruments.</div>')+'</div>';
+  function section(title,note,rows){
+    return '<div class="card"><div class="hd"><h2>'+title+'</h2><span class="note">'+note+'</span></div>'
+      +(rows.length?'<div style="overflow-x:auto"><table><thead><tr><th>Name</th><th class="r">Price</th><th class="r">Today</th><th></th></tr></thead><tbody>'
+      +rows.map(function(q){return quoteRow(q);}).join("")+'</tbody></table></div>':'<div class="empty">Nothing here.</div>')+'</div>';
+  }
+  var isCrypto=function(q){var i=instFor(q.symbol);return i&&i.kind==="crypto";};
+  var equities=list.filter(function(q){return !isCrypto(q);});
+  var crypto=list.filter(isCrypto);
+  $("#main").innerHTML=head("Browse",list.length+" assets in the mock market")+movers
+    +section("Stocks &amp; ETFs",equities.length+" listed",equities)
+    +section("Crypto","trades 24/7",crypto);
 }
 
 function vWatchlist(){
@@ -579,6 +587,7 @@ function attachScrub(boxId,points,onPoint,onLeave){
   box.addEventListener("touchcancel",end);
 }
 
+function instFor(sym){for(var i=0;i<instruments.length;i++)if(instruments[i].symbol===sym)return instruments[i];return null;}
 function positionFor(sym){
   var list=portfolio?portfolio.positions:[];
   for(var i=0;i<list.length;i++)if(list[i].symbol===sym)return list[i];
@@ -631,7 +640,8 @@ function openStockDrawer(sym){
   var q=quotes[sym]||{};
   $("#dtitle").textContent=sym;
   $("#dbody").innerHTML='<div class="quotebox"><div><div class="p num">'+usd(q.priceCents)+'</div>'
-    +'<div class="c num '+cls(q.changeBps)+'">'+(q.changeCents>=0?"+":"")+usd(q.changeCents)+' ('+pct(q.changeBps)+') today</div></div>'
+    +'<div class="c num '+cls(q.changeBps)+'">'+(q.changeCents>=0?"+":"")+usd(q.changeCents)+' ('+pct(q.changeBps)+') today</div>'
+    +(function(){var inst=instFor(sym);return inst?'<div class="dim" style="margin-top:3px">'+esc(inst.name)+(inst.kind==="crypto"?" \u00b7 Crypto \u00b7 trades 24/7":"")+'</div>':"";})()+'</div>'
     +starBtn(sym)+'</div>'
     +'<div class="chartbox" id="d_chart"><div class="dim" style="padding:8px 0">Loading chart&hellip;</div></div>'
     +'<div class="ranges"><div class="seg chips" id="d_ranges">'+Object.keys(RANGES).map(function(r){return '<button data-r="'+r+'" aria-pressed="'+(r===chartRange)+'">'+r+'</button>';}).join("")+'</div></div>'

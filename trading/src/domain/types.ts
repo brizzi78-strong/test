@@ -11,27 +11,39 @@
  * under Node's type stripping with no build step.
  */
 
+export type InstrumentKind = 'stock' | 'etf' | 'crypto';
+
 export interface Instrument {
   symbol: string;
   name: string;
+  kind: InstrumentKind;
   /** Reference price the mock feed wanders around, in whole cents. */
   basePriceCents: number;
   /** How far the feed wanders from `basePriceCents`, in basis points of it. */
   volatilityBps: number;
 }
 
-/** A small fixed universe of tradable names — enough to browse, search, and demo with. */
+/**
+ * A small fixed universe of tradable names — enough to browse, search, and
+ * demo with. Crypto symbols use the `BTC-USD` pair form, which is also what
+ * Yahoo's chart API expects — so `MARKET_DATA=yahoo` serves live crypto
+ * prices with no extra provider code, 24/7.
+ */
 export const INSTRUMENTS: readonly Instrument[] = [
-  { symbol: 'AAPL', name: 'Apple Inc.', basePriceCents: 22_950, volatilityBps: 250 },
-  { symbol: 'MSFT', name: 'Microsoft Corporation', basePriceCents: 41_800, volatilityBps: 220 },
-  { symbol: 'GOOGL', name: 'Alphabet Inc.', basePriceCents: 17_120, volatilityBps: 260 },
-  { symbol: 'AMZN', name: 'Amazon.com, Inc.', basePriceCents: 18_640, volatilityBps: 280 },
-  { symbol: 'NVDA', name: 'NVIDIA Corporation', basePriceCents: 13_205, volatilityBps: 420 },
-  { symbol: 'META', name: 'Meta Platforms, Inc.', basePriceCents: 56_310, volatilityBps: 320 },
-  { symbol: 'TSLA', name: 'Tesla, Inc.', basePriceCents: 24_180, volatilityBps: 520 },
-  { symbol: 'NFLX', name: 'Netflix, Inc.', basePriceCents: 91_240, volatilityBps: 300 },
-  { symbol: 'DIS', name: 'The Walt Disney Company', basePriceCents: 11_050, volatilityBps: 240 },
-  { symbol: 'SPY', name: 'SPDR S&P 500 ETF Trust', basePriceCents: 57_430, volatilityBps: 130 },
+  { symbol: 'AAPL', name: 'Apple Inc.', kind: 'stock', basePriceCents: 22_950, volatilityBps: 250 },
+  { symbol: 'MSFT', name: 'Microsoft Corporation', kind: 'stock', basePriceCents: 41_800, volatilityBps: 220 },
+  { symbol: 'GOOGL', name: 'Alphabet Inc.', kind: 'stock', basePriceCents: 17_120, volatilityBps: 260 },
+  { symbol: 'AMZN', name: 'Amazon.com, Inc.', kind: 'stock', basePriceCents: 18_640, volatilityBps: 280 },
+  { symbol: 'NVDA', name: 'NVIDIA Corporation', kind: 'stock', basePriceCents: 13_205, volatilityBps: 420 },
+  { symbol: 'META', name: 'Meta Platforms, Inc.', kind: 'stock', basePriceCents: 56_310, volatilityBps: 320 },
+  { symbol: 'TSLA', name: 'Tesla, Inc.', kind: 'stock', basePriceCents: 24_180, volatilityBps: 520 },
+  { symbol: 'NFLX', name: 'Netflix, Inc.', kind: 'stock', basePriceCents: 91_240, volatilityBps: 300 },
+  { symbol: 'DIS', name: 'The Walt Disney Company', kind: 'stock', basePriceCents: 11_050, volatilityBps: 240 },
+  { symbol: 'SPY', name: 'SPDR S&P 500 ETF Trust', kind: 'etf', basePriceCents: 57_430, volatilityBps: 130 },
+  { symbol: 'BTC-USD', name: 'Bitcoin', kind: 'crypto', basePriceCents: 10_125_000, volatilityBps: 550 },
+  { symbol: 'ETH-USD', name: 'Ethereum', kind: 'crypto', basePriceCents: 342_000, volatilityBps: 700 },
+  { symbol: 'SOL-USD', name: 'Solana', kind: 'crypto', basePriceCents: 17_850, volatilityBps: 950 },
+  { symbol: 'DOGE-USD', name: 'Dogecoin', kind: 'crypto', basePriceCents: 21, volatilityBps: 1200 },
 ] as const;
 
 export type OrderSide = 'buy' | 'sell';
