@@ -171,14 +171,20 @@ trust mechanism already adopted, so the options need stating precisely.
   alias does not slow a subpoena by a day — but it *will* be characterized as concealment
   by anyone building a case or a headline.
 
-**The collision this design has that other pseudonymous projects do not:** the coin page is
-dedicated to Lou Brizzi and lists his church by name. A pseudonym standing in front of an
-identifiable family story is a costume, not anonymity — pierced in one search by anyone who
-cares, and the piercing itself becomes the story: "founder of accountability coin hid his
-name." Worse, the conduct-based trust structure adopted in Part II depends on a real
-reputation being at stake: the unlocked 100M was survivable *because* a named founder's
+**Decision taken alongside this: the coin is no longer connected to Lou or the family at
+all.** The dedication, the family story, and the named family charities have been removed
+from every coin page, completing the de-personalization the rename began. That removes the
+collision that made an alias self-defeating — there is no longer an identifiable family
+story on the site for a pseudonym to fail in front of, so full pseudonymity (version 2
+below) is now coherent rather than a costume.
+
+What has not changed: the conduct-based trust structure in Part II depends on a real
+reputation being at stake. The unlocked 100M was survivable *because* a named founder's
 conduct backed it. **A pseudonymous founder holding an unlocked 40% against a thin pool is
-the textbook profile of a rug pull**, and scanners and buyers will read it exactly that way.
+the textbook profile of a rug pull**, and scanners and buyers will read it exactly that
+way. De-personalizing the site removes the *contradiction*; it does not remove the *trust
+discount*, and with the family story gone, the founder's conduct is now the only human
+collateral the project has left. Weigh the alias against that.
 
 **The two coherent versions, and the one that is not:**
 
@@ -187,10 +193,11 @@ the textbook profile of a rug pull**, and scanners and buyers will read it exact
    accountant, and the bank all know." Honest, modestly private, costs a real but bounded
    trust discount. If the family dedication stays on the page, expect the connection to be
    made anyway — the pen name then buys distance from casual searches, nothing more.
-2. **Full pseudonymity.** Possible only by also removing the dedication, the family story,
-   and the named family charities from the coin page — the things that connect the coin to
-   you. That guts the mission framing and most of what makes this project different. It is
-   coherent, but it is a different project.
+2. **Full pseudonymity.** Now coherent, since the dedication, family story, and named
+   family charities are gone from the coin pages. The cost is what was removed: the coin
+   no longer carries the mission framing that made it different, and the giving survives
+   only as a committee and a ledger rather than a story. It is a different, plainer
+   project — deliberately.
 3. **Undisclosed alias presented as a real person** — a bio, a face, a history for
    "Chandler Grey" as if he existed. **Do not do this.** It is the one version that is not
    a privacy choice but a misrepresentation, it converts every future dispute into a fraud
