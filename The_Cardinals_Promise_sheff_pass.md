@@ -621,13 +621,7 @@ He was always in the stands. He almost never missed a match in four years of hig
 
 Freshman year I finished two and four. That nineteen-second pin was one of the losses.
 
-Sophomore year I entered districts as the fifth seed, which meant fifth of the eight wrestlers in the bracket. Nobody expected me to place in the top three. I won the tournament, became district champion, and was named Athlete of the Month.
-
-Junior year I entered regions as the seventh seed and made the finals.
-
-Senior year I went thirty-one and zero at one point on my way to county champion. Chris and I wrestled together by then.
-
-But the victories were never only about wrestling. Somewhere along the way I had learned that success was how I gained acceptance. If I kept winning, people would value me. If I stopped, I feared they might not.
+The victories came later, and they were never only about wrestling. Somewhere along the way I had learned that success was how I gained acceptance. If I kept winning, people would value me. If I stopped, I feared they might not.
 
 For years I thought wrestling was making me into someone. Looking back, I realize it was also teaching me something dangerous. I was beginning to believe that winning was who I was.
 
@@ -696,7 +690,7 @@ Dave went on to play in the NFL, then became a missionary in China, and years la
 
 Freshman year I lost more than I won. Early sophomore season I drew the top seed in a tournament, a kid everyone knew would win, the kid I was supposed to be a warm-up for. Something happened I still can't fully explain. I wasn't afraid of him. The fear that had been the ground note of every match since that first pin just wasn't there. What was there was anger, not at him, at the idea that I was supposed to lose. I beat him. Ugly, grinding, the full three periods. But I won it. Afterward Lou didn't say much. A hand on my shoulder. In his language it meant: I always knew this was in you.
 
-I won the District at 119 in 1994. The recognition came fast after that. One afternoon Mr. Molino pulled me out of class, and I walked down the hall sure I was in trouble, running through everything I might have done. Instead he told me I'd been named Athlete of the Month for Ramsey High School. They put my name on the billboard in front of the school for the whole month, where the entire town of Ramsey could read it. They painted it on the wall in the old gym too, and I was the first sophomore they had ever done that for.
+I won the District at 119 in 1994, seeded fifth of the eight in the bracket, expected to place nowhere near the top. The recognition came fast after that. One afternoon Mr. Molino pulled me out of class, and I walked down the hall sure I was in trouble, running through everything I might have done. Instead he told me I'd been named Athlete of the Month for Ramsey High School. They put my name on the billboard in front of the school for the whole month, where the entire town of Ramsey could read it. They painted it on the wall in the old gym too, and I was the first sophomore they had ever done that for.
 
 I couldn't take any of it in. The gap between who everyone suddenly said I was and who I knew myself to be was too wide to cross. The achievement was real. The sense that I had earned it wasn't there, and it wouldn't be for years. I'd feel the same thing later, on MTV with cameras pointed at me, the same quiet question running underneath it all: who am I to be anybody? It would take a long time, and losing nearly everything, before I could stand in a room and believe I belonged in it.
 
