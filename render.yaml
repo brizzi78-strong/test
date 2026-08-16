@@ -117,4 +117,3 @@ services:
         value: admin
       - key: CHAT_PASSWORD
         sync: false            # Render prompts you to set this on first deploy
->>>>>>> origin/main
