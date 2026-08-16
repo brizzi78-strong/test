@@ -72,7 +72,7 @@ awk '
     next
   }
   { print }
-' "$BASE.speechify.full.txt" > "${BASE}_speechify.txt"
+' "$BASE.speechify.full.txt" | sed 's/^\(CHAPTER [0-9]*\) ## /\1. /' > "${BASE}_speechify.txt"
 rm -f "$BASE.speechify.full.txt"
 
 echo "Built: $BASE.epub  $BASE.docx  $BASE.pdf  $BASE.html  ${BASE}_speechify.txt"
