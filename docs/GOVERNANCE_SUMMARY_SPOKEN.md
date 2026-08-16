@@ -120,15 +120,14 @@ have rules about it. Ask him to clear both the engagement and the key with his f
 he says yes. If the key is a problem, that is easy. He does the oversight, and the third key
 goes to somebody else.
 
-One last thing on the name. The coin went through several names — Cardinals Promise, then
-briefly Mager Coin, back again, then C P seventeen, with Brizz Coin and Lubrizzi considered
-along the way — and it has settled where it started, on the ticker. The coin is simply
-called Hope Coin, ticker C A R D. Nothing was ever deployed under any earlier name, so every
-change was free, and after launch none would have been. The naming conversation ends at the
-contract address. The name names nobody and borrows nothing, and the website being the one
-official source of the contract address is what protects buyers from fakes, because a name
-this plain cannot do that job. Jeff Mager stays eligible for the board, because the only
-thing that ever ruled him out was the coin carrying his name.
+One last thing on the name. The coin went through many names — Cardinals Promise, Mager
+Coin, back again, C P seventeen, Brizz and Lubrizzi considered, then simply Card — and it
+has settled on Hope Coin, ticker H O P, dedicated in honor of your wife, who supported you
+through thick and thin. Hope Coin actually existed in this project once before and was set
+aside, so this is a restoration, not an invention. Nothing was ever deployed under any
+earlier name, so every change was free, and after launch none would have been. The naming
+conversation ends at the contract address. And Jeff Mager stays eligible for the board,
+because the only thing that ever ruled him out was the coin carrying his name.
 
 When you interview candidates, there is one question that works better than any other. Ask
 them what would make them resign. A good answer comes fast and is specific. If you moved
