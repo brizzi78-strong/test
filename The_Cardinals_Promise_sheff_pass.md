@@ -315,7 +315,7 @@ While he taught history, he also made me interested in science. Once he took me 
 
 Their dog, Abbey, became my partner at the dinner table; anything on my plate I didn't like somehow found its way to her. After dinner, we'd often play UNO, War, and checkers. Chris took up chess with him, but chess was never mine. UNO was enough.
 
-Grandpa never talked much about his own hard childhood, but it showed in a certain toughness he expected from everyone around him. For a man who taught for a living, he never pushed my mother or her sisters, Terry and Nancey, toward college. The way they tell it, he'd say they were all pretty and would find good husbands. Getting an education wasn't something he expected from them.
+Grandpa never talked much about his own hard childhood, but it showed in a certain toughness he expected from everyone around him.
 
 Then there was my nana, Jan, who could catch you off guard with her gentleness. One afternoon, not long after I'd learned about cowboys and Indians in school, she mentioned she had some American Indian in her.
 
@@ -518,7 +518,7 @@ I had my own version of it in that car coming home from upstate, the quiet after
 
 He didn't connect with me only on the big things. One time I asked for White Castle, and the nearest one was an hour away. He drove me. An hour there for a sack of little burgers, because his kid had a taste for them. When I needed a root canal out at college in Ohio, he drove ten hours to take me to the dentist and ten hours back. A full day of driving, for a dentist's chair. In both pleasure and pain, Dad was there.
 
-And once, it was far bigger than a tournament, a sack of burgers, or a dentist's chair. I was in college in Oxford, Ohio, and I was in a dark place, the kind where I couldn't find my way out, where it had taken everything I had just to admit I needed help. Dad got in the car and drove to Ohio. He came the way he always had, except this time it wasn't for a game. He came because he loved me.
+And once, it was far bigger than a tournament, a sack of burgers, or a dentist's chair. In college in Ohio I went down into something I couldn't explain, and he drove ten hours to sit across a table from me. He came the way he always had, except this time it wasn't for a game. He came because he loved me.
 
 Somewhere on that drive, just the two of us in the car, I said it for the first time.
 
