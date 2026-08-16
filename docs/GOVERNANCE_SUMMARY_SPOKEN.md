@@ -193,8 +193,14 @@ gradually, publicly verifiable. Publish the schedule before launch, not after so
 asks. If you genuinely intend to hold, then a lock takes away nothing at all, and it turns
 your single biggest liability into your second best trust signal.
 
-Now the three percent fee. My recommendation is do not do it. Not on principle. On
-arithmetic.
+Now the trade fee. You first floated three percent; the decision, made and confirmed, is
+two percent — built so that nobody can ever change it. The rate and the treasury address
+are burned into the code, there is no dial and no owner switch, so giving up ownership of
+the contract still happens and the claim that no one can touch the fee is checkable rather
+than promised. The fee flows to the treasury, not to you, and gifts leaving the treasury
+pay no fee at all. Be honest about what it earns: at a couple hundred dollars of trading a
+day, about fifteen hundred a year, in coins. And be honest about the cost: scanner tools
+flag any coin with a transfer fee, and that is simply part of the deal now.
 
 At realistic trading volume for a coin this size, three percent earns somewhere between two
 thousand and eleven thousand dollars a year. To pay yourself even forty thousand, you would

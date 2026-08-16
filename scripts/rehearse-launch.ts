@@ -64,7 +64,7 @@ async function main() {
   console.log(`Uniswap V2 deployed — router at ${router.address}`);
 
   // --- Step 1: deploy HOP --------------------------------------------
-  const token = await viem.deployContract("HopeCoin");
+  const token = await viem.deployContract("HopeCoin", [deployer.account.address]) // rehearsal only: deployer-as-treasury disables the fee path; mainnet passes the Safe;
   console.log(`HOP deployed at ${token.address}`);
   const totalSupply = (await token.read.totalSupply()) as bigint;
   console.log(`  totalSupply: ${formatEther(totalSupply)} HOP`);

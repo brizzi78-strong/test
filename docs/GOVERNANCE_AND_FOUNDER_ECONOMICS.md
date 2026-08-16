@@ -1092,7 +1092,37 @@ The guardrails that keep it defensible:
    value; the book side does not double-count them — the accountant sets this up before
    the first claim.
 
-## Part III — The 3% trade fee
+### Merch — Hope on the front, cp17 on the back
+
+Decided in passing and worth capturing: t-shirts with **Hope** on the front and **cp17**
+on the back. Sold by the LLC for dollars, this is quietly useful beyond the fun of it —
+merch revenue is **non-book revenue**, which under the funding boundary can pay for the
+giving, the CPA, and operating costs. Keep it print-on-demand (no inventory risk), keep
+any token language off the shirt itself, and book the sales as ordinary LLC revenue.
+
+## Part III — The trade fee
+
+### Decision taken and confirmed: a flat 2% fee, immutable, to the treasury
+
+The fee question closed at **2%**, built the only way that preserves the rest of the
+design: **hardcoded rate, hardcoded treasury recipient, no owner functions** — so
+renouncing ownership survives intact, and "no one can change the fee, including us" is a
+checkable claim rather than a promise. Treasury-side transfers are exempt so gifts and the
+book program arrive whole. The contract, tests, invariants, claims file, and both site
+pages were rewritten together so no published sentence is false.
+
+Honest numbers at 2%: $200/day of volume yields about **$1,460/year**; $1,000/day about
+**$7,300/year** — accruing to the treasury *in HOP*, which still converts to dollars only
+through the same thin pool. The fee funds the treasury, not the founder; that distinction
+is what keeps the founder-rake concern below from applying, and counsel still reviews the
+whole mechanism. Known costs, accepted by decision: scanners flag fee-on-transfer tokens,
+trades must route through Uniswap's fee-on-transfer functions, and the pool seed itself
+pays the 2% skim unless seeded from the treasury.
+
+The original analysis of the 3% proposal follows, kept for the record — its arithmetic is
+why the fee is 2%-to-treasury-immutable rather than 3%-to-founder-adjustable.
+
+
 
 **Recommendation: don't.** Not on moral grounds — on arithmetic.
 

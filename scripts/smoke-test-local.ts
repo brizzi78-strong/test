@@ -24,7 +24,7 @@ const deployer = deployerWallet.account.address;
 const treasury = treasuryWallet.account.address;
 const pool = poolWallet.account.address; // stands in for the Uniswap pair
 
-const token = await viem.deployContract("HopeCoin");
+const token = await viem.deployContract("HopeCoin", [treasury]);
 console.log("deployed HOP at", token.address);
 
 // Fresh deploy → stage 1, no problems
