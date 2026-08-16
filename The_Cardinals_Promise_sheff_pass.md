@@ -420,7 +420,11 @@ Some dads spend their weekends chasing hobbies like golf, manicuring their lawns
 
 Lou and my mother decided early that Chris and I would be raised in church. It wasn't up for discussion. Sunday mornings, confirmation, and at thirteen I chose God and accepted Him into my heart. That part wasn't handed to me by the adults around me. It was mine — the first real decision I ever made for myself besides taking Lou as my middle name. My decision to follow Christ was real. I meant it. I'd lose the thread of it for a long time, the drinking years, California, the stretch when I was too busy performing life to remember what mine was built on. I left my faith, but it waited for me to return.
 
-We moved to Ramsey when I was in sixth grade. Bigger house, new school, a town where the kids had known each other since before I showed up, and I came in as the new boy with dark olive skin and features that didn't match the rest of Bergen County. But I had Lou, who understood that a boy who comes home quiet in the wrong way doesn't need to be interrogated, he needs someone there. He couldn't fix school for me. He was just home when I got there, and that turned out to be enough.
+We moved to Ramsey when I was in sixth grade. Bigger house, new school, a town where the kids had known each other since before I showed up, and I came in as the new boy with dark olive skin and features that didn't match the rest of Bergen County.
+
+At lunch I sat at the end of the table, in the back corner, trying to be invisible and still wanting to be let in. It wasn't long before they started in on me.
+
+But I had Lou, who understood that a boy who comes home quiet in the wrong way doesn't need to be interrogated, he needs someone there. He couldn't fix school for me. He was just home when I got there, and that turned out to be enough.
 
 The school paired me with a buddy to show me around those first weeks, a kid everybody called Whitey. We didn't get close then — that year I was mostly on my own. But by high school, Whitey had become one of my best friends, and all these years later, he still is. When I got into Miami of Ohio, part of me hoped Whitey would land there too, an easy way to carry the friendship forward. He chose Bates College, up in Maine. I'd wanted a next chapter; what we got was a fork in the road.
 
