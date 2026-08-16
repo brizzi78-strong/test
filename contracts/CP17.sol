@@ -4,7 +4,7 @@ pragma solidity ^0.8.24;
 import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 
-/// @title CP Coin Platform 17 (CP17)
+/// @title Card Platform 17 (CP17)
 /// @notice Fixed-supply ERC-20. The entire 250M supply is minted once at
 ///         deployment; there is no mint function, no transfer tax, no
 ///         blacklist, and no pausing. See TOKEN_LAUNCH_STRATEGY.md and
@@ -16,7 +16,7 @@ import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 contract CP17 is ERC20, Ownable {
     uint256 public constant TOTAL_SUPPLY = 250_000_000 * 1e18;
 
-    constructor() ERC20("CP Coin Platform 17", "CP17") Ownable(msg.sender) {
+    constructor() ERC20("Card Platform 17", "CP17") Ownable(msg.sender) {
         _mint(msg.sender, TOTAL_SUPPLY);
     }
 }

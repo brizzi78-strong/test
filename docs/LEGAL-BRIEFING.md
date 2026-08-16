@@ -1,4 +1,4 @@
-# Legal Briefing — CP Coin Platform 17 (CP17) Token Launch
+# Legal Briefing — Card Platform 17 (CP17) Token Launch
 
 > **This is research, not legal advice.** It was prepared to make the
 > conversation with a qualified lawyer faster and cheaper, and every claim

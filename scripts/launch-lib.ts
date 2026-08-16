@@ -107,9 +107,9 @@ export function describeStage(
 ): { stage: string; problems: string[] } {
   const problems: string[] = [];
 
-  if (s.name !== "CP Coin Platform 17" || s.symbol !== "CP17") {
+  if (s.name !== "Card Platform 17" || s.symbol !== "CP17") {
     problems.push(
-      `token name/symbol is ${s.name}/${s.symbol}, expected "CP Coin Platform 17"/CP17 — is the token address right?`,
+      `token name/symbol is ${s.name}/${s.symbol}, expected "Card Platform 17"/CP17 — is the token address right?`,
     );
   }
   if (s.totalSupply !== TOTAL_SUPPLY) {

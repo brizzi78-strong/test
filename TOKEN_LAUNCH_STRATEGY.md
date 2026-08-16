@@ -17,7 +17,7 @@ token scanners, screeners, and skeptical buyers have nothing to flag.
 
 ## Token Parameters
 
-- **Name / Symbol:** CP Coin Platform 17 / CP17
+- **Name / Symbol:** Card Platform 17 / CP17
 - **Total supply:** 250,000,000 (fixed — minted once at deployment, no mint function reachable after renounce)
 - **Distribution:**
   - 100,000,000 (40%) → Uniswap liquidity pool

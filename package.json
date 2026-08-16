@@ -2,7 +2,7 @@
   "name": "cp17",
   "private": true,
   "version": "0.1.0",
-  "description": "CP Coin Platform 17 (CP17) — fixed-supply ERC-20 on Ethereum, with iOS companion app workspace",
+  "description": "Card Platform 17 (CP17) — fixed-supply ERC-20 on Ethereum, with iOS companion app workspace",
   "type": "module",
   "scripts": {
     "build": "hardhat build",

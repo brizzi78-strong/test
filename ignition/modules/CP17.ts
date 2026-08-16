@@ -1,7 +1,7 @@
 import { buildModule } from "@nomicfoundation/hardhat-ignition/modules";
 
 /**
- * Deploys the CP Coin Platform 17 (CP17) token. The full 250M supply is
+ * Deploys the Card Platform 17 (CP17) token. The full 250M supply is
  * minted to the deployer in the constructor — there are no parameters.
  *
  *   npx hardhat ignition deploy ignition/modules/CP17.ts --network sepolia

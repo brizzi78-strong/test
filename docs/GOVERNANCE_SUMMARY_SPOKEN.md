@@ -121,12 +121,12 @@ he says yes. If the key is a problem, that is easy. He does the oversight, and t
 goes to somebody else.
 
 One last thing on the name. The coin has had three names. It started as Cardinals Promise,
-was briefly Mager Coin, and has landed on its final name: C P Coin Platform seventeen,
+was briefly Mager Coin, and has landed on its final name: Card Platform seventeen,
 ticker C P seventeen. Nothing was ever deployed under the earlier names, so every change was
 free, and after launch none of them would have been, so this one is the last. The new name
 lines everything up. The coin is C P seventeen, the company is C P seventeen L L C, and the
 website is c p seventeen dot org. One name, one site, one address. And C P now stands for
-Coin Platform, not for the book, which finishes the separation between the coin and the
+Card Platform, not for the book, which finishes the separation between the coin and the
 memoir. The name is plain on purpose. It has no story to defend, and the mission lives in
 the giving and the ledger instead of the branding. Jeff Mager stays eligible for the board,
 because the only thing that ever ruled him out was the coin carrying his name.
@@ -172,8 +172,8 @@ because your project is hospice adjacent, which is their exact territory. Cardin
 crowded in financial services.
 
 So my suggestion is C P seventeen L L C for the company, which already matches the web
-address you own, with CP Coin Platform 17 as the public name of the coin. And notice the good side
-effect. With the coin called CP Coin Platform 17 and the company called C P seventeen, the book's
+address you own, with Card Platform 17 as the public name of the coin. And notice the good side
+effect. With the coin called Card Platform 17 and the company called C P seventeen, the book's
 name appears nowhere in the coin's legal identity or its public one. That is a stronger
 version of the separation you formed the company to get.
 

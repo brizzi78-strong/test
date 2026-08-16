@@ -1,4 +1,4 @@
-# CP Coin Platform 17 (CP17) — Launch Runbook
+# Card Platform 17 (CP17) — Launch Runbook
 
 ## Decided launch parameters
 

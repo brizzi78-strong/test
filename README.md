@@ -6,7 +6,7 @@ This repository holds several projects. Jump to the one you need:
 |---|---|---|
 | **The Cardinal's Toolkit — iPhone app** | `CardinalPress/` + `CardinalPress.xcodeproj` | Companion app to the NC Family Caregiver Handbook ([below](#the-cardinals-toolkit--iphone-app)) |
 | **The Cardinal's Promise / Toolkit book** | `cardinals-promise/` | Manuscript, samples, and marketing for the book |
-| **CP Coin Platform 17 (CP17) token** | `contracts/`, `test/`, `verification/`, `site/` | Fixed-supply ERC-20 with a complete launch kit ([below](#cp-coin-platform-17-cp17-token)) |
+| **Card Platform 17 (CP17) token** | `contracts/`, `test/`, `verification/`, `site/` | Fixed-supply ERC-20 with a complete launch kit ([below](#cp-coin-platform-17-cp17-token)) |
 | **HireCheck — background screening service** | `hirecheck/` | Standalone service for running FCRA-aware pre-employment background checks on new hires (see `hirecheck/README.md`) |
 | **Cardinal Verify — consent-based checks** | `verify/` | A working site for consent-first reference / employment / education verification: the candidate e-signs a disclosure, then each source confirms via a private link. No CRA vendor, no criminal/credit data. Employer console + candidate-consent + verifier pages (see `verify/README.md`) |
 | **MyHR — new-hire paperwork service** | `myhr/` | Standalone onboarding service: e-signed new-hire forms (I-9, W-4, consent, etc.) with HR review and an audit trail (see `myhr/README.md`) |

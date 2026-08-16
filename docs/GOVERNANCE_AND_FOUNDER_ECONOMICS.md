@@ -175,7 +175,7 @@ question is worse than either answer.
 ### On the entity name
 
 You'd considered "Cardinal" or "Cardinals Platform" for the LLC. The recommendation is
-unchanged, and matters more now that the token has reverted to CP Coin Platform 17: **make the
+unchanged, and matters more now that the token has reverted to Card Platform 17: **make the
 LLC name boring.** The entity name is the one place
 where distinctiveness buys you nothing, and a complaint about the token should not arrive
 carrying a brand you care about.
@@ -193,10 +193,10 @@ Why not "Cardinal" for the entity:
 | Option | Assessment |
 |---|---|
 | **CP17 LLC** | **Recommended.** Already matches `cp17.org` and the `cp17-site` folder in this repo. Distinctive, uncrowded, and says nothing a plaintiff can quote |
-| **CP Coin Platform 17 LLC** | Workable, but it welds the entity to the token *and* to a private individual's surname. If the token fails, the entity's name fails with it |
+| **Card Platform 17 LLC** | Workable, but it welds the entity to the token *and* to a private individual's surname. If the token fails, the entity's name fails with it |
 | **Cardinal's Promise LLC / Cardinals Platform LLC** | No longer appropriate. The token is not Cardinal-branded any more, and this would re-entangle the book with the entity carrying the token's liability |
 
-The rename has a clean side effect worth naming: with the token called CP Coin Platform 17 and the
+The rename has a clean side effect worth naming: with the token called Card Platform 17 and the
 entity called CP17 LLC, **the book's brand appears nowhere in the token's legal or public
 identity.** That is a stronger version of the separation the LLC was formed to create.
 
@@ -332,17 +332,17 @@ later is. "One of the three is my brother, here is why" is a fact a reasonable p
 accept. Silence on it, followed by someone noticing the surname, is a credibility problem
 you cannot undo.
 
-### The name — final: CP Coin Platform 17 (CP17)
+### The name — final: Card Platform 17 (CP17)
 
 The token's naming history, kept honestly: it began as **Cardinals Promise (CARD)**, was
 briefly renamed **Mager Coin (MAGR)**, reverted to Cardinals Promise, and is now — finally —
-**CP Coin Platform 17 (CP17)**. Nothing was ever deployed under any of these names, so every
+**Card Platform 17 (CP17)**. Nothing was ever deployed under any of these names, so every
 change was free. After deployment, none of them would have been.
 
 What the final name buys:
 
 - **Complete alignment.** Token (CP17), entity (CP17 LLC), and domain (cp17.org) all carry
-  the same name, and "CP" now expands to *Coin Platform* rather than the book's title. The
+  the same name, and "CP" now expands to *Card Platform* rather than the book's title. The
   last naming link between the token and the memoir is gone, completing the separation the
   LLC provides legally and the split web properties provide reputationally.
 - **Nothing to defend.** A deliberately plain name makes no claim, borrows no story, and

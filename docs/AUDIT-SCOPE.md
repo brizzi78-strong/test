@@ -17,7 +17,7 @@ OpenZeppelin v5 base contracts.
 ## Intended behavior (the spec to audit against)
 
 1. Standard ERC-20 (EIP-20) semantics, exactly as inherited from
-   OpenZeppelin `ERC20` — name "CP Coin Platform 17", symbol "CP17",
+   OpenZeppelin `ERC20` — name "Card Platform 17", symbol "CP17",
    18 decimals.
 2. The full supply (250,000,000 × 10¹⁸) is minted to the deployer in the
    constructor, once. **No code path can ever change `totalSupply` again:

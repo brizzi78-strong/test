@@ -23,7 +23,7 @@ Before posting, search each file for `{{` to make sure no blank was missed.
 
 **Post 1**
 
-> CP Coin Platform 17 (CP17) is live.
+> Card Platform 17 (CP17) is live.
 >
 > Fixed supply: 250,000,000. No mint. No tax. No blacklist. Ownership renounced — nobody, including us, can ever change the contract.
 >
@@ -56,7 +56,7 @@ Before posting, search each file for `{{` to make sure no blank was missed.
 
 ## Long version (Telegram / Discord / blog)
 
-> # CP Coin Platform 17 (CP17) is live
+> # Card Platform 17 (CP17) is live
 >
 > **Contract address: `{{TOKEN_ADDRESS}}`**
 >

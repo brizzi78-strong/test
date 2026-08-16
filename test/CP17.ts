@@ -23,7 +23,7 @@ describe("CP17", async function () {
   it("has the expected metadata", async function () {
     const token = await viem.deployContract("CP17");
 
-    assert.equal(await token.read.name(), "CP Coin Platform 17");
+    assert.equal(await token.read.name(), "Card Platform 17");
     assert.equal(await token.read.symbol(), "CP17");
     assert.equal(await token.read.decimals(), 18);
   });

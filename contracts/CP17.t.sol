@@ -14,7 +14,7 @@ contract CP17Test is Test {
     }
 
     function test_Metadata() public view {
-        assertEq(token.name(), "CP Coin Platform 17");
+        assertEq(token.name(), "Card Platform 17");
         assertEq(token.symbol(), "CP17");
         assertEq(token.decimals(), 18);
     }
