@@ -271,7 +271,7 @@ My aunt Nancey picked us up in her small red Honda Civic and drove us to Cedar G
 
 My Spanish disappeared almost overnight. English was everywhere. I picked it up the way kids do, without deciding to. Back home I'd had a lisp. In New Jersey they sent me to speech therapy twice a week to fix the way I talked. Decades later it still comes out at the worst times.
 
-My grandfather was strict. He'd never approved of the marriage, but he let us stay with him. We paid him eight hundred a month. He was hard on her and soft on us. My nana mostly stayed in the background. My aunts Nancey or Terry, or Grandpa, watched us when my mother had to find work. My mom started over with no degree and nobody to fall back on, and she worked. That's her story to tell, in her own voice, and I hope she does. This book is here because of her. She picked us.
+My grandfather was strict, or so my mother said. He'd never approved of the marriage, but he let us stay with him. We paid him eight hundred a month. Chris and I never saw that side of him. To us he was kind, and he was the one who kept the routine. My nana mostly stayed in the background. My aunts Nancey or Terry, or Grandpa, watched us when my mother had to find work. My mom started over with no degree and nobody to fall back on, and she worked. That's her story to tell, in her own voice, and I hope she does. This book is here because of her. She picked us.
 
 Still, I missed my papa.
 
