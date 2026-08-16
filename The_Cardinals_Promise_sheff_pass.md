@@ -708,9 +708,9 @@ That season in Regions I drew a kid who almost never lost, a Bergen County name 
 
 I won my semi, lost a close one in the finals, still went to States. Finished 18–4. After that match Lou sat with me while I caught my breath and the bracket moved on without us.
 
-"Rob, I'm proud of you."
+"Good job, son."
 
-Not great match. Not I knew you could do it. I just nodded. That was enough for him.
+He knew what it had taken to get there. He wasn't making it into anything bigger than it was; he was just enjoying it with me. I nodded. That was enough for both of us.
 
 ### *Charlie*
 
