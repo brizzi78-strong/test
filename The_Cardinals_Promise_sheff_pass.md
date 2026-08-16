@@ -819,7 +819,7 @@ He met Donna, the woman he would marry after the divorce, with one line too. A b
 
 Some afternoons he'd tape a Yankee game that had already played, then put it on for me like it was live. Rickey Henderson's gonna hit a home run here, he'd say. And Henderson would go deep. I was a little kid. I thought my father could see the future. He let me believe it for years before he told me he'd already watched the whole thing.
 
-He got a goat. Somebody was hauling it off to the slaughterhouse, and my dad told him that if he was going to kill it, he'd take it. No discussion, no warning. One day there was a goat back there eating the grass. He ran a landscaping business, fifty lawns a week, and his own backyard was being handled by an animal he'd talked somebody out of killing.
+He got a goat. Somebody was hauling it off to the slaughterhouse, and my dad told him that if he was going to kill it, he'd take it. No discussion, no warning. One day there was a goat back there eating the grass. The man cut fifty lawns a week for a living, and his own backyard was being handled by an animal he'd talked somebody out of killing.
 
 And everything was a surprise. What are we watching, Dad? It's a surprise. Where are we going? It's a surprise. It was usually Clint Eastwood on the screen. He loved Eastwood — the squint, the quiet, the man who didn't say much and didn't have to. That was Lou's hero, and a fair description of Lou himself. He got more joy out of the not-telling than the telling.
 
@@ -986,7 +986,7 @@ The screen couldn't show what was underneath. I walked into every room sure that
 
 The secret was older than California. It went back to a four-year-old carried out of one country and set down in another. In the years that followed — the new name I had to print at the top of my homework, the dark skin that didn't match the other kids, the lisp they sent me to therapy to fix — I came to a decision I didn't have words for: this part of me is not welcome here. Claudio wasn't safe. So Claudio went quiet.
 
-People sometimes ask — I've asked it myself — why the disease took me and not Chris. Same blood, same two fathers, same kitchen. The honest answer I've come to is this: Chris was a year and a half when we left Mexico. He carried nothing out of that country to miss. I was four. I had a papa who raced me to the corner and called me his good luck charm, and then I didn't. Missing Horacio was work I was doing before I had words for it. Chris grew up with one father. I grew up with one father and one ghost.
+People sometimes ask — I've asked it myself — why the disease took me and not Chris. Same blood, same two fathers, same kitchen. The honest answer I've come to is this: Chris left Mexico at a year and a half. He carried nothing out of that country to miss. I was four. I had a papa who raced me to the corner and called me his good luck charm, and then I didn't. Missing Horacio was work I was doing before I had words for it. Chris grew up with one father. I grew up with one father and one ghost.
 
 I built a character in his place, and I built him well. Smoother. Funnier. More needed than I was. The hard part to admit is that it worked. People responded to him. Every time they did, the real one underneath got a little quieter and stayed down where it was safe.
 
@@ -2037,7 +2037,7 @@ He could enjoy the game even when the season was lost.
 
 He still wanted to be useful, all the way to the end.
 
-He taught me that care is learning the doorway a person is willing to walk through.
+He found the doorway you were willing to walk through.
 
 He stayed.
 
