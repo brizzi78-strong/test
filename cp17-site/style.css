@@ -1,4 +1,4 @@
-/* Card — cp17.org
+/* Hope Coin — hopecoin.com
    Designed to read like a page from a book, not a token launch. */
 
 :root {
@@ -223,13 +223,14 @@ footer a { color: var(--muted); }
 .legal { font-size: 0.76rem; line-height: 1.6; color: var(--faint); margin-top: 1.6rem; }
 
 
-/* ---------- the cardinal ---------- */
+/* ---------- the sunrise mark ---------- */
+/* A cardinal-red sun, half-risen over the horizon rule. Hope, drawn once. */
 
-.crest {
+.mark-sunrise {
   display: block;
-  width: clamp(7rem, 22vw, 9.5rem);
+  width: clamp(6.5rem, 20vw, 9rem);
   height: auto;
-  margin: 0 0 1.6rem -0.6rem;
+  margin: 0 0 1.8rem;
 }
 
 /* ---------- opening ---------- */

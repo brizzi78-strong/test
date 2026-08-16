@@ -10,9 +10,9 @@
     "sepolia": null
   },
   "links": {
-    "website": "https://cp17.org",
+    "website": "https://hopecoin.com",
     "repository": "https://github.com/brizzi78-strong/test",
     "twitter": null
   },
-  "notes": "Official site: cp17.org, the coin's only web property. By decision the coin and the book are tied: direct purchases of The Cardinal's Promise include a fixed number of HOP, claimable via the site, from a published program wallet. Fill in contract addresses after deployment before submitting to Etherscan token update, CoinGecko, or a Uniswap token list. Etherscan requires a 32x32 PNG icon — use assets/logo-32.png."
+  "notes": "Official site: hopecoin.com, the coin's only web property (cp17.org forwards there; hopecoin.org belongs to someone else and is never ours). By decision the coin and the book are tied: direct purchases of The Cardinal's Promise include a fixed number of HOP, claimable via the site, from a published program wallet. Fill in contract addresses after deployment before submitting to Etherscan token update, CoinGecko, or a Uniswap token list. Etherscan requires a 32x32 PNG icon — use assets/logo-32.png."
 }
