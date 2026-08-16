@@ -42,7 +42,7 @@ Prologue
 6. The Wrestler
 7. What the Mat Left
 8. The Suit
-9. When I Worked for the Mob
+9. They'll Teach You
 10. Oxford
 11. MTV
 
@@ -779,7 +779,7 @@ I can still see him at the front door. Dyed hair, pressed shirt, tie pulled tigh
 
 **CHAPTER 9**
 
-## **When I Worked for the Mob**
+## **They'll Teach You**
 
 *"A good name is rather to be chosen than great riches."*
 *— Proverbs 22:1*

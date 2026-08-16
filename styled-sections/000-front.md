@@ -42,7 +42,7 @@ Prologue
 6. The Wrestler
 7. What the Mat Left
 8. The Suit
-9. When I Worked for the Mob
+9. They'll Teach You
 10. Oxford
 11. MTV
 
