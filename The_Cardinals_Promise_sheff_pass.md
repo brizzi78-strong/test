@@ -380,7 +380,7 @@ Once he decided you were his, that settled it. Lou was there early mornings and 
 
 Lou's upbringing explained some of it. His father sold produce. When men in suits walked into his market, his father went out back to discuss things in private. When relatives came over from Italy, Lou was the boy who lost his bed to them and slept in the attic. He carried that longer than anybody knew. Years later, during a stretch when he was going to therapy, he recalled a family Christmas and an old man yelling at his uncle about a boy who had to sleep in the attic. The temper was the Italian kind you see in the movies. It was older than any of us, and it was never about us.
 
-He had three kids by the time he was twenty-two. His first wife, Judy, was a couple of years younger and fighting postpartum depression in an era that had no name for it and no help. To avoid her moods, he stayed out late some nights, partying. The marriage couldn't hold, and the kids spent most of their time with his mother, Mag.
+He had three kids before he was twenty-five. His first wife, Judy, was a couple of years younger and fighting postpartum depression in an era that had no name for it and no help. To avoid her moods, he stayed out late some nights, partying. The marriage couldn't hold, and the kids spent most of their time with his mother, Mag.
 
 "No excuses," he confided in me years later. "I wasn't the best dad. My kids deserved a better one than the one they got."
 
