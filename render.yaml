@@ -67,11 +67,14 @@ services:
     staticPublishPath: ./singalong/demo
     autoDeploy: true
 
-  # Blue Ridge Tax — the TaxFile app (taxfile/): guided 2025 federal 1040 with
-  # a live refund tracker and mock e-file. Password-gated (TAXFILE_USER /
-  # TAXFILE_PASSWORD — set the password when Render prompts; returns contain
-  # SSNs, so never run this public-facing without the gate). Return data
-  # persists in SQLite on the mounted disk.
+  # Blue Ridge Tax — the TaxFile app (taxfile/): guided federal tax estimator
+  # (2025 + 2026 projection) with a live refund tracker, scope screening, user
+  # accounts, and a Stripe-ready Pro tier (planning scenarios). No SSNs are
+  # collected. Password-gated (TAXFILE_USER / TAXFILE_PASSWORD — set the
+  # password when Render prompts). Data persists in SQLite on the mounted
+  # disk. To enable real billing, add STRIPE_SECRET_KEY, STRIPE_PRICE_ID,
+  # STRIPE_WEBHOOK_SECRET, and PUBLIC_BASE_URL in the service's environment;
+  # until then upgrades run in instant dev mode.
   - type: web
     name: blue-ridge-tax
     runtime: docker

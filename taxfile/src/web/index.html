@@ -38,6 +38,11 @@
     text-align: right; background: rgba(255, 255, 255, .13); border: 1px solid rgba(255, 255, 255, .22);
     border-radius: 12px; padding: 8px 16px; min-width: 168px; backdrop-filter: blur(6px);
   }
+  #yearPick {
+    width: auto; margin-left: auto; background: rgba(255,255,255,.13); color: #fff;
+    border: 1px solid rgba(255,255,255,.28); border-radius: 9px; padding: 8px 10px; font-size: 13.5px;
+  }
+  #yearPick option { color: #16222A; }
   #tracker .amount { font-size: 25px; font-weight: 750; letter-spacing: -.02em; font-variant-numeric: tabular-nums; color: #fff; }
   #tracker .label { font-size: 11.5px; text-transform: uppercase; letter-spacing: .07em; color: rgba(255, 255, 255, .75); }
   #tracker.refund .amount { color: #8ff2c0; }
@@ -141,6 +146,12 @@
   #scopeVerdict.unsupported { background: #7d1d1d; color: #fff; }
   #scopeVerdict.review { background: var(--royal-100); color: var(--royal-900); }
   .disclaimer { margin: 18px 0 0; padding-top: 14px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12.5px; }
+  .scenario { border: 1px solid var(--line); border-left: 3px solid var(--royal-600); border-radius: 11px; padding: 15px 18px; margin-bottom: 12px; background: var(--royal-50); }
+  .scenario .s-title { font-weight: 700; margin-bottom: 3px; }
+  .scenario .s-save { color: var(--good); font-weight: 700; }
+  .scenario .s-detail { font-size: 14px; color: var(--muted); margin: 4px 0 8px; }
+  .scenario .s-fig { display: flex; justify-content: space-between; font-size: 14px; padding: 3px 0; border-top: 1px dashed var(--line); }
+  .scenario .s-fig b { font-variant-numeric: tabular-nums; }
 
   @media (max-width: 640px) {
     header { padding: 14px 18px; }
@@ -152,7 +163,11 @@
 </head>
 <body>
 <header>
-  <h1>TaxFile<small>2025 federal estimate — six steps, no upsells, no filing</small></h1>
+  <h1>TaxFile<small>federal estimate — six steps, no upsells, no filing</small></h1>
+  <select id="yearPick" aria-label="Tax year">
+    <option value="2025">Tax year 2025</option>
+    <option value="2026">2026 projection</option>
+  </select>
   <div id="tracker" class="refund"><div class="amount">$0</div><div class="label">estimated refund</div></div>
   <div id="progressWrap"><div id="progressBar"></div></div>
 </header>
@@ -166,17 +181,12 @@
       <div><label>First name</label><input id="p_first"></div>
       <div><label>Last name</label><input id="p_last"></div>
     </div>
-    <div class="row3">
-      <div><label>SSN</label><input id="p_ssn" placeholder="123-45-6789"></div>
+    <div class="row">
       <div><label>Birth year</label><input id="p_birth" type="number" placeholder="1985"></div>
       <div><label style="visibility:hidden">.</label><label class="check" style="margin:0"><input type="checkbox" id="p_blind"> Legally blind</label></div>
     </div>
     <label>Email</label><input id="p_email" placeholder="you@example.com">
-    <div class="row3">
-      <div><label>Street</label><input id="a_street"></div>
-      <div><label>City</label><input id="a_city"></div>
-      <div><label>State / ZIP</label><div style="display:flex;gap:6px"><input id="a_state" placeholder="NC" style="width:60px"><input id="a_zip" placeholder="27601"></div></div>
-    </div>
+    <p class="hint" style="margin:10px 0 0">No SSN, no address — an estimate doesn't need them, so we never ask.</p>
     <label class="check" style="margin-top:18px"><input type="checkbox" id="hasSpouse"> I'm filing with a spouse</label>
     <div class="subform" id="spouseForm" style="display:none">
       <div class="row">
@@ -184,8 +194,8 @@
         <div><label>Spouse last name</label><input id="s_last"></div>
       </div>
       <div class="row">
-        <div><label>Spouse SSN</label><input id="s_ssn"></div>
         <div><label>Spouse birth year</label><input id="s_birth" type="number"></div>
+        <div></div>
       </div>
     </div>
     <div class="actions"><button class="primary" onclick="savePersonal()">Save</button><span class="saved" id="ok-personal"></span></div>
@@ -286,6 +296,18 @@
       and no return is filed on your behalf. When you're ready to file, take these numbers to
       IRS Direct File, a commercial filing service, or a tax professional.</p>
   </section>
+
+  <section class="card" id="sec-pro">
+    <h2><span class="step" style="background:linear-gradient(150deg,#8a6d1f,#5c470f)">★</span>Planning tools <span class="pill">Pro</span></h2>
+    <p class="hint">The same engine, run against your what-ifs: IRA headroom, quarterly payment
+      schedule, a withholding fix, and what your next $1,000 really costs.</p>
+    <div id="scenarioList"></div>
+    <div class="actions">
+      <button class="primary" id="scenariosBtn" onclick="runScenarios()">Run my scenarios</button>
+      <span class="saved" id="ok-pro"></span>
+    </div>
+    <div class="error" id="err-pro"></div>
+  </section>
 </main>
 
 <script>
@@ -293,7 +315,8 @@ const api = (path, opts = {}) =>
   fetch(path, { headers: { 'content-type': 'application/json' }, ...opts })
     .then(async (r) => { const j = await r.json(); if (!r.ok) throw new Error(j.error || r.status); return j; });
 
-let returnId = localStorage.getItem('taxfile.returnId');
+let taxYear = Number(localStorage.getItem('taxfile.year') || 2025);
+let returnId = localStorage.getItem('taxfile.returnId.' + taxYear);
 const num = (id) => Number(document.getElementById(id).value || 0);
 const val = (id) => document.getElementById(id).value.trim();
 const fmt = (n) => (n < 0 ? '-' : '') + '$' + Math.abs(n).toLocaleString(undefined, { maximumFractionDigits: 0 });
@@ -301,12 +324,65 @@ const fmt = (n) => (n < 0 ? '-' : '') + '$' + Math.abs(n).toLocaleString(undefin
 async function ensureReturn() {
   if (returnId) {
     try { return await api('/returns/' + returnId + '/review'); }
-    catch { returnId = null; }
+    catch (e) { returnId = null; }
   }
-  const created = await api('/returns', { method: 'POST' });
+  const created = await api('/returns', { method: 'POST', body: JSON.stringify({ taxYear }) });
   returnId = created.taxReturn.id;
-  localStorage.setItem('taxfile.returnId', returnId);
-  return { taxReturn: created.taxReturn, computation: created.computation, fileBlockers: [] };
+  localStorage.setItem('taxfile.returnId.' + taxYear, returnId);
+  return { taxReturn: created.taxReturn, computation: created.computation, scope: created.scope, fileBlockers: [] };
+}
+
+document.getElementById('yearPick').value = String(taxYear);
+document.getElementById('yearPick').addEventListener('change', async (e) => {
+  taxYear = Number(e.target.value);
+  localStorage.setItem('taxfile.year', String(taxYear));
+  returnId = localStorage.getItem('taxfile.returnId.' + taxYear);
+  document.getElementById('scenarioList').innerHTML = '';
+  render(await ensureReturn());
+});
+
+function fmtCents(n) {
+  const cents = Math.abs(n) % 1 > 0.004;
+  return (n < 0 ? '-' : '') + '$' + Math.abs(n).toLocaleString(undefined,
+    { minimumFractionDigits: cents ? 2 : 0, maximumFractionDigits: 2 });
+}
+
+async function runScenarios() {
+  const okEl = document.getElementById('ok-pro');
+  const errEl = document.getElementById('err-pro');
+  const list = document.getElementById('scenarioList');
+  okEl.textContent = ''; errEl.textContent = ''; list.innerHTML = '';
+  try {
+    const res = await api('/returns/' + returnId + '/scenarios');
+    res.scenarios.forEach((sc) => {
+      const el = document.createElement('div');
+      el.className = 'scenario';
+      el.innerHTML = '<div class="s-title">' + sc.title +
+        (sc.savings > 0 ? ' — <span class="s-save">save ' + fmtCents(sc.savings) + '</span>' : '') +
+        '</div><div class="s-detail">' + sc.detail + '</div>' +
+        sc.figures.map((f) => '<div class="s-fig"><span>' + f.label + '</span><b>' + fmtCents(f.amount) + '</b></div>').join('');
+      list.appendChild(el);
+    });
+    okEl.textContent = '✓ ' + res.scenarios.length + ' scenarios';
+  } catch (e) {
+    if (/Pro feature/.test(e.message)) {
+      errEl.innerHTML = '';
+      const btn = document.createElement('button');
+      btn.className = 'ghost';
+      btn.textContent = 'Upgrade to Pro';
+      btn.onclick = async () => {
+        try {
+          const up = await api('/billing/upgrade', { method: 'POST' });
+          if (up.checkoutUrl) { window.open(up.checkoutUrl, '_blank'); errEl.textContent = 'Complete checkout in the new tab, then run again.'; }
+          else { errEl.textContent = ''; runScenarios(); }
+        } catch (err2) { errEl.textContent = err2.message; }
+      };
+      errEl.textContent = 'Planning tools are part of Pro. ';
+      errEl.appendChild(btn);
+    } else {
+      errEl.textContent = e.message;
+    }
+  }
 }
 
 const STEPS = [
@@ -459,12 +535,11 @@ async function saveSection(name, path, body) {
 
 function savePersonal() {
   const body = {
-    taxpayer: { firstName: val('p_first'), lastName: val('p_last'), ssn: val('p_ssn'), birthYear: num('p_birth'), blind: document.getElementById('p_blind').checked },
-    address: { street: val('a_street'), city: val('a_city'), state: val('a_state'), zip: val('a_zip') },
+    taxpayer: { firstName: val('p_first'), lastName: val('p_last'), birthYear: num('p_birth'), blind: document.getElementById('p_blind').checked },
     email: val('p_email'),
   };
   if (document.getElementById('hasSpouse').checked) {
-    body.spouse = { firstName: val('s_first'), lastName: val('s_last'), ssn: val('s_ssn'), birthYear: num('s_birth'), blind: false };
+    body.spouse = { firstName: val('s_first'), lastName: val('s_last'), birthYear: num('s_birth'), blind: false };
   }
   saveSection('personal', '/personal', body);
 }
@@ -474,7 +549,7 @@ function addDependent() {
   const div = document.createElement('div');
   div.className = 'subform dep';
   div.innerHTML = '<div class="row"><div><label>First name</label><input class="d_first"></div><div><label>Last name</label><input class="d_last"></div></div>' +
-    '<div class="row3"><div><label>SSN</label><input class="d_ssn"></div><div><label>Birth year</label><input class="d_birth" type="number"></div>' +
+    '<div class="row3"><div><label>SSN (optional)</label><input class="d_ssn" placeholder="only needed to file"></div><div><label>Birth year</label><input class="d_birth" type="number"></div>' +
     '<div><label>Relationship</label><select class="d_rel"><option value="child">Child</option><option value="parent">Parent</option><option value="sibling">Sibling</option><option value="other">Other</option></select></div></div>' +
     '<button class="link" onclick="this.parentElement.remove()">remove</button>';
   document.getElementById('depList').appendChild(div);
@@ -483,7 +558,7 @@ function saveDependents() {
   const deps = [...document.querySelectorAll('#depList .dep')].map((el) => ({
     firstName: el.querySelector('.d_first').value.trim(),
     lastName: el.querySelector('.d_last').value.trim(),
-    ssn: el.querySelector('.d_ssn').value.trim(),
+    ssn: el.querySelector('.d_ssn').value.trim() || undefined,
     birthYear: Number(el.querySelector('.d_birth').value || 0),
     relationship: el.querySelector('.d_rel').value,
   }));
