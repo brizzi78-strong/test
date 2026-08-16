@@ -75,6 +75,17 @@ book — a $1,000 buy still moves spot ~27%, and a $1,000 sell moves it down com
 pool is thin in both directions. That is survivable and honest. It only becomes dangerous
 when combined with the next section.
 
+### Decision taken: supply stays fixed at 250M
+
+Raised and closed: no mint function, no "opportunity for more," no burn function. The
+reasoning, for the record — a mint needs an owner, which forecloses renouncing; the market
+prices mintable small tokens as if the mint will be used; and the held 60% (founder 100M +
+treasury 50M) already is the growth reserve, released in daylight if ever needed. Tether's
+mint-and-burn model exists because USDT is redeemable against reserves; CP17 redeems
+nothing, so neither function has a job here. One capability survives without any code: any
+holder can burn irreversibly by sending to the dead address — which remains the strongest
+trust action available on the founder's unlocked position, should it ever be wanted.
+
 ---
 
 ## Part I — The board
