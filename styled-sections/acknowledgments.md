@@ -6,7 +6,7 @@ My mother, who carried two boys out of Mexico City and then checked more of thes
 
 Chris. My brother, my keeper. You know what you said to me that night. It worked.
 
-Lisa, Jon, and Joel — we shared him. I know what we lost.
+Jon, Lisa, and Joel — we shared him. I know what we lost.
 
 The men God put in front of me: Andy, Bob, Mager, Matt, and Quint. You walked into the room. So did I.
 
