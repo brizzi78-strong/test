@@ -690,7 +690,7 @@ I won my semi, lost a close one in the finals, still went to States. Finished 18
 
 ### *Charlie*
 
-I was in middle school when I got the news about Charlie. He and Nancey had separated and he'd drifted somewhere harder to reach. The disease had him, the same one that came for me a decade later, though I didn't know that yet. My dad was the one who went and got him, found him alone in his apartment the way you find someone who's stopped being able to take care of himself. Charlie died about four years after that. I never knew if he got sober in there. He felt sober to me when I saw him — but a kid reads what he wants to read, and to this day I can't tell you whether those last years were clean or whether the disease had just gone quiet.
+I was in middle school when I got the news about Charlie. He and Nancey had separated and he'd drifted somewhere harder to reach. The disease had him, the same one that had Papa, and the same one that came for me a decade later, though I didn't know that yet. My dad was the one who went and got him, found him alone in his apartment the way you find someone who's stopped being able to take care of himself. Charlie died about four years after that. I never knew if he got sober in there. He felt sober to me when I saw him — but a kid reads what he wants to read, and to this day I can't tell you whether those last years were clean or whether the disease had just gone quiet.
 
 I loved him, and that's hard to explain to people who think grief needs proximity. I hadn't talked to him in years. I was sixteen, buried in wrestling and school. But I'd loved him, and when he died something opened in me I didn't have a name for. Nobody validated it. He was the first person I loved who was just gone.
 
@@ -883,7 +883,11 @@ And some days sobriety feels like that same nakedness I used to run from. No clo
 
 Jason still tells one on me. We ran a case race one night — you pair off, a case of beer to a team, and whoever puts theirs down first wins. I hated losing at anything, and a case of beer was no exception. Somebody had a camera going when it caught up with me afterward: me on the bathroom floor, sick as a dog, looking up at the lens and saying, this is what I do to win. It got a big laugh. It should have gotten a second look. I could turn getting sick on a tile floor into something I'd won. They say there are always signs. That was one I wasn't ready to read.
 
-I fell into a depression. Not announced. Gray. Lou heard it in my voice on the phone. He didn't ask follow-up questions. New Jersey to Ohio, ten hours, no call ahead to confirm I needed him. Took me to a doctor, got me seen, then to a chain restaurant. Laminated menus, free refills, nothing to it but food and a booth and him across from me.
+I fell into a depression that nothing had caused. Nothing had happened to me. Everything went gray. I called my mother and she went looking for the reason — what happened, was it a girl. It wasn't a girl. I still can't explain it.
+
+Then I called Lou. He heard it in my voice. He didn't ask follow-up questions. He said, how about I take a ride there tomorrow.
+
+New Jersey to Ohio, ten hours, no call ahead to confirm I needed him. He took me to a doctor, got me seen, then to a chain restaurant. Laminated menus, free refills, nothing to it but food and a booth and him across from me.
 
 On the way out, a waitress ran into the parking lot after us and handed me her phone number. I looked at Lou. He kept walking, eyes straight ahead. I asked if he'd said something, left a big tip, set the whole thing up. He denied it flat. Didn't miss a beat. I never believed him. He took it to the grave. That might be my favorite thing about him.
 
