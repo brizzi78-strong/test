@@ -52,8 +52,8 @@ But here is the important distinction, and it is easy to miss. Three people and 
 are two different questions.
 
 The giving committee is three people. You, a hospice or palliative care professional, and
-one more. They decide which families get money. That money comes from book revenue, not
-from the coin, which means none of them ever touch a wallet, hold a coin, or appear on the
+one more. They decide which families get money. That money comes from the founder's other work —
+software income or personal funds, never the coin, and by decision never book profits — which means none of them ever touch a wallet, hold a coin, or appear on the
 coin page at all. Those are the easy seats to fill, because there is no crypto in the ask.
 
 The treasury wallet is three keys, and it takes two of them to move anything. You, a paid

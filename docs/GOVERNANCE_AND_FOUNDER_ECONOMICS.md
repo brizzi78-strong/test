@@ -107,7 +107,9 @@ seats only with people who will actually show up; stage the rest.
 different roles:
 
 - **The Giving Committee** — the Domain seat, the Recipient Voice, and you — decides which
-  families receive money, funded from book revenue. Members with no coin grant keep the
+  families receive money, funded from the founder's non-book money — software revenue or
+  personal funds. **By decision, book profits never fund the coin or its giving.** Members
+  with no coin grant keep the
   no-crypto shield: they never touch a wallet and their public description contains no
   token. The one member who takes the grant gives that shield up, knowingly.
 - **The treasury Safe starts at 2-of-3** — you, the paid reviewer, one crypto-literate
@@ -574,7 +576,8 @@ engagement is not an endorsement, and they can say so to anyone who asks. Budget
 hundred dollars a quarter; it is an operating cost the LLC can pay a vendor directly (the
 cleanest disclosure tier in Part IV), and it likely runs one to two thousand dollars a year.
 
-That is real money against a treasury with none, so fund it from book revenue like
+That is real money against a treasury with none, so fund it from non-book money — software
+revenue or personal funds — like
 everything else. It buys the single hardest seat, and a paid independent reviewer is a
 stronger signal than an unpaid friend regardless of stigma.
 
@@ -615,11 +618,13 @@ The honest position today:
 |---|---|
 | The 50M treasury | **Not yet.** It is coins, not cash — about $4,000 at spot, and selling it into an $8,000 pool wrecks the price and raises the sale-by-the-issuer problem |
 | Money from people buying CARD | **No, and this matters.** Buyers' ETH goes into the liquidity pool, not to the project. The coin page says so explicitly. Buying the coin does not fund the giving |
-| Book, speaking, and app revenue | **Yes.** This is the one source that exists |
+| Software and app revenue, personal non-book funds | **Yes.** The one source that exists |
+| Book profits | **Excluded by decision.** The book's money never funds the coin, its giving, or its costs |
 | Soliciting donations | **No.** Taking charitable donations without a charitable vehicle brings solicitation-registration and tax questions that a $20,000 project should not go near. Keep pointing people at the charities directly, as the site already does |
 | Gifting CARD to families instead of cash | **No.** That hands a struggling family an illiquid asset that may go to zero. The same objection as paying board members in tokens, only worse |
 
-**So: fund the giving from the book and the software, not from the coin.** The committee's
+**So: fund the giving from the software and personal non-book funds — never the coin, and
+by decision never book profits.** The committee's
 job is real either way — deciding where money goes is the substance of the seat, and the
 budget's origin does not change that. What changes is what you are allowed to promise.
 
@@ -630,7 +635,7 @@ utility bill. What destroys the relationship is implying a budget that does not 
 then convening a meeting with nothing to allocate.
 
 **The stronger move: start the giving before the token launches.** Nothing about the gifts
-depends on CARD existing. Fund a small quarterly amount out of book revenue, convene the
+depends on CARD existing. Fund a small quarterly amount out of software revenue or personal funds, convene the
 committee, make the first gifts, and post them to the ledger page — all of it before launch
 day. Three consequences, each worth more than it costs:
 
@@ -1359,7 +1364,7 @@ fundraising campaign.
    its bank account, and document the $10,000 as a capital contribution. *Before* launch —
    retrofitting an issuer onto a live token is visibly a patch.
 2. Seat the Giving Committee — three people, no crypto in the ask — and make the first
-   gifts from book revenue before launch, so the ledger opens with receipts rather than
+   gifts from non-book funds before launch, so the ledger opens with receipts rather than
    promises.
 3. Engage the paid reviewer and open the 2-of-3 Safe. Decide who deploys.
 4. Adopt, in writing and before they are needed: the tie-fails rule, the gift policy, the
