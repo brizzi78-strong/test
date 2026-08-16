@@ -19,8 +19,8 @@
  * later means implementing this one interface.
  */
 
-import type { Instrument } from './types.ts';
-import { history as mockHistory, quote as mockQuote, type PricePoint } from './priceEngine.ts';
+import { INSTRUMENTS, type Instrument } from './types.ts';
+import { history as mockHistory, quantizePriceCents, quote as mockQuote, type PricePoint } from './priceEngine.ts';
 import { UpstreamError } from '../service/errors.ts';
 
 /** The two numbers a quote is built from, in whole cents. */
@@ -137,8 +137,8 @@ export function createYahooSource(opts: YahooOptions = {}): MarketDataSource {
           throw new UpstreamError(`market data missing price for ${instrument.symbol}`);
         }
         return {
-          priceCents: Math.max(1, Math.round(price * 100)),
-          previousCloseCents: Math.max(1, Math.round((prevClose as number) * 100)),
+          priceCents: quantizePriceCents(price * 100),
+          previousCloseCents: quantizePriceCents((prevClose as number) * 100),
         };
       });
     },
@@ -155,7 +155,7 @@ export function createYahooSource(opts: YahooOptions = {}): MarketDataSource {
         for (let i = 0; i < timestamps.length; i++) {
           const close = closes[i];
           if (typeof close === 'number' && Number.isFinite(close)) {
-            out.push({ atMs: timestamps[i] * 1000, priceCents: Math.max(1, Math.round(close * 100)) });
+            out.push({ atMs: timestamps[i] * 1000, priceCents: quantizePriceCents(close * 100) });
           }
         }
         if (out.length === 0) throw new UpstreamError(`market data empty history for ${instrument.symbol}`);
@@ -166,11 +166,133 @@ export function createYahooSource(opts: YahooOptions = {}): MarketDataSource {
   };
 }
 
+// --- Uniswap V2 pool (on-chain price for one token, e.g. CARD) ---------------
+
+export interface UniswapPoolOptions {
+  /** Serves every other symbol, and the ETH-USD cross rate. */
+  base: MarketDataSource;
+  /** Any Ethereum JSON-RPC endpoint (public ones work; no key or account). */
+  rpcUrl: string;
+  /** The Uniswap V2 pair (token/WETH pool) address. */
+  poolAddress: string;
+  /** The token's own contract address, to resolve reserve ordering. */
+  tokenAddress: string;
+  /** Which instrument symbol this pool prices (default 'CARD'). */
+  symbol?: string;
+  fetchImpl?: typeof fetch;
+  quoteTtlMs?: number;
+}
+
+const SELECTOR_TOKEN0 = '0x0dfe1681';
+const SELECTOR_GET_RESERVES = '0x0902f1ac';
+
+/**
+ * Price one symbol straight from its Uniswap V2 token/WETH pool: two
+ * `eth_call`s (token0 once, getReserves per refresh) give the reserve ratio —
+ * the token's price in ETH — and the base source's ETH-USD quote converts it
+ * to cents. Both tokens are 18-decimal, so the scales cancel. No keys, no
+ * custody, no third-party API: the pool itself is the price oracle, which is
+ * exactly what "tradable without an exchange" means on-chain.
+ *
+ * The pool has no queryable price history, so history is served flat at the
+ * current price — an honest "no movement data" line rather than an invented
+ * one. Previous close is likewise unknowable on-chain; day change reads 0.
+ */
+export function createUniswapPoolSource(opts: UniswapPoolOptions): MarketDataSource {
+  const symbol = (opts.symbol ?? 'CARD').toUpperCase();
+  const fetchImpl = opts.fetchImpl ?? fetch;
+  const quoteTtlMs = opts.quoteTtlMs ?? 15_000;
+  const tokenAddress = opts.tokenAddress.toLowerCase();
+  let token0IsToken: boolean | undefined; // resolved once, never changes for a pair
+  let cachedQuote: { at: number; value: RawQuote } | undefined;
+
+  async function ethCall(data: string): Promise<string> {
+    let res: Response;
+    try {
+      res = await fetchImpl(opts.rpcUrl, {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({
+          jsonrpc: '2.0',
+          id: 1,
+          method: 'eth_call',
+          params: [{ to: opts.poolAddress, data }, 'latest'],
+        }),
+      });
+    } catch (err) {
+      throw new UpstreamError(`pool RPC unreachable: ${err instanceof Error ? err.message : String(err)}`);
+    }
+    if (!res.ok) throw new UpstreamError(`pool RPC HTTP ${res.status}`);
+    const json = (await res.json().catch(() => undefined)) as { result?: string; error?: { message?: string } } | undefined;
+    if (!json || typeof json.result !== 'string' || json.result.length < 10) {
+      throw new UpstreamError(`pool RPC error: ${json?.error?.message ?? 'malformed response'}`);
+    }
+    return json.result;
+  }
+
+  async function poolQuote(now: Date): Promise<RawQuote> {
+    if (cachedQuote && Date.now() - cachedQuote.at < quoteTtlMs) return cachedQuote.value;
+    if (token0IsToken === undefined) {
+      const token0 = await ethCall(SELECTOR_TOKEN0);
+      token0IsToken = `0x${token0.slice(-40).toLowerCase()}` === tokenAddress;
+    }
+    const reserves = await ethCall(SELECTOR_GET_RESERVES);
+    const hex = reserves.slice(2);
+    const reserve0 = BigInt(`0x${hex.slice(0, 64)}`);
+    const reserve1 = BigInt(`0x${hex.slice(64, 128)}`);
+    const tokenReserve = token0IsToken ? reserve0 : reserve1;
+    const wethReserve = token0IsToken ? reserve1 : reserve0;
+    if (tokenReserve === 0n) throw new UpstreamError('pool has no token liquidity');
+
+    const eth = INSTRUMENTS.find((i) => i.symbol === 'ETH-USD')!;
+    const ethUsd = await opts.base.getQuote(eth, now);
+    // price(token, ETH) = wethReserve / tokenReserve; 1e12 fixed-point keeps
+    // the BigInt→Number conversion inside double precision.
+    const ratio = Number((wethReserve * 1_000_000_000_000n) / tokenReserve) / 1e12;
+    const priceCents = quantizePriceCents(ratio * ethUsd.priceCents);
+    const value: RawQuote = { priceCents, previousCloseCents: priceCents };
+    cachedQuote = { at: Date.now(), value };
+    return value;
+  }
+
+  return {
+    name: `${opts.base.name}+uniswap:${symbol}`,
+    async getQuote(instrument, now) {
+      if (instrument.symbol !== symbol) return opts.base.getQuote(instrument, now);
+      return poolQuote(now);
+    },
+    async getHistory(instrument, opts2, now) {
+      if (instrument.symbol !== symbol) return opts.base.getHistory(instrument, opts2, now);
+      const q = await poolQuote(now);
+      const points = clampInt(opts2.points ?? 60, 2, 500);
+      const stepMs = clampInt(opts2.intervalMinutes ?? 5, 1, 1440) * 60_000;
+      const series: PricePoint[] = [];
+      for (let i = points - 1; i >= 0; i--) {
+        series.push({ atMs: now.getTime() - i * stepMs, priceCents: q.priceCents });
+      }
+      return series;
+    },
+  };
+}
+
 // --- selection ---------------------------------------------------------------
 
-/** `MARKET_DATA=yahoo` → live Yahoo Finance source; unset/anything else → mock. */
+/**
+ * `MARKET_DATA=yahoo` → live Yahoo Finance source; unset/anything else → mock.
+ * Setting `ETH_RPC_URL` + `CARD_POOL_ADDRESS` + `CARD_TOKEN_ADDRESS` layers
+ * live on-chain Uniswap pricing for CARD on top of either base.
+ */
 export function marketDataFromEnv(env: NodeJS.ProcessEnv = process.env): MarketDataSource {
-  return env.MARKET_DATA === 'yahoo' ? createYahooSource() : createMockSource();
+  const base = env.MARKET_DATA === 'yahoo' ? createYahooSource() : createMockSource();
+  if (env.ETH_RPC_URL && env.CARD_POOL_ADDRESS && env.CARD_TOKEN_ADDRESS) {
+    return createUniswapPoolSource({
+      base,
+      rpcUrl: env.ETH_RPC_URL,
+      poolAddress: env.CARD_POOL_ADDRESS,
+      tokenAddress: env.CARD_TOKEN_ADDRESS,
+    });
+  }
+  return base;
 }
 
 function clampInt(value: number, min: number, max: number): number {

@@ -73,12 +73,24 @@ function signalAt(waves: readonly Wave[], timeMs: number): number {
   return signal / totalWeight; // in [-1, 1]
 }
 
-/** The mock price for `instrument` at `timeMs` (epoch ms), in whole cents (≥ 1). */
+/**
+ * Quantize a price in cents: whole cents at 1¢ and above, micro-cents (six
+ * decimal places) below — so micro-cap tokens like CARD keep a real price
+ * instead of being floored to a penny. Cash movements still round to whole
+ * cents at fill time; only *prices* carry sub-cent precision.
+ */
+export function quantizePriceCents(value: number): number {
+  const whole = Math.round(value);
+  if (whole >= 1) return whole;
+  return Math.max(0.000001, Math.round(value * 1e6) / 1e6);
+}
+
+/** The mock price for `instrument` at `timeMs` (epoch ms), in cents (≥ one micro-cent). */
 export function priceAtCents(instrument: Instrument, timeMs: number): number {
   const waves = wavesForSymbol(instrument.symbol);
-  const amplitudeCents = Math.round((instrument.basePriceCents * instrument.volatilityBps) / 10000);
+  const amplitudeCents = (instrument.basePriceCents * instrument.volatilityBps) / 10000;
   const signal = signalAt(waves, timeMs);
-  return Math.max(1, Math.round(instrument.basePriceCents + signal * amplitudeCents));
+  return quantizePriceCents(instrument.basePriceCents + signal * amplitudeCents);
 }
 
 /** Most recent UTC midnight at or before `now` — the feed's "previous close" reference. */

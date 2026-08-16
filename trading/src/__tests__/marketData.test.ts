@@ -1,7 +1,12 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { createMockSource, createYahooSource, marketDataFromEnv } from '../domain/marketData.ts';
-import { priceAtCents } from '../domain/priceEngine.ts';
+import {
+  createMockSource,
+  createUniswapPoolSource,
+  createYahooSource,
+  marketDataFromEnv,
+} from '../domain/marketData.ts';
+import { priceAtCents, quantizePriceCents } from '../domain/priceEngine.ts';
 import { INSTRUMENTS } from '../domain/types.ts';
 import { UpstreamError } from '../service/errors.ts';
 
@@ -77,6 +82,102 @@ test('yahoo source surfaces HTTP and shape failures as UpstreamError', async () 
 
   const noPrice = createYahooSource({ fetchImpl: fakeFetch(200, yahooChartBody({ meta: {} })).impl });
   await assert.rejects(() => noPrice.getQuote(AAPL, NOW), UpstreamError);
+});
+
+// --- Uniswap pool source ----------------------------------------------------
+
+const CARD_TOKEN = '0x1111111111111111111111111111111111111111';
+const POOL = '0x2222222222222222222222222222222222222222';
+const CARD = INSTRUMENTS.find((i) => i.symbol === 'CARD')!;
+const ETH = INSTRUMENTS.find((i) => i.symbol === 'ETH-USD')!;
+
+function pad32(hex: string): string {
+  return hex.replace(/^0x/, '').padStart(64, '0');
+}
+
+/** Fake JSON-RPC: answers token0 and getReserves for a CARD/WETH pool. */
+function fakeRpc(opts: { cardReserve: bigint; wethReserve: bigint; cardIsToken0?: boolean; fail?: boolean }) {
+  const calls: string[] = [];
+  const impl = (async (_url: any, init: any) => {
+    const body = JSON.parse(init.body);
+    calls.push(body.params[0].data);
+    if (opts.fail) return new Response('boom', { status: 500 });
+    let result: string;
+    if (body.params[0].data === '0x0dfe1681') {
+      result = '0x' + pad32(opts.cardIsToken0 !== false ? CARD_TOKEN : '0x' + 'f'.repeat(40));
+    } else {
+      const r0 = opts.cardIsToken0 !== false ? opts.cardReserve : opts.wethReserve;
+      const r1 = opts.cardIsToken0 !== false ? opts.wethReserve : opts.cardReserve;
+      result = '0x' + pad32('0x' + r0.toString(16)) + pad32('0x' + r1.toString(16)) + pad32('0x0');
+    }
+    return new Response(JSON.stringify({ jsonrpc: '2.0', id: 1, result }), {
+      status: 200,
+      headers: { 'content-type': 'application/json' },
+    });
+  }) as typeof fetch;
+  return { impl, calls };
+}
+
+function poolSource(rpc: { impl: typeof fetch }, base = createMockSource()) {
+  return createUniswapPoolSource({
+    base,
+    rpcUrl: 'http://rpc.local',
+    poolAddress: POOL,
+    tokenAddress: CARD_TOKEN,
+    fetchImpl: rpc.impl,
+  });
+}
+
+test('uniswap source prices CARD from pool reserves × the ETH-USD cross', async () => {
+  // The documented launch pool: 200M CARD against 3 ETH.
+  const rpc = fakeRpc({ cardReserve: 200_000_000n * 10n ** 18n, wethReserve: 3n * 10n ** 18n });
+  const source = poolSource(rpc);
+  const q = await source.getQuote(CARD, NOW);
+
+  const ethUsd = await createMockSource().getQuote(ETH, NOW);
+  const expected = quantizePriceCents((3 / 200_000_000) * ethUsd.priceCents);
+  assert.equal(q.priceCents, expected);
+  assert.ok(q.priceCents > 0 && q.priceCents < 1, `sub-cent price, got ${q.priceCents}`);
+});
+
+test('uniswap source handles either reserve ordering and caches within the TTL', async () => {
+  const rpc = fakeRpc({ cardReserve: 200_000_000n * 10n ** 18n, wethReserve: 3n * 10n ** 18n, cardIsToken0: false });
+  const source = poolSource(rpc);
+  const a = await source.getQuote(CARD, NOW);
+  const b = await source.getQuote(CARD, NOW);
+  assert.equal(a.priceCents, b.priceCents);
+  assert.equal(rpc.calls.length, 2); // token0 + one getReserves; second quote came from cache
+});
+
+test('uniswap source passes every other symbol through to the base source', async () => {
+  const rpc = fakeRpc({ cardReserve: 1n, wethReserve: 1n });
+  const source = poolSource(rpc);
+  const aapl = INSTRUMENTS.find((i) => i.symbol === 'AAPL')!;
+  const q = await source.getQuote(aapl, NOW);
+  assert.equal(q.priceCents, priceAtCents(aapl, NOW.getTime()));
+  assert.equal(rpc.calls.length, 0); // no RPC traffic for non-pool symbols
+});
+
+test('uniswap source serves flat history at the pool price and surfaces RPC failures', async () => {
+  const rpc = fakeRpc({ cardReserve: 200_000_000n * 10n ** 18n, wethReserve: 3n * 10n ** 18n });
+  const source = poolSource(rpc);
+  const hist = await source.getHistory(CARD, { points: 5, intervalMinutes: 60 }, NOW);
+  assert.equal(hist.length, 5);
+  assert.ok(hist.every((p) => p.priceCents === hist[0].priceCents)); // honest "no movement data" line
+
+  const failing = poolSource(fakeRpc({ cardReserve: 1n, wethReserve: 1n, fail: true }));
+  await assert.rejects(() => failing.getQuote(CARD, NOW), UpstreamError);
+});
+
+test('marketDataFromEnv layers the pool source only when all three envs are set', () => {
+  const envBase = { MARKET_DATA: '' } as NodeJS.ProcessEnv;
+  assert.equal(marketDataFromEnv(envBase).name, 'mock');
+  const wrapped = marketDataFromEnv({
+    ETH_RPC_URL: 'http://rpc.local',
+    CARD_POOL_ADDRESS: POOL,
+    CARD_TOKEN_ADDRESS: CARD_TOKEN,
+  } as NodeJS.ProcessEnv);
+  assert.equal(wrapped.name, 'mock+uniswap:CARD');
 });
 
 test('marketDataFromEnv selects yahoo only when MARKET_DATA=yahoo', () => {

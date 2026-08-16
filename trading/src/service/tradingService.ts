@@ -208,7 +208,7 @@ export class TradingService {
       throw new ValidationError('dollar-based orders are market only — pass quantity for a limit order');
     }
     const quantity = requireShares(input.quantity, 'quantity');
-    const limitPriceCents = requirePositiveInt(input.limitPriceCents, 'limitPriceCents');
+    const limitPriceCents = requirePriceCents(input.limitPriceCents, 'limitPriceCents');
     this.checkCanRestOrder(account, side, instrument.symbol, quantity, limitPriceCents);
     const order: Order = {
       id: this.newId('ord'),
@@ -688,6 +688,18 @@ function requirePositiveInt(value: unknown, field: string): number {
     throw new ValidationError(`${field} must be a positive integer`);
   }
   return value;
+}
+
+/** A positive price in cents — whole cents at 1¢+, micro-cents below (sub-cent tokens). */
+function requirePriceCents(value: unknown, field: string): number {
+  if (typeof value !== 'number' || !Number.isFinite(value) || value <= 0) {
+    throw new ValidationError(`${field} must be a positive price in cents`);
+  }
+  const whole = Math.round(value);
+  if (whole >= 1) return whole;
+  const micro = Math.round(value * 1e6) / 1e6;
+  if (micro <= 0) throw new ValidationError(`${field} must be at least 0.000001 cents`);
+  return micro;
 }
 
 /** A positive share quantity, quantized to 6 decimal places (min one micro-share). */

@@ -53,6 +53,7 @@ export const PAGE = /* html */ `<!doctype html>
   .sub{color:var(--muted);font-size:.86rem;margin-top:3px}
   .btn{background:var(--brand);color:var(--brand-ink);border:0;border-radius:10px;padding:.6rem .95rem;font-weight:700;font-size:.86rem;cursor:pointer;display:inline-flex;align-items:center;gap:7px;box-shadow:var(--shadow)}
   .btn:hover{filter:brightness(1.08)}
+  a.btn{text-decoration:none;justify-content:center}
   .btn:disabled{opacity:.5;cursor:not-allowed}
   .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line);box-shadow:none}
   .btn.ghost:hover{border-color:var(--brand);color:var(--brand)}
@@ -210,11 +211,13 @@ export const PAGE = /* html */ `<!doctype html>
 <script>
 "use strict";
 var $=function(s,r){return (r||document).querySelector(s);};
-var ACCT=null, ACCTNAME="", EMAIL="", EMAILVERIFIED=true, view="home";
+var ACCT=null, ACCTNAME="", EMAIL="", EMAILVERIFIED=true, CARDADDR=null, view="home";
 var instruments=[], quotes={}, watchlistSymbols={}, orders=[], plans=[], portfolio=null;
 
 // ---- helpers ----
-function usd(c){c=c||0;return (c<0?"-":"")+"$"+(Math.abs(c)/100).toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2});}
+function usd(c){c=c||0;var a=Math.abs(c),sign=c<0?"-":"";
+  if(a>0&&a<1)return sign+"$"+(a/100).toFixed(8).replace(/0+$/,"");
+  return sign+"$"+(a/100).toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2});}
 function fmtQty(n){return (Math.round((n||0)*1e6)/1e6).toString();}
 function pct(bps){bps=bps||0;return (bps>=0?"+":"")+(bps/100).toFixed(2)+"%";}
 // Percent signed by its own dollar figure — independent rounding must never
@@ -321,7 +324,7 @@ function logout(){fetch("/auth/logout",{method:"POST"}).then(function(){location
 function boot(){
   return api("GET","/app").then(function(app){
     ACCT=app.accountId; ACCTNAME=app.accountName||"Investor";
-    EMAIL=app.email||""; EMAILVERIFIED=app.emailVerified!==false;
+    EMAIL=app.email||""; EMAILVERIFIED=app.emailVerified!==false; CARDADDR=app.cardTokenAddress||null;
     $("#acctname").textContent=ACCTNAME;
     $("#foot").innerHTML="Don\u2019t ever trade alone again.<br><br>Paper account for<br><b>"+esc(ACCTNAME)+"</b><br>No real money moves.<br><button class=\\"logout\\" id=\\"logoutbtn\\">Log out</button>";
     $("#logoutbtn").onclick=logout;
@@ -607,6 +610,20 @@ function positionCard(sym){
 }
 // Key stats; day low/high come from the loaded 1D series, so they fill in
 // once the chart lands (hence the id the chart loader updates).
+// Real CARD, the simplest possible way: two links that open Uniswap with the
+// pair pre-filled — the visitor buys or sells with ETH from their OWN wallet.
+// Cardinal Trading never touches funds or keys.
+function realCardBlock(sym){
+  if(sym!=="CARD"||!CARDADDR)return "";
+  var buy="https://app.uniswap.org/swap?outputCurrency="+encodeURIComponent(CARDADDR)+"&chain=mainnet";
+  var sell="https://app.uniswap.org/swap?inputCurrency="+encodeURIComponent(CARDADDR)+"&chain=mainnet";
+  return '<div class="stats"><h3>Real CARD \u00b7 on-chain</h3>'
+    +'<p class="dim" style="margin:0 0 10px">Buy and sell real CARD with ETH from your own wallet, directly on Uniswap. Cardinal Trading never holds your funds or keys.</p>'
+    +'<div class="row2">'
+    +'<a class="btn" href="'+buy+'" target="_blank" rel="noopener">Buy CARD with ETH</a>'
+    +'<a class="btn ghost" href="'+sell+'" target="_blank" rel="noopener">Sell CARD for ETH</a>'
+    +'</div></div>';
+}
 function statsBlock(sym){
   var q=quotes[sym]||{};
   var openOrders=orders.filter(function(o){return o.symbol===sym&&o.status==="open";}).length;
@@ -655,7 +672,8 @@ function openStockDrawer(sym){
     +'<div class="field" id="d_limitwrap" style="display:none"><label>Limit price $</label><input id="d_limit" type="number" min="0.01" step="0.01"></div>'
     +'<div class="field" id="d_repeatwrap"><label>Repeat</label><select id="d_repeat"><option value="once">One time</option><option value="daily">Daily</option><option value="weekly">Weekly</option><option value="biweekly">Every 2 weeks</option><option value="monthly">Monthly</option></select></div></div>'
     +'<div class="sumbox" id="d_sum"></div>'
-    +statsBlock(sym);
+    +statsBlock(sym)
+    +realCardBlock(sym);
   $("#dfoot").innerHTML='<button class="btn ghost" id="d_cancel">Cancel</button><button class="btn" id="d_submit">Review order</button>';
   $("#d_cancel").onclick=closeDrawer;
   $("#d_ranges").onclick=function(e){var b=e.target.closest("button");if(!b)return;chartRange=b.dataset.r;
@@ -743,8 +761,9 @@ function submitTrade(){
     body.quantity=qty;
   }
   if(tradeType==="limit"){
-    var limit=Math.round(parseFloat($("#d_limit").value||"0")*100);
-    if(!limit){toast("Enter a limit price","err");return;}
+    var limit=parseFloat($("#d_limit").value||"0")*100;
+    limit=limit>=1?Math.round(limit):Math.round(limit*1e6)/1e6;
+    if(!(limit>0)){toast("Enter a limit price","err");return;}
     body.limitPriceCents=limit;
   }
   $("#d_submit").disabled=true;
