@@ -991,6 +991,77 @@ they cost almost nothing:
 
 ---
 
+## Part II-B — Utility: value outside the brand
+
+**The design problem, stated cleanly:** every mechanism that "creates value" either shuffles
+money between holders (burns, staking, reflections — zero-sum) or needs value to flow in
+from outside. Backing with ETH fails because the vault would be filled with the founder's
+own money, and ETH needs no wrapper. What is needed is a warehouse that is **free to stock
+and worth something to withdraw from.**
+
+**The answer this project already owns: software access.** The repo contains working
+products. Granting access to software costs approximately nothing per user; strangers still
+pay for it. That is the same asymmetry behind airline miles (backed by seats that would fly
+empty) and arcade tokens (backed by machine time). A coin redeemable for software access
+has value to someone who has never heard the story — which is the definition of value
+outside a brand.
+
+### The design: CP17 as a software key
+
+1. **Pick one product first — the one with real demand.** Utility is anchored by the thing
+   it unlocks; a key to software nobody wants is worth nothing. Start with a single app
+   where there is any evidence of actual users, and expand the catalog later. Do not gate
+   anything care-critical or safety-related, ever.
+2. **Two tiers, no contract changes:**
+   - **Hold to use** — a wallet holding ≥ N CP17 unlocks the product while it holds. The
+     coin works like a transferable subscription; sell the coins, lose the access.
+   - **Burn to own** — send M CP17 to the dead address, show the transaction, receive a
+     lifetime license. Every redemption is an on-chain receipt, and every one permanently
+     shrinks the float. This fits the project's receipts thesis exactly: usage itself
+     becomes checkable.
+3. **Mechanics are a weekend, not a protocol.** The user connects a wallet and signs a
+   message; the server verifies the signature and checks the balance (or the burn
+   transaction) via any RPC. No changes to the token, no new Solidity, renounce intact.
+4. **Publish a price list in CP17, as policy.** "Lifetime license: 500,000 CP17" — posted
+   on the site, repriced periodically as market price moves, explicitly a policy the LLC
+   can change with notice rather than a promise welded into anything. This is the honor
+   policy of a gift card, and it should say what gift cards say: honored while the LLC
+   operates, terms can change prospectively, already-burned redemptions stay honored.
+5. **What this anchors, honestly.** If a license is worth $50 and costs 500k CP17, the coin
+   has a use-value reference near $0.0001 — *for as long as people actually want the
+   license*. The anchor is demand-limited: it is a floor made of customers, not of cash.
+   Say that plainly rather than advertising a "price floor."
+
+### The rules that keep it survivable
+
+- **It must exist at launch or stay unmentioned.** Promising future utility is selling an
+  expectation of the founder's efforts — the exact securities fact pattern this design
+  avoids. Build the gate, wire one product, *then* put a single sentence on the site.
+- **Market the use, never the upside.** "500k CP17 unlocks X" is a product page. "Utility
+  will drive the price" is the sentence a plaintiff quotes. The coin page's souvenir
+  framing stays; the utility is listed the way a menu lists prices.
+- **Run it through counsel with the rest.** Consumptive, exists-at-launch utility generally
+  *improves* the Howey posture — people buying to use, not to profit — but this is
+  precisely the question the legal briefing exists to put to a lawyer, not to decide here.
+- **Tax and books:** redemptions are revenue to the LLC at fair market value, and the
+  LLC honoring licenses is a service obligation — both go through the accountant.
+- **The giving stays ungated and unpriced.** The committee, the gifts, and the ledger are
+  never behind a paywall. Utility funds nothing and gates nothing on that side.
+
+### Why this is the right shape and the others were not
+
+| Mechanism | Where value comes from | Verdict |
+|---|---|---|
+| Burns, staking, reflections | Other holders | Zero-sum shuffle — no |
+| Revenue share, buybacks | The LLC's cash flows | A security — closed door |
+| ETH backing | The founder's own pocket | Stores value, creates none — no |
+| **Software key** | **Strangers who want the product** | **Real, consumptive, buildable now** |
+| The ledger of gifts | Verified acts over time | The meaning engine — keep, it compounds |
+
+The two engines are complementary and neither is a brand: the ledger gives the coin a
+reason to be *held*, and the software key gives it a reason to be *used*. Everything else
+on the menu was either someone else's money moving in a circle, or yours.
+
 ## Part III — The 3% trade fee
 
 **Recommendation: don't.** Not on moral grounds — on arithmetic.
