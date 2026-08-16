@@ -327,7 +327,7 @@ I also had a strong opinion about which colors belonged to Mom and my Aunt Nance
 
 I'd lost a country, a father, and a language.
 
-Nancey, my mother's youngest sister, treated Chris and me as her own from the start. She was at the games and the matches, always in our corner. Nancey was in her early twenties when we arrived from Mexico, years before she met Charlie. She told me not long ago that no matter how old I get, she'll always see the same little kid, and I know the one she means: the boy in the backseat too scared to get out of the car.
+Nancey, my mother's youngest sister, treated Chris and me as her own from the start. She was at the games and the matches, always in our corner. Nancey was in her early twenties when we arrived from Mexico, years before she met Charlie. She started seeing him when I was eight and married him two years later. He became my uncle. She told me not long ago that no matter how old I get, she'll always see the same little kid, and I know the one she means: the boy in the backseat too scared to get out of the car.
 
 Aunt Terry's family had the house at Pines Lake. We'd flown to see Terry once before, in Houston, when my cousin Kevin was born and my mom was pregnant with Chris. Nancey and my grandparents all crowded into the little two-bedroom with us. The American thread never broke, even from Mexico City.
 
