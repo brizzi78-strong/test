@@ -59,17 +59,17 @@ Prologue
 17. Chumuckla
 18. The Quiet Years
 19. The People You Meet When You Stop Drinking
-20. Horacio
-21. The Line
-22. The Salmon Palace
-23. They Gave Me a Chance
-24. Making Amends
+20. The Line
+21. They Gave Me a Chance
+22. Making Amends
+23. The Salmon Palace
+24. Horacio
 
 **Part Five — Hope**
 
-25. Hope
-26. What We Built
-27. Sobriety Meets Hospice
+25. Sobriety Meets Hospice
+26. Hope for Rob
+27. What We Built
 
 **Part Six — The Last Chapter**
 

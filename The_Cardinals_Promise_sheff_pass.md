@@ -59,17 +59,17 @@ Prologue
 17. Chumuckla
 18. The Quiet Years
 19. The People You Meet When You Stop Drinking
-20. Horacio
-21. The Line
-22. The Salmon Palace
-23. They Gave Me a Chance
-24. Making Amends
+20. The Line
+21. They Gave Me a Chance
+22. Making Amends
+23. The Salmon Palace
+24. Horacio
 
 **Part Five — Hope**
 
-25. Hope
-26. What We Built
-27. Sobriety Meets Hospice
+25. Sobriety Meets Hospice
+26. Hope for Rob
+27. What We Built
 
 **Part Six — The Last Chapter**
 
@@ -166,7 +166,6 @@ PART ONE
 # **THE ESCAPE**
 
 **CHAPTER 1**
-
 ## **Mexico City — The Escape**
 
 *"The LORD shall preserve thy going out and thy coming in from this time forth, and even for evermore."*
@@ -261,7 +260,6 @@ She sat awake. The whole flight she was waiting for someone to stop her, at the 
 We landed in New Jersey at the start of winter. The airport felt like home at first. Same crowds, same noise, everyone rushing. Then I started listening. The words were wrong. Not Spanish. Something else. Everybody around me knew something I didn't.
 
 **CHAPTER 2**
-
 ## **New Jersey: Survival**
 
 *"Strength and honour are her clothing; and she shall rejoice in time to come."*
@@ -358,7 +356,6 @@ He went back to Mexico. It would be years before I saw him again.
 A year later, my mother told us there was someone she wanted us to meet.
 
 **CHAPTER 3**
-
 ## **The Man Who Didn't Have To**
 
 *"A father of the fatherless... is God in his holy habitation."*
@@ -439,7 +436,6 @@ My mother and Lou divorced in 1996, the year I turned eighteen. The divorce hand
 I get it now. I didn't back then. I see it every day at work — in the room with a family around a bed, watching some grown son or daughter hold a hand that's already going cool, trying to figure out what thirty years of somebody just being there actually meant. For me, it started on a Saturday. With a bucket of baseballs.
 
 **CHAPTER 4**
-
 ## **Chosen**
 
 *"I have called thee by thy name; thou art mine."*
@@ -512,7 +508,6 @@ He didn't give me a speech. He got the white-out and painted over the word, let 
 There was one thing they couldn't change, and I held onto it. Brizzi still started with a B. When the teacher lined us up alphabetically, I landed near the front, right about where Balderas used to put me. My country was gone. My first father was gone. My name was gone. But I still stood in the same place in that line, and some mornings that one small thing was the only proof I had that any part of the old me had made the trip.
 
 **CHAPTER 5**
-
 ## **The Man Who Raised Me**
 
 *"Let us not love in word, neither in tongue; but in deed and in truth."*
@@ -565,7 +560,6 @@ PART TWO
 *Love came free at home. Everywhere else, I thought you had to win it.*
 
 **CHAPTER 6**
-
 ## **The Wrestler**
 
 *"And Jacob was left alone; and there wrestled a man with him until the breaking of the day."*
@@ -678,7 +672,6 @@ Dave's football plans eventually changed. His character did not. Mine was beginn
 Dave went on to play in the NFL, then became a missionary in China, and years later we found our way back to each other. He's the one who wrote the afterword to this book. That tells you who he is.
 
 **CHAPTER 7**
-
 ## **What the Mat Left**
 
 *"And every man that striveth for the mastery is temperate in all things."*
@@ -741,7 +734,6 @@ When I threw up in a match, he didn't see weakness. When I got pinned in ninetee
 The wrestling years left marks I still feel. For a long time my body didn't feel like my own. It was something to manage, a number to beat, proof I deserved my place. Food stayed complicated, some meals were cheat meals, others I ate lean. When life felt out of control, drop the pounds was still the first thought that came back. The same drive that cut nineteen pounds to make weight later went looking for other ways to numb everything. It took years to make peace with my body, and it wasn't discipline that got me there. It was my mother's quiet meals. Some days I still have to choose that peace on purpose. It gets easier every year.
 
 **CHAPTER 8**
-
 ## **The Suit**
 
 *"Drudgery is the touchstone of character."*
@@ -770,7 +762,6 @@ They told him no, and the next morning he knotted the tie again. He wasn't loud 
 I can still see him at the front door. Dyed hair, pressed shirt, tie pulled tight, shoes shined. That's what he did while he waited. He kept showing up.
 
 **CHAPTER 9**
-
 ## **They'll Teach You**
 
 *"A good name is rather to be chosen than great riches."*
@@ -837,7 +828,6 @@ My brother and I called him the most interesting man in the world. It started as
 That was the man who adopted me. He never talked about himself, never needed you to know who he knew, and never once acted like any of it was special. I was proud to be his son.
 
 **CHAPTER 10**
-
 ## **Oxford**
 
 *"The LORD is nigh unto them that are of a broken heart."*
@@ -908,7 +898,6 @@ New Jersey to Ohio, ten hours, no call ahead to confirm I needed him. He took me
 On the way out, a waitress ran into the parking lot after us and handed me her phone number. I looked at Lou. He kept walking, eyes straight ahead. I asked if he'd said something, left a big tip, set the whole thing up. He denied it flat. Didn't miss a beat. I never believed him. He took it to the grave. That might be my favorite thing about him.
 
 **CHAPTER 11**
-
 ## **MTV**
 
 *"All is vanity and vexation of spirit."*
@@ -941,7 +930,6 @@ PART THREE
 *Everything I'd built was borrowed. This is what the repo man looks like.*
 
 **CHAPTER 12**
-
 ## **My Brother's Keeper**
 
 *"Am I my brother's keeper?"*
@@ -977,7 +965,6 @@ Chris likes to say that growing up, he and I played Nintendo. We didn't. I playe
 That's my brother. The Nintendo I hogged, India, the Bahamas, the ultimatum that saved my life. Chris sees what I can't, and when I stop arguing and do what he says, it works out in ways I never would have bet on. My best friend.
 
 **CHAPTER 13**
-
 ## **The Performance Trap**
 
 *"Selfishness — self-centeredness! That, we think, is the root of our troubles."*
@@ -1074,7 +1061,6 @@ That's when my dad stepped in. He'd remarried years earlier, Donna, a nurse, the
 The Florida license felt like a loophole I'd found in the universe. Their computers didn't talk to California's, so I passed the test, smiled for the camera, and walked out with a clean one, laminated proof that I'd beaten the system. I told myself everything would be different here. But a geographic cure only works if you leave the problem behind, and I hadn't. Same man, new license. One night before Dad and Donna made it down, I went out, and I drove home drunk. At a red light I looked left, and there was a cop. I looked right. Another cop. A drunk man on a suspended license, boxed in on both sides, holding his breath at a light in a town where nobody knew him yet. The light changed. They rolled on. By the grace of God I wasn't pulled over, not that night, not ever. People in the rooms talk about the moment of clarity. That red light was mine. I didn't get sober that night, and I didn't slow down for long. But I never forgot what that box felt like. The old patterns came back like muscle memory, the late nights, the mornings that turned into afternoons, the résumé I kept updating and never sent. I'd drive past Dad and Donna's house, see him in the driveway washing his car, and think about stopping in. But that meant questions about interviews and the leads I hadn't followed, so it was easier to wave and keep driving. The jobs were gone, and Pensacola without work started to feel like a place I was hiding rather than rebuilding. So when my aunt Nancey called and said come stay with me, I went.
 
 **CHAPTER 14**
-
 ## **Checking Boxes**
 
 *"Man looketh on the outward appearance, but the LORD looketh on the heart."*
@@ -1127,7 +1113,6 @@ She helped me find work through local connections, and for a while, in her quiet
 Then I left. I got an apartment in West Palm Beach, and I can't hand you a clean reason why. I told myself it was a fresh start. In West Palm the pills stopped being the whole story. The drinking came back, and I added cocaine. I all but stopped eating, and my body started failing — malnutrition, the damage quietly adding up while I told anyone who asked I was fine. Boca was the last soft place. West Palm Beach was where the disease finally got me alone.
 
 **CHAPTER 15**
-
 ## **West Palm Beach**
 
 *"His father saw him, and had compassion, and ran."*
@@ -1174,7 +1159,6 @@ And the prayer deserves an honest accounting too. On that floor I asked God to e
 But I think about it all the time now. What did he owe me at that point, a grown man he'd adopted, who'd burned through everything, living off stolen electricity in a tower of Post-it notes, praying on a balcony to disappear? Nothing. He owed me nothing. And he slept on my floor, and bought me a bagel, and rented the truck, and found Marcus, and drove me home, and pointed at a bird and told me my nana was watching out for us. That's the man. That was always the man.
 
 **CHAPTER 16**
-
 ## **New Orleans**
 
 *"Out of the belly of hell cried I, and thou heardest my voice."*
@@ -1227,7 +1211,6 @@ PART FOUR
 *You can't pay back a man who never sent a bill. You can pass it on.*
 
 **CHAPTER 17**
-
 ## **Chumuckla**
 
 *"Half measures availed us nothing. We stood at the turning point."*
@@ -1270,7 +1253,6 @@ Lou picked me up. Same truck, same calm. He didn't ask me to prove anything, did
 What came next was a long line of ordinary mornings I had to learn how to fill.
 
 **CHAPTER 18**
-
 ## **The Quiet Years**
 
 *"Prayer changes me, and I change things."*
@@ -1313,7 +1295,6 @@ The shape of those years was small on purpose. Up at five thirty. Coffee. A litt
 People asked why I did all of it. The meetings, the volunteering, the running, the calls at midnight. I only ever had one answer. It kept me sober. That was enough. By 2010 I was becoming someone who could be trusted. Not because of talent or drive. Because of repetition. In the quiet years, staying sober wasn't the boring part. It was the whole victory.
 
 **CHAPTER 19**
-
 ## **The People You Meet When You Stop Drinking**
 
 *"Two are better than one... for if they fall, the one will lift up his fellow."*
@@ -1356,13 +1337,110 @@ The morning after my father died, all these years later, Quint was the first per
 I started sober thinking mediocrity was the ceiling. Then I met Andy, Bob, Mager, Matt, and Quint. These are the people you meet when you stop drinking. Not the ones you expected, the ones God put in front of you. I thought I was too far gone for any of it. So did they, once. They walked into the room anyway, and so did I, and that turned out to be the whole thing. And the best one didn't come from a meeting at all. You'll meet her soon.
 
 **CHAPTER 20**
+## **The Line**
 
+*"Keep thy heart with all diligence; for out of it are the issues of life."*
+*— Proverbs 4:23*
+
+**Pensacola, 2010**
+
+"Rob, if you relapse, I'm going to have to wash my hands of you." No emotion. No threat. My father said it the way he stated facts, and it was the kindest hard thing anyone ever told me. It only worked coming from him. He had spent my whole life proving he would never actually leave. Sobriety didn't erase desire. That surprised me. What sobriety gave me was time. What it took away was the anesthesia, and without it I could feel everything, the hunger included. The disease didn't leave when I put the drink down. It got quiet and waited.
+
+By late 2010 I was restless in a way I couldn't name. Sober, working, going to meetings, living clean, and underneath it something in me still wanted out. An opportunity came across my radar, medical device sales, Stryker. Big money, fast track. My first thought was: this is how I get back. My second: I don't know if I can stay sober there.
+
+That scared me. I drove to see Lou. He didn't ask why I'd come; he rarely did. He listened while I talked in circles, opportunity, timing, readiness, fear. Eventually the truth slipped out. I still want to drink, I said. The words just hung there. Accurate.
+
+He didn't react the way I expected. No anger, no speech, no disappointment. He looked at me the way he had when I was losing badly on a mat and he was deciding whether I could recover. Then he said it. Just a boundary. It landed harder than any consequence I'd faced, not because it was cruel but because it was clean. He'd done what he could do, and he wasn't going to stand by and watch me die slowly while pretending that watching helped.
+
+I left shaken. That line forced a choice I couldn't hand off. Go back to that world too soon and I wouldn't be returning, I'd be relapsing with a résumé. I didn't take the job. It didn't feel brave. It felt like staying alive.
+
+The payoff came quietly, months later. A Tuesday morning in 2011, on my walk along the bay, coffee in a paper cup, the sun just coming up over the water. I wasn't thinking about anything in particular, and then I knew, the way you know your own name. I didn't want a drink. I hadn't wanted one in a long time, and it wasn't a fight anymore. I took another sip of coffee and kept walking.
+
+**CHAPTER 21**
+## **They Gave Me a Chance**
+
+*"Old things are passed away; behold, all things are become new."*
+*— 2 Corinthians 5:17*
+
+**Pensacola, 2011**
+
+When the recruiter asked what I'd been doing for the last five years, I didn't open up about everything. I've been working as a lifeguard, I said. I've hit some bumps in the road. I've been rebuilding. The call that led to that answer came on an ordinary day. By 2011 ordinary days were the whole texture of my life. The sharp edges were gone. Work, meetings, lifeguard shifts, dinners with Lou and Donna, early mornings that looked exactly like the ones before. When the phone rang that afternoon I almost let it go to voicemail.
+
+A recruiter. Someone who knew someone, the way it happens in a town like Pensacola. We're looking for someone to build relationships for a home health company, nursing, PT, OT, patients who can't get to clinics. We need someone who can develop referral sources. Healthcare. The word landed with weight. Not excitement. Something quieter.
+
+I have medical sales experience, I said. But it's been a while. How long? About five years. And what have you been doing since? There it was. I didn't spin it, and I didn't tell the whole story either. Some bumps in the road, I said. I've been rebuilding. Silence, not uncomfortable, just space. Can you come in for an interview?
+
+Caroline, the home health leader who would hire me, didn't waste time. She read my résumé the way people do when they're not looking to be impressed, following the rise all the way to where it stopped. She didn't ask about the gaps. She asked about trust. How do you build it with people who don't know you? What do you do when the territory's cold and the numbers aren't there? How do you stay consistent when results don't come? I talked about discipline without ego, doing the work because it's right, not because someone's watching. Rejection as information, not a verdict. I talked about the pool, scanning the water when nothing was happening, how the job was the same whether anyone needed saving or not. She listened. Wrote. Looked up only when something mattered.
+
+The position pays sixty thousand a year, she said finally. Plus commission. But it's a slow build. Once, I'd made five times that and felt hollow. This felt honest. I can do this, I said, and for once in an interview I wasn't performing belief. I was stating it.
+
+She called three days later. I need to talk to you about something from your background check. I knew. It shows two DUIs. Those weren't disclosed. You're right, I said. I should have disclosed it. I'm sorry. A pause. Can you tell me what happened? So I did. Not the polished version. What it had been, what it cost, what had changed. When I finished the line stayed quiet. Okay, she said. I appreciate your honesty. Let me talk to HR.
+
+Four days. I went to work, went to meetings, had dinner, slept, did it again. On the fifth day Caroline called. How does a November first start date sound? I didn't answer right away. I sat in my car in Lou's driveway and let it settle. Not adrenaline. Gratitude. Someone had looked at who I was and decided it was enough. I called Lou. I got the job. She knew about the DUIs. HR wanted to pull the offer. She fought for me. A pause. That's a blessing, he said. I'm proud of you. After we hung up I sat there a long time. This wasn't a comeback. Comeback means there's something to go back to, and there wasn't. It was confirmation.
+
+The work didn't feel heroic, which surprised me. I half-expected the new job to arrive with meaning baked in. Day one was paperwork. Compliance modules. Acronyms I barely remembered from a former life, HIPAA, OASIS. Caroline didn't give me a speech. She showed me how things worked. This is a long game, she said. You don't force referrals. You earn trust.
+
+Home health wasn't selling, not the way I'd done it. It was assisted livings and living rooms, oxygen tanks humming in the corner, family members exhausted in ways sleep doesn't fix. I walked into homes where time had slowed down.
+
+Miss Jane was seventy-eight, recovering from hip surgery, and she apologized for the mess in a spotless house. She told me she used to dance, every Friday night for forty years, like it was a confession, and she was terrified she'd never walk without a walker again. I didn't rush past it. I asked about the dancing, and her face changed when she talked about it. That was the job.
+
+Mr. Joe was newly diabetic, embarrassed he needed a nurse to teach him insulin. His hands shook as he practiced. I'm sorry, he kept saying. I should have this by now. You have it, I told him. You've done it right three times in a row. He looked up like he hadn't thought to count the successes.
+
+It was familiar. I knew what it was like to need help and not want it, to be ashamed of dependence, to apologize for taking up space when you're the one suffering. So when families talked I didn't rush them, didn't fill the silence, didn't pitch. I listened. Caroline noticed. You're different with people, she said one afternoon. You don't talk at them. I know what it feels like to be scared, I said. She nodded. No follow-up. She'd already decided to trust me, and I understood what that trust meant in a way I wouldn't have before.
+
+The days were long, doctors' offices, nursing homes, assisted livings, back roads. At night I still went to meetings, still called my sponsor. There was a moment, small and almost forgettable, sitting in my car after a visit with paperwork on the steering wheel, when I realized I wasn't waiting for something else anymore. This was enough. They gave me a chance, and I stayed ten years. There were sales awards in there; they mattered less than what they measured. My manager Brenda Jahn was one of the best I ever worked for. She believed in me and pushed me, and that prepared me for everything that came next.
+
+**CHAPTER 22**
+## **Making Amends**
+
+*"First be reconciled to thy brother, and then come and offer thy gift."*
+*— Matthew 5:24*
+
+**Pensacola, 2012**
+
+$113,000. That was the number when I finally added it up in ink on a yellow legal pad, every credit card and collection account and legal fee, no rounding. I'd spent years not looking at it. Steady work meant I could finally face the wreckage I'd been outrunning, and my sponsor Mager was the one who walked me into it. He didn't rush me. He was patient, but he wasn't buying the act. I could make my recovery sound like a success story, still controlling the version of me in the room. Mager didn't interrupt. He listened in a way that made clear he was hearing more than I was saying, and eventually, with nowhere for the story to land, it fell apart on its own.
+
+I got stuck on the amends step. Not in theory. In the concrete requirement to account for everything, without narrative, without softening. One night after a meeting Mager slid a yellow legal pad across the table. Write it down, he said. I knew what he meant.
+
+I had never been honest with myself about money. I used it to keep score. This was about what it had cost. I started listing. Credit cards, multiple, run up over years of buying the appearance of success with borrowed money. Medical bills. Legal fees. Collection accounts I hadn't looked at directly in months. When I finished I added it up slowly. $113,000. I waited for the spiral. It didn't come. What came was clarity. The real number doesn't move. It just sits there, and because it sits there, you can work with it.
+
+Mager looked at the pad. Didn't soften it, didn't minimize it. Okay, he said. Now we know. We kept it basic: pay what you can, don't borrow, don't hide, open the envelopes, answer the calls, always know where you stand. At one point I reached for the future. Once I make more. Mager stopped me. Use the money you actually have. That's how trust gets rebuilt.
+
+My mother's money never went on that legal pad. What I owed her had no number on it. The lies I'd told her went into my fourth step and my fifth, and for years I told myself the rest was paid in the only currency she ever wanted — her son, alive and honest. Writing this book made me stop on that sentence. Sober and alive is a start. It isn't a settlement. She's the last parent I have, down in South Florida, and I am not there enough. I've come to think this isn't an amends you finish — not a letter, not a line in a book. It's the trips. More of my time, which is the one thing she always wanted and the one thing I kept for myself. I'm putting it on the page so I can't walk past it again. I love her, and I haven't shown it the way she showed me. As I write this, I'm booking a trip to South Florida to see her — to start being a better son while I still have the time to be one. The debt on the pad didn't disappear fast. But I stopped flinching when bills came. I started answering calls from numbers I didn't recognize. My past stopped feeling like it was following me, not because it was gone, but because it was being addressed. Not redemption. Nothing was being erased. Responsibility. One payment, one opened envelope, one answered call at a time.
+
+One amends I owed Chris had nothing to do with money. I'm the older brother. On paper the job was mine, look out for him, go first, take the hit. My addiction handed that job to him instead. He drove me to detox. He called me with the ultimatum. He watched the whole family bend around a crisis I kept making, and somewhere in it he became the big brother, a promotion he never asked for. When I made my amends to him, I said it plain. I'm sorry you had to be the older one. He waved it off the way he waves off everything. But I needed to say it, and I needed him to hear it. He carried a weight that should have been mine, and he never once made me feel like the weight.
+
+The courts came last. In 2013, four years sober, I wrote to the court myself and petitioned to have the cases dismissed. No lawyer this time. In 2002 that work had taken the Taylor firm and ten thousand dollars. In 2013 it took a letter from a sober man who had done everything the court asked. The dismissals came through.
+
+**CHAPTER 23**
+## **The Salmon Palace**
+
+*"Except the LORD build the house, they labour in vain that build it."*
+*— Psalm 127:1*
+
+**Pensacola, 2014**
+
+I didn't buy it because it made sense. On paper it didn't. An association fee. Seven hundred and sixty-five square feet, one bedroom, one bath, but it was all I needed. It was a condo carved out of a building called the Mirador, Spanish stucco with a Spanish tile roof, a place that looked like it belonged in Southern California or Mexico and somehow held its ground in Pensacola. My unit had its own balcony over the pool. To this day it's the proudest I have ever been of a place I lived.
+
+The color was impossible to ignore. Salmon. Warm and defiant. It sat up off the road like a little castle on a hill, and that is exactly why my friends named it the Salmon Palace. They said it proud. The deed said the Mirador. Both were true. For years I drove past it on my way home from meetings. At first I barely noticed it. Then I noticed it every time. Then I was slowing down, then parking across the street to sit and stare. I couldn't imagine ever living there. So I did the thing they teach you. I pictured it anyway, owning it one day, a kind of prayer I didn't have the nerve to say out loud. Something in me recognized the place.
+
+By then I was doing well again, quietly. Home health had stabilized my life. Sober, paying bills, still carrying debt but no longer running from it. I wasn't after something bigger. I wanted something that was mine. The realtor showed me the sensible options first, places near the railroad tracks, starter homes with neutral paint, the kind that say be grateful this is all you can afford. None of them felt right. When I asked about the Mirador she raised an eyebrow. That one's different, she said. I know, I said.
+
+The unit was small but solid. Thick walls, high ceilings, construction that survives hurricanes and decades and neglect. It felt anchored. I didn't need to impress anymore. I needed something permanent.
+
+Prices in Pensacola were still down in 2014, which is the only reason a place like that ever came within reach. It was listed at a hundred and thirty thousand. I offered a hundred and nine, and they accepted. The only thing between me and the keys was the down payment, and I was short. Not dramatically. Enough to matter. So I called my brother, and I hated every second of it. Chris had done everything right, watched Lou rescue me, watched me fall and climb and wobble. He loved me, but love isn't unlimited credit. I need to borrow ten thousand dollars, I said. He didn't make me sweat it. Rob, he said, I'll loan it to you and I won't ask you a dollar for it. But if you don't pay it back, it'll affect our relationship. He wasn't threatening me. He was trusting me, conditionally. I understand, I said. He sent it. I set up an automatic payment that day, two hundred a month, and paid extra when I could. It took four years. I never missed one.
+
+When I got the keys I stood in the middle of that small living room longer than I expected. Nothing about it was impressive, and that was the point. I'd earned it through doing the next right thing. For five years the Mirador was my world. I woke up there, prayed there, paid down debt there, stayed sober there. Went to work, came home, did it again. Nobody applauded, and that was the miracle.
+
+That condo is where I finally stopped running. Years later, when Hope walked through that door the first time, she didn't say a word about the size. She noticed how it felt. We'd take a devotional out to the pool, or down to the dock, and read it together. The habit we still fall back into, the one that's just part of the house now, started there. We sold it in 2019, a hundred thousand in equity, and put it down on the home Hope and I built together in East Hill, the kind I'd never let myself imagine from across the street. From a one-bedroom salmon castle to a house we built from the ground up. That's what five years of quiet, unglamorous work can do.
+
+**CHAPTER 24**
 ## **Horacio**
 
 *"For if ye forgive men their trespasses, your heavenly Father will also forgive you."*
 *— Matthew 6:14*
 
-**Ensenada, Mexico, 2006**
+**Ensenada and Pensacola, 2006–2015**
 
 He never remarried. No second family, no one after my mother.
 
@@ -1400,108 +1478,6 @@ And every Fourth of July — my birthday — since that first call, the phone ha
 
 It took me a long time to understand that all of it, the Wednesday calls at seven from a borrowed line, the birthday calls, even the friend requests to people he had never met, was the love. I understood it. I still couldn't answer it. It hasn't stopped him from trying. There was never anyone else to try for. Chris and me. That's what he has. Do I have closure? I don't know. It's complicated, and I've stopped needing it not to be. What's simple is this: I honor Lou. One father kept calling. The other one kept coming.
 
-**CHAPTER 21**
-
-## **The Line**
-
-*"Keep thy heart with all diligence; for out of it are the issues of life."*
-*— Proverbs 4:23*
-
-**Pensacola, 2010**
-
-"Rob, if you relapse, I'm going to have to wash my hands of you." No emotion. No threat. My father said it the way he stated facts, and it was the kindest hard thing anyone ever told me. It only worked coming from him. He had spent my whole life proving he would never actually leave. Sobriety didn't erase desire. That surprised me. What sobriety gave me was time. What it took away was the anesthesia, and without it I could feel everything, the hunger included. The disease didn't leave when I put the drink down. It got quiet and waited.
-
-By late 2010 I was restless in a way I couldn't name. Sober, working, going to meetings, living clean, and underneath it something in me still wanted out. An opportunity came across my radar, medical device sales, Stryker. Big money, fast track. My first thought was: this is how I get back. My second: I don't know if I can stay sober there.
-
-That scared me. I drove to see Lou. He didn't ask why I'd come; he rarely did. He listened while I talked in circles, opportunity, timing, readiness, fear. Eventually the truth slipped out. I still want to drink, I said. The words just hung there. Accurate.
-
-He didn't react the way I expected. No anger, no speech, no disappointment. He looked at me the way he had when I was losing badly on a mat and he was deciding whether I could recover. Then he said it. Just a boundary. It landed harder than any consequence I'd faced, not because it was cruel but because it was clean. He'd done what he could do, and he wasn't going to stand by and watch me die slowly while pretending that watching helped.
-
-I left shaken. That line forced a choice I couldn't hand off. Go back to that world too soon and I wouldn't be returning, I'd be relapsing with a résumé. I didn't take the job. It didn't feel brave. It felt like staying alive.
-
-The payoff came quietly, months later. A Tuesday morning in 2011, on my walk along the bay, coffee in a paper cup, the sun just coming up over the water. I wasn't thinking about anything in particular, and then I knew, the way you know your own name. I didn't want a drink. I hadn't wanted one in a long time, and it wasn't a fight anymore. I took another sip of coffee and kept walking.
-
-**CHAPTER 22**
-
-## **The Salmon Palace**
-
-*"Except the LORD build the house, they labour in vain that build it."*
-*— Psalm 127:1*
-
-**Pensacola, 2014**
-
-I didn't buy it because it made sense. On paper it didn't. An association fee. Seven hundred and sixty-five square feet, one bedroom, one bath, but it was all I needed. It was a condo carved out of a building called the Mirador, Spanish stucco with a Spanish tile roof, a place that looked like it belonged in Southern California or Mexico and somehow held its ground in Pensacola. My unit had its own balcony over the pool. To this day it's the proudest I have ever been of a place I lived.
-
-The color was impossible to ignore. Salmon. Warm and defiant. It sat up off the road like a little castle on a hill, and that is exactly why my friends named it the Salmon Palace. They said it proud. The deed said the Mirador. Both were true. For years I drove past it on my way home from meetings. At first I barely noticed it. Then I noticed it every time. Then I was slowing down, then parking across the street to sit and stare. I couldn't imagine ever living there. So I did the thing they teach you. I pictured it anyway, owning it one day, a kind of prayer I didn't have the nerve to say out loud. Something in me recognized the place.
-
-By then I was doing well again, quietly. Home health had stabilized my life. Sober, paying bills, still carrying debt but no longer running from it. I wasn't after something bigger. I wanted something that was mine. The realtor showed me the sensible options first, places near the railroad tracks, starter homes with neutral paint, the kind that say be grateful this is all you can afford. None of them felt right. When I asked about the Mirador she raised an eyebrow. That one's different, she said. I know, I said.
-
-The unit was small but solid. Thick walls, high ceilings, construction that survives hurricanes and decades and neglect. It felt anchored. I didn't need to impress anymore. I needed something permanent.
-
-Prices in Pensacola were still down in 2014, which is the only reason a place like that ever came within reach. It was listed at a hundred and thirty thousand. I offered a hundred and nine, and they accepted. The only thing between me and the keys was the down payment, and I was short. Not dramatically. Enough to matter. So I called my brother, and I hated every second of it. Chris had done everything right, watched Lou rescue me, watched me fall and climb and wobble. He loved me, but love isn't unlimited credit. I need to borrow ten thousand dollars, I said. He didn't make me sweat it. Rob, he said, I'll loan it to you and I won't ask you a dollar for it. But if you don't pay it back, it'll affect our relationship. He wasn't threatening me. He was trusting me, conditionally. I understand, I said. He sent it. I set up an automatic payment that day, two hundred a month, and paid extra when I could. It took four years. I never missed one.
-
-When I got the keys I stood in the middle of that small living room longer than I expected. Nothing about it was impressive, and that was the point. I'd earned it through doing the next right thing. For five years the Mirador was my world. I woke up there, prayed there, paid down debt there, stayed sober there. Went to work, came home, did it again. Nobody applauded, and that was the miracle.
-
-That condo is where I finally stopped running. Years later, when Hope walked through that door the first time, she didn't say a word about the size. She noticed how it felt. We'd take a devotional out to the pool, or down to the dock, and read it together. The habit we still fall back into, the one that's just part of the house now, started there. We sold it in 2019, a hundred thousand in equity, and put it down on the home Hope and I built together in East Hill, the kind I'd never let myself imagine from across the street. From a one-bedroom salmon castle to a house we built from the ground up. That's what five years of quiet, unglamorous work can do.
-
-**CHAPTER 23**
-
-## **They Gave Me a Chance**
-
-*"Old things are passed away; behold, all things are become new."*
-*— 2 Corinthians 5:17*
-
-**Pensacola, 2011**
-
-When the recruiter asked what I'd been doing for the last five years, I didn't open up about everything. I've been working as a lifeguard, I said. I've hit some bumps in the road. I've been rebuilding. The call that led to that answer came on an ordinary day. By 2011 ordinary days were the whole texture of my life. The sharp edges were gone. Work, meetings, lifeguard shifts, dinners with Lou and Donna, early mornings that looked exactly like the ones before. When the phone rang that afternoon I almost let it go to voicemail.
-
-A recruiter. Someone who knew someone, the way it happens in a town like Pensacola. We're looking for someone to build relationships for a home health company, nursing, PT, OT, patients who can't get to clinics. We need someone who can develop referral sources. Healthcare. The word landed with weight. Not excitement. Something quieter.
-
-I have medical sales experience, I said. But it's been a while. How long? About five years. And what have you been doing since? There it was. I didn't spin it, and I didn't tell the whole story either. Some bumps in the road, I said. I've been rebuilding. Silence, not uncomfortable, just space. Can you come in for an interview?
-
-Caroline, the home health leader who would hire me, didn't waste time. She read my résumé the way people do when they're not looking to be impressed, following the rise all the way to where it stopped. She didn't ask about the gaps. She asked about trust. How do you build it with people who don't know you? What do you do when the territory's cold and the numbers aren't there? How do you stay consistent when results don't come? I talked about discipline without ego, doing the work because it's right, not because someone's watching. Rejection as information, not a verdict. I talked about the pool, scanning the water when nothing was happening, how the job was the same whether anyone needed saving or not. She listened. Wrote. Looked up only when something mattered.
-
-The position pays sixty thousand a year, she said finally. Plus commission. But it's a slow build. Once, I'd made five times that and felt hollow. This felt honest. I can do this, I said, and for once in an interview I wasn't performing belief. I was stating it.
-
-She called three days later. I need to talk to you about something from your background check. I knew. It shows two DUIs. Those weren't disclosed. You're right, I said. I should have disclosed it. I'm sorry. A pause. Can you tell me what happened? So I did. Not the polished version. What it had been, what it cost, what had changed. When I finished the line stayed quiet. Okay, she said. I appreciate your honesty. Let me talk to HR.
-
-Four days. I went to work, went to meetings, had dinner, slept, did it again. On the fifth day Caroline called. How does a November first start date sound? I didn't answer right away. I sat in my car in Lou's driveway and let it settle. Not adrenaline. Gratitude. Someone had looked at who I was and decided it was enough. I called Lou. I got the job. She knew about the DUIs. HR wanted to pull the offer. She fought for me. A pause. That's a blessing, he said. I'm proud of you. After we hung up I sat there a long time. This wasn't a comeback. Comeback means there's something to go back to, and there wasn't. It was confirmation.
-
-The work didn't feel heroic, which surprised me. I half-expected the new job to arrive with meaning baked in. Day one was paperwork. Compliance modules. Acronyms I barely remembered from a former life, HIPAA, OASIS. Caroline didn't give me a speech. She showed me how things worked. This is a long game, she said. You don't force referrals. You earn trust.
-
-Home health wasn't selling, not the way I'd done it. It was assisted livings and living rooms, oxygen tanks humming in the corner, family members exhausted in ways sleep doesn't fix. I walked into homes where time had slowed down.
-
-Miss Jane was seventy-eight, recovering from hip surgery, and she apologized for the mess in a spotless house. She told me she used to dance, every Friday night for forty years, like it was a confession, and she was terrified she'd never walk without a walker again. I didn't rush past it. I asked about the dancing, and her face changed when she talked about it. That was the job.
-
-Mr. Joe was newly diabetic, embarrassed he needed a nurse to teach him insulin. His hands shook as he practiced. I'm sorry, he kept saying. I should have this by now. You have it, I told him. You've done it right three times in a row. He looked up like he hadn't thought to count the successes.
-
-It was familiar. I knew what it was like to need help and not want it, to be ashamed of dependence, to apologize for taking up space when you're the one suffering. So when families talked I didn't rush them, didn't fill the silence, didn't pitch. I listened. Caroline noticed. You're different with people, she said one afternoon. You don't talk at them. I know what it feels like to be scared, I said. She nodded. No follow-up. She'd already decided to trust me, and I understood what that trust meant in a way I wouldn't have before.
-
-The days were long, doctors' offices, nursing homes, assisted livings, back roads. At night I still went to meetings, still called my sponsor. There was a moment, small and almost forgettable, sitting in my car after a visit with paperwork on the steering wheel, when I realized I wasn't waiting for something else anymore. This was enough. They gave me a chance, and I stayed ten years. There were sales awards in there; they mattered less than what they measured. My manager Brenda Jahn was one of the best I ever worked for. She believed in me and pushed me, and that prepared me for everything that came next.
-
-**CHAPTER 24**
-
-## **Making Amends**
-
-*"First be reconciled to thy brother, and then come and offer thy gift."*
-*— Matthew 5:24*
-
-**Pensacola, 2012**
-
-$113,000. That was the number when I finally added it up in ink on a yellow legal pad, every credit card and collection account and legal fee, no rounding. I'd spent years not looking at it. Steady work meant I could finally face the wreckage I'd been outrunning, and my sponsor Mager was the one who walked me into it. He didn't rush me. He was patient, but he wasn't buying the act. I could make my recovery sound like a success story, still controlling the version of me in the room. Mager didn't interrupt. He listened in a way that made clear he was hearing more than I was saying, and eventually, with nowhere for the story to land, it fell apart on its own.
-
-I got stuck on the amends step. Not in theory. In the concrete requirement to account for everything, without narrative, without softening. One night after a meeting Mager slid a yellow legal pad across the table. Write it down, he said. I knew what he meant.
-
-I had never been honest with myself about money. I used it to keep score. This was about what it had cost. I started listing. Credit cards, multiple, run up over years of buying the appearance of success with borrowed money. Medical bills. Legal fees. Collection accounts I hadn't looked at directly in months. When I finished I added it up slowly. $113,000. I waited for the spiral. It didn't come. What came was clarity. The real number doesn't move. It just sits there, and because it sits there, you can work with it.
-
-Mager looked at the pad. Didn't soften it, didn't minimize it. Okay, he said. Now we know. We kept it basic: pay what you can, don't borrow, don't hide, open the envelopes, answer the calls, always know where you stand. At one point I reached for the future. Once I make more. Mager stopped me. Use the money you actually have. That's how trust gets rebuilt.
-
-My mother's money never went on that legal pad. What I owed her had no number on it. The lies I'd told her went into my fourth step and my fifth, and for years I told myself the rest was paid in the only currency she ever wanted — her son, alive and honest. Writing this book made me stop on that sentence. Sober and alive is a start. It isn't a settlement. She's the last parent I have, down in South Florida, and I am not there enough. I've come to think this isn't an amends you finish — not a letter, not a line in a book. It's the trips. More of my time, which is the one thing she always wanted and the one thing I kept for myself. I'm putting it on the page so I can't walk past it again. I love her, and I haven't shown it the way she showed me. As I write this, I'm booking a trip to South Florida to see her — to start being a better son while I still have the time to be one. The debt on the pad didn't disappear fast. But I stopped flinching when bills came. I started answering calls from numbers I didn't recognize. My past stopped feeling like it was following me, not because it was gone, but because it was being addressed. Not redemption. Nothing was being erased. Responsibility. One payment, one opened envelope, one answered call at a time.
-
-One amends I owed Chris had nothing to do with money. I'm the older brother. On paper the job was mine, look out for him, go first, take the hit. My addiction handed that job to him instead. He drove me to detox. He called me with the ultimatum. He watched the whole family bend around a crisis I kept making, and somewhere in it he became the big brother, a promotion he never asked for. When I made my amends to him, I said it plain. I'm sorry you had to be the older one. He waved it off the way he waves off everything. But I needed to say it, and I needed him to hear it. He carried a weight that should have been mine, and he never once made me feel like the weight.
-
-The courts came last. In 2013, four years sober, I wrote to the court myself and petitioned to have the cases dismissed. No lawyer this time. In 2002 that work had taken the Taylor firm and ten thousand dollars. In 2013 it took a letter from a sober man who had done everything the court asked. The dismissals came through.
-
 # **THE DRIVES · II**
 
 *New York State, weekend after weekend, however far the bracket went. He'd worked the night before and never talked about the miles. It was the rides home I kept: the dark, the quiet, two people who had spent the day at the same thing. Love he never announced. Earned, both of us. He drove.*
@@ -1513,7 +1489,36 @@ PART FIVE
 *She said, I will love you no matter what. I'd heard that sentence once before — proved, not spoken.*
 
 **CHAPTER 25**
+## **Sobriety Meets Hospice**
 
+*"I have fought a good fight, I have finished my course, I have kept the faith."*
+*— 2 Timothy 4:7*
+
+**Pensacola, 2015**
+
+I saw things in the rooms that never leave you. Young people dying from drugs and alcohol. Not old men at the end of long lives, young people with everything ahead of them. I sponsored people who went back out. Many of them died. Some went to jail. You pour yourself into someone, walk alongside them, answer the phone at midnight, and then one day you get the call that they didn't make it.
+
+I was that person once. I know what the disease does from the inside. Losing people in those rooms prepared me for something I didn't know I was being prepared for. Nothing in hospice is harder than a parent losing a child. The only reason I can stay in that room without flinching is that I've already sat with losses like that in recovery. Hospice just gave me a new room to bring it to.
+
+The very first time I was in a room with someone dying, I was too small to know that was what it was. My grandfather's mother was in a nursing home, near the end. I was a little boy, barely talking, and the only language I had yet was Spanish. She lay against the pillows, white-haired and round-faced, and to me she looked like exactly one thing. Santa Claus. So I told her so. Ho, ho, ho. My mother said, Stop. I didn't understand the hush in the room, or that the woman in the bed was leaving, or that I would spend my life walking into rooms just like it. I only remember her face, and my mother's hand steering me out.
+
+The first death that stayed with me wasn't a patient, and it came years before hospice was ever my job. It was Detroit Bob.
+
+You've met Detroit Bob already — the one who was only in the rooms to save his own butt. What I haven't told you is the rest of him. I met him at Courage at Noon in my first year sober. Bald, a scratchy voice, a face that looked permanently annoyed, like the world had let him down personally and he hadn't decided yet whether to forgive it. He smelled like Old Spice, just enough, never too much. And he had the one thing I could not stop staring at: decades sober, old, and at peace with all of it. I needed to understand how a person did that.
+
+So we got close. We'd go eat after meetings, the kid a few years in and the old man who had seen it all. Then, years into the friendship, the cancer came. He knew it was going to take him, and he stayed sober anyway, a man at the very end of his life with every excuse in the world to pick up, choosing not to. He fought it for about six months, and somewhere in there he went on hospice, the first time that word ever meant someone I loved instead of a thing I would one day do for a living.
+
+One afternoon he looked at me and said it straight out, the way he said everything. I am so proud of the man I have seen you grow into over the past seven years. You have really blossomed. And sober looks good on you. Bob did not hand out lines like that. I have carried it ever since.
+
+Near the end I went to see him, and it was nothing like the nursing-home room of my boyhood — this was a grown man actively dying, and everyone in the house knew it. The place was full. People he'd carried in the rooms, people who'd carried him, a steady stream coming to sit with him and say what they needed to say while he could still hear it. My first thought was a small, honest panic: how was I supposed to feel all of this without anything to take the edge off? I had never done grief without a buffer. The panic didn't last, and what replaced it wasn't sadness. It was gratitude, and a level calm, the plain fact of being there and not needing to be anywhere else. He told me once that sobriety wasn't something he fought every morning; it was a decision he had made a single time and never went back to revisit, and he carried it all the way to the edge of his life. Decades older than me, and still showing me how it was done. That was when I understood what being sober had bought me: the ability to stay in a room like that and not run.
+
+I was in the room when he passed, in 2016. I had been around a lot by then, but not that, not the actual leaving. I watched it happen, and afterward I stayed for his wife, a woman I loved, because there was nothing left to do but be there and not go. That was when it finally landed. Bob was gone. There was no fixing it, no deal to close, no right answer that would have bought him one more minute.
+
+Around that same stretch the recognition I'd chased my whole life finally showed up at work, and it barely registered. Someone forwarded an internal article. A colleague congratulated me in passing. I skimmed it once and closed the screen. Lou noticed, the way he noticed everything. You're successful again, he said. I guess, I said. You don't sound like it matters. That's because it doesn't, I said. Not the way it used to. He nodded. That nod was the approval.
+
+I talked to Lou about Bob one evening. I don't know why this is hitting me so hard, I said. I did everything right. He didn't hesitate. That's not why it's bothering you. He was right. Bob hadn't needed me to fix anything. He'd needed me in the room. I was being let into places where presence was the only thing left to offer, and something in me already knew how to do that. Not as a technique. As a practice. An old man dying sober at eighty-eight showed me that the most you can do at that edge is refuse to leave. Years later, that became the whole job.
+
+**CHAPTER 26**
 ## **Hope for Rob**
 
 *"Hope deferred maketh the heart sick: but when the desire cometh, it is a tree of life."*
@@ -1581,8 +1586,7 @@ Rhonda had rented an old fifties car to take us from the ceremony to the recepti
 
 When everything else in my life had sunk, Hope floated.
 
-**CHAPTER 26**
-
+**CHAPTER 27**
 ## **What We Built**
 
 *"Beareth all things, believeth all things, hopeth all things, endureth all things."*
@@ -1664,41 +1668,6 @@ So the other day, on one of our daily calls, I told her the truth it had forced 
 
 There is one more thing I need to say to her in print, because I don't say it enough out loud. It was my mother who first walked me into a church, who made faith the one thing that wasn't up for debate. The first time it stopped being hers and started being mine, I was thirteen, on a mission trip in Nashville. I don't remember a word of the preaching. I remember the room, some current moving through all of us, and my fear going quiet for the first time I can recall. That faith became the floor I stood on when everything else gave way. Mom, if it weren't for you, I would not be the person I am today. Not the sober one, not the one who can sit in a stranger's last room, not the one who finally learned how to stay. All of it traces back to you. My mother will be taken care of for the rest of her life. Whatever care she needs, we will provide it. She picked us once. She never stopped.
 
-**CHAPTER 27**
-
-## **Sobriety Meets Hospice**
-
-*"I have fought a good fight, I have finished my course, I have kept the faith."*
-*— 2 Timothy 4:7*
-
-**Pensacola, 2015**
-
-I saw things in the rooms that never leave you. Young people dying from drugs and alcohol. Not old men at the end of long lives, young people with everything ahead of them. I sponsored people who went back out. Many of them died. Some went to jail. You pour yourself into someone, walk alongside them, answer the phone at midnight, and then one day you get the call that they didn't make it.
-
-I was that person once. I know what the disease does from the inside. Losing people in those rooms prepared me for something I didn't know I was being prepared for. Nothing in hospice is harder than a parent losing a child. The only reason I can stay in that room without flinching is that I've already sat with losses like that in recovery. Hospice just gave me a new room to bring it to.
-
-The very first time I was in a room with someone dying, I was too small to know that was what it was. My grandfather's mother was in a nursing home, near the end. I was a little boy, barely talking, and the only language I had yet was Spanish. She lay against the pillows, white-haired and round-faced, and to me she looked like exactly one thing. Santa Claus. So I told her so. Ho, ho, ho. My mother said, Stop. I didn't understand the hush in the room, or that the woman in the bed was leaving, or that I would spend my life walking into rooms just like it. I only remember her face, and my mother's hand steering me out.
-
-The first death that stayed with me wasn't a patient, and it came years before hospice was ever my job. It was Detroit Bob.
-
-You've met Detroit Bob already — the one who was only in the rooms to save his own butt. What I haven't told you is the rest of him. I met him at Courage at Noon in my first year sober. Bald, a scratchy voice, a face that looked permanently annoyed, like the world had let him down personally and he hadn't decided yet whether to forgive it. He smelled like Old Spice, just enough, never too much. And he had the one thing I could not stop staring at: decades sober, old, and at peace with all of it. I needed to understand how a person did that.
-
-So we got close. We'd go eat after meetings, the kid a few years in and the old man who had seen it all. Then, years into the friendship, the cancer came. He knew it was going to take him, and he stayed sober anyway, a man at the very end of his life with every excuse in the world to pick up, choosing not to. He fought it for about six months, and somewhere in there he went on hospice, the first time that word ever meant someone I loved instead of a thing I would one day do for a living.
-
-One afternoon he looked at me and said it straight out, the way he said everything. I am so proud of the man I have seen you grow into over the past seven years. You have really blossomed. And sober looks good on you. Bob did not hand out lines like that. I have carried it ever since.
-
-Near the end I went to see him, and it was nothing like the nursing-home room of my boyhood — this was a grown man actively dying, and everyone in the house knew it. The place was full. People he'd carried in the rooms, people who'd carried him, a steady stream coming to sit with him and say what they needed to say while he could still hear it. My first thought was a small, honest panic: how was I supposed to feel all of this without anything to take the edge off? I had never done grief without a buffer. The panic didn't last, and what replaced it wasn't sadness. It was gratitude, and a level calm, the plain fact of being there and not needing to be anywhere else. He told me once that sobriety wasn't something he fought every morning; it was a decision he had made a single time and never went back to revisit, and he carried it all the way to the edge of his life. Decades older than me, and still showing me how it was done. That was when I understood what being sober had bought me: the ability to stay in a room like that and not run.
-
-I was in the room when he passed, in 2016. I had been around a lot by then, but not that, not the actual leaving. I watched it happen, and afterward I stayed for his wife, a woman I loved, because there was nothing left to do but be there and not go. That was when it finally landed. Bob was gone. There was no fixing it, no deal to close, no right answer that would have bought him one more minute.
-
-Around that same stretch the recognition I'd chased my whole life finally showed up at work, and it barely registered. Someone forwarded an internal article. A colleague congratulated me in passing. I skimmed it once and closed the screen. Lou noticed, the way he noticed everything. You're successful again, he said. I guess, I said. You don't sound like it matters. That's because it doesn't, I said. Not the way it used to. He nodded. That nod was the approval.
-
-I talked to Lou about Bob one evening. I don't know why this is hitting me so hard, I said. I did everything right. He didn't hesitate. That's not why it's bothering you. He was right. Bob hadn't needed me to fix anything. He'd needed me in the room. I was being let into places where presence was the only thing left to offer, and something in me already knew how to do that. Not as a technique. As a practice. An old man dying sober at eighty-eight showed me that the most you can do at that edge is refuse to leave. Years later, that became the whole job.
-
-# **THE DRIVES · III**
-
-*Spring 2025. Our car pointed north out of Pensacola, eighteen years of living near him somewhere back in the mirrors. He had told me to go — that was always his way, more concerned that we were okay than that we were close. I didn't know it was the last of the old kind of drive, the kind where he was still at the other end of the road. This time, I drove.*
-
 PART SIX
 
 # **THE LAST CHAPTER**
@@ -1706,7 +1675,6 @@ PART SIX
 *Presence, repeated, until the end. His, then mine.*
 
 **CHAPTER 28**
-
 ## **The Detour**
 
 *"My thoughts are not your thoughts, neither are your ways my ways."*
@@ -1734,8 +1702,11 @@ The hardest part of leaving Novo wasn't the job. It was leaving that relationshi
 
 I told people I was going to take some time off. Be there for my dad. Be there for my mom. Be present the way I'd spent years telling families to be present, while there was still time. That was the plan. It's not what happened. What happened was I retreated into myself. The time I'd set aside became something else, a depression I didn't see coming and couldn't recognize from the inside. I was grieving what was already happening and what was coming, and it kept me from doing the thing I'd left my career to do. I know the name for it now. The grief showed up before the loss did, and it froze me. I wasn't working. I wasn't fully showing up for my parents. I was stuck in a version of myself that couldn't move in any direction. I don't say that for sympathy. I say it because it's the truth, and this book doesn't work if I only tell the parts where I got it right. Hospice, when it came, wasn't a pivot. It was a return, to the rooms I'd been thinking about since the home health years, to the weight I'd learned how to carry. It pulled me out of that in-between place and gave me direction again.
 
-**CHAPTER 29**
+# **THE DRIVES · III**
 
+*September 2025. Our car pointed north out of Pensacola, eighteen years of living near him somewhere back in the mirrors. He had told me to go — that was always his way, more concerned that we were okay than that we were close. I didn't know it was the last of the old kind of drive, the kind where he was still at the other end of the road. This time, I drove.*
+
+**CHAPTER 29**
 ## **Five Weeks**
 
 *"They shall mount up with wings as eagles."*
@@ -1812,7 +1783,6 @@ He got pneumonia on December 23. His immune system had nothing left to fight wit
 My father died on Christmas Day, 2025. A Thursday.
 
 **CHAPTER 30**
-
 ## **The Days After**
 
 *"Jesus wept."*
@@ -1893,7 +1863,6 @@ I sat in my car one afternoon thinking, am I becoming someone else? The answer c
 In January we went through his things. His gray suit was hanging on the right side of the closet, between two work shirts. Always be the best-dressed person in the room. I pulled it off the rack and held it up, and I couldn't put it back. I took it home in a garment bag with no plan. It hangs in my closet now, next to mine. It isn't my size and it isn't my style and I will never wear it. But some mornings I open the closet door and it's there, and I know what it is, and I know who wore it, and I leave it alone. I tell families sometimes, when they're clearing out a closet of their own: keep one thing. You'll know which one. It will tell you.
 
 **CHAPTER 31**
-
 ## **The First Honest Mile**
 
 *"Blessed are they that mourn: for they shall be comforted."*
@@ -1914,7 +1883,6 @@ And I was mean. That scared me more than a craving would have. I lashed out at t
 Seventeen years sober, and I had hit a rock bottom again, an emotional one this time. The disease doesn't need a bottle to run the old plays, isolation, anger, the closed door. The difference was that this time I had to feel it all the way through. And this time I knew what to do with a bottom. I went back to meetings, more of them than I'd been to in years. I got a therapist. The morning calls with Mager got longer. I said out loud, in the rooms and on the phone, that I was not okay. I went back to the people I'd been sharp with and said sorry, plainly. Seventeen years in, I was back on the first honest mile.
 
 **CHAPTER 32**
-
 ## **What Grief Taught the Job**
 
 *"Weeping may endure for a night, but joy cometh in the morning."*
@@ -1945,7 +1913,6 @@ And some rooms stay with me whole. There was a couple I'll call Ed and Eva. Ed s
 My father always made a big deal of my sobriety anniversary. Every January 9. My first year, he came to Gulf Breeze Hospital to hear me speak, sat in that room and listened to his son talk about staying sober for one year. He told me once, quietly, that whenever he mentioned my name to someone who knew me, they'd say the same thing: he's the best. That's what he built. Lou spent eighty-four years showing up without needing to know exactly where he was going. I'm trying to do the same.
 
 **CHAPTER 33**
-
 ## **The Table**
 
 *"Thou preparest a table before me in the presence of mine enemies."*
