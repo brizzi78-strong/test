@@ -1,8 +1,9 @@
-# hopecoin.com — the Hope coin site
+# hopecoin.org — the Hope coin site
 
-The official domain is `hopecoin.com` (hopecoin.org is registered to
-someone else — never link it). `cp17.org`, the LLC's own name, should be
-registered too and set to forward here.
+The official domain is `hopecoin.org`, registered and owned by the
+founder. `hopecoin.com` was still unregistered at last check — buying it
+as a defensive forward is cheap insurance against look-alike sites.
+`cp17.org`, the LLC's own name, should also forward here.
 
 Three static pages. No build step, no dependencies, no JavaScript.
 
