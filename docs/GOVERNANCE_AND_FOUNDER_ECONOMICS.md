@@ -154,6 +154,56 @@ position. Either choice is
 defensible, but pick one *before* launch and publish which one it is. Silence on this
 question is worse than either answer.
 
+### The founder's public name — the alias "Chandler Grey"
+
+Decision under consideration: the founder appears publicly as **Chandler Grey** (spelling
+assumed corrected from "Chnadler"). Pseudonymous founders are common in crypto and a pen
+name is not illegal — but for *this* project the alias interacts badly with almost every
+trust mechanism already adopted, so the options need stating precisely.
+
+**What an alias cannot do at all:**
+
+- **It cannot exist in the legal layer.** The LLC filing, the EIN, the bank account, the
+  exchange KYC, and the engagement letter with your father-in-law all require your legal
+  name. "Chandler Grey" can front the website; he cannot sign anything, own anything, or
+  withdraw anything. The alias is a publishing choice, not an identity.
+- **It cannot shield you from liability.** The LLC does that. If anything goes wrong, an
+  alias does not slow a subpoena by a day — but it *will* be characterized as concealment
+  by anyone building a case or a headline.
+
+**The collision this design has that other pseudonymous projects do not:** the coin page is
+dedicated to Lou Brizzi and lists his church by name. A pseudonym standing in front of an
+identifiable family story is a costume, not anonymity — pierced in one search by anyone who
+cares, and the piercing itself becomes the story: "founder of accountability coin hid his
+name." Worse, the conduct-based trust structure adopted in Part II depends on a real
+reputation being at stake: the unlocked 100M was survivable *because* a named founder's
+conduct backed it. **A pseudonymous founder holding an unlocked 40% against a thin pool is
+the textbook profile of a rug pull**, and scanners and buyers will read it exactly that way.
+
+**The two coherent versions, and the one that is not:**
+
+1. **Disclosed pen name.** The site says, in its own plain voice: "The founder writes under
+   the name Chandler Grey; the LLC's records carry his legal name, which the board, the
+   accountant, and the bank all know." Honest, modestly private, costs a real but bounded
+   trust discount. If the family dedication stays on the page, expect the connection to be
+   made anyway — the pen name then buys distance from casual searches, nothing more.
+2. **Full pseudonymity.** Possible only by also removing the dedication, the family story,
+   and the named family charities from the coin page — the things that connect the coin to
+   you. That guts the mission framing and most of what makes this project different. It is
+   coherent, but it is a different project.
+3. **Undisclosed alias presented as a real person** — a bio, a face, a history for
+   "Chandler Grey" as if he existed. **Do not do this.** It is the one version that is not
+   a privacy choice but a misrepresentation, it converts every future dispute into a fraud
+   narrative, and its discovery is a matter of when.
+
+**Recommendation:** the separation you actually wanted is already built — the LLC carries
+the liability, the book's domain and brand are fully severed, and the token no longer says
+"Cardinal" anywhere. Those walls protect the family better than a pen name does. If the
+alias still feels necessary, use version 1, disclosed, and accept what it costs. And
+recognize the tension you would be carrying: a project whose product is checkability, run
+by someone whose name cannot be checked, holding 40% of the supply unlocked. Each of those
+three was survivable alone. All three together is a heavy load for a $20,000 experiment.
+
 ### Two things to settle before anyone deploys anything
 
 1. **Who deploys?** The deployer address is permanent, public, and is the first thing
@@ -1177,6 +1227,7 @@ fundraising campaign.
 | Grant drift | One grant becomes the precedent for the next | The line in writing: there is one, and there will not be another |
 | Board of friends and family | Slate is family plus friends; no outsider anywhere | Recruit one outsider for one key, or buy a published third-party audit as the substitute; disclose every relationship on the ledger |
 | Family signer mistaken for oversight | A relative's key reads as independence | A family key buys security, not governance — say so, and never describe him as independent |
+| Alias read as concealment | Pseudonymous founder + unlocked 40% + thin pool is the rug-pull profile | If used at all: a disclosed pen name with legal identity intact in the LLC layer; never a fabricated persona |
 | Deadlock on conflicted votes | Recusal leaves an even four | Written rule adopted up front: a tied vote fails |
 | Empty seats read as oversight | Names listed who never attend | Three real people, not a longer list; publish any vacancy with a target date |
 | Cannot recruit — crypto stigma | Unpaid public affiliation reads as endorsement | Split the Giving Committee from the Treasury Signers; pay for the Constraint function; publish a non-endorsement line per name |
