@@ -19,7 +19,7 @@ export interface LaunchConfig {
 }
 
 // The subset of the Hardhat viem contract instance the scripts use.
-interface CP17 {
+interface Card {
   read: {
     name: () => Promise<string>;
     symbol: () => Promise<string>;
@@ -43,7 +43,7 @@ export function loadLaunchConfig(url: URL): LaunchConfig {
   const raw = JSON.parse(readFileSync(url, "utf8"));
   if (!raw.token) {
     throw new Error(
-      "launch.json: fill in \"token\" with the deployed CP17 address first.",
+      "launch.json: fill in \"token\" with the deployed CARD address first.",
     );
   }
   if (!raw.treasury) {
@@ -70,7 +70,7 @@ export function explorerTxUrl(network: string, hash: string): string {
 }
 
 export const fmt = (wei: bigint): string =>
-  `${Number(formatEther(wei)).toLocaleString("en-US")} CP17`;
+  `${Number(formatEther(wei)).toLocaleString("en-US")} CARD`;
 
 export interface LaunchState {
   name: string;
@@ -83,7 +83,7 @@ export interface LaunchState {
 }
 
 export async function readState(
-  token: CP17,
+  token: Card,
   deployer: `0x${string}`,
   treasury: `0x${string}`,
   pool?: `0x${string}`,
@@ -107,9 +107,9 @@ export function describeStage(
 ): { stage: string; problems: string[] } {
   const problems: string[] = [];
 
-  if (s.name !== "Card Platform 17" || s.symbol !== "CP17") {
+  if (s.name !== "Card" || s.symbol !== "CARD") {
     problems.push(
-      `token name/symbol is ${s.name}/${s.symbol}, expected "Card Platform 17"/CP17 — is the token address right?`,
+      `token name/symbol is ${s.name}/${s.symbol}, expected "Card"/CARD — is the token address right?`,
     );
   }
   if (s.totalSupply !== TOTAL_SUPPLY) {
@@ -157,11 +157,11 @@ export function printState(
   }
 }
 
-// Checklist step 3: send exactly 50M CP17 to the treasury. Refuses to run
+// Checklist step 3: send exactly 50M CARD to the treasury. Refuses to run
 // unless the token is in the untouched just-deployed state, so it can't
 // double-send or fire mid-sequence.
 export async function transferTreasury(
-  token: CP17,
+  token: Card,
   publicClient: PublicClientLike,
   deployer: `0x${string}`,
   treasury: `0x${string}`,
@@ -202,7 +202,7 @@ export async function transferTreasury(
 // instead. Guards mirror transferTreasury: runs only from the
 // treasury-funded state, never twice.
 export async function fundPoolSim(
-  token: CP17,
+  token: Card,
   publicClient: PublicClientLike,
   deployer: `0x${string}`,
   treasury: `0x${string}`,
@@ -244,7 +244,7 @@ export async function fundPoolSim(
 // it can verify on-chain, makes the human confirm the ones it can't (source
 // verified, LP locked), then renounces and confirms the owner is zero.
 export async function renounce(
-  token: CP17,
+  token: Card,
   publicClient: PublicClientLike,
   deployer: `0x${string}`,
   config: { treasury: `0x${string}`; pool?: `0x${string}` },

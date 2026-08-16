@@ -1,8 +1,8 @@
 {
-  "name": "Card Platform 17",
-  "symbol": "CP17",
+  "name": "Card",
+  "symbol": "CARD",
   "decimals": 18,
-  "description": "Card Platform 17 (CP17) is a fixed-cap ERC-20 token on Ethereum. Maximum supply is hard-capped on-chain at 250,000,000 CP17; the contract has no fees, hooks, blocklists, or pausing.",
+  "description": "Card (CARD) is a fixed-cap ERC-20 token on Ethereum. Maximum supply is hard-capped on-chain at 250,000,000 CARD; the contract has no fees, hooks, blocklists, or pausing.",
   "totalSupplyCap": "250000000",
   "logo": "assets/logo.svg",
   "contract": {
@@ -14,5 +14,5 @@
     "repository": "https://github.com/brizzi78-strong/test",
     "twitter": null
   },
-  "notes": "Official site: cp17.org, the token's only web property. Decision taken: cp17.org and thecardinalspromise.com are fully separated — neither site links to the other, and the book's domain hosts nothing about the token. Fill in contract addresses after deployment before submitting to Etherscan token update, CoinGecko, or a Uniswap token list. Etherscan requires a 32x32 PNG icon — use assets/logo-32.png."
+  "notes": "Official site: cp17.org, the coin's only web property. By decision the coin and the book are tied: direct purchases of The Cardinal's Promise include a fixed number of CARD, claimable via the site, from a published program wallet. Fill in contract addresses after deployment before submitting to Etherscan token update, CoinGecko, or a Uniswap token list. Etherscan requires a 32x32 PNG icon — use assets/logo-32.png."
 }

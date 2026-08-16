@@ -1,4 +1,4 @@
-# Governance and Founder Economics — CP17
+# Governance and Founder Economics — CARD
 
 How to choose a board, what the revised supply split does, whether to charge a 3% trade
 fee, and whether to pay yourself a salary.
@@ -11,7 +11,7 @@ fee, and whether to pay yourself a salary.
 
 ## Thesis
 
-**The only asset CP17 has is that its claims are checkable.** At a ~$20,000 fully diluted
+**The only asset CARD has is that its claims are checkable.** At a ~$20,000 fully diluted
 valuation, the token has no liquidity moat, no user base, and no network effect. What it
 has is a contract with nothing hidden in it, a locked pool, a renounced owner, and a page
 that tells people not to buy. That verifiability *is* the product.
@@ -42,11 +42,11 @@ reading this document uses:
 
 | Your words | Interpretation | Source |
 |---|---|---|
-| "250,000 coins" | 250,000,000 CP17 total supply | `contracts/CP17.sol` — `TOTAL_SUPPLY = 250_000_000e18` |
+| "250,000 coins" | 250,000,000 CARD total supply | `contracts/Card.sol` — `TOTAL_SUPPLY = 250_000_000e18` |
 | "I invested 10k" | ~$10,000 of your own money: ETH for the pool plus launch costs | `TOKEN_LAUNCH_STRATEGY.md` budgets 2–5 ETH into the pool |
-| "hold onto 100 mill" | 100,000,000 CP17 (40%) retained by you personally | New — supersedes the old split |
-| "only 100 mill initially released" | 100,000,000 CP17 (40%) into the Uniswap pool at launch | New — was 200M (80%) |
-| Remainder | 50,000,000 CP17 (20%) treasury | Unchanged from `TOKEN_LAUNCH_STRATEGY.md` |
+| "hold onto 100 mill" | 100,000,000 CARD (40%) retained by you personally | New — supersedes the old split |
+| "only 100 mill initially released" | 100,000,000 CARD (40%) into the Uniswap pool at launch | New — was 200M (80%) |
+| Remainder | 50,000,000 CARD (20%) treasury | Unchanged from `TOKEN_LAUNCH_STRATEGY.md` |
 
 **This is a material change from the shipped plan.** The launch strategy puts 80% in the
 pool specifically because "screeners flag deployer-heavy tokens as rug risks," and warns
@@ -56,21 +56,21 @@ personally *on top of* the 20% treasury — 60% of supply in team-controlled han
 Assuming ~$8,000 of the $10,000 goes into the pool and ~$2,000 covers the lock, gas,
 verification, and fees:
 
-- Launch spot price: **$0.00008 per CP17**
+- Launch spot price: **$0.00008 per CARD**
 - Fully diluted valuation: **$20,000**
 - Value of your 100M retained: **$8,000 on paper** — exactly equal to the entire pool, which
   is the problem in one line
 
 ### What $8,000 of liquidity actually feels like
 
-| Buy size | CP17 received | Average price paid | Spot price move |
+| Buy size | CARD received | Average price paid | Spot price move |
 |---|---|---|---|
 | $100 | 1.23M | $0.000081 | +2.5% |
 | $500 | 5.88M | $0.000085 | +12.9% |
 | $1,000 | 11.11M | $0.000090 | +26.6% |
 | $5,000 | 38.46M | $0.000130 | +164% |
 
-Halving the pool from 200M to 100M CP17 doubles the launch price but does not deepen the
+Halving the pool from 200M to 100M CARD doubles the launch price but does not deepen the
 book — a $1,000 buy still moves spot ~27%, and a $1,000 sell moves it down comparably. The
 pool is thin in both directions. That is survivable and honest. It only becomes dangerous
 when combined with the next section.
@@ -81,7 +81,7 @@ Raised and closed: no mint function, no "opportunity for more," no burn function
 reasoning, for the record — a mint needs an owner, which forecloses renouncing; the market
 prices mintable small tokens as if the mint will be used; and the held 60% (founder 100M +
 treasury 50M) already is the growth reserve, released in daylight if ever needed. Tether's
-mint-and-burn model exists because USDT is redeemable against reserves; CP17 redeems
+mint-and-burn model exists because USDT is redeemable against reserves; CARD redeems
 nothing, so neither function has a job here. One capability survives without any code: any
 holder can burn irreversibly by sending to the dead address — which remains the strongest
 trust action available on the founder's unlocked position, should it ever be wanted.
@@ -136,7 +136,7 @@ That is the right call, and the "separate" part is doing most of the work:
   page is verifiable and the board cannot certify anything.
 - **A clean handoff.** You can give the board real power over the LLC without giving them
   any say over the book or the rest of your work.
-- **A clean exit.** If CP17 goes nowhere, you dissolve one LLC. Nothing else is affected.
+- **A clean exit.** If CARD goes nowhere, you dissolve one LLC. Nothing else is affected.
 
 **Structure: new LLC + a 2-of-3 Safe multisig on the treasury.** Skip the nonprofit for
 now — do not file a 501(c)(3) for a $20,000 project; the formation cost, exemption
@@ -153,7 +153,7 @@ renounced ownership and the locked LP.
 | Put it in the LLC | Keep it out |
 |---|---|
 | The 50M treasury (via the Safe) | The book, its royalties, and its IP |
-| The `cp17.org` domain and the coin site | Your personal 100M CP17 position (see below) |
+| The `cp17.org` domain and the coin site | Your personal 100M CARD position (see below) |
 | Deployment ops, the lock, listings, audits | The other apps and businesses in this repo |
 | The gift program and its records | Personal accounts of any kind |
 | The board, the gift policy, your comp agreement | |
@@ -237,7 +237,7 @@ three was survivable alone. All three together is a heavy load for a $20,000 exp
 ### On the entity name
 
 You'd considered "Cardinal" or "Cardinals Platform" for the LLC. The recommendation is
-unchanged, and matters more now that the token has reverted to Card Platform 17: **make the
+unchanged, and matters more now that the token has reverted to Card: **make the
 LLC name boring.** The entity name is the one place
 where distinctiveness buys you nothing, and a complaint about the token should not arrive
 carrying a brand you care about.
@@ -255,10 +255,10 @@ Why not "Cardinal" for the entity:
 | Option | Assessment |
 |---|---|
 | **CP17 LLC** | **Recommended.** Already matches `cp17.org` and the `cp17-site` folder in this repo. Distinctive, uncrowded, and says nothing a plaintiff can quote |
-| **Card Platform 17 LLC** | Workable, but it welds the entity to the token *and* to a private individual's surname. If the token fails, the entity's name fails with it |
+| **Card LLC** | Workable, but it welds the entity to the token *and* to a private individual's surname. If the token fails, the entity's name fails with it |
 | **Cardinal's Promise LLC / Cardinals Platform LLC** | No longer appropriate. The token is not Cardinal-branded any more, and this would re-entangle the book with the entity carrying the token's liability |
 
-The rename has a clean side effect worth naming: with the token called Card Platform 17 and the
+The rename has a clean side effect worth naming: with the token called Card and the
 entity called CP17 LLC, **the book's brand appears nowhere in the token's legal or public
 identity.** That is a stronger version of the separation the LLC was formed to create.
 
@@ -279,7 +279,7 @@ roles afterward is how boards fill up with friends. Each seat below covers a way
 project can fail that no other seat can see.
 
 **Seat 1 — The Constraint.** Someone with financial, legal, or fiduciary experience who
-holds **no CP17** and has no upside if the price rises. Their entire job is to be able to
+holds **no CARD** and has no upside if the price rises. Their entire job is to be able to
 say no to you and mean it. This is the seat that makes the board real; if you fill only one
 seat, fill this one. Look for: a CPA, an estate or nonprofit attorney, a retired finance
 officer, a credit-union or community-bank board veteran. *Guards against: money moving for
@@ -301,7 +301,7 @@ renounced, liquidity is locked, the founder's holding is exactly what it is said
 *you* saying so. A technically competent board member who has checked the chain themselves,
 and who would resign publicly if a claim stopped being true, is the difference between a
 promise and an audit. Look for: a smart-contract developer, a security engineer, anyone who
-has shipped or reviewed an ERC-20 in production. They must hold no CP17 either. *Guards
+has shipped or reviewed an ERC-20 in production. They must hold no CARD either. *Guards
 against: a claim on the website drifting out of line with the chain.*
 
 **Seat 4 — The Recipient Voice.** Someone who has been through it — a bereaved family
@@ -365,7 +365,7 @@ that is fine — a shortlist longer than the structure is the healthy direction 
 
 Nothing else can be assigned yet, because seats are defined by what a person can do that
 the others cannot, and that requires knowing each person's profession, their relationship
-to you, and whether they hold or intend to hold CP17. Run all three named candidates
+to you, and whether they hold or intend to hold CARD. Run all three named candidates
 through the scorecard above and the three conversations below before assigning anyone. The
 slate still needs to answer:
 
@@ -377,7 +377,7 @@ slate still needs to answer:
   and buy a third-party audit instead — do not fill it with someone who will nod.
 - **Who brings hospice credibility?** Same test, and only if the person actually works in
   the field.
-- **Does anyone hold CP17, or expect to?** Disqualifying for the Constraint and Verifier
+- **Does anyone hold CARD, or expect to?** Disqualifying for the Constraint and Verifier
   seats. Ask before offering, not after.
 
 **On Chris Brizzi specifically:** the shared surname suggests family. That is not a
@@ -394,16 +394,16 @@ later is. "One of the three is my brother, here is why" is a fact a reasonable p
 accept. Silence on it, followed by someone noticing the surname, is a credibility problem
 you cannot undo.
 
-### The name — final: Card Platform 17 (CP17)
+### The name — final: Card (CARD)
 
 The token's naming history, kept honestly: it began as **Cardinals Promise (CARD)**, was
 briefly renamed **Mager Coin (MAGR)**, reverted to Cardinals Promise, and is now — finally —
-**Card Platform 17 (CP17)**. Nothing was ever deployed under any of these names, so every
+**Card (CARD)**. Nothing was ever deployed under any of these names, so every
 change was free. After deployment, none of them would have been.
 
 What the final name buys:
 
-- **Complete alignment.** Token (CP17), entity (CP17 LLC), and domain (cp17.org) all carry
+- **Complete alignment.** Token (CARD), entity (CP17 LLC), and domain (cp17.org) all carry
   the same name, and "CP" now expands to *Card Platform* rather than the book's title. The
   last naming link between the token and the memoir is gone, completing the separation the
   LLC provides legally and the split web properties provide reputationally.
@@ -423,7 +423,7 @@ cannot have a naming history that continues after launch.
 
 ### Who must not be on it
 
-- **Anyone paid in CP17.** A board member holding tokens is a trader with a vote. It
+- **Anyone paid in CARD.** A board member holding tokens is a trader with a vote. It
   destroys the independence of the only body whose independence matters.
 - **Crypto influencers or "advisors" who want an allocation.** The ask itself is the
   disqualification.
@@ -588,7 +588,7 @@ stronger signal than an unpaid friend regardless of stigma.
 **Smaller things that lower the barrier:**
 
 - **Publish a non-endorsement line beside every name.** "Serves on the Giving Committee.
-  Does not hold CP17, does not endorse it, and receives no compensation." One sentence they
+  Does not hold CARD, does not endorse it, and receives no compensation." One sentence they
   can point at forever.
 - **Ask them to clear it with their firm first**, rather than discovering a conflict later.
   Many firms restrict outside financial affiliations, and being the one who raised it is far
@@ -621,10 +621,10 @@ The honest position today:
 | Possible source | Real? |
 |---|---|
 | The 50M treasury | **Not yet.** It is coins, not cash — about $4,000 at spot, and selling it into an $8,000 pool wrecks the price and raises the sale-by-the-issuer problem |
-| Money from people buying CP17 | **No, and this matters.** Buyers' ETH goes into the liquidity pool, not to the project. The coin page says so explicitly. Buying the coin does not fund the giving |
+| Money from people buying CARD | **No, and this matters.** Buyers' ETH goes into the liquidity pool, not to the project. The coin page says so explicitly. Buying the coin does not fund the giving |
 | Book, speaking, and app revenue | **Yes.** This is the one source that exists |
 | Soliciting donations | **No.** Taking charitable donations without a charitable vehicle brings solicitation-registration and tax questions that a $20,000 project should not go near. Keep pointing people at the charities directly, as the site already does |
-| Gifting CP17 to families instead of cash | **No.** That hands a struggling family an illiquid asset that may go to zero. The same objection as paying board members in tokens, only worse |
+| Gifting CARD to families instead of cash | **No.** That hands a struggling family an illiquid asset that may go to zero. The same objection as paying board members in tokens, only worse |
 
 **So: fund the giving from the book and the software, not from the coin.** The committee's
 job is real either way — deciding where money goes is the substance of the seat, and the
@@ -637,7 +637,7 @@ utility bill. What destroys the relationship is implying a budget that does not 
 then convening a meeting with nothing to allocate.
 
 **The stronger move: start the giving before the token launches.** Nothing about the gifts
-depends on CP17 existing. Fund a small quarterly amount out of book revenue, convene the
+depends on CARD existing. Fund a small quarterly amount out of book revenue, convene the
 committee, make the first gifts, and post them to the ledger page — all of it before launch
 day. Three consequences, each worth more than it costs:
 
@@ -646,7 +646,7 @@ day. Three consequences, each worth more than it costs:
 2. **The ledger page launches with actual gifts on it** instead of promises. For a project
    whose entire argument is "check the receipts," arriving on day one with receipts is worth
    more than any amount of copy.
-3. **The giving stops being contingent on the coin succeeding.** If CP17 goes nowhere,
+3. **The giving stops being contingent on the coin succeeding.** If CARD goes nowhere,
    families were still helped — which is the outcome the project says it cares about, and
    the strongest possible answer to anyone who calls the whole thing a pretext.
 
@@ -873,7 +873,7 @@ no; the decision is recorded, and every guardrail becomes mandatory rather than 
    which is enough conflict for one person. Realistically the grant goes to the Domain
    seat or the Recipient Voice, and whoever takes it gives up the no-crypto shield the
    Giving Committee otherwise provides. Say that to them before they accept.
-2. **Fixed and named up front.** A specific number of CP17, agreed before they join,
+2. **Fixed and named up front.** A specific number of CARD, agreed before they join,
    granted once. Not a stream, not discretionary top-ups, never renegotiated while they
    serve.
 3. **Source decided and disclosed.** From your personal 100M it is a personal transfer;
@@ -910,7 +910,7 @@ grant — because the one thing being borrowed is the one thing that does not tr
   exist to contain.
 - **Tether's insiders profit through the company, not the token.** The owners of Tether
   Holdings earn billions a year from yield on the reserves — the token is plumbing; the
-  equity is the asset. Translated to CP17, that model says: get paid through the LLC and
+  equity is the asset. Translated to CARD, that model says: get paid through the LLC and
   operating revenue, not through coins. Which is precisely what Part IV already concluded.
 - **Tether's governance is the opposite of this project's thesis.** No full audit has ever
   been published — quarterly attestations only — and the company paid an $18.5M settlement
@@ -957,7 +957,7 @@ Consequences, stated plainly so they are not discovered later:
 - **Scanners will flag it, and they will be right to.** Do not treat the flag as unfair or
   try to argue it down. A project whose entire pitch is verifiability cannot dispute a true
   on-chain observation about itself.
-- **The float is 40% and your position equals the entire pool's CP17 side.** Thin float
+- **The float is 40% and your position equals the entire pool's CARD side.** Thin float
   amplifies both directions — it is why the price will look exciting early and why a single
   seller can erase it. Do not read an early price rise as validation of the model. It is a
   measure of how little liquidity there is.
@@ -1006,28 +1006,28 @@ empty) and arcade tokens (backed by machine time). A coin redeemable for softwar
 has value to someone who has never heard the story — which is the definition of value
 outside a brand.
 
-### The design: CP17 as a software key
+### The design: CARD as a software key
 
 1. **Pick one product first — the one with real demand.** Utility is anchored by the thing
    it unlocks; a key to software nobody wants is worth nothing. Start with a single app
    where there is any evidence of actual users, and expand the catalog later. Do not gate
    anything care-critical or safety-related, ever.
 2. **Two tiers, no contract changes:**
-   - **Hold to use** — a wallet holding ≥ N CP17 unlocks the product while it holds. The
+   - **Hold to use** — a wallet holding ≥ N CARD unlocks the product while it holds. The
      coin works like a transferable subscription; sell the coins, lose the access.
-   - **Burn to own** — send M CP17 to the dead address, show the transaction, receive a
+   - **Burn to own** — send M CARD to the dead address, show the transaction, receive a
      lifetime license. Every redemption is an on-chain receipt, and every one permanently
      shrinks the float. This fits the project's receipts thesis exactly: usage itself
      becomes checkable.
 3. **Mechanics are a weekend, not a protocol.** The user connects a wallet and signs a
    message; the server verifies the signature and checks the balance (or the burn
    transaction) via any RPC. No changes to the token, no new Solidity, renounce intact.
-4. **Publish a price list in CP17, as policy.** "Lifetime license: 500,000 CP17" — posted
+4. **Publish a price list in CARD, as policy.** "Lifetime license: 500,000 CARD" — posted
    on the site, repriced periodically as market price moves, explicitly a policy the LLC
    can change with notice rather than a promise welded into anything. This is the honor
    policy of a gift card, and it should say what gift cards say: honored while the LLC
    operates, terms can change prospectively, already-burned redemptions stay honored.
-5. **What this anchors, honestly.** If a license is worth $50 and costs 500k CP17, the coin
+5. **What this anchors, honestly.** If a license is worth $50 and costs 500k CARD, the coin
    has a use-value reference near $0.0001 — *for as long as people actually want the
    license*. The anchor is demand-limited: it is a floor made of customers, not of cash.
    Say that plainly rather than advertising a "price floor."
@@ -1037,7 +1037,7 @@ outside a brand.
 - **It must exist at launch or stay unmentioned.** Promising future utility is selling an
   expectation of the founder's efforts — the exact securities fact pattern this design
   avoids. Build the gate, wire one product, *then* put a single sentence on the site.
-- **Market the use, never the upside.** "500k CP17 unlocks X" is a product page. "Utility
+- **Market the use, never the upside.** "500k CARD unlocks X" is a product page. "Utility
   will drive the price" is the sentence a plaintiff quotes. The coin page's souvenir
   framing stays; the utility is listed the way a menu lists prices.
 - **Run it through counsel with the rest.** Consumptive, exists-at-launch utility generally
@@ -1090,7 +1090,7 @@ auditing the mechanism that collects it.
    false. Rewriting it before launch is honest; shipping it as-is is not, and the tone of
    the whole site rests on that paragraph being true.
 
-2. **It breaks the contract's core promise.** `CP17.sol` has no tax hook, and
+2. **It breaks the contract's core promise.** `Card.sol` has no tax hook, and
    `TOKEN_LAUNCH_STRATEGY.md` lists "tax/fee/blacklist mechanics" under *What This Setup
    Deliberately Avoids*, noting exotic mechanics are "the second thing scanners flag after
    unlocked liquidity." A fee-on-transfer token needs different, more complex, unaudited
@@ -1142,12 +1142,12 @@ what CP17 LLC would actually have to pay from:
 | Asset | Amount | Can it pay a salary? |
 |---|---|---|
 | Your $10,000 capital contribution | $10,000 cash | **No.** It is earmarked for the pool and launch costs, and paying yourself from your own contributed capital is moving money between your pockets while creating a taxable-looking event and a bad ledger line |
-| 50M CP17 treasury | ~$4,000 at spot | **No.** Illiquid. Selling it into an $8,000 pool crashes the price, and `LEGAL-BRIEFING.md` flags treasury sales as the asset most exposed to a "sale by the issuer" characterization |
+| 50M CARD treasury | ~$4,000 at spot | **No.** Illiquid. Selling it into an $8,000 pool crashes the price, and `LEGAL-BRIEFING.md` flags treasury sales as the asset most exposed to a "sale by the issuer" characterization |
 | Trade fee revenue | $2,190–$10,950/yr, if you add a fee | **No** — and see Part III for why the fee shouldn't exist |
 | Book, speaking, app revenue | Whatever it actually is | **Yes.** This is the only real source |
 
 So the answer to "from where" for at least the next year is: **from the book and the
-software, not from CP17.** The token has no cash and cannot generate any without doing the
+software, not from CARD.** The token has no cash and cannot generate any without doing the
 one thing the whole design was built to make impossible.
 
 ### The structural catch: the entity that pays you shouldn't be the token entity
@@ -1170,7 +1170,7 @@ So:
   cash. That agreement being on the shelf, unused and disclosed, is itself a good signal.
 
 The practical read: you get paid from the book and the software, in the ordinary way, and
-CP17 stays a thing you fund rather than a thing that funds you.
+CARD stays a thing you fund rather than a thing that funds you.
 
 ### The step that works right now: an accountable plan
 
@@ -1212,8 +1212,8 @@ Work down that list, not up. Most of what you need money for in year one is tier
 ### The constraint that governs all three — and the gifts
 
 Every one of these — vendor payments, reimbursements, salary, **and the gifts themselves** —
-needs *dollars*. The treasury holds 50M CP17, not cash. So each of them implies the same
-prior act: converting CP17 into money, which means selling into a pool that cannot absorb
+needs *dollars*. The treasury holds 50M CARD, not cash. So each of them implies the same
+prior act: converting CARD into money, which means selling into a pool that cannot absorb
 it, or an off-market sale that is unambiguously a sale by the issuer.
 
 **The treasury is not a budget. It is a claim on a budget that doesn't exist yet.** That
@@ -1233,7 +1233,7 @@ disclosure, promise no numbers you'd have to walk back.
 ### If it comes from the treasury, constrain it
 
 - **Set it by the two non-founder members, with you recused and the recusal in the minutes.**
-- **Cash, not CP17.** Paying yourself in tokens makes you a seller later, which is the one
+- **Cash, not CARD.** Paying yourself in tokens makes you a seller later, which is the one
   thing your holders will be watching for.
 - **Modest and defensible against the actual work** — hours logged, a written scope. If the
   entity ever becomes a nonprofit, "reasonable compensation" stops being good practice and
@@ -1296,7 +1296,7 @@ S-corp conversation later.**
 
 At a $20,000 FDV, there is no salary in this token. The treasury is worth $4,000 at spot and
 cannot be sold into an $8,000 pool without destroying it. Any real compensation for the next
-year comes from the book and the businesses in this repo, not from CP17. Plan accordingly,
+year comes from the book and the businesses in this repo, not from CARD. Plan accordingly,
 and let the token be what the site already says it is — not an investment, and not a
 fundraising campaign.
 

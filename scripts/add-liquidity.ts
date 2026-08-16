@@ -1,14 +1,14 @@
 /**
- * Creates (if needed) and seeds a CP17/WETH pool on Uniswap V2.
+ * Creates (if needed) and seeds a CARD/WETH pool on Uniswap V2.
  *
  * Usage:
- *   CP17_NETWORK=sepolia \
- *   CP17_TOKEN_ADDRESS=0x... \
- *   CP17_AMOUNT=1000000 \        # CP17 to deposit (whole tokens)
+ *   CARD_NETWORK=sepolia \
+ *   CARD_TOKEN_ADDRESS=0x... \
+ *   CARD_AMOUNT=1000000 \        # CARD to deposit (whole tokens)
  *   ETH_AMOUNT=1.5 \             # ETH to pair with it
  *   npx hardhat run scripts/add-liquidity.ts
  *
- * The CP17_AMOUNT/ETH_AMOUNT ratio sets the initial price, so double-check
+ * The CARD_AMOUNT/ETH_AMOUNT ratio sets the initial price, so double-check
  * it before running against mainnet. LP tokens are minted to the caller.
  */
 import { getContract, parseEther, parseUnits, formatUnits, parseAbi } from "viem";
@@ -37,14 +37,14 @@ const TOKEN_ABI = parseAbi([
 ]);
 
 async function main() {
-  const networkName = process.env.CP17_NETWORK ?? "sepolia";
-  const tokenAddress = process.env.CP17_TOKEN_ADDRESS as `0x${string}` | undefined;
-  const cardAmount = process.env.CP17_AMOUNT;
+  const networkName = process.env.CARD_NETWORK ?? "sepolia";
+  const tokenAddress = process.env.CARD_TOKEN_ADDRESS as `0x${string}` | undefined;
+  const cardAmount = process.env.CARD_AMOUNT;
   const ethAmount = process.env.ETH_AMOUNT;
 
   if (!tokenAddress || !cardAmount || !ethAmount) {
     throw new Error(
-      "Set CP17_TOKEN_ADDRESS, CP17_AMOUNT (whole CP17) and ETH_AMOUNT (ETH) env vars",
+      "Set CARD_TOKEN_ADDRESS, CARD_AMOUNT (whole CARD) and ETH_AMOUNT (ETH) env vars",
     );
   }
   const routerAddress = ROUTERS[networkName];

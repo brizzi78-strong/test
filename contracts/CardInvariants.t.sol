@@ -3,25 +3,25 @@ pragma solidity ^0.8.28;
 
 import {Test} from "forge-std/Test.sol";
 import {Vm} from "forge-std/Vm.sol";
-import {CP17} from "./CP17.sol";
+import {Card} from "./Card.sol";
 
-/// @notice Fuzz handler for CP17 invariant testing. The invariant runner
+/// @notice Fuzz handler for CARD invariant testing. The invariant runner
 ///         calls these entry points in random sequences from random senders;
 ///         the handler narrows that randomness onto valid token operations so
 ///         sequences exercise real state transitions instead of reverting.
 ///         Deliberately NOT a Test subclass: its only public surface is the
 ///         operations we want fuzzed (plus view helpers), so the runner cannot
 ///         wander into inherited helpers.
-contract CP17Handler {
+contract CardHandler {
     Vm private constant vm =
         Vm(address(uint160(uint256(keccak256("hevm cheat code")))));
 
-    CP17 public immutable token;
+    CARD public immutable token;
     address[] public actors;
     bool public renounced;
 
     constructor(uint256 numActors) {
-        token = new CP17();
+        token = new CARD();
         uint256 share = token.totalSupply() / (numActors * 2);
         for (uint256 i = 0; i < numActors; i++) {
             address actor = address(uint160(0xCA4D0000 + i));
@@ -92,17 +92,17 @@ contract CP17Handler {
     }
 }
 
-/// @notice Stateful verification of CP17's launch-critical properties.
+/// @notice Stateful verification of CARD's launch-critical properties.
 ///         Each invariant is re-checked after every randomized call sequence
 ///         against the handler above (256 sequences by default).
-contract CP17InvariantTest is Test {
+contract CardInvariantTest is Test {
     uint256 internal constant NUM_ACTORS = 8;
 
-    CP17Handler handler;
-    CP17 token;
+    CardHandler handler;
+    CARD token;
 
     function setUp() public {
-        handler = new CP17Handler(NUM_ACTORS);
+        handler = new CardHandler(NUM_ACTORS);
         token = handler.token();
         targetContract(address(handler));
     }

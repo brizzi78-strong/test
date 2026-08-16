@@ -1,4 +1,4 @@
-# cp17.org — the Card Platform 17 coin site
+# cp17.org — the Card coin site
 
 Three static pages. No build step, no dependencies, no JavaScript.
 
