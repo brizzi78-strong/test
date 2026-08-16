@@ -396,7 +396,7 @@ People asked Lou why he decided to take on somebody else's two boys. He never dr
 
 That was the honest start of it. The staying part he never explained.
 
-Lou and Mom married at Pines Lake, where Aunt Terry's family lived, the same place the Halloween candy hit the kitchen floor. Around the time Lou came into our lives, we left West Paterson for a house of our own in Woodridge. That was the home of my grade-school years, before Ramsey.
+Lou and Mom married at Pines Lake, in Wayne, New Jersey, where Aunt Terry's family lived, the same place the Halloween candy hit the kitchen floor. Around the time Lou came into our lives, we left West Paterson for a house of our own in Woodridge. That was the home of my grade-school years, before Ramsey.
 
 He adopted us when I was eight. The paperwork had taken years. International adoption in the eighties crawled and required everything in triplicate. Lou wasn't a patient man by nature, but he was patient in practice. He made the trips, sat in the offices, signed what they put in front of him, and waited for the next form.
 
@@ -724,7 +724,7 @@ When I threw up in a match, he didn't see weakness. When I got pinned in ninetee
 
 ### *The Marks*
 
-The wrestling years left marks I still feel. For a long time my body didn't feel like my own. It was something to manage, a number to beat, proof I deserved my place. Food stayed complicated, some meals were cheat meals, others I ate lean. When life felt out of control, drop the pounds was still the first thought that came back. The same drive that cut nineteen pounds to make weight later went looking for other ways to numb everything. It took years to make peace with my body, and it wasn't discipline that got me there. It was Lou telling me, flat out, that he loved me as much as his own kids, and my mother's quiet meals. Some days I still have to choose that peace on purpose. It gets easier every year.
+The wrestling years left marks I still feel. For a long time my body didn't feel like my own. It was something to manage, a number to beat, proof I deserved my place. Food stayed complicated, some meals were cheat meals, others I ate lean. When life felt out of control, drop the pounds was still the first thought that came back. The same drive that cut nineteen pounds to make weight later went looking for other ways to numb everything. It took years to make peace with my body, and it wasn't discipline that got me there. It was my mother's quiet meals. Some days I still have to choose that peace on purpose. It gets easier every year.
 
 **CHAPTER 8**
 
