@@ -1469,3 +1469,41 @@ fundraising campaign.
 *Prepared as internal strategy analysis. Nothing here is legal, tax, or financial advice.
 Review the securities questions in `docs/LEGAL-BRIEFING.md` with qualified counsel, and the
 compensation and entity questions with a CPA, before acting on any of it.*
+
+---
+
+## Decision record: the book bundle is removed entirely (August 16, 2026)
+
+**Decision.** There is no coin-per-book program, and no free-claim program either.
+The coin trades on Uniswap and nowhere else; the book is sold on its own site with
+no coins attached. Nothing connects the two but the story and a link.
+
+**How it happened.** The bundle ("You get some Hope when you buy a book," direct
+sales only) was Hope's veto: too confusing for older readers — precisely the people
+the book reaches. A free-claim replacement (a small gift of HOP from the site, one
+to a person, no purchase) was considered for about a minute and rejected the same
+way: "No claim." Every program that hands out coins needs a wallet on the receiving
+end, an anti-abuse rule, and an explanation — which is the confusion, just relocated.
+
+**What this simplifies.**
+
+- *For readers:* the pitch is now one sentence. The book is a book. The coin is a
+  souvenir some people buy. Nobody has to understand a redemption flow.
+- *Legally:* the strongest version of the Howey posture is restored — the issuer
+  never takes money in any transaction that delivers tokens, and never delivers
+  tokens at all. The book-bundle question prepared for counsel is withdrawn; the
+  remaining counsel questions stand.
+- *Operationally:* no claim codes, no batched sends, no gift-wallet row on the
+  ledger, no Sybil policing, no gas budget for giveaways.
+
+**What it supersedes.** The bundle decision ("we bring it back to tie it together
+and coin offered for every book," direct sales only) and its tagline "You get some
+Hope when you buy a book." The tagline is retired from the site and from launch
+copy. T-shirts (Hope on the front, cp17 on the back) are unaffected. The
+book-program wallet is deleted from the ledger page; the 50M treasury allocation
+is untouched by this change.
+
+**Site effect.** The coin page's book section now reads "The book is the book, and
+the coin is the coin" and says plainly that neither is required for the other and
+that money from one never funds the other — which also restates the standing
+funding boundary (book profits never enter the LLC).

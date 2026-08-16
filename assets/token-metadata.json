@@ -14,5 +14,5 @@
     "repository": "https://github.com/brizzi78-strong/test",
     "twitter": null
   },
-  "notes": "Official site: hopecoin.org, the coin's only web property, owned by the founder (cp17.org forwards there; register hopecoin.com defensively if still available). By decision the coin and the book are tied: direct purchases of The Cardinal's Promise include a fixed number of HOP, claimable via the site, from a published program wallet. Fill in contract addresses after deployment before submitting to Etherscan token update, CoinGecko, or a Uniswap token list. Etherscan requires a 32x32 PNG icon — use assets/logo-32.png."
+  "notes": "Official site: hopecoin.org, the coin's only web property, owned by the founder (cp17.org forwards there; register hopecoin.com defensively if still available). By decision there is no bundle, giveaway, or claim program of any kind: HOP trades on Uniswap only, and the book The Cardinal's Promise is sold entirely separately with no coins attached. Fill in contract addresses after deployment before submitting to Etherscan token update, CoinGecko, or a Uniswap token list. Etherscan requires a 32x32 PNG icon — use assets/logo-32.png."
 }

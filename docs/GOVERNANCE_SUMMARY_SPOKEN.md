@@ -297,3 +297,11 @@ One last thing. None of this is legal or tax advice. The securities questions be
 lawyer and the pay and company questions belong with an accountant. But you will walk into
 both of those conversations knowing what you want, which makes them much shorter and much
 cheaper.
+
+An update from August sixteenth. The book bundle is gone, and so is the free claim
+idea that briefly replaced it. Hope's read was that coins-with-a-book is too
+confusing for older readers, and she was right. So now it is one sentence: the book
+is a book, the coin is a souvenir some people buy on Uniswap, and nothing connects
+them but the story. This also gives us the cleanest possible legal posture — we
+never take money in a transaction that delivers tokens, because we never deliver
+tokens at all. The tagline about getting some Hope when you buy a book is retired.
