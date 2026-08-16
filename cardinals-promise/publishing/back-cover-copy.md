@@ -38,6 +38,11 @@ home health, hospice, and senior living. His work at the bedside of patients
 and families has shaped his mission to bring comfort, grace, and dignity to
 the end-of-life journey.
 
+## Giving line (runs below the author block, above the website)
+**$1 from every copy** goes to organizations doing this work — hospice,
+dementia care, and mental-health and addiction treatment. Every gift is
+posted, with its receipt, at thecardinalspromise.com/giving.
+
 Rob lives in North Carolina with his wife, Hope Brizzi, PharmD.
 
 > Marketing reviewer's changes applied: bio now leads with the Certified

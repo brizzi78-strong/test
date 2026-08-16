@@ -38,7 +38,17 @@ makes sure you know what to ask.
 <b>Large 8.5" × 11" full-color workbook format</b> — write in it, copy the
 worksheets, take them to appointments. Medication content reviewed by Hope
 Brizzi, PharmD. Book one of the Cardinal's Promise series.
+
+<b>$1 from every copy</b> is donated to organizations doing this work —
+hospice, dementia care, and mental-health and addiction treatment — with
+every gift posted publicly, receipt included.
 ```
+
+> Giving-line rule: never name a specific charity in the listing or ads
+> until that organization has agreed in writing (charity names in sales
+> promotions are regulated in many states — commercial co-venture rules).
+> The named recipients and receipts live at thecardinalspromise.com/giving;
+> the listing keeps the URL off per the copy rule above.
 
 ## The hook line (A+ content banner, ads, social — panel-tested)
 

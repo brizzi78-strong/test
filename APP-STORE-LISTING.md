@@ -81,6 +81,8 @@ call who understand.
 
 You are not alone. You are the difference.
 
+$1 from every copy of the book is donated to organizations doing this work — hospice, dementia care, and mental-health and addiction treatment — with every gift posted publicly at thecardinalspromise.com/giving.
+
 Learn more at thecardinalspromise.com
 
 ---
