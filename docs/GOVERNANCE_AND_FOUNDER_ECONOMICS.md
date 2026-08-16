@@ -26,8 +26,9 @@ The board is the opposite case. A small board inside a separate LLC is the one p
 that *adds* to the asset, because it converts "trust us with the treasury" into "someone
 else has to agree," and it keeps a token dispute from ever reaching the book.
 
-**Form the new LLC and give it a boring name. Three on the Giving Committee, a 2-of-3 Safe
-on the treasury. Disclose the unlocked 100M hold and put a written sell policy around it.
+**Form the new LLC and give it a boring name. Five seats, staged, with a 2-of-3 Safe that
+grows to 3-of-5, and one disclosed coin grant to a single member. Disclose the unlocked
+100M hold and put a written sell policy around it.
 Skip the fee. Get paid — but from the book and the software, as owner's draws from an
 operating entity, while CP17 LLC pays operating costs directly and leaves the treasury
 untouched.**
@@ -78,40 +79,33 @@ when combined with the next section.
 
 ## Part I — The board
 
-**Decision taken: three.** Five was considered and set aside once the recruiting reality
-became clear.
+**Decision taken: five — restored.** The board went five, then three when unpaid
+recruiting looked impossible, and is now five again. Recorded, with the earlier reasoning
+kept below rather than erased, because the recruiting constraint that forced three has not
+disappeared — it has to be managed, and one lever has changed: **one of the five will
+receive coins** (see the grant decision in the compensation section), which alters who can
+sit where.
 
-Five had two genuine advantages — four independent voices instead of two, and a five-key
-wallet that survives losing two keys where a three-key wallet does not. Neither survives
-contact with the constraint that actually binds here: **you cannot recruit five unpaid
-people to attach their names to a token.** A seat filled by someone who will not show up is
-worse than an empty one, because it launders the appearance of oversight without the
-substance. Three real people beat five names, and this is the rare case where the smaller
-structure is also the more honest one.
+Five is odd, so nothing deadlocks, and it buys what three could not: four voices around the
+founder instead of two, and a path to a 3-of-5 treasury that survives losing two keys. The
+cost is the same as ever — five genuinely engaged people is a hard ask, and a seat filled by
+someone who never attends launders the appearance of oversight without the substance. Fill
+seats only with people who will actually show up; stage the rest.
 
-Three is odd, so nothing deadlocks. Two is not a board, it is a standoff.
+**The two-body structure survives inside the five.** "Board member" and "key holder" remain
+different roles:
 
-**But "three people" and "three keys" are different questions, and conflating them is the
-one mistake to avoid here.** A signer is not the same role as a committee member:
+- **The Giving Committee** — the Domain seat, the Recipient Voice, and you — decides which
+  families receive money, funded from book revenue. Members with no coin grant keep the
+  no-crypto shield: they never touch a wallet and their public description contains no
+  token. The one member who takes the grant gives that shield up, knowingly.
+- **The treasury Safe starts at 2-of-3** — you, the paid reviewer, one crypto-literate
+  signer — and **migrates to 3-of-5 only when all five seats are genuinely filled.**
+  Announce the migration and link the transaction. Never an even threshold, and never a
+  threshold the current roster cannot meet.
 
-- **The Giving Committee: three.** You, the hospice or palliative-care professional, and one
-  more — a recipient voice, or a second person from that world. This body decides which
-  families receive money. Funded from book revenue, so **none of its members touch a wallet,
-  hold a token, or appear on the coin page.** These are the easy seats to fill, because the
-  ask contains no crypto at all.
-- **The treasury Safe: 2-of-3 keys.** You, the paid independent reviewer, and one
-  crypto-literate signer. **Never 2-of-2** — an even threshold deadlocks, and losing either
-  key locks the treasury permanently. The third key exists for survivability as much as
-  oversight.
-
-The two rosters overlap in you and need not overlap anywhere else. A signer can be a paid
-professional or a quiet technical person who is never presented publicly as a director,
-which is exactly what makes those roles fillable.
-
-One consequence of three: when you recuse on the Giving Committee, two remain and can tie.
-The tie-fails rule below still resolves it. In practice most conflicted questions — your
-compensation, treasury movements — sit with the Safe signers rather than the committee, so
-the situation is rarer than it looks.
+When you recuse, four remain and can tie; the tie-fails rule below resolves it, adopted in
+writing before the first meeting.
 
 ### Before you can have a board, you need something for it to be a board *of*
 
@@ -232,8 +226,8 @@ strongest credibility signal to non-crypto audiences. *Guards against: giving th
 good and helps nobody.*
 
 **Seat 3 — The Verifier.** Someone who can read Solidity and independently confirm what the
-contract actually does. At three this is the crypto-literate Safe signer rather than a
-separate committee seat, and it closes the largest
+contract actually does. This seat can double as the crypto-literate Safe signer, and it
+closes the largest
 hole in the current design: every trust claim you make — supply is fixed, ownership is
 renounced, liquidity is locked, the founder's holding is exactly what it is said to be — currently rests on
 *you* saying so. A technically competent board member who has checked the chain themselves,
@@ -801,6 +795,70 @@ no exceptions; the wallet and amount published on the ledger page; the tokens lo
 their full term plus six to twelve months; and a written blackout policy covering the
 periods when the board knows something the market does not.
 
+### Decision taken: one member receives coins
+
+One of the five — and exactly one — will receive a coin grant. The recommendation above was
+no; the decision is recorded, and every guardrail becomes mandatory rather than advisory:
+
+1. **Who is eligible.** Not the Constraint, not the Verifier, and not the paid reviewer —
+   those roles exist to have no upside, and Jeff Middleton is already family and paid,
+   which is enough conflict for one person. Realistically the grant goes to the Domain
+   seat or the Recipient Voice, and whoever takes it gives up the no-crypto shield the
+   Giving Committee otherwise provides. Say that to them before they accept.
+2. **Fixed and named up front.** A specific number of CP17, agreed before they join,
+   granted once. Not a stream, not discretionary top-ups, never renegotiated while they
+   serve.
+3. **Source decided and disclosed.** From your personal 100M it is a personal transfer;
+   from the treasury it is LLC compensation and needs two Safe signatures. Either way it
+   is posted to the ledger — holder, amount, source, and date.
+4. **Locked for their term plus six to twelve months.** The grant must not be sellable
+   while they sit. This is the difference between a keepsake and a trader with a vote.
+5. **Blackout policy in writing.** The sell policy gives the board advance notice of
+   price-moving events; the recipient signs a policy that they do not trade in the window
+   between any board notice and its publication — and their wallet being published makes
+   this checkable by anyone.
+6. **Tell them about the tax.** Tokens for services are ordinary income at fair market
+   value on receipt. At today's prices the number is small; put it in writing so it is
+   never a surprise.
+7. **Recusal on token-price matters.** The holder recuses from any vote whose outcome
+   plausibly moves the price — listings, liquidity changes, treasury sales — the same way
+   you recuse on compensation.
+
+One grant, disclosed and locked, is survivable. What the design cannot survive is drift —
+a second grant, then a third, until the board is paid in exactly the currency this document
+spent its middle third refusing. The line to hold is not "small grants are fine"; it is
+**"there is one, here it is, and there will not be another."**
+
+### On "Tether does it"
+
+Tether was raised as the model for insiders holding the coin. Looked at closely, Tether is
+a strong argument for the *other* parts of this design, and no argument at all for the
+grant — because the one thing being borrowed is the one thing that does not transfer.
+
+- **USDT cannot go up.** It is a stablecoin pegged to the dollar. Tether's insiders holding
+  USDT hold something with no price to profit from — the equivalent of a board member
+  holding cash. It proves nothing about granting an *appreciating* token to people who get
+  advance notice of price-moving decisions, which is the exact problem the guardrails above
+  exist to contain.
+- **Tether's insiders profit through the company, not the token.** The owners of Tether
+  Holdings earn billions a year from yield on the reserves — the token is plumbing; the
+  equity is the asset. Translated to CP17, that model says: get paid through the LLC and
+  operating revenue, not through coins. Which is precisely what Part IV already concluded.
+- **Tether's governance is the opposite of this project's thesis.** No full audit has ever
+  been published — quarterly attestations only — and the company paid an $18.5M settlement
+  to the New York Attorney General and a ~$41M CFTC fine over misstatements about its
+  reserves. Tether survives that history because it is systemically enormous and immensely
+  profitable. A $20,000 token attached to a memoir does not survive one such headline. The
+  project whose entire product is checkability cannot take its governance cues from the
+  most prominent unaudited balance sheet in crypto.
+- **What is genuinely worth borrowing:** the quarterly third-party attestation — which is
+  already here as the paid reviewer's published statement — and profit-via-entity rather
+  than via token, which is already here too.
+
+So "Tether does it" is true only in the sense that does not apply. The one-grant decision
+above stands or falls on its own guardrails; it cannot borrow legitimacy from a stablecoin
+issuer whose insiders hold a token that cannot move.
+
 ---
 
 ## Part II — Holding 100M personally
@@ -1115,7 +1173,8 @@ fundraising campaign.
 | Published claims become false | 3% fee contradicts `cp17-site/index.html` | Either don't add the fee, or rewrite the page *before* launch |
 | Treasury discretion | Single-signer wallet | Safe multisig (2-of-3, then 3-of-5), written gift policy, published minutes |
 | Board capture | Members hold tokens or depend on you | No token comp; independence weighted ×3 in scoring |
-| Board insider trading | The sell policy gives the board advance notice of price-moving events | No tokens to board members; blackout policy if any member ever holds |
+| Board insider trading | The sell policy gives the board advance notice of price-moving events | One grant only, locked for term +6–12mo, published wallet, written blackout, recusal on price-moving votes |
+| Grant drift | One grant becomes the precedent for the next | The line in writing: there is one, and there will not be another |
 | Board of friends and family | Slate is family plus friends; no outsider anywhere | Recruit one outsider for one key, or buy a published third-party audit as the substitute; disclose every relationship on the ledger |
 | Family signer mistaken for oversight | A relative's key reads as independence | A family key buys security, not governance — say so, and never describe him as independent |
 | Deadlock on conflicted votes | Recusal leaves an even four | Written rule adopted up front: a tied vote fails |
