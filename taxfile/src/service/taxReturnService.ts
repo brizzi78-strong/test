@@ -8,6 +8,8 @@
 
 import { randomUUID } from 'node:crypto';
 import { computeReturn } from '../domain/engine.ts';
+import { isSupportedTaxYear, SUPPORTED_TAX_YEARS } from '../domain/params.ts';
+import { buildScenarios, type Scenario } from '../domain/scenarios.ts';
 import { screenReturn, type ScopeReport } from '../domain/scope.ts';
 import {
   FILING_STATUSES,
@@ -56,12 +58,24 @@ export class TaxReturnService {
     this.now = opts.now ?? (() => new Date());
   }
 
-  createReturn(ownerId: string): ReturnWithComputation {
+  createReturn(ownerId: string, input?: unknown): ReturnWithComputation {
+    let taxYear: number = TAX_YEAR;
+    if (input !== undefined && input !== null) {
+      const requested = asObject(input).taxYear;
+      if (requested !== undefined) {
+        if (typeof requested !== 'number' || !isSupportedTaxYear(requested)) {
+          throw new ValidationError(
+            `taxYear must be one of: ${SUPPORTED_TAX_YEARS.join(', ')}`,
+          );
+        }
+        taxYear = requested;
+      }
+    }
     const timestamp = this.now().toISOString();
     const ret: TaxReturn = {
       id: randomUUID(),
       ownerId,
-      taxYear: TAX_YEAR,
+      taxYear,
       status: 'in-progress',
       createdAt: timestamp,
       updatedAt: timestamp,
@@ -192,6 +206,22 @@ export class TaxReturnService {
     return this.save(ret);
   }
 
+  /**
+   * Planning scenarios (Pro tier — the router enforces the entitlement).
+   * Only available when the return is computable and in scope.
+   */
+  scenarios(ownerId: string, id: string): Scenario[] {
+    const { taxReturn, computation, scope } = this.getReturn(ownerId, id);
+    if (!computation) {
+      throw new ValidationError(
+        scope.status === 'unsupported'
+          ? 'scenarios are unavailable: this return is outside what the estimator supports'
+          : 'choose a filing status before running scenarios',
+      );
+    }
+    return buildScenarios(taxReturn, computation);
+  }
+
   private load(ownerId: string, id: string): TaxReturn {
     const ret = this.store.get(id);
     if (!ret || ret.ownerId !== ownerId) throw new NotFoundError(`no return with id ${id}`);
@@ -258,8 +288,12 @@ function money(obj: Record<string, unknown>, field: string, label: string, allow
   return Math.round(value * 100) / 100;
 }
 
-function parseSsn(obj: Record<string, unknown>, label: string): string {
-  const raw = requireString(obj, 'ssn', label).replace(/[^\d]/g, '');
+/** SSN is optional everywhere — an estimate never needs one. Validate if given. */
+function parseOptionalSsn(obj: Record<string, unknown>, label: string): string | undefined {
+  const value = obj.ssn;
+  if (value === undefined || value === null || value === '') return undefined;
+  if (typeof value !== 'string') throw new ValidationError(`${label}.ssn must be a string`);
+  const raw = value.replace(/[^\d]/g, '');
   const formatted = `${raw.slice(0, 3)}-${raw.slice(3, 5)}-${raw.slice(5)}`;
   if (!SSN_PATTERN.test(formatted)) {
     throw new ValidationError(`${label}.ssn must be 9 digits (e.g. 123-45-6789)`);
@@ -280,7 +314,7 @@ function parsePerson(input: unknown, label: string): Person {
   return {
     firstName: requireString(obj, 'firstName', label),
     lastName: requireString(obj, 'lastName', label),
-    ssn: parseSsn(obj, label),
+    ssn: parseOptionalSsn(obj, label),
     birthYear: parseBirthYear(obj, label),
     blind: obj.blind === true,
   };
@@ -288,20 +322,24 @@ function parsePerson(input: unknown, label: string): Person {
 
 function parsePersonal(input: unknown): PersonalSection {
   const obj = asObject(input);
-  const address = asObject(obj.address ?? {});
-  const state = requireString(address, 'state', 'address').toUpperCase();
-  if (!STATE_PATTERN.test(state)) throw new ValidationError('address.state must be a 2-letter code');
-  const zip = requireString(address, 'zip', 'address');
-  if (!ZIP_PATTERN.test(zip)) throw new ValidationError('address.zip must be a 5-digit ZIP code');
+  let address: PersonalSection['address'];
+  if (obj.address != null) {
+    const addr = asObject(obj.address);
+    const state = requireString(addr, 'state', 'address').toUpperCase();
+    if (!STATE_PATTERN.test(state)) throw new ValidationError('address.state must be a 2-letter code');
+    const zip = requireString(addr, 'zip', 'address');
+    if (!ZIP_PATTERN.test(zip)) throw new ValidationError('address.zip must be a 5-digit ZIP code');
+    address = {
+      street: requireString(addr, 'street', 'address'),
+      city: requireString(addr, 'city', 'address'),
+      state,
+      zip,
+    };
+  }
   return {
     taxpayer: parsePerson(obj.taxpayer, 'taxpayer'),
     spouse: obj.spouse == null ? undefined : parsePerson(obj.spouse, 'spouse'),
-    address: {
-      street: requireString(address, 'street', 'address'),
-      city: requireString(address, 'city', 'address'),
-      state,
-      zip,
-    },
+    address,
     email: requireString(obj, 'email', 'personal'),
   };
 }
@@ -316,7 +354,7 @@ function parseDependent(input: unknown, index: number): Dependent {
   return {
     firstName: requireString(obj, 'firstName', label),
     lastName: requireString(obj, 'lastName', label),
-    ssn: parseSsn(obj, label),
+    ssn: parseOptionalSsn(obj, label),
     birthYear: parseBirthYear(obj, label),
     relationship: relationship as Dependent['relationship'],
   };

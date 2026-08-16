@@ -9,6 +9,15 @@ whose framework, instrument, and evidence base this document applies to one spec
 launch mechanics live in [`TOKEN_LAUNCH_STRATEGY.md`](TOKEN_LAUNCH_STRATEGY.md); this document is
 the argument for the design.*
 
+> **Note on the adopted design.** The decision record in
+> [`docs/GOVERNANCE_AND_FOUNDER_ECONOMICS.md`](docs/GOVERNANCE_AND_FOUNDER_ECONOMICS.md) adopts the
+> same 100/100/50 split analysed here but assigns the tranches differently: the 100M held tranche
+> is the **founder's, unlocked by deliberate decision** (mitigated by disclosure and a written sell
+> policy, not code), and the 50M is the treasury behind a 2-of-3 Safe. That decision governs the
+> launch. This dissertation's schedule-bound architecture — timelocked treasury, vesting reserve —
+> stands as the framework's recommendation, and §5a below scores the adopted design honestly
+> against it rather than pretending the two coincide.
+
 ---
 
 ## Abstract
@@ -182,6 +191,31 @@ vesting contracts deployed and verifiable. The identical allocation announced wi
 contracts — "we hold 60% and we'll be responsible with it" — scores in the low 40s and, more
 importantly, reads to every screener as the standard prelude to a slow rug. The distance between
 those two versions of the same allocation is the entire thesis of this document.
+
+## 5a. Scoring the adopted design
+
+The design actually adopted (see the note at the head of this document) differs from the
+specification above in one material respect: the 100M held tranche is the founder's, unlocked,
+with disclosure and a written sell policy as the mitigation rather than a timelock or vesting
+contract. Rescoring only the items that move:
+
+- **Item 7 (machine-enforced constraints), 10 → 5.** The renounce and LP lock remain
+  machine-enforced; the treasury Safe is multi-party but the largest retained tranche is
+  constrained by policy, not code. Under coding rule R2 (structure over intent), a written sell
+  policy scores as a commitment, not a constraint.
+- **Item 5 (states weakest item), 8 held.** The adopted materials name the unlocked hold as the
+  design's weakest point in plain words, which is exactly what this item rewards. Full marks stand.
+- No other item moves.
+
+**Adopted-design total: 59/100** — five points below the specified architecture, eleven above the
+prior plan. The five-point gap is the measured price of the flexibility the decision purchases,
+and it is a legitimate trade for a founder to make *provided it is disclosed as such*, which the
+adopted materials do. What the gap buys back is real: the capacity to respond to a genuine need in
+month six that a cliff would have made impossible (§7). What it costs is equally real: every
+screener that reads "40% unlocked founder hold" prices future sell pressure into the launch, and
+no sell policy, however honestly kept, is checkable in advance. The framework's view is that this
+is the single decision most worth revisiting once the demand gate passes — a token that has become
+load-bearing in a revenue product justifies, and can afford, the stronger constraint.
 
 ## 6. Launch protocol deltas
 
