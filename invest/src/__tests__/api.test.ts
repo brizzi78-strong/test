@@ -77,6 +77,24 @@ test('serves the app shell without a session', async () => {
   });
 });
 
+test('legal pages are public; unknown slugs 404', async () => {
+  await withApp(async (base) => {
+    for (const [slug, marker] of [
+      ['terms', /Terms of Service/],
+      ['privacy', /Privacy Policy/],
+      ['disclosures', /Risk Disclosures/],
+    ] as const) {
+      const res = await fetch(`${base}/legal/${slug}`);
+      assert.equal(res.status, 200);
+      const text = await res.text();
+      assert.match(text, marker);
+      assert.match(text, /Cardinal Trading/);
+    }
+    const missing = await fetch(`${base}/legal/nope`);
+    assert.equal(missing.status, 404);
+  });
+});
+
 test('the API requires a session', async () => {
   await withApp(async (base) => {
     assert.equal((await j(base, 'GET', '/api/app')).status, 401);

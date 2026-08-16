@@ -42,6 +42,7 @@
 import { createServer, type IncomingMessage, type Server, type ServerResponse } from 'node:http';
 import { randomUUID } from 'node:crypto';
 import { PAGE } from '../ui/page.ts';
+import { LEGAL_PAGES } from '../ui/legal.ts';
 import {
   authStoreFromEnv,
   hashPassword,
@@ -231,6 +232,16 @@ export function createApp(opts: AppOptions = {}): AppServer {
       }
       if (method === 'GET' && path === '/health') {
         return sendJson(res, 200, { status: 'ok' });
+      }
+      // Legal pages are public — readable before signing up.
+      if (method === 'GET' && path.startsWith('/legal/')) {
+        const page = LEGAL_PAGES[path.slice('/legal/'.length)];
+        if (page) {
+          res.writeHead(200, { 'content-type': 'text/html; charset=utf-8', 'content-security-policy': PAGE_CSP });
+          res.end(page);
+          return;
+        }
+        return sendError(res, 404, 'not_found', 'no such page');
       }
 
       // --- auth ---------------------------------------------------------

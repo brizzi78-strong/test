@@ -159,6 +159,9 @@ export const PAGE = /* html */ `<!doctype html>
   .auth .btn{width:100%;justify-content:center;padding:.7rem}
   .foot .logout{background:transparent;border:0;color:var(--muted);cursor:pointer;padding:0;font-size:.72rem;text-decoration:underline}
   .foot .logout:hover{color:var(--crit)}
+  .legallink{color:var(--muted);text-decoration:underline}
+  .legallink:hover{color:var(--ink)}
+  .authnote .legallink{font-size:inherit}
   .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--ink);color:var(--bg);padding:.6rem 1rem;border-radius:10px;font-size:.85rem;font-weight:600;opacity:0;pointer-events:none;transition:.25s;z-index:9;box-shadow:var(--shadow)}
   .toast.on{opacity:1;transform:translateX(-50%)}
   .toast.err{background:var(--crit);color:#fff}
@@ -204,6 +207,7 @@ export const PAGE = /* html */ `<!doctype html>
     <button class="alink" id="a_forgot" type="button">Forgot password?</button>
     <button class="alink" id="a_back" type="button" style="display:none">&larr; Back to log in</button>
     <div class="authnote">Paper trading demo &mdash; you start with play money, and no real money ever moves.</div>
+    <div class="authnote">By continuing you agree to the <a class="legallink" href="/legal/terms" target="_blank" rel="noopener">Terms</a>, <a class="legallink" href="/legal/privacy" target="_blank" rel="noopener">Privacy Policy</a>, and <a class="legallink" href="/legal/disclosures" target="_blank" rel="noopener">Risk Disclosures</a>.</div>
   </div>
 </div>
 <div class="toast" id="toast"></div>
@@ -326,7 +330,7 @@ function boot(){
     ACCT=app.accountId; ACCTNAME=app.accountName||"Investor";
     EMAIL=app.email||""; EMAILVERIFIED=app.emailVerified!==false; CARDADDR=app.cardTokenAddress||null;
     $("#acctname").textContent=ACCTNAME;
-    $("#foot").innerHTML="Don\u2019t ever trade alone again.<br><br>Paper account for<br><b>"+esc(ACCTNAME)+"</b><br>No real money moves.<br><button class=\\"logout\\" id=\\"logoutbtn\\">Log out</button>";
+    $("#foot").innerHTML="Don\u2019t ever trade alone again.<br><br>Paper account for<br><b>"+esc(ACCTNAME)+"</b><br>No real money moves.<br><a class=\\"legallink\\" href=\\"/legal/terms\\" target=\\"_blank\\" rel=\\"noopener\\">Terms</a> \u00b7 <a class=\\"legallink\\" href=\\"/legal/privacy\\" target=\\"_blank\\" rel=\\"noopener\\">Privacy</a> \u00b7 <a class=\\"legallink\\" href=\\"/legal/disclosures\\" target=\\"_blank\\" rel=\\"noopener\\">Risks</a><br><button class=\\"logout\\" id=\\"logoutbtn\\">Log out</button>";
     $("#logoutbtn").onclick=logout;
     return loadAll();
   }).then(function(){render();}).catch(function(e){
