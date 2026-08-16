@@ -396,7 +396,7 @@ People asked Lou why he decided to take on somebody else's two boys. He never dr
 
 That was the honest start of it. The staying part he never explained.
 
-Lou and Mom married at Pines Lake, where Aunt Terry's family lived, the same place the Halloween candy hit the kitchen floor. Around the time Lou came into our lives, we left my grandparents' place in West Paterson for a house of our own in Woodridge. That was the home of my grade-school years, before Ramsey.
+Lou and Mom married at Pines Lake, where Aunt Terry's family lived, the same place the Halloween candy hit the kitchen floor. Around the time Lou came into our lives, we left West Paterson for a house of our own in Woodridge. That was the home of my grade-school years, before Ramsey.
 
 He adopted us when I was eight. The paperwork had taken years. International adoption in the eighties crawled and required everything in triplicate. Lou wasn't a patient man by nature, but he was patient in practice. He made the trips, sat in the offices, signed what they put in front of him, and waited for the next form.
 
