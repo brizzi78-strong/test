@@ -350,10 +350,12 @@ still applies to him exactly as it does to everyone else.
 
 **What survives from the Mager episode, and should not be lost:**
 
-- The token still should not live on the book's domain. `assets/token-metadata.json` points
-  at `cp17.org`, not `thecardinalspromise.com`, and that stays: the memoir's brand belongs
-  outside the token's public identity even when the two share a name. The LLC's separation is
-  legal; this one is reputational, and both are worth keeping.
+- The token still should not live on the book's domain — and this has since been taken
+  further. **Decision taken: `cp17.org` and `thecardinalspromise.com` are fully separated.**
+  Neither site links to the other, the coin site carries no book link or book branding, and
+  the book's domain hosts nothing about the token. The coin page states that cp17.org is the
+  token's only official home, which also sharpens the anti-fake claim: one site, one address,
+  nowhere else to check. The LLC's separation is legal; this one is reputational; both stay.
 - The entity name should still be boring — `CP17 LLC`, not a Cardinal variant — for the
   reasons in the entity-name section above. With the token named Cardinals Promise, keeping
   the *entity* out of that brand matters more, not less.
