@@ -182,20 +182,21 @@ trust mechanism already adopted, so the options need stating precisely.
   alias does not slow a subpoena by a day — but it *will* be characterized as concealment
   by anyone building a case or a headline.
 
-**Decision taken alongside this: the coin is no longer connected to Lou or the family at
-all.** The dedication, the family story, and the named family charities have been removed
-from every coin page, completing the de-personalization the rename began. That removes the
-collision that made an alias self-defeating — there is no longer an identifiable family
-story on the site for a pseudonym to fail in front of, so full pseudonymity (version 2
-below) is now coherent rather than a costume.
+**This decision has swung twice and now rests re-tied.** The coin was first stripped of
+Lou and the family entirely; that was then reversed — the dedication, the story, and the
+family charities are back on the coin pages, and the book and coin are joined through the
+coin-per-book program (see "The book bundle"). With an identifiable family story on the
+site again, **full pseudonymity (version 2 below) is once more incoherent** — a pseudonym
+standing in front of a named family is pierced in one search. Only the disclosed pen name
+(version 1) remains workable, and it buys little.
 
 What has not changed: the conduct-based trust structure in Part II depends on a real
 reputation being at stake. The unlocked 100M was survivable *because* a named founder's
 conduct backed it. **A pseudonymous founder holding an unlocked 40% against a thin pool is
 the textbook profile of a rug pull**, and scanners and buyers will read it exactly that
-way. De-personalizing the site removes the *contradiction*; it does not remove the *trust
-discount*, and with the family story gone, the founder's conduct is now the only human
-collateral the project has left. Weigh the alias against that.
+way. With the family story restored to the page, name and conduct are joined again — which
+strengthens the trust story exactly as much as it exposes the family to the coin's fate.
+That trade was made knowingly in the re-tie decision; the alias cannot undo it.
 
 **The two coherent versions, and the one that is not:**
 
@@ -396,30 +397,22 @@ you cannot undo.
 
 ### The name — final: Card (CARD)
 
-The token's naming history, kept honestly: it began as **Cardinals Promise (CARD)**, was
-briefly renamed **Mager Coin (MAGR)**, reverted to Cardinals Promise, and is now — finally —
-**Card (CARD)**. Nothing was ever deployed under any of these names, so every
-change was free. After deployment, none of them would have been.
+The full naming history, kept honestly: **Cardinals Promise (CARD)** → briefly **Mager
+Coin (MAGR)** → back to Cardinals Promise → **Card Platform 17 (CP17)** → Brizz Coin and
+Lubrizzi considered and set aside → settled on **Card (CARD)**: the plainest possible
+name, carrying the original ticker. Nothing was ever deployed under any of these names, so
+every change was free. After deployment none would have been — **the naming conversation
+ends at the contract address.**
 
-What the final name buys:
+What the final name is: it names no person (Brizz and Lubrizzi would have welded family
+names to an immutable contract), borrows nothing, and still rhymes with the structure —
+**Card, at cp17.org, by CP17 LLC**, where CP reads naturally as Card Platform. With the
+book re-tied (see "The book bundle"), it also echoes where the project started without
+carrying the book's title.
 
-- **Complete alignment.** Token (CARD), entity (CP17 LLC), and domain (cp17.org) all carry
-  the same name, and "CP" now expands to *Card Platform* rather than the book's title. The
-  last naming link between the token and the memoir is gone, completing the separation the
-  LLC provides legally and the split web properties provide reputationally.
-- **Nothing to defend.** A deliberately plain name makes no claim, borrows no story, and
-  names no person — none of the costs the Mager episode surfaced, and no trademark crowd
-  like "Cardinal." The coin page turns the plainness into the point: what matters is not
-  what the coin is called but what can be checked.
-- **The anti-fake claim at full strength.** One name, one site, one address.
-
-What it costs: the name carries no warmth and no story. The mission now has to live
-entirely in the giving and the ledger rather than in the branding — which is where this
-document has argued it belongs anyway.
-
-**And this is the third rename. Let it be the last.** Renaming is free only until
-deployment; the contract address is permanent, and a project whose product is checkability
-cannot have a naming history that continues after launch.
+What it costs: "Card" is maximally generic — unsearchable alone, and the CARD ticker has
+been used by other projects. The site being the single official source of the contract
+address does the anti-fake work; the name cannot.
 
 ### Who must not be on it
 
@@ -1062,6 +1055,36 @@ The two engines are complementary and neither is a brand: the ledger gives the c
 reason to be *held*, and the software key gives it a reason to be *used*. Everything else
 on the menu was either someone else's money moving in a circle, or yours.
 
+### The book bundle — coins with every direct copy
+
+**Decision taken: every copy of the book bought directly from the book's site comes with a
+fixed number of CARD.** Direct sales only — confirmed — since retail and Amazon copies
+cannot carry a claim code. The coin page describes the program as a keepsake, tells buyers
+the coins are worth almost nothing, and says plainly not to buy the book for the coins.
+
+**What this costs, stated once and not softened:** it re-couples the book and the coin at
+the cash register, and it weakens the cleanest fact in `docs/LEGAL-BRIEFING.md` — that the
+issuer never takes money in any transaction that delivers tokens. Money for a book that
+comes with coins is money adjacent to coins, and courts look through wrapping. **This is
+now the first question for counsel, ahead of everything else in the briefing.**
+
+The guardrails that keep it defensible:
+
+1. **Keepsake framing everywhere, value language nowhere.** A fixed, small number of coins
+   per copy; never marketed as a rebate, a bonus "worth $X," or a reason to buy the book.
+2. **The amount is announced at launch, not promised before it** — the site's
+   no-numbers-you-might-walk-back discipline applies.
+3. **A dedicated program wallet, funded once.** One treasury allocation, approved by the
+   Safe signers in a single minuted decision, published as its own ledger row. Claims are
+   paid from it; when it is empty the program ends or is refilled by another minuted
+   decision. No ad-hoc sends from the founder's 100M.
+4. **Claim flow, not airdrop.** The purchase issues a code; the buyer redeems it on
+   cp17.org with a wallet address; sends are batched weekly because mainnet gas per claim
+   is real money. Unclaimed codes expire after a stated period.
+5. **Tax and books.** Distributed coins are a marketing expense of the LLC at fair market
+   value; the book side does not double-count them — the accountant sets this up before
+   the first claim.
+
 ## Part III — The 3% trade fee
 
 **Recommendation: don't.** Not on moral grounds — on arithmetic.
@@ -1317,6 +1340,8 @@ fundraising campaign.
 | Board of friends and family | Slate is family plus friends; no outsider anywhere | Recruit one outsider for one key, or buy a published third-party audit as the substitute; disclose every relationship on the ledger |
 | Family signer mistaken for oversight | A relative's key reads as independence | A family key buys security, not governance — say so, and never describe him as independent |
 | Alias read as concealment | Pseudonymous founder + unlocked 40% + thin pool is the rug-pull profile | If used at all: a disclosed pen name with legal identity intact in the LLC layer; never a fabricated persona |
+| Issuer-sale pillar weakened | Coins bundled with paid book copies | Direct sales only, keepsake framing, no value language, program wallet funded once and published — counsel reviews before launch |
+| Book re-coupled to token risk | Coin-per-book joins them at the cash register | Accepted by decision; the LLC ring-fence and the single-source address rule remain |
 | Deadlock on conflicted votes | Recusal leaves an even four | Written rule adopted up front: a tied vote fails |
 | Empty seats read as oversight | Names listed who never attend | Three real people, not a longer list; publish any vacancy with a target date |
 | Cannot recruit — crypto stigma | Unpaid public affiliation reads as endorsement | Split the Giving Committee from the Treasury Signers; pay for the Constraint function; publish a non-endorsement line per name |
@@ -1343,8 +1368,11 @@ fundraising campaign.
 6. Publish the founder's wallet address, labelled unlocked, alongside the sell policy.
 7. Update `cp17-site` so the page matches reality on day one — supply split, unlocked
    founder position, multisig, committee members.
-8. Launch per `TOKEN_LAUNCH_STRATEGY.md`, with the amended split.
-9. Publish quarterly: gifts, spends, minutes, compensation.
+8. Build the book-bundle claim flow (code at purchase, redeem on cp17.org, batched sends)
+   and fund the program wallet by one minuted Safe decision — after counsel clears the
+   bundle, before launch.
+9. Launch per `TOKEN_LAUNCH_STRATEGY.md`, with the amended split.
+10. Publish quarterly: gifts, spends, minutes, compensation.
 
 ---
 

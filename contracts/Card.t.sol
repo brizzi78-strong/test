@@ -5,12 +5,12 @@ import {Test} from "forge-std/Test.sol";
 import {Card} from "./Card.sol";
 
 contract CardTest is Test {
-    CARD token;
+    Card token;
     address alice = makeAddr("alice");
     address bob = makeAddr("bob");
 
     function setUp() public {
-        token = new CARD();
+        token = new Card();
     }
 
     function test_Metadata() public view {

@@ -120,16 +120,15 @@ have rules about it. Ask him to clear both the engagement and the key with his f
 he says yes. If the key is a problem, that is easy. He does the oversight, and the third key
 goes to somebody else.
 
-One last thing on the name. The coin has had three names. It started as Cardinals Promise,
-was briefly Mager Coin, and has landed on its final name: Card,
-ticker C P seventeen. Nothing was ever deployed under the earlier names, so every change was
-free, and after launch none of them would have been, so this one is the last. The new name
-lines everything up. The coin is C P seventeen, the company is C P seventeen L L C, and the
-website is c p seventeen dot org. One name, one site, one address. And C P now stands for
-Card Platform, not for the book, which finishes the separation between the coin and the
-memoir. The name is plain on purpose. It has no story to defend, and the mission lives in
-the giving and the ledger instead of the branding. Jeff Mager stays eligible for the board,
-because the only thing that ever ruled him out was the coin carrying his name.
+One last thing on the name. The coin went through several names — Cardinals Promise, then
+briefly Mager Coin, back again, then C P seventeen, with Brizz Coin and Lubrizzi considered
+along the way — and it has settled where it started, on the ticker. The coin is simply
+called Card, ticker C A R D. Nothing was ever deployed under any earlier name, so every
+change was free, and after launch none would have been. The naming conversation ends at the
+contract address. The name names nobody and borrows nothing, and the website being the one
+official source of the contract address is what protects buyers from fakes, because a name
+this plain cannot do that job. Jeff Mager stays eligible for the board, because the only
+thing that ever ruled him out was the coin carrying his name.
 
 When you interview candidates, there is one question that works better than any other. Ask
 them what would make them resign. A good answer comes fast and is specific. If you moved

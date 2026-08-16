@@ -16,12 +16,12 @@ contract CardHandler {
     Vm private constant vm =
         Vm(address(uint160(uint256(keccak256("hevm cheat code")))));
 
-    CARD public immutable token;
+    Card public immutable token;
     address[] public actors;
     bool public renounced;
 
     constructor(uint256 numActors) {
-        token = new CARD();
+        token = new Card();
         uint256 share = token.totalSupply() / (numActors * 2);
         for (uint256 i = 0; i < numActors; i++) {
             address actor = address(uint160(0xCA4D0000 + i));
@@ -99,7 +99,7 @@ contract CardInvariantTest is Test {
     uint256 internal constant NUM_ACTORS = 8;
 
     CardHandler handler;
-    CARD token;
+    Card token;
 
     function setUp() public {
         handler = new CardHandler(NUM_ACTORS);
