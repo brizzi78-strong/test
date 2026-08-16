@@ -897,6 +897,49 @@ a second grant, then a third, until the board is paid in exactly the currency th
 spent its middle third refusing. The line to hold is not "small grants are fine"; it is
 **"there is one, here it is, and there will not be another."**
 
+### Superseded: every member now receives a vested grant
+
+**Decision taken: each board member receives 5,000,000 HOP, vested over two years.** The
+one-grant line above lasted a day; the drift it warned about arrived as a deliberate
+decision rather than a slide, which is at least the honest version. Recorded, with the
+mechanics that keep it survivable:
+
+- **Assumed scope: the four non-founder seats** — the founder already holds 100M and takes
+  no grant. Four grants × 5M = **20,000,000 HOP, which is 40% of the treasury.** (If the
+  founder is meant to receive one too, say so; it changes the arithmetic, not the rules.)
+- **What it is worth, said out loud to every candidate: about $400 at launch prices.** The
+  grant is real upside only if the coin becomes real. Recruit with that sentence, not with
+  a dream — anyone who joins for the 5M has misunderstood the project or is the wrong
+  person.
+- **Vesting is on-chain, not a promise.** One OpenZeppelin `VestingWallet` per member: 5M
+  deposited from the treasury, releasing linearly over 24 months, address published on the
+  ledger beside their name. Anyone can verify what has vested and what remains. Leaving
+  the board forfeits nothing already vested and (by written agreement) waives the
+  unvested remainder back to the treasury.
+- **Funded by one minuted Safe decision**, all four wallets at once, each a ledger row.
+- **The paid reviewer still receives nothing.** Jeff Middleton holds a key and reviews the
+  treasury; a reviewer holding the asset he attests to is the one conflict this structure
+  cannot absorb. His compensation stays cash.
+- **The insider rules become board-wide and mandatory:** published wallets, the written
+  blackout policy (no trading between board notice of a price-moving event and its
+  publication), and recusal on votes that move the price. The sell policy's advance
+  notices make every member an insider; the vesting schedule and published wallets make
+  their compliance checkable.
+- **Tax, in writing, to each member:** vested tokens are ordinary income at fair market
+  value as they vest — small dollars at today's prices, their problem to plan for if the
+  price moves.
+- **The new line, and the last one:** 5M each, once, at joining. No top-ups, no refresh
+  grants, no exceptions. This section is what the next "everyone gets a bit more" proposal
+  has to be read against.
+
+What this decision does to earlier sections: the recruiting pitch changes — seats now
+carry standard crypto compensation (token grants with vesting, the industry's pattern #3),
+which eases recruiting among the crypto-comfortable and *hardens* it for the
+stigma-averse: a hospice chaplain offered token compensation is being asked to hold the
+thing they were promised they would never touch. Offer every candidate the explicit choice
+to **decline the grant** and serve unpaid; some of the best ones will, and their refusal,
+published, is worth more than their holding.
+
 ### On "Tether does it"
 
 Tether was raised as the model for insiders holding the coin. Looked at closely, Tether is
@@ -1373,7 +1416,7 @@ fundraising campaign.
 | Treasury discretion | Single-signer wallet | Safe multisig (2-of-3, then 3-of-5), written gift policy, published minutes |
 | Board capture | Members hold tokens or depend on you | No token comp; independence weighted ×3 in scoring |
 | Board insider trading | The sell policy gives the board advance notice of price-moving events | One grant only, locked for term +6–12mo, published wallet, written blackout, recusal on price-moving votes |
-| Grant drift | One grant becomes the precedent for the next | The line in writing: there is one, and there will not be another |
+| Grant drift | The one-grant line was already superseded once | The new line in writing: 5M each at joining, once — no top-ups, no refresh grants |
 | Board of friends and family | Slate is family plus friends; no outsider anywhere | Recruit one outsider for one key, or buy a published third-party audit as the substitute; disclose every relationship on the ledger |
 | Family signer mistaken for oversight | A relative's key reads as independence | A family key buys security, not governance — say so, and never describe him as independent |
 | Alias read as concealment | Pseudonymous founder + unlocked 40% + thin pool is the rug-pull profile | If used at all: a disclosed pen name with legal identity intact in the LLC layer; never a fabricated persona |
