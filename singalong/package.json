@@ -5,6 +5,11 @@
   "description": "Sing Along — personalized, guided sing-along sessions for dementia and memory care: match songs to a resident's musical past, prompt the lyrics, and learn what works",
   "type": "module",
   "engines": { "node": ">=22.18" },
-  "scripts": { "start": "node src/index.ts", "test": "node --test", "typecheck": "tsc --noEmit" },
+  "scripts": {
+    "start": "node src/index.ts",
+    "seed:program": "node src/program/seed.ts",
+    "test": "node --test",
+    "typecheck": "tsc --noEmit"
+  },
   "devDependencies": { "@types/node": "^22.8.5", "typescript": "~5.8.0" }
 }

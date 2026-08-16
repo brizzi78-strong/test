@@ -37,6 +37,24 @@ instead of competing on them.
   `topSongsForResident` turns that history into a ranked "what works for this
   resident" list from completed sessions only.
 
+## The program
+
+The app is the tooling; [`PROGRAM.md`](PROGRAM.md) is the ready-to-run
+**Memory Care Music Program** built on it: twice-weekly sing-along circles on
+a four-week themed cycle, personalized listening between them, and a Friday
+review of the engagement logs. `npm run seed:program` loads its 20-song
+public-domain kit (lyrics included) into a facility's library:
+
+```bash
+SINGALONG_DB=/path/data.db npm run seed:program                    # new facility + song kit
+SINGALONG_DB=/path/data.db npm run seed:program -- --facility ID   # into an existing facility (idempotent)
+npm run seed:program -- --demo-resident                            # dry run incl. the 4 session playlists
+```
+
+[`demo/index.html`](demo/index.html) is a self-contained, client-side
+walkthrough of the program with sample data — open it in any browser, or let
+the repo's `../render.yaml` blueprint serve it as a free static site.
+
 ## Run it
 
 ```bash
