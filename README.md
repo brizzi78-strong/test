@@ -141,7 +141,7 @@ launch-day sequence in [LAUNCH_DAY_CHECKLIST.md](LAUNCH_DAY_CHECKLIST.md)).
 
 ```
 contracts/Card.sol             # the token (OpenZeppelin ERC20 + Ownable)
-contracts/CARD.t.sol           # Foundry-style Solidity tests (forge-std)
+contracts/Card.t.sol           # Foundry-style Solidity tests (forge-std)
 contracts/CardInvariants.t.sol # stateful fuzz/invariant suite (handler-based)
 test/Card.ts                   # TypeScript tests (node:test + viem)
 verification/claims.json                   # launch-claims registry (claim → evidence)

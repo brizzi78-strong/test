@@ -10,7 +10,7 @@
       "evidence": [
         {
           "type": "solidity-test",
-          "file": "contracts/CARD.t.sol",
+          "file": "contracts/Card.t.sol",
           "name": "test_FullSupplyMintedToDeployer"
         },
         {
@@ -88,7 +88,7 @@
       "evidence": [
         {
           "type": "solidity-test",
-          "file": "contracts/CARD.t.sol",
+          "file": "contracts/Card.t.sol",
           "name": "test_Transfer"
         },
         {
@@ -116,7 +116,7 @@
         },
         {
           "type": "solidity-test",
-          "file": "contracts/CARD.t.sol",
+          "file": "contracts/Card.t.sol",
           "name": "test_TransfersStillWorkAfterRenounce"
         }
       ]
@@ -128,7 +128,7 @@
       "evidence": [
         {
           "type": "solidity-test",
-          "file": "contracts/CARD.t.sol",
+          "file": "contracts/Card.t.sol",
           "name": "test_RenounceOwnershipSetsOwnerToZero"
         },
         {
@@ -150,7 +150,7 @@
       "evidence": [
         {
           "type": "solidity-test",
-          "file": "contracts/CARD.t.sol",
+          "file": "contracts/Card.t.sol",
           "name": "test_RevertWhen_TransferExceedsBalance"
         },
         {

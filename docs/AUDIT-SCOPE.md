@@ -36,7 +36,7 @@ OpenZeppelin v5 base contracts.
   (no mint/burn/pause/blacklist function exists) and an exact
   write-surface check (the ABI's state-changing functions are exactly the
   ERC-20 five plus the two Ownable handover functions).
-- **Foundry-style Solidity tests** (`contracts/CARD.t.sol`)
+- **Foundry-style Solidity tests** (`contracts/Card.t.sol`)
   including fuzz tests, plus a **handler-based stateful invariant suite**
   (`contracts/CardInvariants.t.sol`): supply constant, balances
   sum to supply, renounce is permanent, no-tax property asserted inside
