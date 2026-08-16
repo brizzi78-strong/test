@@ -10,9 +10,9 @@
     "sepolia": null
   },
   "links": {
-    "website": "https://thecardinalspromise.com/card",
+    "website": "https://cp17.org",
     "repository": "https://github.com/brizzi78-strong/test",
     "twitter": null
   },
-  "notes": "Official site: thecardinalspromise.com (the book's established domain \u2014 token page at /card; cp17.org may redirect there). Fill in contract addresses after deployment before submitting to Etherscan token update, CoinGecko, or a Uniswap token list. Etherscan requires a 32x32 PNG icon \u2014 use assets/logo-32.png."
+  "notes": "Official site: cp17.org. The token is deliberately NOT hosted on the book's domain (thecardinalspromise.com) — keeping the memoir's brand separate from the token is the same separation the LLC provides legally. Fill in contract addresses after deployment before submitting to Etherscan token update, CoinGecko, or a Uniswap token list. Etherscan requires a 32x32 PNG icon — use assets/logo-32.png."
 }
