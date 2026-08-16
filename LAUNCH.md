@@ -1,4 +1,4 @@
-# Cardinals Promise (CARD) — Launch Runbook
+# The Cardinal (CARD) — Launch Runbook
 
 ## Decided launch parameters
 
@@ -19,11 +19,11 @@ repo; items marked 🔑 need something only the project owner can provide
 
 | Step | Where |
 | --- | --- |
-| Token contract (250M fixed supply — no mint, no burn; OpenZeppelin ERC20 + Ownable) | `contracts/CardinalsPromise.sol` |
-| Test suite — 17 tests (Foundry-style Solidity incl. fuzz + invariants, plus node:test/viem), all passing | `contracts/*.t.sol`, `test/CardinalsPromise.ts` |
+| Token contract (250M fixed supply — no mint, no burn; OpenZeppelin ERC20 + Ownable) | `contracts/Cardinal.sol` |
+| Test suite — 17 tests (Foundry-style Solidity incl. fuzz + invariants, plus node:test/viem), all passing | `contracts/*.t.sol`, `test/Cardinal.ts` |
 | Machine-checkable launch-claims ledger — 8/8 claims verified in CI (`npm run verify`) | `verification/claims.json` |
 | Static analysis — Slither v0.11.5, all 101 detectors, **0 findings** | run locally, see below to reproduce |
-| Local deployment rehearsal (Ignition) | `ignition/modules/CardinalsPromise.ts` |
+| Local deployment rehearsal (Ignition) | `ignition/modules/Cardinal.ts` |
 | CI — build + full test suite + claims verification on every push/PR | `.github/workflows/verify.yml` |
 | Sepolia + mainnet network config | `hardhat.config.ts` |
 | Etherscan verification config | `hardhat.config.ts` (`verify.etherscan`) |
@@ -69,7 +69,7 @@ npx hardhat keystore set SEPOLIA_RPC_URL
 npx hardhat keystore set SEPOLIA_PRIVATE_KEY     # fund it from a Sepolia faucet first
 npx hardhat keystore set ETHERSCAN_API_KEY
 
-npx hardhat ignition deploy ignition/modules/CardinalsPromise.ts --network sepolia
+npx hardhat ignition deploy ignition/modules/Cardinal.ts --network sepolia
 npx hardhat verify --network sepolia <deployed-address>
 ```
 
@@ -96,7 +96,7 @@ implied returns — the name "Promise" makes this doubly important.
 npx hardhat keystore set MAINNET_RPC_URL
 npx hardhat keystore set MAINNET_PRIVATE_KEY
 
-npx hardhat ignition deploy ignition/modules/CardinalsPromise.ts --network mainnet
+npx hardhat ignition deploy ignition/modules/Cardinal.ts --network mainnet
 npx hardhat verify --network mainnet <deployed-address>
 ```
 

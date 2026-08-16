@@ -80,7 +80,7 @@ npm run deploy:sepolia
 ```
 
 It prints the deployed address, like
-`CardinalsPromiseModule#CardinalsPromise - 0xAB12...`.
+`CardinalModule#Cardinal - 0xAB12...`.
 **Record that address.**
 
 Now tell the helper scripts about it — edit `launch.json`:
