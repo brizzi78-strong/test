@@ -273,7 +273,7 @@ My aunt Nancey picked us up in her small red Honda Civic and drove us to Cedar G
 
 My Spanish disappeared almost overnight. English was everywhere. I picked it up the way kids do, without deciding to. Back home I'd had a lisp. In New Jersey they sent me to speech therapy twice a week to fix the way I talked. Decades later it still comes out at the worst times.
 
-My grandfather was strict, or so my mother said. He'd never approved of the marriage, but he let us stay with him. We paid him eight hundred a month. Chris and I never saw that side of him. To us he was kind, and he was the one who kept the routine. My nana mostly stayed in the background. My aunts Nancey or Terry, or Grandpa, watched us when my mother had to find work. My mom started over with no degree and nobody to fall back on, and she worked. That's her story to tell, in her own voice, and I hope she does. This book is here because of her. She picked us.
+My grandfather was strict, or so my mother said. He'd never approved of the marriage, but he let us stay with him. We paid him eight hundred a month. Chris and I never saw that side of him. To us he was kind, and he was the one who kept the routine. My nana mostly stayed in the background. My aunts Nancey or Terry, or Grandpa, watched us when my mother had to find work. My mom started over with no degree and nobody to fall back on, and she worked. That's her story to tell, in her own voice, and I hope she does. This book is here because of her. When it came down to it, she picked us over him.
 
 Still, I missed my papa.
 
@@ -526,15 +526,15 @@ Don't complain. Don't play the victim. Show up.
 
 He never sat me down and said those words. Instead, he lived them out loud in front of me every day until they became part of who I am.
 
-When my turn came, it was the wrestling tournaments upstate. Dad drove me up into New York weekend after weekend, however far the bracket took us. He didn't talk about the miles, the early start, or that he had worked the night before. He just got in the car, because his kid was wrestling and that was where he was supposed to be.
+Where I saw it most was the wrestling tournaments upstate. Dad drove me up into New York weekend after weekend, however far the bracket took us. He didn't talk about the miles, the early start, or that he had worked the night before. He just got in the car, because his kid was wrestling and that was where he was supposed to be.
 
-The drives were endless, even for me, and I wasn't driving. Cooperstown. New York City. Albany, to see the Double-A Yankees. Lehigh, out in Pennsylvania. Philadelphia, where he took Jon and me to a Giants–Eagles game. Somebody in the rows below us had a sign: LT CHOOSES COKE OVER PEPSI. Lawrence Taylor's troubles were public sport by then. Lou went down and took the sign, and it almost started a fight. I was a kid; I thought it was about football. It took me years to wonder whether it was about something else — whether some part of him just couldn't watch a stadium laugh at a man for the thing that was eating him.
+The drives were endless, even for me, and I wasn't driving. Cooperstown. New York City. Albany, to see the Double-A Yankees. Lehigh, out in Pennsylvania. Philadelphia, where he took Jon and me to a Giants–Eagles game. Somebody in the rows below us had a sign: LT CHOOSES COKE OVER PEPSI. Lawrence Taylor was the best defensive player in football and by then everyone knew about the cocaine, so his addiction had become public sport. Lou went down and took the sign, and it almost started a fight. I was a kid; I thought it was about football. It took me years to wonder whether it was about something else — whether some part of him just couldn't watch a stadium laugh at a man for the thing that was eating him.
 
 When he coached baseball, the Foxes and the Falcons, he was harder on me than anyone else. He'd take me to the field where he would hit me a hundred balls, then a hundred more. At the batting cages, he fed the machine until my hands were raw from gripping the bat. He never let me quit because it hurt. *Stay in the box. Take the next pitch.* That was the lesson under the lesson.
 
 Chris and Dad shared a phrase between them. After the big moments, like something at school, a hard-won wrestling match, or a new job, they would whisper to each other: *Hey Dad, we made it.*
 
-I had my own version of it in that car coming home from upstate, the quiet after a long day, the two of us, the feeling that we had done the thing together. That was Lou's idea of love. Not announced. Earned, together. And when he was proud of me, he rarely said so. He'd give me a small smile and a look. His expression said all of it.
+I had my own version of that feeling in that car coming home from upstate, the quiet after a long day, the two of us, the feeling that we had done the thing together. That was Lou's idea of love. Not announced. Earned, together. And when he was proud of me, he rarely said so. He'd give me a small smile and a look. His expression said all of it.
 
 He didn't connect with me only on the big things. One time I asked for White Castle, and the nearest one was an hour away. He drove me. An hour there for a sack of little burgers, because his kid had a taste for them. When I needed a root canal out at college in Ohio, he drove ten hours to take me to the dentist and ten hours back. A full day of driving, for a dentist's chair. In both pleasure and pain, Dad was there.
 
@@ -930,7 +930,7 @@ The lineup was NSYNC, 98 Degrees, Busta Rhymes, Eminem, and for ten days I carri
 
 The show aired eight times a day for three months. Back in Oxford, cars slowed, people pointed, strangers at parties turned toward us with a warmth I hadn't been on the receiving end of before. I got the reach of it through Chris: a girl in his high school was watching one night, called him over, said there's someone on here who looks exactly like your brother. That is my brother, Chris said. She looked at the screen, looked at him, said, yeah right.
 
-Senior year I lived with Dave Nesser, Dean Ferrera, and Jason Huet in a condo downtown. Absolute pigs. We destroyed that place. We were about to scatter.
+Senior year I lived with Dave Nesser, Dean Ferrera, and Jason Huet in a condo downtown. Absolute pigs. We destroyed that place. Graduation was coming and we were all about to scatter.
 
 That feeling, the one that hadn't come after the county championship, or the wrestling room, or Kappa Sig, came in Cancun, ten feet from Timberlake with cameras pointed my way. I'd finally found the feeling. From then on I knew exactly what I was chasing.
 
