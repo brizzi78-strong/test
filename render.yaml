@@ -99,6 +99,45 @@ services:
       - key: TAXFILE_PASSWORD
         sync: false            # Render prompts you to set this on first deploy
 
+  # Cardinal Trading — the trading app (invest/ over trading/): multi-user
+  # accounts with paper buying power, real market quotes (Yahoo), fractional
+  # and recurring buys, and the CARD token page. Sign-ups are open; every user
+  # gets their own login and an isolated paper account, so no shared gate is
+  # needed. Data persists in SQLite on the mounted disk.
+  #
+  # CARD launch day: once the Uniswap pool is live, add ETH_RPC_URL,
+  # CARD_POOL_ADDRESS, and CARD_TOKEN_ADDRESS in the service's environment
+  # (Settings -> Environment) and CARD flips from practice prices to live
+  # pool pricing, with the real one-tap Uniswap buy/sell links on its page.
+  # For real verification/reset emails, add SENDGRID_API_KEY,
+  # INVEST_MAIL_FROM, and INVEST_BASE_URL (the service's public URL);
+  # until then the links print to the service logs.
+  # To serve this at a cp17.org address, add the subdomain (e.g.
+  # trade.cp17.org) in Settings -> Custom Domains and point a DNS CNAME at it.
+  - type: web
+    name: cardinal-trading
+    runtime: docker
+    branch: main
+    plan: starter            # a persistent disk requires a paid instance
+    dockerfilePath: ./deploy/Dockerfile
+    dockerContext: .
+    dockerCommand: node deploy/allinone-trading.ts
+    healthCheckPath: /health
+    autoDeploy: true
+    disk:
+      name: trading-data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: TRADING_DB
+        value: /data/trading.db
+      - key: INVEST_DB
+        value: /data/invest.db
+      - key: MARKET_DATA
+        value: yahoo           # live quotes; remove to fall back to the mock feed
+      - key: INVEST_TRUST_PROXY
+        value: "1"             # Render terminates TLS; trust its proxy for Secure cookies
+
   # Cardinal Chat — self-hosted ChatGPT alternative (chat/), powered by the
   # Claude API. Password-gated (CHAT_USER / CHAT_PASSWORD — set the password
   # when Render prompts; the app spends your Anthropic API budget, so never run
