@@ -122,8 +122,10 @@ goes to somebody else.
 
 One last thing on the name. The coin went through many names — Cardinals Promise, Mager
 Coin, back again, C P seventeen, Brizz and Lubrizzi considered, then simply Card — and it
-has settled on Hope Coin, ticker H O P, dedicated in honor of your wife, who supported you
-through thick and thin. Hope Coin actually existed in this project once before and was set
+has settled on Hope Coin, ticker H O P. The name has a double meaning on purpose. In
+public, the coin is about having hope, the kind families need in the hardest stretches. In
+private, Hope is your wife's name, and the dedication line, in honor of Hope, reads both
+ways and explains itself to no one. Hope Coin actually existed in this project once before and was set
 aside, so this is a restoration, not an invention. Nothing was ever deployed under any
 earlier name, so every change was free, and after launch none would have been. The naming
 conversation ends at the contract address. And Jeff Mager stays eligible for the board,

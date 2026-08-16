@@ -401,8 +401,12 @@ you cannot undo.
 
 The full naming history, kept honestly: **Cardinals Promise (CARD)** → briefly **Mager
 Coin (MAGR)** → back → **Card Platform 17 (CP17)** → Brizz Coin and Lubrizzi considered →
-**Card (CARD)** → settled on **Hope Coin (HOP)**, dedicated in honor of the founder's
-wife. Fittingly, Hope Coin (HOP) already existed in this repository once — added in PR
+**Card (CARD)** → settled on **Hope Coin (HOP)**. The name carries a deliberate double
+meaning: publicly the coin is about *having hope* — the virtue, fitting the giving
+mission — and privately it honors Hope, the founder's wife, who sacrificed so the book
+about his father could be written. By decision the public copy leads with the virtue; the
+dedication line, "In honor of Hope," reads both ways on purpose and explains itself to
+no one. Fittingly, Hope Coin (HOP) already existed in this repository once — added in PR
 #100 and removed in PR #101 when Cardinals Promise became the only token — so this is a
 restoration, not an invention: the same 250M fixed-supply design under its original
 name. Nothing was ever deployed under any of these names, so every change was free. After
