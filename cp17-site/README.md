@@ -1,4 +1,4 @@
-# cp17.org — the Card coin site
+# cp17.org — the Hope coin site
 
 Three static pages. No build step, no dependencies, no JavaScript.
 

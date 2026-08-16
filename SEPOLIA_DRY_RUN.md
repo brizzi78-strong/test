@@ -80,7 +80,7 @@ npm run deploy:sepolia
 ```
 
 It prints the deployed address, like
-`CardModule#CARD - 0xAB12...`.
+`HopeCoinModule#HOP - 0xAB12...`.
 **Record that address.**
 
 Now tell the helper scripts about it — edit `launch.json`:
@@ -133,7 +133,7 @@ needs it.
 npx hardhat run scripts/transfer-treasury.ts
 ```
 
-It sends exactly 50,000,000 CARD and prints the transaction link — open it,
+It sends exactly 50,000,000 HOP and prints the transaction link — open it,
 this is what a "proof link" looks like. Then:
 
 ```bash
@@ -148,7 +148,7 @@ the guardrail doing its job.
 
 ## Step 4 — The pool (10 min, simulated)
 
-On the real day you'll do this in the Uniswap website (pair 200M CARD with
+On the real day you'll do this in the Uniswap website (pair 200M HOP with
 your ETH). For practice, simulate it with the third wallet from step 0a:
 put the **pool** address into `launch.json` under `"pool"`, then:
 

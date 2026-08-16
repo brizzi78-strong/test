@@ -1,6 +1,6 @@
-# CARD Token Launch Strategy
+# HOP Token Launch Strategy
 
-Launch plan for the CARD token: 250M fixed supply, Uniswap fair launch, trust-first design.
+Launch plan for the HOP token: 250M fixed supply, Uniswap fair launch, trust-first design.
 Every decision below optimizes for the same thing — being verifiably safe on-chain, so that
 token scanners, screeners, and skeptical buyers have nothing to flag.
 
@@ -9,7 +9,7 @@ token scanners, screeners, and skeptical buyers have nothing to flag.
 | Decision | Call | Rationale |
 |---|---|---|
 | Supply at launch | Mint all 250M, then **renounce ownership immediately** | "Nobody can ever print more" is the single strongest trust signal a small token can have, and it costs nothing |
-| Into the Uniswap pool | **100M CARD (40%)** | The tradeable float. Halving it from the original 200M doubles the launch price but does not deepen the book — see the slippage table in `docs/GOVERNANCE_AND_FOUNDER_ECONOMICS.md` |
+| Into the Uniswap pool | **100M HOP (40%)** | The tradeable float. Halving it from the original 200M doubles the launch price but does not deepen the book — see the slippage table in `docs/GOVERNANCE_AND_FOUNDER_ECONOMICS.md` |
 | Founder-held | **100M (40%), unlocked, in a disclosed wallet** | Decision taken: no timelock. This is the weakest point in the design and it is deliberate. Mitigation is disclosure plus a written sell policy, not code — see `docs/GOVERNANCE_AND_FOUNDER_ECONOMICS.md` |
 | Treasury | 50M (20%) behind a Safe multisig, publicly announced | Any more looks extractive; label it, and require more than one signature to move it |
 | ETH into the pool | **2–5 ETH** to start | Enough that a few-hundred-dollar buy doesn't spike the price ~20%; small enough not to risk savings on an experiment |
@@ -17,7 +17,7 @@ token scanners, screeners, and skeptical buyers have nothing to flag.
 
 ## Token Parameters
 
-- **Name / Symbol:** Card / CARD
+- **Name / Symbol:** Hope Coin / HOP
 - **Total supply:** 250,000,000 (fixed — minted once at deployment, no mint function reachable after renounce)
 - **Distribution:**
   - 100,000,000 (40%) → Uniswap liquidity pool
@@ -36,10 +36,10 @@ Order matters — several of these steps are only trustworthy if done in the rig
    hostile by default.
 3. **Transfer 50M to the treasury wallet.** Do this *before* renouncing and *before* the pool
    exists, so the transfer is visibly a setup step rather than a post-launch extraction.
-4. **Create the Uniswap V2 pool** with 100M CARD + 2–5 ETH, via `addLiquidityETH` on the
+4. **Create the Uniswap V2 pool** with 100M HOP + 2–5 ETH, via `addLiquidityETH` on the
    router (`scripts/add-liquidity.ts`). This is not a swap — you are depositing both sides
-   and thereby *setting* the opening price, not paying one. The CARD/ETH ratio is the price:
-   with 100M in the pool, 3 ETH implies 0.00000003 ETH/CARD. Check the ratio twice; it is the
+   and thereby *setting* the opening price, not paying one. The HOP/ETH ratio is the price:
+   with 100M in the pool, 3 ETH implies 0.00000003 ETH/HOP. Check the ratio twice; it is the
    one number here that cannot be undone without trading against your own pool.
 5. **Lock the LP tokens for 12 months** via Team Finance or UNCX. Save the lock URL — it's
    the first link to publish.

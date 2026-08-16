@@ -1,4 +1,4 @@
-# CARD — Governance and Money. Spoken Summary.
+# HOP — Governance and Money. Spoken Summary.
 
 *A plain-language version of the governance and founder economics analysis, written to be
 listened to rather than read. No tables, no addresses, no file names. About fifteen minutes.*
@@ -123,7 +123,7 @@ goes to somebody else.
 One last thing on the name. The coin went through several names — Cardinals Promise, then
 briefly Mager Coin, back again, then C P seventeen, with Brizz Coin and Lubrizzi considered
 along the way — and it has settled where it started, on the ticker. The coin is simply
-called Card, ticker C A R D. Nothing was ever deployed under any earlier name, so every
+called Hope Coin, ticker C A R D. Nothing was ever deployed under any earlier name, so every
 change was free, and after launch none would have been. The naming conversation ends at the
 contract address. The name names nobody and borrows nothing, and the website being the one
 official source of the contract address is what protects buyers from fakes, because a name
@@ -171,8 +171,8 @@ because your project is hospice adjacent, which is their exact territory. Cardin
 crowded in financial services.
 
 So my suggestion is C P seventeen L L C for the company, which already matches the web
-address you own, with Card as the public name of the coin. And notice the good side
-effect. With the coin called Card and the company called C P seventeen, the book's
+address you own, with Hope Coin as the public name of the coin. And notice the good side
+effect. With the coin called Hope Coin and the company called C P seventeen, the book's
 name appears nowhere in the coin's legal identity or its public one. That is a stronger
 version of the separation you formed the company to get.
 

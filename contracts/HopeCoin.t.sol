@@ -2,20 +2,20 @@
 pragma solidity ^0.8.28;
 
 import {Test} from "forge-std/Test.sol";
-import {Card} from "./Card.sol";
+import {HopeCoin} from "./HopeCoin.sol";
 
-contract CardTest is Test {
-    Card token;
+contract HopeCoinTest is Test {
+    HopeCoin token;
     address alice = makeAddr("alice");
     address bob = makeAddr("bob");
 
     function setUp() public {
-        token = new Card();
+        token = new HopeCoin();
     }
 
     function test_Metadata() public view {
-        assertEq(token.name(), "Card");
-        assertEq(token.symbol(), "CARD");
+        assertEq(token.name(), "Hope Coin");
+        assertEq(token.symbol(), "HOP");
         assertEq(token.decimals(), 18);
     }
 

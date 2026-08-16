@@ -3,25 +3,25 @@ pragma solidity ^0.8.28;
 
 import {Test} from "forge-std/Test.sol";
 import {Vm} from "forge-std/Vm.sol";
-import {Card} from "./Card.sol";
+import {HopeCoin} from "./HopeCoin.sol";
 
-/// @notice Fuzz handler for CARD invariant testing. The invariant runner
+/// @notice Fuzz handler for HOP invariant testing. The invariant runner
 ///         calls these entry points in random sequences from random senders;
 ///         the handler narrows that randomness onto valid token operations so
 ///         sequences exercise real state transitions instead of reverting.
 ///         Deliberately NOT a Test subclass: its only public surface is the
 ///         operations we want fuzzed (plus view helpers), so the runner cannot
 ///         wander into inherited helpers.
-contract CardHandler {
+contract HopeCoinHandler {
     Vm private constant vm =
         Vm(address(uint160(uint256(keccak256("hevm cheat code")))));
 
-    Card public immutable token;
+    HopeCoin public immutable token;
     address[] public actors;
     bool public renounced;
 
     constructor(uint256 numActors) {
-        token = new Card();
+        token = new HopeCoin();
         uint256 share = token.totalSupply() / (numActors * 2);
         for (uint256 i = 0; i < numActors; i++) {
             address actor = address(uint160(0xCA4D0000 + i));
@@ -92,17 +92,17 @@ contract CardHandler {
     }
 }
 
-/// @notice Stateful verification of CARD's launch-critical properties.
+/// @notice Stateful verification of HOP's launch-critical properties.
 ///         Each invariant is re-checked after every randomized call sequence
 ///         against the handler above (256 sequences by default).
-contract CardInvariantTest is Test {
+contract HopeCoinInvariantTest is Test {
     uint256 internal constant NUM_ACTORS = 8;
 
-    CardHandler handler;
-    Card token;
+    HopeCoinHandler handler;
+    HopeCoin token;
 
     function setUp() public {
-        handler = new CardHandler(NUM_ACTORS);
+        handler = new HopeCoinHandler(NUM_ACTORS);
         token = handler.token();
         targetContract(address(handler));
     }
