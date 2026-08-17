@@ -1,38 +1,38 @@
 /* Hope Coin — hopecoin.org
-   Navy, gold, and white. Designed to read like a page from a book,
-   not a token launch. Light: navy ink on white, deep gold accent.
-   Dark: white ink on navy, bright gold accent. */
+   Dark navy, rich gold, white. Designed to read like a page from a
+   book, not a token launch. Light: near-black navy ink on white, deep
+   amber-gold accent. Dark: white ink on dark navy, rich gold accent. */
 
 :root {
   --paper:    #ffffff;
-  --ink:      #14274a;
-  --muted:    #4a5d7d;
-  --faint:    #7d8ca6;
-  --rule:     #dfe4ec;
-  --panel:    #f3f6fa;
-  --gold:     #8a6712;
+  --ink:      #0c1930;
+  --muted:    #3d4f6b;
+  --faint:    #71809a;
+  --rule:     #dbe1ea;
+  --panel:    #f1f4f9;
+  --gold:     #9c6b07;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --paper:    #0e1c30;
-    --ink:      #eef1f6;
-    --muted:    #a3b1c6;
-    --faint:    #7688a1;
-    --rule:     #253750;
-    --panel:    #152740;
-    --gold:     #d9b45b;
+    --paper:    #081426;
+    --ink:      #edf1f7;
+    --muted:    #9daabf;
+    --faint:    #6d7d96;
+    --rule:     #1e2f47;
+    --panel:    #0e1d33;
+    --gold:     #dfa32b;
   }
 }
 
 :root[data-theme="dark"] {
-  --paper:    #0e1c30;
-  --ink:      #eef1f6;
-  --muted:    #a3b1c6;
-  --faint:    #7688a1;
-  --rule:     #253750;
-  --panel:    #152740;
-  --gold:     #d9b45b;
+  --paper:    #081426;
+  --ink:      #edf1f7;
+  --muted:    #9daabf;
+  --faint:    #6d7d96;
+  --rule:     #1e2f47;
+  --panel:    #0e1d33;
+  --gold:     #dfa32b;
 }
 
 * { box-sizing: border-box; }
