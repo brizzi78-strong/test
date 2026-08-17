@@ -308,10 +308,11 @@ tokens at all. The tagline about getting some Hope when you buy a book is retire
 
 One more from August seventeenth. There will be a real coin you can hold — Hope's
 face on the front, the word HOPE on the back. First a single prototype for about
-twenty-five dollars, into Hope's hands for the final say. Then a run of one
-hundred in two versions: fifty dollars for the silver finish, one hundred for
-the gold. Finishes, we say plainly, not precious metal — the honesty rule
-follows the coin off the screen and onto the shelf. It is merchandise, plain and
+twenty-five dollars, into Hope's hands for the final say. Then the real thing,
+in real metal: two hundred dollars for a full one-ounce coin of pure silver,
+and five hundred for a small coin of solid gold. The gold one barely clears
+its own metal cost — it exists for the story, not the margin — and both are
+exactly what they claim to be, which is the whole point of this project. It is merchandise, plain and
 simple — that money stays on the book side, it never touches the crypto, and the
 metal coin never comes bundled with the digital one. The token's official logo
 stays the rising sun.
