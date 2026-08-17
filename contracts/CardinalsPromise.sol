@@ -4,7 +4,7 @@ pragma solidity ^0.8.24;
 import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 
-/// @title Hope Coin (HOP)
+/// @title Cardinals Promise (CARD)
 /// @notice Fixed-supply ERC-20 with a flat, immutable 2% transfer fee that
 ///         accrues to a fixed treasury address. The entire 250M supply is
 ///         minted once at deployment; there is no mint function, no
@@ -16,7 +16,7 @@ import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 ///      grants no power even before it is renounced. Transfers to or from
 ///      the treasury are fee-exempt so treasury operations (gifts, the
 ///      book program) arrive whole and do not self-tax.
-contract HopeCoin is ERC20, Ownable {
+contract CardinalsPromise is ERC20, Ownable {
     uint256 public constant TOTAL_SUPPLY = 250_000_000 * 1e18;
 
     /// @notice Transfer fee in basis points, fixed forever at deployment.
@@ -25,8 +25,8 @@ contract HopeCoin is ERC20, Ownable {
     /// @notice Where every fee goes. Immutable: set once, never changeable.
     address public immutable treasury;
 
-    constructor(address treasury_) ERC20("Hope Coin", "HOP") Ownable(msg.sender) {
-        require(treasury_ != address(0), "HopeCoin: treasury is zero");
+    constructor(address treasury_) ERC20("Cardinals Promise", "CARD") Ownable(msg.sender) {
+        require(treasury_ != address(0), "CardinalsPromise: treasury is zero");
         treasury = treasury_;
         _mint(msg.sender, TOTAL_SUPPLY);
     }

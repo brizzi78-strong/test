@@ -6,7 +6,7 @@ This repository holds several projects. Jump to the one you need:
 |---|---|---|
 | **The Cardinal's Toolkit — iPhone app** | `CardinalPress/` + `CardinalPress.xcodeproj` | Companion app to the NC Family Caregiver Handbook ([below](#the-cardinals-toolkit--iphone-app)) |
 | **The Cardinal's Promise / Toolkit book** | `cardinals-promise/` | Manuscript, samples, and marketing for the book |
-| **Hope Coin (HOP) token** | `contracts/`, `test/`, `verification/`, `site/` | Fixed-supply ERC-20 with a complete launch kit ([below](#cp-coin-platform-17-cp17-token)) |
+| **Cardinals Promise (CARD) token** | `contracts/`, `test/`, `verification/`, `site/` | Fixed-supply ERC-20 with a complete launch kit ([below](#cp-coin-platform-17-cp17-token)) |
 | **HireCheck — background screening service** | `hirecheck/` | Standalone service for running FCRA-aware pre-employment background checks on new hires (see `hirecheck/README.md`) |
 | **Cardinal Verify — consent-based checks** | `verify/` | A working site for consent-first reference / employment / education verification: the candidate e-signs a disclosure, then each source confirms via a private link. No CRA vendor, no criminal/credit data. Employer console + candidate-consent + verifier pages (see `verify/README.md`) |
 | **MyHR — new-hire paperwork service** | `myhr/` | Standalone onboarding service: e-signed new-hire forms (I-9, W-4, consent, etc.) with HR review and an audit trail (see `myhr/README.md`) |
@@ -121,11 +121,11 @@ This app supports organization and caregiver self-care. It is not medical, legal
 
 ---
 
-# Cardinals Promise (HOP) Token
+# Cardinals Promise (CARD) Token
 
 [![verify-claims](https://github.com/brizzi78-strong/test/actions/workflows/verify.yml/badge.svg)](https://github.com/brizzi78-strong/test/actions/workflows/verify.yml)
 
-**Cardinals Promise (HOP)** — a fixed-supply ERC-20 on Ethereum. The full
+**Cardinals Promise (CARD)** — a fixed-supply ERC-20 on Ethereum. The full
 250,000,000 supply is minted to the deployer at construction; there is **no
 mint function, no burn, no transfer tax, no blacklist, and no pausing** —
 the supply can never change. `Ownable` is inherited solely so
@@ -140,15 +140,15 @@ launch-day sequence in [LAUNCH_DAY_CHECKLIST.md](LAUNCH_DAY_CHECKLIST.md)).
 ## Layout
 
 ```
-contracts/HopeCoin.sol             # the token (OpenZeppelin ERC20 + Ownable)
-contracts/HopeCoin.t.sol           # Foundry-style Solidity tests (forge-std)
-contracts/HopeCoinInvariants.t.sol # stateful fuzz/invariant suite (handler-based)
-test/HopeCoin.ts                   # TypeScript tests (node:test + viem)
+contracts/CardinalsPromise.sol             # the token (OpenZeppelin ERC20 + Ownable)
+contracts/CardinalsPromise.t.sol           # Foundry-style Solidity tests (forge-std)
+contracts/CardinalsPromiseInvariants.t.sol # stateful fuzz/invariant suite (handler-based)
+test/CardinalsPromise.ts                   # TypeScript tests (node:test + viem)
 verification/claims.json                   # launch-claims registry (claim → evidence)
 scripts/verify-claims.mjs                  # claims verifier (run via `npm run verify`)
 scripts/rehearse-launch.ts                 # full local launch rehearsal (real Uniswap V2 stack)
-scripts/add-liquidity.ts                   # create/seed the Uniswap V2 HOP/ETH pool
-ignition/modules/HopeCoin.ts       # Hardhat Ignition deployment module
+scripts/add-liquidity.ts                   # create/seed the Uniswap V2 CARD/ETH pool
+ignition/modules/CardinalsPromise.ts       # Hardhat Ignition deployment module
 docs/AUDIT-SCOPE.md                        # cold-start package for an auditor
 docs/LEGAL-BRIEFING.md                     # cited research briefing for counsel (US + EU)
 docs/AI_VERIFICATION_GAP.md                # why the claims ledger exists
@@ -227,7 +227,7 @@ network to prove the guardrails work — no real network or funds involved.
 Source verification (step 2 of `LAUNCH_DAY_CHECKLIST.md`) goes through
 `hardhat-verify`, which ships with the toolbox. Store an
 [Etherscan API key](https://etherscan.io/apis) the same way as the RPC
-secrets, then verify the deployed address — `HOP` takes no
+secrets, then verify the deployed address — `CARD` takes no
 constructor arguments:
 
 ```bash

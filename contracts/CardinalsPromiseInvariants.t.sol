@@ -3,24 +3,24 @@ pragma solidity ^0.8.28;
 
 import {Test} from "forge-std/Test.sol";
 import {Vm} from "forge-std/Vm.sol";
-import {HopeCoin} from "./HopeCoin.sol";
+import {CardinalsPromise} from "./CardinalsPromise.sol";
 
-/// @notice Fuzz handler for HopeCoin invariant testing. The invariant runner
+/// @notice Fuzz handler for CardinalsPromise invariant testing. The invariant runner
 ///         calls these entry points in random sequences from random senders;
 ///         the handler narrows that randomness onto valid token operations,
 ///         checking the exact 2% fee semantics on every hop. The treasury is
 ///         itself an actor so fee-exempt paths are exercised too.
-contract HopeCoinHandler {
+contract CardinalsPromiseHandler {
     Vm private constant vm =
         Vm(address(uint160(uint256(keccak256("hevm cheat code")))));
 
-    HopeCoin public immutable token;
+    CardinalsPromise public immutable token;
     address public constant TREASURY = address(0x7EA5);
     address[] public actors;
     bool public renounced;
 
     constructor(uint256 numActors) {
-        token = new HopeCoin(TREASURY);
+        token = new CardinalsPromise(TREASURY);
         uint256 share = token.totalSupply() / (numActors * 2);
         for (uint256 i = 0; i < numActors; i++) {
             address actor = address(uint160(0xCA4D0000 + i));
@@ -104,15 +104,15 @@ contract HopeCoinHandler {
     }
 }
 
-/// @notice Stateful verification of HopeCoin's launch-critical properties.
-contract HopeCoinInvariantTest is Test {
+/// @notice Stateful verification of CardinalsPromise's launch-critical properties.
+contract CardinalsPromiseInvariantTest is Test {
     uint256 internal constant NUM_ACTORS = 8;
 
-    HopeCoinHandler handler;
-    HopeCoin token;
+    CardinalsPromiseHandler handler;
+    CardinalsPromise token;
 
     function setUp() public {
-        handler = new HopeCoinHandler(NUM_ACTORS);
+        handler = new CardinalsPromiseHandler(NUM_ACTORS);
         token = handler.token();
         targetContract(address(handler));
     }

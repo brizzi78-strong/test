@@ -2,15 +2,15 @@
   "name": "hope-coin",
   "private": true,
   "version": "0.1.0",
-  "description": "Hope Coin (HOP) — fixed-supply ERC-20 on Ethereum, with iOS companion app workspace",
+  "description": "Cardinals Promise (CARD) — fixed-supply ERC-20 on Ethereum, with iOS companion app workspace",
   "type": "module",
   "scripts": {
     "build": "hardhat build",
     "test": "hardhat test",
     "verify": "node scripts/verify-claims.mjs",
     "rehearse": "hardhat run scripts/rehearse-launch.ts",
-    "deploy:sepolia": "hardhat ignition deploy ignition/modules/HopeCoin.ts --network sepolia",
-    "deploy:mainnet": "hardhat ignition deploy ignition/modules/HopeCoin.ts --network mainnet"
+    "deploy:sepolia": "hardhat ignition deploy ignition/modules/CardinalsPromise.ts --network sepolia",
+    "deploy:mainnet": "hardhat ignition deploy ignition/modules/CardinalsPromise.ts --network mainnet"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-ignition": "^3.1.8",

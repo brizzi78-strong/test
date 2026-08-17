@@ -1,26 +1,26 @@
 {
-  "$comment": "Machine-checkable security claims for HOP. Every trust claim made in TOKEN_LAUNCH_STRATEGY.md and the contract natspec must appear here, mapped to executable evidence. Run `npm run verify` \u2014 it fails if any claim's evidence is missing, stale, or failing. Do not edit a claim without editing the code/tests that back it, and vice versa.",
-  "contract": "HopeCoin",
-  "artifact": "artifacts/contracts/HopeCoin.sol/HopeCoin.json",
+  "$comment": "Machine-checkable security claims for CARD. Every trust claim made in TOKEN_LAUNCH_STRATEGY.md and the contract natspec must appear here, mapped to executable evidence. Run `npm run verify` \u2014 it fails if any claim's evidence is missing, stale, or failing. Do not edit a claim without editing the code/tests that back it, and vice versa.",
+  "contract": "CardinalsPromise",
+  "artifact": "artifacts/contracts/CardinalsPromise.sol/CardinalsPromise.json",
   "claims": [
     {
       "id": "fixed-supply",
-      "statement": "Total supply is exactly 250,000,000 HOP, minted once at deployment to the deployer.",
+      "statement": "Total supply is exactly 250,000,000 CARD, minted once at deployment to the deployer.",
       "source": "TOKEN_LAUNCH_STRATEGY.md \u00a7 Token Parameters",
       "evidence": [
         {
           "type": "solidity-test",
-          "file": "contracts/HopeCoin.t.sol",
+          "file": "contracts/CardinalsPromise.t.sol",
           "name": "test_FullSupplyMintedToDeployer"
         },
         {
           "type": "node-test",
-          "file": "test/HopeCoin.ts",
+          "file": "test/CardinalsPromise.ts",
           "title": "mints the full fixed supply to the deployer"
         },
         {
           "type": "invariant",
-          "file": "contracts/HopeCoinInvariants.t.sol",
+          "file": "contracts/CardinalsPromiseInvariants.t.sol",
           "name": "invariant_TotalSupplyConstant"
         }
       ]
@@ -28,7 +28,7 @@
     {
       "id": "supply-immutable",
       "statement": "No code path can ever increase or decrease the supply: there is no mint, burn, or rebase function.",
-      "source": "HopeCoin.sol natspec; TOKEN_LAUNCH_STRATEGY.md \u00a7 Launch Sequence step 1",
+      "source": "CardinalsPromise.sol natspec; TOKEN_LAUNCH_STRATEGY.md \u00a7 Launch Sequence step 1",
       "evidence": [
         {
           "type": "abi-absent",
@@ -41,12 +41,12 @@
         },
         {
           "type": "invariant",
-          "file": "contracts/HopeCoinInvariants.t.sol",
+          "file": "contracts/CardinalsPromiseInvariants.t.sol",
           "name": "invariant_TotalSupplyConstant"
         },
         {
           "type": "invariant",
-          "file": "contracts/HopeCoinInvariants.t.sol",
+          "file": "contracts/CardinalsPromiseInvariants.t.sol",
           "name": "invariant_BalancesSumToTotalSupply"
         }
       ]
@@ -54,7 +54,7 @@
     {
       "id": "no-pause",
       "statement": "Transfers can never be paused or frozen.",
-      "source": "HopeCoin.sol natspec",
+      "source": "CardinalsPromise.sol natspec",
       "evidence": [
         {
           "type": "abi-absent",
@@ -68,7 +68,7 @@
     {
       "id": "no-blacklist",
       "statement": "No address can be blacklisted or blocked from transferring.",
-      "source": "HopeCoin.sol natspec; TOKEN_LAUNCH_STRATEGY.md \u00a7 Launch Sequence step 1",
+      "source": "CardinalsPromise.sol natspec; TOKEN_LAUNCH_STRATEGY.md \u00a7 Launch Sequence step 1",
       "evidence": [
         {
           "type": "abi-absent",
@@ -84,16 +84,16 @@
     {
       "id": "flat-2pct-fee",
       "statement": "Every transfer between non-treasury addresses moves exactly 98% to the recipient and 2% to the immutable treasury address; the rate and recipient are fixed at deployment and no function exists to change either.",
-      "source": "HopeCoin.sol natspec; TOKEN_LAUNCH_STRATEGY.md \u00a7 Token Parameters",
+      "source": "CardinalsPromise.sol natspec; TOKEN_LAUNCH_STRATEGY.md \u00a7 Token Parameters",
       "evidence": [
         {
           "type": "solidity-test",
-          "file": "contracts/HopeCoin.t.sol",
+          "file": "contracts/CardinalsPromise.t.sol",
           "name": "test_TransferTakesExactTwoPercentFee"
         },
         {
           "type": "solidity-test",
-          "file": "contracts/HopeCoin.t.sol",
+          "file": "contracts/CardinalsPromise.t.sol",
           "name": "test_TreasuryTransfersAreExempt"
         },
         {
@@ -108,7 +108,7 @@
         },
         {
           "type": "invariant",
-          "file": "contracts/HopeCoinInvariants.t.sol",
+          "file": "contracts/CardinalsPromiseInvariants.t.sol",
           "name": "invariant_BalancesSumToTotalSupply"
         }
       ]
@@ -116,7 +116,7 @@
     {
       "id": "owner-powerless",
       "statement": "Ownership grants no power over the token: the only state-changing functions are the standard ERC-20 surface plus the two Ownable handover functions, none of which touch balances or supply.",
-      "source": "HopeCoin.sol natspec",
+      "source": "CardinalsPromise.sol natspec",
       "evidence": [
         {
           "type": "abi-write-surface",
@@ -130,7 +130,7 @@
         },
         {
           "type": "solidity-test",
-          "file": "contracts/HopeCoin.t.sol",
+          "file": "contracts/CardinalsPromise.t.sol",
           "name": "test_TransfersStillWorkAfterRenounce"
         }
       ]
@@ -142,17 +142,17 @@
       "evidence": [
         {
           "type": "solidity-test",
-          "file": "contracts/HopeCoin.t.sol",
+          "file": "contracts/CardinalsPromise.t.sol",
           "name": "test_RenounceOwnershipSetsOwnerToZero"
         },
         {
           "type": "node-test",
-          "file": "test/HopeCoin.ts",
+          "file": "test/CardinalsPromise.ts",
           "title": "renounces ownership to the zero address"
         },
         {
           "type": "invariant",
-          "file": "contracts/HopeCoinInvariants.t.sol",
+          "file": "contracts/CardinalsPromiseInvariants.t.sol",
           "name": "invariant_RenounceIsPermanent"
         }
       ]
@@ -164,12 +164,12 @@
       "evidence": [
         {
           "type": "solidity-test",
-          "file": "contracts/HopeCoin.t.sol",
+          "file": "contracts/CardinalsPromise.t.sol",
           "name": "test_RevertWhen_TransferExceedsBalance"
         },
         {
           "type": "node-test",
-          "file": "test/HopeCoin.ts",
+          "file": "test/CardinalsPromise.ts",
           "title": "reverts when transferring more than the sender's balance"
         }
       ]

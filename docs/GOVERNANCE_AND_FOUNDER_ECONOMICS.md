@@ -1611,3 +1611,39 @@ before the pre-order page is written.
   the on-chain token logo that would appear in every wallet and on Etherscan
   permanently — requires her explicit, specific yes. The official token logo
   remains the sunrise mark.
+
+---
+
+## Decision record: the token reverts to Cardinals Promise (CARD) (August 17, 2026)
+
+**Decision.** The on-chain token is **Cardinals Promise (CARD)** — contract
+`CardinalsPromise`, name "Cardinals Promise", symbol CARD, proof page at
+cardinalspromise.org. The Hope Coin (HOP) identity is retired on-chain.
+Confirmed by the founder in this session after the direction arrived from
+the companion session via PR #111.
+
+**Why.** The token namespace research: **HOP is Hop Protocol's established
+ticker** (Ethereum L2 bridge, listed on the major screeners), and the
+HOPE name is already used by third-party tokens on other chains. A small
+new token sharing a ticker with an established project pools with it in
+every search, screener, and wallet list — the opposite of the
+single-official-source anti-fake strategy.
+
+**What survives unchanged.** Everything substantive: the immutable 2% fee
+and its claims/invariants/tests, fixed 250M supply, the board economics,
+the blunt-disclosure site (navy/gold, cardinal mark, green buy button,
+four-step Robinhood walkthrough), and the funding boundaries.
+
+**Where Hope lives now.** The Hope name and portrait move entirely to the
+physical merch side — the specialty-edition coin, sold or given from the
+book's world, never pictured on a site. The colophon line "In honor of
+Hope · and of Lou Brizzi, 9 January" stays on every page of the token
+site: the honor stands; the ticker changes.
+
+**Open questions from the founder, not yet decided (asked as "could we
+do two coins" / "only 100 mill"):** whether a second on-chain token
+should exist at all, and what its supply would be. Recommendation
+recorded against it — two tokens split the same small liquidity, double
+the legal and fake-token surface, and re-enter the crowded HOPE
+namespace — but the decision is the founder's and nothing is built
+until it is made.

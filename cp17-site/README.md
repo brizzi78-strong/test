@@ -1,9 +1,9 @@
-# hopecoin.org — the Hope coin site
+# cardinalspromise.org — the Cardinals Promise coin site
 
-The official domain is `hopecoin.org`, registered and owned by the
-founder. `hopecoin.com` was still unregistered at last check — buying it
-as a defensive forward is cheap insurance against look-alike sites.
-`cp17.org`, the LLC's own name, should also forward here.
+The official domain is `cardinalspromise.org`. `cp17.org`, the LLC's own
+name, should forward here. (The token is CARD — the Hope name lives on
+the physical-coin merch side, sold from the book's world, and never
+names the on-chain token: HOP is Hop Protocol's established ticker.)
 
 Three static pages. No build step, no dependencies, no JavaScript.
 
@@ -13,19 +13,13 @@ Three static pages. No build step, no dependencies, no JavaScript.
 - `style.css` — shared styling, light and dark
 - `CNAME` — the custom domain for GitHub Pages
 
-## Optional
-
-The dedication on `index.html` is text-only by choice. To add Hope's
-photo (consent on record), commit it as `assets/hope.jpg` and wrap the
-dedication back into a `<figure>` with an `<img>` — one small change.
-
 ## On launch day
 
 Replace the "not launched yet" cells in `ledger.html`, and add the
 contract address to `index.html`. Point the Buy button on `index.html`
 and the Uniswap link in `how-to-buy.html` at
 `https://app.uniswap.org/swap?outputCurrency=<contract address>` so the
-swap opens with HOP pre-selected (how-to-buy promises "two taps").
+swap opens with CARD pre-selected (how-to-buy promises "two taps").
 Nothing else changes.
 
 ## Hosting

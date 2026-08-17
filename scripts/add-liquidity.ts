@@ -1,10 +1,10 @@
 /**
- * Creates (if needed) and seeds a HOP/WETH pool on Uniswap V2.
+ * Creates (if needed) and seeds a CARD/WETH pool on Uniswap V2.
  *
  * Usage:
  *   HOP_NETWORK=sepolia \
  *   HOP_TOKEN_ADDRESS=0x... \
- *   HOP_AMOUNT=1000000 \        # HOP to deposit (whole tokens)
+ *   HOP_AMOUNT=1000000 \        # CARD to deposit (whole tokens)
  *   ETH_AMOUNT=1.5 \             # ETH to pair with it
  *   npx hardhat run scripts/add-liquidity.ts
  *
@@ -44,7 +44,7 @@ async function main() {
 
   if (!tokenAddress || !cardAmount || !ethAmount) {
     throw new Error(
-      "Set HOP_TOKEN_ADDRESS, HOP_AMOUNT (whole HOP) and ETH_AMOUNT (ETH) env vars",
+      "Set HOP_TOKEN_ADDRESS, HOP_AMOUNT (whole CARD) and ETH_AMOUNT (ETH) env vars",
     );
   }
   const routerAddress = ROUTERS[networkName];

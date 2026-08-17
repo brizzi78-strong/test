@@ -316,3 +316,12 @@ be, which is the whole point of this project. It is merchandise, plain and
 simple — that money stays on the book side, it never touches the crypto, and the
 metal coin never comes bundled with the digital one. The token's official logo
 stays the rising sun.
+
+The last word from August seventeenth, and it is a big one. The token goes back
+to being the Cardinals Promise coin — ticker C-A-R-D. The research found that
+H-O-P already belongs to an established project called Hop Protocol, and a tiny
+new coin sharing a ticker with a big one disappears into its shadow in every
+search. So the digital coin is CARD, at cardinalspromise dot org. Hope is not
+erased — far from it. Her name moves to the real, physical coins, the specialty
+edition, the ones you can hold. And every page of the coin's site still ends
+the same way: in honor of Hope, and of Lou Brizzi, the ninth of January.

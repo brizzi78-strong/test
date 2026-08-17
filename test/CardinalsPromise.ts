@@ -6,12 +6,12 @@ import { network } from "hardhat";
 
 const TOTAL_SUPPLY = parseEther("250000000");
 
-describe("HOP", async function () {
+describe("CARD", async function () {
   const { viem } = await network.create();
 
   async function deploy() {
     const [, treasury] = await viem.getWalletClients();
-    const token = await viem.deployContract("HopeCoin", [
+    const token = await viem.deployContract("CardinalsPromise", [
       treasury.account.address,
     ]);
     return { token, treasury };
@@ -31,8 +31,8 @@ describe("HOP", async function () {
   it("has the expected metadata", async function () {
     const { token, treasury } = await deploy();
 
-    assert.equal(await token.read.name(), "Hope Coin");
-    assert.equal(await token.read.symbol(), "HOP");
+    assert.equal(await token.read.name(), "Cardinals Promise");
+    assert.equal(await token.read.symbol(), "CARD");
     assert.equal(await token.read.decimals(), 18);
     assert.equal(await token.read.FEE_BPS(), 200n);
     assert.equal(
