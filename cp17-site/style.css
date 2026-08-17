@@ -10,7 +10,8 @@
   --faint:    #71809a;
   --rule:     #dbe1ea;
   --panel:    #f1f4f9;
-  --gold:     #9c6b07;
+  --gold:     #8a5a0b;
+  --green:    #17724a;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -21,7 +22,8 @@
     --faint:    #6d7d96;
     --rule:     #1e2f47;
     --panel:    #0e1d33;
-    --gold:     #dfa32b;
+    --gold:     #cf9236;
+    --green:    #27a866;
   }
 }
 
@@ -32,7 +34,8 @@
   --faint:    #6d7d96;
   --rule:     #1e2f47;
   --panel:    #0e1d33;
-  --gold:     #dfa32b;
+  --gold:     #cf9236;
+  --green:    #27a866;
 }
 
 * { box-sizing: border-box; }
@@ -122,15 +125,16 @@ a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-ra
 
 .cta {
   display: inline-block;
-  background: var(--gold);
-  color: var(--paper);
+  background: var(--green);
+  color: #ffffff;
   font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, monospace;
-  font-size: 0.72rem;
+  font-size: 0.95rem;
+  font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 2px;
+  padding: 1.05rem 2.3rem;
+  border-radius: 3px;
   margin: 0 0 0.6rem;
 }
 
