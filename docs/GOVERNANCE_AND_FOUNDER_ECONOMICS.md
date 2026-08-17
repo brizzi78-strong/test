@@ -1522,9 +1522,13 @@ T-shirts (Hope on the front, cp17 on the back).
    Hope's hands before anything is committed.
 2. **Then a run of 100** from a proper coin maker (antique-silver finish;
    roughly $400–700 all-in at $4–8 per piece).
-3. **Retail $25** as the starting price — priced for volume and for the
-   audience that buys the story. A premium $50 collector package (box, card,
-   possibly edge lettering) stays on the table for later, not first.
+3. **Two tiers: $50 silver-finish and $100 gold-finish** (decision of
+   August 17, superseding the earlier $25 single-tier plan the same day).
+   Collector pricing, sold on the story. One honesty rule carries the site's
+   voice onto the metal: they are marketed as *finishes* — antique-silver
+   and gold-plated — never as precious-metal content, unless a tier is
+   actually struck in .999 metal and priced accordingly. Boxes and cards
+   should make $100 feel deserved.
 
 **Boundaries, so the clean lines survive.**
 

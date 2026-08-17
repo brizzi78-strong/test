@@ -309,7 +309,9 @@ tokens at all. The tagline about getting some Hope when you buy a book is retire
 One more from August seventeenth. There will be a real coin you can hold — Hope's
 face on the front, the word HOPE on the back. First a single prototype for about
 twenty-five dollars, into Hope's hands for the final say. Then a run of one
-hundred, selling at twenty-five dollars each. It is merchandise, plain and
+hundred in two versions: fifty dollars for the silver finish, one hundred for
+the gold. Finishes, we say plainly, not precious metal — the honesty rule
+follows the coin off the screen and onto the shelf. It is merchandise, plain and
 simple — that money stays on the book side, it never touches the crypto, and the
 metal coin never comes bundled with the digital one. The token's official logo
 stays the rising sun.
