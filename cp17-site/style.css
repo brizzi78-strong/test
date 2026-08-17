@@ -118,6 +118,24 @@ a { color: var(--ink); text-decoration-color: var(--gold); text-underline-offset
 a:hover { color: var(--gold); }
 a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 2px; }
 
+/* ---------- the buy button ---------- */
+
+.cta {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--paper);
+  font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2px;
+  margin: 0 0 0.6rem;
+}
+
+.cta:hover { background: var(--ink); color: var(--paper); }
+
 /* ---------- the one gold mark ---------- */
 
 .mark {
