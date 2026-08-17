@@ -251,13 +251,14 @@ footer a { color: var(--muted); }
 
 
 /* ---------- the cardinal mark ---------- */
-/* The cardinal, in cardinal red, perched above the ledger line. */
+/* An engraved medallion: gold rings, ticked rim, red cardinal at the
+   center. Line art, so it stamps cleanly at any size. */
 
 .mark-cardinal {
   display: block;
-  width: clamp(6.5rem, 20vw, 9rem);
+  width: clamp(7rem, 21vw, 9.5rem);
   height: auto;
-  margin: 0 0 1.8rem;
+  margin: 0 0 2rem;
 }
 
 /* ---------- the dedication ---------- */
