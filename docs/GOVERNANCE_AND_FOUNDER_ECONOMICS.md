@@ -1723,3 +1723,43 @@ whether or not the coin is ever worth anything.
 This is the one place on the token site where the writing reaches for meaning
 rather than proof. It stays short, and it stays free of any suggestion that
 buying something is how a person gets hope.
+
+---
+
+## Decision record: the linking policy (August 17, 2026)
+
+**Decision.** The token keeps the name **Cardinals Promise (CARD)** and its
+cardinalspromise.org proof page. The link between the coin and the book runs
+**one direction only**.
+
+**The coin may point at the book.** Attribution is honest and it is where the
+mark's meaning comes from — the cardinal, the promise, Lou. It also lives on a
+web page, which means it can be undone in minutes if that ever becomes the
+right call.
+
+**The book must not point at the token in print.** A printed page ships in
+every copy, sits on shelves for years, and cannot be edited if the coin has a
+bad chapter. A memoir about a father's death with a cryptocurrency URL bound
+into it is the one link that can never be taken back. Therefore:
+
+- **No back-of-book page pointing to cardinalspromise.org.** (A draft of one
+  was written on August 17 and is withdrawn — it should not go to print.)
+- **The loose insert card may point to the book's own site and the physical
+  coins only** — reprintable, and merchandise rather than a ticker.
+- Author bio, acknowledgments, and jacket copy stay free of the token.
+
+**Standing guardrails.**
+
+1. The book's cover art and exact title never appear on token assets, exchange
+   listings, or token-list submissions.
+2. Hospice and charitable work stays in the book's channels, never in coin
+   promotion.
+3. If asked whether book buyers funded a crypto scheme, the answer is already
+   documented: the money never mixed.
+
+**The condition that would reopen this.** If the founder pursues hospice
+partnerships, care-conference speaking, or nonprofit collaboration around the
+book's mission, those audiences are materially crypto-averse and a token
+sharing the book's name can close doors silently. In that case the
+recommendation is to de-name the token — keep the bird, drop the
+title-derived name and domain — even at the cost of another rename.
