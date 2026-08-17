@@ -1647,3 +1647,29 @@ recorded against it — two tokens split the same small liquidity, double
 the legal and fake-token surface, and re-enter the crowded HOPE
 namespace — but the decision is the founder's and nothing is built
 until it is made.
+
+---
+
+## Decision record: demand and the waiting lists (August 17, 2026)
+
+**Two lists, mirroring the money wall.** Both live in the founder's Kit
+account (the-cardinal-s-promise.kit.com), each as its own form so the
+audiences never mix:
+
+1. **The launch list** (linked from cardinalspromise.org): one email on
+   launch day carrying the only official contract address. Framed and
+   operated as a safety measure, not marketing — no price talk, no
+   countdowns, no reasons to buy, ever. This framing is a legal
+   constraint, not a style choice: promoting demand for the token is
+   what would turn a souvenir into an investment pitch.
+2. **The coin pre-order list** (for thecardinalspromise.com): early
+   notice of the physical-coin pre-order window. Ordinary merch
+   marketing — full throttle allowed. List size also sizes the mint run
+   before any silver is bought.
+
+**Demand drivers adopted:** the book carries it (option 4 — a
+back-of-book page and an insert card in every direct-shipped copy,
+pointing to the coins and the book's site); honest scarcity on the merch
+("minted once, count published"); the story itself as press material.
+Explicitly rejected: any paid promotion, influencer marketing, or
+scarcity framing for the token.
