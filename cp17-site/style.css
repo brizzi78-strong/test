@@ -235,6 +235,28 @@ footer a { color: var(--muted); }
   margin: 0 0 1.8rem;
 }
 
+/* ---------- the dedication ---------- */
+
+.dedication {
+  margin: 3.5rem 0 0;
+}
+
+.dedication img {
+  display: block;
+  width: 100%;
+  max-width: 20rem;
+  height: auto;
+  border: 1px solid var(--rule);
+}
+
+.dedication figcaption {
+  max-width: 20rem;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--muted);
+  margin-top: 0.7rem;
+}
+
 /* ---------- opening ---------- */
 
 .lede::first-letter {
