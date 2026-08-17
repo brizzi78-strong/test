@@ -1703,3 +1703,23 @@ cp17 back print unless the founder says otherwise.
    holds a token, a treasury, a domain, and a merch line — not a platform in
    the software sense. That is fine as a name, but it should never appear in
    copy that implies functionality the project does not have.
+
+---
+
+## The meaning of the mark (August 17, 2026)
+
+Recorded because it is the reason the bird is on the page, and because copy
+written later should not drift from it. In the founder's words: *"The cardinal
+offers people Hope. Not in the sense of the coin but in life."*
+
+A cardinal appearing is, for many families, taken as a sign — a visit, a
+reason to keep going. This family watched for one. The site now says so
+plainly in a section titled "Why a cardinal," and it draws the distinction
+the founder drew: the hope on offer is the ordinary kind that carries a
+person through a hard week, explicitly **not** an expectation that the coin
+appreciates. The section ends by saying the bird will go on doing that
+whether or not the coin is ever worth anything.
+
+This is the one place on the token site where the writing reaches for meaning
+rather than proof. It stays short, and it stays free of any suggestion that
+buying something is how a person gets hope.
