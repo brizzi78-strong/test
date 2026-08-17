@@ -166,7 +166,7 @@ export function createYahooSource(opts: YahooOptions = {}): MarketDataSource {
   };
 }
 
-// --- Uniswap V2 pool (on-chain price for one token, e.g. CARD) ---------------
+// --- Uniswap V2 pool (on-chain price for one token, e.g. HOPE) ---------------
 
 export interface UniswapPoolOptions {
   /** Serves every other symbol, and the ETH-USD cross rate. */
@@ -177,7 +177,7 @@ export interface UniswapPoolOptions {
   poolAddress: string;
   /** The token's own contract address, to resolve reserve ordering. */
   tokenAddress: string;
-  /** Which instrument symbol this pool prices (default 'CARD'). */
+  /** Which instrument symbol this pool prices (default 'HOPE'). */
   symbol?: string;
   fetchImpl?: typeof fetch;
   quoteTtlMs?: number;
@@ -199,7 +199,7 @@ const SELECTOR_GET_RESERVES = '0x0902f1ac';
  * one. Previous close is likewise unknowable on-chain; day change reads 0.
  */
 export function createUniswapPoolSource(opts: UniswapPoolOptions): MarketDataSource {
-  const symbol = (opts.symbol ?? 'CARD').toUpperCase();
+  const symbol = (opts.symbol ?? 'HOPE').toUpperCase();
   const fetchImpl = opts.fetchImpl ?? fetch;
   const quoteTtlMs = opts.quoteTtlMs ?? 15_000;
   const tokenAddress = opts.tokenAddress.toLowerCase();
@@ -279,17 +279,17 @@ export function createUniswapPoolSource(opts: UniswapPoolOptions): MarketDataSou
 
 /**
  * `MARKET_DATA=yahoo` → live Yahoo Finance source; unset/anything else → mock.
- * Setting `ETH_RPC_URL` + `CARD_POOL_ADDRESS` + `CARD_TOKEN_ADDRESS` layers
- * live on-chain Uniswap pricing for CARD on top of either base.
+ * Setting `ETH_RPC_URL` + `HOPE_POOL_ADDRESS` + `HOPE_TOKEN_ADDRESS` layers
+ * live on-chain Uniswap pricing for HOPE on top of either base.
  */
 export function marketDataFromEnv(env: NodeJS.ProcessEnv = process.env): MarketDataSource {
   const base = env.MARKET_DATA === 'yahoo' ? createYahooSource() : createMockSource();
-  if (env.ETH_RPC_URL && env.CARD_POOL_ADDRESS && env.CARD_TOKEN_ADDRESS) {
+  if (env.ETH_RPC_URL && env.HOPE_POOL_ADDRESS && env.HOPE_TOKEN_ADDRESS) {
     return createUniswapPoolSource({
       base,
       rpcUrl: env.ETH_RPC_URL,
-      poolAddress: env.CARD_POOL_ADDRESS,
-      tokenAddress: env.CARD_TOKEN_ADDRESS,
+      poolAddress: env.HOPE_POOL_ADDRESS,
+      tokenAddress: env.HOPE_TOKEN_ADDRESS,
     });
   }
   return base;

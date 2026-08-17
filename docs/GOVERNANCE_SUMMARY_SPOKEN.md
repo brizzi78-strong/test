@@ -1,4 +1,4 @@
-# Cardinals Promise — Governance and Money. Spoken Summary.
+# Hope Coin — Governance and Money. Spoken Summary.
 
 *A plain-language version of the governance and founder economics analysis, written to be
 listened to rather than read. No tables, no addresses, no file names. About fifteen minutes.*
@@ -120,7 +120,7 @@ he says yes. If the key is a problem, that is easy. He does the oversight, and t
 goes to somebody else.
 
 One last thing on the name. The coin was briefly going to be called Mager Coin, and it is
-back to Cardinals Promise, ticker C A R D. Nothing was deployed under either name, so the
+back to Hope Coin, ticker C A R D. Nothing was deployed under either name, so the
 change cost nothing. Going back also removes three problems at once: no need for anyone's
 written permission, no trademark question about the word Ironman, and none of the baggage
 that comes with naming a coin after a person. And Jeff Mager is eligible for the board again
@@ -167,8 +167,8 @@ because your project is hospice adjacent, which is their exact territory. Cardin
 crowded in financial services.
 
 So my suggestion is C P seventeen L L C for the company, which already matches the web
-address you own, with Cardinals Promise as the public name of the coin. And notice the good side
-effect. With the coin called Cardinals Promise and the company called C P seventeen, the book's
+address you own, with Hope Coin as the public name of the coin. And notice the good side
+effect. With the coin called Hope Coin and the company called C P seventeen, the book's
 name appears nowhere in the coin's legal identity or its public one. That is a stronger
 version of the separation you formed the company to get.
 

@@ -215,7 +215,7 @@ export const PAGE = /* html */ `<!doctype html>
 <script>
 "use strict";
 var $=function(s,r){return (r||document).querySelector(s);};
-var ACCT=null, ACCTNAME="", EMAIL="", EMAILVERIFIED=true, CARDADDR=null, view="home";
+var ACCT=null, ACCTNAME="", EMAIL="", EMAILVERIFIED=true, HOPEADDR=null, view="home";
 var instruments=[], quotes={}, watchlistSymbols={}, orders=[], plans=[], portfolio=null;
 
 // ---- helpers ----
@@ -328,7 +328,7 @@ function logout(){fetch("/auth/logout",{method:"POST"}).then(function(){location
 function boot(){
   return api("GET","/app").then(function(app){
     ACCT=app.accountId; ACCTNAME=app.accountName||"Investor";
-    EMAIL=app.email||""; EMAILVERIFIED=app.emailVerified!==false; CARDADDR=app.cardTokenAddress||null;
+    EMAIL=app.email||""; EMAILVERIFIED=app.emailVerified!==false; HOPEADDR=app.hopeTokenAddress||null;
     $("#acctname").textContent=ACCTNAME;
     $("#foot").innerHTML="Don\u2019t ever trade alone again.<br><br>Paper account for<br><b>"+esc(ACCTNAME)+"</b><br>No real money moves.<br><a class=\\"legallink\\" href=\\"/legal/terms\\" target=\\"_blank\\" rel=\\"noopener\\">Terms</a> \u00b7 <a class=\\"legallink\\" href=\\"/legal/privacy\\" target=\\"_blank\\" rel=\\"noopener\\">Privacy</a> \u00b7 <a class=\\"legallink\\" href=\\"/legal/disclosures\\" target=\\"_blank\\" rel=\\"noopener\\">Risks</a><br><button class=\\"logout\\" id=\\"logoutbtn\\">Log out</button>";
     $("#logoutbtn").onclick=logout;
@@ -614,18 +614,18 @@ function positionCard(sym){
 }
 // Key stats; day low/high come from the loaded 1D series, so they fill in
 // once the chart lands (hence the id the chart loader updates).
-// Real CARD, the simplest possible way: two links that open Uniswap with the
+// Real HOPE, the simplest possible way: two links that open Uniswap with the
 // pair pre-filled — the visitor buys or sells with ETH from their OWN wallet.
 // Cardinal Trading never touches funds or keys.
 function realCardBlock(sym){
-  if(sym!=="CARD"||!CARDADDR)return "";
-  var buy="https://app.uniswap.org/swap?outputCurrency="+encodeURIComponent(CARDADDR)+"&chain=mainnet";
-  var sell="https://app.uniswap.org/swap?inputCurrency="+encodeURIComponent(CARDADDR)+"&chain=mainnet";
-  return '<div class="stats"><h3>Real CARD \u00b7 on-chain</h3>'
-    +'<p class="dim" style="margin:0 0 10px">Buy and sell real CARD with ETH from your own wallet, directly on Uniswap. Cardinal Trading never holds your funds or keys.</p>'
+  if(sym!=="HOPE"||!HOPEADDR)return "";
+  var buy="https://app.uniswap.org/swap?outputCurrency="+encodeURIComponent(HOPEADDR)+"&chain=mainnet";
+  var sell="https://app.uniswap.org/swap?inputCurrency="+encodeURIComponent(HOPEADDR)+"&chain=mainnet";
+  return '<div class="stats"><h3>Real HOPE \u00b7 on-chain</h3>'
+    +'<p class="dim" style="margin:0 0 10px">Buy and sell real HOPE with ETH from your own wallet, directly on Uniswap. Cardinal Trading never holds your funds or keys.</p>'
     +'<div class="row2">'
-    +'<a class="btn" href="'+buy+'" target="_blank" rel="noopener">Buy CARD with ETH</a>'
-    +'<a class="btn ghost" href="'+sell+'" target="_blank" rel="noopener">Sell CARD for ETH</a>'
+    +'<a class="btn" href="'+buy+'" target="_blank" rel="noopener">Buy HOPE with ETH</a>'
+    +'<a class="btn ghost" href="'+sell+'" target="_blank" rel="noopener">Sell HOPE for ETH</a>'
     +'</div></div>';
 }
 function statsBlock(sym){

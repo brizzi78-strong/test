@@ -1,8 +1,8 @@
 {
-  "name": "Cardinals Promise",
-  "symbol": "CARD",
+  "name": "Hope Coin",
+  "symbol": "HOPE",
   "decimals": 18,
-  "description": "Cardinals Promise (CARD) is a fixed-cap ERC-20 token on Ethereum. Maximum supply is hard-capped on-chain at 250,000,000 CARD; the contract has no fees, hooks, blocklists, or pausing.",
+  "description": "Hope Coin (HOPE) is a fixed-cap ERC-20 token on Ethereum. Maximum supply is hard-capped on-chain at 250,000,000 HOPE. Every transfer sends a fixed 2% fee to the treasury address set permanently at deployment; the contract has no mint function, no hooks, no blocklists, no pausing, and no way to change the fee or the treasury.",
   "totalSupplyCap": "250000000",
   "logo": "assets/logo.svg",
   "contract": {
@@ -14,5 +14,5 @@
     "repository": "https://github.com/brizzi78-strong/test",
     "twitter": null
   },
-  "notes": "Official site: cp17.org. The token is deliberately NOT hosted on the book's domain (thecardinalspromise.com) — keeping the memoir's brand separate from the token is the same separation the LLC provides legally. Fill in contract addresses after deployment before submitting to Etherscan token update, CoinGecko, or a Uniswap token list. Etherscan requires a 32x32 PNG icon — use assets/logo-32.png."
+  "notes": "Official site: cp17.org. The token is deliberately NOT hosted on the book's domain (thecardinalspromise.com) \u2014 keeping the memoir's brand separate from the token is the same separation the LLC provides legally. Fill in contract addresses after deployment before submitting to Etherscan token update, CoinGecko, or a Uniswap token list. Etherscan requires a 32x32 PNG icon \u2014 use assets/logo-32.png."
 }

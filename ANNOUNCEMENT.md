@@ -1,4 +1,4 @@
-# CARD Launch Announcement (draft)
+# HOPE Launch Announcement (draft)
 
 Two ready-to-post versions: a short thread for X/Twitter and a long-form post
 for Telegram/Discord/blog. Nothing goes out until every box in sections 1–6 of
@@ -13,7 +13,7 @@ for Telegram/Discord/blog. Nothing goes out until every box in sections 1–6 of
 | `{{LOCK_URL}}` | Public Team Finance / UNCX lock page | 5 |
 | `{{TREASURY_ADDRESS}}` | The treasury wallet address | 3 |
 | `{{TREASURY_TX_URL}}` | Etherscan link to the 50M treasury transfer | 3 |
-| `{{PAIR_URL}}` | DexScreener/Uniswap link to the CARD/ETH pool | 4 |
+| `{{PAIR_URL}}` | DexScreener/Uniswap link to the HOPE/ETH pool | 4 |
 
 Before posting, search each file for `{{` to make sure no blank was missed.
 
@@ -23,7 +23,7 @@ Before posting, search each file for `{{` to make sure no blank was missed.
 
 **Post 1**
 
-> Cardinals Promise (CARD) is live.
+> Hope Coin (HOPE) is live.
 >
 > Fixed supply: 250,000,000. No mint. No tax. No blacklist. Ownership renounced — nobody, including us, can ever change the contract.
 >
@@ -56,18 +56,20 @@ Before posting, search each file for `{{` to make sure no blank was missed.
 
 ## Long version (Telegram / Discord / blog)
 
-> # Cardinals Promise (CARD) is live
+> # Hope Coin (HOPE) is live
 >
 > **Contract address: `{{TOKEN_ADDRESS}}`**
 >
-> ⚠️ This is the only real CARD. Scammers deploy lookalike tokens within
+> ⚠️ This is the only real HOPE. Scammers deploy lookalike tokens within
 > minutes of any launch — trust nothing but this exact address, posted here.
 >
-> ## What CARD is
+> ## What HOPE is
 >
 > A fixed-supply ERC-20 on Ethereum. 250,000,000 tokens were minted once at
-> deployment. There is no mint function, no transfer tax, no fee, no
-> blacklist, no pause switch. The contract is built on OpenZeppelin's audited
+> deployment. Every transfer sends a fixed 2% fee to the treasury — a rate
+> and destination hard-coded forever, which anyone can verify. There is no
+> mint function, no blacklist, no pause switch, and no way for anyone to
+> change the fee. The contract is built on OpenZeppelin's audited
 > ERC-20 and the full source is verified on Etherscan for anyone to read.
 >
 > ## Don't trust us — verify
@@ -83,7 +85,7 @@ Before posting, search each file for `{{` to make sure no blank was missed.
 >    {{LOCK_URL}}
 >
 > 3. **The team allocation is public, not hidden.**
->    20% (50,000,000 CARD) sits in a disclosed treasury wallet:
+>    20% (50,000,000 HOPE) sits in a disclosed treasury wallet:
 >    `{{TREASURY_ADDRESS}}`
 >    (funded during setup, before the pool existed: {{TREASURY_TX_URL}})
 >
@@ -115,7 +117,7 @@ Before posting, search each file for `{{` to make sure no blank was missed.
 >
 > ---
 >
-> Nothing here is financial advice. CARD is an experiment; only spend what
+> Nothing here is financial advice. HOPE is an experiment; only spend what
 > you can afford to lose.
 
 ---

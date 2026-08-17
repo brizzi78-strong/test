@@ -1,4 +1,4 @@
-# Audit Scope — CardinalsPromise.sol
+# Audit Scope — HopeCoin.sol
 
 Everything an auditor needs to start cold. One ~20-line contract over
 OpenZeppelin v5 base contracts.
@@ -7,17 +7,17 @@ OpenZeppelin v5 base contracts.
 
 | Item | Value |
 | --- | --- |
-| Files in scope | `contracts/CardinalsPromise.sol` |
+| Files in scope | `contracts/HopeCoin.sol` |
 | Inherited (out of scope unless integration is wrong) | OpenZeppelin v5 `ERC20`, `Ownable` |
 | Solidity version | 0.8.24+ (compiled with 0.8.28) |
 | Upgradeability | None — not a proxy, no delegatecall |
 | Oracles / external calls | None — the contract never calls out |
-| Deployment target | Ethereum mainnet, via Hardhat Ignition (`ignition/modules/CardinalsPromise.ts`) |
+| Deployment target | Ethereum mainnet, via Hardhat Ignition (`ignition/modules/HopeCoin.ts`) |
 
 ## Intended behavior (the spec to audit against)
 
 1. Standard ERC-20 (EIP-20) semantics, exactly as inherited from
-   OpenZeppelin `ERC20` — name "Cardinals Promise", symbol "CARD",
+   OpenZeppelin `ERC20` — name "Hope Coin", symbol "HOPE",
    18 decimals.
 2. The full supply (250,000,000 × 10¹⁸) is minted to the deployer in the
    constructor, once. **No code path can ever change `totalSupply` again:
@@ -25,8 +25,10 @@ OpenZeppelin v5 base contracts.
 3. `Ownable` is inherited solely so `renounceOwnership()` can be executed
    as a public, verifiable launch step. **No function is owner-gated** —
    ownership grants no power even before it is renounced.
-4. No fees, no hooks, no callbacks, no blocklist, no pause — a transfer of
-   N tokens always moves exactly N tokens.
+4. Exactly one transfer mechanic: a **fixed 2% fee to the immutable treasury**
+   set in the constructor — constant rate, no setter, no exclusion list. A
+   transfer of N tokens always moves exactly N×98% to the recipient and N×2%
+   to the treasury. Beyond that: no hooks, no callbacks, no blocklist, no pause.
 
 ## Existing verification (all runnable, all in CI)
 
@@ -36,12 +38,12 @@ OpenZeppelin v5 base contracts.
   (no mint/burn/pause/blacklist function exists) and an exact
   write-surface check (the ABI's state-changing functions are exactly the
   ERC-20 five plus the two Ownable handover functions).
-- **Foundry-style Solidity tests** (`contracts/CardinalsPromise.t.sol`)
+- **Foundry-style Solidity tests** (`contracts/HopeCoin.t.sol`)
   including fuzz tests, plus a **handler-based stateful invariant suite**
-  (`contracts/CardinalsPromiseInvariants.t.sol`): supply constant, balances
-  sum to supply, renounce is permanent, no-tax property asserted inside
-  every fuzzed transfer.
-- **TypeScript tests** (node:test + viem) in `test/CardinalsPromise.ts`.
+  (`contracts/HopeCoinInvariants.t.sol`): supply constant, balances
+  sum to supply (treasury included), renounce is permanent, and the exact
+  98/2 fee split asserted inside every fuzzed transfer.
+- **TypeScript tests** (node:test + viem) in `test/HopeCoin.ts`.
 - **Slither v0.11.5**, all 101 detectors: 0 findings (see LAUNCH.md for
   the Hardhat-3 reproduction workaround).
 - Full launch sequence rehearsed against a real Uniswap V2 deployment

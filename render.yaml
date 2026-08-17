@@ -101,13 +101,13 @@ services:
 
   # Cardinal Trading — the trading app (invest/ over trading/): multi-user
   # accounts with paper buying power, real market quotes (Yahoo), fractional
-  # and recurring buys, and the CARD token page. Sign-ups are open; every user
+  # and recurring buys, and the HOPE token page. Sign-ups are open; every user
   # gets their own login and an isolated paper account, so no shared gate is
   # needed. Data persists in SQLite on the mounted disk.
   #
-  # CARD launch day: once the Uniswap pool is live, add ETH_RPC_URL,
-  # CARD_POOL_ADDRESS, and CARD_TOKEN_ADDRESS in the service's environment
-  # (Settings -> Environment) and CARD flips from practice prices to live
+  # HOPE launch day: once the Uniswap pool is live, add ETH_RPC_URL,
+  # HOPE_POOL_ADDRESS, and HOPE_TOKEN_ADDRESS in the service's environment
+  # (Settings -> Environment) and HOPE flips from practice prices to live
   # pool pricing, with the real one-tap Uniswap buy/sell links on its page.
   # For real verification/reset emails, add SENDGRID_API_KEY,
   # INVEST_MAIL_FROM, and INVEST_BASE_URL (the service's public URL);

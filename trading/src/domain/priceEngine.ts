@@ -75,7 +75,7 @@ function signalAt(waves: readonly Wave[], timeMs: number): number {
 
 /**
  * Quantize a price in cents: whole cents at 1¢ and above, micro-cents (six
- * decimal places) below — so micro-cap tokens like CARD keep a real price
+ * decimal places) below — so micro-cap tokens like HOPE keep a real price
  * instead of being floored to a penny. Cash movements still round to whole
  * cents at fill time; only *prices* carry sub-cent precision.
  */

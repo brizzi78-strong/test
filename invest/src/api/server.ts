@@ -377,9 +377,9 @@ export function createApp(opts: AppOptions = {}): AppServer {
             email: user.email,
             emailVerified: Boolean(user.emailVerifiedAt),
             cashCents: account.cashCents,
-            // The CARD token's contract address (public on-chain info); when set,
-            // the app renders real buy/sell-on-Uniswap links for CARD.
-            cardTokenAddress: process.env.CARD_TOKEN_ADDRESS ?? null,
+            // The HOPE token's contract address (public on-chain info); when set,
+            // the app renders real buy/sell-on-Uniswap links for HOPE.
+            hopeTokenAddress: process.env.HOPE_TOKEN_ADDRESS ?? null,
           });
         }
 
