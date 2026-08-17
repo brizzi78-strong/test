@@ -145,6 +145,86 @@ constraints from the companion study:
   tranche must be to parties with a role (users of the product CARD is load-bearing in,
   integration partners), not to wallets recruited to look like a community.
 
+## 3a. The pool arithmetic: what "market cap" means here
+
+Every figure in this section assumes the flat 2% transfer fee introduced in the pending
+CARD revision, which taxes the pool-seeding transfer itself: seeding "100M CARD" delivers
+**98M to the pair and 2M to the treasury**, because the exemption covers only the treasury
+and the deployer is not it. All arithmetic below therefore uses a 98M pool balance.
+Uniswap's own 0.3% swap fee is omitted except where noted; it makes the figures marginally
+worse, never better.
+
+### 3a.1 The launch price is set, not discovered
+
+In a constant-product pool, price is simply the ratio of the two balances. Both balances are
+chosen by the issuer. So at the moment of launch, market capitalisation is an arithmetic
+consequence of two numbers the founder picked — not a valuation anyone external has offered:
+
+| ETH seeded | Price per CARD | Fully diluted cap (250M) |
+|---|---|---|
+| **$3,000** | **$0.0000306** | **$7,653** |
+| $10,000 | $0.000102 | $25,510 |
+| $20,000 | $0.000204 | $51,020 |
+| $40,000 | $0.000408 | $102,041 |
+
+This matters because a higher launch capitalisation is not a better launch. It prices the
+same tokens against the same ETH; only the ETH is genuinely at risk. Choosing a larger
+seed buys a bigger headline number and a bigger loss surface, in equal measure.
+
+### 3a.2 The capitalisation cannot be realised
+
+Fully diluted capitalisation is the marginal price extrapolated across supply that cannot
+transact at that price. The constant-product curve makes the gap explicit. Taking the
+$40,000 case — pool of 98,000,000 CARD and $40,000, so *k* ≈ 3.92 × 10¹²:
+
+| Sale | ETH extracted | Price after | Drawdown |
+|---|---|---|---|
+| 10M CARD (4% of supply) | ~$3,640 | $0.000337 | −17% |
+| 100M CARD (the founder tranche) | ~$20,000 | $0.000102 | **−75%** |
+
+The second row is the one that matters. **The founder's 100M reads as $40,816 at fully
+diluted price and is realisably worth about $20,000** — half — and realising it leaves the
+token at a quarter of its launch price. The paper figure and the attainable figure differ by
+roughly 2×, and the gap is structural rather than a matter of poor execution or bad timing.
+
+**The drawdown percentages are scale-invariant.** A constant-product curve depends on the
+*ratio* of balances, not their magnitude, so the proportions above hold at every seed size.
+At a $3,000 seed, a 4% sale still moves price −17% and the founder tranche still cuts it
+−75%; only the dollars change — roughly $273 and $1,500 extracted rather than $3,640 and
+$20,000.
+
+This has a direct practical consequence. A larger seed buys **no structural improvement**:
+not deeper proportional liquidity, not better price stability, not a smaller founder
+overhang in percentage terms. It buys a larger headline capitalisation and a proportionally
+larger sum at risk, and nothing else. The market's shape is fixed by the token distribution;
+only the amount the issuer stands to lose is a free variable.
+
+### 3a.3 The pool is the entire realisable market
+
+There is no external capital inside a launch capitalisation. Every dollar any participant
+withdraws is a dollar the founder deposited. Until a buyer arrives who is not selling back
+into the same pool, the seed *is* the market — which is the same conclusion the demand gate
+reaches from the opposite direction (§4), arrived at here through arithmetic rather than
+through the failure base rate.
+
+### 3a.4 Consequences for the disclosure
+
+Two follow directly, and both strengthen rather than weaken the design's honesty case.
+
+**The sell policy becomes meaningful rather than decorative.** §5a scored the unlocked
+founder hold at a five-point discount because a written policy is a commitment rather than
+a machine-enforced constraint. The arithmetic above supplies the missing quantitative
+companion: the launch materials can state that the founder's tranche, if sold, would extract
+roughly half the pool and cut the price by about three quarters. A disclosure carrying that
+number is materially more useful to a prospective buyer than one asserting good intentions,
+and it is checkable by anyone willing to run the curve.
+
+**Seed size should be set by tolerance for loss, not by target capitalisation.** Since the
+seed is the only realisable value in the pool and the pool is the only market, the seed
+should be sized as money the issuer is content never to recover. Sizing it to produce an
+impressive headline capitalisation inverts the decision, putting more at risk to make a
+number larger that nobody outside has endorsed.
+
 ## 4. The demand gate is unchanged and unweakened
 
 Nothing in this allocation answers the question the companion study puts first: who buys this, and
