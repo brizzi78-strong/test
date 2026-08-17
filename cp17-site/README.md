@@ -13,11 +13,11 @@ Three static pages. No build step, no dependencies, no JavaScript.
 - `style.css` — shared styling, light and dark
 - `CNAME` — the custom domain for GitHub Pages
 
-## Before launch
+## Optional
 
-Add the dedication photo at `assets/hope.jpg` — `index.html` references
-it (with Hope's consent, on record). Until the file exists the coin page
-shows a broken image at the dedication.
+The dedication on `index.html` is text-only by choice. To add Hope's
+photo (consent on record), commit it as `assets/hope.jpg` and wrap the
+dedication back into a `<figure>` with an `<img>` — one small change.
 
 ## On launch day
 
