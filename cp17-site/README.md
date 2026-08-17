@@ -21,8 +21,12 @@ shows a broken image at the dedication.
 
 ## On launch day
 
-Replace the five "not launched yet" cells in `ledger.html`, and add the
-contract address to `index.html`. Nothing else changes.
+Replace the "not launched yet" cells in `ledger.html`, and add the
+contract address to `index.html`. Point the Buy button on `index.html`
+and the Uniswap link in `how-to-buy.html` at
+`https://app.uniswap.org/swap?outputCurrency=<contract address>` so the
+swap opens with HOP pre-selected (how-to-buy promises "two taps").
+Nothing else changes.
 
 ## Hosting
 
