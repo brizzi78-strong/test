@@ -1570,6 +1570,27 @@ token site stays what it is — a page of promises anyone can check — and
 the separation of the two worlds is something a visitor can see, not
 just something we say.
 
+**Two coin designs, one public face (August 17, 2026).** "If it's on the
+site, it's the cardinal" resolved into a design rule once the second
+mockup arrived:
+
+- **The cardinal coin** — a cardinal on a branch over "CP17" on the
+  front; "CARD · SUPPORT TEAM · Courage · Recovery · Legacy" on the
+  reverse, copper/bronze in the mockup. This is the *public* design: any
+  coin pictured on any website, pre-order page, or promotion is this one.
+  The support-team framing also makes it the natural recognition coin —
+  a challenge coin in the recovery tradition, which suits the book's
+  Lakeview thread.
+- **The Hope coin** — her portrait and HOPE. Private by rule: it is never
+  pictured on a site, a listing, or an ad. It exists as the gift and the
+  family keepsake, which is what it was always for.
+
+Open until decided: which design carries the $200 silver / $750 gold
+tiers (the cardinal is the default for anything sold publicly, per the
+rule above), and whether the copper cardinal becomes an entry-priced
+piece (~$4–8 unit cost as a standard challenge coin) or a given-not-sold
+recognition coin for the board and helpers.
+
 *Open proposal, not yet decided:* pledging 2% of each physical-coin sale
 to the giving-list organizations, echoing the on-chain 2% fee. Decide
 before the pre-order page is written.
