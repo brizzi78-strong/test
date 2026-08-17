@@ -265,10 +265,12 @@
             <div><label for="dPhone">Phone (optional)</label><input id="dPhone" type="tel" autocomplete="tel"></div>
           </div>
           <div><label for="dFacility">Facility / organization</label><input id="dFacility" required></div>
-          <div><label for="dNotes">What's the biggest Medicare Advantage headache right now? (optional)</label><textarea id="dNotes"></textarea></div>
+          <div><label for="dNotes">Which part of the Medicare Advantage process costs you most? (optional)</label>
+            <textarea id="dNotes" placeholder="e.g. short reauthorization cycles, chasing plan portals, appeal deadlines"></textarea>
+            <p class="formnote" style="margin-top:.25rem;"><b>Please don't include any resident information</b> — no names, dates of birth, member IDs or clinical details. Tell us about your process, not a case.</p></div>
           <div class="banner" id="demoBanner" role="status"></div>
           <button class="btn block" type="submit">Request a Demo</button>
-          <p class="formnote">This opens your email client — nothing is sent or stored by this page. We reply within one business day.</p>
+          <p class="formnote">This opens your email client — nothing is sent or stored by this page, and it is ordinary email, not a secure channel. We reply within one business day.</p>
         </form>
       </div>
     </div>
@@ -306,7 +308,8 @@ $("demoForm").addEventListener("submit", (e) => {
       `Name: ${name}`, `Role: ${$("dRole").value}`, `Email: ${email}`,
       phone ? `Phone: ${phone}` : null,
       `Facility: ${facility}`,
-      "", "Biggest Medicare Advantage headache:", notes || "(not provided)",
+      "", "Costliest part of the MA process:", notes || "(not provided)",
+      "", "(Sent from the Cardinal Coverage site. Please do not include resident information in this email.)",
       "", "Requested via the Cardinal Coverage website demo form.",
     ].filter(Boolean)
   );

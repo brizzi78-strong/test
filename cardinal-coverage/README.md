@@ -82,7 +82,13 @@ Built directly from the messaging framework in
 | The Dashboard | Step 3 (future picture) made literal: an illustrative authorization board with status, covered days, deadlines, and exposure |
 | How It Works | Step 4 (the bridge): admission → stay → deadlines → discharge |
 | What Changes | Step 5 (outcome-focused language), all six outcomes |
-| Request a Demo | Lead capture — mailto-based form, no backend, nothing stored |
+| Request a Demo | Lead capture — mailto-based form to robertbrizzi@gmail.com, no backend, nothing stored |
+
+The demo form deliberately asks which part of the *process* costs the most,
+never about a case, and says plainly not to include resident information — it
+opens ordinary email, which is not a secure channel. Worth revisiting before
+driving real traffic: a proper intake path would avoid routing prospect replies
+to a personal inbox at all.
 
 The dashboard table on this page uses **sample data only** and says so; the
 footer carries a plain-language disclaimer (no outcome guarantees, no
