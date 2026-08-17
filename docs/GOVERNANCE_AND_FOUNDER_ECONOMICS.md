@@ -1562,6 +1562,14 @@ Funding boundary restated for the avoidance of doubt: all of this is
 merch-side money — personal/book-world funds in, merch revenue out. None
 of it flows through the LLC or touches the crypto treasury.
 
+**Where the coins are sold (August 17, 2026): the Cardinal's site.** "If
+it's on the site, it's the Cardinal" — the pre-order page and any future
+merch live on thecardinalspromise.com, the book's own home. hopecoin.org
+never sells anything: no store, no pre-orders, no checkout, ever. The
+token site stays what it is — a page of promises anyone can check — and
+the separation of the two worlds is something a visitor can see, not
+just something we say.
+
 *Open proposal, not yet decided:* pledging 2% of each physical-coin sale
 to the giving-list organizations, echoing the on-chain 2% fee. Decide
 before the pre-order page is written.
