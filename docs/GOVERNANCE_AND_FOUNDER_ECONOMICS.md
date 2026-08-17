@@ -1507,3 +1507,33 @@ is untouched by this change.
 the coin is the coin" and says plainly that neither is required for the other and
 that money from one never funds the other — which also restates the standing
 funding boundary (book profits never enter the LLC).
+
+---
+
+## Decision record: the physical HOPE coin (August 17, 2026)
+
+**Decision.** A real, minted keepsake coin — Hope's portrait on the front, HOPE
+on the back, matching the mockup — proceeds as merchandise, alongside the
+T-shirts (Hope on the front, cp17 on the back).
+
+**The plan, as agreed.**
+
+1. **Prototype first.** One single coin from a one-off maker (~$25), put in
+   Hope's hands before anything is committed.
+2. **Then a run of 100** from a proper coin maker (antique-silver finish;
+   roughly $400–700 all-in at $4–8 per piece).
+3. **Retail $25** as the starting price — priced for volume and for the
+   audience that buys the story. A premium $50 collector package (box, card,
+   possibly edge lettering) stays on the table for later, not first.
+
+**Boundaries, so the clean lines survive.**
+
+- The metal coin is **merchandise** — its money lives on the book/merch side
+  and never enters the LLC or the crypto treasury, per the standing funding
+  boundary. It is never bundled with HOP tokens and never marketed as the
+  cryptocurrency; it is a T-shirt that happens to be round.
+- **Hope's face** appears on the physical coin and (with her consent, already
+  given for the site) may appear on hopecoin.org. Any wider use — especially
+  the on-chain token logo that would appear in every wallet and on Etherscan
+  permanently — requires her explicit, specific yes. The official token logo
+  remains the sunrise mark.
