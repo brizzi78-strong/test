@@ -1541,6 +1541,32 @@ T-shirts (Hope on the front, cp17 on the back).
    applies; the truth got simpler. Boxes, cards, and numbering should make
    the prices feel deserved.
 
+**Production model: pre-orders, not inventory (added August 17, 2026).**
+A full 100-coin silver run costs roughly $8,400–9,600 all-in (about $6,600
+of that is the metal itself at the August 17 spot; the rest is minting
+premium, one-time portrait dies, boxes and cards, insured shipping) — so
+the run is funded by pre-orders instead of upfront capital:
+
+1. **Prototype first** (~$25, unchanged): one coin into Hope's hands for
+   the final say before anything else is spent.
+2. **Announce and take paid pre-orders** for a 3–4 week window, shipping
+   quoted at about six weeks. Upfront exposure shrinks to the dies and
+   prototype (~$600); the buyers' money buys the silver.
+3. **Mint exactly what sold**, plus a small buffer. The final run size
+   becomes a published fact afterward — "this many were ever made" — in
+   the project's spirit of receipts over pledges.
+4. Gold coins (1/10 oz solid, $750) are pre-order only, always: at
+   ~$460–500 of cost each, no gold is bought before it is sold.
+
+Funding boundary restated for the avoidance of doubt: all of this is
+merch-side money — personal/book-world funds in, merch revenue out. None
+of it flows through the LLC or touches the crypto treasury.
+
+*Open proposal, not yet decided:* pledging 2% of each physical-coin sale
+to the giving-list organizations, echoing the on-chain 2% fee. Decide
+before the pre-order page is written.
+
+
 **Boundaries, so the clean lines survive.**
 
 - The metal coin is **merchandise** — its money lives on the book/merch side
