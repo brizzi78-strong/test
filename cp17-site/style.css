@@ -1,36 +1,38 @@
 /* Hope Coin — hopecoin.org
-   Designed to read like a page from a book, not a token launch. */
+   Navy, gold, and white. Designed to read like a page from a book,
+   not a token launch. Light: navy ink on white, deep gold accent.
+   Dark: white ink on navy, bright gold accent. */
 
 :root {
-  --paper:    #faf7f3;
-  --ink:      #1c1614;
-  --muted:    #6f635d;
-  --faint:    #948880;
-  --rule:     #e5dcd3;
-  --panel:    #f2ece4;
-  --cardinal: #9e1b1b;
+  --paper:    #ffffff;
+  --ink:      #14274a;
+  --muted:    #4a5d7d;
+  --faint:    #7d8ca6;
+  --rule:     #dfe4ec;
+  --panel:    #f3f6fa;
+  --gold:     #8a6712;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --paper:    #12100e;
-    --ink:      #ece5dd;
-    --muted:    #a1958c;
-    --faint:    #7a6f67;
-    --rule:     #2c2723;
-    --panel:    #1a1714;
-    --cardinal: #dd6a6a;
+    --paper:    #0e1c30;
+    --ink:      #eef1f6;
+    --muted:    #a3b1c6;
+    --faint:    #7688a1;
+    --rule:     #253750;
+    --panel:    #152740;
+    --gold:     #d9b45b;
   }
 }
 
 :root[data-theme="dark"] {
-  --paper:    #12100e;
-  --ink:      #ece5dd;
-  --muted:    #a1958c;
-  --faint:    #7a6f67;
-  --rule:     #2c2723;
-  --panel:    #1a1714;
-  --cardinal: #dd6a6a;
+  --paper:    #0e1c30;
+  --ink:      #eef1f6;
+  --muted:    #a3b1c6;
+  --faint:    #7688a1;
+  --rule:     #253750;
+  --panel:    #152740;
+  --gold:     #d9b45b;
 }
 
 * { box-sizing: border-box; }
@@ -71,7 +73,7 @@ nav {
 
 nav a { color: var(--faint); text-decoration: none; }
 nav a:hover { color: var(--ink); }
-nav a[aria-current="page"] { color: var(--cardinal); }
+nav a[aria-current="page"] { color: var(--gold); }
 
 /* ---------- headings ---------- */
 
@@ -112,14 +114,14 @@ li::marker { color: var(--faint); }
 
 strong { font-weight: 600; }
 
-a { color: var(--ink); text-decoration-color: var(--cardinal); text-underline-offset: 3px; }
-a:hover { color: var(--cardinal); }
-a:focus-visible { outline: 2px solid var(--cardinal); outline-offset: 3px; border-radius: 2px; }
+a { color: var(--ink); text-decoration-color: var(--gold); text-underline-offset: 3px; }
+a:hover { color: var(--gold); }
+a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 2px; }
 
-/* ---------- the one red mark ---------- */
+/* ---------- the one gold mark ---------- */
 
 .mark {
-  border-left: 2px solid var(--cardinal);
+  border-left: 2px solid var(--gold);
   padding: 0.15rem 0 0.15rem 1.25rem;
   margin: 2.2rem 0;
 }
@@ -216,7 +218,7 @@ footer a { color: var(--muted); }
   font-size: 0.66rem;
   letter-spacing: 0.09em;
   text-transform: uppercase;
-  color: var(--cardinal);
+  color: var(--gold);
   margin-top: 1.6rem;
 }
 
@@ -224,7 +226,7 @@ footer a { color: var(--muted); }
 
 
 /* ---------- the sunrise mark ---------- */
-/* A cardinal-red sun, half-risen over the horizon rule. Hope, drawn once. */
+/* A gold sun, half-risen over the horizon rule. Hope, drawn once. */
 
 .mark-sunrise {
   display: block;
@@ -241,7 +243,7 @@ footer a { color: var(--muted); }
   line-height: 0.82;
   padding: 0.06em 0.1em 0 0;
   font-weight: 400;
-  color: var(--cardinal);
+  color: var(--gold);
 }
 
 /* ---------- section labels ---------- */
@@ -264,7 +266,7 @@ h2:first-of-type { border-top: 0; padding-top: 0; }
 
 blockquote { margin: 2rem 0; padding: 0; font-style: italic; color: var(--muted); }
 
-::selection { background: var(--cardinal); color: var(--paper); }
+::selection { background: var(--gold); color: var(--paper); }
 
 @media (prefers-reduced-motion: no-preference) {
   a { transition: color 120ms ease; }
