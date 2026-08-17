@@ -5,8 +5,10 @@ import { parseEther } from "viem";
 import { network } from "hardhat";
 
 const TOTAL_SUPPLY = parseEther("250000000");
-// A fixed, throwaway treasury address for tests (the real one is set at deploy).
-const TREASURY = "0x0000000000000000000000000000000000007Ea5";
+// A fixed, throwaway treasury address for tests (the real one is set at
+// deploy). All-lowercase on purpose: viem accepts lowercase addresses as-is
+// but rejects mixed case that doesn't match the EIP-55 checksum.
+const TREASURY = "0x0000000000000000000000000000000000007ea5";
 
 /** 2% of `amount`, exactly as the contract computes it. */
 function fee(amount: bigint): bigint {
