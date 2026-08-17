@@ -79,9 +79,29 @@ The 20% held back is the only part of this setup that requires ongoing trust, so
 - **Fee-on-transfer mechanics.** Buys and sells must route through Uniswap's
   `...SupportingFeeOnTransferTokens` functions; some aggregators and tools handle this
   poorly, and scanners will flag the token. Accepted by decision.
-- **Seeding pays the fee.** The 100M pool seed from the deployer skims 2% (2M CARD) to the
-  treasury unless the pool is seeded from the treasury itself — decide which before
-  launch and disclose it.
+- **Seeding pays the fee unless it is routed through the treasury.** A direct
+  deployer → pair transfer is taxed like any other: seeding "100M CARD" would deliver
+  **98M to the pool and 2M to the treasury**, and since the opening price is set by what
+  the pair actually receives, the launch price would land ~2% off intent. The contract
+  has no exempt function and never will, but it does not need one — transfers *to* the
+  treasury and *from* the treasury are both fee-exempt, so a two-step seed arrives whole:
+
+      deployer → treasury   (exempt: to == treasury)     100,000,000 CARD
+      treasury → pair       (exempt: from == treasury)   100,000,000 CARD
+
+  **Decision: seed the pool this way.** It costs one extra transaction and keeps the
+  published 100M figure literally true. If a direct seed is ever used instead, the
+  98M/2M split must be disclosed on the ledger page before launch, not after.
+
+- **Slippage must be raised to clear the fee.** Uniswap's default 0.5% tolerance is below
+  the 2% skim, so a default-settings buy fails the router's minimum-received check. The
+  how-to-buy page instructs buyers to set 3%. Sells must use the
+  `...SupportingFeeOnTransferTokens` router functions; the Uniswap interface selects them
+  automatically, in-wallet swap features often do not — which is why the walkthrough sends
+  people to the Uniswap site rather than the wallet's Swap button.
+
+- **Round-trip cost is ~4%.** The fee lands on the buy and again on the sell. Disclosed
+  in those terms on both the coin page and the walkthrough.
 
 - **Renouncing is irreversible.** No parameter can ever be changed, no bug patched, no
   migration forced. Acceptable for a simple fixed-supply ERC-20; it's the point.

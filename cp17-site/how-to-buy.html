@@ -56,17 +56,22 @@
 
 <h3>Step 4 — Trade the ETH for CARD (5 minutes)</h3>
 
-<p>Tap <strong>Swap</strong> inside your wallet app — that's the easy way, and you never leave the app. Behind the scenes the trade runs through Uniswap, an open exchange, and the wallet adds a small convenience fee, typically under 1%.</p>
-
-<p>Prefer to go direct? Open <strong><a href="https://app.uniswap.org" target="_blank" rel="noreferrer noopener">app.uniswap.org</a></strong> in the wallet's browser — no account needed, no extra fee. Check the address bar before you trade.</p>
+<p>Open <strong><a href="https://app.uniswap.org" target="_blank" rel="noreferrer noopener">app.uniswap.org</a></strong> in your wallet's browser. It's an open exchange — no account needed. Check the address bar says app.uniswap.org before you trade.</p>
 
 <ol>
   <li>Set the top box to <strong>ETH</strong> and type how much you want to spend.</li>
   <li>In the bottom box, paste the official CARD address from <a href="/">the coin page</a>. <strong>Copy and paste it — never type it by hand.</strong></li>
+  <li>Open the settings (the gear icon) and <strong>set slippage tolerance to 3%</strong>. This step is not optional — see below.</li>
   <li>Check that the name shown is <strong>Cardinals Promise (CARD)</strong>, then confirm.</li>
 </ol>
 
-<p>About a minute later, the CARD is in your wallet. Every transfer costs 2% — built into the coin, paid to the public treasury — plus Uniswap's 0.3%. There's no penalty for selling whenever you want.</p>
+<div class="note">
+  <p><strong>Why you have to change that slippage setting.</strong> Because of the 2% fee, you receive about 2% less than the price you were quoted. Uniswap's default tolerance is 0.5%, so it treats that gap as something going wrong and cancels the trade. Setting it to 3% tells it the difference is expected. If a trade fails and you didn't change this, that's almost certainly why — nothing is broken and you haven't lost your money, though a failed attempt still costs a small network fee.</p>
+</div>
+
+<p><strong>A caution about the Swap button inside wallet apps.</strong> It's tempting, because you never leave the app — but some wallets' built-in swap can't handle a coin that charges a transfer fee, and will either fail or quietly give you less than it promised. Uniswap's own site handles it properly. Use the site.</p>
+
+<p>About a minute later, the CARD is in your wallet. Every transfer costs 2% — built into the coin, paid to the public treasury — plus Uniswap's 0.3%. Buying is a transfer and selling is a transfer, so <strong>a round trip in and back out costs about 4%</strong>. There's no penalty for selling whenever you want.</p>
 
 <p><strong>The good news: you only do this once.</strong> The first three steps are one-time setup. After that, the Buy button on <a href="/">the front page</a> opens Uniswap with CARD already selected — buying again is two taps.</p>
 
