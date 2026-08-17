@@ -310,9 +310,9 @@ One more from August seventeenth. There will be a real coin you can hold — Hop
 face on the front, the word HOPE on the back. First a single prototype for about
 twenty-five dollars, into Hope's hands for the final say. Then the real thing,
 in real metal: two hundred dollars for a full one-ounce coin of pure silver,
-and five hundred for a small coin of solid gold. The gold one barely clears
-its own metal cost — it exists for the story, not the margin — and both are
-exactly what they claim to be, which is the whole point of this project. It is merchandise, plain and
+and seven hundred fifty for a small coin of solid gold — priced so it clears
+its own metal cost with room to spare. Both are exactly what they claim to
+be, which is the whole point of this project. It is merchandise, plain and
 simple — that money stays on the book side, it never touches the crypto, and the
 metal coin never comes bundled with the digital one. The token's official logo
 stays the rising sun.

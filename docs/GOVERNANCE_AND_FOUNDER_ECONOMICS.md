@@ -1522,15 +1522,16 @@ T-shirts (Hope on the front, cp17 on the back).
    Hope's hands before anything is committed.
 2. **Then a run of 100** from a proper coin maker (antique-silver finish;
    roughly $400–700 all-in at $4–8 per piece).
-3. **Two tiers, real metal: $200 silver and $500 gold** (decision of
-   August 17, superseding the same-day $25 and $50/$100 finish plans).
+3. **Two tiers, real metal: $200 silver and $750 gold** (decision of
+   August 17, superseding the same-day $25 and $50/$100 finish plans;
+   the gold price moved $500 → $750 the same day to put real margin
+   over the metal).
    - **$200 — real 1 oz .999 silver.** Metal ~$66 at the August 17 spot
      (~$65.60/oz), all-in cost ~$80–90 with minting and die share. Healthy
      margin; full 39mm size carries the portrait.
-   - **$500 — solid gold, 1/10 troy oz.** Metal ~$439 at the August 17 spot
+   - **$750 — solid gold, 1/10 troy oz.** Metal ~$439 at the August 17 spot
      (~$4,380/oz); with small-run minting premiums the all-in cost runs
-     roughly $460–500, so this tier is near break-even at today's price —
-     it is a prestige piece, not a profit line. Two standing cautions:
+     roughly $460–500, leaving ~$250–290 of margin at $750. Two standing cautions:
      gold spot moves, so confirm cost against spot before each batch (and
      reprice or pause the tier if spot rises); and at 16–18mm the coin is
      nickel-sized — the die maker must confirm the portrait reads at that
