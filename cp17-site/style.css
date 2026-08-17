@@ -247,10 +247,10 @@ footer a { color: var(--muted); }
 .legal { font-size: 0.76rem; line-height: 1.6; color: var(--faint); margin-top: 1.6rem; }
 
 
-/* ---------- the sunrise mark ---------- */
-/* A gold sun, half-risen over the horizon rule. Hope, drawn once. */
+/* ---------- the cardinal mark ---------- */
+/* The cardinal, in gold, perched above the ledger line. */
 
-.mark-sunrise {
+.mark-cardinal {
   display: block;
   width: clamp(6.5rem, 20vw, 9rem);
   height: auto;

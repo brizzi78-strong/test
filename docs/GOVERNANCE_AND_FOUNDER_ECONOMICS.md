@@ -1585,11 +1585,15 @@ mockup arrived:
   pictured on a site, a listing, or an ad. It exists as the gift and the
   family keepsake, which is what it was always for.
 
-Open until decided: which design carries the $200 silver / $750 gold
-tiers (the cardinal is the default for anything sold publicly, per the
-rule above), and whether the copper cardinal becomes an entry-priced
-piece (~$4–8 unit cost as a standard challenge coin) or a given-not-sold
-recognition coin for the board and helpers.
+Decided the same day ("back to this just for coin" / "specialty
+addition Hope" / "ok yes"): **the cardinal is the coin's identity.** The
+cardinal design carries the sold tiers — $200 silver and $750 gold — and
+the cardinal mark replaces the sunrise on hopecoin.org (the token logo in
+assets/logo.svg was already the cardinal, so the identity now matches
+end to end). **The Hope-portrait coin is the specialty edition**: small,
+numbered, released at the founder's discretion, and still never pictured
+on any site or listing. Whether the copper "support team" version is
+sold cheaply or given as recognition remains open.
 
 *Open proposal, not yet decided:* pledging 2% of each physical-coin sale
 to the giving-list organizations, echoing the on-chain 2% fee. Decide
