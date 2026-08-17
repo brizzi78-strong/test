@@ -9,7 +9,7 @@
   <circle cx="128" cy="128" r="124" fill="url(#bg)"/>
   <circle cx="128" cy="128" r="124" fill="none" stroke="#cf9236" stroke-opacity="0.35" stroke-width="6"/>
   <!-- the cardinal: crest, cone beak, long tail -->
-  <g transform="translate(37,22) scale(0.85)" fill="#cf9236">
+  <g transform="translate(37,22) scale(0.85)" fill="#c9302a">
     <path d="M188 86
       L168 76
       C160 66 154 56 152 46

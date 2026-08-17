@@ -325,3 +325,12 @@ search. So the digital coin is CARD, at cardinalspromise dot org. Hope is not
 erased — far from it. Her name moves to the real, physical coins, the specialty
 edition, the ones you can hold. And every page of the coin's site still ends
 the same way: in honor of Hope, and of Lou Brizzi, the ninth of January.
+
+Also from August seventeenth: the company gets a name. It is Cardinals Platform
+L-L-C, replacing the working name C-P-17. Nothing else changes — the token is
+still CARD, the site is still cardinalspromise dot org, and every rule about
+keeping book money and coin money apart still holds. Two warnings go in the
+record. The word Cardinal is crowded in trademark terms, especially in health
+care and finance, so a lawyer should clear the name before it gets filed. And
+the word Platform describes something that does not exist yet, so it stays in
+the company name and out of any sentence that promises features.

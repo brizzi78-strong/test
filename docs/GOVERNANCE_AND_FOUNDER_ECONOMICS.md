@@ -1673,3 +1673,33 @@ pointing to the coins and the book's site); honest scarcity on the merch
 ("minted once, count published"); the story itself as press material.
 Explicitly rejected: any paid promotion, influencer marketing, or
 scarcity framing for the token.
+
+---
+
+## Decision record: the entity is Cardinals Platform LLC (August 17, 2026)
+
+**Decision.** The operating entity's name is **Cardinals Platform LLC**,
+superseding the working name CP17 LLC used throughout the earlier sections of
+this document. Every earlier reference to "CP17 LLC" — the funding boundaries,
+the accountable-plan reimbursement structure, the S-corp threshold analysis,
+the risk table — describes this same entity and remains in force unchanged.
+Only the name moved.
+
+**Scope of the change.** Nothing else follows from it. The token stays
+Cardinals Promise (CARD). The proof page stays cardinalspromise.org. The
+`cp17-site` folder keeps its path (a directory name is not a brand), and
+cp17.org remains a forward the founder controls. The T-shirts keep their
+cp17 back print unless the founder says otherwise.
+
+**Two cautions to carry into formation.**
+
+1. **"Cardinal" is a crowded trademark space** — heavily used in healthcare
+   (Cardinal Health) and finance. The earlier recommendation of a boring,
+   uncrowded legal name existed precisely to keep the entity's name out of
+   any plaintiff's reach; naming the LLC "Cardinals Platform" gives that up
+   deliberately. Have counsel run a name-availability and mark search before
+   filing with the state, not after.
+2. **"Platform" describes something that does not exist yet.** The entity
+   holds a token, a treasury, a domain, and a merch line — not a platform in
+   the software sense. That is fine as a name, but it should never appear in
+   copy that implies functionality the project does not have.

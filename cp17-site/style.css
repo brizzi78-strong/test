@@ -1,7 +1,7 @@
 /* Cardinals Promise — cardinalspromise.org
-   Dark navy, rich gold, white. Designed to read like a page from a
-   book, not a token launch. Light: near-black navy ink on white, deep
-   amber-gold accent. Dark: white ink on dark navy, rich gold accent. */
+   Dark navy, rich gold, white — and cardinal red, used once, for the
+   bird. Designed to read like a page from a book, not a token launch.
+   Light: near-black navy ink on white. Dark: white ink on dark navy. */
 
 :root {
   --paper:    #ffffff;
@@ -12,6 +12,7 @@
   --panel:    #f1f4f9;
   --gold:     #8a5a0b;
   --green:    #17724a;
+  --cardinal: #b3261f;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,6 +25,7 @@
     --panel:    #0e1d33;
     --gold:     #cf9236;
     --green:    #27a866;
+    --cardinal: #e2564c;
   }
 }
 
@@ -36,6 +38,7 @@
   --panel:    #0e1d33;
   --gold:     #cf9236;
   --green:    #27a866;
+  --cardinal: #e2564c;
 }
 
 * { box-sizing: border-box; }
@@ -248,7 +251,7 @@ footer a { color: var(--muted); }
 
 
 /* ---------- the cardinal mark ---------- */
-/* The cardinal, in gold, perched above the ledger line. */
+/* The cardinal, in cardinal red, perched above the ledger line. */
 
 .mark-cardinal {
   display: block;
