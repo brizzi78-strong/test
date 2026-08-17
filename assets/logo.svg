@@ -7,22 +7,22 @@
     </linearGradient>
   </defs>
   <circle cx="128" cy="128" r="124" fill="url(#bg)"/>
-  <circle cx="128" cy="128" r="124" fill="none" stroke="#cf9236" stroke-opacity="0.35" stroke-width="6"/>
-  <!-- the cardinal: crest, cone beak, long tail -->
-  <g transform="translate(37,22) scale(0.85)" fill="#c9302a">
-    <path d="M188 86
-      L168 76
-      C160 66 154 56 152 46
-      C146 56 140 62 132 66
-      C112 78 94 100 80 132
-      L26 204
-      L64 188
-      C92 178 116 164 134 142
-      C150 124 162 106 170 94
-      Z"/>
-    <path d="M120 168 h6 v34 h-6 z"/>
-    <path d="M140 164 h6 v38 h-6 z"/>
+  <circle cx="128" cy="128" r="112" fill="none" stroke="#cf9236" stroke-width="3"/>
+  <circle cx="128" cy="128" r="104" fill="none" stroke="#cf9236" stroke-width="4" stroke-dasharray="2 7"/>
+  <!-- the cardinal: crest, cone beak, long straight tail -->
+  <g transform="translate(128 130) scale(0.72) translate(-121 -106.5)">
+    <g fill="#c9302a">
+    <path d="M100 138 L120 156 L40 206 L22 190 Z"/>
+    <ellipse cx="130" cy="116" rx="54" ry="40" transform="rotate(-32 130 116)"/>
+    <circle cx="170" cy="66" r="27"/>
+    <path d="M148 52 C150 30 154 16 162 8 C166 26 174 40 186 48 Z"/>
+    <path d="M192 58 L220 70 L192 82 Z"/>
+    <path d="M126 140 h6 v62 h-6 z"/>
+    <path d="M146 138 h6 v64 h-6 z"/>
+    <path d="M116 200 h24 v5 h-24 z"/>
+    <path d="M138 200 h24 v5 h-24 z"/>
+    </g>
+    <path d="M152 94 C132 108 116 126 104 146" fill="none" stroke="#081426" stroke-width="5"/>
+    <circle cx="176" cy="60" r="4.5" fill="#081426"/>
   </g>
-  <circle cx="166" cy="83" r="4" fill="#081426"/>
-  <line x1="46" y1="200" x2="210" y2="200" stroke="#cf9236" stroke-opacity="0.45" stroke-width="5"/>
 </svg>
