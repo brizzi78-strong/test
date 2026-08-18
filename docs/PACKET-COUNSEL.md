@@ -105,6 +105,26 @@ securities analysis in Q9?
 seed the pool, so that the deployer address does not contradict our own org chart. Confirm,
 and tell us what else follows from the LLC being the issuer.
 
+**Q11a. A proposed retail purchase flow.** We have designed, but not built, a "Buy CARD"
+button routing: card/bank → regulated on-ramp → USDC → decentralised exchange → customer's
+non-custodial wallet. We would hold no customer funds, identity documents, or keys. Assessment
+in `PURCHASE-FLOW-ASSESSMENT.md`. Please advise on:
+
+- **(a) Issuer and seller status.** Does non-custodial routing affect who is selling the
+  token, given that we created it, hold 100,000,000 of it, operate the site, and run the
+  marketing? Our own reading is that it does not, and that the custody design addresses
+  money transmission only.
+- **(b) "Marketplace."** We have described the site as providing a marketplace. Does that
+  characterisation create exchange or broker-dealer exposure, and should we stop using the
+  word?
+- **(c) Front-end liability.** What exposure attaches to operating an interface to a
+  decentralised exchange, and does building custom swap routing (which the transfer fee may
+  require) worsen it?
+- **(d) State availability.** Which states may we serve, and does that obligation sit with us
+  or with the on-ramp provider?
+- **(e) On-ramp contracting.** What should we require from a provider agreement, and what
+  should we refuse?
+
 ---
 
 ## 5. Questions — proposed personal transfers
