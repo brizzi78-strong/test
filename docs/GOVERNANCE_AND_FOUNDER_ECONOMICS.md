@@ -1852,3 +1852,67 @@ fixed token count.**
   execution, and this splits the difference.
 - The plan is set while no material non-public information exists, and is
   suspended (not accelerated) if any arises.
+
+---
+
+## Decision record: the 2% fee is removed (August 18, 2026)
+
+**Decision.** The transfer fee is eliminated. CARD is a plain fixed-supply
+ERC-20 with no `_update` override, no treasury role in the contract, and no
+mechanism that could add a fee later. This **supersedes** the earlier
+decision recorded in this document ("2% fee decided and confirmed," and the
+instruction to stop re-litigating it), which stood for two days and was
+implemented in full before being reversed.
+
+**Why it was reversed.** Three findings, in the order that mattered.
+
+1. **A fee-on-transfer token and a one-button retail buy flow are close to
+   mutually exclusive.** Standard Uniswap V2 router paths revert
+   (`UniswapV2: K`) unless the `SupportingFeeOnTransferTokens` variants are
+   used; the default 0.5% slippage tolerance fails on every trade; and
+   on-ramp providers and aggregators that auto-swap call standard routers.
+   The founder has asked for exactly that one-button flow on the marketplace.
+   The alternative — custom swap routing operated by the issuer — puts the
+   company deeper into the transaction and worsens the issuer analysis. This
+   was decisive.
+2. **It cost every ordinary buyer about two points, permanently.** Modelled
+   as a retail purchase (on-ramp → USDC → DEX → wallet), the achievable cost
+   floor was 9.6% with the fee against 7.6% without at a $3,000 pool, and
+   6.4% against 4.4% at $100,000. The gap does not close as liquidity grows,
+   because a constant rate survives any depth.
+3. **It bought almost nothing.** Price impact is governed by sale size
+   relative to pool depth, not by a tax on the input. Shaving a few percent
+   off a large sale barely moves that ratio — the modelled difference between
+   an untaxed sale and a 5%-taxed one was about a point of price impact. **A
+   transfer tax cannot fix a depth problem.**
+
+**The honest cost of removing it.** Price manipulation gets cheaper: a
+wash-pump round trip falls from roughly 4.6% of notional to roughly 0.6%.
+That is real and is recorded here rather than glossed. It is judged worth
+paying, since the fee bought barely a point of genuine protection while
+taxing every ordinary buyer far more.
+
+**What this changes elsewhere.**
+
+- **The treasury has no income.** The fee was the only thing that fed it.
+  The 50,000,000 CARD allocated at launch is now the entire treasury,
+  permanently — there is no top-up mechanism and no way to add one. Every
+  statement about the treasury "growing on its own" is removed from the site.
+  Operating costs are funded by the founder personally, as they already were
+  in practice, since the treasury is coins rather than dollars.
+- **Pool seeding is simple again.** The two-step deployer → treasury → pair
+  route existed only to dodge the fee on the seed. A direct seed now
+  delivers the full 100,000,000.
+- **The slippage instruction comes off the site.** Default tolerance works.
+- **The round-trip disclosure comes off the site.** There is no round trip
+  cost beyond Uniswap's own 0.3% and gas.
+- **The claims file** replaces `flat-2pct-fee` with `no-transfer-fee`, backed
+  by three Solidity tests, a Node test, an ABI-absence check over
+  fee/tax/treasury patterns, and the conservation invariant.
+
+**A note on how this decision was made.** The fee was defended in-session,
+implemented, locked at the founder's explicit instruction, and then reversed
+two days later on new analysis. That sequence is not a failure of the
+process — it is the process working. The record keeps both decisions, and
+the reasoning for each, so a reader can see that the reversal was earned
+rather than arbitrary.

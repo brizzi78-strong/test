@@ -18,7 +18,7 @@ token scanners, screeners, and skeptical buyers have nothing to flag.
 ## Token Parameters
 
 - **Name / Symbol:** Cardinals Promise / CARD
-- **Fee:** flat 2% on every non-treasury transfer, accruing to the treasury; rate and recipient immutable at deployment
+- **Fee:** none. A transfer delivers exactly the amount sent; the contract has no fee mechanic and no function that could add one
 - **Total supply:** 250,000,000 (fixed — minted once at deployment, no mint function reachable after renounce)
 - **Distribution:**
   - 100,000,000 (40%) → Uniswap liquidity pool
@@ -31,9 +31,9 @@ token scanners, screeners, and skeptical buyers have nothing to flag.
 Order matters — several of these steps are only trustworthy if done in the right sequence.
 
 1. **Deploy the token contract.** Mint the full 250M supply to the deployer. Use a plain,
-   audited ERC-20 base (OpenZeppelin) carrying exactly one mechanic: a flat, immutable 2%
-   treasury fee. No blacklist, no mint, no pause. Scanners flag fee-on-transfer tokens —
-   accepted; the answer is the fee's immutability and the renounce, not a denial.
+   audited ERC-20 base (OpenZeppelin) carrying no extra mechanics at all: no fee, no
+   blacklist, no mint, no pause, no transfer hook of any kind. The contract adds nothing
+   to the standard, which is what makes every claim about it cheap to verify.
 2. **Verify the source code** on Etherscan immediately. Unverified contracts are treated as
    hostile by default.
 3. **Transfer 50M to the treasury wallet.** Do this *before* renouncing and *before* the pool
@@ -71,37 +71,26 @@ The 20% held back is the only part of this setup that requires ongoing trust, so
 - ~~**Deployer holding a large share**~~ — **not avoided.** The founder holds 40% unlocked. This is the one item on this list the design does not solve, and the launch materials say so in those words rather than working around it.
 - **Yankable liquidity** — LP locked 12 months.
 - **Hidden team allocation** — the 20% is announced and labeled.
-- **Owner-controlled fees, blacklists, pausing** — none. The 2% fee exists but is
-  hardcoded and ungated: no one can raise, lower, redirect, or disable it.
+- **Owner-controlled fees, blacklists, pausing** — none, and not merely ungated: the
+  functions do not exist. There is no fee to raise, redirect, or disable.
 
 ## Known Trade-offs
 
-- **Fee-on-transfer mechanics.** Buys and sells must route through Uniswap's
-  `...SupportingFeeOnTransferTokens` functions; some aggregators and tools handle this
-  poorly, and scanners will flag the token. Accepted by decision.
-- **Seeding pays the fee unless it is routed through the treasury.** A direct
-  deployer → pair transfer is taxed like any other: seeding "100M CARD" would deliver
-  **98M to the pool and 2M to the treasury**, and since the opening price is set by what
-  the pair actually receives, the launch price would land ~2% off intent. The contract
-  has no exempt function and never will, but it does not need one — transfers *to* the
-  treasury and *from* the treasury are both fee-exempt, so a two-step seed arrives whole:
+- **No fee-on-transfer mechanics.** The token has no transfer hook at all, so
+  none of the fee-on-transfer caveats apply: no special router functions, no
+  raised slippage, no scanner flags for a tax.
+- **Seeding is untaxed.** With the fee removed, a direct deployer → pair
+  transfer delivers the full 100,000,000 CARD and sets the opening price
+  exactly as intended. The two-step route through the treasury, which existed
+  only to dodge the fee, is no longer needed — though it remains harmless if
+  the launch scripts already do it.
 
-      deployer → treasury   (exempt: to == treasury)     100,000,000 CARD
-      treasury → pair       (exempt: from == treasury)   100,000,000 CARD
-
-  **Decision: seed the pool this way.** It costs one extra transaction and keeps the
-  published 100M figure literally true. If a direct seed is ever used instead, the
-  98M/2M split must be disclosed on the ledger page before launch, not after.
-
-- **Slippage must be raised to clear the fee.** Uniswap's default 0.5% tolerance is below
-  the 2% skim, so a default-settings buy fails the router's minimum-received check. The
-  how-to-buy page instructs buyers to set 3%. Sells must use the
-  `...SupportingFeeOnTransferTokens` router functions; the Uniswap interface selects them
-  automatically, in-wallet swap features often do not — which is why the walkthrough sends
-  people to the Uniswap site rather than the wallet's Swap button.
-
-- **Round-trip cost is ~4%.** The fee lands on the buy and again on the sell. Disclosed
-  in those terms on both the coin page and the walkthrough.
+- **Standard router paths work.** Buys and sells use the ordinary Uniswap V2
+  router functions, default slippage tolerance is sufficient, and aggregators
+  and on-ramp providers that call standard routers will work without special
+  handling. This was the decisive argument for removing the fee: a
+  fee-on-transfer token and a one-button retail buy flow are close to
+  mutually exclusive.
 
 - **Renouncing is irreversible.** No parameter can ever be changed, no bug patched, no
   migration forced. Acceptable for a simple fixed-supply ERC-20; it's the point.

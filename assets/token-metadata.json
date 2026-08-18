@@ -2,7 +2,7 @@
   "name": "Cardinals Promise",
   "symbol": "CARD",
   "decimals": 18,
-  "description": "Cardinals Promise (CARD) is a fixed-cap ERC-20 token on Ethereum. Maximum supply is hard-capped on-chain at 250,000,000 CARD. A single flat 2% transfer fee accrues to a fixed treasury address and cannot be changed by anyone; there are no other fees, no blocklists, and no pausing.",
+  "description": "Cardinals Promise (CARD) is a fixed-cap ERC-20 token on Ethereum. Maximum supply is hard-capped on-chain at 250,000,000 CARD. There is no transfer fee of any kind: a transfer delivers exactly the amount sent. No mint, no burn, no blocklists, no pausing, and no owner-gated functions.",
   "totalSupplyCap": "250000000",
   "logo": "assets/logo.svg",
   "contract": {

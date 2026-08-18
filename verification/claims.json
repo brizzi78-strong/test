@@ -82,26 +82,39 @@
       ]
     },
     {
-      "id": "flat-2pct-fee",
-      "statement": "Every transfer between non-treasury addresses moves exactly 98% to the recipient and 2% to the immutable treasury address; the rate and recipient are fixed at deployment and no function exists to change either.",
-      "source": "CardinalsPromise.sol natspec; TOKEN_LAUNCH_STRATEGY.md \u00a7 Token Parameters",
+      "id": "no-transfer-fee",
+      "statement": "A transfer delivers exactly the amount sent. There is no transfer fee, tax, or skim of any kind, and no address receives a cut.",
+      "source": "CardinalsPromise.sol natspec; cp17.org \u00a7 What the code does",
       "evidence": [
         {
           "type": "solidity-test",
           "file": "contracts/CardinalsPromise.t.sol",
-          "name": "test_TransferTakesExactTwoPercentFee"
+          "name": "test_TransferDeliversTheFullAmount"
         },
         {
           "type": "solidity-test",
           "file": "contracts/CardinalsPromise.t.sol",
-          "name": "test_TreasuryTransfersAreExempt"
+          "name": "testFuzz_TransferDeliversExactlyWhatWasSent"
+        },
+        {
+          "type": "solidity-test",
+          "file": "contracts/CardinalsPromise.t.sol",
+          "name": "test_RoundTripLosesNothing"
+        },
+        {
+          "type": "node-test",
+          "file": "test/CardinalsPromise.ts",
+          "title": "delivers the full amount sent, with nothing skimmed"
         },
         {
           "type": "abi-absent",
           "patterns": [
+            "fee",
+            "tax",
             "setFee",
             "updateFee",
             "setTreasury",
+            "treasury",
             "exclude",
             "exempt"
           ]

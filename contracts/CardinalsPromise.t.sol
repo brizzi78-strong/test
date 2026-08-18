@@ -6,20 +6,17 @@ import {CardinalsPromise} from "./CardinalsPromise.sol";
 
 contract CardinalsPromiseTest is Test {
     CardinalsPromise token;
-    address treasury = makeAddr("treasury");
     address alice = makeAddr("alice");
     address bob = makeAddr("bob");
 
     function setUp() public {
-        token = new CardinalsPromise(treasury);
+        token = new CardinalsPromise();
     }
 
     function test_Metadata() public view {
         assertEq(token.name(), "Cardinals Promise");
         assertEq(token.symbol(), "CARD");
         assertEq(token.decimals(), 18);
-        assertEq(token.FEE_BPS(), 200);
-        assertEq(token.treasury(), treasury);
     }
 
     function test_OwnerIsDeployer() public view {
@@ -34,7 +31,7 @@ contract CardinalsPromiseTest is Test {
     function test_TransfersStillWorkAfterRenounce() public {
         token.renounceOwnership();
         token.transfer(alice, 1_000e18);
-        assertEq(token.balanceOf(alice), 980e18);
+        assertEq(token.balanceOf(alice), 1_000e18);
     }
 
     function test_FullSupplyMintedToDeployer() public view {
@@ -42,21 +39,22 @@ contract CardinalsPromiseTest is Test {
         assertEq(token.balanceOf(address(this)), token.totalSupply());
     }
 
-    function test_TransferTakesExactTwoPercentFee() public {
+    /// @dev The recipient receives exactly what was sent. Nothing is skimmed
+    ///      by the contract, the issuer, or anyone else.
+    function test_TransferDeliversTheFullAmount() public {
         token.transfer(alice, 1_000e18);
-        assertEq(token.balanceOf(alice), 980e18);
-        assertEq(token.balanceOf(treasury), 20e18);
+        assertEq(token.balanceOf(alice), 1_000e18);
         assertEq(token.balanceOf(address(this)), 250_000_000e18 - 1_000e18);
     }
 
-    function test_TreasuryTransfersAreExempt() public {
-        token.transfer(treasury, 1_000e18);
-        assertEq(token.balanceOf(treasury), 1_000e18);
-
-        vm.prank(treasury);
-        token.transfer(bob, 400e18);
-        assertEq(token.balanceOf(bob), 400e18);
-        assertEq(token.balanceOf(treasury), 600e18);
+    /// @dev A round trip returns the sender whole: no fee on the way out,
+    ///      none on the way back.
+    function test_RoundTripLosesNothing() public {
+        token.transfer(alice, 1_000e18);
+        vm.prank(alice);
+        token.transfer(address(this), 1_000e18);
+        assertEq(token.balanceOf(alice), 0);
+        assertEq(token.balanceOf(address(this)), 250_000_000e18);
     }
 
     function testFuzz_TransferPreservesTotalSupply(uint256 amount) public {
@@ -64,9 +62,15 @@ contract CardinalsPromiseTest is Test {
         token.transfer(alice, amount);
         assertEq(token.totalSupply(), 250_000_000e18);
         assertEq(
-            token.balanceOf(alice) + token.balanceOf(treasury) + token.balanceOf(address(this)),
+            token.balanceOf(alice) + token.balanceOf(address(this)),
             token.totalSupply()
         );
+    }
+
+    function testFuzz_TransferDeliversExactlyWhatWasSent(uint256 amount) public {
+        amount = bound(amount, 0, token.totalSupply());
+        token.transfer(alice, amount);
+        assertEq(token.balanceOf(alice), amount);
     }
 
     function test_RevertWhen_TransferExceedsBalance() public {
@@ -79,8 +83,7 @@ contract CardinalsPromiseTest is Test {
         token.approve(alice, 500e18);
         vm.prank(alice);
         token.transferFrom(address(this), bob, 500e18);
-        assertEq(token.balanceOf(bob), 490e18);
-        assertEq(token.balanceOf(treasury), 10e18);
+        assertEq(token.balanceOf(bob), 500e18);
         assertEq(token.allowance(address(this), alice), 0);
     }
 }

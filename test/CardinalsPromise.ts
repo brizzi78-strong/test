@@ -10,11 +10,8 @@ describe("CARD", async function () {
   const { viem } = await network.create();
 
   async function deploy() {
-    const [, treasury] = await viem.getWalletClients();
-    const token = await viem.deployContract("CardinalsPromise", [
-      treasury.account.address,
-    ]);
-    return { token, treasury };
+    const token = await viem.deployContract("CardinalsPromise", []);
+    return { token };
   }
 
   it("mints the full fixed supply to the deployer", async function () {
@@ -29,44 +26,41 @@ describe("CARD", async function () {
   });
 
   it("has the expected metadata", async function () {
-    const { token, treasury } = await deploy();
+    const { token } = await deploy();
 
     assert.equal(await token.read.name(), "Cardinals Promise");
     assert.equal(await token.read.symbol(), "CARD");
     assert.equal(await token.read.decimals(), 18);
-    assert.equal(await token.read.FEE_BPS(), 200n);
-    assert.equal(
-      (await token.read.treasury()).toLowerCase(),
-      treasury.account.address.toLowerCase(),
-    );
   });
 
-  it("takes exactly 2% on transfers and sends it to the treasury", async function () {
-    const { token, treasury } = await deploy();
-    const [, , recipient] = await viem.getWalletClients();
+  it("delivers the full amount sent, with nothing skimmed", async function () {
+    const { token } = await deploy();
+    const [, recipient] = await viem.getWalletClients();
     const amount = parseEther("1000");
 
     await token.write.transfer([recipient.account.address, amount]);
 
     assert.equal(
       await token.read.balanceOf([recipient.account.address]),
-      parseEther("980"),
-    );
-    assert.equal(
-      await token.read.balanceOf([treasury.account.address]),
-      parseEther("20"),
+      amount,
     );
     assert.equal(await token.read.totalSupply(), TOTAL_SUPPLY);
   });
 
-  it("exempts treasury transfers so gifts arrive whole", async function () {
-    const { token, treasury } = await deploy();
+  it("returns the sender whole on a round trip", async function () {
+    const { token } = await deploy();
+    const [deployer, other] = await viem.getWalletClients();
     const amount = parseEther("1000");
 
-    await token.write.transfer([treasury.account.address, amount]);
+    await token.write.transfer([other.account.address, amount]);
+    await token.write.transfer([deployer.account.address, amount], {
+      account: other.account,
+    });
+
+    assert.equal(await token.read.balanceOf([other.account.address]), 0n);
     assert.equal(
-      await token.read.balanceOf([treasury.account.address]),
-      amount,
+      await token.read.balanceOf([deployer.account.address]),
+      TOTAL_SUPPLY,
     );
   });
 

@@ -64,7 +64,7 @@ async function main() {
   console.log(`Uniswap V2 deployed — router at ${router.address}`);
 
   // --- Step 1: deploy CARD --------------------------------------------
-  const token = await viem.deployContract("CardinalsPromise", [deployer.account.address]) // rehearsal only: deployer-as-treasury disables the fee path; mainnet passes the Safe;
+  const token = await viem.deployContract("CardinalsPromise", []);
   console.log(`CARD deployed at ${token.address}`);
   const totalSupply = (await token.read.totalSupply()) as bigint;
   console.log(`  totalSupply: ${formatEther(totalSupply)} CARD`);
