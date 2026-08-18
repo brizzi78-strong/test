@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Sentra Safety &amp; Handling — an honest upgrade plan</title>
+<meta name="description" content="A real, prioritized action plan to make a 2026 Nissan Sentra safer and better-handling — ranked by actual impact, with cost, effort, and DIY-vs-shop for each step. No fake horsepower, no gimmicks. Check items off as you go; progress saves on your device.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230E7A46'/%3E%3Cpath d='M9 16.5l4.5 4.5L23 11' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<style>
+  :root {
+    --paper:#F4F6F4; --surface:#FFFFFF; --surface-2:#E9EFEA; --ink:#13201A; --muted:#5A6B62;
+    --line:#DBE4DD; --brand:#0E7A46; --brand-strong:#0A5E36; --accent:#22B573;
+    --good:#1F8A54; --good-bg:#E2F3E9; --warn:#9A6410; --warn-bg:#F7ECD4; --crit:#C23B3B; --crit-bg:#F8E2E0;
+    --safety:#2563EB; --safety-bg:#E3ECFD; --handling:#7C3AED; --handling-bg:#EEE7FC;
+    --shadow:0 1px 2px rgba(19,32,26,.06), 0 12px 30px -16px rgba(19,32,26,.28);
+    --font:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+    --maxw:720px; --r:14px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper:#0B120E; --surface:#131C17; --surface-2:#1B2620; --ink:#EDF3EF; --muted:#93A69B;
+      --line:#26332B; --brand:#33C27E; --brand-strong:#57D497; --accent:#33C27E;
+      --good:#4CBE84; --good-bg:#12321f; --warn:#D6A24A; --warn-bg:#33280f; --crit:#E27B70; --crit-bg:#3a1d1a;
+      --safety:#6FA0FB; --safety-bg:#16233d; --handling:#B38BFA; --handling-bg:#241a3b;
+      --shadow:0 1px 2px rgba(0,0,0,.5), 0 14px 34px -16px rgba(0,0,0,.7);
+    }
+  }
+  :root[data-theme="light"]{--paper:#F4F6F4;--surface:#FFFFFF;--surface-2:#E9EFEA;--ink:#13201A;--muted:#5A6B62;--line:#DBE4DD;--brand:#0E7A46;--brand-strong:#0A5E36;--safety:#2563EB;--safety-bg:#E3ECFD;--handling:#7C3AED;--handling-bg:#EEE7FC;}
+  :root[data-theme="dark"]{--paper:#0B120E;--surface:#131C17;--surface-2:#1B2620;--ink:#EDF3EF;--muted:#93A69B;--line:#26332B;--brand:#33C27E;--brand-strong:#57D497;--safety:#6FA0FB;--safety-bg:#16233d;--handling:#B38BFA;--handling-bg:#241a3b;}
+
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink); font-family:var(--font); line-height:1.55; -webkit-text-size-adjust:100%; }
+  .wrap { max-width:var(--maxw); margin-inline:auto; padding:0 clamp(.9rem,4vw,1.4rem) 3rem; }
+
+  header.top { position:sticky; top:0; z-index:10; background:color-mix(in srgb,var(--paper) 88%,transparent);
+    backdrop-filter:blur(8px); border-bottom:1px solid var(--line); }
+  .top-in { max-width:var(--maxw); margin-inline:auto; padding:.7rem clamp(.9rem,4vw,1.4rem); display:flex; align-items:center; gap:.6rem; }
+  .logo { width:32px; height:32px; border-radius:9px; background:var(--brand); display:grid; place-items:center; flex:none; }
+  .logo svg { width:21px; height:21px; }
+  h1.brand { font-size:1.08rem; margin:0; font-weight:800; letter-spacing:-.01em; }
+  .brand small { display:block; font-weight:600; font-size:.68rem; color:var(--muted); letter-spacing:.03em; }
+  .theme { margin-left:auto; background:transparent; border:1px solid var(--line); border-radius:9px; color:var(--ink); padding:.4rem .6rem; cursor:pointer; font-size:.95rem; }
+
+  .hero { padding:1.6rem 0 .4rem; }
+  .hero h2 { font-size:clamp(1.4rem,5vw,2rem); margin:0 0 .4rem; letter-spacing:-.02em; line-height:1.15; }
+  .hero p { color:var(--muted); margin:0; max-width:40rem; }
+
+  .card { background:var(--surface); border:1px solid var(--line); border-radius:var(--r); box-shadow:var(--shadow); padding:1rem 1.05rem; margin:.85rem 0; }
+  .muted { color:var(--muted); }
+  .small { font-size:.85rem; }
+
+  /* progress */
+  .prog { display:flex; align-items:center; gap:.8rem; }
+  .prog .ring { --p:0; width:54px; height:54px; border-radius:50%; flex:none;
+    background:conic-gradient(var(--brand) calc(var(--p)*1%), var(--surface-2) 0); display:grid; place-items:center; }
+  .prog .ring i { width:40px; height:40px; border-radius:50%; background:var(--surface); display:grid; place-items:center; font-weight:800; font-size:.82rem; font-style:normal; }
+  .prog .lbl b { font-size:1.02rem; } .prog .lbl div { color:var(--muted); font-size:.85rem; }
+
+  /* filters */
+  .filters { display:flex; gap:.4rem; flex-wrap:wrap; margin:.3rem 0 .2rem; }
+  .filters button { border:1px solid var(--line); background:var(--surface); color:var(--muted); font:inherit; font-weight:700; font-size:.85rem;
+    padding:.4rem .7rem; border-radius:999px; cursor:pointer; }
+  .filters button[aria-selected="true"] { background:var(--ink); color:var(--paper); border-color:var(--ink); }
+
+  /* item */
+  .item { border:1px solid var(--line); border-radius:12px; padding:.8rem .85rem; margin:.55rem 0; background:var(--surface); display:flex; gap:.7rem; align-items:flex-start; }
+  .item.done { opacity:.62; }
+  .item.done .t { text-decoration:line-through; }
+  .chk { flex:none; width:24px; height:24px; border-radius:7px; border:2px solid var(--line); background:var(--surface); cursor:pointer; display:grid; place-items:center; margin-top:.1rem; font-size:.9rem; color:#fff; }
+  .chk.on { background:var(--brand); border-color:var(--brand); }
+  .body { flex:1; min-width:0; }
+  .row1 { display:flex; align-items:baseline; gap:.5rem; flex-wrap:wrap; }
+  .t { font-weight:800; }
+  .why { font-size:.9rem; color:var(--muted); margin:.3rem 0 .45rem; }
+  .meta { display:flex; gap:.4rem; flex-wrap:wrap; }
+  .pill { font-size:.7rem; font-weight:800; letter-spacing:.02em; padding:.16rem .5rem; border-radius:999px; text-transform:uppercase; }
+  .pill.cat-safety { color:var(--safety); background:var(--safety-bg); }
+  .pill.cat-handling { color:var(--handling); background:var(--handling-bg); }
+  .pill.cost { color:var(--ink); background:var(--surface-2); }
+  .pill.effort { color:var(--ink); background:var(--surface-2); }
+  .pill.impact-high { color:var(--good); background:var(--good-bg); }
+  .pill.impact-med { color:var(--warn); background:var(--warn-bg); }
+  .tier { font-size:.72rem; font-weight:800; color:var(--muted); text-transform:uppercase; letter-spacing:.05em; margin:1rem 0 .1rem; }
+
+  .note { background:var(--warn-bg); color:var(--warn); border-radius:12px; padding:.7rem .85rem; font-size:.85rem; font-weight:600; margin:.85rem 0; }
+  .foot-note { background:var(--surface-2); color:var(--muted); border-radius:12px; padding:.7rem .85rem; font-size:.82rem; margin:.85rem 0; }
+  footer { text-align:center; color:var(--muted); font-size:.78rem; margin-top:1.4rem; }
+  .reset { background:transparent; border:1px solid var(--line); color:var(--muted); border-radius:9px; padding:.35rem .6rem; font:inherit; font-size:.8rem; cursor:pointer; }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <span class="logo" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M9 16.5l4.5 4.5L23 11" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+    <h1 class="brand">Sentra Care<small>safer &amp; better-handling — the honest plan</small></h1>
+    <button class="theme" id="theme" title="Toggle theme" aria-label="Toggle light/dark">◐</button>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <h2>Make your 2026 Sentra safer and sharper — for real.</h2>
+    <p>Your Sentra is new, so this isn't about fixing worn-out parts — it's the short list of things that genuinely raise safety and handling on this car, ranked by how much they actually matter. No fake horsepower, no "unlock self-driving." Just what works, what it costs, and whether you can do it yourself.</p>
+  </section>
+
+  <section class="card">
+    <div class="prog">
+      <span class="ring" id="ring"><i id="ring-pct">0%</i></span>
+      <div class="lbl">
+        <b id="prog-text">0 of 0 done</b>
+        <div id="prog-sub">Check items off as you tackle them — progress saves on this device.</div>
+      </div>
+      <button class="reset" id="reset" style="margin-left:auto">Reset</button>
+    </div>
+  </section>
+
+  <div class="filters" id="filters">
+    <button data-f="all" aria-selected="true">All</button>
+    <button data-f="safety" aria-selected="false">🛡️ Safety</button>
+    <button data-f="handling" aria-selected="false">🏁 Handling</button>
+    <button data-f="todo" aria-selected="false">To-do</button>
+  </div>
+
+  <div id="list"></div>
+
+  <div class="note">
+    ⚠️ One line that matters more than any part on this list: the biggest safety and handling upgrade on almost any car is <b>good tires at the correct pressure</b>. Everything else is a smaller adjustment on top of that.
+  </div>
+
+  <div class="foot-note" id="disclaimer">
+    Honest limits: costs are rough US ballparks and vary by shop and region. Anything involving brakes, alignment, or your car's driver-assistance calibration should be done by a qualified tech — a mis-done safety job is worse than none. This plan doesn't modify your car's ProPILOT Assist / Safety Shield 360; those are maintained by Nissan, and the goal here is to keep them working perfectly, not to alter them.
+  </div>
+
+  <footer>Runs entirely in your browser. Your checklist is stored on this device — no account, no upload.</footer>
+</main>
+
+<script>
+"use strict";
+(function () {
+  const $ = (s, r=document) => r.querySelector(s);
+  const el = (t,c)=>{ const e=document.createElement(t); if(c) e.className=c; return e; };
+  const store = {
+    get(k,d){ try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch { return d; } },
+    set(k,v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch {} }
+  };
+
+  /* ---------- Theme ---------- */
+  const themeBtn = $("#theme");
+  const applyTheme = t => { if(t) document.documentElement.setAttribute("data-theme", t); };
+  applyTheme(store.get("sentra.theme", null));
+  themeBtn.addEventListener("click", () => {
+    const cur = document.documentElement.getAttribute("data-theme");
+    const isDark = cur ? cur==="dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+    const next = isDark ? "light" : "dark"; applyTheme(next); store.set("sentra.theme", next);
+  });
+
+  /* ---------- The plan ----------
+     tier: 1 = do first (biggest bang for buck). cat: safety | handling | both.
+     impact: high | med. cost/effort: short human strings.  */
+  const ITEMS = [
+    // TIER 1 — foundation, highest impact
+    { id:"tires", tier:1, cat:"both", impact:"high", cost:"$500–800/set", effort:"Shop · 1 hr",
+      t:"Fit a great set of tires",
+      why:"The single biggest lever for both grip and stopping distance. When your factory tires wear out, choose a top-rated all-season (or a dedicated winter set if you see snow) instead of the cheapest option — the difference in wet braking can be a full car length." },
+    { id:"pressure", tier:1, cat:"both", impact:"high", cost:"Free", effort:"DIY · 5 min/mo",
+      t:"Set tire pressure to spec, check monthly",
+      why:"Under-inflated tires lengthen braking, hurt handling, overheat, and can fail. The correct number is on the driver's-door jamb sticker (not the tire sidewall). Check cold, monthly, and before road trips." },
+    { id:"alignment", tier:1, cat:"handling", impact:"high", cost:"$100–150", effort:"Shop · 1 hr",
+      t:"Get a 4-wheel alignment",
+      why:"Straight-tracking steering, even tire wear, and a car that doesn't wander. Worth doing once now to set a baseline, and any time you hit a bad pothole or curb or notice pulling." },
+    { id:"brakes-inspect", tier:1, cat:"safety", impact:"high", cost:"$0–40 inspection", effort:"Shop · 30 min",
+      t:"Baseline brake inspection",
+      why:"Know your pad thickness and rotor condition now, so you replace on your schedule — not in an emergency. When the time comes, quality pads shorten stopping distance and fade less on long descents." },
+
+    // TIER 2 — visibility & the safety systems you already have
+    { id:"adas-clean", tier:2, cat:"safety", impact:"high", cost:"Free", effort:"DIY · ongoing",
+      t:"Keep the safety-system sensors clean",
+      why:"ProPILOT Assist / Safety Shield 360 see through the windshield camera and the front-emblem radar. A dirty, iced, or bug-covered sensor silently disables automatic braking and lane-centering. Keep the windshield and front grille area clean." },
+    { id:"adas-calibrate", tier:2, cat:"safety", impact:"high", cost:"Varies (with glass work)", effort:"Shop",
+      t:"Recalibrate the camera after any windshield work",
+      why:"If the windshield is ever replaced, the forward camera MUST be recalibrated or the safety systems misjudge the road. Insist the glass shop does the ADAS calibration — don't skip it to save time." },
+    { id:"wipers", tier:2, cat:"safety", impact:"med", cost:"$25–45", effort:"DIY · 10 min",
+      t:"Fresh wiper blades + good washer fluid",
+      why:"Visibility is safety. Streaking blades in a downpour or a night glare are exactly when you need to see. Replace blades ~yearly and keep the washer bottle full with a de-bug/de-ice fluid." },
+    { id:"headlights", tier:2, cat:"safety", impact:"med", cost:"$0–25", effort:"DIY · 20 min",
+      t:"Aim / clean the headlights",
+      why:"Good night vision prevents crashes. Make sure the lights are aimed correctly and the lenses are clear; if they ever haze over, a restoration kit brings back the brightness cheaply." },
+    { id:"dashcam", tier:2, cat:"safety", impact:"med", cost:"$60–150", effort:"DIY · 1 hr",
+      t:"Add a dashcam",
+      why:"It won't prevent a crash, but it protects you after one — clear evidence for insurance and fault. A front (or front+rear) cam is one of the best-value additions to any daily driver." },
+
+    // TIER 3 — handling refinement & preparedness
+    { id:"balance-rotate", tier:3, cat:"both", impact:"med", cost:"$40–80", effort:"Shop · 45 min",
+      t:"Rotate & balance on schedule",
+      why:"Even tire wear keeps grip consistent across all four corners and kills steering-wheel vibration. Rotate about every 5,000–7,500 miles (with oil changes is easy to remember)." },
+    { id:"brake-fluid", tier:3, cat:"both", impact:"med", cost:"$90–150", effort:"Shop · 1 hr",
+      t:"Brake-fluid flush on schedule",
+      why:"Brake fluid absorbs water over time, which lowers its boiling point and makes the pedal soft when you brake hard repeatedly. A flush every ~3 years restores a firm, confident pedal." },
+    { id:"sway-bar", tier:3, cat:"handling", impact:"med", cost:"$150–350 + install", effort:"Shop",
+      t:"Optional: a larger rear sway bar",
+      why:"The one bolt-on that genuinely sharpens an economy sedan's handling — flatter cornering and more eager turn-in, without wrecking ride quality. Modest, honest gain; purely optional and best after tires/alignment." },
+    { id:"kit", tier:3, cat:"safety", impact:"med", cost:"$30–60", effort:"DIY · buy once",
+      t:"Stock an emergency kit",
+      why:"A small kit — jumper pack, tire plug kit + inflator, flashlight, first-aid, warning triangle — turns a roadside emergency into an inconvenience. Keep it in the trunk." },
+
+    // Honest 'don't' item
+    { id:"no-defeat", tier:3, cat:"safety", impact:"high", cost:"—", effort:"Just don't",
+      t:"Don't defeat the driver-attention systems",
+      why:"Devices that trick ProPILOT into steering with no hands on the wheel are sold as 'upgrades.' They make the car less safe — it isn't built to drive itself, and defeating its limits is how people crash. Leave them alone." },
+  ];
+
+  const CAT_LABEL = { safety:"Safety", handling:"Handling", both:"Safety + Handling" };
+  const TIER_LABEL = { 1:"Do first — biggest impact", 2:"Visibility & the systems you already have", 3:"Refinement & preparedness" };
+
+  let done = store.get("sentra.done", {});
+  let filter = "all";
+
+  function visible(it){
+    if(filter==="all") return true;
+    if(filter==="todo") return !done[it.id];
+    if(filter==="safety") return it.cat==="safety" || it.cat==="both";
+    if(filter==="handling") return it.cat==="handling" || it.cat==="both";
+    return true;
+  }
+
+  function render(){
+    const list = $("#list"); list.innerHTML = "";
+    let lastTier = null;
+    ITEMS.filter(visible).forEach(it => {
+      if(it.tier !== lastTier){ lastTier = it.tier; const h = el("div","tier"); h.textContent = TIER_LABEL[it.tier]; list.appendChild(h); }
+      const isDone = !!done[it.id];
+      const row = el("div", "item" + (isDone?" done":""));
+      const catCls = it.cat==="handling" ? "cat-handling" : "cat-safety";
+      const catTxt = CAT_LABEL[it.cat];
+      const impCls = it.impact==="high" ? "impact-high" : "impact-med";
+      row.innerHTML =
+        `<button class="chk ${isDone?'on':''}" aria-label="Toggle done">${isDone?'✓':''}</button>
+         <div class="body">
+           <div class="row1"><span class="t">${it.t}</span></div>
+           <div class="why">${it.why}</div>
+           <div class="meta">
+             <span class="pill ${catCls}">${catTxt}</span>
+             <span class="pill ${impCls}">${it.impact==='high'?'High impact':'Solid gain'}</span>
+             <span class="pill cost">${it.cost}</span>
+             <span class="pill effort">${it.effort}</span>
+           </div>
+         </div>`;
+      row.querySelector(".chk").addEventListener("click", () => {
+        if(done[it.id]) delete done[it.id]; else done[it.id]=Date.now();
+        store.set("sentra.done", done); render();
+      });
+      list.appendChild(row);
+    });
+    updateProgress();
+  }
+
+  function updateProgress(){
+    const total = ITEMS.length, n = ITEMS.filter(i=>done[i.id]).length;
+    const pct = total ? Math.round(n/total*100) : 0;
+    $("#ring").style.setProperty("--p", pct);
+    $("#ring-pct").textContent = pct + "%";
+    $("#prog-text").textContent = `${n} of ${total} done`;
+    $("#prog-sub").textContent = n===total ? "Every item handled — your Sentra's in great shape. 🎉"
+      : "Check items off as you tackle them — progress saves on this device.";
+  }
+
+  /* filters */
+  $("#filters").querySelectorAll("button").forEach(b => {
+    b.addEventListener("click", () => {
+      filter = b.dataset.f;
+      $("#filters").querySelectorAll("button").forEach(x => x.setAttribute("aria-selected", x===b ? "true":"false"));
+      render();
+    });
+  });
+  $("#reset").addEventListener("click", () => {
+    if(confirm("Clear all your checkmarks?")){ done = {}; store.set("sentra.done", done); render(); }
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>
