@@ -94,7 +94,7 @@ async function allData(){
   if(useMemory) return {stores:memory.stores,inventory:memory.inventory,audit:memory.audit,transfers:memory.transfers};
   const [s,i,a,t]=await Promise.all([
     pool.query('select * from stores order by id'),
-    pool.query("select *, exp::text from inventory where qty>0 order by exp asc"),
+    pool.query("select id,store_id,name,gtin,lot,to_char(exp,'YYYY-MM-DD') as exp,qty,location,unit_value,monthly_velocity,status,verified_at,created_at from inventory where qty>0 order by inventory.exp asc"),
     pool.query('select * from audit order by ts desc limit 500'),
     pool.query('select * from transfers order by ts desc limit 200')
   ]);
