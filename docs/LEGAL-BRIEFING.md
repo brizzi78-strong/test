@@ -7,10 +7,12 @@
 
 ## Facts of the planned launch (what counsel will ask first)
 
-- Fixed-supply ERC-20 on Ethereum mainnet: 250M hard cap, all minted at
-  deploy, ownership renounced immediately (no ongoing issuer control).
-- No sale by the issuer: 80% of supply placed into a Uniswap V2 pool
-  (LP locked 12 months), 20% held in a disclosed treasury wallet.
+- Fixed-supply ERC-20 proposed for Ethereum mainnet: 250M hard cap, all minted
+  at deploy, with ownership renounced only after verification and testing.
+- Proposed allocation: 40% in a Uniswap V2 pool, 40% in an unlocked founder
+  wallet, and 20% in a disclosed treasury Safe.
+- Transfers between non-treasury addresses send an immutable 2% fee to the
+  treasury; transfers to or from the treasury are exempt.
 - No promised returns, dividends, staking yield, or buybacks; no
   fundraising round; trading is peer-to-pool on a DEX.
 
@@ -36,20 +38,20 @@ Key points from recent litigation:
 - The SEC has also charged intermediaries facilitating token markets, e.g.
   [SEC v. Payward, Inc. (Kraken) (N.D. Cal. 2024)](https://www.courtlistener.com/opinion/10294772/securities-and-exchange-commission-v-payward-inc/).
 
-**What this means for CARD's design** (to verify with counsel): the launch
-deliberately weakens several Howey prongs — no capital is raised by the
-issuer, ownership renouncement removes ongoing "efforts of others," and no
-profits are promised. The residual risk concentrates in **marketing**: if
-communications create a reasonable expectation that the team's efforts will
-raise the price, the analysis worsens regardless of contract design. The
-20% treasury is the asset most exposed to a "sale by the issuer"
-characterization if it is ever sold into the market.
+**What counsel must evaluate:** pool seeding, the treasury fee, the unlocked
+founder position, first-party Uniswap links, treasury activity, and project
+marketing are all issuer-connected facts. Renouncement and disclaimers do not
+decide the legal analysis by themselves.
 
 Questions for US counsel:
 1. Does seeding a DEX pool constitute an "offer or sale" by the deployer under Securities Act §5?
 2. How should the 50M treasury be handled (lockup, disclosure, OTC vs. market sales)?
 3. Does the name "Promise" itself create marketing risk, and what disclaimer language mitigates it?
 4. State-level (blue sky) and money-transmission exposure?
+5. Does the 2% treasury fee or treasury exemption change any securities,
+   commodities, consumer-protection, tax, or money-transmission analysis?
+6. May Cardinal Trading display issuer-affiliated Uniswap links, and under
+   what geographic restrictions and disclosures?
 
 ## European Union — MiCA
 

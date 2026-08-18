@@ -2,7 +2,7 @@
   "name": "Cardinals Promise",
   "symbol": "CARD",
   "decimals": 18,
-  "description": "Cardinals Promise (CARD) is a fixed-cap ERC-20 token on Ethereum. Maximum supply is hard-capped on-chain at 250,000,000 CARD; the contract has no fees, hooks, blocklists, or pausing.",
+  "description": "Cardinals Promise (CARD) is a fixed-cap ERC-20 token on Ethereum. Maximum supply is 250,000,000 CARD. Transfers between non-treasury addresses send 2% to an immutable treasury; transfers to or from that treasury are exempt. The fee rule and recipient cannot be changed. There are no other fees, blocklists, or pausing.",
   "totalSupplyCap": "250000000",
   "logo": "assets/logo.svg",
   "contract": {
@@ -14,5 +14,5 @@
     "repository": "https://github.com/brizzi78-strong/test",
     "twitter": null
   },
-  "notes": "Official site: cp17.org. The token is deliberately NOT hosted on the book's domain (thecardinalspromise.com) — keeping the memoir's brand separate from the token is the same separation the LLC provides legally. Fill in contract addresses after deployment before submitting to Etherscan token update, CoinGecko, or a Uniswap token list. Etherscan requires a 32x32 PNG icon — use assets/logo-32.png."
+  "notes": "Official site: cp17.org, the coin's only web property, owned by the founder. By decision there is no bundle, giveaway, or claim program of any kind: CARD trades on Uniswap only, and the book The Cardinal's Promise is sold entirely separately with no coins attached. Fill in contract addresses after deployment before submitting to Etherscan token update, CoinGecko, or a Uniswap token list. Etherscan requires a 32x32 PNG icon — use assets/logo-32.png."
 }
