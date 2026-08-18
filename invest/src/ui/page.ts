@@ -165,9 +165,17 @@ export const PAGE = /* html */ `<!doctype html>
   .toast.good{background:var(--good);color:#00220A}
   @media (max-width:860px){.app{grid-template-columns:1fr}.rail{position:static;height:auto;flex-direction:row;flex-wrap:wrap;align-items:center;gap:8px}.rail .foot{display:none}.brand{padding-bottom:0}.nav{flex-direction:row;flex-wrap:wrap;margin-left:auto}.tiles{grid-template-columns:1fr}}
   @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+  .testbar{position:sticky;top:0;z-index:50;background:#8a1c14;color:#fff;
+    font-size:.8rem;line-height:1.45;padding:.55rem 1rem;text-align:center;
+    letter-spacing:.01em;border-bottom:2px solid #d93b2b}
+  .testbar b{letter-spacing:.14em;font-weight:700}
 </style>
 </head>
 <body>
+<div class="testbar" role="status">
+  <b>TEST MODE</b> — nothing here is real. Paper money, simulated prices, no bank,
+  no wallet, no blockchain. Buying CARD is not yet possible from this site.
+</div>
 <div class="app">
   <aside class="rail">
     <div class="brand"><span class="glyph"><svg viewBox="0 0 100 100" aria-hidden="true"><polygon points="38,30 44,4 52,30"/><circle cx="44" cy="40" r="15"/><polygon points="30,39 12,47 30,53"/><ellipse cx="58" cy="64" rx="24" ry="21"/><polygon points="72,72 98,92 86,96 66,82"/></svg></span><span><b>Cardinal Trading</b><span id="acctname">Loading&hellip;</span></span></div>
