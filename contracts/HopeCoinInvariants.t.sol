@@ -17,22 +17,19 @@ contract HopeCoinHandler {
         Vm(address(uint160(uint256(keccak256("hevm cheat code")))));
 
     HopeCoin public immutable token;
-    address public immutable treasury = address(uint160(0x0000000000000000000000000000000000007EA5));
     address[] public actors;
     bool public renounced;
 
-    uint256 private constant FEE_BPS = 200;
-
     constructor(uint256 numActors) {
-        token = new HopeCoin(treasury);
+        token = new HopeCoin();
         uint256 share = token.totalSupply() / (numActors * 2);
         for (uint256 i = 0; i < numActors; i++) {
             address actor = address(uint160(0xCA4D0000 + i));
             actors.push(actor);
             token.transfer(actor, share);
         }
-        // The handler keeps the remaining supply and is itself an actor, so
-        // transfers to/from a large holder are exercised too.
+        // The handler keeps the remaining half of the supply and is itself an
+        // actor, so transfers to/from a large holder are exercised too.
         actors.push(address(this));
     }
 
@@ -47,21 +44,17 @@ contract HopeCoinHandler {
 
         uint256 toBefore = token.balanceOf(to);
         uint256 fromBefore = token.balanceOf(from);
-        uint256 treasuryBefore = token.balanceOf(treasury);
-        uint256 fee = (amount * FEE_BPS) / 10_000;
 
         vm.prank(from);
         token.transfer(to, amount);
 
-        // Fixed-fee property: every transfer moves exactly amount-fee to the
-        // recipient and exactly fee to the treasury, never more, never less.
+        // No-tax property: every transfer moves exactly the requested amount.
         if (from != to) {
-            require(token.balanceOf(to) == toBefore + amount - fee, "recipient got wrong net amount");
-            require(token.balanceOf(from) == fromBefore - amount, "sender charged wrong amount");
+            require(token.balanceOf(to) == toBefore + amount, "transfer taxed recipient");
+            require(token.balanceOf(from) == fromBefore - amount, "transfer overcharged sender");
         } else {
-            require(token.balanceOf(from) == fromBefore - fee, "self-transfer should cost exactly the fee");
+            require(token.balanceOf(from) == fromBefore, "self-transfer changed balance");
         }
-        require(token.balanceOf(treasury) == treasuryBefore + fee, "treasury got wrong fee");
     }
 
     function approveAndTransferFrom(
@@ -79,16 +72,13 @@ contract HopeCoinHandler {
         token.approve(spender, amount);
 
         uint256 toBefore = token.balanceOf(to);
-        uint256 treasuryBefore = token.balanceOf(treasury);
-        uint256 fee = (amount * FEE_BPS) / 10_000;
 
         vm.prank(spender);
         token.transferFrom(owner, to, amount);
 
         if (owner != to) {
-            require(token.balanceOf(to) == toBefore + amount - fee, "transferFrom recipient got wrong net");
+            require(token.balanceOf(to) == toBefore + amount, "transferFrom taxed recipient");
         }
-        require(token.balanceOf(treasury) == treasuryBefore + fee, "transferFrom treasury got wrong fee");
         require(
             owner == spender || token.allowance(owner, spender) == 0,
             "allowance not fully consumed"
@@ -117,27 +107,19 @@ contract HopeCoinInvariantTest is Test {
         targetContract(address(handler));
     }
 
-    /// Supply can never change: no mint, no burn, no rebase. The 2% fee moves
-    /// balance to the treasury; it never destroys it.
+    /// Supply can never change: no mint, no burn, no rebase.
     function invariant_TotalSupplyConstant() public view {
         assertEq(token.totalSupply(), token.TOTAL_SUPPLY());
     }
 
-    /// Tokens are conserved: every unit of supply is in some actor's balance
-    /// or in the treasury.
+    /// Tokens are conserved: every unit of supply is in some actor's balance.
     function invariant_BalancesSumToTotalSupply() public view {
-        uint256 sum = token.balanceOf(handler.treasury());
+        uint256 sum;
         uint256 n = handler.actorCount();
         for (uint256 i = 0; i < n; i++) {
             sum += token.balanceOf(handler.actors(i));
         }
         assertEq(sum, token.totalSupply());
-    }
-
-    /// The fee rate and destination are fixed at deployment, forever.
-    function invariant_FeeParametersImmutable() public view {
-        assertEq(token.FEE_BPS(), 200);
-        assertEq(token.treasury(), handler.treasury());
     }
 
     /// Once ownership is renounced it can never come back.

@@ -126,10 +126,9 @@ This app supports organization and caregiver self-care. It is not medical, legal
 [![verify-claims](https://github.com/brizzi78-strong/test/actions/workflows/verify.yml/badge.svg)](https://github.com/brizzi78-strong/test/actions/workflows/verify.yml)
 
 **Hope Coin (HOPE)** — a fixed-supply ERC-20 on Ethereum. The full
-250,000,000 supply is minted to the deployer at construction; every transfer
-sends a **fixed 2% fee to the immutable treasury address**, and there is **no
-mint function, no burn, no blacklist, and no pausing** — the supply and the
-fee mechanics can never change. `Ownable` is inherited solely so
+250,000,000 supply is minted to the deployer at construction; there is **no
+mint function, no burn, no transfer tax, no blacklist, and no pausing** —
+the supply can never change. `Ownable` is inherited solely so
 `renounceOwnership()` can be executed as a public, verifiable launch step;
 no function is owner-gated, so ownership grants no power even before it is
 renounced.
@@ -168,7 +167,7 @@ npm run verify            # verify every launch claim against executable evidenc
 npm run rehearse          # full local launch rehearsal: deploy → pool → swap → renounce
 ```
 
-Every trust claim (fixed supply, fixed 2% fee, no blacklist, no pause, ownership
+Every trust claim (fixed supply, no tax, no blacklist, no pause, ownership
 grants no power, renounce works) is recorded in `verification/claims.json`
 and mapped to ABI-level structural checks, example tests, and stateful fuzz
 invariants. CI runs the verifier on every push. With

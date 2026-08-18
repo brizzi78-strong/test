@@ -5,21 +5,12 @@ import { parseEther } from "viem";
 import { network } from "hardhat";
 
 const TOTAL_SUPPLY = parseEther("250000000");
-// A fixed, throwaway treasury address for tests (the real one is set at
-// deploy). All-lowercase on purpose: viem accepts lowercase addresses as-is
-// but rejects mixed case that doesn't match the EIP-55 checksum.
-const TREASURY = "0x0000000000000000000000000000000000007ea5";
-
-/** 2% of `amount`, exactly as the contract computes it. */
-function fee(amount: bigint): bigint {
-  return (amount * 200n) / 10_000n;
-}
 
 describe("HopeCoin", async function () {
   const { viem } = await network.create();
 
   it("mints the full fixed supply to the deployer", async function () {
-    const token = await viem.deployContract("HopeCoin", [TREASURY]);
+    const token = await viem.deployContract("HopeCoin");
     const [deployer] = await viem.getWalletClients();
 
     assert.equal(await token.read.totalSupply(), TOTAL_SUPPLY);
@@ -30,40 +21,38 @@ describe("HopeCoin", async function () {
   });
 
   it("has the expected metadata", async function () {
-    const token = await viem.deployContract("HopeCoin", [TREASURY]);
+    const token = await viem.deployContract("HopeCoin");
 
     assert.equal(await token.read.name(), "Hope Coin");
     assert.equal(await token.read.symbol(), "HOPE");
     assert.equal(await token.read.decimals(), 18);
   });
 
-  it("takes a fixed 2% fee to the treasury on every transfer", async function () {
-    const token = await viem.deployContract("HopeCoin", [TREASURY]);
+  it("emits Transfer and moves the exact amount, untaxed", async function () {
+    const token = await viem.deployContract("HopeCoin");
     const [, recipient] = await viem.getWalletClients();
     const amount = parseEther("1000");
 
-    await token.write.transfer([recipient.account.address, amount]);
+    await viem.assertions.emitWithArgs(
+      token.write.transfer([recipient.account.address, amount]),
+      token,
+      "Transfer",
+      [
+        (await viem.getWalletClients())[0].account.address,
+        recipient.account.address,
+        amount,
+      ],
+    );
 
     assert.equal(
       await token.read.balanceOf([recipient.account.address]),
-      amount - fee(amount),
+      amount,
     );
-    assert.equal(await token.read.balanceOf([TREASURY]), fee(amount));
     assert.equal(await token.read.totalSupply(), TOTAL_SUPPLY);
   });
 
-  it("exposes the fee rate and treasury as unchangeable views", async function () {
-    const token = await viem.deployContract("HopeCoin", [TREASURY]);
-
-    assert.equal(await token.read.FEE_BPS(), 200n);
-    assert.equal(
-      (await token.read.treasury()).toLowerCase(),
-      TREASURY.toLowerCase(),
-    );
-  });
-
   it("renounces ownership to the zero address", async function () {
-    const token = await viem.deployContract("HopeCoin", [TREASURY]);
+    const token = await viem.deployContract("HopeCoin");
 
     await token.write.renounceOwnership();
 
@@ -74,7 +63,7 @@ describe("HopeCoin", async function () {
   });
 
   it("reverts when transferring more than the sender's balance", async function () {
-    const token = await viem.deployContract("HopeCoin", [TREASURY]);
+    const token = await viem.deployContract("HopeCoin");
     const [deployer, other] = await viem.getWalletClients();
 
     await viem.assertions.revertWithCustomError(

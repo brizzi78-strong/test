@@ -1,12 +1,12 @@
 {
-  "$comment": "Machine-checkable security claims for HopeCoin. Every trust claim made in TOKEN_LAUNCH_STRATEGY.md and the contract natspec must appear here, mapped to executable evidence. Run `npm run verify` — it fails if any claim's evidence is missing, stale, or failing. Do not edit a claim without editing the code/tests that back it, and vice versa.",
+  "$comment": "Machine-checkable security claims for HopeCoin. Every trust claim made in TOKEN_LAUNCH_STRATEGY.md and the contract natspec must appear here, mapped to executable evidence. Run `npm run verify` \u2014 it fails if any claim's evidence is missing, stale, or failing. Do not edit a claim without editing the code/tests that back it, and vice versa.",
   "contract": "HopeCoin",
   "artifact": "artifacts/contracts/HopeCoin.sol/HopeCoin.json",
   "claims": [
     {
       "id": "fixed-supply",
       "statement": "Total supply is exactly 250,000,000 HOPE, minted once at deployment to the deployer.",
-      "source": "TOKEN_LAUNCH_STRATEGY.md § Token Parameters",
+      "source": "TOKEN_LAUNCH_STRATEGY.md \u00a7 Token Parameters",
       "evidence": [
         {
           "type": "solidity-test",
@@ -27,8 +27,8 @@
     },
     {
       "id": "supply-immutable",
-      "statement": "No code path can ever increase or decrease the supply: there is no mint, burn, or rebase function. The 2% fee moves balance to the treasury; it never destroys it.",
-      "source": "HopeCoin.sol natspec; TOKEN_LAUNCH_STRATEGY.md § Launch Sequence step 1",
+      "statement": "No code path can ever increase or decrease the supply: there is no mint, burn, or rebase function.",
+      "source": "HopeCoin.sol natspec; TOKEN_LAUNCH_STRATEGY.md \u00a7 Launch Sequence step 1",
       "evidence": [
         {
           "type": "abi-absent",
@@ -68,7 +68,7 @@
     {
       "id": "no-blacklist",
       "statement": "No address can be blacklisted or blocked from transferring.",
-      "source": "HopeCoin.sol natspec; TOKEN_LAUNCH_STRATEGY.md § Launch Sequence step 1",
+      "source": "HopeCoin.sol natspec; TOKEN_LAUNCH_STRATEGY.md \u00a7 Launch Sequence step 1",
       "evidence": [
         {
           "type": "abi-absent",
@@ -82,29 +82,24 @@
       ]
     },
     {
-      "id": "fixed-fee",
-      "statement": "Every transfer sends exactly 2% (rounded down) to the treasury address fixed at deployment and the remainder to the recipient. The fee rate is a constant and the treasury is immutable: no function exists that can change either, raise the fee, or redirect it.",
-      "source": "HopeCoin.sol natspec; TOKEN_LAUNCH_STRATEGY.md § Token Parameters",
+      "id": "no-transfer-tax",
+      "statement": "Transfers move exactly the requested amount; there is no tax, fee, or skim.",
+      "source": "HopeCoin.sol natspec; TOKEN_LAUNCH_STRATEGY.md \u00a7 Launch Sequence step 1",
       "evidence": [
         {
           "type": "solidity-test",
           "file": "contracts/HopeCoin.t.sol",
-          "name": "test_TransferTakesFixedFee"
+          "name": "test_Transfer"
         },
         {
           "type": "solidity-test",
           "file": "contracts/HopeCoin.t.sol",
-          "name": "testFuzz_FeeIsExactlyTwoPercent"
+          "name": "testFuzz_TransferMovesExactlyTheRequestedAmount"
         },
         {
           "type": "node-test",
           "file": "test/HopeCoin.ts",
-          "title": "takes a fixed 2% fee to the treasury on every transfer"
-        },
-        {
-          "type": "invariant",
-          "file": "contracts/HopeCoinInvariants.t.sol",
-          "name": "invariant_FeeParametersImmutable"
+          "title": "emits Transfer and moves the exact amount, untaxed"
         },
         {
           "type": "invariant",
@@ -112,11 +107,11 @@
           "name": "invariant_BalancesSumToTotalSupply"
         }
       ],
-      "notes": "The HopeCoinHandler additionally asserts the exact 98/2 split inside every fuzzed transfer/transferFrom sequence, including self-transfers (which cost exactly the fee) and transfers to the treasury (which net the full amount)."
+      "notes": "The HopeCoinHandler additionally asserts exact-amount deltas inside every fuzzed transfer/transferFrom sequence."
     },
     {
       "id": "owner-powerless",
-      "statement": "Ownership grants no power over the token: the only state-changing functions are the standard ERC-20 surface plus the two Ownable handover functions, none of which touch balances, supply, the fee rate, or the treasury address.",
+      "statement": "Ownership grants no power over the token: the only state-changing functions are the standard ERC-20 surface plus the two Ownable handover functions, none of which touch balances or supply.",
       "source": "HopeCoin.sol natspec",
       "evidence": [
         {
@@ -139,7 +134,7 @@
     {
       "id": "renounce-works",
       "statement": "renounceOwnership() sets the owner to the zero address, permanently and verifiably on-chain.",
-      "source": "TOKEN_LAUNCH_STRATEGY.md § Launch Sequence step 6",
+      "source": "TOKEN_LAUNCH_STRATEGY.md \u00a7 Launch Sequence step 6",
       "evidence": [
         {
           "type": "solidity-test",

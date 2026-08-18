@@ -900,12 +900,12 @@ auditing the mechanism that collects it.
    unlocked liquidity." A fee-on-transfer token needs different, more complex, unaudited
    code — the opposite direction from a plain OpenZeppelin ERC-20.
 
-3. **It sits awkwardly with renouncing ownership.** A tunable fee needs a recipient
-   address, an exclusion list for the pool, and the ability to fix it when it breaks —
-   which is why the shipped design hard-codes everything instead: constant rate, immutable
-   treasury, no exclusion list. Renouncing locks the fee in forever, deliberately. The
-   costs of that trade: seeding the pool is itself taxed, and every DEX swap must use the
-   fee-on-transfer router functions.
+3. **It cannot coexist cleanly with renouncing ownership.** A fee needs a recipient
+   address, an exclusion list for the pool, and the ability to fix it when it breaks.
+   Renouncing locks the fee in forever; not renouncing forfeits the single strongest trust
+   signal you have. Hard-coding everything makes renouncement possible but permanent, and
+   in practice it also taxes the pool seeding and forces every DEX swap onto the
+   fee-on-transfer router paths.
 
 4. **It worsens the securities analysis.** `docs/LEGAL-BRIEFING.md` notes the design
    "deliberately weakens several Howey prongs — no capital is raised by the issuer,
@@ -928,12 +928,14 @@ destination on the coin page above the fold, and get the contract audited. A fee
 to a board-controlled treasury is a defensible design. A 3% fee routed to the founder is
 the thing your own launch document was written to avoid.
 
-**Decision (August 2026):** the founder chose a **2% fee** — above the 1% cap suggested
-here, and that difference is recorded rather than hidden. It follows the rest of this
-section's shape: symmetric on every transfer, routed to the treasury (never a personal
-wallet), hard-coded as a constant with an immutable destination and no exclusion list, so
-renouncing ownership stays possible and the rate can never be raised. The audit
-recommendation stands.
+**Decision record (August 2026).** A **2% fee** was adopted — above the 1% cap suggested
+here — implemented as a constant with an immutable treasury destination, and then
+**removed before launch**. The token ships with **no transfer fee at all**: a plain
+OpenZeppelin ERC-20, ownership renounced, nothing taken from any trade. Every argument in
+this section survived contact with the implementation — the pool seeding was itself taxed,
+DEX swaps needed fee-on-transfer router paths, scanners flag fee tokens, and the securities
+analysis got worse, not better. Reverting cost nothing but a day; shipping it would have
+cost the thing the whole project is built on. The audit recommendation stands regardless.
 
 ---
 
@@ -1150,11 +1152,9 @@ fundraising campaign.
 3. Engage the paid reviewer and open the 2-of-3 Safe. Decide who deploys.
 4. Adopt, in writing and before they are needed: the tie-fails rule, the gift policy, the
    founder sell policy, and the compensation clause.
-5. Decide the fee question. The recommendation was no fee; the founder decided on a **fixed
-   2% transfer fee routed to the multisig treasury** — hard-coded as a constant with an
-   immutable destination and no exclusion list, so it coexists with renouncing ownership.
-   The costs itemized under *What it would cost* remain real and must stay disclosed above
-   the fold on cp17.org.
+5. Decide the fee question. **Decided: no fee.** A 2% treasury fee was adopted in August 2026
+   and then removed before launch — the token ships as a plain ERC-20 with no transfer tax
+   (see the decision record under *If you charge one anyway*).
 6. Publish the founder's wallet address, labelled unlocked, alongside the sell policy.
 7. Update `cp17-site` so the page matches reality on day one — supply split, unlocked
    founder position, multisig, committee members.

@@ -29,12 +29,9 @@ token scanners, screeners, and skeptical buyers have nothing to flag.
 
 Order matters — several of these steps are only trustworthy if done in the right sequence.
 
-1. **Deploy the token contract.** Mint the full 250M supply to the deployer. OpenZeppelin
-   ERC-20 base with no blacklist and no mint function, plus exactly one deliberate mechanic:
-   a **fixed 2% fee on every transfer, routed to the treasury address set permanently in the
-   constructor** — constant rate, immutable destination, no exclusion list, no owner hooks.
-   Scanners will flag fee-on-transfer; the answer is that the fee is disclosed above the
-   fold, can never change, and pays the treasury, not a personal wallet.
+1. **Deploy the token contract.** Mint the full 250M supply to the deployer. Use a plain,
+   audited ERC-20 base (e.g. OpenZeppelin) with no taxes, no blacklist, no mint function —
+   exotic mechanics are the second thing scanners flag after unlocked liquidity.
 2. **Verify the source code** on Etherscan immediately. Unverified contracts are treated as
    hostile by default.
 3. **Transfer 50M to the treasury wallet.** Do this *before* renouncing and *before* the pool
@@ -72,9 +69,7 @@ The 20% held back is the only part of this setup that requires ongoing trust, so
 - ~~**Deployer holding a large share**~~ — **not avoided.** The founder holds 40% unlocked. This is the one item on this list the design does not solve, and the launch materials say so in those words rather than working around it.
 - **Yankable liquidity** — LP locked 12 months.
 - **Hidden team allocation** — the 20% is announced and labeled.
-- **Adjustable tax/blacklist mechanics** — the 2% fee exists, but it is a constant with an
-  immutable destination: no setter, no exclusion list, nothing an owner could tune. What is
-  deliberately avoided is any fee that can be raised, redirected, or selectively waived.
+- **Tax/fee/blacklist mechanics** — none; keeps scanner scores clean.
 
 ## Known Trade-offs
 

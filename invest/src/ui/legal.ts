@@ -79,8 +79,7 @@ const TERMS = shell(
 <h2>3. The HOPE token page</h2>
 <p>The HOPE page can show links that open <b>Uniswap</b>, a third-party decentralized exchange, pre-filled for a real on-chain swap. If you follow one of those links:</p>
 <ul>
-  <li>The transaction happens entirely between <b>your own crypto wallet</b> and the Uniswap protocol on the Ethereum network. We never hold your funds, tokens, or keys, this app adds no fee, and we cannot reverse, refund, or intervene in any on-chain transaction.</li>
-  <li>The HOPE token itself carries a <b>built-in 2% fee on every transfer</b>, paid to the project treasury. That fee is part of the token&rsquo;s own contract &mdash; it applies wherever HOPE is traded, it is fixed forever, and it is disclosed in full at <a href="https://cp17.org">cp17.org</a>.</li>
+  <li>The transaction happens entirely between <b>your own crypto wallet</b> and the Uniswap protocol on the Ethereum network. We never hold your funds, tokens, or keys, we take no fee, and we cannot reverse, refund, or intervene in any on-chain transaction.</li>
   <li>You are responsible for your own wallet security and for understanding what you are buying. Read the <a href="/legal/disclosures">Risk Disclosures</a> first — crypto tokens can lose their entire value.</li>
 </ul>
 
@@ -150,7 +149,6 @@ const DISCLOSURES = shell(
 <h2>Crypto risk, and HOPE specifically</h2>
 <ul>
   <li>Crypto tokens are <b>extremely volatile and speculative</b>. Small-pool tokens like HOPE can move violently on tiny trades, may have little or no liquidity when you want to sell, and can go to zero.</li>
-  <li>HOPE charges a <b>built-in 2% fee on every transfer</b>, routed to the project treasury &mdash; so a round trip costs about 4.6% in fees before network costs. The people behind this platform benefit from that fee. Weigh that alongside the conflict of interest below.</li>
   <li>HOPE is a community token connected to this project. That is a <b>conflict of interest</b> you should weigh: the people behind Cardinal Trading and cp17.org created HOPE and hold HOPE. Never buy it — or any token — with money you can't afford to lose entirely.</li>
   <li>On-chain transactions are <b>irreversible</b>. A mistaken or regretted swap cannot be undone by us or anyone else. Larger trades move the pool price against you (price impact), so what you pay can differ from the quoted price.</li>
   <li>Crypto held in your own wallet has no FDIC or SIPC protection, and lost keys mean lost funds.</li>

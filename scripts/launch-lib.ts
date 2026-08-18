@@ -8,12 +8,6 @@ import { createInterface } from "node:readline/promises";
 import { formatEther, getAddress, parseEther } from "viem";
 
 export const TOTAL_SUPPLY = parseEther("250000000");
-export const FEE_BPS = 200n; // the fixed 2% transfer fee, mirrors HopeCoin.FEE_BPS
-
-/** 2% of `amount`, exactly as the contract computes it. */
-export function feeOf(amount: bigint): bigint {
-  return (amount * FEE_BPS) / 10_000n;
-}
 export const TREASURY_AMOUNT = parseEther("50000000"); // 20%
 export const POOL_AMOUNT = parseEther("200000000"); // 80%
 
@@ -134,16 +128,13 @@ export function describeStage(
     stage = "Deployed, treasury not yet funded — next: transfer-treasury (checklist step 3)";
   } else if (s.treasuryBalance === TREASURY_AMOUNT && s.deployerBalance === POOL_AMOUNT) {
     stage = "Treasury funded — next: create the Uniswap pool (checklist step 4)";
-  } else if (
-    s.treasuryBalance === TREASURY_AMOUNT + feeOf(POOL_AMOUNT) &&
-    s.deployerBalance === 0n
-  ) {
+  } else if (s.treasuryBalance === TREASURY_AMOUNT && s.deployerBalance === 0n) {
     stage = "Pool funded — next: test swap, lock LP, then renounce (checklist steps 4-6)";
   } else {
     stage = "UNRECOGNIZED state — balances don't match any expected launch step";
     problems.push(
       `deployer holds ${fmt(s.deployerBalance)} and treasury holds ${fmt(s.treasuryBalance)}; ` +
-        `expected one of: 250M/0 (fresh), 200M/50M (treasury funded), 0/54M (pool funded; the pool transfer's 2% fee lands in the treasury)`,
+        `expected one of: 250M/0 (fresh), 200M/50M (treasury funded), 0/50M (pool funded)`,
     );
   }
 
@@ -166,9 +157,7 @@ export function printState(
   }
 }
 
-// Checklist step 3: send exactly 50M HOPE to the treasury. Because the 2%
-// transfer fee also goes to the treasury, a transfer TO the treasury nets it
-// exactly the full amount. Refuses to run
+// Checklist step 3: send exactly 50M HOPE to the treasury. Refuses to run
 // unless the token is in the untouched just-deployed state, so it can't
 // double-send or fire mid-sequence.
 export async function transferTreasury(
@@ -270,12 +259,8 @@ export async function renounce(
   if (getAddress(state.owner) !== getAddress(deployer)) {
     throw new Error(`connected wallet is not the owner (owner is ${state.owner}).`);
   }
-  const expectedTreasury = TREASURY_AMOUNT + feeOf(POOL_AMOUNT);
-  if (state.treasuryBalance !== expectedTreasury) {
-    problems.push(
-      `treasury holds ${fmt(state.treasuryBalance)}, expected exactly ${fmt(expectedTreasury)} ` +
-        "(50M + the 2% fee from funding the pool)",
-    );
+  if (state.treasuryBalance !== TREASURY_AMOUNT) {
+    problems.push(`treasury holds ${fmt(state.treasuryBalance)}, expected exactly ${fmt(TREASURY_AMOUNT)}`);
   }
   if (state.deployerBalance !== 0n) {
     problems.push(
@@ -283,10 +268,9 @@ export async function renounce(
     );
   }
   if (config.pool) {
-    // The pool receives 98% of the 200M (the 2% transfer fee goes to the
-    // treasury); a bit less again is fine because the test swap moves a
-    // little out and back.
-    const min = (POOL_AMOUNT * 97n) / 100n;
+    // The pool needs ~200M; a bit less is fine because the test swap moves a
+    // little out and back through fees.
+    const min = (POOL_AMOUNT * 99n) / 100n;
     if (state.poolBalance === undefined || state.poolBalance < min) {
       problems.push(`pool holds ${fmt(state.poolBalance ?? 0n)}, expected roughly ${fmt(POOL_AMOUNT)}`);
     }

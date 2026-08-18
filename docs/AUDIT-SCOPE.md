@@ -25,10 +25,8 @@ OpenZeppelin v5 base contracts.
 3. `Ownable` is inherited solely so `renounceOwnership()` can be executed
    as a public, verifiable launch step. **No function is owner-gated** —
    ownership grants no power even before it is renounced.
-4. Exactly one transfer mechanic: a **fixed 2% fee to the immutable treasury**
-   set in the constructor — constant rate, no setter, no exclusion list. A
-   transfer of N tokens always moves exactly N×98% to the recipient and N×2%
-   to the treasury. Beyond that: no hooks, no callbacks, no blocklist, no pause.
+4. No fees, no hooks, no callbacks, no blocklist, no pause — a transfer of
+   N tokens always moves exactly N tokens.
 
 ## Existing verification (all runnable, all in CI)
 
@@ -41,8 +39,8 @@ OpenZeppelin v5 base contracts.
 - **Foundry-style Solidity tests** (`contracts/HopeCoin.t.sol`)
   including fuzz tests, plus a **handler-based stateful invariant suite**
   (`contracts/HopeCoinInvariants.t.sol`): supply constant, balances
-  sum to supply (treasury included), renounce is permanent, and the exact
-  98/2 fee split asserted inside every fuzzed transfer.
+  sum to supply, renounce is permanent, no-tax property asserted inside
+  every fuzzed transfer.
 - **TypeScript tests** (node:test + viem) in `test/HopeCoin.ts`.
 - **Slither v0.11.5**, all 101 detectors: 0 findings (see LAUNCH.md for
   the Hardhat-3 reproduction workaround).

@@ -2,7 +2,7 @@
   "name": "Hope Coin",
   "symbol": "HOPE",
   "decimals": 18,
-  "description": "Hope Coin (HOPE) is a fixed-cap ERC-20 token on Ethereum. Maximum supply is hard-capped on-chain at 250,000,000 HOPE. Every transfer sends a fixed 2% fee to the treasury address set permanently at deployment; the contract has no mint function, no hooks, no blocklists, no pausing, and no way to change the fee or the treasury.",
+  "description": "Hope Coin (HOPE) is a fixed-cap ERC-20 token on Ethereum. Maximum supply is hard-capped on-chain at 250,000,000 HOPE; the contract has no fees, hooks, blocklists, or pausing.",
   "totalSupplyCap": "250000000",
   "logo": "assets/logo.svg",
   "contract": {

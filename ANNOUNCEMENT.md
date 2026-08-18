@@ -66,10 +66,8 @@ Before posting, search each file for `{{` to make sure no blank was missed.
 > ## What HOPE is
 >
 > A fixed-supply ERC-20 on Ethereum. 250,000,000 tokens were minted once at
-> deployment. Every transfer sends a fixed 2% fee to the treasury — a rate
-> and destination hard-coded forever, which anyone can verify. There is no
-> mint function, no blacklist, no pause switch, and no way for anyone to
-> change the fee. The contract is built on OpenZeppelin's audited
+> deployment. There is no mint function, no transfer tax, no fee, no
+> blacklist, no pause switch. The contract is built on OpenZeppelin's audited
 > ERC-20 and the full source is verified on Etherscan for anyone to read.
 >
 > ## Don't trust us — verify
