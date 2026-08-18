@@ -5,7 +5,27 @@ const crypto = require('crypto');
 
 const app = express();
 const PORT = process.env.PORT || 10000;
+const PILOT_USER = process.env.PILOT_USER || 'pilot';
+const PILOT_PASSWORD = process.env.PILOT_PASSWORD || '';
+
+app.disable('x-powered-by');
 app.use(express.json({limit:'1mb'}));
+
+// Temporary pilot access gate. Replace with SSO/role-based auth before enterprise rollout.
+app.use((req,res,next)=>{
+  if(req.path === '/api/health') return next();
+  if(!PILOT_PASSWORD) return next();
+  const auth = req.headers.authorization || '';
+  if(auth.startsWith('Basic ')){
+    try{
+      const [user,pass] = Buffer.from(auth.slice(6),'base64').toString('utf8').split(':');
+      if(user === PILOT_USER && pass === PILOT_PASSWORD) return next();
+    }catch(e){}
+  }
+  res.set('WWW-Authenticate','Basic realm="ExpiryRx Pilot"');
+  return res.status(401).send('ExpiryRx pilot access required');
+});
+
 app.use(express.static(path.join(__dirname,'public')));
 
 const dbUrl = process.env.DATABASE_URL || '';
@@ -48,6 +68,9 @@ async function initDb(){
     );
     create table if not exists audit(id uuid primary key, ts timestamptz default now(), action text, detail text, store_id text, role text);
     create table if not exists transfers(id uuid primary key, ts timestamptz default now(), item_name text, from_store text, to_store text, qty integer, protected_value numeric(12,2), status text);
+    create index if not exists idx_inventory_exp on inventory(exp);
+    create index if not exists idx_inventory_store on inventory(store_id);
+    create index if not exists idx_inventory_name on inventory(name);
   `);
   const c = await pool.query('select count(*)::int as c from stores');
   if(c.rows[0].c===0){
@@ -70,7 +93,7 @@ async function allData(){
 app.get('/api/health', async (req,res)=>{
   let db='memory';
   if(pool){ try{ await pool.query('select 1'); db='postgres'; }catch(e){ db='postgres-error'; } }
-  res.json({ok:true,service:'ExpiryRx',db,time:new Date().toISOString()});
+  res.json({ok:true,service:'ExpiryRx',db,auth:!!PILOT_PASSWORD,time:new Date().toISOString()});
 });
 
 app.get('/api/state', async (req,res)=>{
@@ -144,4 +167,4 @@ app.get('/api/roi', async (req,res)=>{
 
 app.get('*',(req,res)=>res.sendFile(path.join(__dirname,'public','index.html')));
 
-initDb().then(()=>app.listen(PORT,()=>console.log(`ExpiryRx listening on ${PORT}; storage=${useMemory?'memory':'postgres'}`))).catch(err=>{ console.error(err); process.exit(1); });
+initDb().then(()=>app.listen(PORT,()=>console.log(`ExpiryRx listening on ${PORT}; storage=${useMemory?'memory':'postgres'}; auth=${!!PILOT_PASSWORD}`))).catch(err=>{ console.error(err); process.exit(1); });
