@@ -83,6 +83,140 @@ year that people give.
 
 ---
 
+## 2a. Taking an operating allocation
+
+Short answer: **yes, 10% is lawful and conservative** — the Salvation Army runs roughly 18%
+on overhead, so a 10% allocation would put this fund at an **87.4% program ratio, above the
+benchmark it is measured against.** Three things qualify that, and the second is the one that
+changes a decision.
+
+**First, "taken on each donation" is the wrong mental model.** A charity does not skim a
+percentage off incoming gifts; it has a budget and pays expenses out of it, and the ratio is
+the *result* rather than the mechanism. Practically the money is similar. Legally and
+reputationally the difference matters: a **published cap we hold ourselves to** is a
+commitment, while a per-donation cut is a fee, and only one of those reads well on a page
+asking people to remember someone.
+
+**Second, the fees stack, and this decides the vehicle question.**
+
+| Structure | Reaches the student | Program ratio |
+|---|---|---|
+| Fiscal sponsor 10% **+ our ops 10%** | $78,651 | **78.7%** — *below the Salvation Army benchmark* |
+| Fiscal sponsor 10%, we take nothing | $87,390 | 87.4% |
+| **Own 501(c)(3) + our ops 10%** | **$87,390** | **87.4%** |
+| Own 501(c)(3), all volunteer | $97,100 | 97.1% |
+
+A sponsor's fee and our own allocation are not alternatives — they compound, and together
+they drop us beneath the benchmark we would be citing. So the two workable positions are
+**take nothing and use a sponsor**, or **take 10% and hold our own exemption**. That reopens
+§4 rather than settling it: our own entity is what makes an operating allocation defensible,
+and it is also what triggers the private-foundation and §4945(g) questions. Counsel should be
+asked to weigh those together, not separately.
+
+**Third, if any of that allocation pays a person connected to the fund, a different regime
+applies.** Under **IRC §4958**, founders and substantial contributors are *disqualified
+persons*. Compensation beyond what is reasonable is an *excess benefit transaction*, taxed at
+**25% of the excess to the recipient, rising to 200% if not corrected**, with a further **10%
+(capped at $20,000)** on any organisation manager who knowingly approved it. The defence is
+the **rebuttable presumption of reasonableness**: approval by an independent body without
+conflict, reliance on comparability data, and contemporaneous documentation. Satisfy all
+three and the burden shifts to the IRS. (§4958 governs public charities; private foundations
+fall under the §4941 self-dealing rules instead, where reasonable compensation for personal
+services is an exception — another reason the classification question in §4 comes first.)
+
+**A scale check worth doing before any of this is designed:**
+
+| Raised | 10% operating allocation |
+|---|---|
+| $5,000 | $500 |
+| $25,000 | $2,500 |
+| $100,000 | $10,000 |
+
+Ten percent of a small number is a small number. At the scale this fund will plausibly reach
+in its first year, an operating allocation funds a little software and some postage, not a
+role. The realistic sequence is to **adopt the cap now and draw nothing against it**, so the
+policy exists before there is any temptation attached to it.
+
+**And one thing the arithmetic does not capture.** The first donors will largely be people
+who knew Lou. If they later read on a Form 990 that a share went to salary — however lawful,
+however reasonable, however properly documented — that is a relationship problem, and it is
+not fixed by having been legal. The only real defence is having said it first, in a number,
+before the first dollar arrived.
+
+Which is the whole thesis of the companion study, pointed at the charity rather than the
+token: **a cap published in advance and reported against annually is verifiable restraint.**
+"We cap operations at 10% and publish the actual figure every year, including the years it
+runs higher" is a stronger commitment than most charities make, it costs something real to
+keep, and unlike a token sell policy it is checkable by anyone against a public Form 990. If
+we are going to take an allocation, that is how to take it.
+
+## 2b. Paying reps on commission
+
+**This one should not be done, and the reasons are unusually clear-cut.** It is the first
+proposal in this project that fails on all three of ethics, regulation, and arithmetic
+simultaneously.
+
+**It is prohibited by the profession's own code, in terms.** The AFP Code of Ethical Standards
+states that fundraising compensation *"may never be based on a percentage of funds raised,"*
+and that members must decline **receiving or paying** finder's fees, commissions, or
+percentage-based compensation. The prohibition runs in both directions — engaging commissioned
+reps is itself the violation, not merely accepting such a role. AFP further urges members to
+counsel organisations against paying any third party, including face-to-face street
+solicitors, a fee calculated as a percentage of the contribution.
+
+The reasoning behind the rule is the reason it matters here: a commission makes the solicitor's
+income depend on the size of the gift rather than on its fit with the donor's intent, and it
+converts a memorial gift into a sales transaction with a margin.
+
+**It is heavily regulated, and the compliance is not trivial.** **44 states require paid
+solicitors to be licensed and 38 require surety bonds, in face amounts from $10,000 to
+$25,000.** Georgia requires a $10,000 bond where the solicitor has possession or control of
+contributions; South Carolina requires $15,000 filed *before any solicitation activity
+occurs*. Contracts must typically be filed in advance, and point-of-solicitation disclosure —
+that the caller is paid, and on request what share reaches the charity — is commonly mandatory.
+
+**And it destroys the number that made this route better than the token in the first place:**
+
+| Structure | Reaches the student | Program ratio |
+|---|---|---|
+| Own 501(c)(3) + 10% ops, no reps | $87,390 | **87.4%** |
+| Salvation Army benchmark | ~$82,000 | ~82% |
+| + reps at 15% commission | $74,282 | 74.3% |
+| + reps at 25% commission | $65,542 | **65.5%** |
+| + reps at 40% commission | $52,434 | **52.4%** |
+
+At any realistic commission the fund drops below the benchmark it would be citing, and at the
+upper end barely half of a gift reaches a student. §3a.9 of the companion study chose donations
+over the token *because* of the program ratio. Commissioned reps hand that advantage back and
+then some — and unlike the token route, this version has to be disclosed to every donor who
+asks.
+
+**The salaried alternative is legitimate but premature.** Paying fundraising staff a salary or
+a flat fee for defined deliverables is entirely proper; only percentage-based compensation is
+barred. The problem is scale:
+
+| Development salary + tax | Must raise to stay within a 10% operating cap |
+|---|---|
+| $45,000 | ~$450,000 |
+| $60,000 | ~$600,000 |
+| $80,000 | ~$800,000 |
+
+A fund raising tens of thousands cannot carry a fundraiser of any kind. That is not a
+temporary embarrassment; it is the ordinary condition of a new scholarship fund.
+
+**What actually raises money at this size is the thing that cannot be outsourced.** The donors
+for a scholarship in Lou's name are people who knew him, and people whom someone who knew him
+tells. That asset is the story and the relationships behind it, and a commissioned stranger
+cannot carry either — not because they lack skill, but because the credibility being drawn on
+is personal and non-transferable. The board members are the fundraisers. So is the founder.
+That is not a constraint imposed by the budget; it is what the fundraising *is* at this stage,
+and it is also the cheapest and most effective form available.
+
+**If reps are revisited later**, the terms are: salary or flat fee only, never a percentage;
+paid-solicitor registration and bonding confirmed in every state solicited before any contact
+is made; and the arrangement disclosed on the donation page whether or not a given state
+compels it.
+
 ## 3. Recommendation
 
 **Start with a fiscal sponsor or a community foundation. Do not form our own 501(c)(3) yet.**
@@ -125,6 +259,14 @@ These are flagged as questions, not conclusions. None of them is answered here.
    ever be granted or sold to fund the scholarship, and what that does to items 1–4.
 6. **Solicitation registration.** Most states require registration before soliciting
    charitable donations from their residents. A public webpage solicits everywhere.
+7. **Paid solicitors (see §2b).** Confirm our reading that percentage-based fundraising
+   compensation should be off the table entirely, and identify the registration and bonding
+   obligations that would attach in each state solicited if flat-fee help is ever engaged.
+8. **Operating allocation (see §2a).** Whether a 10% cap is defensible, whether it may ever
+   compensate the founder, and what the §4958 rebuttable-presumption procedure requires of a
+   board this small. Please weigh this together with items 1–2 rather than separately: our own
+   entity is what makes an allocation workable and is also what triggers the classification
+   question.
 
 ---
 
@@ -159,6 +301,14 @@ instead: a commitment is only worth what it costs to keep in a bad quarter.
 - [National Council of Nonprofits — Fiscal Sponsorship](https://www.councilofnonprofits.org/running-nonprofit/administration-and-financial-management/fiscal-sponsorship-nonprofits)
 - [National Network of Fiscal Sponsors — 10 Questions Projects Should Ask](https://www.fiscalsponsors.org/10-questions-projects-should-ask)
 - [AlignMint — Fiscal Sponsorship Fee Structures](https://www.getalignmint.org/blog/fiscal-sponsorship-fee-structures)
+- [IRS — Intermediate sanctions: excess benefit transactions](https://www.irs.gov/charities-non-profits/charitable-organizations/intermediate-sanctions-excess-benefit-transactions)
+- [26 CFR §53.4958-6 — Rebuttable presumption that a transaction is not an excess benefit transaction](https://www.law.cornell.edu/cfr/text/26/53.4958-6)
+- [Nonprofit Law Blog — Rebuttable Presumption of Reasonableness Procedures](https://nonprofitlawblog.com/rebuttable-presumption-of-reasonableness-procedures/)
+- [AFP Code of Ethical Standards](https://afpglobal.org/ethics/code-ethical-standards)
+- [AFP — Frequently Asked Questions About Fundraising Ethics](https://afpglobal.org/sites/default/files/attachments/2018-11/EthicsFAQ.pdf)
+- [Perlman & Perlman — Paid to Solicit Charitable Contributions? You May Need to Register](https://perlmanandperlman.com/are-you-paid-to-solicit-charitable-contributions-for-a-charity-you-may-need-to-register-as-a-professional-fundraiser/)
+- [Georgia Secretary of State — How-To Guide: Paid Solicitor](https://sos.ga.gov/how-to-guide/how-guide-paid-solicitor)
+- [SC Secretary of State — Professional Fundraisers and Solicitors](https://www.sos.sc.gov/online-filings/charities-pfrs-and-raffles/professional-fundraisers-and-solicitors)
 - [Foundant Compass — Scholarship Fund Minimums and Admin Fees](https://community.foundant.com/funders_community_foundations/discussion/1110/scholarship-fund-minimums-and-admin-fees)
 
 ---
