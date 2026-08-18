@@ -17,7 +17,7 @@ npm run verify
 ```
 
 runs a **claims ledger** (`verification/claims.json`) that maps every trust
-claim from `TOKEN_LAUNCH_STRATEGY.md` — "no mint function", "no transfer tax",
+claim from `TOKEN_LAUNCH_STRATEGY.md` — "no mint function", "immutable 2% fee",
 "ownership grants no power" — to executable evidence: ABI-level structural
 proofs, example tests, and stateful fuzz invariants. If any claim loses its
 backing, the build fails.
@@ -123,7 +123,7 @@ the review bottleneck: shrink what requires judgment, mechanize the rest.
 ## Part 3: What Was Built in This Repo
 
 The CARD launch strategy is explicitly trust-first: its pitch to buyers and
-token scanners is "no mint, no tax, no blacklist, no pause, renounced
+token scanners is "no mint, immutable fee, no blacklist, no pause, renounced
 ownership." Those are exactly the kind of claims that are cheap to make and
 expensive to verify by eye — which makes this repo a perfect testbed.
 

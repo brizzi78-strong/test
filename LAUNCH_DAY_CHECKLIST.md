@@ -6,9 +6,14 @@ and don't announce anything until every box in sections 1–6 is checked.
 
 ## 0. Before launch day (do these days ahead)
 
-- [ ] Contract code finalized: OpenZeppelin ERC-20, fixed 250M supply, no tax/blacklist/mint
+- [ ] Contract code finalized: OpenZeppelin ERC-20, fixed 250M supply, immutable 2% fee,
+      immutable treasury exemption, no blacklist/mint/pause/admin setters
+- [ ] Independent contract audit complete and all material findings resolved
+- [ ] Counsel has approved the launch, disclosures, treasury policy, and intended jurisdictions
 - [ ] Contract deployed and tested on a testnet (Sepolia) end-to-end, including the renounce
       — copy-paste walkthrough in `SEPOLIA_DRY_RUN.md`
+- [ ] Sepolia buy and sell completed through fee-on-transfer-supporting routes from a
+      separate buyer wallet; both transaction links and treasury fee deltas recorded
 - [ ] Deployer wallet is a fresh address with no unrelated history
 - [ ] Treasury wallet created (separate address; ideally a Safe multisig) and its purpose
       written down for the announcement
@@ -28,7 +33,7 @@ and don't announce anything until every box in sections 1–6 is checked.
 
 ## 1. Deploy
 
-- [ ] Deploy the token contract; full 250M mints to deployer
+- [ ] Deploy the token contract with the final treasury address; full 250M mints to deployer
 - [ ] Record: contract address, deploy tx hash
 - [ ] Fill `launch.json` (network, token address, treasury address) — the helper
       scripts below read it. Run `npx hardhat run scripts/launch-check.ts` between
@@ -38,26 +43,29 @@ and don't announce anything until every box in sections 1–6 is checked.
 ## 2. Verify source
 
 - [ ] Verify contract source on Etherscan (exact compiler version + settings used to deploy):
-      `npx hardhat verify --network mainnet <token-address>` (needs `ETHERSCAN_API_KEY`
+      `npx hardhat verify --network mainnet <token-address> <treasury-address>` (needs `ETHERSCAN_API_KEY`
       in the keystore — see README "Etherscan verification")
 - [ ] Confirm the "Contract" tab shows readable code with a green check
 
 ## 3. Treasury transfer
 
-- [ ] Send 50,000,000 CARD to the treasury wallet:
-      `npx hardhat run scripts/transfer-treasury.ts` (sends exactly 50M; refuses to
+- [ ] Send 150,000,000 CARD to the treasury wallet:
+      `npx hardhat run scripts/transfer-treasury.ts` (stages exactly 150M; refuses to
       run twice or if any balance is off)
 - [ ] Record the tx hash (this is a proof link)
-- [ ] Confirm balances: deployer 200M, treasury 50M
+- [ ] Confirm balances: deployer/founder 100M, treasury 150M
 
 ## 4. Create the Uniswap pool
 
-- [ ] Create the pool with 200,000,000 CARD + your chosen ETH amount (2–5 ETH)
+- [ ] From the treasury wallet, create the pool with 100,000,000 CARD + your chosen ETH amount (2–5 ETH)
 - [ ] Double-check both amounts **before** confirming — the ratio sets the launch price
-      and cannot be un-set (e.g. 3 ETH ÷ 200M = 0.000000015 ETH/CARD starting price)
+      and cannot be un-set (e.g. 3 ETH ÷ 100M = 0.00000003 ETH/CARD starting price)
+- [ ] Confirm the treasury-to-router transfer was fee-exempt and the pair received the full 100M
 - [ ] Record: pool/pair address, LP token balance received
 - [ ] Do one tiny test swap (~0.01 ETH) from a different wallet to confirm trading works
       both directions
+- [ ] Confirm the 2% CARD transfer fee reached treasury on buy and sell; disclose that a simple
+      buy/sell round trip is ~4.5% before gas, slippage, and price impact (including two 0.3% pool fees)
 
 ## 5. Lock the LP tokens
 
@@ -79,8 +87,8 @@ pool live and trading, LP locked. After this, nothing about the contract can eve
 
 ## 7. Announce
 
-- [ ] Fill the six `{{...}}` placeholders in `ANNOUNCEMENT.md` (renounce tx, LP lock URL,
-      treasury address + funding tx, token address, pool link); search for `{{` to
+- [ ] Fill the seven `{{...}}` placeholders in `ANNOUNCEMENT.md` (renounce tx, LP lock URL,
+      founder and treasury addresses, treasury funding tx, token address, pool link); search for `{{` to
       confirm none were missed
 - [ ] State the token address prominently (scammers deploy fake lookalikes — tell people
       to trust only this address)
@@ -105,7 +113,8 @@ Stop and reassess — do **not** proceed to renounce (step 6) — if any of thes
 - Test swap fails or behaves oddly (wrong amounts, reverts)
 - Etherscan verification won't go green
 - LP lock shows the wrong amount or date
-- Any balance doesn't match the plan (250M total / 200M pool / 50M treasury)
+- Any balance doesn't match the plan (250M total / 100M founder / ~100M pool / ~50M treasury,
+  allowing only the recorded test-swap fee deltas)
 
 Everything before the renounce is recoverable. After it, nothing is — that's the point,
 but it means the renounce is the one step you never do while anything looks wrong.

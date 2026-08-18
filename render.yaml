@@ -55,11 +55,26 @@ services:
     staticPublishPath: ./cardinal-care-bridge
     autoDeploy: true
 
-  # Blue Ridge Tax — the TaxFile app (taxfile/): guided 2025 federal 1040 with
-  # a live refund tracker and mock e-file. Password-gated (TAXFILE_USER /
-  # TAXFILE_PASSWORD — set the password when Render prompts; returns contain
-  # SSNs, so never run this public-facing without the gate). Return data
-  # persists in SQLite on the mounted disk.
+  # Memory Care Music Program demo — an interactive, client-side walkthrough of
+  # the program that runs on the Sing Along app (singalong/PROGRAM.md): sample
+  # residents, the public-domain song kit with lyrics, the weekly playlists, a
+  # working sing-along prompter, and live engagement insights. Static and free,
+  # like Cardinal Care Bridge; sample data only, nothing is stored.
+  - type: web
+    name: music-program-demo
+    runtime: static
+    branch: main
+    staticPublishPath: ./singalong/demo
+    autoDeploy: true
+
+  # Blue Ridge Tax — the TaxFile app (taxfile/): guided federal tax estimator
+  # (2025 + 2026 projection) with a live refund tracker, scope screening, user
+  # accounts, and a Stripe-ready Pro tier (planning scenarios). No SSNs are
+  # collected. Password-gated (TAXFILE_USER / TAXFILE_PASSWORD — set the
+  # password when Render prompts). Data persists in SQLite on the mounted
+  # disk. To enable real billing, add STRIPE_SECRET_KEY, STRIPE_PRICE_ID,
+  # STRIPE_WEBHOOK_SECRET, and PUBLIC_BASE_URL in the service's environment;
+  # until then upgrades run in instant dev mode.
   - type: web
     name: blue-ridge-tax
     runtime: docker
@@ -83,6 +98,46 @@ services:
         value: admin
       - key: TAXFILE_PASSWORD
         sync: false            # Render prompts you to set this on first deploy
+
+  # Cardinal Trading — the trading app (invest/ over trading/): multi-user
+  # accounts with paper buying power, real market quotes (Yahoo), fractional
+  # and recurring buys, and the CARD token page. Sign-ups are open; every user
+  # gets their own login and an isolated paper account, so no shared gate is
+  # needed. Data persists in SQLite on the mounted disk.
+  #
+  # CARD launch day: only after the verified address is published at cp17.org,
+  # add ETH_RPC_URL, CARD_POOL_ADDRESS, and CARD_TOKEN_ADDRESS. Set
+  # ENABLE_REAL_CARD_LINKS=1 separately to expose links that open Uniswap.
+  # For real verification/reset emails, add SENDGRID_API_KEY,
+  # INVEST_MAIL_FROM, and INVEST_BASE_URL (the service's public URL);
+  # until then the links print to the service logs.
+  # To serve this at a cp17.org address, add the subdomain (e.g.
+  # trade.cp17.org) in Settings -> Custom Domains and point a DNS CNAME at it.
+  - type: web
+    name: cardinal-trading
+    runtime: docker
+    branch: main
+    plan: starter            # a persistent disk requires a paid instance
+    dockerfilePath: ./deploy/Dockerfile
+    dockerContext: .
+    dockerCommand: node deploy/allinone-trading.ts
+    healthCheckPath: /health
+    autoDeploy: true
+    disk:
+      name: trading-data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: TRADING_DB
+        value: /data/trading.db
+      - key: INVEST_DB
+        value: /data/invest.db
+      - key: MARKET_DATA
+        value: yahoo           # live quotes; remove to fall back to the mock feed
+      - key: INVEST_TRUST_PROXY
+        value: "1"             # Render terminates TLS; trust its proxy for Secure cookies
+      - key: ENABLE_REAL_CARD_LINKS
+        value: "0"             # address alone cannot expose real-money links
 
   # Cardinal Chat — self-hosted ChatGPT alternative (chat/), powered by the
   # Claude API. Password-gated (CHAT_USER / CHAT_PASSWORD — set the password
