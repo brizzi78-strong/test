@@ -1,7 +1,8 @@
-# cardinalspromise.org — the Cardinals Promise coin site
+# cp17.org — the Cardinals Promise coin site
 
-The official domain is `cardinalspromise.org`. `cp17.org`, the LLC's own
-name, should forward here. (The token is CARD — the Hope name lives on
+The official domain is `cp17.org` — the domain the founder already owns,
+and a neutral name that keeps the token's address out of the book's search
+results. (The token is CARD — the Hope name lives on
 the physical-coin merch side, sold from the book's world, and never
 names the on-chain token: HOP is Hop Protocol's established ticker.)
 
