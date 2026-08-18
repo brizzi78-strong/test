@@ -282,7 +282,8 @@ Nothing below is started until the step above it is finished.
 4. Confirm state solicitation registration requirements for a public page.
 5. **Only then** build the donation page, with the recipient entity, its EIN, the fee
    disclosed as a number, and the deduction language reviewed by counsel.
-6. Publish what reached a student each year, including the years the number is small. Once a
+6. Adopt Appendix A (operating policy) at the first board meeting, before soliciting.
+7. Publish what reached a student each year, including the years the number is small. Once a
    figure is published on a schedule, not publishing it becomes the signal — so do not start
    until we are prepared to publish a bad year.
 
@@ -314,3 +315,66 @@ instead: a commitment is only worth what it costs to keep in a bad quarter.
 ---
 *Research and decision document. Not legal, tax, or financial advice — §4 is a list of
 questions for counsel, not a set of answers.*
+---
+
+## Appendix A — Draft operating policy
+
+Not adopted. Cannot be adopted until a vehicle exists (§3–§5). Drafted now so the policy is
+written before there is any money attached to it, which is the only time a cap costs nothing
+to set.
+
+### A.1 The cap
+
+Operating costs shall not exceed **10% of contributions received in a fiscal year**. The
+actual figure shall be published annually whether it is above or below the cap, and if it is
+ever exceeded, the amount and the reason shall be published rather than smoothed.
+
+### A.2 What "operations" means here
+
+The cap covers the cost of being a lawful charity, which at this size is almost entirely
+compliance rather than people:
+
+| Line | Realistic annual cost |
+|---|---|
+| Payment processing (discounted nonprofit rates are available from major processors — confirm current terms) | 2.2–2.9% + per-transaction |
+| Accounting and Form 990 preparation | $500–$2,000 |
+| State charitable solicitation registration and renewals | $25–$400 per state |
+| Directors & officers insurance | $500–$1,500 |
+| Domain, email, website, donor records | $200–$1,100 |
+| **Realistic floor before anyone is paid anything** | **~$1,500–$4,000** |
+
+Which produces the number that should govern expectations: **at a 10% cap, roughly $30,000
+must be raised in a year before the cap covers compliance alone.** Below that level the
+shortfall is met personally, and the operating allocation is not a source of income to
+anybody — it is the cost of the fund being real. *(Worth a CPA question: expenses paid
+personally on the charity's behalf may themselves be deductible as charitable contributions.)*
+
+### A.3 Compensation, if it ever arises
+
+No connected person is compensated until the fund can carry it without breaching §A.1. If
+that point is reached, every one of the following happens before a dollar is paid — this is
+the **§4958 rebuttable presumption**, and doing two of the three is worth nothing:
+
+1. Approved by board members with no financial interest in the outcome, with the person
+   concerned recused from the discussion and the vote.
+2. Decided against **comparability data** — Form 990 compensation figures from organisations
+   of similar size, budget, and mission.
+3. **Documented contemporaneously** in the minutes: the figure, the data relied on, who voted,
+   and when.
+
+Satisfy all three and the burden of proving unreasonableness shifts to the IRS. Satisfy fewer
+and it rests on us.
+
+### A.4 What is excluded outright
+
+- Compensation to any person calculated as a percentage of funds raised (§2b).
+- Awards to any member of the founder's family, or to any board member's family.
+- Any payment to a party that also provides the fund with paid independent review.
+
+### A.5 Reporting
+
+One page, published annually, carrying four numbers: raised, operating costs, operating costs
+as a percentage, and awarded. Published in a bad year too. **Beginning to report on a schedule
+and then stopping is itself the disclosure** — so this does not start until we are willing to
+publish a year we would rather not.
+
