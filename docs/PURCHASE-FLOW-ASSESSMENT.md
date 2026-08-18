@@ -42,18 +42,18 @@ In a constant-product pool, **slippage is exactly the buy size divided by the po
 asset**: `slippage = X / E`. Not an approximation. Pool depth is therefore not an
 implementation detail — **it is the product specification.**
 
-Against the decided $3,000 seed (98,000,000 CARD):
+Against the decided $3,000 seed (100,000,000 CARD, no transfer fee):
 
-| Customer buys | CARD received | Slippage | All-in cost (+2% fee, +0.3% DEX, +3% on-ramp) |
+| Customer buys | CARD received | Slippage | All-in cost (+0.3% DEX, +3% on-ramp) |
 |---|---|---|---|
-| $50 | 1,606,557 | 1.7% | 7.1% |
-| $100 | 3,161,290 | 3.3% | 8.9% |
-| $500 | 14,000,000 | 16.7% | 22.9% |
-| **$1,000** | 24,500,000 | **33.3%** | **40.5%** |
-| $3,000 | 49,000,000 | 100.0% | 110.8% |
+| $50 | 1,639,344 | 1.7% | 5.0% |
+| $100 | 3,225,806 | 3.3% | 6.8% |
+| $500 | 14,285,714 | 16.7% | 20.5% |
+| **$1,000** | 25,000,000 | **33.3%** | **37.7%** |
+| $3,000 | 50,000,000 | 100.0% | 106.6% |
 
 **Step 4 is what makes this fatal rather than merely bad.** Disclosing honestly on a $1,000
-purchase means displaying that the customer pays roughly 40% above the quoted rate. That
+purchase means displaying that the customer pays roughly 38% above the quoted rate. That
 screen does not convert. A screen that hides it is not a conversion improvement, it is a
 disclosure failure.
 
@@ -62,28 +62,34 @@ disclosure failure.
 Small purchases are destroyed by the on-ramp's *fixed* minimum fee (~$3.99); large ones by
 slippage. The two curves cross, and the crossing point is the best a customer can possibly do:
 
-| Pool | Best-case purchase | On-ramp | Fees | Slippage | **Cost floor** |
+| Pool | Best-case purchase | On-ramp | DEX | Slippage | **Cost floor** |
 |---|---|---|---|---|---|
-| **$3,000** | $109 | 3.6% | 2.3% | 3.6% | **9.6%** |
-| $25,000 | $316 | 3.5% | 2.3% | 1.3% | 7.1% |
-| $100,000 | $632 | 3.5% | 2.3% | 0.6% | 6.4% |
+| **$3,000** | $109 | 3.6% | 0.3% | 3.6% | **7.6%** |
+| $25,000 | $316 | 3.5% | 0.3% | 1.3% | 5.1% |
+| $100,000 | $632 | 3.5% | 0.3% | 0.6% | 4.4% |
 
 **At the decided seed, the best experience available to any customer, at the single optimal
-purchase size, is a 9.6% haircut.** Every other amount is worse.
+purchase size, is a 7.6% haircut.** Every other amount is worse.
 
-### 3.2 The transfer fee sets a floor no liquidity can lift
+### 3.2 Eliminating the transfer fee — what it bought
 
-The 2% fee in the pending contract revision is a constant, so it survives any amount of
-pool depth:
+The 2% fee proposed in a parallel workstream has been **eliminated by decision**. It was a
+constant, so it survived any amount of pool depth, and this is what removing it recovered:
 
-| Pool | Cost floor **with** the 2% fee | **without** it |
+| Pool | Cost floor **with** the 2% fee | **without it (adopted)** |
 |---|---|---|
-| $3,000 | 9.6% | 7.6% |
-| $25,000 | 7.1% | 5.1% |
+| $3,000 | 9.6% | **7.6%** |
+| $25,000 | 7.1% | **5.1%** |
 | $100,000 | 6.4% | **4.4%** |
 
-Adding liquidity has sharply diminishing returns because the fee and the on-ramp dominate
-once slippage is small. **The fee costs every retail customer two points, permanently.**
+**The fee cost every retail customer two points, permanently** — and because the on-ramp and
+slippage dominate once the pool is deep, no amount of added liquidity could have offset it.
+Two points was also roughly what it delivered in price protection on the sell side
+(`CARD-DISSERTATION.md` §5b.1), which is why it went.
+
+What remains is that adding liquidity still has sharply diminishing returns: the on-ramp's
+3.5% is now the dominant term at every pool size worth considering, and it is not ours to
+reduce.
 
 ### 3.3 If the flow ships anyway, the purchase cap is not optional
 
@@ -102,16 +108,20 @@ depth is chosen; without one the interface will quote prices the pool cannot hon
 
 ---
 
-## 4. The 2% fee may make the flow impossible, not merely expensive
+## 4. The router incompatibility — resolved
 
-Independently of cost: a fee-on-transfer token breaks the standard Uniswap V2 sell and swap
-paths, which revert with `UniswapV2: K` unless the `SupportingFeeOnTransferTokens` variants
-are used, and default slippage tolerances (0.5%) fail on every trade. On-ramp providers that
-auto-swap, and aggregators generally, call standard routers.
+A fee-on-transfer token breaks the standard Uniswap V2 sell and swap paths, which revert with
+`UniswapV2: K` unless the `SupportingFeeOnTransferTokens` variants are used, and default
+slippage tolerances (0.5%) fail on every trade. On-ramp providers that auto-swap, and
+aggregators generally, call standard routers. **The transfer fee and the Buy button were close
+to mutually exclusive.**
 
-**The transfer fee and the Buy button are close to mutually exclusive** unless custom swap
-routing is built — which puts CARD Technologies further into the transaction, worsening §5.
-This should be settled before either is committed to.
+**This is resolved: the fee has been eliminated.** The token is now a plain ERC-20 with no
+transfer hook, so standard routers, aggregators, and on-ramp auto-swap paths work without
+special handling, and no custom swap routing is needed — which also avoids putting CARD
+Technologies deeper into the transaction than §5 already places it.
+
+This removes a build/no-build flag. It does not change §3: the pool is still too shallow.
 
 ---
 
@@ -146,11 +156,11 @@ Two specifics:
 | Legally approved token and sale structure | No such approval exists; needs an opinion on §5. **The gating item.** |
 | Regulated on-ramp provider | Available (MoonPay, Transak, Stripe, Coinbase). Will impose its own listing review. |
 | Non-custodial wallet provider | Available (Privy, Dynamic, Turnkey). Confirm embedded wallets remain non-custodial as configured. |
-| CARD/USDC liquidity pool | **Exists only at $3,000. Needs $25,000–$100,000 to be usable.** |
+| CARD/USDC liquidity pool | **Exists only at $3,000. Needs $25,000–$100,000 to be usable. The binding constraint.** |
 | Audited smart contracts | Static analysis only so far. An audit is weeks and thousands of dollars. |
 | KYC/AML and state availability | Mostly the provider's, but state availability constrains who may buy. |
 | Production security and monitoring | Real but ordinary. |
-| **Missing from the list** | **Purchase cap enforcement (§3.3), and resolving the fee/router conflict (§4).** |
+| **Missing from the list** | **Purchase cap enforcement (§3.3).** The fee/router conflict (§4) is now resolved. |
 
 ---
 
@@ -175,10 +185,10 @@ changes which prerequisites in §6 matter.
 ## 8. Recommendation
 
 1. **Answer §7 first.** What the token is now for.
-2. **Settle the fee (§4) before anything else technical.** It is close to a build/no-build
-   flag for this flow, and it costs every customer two points forever.
+2. **~~Settle the fee.~~ Done — eliminated.** It was close to a build/no-build flag and cost
+   every customer two points forever. The flow is now technically buildable.
 3. **Do not integrate an on-ramp against a $3,000 pool.** The honest maximum purchase is $60
-   and the cost floor is 9.6%. Either the seed rises to $25,000+ — a materially different
+   and the cost floor is 7.6%. Either the seed rises to $25,000+ — a materially different
    capital decision from the one taken — or the buy button waits.
 4. **Whatever depth is chosen, enforce the purchase cap in the interface** and keep step 4's
    disclosure exactly as proposed. It is the best thing in the design.

@@ -96,10 +96,13 @@ analysis written so it can be re-run when the CLARITY Act resolves.
 **Q10. May the treasury ever fund the scholarship?** If CARD launches, may the 50M treasury be
 sold or granted to the charitable vehicle, and what does that do to Q2 and Q3?
 
-**Q11. A pending contract change.** A parallel workstream proposes adding an immutable 2%
-transfer fee to the token, with the treasury exempt. Beyond the technical objections we have
-raised internally, does a transfer fee accruing to a treasury the founder controls change the
-securities analysis in Q9?
+**Q11. A transfer fee, proposed and eliminated.** A parallel workstream proposed an immutable
+2% transfer fee accruing to a treasury the founder controls. **We have decided against it** —
+it cost every retail buyer roughly two points permanently, broke standard exchange routing,
+and delivered almost no offsetting price protection. The token is a plain fixed-supply ERC-20
+with no transfer hook. Flagged in case (a) a fee accruing to a founder-controlled treasury
+would have affected the analysis in Q9, which would be useful to know before anyone proposes
+it again, and (b) the parallel workstream's branch still carries it and must be reconciled.
 
 **Q12. Issuer identity.** The governance record says the LLC should deploy the contract and
 seed the pool, so that the deployer address does not contradict our own org chart. Confirm,

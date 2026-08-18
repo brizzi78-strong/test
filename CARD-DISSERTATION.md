@@ -147,12 +147,15 @@ constraints from the companion study:
 
 ## 3a. The pool arithmetic: what "market cap" means here
 
-Every figure in this section assumes the flat 2% transfer fee introduced in the pending
-CARD revision, which taxes the pool-seeding transfer itself: seeding "100M CARD" delivers
-**98M to the pair and 2M to the treasury**, because the exemption covers only the treasury
-and the deployer is not it. All arithmetic below therefore uses a 98M pool balance.
-Uniswap's own 0.3% swap fee is omitted except where noted; it makes the figures marginally
-worse, never better.
+Every figure in this section assumes **no transfer fee** — the decision to eliminate the
+proposed 2% fee means the pool-seeding transfer is untaxed and a seeded "100M CARD" arrives
+as a full **100,000,000 pool balance**. Uniswap's own 0.3% swap fee is omitted except where
+noted; it makes the figures marginally worse, never better.
+
+*(A prior revision of this section assumed the 2% fee and therefore a 98M pool. All figures
+below are recomputed. The fee's removal changes the absolute numbers slightly and changes
+none of the findings — with one exception recorded honestly at §3a.6, where removing the fee
+makes price manipulation cheaper.)*
 
 ### 3a.1 The launch price is set, not discovered
 
@@ -162,10 +165,10 @@ consequence of two numbers the founder picked — not a valuation anyone externa
 
 | ETH seeded | Price per CARD | Fully diluted cap (250M) |
 |---|---|---|
-| **$3,000** | **$0.0000306** | **$7,653** |
-| $10,000 | $0.000102 | $25,510 |
-| $20,000 | $0.000204 | $51,020 |
-| $40,000 | $0.000408 | $102,041 |
+| **$3,000** | **$0.000030** | **$7,500** |
+| $10,000 | $0.000100 | $25,000 |
+| $20,000 | $0.000200 | $50,000 |
+| $40,000 | $0.000400 | $100,000 |
 
 This matters because a higher launch capitalisation is not a better launch. It prices the
 same tokens against the same ETH; only the ETH is genuinely at risk. Choosing a larger
@@ -175,22 +178,22 @@ seed buys a bigger headline number and a bigger loss surface, in equal measure.
 
 Fully diluted capitalisation is the marginal price extrapolated across supply that cannot
 transact at that price. The constant-product curve makes the gap explicit. Taking the
-$40,000 case — pool of 98,000,000 CARD and $40,000, so *k* ≈ 3.92 × 10¹²:
+$40,000 case — pool of 100,000,000 CARD and $40,000, so *k* = 4.0 × 10¹²:
 
 | Sale | ETH extracted | Price after | Drawdown |
 |---|---|---|---|
-| 10M CARD (4% of supply) | ~$3,640 | $0.000337 | −17% |
-| 100M CARD (the founder tranche) | ~$20,000 | $0.000102 | **−75%** |
+| 10M CARD (4% of supply) | ~$3,636 | $0.000331 | −17.4% |
+| 100M CARD (the founder tranche) | ~$20,000 | $0.000100 | **−75%** |
 
-The second row is the one that matters. **The founder's 100M reads as $40,816 at fully
+The second row is the one that matters. **The founder's 100M reads as $40,000 at fully
 diluted price and is realisably worth about $20,000** — half — and realising it leaves the
 token at a quarter of its launch price. The paper figure and the attainable figure differ by
 roughly 2×, and the gap is structural rather than a matter of poor execution or bad timing.
 
 **The drawdown percentages are scale-invariant.** A constant-product curve depends on the
 *ratio* of balances, not their magnitude, so the proportions above hold at every seed size.
-At a $3,000 seed, a 4% sale still moves price −17% and the founder tranche still cuts it
-−75%; only the dollars change — roughly $273 and $1,500 extracted rather than $3,640 and
+At a $3,000 seed, a 4% sale still moves price −17.4% and the founder tranche still cuts it
+−75%; only the dollars change — roughly $273 and $1,500 extracted rather than $3,636 and
 $20,000.
 
 This has a direct practical consequence. A larger seed buys **no structural improvement**:
@@ -229,19 +232,19 @@ number larger that nobody outside has endorsed.
 
 The question is asked of every small token, so it is worth answering with the curve rather
 than with an opinion. **$1 per CARD is a fully diluted capitalisation of $250,000,000** —
-32,668× the $7,653 the $3,000 seed establishes.
+33,333× the $7,500 the $3,000 seed establishes.
 
 In a constant-product pool the ETH reserve needed to hold a given price follows directly
 from the invariant: if *E₀* is the seeded ETH, *C* the pooled CARD, and *P* the target
 price, then the pool at that price holds *E* = √(*E₀* · *P* · *C*) in ETH and *C* / √(*P* /
-*P₀*) in CARD. Applied to the $3,000 seed and its 98,000,000 pooled tokens:
+*P₀*) in CARD. Applied to the $3,000 seed and its 100,000,000 pooled tokens:
 
 | Target price | Fully diluted cap | Net ETH that must buy in | CARD left in pool | Share of pooled float consumed |
 |---|---|---|---|---|
-| $0.001 | $250,000 | ~$14,100 | 17,150,000 | 82.5% |
-| $0.01 | $2,500,000 | ~$51,200 | 5,420,000 | 94.5% |
-| $0.10 | $25,000,000 | ~$168,500 | 1,715,000 | 98.3% |
-| **$1.00** | **$250,000,000** | **~$539,000** | **542,000** | **99.45%** |
+| $0.001 | $250,000 | ~$14,300 | 17,320,508 | 82.7% |
+| $0.01 | $2,500,000 | ~$51,800 | 5,477,226 | 94.5% |
+| $0.10 | $25,000,000 | ~$170,200 | 1,732,051 | 98.3% |
+| **$1.00** | **$250,000,000** | **~$544,700** | **547,723** | **99.45%** |
 
 The dollar figure in the fourth row is not the obstacle. **The obstacle is the last
 column.** Reaching $1 requires that 99.45% of every token in the pool be bought out of it,
@@ -252,7 +255,7 @@ structural statement about the curve, not a pessimistic forecast.
 
 **A larger seed does not help, and the direction of the effect is counterintuitive.** Since
 *E* = √(*E₀* · *P* · *C*), the required inflow rises with the *square root* of the seed. At
-a $40,000 seed the same $1 target requires roughly **$1,940,000** of net buying — 3.6× more
+a $40,000 seed the same $1 target requires roughly **$1,960,000** of net buying — 3.6× more
 absolute capital than the $3,000 case, not less, because the larger pool retains more tokens
 at $1 and each must be backed by ETH. What the larger seed buys is a marginally shallower
 climb in proportional terms — 98.0% of the float consumed rather than 99.45%. Both sit on
@@ -301,10 +304,15 @@ renounced ERC-20 can stop this: creating pools is permissionless by design, and 
 permissionlessness that makes the renounce credible makes the price surface unownable.
 
 **Wash-trading the canonical pool is more expensive and self-defeating.** Round-tripping
-enough volume through the main pool to touch $1 and return costs roughly 4.6% of the traded
-notional — 2% transfer fee on each leg plus Uniswap's 0.3% on each — or about $25,000 on the
-~$539,000 of notional §3a.5 requires. More to the point, a manipulator pumping this pool is
-buying into an overhang of **150,000,000 tokens held outside it** — 1.5× the pooled float,
+enough volume through the main pool to touch $1 and return costs roughly 0.6% of the traded
+notional — Uniswap's 0.3% on each leg — or about $3,300 on the ~$544,700 of notional §3a.5
+requires. **This is the one place where eliminating the transfer fee makes things worse:**
+under the withdrawn 2% fee the same round trip cost about 4.6%, or ~$25,000, so removing it
+cut the cost of a wash pump by roughly a factor of seven. It is recorded here rather than
+buried because it is the genuine price of the decision — and it is a price worth paying, since
+§5b.1 shows the fee bought barely a point of real price protection while costing every
+ordinary buyer far more. More to the point, a manipulator pumping this pool is
+buying into an overhang of **150,000,000 tokens held outside it** — 1.50× the pooled float,
 across the founder and treasury addresses — any part of which can be sold into the pump and
 take the manipulator's ETH. Outside manipulation of the primary pool is therefore poorly
 motivated. The party for whom the manoeuvre is *not* self-defeating is the founder, since
@@ -339,31 +347,30 @@ The proposed distributions (see the counsel/CPA memo) would transfer 20,000,000 
 8% of supply — to each of several recipients. The curve prices that grant precisely, and
 the result is worth stating before any grant is executed rather than after.
 
-**Today, against the $3,000 seed, the grant marks at $612 and realises about $500.** Selling
-20,000,000 into a pool of 98,000,000 CARD and $3,000 delivers 19,600,000 after the transfer
-fee, leaving the pool at $2,500. And the grants are not independent of one another — the pool
+**Today, against the $3,000 seed, the grant marks at $600 and realises about $500.** Selling
+20,000,000 into a pool of 100,000,000 CARD and $3,000 leaves the pool at $2,500. And the grants are not independent of one another — the pool
 pays the first seller best:
 
 | Sequence | Extracts | Pool remaining | Price after |
 |---|---|---|---|
-| First 20M sold | $500 | $2,500 | −31% |
-| Second 20M sold | $357 | $2,143 | −49% |
-| Third 20M sold | $268 | $1,875 | −61% |
+| First 20M sold | $500 | $2,500 | −30.6% |
+| Second 20M sold | $357 | $2,143 | −49.0% |
+| Third 20M sold | $268 | $1,875 | −60.9% |
 | **Three grants, combined** | **$1,125** | | |
 
-Sixty million tokens — 24% of total supply, marking at $1,836 — realise $1,125 between them,
+Sixty million tokens — 24% of total supply, marking at $1,800 — realise $1,125 between them,
 and the third recipient receives roughly half of what the first does for holding exactly the
 same asset. **The grant is close to fully realisable only because it is close to worthless.**
 
 **At a printed $1.00 the position inverts completely.** Per §3a.5 the pool at that price holds
-about 542,000 CARD and $542,000. A single grantee selling 20,000,000 into it extracts
-**$527,621 — essentially the entire pool — and leaves the price at $0.000725**, down 99.9%.
+about 547,723 CARD and $547,723. A single grantee selling 20,000,000 into it extracts
+**$533,122 — essentially the entire pool — and leaves the price at $0.000711**, down 99.9%.
 The first board member out takes nearly everything that ever entered; the others hold
-20,000,000 tokens each against a pool containing $14,000. A twenty-million-dollar paper
+20,000,000 tokens each against a pool containing $14,600. A twenty-million-dollar paper
 position converts to roughly half a million dollars for exactly one holder.
 
 **For a single 20,000,000 grant to be genuinely worth $1,000,000, the pool must reach
-$3.50 per CARD** — a fully diluted capitalisation of **$875,664,547**, requiring about
+$3.43 per CARD** — a fully diluted capitalisation of **$858,151,256**, requiring about
 **$1,011,782 of net external buying**. At that point the pool holds $1,014,782 and the sale
 takes $1,000,000 of it, leaving $14,782 for everyone else. Three recipients each realising
 $1,000,000 therefore requires not $3,000,000 of external money but considerably more, since
@@ -383,7 +390,7 @@ face a tax liability computed from a number nobody paid, against a position the 
 liquidate at anything near it. Whether a manipulated thin-pool print would survive scrutiny
 as fair market value is a question for the CPA and not one this document can answer — but it
 is the reason the §83(b) question in the memo is the most time-sensitive item in it, and the
-reason the election should be evaluated while the whole grant demonstrably marks at $612.
+reason the election should be evaluated while the whole grant demonstrably marks at $600.
 
 ### 3a.8 Buy-and-hold: the honest case, and what it does to the pool
 
@@ -397,20 +404,20 @@ That is a genuinely powerful dynamic and it deserves to be stated plainly:
 
 | Net bought in | Price | Fully diluted cap | Multiple | CARD left in pool | Float consumed |
 |---|---|---|---|---|---|
-| $10,000 | $0.000575 | $143,707 | 19× | 22,615,385 | 76.9% |
-| $25,000 | $0.002667 | $666,667 | 87× | 10,500,000 | 89.3% |
-| $50,000 | $0.009554 | $2,388,605 | 312× | 5,547,170 | 94.3% |
-| **$100,000** | **$0.036085** | **$9,021,259** | **1,179×** | **2,854,369** | **97.1%** |
-| $250,000 | $0.217718 | $54,429,422 | 7,112× | 1,162,055 | 98.8% |
+| $10,000 | $0.000563 | $140,833 | 19× | 23,076,923 | 76.9% |
+| $25,000 | $0.002613 | $653,333 | 87× | 10,714,286 | 89.3% |
+| $50,000 | $0.009363 | $2,340,833 | 312× | 5,660,377 | 94.3% |
+| **$100,000** | **$0.035363** | **$8,840,833** | **1,179×** | **2,912,621** | **97.1%** |
+| $250,000 | $0.213363 | $53,340,833 | 7,112× | 1,185,771 | 98.8% |
 
-A hundred thousand dollars of genuine, patient buying produces a nine-million-dollar
+A hundred thousand dollars of genuine, patient buying produces an $8.8-million
 capitalisation. Nothing in this study says that cannot happen, and §3a.5's pessimism about
 $1 should not be read as pessimism about every price.
 
 **The failure mode is in the last column.** Buy-and-hold does not deepen the market; **it
 consumes it.** Every purchase removes CARD from the pool, so the more completely the strategy
 succeeds, the less liquidity remains behind the price it produced. At the $100,000 state the
-entire tradeable market is 2,854,369 tokens — about 1.1% of supply — and the consequences are
+entire tradeable market is 2,912,621 tokens — about 1.2% of supply — and the consequences are
 severe:
 
 | Sold into the pool | Share of supply | Extracts | Price impact |
@@ -445,11 +452,11 @@ ratio, so **depth is cheapest exactly when it is least needed:**
 
 | Pool state | Cost of adding 20,000,000 CARD of depth |
 |---|---|
-| At launch | **$612** |
-| After $10,000 of buying | $11,497 |
-| After $100,000 of buying | **$721,701** |
+| At launch | **$600** |
+| After $10,000 of buying | $11,267 |
+| After $100,000 of buying | **$707,267** |
 
-Depth that costs $612 on day one costs $721,701 at a nine-million-dollar capitalisation —
+Depth that costs $600 on day one costs $707,267 at an $8.8-million capitalisation —
 1,179× more, by the same convexity that produced the gain. Any plan to "add liquidity later
 if it takes off" should be priced now, because later it is unaffordable. (Uniswap's 0.3% swap
 fee does accrue to the pool and thickens it slightly with volume; at these sizes the effect
@@ -464,11 +471,11 @@ at any given achieved price. The two findings answer "what does selling cost?" a
 rising cost?" respectively.
 
 **Finally, success makes the grant problem worse rather than better.** Under a $100,000
-buy-and-hold, a 20,000,000 board grant marks at **$721,701** and a vesting third of it
-represents **$240,579** of income at a price real buyers actually paid — so the valuation is
+buy-and-hold, a 20,000,000 board grant marks at **$707,267** and a vesting third of it
+represents **$235,756** of income at a price real buyers actually paid — so the valuation is
 defensible in a way §3a.7's manipulated case was not. Selling that tranche realises
-**$71,684** and moves the price **−90.8%**. A recipient could owe tax computed on $240,579
-while able to obtain $71,684, and only by destroying the position of everyone who held. This
+**$71,682** and moves the price **−90.8%**. A recipient could owe tax computed on $235,756
+while able to obtain $71,682, and only by destroying the position of everyone who held. This
 is the classic illiquid-appreciated-property trap, it arrives in the *good* scenario, and it
 is the strongest argument in this document for settling the §83(b) question before any grant
 is signed.
@@ -484,15 +491,15 @@ The project exists to fund something — a scholarship in Lou's memory. §3a.8 s
 patient buying can produce a large capitalisation, so the operative question is not whether
 the number can get big but **how much of it reaches a student.** The curve answers precisely.
 
-The treasury holds 50,000,000 tokens and is exempt from the transfer fee. Selling that tranche
-into the pool at various levels of genuine buy-side interest:
+The treasury holds 50,000,000 tokens. Selling that tranche into the pool at various levels of
+genuine buy-side interest:
 
 | Buyers put in | Pool holds | Treasury 50M marks at | Actually funds | Share of buyers' money | Price after |
 |---|---|---|---|---|---|
-| $25,000 | $28,000 | $133,333 | $23,140 | 92.6% | −97.0% |
-| $50,000 | $53,000 | $477,721 | $47,707 | 95.4% | −99.0% |
-| **$100,000** | **$103,000** | **$1,804,252** | **$97,438** | **97.4%** | **−99.7%** |
-| $250,000 | $253,000 | $10,885,884 | $247,254 | 98.9% | −99.9% |
+| $25,000 | $28,000 | $130,667 | $23,059 | 92.2% | −96.9% |
+| $50,000 | $53,000 | $468,167 | $47,610 | 95.2% | −99.0% |
+| **$100,000** | **$103,000** | **$1,768,167** | **$97,330** | **97.3%** | **−99.7%** |
+| $250,000 | $253,000 | $10,668,167 | $247,139 | 98.9% | −99.9% |
 
 Two things are true at once here, and both matter.
 
@@ -501,7 +508,7 @@ dollar buyers put in can be converted into scholarship funding. That is a respec
 conversion rate and it should not be dismissed.
 
 **The bad news is what the third and sixth columns say together.** The treasury tranche
-*marks* at $1,804,252 and *funds* $97,438 — and doing so takes the price down 99.7%, because
+*marks* at $1,768,167 and *funds* $97,330 — and doing so takes the price down 99.7%, because
 the funding comes out of the same pool the price is made of. **Every dollar the scholarship
 receives is a dollar a buyer deposited**, less leakage. The token does not generate the money.
 It transports it, and it is destroyed in transit.
@@ -511,7 +518,7 @@ of goodwill and route it two ways:
 
 | | Reaches the scholarship | Donor keeps | Donor is left holding |
 |---|---|---|---|
-| **Through the token pool** | $97,438 | nothing | tokens worth ~99.7% less than paid |
+| **Through the token pool** | $97,330 | nothing | tokens worth ~99.7% less than paid |
 | **As direct donations** | ~$97,100 (2.9% processing) | a deduction worth **$22,000–$37,000** | nothing, by design |
 
 The two routes deliver the same amount to the student. One of them additionally hands the
@@ -628,11 +635,11 @@ removing the downside is exactly the problem §5a docked five points for.
 ### 5b.1 Two burns that share a name and nothing else
 
 **A per-transfer burn tax should be rejected.** Burning a percentage of every transfer is a
-mechanic, not a restraint: it signals nothing about the founder's intent, removes no
-overhang, and compounds badly with the 2% treasury fee already in the pending revision.
-Round-trip cost would rise from roughly 4.6% to roughly 8.6%, the standard Uniswap sell path
-already broken by the existing fee would break further, and every screener that classifies
-tokens by tax rate would classify this one unfavourably. It buys a deflationary narrative at
+mechanic, not a restraint: it signals nothing about the founder's intent and removes no
+overhang. It would also reverse the decision to eliminate the 2% transfer fee: round-trip
+cost would rise from 0.6% to roughly 5.6%, the standard Uniswap sell path would break in
+exactly the way the no-fee design avoids, and every screener that classifies tokens by tax
+rate would classify this one unfavourably. It buys a deflationary narrative at
 the cost of the clean-mechanics posture the launch strategy deliberately maintains.
 
 **Burning founder supply is the strong form, and it is genuinely available.** It is costly,
@@ -644,26 +651,26 @@ destroys the thing they would dump. A founder planning to build forfeits only op
 **A 5% burn on every sale, specifically.** The most appealing version of the tax burn is one
 that falls only on selling — it sounds like it should protect the price, and it does, by an
 amount too small to matter. Taking the $100,000 buy-and-hold state from §3a.8 (pool of
-2,854,369 CARD and $103,000) and selling 3,000,000 tokens under different tax rates:
+2,912,621 CARD and $103,000) and selling 3,000,000 tokens under different tax rates:
 
 | Tax on the sale | Reaches the pool | Seller extracts | Price impact |
 |---|---|---|---|
-| none | 3,000,000 | $52,781 | −76.2% |
-| 2% (current design) | 2,940,000 | $52,261 | −75.7% |
-| 5% burn | 2,850,000 | $51,461 | −75.0% |
-| 2% fee + 5% burn | 2,790,000 | $50,913 | −74.4% |
+| **none (adopted design)** | 3,000,000 | $52,261 | −75.7% |
+| 5% burn | 2,850,000 | $50,940 | −74.5% |
 
-**Seven percent of taxation buys 1.8 percentage points of price protection.** The result is
+**Five percent of taxation buys 1.2 percentage points of price protection.** The result is
 not close, and the reason is structural: price impact is governed by the size of the sale
 relative to the depth of the pool, and shaving a few percent off the input barely moves that
 ratio. A sell tax cannot fix a depth problem. Only depth fixes a depth problem.
 
+*(This table also retrospectively justifies eliminating the proposed 2% transfer fee. That
+fee bought roughly half a point of price protection on the same test, while costing every
+ordinary buyer two points permanently — see §3a.6 and the purchase-flow assessment.)*
+
 What the 5% does buy is cost to the holder. Round-trip cost for a buyer who later wants out
-rises from **4.5%** under the current design to **9.4%** with a 5% sell burn stacked on the
-existing fee — approaching the range where screeners classify a token as effectively
-untradeable, and where the standard Uniswap sell path (already broken by the 2% fee, per the
-review of the pending contract revision) fails more often and more confusingly for ordinary
-users.
+rises from **0.6%** under the adopted no-fee design to **5.6%** — and it reintroduces exactly
+the fee-on-transfer breakage of the standard Uniswap sell path that eliminating the 2% fee
+just removed.
 
 **The decisive objection is not arithmetic but signalling.** A sell tax higher than the buy
 tax is the defining on-chain signature of a honeypot, because asymmetric exit taxation is the
@@ -693,14 +700,14 @@ everything remaining into the pool at launch depth:
 
 | Founder keeps | Total supply | FDV | Max self-extraction | Price drawdown | Off-pool overhang ÷ float |
 |---|---|---|---|---|---|
-| 100M (no burn) | 250M | $7,653 | $1,500 | −75.0% | 1.53× |
-| 75M | 225M | $6,888 | $1,286 | −67.3% | 1.28× |
-| **50M** | **200M** | **$6,122** | **$1,000** | **−55.6%** | **1.02×** |
-| 25M | 175M | $5,357 | $600 | −36.0% | 0.77× |
+| 100M (no burn) | 250M | $7,500 | $1,500 | −75.0% | 1.50× |
+| 75M | 225M | $6,750 | $1,286 | −67.3% | 1.25× |
+| **50M** | **200M** | **$6,000** | **$1,000** | **−55.6%** | **1.00×** |
+| 25M | 175M | $5,250 | $600 | −36.0% | 0.75× |
 
 The last column is the one that matters most, because it is the quantity §3a.6 identified as
 the design's real manipulation exposure. At no burn, the tokens sitting outside the pool
-outnumber the tradeable float by half again. A 50,000,000 burn brings them to parity; a
+outnumber the tradeable float by half again. A 50,000,000 burn brings them to exact parity; a
 75,000,000 burn puts the float in the majority for the first time.
 
 ### 5b.3 Effect on the score
