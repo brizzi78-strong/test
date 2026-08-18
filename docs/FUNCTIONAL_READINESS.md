@@ -1,6 +1,6 @@
 # Functional readiness: a thesis and its examination
 
-*Assessed 18 August 2026, against head `e1f7120`.*
+*Assessed 18 August 2026 against the canonical CARD/no-transfer-tax design.*
 
 ## The thesis
 
@@ -8,9 +8,9 @@ The project makes one claim, printed at the top of its own website:
 
 > **A promise you can check.**
 
-Everything else — the fixed supply, the immutable fee, the renounced
-ownership, the published wallets, the blunt disclosures — is a mechanism in
-service of that sentence. So the functional question is not "does the code
+Everything else — the fixed supply, the absence of transfer taxes, the renounced
+ownership, the published wallets, and the blunt disclosures — is a mechanism
+in service of that sentence. So the functional question is not "does the code
 compile." It is:
 
 **For every promise this project makes in public, is there a working
@@ -41,15 +41,17 @@ would need re-proving on any commit CI has not seen.
 
 ### 1. The token contract — PROVEN
 
-46 lines. Fixed supply of 250,000,000 minted once; a 2% fee as a `constant`;
-the treasury as an `immutable`; no owner-gated function anywhere, so
-renouncing ownership is a real event rather than a gesture.
+A deliberately small fixed-supply contract: 250,000,000 CARD minted once;
+no mint, burn, transfer tax, blacklist, pause, or owner-gated balance function.
+Renouncing ownership is therefore a public finalisation step rather than a
+substitute for hidden administrative controls.
 
-Evidence: **8 claims**, backed by **10 Solidity tests, 3 invariants, and 6
-Node tests**, all passing in CI on the current head. The invariants include
-supply conservation and the permanence of renouncing. Static analysis
-(Slither 0.11.6, run from the companion session) returned 8 findings, all
-informational, none high, medium, or low.
+Evidence: the claims harness maps the published fixed-supply, no-tax,
+no-blacklist, no-pause, powerless-owner, and permanent-renunciation promises
+to Solidity tests, Node tests, ABI checks, and invariants. The compiler pragma
+is pinned to `0.8.28` so verified source and deployed bytecode have a single
+reproducible compiler target. Static analysis reported informational findings
+only; that is useful evidence, but it is not an independent audit.
 
 This is the most thoroughly verified component of the project, and it is
 also the smallest.
@@ -70,11 +72,11 @@ Three static pages, no JavaScript, no dependencies, no build step. A page
 with no code is a page that cannot be compromised by code, which is a real
 security property and not merely an aesthetic one.
 
-Content is honest to an unusual degree: the founder's unlocked holding is
-disclosed, the round-trip cost is stated as ~4% rather than the flattering
-2%, the buying walkthrough opens by advising against buying, and the front
-page says *"If you haven't bought, don't buy"* directly beneath its own buy
-button.
+Content is unusually direct: the founder's unlocked holding is disclosed,
+the site states that CARD itself takes no transfer fee, the buying walkthrough
+opens by advising against buying, and the front page says *"If you haven't
+bought, don't buy"* directly beneath its own buy button. The token pages do
+not market or link to the memoir.
 
 Two dependencies remain: DNS for cp17.org is not yet pointed, and the buy
 button's deep link cannot be finalised until a contract address exists.
@@ -82,20 +84,15 @@ button's deep link cannot be finalised until a contract address exists.
 ### 4. The launch sequence — REASONED, NOT PROVEN
 
 The scripts exist (`launch-check`, `add-liquidity`, `renounce`,
-`rehearse-launch`, `transfer-treasury`). The seeding route is resolved on
-paper: a direct deployer-to-pair transfer would be taxed, delivering 98M
-instead of 100M and setting the opening price ~2% off intent, so the pool
-is seeded deployer → treasury → pair, exempt at both hops.
+`rehearse-launch`, `transfer-treasury`). With no transfer-tax hook, CARD uses
+standard ERC-20 transfer and Uniswap router paths. The intended genesis
+allocation remains 100M pool / 100M founder-held unlocked / 50M treasury.
 
-**But no part of this has touched a real pool.** Three behaviours are
-reasoned from router source rather than executed:
-
-- that buys fail at Uniswap's default 0.5% slippage against the 2% fee;
-- that sells require the fee-on-transfer router functions;
-- that the two-step seed arrives whole.
-
-All three are almost certainly right. None is proven. **This is the largest
-technical gap in the project**, and the Sepolia dry run exists to close it.
+**But no part of the launch sequence has touched a real pool.** The repository
+has not yet demonstrated on Sepolia that the selected scripts, wallet path,
+liquidity amounts, swap path, LP lock, source verification, and renunciation
+work together in the same sequence. **This is the largest technical gap in
+the project**, and the Sepolia dry run exists to close it.
 
 ### 5. The marketplace prototype — NOT FUNCTIONAL, CORRECTLY LABELLED
 
@@ -143,8 +140,9 @@ software problem, and none of it is done.
 3. **The two properties disagreeing about what CARD is.** cp17.org says
    souvenir, don't buy. The marketplace prototype says currency, utility,
    value you can put to work. A complainant quotes whichever is worse.
-4. **Fee-on-transfer behaviour failing in the wild.** Every first buyer
-   hits a failed transaction and concludes the token is broken.
+4. **Launching with liquidity too shallow for the promised purchase flow.**
+   The contract can work perfectly while real buyers still face unacceptable
+   price impact, on-ramp cost, or failed expectations.
 5. **Reputational coupling to the book.** The asymmetric risk: the coin can
    damage the memoir far more than the memoir can help the coin.
 
@@ -156,10 +154,11 @@ Ordered, with dependencies:
 2. Form the entity; clear the "Cardinal" trademark question before filing.
 3. CPA rules on board-grant taxation. Only then, offer grants.
 4. Seat the board; get written acceptances.
-5. Sepolia dry run: seed a real pool, buy, sell, verify all three reasoned
-   behaviours above.
+5. Sepolia dry run: deploy, seed a real pool, buy, sell, verify source,
+   lock test liquidity, and verify that renunciation is permanent.
 6. Point DNS; publish the site.
-7. Deploy, seed via the two-step route, lock liquidity, renounce.
+7. Deploy, distribute the adopted 100M/100M/50M tranches, seed the pool,
+   lock liquidity, and renounce.
 8. Fill in the ledger; send the one launch email.
 
 The marketplace is not on this list. It resumes after step 8, if at all.
