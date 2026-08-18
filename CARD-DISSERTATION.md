@@ -333,6 +333,58 @@ meant to foreclose.
    which is the only defence against a printed number that generalises to attacks nobody has
    thought of yet.
 
+### 3a.7 What a 20,000,000-token grant is actually worth
+
+The proposed distributions (see the counsel/CPA memo) would transfer 20,000,000 CARD —
+8% of supply — to each of several recipients. The curve prices that grant precisely, and
+the result is worth stating before any grant is executed rather than after.
+
+**Today, against the $3,000 seed, the grant marks at $612 and realises about $500.** Selling
+20,000,000 into a pool of 98,000,000 CARD and $3,000 delivers 19,600,000 after the transfer
+fee, leaving the pool at $2,500. And the grants are not independent of one another — the pool
+pays the first seller best:
+
+| Sequence | Extracts | Pool remaining | Price after |
+|---|---|---|---|
+| First 20M sold | $500 | $2,500 | −31% |
+| Second 20M sold | $357 | $2,143 | −49% |
+| Third 20M sold | $268 | $1,875 | −61% |
+| **Three grants, combined** | **$1,125** | | |
+
+Sixty million tokens — 24% of total supply, marking at $1,836 — realise $1,125 between them,
+and the third recipient receives roughly half of what the first does for holding exactly the
+same asset. **The grant is close to fully realisable only because it is close to worthless.**
+
+**At a printed $1.00 the position inverts completely.** Per §3a.5 the pool at that price holds
+about 542,000 CARD and $542,000. A single grantee selling 20,000,000 into it extracts
+**$527,621 — essentially the entire pool — and leaves the price at $0.000725**, down 99.9%.
+The first board member out takes nearly everything that ever entered; the others hold
+20,000,000 tokens each against a pool containing $14,000. A twenty-million-dollar paper
+position converts to roughly half a million dollars for exactly one holder.
+
+**For a single 20,000,000 grant to be genuinely worth $1,000,000, the pool must reach
+$3.50 per CARD** — a fully diluted capitalisation of **$875,664,547**, requiring about
+**$1,011,782 of net external buying**. At that point the pool holds $1,014,782 and the sale
+takes $1,000,000 of it, leaving $14,782 for everyone else. Three recipients each realising
+$1,000,000 therefore requires not $3,000,000 of external money but considerably more, since
+each exit deepens the curve for the next.
+
+None of this says the grants are a bad idea. It says the grants are **recognition, not
+compensation**, at any pool size the project will plausibly reach, and the paperwork and the
+conversation with each recipient should say so in those words. A recipient who believes they
+have been given $20,000,000 has been misled by an arithmetic the project is in a position to
+correct.
+
+**The inversion that actually endangers recipients is tax, not disappointment.** Absent a
+timely §83(b) election, a vesting grant is ordinarily taxed at each vesting date on the fair
+market value then — a number derived from a price feed. §3a.6 establishes that a price feed
+for this token can be moved to $1 by a stranger for about $100. A recipient could therefore
+face a tax liability computed from a number nobody paid, against a position the pool cannot
+liquidate at anything near it. Whether a manipulated thin-pool print would survive scrutiny
+as fair market value is a question for the CPA and not one this document can answer — but it
+is the reason the §83(b) question in the memo is the most time-sensitive item in it, and the
+reason the election should be evaluated while the whole grant demonstrably marks at $612.
+
 ## 4. The demand gate is unchanged and unweakened
 
 Nothing in this allocation answers the question the companion study puts first: who buys this, and
@@ -404,6 +456,102 @@ screener that reads "40% unlocked founder hold" prices future sell pressure into
 no sell policy, however honestly kept, is checkable in advance. The framework's view is that this
 is the single decision most worth revisiting once the demand gate passes — a token that has become
 load-bearing in a revenue product justifies, and can afford, the stronger constraint.
+
+## 5b. The burn option: the cheapest route back to the discounted points
+
+Burning supply is worth analysing carefully, because the instinct behind it is correct for a
+reason quite different from the one usually given.
+
+**First, the correction.** Burning tokens held *outside* the pool moves the price by exactly
+zero. Price is the ratio of the two pool balances (§3a.1); tokens in a founder wallet or a
+treasury Safe are not in that ratio, and destroying them does not change it. The widespread
+belief that burning supply raises price is, for supply held off-pool, simply false. What a
+burn does is remove tokens that could otherwise have been sold — **it removes a downside
+rather than creating an upside**, which is precisely what this study's central claim says
+verifiable restraint does and does not do (§3a.3 is unaffected: the pool remains the entire
+realisable market).
+
+That is not a reason to dismiss the idea. It is the reason to take it seriously, because
+removing the downside is exactly the problem §5a docked five points for.
+
+### 5b.1 Two burns that share a name and nothing else
+
+**A per-transfer burn tax should be rejected.** Burning a percentage of every transfer is a
+mechanic, not a restraint: it signals nothing about the founder's intent, removes no
+overhang, and compounds badly with the 2% treasury fee already in the pending revision.
+Round-trip cost would rise from roughly 4.6% to roughly 8.6%, the standard Uniswap sell path
+already broken by the existing fee would break further, and every screener that classifies
+tokens by tax rate would classify this one unfavourably. It buys a deflationary narrative at
+the cost of the clean-mechanics posture the launch strategy deliberately maintains.
+
+**Burning founder supply is the strong form, and it is genuinely available.** It is costly,
+irreversible, verifiable by anyone at a block explorer, and differentially expensive for a
+founder who intends to extract — which is the exact structure of a separating signal under
+this study's framework (§3.2). A founder planning to dump cannot burn, because burning
+destroys the thing they would dump. A founder planning to build forfeits only optionality.
+
+### 5b.2 What each burn size does
+
+Founder tranche burned from the 100,000,000 held, worst case being the founder selling
+everything remaining into the pool at launch depth:
+
+| Founder keeps | Total supply | FDV | Max self-extraction | Price drawdown | Off-pool overhang ÷ float |
+|---|---|---|---|---|---|
+| 100M (no burn) | 250M | $7,653 | $1,500 | −75.0% | 1.53× |
+| 75M | 225M | $6,888 | $1,286 | −67.3% | 1.28× |
+| **50M** | **200M** | **$6,122** | **$1,000** | **−55.6%** | **1.02×** |
+| 25M | 175M | $5,357 | $600 | −36.0% | 0.77× |
+
+The last column is the one that matters most, because it is the quantity §3a.6 identified as
+the design's real manipulation exposure. At no burn, the tokens sitting outside the pool
+outnumber the tradeable float by half again. A 50,000,000 burn brings them to parity; a
+75,000,000 burn puts the float in the majority for the first time.
+
+### 5b.3 Effect on the score
+
+§5a's five-point deduction falls on item 7 (machine-enforced constraints), on the reasoning
+that the largest retained tranche is governed by a written policy rather than by code. A burn
+answers that objection in the strongest available way: **a burned token is not a constraint
+on selling, it is the removal of the capacity to sell**, which is the same logical form as the
+renounce that item 7 already awards full marks for elsewhere.
+
+Applying Appendix A's rule R2 (structure over intent), item 7 should move materially upward
+at a 50,000,000 burn — where the policy-governed tranche no longer exceeds the multisig-
+governed one — and further at 75,000,000, where the Safe becomes the dominant retained
+tranche. The precise rescore belongs to a coding pass under Appendix A rather than to an
+assertion here, but the direction is not in doubt, and **the notable feature is that a burn
+recovers those points without a vesting contract at all.** It is strictly stronger than the
+timelock architecture §5 specified and §5a recommended revisiting: a timelock delays access,
+a burn ends it.
+
+### 5b.4 Four honest costs
+
+1. **It is irreversible in the wrong direction too.** Burned tokens cannot later fund a
+   contributor, a listing, a partnership, or an emergency. The flexibility §5a credited the
+   unlocked hold with buying is exactly what a burn spends.
+2. **It forfeits the founder's own upside permanently.** Today that is a few hundred dollars
+   of realisable value, which is why it is cheap to do now — but the real cost is the forgone
+   claim on all future value of that supply, and that cost is borne before anyone knows
+   whether there will be any. That is what makes it a signal rather than a gesture.
+3. **It competes directly with the proposed grants.** The 100,000,000 tranche is one pool of
+   tokens with three candidate uses — retain, grant, burn — and they are mutually exclusive
+   at the margin. The distributions contemplated in the memo consume 40,000,000 to
+   60,000,000 of it. A burn decision and a grant decision are the same decision and should be
+   taken together, not sequentially.
+4. **It does not touch the demand gate.** A token nobody wants, with less supply, is still a
+   token nobody wants. Burning improves the safety of the downside case and the honesty of
+   the FDV figure; it moves the central question in §4 not at all.
+
+### 5b.5 Recommendation
+
+If the founder tranche is to be reduced, a burn is the best available use of the reduction on
+this framework's terms — better than a timelock, better than a vesting contract, and far
+better than a per-transfer burn tax, which should not be adopted. The sequencing that follows
+from §5b.4(3) is: settle the grant question with counsel first, then burn a stated portion of
+what remains, announce the burn transaction hash alongside the renounce and the LP lock, and
+retain the balance under the existing sell policy. A burn executed *before* launch and
+disclosed *as* a launch step is worth materially more as a signal than the same burn performed
+later in response to pressure.
 
 ## 6. Launch protocol deltas
 
