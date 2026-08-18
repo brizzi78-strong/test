@@ -225,6 +225,114 @@ should be sized as money the issuer is content never to recover. Sizing it to pr
 impressive headline capitalisation inverts the decision, putting more at risk to make a
 number larger that nobody outside has endorsed.
 
+### 3a.5 What $1 per token would require
+
+The question is asked of every small token, so it is worth answering with the curve rather
+than with an opinion. **$1 per CARD is a fully diluted capitalisation of $250,000,000** —
+32,668× the $7,653 the $3,000 seed establishes.
+
+In a constant-product pool the ETH reserve needed to hold a given price follows directly
+from the invariant: if *E₀* is the seeded ETH, *C* the pooled CARD, and *P* the target
+price, then the pool at that price holds *E* = √(*E₀* · *P* · *C*) in ETH and *C* / √(*P* /
+*P₀*) in CARD. Applied to the $3,000 seed and its 98,000,000 pooled tokens:
+
+| Target price | Fully diluted cap | Net ETH that must buy in | CARD left in pool | Share of pooled float consumed |
+|---|---|---|---|---|
+| $0.001 | $250,000 | ~$14,100 | 17,150,000 | 82.5% |
+| $0.01 | $2,500,000 | ~$51,200 | 5,420,000 | 94.5% |
+| $0.10 | $25,000,000 | ~$168,500 | 1,715,000 | 98.3% |
+| **$1.00** | **$250,000,000** | **~$539,000** | **542,000** | **99.45%** |
+
+The dollar figure in the fourth row is not the obstacle. **The obstacle is the last
+column.** Reaching $1 requires that 99.45% of every token in the pool be bought out of it,
+and the constant-product curve prices the final tranche asymptotically: each additional
+token costs more ETH than the last, without bound, as the CARD reserve approaches zero. A
+pool seeded with $3,000 has no depth through which that volume can transact. This is a
+structural statement about the curve, not a pessimistic forecast.
+
+**A larger seed does not help, and the direction of the effect is counterintuitive.** Since
+*E* = √(*E₀* · *P* · *C*), the required inflow rises with the *square root* of the seed. At
+a $40,000 seed the same $1 target requires roughly **$1,940,000** of net buying — 3.6× more
+absolute capital than the $3,000 case, not less, because the larger pool retains more tokens
+at $1 and each must be backed by ETH. What the larger seed buys is a marginally shallower
+climb in proportional terms — 98.0% of the float consumed rather than 99.45%. Both sit on
+the vertical part of the curve. The seed size trades one infeasibility for another; it does
+not convert either into a feasible one.
+
+**And the resulting capitalisation would be mostly notional even if it happened.** The
+$250,000,000 headline would rest on approximately $539,000 of money that actually changed
+hands — every dollar entering the pool marks up roughly $464 of fully diluted
+capitalisation. The founder's 100,000,000 and the treasury's 50,000,000 were never in the
+pool; they would mark at $100,000,000 and $50,000,000 respectively, funded by nothing, and
+§3a.2's arithmetic would still govern what either could realise on the way out.
+
+**One honest limitation.** This analyses the pool *as seeded and never re-seeded*. A token
+with genuine demand does not stay in a single thin pool: liquidity is deepened, additional
+venues open, and the curve above is replaced by a different and much deeper one. The finding
+is therefore not that $1 is impossible in principle — it is that **$1 is not reachable
+through pool mechanics, at any seed size the issuer would rationally choose.** It is
+reachable only through the thing the demand gate (§4) asks for and no allocation decision
+can substitute for: enough external parties wanting the token badly enough to fund that
+depth. The arithmetic in this section does not add a constraint the demand gate had not
+already imposed. It prices it.
+
+**Consequence for the disclosure.** The launch materials should be able to answer the
+question directly when it is asked, because it will be. "What would it take to reach $1"
+has a checkable answer — roughly half a million dollars of net buying, consuming 99% of the
+pooled float — and publishing it is a straightforward instance of the disclosure discipline
+the framework treats as the cheapest credibility available. A project willing to state the
+number is distinguishable from one that lets the question hang.
+
+### 3a.6 Manipulation prints the price but cannot fund it
+
+§3a.5 shows what $1 costs in *bought* liquidity. It does not show what $1 costs in
+*displayed* price, and the two are far apart. The honest answer to "could someone manipulate
+CARD to $1" is **yes, cheaply, and the design cannot prevent it** — which is precisely why
+the distinction between printed price and realisable value has to be stated at launch rather
+than discovered afterwards.
+
+**The cheap attack is a second pool.** Anyone holding CARD — the founder, the treasury, a
+buyer, a stranger — can create an additional pair at any ratio they choose. Seeding a fresh
+CARD/ETH pool with 100 CARD and $100 of ETH sets that pool's price at $1 per CARD. The cost
+is roughly $100 plus gas. Price aggregators and token screeners frequently surface a new
+pair's price before any liquidity-weighting is applied, so a $250,000,000 fully diluted
+capitalisation can be *displayed* for the price of a modest dinner. Nothing in a fixed-supply
+renounced ERC-20 can stop this: creating pools is permissionless by design, and the same
+permissionlessness that makes the renounce credible makes the price surface unownable.
+
+**Wash-trading the canonical pool is more expensive and self-defeating.** Round-tripping
+enough volume through the main pool to touch $1 and return costs roughly 4.6% of the traded
+notional — 2% transfer fee on each leg plus Uniswap's 0.3% on each — or about $25,000 on the
+~$539,000 of notional §3a.5 requires. More to the point, a manipulator pumping this pool is
+buying into an overhang of **150,000,000 tokens held outside it** — 1.5× the pooled float,
+across the founder and treasury addresses — any part of which can be sold into the pump and
+take the manipulator's ETH. Outside manipulation of the primary pool is therefore poorly
+motivated. The party for whom the manoeuvre is *not* self-defeating is the founder, since
+the founder holds the overhang. That is the same exposure §5a discounts five points for, seen
+from a second angle.
+
+**What manipulation cannot do is change §3a.2.** A printed price of $1 does not put a dollar
+into the pool. Extraction remains bounded by the ETH actually deposited, whatever the ticker
+says: the pool holds what it holds. Manipulation therefore does not narrow the gap between
+capitalisation and realisable value — **it widens it arbitrarily**, and a $250,000,000
+headline sitting above a $3,000 pool is the widest form that gap can take. Anyone treating a
+displayed capitalisation as evidence of value is making an error the arithmetic here is
+meant to foreclose.
+
+**Three commitments follow, and all three are cheap to make and checkable.**
+
+1. **Name the canonical pool at launch.** Publish the pair address and state that prices from
+   any other venue are neither endorsed nor meaningful. A named pool converts the second-pool
+   attack from a claim into an obvious discrepancy.
+2. **Never cite a price the project created.** The project does not quote a market
+   capitalisation, a token price, or a "valuation" derived from its own pool in any
+   promotional material. If a number is quoted, it is quoted with the extraction table beside
+   it.
+3. **Publish the extraction arithmetic itself.** §3a.2 and §3a.5 are the disclosure. A reader
+   holding them can check any price they are shown against what the pool could actually pay,
+   which is the only defence against a printed number that generalises to attacks nobody has
+   thought of yet.
+
 ## 4. The demand gate is unchanged and unweakened
 
 Nothing in this allocation answers the question the companion study puts first: who buys this, and
