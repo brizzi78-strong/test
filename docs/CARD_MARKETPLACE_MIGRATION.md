@@ -99,3 +99,64 @@ Every one of these is a blocker, not a nice-to-have:
 4. **No live claims in test copy.** Nothing in this app may state a price,
    a return, an availability date, or a partner relationship that does not
    exist yet.
+
+## Test Mode copy review (August 2026, from screenshots)
+
+The prototype's labeling discipline is strong and should be preserved
+verbatim through the migration: TEST MODE on every card, "Demonstration
+balance · No cash value," "Illustrative amount," "Test rate," "User
+approval required before anything moves," "CARD never sees or stores a
+seed phrase," and the block statement that no wallet, payment, identity,
+exchange, or blockchain service is active. Four things still need to
+change.
+
+### 1. The illustrative rate implies a valuation ~500x the plan
+
+The trade card shows **1 USDC = 25 CARD** — a $0.04 token. Against the
+fixed 250,000,000 supply that is a **$10,000,000 implied market cap**.
+The actual launch plan is roughly $8,000 of liquidity against the
+100,000,000 CARD pool: about **$0.00008 per CARD**, a ~$20,000 implied
+cap, and about **12,500 CARD per USDC**.
+
+"Test rate" does not neutralise this. A screenshot of that number is a
+price anchor, and the gap between it and launch reality is the kind of
+thing that reads as a promise made and broken. Use numbers in the right
+order of magnitude, or use obviously non-numeric placeholders.
+
+### 2. The quote omits the token's own 2% fee
+
+"Estimated costs — shown before approval" is not enough for a page that
+promises a "complete test quote." The real breakdown must show, as
+separate lines: the provider's on-ramp fee, the network fee, the DEX fee
+(0.3%), **CARD's own 2% transfer fee**, and the resulting minimum
+received. It must also surface the slippage requirement — a default
+0.5% tolerance cannot clear a 2% fee, which is the single most likely
+cause of a failed first purchase.
+
+### 3. Embedded wallets contradict the other site, and raise a recovery question
+
+The wallet flow offers sign-in by email or phone with an embedded
+non-custodial wallet, "without asking most users to manage twelve
+recovery words." That is a legitimate and much friendlier pattern — but
+`cardinalspromise.org/how-to-buy` currently tells readers to write their
+twelve words on paper and never share them. Two official properties
+giving opposite wallet advice is a support problem and a trust problem;
+one of them has to change.
+
+The diligence question for the provider contract, which decides whether
+this is non-custodial in substance and not just in form:
+
+- Can the customer **export** their key and leave?
+- If the customer loses access, who can recover the funds — and can that
+  party move funds without the customer?
+- Can CARD, alone or with the provider, ever move a customer's tokens?
+
+If the answer to the last one is anything but a flat no, the custody
+analysis changes and counsel needs to know before signing.
+
+### 4. "Use CARD" and "Participating partners — real utility"
+
+Both describe a merchant network that does not exist. Promised future
+utility delivered by the issuer's efforts is the classic shape
+regulators look for. Until partners exist and are named, this reads as
+an aspiration and must be written as one.
