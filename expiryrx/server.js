@@ -7,23 +7,34 @@ const app = express();
 const PORT = process.env.PORT || 10000;
 const PILOT_USER = process.env.PILOT_USER || 'pilot';
 const PILOT_PASSWORD = process.env.PILOT_PASSWORD || '';
+const SESSION_TOKEN = crypto.createHash('sha256').update(`${PILOT_USER}:${PILOT_PASSWORD}:expiryrx-pilot`).digest('hex');
 
 app.disable('x-powered-by');
 app.use(express.json({limit:'1mb'}));
+app.use(express.urlencoded({extended:false}));
 
-// Temporary pilot access gate. Replace with SSO/role-based auth before enterprise rollout.
+function cookies(req){
+  return Object.fromEntries((req.headers.cookie||'').split(';').map(v=>v.trim()).filter(Boolean).map(v=>{const i=v.indexOf('=');return i<0?[v,'']:[v.slice(0,i),decodeURIComponent(v.slice(i+1))]}));
+}
+function signedIn(req){ return !PILOT_PASSWORD || cookies(req).expiryrx_session === SESSION_TOKEN; }
+function loginPage(error=''){
+  return `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ExpiryRx Sign In</title><style>*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;background:linear-gradient(145deg,#071b34,#123a63);color:#16324a;min-height:100vh;display:grid;place-items:center;padding:22px}.card{width:min(430px,100%);background:#fff;border-radius:24px;padding:28px;box-shadow:0 30px 90px #0005}.brand{font-size:28px;font-weight:900;color:#0b1f3a}.tag{color:#6b8093;margin:5px 0 24px}.field{margin:14px 0}.field label{display:block;font-size:11px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:#6b8093;margin-bottom:7px}.field input{width:100%;padding:14px;border:1px solid #cfdce6;border-radius:13px;font-size:16px;outline:none}.field input:focus{border-color:#2b6ca3;box-shadow:0 0 0 4px #2b6ca322}.btn{width:100%;border:0;border-radius:999px;background:#0b1f3a;color:#fff;font-weight:850;padding:14px;margin-top:8px;font-size:16px}.error{background:#fdecec;color:#a92f2f;border-radius:12px;padding:11px 12px;margin:12px 0}.small{font-size:12px;color:#7a8d9c;margin-top:18px;text-align:center}</style></head><body><main class="card"><div class="brand">ExpiryRx</div><div class="tag">Pharmacy Inventory Intelligence</div>${error?`<div class="error">${error}</div>`:''}<form method="post" action="/login"><div class="field"><label>User name</label><input name="username" autocomplete="username" required autofocus></div><div class="field"><label>Password</label><input type="password" name="password" autocomplete="current-password" required></div><button class="btn" type="submit">Sign in</button></form><div class="small">Pilot access only</div></main></body></html>`;
+}
+
+app.get('/login',(req,res)=>{ if(signedIn(req)) return res.redirect('/'); res.send(loginPage()); });
+app.post('/login',(req,res)=>{
+  const user=String(req.body.username||''); const pass=String(req.body.password||'');
+  if(user!==PILOT_USER || pass!==PILOT_PASSWORD) return res.status(401).send(loginPage('Incorrect username or password.'));
+  res.setHeader('Set-Cookie',`expiryrx_session=${SESSION_TOKEN}; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=28800`);
+  res.redirect('/');
+});
+app.get('/logout',(req,res)=>{ res.setHeader('Set-Cookie','expiryrx_session=; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=0'); res.redirect('/login'); });
+
 app.use((req,res,next)=>{
-  if(req.path === '/api/health') return next();
-  if(!PILOT_PASSWORD) return next();
-  const auth = req.headers.authorization || '';
-  if(auth.startsWith('Basic ')){
-    try{
-      const [user,pass] = Buffer.from(auth.slice(6),'base64').toString('utf8').split(':');
-      if(user === PILOT_USER && pass === PILOT_PASSWORD) return next();
-    }catch(e){}
-  }
-  res.set('WWW-Authenticate','Basic realm="ExpiryRx Pilot"');
-  return res.status(401).send('ExpiryRx pilot access required');
+  if(req.path==='/api/health' || req.path==='/login') return next();
+  if(signedIn(req)) return next();
+  if(req.path.startsWith('/api/')) return res.status(401).json({error:'Sign in required'});
+  return res.redirect('/login');
 });
 
 app.use(express.static(path.join(__dirname,'public')));
