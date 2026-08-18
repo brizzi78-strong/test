@@ -7,7 +7,7 @@ and data that persists — the actual books for Blue Ridge Press LLC.
 > that runs it. WordPress stays your public marketing site; Books is a separate,
 > private admin tool you log into.
 
-Two ways to do it. **Option A needs no server and is the recommended path.**
+Three ways to do it. **Options A and B need no server and are the recommended path.**
 
 ---
 
@@ -38,7 +38,41 @@ commits auto-deploys.
 
 ---
 
-## Option B — your own small server (VPS)
+## Option B — Koyeb (no server to manage)
+
+Koyeb builds straight from this repo's `deploy/Dockerfile` and gives you an
+`https://<app>-<org>.koyeb.app` URL with HTTPS. Free eco instances are available;
+persistent data needs a paid instance with a Volume attached.
+
+1. Go to **https://app.koyeb.com** and sign up (GitHub login works).
+2. Click the button below (edit `BOOKS_PASSWORD` in the URL first, or set it
+   after the form loads):
+
+   [![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&name=cardinal-books&repository=brizzi78-strong%2Ftest&branch=main&builder=dockerfile&dockerfile=deploy%2FDockerfile&command=node&args=deploy%2Fallinone.ts&ports=8000%3Bhttp%3B%2F&env%5BPORT%5D=8000&env%5BBUSINESS_NAME%5D=Blue+Ridge+Press+LLC&env%5BACCOUNTING_DB%5D=%2Fdata%2Faccounting.db&env%5BBOOKS_USER%5D=admin&env%5BBOOKS_PASSWORD%5D=CHANGE_ME)
+
+   This pre-fills: Git deployment from `brizzi78-strong/test` on `main`,
+   building `deploy/Dockerfile` (build context is the repo root, matching the
+   `COPY` paths inside it), running `node deploy/allinone.ts`, and exposing
+   port `8000` — plus the env vars below. If a field doesn't carry over,
+   copy it in by hand on the review screen; nothing here is required to be
+   set through the link.
+3. Before clicking **Deploy**, set **BOOKS_PASSWORD** to a strong password
+   (`BOOKS_USER` defaults to `admin`).
+4. **Attach a Volume** for durable storage (skip this and Cardinal Books
+   still runs, but the ledger resets on every redeploy): in the service's
+   **Volumes** settings, add a Volume mounted at `/data`. This requires an
+   instance type that supports Volumes (not the free eco tier) — see
+   [Koyeb Volumes](https://www.koyeb.com/docs/reference/volumes).
+5. Deploy. Koyeb gives you a URL like
+   **https://cardinal-books-yourorg.koyeb.app** — open it, log in, and push
+   to `main` to auto-deploy new commits.
+
+**Custom domain (optional):** in the service's **Domains** settings, add
+`books.blueridgepressllc.com` and point the CNAME Koyeb shows you at your DNS.
+
+---
+
+## Option C — your own small server (VPS)
 
 If you'd rather run your own box (~$5–6/month), full control:
 
@@ -72,7 +106,7 @@ only you can get in.
 - **Data** lives on the disk / `accounting-data` volume and survives restarts and
   redeploys. Restarting reuses the same Blue Ridge Press LLC books (the app finds
   the existing company by name).
-- **Update** (VPS): `git pull && docker compose --env-file deploy/.env -f deploy/books-stack.yml up --build -d`. On Render, pushing to the branch auto-deploys.
+- **Update** (VPS): `git pull && docker compose --env-file deploy/.env -f deploy/books-stack.yml up --build -d`. On Render or Koyeb, pushing to the branch auto-deploys.
 - **Back up** (VPS): `docker run --rm -v cardinal-books_accounting-data:/d -v $PWD:/b alpine tar czf /b/books-backup.tgz -C /d .`
 
 ## For actual tax filing
