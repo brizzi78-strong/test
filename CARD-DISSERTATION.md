@@ -385,6 +385,157 @@ as fair market value is a question for the CPA and not one this document can ans
 is the reason the §83(b) question in the memo is the most time-sensitive item in it, and the
 reason the election should be evaluated while the whole grant demonstrably marks at $612.
 
+### 3a.8 Buy-and-hold: the honest case, and what it does to the pool
+
+Manipulation aside, the fair question is what happens if the token simply finds buyers who
+intend to keep it. The answer is more favourable than §3a.5 might suggest, and it fails in a
+way worth understanding before it is relied on.
+
+**The upside is real and it is convex.** With no selling, price rises as the *square* of the
+ETH in the pool: *P* = *E*² / *k*. Ten times the pooled ETH is a hundred times the price.
+That is a genuinely powerful dynamic and it deserves to be stated plainly:
+
+| Net bought in | Price | Fully diluted cap | Multiple | CARD left in pool | Float consumed |
+|---|---|---|---|---|---|
+| $10,000 | $0.000575 | $143,707 | 19× | 22,615,385 | 76.9% |
+| $25,000 | $0.002667 | $666,667 | 87× | 10,500,000 | 89.3% |
+| $50,000 | $0.009554 | $2,388,605 | 312× | 5,547,170 | 94.3% |
+| **$100,000** | **$0.036085** | **$9,021,259** | **1,179×** | **2,854,369** | **97.1%** |
+| $250,000 | $0.217718 | $54,429,422 | 7,112× | 1,162,055 | 98.8% |
+
+A hundred thousand dollars of genuine, patient buying produces a nine-million-dollar
+capitalisation. Nothing in this study says that cannot happen, and §3a.5's pessimism about
+$1 should not be read as pessimism about every price.
+
+**The failure mode is in the last column.** Buy-and-hold does not deepen the market; **it
+consumes it.** Every purchase removes CARD from the pool, so the more completely the strategy
+succeeds, the less liquidity remains behind the price it produced. At the $100,000 state the
+entire tradeable market is 2,854,369 tokens — about 1.1% of supply — and the consequences are
+severe:
+
+| Sold into the pool | Share of supply | Extracts | Price impact |
+|---|---|---|---|
+| 1,000,000 CARD | 0.4% | $26,325 | **−44.6%** |
+| 3,000,000 CARD | 1.2% | $52,261 | −75.7% |
+| 10,000,000 CARD | 4.0% | $79,767 | −94.9% |
+| 20,000,000 CARD | 8.0% | $89,907 | −98.4% |
+
+**A single holder disposing of 0.4% of supply halves the price.** One board grant, one early
+buyer changing their mind, one estate being settled. The nine-million-dollar figure is not
+protected by the holders' collective intention, because the pool does not know their
+intention — it knows only the next trade.
+
+**Which makes buy-and-hold a coordination game, and an unstable one.** The strategy pays
+every participant well precisely as long as every participant follows it, while the payoff to
+being the first to stop rises with the price and falls sharply for everyone who goes second.
+This is not a claim that holders would act in bad faith. It requires no bad faith at all: a
+medical bill, a divorce, a portfolio rebalance, a death, a change of mind. The strategy asks
+strangers for unanimous, indefinite, unenforced coordination.
+
+**And by this study's own standard, that is the weakest class of commitment there is.** §5a
+deducted five points because the founder's written sell policy is a commitment rather than a
+machine-enforced constraint. A buy-and-hold ethos among holders is strictly weaker than that
+policy — unwritten, undertaken by parties with no relationship to the project, enforceable by
+nobody. The framework cannot count it, and neither should a launch that takes the framework
+seriously.
+
+**The correct response to it working is to deepen the pool, not to celebrate.** And here the
+arithmetic is unkind, because adding liquidity requires matching both sides at the prevailing
+ratio, so **depth is cheapest exactly when it is least needed:**
+
+| Pool state | Cost of adding 20,000,000 CARD of depth |
+|---|---|
+| At launch | **$612** |
+| After $10,000 of buying | $11,497 |
+| After $100,000 of buying | **$721,701** |
+
+Depth that costs $612 on day one costs $721,701 at a nine-million-dollar capitalisation —
+1,179× more, by the same convexity that produced the gain. Any plan to "add liquidity later
+if it takes off" should be priced now, because later it is unaffordable. (Uniswap's 0.3% swap
+fee does accrue to the pool and thickens it slightly with volume; at these sizes the effect
+is real but small relative to the figures above.)
+
+**This does not contradict §3a.2, which answers a different question.** That section found
+drawdown scale-invariant for a *fixed fraction of supply sold* — a ratio, and therefore
+independent of magnitude. This section measures *pool depletion per dollar of price achieved*,
+which is not a ratio and is not scale-invariant. Both hold: a bigger seed does not improve the
+risk from any given percentage sold, and a bigger seed does leave a proportionally deeper pool
+at any given achieved price. The two findings answer "what does selling cost?" and "what does
+rising cost?" respectively.
+
+**Finally, success makes the grant problem worse rather than better.** Under a $100,000
+buy-and-hold, a 20,000,000 board grant marks at **$721,701** and a vesting third of it
+represents **$240,579** of income at a price real buyers actually paid — so the valuation is
+defensible in a way §3a.7's manipulated case was not. Selling that tranche realises
+**$71,684** and moves the price **−90.8%**. A recipient could owe tax computed on $240,579
+while able to obtain $71,684, and only by destroying the position of everyone who held. This
+is the classic illiquid-appreciated-property trap, it arrives in the *good* scenario, and it
+is the strongest argument in this document for settling the §83(b) question before any grant
+is signed.
+
+**What would make patient holding structurally real**, rather than a hope, is the same short
+list the rest of this study keeps arriving at: machine-enforced locks that holders opt into,
+liquidity deep enough to absorb an exit, or a reason to hold the token that is not the
+expectation of selling it. The first two cost money. The third is the demand gate (§4).
+
+### 3a.9 What the pool can actually fund, and the comparison that decides it
+
+The project exists to fund something — a scholarship in Lou's memory. §3a.8 shows that
+patient buying can produce a large capitalisation, so the operative question is not whether
+the number can get big but **how much of it reaches a student.** The curve answers precisely.
+
+The treasury holds 50,000,000 tokens and is exempt from the transfer fee. Selling that tranche
+into the pool at various levels of genuine buy-side interest:
+
+| Buyers put in | Pool holds | Treasury 50M marks at | Actually funds | Share of buyers' money | Price after |
+|---|---|---|---|---|---|
+| $25,000 | $28,000 | $133,333 | $23,140 | 92.6% | −97.0% |
+| $50,000 | $53,000 | $477,721 | $47,707 | 95.4% | −99.0% |
+| **$100,000** | **$103,000** | **$1,804,252** | **$97,438** | **97.4%** | **−99.7%** |
+| $250,000 | $253,000 | $10,885,884 | $247,254 | 98.9% | −99.9% |
+
+Two things are true at once here, and both matter.
+
+**The good news is real: the mechanism works, and it is efficient.** Roughly 97% of every
+dollar buyers put in can be converted into scholarship funding. That is a respectable
+conversion rate and it should not be dismissed.
+
+**The bad news is what the third and sixth columns say together.** The treasury tranche
+*marks* at $1,804,252 and *funds* $97,438 — and doing so takes the price down 99.7%, because
+the funding comes out of the same pool the price is made of. **Every dollar the scholarship
+receives is a dollar a buyer deposited**, less leakage. The token does not generate the money.
+It transports it, and it is destroyed in transit.
+
+**Which invites the comparison that actually decides the question.** Take the same $100,000
+of goodwill and route it two ways:
+
+| | Reaches the scholarship | Donor keeps | Donor is left holding |
+|---|---|---|---|
+| **Through the token pool** | $97,438 | nothing | tokens worth ~99.7% less than paid |
+| **As direct donations** | ~$97,100 (2.9% processing) | a deduction worth **$22,000–$37,000** | nothing, by design |
+
+The two routes deliver the same amount to the student. One of them additionally hands the
+donors $22,000–$37,000 in tax relief and leaves nobody holding a depreciated asset; the other
+converts a gift into what looks, on a public and permanent price chart, like a loss. **For the
+purpose of funding a scholarship, a donation mechanism dominates a token on every axis that
+can be measured** — and it carries no securities question, no §83(b) problem, no
+custody risk, and no key ceremony.
+
+The one genuine argument on the other side deserves stating: a token may reach people who
+would never donate. That is true, and it is not nothing. But money raised that way arrives
+carrying an expectation of return that this structure cannot meet, from exactly the
+population a securities analysis is most concerned about, and the eventual chart is a public
+record of what happened to them. A scholarship funded that way is funded once.
+
+**None of this argues against the mission. It argues about the instrument.** The structure
+this study keeps arriving at is the same one §4 describes from the other direction: something
+real is sold, it earns revenue, and a published share of that revenue funds the scholarship —
+reported on a schedule, in bad quarters as well as good, which is verifiable restraint applied
+to the mission rather than to the tokenomics. That structure funds a scholarship every year
+instead of once, requires no buyer to lose money for a student to gain it, and needs no token
+at all. If a token is later load-bearing inside that business, it will have a reason to exist
+that this section cannot supply and the pool arithmetic cannot fake.
+
 ## 4. The demand gate is unchanged and unweakened
 
 Nothing in this allocation answers the question the companion study puts first: who buys this, and
@@ -489,6 +640,51 @@ irreversible, verifiable by anyone at a block explorer, and differentially expen
 founder who intends to extract — which is the exact structure of a separating signal under
 this study's framework (§3.2). A founder planning to dump cannot burn, because burning
 destroys the thing they would dump. A founder planning to build forfeits only optionality.
+
+**A 5% burn on every sale, specifically.** The most appealing version of the tax burn is one
+that falls only on selling — it sounds like it should protect the price, and it does, by an
+amount too small to matter. Taking the $100,000 buy-and-hold state from §3a.8 (pool of
+2,854,369 CARD and $103,000) and selling 3,000,000 tokens under different tax rates:
+
+| Tax on the sale | Reaches the pool | Seller extracts | Price impact |
+|---|---|---|---|
+| none | 3,000,000 | $52,781 | −76.2% |
+| 2% (current design) | 2,940,000 | $52,261 | −75.7% |
+| 5% burn | 2,850,000 | $51,461 | −75.0% |
+| 2% fee + 5% burn | 2,790,000 | $50,913 | −74.4% |
+
+**Seven percent of taxation buys 1.8 percentage points of price protection.** The result is
+not close, and the reason is structural: price impact is governed by the size of the sale
+relative to the depth of the pool, and shaving a few percent off the input barely moves that
+ratio. A sell tax cannot fix a depth problem. Only depth fixes a depth problem.
+
+What the 5% does buy is cost to the holder. Round-trip cost for a buyer who later wants out
+rises from **4.5%** under the current design to **9.4%** with a 5% sell burn stacked on the
+existing fee — approaching the range where screeners classify a token as effectively
+untradeable, and where the standard Uniswap sell path (already broken by the 2% fee, per the
+review of the pending contract revision) fails more often and more confusingly for ordinary
+users.
+
+**The decisive objection is not arithmetic but signalling.** A sell tax higher than the buy
+tax is the defining on-chain signature of a honeypot, because asymmetric exit taxation is the
+mechanism honeypots use. An honest implementation is indistinguishable from a dishonest one
+by inspection — which is precisely the pooling outcome this study says a credible firm must
+avoid (§3.2). Adopting it would mean taking the one mechanic that *cannot* separate an honest
+issuer from a predatory one and installing it in a project whose entire case rests on that
+separation. It moves CARD toward the indistinguishable pool, not away from it.
+
+There is also an exemption problem with no good answer. Someone must be exempt from the burn
+or the treasury cannot fund anything. If the exemption covers the founder, the design reads —
+correctly — as *retail pays to exit and the largest holder does not*, which is the extraction
+pattern this document exists to argue against. If it does not, the founder pays 5% to honour
+the sell policy, which is a strange thing to build on purpose.
+
+**The contrast with §5b's recommendation is the whole point, and the two proposals share only
+a word.** A one-time burn of founder supply is voluntary, self-imposed, borne by the person
+making the promise, and costly precisely to the party whose restraint is in question. A burn
+on every sale is involuntary, imposed on others, borne by the buyers the disclosure exists to
+protect, and costs the founder nothing. The first is a signal. The second is a fee with a
+better name.
 
 ### 5b.2 What each burn size does
 
