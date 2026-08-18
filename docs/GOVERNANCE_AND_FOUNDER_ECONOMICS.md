@@ -1763,3 +1763,59 @@ book's mission, those audiences are materially crypto-averse and a token
 sharing the book's name can close doors silently. In that case the
 recommendation is to de-name the token — keep the bird, drop the
 title-derived name and domain — even at the cost of another rename.
+
+---
+
+## The founder's 100M: what it is actually worth, and the rules for using it
+
+**The arithmetic first, because it changes the question.** At the planned
+seed — 100,000,000 CARD against roughly $8,000 of liquidity — spot is
+$0.00008 per CARD. The founder's 100,000,000 therefore shows a paper value
+of about $8,000. That number cannot be realised. Selling into the same
+small pool moves the price down as you go:
+
+| Sold | Cash actually received | Price after | Drop |
+|---|---|---|---|
+| 1,000,000 (1%) | ~$78 | $0.0000785 | −2% |
+| 10,000,000 (10%) | ~$714 | $0.0000664 | −17% |
+| 25,000,000 (25%) | ~$1,574 | $0.0000516 | −35% |
+| 50,000,000 (50%) | ~$2,631 | $0.0000360 | −55% |
+| 100,000,000 (100%) | **~$3,960** | $0.0000204 | −74% |
+
+Selling the entire holding yields under four thousand dollars — less than
+the pool was seeded with — and takes the price down roughly three quarters
+on the way. The position is not a store of value that can be tapped; it is
+mostly an accounting artifact. Anyone who models it as $8,000 of personal
+wealth is modelling it wrong.
+
+Two consequences worth stating plainly:
+
+1. **There is no version of this where selling the stack is worth doing.**
+   The proceeds are trivial and the reputational cost is total — the
+   founder's own site publishes the wallet and the promise to announce.
+2. **The honest reason to hold it is that it does not matter financially.**
+   That is a stronger position than a lock-up, and it should be said in
+   those terms rather than dressed up as restraint.
+
+### The rules
+
+1. **Announce before selling.** Already published on cp17.org. Any sale is
+   posted before it happens, with the amount, and linked on the ledger
+   afterwards. No exceptions, including small ones.
+2. **Nothing in the first 90 days.** No sale, no transfer out, no gift to
+   anyone who could plausibly sell, for ninety days after launch.
+3. **A cap, not a promise of restraint.** In any rolling 30-day period, no
+   more than 1,000,000 CARD (1% of the holding, ~2% price impact) moves
+   for value. Above that, it stops being a sale and becomes an exit.
+4. **20,000,000 is already committed** to the four board grants, vested over
+   two years, leaving 80,000,000 genuinely discretionary. Grants are not
+   sales and are not subject to the cap, but they are announced the same way.
+5. **Never sell on private information.** If the founder knows something
+   material that the public does not — winding the project down, a failed
+   audit, a legal problem — selling is fraud in substance whatever the
+   regulatory status of the token. Disclose first, then the rules above apply.
+6. **Every disposal is taxable, and the basis is probably near zero.** Coins
+   the founder created are not purchased inventory; nearly all proceeds are
+   likely gain. Gifts (to family, including Hope) are transfers: the 2% fee
+   applies, and gift-tax reporting thresholds may too. Jeff confirms the
+   treatment before the first sale, not after.
