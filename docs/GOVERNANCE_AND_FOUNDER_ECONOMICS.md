@@ -1819,3 +1819,36 @@ Two consequences worth stating plainly:
    likely gain. Gifts (to family, including Hope) are transfers: the 2% fee
    applies, and gift-tax reporting thresholds may too. Jeff confirms the
    treatment before the first sale, not after.
+
+### Amendment: sales are scheduled, not discretionary — and dormant for now
+
+The founder proposed quarterly sales on a fixed day and time. The principle
+is right and is adopted: a schedule fixed and published in advance removes
+discretion, which is what defeats any suggestion of selling on information
+buyers did not have. It is the same logic as an executive's pre-arranged
+stock plan.
+
+Two adjustments came with it.
+
+**The plan is dormant below real liquidity.** Under the 1,000,000 cap, a
+quarterly sale returns roughly $78. A formal selling program that extracts
+$78 a quarter costs more credibility than it returns in money. So:
+
+> **No sales of any size while pool liquidity is under $100,000.** The
+> public position is simply "the founder is not selling." If liquidity
+> ever exceeds $100,000, the schedule below activates and is announced
+> before its first use.
+
+**When active: quarterly, published, capped by pool depth rather than by a
+fixed token count.**
+
+- A fixed calendar date each quarter, published in advance on the ledger page.
+- No more than **1% of the pool's CARD depth** in any quarter — a cap that
+  scales with the pool instead of going stale.
+- Announced **30 days ahead** of each execution, and linked afterwards.
+- Execution broken into several smaller transactions across the day rather
+  than one, because a perfectly predictable single sale invites bots to
+  trade in front of it — predictability buys credibility and costs
+  execution, and this splits the difference.
+- The plan is set while no material non-public information exists, and is
+  suspended (not accelerated) if any arises.
