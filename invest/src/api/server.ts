@@ -42,6 +42,7 @@
 import { createServer, type IncomingMessage, type Server, type ServerResponse } from 'node:http';
 import { randomUUID } from 'node:crypto';
 import { PAGE } from '../ui/page.ts';
+import { LEGAL_PAGES } from '../ui/legal.ts';
 import {
   authStoreFromEnv,
   hashPassword,
@@ -73,6 +74,10 @@ export interface AppOptions {
   mailer?: Mailer;
   /** Absolute origin used in emailed links (INVEST_BASE_URL); inferred from the request when unset. */
   baseUrl?: string;
+  /** Expose real-CARD Uniswap links only after launch approval. Defaults to the env switch. */
+  enableRealCardLinks?: boolean;
+  /** Verified mainnet CARD address. Invalid or absent addresses are never exposed. */
+  cardTokenAddress?: string;
 }
 
 const SESSION_COOKIE = 'invest_session';
@@ -102,6 +107,12 @@ export function createApp(opts: AppOptions = {}): AppServer {
   const trustProxy = opts.trustProxy ?? boolFromEnv(process.env.INVEST_TRUST_PROXY);
   const mailer = opts.mailer ?? mailerFromEnv();
   const configuredBaseUrl = (opts.baseUrl ?? process.env.INVEST_BASE_URL ?? '').replace(/\/$/, '');
+  const enableRealCardLinks = opts.enableRealCardLinks ?? process.env.ENABLE_REAL_CARD_LINKS === '1';
+  const configuredCardAddress = opts.cardTokenAddress ?? process.env.CARD_TOKEN_ADDRESS ?? '';
+  const cardTokenAddress =
+    enableRealCardLinks && /^0x[0-9a-fA-F]{40}$/.test(configuredCardAddress)
+      ? configuredCardAddress
+      : null;
 
   const windowMs = opts.authLimits?.windowMs ?? 15 * 60 * 1000;
   const ipLimiter: RateLimiter = createRateLimiter({
@@ -231,6 +242,16 @@ export function createApp(opts: AppOptions = {}): AppServer {
       }
       if (method === 'GET' && path === '/health') {
         return sendJson(res, 200, { status: 'ok' });
+      }
+      // Legal pages are public — readable before signing up.
+      if (method === 'GET' && path.startsWith('/legal/')) {
+        const page = LEGAL_PAGES[path.slice('/legal/'.length)];
+        if (page) {
+          res.writeHead(200, { 'content-type': 'text/html; charset=utf-8', 'content-security-policy': PAGE_CSP });
+          res.end(page);
+          return;
+        }
+        return sendError(res, 404, 'not_found', 'no such page');
       }
 
       // --- auth ---------------------------------------------------------
@@ -366,9 +387,9 @@ export function createApp(opts: AppOptions = {}): AppServer {
             email: user.email,
             emailVerified: Boolean(user.emailVerifiedAt),
             cashCents: account.cashCents,
-            // The CARD token's contract address (public on-chain info); when set,
-            // the app renders real buy/sell-on-Uniswap links for CARD.
-            cardTokenAddress: process.env.CARD_TOKEN_ADDRESS ?? null,
+            // Real CARD links are an explicit post-launch switch. Supplying an
+            // address alone is not enough to expose them accidentally.
+            cardTokenAddress,
           });
         }
 

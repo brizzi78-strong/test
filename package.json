@@ -2,7 +2,7 @@
   "name": "cardinals-promise",
   "private": true,
   "version": "0.1.0",
-  "description": "Cardinals Promise (CARD) — fixed-supply ERC-20 on Ethereum, with iOS companion app workspace",
+  "description": "Cardinals Promise (CARD) — fixed-supply ERC-20 with an immutable 2% treasury fee",
   "type": "module",
   "scripts": {
     "build": "hardhat build",

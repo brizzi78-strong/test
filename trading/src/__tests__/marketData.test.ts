@@ -129,19 +129,19 @@ function poolSource(rpc: { impl: typeof fetch }, base = createMockSource()) {
 }
 
 test('uniswap source prices CARD from pool reserves × the ETH-USD cross', async () => {
-  // The documented launch pool: 200M CARD against 3 ETH.
-  const rpc = fakeRpc({ cardReserve: 200_000_000n * 10n ** 18n, wethReserve: 3n * 10n ** 18n });
+  // The documented launch pool: 100M CARD against 3 ETH.
+  const rpc = fakeRpc({ cardReserve: 100_000_000n * 10n ** 18n, wethReserve: 3n * 10n ** 18n });
   const source = poolSource(rpc);
   const q = await source.getQuote(CARD, NOW);
 
   const ethUsd = await createMockSource().getQuote(ETH, NOW);
-  const expected = quantizePriceCents((3 / 200_000_000) * ethUsd.priceCents);
+  const expected = quantizePriceCents((3 / 100_000_000) * ethUsd.priceCents);
   assert.equal(q.priceCents, expected);
   assert.ok(q.priceCents > 0 && q.priceCents < 1, `sub-cent price, got ${q.priceCents}`);
 });
 
 test('uniswap source handles either reserve ordering and caches within the TTL', async () => {
-  const rpc = fakeRpc({ cardReserve: 200_000_000n * 10n ** 18n, wethReserve: 3n * 10n ** 18n, cardIsToken0: false });
+  const rpc = fakeRpc({ cardReserve: 100_000_000n * 10n ** 18n, wethReserve: 3n * 10n ** 18n, cardIsToken0: false });
   const source = poolSource(rpc);
   const a = await source.getQuote(CARD, NOW);
   const b = await source.getQuote(CARD, NOW);

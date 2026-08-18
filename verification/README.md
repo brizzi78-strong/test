@@ -23,7 +23,9 @@ deployed bytecode. It has been checked to compile standalone with solc
 3. Upload `CardinalsPromise.solc-input.json`.
 4. If asked which contract, pick
    `project/contracts/CardinalsPromise.sol:CardinalsPromise`.
-5. Constructor arguments: **none** — leave empty.
+5. Supply the ABI-encoded immutable treasury address used in the deployment.
+   Etherscan normally detects this from the creation transaction; verify the
+   decoded value matches the published treasury before submitting.
 6. Submit and confirm the Contract tab shows the green check
    (launch checklist step 2).
 

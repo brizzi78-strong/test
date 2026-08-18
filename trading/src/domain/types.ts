@@ -45,9 +45,9 @@ export const INSTRUMENTS: readonly Instrument[] = [
   { symbol: 'SOL-USD', name: 'Solana', kind: 'crypto', basePriceCents: 17_850, volatilityBps: 950 },
   { symbol: 'DOGE-USD', name: 'Dogecoin', kind: 'crypto', basePriceCents: 21, volatilityBps: 1200 },
   // Cardinals Promise — the workspace's own ERC-20. The mock base price is the
-  // documented Uniswap launch price (3 ETH / 200M CARD ≈ $0.000051, i.e. sub-cent);
+  // illustrative launch price (3 ETH / 100M CARD ≈ $0.000102, i.e. sub-cent);
   // configure the on-chain pool source and this becomes the live pool price.
-  { symbol: 'CARD', name: 'Cardinals Promise', kind: 'crypto', basePriceCents: 0.0051, volatilityBps: 1500 },
+  { symbol: 'CARD', name: 'Cardinals Promise', kind: 'crypto', basePriceCents: 0.0102, volatilityBps: 1500 },
 ] as const;
 
 export type OrderSide = 'buy' | 'sell';

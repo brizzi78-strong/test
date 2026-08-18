@@ -1,6 +1,6 @@
 # Audit Scope — CardinalsPromise.sol
 
-Everything an auditor needs to start cold. One ~20-line contract over
+Everything an auditor needs to start cold. One small contract over
 OpenZeppelin v5 base contracts.
 
 ## Scope
@@ -9,7 +9,7 @@ OpenZeppelin v5 base contracts.
 | --- | --- |
 | Files in scope | `contracts/CardinalsPromise.sol` |
 | Inherited (out of scope unless integration is wrong) | OpenZeppelin v5 `ERC20`, `Ownable` |
-| Solidity version | 0.8.24+ (compiled with 0.8.28) |
+| Solidity version | Pinned to 0.8.28 |
 | Upgradeability | None — not a proxy, no delegatecall |
 | Oracles / external calls | None — the contract never calls out |
 | Deployment target | Ethereum mainnet, via Hardhat Ignition (`ignition/modules/CardinalsPromise.ts`) |
@@ -25,8 +25,11 @@ OpenZeppelin v5 base contracts.
 3. `Ownable` is inherited solely so `renounceOwnership()` can be executed
    as a public, verifiable launch step. **No function is owner-gated** —
    ownership grants no power even before it is renounced.
-4. No fees, no hooks, no callbacks, no blocklist, no pause — a transfer of
-   N tokens always moves exactly N tokens.
+4. Transfers between non-treasury addresses send `floor(N × 200 / 10,000)`
+   to the immutable treasury and the remainder to the recipient.
+5. Transfers to or from the treasury are fee-exempt. Minting is exempt.
+6. No function changes the fee, treasury, exemption, supply, blacklist, or
+   pause state. The constructor rejects a zero treasury.
 
 ## Existing verification (all runnable, all in CI)
 
@@ -39,19 +42,17 @@ OpenZeppelin v5 base contracts.
 - **Foundry-style Solidity tests** (`contracts/CardinalsPromise.t.sol`)
   including fuzz tests, plus a **handler-based stateful invariant suite**
   (`contracts/CardinalsPromiseInvariants.t.sol`): supply constant, balances
-  sum to supply, renounce is permanent, no-tax property asserted inside
-  every fuzzed transfer.
+  sum to supply, renounce is permanent, and exact fee/exemption behavior
+  asserted inside fuzzed transfers.
 - **TypeScript tests** (node:test + viem) in `test/CardinalsPromise.ts`.
-- **Slither v0.11.5**, all 101 detectors: 0 findings (see LAUNCH.md for
-  the Hardhat-3 reproduction workaround).
 - Full launch sequence rehearsed against a real Uniswap V2 deployment
-  locally (`scripts/rehearse-launch.ts`), including a third-party swap.
+  locally (`scripts/rehearse-launch.ts`), including treasury-mediated pool
+  seeding and fee-aware buy and sell paths.
 
 ## What to focus on
 
 Given the contract is a thin composition of audited OZ code, the highest-
-value review targets are: (a) the composition itself (constructor,
-inheritance order, missing overrides), (b) the claims ledger — is any
-launch claim *not* actually enforced by the evidence cited? — and (c) the
-operational scripts' parameters (`scripts/add-liquidity.ts`), an opinion on
-which is welcome but not required.
+value review targets are: fee rounding and self-transfers; treasury
+exemptions; `_update` composition; constructor immutability; transferFrom;
+supply conservation; router compatibility; treasury-mediated pool seeding;
+the claims ledger; and all launch-script balance/role guards.

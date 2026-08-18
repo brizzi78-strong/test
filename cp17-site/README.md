@@ -1,5 +1,8 @@
 # cp17.org — the Cardinals Promise coin site
 
+The official token domain is `cp17.org`. The on-chain token is Cardinals
+Promise (`CARD`). No other name, ticker, or domain is authoritative.
+
 Three static pages. No build step, no dependencies, no JavaScript.
 
 - `index.html` — the coin page (the promises, the fee, the disclaimer)
@@ -10,8 +13,13 @@ Three static pages. No build step, no dependencies, no JavaScript.
 
 ## On launch day
 
-Replace the five "not launched yet" cells in `ledger.html`, and add the
-contract address to `index.html`. Nothing else changes.
+Replace the "not launched yet" cells in `ledger.html`, and add the
+contract address to `index.html` only after source verification, the
+fee-aware two-way swap test, LP lock, and renouncement. Point the Buy button
+and the Uniswap link in `how-to-buy.html` at
+`https://app.uniswap.org/swap?outputCurrency=<contract address>` so the
+swap opens with CARD pre-selected (how-to-buy promises "two taps").
+Nothing else changes.
 
 ## Hosting
 

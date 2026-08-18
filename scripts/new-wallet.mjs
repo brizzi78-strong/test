@@ -4,7 +4,7 @@
 // mainnet, use a hardware wallet or an offline-generated key (see LAUNCH.md).
 //
 //   node scripts/new-wallet.mjs            # one wallet
-//   node scripts/new-wallet.mjs deployer treasury pool   # one per label
+//   node scripts/new-wallet.mjs deployer treasury buyer  # one per label
 //
 // Put the private key in the Hardhat keystore (npx hardhat keystore set
 // SEPOLIA_PRIVATE_KEY) and the addresses in launch.json.

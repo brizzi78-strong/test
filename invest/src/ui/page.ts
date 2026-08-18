@@ -152,6 +152,8 @@ export const PAGE = /* html */ `<!doctype html>
   .tagline{font-size:.88rem;font-weight:600;color:var(--muted);margin:-8px 0 16px}
   .autherr{color:var(--crit);font-size:.82rem;font-weight:600;min-height:1.2em;margin:6px 0 10px}
   .authnote{color:var(--muted);font-size:.74rem;margin-top:14px;text-align:center}
+  .legallink{color:var(--muted);text-decoration:underline}
+  .legallink:hover{color:var(--ink)}
   .alink{background:transparent;border:0;color:var(--muted);cursor:pointer;font-size:.78rem;text-decoration:underline;padding:0;display:block;margin:10px auto 0}
   .alink:hover{color:var(--brand)}
   .vbanner{display:flex;align-items:center;gap:12px;flex-wrap:wrap;background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--brand);border-radius:11px;padding:10px 14px;margin-bottom:18px;font-size:.84rem;color:var(--muted)}
@@ -165,9 +167,17 @@ export const PAGE = /* html */ `<!doctype html>
   .toast.good{background:var(--good);color:#00220A}
   @media (max-width:860px){.app{grid-template-columns:1fr}.rail{position:static;height:auto;flex-direction:row;flex-wrap:wrap;align-items:center;gap:8px}.rail .foot{display:none}.brand{padding-bottom:0}.nav{flex-direction:row;flex-wrap:wrap;margin-left:auto}.tiles{grid-template-columns:1fr}}
   @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+  .testbar{position:sticky;top:0;z-index:50;background:#8a1c14;color:#fff;
+    font-size:.8rem;line-height:1.45;padding:.55rem 1rem;text-align:center;
+    letter-spacing:.01em;border-bottom:2px solid #d93b2b}
+  .testbar b{letter-spacing:.14em;font-weight:700}
 </style>
 </head>
 <body>
+<div class="testbar" role="status">
+  <b>TEST MODE</b> — nothing here is real. Paper money, simulated prices, no bank,
+  no wallet, no blockchain. Buying CARD is not yet possible from this site.
+</div>
 <div class="app">
   <aside class="rail">
     <div class="brand"><span class="glyph"><svg viewBox="0 0 100 100" aria-hidden="true"><polygon points="38,30 44,4 52,30"/><circle cx="44" cy="40" r="15"/><polygon points="30,39 12,47 30,53"/><ellipse cx="58" cy="64" rx="24" ry="21"/><polygon points="72,72 98,92 86,96 66,82"/></svg></span><span><b>Cardinal Trading</b><span id="acctname">Loading&hellip;</span></span></div>
@@ -204,6 +214,7 @@ export const PAGE = /* html */ `<!doctype html>
     <button class="alink" id="a_forgot" type="button">Forgot password?</button>
     <button class="alink" id="a_back" type="button" style="display:none">&larr; Back to log in</button>
     <div class="authnote">Paper trading demo &mdash; you start with play money, and no real money ever moves.</div>
+    <div class="authnote">By continuing you agree to the <a class="legallink" href="/legal/terms" target="_blank" rel="noopener">Terms</a>, <a class="legallink" href="/legal/privacy" target="_blank" rel="noopener">Privacy Policy</a>, and <a class="legallink" href="/legal/disclosures" target="_blank" rel="noopener">Risk Disclosures</a>.</div>
   </div>
 </div>
 <div class="toast" id="toast"></div>
@@ -326,7 +337,7 @@ function boot(){
     ACCT=app.accountId; ACCTNAME=app.accountName||"Investor";
     EMAIL=app.email||""; EMAILVERIFIED=app.emailVerified!==false; CARDADDR=app.cardTokenAddress||null;
     $("#acctname").textContent=ACCTNAME;
-    $("#foot").innerHTML="Don\u2019t ever trade alone again.<br><br>Paper account for<br><b>"+esc(ACCTNAME)+"</b><br>No real money moves.<br><button class=\\"logout\\" id=\\"logoutbtn\\">Log out</button>";
+    $("#foot").innerHTML="Don\u2019t ever trade alone again.<br><br>Paper account for<br><b>"+esc(ACCTNAME)+"</b><br>No real money moves.<br><a class=\\"legallink\\" href=\\"/legal/terms\\" target=\\"_blank\\" rel=\\"noopener\\">Terms</a> \u00b7 <a class=\\"legallink\\" href=\\"/legal/privacy\\" target=\\"_blank\\" rel=\\"noopener\\">Privacy</a> \u00b7 <a class=\\"legallink\\" href=\\"/legal/disclosures\\" target=\\"_blank\\" rel=\\"noopener\\">Risks</a><br><button class=\\"logout\\" id=\\"logoutbtn\\">Log out</button>";
     $("#logoutbtn").onclick=logout;
     return loadAll();
   }).then(function(){render();}).catch(function(e){
@@ -618,7 +629,7 @@ function realCardBlock(sym){
   var buy="https://app.uniswap.org/swap?outputCurrency="+encodeURIComponent(CARDADDR)+"&chain=mainnet";
   var sell="https://app.uniswap.org/swap?inputCurrency="+encodeURIComponent(CARDADDR)+"&chain=mainnet";
   return '<div class="stats"><h3>Real CARD \u00b7 on-chain</h3>'
-    +'<p class="dim" style="margin:0 0 10px">Buy and sell real CARD with ETH from your own wallet, directly on Uniswap. Cardinal Trading never holds your funds or keys.</p>'
+    +'<p class="dim" style="margin:0 0 10px">These links open Uniswap for a transaction from your own wallet. Cardinal Trading never holds funds or keys. CARD charges 2% on the buy and again on the sell; with Uniswap fees, the simple round-trip estimate is about 4.5% before gas, slippage, and price impact.</p>'
     +'<div class="row2">'
     +'<a class="btn" href="'+buy+'" target="_blank" rel="noopener">Buy CARD with ETH</a>'
     +'<a class="btn ghost" href="'+sell+'" target="_blank" rel="noopener">Sell CARD for ETH</a>'
