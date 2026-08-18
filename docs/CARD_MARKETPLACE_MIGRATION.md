@@ -1,12 +1,19 @@
-# From demo brokerage to the CARD buy flow
+# From simulated marketplace to the CARD buy flow
 
-The decision (August 2026) is to keep this app as the foundation for the
-customer-facing CARD website rather than rebuild it, replacing each
-simulated component with a provider connection, and keeping it labeled
-**Test Mode** until counsel, providers, liquidity, and security are ready.
+The decision (August 2026) is to keep the existing simulated marketplace as
+the foundation for the customer-facing CARD website rather than rebuild it,
+replacing each simulated component with an approved provider connection, and
+keeping it clearly labeled **Test Mode** until counsel, providers,
+liquidity, and security are ready.
+
+The app in question is the hosted prototype at
+`card-community-marketplace.brizzi78.chatgpt.site`. This repo also contains
+`invest/` ("Cardinal Trading"), a separate Robinhood-style demo with the same
+simulated-account shape; both are covered by the warning below, and `invest/`
+now carries a persistent Test Mode bar for the same reason.
 
 This document is the seam map. It exists because one part of that plan does
-not survive contact with the current code, and that needs to be visible
+not survive contact with either codebase, and that needs to be visible
 before anyone starts wiring providers in.
 
 ## The one thing that cannot be swapped: the account model
@@ -14,9 +21,12 @@ before anyone starts wiring providers in.
 The target product is explicitly **non-custodial** — "would not hold the
 customer's money, identification documents, seed phrase, or private keys."
 
-This app's core abstraction is the opposite of that. Every user has an
-account with `cashCents` — a cash balance the platform holds and spends on
-their behalf (`invest/src/api/server.ts`, `trading/src/service/`). Holding
+A simulated marketplace's core abstraction is usually the opposite of that:
+a user account carrying a balance the platform holds and spends on their
+behalf. In `invest/` this is literally `cashCents`
+(`invest/src/api/server.ts`, `trading/src/service/`); in the hosted
+prototype it is whatever backs "Demo balances" and "Demo Add funds" —
+**this is the first thing to check there.** Holding
 customer cash balances and executing orders against them is custody, and
 custody is what triggers FinCEN registration, state money-transmitter
 licensing, bonding, and audits. It is the single most expensive line a
@@ -24,10 +34,10 @@ project like this can cross, and it would be crossed by accident here — by
 keeping the shell and swapping the pieces underneath it.
 
 **So the migration is not six swaps. It is five swaps and one amputation:**
-the account/buying-power/orders model is removed, not connected to a
-provider. What is genuinely worth keeping is the interface craft — the
-layout, the flows, the drawer, the polish — and the backend-for-frontend
-pattern that keeps browser JavaScript talking only to same-origin routes.
+the platform-held balance model is removed, not connected to a provider.
+What is genuinely worth keeping is the interface craft — the layout, the
+flows, the polish, the one-button feel — and a backend-for-frontend pattern
+that keeps browser JavaScript talking only to same-origin routes.
 
 ## Seam map
 
@@ -77,9 +87,15 @@ Every one of these is a blocker, not a nice-to-have:
    nothing here is real. It is removed in the same commit that switches the
    last provider from simulated to live, and not before.
 2. **cardinalspromise.org does not change.** The proof page stays static,
-   JavaScript-free, and separate. This app is a different property on a
-   different address; the page that makes verifiable claims must not become
-   the page that takes money.
-3. **No live claims in test copy.** Nothing in this app may state a price,
+   JavaScript-free, and separate. The marketplace is a different property on
+   a different address — `app.cardinalspromise.org` is the natural home — and
+   the page that makes verifiable claims must not become the page that takes
+   money.
+3. **A prototype host is not a production host.** A `*.chatgpt.site` address
+   is fine for Test Mode and unfit for a real on-ramp: production needs a
+   domain the company controls, certificates and headers it controls,
+   logging, monitoring, and an incident path. Moving hosts is a blocker on
+   the same list as the providers.
+4. **No live claims in test copy.** Nothing in this app may state a price,
    a return, an availability date, or a partner relationship that does not
    exist yet.
