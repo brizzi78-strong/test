@@ -1,0 +1,10 @@
+{
+  "name": "bookstore",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Book marketplace — publishers, authors, and members sell books; buyers pay in USD or in CARD (non-custodial, USD-denominated, discount not dividend)",
+  "type": "module",
+  "engines": { "node": ">=22.18" },
+  "scripts": { "start": "node src/index.ts", "test": "node --test", "typecheck": "tsc --noEmit" },
+  "devDependencies": { "@types/node": "^22.8.5", "typescript": "~5.8.0" }
+}
