@@ -48,8 +48,8 @@ Prologue
 
 **Part Three — The Fall**
 
-12. My Brother's Keeper
-13. The Performance Trap
+12. The Performance Trap
+13. My Brother's Keeper
 14. Checking Boxes
 15. West Palm Beach
 16. New Orleans
