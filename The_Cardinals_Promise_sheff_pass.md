@@ -944,8 +944,6 @@ You need to know my brother Chris, because he is in every part of what came next
 
 Chris and I have never had a falling out. Not once. You'd assume my addiction would have detonated us, and it strained plenty when I was at my worst in California, but it never broke. Not even the night he called and gave me an ultimatum I'll come back to, the one that finally left me nowhere to stand. I wasn't angry. I respected him too much to be angry. He loved me enough to tell me the truth when everyone else had run out of it. Through all the pills and the lies and the wreckage, I always knew my brother was trying to save my life. He may be the only person who could have said that sentence and had me actually hear it. That was Tsunetomo's whole point: the hard truth only lands from someone who has earned the right to say it. Chris had earned it a hundred times over.
 
-That wasn't the first time he tried. My first detox, Chris was the one who drove me. Anaheim, before the place in Laguna. It looked like a house on a regular street, with a back office where they did the intake. I sat across the desk answering their questions with pills on me the whole time. I'd hidden them in a Flintstones vitamin bottle, the same kind we'd had as kids. At some point I looked up and caught his face. He knew. He'd driven me all that way to get me clean, and I'd carried the drugs in through the front door in a child's vitamin bottle. I still see his face.
-
 After I got sober I talked him into taking a manager job in Pensacola, so for once we were in the same city. Chris is a workaholic, and I don't mean a guy who works hard, I mean the clinical definition. I'd call him to come out, I've got people I want you to meet, and he'd say no, I've got to work. Every time. But every so often he'd surface, and when he did he was generous to a fault. Let's take a trip, he'd say, and the next thing I knew I was in Costa Rica, in a tiny rental Hyundai they had warned us about at El Volcán, on a road that was less a road than a riverbed of rock. The Hyundai barely made it. So did we. Every trip we took went like that: Chris deciding, me going along.
 
 And then there was India.
@@ -1069,6 +1067,20 @@ The Florida license felt like a loophole I'd found in the universe. Their comput
 **Laguna Beach, 2006**
 
 My biological father handed me ten thousand dollars in cash, and I spent it on pills before I left town. That was the reunion my therapist thought would heal me. But a cell didn't stop me, and neither did a courtroom. The first rehab was court-ordered. I want that up front, because it matters. I didn't walk in because I was ready. I walked in because a judge told me to.
+
+Before Laguna there was Anaheim, because you cannot walk into rehab on benzodiazepines. Come off most things and you are only sick. Come off benzos wrong and it can kill you. So detox first. Three days, and then the beach.
+
+The day before Chris came for me, I sat with it. I knew what I was. I had known for a while. Knowing it and being able to say it out loud are two different distances, and I could only cover the first one.
+
+The place wasn't a facility. It was a small house on a regular street, the kind you'd drive past without turning your head.
+
+I had an Abercrombie & Fitch backpack with me and the pills were in it. One of the bottles was a Flintstones vitamin bottle, the same kind we'd had as kids.
+
+We went through the bag together at intake, my brother and me. I handed the bottles over and he set them out one at a time, a grown man's supply coming out of a backpack while a stranger waited with a clipboard. I was embarrassed and I needed them, both at once, in the same body. Somewhere in there I let the embarrassment go. Not out of any dignity. I didn't have the room for it. Everything I had was going into what my body was doing.
+
+Chris never made a face. He didn't lecture me and he didn't look away either. He worked through that bag like it was a job the two of us had agreed to do.
+
+I want to be honest about why I was there. Not to get sober. A judge had told me to, and my brother had put himself in the middle of it, and underneath all of it I knew he was right. Knowing he's right and being ready are two different things. I was only one of them.
 
 Laguna Beach, still in California. If you're going to be forced into rehab, you could do worse. High-end, the place Hollywood people land when their publicists run out of excuses. Beautiful grounds, ocean nearby. The clientele was a mix, retired grandfathers who'd been passing out in the garage, next to younger guys who'd burned through their twenties faster than they expected.
 
