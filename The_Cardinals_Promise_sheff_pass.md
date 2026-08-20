@@ -1112,6 +1112,7 @@ She helped me find work through local connections, and for a while, in her quiet
 Then I left. I got an apartment in West Palm Beach, and I can't hand you a clean reason why. I told myself it was a fresh start. In West Palm the pills stopped being the whole story. The drinking came back, and I added cocaine. I all but stopped eating, and my body started failing — malnutrition, the damage quietly adding up while I told anyone who asked I was fine. Boca was the last soft place. West Palm Beach was where the disease finally got me alone.
 
 **CHAPTER 15**
+
 ## **West Palm Beach**
 
 *"His father saw him, and had compassion, and ran."*
@@ -1119,45 +1120,42 @@ Then I left. I got an apartment in West Palm Beach, and I can't hand you a clean
 
 **West Palm Beach, November 2008**
 
-My father flew to West Palm Beach and rented a U-Haul to bring home a dead man. The dead man was me. I just hadn't finished the job yet. Before I tell you about the morning he showed up at my door, I have to show you the room he found me in.
+My father flew to West Palm Beach and rented a U-Haul to bring home a dead man. The dead man was me. I just hadn't finished the job yet. Before I tell you about the morning he showed up, I have to show you the room he found.
 
-The apartment was about six hundred and fifty square feet on a high floor in CityPlace, carpet underfoot, a balcony over West Palm Beach. From up there the city looked like something I belonged to. P.F. Chang's and the Cheesecake Factory were right downstairs. I almost never went down to either. I almost never went anywhere.
+The apartment was about six hundred and fifty square feet on a high floor in CityPlace, with a balcony over West Palm Beach. From up there, the city looked like something I belonged to. P.F. Chang's and the Cheesecake Factory were downstairs. I almost never went to either. I almost never went anywhere.
 
-The walls were covered in Post-it notes. Yellow squares stuck to the paint in clusters, ideas, plans, schemes, businesses I was going to start, money I was going to make, the whole next version of my life mapped out in ballpoint on adhesive paper. It wasn't genius. It was a man who couldn't finish a thought, papering a room with the evidence.
+The walls were covered in Post-it notes — ideas, plans, schemes, businesses I was going to start, money I was going to make. The whole next version of my life mapped in ballpoint on yellow squares. It wasn't genius. It was a man who couldn't finish a thought papering a room with the evidence.
 
-I'd stopped paying for things. The condo fees lapsed. The utilities lapsed. The power got shut off, so I ran an extension cord from the refrigerator out to an outlet in the building hallway and let it pull its electricity from the common area, stealing it, because I couldn't, or wouldn't, pay the bill. There were maybe a couple of yogurts in that fridge. That was the food in the apartment. What money came in went to pills, and when it ran out I shoplifted electronics to turn back into more.
+I had stopped paying for things. Condo fees. Utilities. The power went off, so I ran an extension cord from the refrigerator to an outlet in the building hallway and stole electricity from the common area. There were maybe two yogurts in the fridge. That was the food. What money came in went to pills. When it ran out, I shoplifted electronics and turned them into more.
 
-My mother sent me money in those years. She told herself it was for rent, for food, for getting back on my feet. I used it for drugs and alcohol. That is the part of the disease I can barely stand to write down. The part I never told her, the lie that eats at me most, is that some of that money went to the strip club. The lie I said out loud was that I wasn't abusing my medication. The lie I lived was letting her believe her money was keeping her son fed.
+My mother sent me money. She told herself it was for rent, food, getting back on my feet. I used it for drugs and alcohol. Some of it went to a strip club. I can barely stand to write that. The lie I told her was that I wasn't abusing my medication. The lie I lived was letting her believe her money was keeping her son fed.
 
-She kept sending it anyway. I think she knew, and she couldn't make herself stop hoping. And when the end of it finally came, when I went to the rehab that actually took, it was my mother and my dad who paid for it. The same woman whose money I had turned into pills was the one who helped buy me the room where I got my life back.
+She kept sending it. Hope can look a lot like enabling from the outside. From inside a mother, I think it looked like keeping her son alive.
 
-I was down to about a hundred and forty-five pounds. I hadn't eaten in days. I wasn't drinking water. I wasn't sleeping in any way that counted. I'd stopped looking in mirrors. I'd stopped answering most calls.
+I was down to about a hundred and forty-five pounds. I hadn't eaten in days. I wasn't drinking water. I wasn't sleeping in any way that counted. I had stopped looking in mirrors. I had stopped answering most calls.
 
-By then I was doing things that made no sense even to me. Writing checks to myself I knew would bounce, floating money I didn't have just to get through one more night. One of those nights I ended up at a club with a tab I couldn't cover, running on myself the same con I'd run on everyone else. I came back to the apartment as the sun was coming up, and I got down on my knees on the floor. I want to be careful and honest about how I say this. I didn't pray for help. I asked God to end it. God, please, end this for me. I wanted to die. It wasn't a plan and it wasn't a method — I didn't have that in me either. I was already a dead man, no soul left in him, nothing left in me to act with. That's the lowest I have ever been: on my knees at dawn, asking to be let out of my own life.
+By then I was doing things that made no sense even to me — writing checks to myself I knew would bounce, floating money I didn't have just to get through another night. One morning I came back to the apartment as the sun was rising and got down on my knees. I didn't pray for help. I asked God to end it. God, please, end this for me. I wanted to die. There was no plan, no method. I had nothing left even for that. I was on the floor at dawn asking to be let out of my own life.
 
 Then Lou was at the door.
 
-I don't remember deciding to tell him how bad it had gotten. Maybe it was Chris. Maybe my mother. Maybe he just knew, the way he knew things, and got on a plane. What I remember is opening the door and watching him take it in, the notes on the walls, the cord running out to the hallway, the weight gone off me, the smell of a place where someone had stopped taking care of himself. He didn't say a word about any of it. No lecture. No what did you do to yourself. He looked around once and I watched him understand the whole thing in silence. He told me later he knew, standing in that doorway, that I was going to die in there if he left me.
+I don't remember deciding to tell Lou how bad it had gotten. Maybe Chris called him. Maybe my mother did. Maybe he simply knew. What I remember is opening the door and watching him take in the notes, the extension cord, the weight gone off me, the smell of a place where someone had stopped taking care of himself. No lecture. No what did you do to yourself. He looked around once and understood.
 
-Then he said it, plain, the way he said things that weren't up for discussion. We're gonna rent a truck in the morning and we're gonna take off. Not a question. Not something we'd talk through. A fact he'd decided on the plane.
+Then he said it the way he said things that weren't up for discussion: We're gonna rent a truck in the morning and we're gonna take off.
 
-There was a king-size memory foam mattress on the floor, about the only real furniture I had left. He told me to take it, and he stayed the night there beside it, a man in his sixties on the carpet of his son's wrecked apartment, because he wasn't going to leave me alone in it.
+A king-size memory-foam mattress on the floor was about the only real furniture I had left. Lou stayed beside it that night, a man in his sixties sleeping on the carpet of his son's wrecked apartment because he wasn't going to leave me alone.
 
-I woke up early, early for me, and by the time I was up he'd already been out and back. A sesame bagel with butter and strawberry jelly and a glass of orange juice were sitting out, waiting. My favorite. He'd also rented the U-Haul and found a man named Marcus to help us move, hired on the spot near the building. The two of them did most of the work while I moved slow. We left almost nothing behind, the Post-it notes still stuck to the walls, the garbage. Whatever was worth keeping went in the truck, and that wasn't much.
+By the time I woke up, he had already been out and back. A sesame bagel with butter and strawberry jelly sat waiting beside a glass of orange juice. My favorite. He had rented the U-Haul and found a man named Marcus to help us move. The two of them did most of the work while I moved slowly. We left almost nothing behind.
 
 When we pulled out, a red cardinal landed on the U-Haul.
 
-Lou saw it before I did. He nodded at it and said, Grandma's looking out for us. He meant his mother, Mag. He said it lightly, the way he said anything about the people he'd lost, no production, just a fact about how the world worked as far as he was concerned. I didn't think much of it then. I was too far down to think much of anything. Seventeen years later one would land on my mirror, and I'd understand exactly what my father had been telling me in that parking lot.
+Lou saw it first. Grandma's looking out for us, he said. He meant his mother, Mag. He said it lightly, as if that were simply how the world worked. I was too far down to make much of it.
 
-I slept most of the drive. When I was awake we talked a little baseball, the Yankees, who was hitting. He didn't bring up the pills. He didn't ask me to explain the apartment or the weight or the cord in the hallway. That wasn't the trip for it. The trip was to get me out of that building alive and pointed home, and he understood the difference between keeping a man breathing and fixing him.
+I slept most of the drive. When I was awake, we talked baseball — the Yankees, who was hitting. He didn't bring up the pills. He didn't ask me to explain the apartment, the weight, or the cord in the hallway. That wasn't the job of that drive. The job was to get me out alive.
 
-But I have to be honest: this wasn't the moment I got sober. People want the U-Haul to be the turn. It wasn't. He got me back to Pensacola and I kept using, about two more months of it, until I hit a bottom underneath the bottom, and that was the one that finally took me to Chumuckla on January 9. The rescue didn't get me sober. It kept me alive long enough to get there.
-
-And the prayer deserves an honest accounting too. On that floor I asked God to end my life, and for a long time I thought the prayer had gone unanswered. It took me years to see it differently. That life did end — the Post-it notes, the stolen electricity, the man on his knees at dawn. Everything I have now, sobriety and Hope and the work and these pages, is what grew where it used to stand. If you have ever prayed that prayer, hear this part: the despair was telling the truth about that night. It was lying about all the nights that came after.
-
-But I think about it all the time now. What did he owe me at that point, a grown man he'd adopted, who'd burned through everything, living off stolen electricity in a tower of Post-it notes, praying on a balcony to disappear? Nothing. He owed me nothing. And he slept on my floor, and bought me a bagel, and rented the truck, and found Marcus, and drove me home, and pointed at a bird and told me my nana was watching out for us. That's the man. That was always the man.
+The U-Haul wasn't the turn. Lou got me back to Pensacola, and I kept using. The rescue didn't get me sober. It kept me alive.
 
 **CHAPTER 16**
+
 ## **New Orleans**
 
 *"Out of the belly of hell cried I, and thou heardest my voice."*
@@ -1167,37 +1165,35 @@ But I think about it all the time now. What did he owe me at that point, a grown
 
 There was a night I almost slept under a bridge.
 
-The rescue had bought me time, and I used it to get worse. It was Christmas, December 2008, and I went down to New Orleans to spend it with my mom.
+The rescue had bought me time, and I used it to get worse. Christmas 2008, I went to New Orleans to spend the holiday with my mother.
 
-She gave me money before I went out. Maybe five hundred dollars. I told her I was going to have a good time. She didn't think much of it.
+Before I went out, she gave me maybe five hundred dollars. I told her I was going to have a good time.
 
-I blew through all of it that night.
+I burned through all of it that night.
 
-At some point I looked around and had no idea where I was. I didn't know how to get back to the hotel. I didn't have money for a cab. I didn't have anything.
+At some point I looked around and had no idea where I was. No idea how to get back to the hotel. No money for a cab. Nothing.
 
-I kept walking. I ended up in a neighborhood that didn't look right. Everything was dark. No one around. A place you know you shouldn't be.
+I kept walking until the neighborhood changed. Dark streets. Nobody around. The kind of place where even drunk, you know you shouldn't be.
 
-I found a bridge and thought, maybe I'll sleep here. Five hundred dollars gone in a few hours, and I was looking at the underside of a bridge thinking that was my best option.
+I found a bridge and thought, maybe I'll sleep here. Five hundred dollars gone in a few hours, and the underside of a bridge looked like my best option.
 
-For a while I tried to find a cab. Tried to hustle somebody into a ride. Nothing worked.
+I tried to find a cab. Tried to talk somebody into a ride. Nothing worked.
 
-So I ran. Back the way I came, through that neighborhood, in the dark, just sprinting. I didn't stop. I didn't look around. I ran until I saw something I recognized.
+So I ran. Back through the neighborhood, in the dark, sprinting until I saw something I recognized.
 
 I made it back to the hotel around four or five in the morning.
 
-My mom was up. She looked at me and she knew. My eyes gave it away. They always did.
+My mother was awake. She looked at me and knew. My eyes gave me away. They always did.
 
 Something is very wrong with you, she said.
 
-I tried to brush it off. Tried to change the subject. But she saw it. I think that was when she understood how bad things had gotten. I could still lie with my mouth. My eyes had stopped lying for me.
+I tried to brush it off. Change the subject. But she saw it. I could still lie with my mouth. My eyes had stopped lying for me.
 
-The two weeks after that were pure panic. Not the fear of dying — I was past that. The panic of being caught. I moved through the days with the feeling that everyone knew the secret, that people were talking about me in rooms I wasn't in, conspiring around me. That paranoia was accurate. They were. My parents were planning a rehab intervention, my dad and my mom coordinating behind the scenes, divorced twelve years and working together like they'd never stopped, because their son was dying and that outranked everything.
+The next two weeks were pure panic. Not fear of dying — fear of being caught. I moved through the days certain people were talking about me in rooms I wasn't in. They were. My mother and Lou, divorced twelve years, were coordinating a rehab intervention because their son was dying and that outranked everything.
 
-Then Chris called with the ultimatum. Admit you're addicted to drugs, or admit you have a mental health problem that needs treatment. Pick one. No middle ground offered, no third door where I got to keep going.
+Then Chris called. Admit you're addicted to drugs, or admit you have a mental-health problem that needs treatment. Pick one. No third door.
 
-I want to tell you the truth about my surrender, because it wasn't clean. Before I walked into that room to give up, I filled my last Adderall script. Filled it first. That's the disease negotiating at the door of its own funeral. Then I walked in, and I handed the bottle to my dad, and I said the words: I surrender. I'm gonna go.
-
-Handing him that bottle was the first honest thing my hands had done in years. A few days later he drove me out to a farmhouse in the panhandle and signed the paperwork himself.
+My surrender wasn't clean. Before I walked in to give up, I filled one last Adderall prescription. Then I handed the bottle to Lou and said the words: I surrender. I'm gonna go.
 
 # **THE DRIVES · I**
 
@@ -1515,7 +1511,7 @@ I was in the room when he passed, in 2016. I had been around a lot by then, but 
 
 Around that same stretch the recognition I'd chased my whole life finally showed up at work, and it barely registered. Someone forwarded an internal article. A colleague congratulated me in passing. I skimmed it once and closed the screen. Lou noticed, the way he noticed everything. You're successful again, he said. I guess, I said. You don't sound like it matters. That's because it doesn't, I said. Not the way it used to. He nodded. That nod was the approval.
 
-I talked to Lou about Bob one evening. I don't know why this is hitting me so hard, I said. I did everything right. He didn't hesitate. That's not why it's bothering you. He was right. Bob hadn't needed me to fix anything. He'd needed me in the room. I was being let into places where presence was the only thing left to offer, and something in me already knew how to do that. Not as a technique. As a practice. An old man dying sober at eighty-eight showed me that the most you can do at that edge is refuse to leave. Years later, that became the whole job.
+I talked to Lou about Bob one evening. I don't know why this is hitting me so hard, I said. I did everything right. He didn't hesitate. That's not why it's bothering you. He was right. Bob hadn't needed me to fix anything. He'd needed me in the room. I was being let into places where presence was the only thing left to offer, and something in me already knew how to do that. Years later, that became the whole job.
 
 **CHAPTER 26**
 ## **Hope for Rob**
