@@ -24,4 +24,4 @@ This book will help you do exactly that. I am grateful it exists, and I am grate
 
 *Sincerely,*
 
-*Dave Meyer, former Captain, Virginia Tech Football*
+*Dave Meyer, former NFL quarterback*
