@@ -930,6 +930,7 @@ PART THREE
 *Everything I'd built was borrowed. This is what the repo man looks like.*
 
 **CHAPTER 12**
+
 ## **The Performance Trap**
 
 *"Selfishness — self-centeredness! That, we think, is the root of our troubles."*
@@ -937,93 +938,87 @@ PART THREE
 
 **San Diego, 2002–2006**
 
-My friend Angela called me from Chicago. You're not going to believe this, she said. I'm standing in the Abercrombie & Fitch on Michigan Avenue, I looked up at the screen, and there you are. Your commercial. For about a minute that felt like arriving. Then it passed straight through me, the way everything did back then, and the hunger underneath was still there.
+My friend Angela called from Chicago. You're not going to believe this, she said. I'm standing in the Abercrombie & Fitch on Michigan Avenue, I looked up at the screen, and there you are. Your commercial. For about a minute, it felt like arriving. Then the feeling passed, and the hunger underneath was still there.
 
-After Oxford I drove straight at the only thing I knew how to do, which was win. My first real job out of college was managing an Abercrombie & Fitch in San Diego. I had one speed, the same one that got me through weight cuts and 6 a.m. practices, and I brought it to folding polo shirts in a mall. I outworked everyone on staff, learned the inventory numbers cold, caught problems before anyone else saw them and fixed them without being asked. Put a scoreboard in front of me and I was going to be at the top of it.
+After Oxford, I drove straight at the only thing I knew how to do: win. My first real job was managing an Abercrombie & Fitch in San Diego. I brought the same speed I had taken into weight cuts and six-a.m. practices. I outworked everyone, learned the inventory cold, found problems before anyone asked me to. Put up a scoreboard and I wanted my name at the top.
 
-Nesser filmed me doing a bio — wakeboarding in Islamorada, Florida, out on the water, being myself — and the tape brought an A&F talent scout to the store. It went to Abercrombie & Fitch TV, the in-store channel that played in every location in the country, and I got picked. That was the commercial Angela had called me about. The kid from Mexico City who'd needed speech therapy for a lisp was now the face on a loop in one of the biggest retail brands in America.
+Nesser filmed a bio of me wakeboarding in Islamorada, Florida. The tape brought an A&F talent scout to the store, and I got picked for Abercrombie & Fitch TV, the in-store channel playing across the country. That was the commercial Angela had seen. The kid from Mexico City who had needed speech therapy for a lisp was now on a loop in one of the biggest retail brands in America.
 
-The hunger stayed. I transferred to the highest-grossing Abercrombie in the country, in Newport Beach. Then a sales job. Then medical device sales. By twenty-four I was clearing six figures.
+The hunger stayed. I transferred to the highest-grossing Abercrombie in the country, in Newport Beach. Then came sales. Then medical devices. By twenty-four, I was clearing six figures.
 
-### *The Fraud Feeling*
+The Fraud Feeling
 
-The screen couldn't show what was underneath. I walked into every room sure that everyone else in it was the real thing and I was the only fake. They belonged. I was getting away with something. Once I believed that, I spent my energy guarding the secret instead of living a life.
+The screen couldn't show what was underneath. I walked into every room certain everyone else was the real thing and I was the only fake. They belonged. I was getting away with something. I spent more energy guarding that secret than living my life.
 
-The secret was older than California. It went back to a four-year-old carried out of one country and set down in another. In the years that followed — the new name I had to print at the top of my homework, the dark skin that didn't match the other kids, the lisp they sent me to therapy to fix — I came to a decision I didn't have words for: this part of me is not welcome here. Claudio wasn't safe. So Claudio went quiet.
+The secret was older than California. It went back to a four-year-old carried out of one country and set down in another — the new name at the top of my homework, the dark skin that didn't match the other kids, the lisp they sent me to therapy to fix. Somewhere along the way I reached a conclusion I couldn't yet name: this part of me is not welcome here. Claudio went quiet.
 
-People sometimes ask — I've asked it myself — why the disease took me and not Chris. Same blood, same two fathers, same kitchen. The honest answer I've come to is this: Chris left Mexico at a year and a half. He carried nothing out of that country to miss. I was four. I had a papa who raced me to the corner and called me his good luck charm, and then I didn't. Missing Horacio was work I was doing before I had words for it. Chris grew up with one father. I grew up with one father and one ghost.
+People sometimes ask why the disease took me and not Chris. I've asked it too. Same blood, same two fathers, same kitchen. Chris left Mexico at a year and a half. I was four. I had a papa who raced me to the corner and called me his good luck charm, and then I didn't. Chris grew up with one father. I grew up with one father and one ghost.
 
-I built a character in his place, and I built him well. Smoother. Funnier. More needed than I was. The hard part to admit is that it worked. People responded to him. Every time they did, the real one underneath got a little quieter and stayed down where it was safe.
+I built a character in that empty space, and I built him well. Smoother. Funnier. More needed. The hard part is that it worked. People responded to him. Every time they did, the real one underneath got quieter.
 
-Then it stacked. Performance on top of performance, year after year, until the buried kid was so far down I forgot he was there at all. By the time I was folding polo shirts in San Diego, I thought the costume was me.
+Then it stacked — performance on performance, year after year — until I forgot there was anyone underneath the costume.
 
-### *Sales*
+Sales
 
 I took a sales job in 2002. For a while it felt like proof California hadn't broken me. The salary was fifty thousand dollars, and at twenty-three it felt like solid ground for the first time in years.
 
-The job was selling uniform services to businesses. Cold calls, presentations to operations managers, a lot of time in parking lots eating lunch and running the next hour in my head. The quota was real, the pressure was constant, and your manager knew your numbers before you finished breakfast. I liked all of it. The structure that would wear someone else down was exactly what I needed, clear rules, clear targets, a scoreboard that updated every day. Lou had raised me in that language: do the work, let the result tell the story.
+The job was selling uniform services to businesses: cold calls, presentations, lunches in parking lots while I ran the next hour in my head. The quota was real. Your manager knew your numbers before breakfast. I loved the structure — clear rules, clear targets, a scoreboard that updated every day. Lou had raised me in that language: do the work and let the result speak.
 
-For the first six months I was sober. Trying. Calling Lou on Sundays, giving him the real numbers, hearing him go quiet in the good way. There's a satisfaction in reporting progress to a man who's seen your worst. He never sounded as impressed as I wanted him to be. You doing okay out there? he'd ask. I'm doing great, Dad, I'd tell him, making more than I ever thought I would. That's good, he'd say. But are you happy? Happy felt like the wrong question. I was successful, I was winning, and I told myself those were the same thing. Yeah, Dad. I'm happy. I don't know if he believed me. I'm not sure I believed myself.
+For the first six months I wasn't using. I called Lou on Sundays and gave him the numbers. He never sounded as impressed as I wanted him to. You doing okay out there? he'd ask. I'm doing great, Dad. Making more than I ever thought I would. That's good, he'd say. But are you happy? Happy felt like the wrong question. I was successful. I was winning. I told myself those were the same thing.
 
-### *Started Using*
+Started Using
 
-The pills came slow. There was no decision I can point to, just a long week, a rough stretch of no's, a body tired of being on for ten hours, and a brain that had no idea how to shut off at night. Once they started, I never stopped taking them.
+The pills came slowly. There was no single decision, just a long week, a rough stretch of no's, a body tired of being on all day and a brain that didn't know how to shut off at night. Once I started, I didn't stop.
 
-I already knew the feeling. I'd met it in Oxford in 1999, at a bar, from Justin's hand, and I had spent the years since telling myself that was college. What was different in San Diego was that I stopped waiting for it to find me. Now there was a bottle, and a reason, and a morning that came with a number attached. The low hum that had run under everything since I was a kid, the part of me always checking the room, always reading faces to know who to be, switched off on a schedule I set. That was the change: not discovering it, but deciding to live there.
+I already knew the feeling. I had met it in Oxford in 1999 and spent the years since telling myself that was college. San Diego was different because I stopped waiting for the feeling to find me. Now there was a bottle, a reason, and a workday attached. The part of me always checking the room, always reading faces to know who to be, could be switched off on schedule. That was the change: not discovering the drug, but deciding to live there.
 
-The pills were Adderall and Ritalin. Taking one before a workday, I told myself it was practical. A pill did this for me in 2002, as honestly as I can put it: the noise went quiet. Not silent, quiet. The static of self-doubt dropped a few decibels. I could hear the customer instead of performing listening while I rehearsed my next line. I closed deals I wouldn't have closed. I walked into rooms that scared me and didn't let them. My numbers went up.
+The pills were Adderall and Ritalin. Before a workday, I told myself they were practical. The noise went quiet. The static of self-doubt dropped a few decibels. I could hear the customer instead of pretending to listen while rehearsing my next line. I closed deals. I walked into rooms that scared me and stopped feeling scared. My numbers went up.
 
-That's the trap. Not that the pills felt good, plenty of things feel good and don't ruin you. The trap was that they made me better at the thing I most needed to be better at, with money attached, in real time. I didn't see it as using. I saw it as competing.
+That was the trap. The pills didn't just feel good; they made me better at the thing I most needed to be good at, with money attached. I didn't see it as using. I saw it as competing.
 
-By then I had a full prescription of my own in California, the bottle right there, no more rationing what I had. The easy access didn't satisfy the chase. It amplified it. What I didn't see was the arithmetic underneath. You take more to get the same effect. The baseline shifts. When California ran dry I started crossing into Tijuana to resupply, a routine, back before anyone noticed. One of those runs ended on the concrete floor where this book began. I crossed again the next day anyway. Six figures a year, crossing the border for pills, because the machine I'd built couldn't run without fuel.
+By then I had my own prescription in California. Easy access didn't satisfy the chase; it amplified it. The arithmetic was simple: more to get the same effect, then more again. When California ran dry, I crossed into Tijuana to resupply. One of those runs ended on the concrete floor where this book began. I crossed again the next day. Six figures a year, crossing a border for pills because the machine I had built couldn't run without fuel.
 
-Alcohol came in alongside. Pills to ramp up in the day, drinks to come down at night. From the first time I drank I was a blackout drinker, not giggly after two beers, just gone, piecing the night together off other people's faces in the morning. I blacked out four nights a week. On the outside I projected a confidence that read as arrogance. Inside I was the same scared kid who needed to prove he belonged in whatever room he'd walked into.
+Alcohol came alongside it. Pills to ramp up, drinks to come down. I wasn't a two-beer, loosen-up drinker. I blacked out. Four nights a week, I'd wake up piecing the night together from other people's faces. Outside, the confidence read as arrogance. Inside, I was still the scared kid trying to prove he belonged.
 
-### *The Wreckage*
+The Wreckage
 
-By then I wasn't really me anymore, my whole self swallowed by the thing I was feeding. I've come to think of it as a demon, because that's how it felt, something that moved in and pushed the real me out, then wore my face while it lied to the people who loved me.
+By then, the thing I was feeding had swallowed most of me. I lied with my own face. I hurt people who loved me and still found ways to explain it away.
 
-And it wasn't only my life it was taking apart. There's a moment from those California years I can't shake. On a workday, of all things, I went to see a fortune teller. I don't even believe in them. She looked at me and said, your mother cries herself to sleep at night worrying about you, and your father is sick with concern. I sat there stunned. How could she know that? I don't think it was a trick. I think it was just so written on me that even a stranger could read it off my face.
+There's one moment from California I can't shake. On a workday, I went to see a fortune teller. I don't even believe in them. She looked at me and said my mother cried herself to sleep worrying about me and my father was sick with concern. I sat there stunned. How could she know? Maybe it was written plainly enough on me for a stranger to read.
 
-Because it was true. While I was chasing a feeling, the people who loved me were lying awake. My mom. My aunt Nancey. My dad. My brother Chris. I don't know how many hours they spent on the phone with each other asking the same worn-out question: what are we going to do with Rob? I lied to them. I manipulated them. I stole. I took their love and their trust and turned it into fuel, and I left every one of them exhausted in a way that doesn't show up in any story but theirs.
+Because it was true. While I chased a feeling, the people who loved me lay awake. My mother. Nancey. Lou. Chris. I lied to them. Manipulated them. Stole. I turned their trust into fuel and left them carrying a wreckage I barely looked back at.
 
-I pray they have forgiven me. Some of it I've been able to make right. Some of it I just have to carry.
+Some of it I would make right later. Some of it I still carry.
 
-### *The First DUI*
+The First DUI
 
-The first DUI was 2002, and it should have stopped me. I was driving down to San Diego to see an ex-girlfriend I wasn't even in love with, holding on because letting go felt like admitting defeat. I'd been drinking. I was exhausted, strung out from work, running on nothing but momentum.
+The first DUI came in 2002, and it should have stopped me. I was driving toward San Diego to see an ex-girlfriend I wasn't even in love with, holding on because letting go felt like defeat. I had been drinking. I was exhausted, strung out from work, running on momentum.
 
-I got so tired I pulled over to sleep on the shoulder near Camp Pendleton, the car still running. The military police saw me and called the cops. I tried the old trick, pennies in my mouth, and I can tell you it doesn't work.
+I got so tired I pulled onto the shoulder near Camp Pendleton and fell asleep with the car running. Military police found me and called the cops. I tried the old pennies-in-the-mouth trick. It doesn't work.
 
-I woke up in handcuffs. A DUI, the car impounded, a night in jail.
+I woke up in handcuffs. The car was impounded. I spent the night in jail.
 
-The next morning I called my boss from a payphone, my hands still shaking. I'm going to lose my job, I said. Bravo, he said — that was my nickname at work — I don't know yet, I'm not sure. I started sobbing right there on the payphone, crying that comes from somewhere deeper than fear. I'd built everything on sand.
+The next morning I called my boss from a payphone, my hands still shaking. I'm going to lose my job, I said. Bravo — that was my nickname at work — I don't know yet, he said. I'm not sure. I started sobbing into the receiver. I had built everything on sand.
 
-But he kept me. A good attorney, the Taylor law firm, ten thousand dollars, got it pled down to a wet reckless, with one string attached: if I picked up another DUI within five years, the wet reckless would count as a first DUI, and the new one would be my second. I should have taken it as the warning it was. Instead I kept going. The success came after that. I built a career on top of the one moment where I could have stopped and asked myself what was really happening. I didn't ask. I just drove harder.
+He kept me. A good attorney and ten thousand dollars got the DUI pled down to a wet reckless, with one condition: another DUI within ten years and the wet reckless would count as the first. The next arrest would be treated as my second. I should have heard the warning. Instead, I kept going.
 
-### *The Second DUI*
+The Second DUI
 
-Four years sit between those two arrests, and on paper they were the best four years of my life. The rankings, the president's clubs, the money, my face on the screen in every store in the country. Nobody watching would have said trouble. I needed five clean years for the wet reckless to stay a wet reckless. I gave it four.
+Four years sat between the arrests, and on paper they were the best four years of my life: rankings, president's clubs, money, my face on screens across the country. I needed ten clean years for the wet reckless to stay a wet reckless. I gave it four.
 
-The second came in 2006, and it landed inside the window. The plan that night was to sleep on the couch. We'd been out in Newport Beach, a night like a lot of nights, and when it wound down I was going to crash at a buddy's and drive home in the morning. Sober. That was the deal I made with myself. But the person who picks up the first drink isn't the person who picks up the fifth, and by last call that first guy wasn't in the room anymore. The one who was left got hungry, and got in the car.
+The second DUI came in 2006, inside the ten-year window. The plan was to sleep on a friend's couch after a night out in Newport Beach and drive home sober in the morning. That was the deal I made before the first drink. But the man who makes the plan isn't always the man who reaches last call. The one who was left got hungry and got in the car.
 
-I pulled into a Del Taco. The line wasn't moving and I couldn't sit in it, so I threw it in reverse and backed into the car behind me — a real hit, metal and all — and then I did the thing I can't dress up. I left. Drove off from a car I'd hit at one in the morning because waiting was more than I could do. I made it to a 7-Eleven in Costa Mesa and sat in the lot eating nachos out of the tray. That's the picture. A man with a career, my face on a screen in every store in the country, parked in the dark eating nachos at a quarter to two.
+At Del Taco, the line wasn't moving. I threw the car in reverse and backed into the car behind me — a real hit, metal on metal — then drove away. I made it to a 7-Eleven in Costa Mesa and sat in the dark eating nachos from a plastic tray. That's the picture I keep: a man with a career and a face on screens across the country, alone in a parking lot at almost two in the morning, eating nachos after a hit-and-run.
 
-The lights came up when I pulled out swerving. Not for the Del Taco — he never knew about that. I was just driving that badly. He put me through the field sobriety test, and I thought I was holding it together. I wasn't close. Somewhere in the middle of it the fear got out ahead of the arrest. I can't get a second DUI, I told him. I'm going to lose my license. I'm going to lose my job. Please. I was pleading with a cop in a parking lot, and he'd heard it a hundred times, and it changed nothing.
+The lights came on after I pulled out, swerving. The officer knew nothing about Del Taco. I was simply driving that badly. During the field sobriety test, fear got ahead of the arrest. I can't get a second DUI, I told him. I'll lose my license. I'll lose my job. Please. He had heard versions of that speech before. It changed nothing.
 
-The cuffs went on and my body just sank forward in the seat. There was no fight left in it. I sat folded over my own knees in the back of that car and it was, more than anything, sad. I thought about my mom and my dad — all the years, all the work they'd put into building a life for me, the adoption, the bleachers, the money Lou didn't have — and the work I'd finally started to do myself on top of it. And I watched the whole thing get taken away in a parking lot. I knew, sitting there, that it would take me years to climb back to anything that looked like a normal life. It did.
+When the cuffs went on, I folded forward in the back seat. No fight left. I thought about my mother and Lou — the adoption, the bleachers, the money he didn't have — and watched the life they had helped build start disappearing in a parking lot.
 
-They towed the car and held me until I was sober enough to walk out. There was no pleading this one down. The five years weren't up, so the wet reckless counted as a DUI, exactly as the first lawyer had warned, and the new one was sentenced as my second. Eighteen months without a license — and you can't do medical device sales from the passenger seat. The six figures, the trajectory, the identity, gone overnight. I never told my boss the truth about why I couldn't drive. I built a story around the suspension and let him believe it, and I carried that lie into every call I somehow still made.
+They held me until I was sober enough to leave. There was no pleading this one down. The ten years weren't up, so the wet reckless counted as my first DUI and this one was sentenced as my second. Eighteen months without a license. You can't do medical device sales from the passenger seat. The six figures, the trajectory, the identity — gone. I lied to my boss about why I couldn't drive and carried that lie into every call I still managed to make.
 
-For years I told this one as a joke — the nachos, asking the cop how I did. The joke was armor. What it actually was: one incident after another, an absolute train wreck, and somewhere underneath it a part of me I still can't fully account for that seemed to be reaching for the wall on purpose. I don't know that I wanted to get caught. I know I kept driving toward it. Two DUIs and a Tijuana jail in four years. That was the real scorecard.
+For years I told the story as a joke — the nachos, the parking lot, the absurdity. The joke was armor. The truth was two DUIs and a Tijuana jail in four years. That was the real scorecard.
 
-I don't tell it as a poor-me story. The rock-bottom moments are the only ones that ever actually change a person, and I had to go all the way through mine to get where I finally got. Not poor me — how many lessons did I have to sit through before I'd make the change. A lot. The elevator keeps going down. You just have to decide which floor you want to get off.
-
-**Pensacola, 2007**
-
-That's when my dad stepped in. He'd remarried years earlier, Donna, a nurse, the woman he'd stay married to for the rest of his life, and the two of them had just bought a house in Pensacola. They said they were thinking about relocating and asked if I'd like to come along. I knew what it really was, a rescue mission disguised as a real estate decision. Come down here, he said. Stay at home, figure it out. So I left California and moved to Pensacola in 2007, no active driver's license to my name, a couple months before they arrived, still drinking, still managing, still sure I could outwork the damage. My mom drove my car from California to Pensacola, because her son couldn't legally drive it. I let her. Until Dad and Donna arrived I had the house to myself, and I slept on the couch. While I waited for them I got real interest from Boston Scientific and Schering-Plough, good money, jobs that could have restarted everything. Then they pulled my driving record. End of that. When your career runs on being in a car, a suspended license isn't a setback, it's a wall.
-
-The Florida license felt like a loophole I'd found in the universe. Their computers didn't talk to California's, so I passed the test, smiled for the camera, and walked out with a clean one, laminated proof that I'd beaten the system. I told myself everything would be different here. But a geographic cure only works if you leave the problem behind, and I hadn't. Same man, new license. One night before Dad and Donna made it down, I went out, and I drove home drunk. At a red light I looked left, and there was a cop. I looked right. Another cop. A drunk man on a suspended license, boxed in on both sides, holding his breath at a light in a town where nobody knew him yet. The light changed. They rolled on. By the grace of God I wasn't pulled over, not that night, not ever. People in the rooms talk about the moment of clarity. That red light was mine. I didn't get sober that night, and I didn't slow down for long. But I never forgot what that box felt like. The old patterns came back like muscle memory, the late nights, the mornings that turned into afternoons, the résumé I kept updating and never sent. I'd drive past Dad and Donna's house, see him in the driveway washing his car, and think about stopping in. But that meant questions about interviews and the leads I hadn't followed, so it was easier to wave and keep driving. The jobs were gone, and Pensacola without work started to feel like a place I was hiding rather than rebuilding. So when my aunt Nancey called and said come stay with me, I went.
+The elevator was still going down.
 
 **CHAPTER 13**
 
@@ -1060,6 +1055,7 @@ I wasn't sitting there analyzing my addiction or thinking about what sobriety wo
 At some point in that stretch, after years of barely leaning on my faith at all, I remember saying to God, "Please, finish me off." It wasn't a polished prayer and I wasn't trying to understand what it meant. It was where I was.
 
 **CHAPTER 14**
+
 ## **Checking Boxes**
 
 *"Man looketh on the outward appearance, but the LORD looketh on the heart."*
@@ -1067,49 +1063,17 @@ At some point in that stretch, after years of barely leaning on my faith at all,
 
 **Laguna Beach, 2006**
 
-My biological father handed me ten thousand dollars in cash, and I spent it on pills before I left town. That was the reunion my therapist thought would heal me. But a cell didn't stop me, and neither did a courtroom. The first rehab was court-ordered. I want that up front, because it matters. I didn't walk in because I was ready. I walked in because a judge told me to.
+That's when Lou stepped in. He and Donna had just bought a house in Pensacola and offered me a place to land. I knew what it was: a rescue mission disguised as a move. Come down here, he said. Stay at home. Figure it out.
 
-Laguna Beach, still in California. If you're going to be forced into rehab, you could do worse. High-end, the place Hollywood people land when their publicists run out of excuses. Beautiful grounds, ocean nearby. The clientele was a mix, retired grandfathers who'd been passing out in the garage, next to younger guys who'd burned through their twenties faster than they expected.
+I moved to Pensacola in 2007 with no active license, still drinking, still convinced I could outwork the damage. My mother drove my car from California because I couldn't legally drive it myself. I let her. Before Lou and Donna arrived, I slept on the couch and chased job leads that disappeared the moment employers saw my driving record.
 
-I made friends with a guy named Tristan. He'd been on a soap opera. An absolute lunatic. He'd done a lot of cocaine and hit a wall. We clicked, both from lives that looked good from the outside and were rotting inside. We'd hang out between sessions, talk about nothing, crack jokes. It felt more like summer camp than rehab. That was the problem.
+Florida gave me a loophole. The systems didn't seem to talk to California, so I passed the test and walked out with a clean license. Laminated proof, I thought, that I had beaten the system. Same man, new license. One night I drove home drunk. At a red light, a cop sat on my left and another on my right. I held my breath until the light changed. They drove on. I didn't get sober. I barely slowed down.
 
-I wasn't there to get better. I was there to get through it. Checking boxes, not surrendering. I went to the sessions, sat in the circles, said the things that sounded like progress, filled out the worksheets. From the outside it probably looked like work. Inside I was already planning what came next, not in recovery, in using. The pills hadn't let go of me, or I hadn't let go of them. Same thing.
+When Pensacola failed to become the fresh start I had promised myself, Aunt Nancey told me to come to Boca Raton. She had always shown up for me, and she did it again. She kept banana cream pie and chicken parm in the house because they were my favorites. For a stretch, I stopped drinking. The pills never stopped.
 
-Every day I told my therapist: I can't get off the pills, I need them, I can't function without them. And she'd say, you have to stop, you can't keep doing this. I heard her. I didn't believe her. The pills had been the solution so long I couldn't picture a version of myself that ran without them. Without them I was just the scared kid from Mexico City who couldn't sit still and didn't believe he was enough.
+From the outside, I could almost pass for stable. I found some work. I sat on Nancey's couch at night. I told myself I was getting my feet under me. I had changed addresses, not direction.
 
-The therapist had an idea. She said I needed to get in touch with my birth father. Horacio. The man I'd left in Mexico City at four. I hadn't spoken to him in years and barely had a memory of him that wasn't assembled from other people's stories and my own four-year-old fragments. She thought part of what I was carrying was unresolved grief about being left. Maybe she was right. What I know is I agreed to try, because agreeing to try was another box to check.
-
-I called my mom. She had a cousin who might track him down. They found him. We decided to meet not in Mexico City but closer to the California border. Ensenada.
-
-Horacio was fifty-three that weekend, still a good-looking man, and we spoke in English, which tells you how much of my first life had survived the trip north. The first thing I noticed was the energy, fun, engaging, a man a room adjusts to when he walks in. But under the charm something didn't sit right, and I couldn't have told you what. To be fair, I was in no shape to evaluate anybody. Fresh out of a rehab I'd half-assed, still craving pills, meeting the biological father I hadn't seen since I was a small boy. And we drank together, the two of us at a table like it was the most natural thing in the world, with the man the therapist thought would heal me. Neither of us said a word about it.
-
-He was generous, and he was trying to make amends the only way he knew how. He gave me ten thousand dollars. Cash. Just handed it over. Ten thousand dollars to a guy who'd just come out of rehab and was still telling his therapist he couldn't live without pills. That money landed on a craving that had never gone out. The moment it was in my hand something shifted, not toward healing, toward planning. I could feel the disease doing its math. Horacio wanted to come along wherever I went. So I told him I was going shopping for a gift for him, which was at least half true, since I had come with nothing to give him. A gift meant he had to stay behind. I left alone and bought Ritalin. With money my biological father had given me at a reunion that was supposed to be about healing.
-
-Then there was the scrapbook. My mom had put together a scrapbook of my childhood, New Jersey, birthdays, holidays, school pictures, wrestling matches, and given it to me to show him. A way of saying, look, he turned out okay, here's what you missed, here's what we built. Horacio flipped through it, and as the pages turned he kept coming back to my mother. Becky. Becky. Becky. Then he stopped on a page and said, you looked very sad there. You must have missed me. I didn't say anything. I let it sit there. It wasn't about me. He was looking at a childhood he'd chosen not to be part of, and the only way he could process it was to put himself at the center.
-
-I didn't stay long after that. No reunion was going to fill the hole I'd been pouring pills into for years. Before Ensenada, Horacio was an idea. After, he was a real person, not an idea — charming, generous, and harder to reach than I'd let myself imagine.
-
-I drove back to California with pills in my system and cash in my pocket and the full knowledge that nothing had healed. Another box checked. The small, private room inside me was exactly the same.
-
-These days I don't carry anger toward Horacio. I did for a while. What I know now is that I was a broken person meeting another broken person, and neither of us had the tools to give the other what they needed. But Ensenada gave me something I didn't recognize for years.
-
-Because I had Lou. Ensenada clarified something I'd always known without being able to say it. Lou Brizzi was my father. Not because of a birth certificate. Because he chose it. Every day. Without keeping score. For years I told that weekend as a ledger. I've stopped, because it was never fair. The money was never the variable; the stage of my disease was — I'd have spent anyone's gift the same way that year. Horacio's gift was genuine, a father trying to make amends with what he had, and I want that acknowledged in full.
-
-### *Boca Raton*
-
-**Boca Raton, 2008**
-
-Nancey lived in Boca Raton. She'd always been the one who showed up, wrestling matches, graduations, every moment that mattered. But this was the first time it was just the two of us. No Mom, no Chris, no occasion. Just me at her door with nowhere better to go.
-
-She knew my favorite foods were banana cream pie and chicken parm, so there was always whipped cream in the house and she made me the pies. Not once. Regularly.
-
-Nancey didn't drink. She'd had her own challenges with alcohol — that's her story to tell, not mine. I wasn't drinking either by then. The pills, yes — those never stopped — but not the drinking. That held until I left Boca. I was still not where I needed to be, but not in freefall yet. We'd get together with sober friends sometimes, not because she needed to, but because she knew I did and wasn't going to make me go alone. Most nights we just sat on the couch. That's what I remember most. We're both people who don't need to be in constant motion. We watched *Dateline*, *Forensic Files*, *20/20*, for hours, laughing at the things people do, and it was the most normal I'd felt in a long time. Not performing anything. Two people who loved each other, on a couch, with nowhere to be.
-
-She knew I was in a dark place. She didn't try to fix it. Didn't ask me to explain it or show measurable improvement. She just loved me where I was and sat with me until I was ready.
-
-She helped me find work through local connections, and for a while, in her quiet orbit, I started to find my feet again.
-
-Then I left. I got an apartment in West Palm Beach, and I can't hand you a clean reason why. I told myself it was a fresh start. In West Palm the pills stopped being the whole story. The drinking came back, and I added cocaine. I all but stopped eating, and my body started failing — malnutrition, the damage quietly adding up while I told anyone who asked I was fine. Boca was the last soft place. West Palm Beach was where the disease finally got me alone.
+Then I moved to West Palm Beach. I called it another fresh start. The drinking came back. I added cocaine. I almost stopped eating. My body started failing while I kept telling anyone who asked that I was fine. Boca was the last soft place. West Palm Beach was where the disease finally got me alone.
 
 **CHAPTER 15**
 
@@ -1206,6 +1170,7 @@ PART FOUR
 *You can't pay back a man who never sent a bill. You can pass it on.*
 
 **CHAPTER 17**
+
 ## **Chumuckla**
 
 *"Half measures availed us nothing. We stood at the turning point."*
@@ -1213,37 +1178,37 @@ PART FOUR
 
 **January 8, 2009**
 
-I am powerless. I am powerless over alcohol, over the pills, over the man I became when I had either one in me. They are the hardest words I have ever said out loud, and the first time I said them and meant them was at a farmhouse called Chumuckla.
+I am powerless. Powerless over alcohol, over the pills, over the man I became when I had either one in me. They are the hardest words I have ever said out loud. The first time I meant them was at a farmhouse called Chumuckla.
 
-January 9, 2009. That's the date I count from. The night before, Lou took me to Carrabba's. My last meal as a drinking man, one last glass of wine. He didn't make a ceremony of it and he didn't say a word against it. He sat across from me while I drank it, the way he sat across from every hard thing in my life, not trying to fix the part that couldn't be fixed in a restaurant.
+January 9, 2009. That's the date I count from. The night before, Lou took me to Carrabba's. My last meal as a drinking man. One glass of wine. He didn't make a ceremony of it or say a word against it. He sat across from me the way he had sat across from every hard thing in my life.
 
-People imagine that last glass as something out of a movie, savored slow, every note of it memorized. It was disappointing. I never drank for the taste of anything. The goal was always to get drunk, and one glass isn't a drink to a man like me, it's a signal — the whole machine waking up and asking, where's the rest? I sat there with my father across the table and my body already asking after a bottle that wasn't coming. That glass taught me the lesson I'd spend the next year learning on purpose: one is too many and twelve isn't enough. My last drink didn't even work. That's the disease, right there, in one restaurant.
+People imagine the last drink as something cinematic, savored slowly, every note memorized. Mine was disappointing. I never drank for taste. One glass only woke the machine and made it ask where the rest was. My last drink didn't even work.
 
-The next morning we drove out to a farmhouse in the panhandle. Chumuckla. The name sounded made up. It wasn't a facility the way Laguna Beach had been, no ocean, no manicured grounds, no soap opera actors in the next room. A farmhouse down a dirt road, fields around it, run by a man named Ron who'd seen more than most people would believe. Lou walked me in, signed the paperwork, hugged me, and left.
+The next morning we drove to a farmhouse in the panhandle. Chumuckla. The name sounded made up. The place didn't look anything like Laguna Beach — no ocean, no manicured grounds, no soap-opera actor in the next room. Just a farmhouse down a dirt road, fields around it, run by a man named Ron. Lou walked me in, signed the paperwork, hugged me, and left.
 
-Ron didn't waste time. He saw through whatever I was still performing. A lot of the men in that house were personal trainers and blue-collar guys, and I walked in still leading with my career, talking business to men who were there to stay alive. The gap was ridiculous, and they named it: by the first day the guys were calling me Corporate Rob. Slacks, polo, haircut, the version of myself I'd assembled to convince the world I was fine. The nickname was playful, and it was accurate. Ron wasn't impressed. That was what I needed.
+Ron saw through me quickly. I walked in leading with my career, talking business to men who were there to stay alive. By the first day they had named me Corporate Rob. Slacks, polo, haircut — the costume I had assembled to convince the world I was fine. Ron wasn't impressed. I needed that.
 
-What was underneath the costume is the part nobody expects. Even at the bottom — a hundred and forty-five pounds, the power off, the U-Haul, all of it — some voice in me had never stopped being confident. Wrestling put it there. I'd been pinned in nineteen seconds in front of a whole gym once, and it didn't define me. I went 2-4 as a freshman and left with a county title and my name on the wall. Somewhere under the pills and the pressed polo, that kid was still on the mat, still certain that a humiliating loss doesn't have to be the story.
+Underneath the costume, one thing had survived. Wrestling had taught me that humiliation didn't have to be the ending. I had been pinned in nineteen seconds, gone 2–4 as a freshman, and still left high school with a county title. Somewhere under the pills and the pressed polo, that kid was still there.
 
-About a dozen of us were in that house. Dan was one of the therapists, a man who'd been where I was and come out the other side. There was the gymnast, nineteen, Olympic-level in his sport before addiction pulled him off the edge of it. Funny, kind, light in a way you don't expect from somebody that young in a room that heavy. There was Mike, one of those people you meet once and think about the rest of your life, quiet, steady. He looked out for me in the small ways that matter when you're new and raw. In 2018 I got the call that Mike was gone. And there was Chad, forty-three, a bodybuilder, a chef, a crack addict, all of it living in the same frame. Chad leaned on the nickname harder than anybody, and from him it was all play. Chad made me laugh. And Chad told me the truth.
+About a dozen of us lived in the house. Dan was one of the therapists, a man who had been where I was and come out the other side. There was a nineteen-year-old gymnast, Olympic-level before addiction pulled him off course. There was Mike, quiet and steady, the kind of man who looked out for you without announcing it. And there was Chad — forty-three, bodybuilder, chef, crack addict, funny as hell. Chad was the one who told me the truth.
 
-The truth came in the first seventy-two hours, and it was the thing that finally broke the story I'd walked in with. By the time you get out of here, Chad told me, you'll be doing meth and knowing it's better than Adderall. He was drawing me a map, not being cruel. I had come in still believing my addiction had a collar on it — pills, prescriptions, a label from a pharmacy, nothing like the men shooting heroin. Chad's sentence took the collar off. I was no different. There was only one direction left from where I stood, and it was down. The withdrawal was its own war, and it still wasn't what broke that version of me. Neither was the mirror. What did it was a crack addict chef telling me, kindly, exactly where my road went.
+It came in the first seventy-two hours. By the time you get out of here, Chad told me, you'll be doing meth and knowing it's better than Adderall. He wasn't being cruel. He was drawing me a map. I had walked in believing my addiction still had a collar on it — pills, prescriptions, a pharmacy label, nothing like the men shooting heroin. Chad took the collar off.
 
-Later I found out Chad and the gymnast died together. An overdose. Two of the people who got me through those ninety days, gone the same day. That's what this disease does. It picks people off.
+For the first time, I could see where the road went.
 
-The first week I couldn't look at myself in the bathroom mirror. I'd brush my teeth staring at the faucet, because if I raised my head and caught my own eyes I'd break. That was the condition Lou had delivered me in.
+The first week I couldn't look at myself in the bathroom mirror. I brushed my teeth staring at the faucet because I knew if I raised my head and caught my own eyes, I'd break.
 
-One night they had a bonfire outside. Stars overhead, the air cold the way North Florida can surprise you in January. We stood around the fire and I wasn't performing recovery, wasn't pretending, just standing there with a ring of strangers who'd ended up in the same dirt yard for the same reason. And I prayed. Not out loud. Inside. God, if you're real, give me a sign. I don't know what I'm doing. Show me something. The sky was clear. I remember that specifically.
+One night we stood around a bonfire outside, stars overhead, the air cold the way North Florida can surprise you in January. I wasn't performing recovery. I was just standing in a dirt yard with men who had ended up there for the same reason. Inside, I prayed: God, if you're real, give me a sign. I don't know what I'm doing. Show me something. The sky was clear. I remember that.
 
-Then it started raining. Not a storm, not weather moving in. Rain out of a clear sky, on the fire, on my face, on the other guys. It lasted maybe a minute, then stopped. I stood there with rain on my face and something that had been sealed shut for years broke open. I know what the sky did. That was the first night I believed God was in the room with me, not in theory, not in a Sunday-morning way. In a muddy field in Chumuckla.
+Then it started raining. Not a storm. Rain from a clear sky, on the fire, on my face, on the other men. It lasted maybe a minute. Something sealed shut in me broke open. That was the first night I believed God was there with me — not in theory, not in a Sunday-morning way. In a muddy field in Chumuckla.
 
-Jane was the other therapist, tougher than Dan, didn't let me slide on anything. One day she handed me a piece of paper and told me to write a letter to myself from five years in the future. Not a plan. A letter from the man I was trying to become, back to the man I was right then. I sat with it a long time because I didn't know if there'd be a man five years out. I wrote it anyway, about my days, about being sober, about work I was proud of, about people who could trust me. About Lou. About being someone he could be proud of. Jane read it, handed it back, and said, hold on to this. Nothing else.
+Jane, the other therapist, was tougher than Dan and didn't let me slide. One day she handed me a sheet of paper and told me to write a letter to myself from five years in the future. I sat with it because I wasn't sure there would be a man five years out. I wrote anyway — about sobriety, work I was proud of, people who could trust me, Lou, becoming someone he could be proud of. Jane read it, handed it back, and said, hold on to this.
 
-Ninety days in, I walked out a different person than the one who walked in. Not fixed. Different. Corporate Rob replaced by somebody quieter and slower and less sure of himself, and that was progress. Cliff volunteered at Chumuckla, longer sober, and he pulled me aside on my last day. Three things, he said. Go to the noon meeting every day. Find somewhere to volunteer. Sign up for a 5K. I didn't ask why. I wrote it down and did it.
+Ninety days later, I walked out different. Not fixed. Different. Cliff, a volunteer with more sober time, pulled me aside on my last day. Three things, he said. Go to the noon meeting every day. Find somewhere to volunteer. Sign up for a 5K. I wrote them down.
 
-I don't tell this part often: I didn't want to leave. It surprised me more than anyone. Ninety days earlier I couldn't meet my own eyes in a mirror, and now the farmhouse was the one place on earth where I knew who I was and what came next, where every man in the house knew exactly what I was and stayed anyway. I understand the word institutionalized now. I wasn't in love with the walls. I was afraid of who I was without them.
+I didn't want to leave. That surprised me. Ninety days earlier I couldn't meet my own eyes in a mirror. Now the farmhouse was the one place where everyone knew exactly what I was and stayed anyway. I wasn't in love with the walls. I was afraid of who I would be without them.
 
-Lou picked me up. Same truck, same calm. He didn't ask me to prove anything, didn't ask what I'd learned. He just drove. Somewhere between the farmhouse and Pensacola he said the only thing he needed to. You get to start over, Rob. A clean page from a man who'd watched me fill the old one with every mistake I was capable of making. Thirty years old, ninety days, the man who'd driven me in driving me out. Whatever came next was on me.
+Lou picked me up. Same truck, same calm. He didn't ask me to prove anything or explain what I had learned. He drove. Somewhere between the farmhouse and Pensacola, he said: You get to start over, Rob. Thirty years old, ninety days sober, the man who had driven me in now driving me out. Whatever came next was on me.
 
 What came next was a long line of ordinary mornings I had to learn how to fill.
 
