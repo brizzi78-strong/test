@@ -4,6 +4,12 @@
 
 **ROB BRIZZI**
 
+**PRAISE FOR THE CARDINAL'S PROMISE**
+
+*"Thirty-five years of friendship, and I can tell you: you can trust what you're about to read."*
+
+*— Dave Meyer, former Captain, Virginia Tech Football*
+
 Copyright © 2026 by Rob Brizzi. All rights reserved. No part of this book may be reproduced in any form without written permission from the publisher, except for brief quotations in reviews.
 
 Published by Cardinal Promise Press, Raleigh, North Carolina.
