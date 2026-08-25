@@ -4,14 +4,12 @@
  * Usage:
  *   CARD_NETWORK=sepolia \
  *   CARD_TOKEN_ADDRESS=0x... \
- *   CARD_TREASURY_ADDRESS=0x... \
- *   CARD_AMOUNT=100000000 \      # CARD to deposit (whole tokens)
+ *   CARD_AMOUNT=1000000 \        # CARD to deposit (whole tokens)
  *   ETH_AMOUNT=1.5 \             # ETH to pair with it
  *   npx hardhat run scripts/add-liquidity.ts
  *
- * Run this with the treasury signer. Transfers from the immutable treasury
- * are fee-exempt, so the pair receives the full CARD_AMOUNT. The ratio sets
- * the initial price; LP tokens are minted to LP_RECIPIENT or the treasury.
+ * The CARD_AMOUNT/ETH_AMOUNT ratio sets the initial price, so double-check
+ * it before running against mainnet. LP tokens are minted to the caller.
  */
 import { getContract, parseEther, parseUnits, formatUnits, parseAbi } from "viem";
 import { network } from "hardhat";
@@ -36,20 +34,17 @@ const TOKEN_ABI = parseAbi([
   "function approve(address spender, uint256 value) external returns (bool)",
   "function balanceOf(address account) external view returns (uint256)",
   "function symbol() external view returns (string)",
-  "function treasury() external view returns (address)",
 ]);
 
 async function main() {
   const networkName = process.env.CARD_NETWORK ?? "sepolia";
   const tokenAddress = process.env.CARD_TOKEN_ADDRESS as `0x${string}` | undefined;
-  const expectedTreasury = process.env.CARD_TREASURY_ADDRESS as `0x${string}` | undefined;
-  const lpRecipient = process.env.LP_RECIPIENT as `0x${string}` | undefined;
   const cardAmount = process.env.CARD_AMOUNT;
   const ethAmount = process.env.ETH_AMOUNT;
 
-  if (!tokenAddress || !expectedTreasury || !cardAmount || !ethAmount) {
+  if (!tokenAddress || !cardAmount || !ethAmount) {
     throw new Error(
-      "Set CARD_TOKEN_ADDRESS, CARD_TREASURY_ADDRESS, CARD_AMOUNT, and ETH_AMOUNT",
+      "Set CARD_TOKEN_ADDRESS, CARD_AMOUNT (whole CARD) and ETH_AMOUNT (ETH) env vars",
     );
   }
   const routerAddress = ROUTERS[networkName];
@@ -68,13 +63,6 @@ async function main() {
   const tokenUnits = parseUnits(cardAmount, 18);
   const ethUnits = parseEther(ethAmount);
   const symbol = await token.read.symbol();
-  const onChainTreasury = await token.read.treasury();
-  if (onChainTreasury.toLowerCase() !== expectedTreasury.toLowerCase()) {
-    throw new Error(`contract treasury ${onChainTreasury} does not match CARD_TREASURY_ADDRESS ${expectedTreasury}`);
-  }
-  if (signer.account.address.toLowerCase() !== onChainTreasury.toLowerCase()) {
-    throw new Error(`connected signer ${signer.account.address} is not the immutable treasury ${onChainTreasury}`);
-  }
 
   const balance = await token.read.balanceOf([signer.account.address]);
   if (balance < tokenUnits) {
@@ -97,7 +85,7 @@ async function main() {
   const deadline = BigInt(Math.floor(Date.now() / 1000) + 20 * 60);
   console.log("Adding liquidity...");
   hash = await router.write.addLiquidityETH(
-    [tokenAddress, tokenUnits, tokenUnits, ethUnits, lpRecipient ?? signer.account.address, deadline],
+    [tokenAddress, tokenUnits, tokenUnits, ethUnits, signer.account.address, deadline],
     { value: ethUnits },
   );
   const receipt = await publicClient.waitForTransactionReceipt({ hash });

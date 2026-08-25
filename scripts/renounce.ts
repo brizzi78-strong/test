@@ -1,11 +1,10 @@
 // Checklist step 6: renounce ownership. ⚠️ POINT OF NO RETURN.
 //
 // Before sending anything this script re-checks every abort criterion it can
-// verify on-chain (treasury 50M, founder 100M, pool about 100M) and makes you
-// confirm the ones it can't (source verified, test swap
-// done, LP locked) with a network-specific confirmation phrase. Mainnet uses
-// "renounce forever"; disposable Sepolia practice uses "renounce practice".
-// If any check fails it stops without sending.
+// verify on-chain (treasury holds exactly 200M, deployer holds exactly the 400M
+// founder hold, pool holds ~400M) and makes you confirm the ones it can't (source verified, test swap
+// done, LP locked) by typing "renounce forever". If any check fails it stops
+// without sending.
 //
 //   npx hardhat run scripts/renounce.ts
 //
@@ -21,16 +20,13 @@ const { viem } = await network.create(config.network);
 
 const [wallet] = await viem.getWalletClients();
 const deployer = wallet.account.address;
-if (deployer.toLowerCase() !== config.deployer.toLowerCase()) {
-  throw new Error(`connected wallet ${deployer} is not launch.json deployer ${config.deployer}`);
-}
 const token = await viem.getContractAt("CardinalsPromise", config.token);
 const publicClient = await viem.getPublicClient();
 
 console.log(`network: ${config.network}`);
 console.log(`token:   ${config.token}`);
 
-const hash = await renounce(token, publicClient, config.deployer, config);
+const hash = await renounce(token, publicClient, deployer, config);
 
 console.log(`\n✅ Ownership renounced — the contract is now final, forever.`);
 console.log(`Save this link, it goes in the announcement:`);

@@ -7,28 +7,30 @@ import {CardinalsPromise} from "./CardinalsPromise.sol";
 
 /// @notice Fuzz handler for CardinalsPromise invariant testing. The invariant runner
 ///         calls these entry points in random sequences from random senders;
-///         the handler narrows that randomness onto valid token operations,
-///         checking the exact 2% fee semantics on every hop. The treasury is
-///         itself an actor so fee-exempt paths are exercised too.
+///         the handler narrows that randomness onto valid token operations so
+///         sequences exercise real state transitions instead of reverting.
+///         Deliberately NOT a Test subclass: its only public surface is the
+///         operations we want fuzzed (plus view helpers), so the runner cannot
+///         wander into inherited helpers.
 contract CardinalsPromiseHandler {
     Vm private constant vm =
         Vm(address(uint160(uint256(keccak256("hevm cheat code")))));
 
     CardinalsPromise public immutable token;
-    address public constant TREASURY = address(0x7EA5);
     address[] public actors;
     bool public renounced;
 
     constructor(uint256 numActors) {
-        token = new CardinalsPromise(TREASURY);
+        token = new CardinalsPromise();
         uint256 share = token.totalSupply() / (numActors * 2);
         for (uint256 i = 0; i < numActors; i++) {
             address actor = address(uint160(0xCA4D0000 + i));
             actors.push(actor);
             token.transfer(actor, share);
         }
+        // The handler keeps the remaining half of the supply and is itself an
+        // actor, so transfers to/from a large holder are exercised too.
         actors.push(address(this));
-        actors.push(TREASURY);
     }
 
     function actorCount() external view returns (uint256) {
@@ -40,30 +42,18 @@ contract CardinalsPromiseHandler {
         address to = actors[toSeed % actors.length];
         amount = amount % (token.balanceOf(from) + 1);
 
-        bool exempt = from == to || from == TREASURY || to == TREASURY;
-        uint256 fee = exempt ? 0 : (amount * token.FEE_BPS()) / 10_000;
-
         uint256 toBefore = token.balanceOf(to);
         uint256 fromBefore = token.balanceOf(from);
-        uint256 tBefore = token.balanceOf(TREASURY);
 
         vm.prank(from);
         token.transfer(to, amount);
 
-        if (from == to) {
-            if (exempt) {
-                require(token.balanceOf(from) == fromBefore, "exempt self-transfer changed balance");
-            } else {
-                require(token.balanceOf(from) == fromBefore - fee, "self-transfer fee wrong");
-                require(token.balanceOf(TREASURY) == tBefore + fee, "self-transfer treasury wrong");
-            }
-        } else if (exempt) {
-            require(token.balanceOf(to) == toBefore + amount, "exempt recipient wrong");
-            require(token.balanceOf(from) == fromBefore - amount, "exempt sender wrong");
+        // No-tax property: every transfer moves exactly the requested amount.
+        if (from != to) {
+            require(token.balanceOf(to) == toBefore + amount, "transfer taxed recipient");
+            require(token.balanceOf(from) == fromBefore - amount, "transfer overcharged sender");
         } else {
-            require(token.balanceOf(to) == toBefore + amount - fee, "recipient net wrong");
-            require(token.balanceOf(from) == fromBefore - amount, "sender wrong");
-            require(token.balanceOf(TREASURY) == tBefore + fee, "treasury fee wrong");
+            require(token.balanceOf(from) == fromBefore, "self-transfer changed balance");
         }
     }
 
@@ -81,15 +71,13 @@ contract CardinalsPromiseHandler {
         vm.prank(owner);
         token.approve(spender, amount);
 
-        bool exempt = owner == TREASURY || to == TREASURY;
-        uint256 fee = exempt ? 0 : (amount * token.FEE_BPS()) / 10_000;
         uint256 toBefore = token.balanceOf(to);
 
         vm.prank(spender);
         token.transferFrom(owner, to, amount);
 
         if (owner != to) {
-            require(token.balanceOf(to) == toBefore + amount - fee, "transferFrom recipient wrong");
+            require(token.balanceOf(to) == toBefore + amount, "transferFrom taxed recipient");
         }
         require(
             owner == spender || token.allowance(owner, spender) == 0,
@@ -105,6 +93,8 @@ contract CardinalsPromiseHandler {
 }
 
 /// @notice Stateful verification of CardinalsPromise's launch-critical properties.
+///         Each invariant is re-checked after every randomized call sequence
+///         against the handler above (256 sequences by default).
 contract CardinalsPromiseInvariantTest is Test {
     uint256 internal constant NUM_ACTORS = 8;
 
@@ -117,14 +107,12 @@ contract CardinalsPromiseInvariantTest is Test {
         targetContract(address(handler));
     }
 
-    /// Supply can never change: no mint, no burn, no rebase. The fee moves
-    /// coins; it never creates or destroys them.
+    /// Supply can never change: no mint, no burn, no rebase.
     function invariant_TotalSupplyConstant() public view {
         assertEq(token.totalSupply(), token.TOTAL_SUPPLY());
     }
 
-    /// Tokens are conserved: every unit of supply, fees included, is in
-    /// some actor's balance (the treasury is an actor).
+    /// Tokens are conserved: every unit of supply is in some actor's balance.
     function invariant_BalancesSumToTotalSupply() public view {
         uint256 sum;
         uint256 n = handler.actorCount();

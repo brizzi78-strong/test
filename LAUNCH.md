@@ -1,119 +1,122 @@
-# Cardinals Promise (CARD) — canonical launch runbook
+# Cardinals Promise (CARD) — Launch Runbook
 
-Status: code and rehearsal package only. No mainnet token or public pool exists until the
-contract address is published at **cp17.org**.
+## Decided launch parameters
 
-## Fixed launch parameters
+| Decision | Value |
+| --- | --- |
+| Supply | Mint all 1B at deploy, `renounceOwnership()` immediately after verification |
+| Uniswap pool | 400M CARD (40%) paired with 2–5 ETH |
+| Founder hold | 400M CARD (40%), unlocked, in a publicly disclosed wallet |
+| Treasury | 200M CARD (20%) in a publicly announced wallet |
+| LP tokens | Locked 12 months (Team Finance or UNCX) |
+| Timeline | Week 0: Sepolia rehearsal → Weeks 1–2: independent audit + legal consult → Week 3: mainnet |
+| Before mainnet | Publish the one-page site (`site/index.html`) at **thecardinalspromise.com/card** (the book's established domain — best trust signal; cp17.org can redirect there) and fill in the story section |
 
-| Item | Canonical value |
-|---|---|
-| Token | Cardinals Promise (`CARD`) |
-| Contract | `CardinalsPromise` |
-| Supply | 250,000,000 CARD, minted once |
-| Public pool | 100,000,000 CARD (40%) with 2–5 ETH |
-| Founder allocation | 100,000,000 CARD (40%), unlocked and publicly disclosed |
-| Treasury | 50,000,000 CARD (20%) after pool seeding |
-| Transfer fee | 2% between non-treasury addresses, sent to the immutable treasury |
-| Treasury transfers | Fee-exempt in both directions |
-| Ownership | Renounced only after verification, two-way swap test, and LP lock |
-| Official token site | `https://cp17.org` |
+Status of each step on the road to mainnet. Items marked ✅ are done in this
+repo; items marked 🔑 need something only the project owner can provide
+(keys, funds, signatures, legal engagement).
 
-The 100M pool inventory is staged through the treasury so it arrives in the pair whole:
+## ✅ Done
 
-```text
-deployer → treasury: 150M CARD  (100M pool inventory + 50M retained)
-treasury → pair:      100M CARD  (fee-exempt)
-final balances:       100M founder / 100M pool / 50M treasury
-```
+| Step | Where |
+| --- | --- |
+| Token contract (1B fixed supply — no mint, no burn; OpenZeppelin ERC20 + Ownable) | `contracts/CardinalsPromise.sol` |
+| Test suite — 17 tests (Foundry-style Solidity incl. fuzz + invariants, plus node:test/viem), all passing | `contracts/*.t.sol`, `test/CardinalsPromise.ts` |
+| Machine-checkable launch-claims ledger — 8/8 claims verified in CI (`npm run verify`) | `verification/claims.json` |
+| Static analysis — Slither v0.11.5, all 101 detectors, **0 findings** | run locally, see below to reproduce |
+| Local deployment rehearsal (Ignition) | `ignition/modules/CardinalsPromise.ts` |
+| CI — build + full test suite + claims verification on every push/PR | `.github/workflows/verify.yml` |
+| Sepolia + mainnet network config | `hardhat.config.ts` |
+| Etherscan verification config | `hardhat.config.ts` (`verify.etherscan`) |
+| Uniswap V2 liquidity script | `scripts/add-liquidity.ts` |
+| Logo (SVG + 256px/32px PNG) and token metadata | `assets/` |
+| **Full launch dress rehearsal** — real Uniswap V2 stack deployed locally; deploy → seed 10M CARD/100 ETH pool → buyer swap (price verified incl. 0.3% fee) → renounceOwnership, all green | `scripts/rehearse-launch.ts` |
 
-## 1. Prepare wallets and parameters
+### Reproducing the Slither run
 
-- Use a dedicated deployer wallet.
-- Use a separate multisignature Safe as the treasury.
-- Put the deployer, treasury, token, and eventual pair addresses in `launch.json`.
-- Copy `ignition/parameters.example.json`, enter the Safe address, and keep the completed
-  file out of public chat and screenshots.
+Slither doesn't yet parse Hardhat 3's split build-info files. Workaround:
+compile, then merge each `artifacts/build-info/*.json` + `*.output.json`
+pair into one file with the Hardhat 2 keys (`input`, `output`,
+`solcVersion`), strip the `project/` source-name prefix, rewrite
+`npm/<pkg>@<version>/` source names to `node_modules/<pkg>/`, ensure
+`settings.optimizer` exists, and run
+`slither . --compile-force-framework hardhat --ignore-compile
+--filter-paths "forge-std|\.t\.sol|openzeppelin"`.
 
-## 2. Build and test
+## ⚠️ Where the remaining steps must run
 
-```bash
-npm ci
-npm run build
-npm test
-npm run verify
-npm run rehearse
-```
+The sandboxed environment this repo was built in blocks all outbound network
+traffic except package registries — no Ethereum RPC endpoint is reachable, so
+steps 2–6 cannot execute from it. Run them either:
 
-The rehearsal must exercise a separate treasury, fee-exempt pool seeding, a fee-aware buy,
-a fee-aware sell, fee accumulation, supply conservation, and renouncement.
+- **on your own machine** — clone the repo, `npm install`, follow the
+  commands below; or
+- **in a Claude Code session** whose environment network policy allows
+  outbound traffic (configurable when creating the environment at
+  https://code.claude.com/docs/en/claude-code-on-the-web) — then Claude can
+  run the Sepolia rehearsal for you once a funded key is in the keystore.
 
-## 3. Sepolia
+## 🔑 Step 1 — Keys and wallets (owner)
+
+- [ ] Create a fresh deployer wallet (hardware wallet or offline-generated key).
+- [ ] Create a Gnosis Safe multisig for the 200M treasury allocation.
+- [ ] Get an RPC endpoint (Alchemy/Infura free tier works) and an Etherscan
+      API key (free at etherscan.io/apis).
+
+## 🔑 Step 2 — Sepolia rehearsal (one command each)
 
 ```bash
 npx hardhat keystore set SEPOLIA_RPC_URL
-npx hardhat keystore set SEPOLIA_PRIVATE_KEY
+npx hardhat keystore set SEPOLIA_PRIVATE_KEY     # fund it from a Sepolia faucet first
 npx hardhat keystore set ETHERSCAN_API_KEY
-npx hardhat ignition deploy ignition/modules/CardinalsPromise.ts \
-  --network sepolia --parameters ignition/parameters.sepolia.json
+
+npx hardhat ignition deploy ignition/modules/CardinalsPromise.ts --network sepolia
+npx hardhat verify --network sepolia <deployed-address>
 ```
 
-Then follow `SEPOLIA_DRY_RUN.md`. It creates a real Sepolia V2 pool through the official
-router and runs a separate-wallet fee-aware buy and sell. Do not proceed unless the
-contract source, constructor treasury, pool, fee behavior, and final balances all match
-this file and the public transaction links are saved.
+Then: add the token to a wallet, send a few transfers, confirm Etherscan
+shows verified source and correct metadata.
 
-## 4. Required human gates
+## 🔑 Step 3 — Audit (owner engages, before real value)
 
-- Independent smart-contract review or audit.
-- Securities, money-transmission, consumer-protection, and marketing review by qualified
-  counsel in every jurisdiction where launch is contemplated.
-- CPA review of treasury, founder, and any future board-grant accounting.
-- Written confirmation of the LP-lock provider and duration.
-- Final review of every statement on cp17.org against `verification/claims.json`.
+The contract is tiny (~20 lines over audited OpenZeppelin v5 base contracts)
+and Slither-clean, which keeps audit cost low. In rough order of cost: Slither/Mythril pass (done/free) → independent
+experienced reviewer → community platform (Code4rena, Sherlock) →
+professional firm. Do not skip this if the token will hold real value.
 
-## 5. Mainnet deployment
+## 🔑 Step 4 — Legal review (owner engages, before mainnet)
+
+Token issuance can be a regulated activity (US: Howey test; EU: MiCA).
+Engage a crypto-literate lawyer on: what CARD is for, how it's distributed,
+whether it's sold, and required disclosures. Keep marketing free of any
+implied returns — the name "Promise" makes this doubly important.
+
+## 🔑 Step 5 — Mainnet deployment
 
 ```bash
 npx hardhat keystore set MAINNET_RPC_URL
 npx hardhat keystore set MAINNET_PRIVATE_KEY
-npx hardhat ignition deploy ignition/modules/CardinalsPromise.ts \
-  --network mainnet --parameters ignition/parameters.mainnet.json
+
+npx hardhat ignition deploy ignition/modules/CardinalsPromise.ts --network mainnet
+npx hardhat verify --network mainnet <deployed-address>
 ```
 
-Immediately verify `project/contracts/CardinalsPromise.sol:CardinalsPromise` on Etherscan,
-including the encoded treasury constructor argument.
+Immediately after:
+- [ ] Verify source on Etherscan (command above).
+- [ ] `renounceOwnership()` (supply locked forever) **or**
+      `transferOwnership(<multisig>)` — publish the tx either way.
+- [ ] Record the contract address in `assets/token-metadata.json` and README.
 
-## 6. Seed liquidity from the treasury
-
-Run with the treasury signer:
+## 🔑 Step 6 — Liquidity + listings
 
 ```bash
-CARD_NETWORK=mainnet \
-CARD_TOKEN_ADDRESS=0x... \
-CARD_TREASURY_ADDRESS=0x... \
-CARD_AMOUNT=100000000 \
-ETH_AMOUNT=... \
-LP_RECIPIENT=0x... \
-npx hardhat run scripts/add-liquidity.ts --network mainnet
+CARD_NETWORK=mainnet CARD_TOKEN_ADDRESS=0x... CARD_AMOUNT=... ETH_AMOUNT=... \
+  npx hardhat run scripts/add-liquidity.ts
 ```
 
-Confirm the pair received exactly 100M CARD. Lock all LP tokens and publish the pair and
-lock transaction links.
-
-## 7. Test both directions and renounce
-
-- Buy through a fee-on-transfer-supporting route.
-- Sell through a fee-on-transfer-supporting route.
-- Confirm ordinary transfers deliver 98% and credit 2% to the treasury.
-- Confirm transfers to/from the treasury are exempt.
-- Confirm 100M founder, approximately 100M pool, and at least 50M treasury balances.
-
-Only then run `scripts/renounce.ts` and type the exact confirmation phrase. Renouncement is
-irreversible and does not replace an audit or legal review.
-
-## 8. Publish
-
-Update `assets/token-metadata.json`, cp17.org, the ledger, and the announcement with the
-same contract, pair, treasury, founder, LP-lock, verification, and renouncement addresses.
-Never publish a contract address anywhere before cp17.org is ready to be the canonical
-anti-phishing source.
+- [ ] The CARD/ETH ratio you pass sets the launch price — sanity-check it.
+- [ ] Lock the LP tokens (Unicrypt, Team Finance) and publish the lock.
+- [ ] Submit logo + info to Etherscan (token update form, uses
+      `assets/logo-32.png`), CoinGecko, and a Uniswap token list.
+- [ ] Publish the contract address on your site/socials so nobody gets
+      phished by fakes.

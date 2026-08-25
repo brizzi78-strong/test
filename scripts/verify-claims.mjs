@@ -41,8 +41,7 @@ function run(cmd, args) {
 
 // --- 1. Fresh build, then load the compiled ABI ---------------------------
 console.log(`${DIM}Building contracts...${RESET}`);
-const hardhat = path.join(root, "node_modules", ".bin", "hardhat");
-const build = run(hardhat, ["build"]);
+const build = run("npx", ["hardhat", "build"]);
 if (build.status !== 0) {
   console.error(build.output);
   console.error(bad("build failed — cannot verify claims against stale artifacts"));
@@ -59,7 +58,7 @@ const abiFunctions = abi.filter((e) => e.type === "function");
 
 // --- 2. Run the full test suite once, capture per-test results ------------
 console.log(`${DIM}Running test suite...${RESET}`);
-const tests = run(hardhat, ["test"]);
+const tests = run("npx", ["hardhat", "test"]);
 const suiteGreen = tests.status === 0;
 const testOutput = tests.output;
 

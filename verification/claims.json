@@ -1,11 +1,11 @@
 {
-  "$comment": "Machine-checkable security claims for CARD. Every trust claim made in TOKEN_LAUNCH_STRATEGY.md and the contract natspec must appear here, mapped to executable evidence. Run `npm run verify` \u2014 it fails if any claim's evidence is missing, stale, or failing. Do not edit a claim without editing the code/tests that back it, and vice versa.",
+  "$comment": "Machine-checkable security claims for CardinalsPromise. Every trust claim made in TOKEN_LAUNCH_STRATEGY.md and the contract natspec must appear here, mapped to executable evidence. Run `npm run verify` \u2014 it fails if any claim's evidence is missing, stale, or failing. Do not edit a claim without editing the code/tests that back it, and vice versa.",
   "contract": "CardinalsPromise",
   "artifact": "artifacts/contracts/CardinalsPromise.sol/CardinalsPromise.json",
   "claims": [
     {
       "id": "fixed-supply",
-      "statement": "Total supply is exactly 250,000,000 CARD, minted once at deployment to the deployer.",
+      "statement": "Total supply is exactly 1,000,000,000 CARD, minted once at deployment to the deployer.",
       "source": "TOKEN_LAUNCH_STRATEGY.md \u00a7 Token Parameters",
       "evidence": [
         {
@@ -82,68 +82,22 @@
       ]
     },
     {
-      "id": "flat-2pct-fee",
-      "statement": "Every transfer between distinct non-treasury addresses moves 98% to the recipient and 2% to the immutable treasury, subject only to integer rounding below 50 wei; self-transfers and transfers to or from the treasury are exempt, and no function can change the rate, recipient, or exemption rule.",
-      "source": "CardinalsPromise.sol natspec; TOKEN_LAUNCH_STRATEGY.md \u00a7 Token Parameters",
+      "id": "no-transfer-tax",
+      "statement": "Transfers move exactly the requested amount; there is no tax, fee, or skim.",
+      "source": "CardinalsPromise.sol natspec; TOKEN_LAUNCH_STRATEGY.md \u00a7 Launch Sequence step 1",
       "evidence": [
         {
           "type": "solidity-test",
           "file": "contracts/CardinalsPromise.t.sol",
-          "name": "test_TransferTakesExactTwoPercentFee"
-        },
-        {
-          "type": "solidity-test",
-          "file": "contracts/CardinalsPromise.t.sol",
-          "name": "test_TreasuryTransfersAreExempt"
-        },
-        {
-          "type": "solidity-test",
-          "file": "contracts/CardinalsPromise.t.sol",
-          "name": "test_TinyTransferRoundsFeeDown"
-        },
-        {
-          "type": "node-test",
-          "file": "test/CardinalsPromise.ts",
-          "title": "takes exactly 2% on transfers and sends it to the treasury"
-        },
-        {
-          "type": "node-test",
-          "file": "test/CardinalsPromise.ts",
-          "title": "exempts treasury transfers so gifts arrive whole"
-        },
-        {
-          "type": "abi-absent",
-          "patterns": [
-            "setFee",
-            "updateFee",
-            "setTreasury",
-            "exclude",
-            "exempt"
-          ]
+          "name": "test_Transfer"
         },
         {
           "type": "invariant",
           "file": "contracts/CardinalsPromiseInvariants.t.sol",
           "name": "invariant_BalancesSumToTotalSupply"
         }
-      ]
-    },
-    {
-      "id": "treasury-valid",
-      "statement": "Deployment reverts unless the immutable treasury is a nonzero address distinct from the deployer.",
-      "source": "CardinalsPromise.sol constructor",
-      "evidence": [
-        {
-          "type": "solidity-test",
-          "file": "contracts/CardinalsPromise.t.sol",
-          "name": "test_RevertWhen_TreasuryIsZero"
-        },
-        {
-          "type": "solidity-test",
-          "file": "contracts/CardinalsPromise.t.sol",
-          "name": "test_RevertWhen_TreasuryIsDeployer"
-        }
-      ]
+      ],
+      "notes": "The CardinalsPromiseHandler additionally asserts exact-amount deltas inside every fuzzed transfer/transferFrom sequence."
     },
     {
       "id": "owner-powerless",

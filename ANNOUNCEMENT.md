@@ -4,7 +4,7 @@ Two ready-to-post versions: a short thread for X/Twitter and a long-form post
 for Telegram/Discord/blog. Nothing goes out until every box in sections 1–6 of
 `LAUNCH_DAY_CHECKLIST.md` is checked.
 
-**Fill these seven blanks on launch day, then post:**
+**Fill these six blanks on launch day, then post:**
 
 | Placeholder | What goes there | Checklist step |
 |---|---|---|
@@ -12,8 +12,7 @@ for Telegram/Discord/blog. Nothing goes out until every box in sections 1–6 of
 | `{{RENOUNCE_TX_URL}}` | Etherscan link to the renounce transaction | 6 |
 | `{{LOCK_URL}}` | Public Team Finance / UNCX lock page | 5 |
 | `{{TREASURY_ADDRESS}}` | The treasury wallet address | 3 |
-| `{{TREASURY_TX_URL}}` | Etherscan link to the 150M treasury staging transfer | 3 |
-| `{{FOUNDER_ADDRESS}}` | The disclosed founder-allocation wallet | 3 |
+| `{{TREASURY_TX_URL}}` | Etherscan link to the 200M treasury transfer | 3 |
 | `{{PAIR_URL}}` | DexScreener/Uniswap link to the CARD/ETH pool | 4 |
 
 Before posting, search each file for `{{` to make sure no blank was missed.
@@ -26,7 +25,7 @@ Before posting, search each file for `{{` to make sure no blank was missed.
 
 > Cardinals Promise (CARD) is live.
 >
-> Fixed supply: 250,000,000. Immutable 2% transfer fee to the disclosed treasury. Treasury transfers are fee-exempt. No mint, blacklist, pause, or admin setters. Ownership renounced.
+> Fixed supply: 1,000,000,000. No mint. No tax. No blacklist. Ownership renounced — nobody, including us, can ever change the contract.
 >
 > Contract: `{{TOKEN_ADDRESS}}`
 >
@@ -38,8 +37,7 @@ Before posting, search each file for `{{` to make sure no blank was missed.
 >
 > 🔒 Ownership renounced: {{RENOUNCE_TX_URL}}
 > 💧 100% of liquidity locked 12 months: {{LOCK_URL}}
-> 👤 Founder allocation (40%, unlocked): {{FOUNDER_ADDRESS}}
-> 🏦 Treasury (20% retained after pool funding): {{TREASURY_ADDRESS}}
+> 🏦 Treasury (20%, disclosed): {{TREASURY_ADDRESS}}
 >
 > Source code is verified on Etherscan. Check everything yourself.
 
@@ -47,9 +45,9 @@ Before posting, search each file for `{{` to make sure no blank was missed.
 
 > Supply breakdown:
 >
-> • 40% (100M) → Uniswap pool, LP locked 12 months
-> • 40% (100M) → founder allocation
-> • 20% (50M) → treasury after pool funding
+> • 40% (400M) → Uniswap pool, LP locked 12 months
+> • 40% (400M) → founder, unlocked, in a disclosed wallet
+> • 20% (200M) → treasury for development, listings, and liquidity top-ups
 >
 > Every treasury spend will be announced before or as it happens.
 >
@@ -68,11 +66,9 @@ Before posting, search each file for `{{` to make sure no blank was missed.
 >
 > ## What CARD is
 >
-> A fixed-supply ERC-20 on Ethereum. 250,000,000 tokens were minted once at
-> deployment. Transfers between non-treasury addresses collect an immutable
-> 2% fee for the immutable treasury; transfers to or from treasury are exempt.
-> There is no mint function, blacklist, pause switch, fee setter, treasury
-> setter, or exemption setter. The contract is built on OpenZeppelin's
+> A fixed-supply ERC-20 on Ethereum. 1,000,000,000 tokens were minted once at
+> deployment. There is no mint function, no transfer tax, no fee, no
+> blacklist, no pause switch. The contract is built on OpenZeppelin's audited
 > ERC-20 and the full source is verified on Etherscan for anyone to read.
 >
 > ## Don't trust us — verify
@@ -87,12 +83,8 @@ Before posting, search each file for `{{` to make sure no blank was missed.
 >    100% of the LP tokens are locked for 12 months:
 >    {{LOCK_URL}}
 >
-> 3. **The founder and treasury allocations are public, not hidden.**
->    The founder holds 40% (100,000,000 CARD), unlocked, at:
->    `{{FOUNDER_ADDRESS}}`
->
->    The remaining 20% (50,000,000 CARD) sits in the disclosed treasury after
->    it supplied 100,000,000 CARD to the pool:
+> 3. **The team allocation is public, not hidden.**
+>    20% (200,000,000 CARD) sits in a disclosed treasury wallet:
 >    `{{TREASURY_ADDRESS}}`
 >    (funded during setup, before the pool existed: {{TREASURY_TX_URL}})
 >
@@ -100,9 +92,9 @@ Before posting, search each file for `{{` to make sure no blank was missed.
 >
 > | Where | Amount | Share |
 > |---|---|---|
-> | Uniswap pool (LP locked 12 months) | 100,000,000 | 40% |
-> | Founder allocation | 100,000,000 | 40% |
-> | Treasury (disclosed) | 50,000,000 | 20% |
+> | Uniswap pool (LP locked 12 months) | 400,000,000 | 40% |
+> | Founder (disclosed, unlocked) | 400,000,000 | 40% |
+> | Treasury (disclosed) | 200,000,000 | 20% |
 > | Team wallets, hidden allocations | 0 | 0% |
 >
 > ## Treasury policy
@@ -122,10 +114,6 @@ Before posting, search each file for `{{` to make sure no blank was missed.
 >
 > Starting liquidity is intentionally modest — expect price impact on larger
 > trades, and size accordingly.
->
-> CARD charges 2% on each non-treasury transfer. A buy followed by a sell
-> loses 3.96% to token fees alone; including two 0.3% Uniswap fees, a simple
-> estimate is about 4.5% before gas, slippage, and price impact.
 >
 > ---
 >

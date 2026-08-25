@@ -7,15 +7,16 @@ import { readFileSync } from "node:fs";
 import { createInterface } from "node:readline/promises";
 import { formatEther, getAddress, parseEther } from "viem";
 
-export const TOTAL_SUPPLY = parseEther("250000000");
-export const TREASURY_AMOUNT = parseEther("50000000"); // 20%
-export const POOL_AMOUNT = parseEther("100000000"); // 40%
-export const FOUNDER_AMOUNT = parseEther("100000000"); // 40%
-export const TREASURY_STAGING_AMOUNT = TREASURY_AMOUNT + POOL_AMOUNT;
+export const TOTAL_SUPPLY = parseEther("1000000000");
+export const TREASURY_AMOUNT = parseEther("200000000"); // 20%
+export const POOL_AMOUNT = parseEther("400000000"); // 40%
+// The deployer wallet IS the founder wallet: after the treasury transfer and
+// pool seeding it retains exactly this much, and that remainder is the
+// disclosed, unlocked founder hold. There is no separate founder transfer.
+export const FOUNDER_AMOUNT = parseEther("400000000"); // 40%
 
 export interface LaunchConfig {
   network: string;
-  deployer: `0x${string}`;
   token: `0x${string}`;
   treasury: `0x${string}`;
   pool?: `0x${string}`;
@@ -28,14 +29,10 @@ interface CardinalsPromise {
     symbol: () => Promise<string>;
     totalSupply: () => Promise<bigint>;
     owner: () => Promise<`0x${string}`>;
-    treasury: () => Promise<`0x${string}`>;
     balanceOf: (args: [`0x${string}`]) => Promise<bigint>;
   };
   write: {
-    transfer: (
-      args: [`0x${string}`, bigint],
-      options?: { account?: `0x${string}` },
-    ) => Promise<`0x${string}`>;
+    transfer: (args: [`0x${string}`, bigint]) => Promise<`0x${string}`>;
     renounceOwnership: () => Promise<`0x${string}`>;
   };
 }
@@ -50,12 +47,7 @@ export function loadLaunchConfig(url: URL): LaunchConfig {
   const raw = JSON.parse(readFileSync(url, "utf8"));
   if (!raw.token) {
     throw new Error(
-      "launch.json: fill in \"token\" with the deployed CARD address first.",
-    );
-  }
-  if (!raw.deployer) {
-    throw new Error(
-      "launch.json: fill in \"deployer\" with the founder/deployer wallet address first.",
+      "launch.json: fill in \"token\" with the deployed CardinalsPromise address first.",
     );
   }
   if (!raw.treasury) {
@@ -65,7 +57,6 @@ export function loadLaunchConfig(url: URL): LaunchConfig {
   }
   return {
     network: raw.network || "sepolia",
-    deployer: getAddress(raw.deployer),
     token: getAddress(raw.token),
     treasury: getAddress(raw.treasury),
     pool: raw.pool ? getAddress(raw.pool) : undefined,
@@ -90,10 +81,8 @@ export interface LaunchState {
   symbol: string;
   totalSupply: bigint;
   owner: `0x${string}`;
-  treasuryAddress: `0x${string}`;
   deployerBalance: bigint;
   treasuryBalance: bigint;
-  contractTreasury: `0x${string}`;
   poolBalance?: bigint;
 }
 
@@ -108,8 +97,6 @@ export async function readState(
     symbol: await token.read.symbol(),
     totalSupply: await token.read.totalSupply(),
     owner: await token.read.owner(),
-    treasuryAddress: treasury,
-    contractTreasury: await token.read.treasury(),
     deployerBalance: await token.read.balanceOf([deployer]),
     treasuryBalance: await token.read.balanceOf([treasury]),
     poolBalance: pool ? await token.read.balanceOf([pool]) : undefined,
@@ -132,11 +119,6 @@ export function describeStage(
   if (s.totalSupply !== TOTAL_SUPPLY) {
     problems.push(`total supply is ${fmt(s.totalSupply)}, expected ${fmt(TOTAL_SUPPLY)}`);
   }
-  if (getAddress(s.contractTreasury) !== getAddress(s.treasuryAddress)) {
-    problems.push(
-      `launch.json treasury ${s.treasuryAddress} does not match immutable contract treasury ${s.contractTreasury}`,
-    );
-  }
 
   const renounced = BigInt(s.owner) === 0n;
   if (!renounced && getAddress(s.owner) !== getAddress(deployer)) {
@@ -148,23 +130,15 @@ export function describeStage(
     stage = "Ownership RENOUNCED — contract is final. (checklist step 6 done)";
   } else if (s.treasuryBalance === 0n && s.deployerBalance === TOTAL_SUPPLY) {
     stage = "Deployed, treasury not yet funded — next: transfer-treasury (checklist step 3)";
-  } else if (
-    s.treasuryBalance === TREASURY_STAGING_AMOUNT &&
-    s.deployerBalance === FOUNDER_AMOUNT
-  ) {
-    stage = "Treasury funded and pool inventory staged — next: create the Uniswap pool (checklist step 4)";
-  } else if (
-    s.treasuryBalance >= TREASURY_AMOUNT &&
-    s.deployerBalance === FOUNDER_AMOUNT &&
-    s.poolBalance !== undefined &&
-    s.poolBalance >= (POOL_AMOUNT * 99n) / 100n
-  ) {
+  } else if (s.treasuryBalance === TREASURY_AMOUNT && s.deployerBalance === POOL_AMOUNT + FOUNDER_AMOUNT) {
+    stage = "Treasury funded — next: create the Uniswap pool (checklist step 4)";
+  } else if (s.treasuryBalance === TREASURY_AMOUNT && s.deployerBalance === FOUNDER_AMOUNT) {
     stage = "Pool funded — next: test swap, lock LP, then renounce (checklist steps 4-6)";
   } else {
     stage = "UNRECOGNIZED state — balances don't match any expected launch step";
     problems.push(
       `deployer holds ${fmt(s.deployerBalance)} and treasury holds ${fmt(s.treasuryBalance)}; ` +
-        `expected one of: 250M/0 (fresh), 100M/150M (pool inventory staged), 100M/50M (pool funded)`,
+        `expected one of: 1B/0 (fresh), 800M/200M (treasury funded), 400M/200M (pool funded — the 400M left is the founder hold)`,
     );
   }
 
@@ -180,7 +154,6 @@ export function printState(
   console.log(`token:     ${s.name} (${s.symbol})`);
   console.log(`supply:    ${fmt(s.totalSupply)}`);
   console.log(`owner:     ${renounced ? "0x000...000 (renounced)" : s.owner}`);
-  console.log(`fee sink:  ${s.contractTreasury} (immutable)`);
   console.log(`deployer:  ${deployer}  ${fmt(s.deployerBalance)}`);
   console.log(`treasury:  ${config.treasury}  ${fmt(s.treasuryBalance)}`);
   if (config.pool && s.poolBalance !== undefined) {
@@ -188,8 +161,7 @@ export function printState(
   }
 }
 
-// Checklist step 3: send 150M CARD to the treasury: 50M retained by the
-// treasury and 100M staged for fee-exempt pool seeding. Refuses to run
+// Checklist step 3: send exactly 50M CARD to the treasury. Refuses to run
 // unless the token is in the untouched just-deployed state, so it can't
 // double-send or fire mid-sequence.
 export async function transferTreasury(
@@ -202,11 +174,6 @@ export async function transferTreasury(
     throw new Error("treasury address is the deployer wallet — set the separate treasury wallet in launch.json.");
   }
   const state = await readState(token, deployer, treasury);
-  if (getAddress(state.contractTreasury) !== getAddress(treasury)) {
-    throw new Error(
-      `launch.json treasury ${treasury} does not match immutable contract treasury ${state.contractTreasury}.`,
-    );
-  }
   if (BigInt(state.owner) === 0n) {
     throw new Error("ownership already renounced — this script should have run before that.");
   }
@@ -220,29 +187,30 @@ export async function transferTreasury(
     );
   }
 
-  const hash = await token.write.transfer([treasury, TREASURY_STAGING_AMOUNT]);
+  const hash = await token.write.transfer([treasury, TREASURY_AMOUNT]);
   const receipt = await publicClient.waitForTransactionReceipt({ hash });
   if (receipt.status !== "success") {
     throw new Error(`transfer transaction ${hash} failed (status: ${receipt.status})`);
   }
 
   const after = await readState(token, deployer, treasury);
-  if (after.treasuryBalance !== TREASURY_STAGING_AMOUNT) {
+  if (after.treasuryBalance !== TREASURY_AMOUNT) {
     throw new Error(`treasury balance after transfer is ${fmt(after.treasuryBalance)} — investigate before continuing!`);
   }
   return hash;
 }
 
-// PRACTICE ONLY (Sepolia dry run, step 4): sends the staged 100M from the
-// treasury to the stand-in pool. The connected token client must be the
-// treasury signer. This exercises the same fee-exempt route used at launch.
+// PRACTICE ONLY (Sepolia dry run, step 4): sends the remaining 400M to the
+// stand-in "pool" address so the balances look like a funded Uniswap pool to
+// the other scripts. The real launch creates an actual pool on Uniswap
+// instead. Guards mirror transferTreasury: runs only from the
+// treasury-funded state, never twice.
 export async function fundPoolSim(
   token: CardinalsPromise,
   publicClient: PublicClientLike,
   deployer: `0x${string}`,
   treasury: `0x${string}`,
   pool: `0x${string}`,
-  writeAccount?: `0x${string}`,
 ): Promise<`0x${string}`> {
   if (
     getAddress(pool) === getAddress(deployer) ||
@@ -251,32 +219,25 @@ export async function fundPoolSim(
     throw new Error("pool address must be its own separate practice wallet.");
   }
   const state = await readState(token, deployer, treasury, pool);
-  if (getAddress(state.contractTreasury) !== getAddress(treasury)) {
-    throw new Error(
-      `launch.json treasury ${treasury} does not match immutable contract treasury ${state.contractTreasury}.`,
-    );
-  }
   if (BigInt(state.owner) === 0n) {
     throw new Error("ownership already renounced — nothing left to practice here.");
+  }
+  if (state.treasuryBalance !== TREASURY_AMOUNT) {
+    throw new Error(
+      `treasury holds ${fmt(state.treasuryBalance)}, expected ${fmt(TREASURY_AMOUNT)} — run transfer-treasury first.`,
+    );
   }
   if (state.poolBalance !== 0n) {
     throw new Error(`pool already holds ${fmt(state.poolBalance ?? 0n)} — refusing to send again.`);
   }
-  if (state.treasuryBalance !== TREASURY_STAGING_AMOUNT) {
+  if (state.deployerBalance !== POOL_AMOUNT + FOUNDER_AMOUNT) {
     throw new Error(
-      `treasury holds ${fmt(state.treasuryBalance)}, expected ${fmt(TREASURY_STAGING_AMOUNT)} — run transfer-treasury first.`,
-    );
-  }
-  if (state.deployerBalance !== FOUNDER_AMOUNT) {
-    throw new Error(
-      `deployer holds ${fmt(state.deployerBalance)}, expected the founder allocation ${fmt(FOUNDER_AMOUNT)}.`,
+      `deployer holds ${fmt(state.deployerBalance)}, expected exactly ${fmt(POOL_AMOUNT + FOUNDER_AMOUNT)} ` +
+        `(400M pool inventory + the 400M founder hold).`,
     );
   }
 
-  const hash = await token.write.transfer(
-    [pool, POOL_AMOUNT],
-    writeAccount ? { account: writeAccount } : undefined,
-  );
+  const hash = await token.write.transfer([pool, POOL_AMOUNT]);
   const receipt = await publicClient.waitForTransactionReceipt({ hash });
   if (receipt.status !== "success") {
     throw new Error(`transfer transaction ${hash} failed (status: ${receipt.status})`);
@@ -291,7 +252,7 @@ export async function renounce(
   token: CardinalsPromise,
   publicClient: PublicClientLike,
   deployer: `0x${string}`,
-  config: { network?: string; treasury: `0x${string}`; pool?: `0x${string}` },
+  config: { treasury: `0x${string}`; pool?: `0x${string}` },
   opts: { confirm?: () => Promise<boolean> } = {},
 ): Promise<`0x${string}`> {
   const state = await readState(token, deployer, config.treasury, config.pool);
@@ -303,21 +264,17 @@ export async function renounce(
   if (getAddress(state.owner) !== getAddress(deployer)) {
     throw new Error(`connected wallet is not the owner (owner is ${state.owner}).`);
   }
-  if (getAddress(state.contractTreasury) !== getAddress(config.treasury)) {
-    problems.push(
-      `launch.json treasury ${config.treasury} does not match immutable contract treasury ${state.contractTreasury}`,
-    );
-  }
-  if (state.treasuryBalance < TREASURY_AMOUNT) {
-    problems.push(`treasury holds ${fmt(state.treasuryBalance)}, expected at least ${fmt(TREASURY_AMOUNT)} plus test-swap fees`);
+  if (state.treasuryBalance !== TREASURY_AMOUNT) {
+    problems.push(`treasury holds ${fmt(state.treasuryBalance)}, expected exactly ${fmt(TREASURY_AMOUNT)}`);
   }
   if (state.deployerBalance !== FOUNDER_AMOUNT) {
     problems.push(
-      `founder/deployer holds ${fmt(state.deployerBalance)}, expected ${fmt(FOUNDER_AMOUNT)}`,
+      `deployer holds ${fmt(state.deployerBalance)}, expected exactly ${fmt(FOUNDER_AMOUNT)} — ` +
+        `the disclosed founder hold that remains after the pool takes its 400M`,
     );
   }
   if (config.pool) {
-    // The pool needs ~100M; a bit less is fine because the test swap moves a
+    // The pool needs ~400M; a bit less is fine because the test swap moves a
     // little out and back through fees.
     const min = (POOL_AMOUNT * 99n) / 100n;
     if (state.poolBalance === undefined || state.poolBalance < min) {
@@ -334,7 +291,7 @@ export async function renounce(
     );
   }
 
-  const confirmed = await (opts.confirm ?? (() => promptRenounceConfirmation(config.network)))();
+  const confirmed = await (opts.confirm ?? promptRenounceConfirmation)();
   if (!confirmed) {
     throw new Error("not confirmed — nothing was sent.");
   }
@@ -351,22 +308,16 @@ export async function renounce(
   return hash;
 }
 
-async function promptRenounceConfirmation(networkName?: string): Promise<boolean> {
-  const practice = networkName === "sepolia";
-  const phrase = practice ? "renounce practice" : "renounce forever";
+async function promptRenounceConfirmation(): Promise<boolean> {
   console.log("");
   console.log("⚠️  POINT OF NO RETURN — after this, the contract can NEVER be changed by anyone.");
   console.log("Only proceed if ALL of these are true (the script cannot check them for you):");
   console.log("  1. Source code is verified on Etherscan (green check on the Contract tab)");
   console.log("  2. The test swap worked in both directions");
-  console.log(
-    practice
-      ? "  3. This is a disposable Sepolia rehearsal; the production LP-lock gate remains unproven"
-      : "  3. 100% of the LP tokens are locked and the lock page shows the right amount and date",
-  );
+  console.log("  3. 100% of the LP tokens are locked and the lock page shows the right amount and date");
   console.log("");
   const rl = createInterface({ input: process.stdin, output: process.stdout });
-  const answer = await rl.question(`Type exactly "${phrase}" to proceed: `);
+  const answer = await rl.question('Type exactly "renounce forever" to proceed: ');
   rl.close();
-  return answer.trim() === phrase;
+  return answer.trim() === "renounce forever";
 }

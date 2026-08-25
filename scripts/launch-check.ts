@@ -13,13 +13,15 @@ import { describeStage, loadLaunchConfig, printState, readState } from "./launch
 const config = loadLaunchConfig(new URL("../launch.json", import.meta.url));
 const { viem } = await network.create(config.network);
 
+const [wallet] = await viem.getWalletClients();
+const deployer = wallet.account.address;
 const token = await viem.getContractAt("CardinalsPromise", config.token);
 
 console.log(`network:   ${config.network}\n`);
-const state = await readState(token, config.deployer, config.treasury, config.pool);
-printState(state, config.deployer, config);
+const state = await readState(token, deployer, config.treasury, config.pool);
+printState(state, deployer, config);
 
-const { stage, problems } = describeStage(state, config.deployer);
+const { stage, problems } = describeStage(state, deployer);
 console.log(`\nstage:     ${stage}`);
 
 if (problems.length > 0) {
