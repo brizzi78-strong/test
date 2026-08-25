@@ -126,7 +126,7 @@ This app supports organization and caregiver self-care. It is not medical, legal
 [![verify-claims](https://github.com/brizzi78-strong/test/actions/workflows/verify.yml/badge.svg)](https://github.com/brizzi78-strong/test/actions/workflows/verify.yml)
 
 **Cardinals Promise (CARD)** — a fixed-supply ERC-20 on Ethereum. The full
-250,000,000 supply is minted to the deployer at construction; there is **no
+1,000,000,000 supply is minted to the deployer at construction; there is **no
 mint function, no burn, no transfer tax, no blacklist, and no pausing** —
 the supply can never change. `Ownable` is inherited solely so
 `renounceOwnership()` can be executed as a public, verifiable launch step;
@@ -213,7 +213,7 @@ exists), then:
 
 ```bash
 npx hardhat run scripts/launch-check.ts       # read-only: which step you're on + abort-criteria check
-npx hardhat run scripts/transfer-treasury.ts  # step 3: sends exactly 50M to the treasury, once
+npx hardhat run scripts/transfer-treasury.ts  # step 3: sends exactly 200M to the treasury, once
 npx hardhat run scripts/renounce.ts           # step 6: guarded renounce — verifies state, asks for confirmation
 ```
 

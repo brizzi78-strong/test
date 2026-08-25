@@ -26,10 +26,13 @@ async function listen(server: { listen: Function; address: Function; close: Func
   return (server.address() as AddressInfo).port;
 }
 
-async function withApp(run: (base: string) => Promise<void>) {
+async function withApp(
+  run: (base: string) => Promise<void>,
+  investOpts: Parameters<typeof createInvest>[0] = {},
+) {
   const trading = createTrading(createInMemoryStore());
   const tradingPort = await listen(trading.server);
-  const invest = createInvest({ tradingBase: `http://127.0.0.1:${tradingPort}` });
+  const invest = createInvest({ tradingBase: `http://127.0.0.1:${tradingPort}`, ...investOpts });
   const investPort = await listen(invest.server);
   try {
     await run(`http://127.0.0.1:${investPort}`);
@@ -77,6 +80,24 @@ test('serves the app shell without a session', async () => {
   });
 });
 
+test('legal pages are public; unknown slugs 404', async () => {
+  await withApp(async (base) => {
+    for (const [slug, marker] of [
+      ['terms', /Terms of Service/],
+      ['privacy', /Privacy Policy/],
+      ['disclosures', /Risk Disclosures/],
+    ] as const) {
+      const res = await fetch(`${base}/legal/${slug}`);
+      assert.equal(res.status, 200);
+      const text = await res.text();
+      assert.match(text, marker);
+      assert.match(text, /Cardinal Trading/);
+    }
+    const missing = await fetch(`${base}/legal/nope`);
+    assert.equal(missing.status, 404);
+  });
+});
+
 test('the API requires a session', async () => {
   await withApp(async (base) => {
     assert.equal((await j(base, 'GET', '/api/app')).status, 401);
@@ -93,6 +114,28 @@ test('signup opens a trading account and starts a session', async () => {
     assert.equal(app.json.email, 'rob@example.com');
     assert.equal(app.json.cashCents, 1_000_000);
   });
+});
+
+test('real CARD links require both the explicit switch and a valid address', async () => {
+  const card = '0x1234567890abcdef1234567890abcdef12345678';
+
+  await withApp(async (base) => {
+    const cookie = await signup(base, 'Off', 'off@example.com');
+    const app = await j(base, 'GET', '/api/app', undefined, cookie);
+    assert.equal(app.json.cardTokenAddress, null);
+  }, { enableRealCardLinks: false, cardTokenAddress: card });
+
+  await withApp(async (base) => {
+    const cookie = await signup(base, 'On', 'on@example.com');
+    const app = await j(base, 'GET', '/api/app', undefined, cookie);
+    assert.equal(app.json.cardTokenAddress, card);
+  }, { enableRealCardLinks: true, cardTokenAddress: card });
+
+  await withApp(async (base) => {
+    const cookie = await signup(base, 'Bad', 'bad@example.com');
+    const app = await j(base, 'GET', '/api/app', undefined, cookie);
+    assert.equal(app.json.cardTokenAddress, null);
+  }, { enableRealCardLinks: true, cardTokenAddress: 'not-an-address' });
 });
 
 test('signup validation: bad email, short password, duplicate email', async () => {

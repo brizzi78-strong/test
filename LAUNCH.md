@@ -4,9 +4,10 @@
 
 | Decision | Value |
 | --- | --- |
-| Supply | Mint all 250M at deploy, `renounceOwnership()` immediately after verification |
-| Uniswap pool | 200M CARD (80%) paired with 2–5 ETH |
-| Treasury | 50M CARD (20%) in a publicly announced wallet |
+| Supply | Mint all 1B at deploy, `renounceOwnership()` immediately after verification |
+| Uniswap pool | 400M CARD (40%) paired with 2–5 ETH |
+| Founder hold | 400M CARD (40%), unlocked, in a publicly disclosed wallet |
+| Treasury | 200M CARD (20%) in a publicly announced wallet |
 | LP tokens | Locked 12 months (Team Finance or UNCX) |
 | Timeline | Week 0: Sepolia rehearsal → Weeks 1–2: independent audit + legal consult → Week 3: mainnet |
 | Before mainnet | Publish the one-page site (`site/index.html`) at **thecardinalspromise.com/card** (the book's established domain — best trust signal; cp17.org can redirect there) and fill in the story section |
@@ -19,7 +20,7 @@ repo; items marked 🔑 need something only the project owner can provide
 
 | Step | Where |
 | --- | --- |
-| Token contract (250M fixed supply — no mint, no burn; OpenZeppelin ERC20 + Ownable) | `contracts/CardinalsPromise.sol` |
+| Token contract (1B fixed supply — no mint, no burn; OpenZeppelin ERC20 + Ownable) | `contracts/CardinalsPromise.sol` |
 | Test suite — 17 tests (Foundry-style Solidity incl. fuzz + invariants, plus node:test/viem), all passing | `contracts/*.t.sol`, `test/CardinalsPromise.ts` |
 | Machine-checkable launch-claims ledger — 8/8 claims verified in CI (`npm run verify`) | `verification/claims.json` |
 | Static analysis — Slither v0.11.5, all 101 detectors, **0 findings** | run locally, see below to reproduce |
@@ -58,7 +59,7 @@ steps 2–6 cannot execute from it. Run them either:
 ## 🔑 Step 1 — Keys and wallets (owner)
 
 - [ ] Create a fresh deployer wallet (hardware wallet or offline-generated key).
-- [ ] Create a Gnosis Safe multisig for the 50M treasury allocation.
+- [ ] Create a Gnosis Safe multisig for the 200M treasury allocation.
 - [ ] Get an RPC endpoint (Alchemy/Infura free tier works) and an Etherscan
       API key (free at etherscan.io/apis).
 

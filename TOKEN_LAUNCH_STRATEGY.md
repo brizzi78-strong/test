@@ -29,7 +29,7 @@ token scanners, screeners, and skeptical buyers have nothing to flag.
 
 Order matters — several of these steps are only trustworthy if done in the right sequence.
 
-1. **Deploy the token contract.** Mint the full 250M supply to the deployer. Use a plain,
+1. **Deploy the token contract.** Mint the full 1B supply to the deployer. Use a plain,
    audited ERC-20 base (e.g. OpenZeppelin) with no taxes, no blacklist, no mint function —
    exotic mechanics are the second thing scanners flag after unlocked liquidity.
 2. **Verify the source code** on Etherscan immediately. Unverified contracts are treated as

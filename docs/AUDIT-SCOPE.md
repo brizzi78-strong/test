@@ -19,7 +19,7 @@ OpenZeppelin v5 base contracts.
 1. Standard ERC-20 (EIP-20) semantics, exactly as inherited from
    OpenZeppelin `ERC20` — name "Cardinals Promise", symbol "CARD",
    18 decimals.
-2. The full supply (250,000,000 × 10¹⁸) is minted to the deployer in the
+2. The full supply (1,000,000,000 × 10¹⁸) is minted to the deployer in the
    constructor, once. **No code path can ever change `totalSupply` again:
    there is no mint, no burn, no rebase.**
 3. `Ownable` is inherited solely so `renounceOwnership()` can be executed

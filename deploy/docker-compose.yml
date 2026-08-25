@@ -332,8 +332,9 @@ services:
       INVEST_MAIL_FROM: ${INVEST_MAIL_FROM:-}
       INVEST_MAIL_FROM_NAME: ${INVEST_MAIL_FROM_NAME:-}
       INVEST_BASE_URL: ${INVEST_BASE_URL:-}
-      # When set, the CARD page shows real one-tap Buy/Sell-on-Uniswap links.
+      # Real links require both the verified address and an explicit post-launch switch.
       CARD_TOKEN_ADDRESS: ${CARD_TOKEN_ADDRESS:-}
+      ENABLE_REAL_CARD_LINKS: ${ENABLE_REAL_CARD_LINKS:-0}
     ports: ["5000:5000"]
     volumes: ["invest-data:/data"]
     depends_on:

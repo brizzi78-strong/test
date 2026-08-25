@@ -7,7 +7,7 @@
 
 ## Facts of the planned launch (what counsel will ask first)
 
-- Fixed-supply ERC-20 on Ethereum mainnet: 250M hard cap, all minted at
+- Fixed-supply ERC-20 on Ethereum mainnet: 1B hard cap, all minted at
   deploy, ownership renounced immediately (no ongoing issuer control).
 - No sale by the issuer: 80% of supply placed into a Uniswap V2 pool
   (LP locked 12 months), 20% held in a disclosed treasury wallet.
@@ -47,7 +47,7 @@ characterization if it is ever sold into the market.
 
 Questions for US counsel:
 1. Does seeding a DEX pool constitute an "offer or sale" by the deployer under Securities Act §5?
-2. How should the 50M treasury be handled (lockup, disclosure, OTC vs. market sales)?
+2. How should the 200M treasury be handled (lockup, disclosure, OTC vs. market sales)?
 3. Does the name "Promise" itself create marketing risk, and what disclaimer language mitigates it?
 4. State-level (blue sky) and money-transmission exposure?
 
