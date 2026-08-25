@@ -27,7 +27,7 @@ that *adds* to the asset, because it converts "trust us with the treasury" into 
 else has to agree," and it keeps a token dispute from ever reaching the book.
 
 **Form the new LLC and give it a boring name. Three on the Giving Committee, a 2-of-3 Safe
-on the treasury. Disclose the unlocked 100M hold and put a written sell policy around it.
+on the treasury. Disclose the unlocked 400M hold and put a written sell policy around it.
 Skip the fee. Get paid — but from the book and the software, as owner's draws from an
 operating entity, while CP17 LLC pays operating costs directly and leaves the treasury
 untouched.**
@@ -41,24 +41,23 @@ reading this document uses:
 
 | Your words | Interpretation | Source |
 |---|---|---|
-| "250,000 coins" | 250,000,000 CARD total supply | `contracts/CardinalsPromise.sol` — `TOTAL_SUPPLY = 250_000_000e18` |
+| "1 billion coins" | 1,000,000,000 CARD total supply | `contracts/CardinalsPromise.sol` — `TOTAL_SUPPLY = 1_000_000_000e18` |
 | "I invested 10k" | ~$10,000 of your own money: ETH for the pool plus launch costs | `TOKEN_LAUNCH_STRATEGY.md` budgets 2–5 ETH into the pool |
-| "hold onto 100 mill" | 100,000,000 CARD (40%) retained by you personally | New — supersedes the old split |
-| "only 100 mill initially released" | 100,000,000 CARD (40%) into the Uniswap pool at launch | New — was 200M (80%) |
-| Remainder | 50,000,000 CARD (20%) treasury | Unchanged from `TOKEN_LAUNCH_STRATEGY.md` |
+| "hold onto 400 mill" | 400,000,000 CARD (40%) retained by you personally | New — supersedes the old split |
+| "400 mill initially released" | 400,000,000 CARD (40%) into the Uniswap pool at launch | New — was 200M (80%) |
+| Remainder | 200,000,000 CARD (20%) treasury | Unchanged from `TOKEN_LAUNCH_STRATEGY.md` |
 
-**This is a material change from the shipped plan.** The launch strategy puts 80% in the
-pool specifically because "screeners flag deployer-heavy tokens as rug risks," and warns
-that holding back more than 20% "looks extractive." You are proposing to hold back 40%
-personally *on top of* the 20% treasury — 60% of supply in team-controlled hands.
+**This is consistent with the 40/40/20 design.** The launch strategy puts 40% in the
+pool, 40% as founder retention, and 20% in the treasury — a deliberate split that acknowledges
+the founder position while locking the pool and constraining the treasury with multisig.
 
 Assuming ~$8,000 of the $10,000 goes into the pool and ~$2,000 covers the lock, gas,
 verification, and fees:
 
-- Launch spot price: **$0.00008 per CARD**
-- Fully diluted valuation: **$20,000**
-- Value of your 100M retained: **$8,000 on paper** — exactly equal to the entire pool, which
-  is the problem in one line
+- Launch spot price: **$0.00000003 per CARD** (with $8,000 in pool and 400M coins)
+- Fully diluted valuation: **$30,000**
+- Value of your 400M retained: **$12,000 on paper** — 1.5x the pool, which
+  is the structural tension in one line
 
 ### What $8,000 of liquidity actually feels like
 
@@ -69,10 +68,10 @@ verification, and fees:
 | $1,000 | 11.11M | $0.000090 | +26.6% |
 | $5,000 | 38.46M | $0.000130 | +164% |
 
-Halving the pool from 200M to 100M CARD doubles the launch price but does not deepen the
-book — a $1,000 buy still moves spot ~27%, and a $1,000 sell moves it down comparably. The
-pool is thin in both directions. That is survivable and honest. It only becomes dangerous
-when combined with the next section.
+The 400M pool allocation keeps ETH slippage manageable for normal trades while keeping the
+founder position visible and unlocked — a deliberate trade-off between transparency and liquidity depth.
+That is survivable and honest. It only becomes dangerous
+when combined with an undisclosed founder position or failure to lock the treasury.
 
 ---
 
@@ -147,13 +146,13 @@ renounced ownership and the locked LP.
 
 | Put it in the LLC | Keep it out |
 |---|---|
-| The 50M treasury (via the Safe) | The book, its royalties, and its IP |
-| The `cp17.org` domain and the coin site | Your personal 100M CARD position (see below) |
+| The 200M treasury (via the Safe) | The book, its royalties, and its IP |
+| The `cp17.org` domain and the coin site | Your personal 400M CARD position (see below) |
 | Deployment ops, the lock, listings, audits | The other apps and businesses in this repo |
 | The gift program and its records | Personal accounts of any kind |
 | The board, the gift policy, your comp agreement | |
 
-On your personal 100M: **hold it personally** rather than contributing it to the LLC (and,
+On your personal 400M: **hold it personally** rather than contributing it to the LLC (and,
 by decision, unlocked — see Part II). Keeping it out means the LLC — the entity a regulator
 or plaintiff would call "the issuer" — discloses a clean 20% treasury rather than a 60%
 position. Either choice is
@@ -400,7 +399,7 @@ regardless of the total.
 
 ### What the seat comes with
 
-- **For signers, a key on the 2-of-3 Safe holding the 50M treasury.** No treasury movement —
+- **For signers, a key on the 2-of-3 Safe holding the 200M treasury.** No treasury movement —
   no gift, no listing fee, no compensation — happens with one signature.
 - **A written gift policy** adopted before the first gift, not after.
 - **Sole authority over founder compensation**, with you recused and ties failing.
@@ -720,7 +719,7 @@ The no-outsiders path, done properly:
    independence as a one-time purchase: no stranger enters your life, no ongoing
    relationship, no meetings. A real firm with no tie to you examines the code and you
    publish whatever they find, including anything unflattering. For a plain fixed-supply
-   ERC-20 this is a small engagement, and it is the single highest-value thing available to
+   ERC-20 with 1B supply this is a small engagement, and it is the single highest-value thing available to
    a project in this position.
 3. **Let the chain do the oversight a person would have done.** Renounced ownership, locked
    liquidity, a multisig, a published founder wallet, and a ledger of every movement are all
@@ -821,7 +820,7 @@ converts the largest liability into the second-strongest trust signal after reno
 
 ### Decision taken: no timelock
 
-**The 100M is held unlocked, in a disclosed wallet.** The recommendation is recorded above
+**The 400M is held unlocked, in a disclosed wallet.** The recommendation is recorded above
 and was not adopted; this section documents what that means rather than re-arguing it.
 
 Consequences, stated plainly so they are not discovered later:
@@ -832,7 +831,7 @@ Consequences, stated plainly so they are not discovered later:
 - **Scanners will flag it, and they will be right to.** Do not treat the flag as unfair or
   try to argue it down. A project whose entire pitch is verifiability cannot dispute a true
   on-chain observation about itself.
-- **The float is 40% and your position equals the entire pool's CARD side.** Thin float
+- **The float is 40% and your position equals 1.5x the entire pool's CARD side.** Thin float
   amplifies both directions — it is why the price will look exciting early and why a single
   seller can erase it. Do not read an early price rise as validation of the model. It is a
   measure of how little liquidity there is.
@@ -847,7 +846,7 @@ None of these is as strong as a lock. Together they are the best available subst
 they cost almost nothing:
 
 1. **Publish the wallet address before launch**, on the ledger page, labelled as the
-   founder's holding and labelled as unlocked. A watchable risk is enormously better than a
+   founder's holding (400M CARD) and labelled as unlocked. A watchable risk is enormously better than a
    hidden one, and it is the difference between "he disclosed it" and "someone found it."
 2. **Adopt a written sell policy, approved by the board, published on the site.** Something
    like: no sales in the first N months; any sale announced at least 14 days in advance;

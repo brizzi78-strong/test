@@ -7,9 +7,9 @@ import { readFileSync } from "node:fs";
 import { createInterface } from "node:readline/promises";
 import { formatEther, getAddress, parseEther } from "viem";
 
-export const TOTAL_SUPPLY = parseEther("250000000");
-export const TREASURY_AMOUNT = parseEther("50000000"); // 20%
-export const POOL_AMOUNT = parseEther("200000000"); // 80%
+export const TOTAL_SUPPLY = parseEther("1000000000");
+export const TREASURY_AMOUNT = parseEther("200000000"); // 20%
+export const POOL_AMOUNT = parseEther("400000000"); // 40%
 
 export interface LaunchConfig {
   network: string;
@@ -134,7 +134,7 @@ export function describeStage(
     stage = "UNRECOGNIZED state — balances don't match any expected launch step";
     problems.push(
       `deployer holds ${fmt(s.deployerBalance)} and treasury holds ${fmt(s.treasuryBalance)}; ` +
-        `expected one of: 250M/0 (fresh), 200M/50M (treasury funded), 0/50M (pool funded)`,
+        `expected one of: 1B/0 (fresh), 400M/200M (treasury funded), 0/200M (pool funded)`,
     );
   }
 
@@ -196,7 +196,7 @@ export async function transferTreasury(
   return hash;
 }
 
-// PRACTICE ONLY (Sepolia dry run, step 4): sends the remaining 200M to the
+// PRACTICE ONLY (Sepolia dry run, step 4): sends the remaining 400M to the
 // stand-in "pool" address so the balances look like a funded Uniswap pool to
 // the other scripts. The real launch creates an actual pool on Uniswap
 // instead. Guards mirror transferTreasury: runs only from the
@@ -264,7 +264,7 @@ export async function renounce(
   }
   if (state.deployerBalance !== 0n) {
     problems.push(
-      `deployer still holds ${fmt(state.deployerBalance)} — the pool should have taken all 200M (expected 0)`,
+      `deployer still holds ${fmt(state.deployerBalance)} — the pool should have taken all 400M (expected 0)`,
     );
   }
   if (config.pool) {

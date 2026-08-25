@@ -5,7 +5,7 @@ import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 
 /// @title Cardinals Promise (CARD)
-/// @notice Fixed-supply ERC-20. The entire 250M supply is minted once at
+/// @notice Fixed-supply ERC-20. The entire 1B supply is minted once at
 ///         deployment; there is no mint function, no transfer tax, no
 ///         blacklist, and no pausing. See TOKEN_LAUNCH_STRATEGY.md and
 ///         LAUNCH.md.
@@ -14,7 +14,7 @@ import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 ///      address). No function in this contract is owner-gated — ownership
 ///      grants no power even before it is renounced.
 contract CardinalsPromise is ERC20, Ownable {
-    uint256 public constant TOTAL_SUPPLY = 250_000_000 * 1e18;
+    uint256 public constant TOTAL_SUPPLY = 1_000_000_000 * 1e18;
 
     constructor() ERC20("Cardinals Promise", "CARD") Ownable(msg.sender) {
         _mint(msg.sender, TOTAL_SUPPLY);
