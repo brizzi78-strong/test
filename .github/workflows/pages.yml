@@ -1,0 +1,40 @@
+name: deploy-cp17-site
+
+# Publishes the cp17-site folder to GitHub Pages (cp17.org).
+# Pages "deploy from branch" can only serve / or /docs, so the
+# site folder is uploaded as a Pages artifact instead.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "cp17-site/**"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    name: Deploy cp17.org
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: cp17-site
+
+      - id: deployment
+        uses: actions/deploy-pages@v4
