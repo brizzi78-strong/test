@@ -39,6 +39,12 @@ contract CardinalsPromiseTest is Test {
         assertEq(token.owner(), admin);
     }
 
+    function test_RenounceOwnershipDisabled() public {
+        vm.prank(admin);
+        vm.expectRevert(CardinalsPromise.OwnershipRenunciationDisabled.selector);
+        token.renounceOwnership();
+    }
+
     function test_TreasuryCanDistributeToMember() public {
         vm.prank(treasury);
         token.transfer(alice, 1_000e18);
