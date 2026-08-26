@@ -1,18 +1,20 @@
 import { buildModule } from "@nomicfoundation/hardhat-ignition/modules";
 
 /**
- * Deploys the Cardinals Promise (CARD) token. The full 250M supply is minted to the
- * deployer; the flat immutable 2% fee accrues to the treasury address given
- * as a parameter — on mainnet this MUST be the treasury Safe, passed via
- * ignition parameters. There is deliberately no default: an accidental
- * deployer-as-treasury deployment would disable the fee during rehearsal.
+ * Deploys CARD v2.
  *
- *   npx hardhat ignition deploy ignition/modules/CardinalsPromise.ts --network sepolia \
- *     --parameters '{"CardinalsPromiseModule": {"treasury": "0xSAFE..."}}'
+ * Required parameters:
+ * - treasury: receives the entire fixed 1B supply at deployment
+ * - admin: operational owner during the pilot; use a Safe multisig on mainnet
+ *
+ * Example:
+ * npx hardhat ignition deploy ignition/modules/CardinalsPromise.ts --network sepolia \
+ *   --parameters '{"CardinalsPromiseModule":{"treasury":"0xTREASURY","admin":"0xADMIN"}}'
  */
 export default buildModule("CardinalsPromiseModule", (m) => {
   const treasury = m.getParameter("treasury");
-  const token = m.contract("CardinalsPromise", [treasury]);
+  const admin = m.getParameter("admin");
+  const token = m.contract("CardinalsPromise", [treasury, admin]);
 
   return { token };
 });
