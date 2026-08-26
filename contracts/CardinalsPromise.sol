@@ -23,6 +23,7 @@ contract CardinalsPromise is ERC20, Ownable, Pausable {
     error TransferNotPermitted(address from, address to);
     error BurnDisabled();
     error OwnershipRenunciationDisabled();
+    error RoleConflict(address account);
 
     event MemberStatusChanged(address indexed account, bool approved);
     event MerchantStatusChanged(address indexed account, bool approved);
@@ -39,6 +40,7 @@ contract CardinalsPromise is ERC20, Ownable, Pausable {
     /// @notice Approve or remove a member wallet.
     function setMember(address account, bool approved) external onlyOwner {
         if (account == address(0)) revert ZeroAddress();
+        if (approved && merchants[account]) revert RoleConflict(account);
         members[account] = approved;
         emit MemberStatusChanged(account, approved);
     }
@@ -46,6 +48,7 @@ contract CardinalsPromise is ERC20, Ownable, Pausable {
     /// @notice Approve or remove a participating merchant wallet.
     function setMerchant(address account, bool approved) external onlyOwner {
         if (account == address(0)) revert ZeroAddress();
+        if (approved && members[account]) revert RoleConflict(account);
         merchants[account] = approved;
         emit MerchantStatusChanged(account, approved);
     }
@@ -69,7 +72,8 @@ contract CardinalsPromise is ERC20, Ownable, Pausable {
     /// @dev Allowed value flows:
     ///      treasury -> approved member/merchant (distribution)
     ///      approved member -> approved merchant (spending)
-    ///      approved member/merchant -> treasury (return/reconciliation)
+    ///      any existing holder -> treasury (return/reconciliation, including
+    ///      after a role is revoked so balances cannot become stranded)
     ///      No member->member, merchant->member, or arbitrary-contract path.
     ///      transferFrom cannot bypass these rules because all ERC-20 movement
     ///      reaches _update().
@@ -85,7 +89,7 @@ contract CardinalsPromise is ERC20, Ownable, Pausable {
         bool allowed =
             (from == treasury && (members[to] || merchants[to])) ||
             (members[from] && merchants[to]) ||
-            ((members[from] || merchants[from]) && to == treasury);
+            (to == treasury);
 
         if (!allowed) revert TransferNotPermitted(from, to);
         super._update(from, to, value);
