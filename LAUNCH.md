@@ -1,122 +1,81 @@
-# Cardinals Promise (CARD) — Launch Runbook
+# Cardinals Promise (CARD) v2 — Pilot Runbook
 
-## Decided launch parameters
+> **Do not use the old Uniswap launch sequence on this branch.** CARD v2 is an earned-and-spent controlled pilot, not a public token sale or DEX launch.
 
-| Decision | Value |
+## Production gates
+
+Do not deploy CARD v2 to mainnet until all of these are complete:
+
+- [ ] Contract build and full test suite pass.
+- [ ] `npm run verify` reports every security claim green.
+- [ ] Independent smart-contract review is complete.
+- [ ] Legal/compliance review covers the actual earning, merchant acceptance, USD settlement, custody/key handling, consumer disclosures, and jurisdictions involved.
+- [ ] Treasury wallet is dedicated to CARD.
+- [ ] Administrator is a Safe multisig rather than an ordinary single-key wallet.
+- [ ] AWS application has least-privilege credentials, audit logging, rate limiting, and no private keys exposed to browsers or source control.
+- [ ] Sepolia pilot exercises every permitted and prohibited path.
+- [ ] Emergency pause procedure has been tested.
+
+## Contract parameters
+
+Deployment requires two addresses:
+
+| Parameter | Purpose |
 | --- | --- |
-| Supply | Mint all 1B at deploy, `renounceOwnership()` immediately after verification |
-| Uniswap pool | 400M CARD (40%) paired with 2–5 ETH |
-| Founder hold | 400M CARD (40%), unlocked, in a publicly disclosed wallet |
-| Treasury | 200M CARD (20%) in a publicly announced wallet |
-| LP tokens | Locked 12 months (Team Finance or UNCX) |
-| Timeline | Week 0: Sepolia rehearsal → Weeks 1–2: independent audit + legal consult → Week 3: mainnet |
-| Before mainnet | Publish the one-page site (`site/index.html`) at **thecardinalspromise.com/card** (the book's established domain — best trust signal; cp17.org can redirect there) and fill in the story section |
+| `treasury` | Receives the entire fixed 1,000,000,000 CARD supply |
+| `admin` | Controls member/merchant approvals, pause/unpause, and ownership transfer |
 
-Status of each step on the road to mainnet. Items marked ✅ are done in this
-repo; items marked 🔑 need something only the project owner can provide
-(keys, funds, signatures, legal engagement).
+The production admin should be a multisig.
 
-## ✅ Done
+## Sepolia first
 
-| Step | Where |
-| --- | --- |
-| Token contract (1B fixed supply — no mint, no burn; OpenZeppelin ERC20 + Ownable) | `contracts/CardinalsPromise.sol` |
-| Test suite — 17 tests (Foundry-style Solidity incl. fuzz + invariants, plus node:test/viem), all passing | `contracts/*.t.sol`, `test/CardinalsPromise.ts` |
-| Machine-checkable launch-claims ledger — 8/8 claims verified in CI (`npm run verify`) | `verification/claims.json` |
-| Static analysis — Slither v0.11.5, all 101 detectors, **0 findings** | run locally, see below to reproduce |
-| Local deployment rehearsal (Ignition) | `ignition/modules/CardinalsPromise.ts` |
-| CI — build + full test suite + claims verification on every push/PR | `.github/workflows/verify.yml` |
-| Sepolia + mainnet network config | `hardhat.config.ts` |
-| Etherscan verification config | `hardhat.config.ts` (`verify.etherscan`) |
-| Uniswap V2 liquidity script | `scripts/add-liquidity.ts` |
-| Logo (SVG + 256px/32px PNG) and token metadata | `assets/` |
-| **Full launch dress rehearsal** — real Uniswap V2 stack deployed locally; deploy → seed 10M CARD/100 ETH pool → buyer swap (price verified incl. 0.3% fee) → renounceOwnership, all green | `scripts/rehearse-launch.ts` |
-
-### Reproducing the Slither run
-
-Slither doesn't yet parse Hardhat 3's split build-info files. Workaround:
-compile, then merge each `artifacts/build-info/*.json` + `*.output.json`
-pair into one file with the Hardhat 2 keys (`input`, `output`,
-`solcVersion`), strip the `project/` source-name prefix, rewrite
-`npm/<pkg>@<version>/` source names to `node_modules/<pkg>/`, ensure
-`settings.optimizer` exists, and run
-`slither . --compile-force-framework hardhat --ignore-compile
---filter-paths "forge-std|\.t\.sol|openzeppelin"`.
-
-## ⚠️ Where the remaining steps must run
-
-The sandboxed environment this repo was built in blocks all outbound network
-traffic except package registries — no Ethereum RPC endpoint is reachable, so
-steps 2–6 cannot execute from it. Run them either:
-
-- **on your own machine** — clone the repo, `npm install`, follow the
-  commands below; or
-- **in a Claude Code session** whose environment network policy allows
-  outbound traffic (configurable when creating the environment at
-  https://code.claude.com/docs/en/claude-code-on-the-web) — then Claude can
-  run the Sepolia rehearsal for you once a funded key is in the keystore.
-
-## 🔑 Step 1 — Keys and wallets (owner)
-
-- [ ] Create a fresh deployer wallet (hardware wallet or offline-generated key).
-- [ ] Create a Gnosis Safe multisig for the 200M treasury allocation.
-- [ ] Get an RPC endpoint (Alchemy/Infura free tier works) and an Etherscan
-      API key (free at etherscan.io/apis).
-
-## 🔑 Step 2 — Sepolia rehearsal (one command each)
+Store RPC and signing credentials using the Hardhat keystore; do not commit them.
 
 ```bash
 npx hardhat keystore set SEPOLIA_RPC_URL
-npx hardhat keystore set SEPOLIA_PRIVATE_KEY     # fund it from a Sepolia faucet first
+npx hardhat keystore set SEPOLIA_PRIVATE_KEY
 npx hardhat keystore set ETHERSCAN_API_KEY
-
-npx hardhat ignition deploy ignition/modules/CardinalsPromise.ts --network sepolia
-npx hardhat verify --network sepolia <deployed-address>
 ```
 
-Then: add the token to a wallet, send a few transfers, confirm Etherscan
-shows verified source and correct metadata.
-
-## 🔑 Step 3 — Audit (owner engages, before real value)
-
-The contract is tiny (~20 lines over audited OpenZeppelin v5 base contracts)
-and Slither-clean, which keeps audit cost low. In rough order of cost: Slither/Mythril pass (done/free) → independent
-experienced reviewer → community platform (Code4rena, Sherlock) →
-professional firm. Do not skip this if the token will hold real value.
-
-## 🔑 Step 4 — Legal review (owner engages, before mainnet)
-
-Token issuance can be a regulated activity (US: Howey test; EU: MiCA).
-Engage a crypto-literate lawyer on: what CARD is for, how it's distributed,
-whether it's sold, and required disclosures. Keep marketing free of any
-implied returns — the name "Promise" makes this doubly important.
-
-## 🔑 Step 5 — Mainnet deployment
+Deploy with explicit treasury and admin parameters:
 
 ```bash
-npx hardhat keystore set MAINNET_RPC_URL
-npx hardhat keystore set MAINNET_PRIVATE_KEY
-
-npx hardhat ignition deploy ignition/modules/CardinalsPromise.ts --network mainnet
-npx hardhat verify --network mainnet <deployed-address>
+npm run deploy:sepolia -- --parameters '{"CardinalsPromiseModule":{"treasury":"0xTREASURY","admin":"0xADMIN"}}'
 ```
 
-Immediately after:
-- [ ] Verify source on Etherscan (command above).
-- [ ] `renounceOwnership()` (supply locked forever) **or**
-      `transferOwnership(<multisig>)` — publish the tx either way.
-- [ ] Record the contract address in `assets/token-metadata.json` and README.
+Then verify the deployed contract with the exact constructor arguments used at deployment.
 
-## 🔑 Step 6 — Liquidity + listings
+## Required Sepolia scenarios
 
-```bash
-CARD_NETWORK=mainnet CARD_TOKEN_ADDRESS=0x... CARD_AMOUNT=... ETH_AMOUNT=... \
-  npx hardhat run scripts/add-liquidity.ts
-```
+1. Treasury distributes CARD to an approved member.
+2. Treasury cannot distribute to an unapproved wallet.
+3. Member spends CARD at an approved merchant.
+4. Member cannot transfer CARD to another member.
+5. Member cannot transfer CARD to an arbitrary wallet or DEX pair.
+6. `transferFrom` cannot bypass destination restrictions.
+7. Merchant can return CARD to treasury for reconciliation.
+8. Merchant cannot transfer CARD to a member or arbitrary wallet.
+9. Removing a member or merchant prevents new restricted-path transactions involving that wallet.
+10. Pause stops token movement.
+11. Unpause restores permitted movement.
+12. Ownership can be transferred to a replacement multisig.
+13. `renounceOwnership()` reverts.
+14. Total supply remains exactly 1,000,000,000 CARD throughout.
 
-- [ ] The CARD/ETH ratio you pass sets the launch price — sanity-check it.
-- [ ] Lock the LP tokens (Unicrypt, Team Finance) and publish the lock.
-- [ ] Submit logo + info to Etherscan (token update form, uses
-      `assets/logo-32.png`), CoinGecko, and a Uniswap token list.
-- [ ] Publish the contract address on your site/socials so nobody gets
-      phished by fakes.
+## Mainnet
+
+Mainnet deployment is a separate approval decision. It should repeat the tested Sepolia constructor and configuration, using production treasury/admin addresses.
+
+There is **no CARD/ETH liquidity step, no LP-token step, no opening market price, and no swap rehearsal** in CARD v2.
+
+## After deployment
+
+- Publish the verified contract address.
+- Publish the treasury and admin/multisig addresses.
+- Record every participant approval/revocation through the application audit trail.
+- Monitor pause events, ownership changes, role changes, failed transactions, and unusual volume.
+- Keep business/settlement records separate from the on-chain token balance ledger.
+
+## Important limitation
+
+Transfer restrictions materially reduce the ability to create a conventional secondary market, but they do not by themselves decide whether the program is legally a security, money-transmission service, stored-value program, gift-card program, or another regulated product. The final legal analysis must be based on the real operating model, not the token's label.
