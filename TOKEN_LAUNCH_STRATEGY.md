@@ -1,4 +1,7 @@
 # CARD Token Launch Strategy
+> **⚠️ PAUSED — do not execute.** The CARD token is on hold; see
+> [`CRYPTO_ON_HOLD.md`](CRYPTO_ON_HOLD.md) for the decision and what would have
+> to be true to revisit it. Nothing is deployed and no money is at risk.
 
 Launch plan for the CARD token: 1B fixed supply, Uniswap fair launch, trust-first design.
 Every decision below optimizes for the same thing — being verifiably safe on-chain, so that

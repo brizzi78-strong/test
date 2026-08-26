@@ -1,4 +1,7 @@
 # Sepolia Practice Run — copy-paste walkthrough
+> **⚠️ PAUSED — do not execute.** The CARD token is on hold; see
+> [`CRYPTO_ON_HOLD.md`](CRYPTO_ON_HOLD.md) for the decision and what would have
+> to be true to revisit it. Nothing is deployed and no money is at risk.
 
 This is the practice round from the launch plan ("Part 1"), on Sepolia — a
 copy of Ethereum where the money is fake and mistakes are free. You'll do

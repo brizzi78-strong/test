@@ -1,4 +1,7 @@
 # CARD Launch Day Checklist
+> **⚠️ PAUSED — do not execute.** The CARD token is on hold; see
+> [`CRYPTO_ON_HOLD.md`](CRYPTO_ON_HOLD.md) for the decision and what would have
+> to be true to revisit it. Nothing is deployed and no money is at risk.
 
 Companion to [TOKEN_LAUNCH_STRATEGY.md](TOKEN_LAUNCH_STRATEGY.md). Work top to bottom;
 the order is deliberate — each step closes a door before buyers arrive. Don't skip ahead,
