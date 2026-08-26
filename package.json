@@ -9,6 +9,7 @@
     "test": "hardhat test",
     "verify": "node scripts/verify-claims.mjs",
     "deploy:sepolia": "hardhat ignition deploy ignition/modules/CardinalsPromise.ts --network sepolia",
+    "check:sepolia": "CARD_NETWORK=sepolia hardhat run scripts/check-deployment.ts",
     "deploy:mainnet": "hardhat ignition deploy ignition/modules/CardinalsPromise.ts --network mainnet"
   },
   "devDependencies": {
