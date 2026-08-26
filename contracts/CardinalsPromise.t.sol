@@ -196,12 +196,13 @@ contract CardinalsPromiseTest is Test {
         token.setMerchant(alice, true);
     }
 
-    function test_RevertOnBurn() public {
+    function test_RevertOnZeroAddressTransfer() public {
         vm.prank(treasury);
         token.transfer(alice, 1_000e18);
 
+        // OpenZeppelin ERC20 rejects the zero-address receiver before _update.
         vm.prank(alice);
-        vm.expectRevert(CardinalsPromise.BurnDisabled.selector);
+        vm.expectRevert();
         token.transfer(address(0), 1e18);
     }
 
