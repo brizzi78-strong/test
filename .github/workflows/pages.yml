@@ -21,14 +21,41 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  # The deploy job below keeps being rejected by the github-pages
+  # environment's protection rules before any step runs, and the exact rule
+  # isn't visible from outside. This job runs without an environment (so no
+  # gate applies) and prints the environment + Pages config so the blocker
+  # can be read from its logs.
+  diagnose:
+    name: Dump Pages environment config
+    runs-on: ubuntu-latest
+    steps:
+      - name: Read environment protection rules and Pages config
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          for path in \
+            "environments" \
+            "environments/github-pages" \
+            "environments/github-pages/deployment-branch-policies" \
+            "pages"; do
+            echo "===== GET repos/$REPO/$path ====="
+            curl -sS -H "Authorization: Bearer $GH_TOKEN" \
+                 -H "Accept: application/vnd.github+json" \
+                 "https://api.github.com/repos/$REPO/$path" || true
+            echo
+          done
+
   deploy:
     name: Deploy cp17.org
     runs-on: ubuntu-latest
-    # No `environment:` block on purpose: a stale github-pages environment
-    # (left by an old deploy attempt) carries branch protection rules that
-    # reject runs from main before any step executes. Omitting the
-    # declaration skips that gate; deploy-pages still targets Pages via its
-    # OIDC token.
+    # deploy-pages requires the job to declare this environment (the Pages
+    # deployment API rejects the run with 400 "Missing environment" without
+    # it), so the environment's protection rules must allow main.
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
 
