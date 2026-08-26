@@ -22,6 +22,7 @@ contract CardinalsPromise is ERC20, Ownable, Pausable {
     error ZeroAddress();
     error TransferNotPermitted(address from, address to);
     error BurnDisabled();
+    error OwnershipRenunciationDisabled();
 
     event MemberStatusChanged(address indexed account, bool approved);
     event MerchantStatusChanged(address indexed account, bool approved);
@@ -56,6 +57,13 @@ contract CardinalsPromise is ERC20, Ownable, Pausable {
 
     function unpause() external onlyOwner {
         _unpause();
+    }
+
+    /// @notice CARD v2 requires an administrator for participant controls and
+    ///         emergency response, so ownership may be transferred but not
+    ///         irreversibly discarded.
+    function renounceOwnership() public pure override {
+        revert OwnershipRenunciationDisabled();
     }
 
     /// @dev Allowed value flows:
