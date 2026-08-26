@@ -112,15 +112,17 @@ describe("CardinalsPromise v2", async function () {
     const { token, admin, treasury, member } = await fixture();
     await token.write.pause({ account: admin.account });
 
-    await viem.assertions.revert(
+    await viem.assertions.revertWithCustomError(
       token.write.transfer([member.account.address, 1n], { account: treasury.account }),
+      token,
+      "EnforcedPause",
     );
   });
 
   it("has no zero-address treasury", async function () {
     const [admin] = await viem.getWalletClients();
-    await viem.assertions.revert(
-      viem.deployContract("CardinalsPromise", [zeroAddress, admin.account.address]),
-    );
+    await assert.rejects(async () => {
+      await viem.deployContract("CardinalsPromise", [zeroAddress, admin.account.address]);
+    });
   });
 });
