@@ -1,8 +1,11 @@
 name: deploy-cp17-site
 
-# Publishes the cp17-site folder to GitHub Pages (cp17.org).
-# Pages "deploy from branch" can only serve / or /docs, so the
-# site folder is uploaded as a Pages artifact instead.
+# Publishes cp17-site to the gh-pages branch. This repo's Pages is in
+# legacy branch mode (serves the gh-pages branch root), and its
+# github-pages environment only allows deployments from gh-pages — so the
+# artifact/deploy-pages flow can never run from main. Pushing the folder
+# to gh-pages triggers the automatic Pages build instead, and the CNAME
+# file in the folder keeps the custom domain (cp17.org) set.
 on:
   push:
     branches: [main]
@@ -12,62 +15,43 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
   group: pages
   cancel-in-progress: true
 
 jobs:
-  # The deploy job below keeps being rejected by the github-pages
-  # environment's protection rules before any step runs, and the exact rule
-  # isn't visible from outside. This job runs without an environment (so no
-  # gate applies) and prints the environment + Pages config so the blocker
-  # can be read from its logs.
-  diagnose:
-    name: Dump Pages environment config
+  publish:
+    name: Publish cp17-site to gh-pages
     runs-on: ubuntu-latest
-    steps:
-      - name: Read environment protection rules and Pages config
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          REPO: ${{ github.repository }}
-        run: |
-          for path in \
-            "environments" \
-            "environments/github-pages" \
-            "environments/github-pages/deployment-branch-policies" \
-            "pages"; do
-            echo "===== GET repos/$REPO/$path ====="
-            curl -sS -H "Authorization: Bearer $GH_TOKEN" \
-                 -H "Accept: application/vnd.github+json" \
-                 "https://api.github.com/repos/$REPO/$path" || true
-            echo
-          done
-
-  deploy:
-    name: Deploy cp17.org
-    runs-on: ubuntu-latest
-    # deploy-pages requires the job to declare this environment (the Pages
-    # deployment API rejects the run with 400 "Missing environment" without
-    # it), so the environment's protection rules must allow main.
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
 
-      # enablement: true turns Pages on via the API (using the pages: write
-      # permission) if the repo doesn't have it enabled yet.
-      - uses: actions/configure-pages@v5
-        with:
-          enablement: true
+      - name: Push cp17-site to gh-pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin gh-pages
+          git worktree add /tmp/site origin/gh-pages
+          cd /tmp/site
+          git rm -rq .
+          cp -r "$GITHUB_WORKSPACE/cp17-site/." .
+          rm -f README.md
+          touch .nojekyll
+          git add -A
+          if git diff --cached --quiet; then
+            echo "gh-pages already matches cp17-site — nothing to publish"
+            exit 0
+          fi
+          git commit -m "Publish cp17-site from ${GITHUB_SHA::7}"
+          git push origin HEAD:gh-pages
 
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: cp17-site
-
-      - id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Report Pages status
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          sleep 30
+          curl -sS -H "Authorization: Bearer $GH_TOKEN" \
+               -H "Accept: application/vnd.github+json" \
+               "https://api.github.com/repos/${{ github.repository }}/pages"
