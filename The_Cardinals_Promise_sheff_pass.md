@@ -8,7 +8,7 @@
 
 *"Thirty-five years of friendship, and I can tell you: you can trust what you're about to read."*
 
-*— Dave Meyer, former Captain, Virginia Tech Football*
+*— Dave Meyer, former Virginia Tech captain and NFL quarterback*
 
 Copyright © 2026 by Rob Brizzi. All rights reserved. No part of this book may be reproduced in any form without written permission from the publisher, except for brief quotations in reviews.
 
@@ -76,15 +76,16 @@ Prologue
 25. Sobriety Meets Hospice
 26. Hope for Rob
 27. What We Built
+28. Wonderwoman
 
 **Part Six — The Last Chapter**
 
-28. The Detour
-29. Five Weeks
-30. The Days After
-31. The First Honest Mile
-32. What Grief Taught the Job
-33. The Table
+29. The Detour
+30. Five Weeks
+31. The Days After
+32. The First Honest Mile
+33. What Grief Taught the Job
+34. The Table
 
 Epilogue: The Cardinal's Promise
 
@@ -1270,7 +1271,7 @@ Early in sobriety, your brain is rewiring itself. You walk around in a fog, not 
 
 I needed a sponsor. So I picked a guy named Andy. Andy's whole vibe was Eeyore, a low-grade heaviness over him like a cloud that never moved. Not angry, just down, like the world had worn him out long ago and he'd made peace with being tired. I'm looking at my sponsor thinking: is this what the long term looks like? If this is sober after fifteen years, I don't know what I signed up for.
 
-But I came to know Andy. Behind the Eeyore was a guy who'd come a long way, been through things I didn't know about yet, rebuilt himself piece by piece and wasn't interested in making it look pretty. When you're newly sober everything is a five-alarm fire. Living at your parents' at thirty-one, stressing about money and whether anyone will trust you again, calling your sponsor because you're spinning out about work or a girl or whatever felt like the end of the world that Tuesday. Andy would listen. Wouldn't interrupt, wouldn't match my energy, just let me run out of gas. Then, when I'd laid out the whole catastrophe, he'd say the same thing every time. "You prayed about it?" The answer was always no. I'd called Andy before I'd called God. He sponsored me a year or two, and he's still a friend. I hear his voice every time I reach for the phone to complain about something before I've gotten on my knees.
+But I came to know Andy. Behind the Eeyore was a guy who'd rebuilt himself piece by piece and wasn't interested in making it look pretty. When you're newly sober, everything is a five-alarm fire, and I'd call him spinning out about whatever felt like the end of the world that Tuesday. Andy would listen. Wouldn't interrupt, wouldn't match my energy, just let me run out of gas. Then, when I'd laid out the whole catastrophe, he'd say the same thing every time. "You prayed about it?" The answer was always no. I'd called Andy before I'd called God. He sponsored me a year or two, and he's still a friend. I hear his voice every time I reach for the phone to complain about something before I've gotten on my knees.
 
 Then there was Detroit Bob. About eighty when I met him, sober a long time, did not care about impressing anybody. His favorite line, and I heard it a hundred times: I'm not here to help any of you. I'm here to save my own butt. And you're listening to me? That's just a fringe benefit. People figured he was cynical. Not Bob. Bob had done the work. He just wasn't going to perform it for an audience.
 
@@ -1282,9 +1283,7 @@ Mager became my sponsor and taught me more than I could list, but one thing stuc
 
 The last one I need to tell you about is Matt Campbell. He lived in Tallahassee when I met him, just sober. He'll tell you himself he couldn't write well. No family money, no degree to dust off. Matt had nothing but the program, and I think that's exactly what he needed.
 
-He was at Jason's Deli making maybe ten dollars an hour, calling me about work, money, life on ten dollars an hour, the same stuff I'd called Andy about, a different version. Then he got an admin job at a BMW dealership, and one day they were short a guy on the floor. Somebody called in sick. Hey Matt, you want to try? Matt went out and sold three cars his first day. The guys who'd been selling for years looked at him like, how did this kid just do that? Because Matt could connect. Whatever makes a great salesperson, the thing you can't teach, Matt had it. He just never had a chance to use it.
-
-He became a salesman at BMW, and then the best they'd ever seen. The guy who'd been homeless, who couldn't write, who made ten dollars an hour at a deli, went back and got his GED. Met Rebecca, an amazing woman. Reconnected with his daughter Aubrey. Had a son, Xander. We all started going to church together, Matt, Rebecca, the kids, me, a whole crew whose lives had been rebuilt from wreckage, sitting in a pew on Sunday like the most normal thing in the world. And Matt didn't stop. He'd always had a dream of acting. He got an acting coach, went to auditions, never gave it up. He connected with people in the industry. Matt became a producer.
+He was at Jason's Deli making ten dollars an hour, calling me about life on ten dollars an hour, the same calls I'd made to Andy. Then a BMW dealership came up short a guy on the floor one day, and Matt went out and sold three cars. Whatever makes a great salesperson, the thing you can't teach, Matt had it. He just never had a chance to use it. He became the best they'd ever seen, went back for his GED, married Rebecca, reconnected with his daughter Aubrey, had a son, Xander — and then he chased the dream on top of the comeback: an acting coach, auditions, connections, until Matt became a producer. We all went to church together on Sundays, a pew full of lives rebuilt from wreckage, sitting there like the most normal thing in the world.
 
 And then there was Quint Studer. I was thirty-three, sober long enough to know I wasn't going back, and I couldn't shake the feeling there was something left in the tank. Not ego. A quiet sense that maybe God hadn't kept me alive just to sit in meetings the rest of my life trying not to mess up again. I wanted to do more. I just hadn't seen many examples of what that looked like.
 
@@ -1598,9 +1597,14 @@ Ireland was the one I couldn't fully meet her on. We'd planned it long before, b
 
 I think about those trips differently now, not as time I should have spent some other way, but as time I'm grateful we took, every messy minute of it. The pictures never tell the whole story. They can't. They only catch the second we were smiling. Everything that earned the smile happened off camera, and most of it was Hope.
 
-### *Wonderwoman*
+**CHAPTER 28**
 
-**2017**
+## **Wonderwoman**
+
+*"Her children arise up, and call her blessed."*
+*— Proverbs 31:28*
+
+**Lantana and Raleigh, 2017–2026**
 
 For most of my life my mother was unbreakable. She got two boys out of Mexico on her own nerve, worked nights without complaint, and still found a way to have a hot meal and a made-up home waiting for me at every turn. Wonderwoman.
 
@@ -1636,7 +1640,7 @@ PART SIX
 
 *Presence, repeated, until the end. His, then mine.*
 
-**CHAPTER 28**
+**CHAPTER 29**
 ## **The Detour**
 
 *"My thoughts are not your thoughts, neither are your ways my ways."*
@@ -1668,7 +1672,7 @@ I told people I was going to take some time off. Be there for my dad. Be there f
 
 *September 2025. Our car pointed north out of Pensacola, eighteen years of living near him somewhere back in the mirrors. He had told me to go — that was always his way, more concerned that we were okay than that we were close. I didn't know it was the last of the old kind of drive, the kind where he was still at the other end of the road. This time, I drove.*
 
-**CHAPTER 29**
+**CHAPTER 30**
 ## **Five Weeks**
 
 *"They shall mount up with wings as eagles."*
@@ -1744,7 +1748,7 @@ He got pneumonia on December 23. His immune system had nothing left to fight wit
 
 My father died on Christmas Day, 2025. A Thursday.
 
-**CHAPTER 30**
+**CHAPTER 31**
 ## **The Days After**
 
 *"Jesus wept."*
@@ -1752,11 +1756,9 @@ My father died on Christmas Day, 2025. A Thursday.
 
 **December 28, 2025**
 
-Hope and I had gone down for a visit, and we went to church that morning and ate with Dad before the drive back up to Raleigh. Dad had beaten cancer twice by then, with a scare in between that never came to anything. This last round looked like another miracle, and with him, miracles had started to feel ordinary. The esophagus and the stomach in 2015, when he nearly died. The liver scare in 2018 that never needed treatment. And in 2024, the lungs and the lymph nodes, when he was at death's door, and he walked back out.
+Hope and I had gone down for a visit, and we went to church that morning and ate with Dad before the drive back up to Raleigh. With him, miracles had started to feel ordinary.
 
 There was an opening in hospice, at a company I had already given ten years to. At the table that morning, Dad told me what he always told me. "Listen to your boss. Work hard." He had put that in me a long time ago, and he said it again like it was the first time.
-
-When I heard he had pneumonia, I wasn't scared. I told myself he would make it. He always made it. Hope and I would drive down that weekend and see him, and he would be sitting up, telling a story. That was the plan. That isn't what happened.
 
 Something in me shut down before he was gone. I couldn't pick up when my stepmom called. I went somewhere I had gone as a little boy when I was scared, that same quiet, far-off place, the dissociation I had learned before I had a word for it.
 
@@ -1824,7 +1826,7 @@ I sat in my car one afternoon thinking, am I becoming someone else? The answer c
 
 In January we went through his things. His gray suit was hanging on the right side of the closet, between two work shirts. Always be the best-dressed person in the room. I pulled it off the rack and held it up, and I couldn't put it back. I took it home in a garment bag with no plan. It hangs in my closet now, next to mine. It isn't my size and it isn't my style and I will never wear it. But some mornings I open the closet door and it's there, and I know what it is, and I know who wore it, and I leave it alone. I tell families sometimes, when they're clearing out a closet of their own: keep one thing. You'll know which one. It will tell you.
 
-**CHAPTER 31**
+**CHAPTER 32**
 ## **The First Honest Mile**
 
 *"Blessed are they that mourn: for they shall be comforted."*
@@ -1844,7 +1846,7 @@ And I was mean. That scared me more than a craving would have. I lashed out at t
 
 Seventeen years sober, and I had hit a rock bottom again, an emotional one this time. The disease doesn't need a bottle to run the old plays, isolation, anger, the closed door. The difference was that this time I had to feel it all the way through. And this time I knew what to do with a bottom. I went back to meetings, more of them than I'd been to in years. I got a therapist. The morning calls with Mager got longer. I said out loud, in the rooms and on the phone, that I was not okay. I went back to the people I'd been sharp with and said sorry, plainly. Seventeen years in, I was back on the first honest mile.
 
-**CHAPTER 32**
+**CHAPTER 33**
 ## **What Grief Taught the Job**
 
 *"Weeping may endure for a night, but joy cometh in the morning."*
@@ -1874,7 +1876,7 @@ And some rooms stay with me whole. There was a couple I'll call Ed and Eva. Ed s
 
 My father always made a big deal of my sobriety anniversary. Every January 9. My first year, he came to Gulf Breeze Hospital to hear me speak, sat in that room and listened to his son talk about staying sober for one year. He told me once, quietly, that whenever he mentioned my name to someone who knew me, they'd say the same thing: "He's the best." That's what he built. Lou spent eighty-four years showing up without needing to know exactly where he was going. I'm trying to do the same.
 
-**CHAPTER 33**
+**CHAPTER 34**
 ## **The Table**
 
 *"Thou preparest a table before me in the presence of mine enemies."*
@@ -2029,7 +2031,7 @@ This book will help you do exactly that. I am grateful it exists, and I am grate
 
 *Sincerely,*
 
-*Dave Meyer, former NFL quarterback*
+*Dave Meyer, former Virginia Tech captain and NFL quarterback*
 
 # **AUTHOR'S NOTE**
 

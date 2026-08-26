@@ -8,7 +8,7 @@
 
 *"Thirty-five years of friendship, and I can tell you: you can trust what you're about to read."*
 
-*— Dave Meyer, former Captain, Virginia Tech Football*
+*— Dave Meyer, former Virginia Tech captain and NFL quarterback*
 
 Copyright © 2026 by Rob Brizzi. All rights reserved. No part of this book may be reproduced in any form without written permission from the publisher, except for brief quotations in reviews.
 
@@ -76,15 +76,16 @@ Prologue
 25. Sobriety Meets Hospice
 26. Hope for Rob
 27. What We Built
+28. Wonderwoman
 
 **Part Six — The Last Chapter**
 
-28. The Detour
-29. Five Weeks
-30. The Days After
-31. The First Honest Mile
-32. What Grief Taught the Job
-33. The Table
+29. The Detour
+30. Five Weeks
+31. The Days After
+32. The First Honest Mile
+33. What Grief Taught the Job
+34. The Table
 
 Epilogue: The Cardinal's Promise
 
