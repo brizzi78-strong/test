@@ -88,6 +88,28 @@ contract CardinalsPromiseTest is Test {
         assertEq(token.balanceOf(merchant), 600e18);
     }
 
+    function test_RevokedMemberCanStillReturnBalanceToTreasury() public {
+        vm.prank(treasury);
+        token.transfer(alice, 1_000e18);
+
+        vm.prank(admin);
+        token.setMember(alice, false);
+
+        vm.prank(alice);
+        token.transfer(treasury, 1_000e18);
+        assertEq(token.balanceOf(alice), 0);
+    }
+
+    function test_RoleOverlapIsRejected() public {
+        vm.prank(admin);
+        vm.expectRevert(abi.encodeWithSelector(CardinalsPromise.RoleConflict.selector, alice));
+        token.setMerchant(alice, true);
+
+        vm.prank(admin);
+        vm.expectRevert(abi.encodeWithSelector(CardinalsPromise.RoleConflict.selector, merchant));
+        token.setMember(merchant, true);
+    }
+
     function test_RevertWhen_MemberTransfersToMember() public {
         vm.prank(treasury);
         token.transfer(alice, 1_000e18);
