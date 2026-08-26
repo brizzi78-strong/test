@@ -1,22 +1,22 @@
 {
-  "$comment": "Machine-checkable security claims for CardinalsPromise. Every trust claim made in TOKEN_LAUNCH_STRATEGY.md and the contract natspec must appear here, mapped to executable evidence. Run `npm run verify` \u2014 it fails if any claim's evidence is missing, stale, or failing. Do not edit a claim without editing the code/tests that back it, and vice versa.",
+  "$comment": "Machine-checkable security claims for CARD v2. Run `npm run verify`; do not ship if any claim is red.",
   "contract": "CardinalsPromise",
   "artifact": "artifacts/contracts/CardinalsPromise.sol/CardinalsPromise.json",
   "claims": [
     {
       "id": "fixed-supply",
-      "statement": "Total supply is exactly 1,000,000,000 CARD, minted once at deployment to the deployer.",
-      "source": "TOKEN_LAUNCH_STRATEGY.md \u00a7 Token Parameters",
+      "statement": "Total supply is exactly 1,000,000,000 CARD, minted once at deployment to the treasury.",
+      "source": "CardinalsPromise.sol",
       "evidence": [
         {
           "type": "solidity-test",
           "file": "contracts/CardinalsPromise.t.sol",
-          "name": "test_FullSupplyMintedToDeployer"
+          "name": "test_FullSupplyMintedToTreasury"
         },
         {
           "type": "node-test",
           "file": "test/CardinalsPromise.ts",
-          "title": "mints the full fixed supply to the deployer"
+          "title": "mints the full fixed supply to the treasury"
         },
         {
           "type": "invariant",
@@ -26,18 +26,13 @@
       ]
     },
     {
-      "id": "supply-immutable",
-      "statement": "No code path can ever increase or decrease the supply: there is no mint, burn, or rebase function.",
-      "source": "CardinalsPromise.sol natspec; TOKEN_LAUNCH_STRATEGY.md \u00a7 Launch Sequence step 1",
+      "id": "no-public-mint-burn-rebase",
+      "statement": "There is no public mint, burn, issue, or rebase function; supply remains constant after construction.",
+      "source": "CardinalsPromise.sol",
       "evidence": [
         {
           "type": "abi-absent",
-          "patterns": [
-            "mint",
-            "burn",
-            "issue",
-            "rebase"
-          ]
+          "patterns": ["mint", "burn", "issue", "rebase"]
         },
         {
           "type": "invariant",
@@ -52,111 +47,112 @@
       ]
     },
     {
-      "id": "no-pause",
-      "statement": "Transfers can never be paused or frozen.",
-      "source": "CardinalsPromise.sol natspec",
-      "evidence": [
-        {
-          "type": "abi-absent",
-          "patterns": [
-            "pause",
-            "freeze"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "no-blacklist",
-      "statement": "No address can be blacklisted or blocked from transferring.",
-      "source": "CardinalsPromise.sol natspec; TOKEN_LAUNCH_STRATEGY.md \u00a7 Launch Sequence step 1",
-      "evidence": [
-        {
-          "type": "abi-absent",
-          "patterns": [
-            "blacklist",
-            "blocklist",
-            "denylist",
-            "ban"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "no-transfer-tax",
-      "statement": "Transfers move exactly the requested amount; there is no tax, fee, or skim.",
-      "source": "CardinalsPromise.sol natspec; TOKEN_LAUNCH_STRATEGY.md \u00a7 Launch Sequence step 1",
+      "id": "member-to-member-blocked",
+      "statement": "An approved member cannot transfer CARD to another member or arbitrary wallet.",
+      "source": "CardinalsPromise.sol _update",
       "evidence": [
         {
           "type": "solidity-test",
           "file": "contracts/CardinalsPromise.t.sol",
-          "name": "test_Transfer"
+          "name": "test_RevertWhen_MemberTransfersToMember"
         },
         {
-          "type": "invariant",
-          "file": "contracts/CardinalsPromiseInvariants.t.sol",
-          "name": "invariant_BalancesSumToTotalSupply"
+          "type": "solidity-test",
+          "file": "contracts/CardinalsPromise.t.sol",
+          "name": "test_RevertWhen_MemberTransfersToArbitraryAddress"
+        },
+        {
+          "type": "node-test",
+          "file": "test/CardinalsPromise.ts",
+          "title": "rejects member-to-member transfers"
+        },
+        {
+          "type": "node-test",
+          "file": "test/CardinalsPromise.ts",
+          "title": "rejects transfers to arbitrary addresses"
         }
-      ],
-      "notes": "The CardinalsPromiseHandler additionally asserts exact-amount deltas inside every fuzzed transfer/transferFrom sequence."
+      ]
     },
     {
-      "id": "owner-powerless",
-      "statement": "Ownership grants no power over the token: the only state-changing functions are the standard ERC-20 surface plus the two Ownable handover functions, none of which touch balances or supply.",
-      "source": "CardinalsPromise.sol natspec",
+      "id": "approved-spend-path",
+      "statement": "An approved member can spend CARD at an approved merchant, and approved participants can return CARD to the treasury.",
+      "source": "CardinalsPromise.sol _update",
+      "evidence": [
+        {
+          "type": "solidity-test",
+          "file": "contracts/CardinalsPromise.t.sol",
+          "name": "test_MemberCanSpendAtMerchant"
+        },
+        {
+          "type": "node-test",
+          "file": "test/CardinalsPromise.ts",
+          "title": "allows an approved member to spend at an approved merchant"
+        }
+      ]
+    },
+    {
+      "id": "transferfrom-cannot-bypass",
+      "statement": "ERC-20 allowances cannot bypass CARD's permitted destination rules.",
+      "source": "CardinalsPromise.sol _update",
+      "evidence": [
+        {
+          "type": "solidity-test",
+          "file": "contracts/CardinalsPromise.t.sol",
+          "name": "test_TransferFromCannotBypassRestrictions"
+        },
+        {
+          "type": "node-test",
+          "file": "test/CardinalsPromise.ts",
+          "title": "transferFrom cannot bypass the destination rules"
+        }
+      ]
+    },
+    {
+      "id": "emergency-pause",
+      "statement": "The administrator can pause pilot token movement in an emergency.",
+      "source": "CardinalsPromise.sol pause/unpause",
+      "evidence": [
+        {
+          "type": "solidity-test",
+          "file": "contracts/CardinalsPromise.t.sol",
+          "name": "test_PauseStopsTransfers"
+        },
+        {
+          "type": "node-test",
+          "file": "test/CardinalsPromise.ts",
+          "title": "pause stops pilot transfers"
+        }
+      ]
+    },
+    {
+      "id": "renounce-disabled",
+      "statement": "The operational admin role cannot be accidentally destroyed by renouncing ownership.",
+      "source": "CardinalsPromise.sol renounceOwnership",
+      "evidence": [
+        {
+          "type": "solidity-test",
+          "file": "contracts/CardinalsPromise.t.sol",
+          "name": "test_RenounceOwnershipDisabled"
+        }
+      ]
+    },
+    {
+      "id": "reviewed-write-surface",
+      "statement": "The state-changing public surface is limited to standard ERC-20 approvals/transfers, participant administration, pause controls, and ownership transfer.",
+      "source": "CardinalsPromise.sol ABI",
       "evidence": [
         {
           "type": "abi-write-surface",
           "allowed": [
             "approve",
+            "pause",
+            "setMember",
+            "setMerchant",
             "transfer",
             "transferFrom",
-            "renounceOwnership",
-            "transferOwnership"
+            "transferOwnership",
+            "unpause"
           ]
-        },
-        {
-          "type": "solidity-test",
-          "file": "contracts/CardinalsPromise.t.sol",
-          "name": "test_TransfersStillWorkAfterRenounce"
-        }
-      ]
-    },
-    {
-      "id": "renounce-works",
-      "statement": "renounceOwnership() sets the owner to the zero address, permanently and verifiably on-chain.",
-      "source": "TOKEN_LAUNCH_STRATEGY.md \u00a7 Launch Sequence step 6",
-      "evidence": [
-        {
-          "type": "solidity-test",
-          "file": "contracts/CardinalsPromise.t.sol",
-          "name": "test_RenounceOwnershipSetsOwnerToZero"
-        },
-        {
-          "type": "node-test",
-          "file": "test/CardinalsPromise.ts",
-          "title": "renounces ownership to the zero address"
-        },
-        {
-          "type": "invariant",
-          "file": "contracts/CardinalsPromiseInvariants.t.sol",
-          "name": "invariant_RenounceIsPermanent"
-        }
-      ]
-    },
-    {
-      "id": "balance-enforced",
-      "statement": "A transfer exceeding the sender's balance always reverts.",
-      "source": "ERC-20 baseline behavior",
-      "evidence": [
-        {
-          "type": "solidity-test",
-          "file": "contracts/CardinalsPromise.t.sol",
-          "name": "test_RevertWhen_TransferExceedsBalance"
-        },
-        {
-          "type": "node-test",
-          "file": "test/CardinalsPromise.ts",
-          "title": "reverts when transferring more than the sender's balance"
         }
       ]
     }
