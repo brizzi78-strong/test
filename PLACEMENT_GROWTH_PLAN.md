@@ -232,6 +232,8 @@ Revisit Charlotte at month 12, with a person on the ground there or not at all.
    assisted living in NC."
 4. **Consider a second placement advisor** at a sustained 8+/month. Not before —
    you can personally handle ~8–10/month, and hiring early burns the margin.
+   Rates, structures, and the referral-fee legal line are in
+   [`PLACEMENT_COMPENSATION.md`](PLACEMENT_COMPENSATION.md).
 
 ### The three doors at month 12
 
