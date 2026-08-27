@@ -415,3 +415,38 @@ h1 .accent { color: var(--gold); }
   border-top: 2px solid var(--cardinal);
   margin: 1.25rem auto 0;
 }
+
+/* ---------- numbered steps ---------- */
+/* Only the how-to-buy page uses these: its steps are a real sequence,
+   so the numerals carry information the other pages' sections don't. */
+
+.step {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  border-top: 1px solid var(--rule);
+  padding-top: 1.6rem;
+  margin: 2.6rem 0 0.5rem;
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+.step .num {
+  font-size: 1.9rem;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--gold);
+  font-variant-numeric: tabular-nums;
+  flex: none;
+}
+
+.step .time {
+  margin-left: auto;
+  font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, monospace;
+  font-size: 0.63rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--faint);
+  flex: none;
+  padding-left: 0.5rem;
+}
