@@ -61,7 +61,7 @@ nav a[aria-current="page"] { color: var(--gold); }
 /* ---------- headings ---------- */
 
 h1 {
-  font-size: clamp(2.3rem, 7.5vw, 3.4rem);
+  font-size: clamp(2.5rem, 8.5vw, 3.9rem);
   line-height: 1.08;
   font-weight: 400;
   letter-spacing: -0.015em;
@@ -449,4 +449,41 @@ h1 .accent { color: var(--gold); }
   color: var(--faint);
   flex: none;
   padding-left: 0.5rem;
+}
+
+/* ---------- the coin card ---------- */
+/* The centerpiece: the medallion presented like the face of a struck
+   coin, inside its own framed card, the way a keepsake sits in a case. */
+
+.coin-card {
+  border: 1px solid var(--gold-line);
+  background:
+    radial-gradient(ellipse at 50% 30%, #14213a 0%, var(--panel) 65%);
+  border-radius: 2px;
+  padding: 1.15rem 1.25rem 1.6rem;
+  margin: 0 0 2.75rem;
+  text-align: center;
+}
+
+.coin-card .corners {
+  display: flex;
+  justify-content: space-between;
+  font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, monospace;
+  font-size: 0.63rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.coin-card .corners .l { color: var(--gold); }
+.coin-card .corners .r { color: var(--faint); }
+
+.coin-card .crest { margin: 1.4rem auto 1.5rem; }
+
+.coin-card .caption {
+  font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, monospace;
+  font-size: 0.66rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0;
 }
