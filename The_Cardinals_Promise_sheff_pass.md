@@ -1401,7 +1401,7 @@ That condo is where I finally stopped running. Years later, when Hope walked thr
 *"For if ye forgive men their trespasses, your heavenly Father will also forgive you."*
 *— Matthew 6:14*
 
-**Ensenada and Pensacola, 2006–2015**
+**Pensacola, 2015**
 
 He never remarried. No second family, no one after my mother.
 
