@@ -552,6 +552,39 @@ one that saves a life.
 
 ---
 
+## Chapter 20 — Healthcare Power of Attorney (DRAFTED)
+
+There is no such thing as too early for a healthcare power of attorney.
+There are, however, many kinds of too late.
+
+A friend of mine learned this with their own mother. Her dementia had
+been progressing for a while — and when the family finally reached for
+the paperwork, the window had closed. A person has to be legally capable
+of understanding what they are signing. She no longer was. Which meant
+she could no longer grant anyone the authority to speak for her — not
+even her own child.
+
+So my friend was excluded from their mother's healthcare decisions. Not
+because the family didn't love her. Not because they didn't know her
+wishes. Because of a signature that never happened while it still could.
+
+There were workarounds. There usually are — hoops, petitions, delays,
+and doors that a single signed page would have opened instantly. They
+got through some of it. But everything was harder, slower, and colder
+than it ever needed to be.
+
+Here is the part I need you to sit with: dementia does not announce the
+last day your parent can still legally sign their name. That day arrives
+quietly, looks like every other day, and passes. You only find out it's
+gone when you need the signature.
+
+So this chapter's advice is the simplest in the book, and the most
+urgent. Get the healthcare power of attorney done now — while "now" is
+still available — and put it in the folder from Chapter 19. Today is
+early. Early is the only time this document can be signed.
+
+---
+
 ## Chapter 21 — Living Will / Advance Directive (OPEN)
 
 Natural thread: this chapter pays off Chapter 5. Lou's wishes lived in
