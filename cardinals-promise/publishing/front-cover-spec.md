@@ -25,10 +25,13 @@ unmistakably, before anything else on the cover resolves.
 
 ## Approved Corrections to the Mock
 
-1. **Dedication comes off the front cover.** "Dedicated to Hope Brizzi,
-   PharmD…" moves to the interior dedication page, where it belongs and
-   will mean more. The front cover keeps three voices: title, subtitle,
-   author.
+1. **Dedication STAYS on the front cover — author's decision.** Keep it
+   exactly as the mock renders it, at the base of the cover:
+   DEDICATED TO
+   Hope Brizzi, PharmD
+   "Thank you for your love, your wisdom, and your unwavering support.
+   Your compassion and expertise helped make this book possible.
+   I love you."
 2. **Credential restored.** The author line becomes:
    ROB BRIZZI, CDP
    Certified Dementia Practitioner
@@ -54,8 +57,15 @@ unmistakably, before anything else on the cover resolves.
 ROB BRIZZI, CDP
 Certified Dementia Practitioner
 
-**Nothing else.** No dedication, no badge, no "Caregiver Hero" tag, no
-endorsement quote. The title owns this cover.
+**Dedication block** (base of cover, exactly as the mock):
+DEDICATED TO
+Hope Brizzi, PharmD
+Thank you for your love, your wisdom, and your unwavering support.
+Your compassion and expertise helped make this book possible.
+I love you.
+
+**Nothing else.** No badge, no "Caregiver Hero" tag, no endorsement
+quote. The title owns this cover.
 
 ## The One-Sentence Brief
 
