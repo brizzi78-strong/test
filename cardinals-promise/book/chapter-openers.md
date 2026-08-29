@@ -21,6 +21,9 @@
   that got them to yes, and what changed after.
 - **Ch. 7** — waiting on the one family: how the money shame showed up, the
   real dollar number, and the rescue move (scaled-down hours, VA, Medicaid).
+- **Ch. 8** — waiting on the husband's scene: where Rob met him, how fast
+  the stroke-to-placement timeline moved, and how his search ended (locator
+  or alone, and how the placement turned out).
 
 ---
 
@@ -243,3 +246,34 @@ later in this book]
 Nobody wants to say out loud that they can't afford to take care of their
 mother. So they say something else. This chapter is about the real cost of
 private duty care — and every way to make it smaller.
+
+---
+
+## Chapter 8 — Assisted Living (OPEN)
+
+Rob's notes: a wife had a stroke and needed placement urgently; her husband
+was unprepared as a caregiver and had to move quickly without much support.
+Children typically get involved only when there is no significant other —
+so married caregivers often carry the search alone. Key insight for the
+chapter body: assisted living locator/broker services. Families who use one
+tend to be more satisfied with the placement. The locator is paid by the
+facility (a percentage of the first month's rent) at no cost to the
+resident, holds contracts with many facilities, and matches far better
+than a self-directed search or a hospital referral list alone.
+
+Planned shape:
+
+[The husband — where Rob met him, what he said or looked like]
+
+One day she was his wife. The next day, a stroke made him her caregiver —
+a job he had never trained for and never expected. [The timeline — how
+fast placement had to happen]
+
+Here's something I saw over and over: when a parent has no spouse, the
+children mobilize. When there is a spouse, everyone assumes he has it
+handled. He didn't have it handled. Almost no one does.
+
+[How his search ended — locator or alone, and what the outcome taught]
+
+There is help almost no family knows about, and it costs them nothing.
+This chapter is about finding the right place — and not doing it alone.
