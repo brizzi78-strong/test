@@ -2,6 +2,6 @@
   "network": "sepolia",
   "deployer": "0xe01e588d3A4Ef5e088B3438C1A518E9C13a7ED2D",
   "token": "",
-  "treasury": "",
+  "treasury": "0xDAE63eBEe60A691e1538D480AE3F6509068ab300",
   "pool": ""
 }
