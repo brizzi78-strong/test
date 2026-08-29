@@ -16,6 +16,11 @@
 - **Ch. 5** — optional: what the missing meeting cost after Christmas Day
   2025 (funeral home, house, bills) — one concrete consequence, if Rob wants
   it in.
+- **Ch. 6** — waiting on the one patient: exact words at the door (pride,
+  the embarrassing house, or "a waste of Medicare dollars"), what Rob said
+  that got them to yes, and what changed after.
+- **Ch. 7** — waiting on the one family: how the money shame showed up, the
+  real dollar number, and the rescue move (scaled-down hours, VA, Medicaid).
 
 ---
 
@@ -190,3 +195,51 @@ every family tells itself. The conversation does not bring the day closer.
 It only decides whether you will be ready when the day comes on its own.
 
 This chapter is the meeting my family never had. Have it.
+
+---
+
+## Chapter 6 — Home Health (OPEN)
+
+Rob's notes: patients generally did NOT view home health as "giving up."
+The real barriers — privacy and embarrassment about the home's condition,
+reluctance to let new people in, pride, and the belief it was a waste of
+Medicare dollars.
+
+Planned shape:
+
+Here's what surprised me most in my home health years: almost nobody
+refused because they thought it meant giving up.
+
+They refused because of the house. Because of the dishes in the sink and
+the laundry on the chair, and the shame of a stranger seeing it. They
+refused out of pride — [the one, at the door, exact words]. Some refused
+on principle: it was a waste of Medicare dollars.
+
+[What Rob said that got them to yes. What changed after.]
+
+The walls that keep help out of a home are almost never medical. They're
+human. This chapter is about what home health actually does — and how to
+get it through the front door.
+
+---
+
+## Chapter 7 — Private Duty Care (OPEN)
+
+Rob's notes: the primary obstacle is cost; the secondary one is the
+reluctance to admit you can't afford it. Less "resistance," more a
+practical and emotional barrier — the money shame hides inside other
+objections ("we're doing fine," "Mom doesn't want a stranger").
+
+Planned shape:
+
+[The one family — how the objection turned out not to be the objection;
+the moment the money truth surfaced]
+
+[The real number — what private duty cost, and what their face did]
+
+[The rescue move — scaled-down hours, VA benefits, Medicaid, the chapters
+later in this book]
+
+Nobody wants to say out loud that they can't afford to take care of their
+mother. So they say something else. This chapter is about the real cost of
+private duty care — and every way to make it smaller.
