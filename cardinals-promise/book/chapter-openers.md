@@ -806,3 +806,56 @@ both plans while everyone is still alive.
 
 [The weeks after — what the family did right, what Rob wishes he'd
 known]
+
+---
+
+## Chapter 28 — What to Expect in the Last Days (DRAFTED)
+
+I have been in the room for the last days more times than I can count.
+And I can tell you what frightens families the most. It is not death.
+It is not knowing.
+
+Nobody tells families what dying looks like. So every change looks like
+an emergency. Every sound seems like suffering. Every hour, someone
+wants to call 911. The fear in the room doesn't come from what is
+happening — it comes from not knowing that what is happening is normal.
+
+So let me tell you what I know, so that you can walk in prepared.
+
+They will sleep more. Then more than that. Eating and drinking will
+fade — and this is where families struggle hardest, because food is how
+we love people. You will want to coax one more bite. Hear me: near the
+end, the body is finished with food. It is not starving; it is shutting
+down the systems it no longer needs. Forcing food and fluids doesn't
+add days. It adds discomfort.
+
+The breathing will change. It may speed up, slow down, pause long
+enough to stop your own heart, then start again. Near the end it may
+rattle. I need you to know: it sounds far worse than it feels. That
+sound is harder on the people hearing it than the person breathing it.
+Comfort medications exist for exactly this, and the care team knows how
+to use them.
+
+There may be restlessness. And there may be visions — reaching for
+things you cannot see, conversations with people who died years ago. I
+have stopped trying to explain this. I only know that it happens, that
+it is common, and that the dying are usually not frightened by it. More
+often, they seem comforted. You already know what to do, because it's
+the same thing I taught you in the dementia chapter: don't argue with
+their reality. Join it.
+
+Then there is the rally. One day — often near the very end — they may
+wake up clear. Alert, talking, maybe hungry, asking for people.
+Families take it as a turnaround. I have watched it break hearts twice
+for that reason. The rally is real, but it is usually not a recovery.
+It is a gift. Treat it like one: gather, say everything, laugh if
+there's laughing to do. It is often the last good day, arriving on
+purpose.
+
+And through all of it — this most of all — **keep talking to them.**
+Hearing stays long after responding stops. The person in that bed can
+very likely still hear you. Say the things. None of it is wasted.
+
+Knowing all of this will not make the last days easy. But it changes
+what you carry into the room. Instead of fear, you can bring presence.
+That is what this chapter is for.
