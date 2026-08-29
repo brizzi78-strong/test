@@ -12,7 +12,7 @@ and don't announce anything until every box in sections 1–6 is checked.
 - [ ] Deployer wallet is a fresh address with no unrelated history
 - [ ] Treasury wallet created (separate address; ideally a Safe multisig) and its purpose
       written down for the announcement
-- [ ] Enough ETH in the deployer wallet: 2–5 ETH for liquidity **plus** ~0.05–0.15 ETH
+- [ ] Enough ETH in the deployer wallet: ~1.6 ETH (about $4,000) for liquidity **plus** ~0.05–0.15 ETH
       buffer for gas across all steps, plus the LP locker's fee. As of Jul 2026
       (re-check before launch): Team Finance = $150 flat in ETH + gas, keeps 100% of
       LP locked; UNCX = 0.1 ETH flat **+ 1% of the LP tokens** (so the lock shows 99%,
@@ -52,9 +52,9 @@ and don't announce anything until every box in sections 1–6 is checked.
 
 ## 4. Create the Uniswap pool
 
-- [ ] Create the pool with 400,000,000 CARD + your chosen ETH amount (2–5 ETH)
+- [ ] Create the pool with 400,000,000 CARD + about $4,000 of ETH (≈1.6 ETH — recompute from that day's ETH price)
 - [ ] Double-check both amounts **before** confirming — the ratio sets the launch price
-      and cannot be un-set (e.g. 3 ETH ÷ 400M = 0.0000000075 ETH/CARD starting price)
+      and cannot be un-set (e.g. 1.6 ETH ÷ 400M = 0.000000004 ETH/CARD starting price)
 - [ ] Record: pool/pair address, LP token balance received
 - [ ] Do one tiny test swap (~0.01 ETH) from a different wallet to confirm trading works
       both directions

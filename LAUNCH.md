@@ -5,7 +5,7 @@
 | Decision | Value |
 | --- | --- |
 | Supply | Mint all 1B at deploy, `renounceOwnership()` immediately after verification |
-| Uniswap pool | 400M CARD (40%) paired with 2–5 ETH |
+| Uniswap pool | 400M CARD (40%) paired with ~$4,000 of ETH (≈1.6 ETH) |
 | Founder hold | 400M CARD (40%), unlocked, in a publicly disclosed wallet |
 | Treasury | 200M CARD (20%) in a publicly announced wallet |
 | LP tokens | Locked 12 months (Team Finance or UNCX) |
