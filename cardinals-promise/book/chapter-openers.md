@@ -31,6 +31,9 @@
   palliative (exact words, and whether the thinner support surprised them
   later) — and whether Lou passed through palliative care between
   immunotherapy and the end.
+- **Ch. 12** — decide whether to name Rob's stepmom, and get her blessing
+  for the nurse / morphine-drip detail before publication — it's her story
+  too.
 
 ---
 
@@ -391,3 +394,54 @@ immunotherapy and hospice]
 This chapter is about what palliative care actually delivers, who
 qualifies, and how to stack it with home health so the support matches
 what your family is picturing.
+
+---
+
+## Chapter 12 — Hospice (DRAFTED)
+
+People ask me when hospice stopped being a job and became a calling. The
+honest answer is that it was never just a job. The calling came early —
+before I ever lost someone of my own.
+
+I got sober on January 9, 2009. Part of staying sober is helping other
+people get sober. And part of sponsoring people is losing some of them.
+
+They were young. People with most of their life still owed to them. I sat
+with their families afterward, and there is no clean word for what that
+was. Nobody is prepared to bury someone in their twenties.
+
+That is where I learned to sit with people in pain and not run. And it is
+why, when I found hospice, I saw it differently than most people do.
+
+The young deaths showed me what a robbed life looks like. A hospice
+patient's life is not that. Most have lived full lives — work, marriages,
+grandchildren around a table. Hospice takes nothing from them. It gives:
+comfort instead of pain. Dignity instead of machines. Presence instead of
+fear. When I tell a family that choosing hospice is a gift, I am not
+softening anything. I have seen the alternative, and it is not a longer
+life. It is a harder death.
+
+Then came Christmas Day, 2025. My dad.
+
+His wife is a nurse, and at the end, his comfort was real — a morphine
+drip, managed with skill and love. He did not suffer his way out of this
+world. That is what hospice care is supposed to look like, and my own
+father received it.
+
+Something changed in me after that. Not the calling — that was already
+there. What changed is that now, when I sit with a family, I am not
+speaking from training. I have lived the same pain they are living. I
+know that at the end, many of the decisions fall to the family, because
+the patient often no longer can make them — and I know exactly how heavy
+that is, because I have carried it.
+
+People sometimes measure this work in numbers — patients served, families
+reached. That has never been what drives me. What drives me is what
+hospice gives the *whole* family: the pain managed, the fear named, the
+room made peaceful enough for love to do its work.
+
+Hospice is not giving up. It is the most active form of love available.
+It says: *I will not let you be in pain. I will not let you die alone. I
+will show up every day until the last one.*
+
+This chapter shows you how to accept that gift.
