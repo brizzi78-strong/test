@@ -13,9 +13,9 @@
   Rob wants it in.
 - **Ch. 4** — waiting on the story: is the caregiver Rob's mom (caring for
   Nana)? Where was he when he asked "How are you doing?", and what did she say?
-- **Ch. 5** — optional: what the missing meeting cost after Christmas Day
-  2025 (funeral home, house, bills) — one concrete consequence, if Rob wants
-  it in.
+- **Ch. 5** — ANSWERED: the concrete cost was the funeral's financial
+  plan — stepmom knew Lou's wishes, but there was no plan for how the
+  funeral would be paid for. Weave into ch. 5 and ch. 29.
 - **Ch. 6** — waiting on the one patient: exact words at the door (pride,
   the embarrassing house, or "a waste of Medicare dollars"), what Rob said
   that got them to yes, and what changed after.
@@ -54,8 +54,7 @@
   to…"): where the guilt went and what brought Rob back. Confirm brothers'
   names: John, Joel, Chris (dictation was choppy).
 - **Ch. 29** — waiting on Christmas Day: who called Rob, and the hours
-  after. Then the funeral home, the funeral week, the decisions that came
-  due.
+  after. Then the funeral home and funeral week specifics.
 - **Chs. 12/24/27/28 — reconcile the last-days timeline.** Ch. 12 has the
   morphine drip and real comfort; Ch. 24 has "tubes down his throat" as
   the memory Rob didn't want. Both can be true in sequence, but Rob needs
@@ -751,3 +750,29 @@ know you did what could be done — and the rest was never yours to carry.
 
 It's not your fault. I titled this book that because I needed the
 sentence too.
+
+---
+
+## Chapter 29 — After Death (OPEN)
+
+Rob's teaching, from his own family: **there are two plans, and most
+families have at most one of them.** His stepmom had the first — she
+knew Lou's wishes, what he wanted, that he wanted to be buried. What no
+one had was the second: the financial plan. How the funeral would be
+paid for. So the money questions surfaced during funeral week, at the
+worst possible time, pulling the family away from grieving.
+
+Planned shape:
+
+[Christmas Day — who called Rob, where he was, the hours after]
+
+[The funeral home, the first days of practical tasks]
+
+There are two plans. The wishes plan: what he wanted, where, how. My
+stepmom had that one. And the financial plan: what it costs and where
+that money comes from. Nobody had that one. Grief and a checkbook do
+not belong in the same week — the way you keep them apart is by making
+both plans while everyone is still alive.
+
+[The weeks after — what the family did right, what Rob wishes he'd
+known]
