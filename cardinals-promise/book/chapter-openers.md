@@ -50,8 +50,9 @@
 - **Ch. 21** — optional upgrades: the real bedside disagreement (who,
   and which question — CPR, ventilator, feeding tube), a family that HAD
   the directive for contrast, and whether Lou put anything in writing.
-- **Ch. 27** — finish the cut-off thought ("it really set out to get me
-  to…"): where the guilt went and what brought Rob back. Confirm brothers'
+- **Ch. 27** — ANSWERED: the guilt came from family backlash, not from
+  within; drafted unattributed (no names, no details). Rob to confirm
+  that level of candor is right for family peace. Confirm brothers'
   names: John, Joel, Chris (dictation was choppy).
 - **Ch. 29** — waiting on Christmas Day: who called Rob, and the hours
   after. Then the funeral home and funeral week specifics.
@@ -732,8 +733,28 @@ honor Mom's last visit, then go to him.
 
 I didn't time it right.
 
-He died on Christmas Day, and I was not in the room. And for a long time
-afterward, that fact set out to get me.
+My brother had been calling. So had my stepmom. But what I heard in
+those calls was that she was held — my brothers and sister were in
+town, and the support around my dad's bed was strong. My being there
+was not what that room was missing.
+
+He died on Christmas Day, and I was not in the room.
+
+Now here is the part I need to be honest about, because it is the
+reason this book has the title it has. At first, I did not feel guilty.
+I had made a real choice between two parents who needed me. I had said
+everything to my father long before that week. He was surrounded by
+people who loved him. I was at peace.
+
+The guilt came later — and it came from the outside. When the backlash
+from the family started, that is when *you should have been there* got
+into my head. That is when it set out to get me.
+
+I want to say something to whoever needs it: sometimes "it's your
+fault" is not even your own sentence. Someone hands it to you —
+grieving, angry, in the worst week of their lives — and you carry it as
+if it were yours. You are allowed to put it down. Grief makes
+scorekeepers out of loving people; the score was never real.
 
 I do this work for a living. I have stood in hospital hallways with a
 hundred families and told them the truth about last days — that they
