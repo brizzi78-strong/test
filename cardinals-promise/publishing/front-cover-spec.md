@@ -1,21 +1,28 @@
-# The Cardinal's Toolkit — Front Cover Spec
+# It's Not Your Fault — Front Cover Spec
 
 > Prepared by Rob Brizzi, July 2026, for cover designer.
-> This is the source of truth for the front cover. Copy below is FINAL —
-> reproduce it exactly, including line breaks where specified.
+> TITLE REVISED August 2026 — the title block below supersedes the July
+> version (kept at the end for reference). Badge, author line, and art
+> direction are unchanged. Reproduce copy exactly, including line breaks
+> where specified.
 
-## Cover Copy (FINAL)
+## Cover Copy (REVISED August 2026)
 
-**Series line** (optional, small, top of cover):
-A Cardinal's Promise Companion
+**Title treatment** (two lines, the crossed-out-and-corrected device):
+Line 1, handwritten script, struck through: It's my fault.
+Line 2, the title proper, strong type, written in as the correction:
+IT'S NOT YOUR FAULT
 
-**Title:**
-The Cardinal's Toolkit
+The crossed-out line is the reader's inner voice; the title is the book
+answering it. The strikethrough must read as a correction, not a design
+flourish — like someone took a pen to the thought itself.
 
-**Subtitle** (break into three lines, in this order):
-A Practical Guide for Families Caring for Someone They Love —
-the Decisions, the Hard Days,
-and the Words No One Teaches You
+**Series line** (small, above or below the title block):
+A Cardinal's Toolkit Guide
+
+**Subtitle:**
+Every decision you'll make for an aging parent —
+and the words no one teaches you
 
 **Badge** (keep existing gold and crimson seal, keep exact wording):
 You Are Not Alone.
@@ -71,5 +78,20 @@ or flannel. The tenderness comes from posture and proximity, not expressions.
 If the designer needs the whole thing in one line:
 
 > An exhausted daughter sits with her aging dad in the last good light of
-> the day, and a cardinal watches from the branch — she doesn't have the
-> words yet, but this book does.
+> the day, and a cardinal watches from the branch — she's been telling
+> herself it's her fault, and this cover crosses that out.
+
+## Superseded — July 2026 Cover Copy (for reference only)
+
+**Series line:** A Cardinal's Promise Companion
+
+**Title:** The Cardinal's Toolkit
+
+**Subtitle** (three lines, in this order):
+A Practical Guide for Families Caring for Someone They Love —
+the Decisions, the Hard Days,
+and the Words No One Teaches You
+
+Copy notes that traveled with it: keep the leading "A" in the subtitle;
+"and the Words No One Teaches You" sits on its own line so it lands last —
+that principle carries into the revised subtitle above.
