@@ -277,3 +277,46 @@ handled. He didn't have it handled. Almost no one does.
 
 There is help almost no family knows about, and it costs them nothing.
 This chapter is about finding the right place — and not doing it alone.
+
+---
+
+## Chapter 9 — Memory Care (DRAFTED)
+
+Families walk into a memory care unit braced for the locked doors. Let me
+tell you what I found behind them.
+
+On one unit, the staff had painted a mural on the wall: a bus and train
+station.
+
+Every day, someone would head for the door. *"I gotta go home." "I'm not
+supposed to be here."* Those may be the most common words spoken in memory
+care, and some of the most heartbreaking. Everything in an untrained person
+wants to answer them with the truth — *you live here now* — and that
+answer only turns fear into a fight.
+
+The staff never argued. They invited.
+
+"Why don't you sit and wait for the train with me?"
+
+And the resident would sit. On a real bench, at a painted station, waiting
+for a train. When the worry settled, the redirect came, gentle as
+anything: "Train must be running late. Let's go get something to eat while
+we wait."
+
+By the time the meal was done, the urge to leave had passed the same way
+it arrived — as a fleeting thought.
+
+Some people hear that and call it a trick. It is not a trick. It is
+meeting a person inside their reality instead of dragging them out of it.
+Nobody was corrected. Nobody was restrained. Nobody lost an argument about
+where home is. My Nana taught me you will never win an argument with
+dementia. That painted station is what winning looks like instead.
+
+The other thing I watched work behind those doors was music. Play a song
+from a resident's younger years — the music of their formative decades —
+and someone deep into dementia would recognize it and sing the lyrics.
+Every word. The disease takes so much, but it takes the music last.
+
+This is what this chapter is about: what memory care actually is, how to
+know a good unit from a warehouse, and what to look for when you tour one.
+Hint — look at the walls.
