@@ -24,6 +24,9 @@
 - **Ch. 8** — waiting on the husband's scene: where Rob met him, how fast
   the stroke-to-placement timeline moved, and how his search ended (locator
   or alone, and how the placement turned out).
+- **Ch. 10** — confirm "Marion and Frank" are pseudonyms, or get the
+  family's okay / change the names before publication. Story is ongoing —
+  update the ending as Frank's recovery unfolds.
 
 ---
 
@@ -320,3 +323,34 @@ Every word. The disease takes so much, but it takes the music last.
 This is what this chapter is about: what memory care actually is, how to
 know a good unit from a warehouse, and what to look for when you tour one.
 Hint — look at the walls.
+
+---
+
+## Chapter 10 — Skilled Nursing and Rehab (DRAFTED)
+
+Marion and Frank are family friends. Frank fell and broke his hip, and he
+was admitted to Gulf Breeze Hospital. His daughter stepped in as his
+primary caregiver — and the family called me with one question: *where
+should he go for rehab?*
+
+I gave them my recommendation. That part took five minutes.
+
+Here is what I carried into that call that they didn't: a broken hip after
+seventy-five is one of the hardest recoveries in all of elder care. A
+significant number of people who go into rehab for a hip never make it
+back to the life they had before. Many will need a higher level of care
+when rehab ends.
+
+I didn't lead with that. Because here is the other thing I know, just as
+true: recovery varies person to person, and nobody's outcome is written in
+advance. You give rehab everything — full effort, full attention, full
+fight — before you ever assume the next level of care is coming.
+
+So that's what I told them, and it's what I'm telling you. Hold both.
+Cheer the recovery like it's going to work, and quietly start learning
+what comes next in case it doesn't. That is not pessimism. That is what
+showing up prepared looks like — and it's the hardest skill in this
+entire book.
+
+Frank is fighting. I check in on the family, and this chapter is
+everything I want them — and you — to know while he does.
