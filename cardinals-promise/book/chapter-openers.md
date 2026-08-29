@@ -27,6 +27,10 @@
 - **Ch. 10** — confirm "Marion and Frank" are pseudonyms, or get the
   family's okay / change the names before publication. Story is ongoing —
   update the ending as Frank's recovery unfolds.
+- **Ch. 11** — waiting on the one family that fled the word "hospice" into
+  palliative (exact words, and whether the thinner support surprised them
+  later) — and whether Lou passed through palliative care between
+  immunotherapy and the end.
 
 ---
 
@@ -354,3 +358,36 @@ entire book.
 
 Frank is fighting. I check in on the family, and this chapter is
 everything I want them — and you — to know while he does.
+
+---
+
+## Chapter 11 — Palliative Care (OPEN)
+
+Rob's notes: palliative care is often chosen when patients or families
+resist the word "hospice." Its qualification guidelines are less
+stringent, so patients not yet hospice-eligible can get it — but it
+involves significantly less care than hospice, and families are commonly
+confused about how much involvement to expect. Key advantage to
+highlight: palliative care and home health can run at the same time.
+
+Planned shape:
+
+[The family that fled the word — where Rob was, their exact words
+("we're not ready for hospice"), and the choice of palliative instead]
+
+[The second surprise — how little care showed up; the call asking "when
+is someone coming?"]
+
+Palliative care is a good and real thing. But many families choose it for
+what it is not — it is not called hospice — and then are caught off guard
+by what it also is not: it is not the level of care hospice brings.
+
+[The concurrent-care teaching: palliative and home health can run at the
+same time — the advantage almost nobody tells families about]
+
+[Possible Lou thread: whether Dad passed through palliative care between
+immunotherapy and hospice]
+
+This chapter is about what palliative care actually delivers, who
+qualifies, and how to stack it with home health so the support matches
+what your family is picturing.
