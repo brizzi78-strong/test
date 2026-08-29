@@ -12,7 +12,7 @@ token scanners, screeners, and skeptical buyers have nothing to flag.
 | Into the Uniswap pool | **400M CARD (40%)** | The tradeable float. Halving it from the original 200M doubles the launch price but does not deepen the book — see the slippage table in `docs/GOVERNANCE_AND_FOUNDER_ECONOMICS.md` |
 | Founder-held | **400M (40%), unlocked, in a disclosed wallet** | Decision taken: no timelock. This is the weakest point in the design and it is deliberate. Mitigation is disclosure plus a written sell policy, not code — see `docs/GOVERNANCE_AND_FOUNDER_ECONOMICS.md` |
 | Treasury | 200M (20%) behind a Safe multisig, publicly announced | Any more looks extractive; label it, and require more than one signature to move it |
-| ETH into the pool | **2–5 ETH** to start | Enough that a few-hundred-dollar buy doesn't spike the price ~20%; small enough not to risk savings on an experiment |
+| ETH into the pool | **~$4,000 of ETH** (≈1.6 ETH; decision taken — exact ETH amount set at launch-day prices) | Enough that a few-hundred-dollar buy doesn't spike the price ~20%; small enough not to risk savings on an experiment |
 | LP tokens | **Lock for 12 months** (Team Finance or UNCX) | The pool being yankable is the #1 thing token scanners and buyers check |
 
 ## Token Parameters
@@ -36,10 +36,10 @@ Order matters — several of these steps are only trustworthy if done in the rig
    hostile by default.
 3. **Transfer 200M to the treasury wallet.** Do this *before* renouncing and *before* the pool
    exists, so the transfer is visibly a setup step rather than a post-launch extraction.
-4. **Create the Uniswap V2 pool** with 400M CARD + 2–5 ETH, via `addLiquidityETH` on the
+4. **Create the Uniswap V2 pool** with 400M CARD + about $4,000 of ETH (≈1.6 ETH at current prices), via `addLiquidityETH` on the
    router (`scripts/add-liquidity.ts`). This is not a swap — you are depositing both sides
    and thereby *setting* the opening price, not paying one. The CARD/ETH ratio is the price:
-   with 400M in the pool, 3 ETH implies 0.0000000075 ETH/CARD. Check the ratio twice; it is the
+   with 400M in the pool, 1.6 ETH implies 0.000000004 ETH/CARD. Check the ratio twice; it is the
    one number here that cannot be undone without trading against your own pool.
 5. **Lock the LP tokens for 12 months** via Team Finance or UNCX. Save the lock URL — it's
    the first link to publish.
@@ -75,7 +75,7 @@ The 20% held back is the only part of this setup that requires ongoing trust, so
 
 - **Renouncing is irreversible.** No parameter can ever be changed, no bug patched, no
   migration forced. Acceptable for a simple fixed-supply ERC-20; it's the point.
-- **2–5 ETH is thin liquidity.** Early trades will still move price noticeably; that's the
+- **~$4,000 is thin liquidity.** Early trades will still move price noticeably; that's the
   accepted cost of keeping personal risk small. Liquidity can be deepened later from the
   treasury (announce it when doing so).
 - **12-month lock, not burned LP.** Locking preserves the option to migrate/re-pool after a
