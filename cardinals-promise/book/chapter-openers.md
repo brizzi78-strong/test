@@ -765,6 +765,14 @@ grieving, angry, in the worst week of their lives — and you carry it as
 if it were yours. You are allowed to put it down. Grief makes
 scorekeepers out of loving people; the score was never real.
 
+And I owe you the rest of the truth, because you've been honest enough
+to read this far. It is still painful for me to talk about what
+happened. To this day. It still hurts, and there are things I would
+have done differently — I live with both. I am not writing to you from
+the other side of healed. I am writing from inside the healing, and
+there is more of this story that I will be able to tell as I get
+further along. When I can, I will.
+
 I do this work for a living. I have stood in hospital hallways with a
 hundred families and told them the truth about last days — that they
 cannot be scheduled, that the timing belongs to no one. And when it was
@@ -778,8 +786,10 @@ in the room, and what you will do when it happens faster than anyone
 believed. Not so the plan goes perfectly. So that whatever happens, you
 know you did what could be done — and the rest was never yours to carry.
 
-It's not your fault. I titled this book that because I needed the
-sentence too.
+So when I say it's not your fault, understand what you're hearing. Not
+a slogan. Not a professional's comfort, handed down from somewhere
+above the pain. It is the sentence I am still learning to believe about
+myself — and I put it on the cover so we would both have to look at it.
 
 ---
 
