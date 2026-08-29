@@ -1,38 +1,60 @@
 # It's Not Your Fault — Front Cover Spec
 
 > Prepared by Rob Brizzi, July 2026, for cover designer.
-> TITLE REVISED August 2026 — the title block below supersedes the July
-> version (kept at the end for reference). Badge, author line, and art
-> direction are unchanged. Reproduce copy exactly, including line breaks
-> where specified.
+> REVISED August 2026 against the approved white/minimal mock (typography-
+> first, cream ground, cardinal as herald — per the cover direction
+> report). The mock is the current direction; the notes below are the
+> corrections it still needs. Earlier title blocks are kept at the end
+> for reference.
 
-## Cover Copy (REVISED August 2026)
+## Current Direction (August 2026 mock)
 
-**Title treatment** (two lines, the crossed-out-and-corrected device):
-Line 1, handwritten script, struck through: It's my fault.
-Line 2, the title proper, strong type, written in as the correction:
-IT'S NOT YOUR FAULT
+- Cardinal on a berried branch, top center, red on cream. Keep.
+- Title: **IT'S [NOT] YOUR FAULT** — "NOT" written in by hand in red,
+  serif type for the rest, navy. Keep the device.
+- Subtitle: **For Families Caring for an Aging Parent** — adopted.
+- Author: ROB BRIZZI.
+- Thin double rule border, diamond dividers. Keep.
 
-The crossed-out line is the reader's inner voice; the title is the book
-answering it. The strikethrough must read as a correction, not a design
-flourish — like someone took a pen to the thought itself.
+## CRITICAL FIX — the NOT must read as written IN, never crossed OUT
 
-**Series line** (small, above or below the title block):
+The brush strokes over "NOT" cannot form an X or strikethrough. At
+thumbnail size a struck-through NOT makes the cover read "IT'S YOUR
+FAULT" — the one catastrophic misread this design cannot survive, aimed
+at a guilt-ridden buyer. Render NOT as an insertion: bold red scrawl,
+underline, or caret — no crossing strokes. Squint test at 100px: it must
+say NOT, unmistakably.
+
+## Corrections to the mock
+
+1. **Move the dedication to Hope Brizzi, PharmD off the front cover** —
+   it belongs on the interior dedication page, where it will mean more.
+   Front cover stays three voices (title, subtitle, author). No clutter.
+2. **Restore the credential** (buyer research: the validator wants it):
+   ROB BRIZZI, CDP
+   Certified Dementia Practitioner
+3. **Badge decision pending** — "You Are Not Alone. / You Are the
+   Difference." (gold and crimson seal) is absent from the mock. The new
+   title arguably carries the message. Rob to confirm: restore or retire.
+
+## Cover Copy (FINAL, per mock + corrections)
+
+**Title:** IT'S NOT YOUR FAULT — "NOT" hand-scrawled in red, written in
+as an insertion (see critical fix above).
+
+**Subtitle:** For Families Caring for an Aging Parent
+
+**Series line** (optional, small — carries the brand):
 A Cardinal's Toolkit Guide
-
-**Subtitle:**
-Every decision you'll make for an aging parent —
-and the words no one teaches you
-
-**Badge** (keep existing gold and crimson seal, keep exact wording):
-You Are Not Alone.
-You Are the Difference.
 
 **Author line:**
 ROB BRIZZI, CDP
 Certified Dementia Practitioner
 
-**Remove:** the "Caregiver Hero" script tag. The badge carries that message now.
+**Badge:** pending Rob's restore-or-retire decision (see above).
+
+**Off the front cover:** the dedication (interior page), and the old
+"Caregiver Hero" script tag.
 
 ## Copy Notes
 
