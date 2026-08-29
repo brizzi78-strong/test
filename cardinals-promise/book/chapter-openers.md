@@ -47,6 +47,10 @@
 - **Structural idea** — Rob's "neutral advisor" theme (someone doing the
   legwork who isn't selling a plan) could open the money section
   (chs. 13-18) as a part intro.
+- **Ch. 19** — optional: a real double-dose catch (who noticed the same
+  drug twice, and how) to replace the mechanism walk-through's generic
+  patient. Also finish the cut-off note: "other medications (" — presumably
+  "have no monitoring program."
 
 ---
 
@@ -507,3 +511,75 @@ what comes in each month. Answer that, send it in, and let them say no.
 Most families never apply. The money goes unclaimed — millions of
 dollars of it, every year, left on tables by people who assumed. This
 chapter is about not being one of them.
+
+---
+
+## Chapter 19 — The Important Documents Folder (DRAFTED)
+
+Let me show you how a person ends up on a double dose of blood thinner.
+
+The cardiologist prescribes it by its brand name. The primary care
+doctor — different office, different network, computer systems that do
+not talk to each other — prescribes the same drug as a generic. Two
+different names. Two different bottles. The same drug inside both.
+
+The patient fills both prescriptions, because a doctor ordered each one.
+Takes both, because they're on the med list. And nobody catches it —
+because the two doctors have never spoken, and the only person who ever
+sees every bottle in the house is the family.
+
+For narcotics, there's a safety net: prescription monitoring programs
+flag the overlap. For almost everything else — including drugs where a
+double dose can put someone in the hospital — the net is you.
+
+That is what the Important Documents Folder is. It is the net.
+
+One folder, one master list, shared by every family member involved in
+the care: the insurance and Medicare cards, the Social Security card,
+the VA card if there is one. The doctors and how to reach them. Every
+diagnosis. And the medication list — kept current, updated the day
+anything changes, with two things most families never write down:
+*which doctor prescribes each medication*, and *both its brand and
+generic names, side by side*.
+
+Doctors in different systems don't communicate. That sentence should be
+printed on the front of the folder, because it is the reason the folder
+exists. You are the only one who sees the whole picture. This chapter
+makes sure the whole picture is on paper.
+
+It may be the least dramatic chapter in this book. It may also be the
+one that saves a life.
+
+---
+
+## Chapter 21 — Living Will / Advance Directive (OPEN)
+
+Natural thread: this chapter pays off Chapter 5. Lou's wishes lived in
+one person's memory — things he'd told Rob's stepmom, never written
+down. A living will is the difference between a family that knows and a
+family that argues at the bedside about "what Dad would have wanted."
+
+Planned shape:
+
+[The bedside argument Rob has witnessed — a family debating what Mom
+would want, with nothing in writing; versus a family that had the
+directive, and what that spared them]
+
+In Chapter 5, I told you my family never had the meeting. This is what
+the meeting produces: a piece of paper that answers the question every
+family gets asked in the worst hour of their lives — "what would they
+want?" — before anyone has to guess.
+
+[What Lou had and didn't have in writing, and what that meant]
+
+A living will is not about death. It is a love letter with legal weight:
+it takes the hardest decisions a family will ever face and makes them
+*his* decisions, ahead of time, so nobody has to carry them alone.
+
+Questions for Rob:
+- The bedside disagreement you've witnessed — who was arguing, and what
+  was the question nobody could answer (CPR? the ventilator? a feeding
+  tube?)
+- A family that HAD the directive — what did the room feel like instead?
+- Did Lou ever put anything in writing? What did the family lean on in
+  the last days?
