@@ -34,6 +34,19 @@
 - **Ch. 12** — decide whether to name Rob's stepmom, and get her blessing
   for the nurse / morphine-drip detail before publication — it's her story
   too.
+- **Ch. 13** — waiting on the Medicare story: an Advantage-plan lockout, or
+  a family steered to straight Medicare + secondary just in time.
+- **Ch. 14** — waiting on the Medicaid story: the family who thought it was
+  for "other people" until it saved them.
+- **Ch. 15** — waiting on the private-pay story: the family who didn't
+  budget in advance, and what running out looked like.
+- **Ch. 16** — waiting on the LTC insurance story: a policy finally used,
+  or one that couldn't be found when it mattered.
+- **Ch. 18** — waiting on the VA story: the veteran or widow blindsided by
+  earned benefits nobody walked them through.
+- **Structural idea** — Rob's "neutral advisor" theme (someone doing the
+  legwork who isn't selling a plan) could open the money section
+  (chs. 13-18) as a part intro.
 
 ---
 
@@ -445,3 +458,52 @@ It says: *I will not let you be in pain. I will not let you die alone. I
 will show up every day until the last one.*
 
 This chapter shows you how to accept that gift.
+
+---
+
+## Chapters 13-18 — The Money Section (notes)
+
+Rob's teachings for the section (candidate part-intro theme: the neutral
+advisor — someone who does the legwork families can't or don't know to
+do, and who isn't selling a plan; uncovers money and benefits that would
+otherwise go unclaimed across Medicare, Medicaid, private pay, LTC
+insurance, VA benefits, and prescription assistance):
+
+- **Medicare (Ch. 13):** straight Medicare + secondary insurance (or
+  Medicaid) is the best combination — flexibility with coverage.
+  Advantage plans can be self-serving recommendations; consult a neutral
+  party, not just insurers pushing specific plans.
+- **Medicaid (Ch. 14):** part of the best-combination pairing above;
+  story pending.
+- **Private pay (Ch. 15):** difficult if not budgeted for in advance;
+  story pending.
+- **LTC insurance (Ch. 16):** story pending.
+- **VA benefits (Ch. 18):** families are often blindsided by uncovered
+  benefits they were eligible for; VA staff are frequently overwhelmed
+  and can't walk families through everything. Gather qualifying
+  information proactively, before benefits are needed.
+
+---
+
+## Chapter 17 — Prescription Assistance (DRAFTED)
+
+I want to tell you about a patient who lived in a million-dollar home —
+because the family almost didn't fill out the paperwork.
+
+Why would they? Look at the house. Nobody in a home like that qualifies
+for assistance. Everyone knows that.
+
+Everyone is wrong. Prescription assistance is based on *income*, not net
+worth. Nobody counts the house. What counted was what came in each
+month — Social Security and investment income — and that number fell
+below the threshold. The patient qualified.
+
+So here is the rule, and it applies to almost every program in this part
+of the book: **always fill out the paperwork.** Do not decide for the
+program whether you qualify. Do not let the house, the boat, or your
+pride answer a question the application never asks. The application asks
+what comes in each month. Answer that, send it in, and let them say no.
+
+Most families never apply. The money goes unclaimed — millions of
+dollars of it, every year, left on tables by people who assumed. This
+chapter is about not being one of them.
