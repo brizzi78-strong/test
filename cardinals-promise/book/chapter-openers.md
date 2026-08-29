@@ -47,6 +47,9 @@
 - **Structural idea** — Rob's "neutral advisor" theme (someone doing the
   legwork who isn't selling a plan) could open the money section
   (chs. 13-18) as a part intro.
+- **Ch. 21** — optional upgrades: the real bedside disagreement (who,
+  and which question — CPR, ventilator, feeding tube), a family that HAD
+  the directive for contrast, and whether Lou put anything in writing.
 - **Ch. 19** — optional: a real double-dose catch (who noticed the same
   drug twice, and how) to replace the mechanism walk-through's generic
   patient. Also finish the cut-off note: "other medications (" — presumably
@@ -585,34 +588,66 @@ early. Early is the only time this document can be signed.
 
 ---
 
-## Chapter 21 — Living Will / Advance Directive (OPEN)
+## Chapter 21 — Living Will / Advance Directive (DRAFTED)
 
-Natural thread: this chapter pays off Chapter 5. Lou's wishes lived in
-one person's memory — things he'd told Rob's stepmom, never written
-down. A living will is the difference between a family that knows and a
-family that argues at the bedside about "what Dad would have wanted."
+Picture the hallway outside a hospital room. On one side, a spouse. On
+the other, the grown children. One of them is saying *keep treating*.
+The other is saying *let them rest.*
 
-Planned shape:
+I have seen this fight, and I want you to understand something about it:
+both sides love the same person. Both sides believe they are defending
+that person's wishes. And both sides are guessing — because nothing was
+ever written down.
 
-[The bedside argument Rob has witnessed — a family debating what Mom
-would want, with nothing in writing; versus a family that had the
-directive, and what that spared them]
+Spouse versus children is the most common version, and it is the
+cruelest, because it sets the two halves of a family against each other
+at the exact moment they need each other most. A living will ends that
+fight before it starts. It replaces guessing with knowing. The question
+stops being *what do we think they'd want* — with everyone's grief and
+fear and history piled onto the answer — and becomes *what did they
+say.* On paper. In their words.
 
-In Chapter 5, I told you my family never had the meeting. This is what
-the meeting produces: a piece of paper that answers the question every
-family gets asked in the worst hour of their lives — "what would they
-want?" — before anyone has to guess.
+In Chapter 5, I told you my family never had the meeting. A living will
+is what the meeting writes down: CPR or not, machines or not, where the
+line is between fighting for life and holding on to it too hard.
 
-[What Lou had and didn't have in writing, and what that meant]
+And one more thing, because it matters just as much as the writing: the
+document has to be *findable*. A DNR that exists in a drawer nobody can
+locate does not exist. If the paper cannot be produced, the default is
+full intervention — everything done, including the things your person
+said they never wanted. We'll cover where these orders must physically
+live in Chapter 23. For now: write it down, and make sure the right
+people can put their hands on it in under a minute.
 
-A living will is not about death. It is a love letter with legal weight:
-it takes the hardest decisions a family will ever face and makes them
-*his* decisions, ahead of time, so nobody has to carry them alone.
+---
 
-Questions for Rob:
-- The bedside disagreement you've witnessed — who was arguing, and what
-  was the question nobody could answer (CPR? the ventilator? a feeding
-  tube?)
-- A family that HAD the directive — what did the room feel like instead?
-- Did Lou ever put anything in writing? What did the family lean on in
-  the last days?
+## Chapter 22 — Financial Power of Attorney (DRAFTED)
+
+Everything in a care crisis costs money, and here is what most families
+learn too late: when no one has the legal authority to move that money,
+everything stops.
+
+The rent at the assisted living community. The insurance premium that
+keeps coverage alive. The bills that keep the lights on in a house
+nobody's living in right now. Without a financial power of attorney —
+or with the wrong person named — the family can't act, and the state
+steps in. Courts, guardianship proceedings, oversight. Strangers, added
+to your family's worst month. And while all of that grinds forward, the
+payments wait, the coverage waits, the placement waits. The person at
+the center of it all waits.
+
+The urgency is identical to the healthcare POA in Chapter 20, and so is
+the window: it closes when capacity does, quietly, without notice.
+
+So here is what I want you to do, and I mean this as literally as
+anything in this book. Get all three documents done together — the
+living will, the healthcare power of attorney, the financial power of
+attorney. One effort, one afternoon if you can manage it.
+
+And while the notary is right there: **do your own.**
+
+You are reading this book because your parent's crisis landed on you
+unprepared. Someday, your crisis will land on someone you love. The
+three documents you are gathering for your mother are the same three
+your children will need from you. Do them at the same table, on the
+same day. It is the most loving paperwork you will ever complete.
