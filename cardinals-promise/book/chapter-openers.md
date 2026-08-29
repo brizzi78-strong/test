@@ -783,29 +783,53 @@ sentence too.
 
 ---
 
-## Chapter 29 — After Death (OPEN)
+## Chapter 29 — After Death (DRAFTED)
 
-Rob's teaching, from his own family: **there are two plans, and most
-families have at most one of them.** His stepmom had the first — she
-knew Lou's wishes, what he wanted, that he wanted to be buried. What no
-one had was the second: the financial plan. How the funeral would be
-paid for. So the money questions surfaced during funeral week, at the
-worst possible time, pulling the family away from grieving.
+My dad died on Christmas morning.
 
-Planned shape:
+And then came the part nobody prepares families for: after.
 
-[Christmas Day — who called Rob, where he was, the hours after]
+Here is what my family had. My dad had told my stepmom his wishes — he
+wanted to be buried. The *what* was known. Here is what no one had: the
+*how*. There was no financial plan. No conversation, ever, about what a
+burial costs or where that money would come from.
 
-[The funeral home, the first days of practical tasks]
+So the money questions came due during funeral week — the one week that
+exists for grieving — and they pulled us away from the only thing that
+week was for.
 
-There are two plans. The wishes plan: what he wanted, where, how. My
-stepmom had that one. And the financial plan: what it costs and where
-that money comes from. Nobody had that one. Grief and a checkbook do
-not belong in the same week — the way you keep them apart is by making
-both plans while everyone is still alive.
+I told you in Chapter 5 about the meeting my family never had. I'm
+telling you now what it cost. There are two plans, and most families
+have at most one of them. The wishes plan: what they want, where, how.
+The financial plan: what it costs and where the money comes from. My
+family had the first. Nobody had the second. Grief and a checkbook do
+not belong in the same week — and the only way to keep them apart is to
+make both plans while everyone is still alive.
 
-[The weeks after — what the family did right, what Rob wishes he'd
-known]
+The rest of this chapter walks you through what those first days
+actually ask of you — the calls, the funeral home, the practical tasks
+that arrive whether you are ready or not — and the weeks after, which
+nobody talks about at all. Take it slowly. Take *everything* slowly.
+There is no stopwatch on any of it.
+
+But I want to end with what happened fifteen days later.
+
+On the morning of January 9th — seventeen years, to the day, since I
+got sober — a cardinal landed on the branch outside my window.
+
+I'm not going to explain it. I told you in the last chapter that I've
+stopped trying to explain things like this. I'll only tell you what
+happened: I stood at the window and I watched it, and I did not feel
+alone.
+
+That is the last thing this book has to say to you. The love does not
+end on the day they die. It keeps arriving — in the tasks you finish
+for them, in the words you said while they could still hear you, in
+whatever lands on the branch outside your window when you need it most.
+
+You showed up. You are still showing up.
+
+It's not your fault. It never was.
 
 ---
 
