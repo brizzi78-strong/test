@@ -31,9 +31,9 @@
   palliative (exact words, and whether the thinner support surprised them
   later) — and whether Lou passed through palliative care between
   immunotherapy and the end.
-- **Ch. 12** — decide whether to name Rob's stepmom, and get her blessing
-  for the nurse / morphine-drip detail before publication — it's her story
-  too.
+- **Ch. 12** — DECIDED (final): Rob's stepmom is never named anywhere in
+  the book — she appears only as "my stepmom." The nurse / morphine-drip
+  detail stays, told from Rob's side, unnamed.
 - **Ch. 13** — waiting on the Medicare story: an Advantage-plan lockout, or
   a family steered to straight Medicare + secondary just in time.
 - **Ch. 14** — waiting on the Medicaid story: the family who thought it was
