@@ -50,6 +50,12 @@
 - **Ch. 21** — optional upgrades: the real bedside disagreement (who,
   and which question — CPR, ventilator, feeding tube), a family that HAD
   the directive for contrast, and whether Lou put anything in writing.
+- **Ch. 27** — finish the cut-off thought ("it really set out to get me
+  to…"): where the guilt went and what brought Rob back. Confirm brothers'
+  names: John, Joel, Chris (dictation was choppy).
+- **Ch. 29** — waiting on Christmas Day: who called Rob, and the hours
+  after. Then the funeral home, the funeral week, the decisions that came
+  due.
 - **Chs. 12/24/27/28 — reconcile the last-days timeline.** Ch. 12 has the
   morphine drip and real comfort; Ch. 24 has "tubes down his throat" as
   the memory Rob didn't want. Both can be true in sequence, but Rob needs
@@ -705,3 +711,43 @@ orders — which this chapter will walk you through, question by
 question. And the love one, which only you can script.
 
 Have both. Leave nothing unsaid.
+
+---
+
+## Chapter 27 — The Last Days Plan (DRAFTED)
+
+My dad spent his last week at Baptist Hospital. The family gathered — my
+brothers John, Joel, and Chris, my sister Lisa, my stepmom at his side.
+
+I wasn't there.
+
+I want to tell you why, because it is the reason this book has the title
+it has.
+
+That same week, my mom — who has Parkinson's disease — had made the trip
+to Raleigh to visit me. Watching her, I understood something nobody said
+out loud: this was probably the last trip she would ever be able to
+take. So I stayed. I did the math that every child of two declining
+parents eventually does. Dad would hold on a couple more days. I would
+honor Mom's last visit, then go to him.
+
+I didn't time it right.
+
+He died on Christmas Day, and I was not in the room. And for a long time
+afterward, that fact set out to get me.
+
+I do this work for a living. I have stood in hospital hallways with a
+hundred families and told them the truth about last days — that they
+cannot be scheduled, that the timing belongs to no one. And when it was
+my own father, I still believed I had a couple more days. That is how it
+goes. Nobody times it right. *That is the point of this chapter.*
+
+A last-days plan is not about controlling death. Death does not take
+instructions. A plan is about deciding — *before* the last week — what
+matters most, who needs to be there, who calls whom, what he would want
+in the room, and what you will do when it happens faster than anyone
+believed. Not so the plan goes perfectly. So that whatever happens, you
+know you did what could be done — and the rest was never yours to carry.
+
+It's not your fault. I titled this book that because I needed the
+sentence too.
