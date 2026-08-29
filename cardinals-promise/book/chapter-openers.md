@@ -56,11 +56,12 @@
   names: John, Joel, Chris (dictation was choppy).
 - **Ch. 29** — waiting on Christmas Day: who called Rob, and the hours
   after. Then the funeral home and funeral week specifics.
-- **Chs. 12/24/27/28 — reconcile the last-days timeline.** Ch. 12 has the
-  morphine drip and real comfort; Ch. 24 has "tubes down his throat" as
-  the memory Rob didn't want. Both can be true in sequence, but Rob needs
-  to give the real timeline of Lou's last days before chapters 27-28 are
-  written.
+- **Chs. 12/24/27/28 timeline — ANSWERED.** Last week at Baptist
+  Hospital (the tubes memory); pneumonia set in Dec 23-24; no flights on
+  Christmas, drive planned for Friday Dec 26; morphine drip started
+  Christmas morning and Lou passed that same morning. Comfort was real at
+  the end. Ch. 28 to be written from Rob's professional bedside
+  knowledge — no further personal questions needed.
 - **Ch. 19** — optional: a real double-dose catch (who noticed the same
   drug twice, and how) to replace the mechanism walk-through's generic
   patient. Also finish the cut-off note: "other medications (" — presumably
@@ -731,7 +732,15 @@ take. So I stayed. I did the math that every child of two declining
 parents eventually does. Dad would hold on a couple more days. I would
 honor Mom's last visit, then go to him.
 
-I didn't time it right.
+Then, in the last days before Christmas — the twenty-third, maybe the
+twenty-fourth — pneumonia set in. My wife and I sat together looking at
+flights. There were no good flights on Christmas. There almost never
+are. So we made the plan: we would drive down on Friday.
+
+On Christmas morning, they started the morphine drip. He passed away
+that same morning.
+
+We were going to drive on Friday. He didn't have a Friday.
 
 My brother had been calling. So had my stepmom. But what I heard in
 those calls was that she was held — my brothers and sister were in
