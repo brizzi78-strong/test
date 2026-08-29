@@ -1,68 +1,78 @@
 # It's Not Your Fault — Front Cover Spec
 
-> Prepared by Rob Brizzi, July 2026, for cover designer.
-> REVISED August 2026 against the approved white/minimal mock (typography-
-> first, cream ground, cardinal as herald — per the cover direction
-> report). The mock is the current direction; the notes below are the
-> corrections it still needs. Earlier title blocks are kept at the end
-> for reference.
+> Prepared by Rob Brizzi, July 2026. Revised and approved August 2026
+> against the white/minimal cardinal mock. Corrections below are
+> AUTHOR-APPROVED — this is the working direction for the designer.
 
-## Current Direction (August 2026 mock)
+## The Design (locked)
 
-- Cardinal on a berried branch, top center, red on cream. Keep.
-- Title: **IT'S [NOT] YOUR FAULT** — "NOT" written in by hand in red,
-  serif type for the rest, navy. Keep the device.
-- Subtitle: **For Families Caring for an Aging Parent** — adopted.
-- Author: ROB BRIZZI.
-- Thin double rule border, diamond dividers. Keep.
+- Cream/off-white ground, thin double-rule border, diamond dividers.
+- Cardinal on a berried branch, top center, red on cream. The herald,
+  never a mourner.
+- Title: **IT'S NOT YOUR FAULT** — navy serif, with "NOT" hand-scrawled
+  in cardinal red, written in as an insertion.
+- Typography-first, one saturated accent. Matches the category's winning
+  formula (36-Hour Day / Being Mortal shelf).
 
 ## CRITICAL FIX — the NOT must read as written IN, never crossed OUT
 
-The brush strokes over "NOT" cannot form an X or strikethrough. At
-thumbnail size a struck-through NOT makes the cover read "IT'S YOUR
-FAULT" — the one catastrophic misread this design cannot survive, aimed
-at a guilt-ridden buyer. Render NOT as an insertion: bold red scrawl,
-underline, or caret — no crossing strokes. Squint test at 100px: it must
-say NOT, unmistakably.
+No X or strikethrough strokes over "NOT." At thumbnail size a
+struck-through NOT makes the cover read "IT'S YOUR FAULT" — the one
+catastrophic misread this design cannot survive, aimed at a guilt-ridden
+buyer. Render NOT as an insertion: bold red scrawl, underline, or caret
+mark — no crossing strokes. Squint test at 100px tall: it must say NOT,
+unmistakably, before anything else on the cover resolves.
 
-## Corrections to the mock
+## Approved Corrections to the Mock
 
-1. **Move the dedication to Hope Brizzi, PharmD off the front cover** —
-   it belongs on the interior dedication page, where it will mean more.
-   Front cover stays three voices (title, subtitle, author). No clutter.
-2. **Restore the credential** (buyer research: the validator wants it):
+1. **Dedication comes off the front cover.** "Dedicated to Hope Brizzi,
+   PharmD…" moves to the interior dedication page, where it belongs and
+   will mean more. The front cover keeps three voices: title, subtitle,
+   author.
+2. **Credential restored.** The author line becomes:
    ROB BRIZZI, CDP
    Certified Dementia Practitioner
-3. **Badge decision pending** — "You Are Not Alone. / You Are the
-   Difference." (gold and crimson seal) is absent from the mock. The new
-   title arguably carries the message. Rob to confirm: restore or retire.
+   (Buyer research: the validator buyer wants the qualification visible.)
+3. **Badge retired from the front, moved to the back.** The gold-and-
+   crimson seal — "You Are Not Alone. / You Are the Difference." — no
+   longer appears on the front; the title now carries that message. Place
+   the seal on the back cover anchoring the author block, where it
+   rewards the reader who turns the book over.
+4. **Series line added, small:** A Cardinal's Toolkit Guide — carries the
+   brand and links to The Cardinal's Promise.
 
-## Cover Copy (FINAL, per mock + corrections)
+## Final Front Cover Copy
 
-**Title:** IT'S NOT YOUR FAULT — "NOT" hand-scrawled in red, written in
-as an insertion (see critical fix above).
+**Title:** IT'S NOT YOUR FAULT
+("NOT" scrawled in red, inserted — see critical fix)
 
 **Subtitle:** For Families Caring for an Aging Parent
 
-**Series line** (optional, small — carries the brand):
-A Cardinal's Toolkit Guide
+**Series line** (small): A Cardinal's Toolkit Guide
 
 **Author line:**
 ROB BRIZZI, CDP
 Certified Dementia Practitioner
 
-**Badge:** pending Rob's restore-or-retire decision (see above).
+**Nothing else.** No dedication, no badge, no "Caregiver Hero" tag, no
+endorsement quote. The title owns this cover.
 
-**Off the front cover:** the dedication (interior page), and the old
-"Caregiver Hero" script tag.
+## The One-Sentence Brief
 
-## Copy Notes
+> She's been telling herself it's her fault for months. The cover takes a
+> red pen to that thought, and the cardinal watches her put the book in
+> her cart.
 
-- Keep the leading "A" in the subtitle. Without it the line reads like a
-  category label instead of a sentence.
-- "and the Words No One Teaches You" must sit on its own line so it lands last.
-- Nothing else gets added to the front cover. Three voices: title, subtitle,
-  badge. The author line confirms.
+## Superseded (for reference only)
+
+- July 2026: title "The Cardinal's Toolkit," subtitle "A Practical Guide
+  for Families Caring for Someone They Love — the Decisions, the Hard
+  Days, and the Words No One Teaches You," badge on front, series line
+  "A Cardinal's Promise Companion," bench-scene art direction.
+- Early August 2026: crossed-out "It's my fault." two-line treatment.
+- The bench-at-golden-hour art direction (adult daughter and aging
+  father) is retired for the front cover but preserved below in case it
+  returns for the back cover, marketing, or the website.
 
 ## Art Direction (REVISED)
 
@@ -94,26 +104,3 @@ or flannel. The tenderness comes from posture and proximity, not expressions.
 - Stock-photo smiles or a precious-moments glow — she is worn out and
   present, and that is the beauty.
 - Making her look defeated. Tired, not broken.
-
-## The One-Sentence Brief
-
-If the designer needs the whole thing in one line:
-
-> An exhausted daughter sits with her aging dad in the last good light of
-> the day, and a cardinal watches from the branch — she's been telling
-> herself it's her fault, and this cover crosses that out.
-
-## Superseded — July 2026 Cover Copy (for reference only)
-
-**Series line:** A Cardinal's Promise Companion
-
-**Title:** The Cardinal's Toolkit
-
-**Subtitle** (three lines, in this order):
-A Practical Guide for Families Caring for Someone They Love —
-the Decisions, the Hard Days,
-and the Words No One Teaches You
-
-Copy notes that traveled with it: keep the leading "A" in the subtitle;
-"and the Words No One Teaches You" sits on its own line so it lands last —
-that principle carries into the revised subtitle above.
