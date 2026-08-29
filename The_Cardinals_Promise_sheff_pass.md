@@ -550,8 +550,6 @@ Somewhere on that drive, just the two of us in the car, I said it for the first 
 
 Neither of us said anything else. We would trade those same two lines maybe ten more times over the years. His answer never changed.
 
-Then there was the time I lived in West Palm Beach. By then, I wasn't a kid anymore. I was a grown man, deep in addiction, and out of options. Dad flew down and pulled me, his dying son, out of it. He didn't shame me. He came one more time, when coming meant saving my life.
-
 I broke down in front of him once. I don't remember anymore what had pushed me there. I let him see me like that because I trusted him. He didn't tell me to pull it together. He let me get it out, and then he looked at me and said it plain.
 
 "I love you as much as I love my own kids."
@@ -710,7 +708,7 @@ I was in middle school when I got the news about Charlie. He and Nancey had sepa
 
 I loved him, and that's hard to explain to people who think grief needs proximity. I hadn't talked to him in years. I was sixteen, buried in wrestling and school. But I'd loved him, and when he died something opened in me I didn't have a name for. Nobody validated it. He was the first person I loved who died. I'd lost Papa years before, but there was no funeral, nothing to stand in front of. Papa was gone and still alive somewhere. Charlie was gone.
 
-What stays with me now: Lou walked into that apartment before he ever walked into mine. When he came for me in West Palm Beach years later and found me in the dark, it wasn't his first time doing it. He'd already gone into a room where someone he loved was losing, and it hadn't been enough. He came for me anyway, knowing how it can end.
+What stays with me now: my dad was the one who went in. He walked into a room where someone he loved was losing, knowing it might not be enough. He went anyway.
 
 ### *Senior Year: County Champion*
 
