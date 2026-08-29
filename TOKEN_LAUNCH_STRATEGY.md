@@ -1,87 +1,85 @@
-# CARD Token Launch Strategy
+# CARD v2 Pilot Strategy
 
-Launch plan for the CARD token: 1B fixed supply, Uniswap fair launch, trust-first design.
-Every decision below optimizes for the same thing — being verifiably safe on-chain, so that
-token scanners, screeners, and skeptical buyers have nothing to flag.
+CARD v2 is an **earned-and-spent community token**, not a publicly traded token launch.
+This document replaces the earlier Uniswap/fair-launch strategy for this branch.
 
-## Decision Summary
+## Core rules
 
-| Decision | Call | Rationale |
-|---|---|---|
-| Supply at launch | Mint all 1B, then **renounce ownership immediately** | "Nobody can ever print more" is the single strongest trust signal a small token can have, and it costs nothing |
-| Into the Uniswap pool | **400M CARD (40%)** | The tradeable float. Halving it from the original 200M doubles the launch price but does not deepen the book — see the slippage table in `docs/GOVERNANCE_AND_FOUNDER_ECONOMICS.md` |
-| Founder-held | **400M (40%), unlocked, in a disclosed wallet** | Decision taken: no timelock. This is the weakest point in the design and it is deliberate. Mitigation is disclosure plus a written sell policy, not code — see `docs/GOVERNANCE_AND_FOUNDER_ECONOMICS.md` |
-| Treasury | 200M (20%) behind a Safe multisig, publicly announced | Any more looks extractive; label it, and require more than one signature to move it |
-| ETH into the pool | **2–5 ETH** to start | Enough that a few-hundred-dollar buy doesn't spike the price ~20%; small enough not to risk savings on an experiment |
-| LP tokens | **Lock for 12 months** (Team Finance or UNCX) | The pool being yankable is the #1 thing token scanners and buyers check |
+- Fixed total supply: **1,000,000,000 CARD**.
+- The full supply is minted once to a designated treasury wallet at deployment.
+- There is no public mint function and no burn/rebase mechanism.
+- CARD is **not seeded into a DEX liquidity pool** by this project.
+- CARD is **not sold in an ICO, presale, or token sale** by this project.
+- Ordinary member-to-member transfers are blocked on-chain.
+- A member may spend CARD only to a wallet approved as a participating merchant.
+- Approved members and merchants may return CARD to the treasury for reconciliation.
+- The administrator can approve/remove member and merchant wallets and pause transfers in an emergency.
+- The administrator role should be held by a Safe multisig before any production pilot.
+- Ownership renunciation is disabled because the pilot requires ongoing participant controls and emergency response.
 
-## Token Parameters
+## Permitted on-chain paths
 
-- **Name / Symbol:** Cardinals Promise / CARD
-- **Total supply:** 1,000,000,000 (fixed — minted once at deployment, no mint function reachable after renounce)
-- **Distribution:**
-  - 400,000,000 (40%) → Uniswap liquidity pool
-  - 400,000,000 (40%) → founder, held unlocked in a publicly disclosed wallet
-  - 200,000,000 (20%) → treasury, behind a Safe multisig, publicly disclosed
-- **Ownership:** renounced immediately after setup is complete
+```text
+Treasury -> approved member       distribution / earned allocation
+Treasury -> approved merchant     pilot funding if required
+Member   -> approved merchant     spend
+Member   -> treasury              return / correction / reconciliation
+Merchant -> treasury              settlement / reconciliation
+```
 
-## Launch Sequence
+Everything else is rejected by the token contract, including:
 
-Order matters — several of these steps are only trustworthy if done in the right sequence.
+```text
+Member -> member
+Member -> arbitrary wallet
+Merchant -> member
+Merchant -> arbitrary wallet
+Treasury -> unapproved wallet
+```
 
-1. **Deploy the token contract.** Mint the full 1B supply to the deployer. Use a plain,
-   audited ERC-20 base (e.g. OpenZeppelin) with no taxes, no blacklist, no mint function —
-   exotic mechanics are the second thing scanners flag after unlocked liquidity.
-2. **Verify the source code** on Etherscan immediately. Unverified contracts are treated as
-   hostile by default.
-3. **Transfer 200M to the treasury wallet.** Do this *before* renouncing and *before* the pool
-   exists, so the transfer is visibly a setup step rather than a post-launch extraction.
-4. **Create the Uniswap V2 pool** with 400M CARD + 2–5 ETH, via `addLiquidityETH` on the
-   router (`scripts/add-liquidity.ts`). This is not a swap — you are depositing both sides
-   and thereby *setting* the opening price, not paying one. The CARD/ETH ratio is the price:
-   with 400M in the pool, 3 ETH implies 0.0000000075 ETH/CARD. Check the ratio twice; it is the
-   one number here that cannot be undone without trading against your own pool.
-5. **Lock the LP tokens for 12 months** via Team Finance or UNCX. Save the lock URL — it's
-   the first link to publish.
-6. **Renounce ownership** of the token contract (`renounceOwnership()` / transfer owner to
-   the zero address). This is last among the contract steps so any needed setup (exclusions,
-   pool address config) can happen first — but it must happen *before* announcing.
-7. **Announce.** The announcement should lead with the three verifiable claims and their
-   proof links:
-   - Ownership renounced → link to the renounce transaction
-   - Liquidity locked 12 months → link to the Team Finance/UNCX lock
-   - Treasury wallet is X (20%) → link to the labeled address
+`transferFrom` uses the same restrictions, so an ERC-20 allowance cannot bypass the destination rules.
 
-## Treasury Wallet Policy
+## Pilot deployment sequence
 
-The 20% held back is the only part of this setup that requires ongoing trust, so constrain it:
+1. **Legal/compliance review before production deployment.** The technical controls do not determine the legal characterization of CARD or the obligations of the operator, merchants, or settlement providers.
+2. Create a dedicated **treasury wallet** and a separate **Safe multisig administrator**.
+3. Deploy to **Sepolia** with those two addresses.
+4. Verify the contract source on Etherscan.
+5. Run `npm run verify` and require all machine-checkable claims to pass.
+6. Add only test member and merchant wallets.
+7. Exercise distribution, member spending, merchant reconciliation, revocation, pause, and unpause flows.
+8. Connect the AWS application layer only after the testnet flow is stable.
+9. Obtain final legal/security approval before any mainnet deployment or real-value settlement.
 
-- Announce the address publicly at launch and label it (Etherscan name tag request).
-- State what it's for (development, listings, liquidity top-ups) before launch, not after.
-- Any spend from it should be announced before or as it happens. Silent outflows from a
-  known team wallet read as a slow rug.
-- Optional strengthener: put it behind a multisig (e.g. Safe) or a vesting/timelock contract —
-  turns "trust us" into "verify it."
+## Explicitly retired from CARD v2
 
-## What This Setup Deliberately Avoids
+The following belong to the earlier prototype and are **not part of CARD v2**:
 
-- **Mintable supply** — renounced, so impossible.
-- ~~**Deployer holding a large share**~~ — **not avoided.** The founder holds 40% unlocked. This is the one item on this list the design does not solve, and the launch materials say so in those words rather than working around it.
-- **Yankable liquidity** — LP locked 12 months.
-- **Hidden team allocation** — the 20% is announced and labeled.
-- **Tax/fee/blacklist mechanics** — none; keeps scanner scores clean.
+- Uniswap CARD/ETH liquidity pool
+- public swapping or trading
+- LP-token locking
+- opening market price engineering
+- a tradeable founder float
+- marketing to token buyers or speculators
+- ownership renunciation as a launch signal
 
-## Known Trade-offs
+The v2 branch removes the Uniswap liquidity and swap rehearsal scripts to reduce the chance of accidentally deploying the obsolete model.
 
-- **Renouncing is irreversible.** No parameter can ever be changed, no bug patched, no
-  migration forced. Acceptable for a simple fixed-supply ERC-20; it's the point.
-- **2–5 ETH is thin liquidity.** Early trades will still move price noticeably; that's the
-  accepted cost of keeping personal risk small. Liquidity can be deepened later from the
-  treasury (announce it when doing so).
-- **12-month lock, not burned LP.** Locking preserves the option to migrate/re-pool after a
-  year; burning would be a stronger forever-signal but removes all flexibility.
+## AWS application boundary
+
+Ethereum is only the token ledger. The application layer should handle:
+
+- authenticated member and merchant accounts
+- approval workflows
+- earning records and supporting evidence
+- merchant checkout requests
+- daily pilot limits
+- transaction metadata and audit history
+- settlement/reconciliation records
+- alerts and operational monitoring
+
+Never store a mainnet private key in source code, a browser bundle, GitHub, or an ordinary environment file. Production signing should use an appropriately secured signer/key-management design and least-privilege AWS permissions.
 
 ---
-*This is an engineering/launch-mechanics document, not financial or legal advice. Token
-launches may have securities-law and tax implications depending on jurisdiction — check
-before launch.*
+
+This is an engineering design document, not a legal conclusion that CARD is or is not a security, money-transmission product, stored-value product, or other regulated instrument. Those questions depend on the actual program and should be reviewed by qualified counsel before launch.

@@ -2,14 +2,14 @@
   "name": "cardinals-promise",
   "private": true,
   "version": "0.1.0",
-  "description": "Cardinals Promise (CARD) — fixed-supply ERC-20 with an immutable 2% treasury fee",
+  "description": "Cardinals Promise (CARD) — fixed-supply earned-only community token with restricted transfer paths",
   "type": "module",
   "scripts": {
     "build": "hardhat build",
     "test": "hardhat test",
     "verify": "node scripts/verify-claims.mjs",
-    "rehearse": "hardhat run scripts/rehearse-launch.ts",
     "deploy:sepolia": "hardhat ignition deploy ignition/modules/CardinalsPromise.ts --network sepolia",
+    "check:sepolia": "CARD_NETWORK=sepolia hardhat run scripts/check-deployment.ts",
     "deploy:mainnet": "hardhat ignition deploy ignition/modules/CardinalsPromise.ts --network mainnet"
   },
   "devDependencies": {

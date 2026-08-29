@@ -33,8 +33,9 @@ export default defineConfig({
       },
     },
   },
-  // Verify with: npx hardhat verify --network sepolia <address> <treasury-address>
-  // (set the key first: npx hardhat keystore set ETHERSCAN_API_KEY)
+  // CARD v2 constructor: (treasury, admin).
+  // Verify with the exact constructor arguments used for deployment.
+  // Set the key first: npx hardhat keystore set ETHERSCAN_API_KEY
   verify: {
     etherscan: {
       apiKey: configVariable("ETHERSCAN_API_KEY"),
