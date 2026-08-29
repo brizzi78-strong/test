@@ -50,6 +50,11 @@
 - **Ch. 21** — optional upgrades: the real bedside disagreement (who,
   and which question — CPR, ventilator, feeding tube), a family that HAD
   the directive for contrast, and whether Lou put anything in writing.
+- **Chs. 12/24/27/28 — reconcile the last-days timeline.** Ch. 12 has the
+  morphine drip and real comfort; Ch. 24 has "tubes down his throat" as
+  the memory Rob didn't want. Both can be true in sequence, but Rob needs
+  to give the real timeline of Lou's last days before chapters 27-28 are
+  written.
 - **Ch. 19** — optional: a real double-dose catch (who noticed the same
   drug twice, and how) to replace the mechanism walk-through's generic
   patient. Also finish the cut-off note: "other medications (" — presumably
@@ -651,3 +656,52 @@ unprepared. Someday, your crisis will land on someone you love. The
 three documents you are gathering for your mother are the same three
 your children will need from you. Do them at the same table, on the
 same day. It is the most loving paperwork you will ever complete.
+
+---
+
+## Chapter 24 — Advance Care Planning Conversations (DRAFTED)
+
+Just last week, I sat with a family and helped them have the
+conversation — the one about what's coming, what he wants, what needs
+saying while there's still time to say it. I do this all the time. It is
+the core message of my first book, *The Cardinal's Promise*: don't leave
+anything left unsaid.
+
+Now let me tell you what I got wrong with my own father.
+
+I never forced the planning conversations. I knew better — it is
+literally my work — and I still let them slide, the way every family
+does. There was always going to be more time. So the decisions he should
+have made stayed unmade, and they came due the week of his funeral.
+Financial matters surfacing at the worst possible time, pulling us away
+from the one thing that week was for: grieving him.
+
+That is one kind of unsaid, and I carry the regret of it. This chapter
+exists so you won't.
+
+But there is a second kind of unsaid — and that kind, I finished.
+
+I was not in the room when my dad died. I thought we had a few more
+days. He didn't have them. And I have struggled with not being there —
+I still do.
+
+Two things give me peace. The first: I had said everything that needed
+to be said. Everything. There was nothing my father didn't know — no
+forgiveness withheld, no love left in my chest instead of in his ears.
+When you've emptied yourself of the unsaid, the moment of death loses
+some of its power over you. The second: the last memory I have of my
+dad is not tubes down his throat. It is *him*.
+
+Here's something families worry about: *what if he can't really take it
+in anymore?* Say it anyway. The words matter even when you can't be
+sure they land — because closure isn't only for the one who hears. It
+is for the one who speaks. And do not wait for the last days to say
+what matters. The last days are too late for meaningful conversations.
+The right time is now, at a kitchen table, while the person you love
+can still answer you back.
+
+Two conversations, then. The practical one — wishes, decisions, money,
+orders — which this chapter will walk you through, question by
+question. And the love one, which only you can script.
+
+Have both. Leave nothing unsaid.
