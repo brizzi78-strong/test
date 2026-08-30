@@ -1,0 +1,21 @@
+# Cardinal Chat image. Separate from the shared HR Dockerfile because chat is
+# the one service with a runtime dependency (@anthropic-ai/sdk), so it needs an
+# npm install step; everything else stays zero-dependency.
+#
+# Node 22 (>= 22.18) is required for TS type stripping.
+FROM node:22-alpine
+
+WORKDIR /app/chat
+
+COPY chat/package.json chat/package-lock.json ./
+RUN npm ci --omit=dev
+
+COPY chat/src ./src
+COPY chat/tsconfig.json ./
+
+RUN addgroup -S app && adduser -S app -G app && chown -R app /app
+USER app
+
+ENV NODE_ENV=production
+
+CMD ["node", "src/index.ts"]

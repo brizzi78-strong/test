@@ -7,9 +7,13 @@ import { readFileSync } from "node:fs";
 import { createInterface } from "node:readline/promises";
 import { formatEther, getAddress, parseEther } from "viem";
 
-export const TOTAL_SUPPLY = parseEther("250000000");
-export const TREASURY_AMOUNT = parseEther("50000000"); // 20%
-export const POOL_AMOUNT = parseEther("200000000"); // 80%
+export const TOTAL_SUPPLY = parseEther("1000000000");
+export const TREASURY_AMOUNT = parseEther("200000000"); // 20%
+export const POOL_AMOUNT = parseEther("400000000"); // 40%
+// The deployer wallet IS the founder wallet: after the treasury transfer and
+// pool seeding it retains exactly this much, and that remainder is the
+// disclosed, unlocked founder hold. There is no separate founder transfer.
+export const FOUNDER_AMOUNT = parseEther("400000000"); // 40%
 
 export interface LaunchConfig {
   network: string;
@@ -126,15 +130,15 @@ export function describeStage(
     stage = "Ownership RENOUNCED — contract is final. (checklist step 6 done)";
   } else if (s.treasuryBalance === 0n && s.deployerBalance === TOTAL_SUPPLY) {
     stage = "Deployed, treasury not yet funded — next: transfer-treasury (checklist step 3)";
-  } else if (s.treasuryBalance === TREASURY_AMOUNT && s.deployerBalance === POOL_AMOUNT) {
+  } else if (s.treasuryBalance === TREASURY_AMOUNT && s.deployerBalance === POOL_AMOUNT + FOUNDER_AMOUNT) {
     stage = "Treasury funded — next: create the Uniswap pool (checklist step 4)";
-  } else if (s.treasuryBalance === TREASURY_AMOUNT && s.deployerBalance === 0n) {
+  } else if (s.treasuryBalance === TREASURY_AMOUNT && s.deployerBalance === FOUNDER_AMOUNT) {
     stage = "Pool funded — next: test swap, lock LP, then renounce (checklist steps 4-6)";
   } else {
     stage = "UNRECOGNIZED state — balances don't match any expected launch step";
     problems.push(
       `deployer holds ${fmt(s.deployerBalance)} and treasury holds ${fmt(s.treasuryBalance)}; ` +
-        `expected one of: 250M/0 (fresh), 200M/50M (treasury funded), 0/50M (pool funded)`,
+        `expected one of: 1B/0 (fresh), 800M/200M (treasury funded), 400M/200M (pool funded — the 400M left is the founder hold)`,
     );
   }
 
@@ -196,7 +200,7 @@ export async function transferTreasury(
   return hash;
 }
 
-// PRACTICE ONLY (Sepolia dry run, step 4): sends the remaining 200M to the
+// PRACTICE ONLY (Sepolia dry run, step 4): sends the remaining 400M to the
 // stand-in "pool" address so the balances look like a funded Uniswap pool to
 // the other scripts. The real launch creates an actual pool on Uniswap
 // instead. Guards mirror transferTreasury: runs only from the
@@ -226,9 +230,10 @@ export async function fundPoolSim(
   if (state.poolBalance !== 0n) {
     throw new Error(`pool already holds ${fmt(state.poolBalance ?? 0n)} — refusing to send again.`);
   }
-  if (state.deployerBalance !== POOL_AMOUNT) {
+  if (state.deployerBalance !== POOL_AMOUNT + FOUNDER_AMOUNT) {
     throw new Error(
-      `deployer holds ${fmt(state.deployerBalance)}, expected exactly ${fmt(POOL_AMOUNT)}.`,
+      `deployer holds ${fmt(state.deployerBalance)}, expected exactly ${fmt(POOL_AMOUNT + FOUNDER_AMOUNT)} ` +
+        `(400M pool inventory + the 400M founder hold).`,
     );
   }
 
@@ -262,13 +267,14 @@ export async function renounce(
   if (state.treasuryBalance !== TREASURY_AMOUNT) {
     problems.push(`treasury holds ${fmt(state.treasuryBalance)}, expected exactly ${fmt(TREASURY_AMOUNT)}`);
   }
-  if (state.deployerBalance !== 0n) {
+  if (state.deployerBalance !== FOUNDER_AMOUNT) {
     problems.push(
-      `deployer still holds ${fmt(state.deployerBalance)} — the pool should have taken all 200M (expected 0)`,
+      `deployer holds ${fmt(state.deployerBalance)}, expected exactly ${fmt(FOUNDER_AMOUNT)} — ` +
+        `the disclosed founder hold that remains after the pool takes its 400M`,
     );
   }
   if (config.pool) {
-    // The pool needs ~200M; a bit less is fine because the test swap moves a
+    // The pool needs ~400M; a bit less is fine because the test swap moves a
     // little out and back through fees.
     const min = (POOL_AMOUNT * 99n) / 100n;
     if (state.poolBalance === undefined || state.poolBalance < min) {

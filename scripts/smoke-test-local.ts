@@ -53,7 +53,8 @@ console.log("✔ treasury funded:", verdict.stage);
 await assert.rejects(transferTreasury(token, publicClient, deployer, treasury), /already holds/);
 console.log("✔ second treasury transfer correctly blocked");
 
-// Renounce still blocked (deployer still holds the 200M)
+// Renounce still blocked (deployer still holds the 400M pool inventory on
+// top of the 400M founder hold)
 await assert.rejects(
   renounce(token, publicClient, deployer, { treasury, pool }, { confirm: async () => true }),
   /ABORT/,
