@@ -11,8 +11,8 @@ application. Its optional real-CARD buttons merely open Uniswap and are disabled
 3. A CARD link opens Uniswap; Cardinal Trading does not quote, execute, custody, reverse,
    or refund the transaction.
 4. The contract address must first be published at `cp17.org`.
-5. The interface discloses the 2% token fee, treasury exemption, Uniswap fee, gas,
-   slippage, price impact, founder holding, and project conflict of interest.
+5. The interface discloses the Uniswap fee, gas, slippage, price impact, founder
+   holding, and project conflict of interest.
 
 ## Possible future on-ramp flow
 
@@ -34,14 +34,14 @@ trading abstraction and must never be converted into a real custodial balance.
 
 ## Cost disclosure
 
-For ordinary wallet and pool transfers, CARD sends 2% to the immutable treasury. Transfers
-to or from that treasury are exempt. A buy and sell therefore leave 96.04% after the token
-fee alone. Including two 0.3% Uniswap fees produces a simple estimate of roughly 4.5% total
-cost before network gas, price impact, routing, and provider charges.
+CARD charges no transfer fee. A transfer of any amount moves exactly that amount, so the
+only costs in a round trip are the two 0.3% Uniswap fees — roughly 0.6% — before network
+gas, price impact, routing, and provider charges.
 
 Every quote must show each cost separately and calculate the expected net amount received.
-A default slippage tolerance below the token fee can make a transaction fail; live routing
-must use fee-on-transfer-supporting functions and be proven against a real testnet pool.
+Because the token is not fee-on-transfer, routing does not need the
+fee-on-transfer-supporting swap functions; ordinary Uniswap routing is correct. This should
+still be proven against a real testnet pool before any live use.
 
 ## Pool-pair decision
 
