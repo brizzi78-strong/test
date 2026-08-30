@@ -105,14 +105,14 @@ would make it.
 My dad is a fighter. He made it.
 
 That was 2015. He lived ten more years. And everything that fills this
-book — every decision, every hard day, every conversation — started with
-one phone call I never saw coming.
+book started with one phone call I never saw coming. Every decision,
+every hard day, every conversation.
 
 Yours may not be a phone call. It may be a fall. A missed bill. The same
 question asked three times in an hour. But there is always a moment when
 something changes. This chapter is for that moment.
 
-And whatever you think you should have seen coming before your moment —
+And whatever you think you should have seen coming before your moment,
 you couldn't have. We couldn't either. It's not your fault. That's why
 those words are on the cover.
 
@@ -135,7 +135,7 @@ The scan found a tumor.
 
 Eight years earlier, I had taken the first call sitting on a couch. Now I
 was on another couch, taking another one. The same helpless feeling,
-arriving the same way — in the middle of an ordinary night.
+arriving the same way, in the middle of an ordinary night.
 
 Dad made his decision the way he always did: his call, his terms. This time
 he said yes to treatment. He started immunotherapy.
@@ -146,7 +146,7 @@ would have looked inside his chest.
 
 A fall is never just a fall. Weakness is never just getting older. They
 are information. Read them early enough, and you get to make decisions
-instead of reacting. And nobody catches everything — I didn't, and this
+instead of reacting. And nobody catches everything. I didn't, and this
 is my profession. But once you know what a fall is trying to tell you,
 the next one becomes information instead of just fear.
 
@@ -154,7 +154,7 @@ the next one becomes information instead of just fear.
 
 ## Chapter 3 — Memory Loss and Dementia (DRAFTED)
 
-My first experience with dementia was professional. Home health — other
+My first experience with dementia was professional. Home health: other
 people's families, other people's parents. My first real one was Nana, my
 mom's mom.
 
@@ -166,7 +166,7 @@ And then: "They're having their way with me."
 
 Stop right there. Hear those words from your own grandmother and everything
 in you reacts. Part of you wants to panic. Part of you wants to correct
-her — *Nana, nobody is stealing anything.*
+her. *Nana, nobody is stealing anything.*
 
 I did neither. I asked.
 
@@ -179,7 +179,7 @@ the onion. "Do you mean they're working with you — because of the therapy?"
 
 The therapists. Strangers moving her body through exercises she didn't
 remember agreeing to, in a building she didn't remember arriving at. Her
-words were frightening. Her reality made sense — once I stopped standing
+words were frightening. Her reality made sense once I stopped standing
 outside of it and started asking about it.
 
 I want to be careful here, because words like hers deserve care. When a
@@ -192,8 +192,8 @@ answer pointed to the therapy room. That is the only reason this story
 ends gently.
 
 There were other changes. She told stories from many years ago as if they
-had happened that morning. And there was a crudeness that was never her —
-my grandmother was a proper woman her whole life. The disease took her
+had happened that morning. And there was a crudeness that was never her.
+My grandmother was a proper woman her whole life. The disease took her
 memory. It took her manners too.
 
 I sat with her. I didn't argue. And afterward I told my mom the thing I
@@ -235,17 +235,17 @@ that never happens.
 
 I know, because it happened in my family. And I do this for a living.
 
-Through everything — the cancer in 2015, the tumor the fall found in
-2023 — we never sat down, all of us, and talked about what would happen if
+Through the cancer in 2015 and the tumor the fall found in 2023, we
+never sat down, all of us, and talked about what would happen if
 Dad declined. His will. His house. His money. What he wanted, and how any
 of it would be paid for.
 
-He had told my stepmom some things. He wanted to be buried; she knew a few
-of his wishes. But that was it — pieces of a plan, living in one person's
+He had told my stepmom some things. He wanted to be buried. She knew a few
+of his wishes. But that was it: pieces of a plan, living in one person's
 memory. There was no meeting. There was no list. And none of us asked the
 money question. Not one of us. Not even me, and I do this for a living.
 
-We didn't avoid it out of carelessness. We avoided it out of love — the
+We didn't avoid it out of carelessness. We avoided it out of love, the
 kind that doesn't want to say the hard thing out loud, as if the
 conversation itself could bring the day closer. It doesn't. The
 conversation only decides whether you will be ready when the day comes on
@@ -347,7 +347,7 @@ station.
 Every day, someone would head for the door. *"I gotta go home." "I'm not
 supposed to be here."* Those may be the most common words spoken in memory
 care, and some of the most heartbreaking. Everything in an untrained person
-wants to answer them with the truth — *you live here now* — and that
+wants to answer them with the truth. *You live here now.* And that
 answer only turns fear into a fight.
 
 The staff never argued. They invited.
@@ -360,7 +360,7 @@ anything: "Train must be running late. Let's go get something to eat while
 we wait."
 
 By the time the meal was done, the urge to leave had passed the same way
-it arrived — as a fleeting thought.
+it arrived, as a fleeting thought.
 
 Some people call that a trick. It isn't. It is meeting a person inside
 her reality instead of dragging her out of it. Nobody was corrected.
@@ -369,8 +369,7 @@ Nana taught me you will never win an argument with dementia. That painted
 station is what winning looks like instead.
 
 The other thing I watched work behind those doors was music. Play a song
-from a resident's younger years — the music of their formative decades —
-and someone deep into dementia would recognize it and sing the lyrics.
+from a resident's younger years, and someone deep into dementia would recognize it and sing the lyrics.
 Every word. The disease takes so much, but it takes the music last.
 
 When you tour a unit, look at the walls.
@@ -381,15 +380,14 @@ When you tour a unit, look at the walls.
 
 Marion and Frank are family friends. Frank fell and broke his hip, and he
 was admitted to the local hospital. His daughter stepped in as his
-primary caregiver — and the family called me with one question: *where
+primary caregiver. The family called me with one question: *where
 should he go for rehab?*
 
 I gave them my recommendation. That part took five minutes.
 
-Here is what I carried into that call that they didn't — the thing every
+Here is what I carried into that call that they didn't, the thing every
 rehab team I ever worked alongside knew: a broken hip after seventy-five
-is one of the hardest recoveries in all of elder care. A significant
-number of people who go into rehab for a hip never make it back to the
+is one of the hardest recoveries in all of elder care. A lot of people who go into rehab for a hip never make it back to the
 life they had before. Many will need a higher level of care when rehab
 ends.
 
@@ -400,8 +398,8 @@ next level of care is coming.
 
 So that's what I told them, and it's what I'm telling you. Hold both.
 Cheer the recovery like it's going to work, and quietly start learning
-what comes next in case it doesn't. That is not pessimism. That is
-showing up prepared.
+what comes next in case it doesn't. That isn't pessimism. That's being
+prepared.
 
 Frank is fighting, and I check in on the family. But you may not have a
 friend in the industry to call. This chapter is that phone call.
@@ -448,12 +446,12 @@ you how I came to love it.
 
 I got sober on January 9, 2009, and part of staying sober is helping
 other people get sober. Some of the people I sponsored didn't make it.
-They were young — most of their life still owed to them — and sitting
+They were young, most of their life still owed to them, and sitting
 with their families afterward is where I learned what a robbed life
 looks like, and how to stay in a room full of pain without running.
 
 A hospice patient's life is not a robbed life. Most have lived full
-ones — work, marriages, grandchildren around a table. And when they
+ones: work, marriages, grandchildren around a table. And when they
 haven't, hospice holds those families closest of all. Hospice takes
 nothing from anyone. It gives. Comfort instead of pain. Somebody in the
 room instead of machines. When I tell a family that choosing hospice is
@@ -466,13 +464,13 @@ At the end, his comfort was real. He did not suffer his way out of this
 world. And I want to say something plainly, because I know how
 end-of-life comfort care gets read: the morphine does not bring the
 morning closer. It is started because the morning has come. Given
-right — the right dose, for the pain that is actually there — it takes
+right, at the right dose, for the pain that is actually there, it takes
 nothing but the suffering. And that comfort wasn't luck, and it wasn't
 inside knowledge. It is what a hospice team brings into every home.
 Including yours.
 
 Now when I sit with a family, I am not speaking from training. I have
-lived the same pain they are living — including the weight of the
+lived the same pain they are living. That includes the weight of the
 decisions that fall to the family at the end, when the patient no longer
 can make them.
 
@@ -512,7 +510,7 @@ insurance, VA benefits, and prescription assistance):
 
 ## Chapter 17 — Prescription Assistance (DRAFTED)
 
-I want to tell you about a patient who lived in a million-dollar home —
+I want to tell you about a patient who lived in a million-dollar home,
 because the family almost didn't fill out the paperwork.
 
 Why would they? Look at the house. Nobody in a home like that qualifies
@@ -520,8 +518,8 @@ for assistance. Everyone knows that.
 
 Everyone is wrong. Prescription assistance from drug makers and
 charities is based on *income*, not net worth. Nobody counts the house.
-What counted was what came in each month — Social Security and
-investment income — and that number fell below the threshold. The
+What counted was what came in each month: Social Security and
+investment income. That number fell below the threshold. The
 patient qualified.
 
 So here is the rule: **always fill out the paperwork.** Do not decide
@@ -530,7 +528,7 @@ your pride answer a question the application never asks. Answer what it
 asks, send it in, and let them say no.
 
 One warning before you run with that rule: some programs later in this
-book do ask about savings. Medicaid asks hardest — for that one, get a
+book do ask about savings. Medicaid asks hardest. For that one, get a
 guide before you file. But never do a program's math for it.
 
 Most families never apply. The money goes unclaimed, year after year,
@@ -543,26 +541,26 @@ left on tables by people who assumed.
 Let me show you how a person ends up on a double dose of blood thinner.
 
 The cardiologist prescribes it by its brand name. The primary care
-doctor — different office, different network, computer systems that do
-not talk to each other — prescribes the same drug as a generic. Two
+doctor (different office, different network, computer systems that do
+not talk to each other) prescribes the same drug as a generic. Two
 different names. Two different bottles. The same drug inside both.
 
 The patient fills both prescriptions, because a doctor ordered each one.
-Takes both, because they're on the med list. And nobody catches it —
+Takes both, because they're on the med list. And nobody catches it,
 because the two doctors have never spoken, and the only person who ever
 sees every bottle in the house is the family.
 
 For painkillers and a handful of other controlled drugs, there is a
 partial safety net: state monitoring programs a pharmacist or doctor can
 check. For everything else, there are exactly two nets. The first is
-simple, and I am begging you to use it — fill every prescription at one
+simple, and I am begging you to use it: fill every prescription at one
 pharmacy, so one computer sees every bottle. The second net is you.
 
 That is what the Important Documents Folder is. The net, on paper.
 
 One folder. One master list. Every family member involved in the care
 has it: the cards, the doctors, every diagnosis, and the medication
-list — updated the day anything changes, with which doctor prescribes
+list, updated the day anything changes, with which doctor prescribes
 each drug, and brand and generic names side by side. The full checklist
 is in this chapter.
 
@@ -582,7 +580,7 @@ There is no such thing as too early for a healthcare power of attorney.
 There are, however, many kinds of too late.
 
 A friend of mine learned this with their own mother. Her dementia had
-been progressing for a while — and when the family finally reached for
+been progressing for a while. When the family finally reached for
 the paperwork, the window had closed. A person has to be capable of
 understanding what they are signing, and she no longer was. She could
 not put her own choice on paper anymore. She could not name which of her
@@ -601,12 +599,12 @@ looks like every other day, and passes.
 
 And here is the other half, because you may be reading this with a
 diagnosis already in the family: a diagnosis is not the closed window.
-Many people in early dementia can still legally sign — the question is
+Many people in early dementia can still legally sign. The question is
 whether they understand what the document does, and an elder-law
 attorney can tell you in one visit. Go this week.
 
 And if the window truly has closed in your family, keep reading. There
-is still a path — this chapter covers it — and missing a window nobody
+is still a path, and this chapter covers it. Missing a window nobody
 showed you is not the same as failing.
 
 Get the healthcare power of attorney done now, and put it in the folder
@@ -622,15 +620,15 @@ The other is saying *let them rest.*
 
 I have seen this fight, and I want you to understand something about it:
 both sides love the same person. Both sides believe they are defending
-that person's wishes. And both sides are guessing — because nothing was
+that person's wishes. And both sides are guessing, because nothing was
 ever written down.
 
 Spouse versus children is the most common version, and it is the
 cruelest, because it sets the two halves of a family against each other
 at the exact moment they need each other most. A living will ends most
 of that fight before it starts. The question stops being *what do we
-think they'd want* — with everyone's grief and fear and history piled
-onto the answer — and becomes *what did they say.* On paper. In their
+think they'd want*, with everyone's grief and fear and history piled
+onto the answer, and becomes *what did they say.* On paper. In their
 words.
 
 In Chapter 5, I told you my family never had the meeting. A living will
@@ -638,7 +636,7 @@ is what the meeting writes down: CPR or not, machines or not, where the
 line is between fighting for life and holding on to it too hard.
 
 And it has to be *findable*. A DNR that exists in a drawer nobody can
-locate does not exist — if the paper cannot be produced, the default is
+locate does not exist. If the paper cannot be produced, the default is
 full intervention, including the things your person said they never
 wanted. Chapter 23 covers where these orders must physically live. For
 now: write it down, and make sure the right people can put their hands
@@ -654,10 +652,10 @@ everything stops.
 
 The rent at the assisted living community. The insurance premium that
 keeps coverage alive. The bills that keep the lights on in a house
-nobody's living in right now. Without a financial power of attorney — or
-with the wrong person named — the family can't act, and a court and a
+nobody's living in right now. Without a financial power of attorney, or
+with the wrong person named, the family can't act, and a court and a
 judge step in. Guardianship proceedings, oversight, months of it. The
-court usually ends up appointing a family member anyway — after the
+court usually ends up appointing a family member anyway, after the
 delay, the cost, and the strangers added to your family's worst month.
 And while all of that grinds forward, everything waits. So does the
 person it's all for.
@@ -666,10 +664,10 @@ The urgency is identical to the healthcare POA in Chapter 20, and so is
 the window: it closes when capacity does, quietly, without notice.
 
 So here is what I want you to do. Get all three documents done
-together — the living will, the healthcare power of attorney, the
+together: the living will, the healthcare power of attorney, the
 financial power of attorney. One effort, one afternoon if you can manage
 it. Do it with someone who knows your state's rules, because signing
-requirements vary — witnesses, notaries, and who is allowed to be which.
+requirements vary: witnesses, notaries, and who is allowed to be which.
 
 And while you're at that table: **do your own.**
 
@@ -684,14 +682,14 @@ day. It is love, in paperwork form.
 ## Chapter 24 — Advance Care Planning Conversations (DRAFTED)
 
 Just last week, I sat with a family and helped them have the
-conversation — the one about what's coming, what he wants, what needs
+conversation: the one about what's coming, what he wants, what needs
 saying while there's still time to say it. I have that conversation with
 other families all the time. Don't leave anything left unsaid.
 
 Now let me tell you what I got wrong with my own father.
 
-I never forced the planning conversations. I knew better — it is
-literally my work — and I still let them slide, the way every family
+I never forced the planning conversations. I knew better (it is
+literally my work) and I still let them slide, the way every family
 does. There was always going to be more time. So the decisions he should
 have made stayed unmade, and they came due the week of his funeral.
 Money questions, surfacing in the worst week to face them.
@@ -699,21 +697,21 @@ Money questions, surfacing in the worst week to face them.
 That is one kind of unsaid, and I carry the regret of it. This chapter
 exists so you won't.
 
-But there is a second kind of unsaid — and that kind, I finished. I said
+But there is a second kind of unsaid, and that kind, I finished. I said
 everything to my father while he could still answer me back. I was not
-in the room when he died; that story belongs to Chapter 27. What I can
+in the room when he died. That story belongs to Chapter 27. What I can
 tell you here is that the words I had already said are what let me
 survive it.
 
 So don't save the practical conversations for the end. The last days are
-too late for the practical conversations — and never too late for the
+too late for the practical conversations, and never too late for the
 loving ones. If the last days are where you are right now, go to Chapter
 28, and keep talking to them. For everything else, the right time is
 now, at a kitchen table, while the person you love can still answer you
 back.
 
-Two conversations, then. The practical one — wishes, decisions, money,
-orders — which this chapter walks you through, question by question. And
+Two conversations, then. The practical one (wishes, decisions, money,
+orders), which this chapter walks you through, question by question. And
 the love one, which only you can script.
 
 Have both. Leave nothing unsaid.
@@ -722,12 +720,12 @@ Have both. Leave nothing unsaid.
 
 ## Chapter 27 — The Last Days Plan (DRAFTED)
 
-My dad spent his last week at Baptist Hospital. The family gathered — my
+My dad spent his last week at Baptist Hospital. The family gathered: my
 brothers and sister, my stepmom at his side.
 
 I wasn't there. I want to tell you why.
 
-That same week, my mom — who has Parkinson's disease — had made the trip
+That same week, my mom, who has Parkinson's disease, had made the trip
 to Raleigh to visit me. Watching her, I understood something nobody said
 out loud: this was probably the last trip she would ever be able to
 take. So I stayed. I did the math that every child of two declining
@@ -752,7 +750,7 @@ room was missing.
 Here is the part I need to be honest about, because it is the reason
 this book has the title it has. At first, I did not feel guilty. I had
 made a real choice between two parents who needed me. I had said
-everything to my father long before that week — no forgiveness withheld,
+everything to my father long before that week: no forgiveness withheld,
 nothing I was still saving up to say. And the last memory I have of my
 dad is not tubes and machines. It is *him*.
 
@@ -761,8 +759,8 @@ from the family started, that is when *you should have been there* got
 into my head. That is when it set out to get me.
 
 So I want to say something to whoever needs it: sometimes "it's your
-fault" is not even your own sentence. Someone hands it to you —
-grieving, angry, in the worst week of their lives — and you carry it as
+fault" is not even your own sentence. Someone hands it to you,
+grieving, angry, in the worst week of their lives, and you carry it as
 if it were yours. You are allowed to put it down. Grief turns loving
 people into scorekeepers. There was never a score.
 
@@ -781,7 +779,7 @@ A last-days plan is not about controlling death. Death does not take
 instructions. A plan is about deciding, before the last week, what
 matters most: who needs to be there, who calls whom, what he would want
 in the room, and what you will do when it happens faster than anyone
-believed. Not so the plan goes perfectly — so that whatever happens, you
+believed. Not so the plan goes perfectly. So that whatever happens, you
 know you did what could be done. The rest was never yours to carry.
 
 So when I say it's not your fault, understand what you're hearing. Not a
@@ -800,18 +798,18 @@ is the not knowing.
 Nobody tells families what dying looks like. So every change looks like
 an emergency. Every sound seems like suffering. Every hour, someone
 wants to call 911. The fear in the room doesn't come from what is
-happening — it comes from not knowing that what is happening is normal.
+happening. It comes from not knowing that what is happening is normal.
 
 So let me tell you what I have watched at hundreds of bedsides, and what
-the hospice nurses and doctors taught me standing next to them — so that
+the hospice nurses and doctors taught me standing next to them, so that
 you can walk in prepared.
 
 They will sleep more. Then more than that. Eating and drinking will
-fade — and this is where families struggle hardest, because food is how
+fade. This is where families struggle hardest, because food is how
 we love people. You will want to coax one more bite. Hear me: near the
 end, the body is finished with food. It is not starving. It is shutting
 down the systems it no longer needs, and forcing food and fluids doesn't
-add days — it adds discomfort. Offering is still allowed: sips and
+add days. It adds discomfort. Offering is still allowed: sips and
 tastes for pleasure, mouth care for comfort. Offer. Never force.
 
 The breathing will change. It may speed up, slow down, pause long enough
@@ -821,29 +819,29 @@ harder on the people hearing it than the person breathing it. Comfort
 medications exist for exactly this, and the care team knows how to use
 them.
 
-There may be restlessness. And there may be visions — reaching for
+There may be restlessness. And there may be visions: reaching for
 things you cannot see, conversations with people who died years ago. I
 have stopped trying to explain this. I only know that it happens, that
 it is common, and that the dying are usually not frightened by it. More
 often, they seem comforted. You already know what to do, because it's
 the same thing I taught you in the dementia chapter: don't argue with
 their reality. Join it. But restlessness that looks like distress is
-different — that one you report. The team can treat it.
+different. That one you report. The team can treat it.
 
-Then there is the rally. One day — often near the very end — they may
+Then there is the rally. One day, often near the very end, they may
 wake up clear. Alert, talking, maybe hungry, asking for people. Families
 take it as a turnaround. I have watched it break hearts twice for that
 reason. The rally is real, but it is usually not a recovery. It is a
 gift. Treat it like one: gather, say everything, laugh if there's
 laughing to do. It is often the last good day.
 
-And through all of it — this most of all — **keep talking to them.**
+And through all of it, this most of all: **keep talking to them.**
 Hearing stays long after responding stops. No one can prove what reaches
 them, so we assume it all does. Say the things. None of it is wasted.
 
 One more thing about the fear of the phone. When hospice is on board and
 death is expected, the number to call is the hospice line, not 911. It
-answers twenty-four hours a day, and it exists for exactly these hours —
+answers twenty-four hours a day, and it exists for exactly these hours:
 for any change, and for any fear, at 2 a.m. as much as 2 p.m.
 
 Knowing all of this will not make the last days easy. But it changes
@@ -863,8 +861,8 @@ wanted to be buried. The *what* was known. Here is what no one had: the
 *how*. There was no financial plan. No conversation, ever, about what a
 burial costs or where that money would come from.
 
-So the money questions came due during funeral week — the one week that
-exists for grieving — and they pulled us away from the only thing that
+So the money questions came due during funeral week, the one week that
+exists for grieving, and they pulled us away from the only thing that
 week was for.
 
 I told you in Chapter 5 about the meeting my family never had. I'm
@@ -872,12 +870,12 @@ telling you now what it cost. There are two plans, and most families
 have at most one of them. The wishes plan: what they want, where, how.
 The financial plan: what it costs and where the money comes from. My
 family had the first. Nobody had the second. Grief and a checkbook do
-not belong in the same week — and the only way to keep them apart is to
+not belong in the same week. The only way to keep them apart is to
 make both plans while everyone is still alive.
 
-The rest of this chapter walks you through those first days — the calls,
+The rest of this chapter walks you through those first days (the calls,
 the funeral home, the practical tasks that arrive whether you are ready
-or not — and the weeks after, which nobody talks about at all. Take
+or not) and the weeks after, which nobody talks about at all. Take
 everything slowly. There is no stopwatch on any of it.
 
 But I want to end with what happened fifteen days later.
@@ -891,7 +889,7 @@ happened: I stood at the window and I watched it, and I did not feel
 alone.
 
 That is the last thing this book has to say to you. The love does not
-end on the day they die. It keeps arriving — in the tasks you finish for
+end on the day they die. It keeps arriving: in the tasks you finish for
 them, in the words you said while they could still hear you, in whatever
 lands on the branch outside your window when you need it most.
 
