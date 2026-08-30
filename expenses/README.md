@@ -18,6 +18,12 @@ know about every exception *while typing*, not days later in a rejection email.
 - **Real receipts.** Attach the actual image or PDF (stored as a capped data:
   URL); approvers open it in place. List payloads carry only a marker, not the
   bytes.
+- **Budgets, the way Mint did them.** A monthly limit per category with a
+  progress meter that turns amber at 80% and red past the limit, "$spent of
+  $available / $left" on every row, a month stepper, and optional rollover
+  that carries an unused (or overspent) balance into the next month. Spend
+  counts every expense you file that month — card and out-of-pocket alike —
+  except rejected reports.
 - **Card feed without reconciliation.** Import corporate card charges; a
   charge auto-matches when you enter the expense (same amount, ±3 days),
   or becomes an expense in one click with date/merchant/amount prefilled.
@@ -81,6 +87,10 @@ draft ──submit──▶ approved (auto, when compliant ≤ ceiling)
 | POST | `/reports/:id/reimburse` | Mark approved report paid |
 | GET | `/analytics` | My spend by category/status, card vs out-of-pocket split |
 | GET | `/export.csv` | My expenses as CSV (`?scope=approvals` for my queue) |
+| GET | `/budgets` | My monthly category budgets |
+| PUT | `/budgets/:category` | Set/replace a budget `{ amountCents, rollover?, startMonth? }` |
+| DELETE | `/budgets/:category` | Remove a budget |
+| GET | `/budgets/summary` | Budget progress for a month (`?month=YYYY-MM`, default this month) |
 | POST | `/card-transactions/import` | Import card charges `{ transactions: [{ date, merchant, amountCents, last4 }] }` (re-imports dedupe) |
 | GET | `/card-transactions` | My card feed (`?status=unmatched\|matched\|dismissed`) |
 | POST | `/card-transactions/:id/expense` | One-click expense from a charge `{ reportId, category }` |

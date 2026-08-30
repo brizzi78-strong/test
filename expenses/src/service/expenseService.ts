@@ -13,9 +13,20 @@ import {
   reportTotalCents,
   type Policy,
 } from '../domain/policy.ts';
+import {
+  budgetProgress,
+  currentMonth,
+  hasStarted,
+  isMonth,
+  monthOf,
+  rolloverInto,
+  summarize,
+} from '../domain/budget.ts';
 import { findMatchingTransaction } from '../domain/matching.ts';
 import {
   CATEGORIES,
+  type Budget,
+  type BudgetSummary,
   type CardTransaction,
   type CardTransactionStatus,
   type Category,
@@ -130,6 +141,9 @@ function stripReceiptData(report: ExpenseReport): ExpenseReport {
     ),
   };
 }
+
+/** One budget per owner per category, so the key is the identity. */
+const budgetId = (ownerId: string, category: Category): string => `${ownerId}|${category}`;
 
 /** Identity of a charge for re-import dedupe. */
 const transactionKey = (t: Pick<CardTransaction, 'date' | 'merchant' | 'amountCents' | 'last4'>): string =>
@@ -340,6 +354,130 @@ export class ExpenseService {
     report.history.push({ at: report.reimbursedAt, by: userId, action: 'reimbursed' });
     this.store.put(report);
     return this.withEvaluation(report);
+  }
+
+  /**
+   * Set (or replace) this user's monthly budget for one category. Keyed by
+   * category, so calling it twice updates rather than duplicating.
+   */
+  setBudget(userId: string, category: string, body: unknown): Budget {
+    if (!CATEGORIES.includes(category as Category)) {
+      throw new DomainError(`category must be one of: ${CATEGORIES.join(', ')}`);
+    }
+    const input = asRecord(body);
+    const amountCents = input.amountCents;
+    if (
+      typeof amountCents !== 'number' ||
+      !Number.isInteger(amountCents) ||
+      amountCents <= 0 ||
+      amountCents > 100_000_000
+    ) {
+      throw new DomainError('amountCents must be a positive integer (max $1,000,000)');
+    }
+    if (input.rollover !== undefined && typeof input.rollover !== 'boolean') {
+      throw new DomainError('rollover must be a boolean');
+    }
+    let startMonth = currentMonth(this.now());
+    if (input.startMonth !== undefined) {
+      const given = requireString(input.startMonth, 'startMonth', 7);
+      if (!isMonth(given)) throw new DomainError('startMonth must be a YYYY-MM month');
+      startMonth = given;
+    }
+    const id = budgetId(userId, category as Category);
+    const existing = this.store.getBudget(id);
+    const rollover = input.rollover === undefined ? (existing?.rollover ?? false) : input.rollover;
+    const effectiveStart = input.startMonth === undefined && existing ? existing.startMonth : startMonth;
+
+    // Where rollover starts accumulating from:
+    //  - a new budget, or one the caller re-based by passing startMonth,
+    //    accumulates from that start month;
+    //  - changing the limit or the rollover flag freezes the balance built up
+    //    so far and accumulates from this month at the new limit, so the
+    //    change never rewrites months budgeted under the old one;
+    //  - otherwise the existing anchor stands.
+    let carryFromMonth: string;
+    let carryFromCents: number;
+    if (!existing || input.startMonth !== undefined) {
+      carryFromMonth = effectiveStart;
+      carryFromCents = 0;
+    } else if (existing.amountCents !== amountCents || existing.rollover !== rollover) {
+      const anchor = currentMonth(this.now());
+      const spent = this.spendByCategory(userId).get(category as Category) ?? new Map<string, number>();
+      // Only a budget that was already rolling over has a balance to keep.
+      carryFromCents = rollover && existing.rollover ? rolloverInto(existing, anchor, spent) : 0;
+      carryFromMonth = anchor;
+    } else {
+      carryFromMonth = existing.carryFromMonth;
+      carryFromCents = existing.carryFromCents;
+    }
+
+    const budget: Budget = {
+      id,
+      ownerId: userId,
+      category: category as Category,
+      amountCents,
+      startMonth: effectiveStart,
+      rollover,
+      carryFromMonth,
+      carryFromCents,
+      createdAt: existing?.createdAt ?? this.now().toISOString(),
+    };
+    this.store.putBudget(budget);
+    return budget;
+  }
+
+  /** Spend per category per month across this user's non-rejected reports. */
+  private spendByCategory(userId: string): Map<Category, Map<string, number>> {
+    const spend = new Map<Category, Map<string, number>>();
+    for (const report of this.query((r) => r.ownerId === userId && r.status !== 'rejected')) {
+      for (const e of report.expenses) {
+        const byMonth = spend.get(e.category) ?? new Map<string, number>();
+        const m = monthOf(e.date);
+        byMonth.set(m, (byMonth.get(m) ?? 0) + e.amountCents);
+        spend.set(e.category, byMonth);
+      }
+    }
+    return spend;
+  }
+
+  listBudgets(userId: string): Budget[] {
+    return this.store
+      .listBudgets((b) => b.ownerId === userId)
+      .sort((a, b) => a.category.localeCompare(b.category));
+  }
+
+  deleteBudget(userId: string, category: string): void {
+    const budget = this.store.getBudget(budgetId(userId, category as Category));
+    if (!budget || budget.ownerId !== userId) throw notFound('budget');
+    this.store.deleteBudget(budget.id);
+  }
+
+  /**
+   * Budget progress for a month: spend per category against its limit, plus
+   * the month's headline totals and any spend in unbudgeted categories.
+   *
+   * Spend counts every expense in the user's reports except rejected ones —
+   * the money left the account whether or not the report is filed yet — and
+   * counts company-card spend alongside out-of-pocket.
+   */
+  budgetSummary(userId: string, month?: string): BudgetSummary {
+    const target = month ?? currentMonth(this.now());
+    if (!isMonth(target)) throw new DomainError('month must be a YYYY-MM month');
+
+    const spend = this.spendByCategory(userId);
+
+    // A budget that had not started yet in this month does not govern it:
+    // that spend is reported as unbudgeted, not as an overspend against a
+    // limit nobody had set.
+    const active = this.listBudgets(userId).filter((b) => hasStarted(b, target));
+    const budgeted = new Set(active.map((b) => b.category));
+    const progress = active.map((b) => budgetProgress(b, target, spend.get(b.category)));
+
+    let unbudgetedCents = 0;
+    for (const [category, byMonth] of spend) {
+      if (!budgeted.has(category)) unbudgetedCents += byMonth.get(target) ?? 0;
+    }
+    return summarize(target, progress, unbudgetedCents);
   }
 
   /**

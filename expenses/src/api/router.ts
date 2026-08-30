@@ -21,6 +21,10 @@
  *   POST   /reports/:id/reimburse
  *   GET    /analytics                          -> my spend by category/status
  *   GET    /export.csv[?scope=approvals]       -> my expenses (or my queue) as CSV
+ *   GET    /budgets                            -> my monthly category budgets
+ *   PUT    /budgets/:category                  -> { amountCents, rollover?, startMonth? }
+ *   DELETE /budgets/:category
+ *   GET    /budgets/summary[?month=YYYY-MM]    -> budget progress for a month
  *   POST   /card-transactions/import           -> { transactions: [...] } card feed import
  *   GET    /card-transactions[?status=...]     -> my card feed
  *   POST   /card-transactions/:id/expense      -> one-click expense from a charge
@@ -122,6 +126,18 @@ export function createRequestListener(
     ok(service.reimburseReport(ctx.userId, ctx.params.id!)),
   );
   route('GET', '/analytics', (ctx) => ok(service.analytics(ctx.userId)));
+  // Registered before /budgets/:category so "summary" is never read as a category.
+  route('GET', '/budgets/summary', (ctx) =>
+    ok(service.budgetSummary(ctx.userId, ctx.query.get('month') ?? undefined)),
+  );
+  route('GET', '/budgets', (ctx) => ok({ budgets: service.listBudgets(ctx.userId) }));
+  route('PUT', '/budgets/:category', (ctx) =>
+    ok({ budget: service.setBudget(ctx.userId, ctx.params.category!, ctx.body) }),
+  );
+  route('DELETE', '/budgets/:category', (ctx) => {
+    service.deleteBudget(ctx.userId, ctx.params.category!);
+    return ok({ deleted: true });
+  });
   route('POST', '/card-transactions/import', (ctx) =>
     created(service.importTransactions(ctx.userId, ctx.body)),
   );

@@ -449,6 +449,127 @@ describe('Expenses API', () => {
     assert.ok(edited.json.report.history.some((h: any) => h.action === 'card-unlinked'));
   });
 
+  it('runs the budgeting component: set limits, track spend, roll over, flag overspend', async () => {
+    const thisMonth = today.slice(0, 7);
+    const lastMonth = (() => {
+      const [y, m] = thisMonth.split('-').map(Number);
+      return m === 1 ? `${y - 1}-12` : `${y}-${String(m - 1).padStart(2, '0')}`;
+    })();
+    const dayIn = (month: string) => `${month}-15`;
+
+    const set = await call('PUT', '/budgets/meals', { amountCents: 50_000 }, 'bud');
+    assert.equal(set.status, 200);
+    assert.equal(set.json.budget.amountCents, 50_000);
+    assert.equal(set.json.budget.rollover, false);
+    assert.equal(set.json.budget.category, 'meals');
+
+    // Setting the same category again updates rather than duplicating.
+    await call('PUT', '/budgets/meals', { amountCents: 60_000, startMonth: lastMonth }, 'bud');
+    await call('PUT', '/budgets/lodging', { amountCents: 100_000, startMonth: lastMonth }, 'bud');
+    const listed = await call('GET', '/budgets', undefined, 'bud');
+    assert.deepEqual(listed.json.budgets.map((b: any) => b.category), ['lodging', 'meals']);
+    assert.equal(listed.json.budgets.find((b: any) => b.category === 'meals').amountCents, 60_000);
+
+    // Spend: meals over the limit this month, lodging under, plus an unbudgeted category.
+    const { json: repJson } = await call('POST', '/reports', { title: 'Budget run' }, 'bud');
+    const rid = repJson.report.id;
+    const add = (date: string, category: string, amountCents: number) =>
+      call('POST', `/reports/${rid}/expenses`,
+        { date, category, merchant: `${category} vendor`, amountCents, receipt: { name: 'r.pdf' } }, 'bud');
+    await add(dayIn(thisMonth), 'meals', 65_000);
+    await add(dayIn(thisMonth), 'lodging', 30_000);
+    await add(dayIn(thisMonth), 'software', 12_000);
+
+    const summary = await call('GET', `/budgets/summary?month=${thisMonth}`, undefined, 'bud');
+    assert.equal(summary.status, 200);
+    const meals = summary.json.budgets.find((b: any) => b.category === 'meals');
+    assert.equal(meals.spentCents, 65_000);
+    assert.equal(meals.availableCents, 60_000);
+    assert.equal(meals.remainingCents, -5_000);
+    assert.equal(meals.status, 'over');
+    const lodging = summary.json.budgets.find((b: any) => b.category === 'lodging');
+    assert.equal(lodging.remainingCents, 70_000);
+    assert.equal(lodging.status, 'under');
+    assert.equal(summary.json.overCount, 1);
+    assert.equal(summary.json.totalAvailableCents, 160_000);
+    assert.equal(summary.json.totalSpentCents, 95_000);
+    assert.equal(summary.json.unbudgetedCents, 12_000, 'software has no budget');
+
+    // Turning rollover on must not invent carry from months that were never
+    // rolling over — the balance starts accumulating from the change.
+    await add(dayIn(lastMonth), 'lodging', 20_000);
+    await call('PUT', '/budgets/lodging', { amountCents: 100_000, rollover: true }, 'bud');
+    const justEnabled = await call('GET', `/budgets/summary?month=${thisMonth}`, undefined, 'bud');
+    assert.equal(
+      justEnabled.json.budgets.find((b: any) => b.category === 'lodging').rolloverCents,
+      0,
+      'no retroactive carry from before rollover was enabled',
+    );
+
+    // Re-basing the budget to last month makes it roll over from there:
+    // $1,000 limit less $200 spent leaves $800 to carry into this month.
+    await call('PUT', '/budgets/lodging',
+      { amountCents: 100_000, rollover: true, startMonth: lastMonth }, 'bud');
+    const rolled = await call('GET', `/budgets/summary?month=${thisMonth}`, undefined, 'bud');
+    const rolledLodging = rolled.json.budgets.find((b: any) => b.category === 'lodging');
+    assert.equal(rolledLodging.rolloverCents, 80_000, 'last month left 80k unspent');
+    assert.equal(rolledLodging.availableCents, 180_000);
+
+    // Raising a rolling budget's limit keeps the balance already built up
+    // instead of replaying old months at the new, higher limit.
+    const raised = await call('PUT', '/budgets/lodging', { amountCents: 150_000 }, 'bud');
+    assert.equal(raised.json.budget.carryFromMonth, thisMonth);
+    assert.equal(raised.json.budget.carryFromCents, 80_000);
+    const afterRaise = await call('GET', `/budgets/summary?month=${thisMonth}`, undefined, 'bud');
+    const raisedLodging = afterRaise.json.budgets.find((b: any) => b.category === 'lodging');
+    assert.equal(raisedLodging.rolloverCents, 80_000);
+    assert.equal(raisedLodging.availableCents, 230_000);
+    // Put it back so the totals below stay predictable.
+    await call('PUT', '/budgets/lodging',
+      { amountCents: 100_000, rollover: true, startMonth: lastMonth }, 'bud');
+
+    // Rejected reports do not count against a budget.
+    const { json: rejJson } = await call('POST', '/reports', { title: 'Rejected spend', approverId: 'bud-mgr' }, 'bud');
+    const rejId = rejJson.report.id;
+    await call('POST', `/reports/${rejId}/expenses`,
+      { date: dayIn(thisMonth), category: 'meals', merchant: 'X', amountCents: 40_000, receipt: { name: 'r.pdf' } }, 'bud');
+    await call('POST', `/reports/${rejId}/submit`, undefined, 'bud');
+    await call('POST', `/reports/${rejId}/reject`, { reason: 'not approved' }, 'bud-mgr');
+    const afterReject = await call('GET', `/budgets/summary?month=${thisMonth}`, undefined, 'bud');
+    assert.equal(afterReject.json.budgets.find((b: any) => b.category === 'meals').spentCents, 65_000);
+
+    const removed = await call('DELETE', '/budgets/lodging', undefined, 'bud');
+    assert.equal(removed.status, 200);
+    const afterDelete = await call('GET', '/budgets', undefined, 'bud');
+    assert.deepEqual(afterDelete.json.budgets.map((b: any) => b.category), ['meals']);
+  });
+
+  it('keeps budgets per user and validates their input', async () => {
+    await call('PUT', '/budgets/meals', { amountCents: 10_000 }, 'bud-a');
+    const otherUser = await call('GET', '/budgets', undefined, 'bud-b');
+    assert.deepEqual(otherUser.json.budgets, []);
+    const strangerDelete = await call('DELETE', '/budgets/meals', undefined, 'bud-b');
+    assert.equal(strangerDelete.status, 404);
+
+    const badCategory = await call('PUT', '/budgets/yachts', { amountCents: 10_000 }, 'bud-a');
+    assert.equal(badCategory.status, 400);
+    const badAmount = await call('PUT', '/budgets/meals', { amountCents: 0 }, 'bud-a');
+    assert.equal(badAmount.status, 400);
+    const fractional = await call('PUT', '/budgets/meals', { amountCents: 10.5 }, 'bud-a');
+    assert.equal(fractional.status, 400);
+    const badRollover = await call('PUT', '/budgets/meals', { amountCents: 100, rollover: 'yes' }, 'bud-a');
+    assert.equal(badRollover.status, 400);
+    const badStart = await call('PUT', '/budgets/meals', { amountCents: 100, startMonth: '2026-13' }, 'bud-a');
+    assert.equal(badStart.status, 400);
+    const badMonth = await call('GET', '/budgets/summary?month=nope', undefined, 'bud-a');
+    assert.equal(badMonth.status, 400);
+
+    // "summary" must route to the summary, never be read as a category.
+    const summary = await call('GET', '/budgets/summary', undefined, 'bud-a');
+    assert.equal(summary.status, 200);
+    assert.ok(Array.isArray(summary.json.budgets));
+  });
+
   it('exports expenses as CSV for the filer and the approver, neutralizing formula injection', async () => {
     const { json: createdJson } = await call('POST', '/reports', { title: 'CSV run', approverId: 'csv-fin' }, 'csv-user');
     const id = createdJson.report.id;

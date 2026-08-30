@@ -91,6 +91,59 @@ export interface ExpenseReport {
   history: HistoryEntry[];
 }
 
+/** A monthly spending limit for one category, Mint-style. */
+export interface Budget {
+  /** Deterministic `${ownerId}|${category}` — one budget per category. */
+  id: string;
+  ownerId: string;
+  category: Category;
+  /** Monthly limit in integer cents. */
+  amountCents: number;
+  /** First month the budget applies (YYYY-MM). */
+  startMonth: string;
+  /** Carry the month's unused (or overspent) balance into the next month. */
+  rollover: boolean;
+  /**
+   * Month rollover accumulates from. Reset whenever the limit or the rollover
+   * flag changes, so changing a budget never rewrites earlier months.
+   */
+  carryFromMonth: string;
+  /** Balance carried into `carryFromMonth`, frozen at that reset. */
+  carryFromCents: number;
+  createdAt: string;
+}
+
+export type BudgetStatus = 'under' | 'warning' | 'over';
+
+export interface BudgetProgress {
+  category: Category;
+  month: string;
+  /** The plain monthly limit, before any rollover. */
+  baseAmountCents: number;
+  /** Signed balance carried in from earlier months; 0 when rollover is off. */
+  rolloverCents: number;
+  /** What may be spent this month: base + rollover. Can go negative. */
+  availableCents: number;
+  spentCents: number;
+  /** available − spent; negative means over budget. */
+  remainingCents: number;
+  /** spent / available, for the progress bar. */
+  ratio: number;
+  status: BudgetStatus;
+  rollover: boolean;
+}
+
+export interface BudgetSummary {
+  month: string;
+  budgets: BudgetProgress[];
+  totalAvailableCents: number;
+  totalSpentCents: number;
+  totalRemainingCents: number;
+  /** Spend this month in categories with no budget set. */
+  unbudgetedCents: number;
+  overCount: number;
+}
+
 export type ViolationCode =
   | 'MISSING_RECEIPT'
   | 'OVER_CATEGORY_LIMIT'

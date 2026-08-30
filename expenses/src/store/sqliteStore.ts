@@ -5,7 +5,7 @@
  */
 
 import { DatabaseSync } from 'node:sqlite';
-import type { CardTransaction, ExpenseReport } from '../domain/types.ts';
+import type { Budget, CardTransaction, ExpenseReport } from '../domain/types.ts';
 import type { Store } from './store.ts';
 
 export interface SqliteStore extends Store {
@@ -27,6 +27,13 @@ export function createSqliteStore(path: string): SqliteStore {
     'INSERT INTO card_transactions (id, data) VALUES (?, ?) ON CONFLICT(id) DO UPDATE SET data = excluded.data',
   );
   const allTxnStmt = db.prepare('SELECT data FROM card_transactions');
+  db.exec('CREATE TABLE IF NOT EXISTS budgets (id TEXT PRIMARY KEY, data TEXT NOT NULL)');
+  const getBudgetStmt = db.prepare('SELECT data FROM budgets WHERE id = ?');
+  const putBudgetStmt = db.prepare(
+    'INSERT INTO budgets (id, data) VALUES (?, ?) ON CONFLICT(id) DO UPDATE SET data = excluded.data',
+  );
+  const allBudgetStmt = db.prepare('SELECT data FROM budgets');
+  const delBudgetStmt = db.prepare('DELETE FROM budgets WHERE id = ?');
 
   return {
     get: (id) => {
@@ -56,6 +63,22 @@ export function createSqliteStore(path: string): SqliteStore {
       const rows = allTxnStmt.all() as Array<{ data: string }>;
       const all = rows.map((r) => JSON.parse(r.data) as CardTransaction);
       return predicate ? all.filter(predicate) : all;
+    },
+
+    getBudget: (id) => {
+      const row = getBudgetStmt.get(id) as { data: string } | undefined;
+      return row ? (JSON.parse(row.data) as Budget) : undefined;
+    },
+    putBudget: (budget) => {
+      putBudgetStmt.run(budget.id, JSON.stringify(budget));
+    },
+    listBudgets: (predicate) => {
+      const rows = allBudgetStmt.all() as Array<{ data: string }>;
+      const all = rows.map((r) => JSON.parse(r.data) as Budget);
+      return predicate ? all.filter(predicate) : all;
+    },
+    deleteBudget: (id) => {
+      delBudgetStmt.run(id);
     },
 
     close: () => db.close(),
