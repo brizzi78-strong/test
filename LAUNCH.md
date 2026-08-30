@@ -5,12 +5,12 @@
 | Decision | Value |
 | --- | --- |
 | Supply | Mint all 1B at deploy, `renounceOwnership()` immediately after verification |
-| Uniswap pool | 400M CARD (40%) paired with ~$4,000 of ETH (≈1.6 ETH) |
-| Founder hold | 400M CARD (40%), unlocked, in a publicly disclosed wallet |
+| Uniswap pool | 550M CARD (55%) paired with ~$4,000 of ETH (≈1.6 ETH) |
+| Founder hold | 250M CARD (25%), unlocked, in a publicly disclosed wallet |
 | Treasury | 200M CARD (20%) in a publicly announced wallet |
 | LP tokens | Locked 12 months (Team Finance or UNCX) |
 | Timeline | Week 0: Sepolia rehearsal → Weeks 1–2: independent audit + legal consult → Week 3: mainnet |
-| Before mainnet | Publish the one-page site (`site/index.html`) at **thecardinalspromise.com/card** (the book's established domain — best trust signal; cp17.org can redirect there) and fill in the story section |
+| Before mainnet | Publish the one-page site (`site/index.html`) at **cp17.org** — deliberately not the book's domain, so the token is not presented to the book's audience as an extension of it |
 
 Status of each step on the road to mainnet. Items marked ✅ are done in this
 repo; items marked 🔑 need something only the project owner can provide
