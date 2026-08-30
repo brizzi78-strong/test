@@ -17,17 +17,27 @@
 
   | Holder | Amount | Share | Status |
   | --- | --- | --- | --- |
-  | Uniswap V2 pool | 550,000,000 CARD | 55% | LP tokens locked 12 months |
-  | **Founder, personally** | **250,000,000 CARD** | **25%** | **Unlocked** |
-  | Treasury | 200,000,000 CARD | 20% | Disclosed wallet |
+  | Uniswap V2 pool | 200,000,000 CARD | 20% | LP tokens locked 12 months |
+  | **Founder allocation** | **800,000,000 CARD** | **80%** | **Held in a vesting contract — 90-day cliff, then continuous release over 3 years** |
+  | Treasury | — | 0% | None exists |
+
+- The founder allocation is **not held personally**. It is held by
+  `contracts/CardinalVesting.sol`, a deployment of OpenZeppelin v5's
+  `VestingWallet` + `VestingWalletCliff` with no added logic beyond
+  constructor wiring. The contract has no early-withdrawal function, no
+  acceleration function, and no owner privilege that shortens the term.
+  The schedule is fixed at construction and publicly readable.
+- There is no treasury. Any charitable giving is personal, from tokens that
+  have actually vested, discretionary, and not promised or committed to
+  anyone.
 
 - Pool is seeded with roughly $4,000 of ETH. At that size the launch spot
   price is a small fraction of a cent and the pool is thin enough that a
   single sizeable trade moves it materially.
 - **No marketing campaign.** Public communications are limited to factual
-  disclosures: contract address, supply, the renouncement transaction, the
-  LP lock, the founder holding, and risk warnings. No price commentary and
-  no growth or return language.
+  disclosures: both contract addresses, supply, the renouncement
+  transaction, the LP lock, the 80% allocation with its full vesting terms,
+  and risk warnings. No price commentary and no growth or return language.
 - No pre-sale, no private round, no fundraising, no allocation issued in
   exchange for services or anything else of value. Trading is peer-to-pool
   on a DEX.
@@ -36,20 +46,37 @@
 
 ## The fact that most needs counsel's attention
 
-**The founder holds 25% of supply personally, and it is not locked.** An
-earlier version of this briefing described the launch as involving "no sale
-by the issuer." That is no longer accurate and should not be relied on.
+**The founder allocation is 80% of total supply.** That is a very large
+concentration, and it is the first thing counsel should be told.
 
-The current policy is: no founder sales while pool liquidity is below
-$100,000; above that threshold, sales follow a public schedule with a small
-quarterly cap. **This is a stated policy, not a smart-contract lock.**
-Nothing in the code prevents the founder from selling at any time, and a
-buyer has only the founder's word.
+Two earlier framings in this document are superseded and should not be
+relied on. It once described the launch as involving "no sale by the
+issuer" — untrue once a founder allocation existed at all. It then described
+a 25% allocation held personally and unlocked, governed by a written sell
+policy — a promise a buyer had to trust.
 
-This single fact drives most of the analysis below, because it converts the
-question from "did the issuer sell?" to "when, how, and with what
-disclosure will the issuer sell?" Counsel should be pointed at it directly
-rather than allowed to discover it in an appendix.
+**The allocation is now locked in code rather than governed by policy.** It
+sits in a vesting contract with a 90-day cliff and continuous release across
+three years. There is no early-withdrawal path, no acceleration function,
+and no owner privilege over the schedule; transferring ownership of the
+vesting wallet reassigns who receives the tokens but changes no date. The
+terms are fixed at construction and independently verifiable on-chain.
+
+Counsel should be asked to weigh these against each other directly, because
+they pull in opposite directions:
+
+- **The concentration got worse** — 80% versus 25%. Float is only 20% of
+  supply, which makes the market thin and easy to move.
+- **The control got better** — the tokens cannot reach the market ahead of
+  schedule regardless of what the founder decides, which is a materially
+  stronger answer to "could the issuer have sold into its buyers?" than any
+  written policy.
+
+For comparison, the structure follows the pattern used by the TRUMP token
+launch (January 2025): approximately 80% held by affiliated entities under a
+multi-year unlock schedule, with roughly 20% circulating at launch. That
+precedent is offered as description of a known structure, not as authority —
+enforcement outcomes there reflected circumstances that do not transfer.
 
 ## United States — securities law
 
@@ -81,11 +108,14 @@ profits are promised anywhere. Those are real and worth preserving.
 The exposure now concentrates in two places, and counsel should be asked
 about both explicitly:
 
-1. **The unlocked 25% founder position.** Sales from it are sales by the
-   issuer into a market the issuer created. That is the classic fact
-   pattern for "offer or sale," and the stated sell policy — a promise
-   rather than a lock — may not carry weight against a buyer's claim.
-2. **Conduct after launch.** Renouncing contract ownership does not remove
+1. **Sales of vested tokens, once they begin.** The lock delays the
+   question; it does not remove it. From the cliff onward the founder
+   receives tokens that can be sold into a market the founder created, and
+   each such sale is a sale by the issuer.
+2. **The thin float.** Only 20% of supply circulates. A market that small is
+   easy to move, which raises manipulation questions independent of the
+   securities analysis and makes the launch price largely notional.
+3. **Conduct after launch.** Renouncing contract ownership does not remove
    "efforts of others" if the founder continues to be the project's public
    face. Communications, not code, decide this prong.
 
@@ -93,16 +123,21 @@ Questions for US counsel:
 
 1. Does seeding a DEX pool constitute an "offer or sale" by the deployer
    under Securities Act § 5?
-2. **Does holding 25% unlocked, with a published but unenforceable sell
-   policy, materially change the analysis — and would a contractual or
-   on-chain lock meaningfully reduce exposure?**
-3. What disclosure must accompany any founder sale, and does a pre-published
-   schedule help?
-4. Does the word "Promise" in the token's name create marketing risk on its
+2. **Does an 80% allocation locked in a vesting contract sit better or worse
+   than a smaller allocation held unlocked?** Which does the analysis weigh
+   more heavily — the size of the concentration, or the issuer's inability
+   to reach it?
+3. Is the three-year term with a 90-day cliff adequate, and would a longer
+   term or a slower release materially improve the position?
+4. What disclosure must accompany sales of vested tokens once releases
+   begin, and should a further voluntary schedule sit on top of the
+   contract's own?
+5. With only 20% of supply circulating, does the thin float itself create
+   exposure — market manipulation, or a disclosure obligation about price
+   fragility?
+6. Does the word "Promise" in the token's name create marketing risk on its
    own, and what disclaimer language mitigates it?
-5. How should the 200M treasury be handled — lockup, disclosure, donation
-   versus market sales?
-6. State-level (blue sky) and money-transmission exposure — see the North
+7. State-level (blue sky) and money-transmission exposure — see the North
    Carolina section below.
 
 ## North Carolina — state law
@@ -120,10 +155,10 @@ issues.
 
 Questions for NC counsel:
 
-7. If CARD is an investment contract, is any § 78A-16 or Article 3 exemption
+8. If CARD is an investment contract, is any § 78A-16 or Article 3 exemption
    available, and does anything need to be filed with the Securities
    Division?
-8. Do the state anti-fraud provisions (e.g. § 78A-10, unlawful
+9. Do the state anti-fraud provisions (e.g. § 78A-10, unlawful
    representations) reach the project's disclosure page as drafted?
 
 **Money transmission.** This is the North Carolina item most likely to
@@ -140,17 +175,17 @@ bond starting at $150,000.
 The likely position — **to be confirmed by counsel, not assumed** — is that
 this project does not trigger licensure, because the issuer never holds,
 transmits, or exchanges virtual currency *on behalf of another person*: it
-deploys a contract, seeds a pool, and transfers from its own holdings.
+deploys contracts, seeds a pool, and transfers from its own holdings.
 Money-transmission regimes generally target custody and transmission for
 third parties. But the definition should be read against these specific
 facts by someone licensed in the state before mainnet.
 
 Question for NC counsel:
 
-9. Do any of (a) seeding a Uniswap pool, (b) holding the treasury wallet,
-   (c) transferring tokens to nonprofits, or (d) operating a companion
-   application that links users to Uniswap constitute "money transmission"
-   under Article 16B requiring licensure?
+10. Do any of (a) seeding a Uniswap pool, (b) deploying and funding the
+    vesting contract, (c) receiving released tokens from it, or (d) operating
+    a companion application that links users to Uniswap constitute "money
+    transmission" under Article 16B requiring licensure?
 
 ## The companion application
 
@@ -161,9 +196,9 @@ real-CARD controls open Uniswap and are disabled behind a feature flag. See
 
 Question for counsel:
 
-10. Does an interface that links to a DEX for a token the operator issued —
-    and in which the operator holds 25% — create broker-dealer, exchange,
-    or advice exposure distinct from the token questions above?
+11. Does an interface that links to a DEX for a token the operator issued —
+    and in which the operator holds 80% under vesting — create broker-dealer,
+    exchange, or advice exposure distinct from the token questions above?
 
 ## European Union — MiCA
 
@@ -193,16 +228,17 @@ case that changes.
 
 ## Everywhere — the non-securities exposure
 
-- **Tax.** Pool seeding, LP fees, founder sales, and treasury transfers are
-  taxable events. The founder position is the significant one: sales are
-  ordinary disposals with basis and holding-period consequences that should
-  be settled with a CPA experienced in digital assets *before* the first
-  sale, not at filing time.
+- **Tax.** Pool seeding, LP fees, and sales of vested tokens are taxable
+  events. Two questions need a CPA experienced in digital assets *before*
+  the vesting contract is funded, not at filing time: whether funding it is
+  itself a taxable transfer, and when income is recognised on tokens it
+  releases — at vesting or at sale. Getting this wrong is expensive and
+  cannot be undone retroactively.
 - **AML.** Converting any holding to fiat runs through exchanges with KYC.
   Keep clean records from day one.
 - **Consumer protection.** A disclaimer that the price can go to zero is
   necessary but not sufficient. Counsel should review the final public page,
-  particularly its description of the founder holding.
+  particularly its description of the 80% allocation and the vesting terms.
 
 ## Suggested engagement
 
@@ -217,9 +253,12 @@ Bring:
 - `docs/GOVERNANCE_AND_FOUNDER_ECONOMICS.md` (the reasoning behind the
   allocation and the sell policy),
 - `contracts/CardinalsPromise.sol` — about twenty lines, readable in two
-  minutes.
+  minutes,
+- `contracts/CardinalVesting.sol` — the founder lock, a thin wrapper over
+  OpenZeppelin's audited `VestingWallet` and `VestingWalletCliff`.
 
-Lead with the founder holding. It is the fact that changes the answers.
+Lead with the 80% founder allocation and its vesting contract. It is the
+fact that changes the answers.
 
 If the first lawyer contacted has no digital-asset background, ask whether
 the firm can refer one and whether any membership or plan discount applies

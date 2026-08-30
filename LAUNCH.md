@@ -5,9 +5,9 @@
 | Decision | Value |
 | --- | --- |
 | Supply | Mint all 1B at deploy, `renounceOwnership()` immediately after verification |
-| Uniswap pool | 550M CARD (55%) paired with ~$4,000 of ETH (≈1.6 ETH) |
-| Founder hold | 250M CARD (25%), unlocked, in a publicly disclosed wallet |
-| Treasury | 200M CARD (20%) in a publicly announced wallet |
+| Uniswap pool | 200M CARD (20%) paired with ~$4,000 of ETH (≈1.6 ETH) |
+| Founder allocation | 800M CARD (80%), **locked in a vesting contract** — 90-day cliff, then continuous release over 3 years. Not withdrawable early by anyone, including the founder |
+| Treasury | None. The supply is pool + vesting only |
 | LP tokens | Locked 12 months (Team Finance or UNCX) |
 | Timeline | Week 0: Sepolia rehearsal → Weeks 1–2: independent audit + legal consult → Week 3: mainnet |
 | Before mainnet | Publish the one-page site (`site/index.html`) at **cp17.org** — deliberately not the book's domain, so the token is not presented to the book's audience as an extension of it |
@@ -59,7 +59,7 @@ steps 2–6 cannot execute from it. Run them either:
 ## 🔑 Step 1 — Keys and wallets (owner)
 
 - [ ] Create a fresh deployer wallet (hardware wallet or offline-generated key).
-- [ ] Create a Gnosis Safe multisig for the 200M treasury allocation.
+- [ ] Decide and publish the vesting terms (start, 3-year duration, 90-day cliff) before deploying the vesting contract.
 - [ ] Get an RPC endpoint (Alchemy/Infura free tier works) and an Etherscan
       API key (free at etherscan.io/apis).
 

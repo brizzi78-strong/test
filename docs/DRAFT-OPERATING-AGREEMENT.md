@@ -50,7 +50,8 @@ Article XI.
 **2.1 Purpose.** The Company is organized to develop, deploy, document, and
 administer a fixed-supply ERC-20 token on the Ethereum blockchain bearing the
 name "Cardinals Promise" and the symbol "CARD" (the "Token"), of which
-1,000,000,000 units are minted once at deployment, together with all lawful
+1,000,000,000 units are minted once at deployment, together with the vesting
+contract described in Article VII (the "Vesting Contract") and all lawful
 activities incidental to that purpose.
 
 **2.2 Purposes expressly excluded.** For the avoidance of doubt, the Company
@@ -144,49 +145,48 @@ Chapter 57D.
 
 ## Article VII — The Token: allocation and sale
 
-*[Counsel — read this article first. The allocation below gives the Member,
-personally, 25% of total supply with no lock. That is the central fact of
-this project and the one most likely to affect your analysis. The
-restrictions in §§ 7.3–7.5 are policy adopted by the Member; nothing in the
-Token's code enforces them. Please advise whether a contractual restriction,
-an escrow, or an on-chain vesting arrangement should replace or supplement
-them, and what disclosure must accompany any sale.]*
+*[Counsel — read this article first. Eighty percent of total supply is
+allocated to the Member, and it is held in a vesting contract rather than
+personally. That single pair of facts is the centre of this project: a very
+large concentration, but one the Member cannot reach ahead of schedule.
+Please advise on both halves, and on the tax treatment of § 7.2, which is
+the question most likely to produce an unwelcome surprise.]*
 
 **7.1 Allocation.** Following deployment the Token supply is allocated:
 
-  (a) 550,000,000 (55%) to a Uniswap V2 liquidity pool, the liquidity
+  (a) 200,000,000 (20%) to a Uniswap V2 liquidity pool, the liquidity
       provider tokens for which are locked for not less than twelve months
       through an established locking service;
 
-  (b) 250,000,000 (25%) to the Member personally, unlocked;
+  (b) 800,000,000 (80%) to the Vesting Contract described in § 7.2;
 
-  (c) 200,000,000 (20%) to a treasury wallet, the address of which is
-      published.
+  (c) no treasury allocation. The supply is (a) and (b) and nothing else.
 
-*[Counsel: the transfer at (b) moves Company property to the Member
-personally. Please advise on its characterization — distribution,
-compensation, or otherwise — and its tax treatment, and whether the Member
-should instead hold that allocation through the Company.]*
+**7.2 The Vesting Contract.** The allocation at § 7.1(b) is transferred at
+launch to a deployment of `contracts/CardinalVesting.sol`, naming the Member
+as beneficiary, which releases nothing for ninety (90) days and thereafter
+releases continuously until the third anniversary of the start date. The
+contract provides no function to withdraw early, accelerate the schedule, or
+alter its terms, and no person holds any privilege that does so.
 
-**7.2 The treasury is never sold.** The Company shall not sell, offer to
-sell, auction, swap for consideration, or otherwise dispose of treasury
-Tokens for value, at any time, in any amount, in any venue, to any person.
-This prohibition applies without exception, including to fund Company
-operations or professional fees.
+*[Counsel and CPA: two questions before this contract is funded. First,
+whether the transfer at § 7.1(b) is itself a taxable event to the Member,
+and if so on what valuation. Second, whether income is recognised as tokens
+vest or as they are sold. Both are irreversible once the transfer is made.
+Please also advise whether the Member should be beneficiary personally or
+whether the Company should hold that position.]*
 
-**7.3 No founder sales below the liquidity threshold.** Neither the Company
-nor the Member shall sell Tokens while the liquidity of the public pool is
-below one hundred thousand United States dollars ($100,000).
+**7.3 No tokens held personally before vesting.** Neither the Company nor
+the Member shall hold any part of the § 7.1(b) allocation outside the
+Vesting Contract at any time before it is released by that contract.
 
-**7.4 Scheduled sales only.** Above that threshold, sales shall occur only
-in accordance with a schedule fixing timing and a maximum quarterly volume,
-adopted and published before the first sale. The schedule shall not be
-amended except on written advice of counsel, and any amendment shall be
-published with its effective date.
+**7.4 No circumvention.** Neither the Company nor the Member shall pledge,
+lend, hypothecate, sell forward, or grant any derivative interest in, or any
+claim upon, unvested Tokens.
 
-**7.5 Disclosure of sales.** Each sale shall be published within seven days
-of settlement, stating its date, the quantity of Tokens, and the transaction
-hash.
+**7.5 Disclosure of sales.** Each sale of released Tokens shall be published
+within seven days of settlement, stating its date, the quantity of Tokens,
+and the transaction hash.
 
 **7.6 No pre-sale or allocation for value.** The Company shall not conduct a
 pre-sale, private sale, or private round, and shall not transfer Tokens in
@@ -194,8 +194,8 @@ exchange for services, promotion, advice, early access, or any other
 consideration.
 
 **7.7 No sales by others on the Member's behalf.** The restrictions in this
-Article apply to any person holding Tokens received from the Company or the
-Member, including family members.
+Article apply to any person holding Tokens received from the Company, the
+Member, or the Vesting Contract, including family members.
 
 ## Article VIII — The Token: communications
 
@@ -215,10 +215,10 @@ condition upon which a person should purchase it.
 the purchase of the Token to any book, author, mission, charitable cause,
 bereavement, hospice care, or family legacy.
 
-**8.5 Disclosure of the Member's holding.** Every public description of the
-Token shall disclose the size of the Member's personal holding, that it is
-unlocked, and that the restrictions in Article VII are policy rather than a
-technical constraint.
+**8.5 Disclosure of the allocation.** Every public description of the Token
+shall disclose the size of the Member's allocation (80% of supply), the
+address of the Vesting Contract, its cliff and term, and the fact that only
+20% of supply circulates.
 
 **8.6 No description of mechanisms not implemented.** The Company shall not
 describe the Token as having any feature its deployed code does not
@@ -234,23 +234,27 @@ charitable commitment, partner network, or affiliated entity shall be
 described publicly until it exists and the necessary written, legal, and tax
 work is complete.
 
-## Article IX — The treasury
+## Article IX — Charitable giving
 
-**9.1 Disposition under published policy only.** Treasury Tokens shall be
-disposed of only in accordance with a written policy adopted and published
-before the first disposition, and never by sale (§ 7.2).
+**9.1 No commitment.** The Company makes no charitable commitment, pledge,
+or representation of any kind with respect to the Token. No percentage,
+amount, recipient, or schedule of giving is promised, and none shall be
+described publicly as promised.
 
-**9.2 Records.** The Company shall record and publish, for each treasury
-disposition: date, recipient, quantity of Tokens, transaction hash, and the
-fair market value of the Tokens at the time of transfer.
+**9.2 Personal and discretionary.** Any charitable giving is made by the
+Member personally, from Tokens already released by the Vesting Contract, at
+the Member's sole discretion, and may never occur.
 
-*[Counsel: the Member's intention has been that the treasury be donated to
-tax-exempt organizations rather than retained. That intention is not yet
-committed and no recipient has been engaged. Please advise on the
-substantiation requirements for non-cash charitable contributions of digital
-assets, whether such a commitment should be made binding here or left as
-policy, and whether the intended recipients can accept digital assets at
-all.]*
+**9.3 Published after the fact only.** Where a gift is made, it may be
+recorded publicly with its date, recipient, quantity, and transaction hash.
+Nothing shall be published in advance of a gift being made.
+
+*[Counsel: § 9.1 is drafted deliberately to avoid creating an enforceable
+charitable pledge or a representation a purchaser could rely on. Please
+confirm it achieves that, and advise separately on the substantiation
+requirements should the Member wish to claim a deduction for a non-cash
+contribution of digital assets — which, above the statutory threshold,
+generally requires a qualified appraisal.]*
 
 ## Article X — Keys, custody, and succession
 
@@ -284,16 +288,16 @@ itself.]*
 election of the Member, or as otherwise required by Chapter 57D.
 
 **11.2 Winding up.** On dissolution, the Company shall pay or provide for its
-liabilities, dispose of any remaining treasury in accordance with Article IX,
-and distribute any remaining cash assets to the Member.
+liabilities and distribute any remaining cash assets to the Member. The
+Vesting Contract is unaffected by dissolution and continues to release Tokens
+to its beneficiary on its original schedule.
 
-**11.3 Survival.** The prohibition on treasury sales in § 7.2 survives
-dissolution and binds any successor in interest to the treasury.
+**11.3 Survival.** The restrictions in §§ 7.3 and 7.4 survive dissolution and
+bind any successor in interest to the beneficiary's position.
 
-*[Counsel: § 11.3 is intended to prevent dissolution from becoming a route to
-liquidating the treasury. Please advise whether it is enforceable as drafted,
-and if not, what mechanism would achieve the intent — a charitable pledge, a
-restricted trust, or another structure.]*
+*[Counsel: § 11.3 is intended to prevent dissolution from becoming a route
+around the vesting restrictions. Please advise whether it is enforceable as
+drafted, and if not, what mechanism would achieve the intent.]*
 
 ## Article XII — General
 
