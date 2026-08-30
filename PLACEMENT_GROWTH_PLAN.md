@@ -30,6 +30,27 @@ their first placement to a community they never papered. Don't be that.
 **Target ~25–40 signed community agreements across the Triangle before you
 expect steady revenue.** That's your inventory.
 
+## The structure — who does what
+
+The founder is W-2 employed in the industry, so the demand channel is fronted
+by partners until the transition. That constraint shaped the whole structure,
+and it turned out to be a feature: everyone works where their trust and their
+daylight already are.
+
+| Person | Where | Role |
+| --- | --- | --- |
+| **Rob** | Triangle, nights + weekends | Supply (community agreements), brand, book, site, back office, the pilot log |
+| **Private duty partner's liaison** | Triangle, business hours | Demand — already walking into SNFs and hospitals weekly; placement rides the existing route |
+| **Charles** | South Florida | CDP® credibility now, phone consults; territory 2 operator when the Triangle machine proves out |
+| **Clinical advisors** (Dr. Huet-type) | — | Care-level judgment, introductions. Flat fee or equity, never per referral |
+
+The private duty partnership runs on
+[`PRIVATE_DUTY_PILOT.md`](PRIVATE_DUTY_PILOT.md): 90 days, no money either
+direction, everything logged, a JV priced on the data. The partner's confirmed
+pain — losing clients when funds run out — is the seam: a family paying
+$5–7K/mo for in-home hours can usually afford $6,350 assisted living, and
+nobody has told them.
+
 ## The money, restated
 
 Referral fees run **50–100% of the first month's rent**, and a full month is a
@@ -84,7 +105,11 @@ placements. Revenue is a bonus, not the measure.**
 
 ### Weeks 2–6 — Supply: sign the communities
 
-This is unglamorous and it's the whole foundation.
+This is unglamorous and it's the whole foundation. It's also entirely
+night-and-weekend work, and it's the moat: **start signing before the private
+duty coffee happens.** Walking into that conversation with 10–15 agreements
+already inked means any partner who's tempted to go it alone is months behind
+a grind you've already finished.
 
 - [ ] Build the target list: every AL and memory care community in **Wake,
       Durham, Orange** counties. Expect 100+. Rank by (a) memory care capacity,
@@ -100,10 +125,19 @@ This is unglamorous and it's the whole foundation.
 level. Twelve agreements means turning families away or placing them somewhere
 that doesn't fit.
 
+### Weeks 2–6, in parallel — Demand source #0: the private duty pilot
+
+Before any hospital work, launch the referral pilot per
+[`PRIVATE_DUTY_PILOT.md`](PRIVATE_DUTY_PILOT.md). The partner's aides are the
+earliest warning system in the industry — they see "it's time" weeks before a
+crisis discharge — and the flow runs both ways, so it costs nothing to test.
+
 ### Weeks 4–12 — Demand: the discharge planners
 
-Your #1 channel and your genuine edge — you came out of Amedisys and speak the
-language.
+Your #1 channel long-term — you speak the language. Until the employment
+transition, this channel is worked by the **partner's liaison** (placement
+added to their existing route) and by the collateral: the one-page referral
+sheet does the introduction when nobody's in the room.
 
 **Triangle hospital systems (start here):**
 
@@ -208,18 +242,25 @@ Treat it as the authority engine, not a revenue line.
 **Goal: 4–8 placements/month, and an evidence-based decision about what this
 becomes.**
 
-### Focus decision — make this one early
+### Focus decision — the territory sequence
 
-You currently market to **Triangle + Charlotte + Winston-Salem**. That is three
-metros for two people, and it's too much surface. Referral relationships are
-built in person; you cannot maintain Duke *and* Atlanta-scale Charlotte on the
-same calendar.
+The rule that settled weeks of map-shopping (Pensacola, South Florida, South
+Carolina, Charlotte): **markets follow trusted people, never the other way
+around.** Ranked by that test:
 
-**Recommendation: own the Triangle first.** Be the obvious call in Wake/Durham/
-Orange before adding a metro. Depth in one market beats presence in three —
-and depth is what gets you to 100% fees and inbound referrals.
+1. **Triangle now** — the partner's liaison fronts demand, Rob builds supply
+   in person; the highest fees of any market considered ($4,500–7,000)
+2. **South Florida at months 4–6** — Charles is there and trusted; he gets a
+   proven playbook instead of a cold start; fees ~$3,500–6,000
+3. **South Carolina / Pensacola — only when a trusted operator exists.** The
+   Grand Strand's transplant retirees (kids in Ohio, no local knowledge) are
+   ideal clients, but a good market with no trusted person is just a place to
+   lose money slowly. The 60–70% affiliate structure in
+   [`PLACEMENT_COMPENSATION.md`](PLACEMENT_COMPENSATION.md) is written for
+   exactly this moment.
 
-Revisit Charlotte at month 12, with a person on the ground there or not at all.
+Depth in one market beats presence in three — depth is what gets you to 100%
+fees and inbound referrals.
 
 ### Growth levers, in order
 
