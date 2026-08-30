@@ -32,6 +32,8 @@ prices any future JV on **90 days of data instead of enthusiasm at a coffee.**
 | Family disclosure | Each side tells the family, unprompted, that the companies refer to each other and that the family is free to use anyone |
 | Client ownership | Each family belongs to themselves. No exclusivity, no non-compete between the parties |
 | Exit | Either side may end the pilot with 7 days' notice, no reason needed |
+| Confidentiality | Mutual: the log, each side's clients/families, pricing, and terms stay private, during and after the pilot |
+| Non-circumvention | Narrow and mutual, 12 months: neither side uses the log or the other's referred families to build or feed a competing service line, nor solicits the other's referred families for it |
 
 ## What gets measured
 
@@ -63,6 +65,18 @@ prices any future JV on **90 days of data instead of enthusiasm at a coffee.**
 4. **Attorney review before the JV, not before the pilot.** A no-money mutual
    referral handshake is the cleanest arrangement there is; the equity step is
    where counsel comes in. It's on the standing attorney agenda.
+
+## Before the first conversation (protects the idea)
+
+- [ ] **Start signing community agreements now, before the coffee.** Supply is
+      the moat: walking in with 10–15 signed agreements means any defection
+      puts him months behind a grind you've already finished.
+- [ ] **Coffee one shares the trade thesis, not the mechanics.** He hears
+      "your declining clients become our placements, our stay-home leads
+      become your clients" and the value math. He does not hear the fee
+      percentage, agreement terms, or the community target list.
+- [ ] Reference-check the agency: two discharge planners' opinions, NC
+      licensure and complaint history, reviews, staff turnover.
 
 ## Open items to establish at the first conversation
 
