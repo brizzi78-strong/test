@@ -19,6 +19,19 @@ before any hospital does.
 That thesis might be right. The pilot measures it instead of assuming it, and
 prices any future JV on **90 days of data instead of enthusiasm at a coffee.**
 
+**Confirmed pain point:** the owner has stated he loses clients when they can
+no longer pay for private duty. Those clients split two ways, and the first
+tier is the heart of the referral flow:
+
+| Tier | Situation | Outcome |
+| --- | --- | --- |
+| **A: money tightening** | Paying $4–8K/mo for in-home care as needs rise | Full-fee ALF/MC placement — often *cheaper* for the family than the hours they're buying (24/7 private duty runs $15–25K/mo vs ~$6,350 ALF) |
+| **B: money gone** | Can't fund private duty or private-pay ALF | Navigation to NC Special Assistance adult care homes, Medicaid beds, PACE — little or no fee, served anyway; it's the reputation that makes every other referral come |
+
+The pitch in his own words: refer at the "money's getting tight" conversation,
+not the "money's gone" one — the family lands with funds intact, he exits
+clean instead of writing off invoices, and the stay-home referrals flow back.
+
 ## Terms (fill in and sign — one page, both signatures)
 
 | Term | Value |
