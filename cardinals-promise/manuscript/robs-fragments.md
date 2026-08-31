@@ -482,3 +482,28 @@ skinnier-staff office (it wasn't only staff). Composite rules apply: no
 identifiable doctor/office; different office than the cutoff one unless
 Rob says otherwise. Still needed: roughly when; what the boss said (or
 didn't) in the car after — that car ride is a scene if it happened.
+
+---
+
+## 2026-08-31 — the girl they hired (the diesel story)
+
+> The girl they hired, part of my territory — there was a story that she
+> had almost gotten fired because she filled her car up with diesel twice.
+
+**Logged; team-texture fragment for the #1 climb.** A colleague on Rob's
+territory (the split? a counterpart?) who nearly got fired over filling
+the company car with diesel twice. If she was part of the "believing,
+working together, inspiring each other" team, this is the underdog
+texture the Number One chapter needs: the territory nobody wanted, worked
+by people the company almost gave up on — who then beat two hundred
+territories.
+
+Handling notes: (a) "there was a story that…" is secondhand — if used, it
+stays framed as the story that went around, not asserted fact; (b) she
+must be unidentifiable or blessed — an almost-firing is her story to
+approve; (c) distinct person from "the girl who recruited me" (separate
+fragment).
+
+Questions: Was she part of the #1 run? Did you work well together — is
+she one of the "each other" in your voice note? Would she laugh at the
+diesel story in print or hate it? (That answer decides everything.)
