@@ -507,3 +507,22 @@ fragment).
 Questions: Was she part of the #1 run? Did you work well together — is
 she one of the "each other" in your voice note? Would she laugh at the
 diesel story in print or hate it? (That answer decides everything.)
+
+---
+
+## 2026-08-31 — the anti-vax paradox
+
+> There were people who were anti-vaxxers. They wouldn't inject anything.
+> But yet they would inject themselves with a compound that was probably
+> from China or India.
+
+**Anchored observation, placed in the Wild West chapter.** Handling rules:
+stated as paradox, never as political mockery (the book's no-sneer
+discipline) — the beat is about trust and distance, not tribes. His
+"probably" is retained and is also factually fair (gray-market semaglutide
+API predominantly shipped from Chinese suppliers per FDA import data and
+wide reporting; keep at this generic, public-record level).
+
+Confirm: were these patients, acquaintances, office staff? One real
+(composite-safe) example would sharpen the beat; without one, it stays a
+territory-level observation, which also works.

@@ -58,6 +58,8 @@ Nobody wrote that rule imagining a gold rush.
 
 Almost overnight, the vial on her phone was for sale everywhere. Med spas sold it next to Botox. Websites sold it after a questionnaire. Trainers whispered about it at gyms. Some compounders were careful, licensed, honest. But plenty of what sold under the name semaglutide never went near a licensed pharmacy at all — salt forms of the molecule that had never been through a clinical trial, wrong doses, vials from nowhere. And alongside all of it a third stream: counterfeit Ozempic pens started showing up in pharmacies in 2023, and some of those contained insulin, which put people in hospitals with crashing blood sugar. Poison control lines lit up with callers who had drawn up ten times their dose — because the pen they'd been denied did the measuring for you, and the padded envelope that replaced it did not.
 
+And there was a part I never solved. Some of the people injecting those vials wouldn't take a vaccine — wouldn't inject anything, on principle. But powder from a website, probably shipped from China or India, mixed and drawn up at a kitchen counter — that, they trusted. The most regulated injection in America, no. The least regulated one, yes. The envelope came right to the door.
+
 I sold the branded version at more than nine hundred dollars a month. So I don't get to lecture anybody. The woman at the cookout had done the math her insurance company left her with: the real thing she couldn't get or couldn't afford, or two hundred dollars from a pharmacy she couldn't visit. The compounders didn't invent that math. They just answered the phone.
 
 ---
