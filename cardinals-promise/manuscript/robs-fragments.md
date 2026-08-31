@@ -281,3 +281,33 @@ grievance. Questions before this goes anywhere:
    a foil. It may also belong to the departure story ("he said... where
    are the numbers" — same voice? Was this the same manager? The same
    conversation era?).
+
+---
+
+## 2026-08-31 — the girl who recruited me and nobody liked
+
+> The girl who recruited me and nobody liked.
+
+**Logged; character fragment for the origin story.** She was on the other
+side of the interview Rob bluffed through — the person nobody liked was
+the one who saw him. That's a door-opener in a book about people who open
+doors, and it rhymes with the book's whole method (Rob sees the people
+others don't; first, someone unlikeable saw him).
+
+Questions before drafting:
+1. Who was she — recruiter, hiring manager, district manager? Her role in
+   the actual hiring: what did she see in a guy who didn't know type 1
+   from type 2?
+2. Why didn't people like her — and did Rob? (The honest version might be
+   complicated: maybe she was hard to like AND right about him. Both can
+   be true on the page.)
+3. What happened to her — still in the industry? Still in touch? Would
+   she get a name (with her blessing) or a changed one?
+4. Home: the interview beat in "Type One, Type Two" (one paragraph), or a
+   short portrait like Diabetes Dave if the material runs deeper. Rob's
+   call once the questions are answered.
+
+**Continuation, arrived incomplete:** "I would learn" — the sentence cut
+off. Rob: finish it. ("I would learn…" what — why nobody liked her? what
+she'd done for me? what she knew?) The unfinished sentence is likely the
+portrait's hinge.
