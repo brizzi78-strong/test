@@ -311,3 +311,30 @@ Questions before drafting:
 off. Rob: finish it. ("I would learn…" what — why nobody liked her? what
 she'd done for me? what she knew?) The unfinished sentence is likely the
 portrait's hinge.
+
+---
+
+## 2026-08-31 — Lou and the reps (SACRED LANE)
+
+> My dad would see the reps at his doctors' offices, and they loved my dad.
+
+**Anchored, and sacred:** Lou, in the waiting rooms of this book's world —
+the same offices, the same species of visitor as his son — and the reps
+loved him. No quoted words for Lou, per the standing rule; this fragment
+is a fact and a picture, which is exactly what can be placed.
+
+Why it matters to THIS book: it's the full circle nobody could invent —
+while Rob carried a bag into offices, his father was on the patient side
+of the same rooms, being the man everyone loved. It quietly answers where
+the salesman came from: Rob learned rooms from Lou.
+
+Questions (Rob only):
+1. When — during your Novo years? Was Lou seeing doctors in your world's
+   era (2021–2024), and did any rep ever realize whose father he was?
+2. One moment you witnessed or were told about — Lou with a rep, a
+   receptionist, a waiting room. The picture, not dialogue.
+3. Home: the Lou paragraph in "Number One in the Nation" (the doorway
+   could open one inch wider: the reps loved him before the ballroom ever
+   heard your name), or "Type One, Type Two" (where the salesman came
+   from), or held for Book One. Your call — Lou's beats get placed by
+   you, not by drafts.
