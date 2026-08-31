@@ -355,3 +355,18 @@ at the top-of-the-list party is the counted ledger winking at him — the
 scene texture for the keynote/Universal material (music too loud for nine
 in the morning now has a name). Placement with the Brady/Universal scene
 once year and city are pinned.
+
+---
+
+## 2026-08-31 — Universal was 2023
+
+> They closed off Universal for us, 2023.
+
+**Anchored: the Universal Studios night was 2023** — a national-meeting
+event (Universal = Orlando) during the climb, the year BEFORE the Q3 2024
+#1. Cascade:
+- Number One chapter fixed: Universal is no longer framed as the #1
+  reward — it's "the year before, at the national meeting."
+- 2023 becomes the leading candidate for the Brady NSM (he retired Feb
+  2023; an Orlando NSM later that year fits everything). Confirm: was
+  Brady the 2023 Orlando meeting — Universal, Pauly D, Brady, one trip?

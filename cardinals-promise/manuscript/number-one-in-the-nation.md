@@ -29,7 +29,7 @@ Number one in the country for Ozempic sales. Out of everybody, carrying the same
 
 I'd like to tell you I took it in stride. I didn't. I wanted it the way I had wanted my hand raised on a mat — wanted it in my body, since the wrestling room. When they said my name, the roar in that ballroom was for me, and I stood there inside it and thought: *so this is the top of the list.*
 
-That was the year they closed Universal Studios for us. Two hours, after dark, no public — a few thousand salespeople with a whole theme park to ourselves, walking onto rides with no lines. I rode a roller coaster at eleven at night over an empty park. It is the strangest way anyone has ever said thank you to me, and I'd be lying if I told you it didn't work.
+The year before, at the national meeting, they'd closed Universal Studios for us. Two hours, after dark, no public — a few thousand salespeople with a whole theme park to ourselves, walking onto rides with no lines. I rode a roller coaster at eleven at night over an empty park. It is the strangest way anyone has ever said thank you, and I'd be lying if I told you it didn't work.
 
 What got me there was the question. Not the closes, not the ninety-second pitch — I had those, everyone had those. The number came from years of hallways where I put the pitch away and asked doctors who they were worried about, and then did the unglamorous paperwork of caring: the prior auth walked through, the template letter delivered same-day, the follow-up three months later.
 
@@ -49,7 +49,7 @@ Then it left me, quietly, the way it does when a family holds the door of a room
 
 - **Anchored (your voice note):** Santa Rosa County; the split/underperforming territory; 200+ reps; #1 in the country for Ozempic sales, Q3 2024; the collective frame. Still needed: when you took the territory, who "together" was, how you found out, and what recognition followed (ballroom/stage/Universal — which trip goes with which achievement). **Keep insider numbers out** (sales figures, quota attainment, call-plan detail) per `nda-guardrails.md`.
 - **Timeline cascade (book-wide):** Q3 2024 in the field means the craze/media/Wild West chapters' "after I turned in my bag" framing is wrong — you lived those eras carrying the bag. Your actual departure date re-points those chapters. Also the hallway chapter's "New Jersey, fall of 2019" needs your territory geography and dates.
-- The Universal Studios beat is your true anchor (closed for the sales force, two hours) — confirm which trip/year, and whether it was the same Orlando meeting as the keynote scene.
+- The Universal Studios beat is anchored to **2023** (your note) — the national-meeting night during the climb, the year before the #1. Confirm whether Brady and the Jersey Shore DJ were that same 2023 Orlando meeting.
 - How you actually found out — stage at the national meeting, a call from your manager, the dashboard? The drafted stage moment is a stand-in.
 - **The two-week data lag (added from your fragment):** confirm the lag as you lived it — was it two weeks flat for your products/era, and what did the blind gap actually feel like at quarter's end? (Kept vendor-generic on the page — "whoever counted such things" — which is also the NDA-safe register.)
 - The call to Lou: did it happen? The draft keeps his words out on purpose — if the call is real, write his side yourself when you're ready; if it isn't, cut the beat rather than let it stand as fact.
