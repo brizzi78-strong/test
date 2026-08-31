@@ -18,6 +18,12 @@ I had a lunch scheduled with an important physician in Pace, Florida. I was carr
 
 "Compounded Ozempic," he said.
 
+Then he asked where I worked.
+
+"Novo Nordisk," I said.
+
+And I watched him get nervous. Not embarrassed — nervous. By then my company's name was landing on lawsuits all over Florida, and he seemed to know better than I did which side of them he was standing on.
+
 I sat back, and the thought arrived in exactly these words: *this man is an illegal drug dealer.*
 
 Because Ozempic is a patented medication. There is no such thing as compounded Ozempic. There's the drug — made in factories the FDA walks through, sold in a sealed pen I was federally accountable for down to the box — and there's something else wearing its name. And the something else had reps now. Detailing the same offices. Bringing lunch to my doctors.

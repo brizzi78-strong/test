@@ -440,3 +440,45 @@ internal instructions as lived texture, never documents.
 **Still needed:** roughly when the order came; whether any of those
 customers ever reached out anyway (a voicemail he couldn't return is a
 scene); how it felt driving past an office he was forbidden to enter.
+
+---
+
+## 2026-08-31 — "Novo Nordisk," and the nervousness
+
+> I sat in a cafeteria or a waiting room, and reps said, oh, where do you
+> work? I said, Novo Nordisk. And you could tell they got really nervous —
+> because he was illegally selling the compound as a rep for a pharmacy.
+
+**Anchored — the Pace scene's electric beat (or a second encounter):** the
+exchange ran both ways. They asked where Rob worked; he said the company's
+name; the nervousness was visible — because the name was, by then, a
+plaintiff's name, and the compound rep (working for a pharmacy) knew which
+side of the lawsuits he stood on.
+
+Memory notes, honestly held: setting uncertain in Rob's own telling
+("a cafeteria or a waiting room" vs. the earlier "in the office" at the
+lunch) — could be the same encounter or a second one. The chapter keeps
+one merged scene for now; Rob confirms whether it was one meeting or two,
+and where. "Illegally selling" stays his lived read; the narration keeps
+the legal nuance.
+
+---
+
+## 2026-08-31 — the doctor who injected himself at the lunch
+
+> I was with my boss at a lunch, and a doctor says, give me one of those
+> pens that he signed for. And he lifts his shirt up, and he injects
+> himself.
+
+**Anchored — the craze inside the prescriber class.** A doctor, at a rep
+lunch, Rob's boss present, demanding a sample pen he'd signed for — then
+lifting his shirt and injecting himself at the table. Legally received
+(signed for), self-administered on the spot; not the rep's violation, and
+nothing the rep could do — which is the beat's power: the hunger had
+credentials, and the paperwork was in order.
+
+Placed in "We Can't Sample Here Anymore" as the escalation before the
+skinnier-staff office (it wasn't only staff). Composite rules apply: no
+identifiable doctor/office; different office than the cutoff one unless
+Rob says otherwise. Still needed: roughly when; what the boss said (or
+didn't) in the car after — that car ride is a scene if it happened.

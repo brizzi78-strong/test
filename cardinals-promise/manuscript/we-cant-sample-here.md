@@ -23,6 +23,8 @@ Because the craze didn't come to me through a monologue or a hashtag. It came th
 
 Offices I'd called on for years started greeting me differently. Not "who's the patient you're worried about." Just: *we need samples.* Again at the next visit: *we need samples.* A hunger in it. Offices that used to take a box were asking for cases.
 
+And it wasn't only staff. I was at a lunch with my boss when a doctor said, give me one of those pens — one he'd just signed for. Then he lifted his shirt and injected himself at the table. Signed for, legal, his. My boss and I looked at each other and said nothing. There was nothing to say.
+
 And I was the guy who counted. That was the deal with samples — every box logged, every signature collected, and a law with teeth waiting behind the paperwork. So I did what the counting man does. I looked at the numbers.
 
 The scripts weren't there.
