@@ -63,3 +63,35 @@ rules below).*
 Tell your story and the public record; leave out the company's playbook;
 change the names; get the two blessings that matter (Hope's and Dave's);
 and pay a publishing attorney for one read before it goes to press.
+
+## Addendum (2026-07-30) — rulings on the anchored voice notes
+
+**Recency raises the stakes:** Rob was in the field through at least Q3
+2024. A recently departed employee's confidentiality and non-disparagement
+obligations are fresh, not faded — the attorney read matters more now, not
+less.
+
+- **Green:** the first line and training story (exam threshold described
+  generically); the hire-salespeople-teach-science history (public lore);
+  the Santa Rosa County #1 ranking, Q3 2024, with "over two hundred reps,
+  I'll be conservative" kept approximate; staying on label; the Wegovy
+  shortage; the $170 Starbucks story (home-health employer unnamed in the
+  beat); the "illegal drug dealer" interior thought (a reaction, with the
+  legal nuance carried in narration).
+- **Yellow — details managed:** the staff-getting-skinnier office (the
+  book's most sensitive scene: no identifiable office or individuals,
+  details changed, written as Rob's observation and decision, never an
+  accusation — and note Pace/Santa Rosa is small; town plus specialty can
+  triangulate. This scene specifically goes past the publisher's lawyer);
+  the Pace lunch (town OK, physician unnamed and undescribed, rival rep
+  and his company unidentified); anything near the #1 story that would
+  attach dollar volumes, share, or quota attainment — the ranking needs
+  no number after it.
+- **Red, restated for the new material:** territory sales data, targeting
+  lists, comp mechanics, internal documents verbatim, inside pipeline
+  knowledge, patient-identifiable anything (office staff included), other
+  reps' conduct in identifiable form.
+
+Rule of thumb that covers the voice notes: **your experiences, decisions,
+and reactions, plus the public record, are yours; the company's numbers,
+documents, and other identifiable people are not.**
