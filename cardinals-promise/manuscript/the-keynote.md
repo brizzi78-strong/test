@@ -47,7 +47,7 @@ Nobody leaves alone either.
 
 ## Details to confirm or replace (Rob)
 
-- **Speaker confirmed (Rob, 2026-07-30): Tom Brady.** Remaining: company, city, year. (Panel note stands: Brady's corporate-keynote circuit is mostly post-retirement, Feb 2023 on, and big in-person meetings went virtual 2020–21 — so the year determines whether this scene sits in your selling years or after; the chapter's framing may need to move with it. If it was post-2023, you were already in hospice — which might be the *truer* scene: the former rep in the audience.)
+- **Anchored (Rob): Tom Brady spoke at a national sales meeting** you attended. With your Aug 2021 start and Q3 2024 #1 run, this was almost certainly the 2023 or 2024 NSM — squarely inside both your tenure and Brady's post-retirement keynote circuit; the old timing impossibility is resolved. Remaining: which year, which city, and whether it was the same meeting as the Universal Studios night.
 - One line you actually remember him saying. The draft paraphrases only his publicly attested material (199th pick, six QBs ahead, the scouting report, team) — do not put invented sentences in his mouth in the final either.
 - What you really thought about during the speech — the hallway-doctor cutaway is the drafted stand-in; if your mind went somewhere else, that somewhere is the scene.
 - Whether anything real happened on the flight home. The drafted "list of doctors" epiphany was cut as manufactured; if something true happened, one rough specific beats a tidy turn.
