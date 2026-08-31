@@ -546,3 +546,36 @@ itself once the math lands here.
 
 Confirm: is $5,000 the right order for the period in question (a quarter?
 a year? the #1 quarter specifically?) — pin which check this was.
+
+---
+
+## 2026-08-31 — the alternate-universe meeting (the image ledger)
+
+> We had this meeting, and I thought I was in an alternate universe,
+> because the meeting was all about what people thought about you and
+> your image — and very little to do with your sales ability, after your
+> first year.
+
+**Anchored; the third ledger.** After year one, the evaluation culture
+measured perception — image, how you were seen — not selling. For the
+wrestler/results man, an alternate universe.
+
+**THE DEPARTURE CLUSTER IS ASSEMBLING.** Four fragments now point at the
+same unwritten chapter (the leaving-pharma story):
+1. The image meeting (this one) — the third ledger revealed.
+2. "Rob, you made someone uncomfortable for hugging them" — image
+   policing meeting warmth.
+3. "They said, where are the numbers" — if the territory/management
+   reading is right, the numbers ledger applied when it suited.
+4. The $170 Starbucks — the world he chose instead.
+The shape suggesting itself: a man who beat the numbers ledger fair and
+square (#1 in the country) discovering the real game was a ledger nobody
+posts — and choosing, eventually, the $200-a-month world where the only
+ledger is whether you showed up. **Not drafted yet** — needs Rob's
+departure story to know if that shape is true or too neat.
+
+Questions: when was the meeting, what was actually said about you, did it
+connect to the hug comment (same era? same voices?), and is this cluster
+in fact the story of why you left — or did you leave for hospice reasons
+(a pull, not a push)? The push-vs-pull question decides the chapter's
+whole character, and only you know the answer.
