@@ -18,13 +18,13 @@
 
 I carried the pitch in my bag for a year and a half. I knew it cold. The clinical data. The A1C reductions. The once-a-week dosing. The objection handlers, in order, like wrestling drills. I could deliver the whole thing in ninety seconds in a hallway while a doctor walked away from me.
 
-And underneath the pitch was the part that still amazes me. People who had been on insulin for years — who still had some pancreas left — could move to one injection a week and watch their A1C come down under seven for the first time in a decade. Some came off insulin altogether. And the studies kept landing, public knowledge, one after another: kidneys preserved, cardiac events down, early trials about memory itself. Behind every call was the clinical version of the question I'd eventually learn to ask out loud: *who are these people?* Which names in this office's panel could this still reach?
+And underneath the pitch was the part that still amazes me. People who had been on insulin for years — people with some pancreas left — could move to one injection a week. A1C under seven for the first time in a decade. Some came off insulin altogether. And the studies were in the works, public knowledge: the cardiac data had already landed, the kidney trials were running, and there was even talk of memory — of Alzheimer's — somewhere down the road. Behind every call, one question: *who are these people?* Which names in this office's panel could this still reach?
 
 Most days, that's exactly what selling Ozempic looked like. A hallway. A walking doctor. Ninety seconds.
 
 Then one Tuesday I stopped doing it.
 
-Family practice office in New Jersey, fall of 2019. I'd been calling on this doctor for months. He was always behind. Fifteen-minute slots, twenty-six patients, a waiting room full of people holding their coats on their laps. He came around the corner, saw me, and put his hand up before I said a word.
+A family practice office, winter of 2023. I'd been calling on this doctor for months. He was always behind. Fifteen-minute slots, twenty-six patients, a waiting room full of people holding their coats on their laps. He came around the corner, saw me, and put his hand up before I said a word.
 
 "I don't have time for a pitch."
 

@@ -14,15 +14,14 @@ no exposé promises. All credential claims gated on verification.*
   element on the jacket)*
 - **Credential tagline (front cover, beneath author name) — two options:**
   1. **The arc (Rob's instinct, lead option):** *He started out not knowing
-     the difference between type 1 and type 2 diabetes. Five years later,
+     the difference between type 1 and type 2 diabetes. Three years later,
      his territory sold more Ozempic than any in America.* (The humble half
-     makes the proud half believable; it's the book in two sentences. If it
-     runs long for a front cover, it's the flap's first line and the front
+     makes the proud half believable; it's the book in two sentences — and
+     "three years" is anchored: start 8/2021, #1 in Q3 2024. If it runs
+     long for a front cover, it's the flap's first line and the front
      carries option 2.)
   2. **The credential alone:** *By the man whose territory sold more
      Ozempic than any in America*
-  ("Five years" placeholder — set to Rob's real span once his start date is
-  confirmed.)
 - **Spine:** title + "OZEMPIC" keyword (insist; spines don't show subtitles)
 - **Design guardrail:** no teal-pen imagery mimicking Novo trade dress.
 

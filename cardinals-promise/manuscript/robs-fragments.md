@@ -199,3 +199,85 @@ Keynote"/Part II and Part III that the book doesn't have yet.
 **Still needed:** when you left Novo and why (the actual decision), the
 home-health role and company form, and whether the coffee memory has a
 date/office attached.
+
+---
+
+## 2026-08-31 — "Start 8/2021" (the Novo start date)
+
+**ANCHOR: Rob started at Novo Nordisk in August 2021.** The timeline key.
+Cascade:
+
+- The arc is **three years**, not five: not-knowing (Aug 2021) → training
+  (fall 2021, the 90% exam) → territory → **#1 in the country, Q3 2024**.
+  Faster arc = stronger tagline. Jacket updated.
+- He never sold the quiet drug. Wegovy launched June 2021, two months
+  before he started; the shortage and craze span his entire tenure. Part I
+  is a man learning the job *inside* the gold rush.
+- The hallway scene ("a year and a half in") re-dates to **winter/early
+  2023** — peak shortage era; coats-on-laps works. The drafted "New
+  Jersey" office is now doubtful (territory was Florida by the #1 era) —
+  geography is Rob's to fix.
+- Pen-and-pill's "almost two years in, they handed me the pill" is now
+  wrong — Rybelsus (2019) was already in the bag when he arrived. That
+  chapter needs reframing: both doors in the bag from day one.
+- The Brady keynote timing problem **resolves**: a 2023–24 national
+  meeting fits both his tenure and Brady's post-retirement keynote
+  circuit. The earlier panel's impossibility flag is lifted; date still
+  needs pinning.
+- Samples-no-credit's rationing framing: his tenure (2021→) overlaps the
+  tail of the insulin-pricing crisis, pre-2023 cuts — survives, dates
+  tightened.
+- AbbVie / C.R. Bard were evidently **before** Novo and non-diabetes —
+  which is exactly why he could arrive at Novo not knowing type 1 from
+  type 2 while already being a good salesperson. Consistent with the
+  hire-the-salesperson chapter.
+- Still open: **departure date** (after Q3 2024), and the order/years of
+  the AbbVie and Bard chapters of his career.
+
+---
+
+## 2026-08-31 — Dave was a friend; and "where are the numbers"
+
+> The friend who lost his son, Diabetes Dave.
+
+> And the[y] said where are the numbers.
+
+**Anchored:** Dave was Rob's **friend** — not just a colleague. The Dave
+chapter warms accordingly ("He was my friend.").
+
+**AMBIGUOUS — needs Rob's word before it enters any chapter.** "They said
+where are the numbers" has three possible readings:
+1. **The Dave reading (devastating if true):** while Dave was grieving his
+   son, the company/managers still asked "where are the numbers." If this
+   is what happened, it may be the most important sentence in the Dave
+   chapter — the counted ledger's blindness, aimed at a grieving father.
+2. **The sample-cutoff reading:** Rob looking at the skinnier-staff
+   office's data — "where are the numbers?" (no new scripts).
+3. **The territory reading:** management pressing the underperforming
+   split territory early on — "where are the numbers?" — before the climb
+   to #1.
+Rob: which one? (Or more than one — the phrase could echo across
+chapters, which the book could use deliberately.)
+
+---
+
+## 2026-08-31 — "Rob, you made someone uncomfortable for hugging them"
+
+> He said, Rob, you made someone uncomfortable for hugging them.
+
+**Logged verbatim; NOT drafted into any chapter yet** — it involves a real
+person's discomfort, and the book must never dismiss that or read as
+grievance. Questions before this goes anywhere:
+1. Who said it (manager? HR?), when, and in which world — pharma or the
+   later jobs?
+2. Who was hugged, and what was the context (an office staffer? a grieving
+   family? a celebration?)? Would they be identifiable in any telling?
+3. How do you hold it now — including the honest possibility that the
+   discomfort was fair? The only publishable version is one where the
+   other person's feelings are respected on the page.
+4. The potential home, if it earns one: the two-worlds contrast — the same
+   gesture that got flagged in corporate America is, in hospice, sometimes
+   the whole visit. But that framing must not flatten the complainant into
+   a foil. It may also belong to the departure story ("he said... where
+   are the numbers" — same voice? Was this the same manager? The same
+   conversation era?).

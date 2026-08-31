@@ -18,7 +18,7 @@ Everybody called him Diabetes Dave.
 
 It was half a joke. It was also just the truth. He knew the disease better than anyone I ever worked with. Not sales-knowledge. Not slide-deck knowledge. He knew it in a way the rest of us didn't, and for a while I didn't ask why.
 
-I worked alongside him in the years I was learning the difference between type 1 and type 2 off flashcards, and I thought that was all it was — a guy who'd been in the business long enough to know everything.
+He was my friend. I worked alongside him in the years I was learning the difference between type 1 and type 2 off flashcards, and for a while I thought the knowledge was just mileage — a guy who'd been in the business long enough to know everything.
 
 Then someone told me about his son.
 
