@@ -338,3 +338,20 @@ Questions (Rob only):
    heard your name), or "Type One, Type Two" (where the salesman came
    from), or held for Book One. Your call — Lou's beats get placed by
    you, not by drafts.
+
+---
+
+## 2026-08-31 — the Jersey Shore DJ
+
+> DJ from Jersey Shore DJs.
+
+**Reading:** a DJ from Jersey Shore — most likely DJ Pauly D — DJ'd at
+the meeting/party (the NSM? the Universal Studios night?). Confirm: was
+it Pauly D, and which event? Naming a public figure performing a paid gig
+is fine (same rule as Brady — factual, no invented words).
+
+**Why it earns a line:** for the kid from New Jersey, a Jersey Shore DJ
+at the top-of-the-list party is the counted ledger winking at him — the
+scene texture for the keynote/Universal material (music too loud for nine
+in the morning now has a name). Placement with the Brady/Universal scene
+once year and city are pinned.
