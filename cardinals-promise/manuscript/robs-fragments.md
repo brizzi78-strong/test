@@ -526,3 +526,23 @@ wide reporting; keep at this generic, public-record level).
 Confirm: were these patients, acquaintances, office staff? One real
 (composite-safe) example would sharpen the beat; without one, it stays a
 territory-level observation, which also works.
+
+---
+
+## 2026-08-31 — the bonus math
+
+> You could sell millions of dollars' worth of Ozempic, and the bonus
+> check would be — okay — five thousand dollars.
+
+**Anchored; placed in Number One before the list-reset paragraph.**
+Guardrails ruling: his own bonus in round terms is his to share (green);
+"millions" stays a generic magnitude, never an actual territory figure
+(the ranking still gets no precise number after it). Attorney read
+covers it with everything else.
+
+Harmonization: the hallway chapter's "a bonus check I couldn't tell you
+the amount of" trimmed to "a bonus check" so the book doesn't contradict
+itself once the math lands here.
+
+Confirm: is $5,000 the right order for the period in question (a quarter?
+a year? the #1 quarter specifically?) — pin which check this was.

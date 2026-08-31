@@ -37,6 +37,8 @@ Or that's the version I like. What else the number took, I owe this book an answ
 
 I called Lou from the hallway outside the ballroom, awards music bleeding through the doors. My father answered the way he always answered. What passed between us in that phone call belongs to him, and this book will get to him — every road in it does. I'll say this much: I have had my hand raised twice in rooms full of people, once on a mat at seventeen and once in that ballroom, and both times the first thing I did was look for Lou.
 
+Here is the math, since it's the first thing everyone asks. You could sell millions of dollars' worth of Ozempic, and the bonus check would be — five thousand dollars.
+
 The next morning the list reset to zero, the way lists do. New year, new quota, the same hallways.
 
 Years later I took a job with no list at all. Nobody ranks hospice visits. There's no ballroom, no music, nobody's name on a screen. For a while, honestly, I missed it — you don't chase raised hands your whole life and stop needing them because the room changed.

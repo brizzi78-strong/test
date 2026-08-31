@@ -55,7 +55,7 @@ He paused. Twenty-six patients a day, and his voice caught.
 
 Neither of us said anything for a second. Then his nurse called him, and he went.
 
-There's a plaque in my garage somewhere with my name on it from that year. A ranking. A bonus check I couldn't tell you the amount of. What I remember is a woman I never met. I never learned her name. And here's the uncomfortable part: the question worked. It opened doors, the doors opened prescriptions, and the prescriptions paid my mortgage. I still can't tell you what I was doing in that hallway — caring, or closing. Maybe that Tuesday it was both.
+There's a plaque in my garage somewhere with my name on it from that year. A ranking. A bonus check. What I remember is a woman I never met. I never learned her name. And here's the uncomfortable part: the question worked. It opened doors, the doors opened prescriptions, and the prescriptions paid my mortgage. I still can't tell you what I was doing in that hallway — caring, or closing. Maybe that Tuesday it was both.
 
 Years later I stopped carrying the bag. Home health first, then hospice. Rooms with nothing to sell and nothing to close.
 
