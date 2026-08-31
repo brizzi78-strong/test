@@ -370,3 +370,30 @@ event (Universal = Orlando) during the climb, the year BEFORE the Q3 2024
 - 2023 becomes the leading candidate for the Brady NSM (he retired Feb
   2023; an Orlando NSM later that year fits everything). Confirm: was
   Brady the 2023 Orlando meeting — Universal, Pauly D, Brady, one trip?
+
+---
+
+## 2026-08-31 — Dancing with the Stars, 2022
+
+> Dancing with the Stars does a show, 2022.
+
+**Anchored: at the 2022 national meeting, Dancing with the Stars
+performed.** The meetings now form their own timeline of the boom:
+
+- **2022** — DWTS does a show (Rob's first NSM, ~6 months into the job)
+- **2023** — Universal Studios closed for the sales force; Brady keynote
+  (candidate year); Pauly D (candidate)
+- **2024** — the #1 quarter (Q3); meeting entertainment unknown
+
+**The story shape this reveals:** each year's meeting got bigger as the
+drug got more famous — the craze measured in corporate entertainment. The
+rookie who didn't know type 1 from type 2 in August 2021 was watching
+network television perform for his division by his first spring. The
+keynote chapter (or a merged NSM chapter) can run this escalation as its
+spine: DWTS → Brady → an empty theme park — and then the quarter that
+actually mattered arrived as a number on a dashboard, two weeks late.
+
+Confirm: which acts go with which years (memory drifts on this exact kind
+of detail — worth a beat of care); what 2024's meeting looked like; and
+whether the escalation read as glory or excess to you at the time (both,
+probably — say it your way).
