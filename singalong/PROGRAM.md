@@ -146,11 +146,11 @@ fill the gap locally: type these into your own library from your facility's
 songbook (words from your own hymnal or by ear — don't photocopy modern
 arrangements, which carry their own copyrights):
 
-> You Are My Sunshine · Don't Sit Under the Apple Tree · Sentimental Journey ·
-> God Bless America · America the Beautiful · In the Garden · The Old Rugged
-> Cross · How Great Thou Art · Red River Valley · Down in the Valley ·
-> Sidewalks of New York · When Irish Eyes Are Smiling · Too-Ra-Loo-Ra-Loo-Ral ·
-> White Christmas · Silent Night
+> You Are My Sunshine · Oh, What a Beautiful Mornin' · Don't Sit Under the
+> Apple Tree · Sentimental Journey · God Bless America · America the
+> Beautiful · In the Garden · The Old Rugged Cross · How Great Thou Art ·
+> Red River Valley · Down in the Valley · Sidewalks of New York · When Irish
+> Eyes Are Smiling · Too-Ra-Loo-Ra-Loo-Ral · White Christmas · Silent Night
 
 Adapt the canon to your actual house — region, denomination, language. For
 Spanish-speaking residents start with *Cielito Lindo*, *Las Mañanitas*, *De
