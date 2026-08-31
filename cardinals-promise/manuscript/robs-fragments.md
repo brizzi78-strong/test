@@ -397,3 +397,18 @@ Confirm: which acts go with which years (memory drifts on this exact kind
 of detail — worth a beat of care); what 2024's meeting looked like; and
 whether the escalation read as glory or excess to you at the time (both,
 probably — say it your way).
+
+---
+
+## 2026-08-31 — "Ozempic was worth more than Denmark"
+
+> Ozempic was worth more than Denmark.
+
+Already anchored in the craze chapter (company market value vs. Denmark's
+GDP, Sept 2023, panel-verified with the "on paper" hedge). Logged here for
+**Rob's cadence**: his compressed version — the drug, not the company — is
+how a rep would say it out loud. Option for the chapter: keep the precise
+version in narration, let his compression be the spoken/remembered line
+("Somebody at a meeting put it the way we all repeated it: Ozempic was
+worth more than Denmark."). If used as speech, it needs a true source —
+did people actually say this in the field/at the NSM? Confirm.
