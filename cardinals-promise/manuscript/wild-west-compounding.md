@@ -22,7 +22,11 @@ I sat back, and the thought arrived in exactly these words: *this man is an ille
 
 Because Ozempic is a patented medication. There is no such thing as compounded Ozempic. There's the drug — made in factories the FDA walks through, sold in a sealed pen I was federally accountable for down to the box — and there's something else wearing its name. And the something else had reps now. Detailing the same offices. Bringing lunch to my doctors.
 
-That was the supply side, standing in a hallway I'd worked for years. The demand side found me at a cookout.
+Then it got closer than a rival in a hallway. Some of my own customers — offices I'd called on for years, relationships I'd built lunch by lunch — started selling the compound themselves. And then the lawsuits started landing on them. My company was suing my customers. The word came down to those of us in the field, and it was short: don't talk to them. At all.
+
+That's how some of those relationships ended. Not with a conversation — with an instruction. There were doors on my route I'd spent years earning the right to walk through, and now I drove past them, under orders, while the lawyers talked to the people I used to bring lunch.
+
+That was the supply side. The demand side found me at a cookout.
 
 A friend of a friend heard I worked for Novo Nordisk and crossed the yard holding her phone like it was evidence. On the screen was a glass vial with a printed label. Semaglutide, it said. Two hundred dollars a month. A telehealth visit that took eleven minutes. She hadn't been able to get Ozempic for four months — the pharmacy kept saying backordered — and her insurance had stopped covering it anyway.
 
@@ -80,7 +84,7 @@ I still wonder what was in her vial.
 
 ## Details to confirm or replace (Rob)
 
-- **Anchored (your voice note):** the Pace lunch, the rival rep, "Compounded Ozempic," and your exact thought. Still needed: what happened next — did you say anything to the rep, the physician, your manager, the company? (Novo's public lawsuits against compounders may intersect your dates.) Note the drafting balance: your gut verdict ("illegal drug dealer") stays as your lived reaction; the chapter's legal nuance (the narrow shortage-era compounding lane, and that "compounded Ozempic" as a phrase was never a real thing — Ozempic is a brand) stays as narration.
+- **Anchored (your voice notes):** the Pace lunch, the rival rep, "Compounded Ozempic," your exact thought — and now the aftermath: customers of yours selling the compound, the lawsuits landing on them, and the field order not to talk to them at all. Legal handling of the new beat: no office identifiable; the litigation described only at public-record level (Novo's 2023–24 suits against clinics/med spas are public); the directive described generically ("the word came down") per the guardrails. Still needed: roughly when the order came, whether any of those customers reached out anyway, and one true moment of driving past a door you were forbidden to enter. Drafting balance stands: your gut verdict ("illegal drug dealer") stays as lived reaction; the legal nuance stays as narration.
 - The cookout scene remains a composite (the demand side) — swap in the real person who asked you, what they showed you, and the advice you actually gave (exact words), or cut it if the chapter stands on Pace alone.
 - **Timeline:** "I was back in hospice rooms by then" (at the early-2025 shortage end) now depends on your actual departure date — you were still in the field Q3 2024. Confirm when you left and adjust that line to the truth.
 - Was there a second encounter — did you ever learn how it turned out? A true second beat would be stronger than the drafted not-knowing; if there wasn't one, the confession as written is the honest version.

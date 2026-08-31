@@ -412,3 +412,31 @@ version in narration, let his compression be the spoken/remembered line
 ("Somebody at a meeting put it the way we all repeated it: Ozempic was
 worth more than Denmark."). If used as speech, it needs a true source —
 did people actually say this in the field/at the NSM? Confirm.
+
+---
+
+## 2026-08-31 — my customers, the lawsuits, and the silence order
+
+> Customers of mine who were selling the compound were getting lawsuits,
+> and we were told not to talk to them at all.
+
+**Anchored (and it completes the Pace scene's aftermath):**
+1. Offices in Rob's own territory — his customers — were selling
+   compounded semaglutide themselves.
+2. The lawsuits landed on them (consistent with Novo's public litigation
+   wave against clinics/med spas/compounders, 2023–24, heavily in
+   Florida — public record).
+3. The field directive: **do not talk to them. At all.** Rob's company
+   suing Rob's customers, and the rep ordered silent — relationships he'd
+   built ending by instruction, not conversation.
+
+**Placed in the Wild West chapter** as the anchored middle: rival rep
+(supply) → customers turning sellers + lawsuits + the wall (the war comes
+to his own call list) → cookout (demand). Legal handling: no office
+identifiable, the litigation described only at public-record level, the
+directive described generically ("we were told") per the guardrails —
+internal instructions as lived texture, never documents.
+
+**Still needed:** roughly when the order came; whether any of those
+customers ever reached out anyway (a voicemail he couldn't return is a
+scene); how it felt driving past an office he was forbidden to enter.
