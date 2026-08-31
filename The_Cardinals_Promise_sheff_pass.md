@@ -1888,7 +1888,7 @@ It was no longer about work. Two people at a round table, one of them grieving a
 
 ### *Lisa's Table*
 
-My father was the gravity that held the family together. When he died, that gravity went with him, and I waited for everything to fly apart. My sister Lisa didn't fracture. She set the table.
+My father was the gravity that held the family together. When he died, that gravity went with him, and I waited for everything to fly apart. We haven't. The reason is my sister Lisa, and a table she has been setting for as long as I can remember.
 
 A stranger had set a place for me at one table. There was another, older one waiting back home. Lisa has Thanksgiving at her house every year. Every year. She sets the table, cooks the meal, opens the door, the way my nana did it, same recipes, same dishes. There's a stubbornness required to keep a tradition alive when the person who started it is gone.
 
@@ -1900,9 +1900,9 @@ And every year there was the Turkey Bowl, Auburn against Alabama, her house spli
 
 It wasn't only Lisa's table. In our family, nobody said love out loud. They cooked it. My mother outside the weigh-ins with Wendy's chicken sandwiches the second I made weight. Nancey in Boca Raton, keeping whipped cream in the house because banana cream pie was my favorite, making me chicken parm for no occasion at all, feeding a nephew who'd shown up at her door with nowhere better to go and not asking him anything a pie couldn't answer. I have eaten my way back to belonging at more tables than I can count, and not one of them ever handed me a bill.
 
-After my dad died, Lisa did what she's always done. She kept the table set.
+The first Thanksgiving without him hasn't come yet. When it does, I know whose house it will be at, and I know the table will be set.
 
-I think about a night long ago when she cooked meatloaf for two boys who didn't make it easy. She's still standing at the counter. Still opening the door. The last time I was there for Thanksgiving I stood in her kitchen a minute before we sat down. I didn't say anything. I just watched, and thought about how the people who hold families together don't usually get thanked for it. They just keep doing it. Year after year. We sat down. Someone said grace. The food was passed. And for a few hours everything had a center again. Lisa made sure of that.
+I think about a night long ago when she cooked meatloaf for two boys who didn't make it easy. She's still standing at the counter. Still opening the door. The last time I was there for Thanksgiving, my father was still alive. I stood in her kitchen a minute before we sat down. I didn't say anything. I just watched, and thought about how the people who hold families together don't usually get thanked for it. They just keep doing it. Year after year. We sat down. Someone said grace. The food was passed. And for a few hours everything had a center. Lisa made sure of that.
 
 ### *The Floor*
 
