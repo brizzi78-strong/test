@@ -7,8 +7,8 @@ than the last one.
 
 This exists because of the assessment in
 [`../DEMENTIA_MUSIC_SOFTWARE_ASSESSMENT.md`](../DEMENTIA_MUSIC_SOFTWARE_ASSESSMENT.md):
-the clinical case for personalized music is strong, but the category is
-crowded and price-anchored by a nonprofit (Music & Memory) and licensing-heavy
+the category is crowded, price-anchored near $1,000 by a nonprofit-run
+program (Music & Memory, part of IMNF since 2025), and licensing-heavy
 (SingFit's catalog). This app takes the two costliest parts off the table
 instead of competing on them.
 
@@ -17,39 +17,40 @@ instead of competing on them.
 - **No licensed audio catalog.** This app never hosts or streams a
   recording. A song's `audioUrl` points at wherever the facility already has
   the right to play it from — their own streaming account, a ripped CD on a
-  shared drive, a physical iPod (the Music & Memory model). That's what keeps
-  this out of music licensing.
+  shared drive, a physical iPod (the Music & Memory model). The app itself
+  therefore carries no music-licensing exposure; the *audio source's own
+  terms* are the facility's responsibility (a personal streaming account's
+  terms usually don't cover group playback in an activity room — check).
 - **No clinical data.** A resident's profile is a musical one — preferred
   eras, genres, favorite artists, and freeform biographical notes. No
   diagnoses, medications, or care-plan fields. See
   [`../SENIOR_CARE_PLACEMENT_STRATEGY.md`](../SENIOR_CARE_PLACEMENT_STRATEGY.md)
   for why that line matters early.
 - **Personalized suggestions.** `suggestSongs` ranks the facility's own song
-  library against a resident's known preferences — individualized selections
-  are what the evidence says actually reduces agitation, not generic
-  "relaxing music."
+  library against a resident's known preferences. Personalization is about
+  *reaching* the person — small studies favor someone's own preferred music
+  over generic "relaxing" tracks, and in-session response predicts who
+  benefits. (Do not oversell it: the best evidence says music-based sessions
+  produce engagement and pleasure and likely help depressive symptoms, but
+  likely do **not** reduce agitation — see PROGRAM.md's evidence section
+  before quoting anything to a family or a surveyor.)
 - **A guided prompter.** Step through a playlist one song at a time with the
   title, artist, lyrics, and a link to the facility's own audio source, sized
   for a shared screen or tablet.
-- **Learn what works.** Staff log each song's engagement
+- **Learn what works.** Staff log each song's response
   (`sang_along` / `listened_attentively` / `moved_or_tapped` /
-  `no_visible_response` / `agitated`) plus an optional mood before/after.
-  `topSongsForResident` turns that history into a ranked "what works for this
+  `moved_to_tears` / `no_visible_response` / `agitated`) plus an optional
+  mood before/after. Tears score as the music *reaching* someone.
+  `topSongsForResident` turns history into a ranked "what works for this
   resident" list from completed sessions only.
 
 ## The program
 
 The app is the tooling; [`PROGRAM.md`](PROGRAM.md) is the ready-to-run
 **Memory Care Music Program** built on it: twice-weekly sing-along circles on
-a four-week themed cycle, personalized listening between them, and a Friday
-review of the engagement logs. `npm run seed:program` loads its 20-song
-public-domain kit (lyrics included) into a facility's library:
-
-```bash
-SINGALONG_DB=/path/data.db npm run seed:program                    # new facility + song kit
-SINGALONG_DB=/path/data.db npm run seed:program -- --facility ID   # into an existing facility (idempotent)
-npm run seed:program -- --demo-resident                            # dry run incl. the 4 session playlists
-```
+a four-week themed cycle, personalized listening between them, and a weekly
+by-song review of the logs. `npm run seed:program` loads its 21-song
+public-domain kit (words included) into a facility's library.
 
 [`demo/index.html`](demo/index.html) is a self-contained, client-side
 walkthrough of the program with sample data — open it in any browser, or let
@@ -57,17 +58,41 @@ the repo's `../render.yaml` blueprint serve it as a free static site.
 
 ## Run it
 
+**Prerequisites:** Node.js 22.18+ (`node --version`; install from
+nodejs.org), then `npm install` once (only the dev tooling needs it — the
+app itself runs dependency-free). A warning that *"SQLite is an experimental
+feature"* will print on every run; it's harmless.
+
 ```bash
-npm start                                    # PORT default 4900 (in-memory store)
-SINGALONG_DB=/path/data.db npm start         # durable SQLite
-SINGALONG_USER=admin SINGALONG_PASSWORD=… npm start   # gate the console
+SINGALONG_DB=./data.db npm run seed:program     # once: new facility + 21-song kit (prints the fac_… ID — save it)
+SINGALONG_DB=./data.db npm start                # serve the console on http://localhost:4900
 npm test
 npm run typecheck
 ```
 
-Open `http://localhost:4900`. Set up a facility, add residents (musical
-profile only) and a song library, build a playlist, then run a session from
-the "Run a session" tab.
+`./data.db` is just a file the app creates — any writable path, but use the
+**same path in every command**. The env vars combine; a real deployment is
+one line:
+
+```bash
+PORT=4900 SINGALONG_DB=./data.db SINGALONG_USER=admin SINGALONG_PASSWORD=yourpassword npm start
+```
+
+Without `SINGALONG_DB` the store is in-memory (and the seeder becomes an
+explicit dry run). From another device on the same network — the
+activity-room tablet — browse to `http://<this computer's address>:4900`
+(find it with `ipconfig` on Windows, `ip addr` on Mac/Linux).
+
+Seeding, all idempotent (reruns skip what exists):
+
+```bash
+SINGALONG_DB=./data.db npm run seed:program -- --facility fac_…                  # kit into an existing facility
+SINGALONG_DB=./data.db npm run seed:program -- --facility fac_… --resident res_… # the 4 program playlists for a real resident
+SINGALONG_DB=./data.db npm run seed:program -- --facility fac_… --demo-resident  # an example resident + playlists
+```
+
+In the console: add residents (musical profile only) and any local songs,
+then run a session from the "Run a session" tab.
 
 ## HTTP API
 
@@ -88,11 +113,17 @@ the "Run a session" tab.
 
 ## A note on sensitive data
 
-This is demonstration scaffolding, not a compliance program. Resident names
-and preferences are personal information even though they aren't clinical —
-gate the console (`SINGALONG_USER`/`SINGALONG_PASSWORD`) in any real
-deployment, and don't let staff notes drift into clinical territory (no
-diagnoses, medications, or incident reports). If this ever needs to record
-outcomes for a care plan rather than "which songs to try next," that's a
-different, HIPAA-scoped product — see the placement strategy doc for why that
-line is worth holding.
+This is demonstration scaffolding, not a compliance program — and the data
+deserves more respect than "non-clinical" suggests. The app stores, per
+named resident, a time-stamped series of session responses (including
+`agitated`) and mood impressions. Nothing in it is a diagnosis or an
+assessment, and none of it substitutes for the chart — but a named
+resident's observed states over time are resident health information by any
+sensible reading. Treat them that way: gate the console
+(`SINGALONG_USER`/`SINGALONG_PASSWORD`), run it inside the facility's own
+network and privacy obligations (expect your compliance reviewer to ask, and
+expect to need a BAA if anyone hosts it for you), and keep staff notes
+biographical — no diagnoses, medications, or incident reports. If this ever
+needs to record outcomes for a care plan rather than "which songs to try
+next," that's a different, fully HIPAA-scoped product — see the placement
+strategy doc for why that line is worth holding.

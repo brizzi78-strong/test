@@ -21,6 +21,7 @@ const ENGAGEMENT_SCORE: Record<EngagementLevel, number> = {
   sang_along: 3,
   listened_attentively: 2,
   moved_or_tapped: 2,
+  moved_to_tears: 2,
   no_visible_response: 0,
   agitated: -2,
 };
