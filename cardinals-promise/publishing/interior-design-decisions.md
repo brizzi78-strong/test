@@ -77,3 +77,40 @@ freely; that reader is at a kitchen table, not in a hallway.
 **Ebook note.** Fill-in rules do not survive reflowable EPUB. The
 digital edition needs the worksheets handled separately — most likely a
 downloadable printable PDF companion.
+
+## Printable workbook + the website funnel (Rob's direction)
+
+**No perforation.** KDP print-on-demand cannot perforate, die-cut, or
+spiral-bind — that would require leaving POD for an offset print run
+(minimum quantities, cash upfront, inventory, fulfillment). Verify
+current specs with KDP before revisiting. A perforated special edition
+stays a "later, if volume justifies it" idea, not a launch plan.
+Perforation is also one-time by nature, and the record worksheets
+(medication list, crisis plan, contacts) are living documents that get
+revised many times — so a reprintable file beats a tear-out.
+
+**Instead:**
+1. **A printable workbook PDF** at thecardinalspromise.com — she prints
+   the medication list fresh whenever a dose changes, three copies for
+   three siblings, one for the car.
+2. **Design for scissors** in the print book: dashed cut lines, a small
+   scissors mark, generous margins, and the back-of-book workbook set on
+   right-hand pages with blank reverses so nothing is lost when a page is
+   cut out or copied.
+
+**The funnel.** The download draws readers to the website, where the
+thank-you page introduces *The Cardinal's Promise* — the toolkit buyer
+is exactly the memoir's reader. Rules that keep it honest:
+
+- **Do not gate the workbook behind an email form.** She may be
+  downloading at 11pm mid-crisis; a form in front of a crisis plan
+  contradicts the whole book. Deliver the PDF instantly, then invite the
+  email ("Want the story behind this book?"). Fewer addresses, better ones.
+- **No sales pitch inside the print book** — just a clean URL and a QR
+  code (she has a phone in her other hand). The memoir gets introduced on
+  the website's thank-you page, led by the cardinal on January 9th.
+- **Last page of the workbook PDF** carries a quiet page about the
+  memoir — she reopens that file all year.
+- **Nothing essential lives behind the URL.** A reader who never goes
+  online must still hold a complete toolkit. The download is a bonus copy
+  of what is already printed.
