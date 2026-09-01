@@ -43,74 +43,53 @@ the cover itself. These cannot both be right:
 Rob decides; everything downstream (cover spec, front matter, domain
 rules) follows.
 
-## Workbook structure (Rob's direction, pending consultant report)
+## Workbook structure — FINAL (option 2, implemented September 2026)
 
-**Hybrid, with cross-references.** Thinking worksheets — where the
-questions are themselves the teaching — stay inline in the chapter.
-Record-keeping worksheets (medication and doctor lists, emergency
-contacts and crisis plan, the documents inventory) consolidate into a
-workbook section at the back of the book, where a family can find and
-reuse them.
+**Superseding note:** an earlier entry here proposed moving the
+record-keeping worksheets into a back workbook. The structural
+consultant's report (`../reviews/workbook-structure-report.md`) found
+that premise wrong — the worksheets are already consolidated in a fixed
+slot at the end of every chapter and never interrupt teaching — and Rob
+chose option 2 instead. That is what is built.
 
-**The pointer.** Where a chapter's tool lives in the back, the chapter
-carries a designed cross-reference marker — not a sentence buried in a
-paragraph:
+**All 55 worksheets stay inline**, in their chapter, in that chapter's
+urgency color. Nothing was moved. What was added:
 
-> ▣ Workbook, p. 243 — Medication & Doctor List
+1. **Worksheet Finder** (back matter, before the Index) — all 55 tools
+   by name, grouped by part, each with its chapter's urgency dot. A
+   scissors mark (✂) flags the four that also have a tear-out. This
+   delivers the findability a back workbook would have, for one page.
+2. **The Refrigerator Page** (after *Numbers That Matter*) — new, not a
+   copy of any worksheet: a distilled merge of who to call, what they
+   take, and where the papers are. Deliberately neutral gray, NOT an
+   urgency color, and it carries a disclaimer echoing Ch. 23's — it
+   records where things are; it is not a medical order. Closes the
+   expert panel's open "one master contacts page" ask.
+3. **Four blank tear-out pages** (very back) — duplicates, never
+   removals. The chapter keeps its complete version and its action beat;
+   the back carries a clean full-page version to fill and post:
+   Medication & Doctor List (25), Emergency Contacts & Crisis Plan (26),
+   Important Documents Folder (19), Last Days Plan (27). Each carries a
+   back-reference to its chapter and a dashed cut line.
+4. **Refill route** — a QR code and short URL on the Finder page, plus a
+   line added to the copyright page's existing photocopy grant, and one
+   sentence in "How to Use This Handbook" pointing to both new pages.
 
-It should read as a tab/callout the eye catches while skimming. Each
-workbook page carries a back-reference the other way ("From Chapter 25,
-p. 148") so a reader filling it in months later can get back to the
-teaching in one flip.
+**Why these four and no others.** A worksheet earns a tear-out only if
+the finished page's job happens outside the book: a living record,
+read by someone other than the reader, chapter-independent, needed when
+the book is not open to that chapter. The other 51 fail at least one
+test — the 19 "Questions to Ask" boxes are scripts with no fill lines,
+Ch. 4's burnout self-check is scored and cannot leave its key, and
+**Ch. 23 stays inline permanently for a documented safety reason** (a
+family taped the filled preferences worksheet to the fridge believing
+it was a DNR).
 
-**Production rule — do not hardcode page numbers.** Mark every pointer
-with a placeholder token (e.g. `{{WB:med-list}}`) and resolve them all
-to real page numbers in a single pass at typeset, after the openers,
-part dividers, and workbook have settled the pagination. A wrong page
-number in a crisis book is worse than no page number.
+**Cost:** +19 pages (231 → 250). No body content moved, so the index is
+untouched; only back-matter TOC entries shift.
 
-**Crisis-reader rule.** RED (Act Today) chapters keep everything the
-reader needs on the page in front of her — never send a reader in
-crisis to the back of the book. BLUE (Plan Ahead) chapters may point
-freely; that reader is at a kitchen table, not in a hallway.
+**Not doing:** no perforation (POD cannot), no gated download, no
+in-chapter URLs beyond the single address. The consolidated workbook
+product remains the North Carolina companion, which is sold, not given
+away as back matter.
 
-**Ebook note.** Fill-in rules do not survive reflowable EPUB. The
-digital edition needs the worksheets handled separately — most likely a
-downloadable printable PDF companion.
-
-## Printable workbook + the website funnel (Rob's direction)
-
-**No perforation.** KDP print-on-demand cannot perforate, die-cut, or
-spiral-bind — that would require leaving POD for an offset print run
-(minimum quantities, cash upfront, inventory, fulfillment). Verify
-current specs with KDP before revisiting. A perforated special edition
-stays a "later, if volume justifies it" idea, not a launch plan.
-Perforation is also one-time by nature, and the record worksheets
-(medication list, crisis plan, contacts) are living documents that get
-revised many times — so a reprintable file beats a tear-out.
-
-**Instead:**
-1. **A printable workbook PDF** at thecardinalspromise.com — she prints
-   the medication list fresh whenever a dose changes, three copies for
-   three siblings, one for the car.
-2. **Design for scissors** in the print book: dashed cut lines, a small
-   scissors mark, generous margins, and the back-of-book workbook set on
-   right-hand pages with blank reverses so nothing is lost when a page is
-   cut out or copied.
-
-**The funnel.** The download draws readers to the website, where the
-thank-you page introduces *The Cardinal's Promise* — the toolkit buyer
-is exactly the memoir's reader. Rules that keep it honest:
-
-- **Do not gate the workbook behind an email form.** She may be
-  downloading at 11pm mid-crisis; a form in front of a crisis plan
-  contradicts the whole book. Deliver the PDF instantly, then invite the
-  email ("Want the story behind this book?"). Fewer addresses, better ones.
-- **No sales pitch inside the print book** — just a clean URL and a QR
-  code (she has a phone in her other hand). The memoir gets introduced on
-  the website's thank-you page, led by the cardinal on January 9th.
-- **Last page of the workbook PDF** carries a quiet page about the
-  memoir — she reopens that file all year.
-- **Nothing essential lives behind the URL.** A reader who never goes
-  online must still hold a complete toolkit. The download is a bonus copy
-  of what is already printed.
