@@ -520,7 +520,7 @@ There was one thing they couldn't change, and I held onto it. Brizzi still start
 *"Let us not love in word, neither in tongue; but in deed and in truth."*
 *— 1 John 3:18*
 
-**New Jersey, 1985**
+**New Jersey, 1986–2000**
 
 I carried his name before I understood what was behind it. What Lou taught me about being a man came down to a few things, none of them speeches.
 
@@ -770,7 +770,7 @@ I can still see him at the front door. Dyed hair, pressed shirt, tie pulled tigh
 *"A good name is rather to be chosen than great riches."*
 *— Proverbs 22:1*
 
-**New York, 1997**
+**New York, summer 1997**
 
 The summer I was nineteen, between semesters at Miami and working construction, my dad called and said he got me a job. Auditing. I said, auditing? Dad, I haven't taken an accounting class yet. He said, they'll teach you.
 
