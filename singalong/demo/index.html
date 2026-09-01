@@ -134,6 +134,34 @@
   .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:max(6.5rem,env(safe-area-inset-bottom));z-index:30;background:var(--ink);color:var(--paper);border-radius:12px;padding:.6rem .9rem;display:flex;gap:.8rem;align-items:center;box-shadow:var(--shadow);font-weight:700}
   .toast button{background:transparent;border:1px solid color-mix(in srgb,var(--paper) 55%,transparent);color:var(--paper);border-radius:8px;font:inherit;font-weight:800;padding:.25rem .6rem;cursor:pointer;min-height:36px}
   @media print{header.top,.tabs,.hero,.foot,.logdock{display:none}}
+  /* ---- Printable circle sheet ---- */
+  #sheetHost{display:none}
+  body.sheet-mode #sheetHost{display:block}
+  @media print{
+    body.sheet-mode header.top,body.sheet-mode main.wrap,body.sheet-mode .foot,body.sheet-mode .stage{display:none}
+    body.sheet-mode{background:#fff}
+    @page{margin:.55in .6in}
+  }
+  #sheetHost{color:#1C2030;background:#fff;font-size:15px;line-height:1.45;padding:1rem}
+  #sheetHost .sh-head{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;border-bottom:3px solid #A31B33;padding-bottom:.35rem;margin-bottom:.6rem}
+  #sheetHost h2{font-family:Georgia,serif;font-weight:400;font-size:1.6rem;margin:0;border:0}
+  #sheetHost .k{font-size:.7rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:#5C5646}
+  #sheetHost h3{font-family:Georgia,serif;font-weight:400;font-size:1.02rem;margin:.8rem 0 .25rem;border-bottom:1px solid #C9BFA8;padding-bottom:.12rem}
+  #sheetHost .sh-cols{display:grid;grid-template-columns:1.5fr 1fr;gap:0 1.5rem}
+  #sheetHost ol{list-style:none;margin:.25rem 0 0;padding:0;counter-reset:st}
+  #sheetHost ol li{display:flex;gap:.55rem;padding:.28rem 0;border-bottom:1px dotted #C9BFA8;align-items:baseline}
+  #sheetHost ol li::before{counter-increment:st;content:counter(st);font-family:Georgia,serif;color:#A31B33;min-width:1.1em;text-align:right}
+  #sheetHost .st{font-weight:700}
+  #sheetHost .sc{color:#5C5646;font-size:.84rem;font-style:italic}
+  #sheetHost ul{margin:.2rem 0 0;padding-left:1rem}
+  #sheetHost ul li{margin:.18rem 0;font-size:.86rem}
+  #sheetHost .bx{background:#F4EFE3;border:1px solid #C9BFA8;border-radius:6px;padding:.5rem .65rem;margin-top:.5rem;font-size:.84rem}
+  #sheetHost .words{columns:2;column-gap:.5in;margin-top:.4rem;break-before:page}
+  #sheetHost .ws{break-inside:avoid;margin-bottom:.8rem}
+  #sheetHost .ws b{font-family:Georgia,serif;font-size:1rem}
+  #sheetHost .ws .by{color:#5C5646;font-size:.7rem;margin:.05rem 0 .2rem}
+  #sheetHost .ws pre{font:inherit;font-size:.93rem;line-height:1.5;margin:0;white-space:pre-wrap}
+  #sheetHost .sh-foot{margin-top:.7rem;padding-top:.35rem;border-top:1px solid #C9BFA8;color:#5C5646;font-size:.74rem;display:flex;justify-content:space-between;gap:1rem}
 </style>
 </head>
 <body>
@@ -221,6 +249,7 @@
     <p class="hint">The circle songs are shared on purpose — they're the ones a whole generation can still sing together.
     Each resident's personal music has its own time, one to one.</p>
     <div id="planList"></div>
+    <button class="btn ghost" id="printSheet" type="button" style="margin-top:.6rem">Print this week’s circle sheet</button>
     <h3>Their own music, one to one</h3>
     <label for="ownResident">Resident</label>
     <select id="ownResident"></select>
@@ -297,6 +326,7 @@
   </div></div>
 </div>
 
+<div id="sheetHost" aria-hidden="true"></div>
 <div id="overlayHost"></div>
 <div id="toastHost" role="status" aria-live="polite"></div>
 
@@ -632,6 +662,43 @@ function finishScreen(early){
   });
   $("discardBtn").addEventListener("click", ()=>{ live = null; closeOverlay(); exitStage(); showToast("Session discarded — nothing was kept."); });
 }
+
+/* ---------- printable circle sheet ---------- */
+function firstLine(t){ return song(t).l.split("\n")[0]; }
+function buildSheet(planIdx){
+  const p = PLANS[planIdx];
+  const soft = p.name.includes("Moon");
+  const steps = [
+    '<li><div><span class="st">'+esc(GATHER)+'</span> <span class="sc">— gather; loop it while people settle. Aide seats latecomers quietly.</span></div></li>',
+    '<li><div><span class="sc">Warm-up, 2 min — shoulder rolls, big breaths, hands open & closed. Then greet each person by name.</span></div></li>',
+    ...p.core.map((t,i)=>'<li><div><span class="st">'+esc(t)+'</span>'+(i>=2?' <span class="sc">— droppable on a slow day</span>':'')+'<br><span class="sc">“'+esc(firstLine(t))+'”</span></div></li>'),
+    '<li><div><span class="st">'+esc(p.move)+'</span> <span class="sc">— movement; shakers & scarves out, one motion at a time.</span></div></li>',
+    '<li><div><span class="sc">Request slot — the room picks one. Same person, same song every week is fine.</span></div></li>',
+    '<li><div><span class="st">'+esc(CLOSE)+'</span> <span class="sc">— goodbye ritual, softer. End calm, then coffee & juice in the same room.</span></div></li>',
+  ].join("");
+  const words = planSongs(p).map(t=>{const s2=song(t);return '<div class="ws"><b>'+esc(s2.t)+'</b><div class="by">'+esc(s2.a)+'</div><pre>'+esc(s2.l)+'</pre></div>';}).join("");
+  $("sheetHost").innerHTML =
+    '<div class="sh-head"><div><div class="k">Sing-Along Circle · The Memory Care Music Program</div><h2>'+esc(p.name)+'</h2></div>'+
+    '<div style="text-align:right"><div class="k">30–40 min · 4–10 residents</div>'+(soft?'<div class="k">Softer & slower this week</div>':'')+'</div></div>'+
+    '<div class="sh-cols"><div><h3>The run</h3><ol>'+steps+'</ol>'+
+    '<div class="bx"><b>If someone cries:</b> don’t stop the song, don’t rush over, don’t apologize for the music. Move near, keep singing. Sit with them after — that’s the real activity.</div>'+
+    '<div class="bx"><b>If someone is truly upset:</b> step down to a song that has settled them before — the music not stopping keeps one hard moment from becoming the room’s event.</div></div>'+
+    '<div><h3>Before song one</h3><ul><li>TV off — unplugged</li><li>Hearing aids in, batteries live</li><li>Glasses on</li><li>Water on the table</li><li>Shaker basket ready</li><li>Empty chair by the door</li><li>Start 15–20 min after toileting round</li></ul>'+
+    '<h3>Staffing</h3><ul><li>1 facilitator — never leaves the front</li><li>1 aide per 4–5 residents — watches faces</li><li>A CNA reachable</li></ul>'+
+    '<h3>The three rules</h3><ul><li><b>Invite, never quiz.</b> “I love this one” — not “Do you remember?”</li><li><b>Every response counts.</b> A hum, a tap, a look up.</li><li><b>Sing lower and slower</b> than the record.</li></ul>'+
+    '<h3>After the circle</h3><ul><li>Aide notes the standouts — sparse and true</li><li>Attendance into the activity record</li><li>Tell a family something specific</li></ul></div></div>'+
+    '<div class="sh-foot"><span><b>The Memory Care Music Program</b> — a Cardinal Care Bridge program</span><span>All songs public domain · words overleaf</span></div>'+
+    '<div class="words">'+words+'</div>'+
+    '<div class="sh-foot"><span>All songs and words on this sheet are US public domain — copy freely.</span></div>';
+}
+$("printSheet").addEventListener("click", ()=>{
+  buildSheet(WEEK);
+  document.body.classList.add("sheet-mode");
+  const done = ()=>{ document.body.classList.remove("sheet-mode"); window.removeEventListener("afterprint", done); };
+  window.addEventListener("afterprint", done);
+  window.print();
+  setTimeout(done, 500); // fallback for browsers that don't fire afterprint reliably
+});
 
 /* ---------- history ---------- */
 $("hResident").innerHTML = resOptions;
