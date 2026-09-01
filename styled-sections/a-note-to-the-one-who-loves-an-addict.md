@@ -14,4 +14,4 @@ Years later I would learn that this is also the whole of hospice. You cannot cur
 
 What you can do is stay. Not fix, not control, not cure. Stay. Set the boundary that keeps you whole, leave the door open a crack, and be there in the ways that don't cost you your own life. If you are not safe, the boundary is distance — my mother saved two boys by leaving.
 
-So now you know how I know. One promise was all I had to offer — to tell you the truth the whole way through — and I've kept it as well as I know how. There's one more page, and it's yours.
+So now you know how I know. One promise was all I had to offer — to tell you the truth the whole way through — and I've kept it as well as I know how. There's one more page, and it belongs to the rooms.

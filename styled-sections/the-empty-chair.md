@@ -12,7 +12,7 @@ I got the call last week. Dale is on hospice with mesothelioma, and they don't t
 
 I called him. I cried, and I told him I loved him, and he said it back. That's the power of the program.
 
-There's another seat at that table. Cardascia and I had been friends since we were seventeen years old. He lost his fight with addiction last year. He never quit trying, and that's the part I won't let anyone forget. The disease tells you a man who goes back out is a failure. The rooms know better. He kept walking back in, every time, wanting to stop. That's not weakness. That's a fighter losing to something that kills fighters.
+There's another seat in those rooms. Cardascia and I had been friends since we were seventeen years old. He lost his fight with addiction last year. He never quit trying, and that's the part I won't let anyone forget. The disease tells you a man who goes back out is a failure. The rooms know better. He kept walking back in, every time, wanting to stop. That's not weakness. That's a fighter losing to something that kills fighters.
 
 I'm seventeen years sober and I'm not one bit safer than he was. None of us are. The only difference between his seat and mine is one day at a time.
 

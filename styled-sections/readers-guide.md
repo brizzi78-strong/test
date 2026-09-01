@@ -12,7 +12,7 @@
 
 5. Lou almost never explains himself: he drives to Cooperstown, buys the Walkman, sleeps on the floor of a wrecked apartment, sets out a sesame bagel. Which of his silent gestures stayed with you, and why do you think the book gives him so few speeches?
 
-6. "The rescue didn't get me sober. It kept me alive long enough to get there." What is the difference, in this book, between rescuing someone and saving them — and who else lives inside that difference?
+6. "The rescue didn't get me sober. It kept me alive." What is the difference, in this book, between rescuing someone and saving them — and who else lives inside that difference?
 
 7. Rob's mother wired money she told herself was for rent. "The lie I lived was letting her believe her money was keeping her son fed." Where is the line between loving an addict and enabling one? Did the book change where you'd draw it?
 
@@ -26,4 +26,4 @@
 
 12. Rob writes that the cardinal "wasn't a miracle... the message is still being sent." What do you make of signs after loss? Has the book changed how you would receive one?
 
-13. The book ends with instructions: say the words now, cross the parking lot, open the door. Which instruction is yours — and when will you follow it?
+13. The book ends with instructions: keep showing up, say the great things while they can still hear you, walk in and let yours find you. Which instruction is yours — and when will you follow it?
