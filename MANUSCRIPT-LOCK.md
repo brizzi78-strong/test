@@ -1,6 +1,8 @@
 # Manuscript Lock — The Cardinal's Promise
 
-**Locked:** 2026-08-31 · **Tag:** `v1-lock-2026-08-31` · **Commit:** `4bc42ea`
+**Locked:** 2026-08-31 · **Manuscript text at commit** `4bc42ea` · **Lock record at commit** `d99e427` (branch `claude/david-sheff-clone-writing-06i30q`)
+
+*A git tag `v1-lock-2026-08-31` exists in the working clone but could not be pushed to GitHub from this session; on GitHub, use the commit hashes above as the reference.*
 
 | | |
 |---|---|
