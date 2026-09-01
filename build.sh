@@ -5,9 +5,9 @@
 # Requires: pandoc, python3 + weasyprint (pip install weasyprint).
 #
 # NOTE: the PDF produced here is a READING PROOF, not the print-spec KDP
-# interior. The locked 226-page KDP interior (which drives the 0.509" spine
-# and cover-wrap math) is typeset separately at final lock, after Scott's
-# proofread. Do not upload this proof PDF to KDP as the interior.
+# interior. The KDP interior (The_Cardinals_Promise_KDP_Interior.pdf, 188 pages at
+# the 2026-08-31 lock — see MANUSCRIPT-LOCK.md and KDP-COVER-SPECS.md) is the
+# file that drives the spine and cover-wrap math.
 
 set -euo pipefail
 SRC="The_Cardinals_Promise_sheff_pass.md"
