@@ -42,3 +42,38 @@ the cover itself. These cannot both be right:
 
 Rob decides; everything downstream (cover spec, front matter, domain
 rules) follows.
+
+## Workbook structure (Rob's direction, pending consultant report)
+
+**Hybrid, with cross-references.** Thinking worksheets — where the
+questions are themselves the teaching — stay inline in the chapter.
+Record-keeping worksheets (medication and doctor lists, emergency
+contacts and crisis plan, the documents inventory) consolidate into a
+workbook section at the back of the book, where a family can find and
+reuse them.
+
+**The pointer.** Where a chapter's tool lives in the back, the chapter
+carries a designed cross-reference marker — not a sentence buried in a
+paragraph:
+
+> ▣ Workbook, p. 243 — Medication & Doctor List
+
+It should read as a tab/callout the eye catches while skimming. Each
+workbook page carries a back-reference the other way ("From Chapter 25,
+p. 148") so a reader filling it in months later can get back to the
+teaching in one flip.
+
+**Production rule — do not hardcode page numbers.** Mark every pointer
+with a placeholder token (e.g. `{{WB:med-list}}`) and resolve them all
+to real page numbers in a single pass at typeset, after the openers,
+part dividers, and workbook have settled the pagination. A wrong page
+number in a crisis book is worse than no page number.
+
+**Crisis-reader rule.** RED (Act Today) chapters keep everything the
+reader needs on the page in front of her — never send a reader in
+crisis to the back of the book. BLUE (Plan Ahead) chapters may point
+freely; that reader is at a kitchen table, not in a hallway.
+
+**Ebook note.** Fill-in rules do not survive reflowable EPUB. The
+digital edition needs the worksheets handled separately — most likely a
+downloadable printable PDF companion.
