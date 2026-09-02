@@ -4,19 +4,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>The Cardinal — where your people are</title>
-<meta name="theme-color" content="#1877f2">
+<meta name="theme-color" content="#12233a">
 <style>
 :root{
-  --bg:#f0f2f5; --card:#ffffff; --ink:#1c1e21; --muted:#65676b; --faint:#8a8d91;
-  --line:#dadde1; --brand:#1877f2; --brand-ink:#166fe0; --brand-soft:#e7f3ff;
-  --like:#7a1f35; --shadow:0 1px 2px rgba(0,0,0,.08);
-  --shadow-sm:0 1px 2px rgba(0,0,0,.06); --radius:8px;
+  --bg:#f3efe7; --card:#fffdf9; --ink:#101a2b; --muted:#5b6474; --faint:#8e95a3;
+  --line:#e2dccf; --brand:#12233a; --brand-ink:#0b1728; --brand-soft:#e9ecf1;
+  --like:#a51c2a; --gold:#a8873d; --shadow:0 1px 2px rgba(16,26,43,.06);
+  --shadow-sm:0 1px 2px rgba(16,26,43,.05); --radius:8px;
+  --serif:"Cormorant Garamond","EB Garamond","Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
   font-synthesis:none;
 }
 @media (prefers-color-scheme: dark){:root{
-  --bg:#18191a; --card:#242526; --ink:#e4e6eb; --muted:#b0b3b8; --faint:#8a8d91;
-  --line:#3a3b3c; --brand:#2e89ff; --brand-ink:#4a99ff; --brand-soft:#1e2a3a;
-  --like:#c15a78;
+  --bg:#0b1526; --card:#132239; --ink:#efe9dc; --muted:#b3b9c6; --faint:#7f8898;
+  --line:#24344c; --brand:#3e5f8f; --brand-ink:#5a7cb0; --brand-soft:#1b2c45;
+  --like:#d3323f; --gold:#c9a75e;
   --shadow:0 1px 2px rgba(0,0,0,.5); --shadow-sm:0 1px 2px rgba(0,0,0,.4);
 }}
 *{margin:0;box-sizing:border-box}
@@ -24,7 +25,7 @@
 body{font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
   background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;min-height:100vh}
 button,input,textarea{font:inherit;color:inherit}
-h1,h2,h3{font-weight:700;letter-spacing:-.01em;line-height:1.2}
+h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-.005em;line-height:1.12}
 ::selection{background:var(--brand);color:#fff}
 
 /* ---------- Top bar ---------- */
@@ -33,7 +34,7 @@ h1,h2,h3{font-weight:700;letter-spacing:-.01em;line-height:1.2}
 .brand{display:flex;align-items:center;gap:.55rem;text-decoration:none;color:var(--ink)}
 .brand-mark{width:34px;height:34px;border-radius:8px;display:grid;place-items:center;background:var(--brand)}
 .brand-mark svg{width:25px;height:auto;display:block}
-.brand-word{font-weight:700;font-size:1.2rem;letter-spacing:-.01em}
+.brand-word{font-family:var(--serif);font-weight:500;font-size:1.4rem;letter-spacing:0}
 .top-actions{display:flex;align-items:center;gap:.35rem}
 .top-tab{border:0;background:none;font-weight:600;color:var(--muted);padding:.5rem .8rem;border-radius:10px;cursor:pointer;transition:.15s}
 .top-tab:hover{background:var(--brand-soft);color:var(--brand-ink)}
@@ -54,7 +55,7 @@ textarea{resize:vertical}
 .err{color:var(--like);font-weight:600;font-size:.85rem}
 
 /* buttons */
-.btn{border:0;border-radius:11px;font-weight:700;padding:.6rem 1.1rem;cursor:pointer;transition:.15s;white-space:nowrap}
+.btn{border:0;border-radius:6px;font-weight:700;letter-spacing:.02em;padding:.6rem 1.1rem;cursor:pointer;transition:.15s;white-space:nowrap}
 .btn.primary{background:var(--brand);color:#fff}
 .btn.primary:hover{background:var(--brand-ink)}
 .btn.primary:disabled{opacity:.5;cursor:default;transform:none}
@@ -72,9 +73,10 @@ textarea{resize:vertical}
 .auth{max-width:940px;display:grid;grid-template-columns:1.1fr .9fr;gap:2.5rem;align-items:center;padding-top:6vh}
 .auth-hero .hero-mark{width:64px;height:64px;border-radius:12px;display:grid;place-items:center;background:var(--brand);margin-bottom:1.2rem}
 .auth-hero .hero-mark svg{width:48px;height:auto;display:block}
-.auth-hero h1{font-weight:800;font-size:clamp(2rem,4vw,2.7rem);margin-bottom:.6rem;color:var(--ink);letter-spacing:-.015em}
-.auth-hero h1 em{font-style:normal;color:var(--brand)}
-.auth-hero p{color:var(--muted);font-size:1.05rem;max-width:38ch;margin-bottom:1.2rem}
+.auth-hero .eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+.auth-hero h1{font-weight:500;font-size:clamp(2.3rem,4.2vw,3.3rem);margin-bottom:.9rem;color:var(--ink);letter-spacing:-.01em;line-height:1.08;text-wrap:balance}
+.auth-hero h1 em{font-style:italic;color:var(--like)}
+.auth-hero p{color:var(--muted);font-size:1.08rem;line-height:1.6;max-width:40ch;margin-bottom:1.4rem}
 .hero-points{list-style:none;display:flex;flex-direction:column;gap:.5rem}
 .hero-points li{padding-left:1.6rem;position:relative;color:var(--ink);font-weight:500}
 .hero-points li::before{content:"";position:absolute;left:0;top:.4rem;width:.55rem;height:.55rem;border-radius:50%;background:var(--brand)}
@@ -162,7 +164,7 @@ textarea{resize:vertical}
 
 /* Check-in strip (the signature feature) */
 .checkin{padding:1.1rem 1.15rem;margin-bottom:1.1rem;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--brand)}
-.checkin-head{font-weight:700;font-size:1.05rem;margin-bottom:.8rem;color:var(--brand-ink)}
+.checkin-head{font-family:var(--serif);font-weight:500;font-size:1.3rem;margin-bottom:.8rem;color:var(--ink)}
 .checkin-person{display:flex;align-items:center;gap:.75rem;padding:.6rem 0}
 .checkin-person+.checkin-person{border-top:1px solid color-mix(in srgb,var(--brand) 12%,var(--line))}
 .checkin-person .who{flex:1;min-width:0}
@@ -206,7 +208,7 @@ textarea{resize:vertical}
 .people-card{padding:1.1rem}
 .people-search{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:.7rem 1.1rem;margin-bottom:1rem}
 .people-search:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 4px var(--brand-soft)}
-.section-h{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--faint);font-weight:800;margin:.6rem 0}
+.section-h{font-size:.7rem;text-transform:uppercase;letter-spacing:.16em;color:var(--gold);font-weight:700;margin:.6rem 0}
 #requestsBlock{padding-bottom:.6rem;margin-bottom:.6rem;border-bottom:1px solid var(--line)}
 .people-list{display:flex;flex-direction:column}
 .person{display:flex;align-items:center;gap:.75rem;padding:.6rem 0}
@@ -301,7 +303,7 @@ textarea{resize:vertical}
 </head>
 <body>
 <header class="topbar" id="topbar" hidden>
-  <a class="brand" href="#" id="brandHome"><span class="brand-mark"><svg viewBox="0 0 260 240" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="#7a1f35" d="M40 94 L70 72 C65 57 67 41 77 31 C81 43 88 44 92 38 C93 52 90 62 99 70 C120 82 142 100 154 122 C161 137 166 150 170 150 C182 158 197 178 214 208 C190 196 171 181 155 164 C133 177 107 173 90 158 C74 150 64 132 62 112 L44 98 Z"/><circle cx="64" cy="88" r="4" fill="#151a2e"/></svg></span><span class="brand-word">The Cardinal</span></a>
+  <a class="brand" href="#" id="brandHome"><span class="brand-mark"><svg viewBox="0 0 260 240" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="#a51c2a" d="M40 94 L70 72 C65 57 67 41 77 31 C81 43 88 44 92 38 C93 52 90 62 99 70 C120 82 142 100 154 122 C161 137 166 150 170 150 C182 158 197 178 214 208 C190 196 171 181 155 164 C133 177 107 173 90 158 C74 150 64 132 62 112 L44 98 Z"/><circle cx="64" cy="88" r="4" fill="#151a2e"/></svg></span><span class="brand-word">The Cardinal</span></a>
   <div class="top-actions">
     <button class="top-tab active" data-view="feed" title="Home">Home</button>
     <button class="top-tab" data-view="friends" title="Friends">Friends <span class="badge" id="reqBadge" hidden>0</span></button>
@@ -327,7 +329,8 @@ textarea{resize:vertical}
   <!-- AUTH -->
   <section class="view auth" id="view-auth">
     <div class="auth-hero">
-      <div class="hero-mark"><svg viewBox="0 0 260 240" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="#7a1f35" d="M40 94 L70 72 C65 57 67 41 77 31 C81 43 88 44 92 38 C93 52 90 62 99 70 C120 82 142 100 154 122 C161 137 166 150 170 150 C182 158 197 178 214 208 C190 196 171 181 155 164 C133 177 107 173 90 158 C74 150 64 132 62 112 L44 98 Z"/><circle cx="64" cy="88" r="4" fill="#151a2e"/></svg></div>
+      <div class="hero-mark"><svg viewBox="0 0 260 240" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="#a51c2a" d="M40 94 L70 72 C65 57 67 41 77 31 C81 43 88 44 92 38 C93 52 90 62 99 70 C120 82 142 100 154 122 C161 137 166 150 170 150 C182 158 197 178 214 208 C190 196 171 181 155 164 C133 177 107 173 90 158 C74 150 64 132 62 112 L44 98 Z"/><circle cx="64" cy="88" r="4" fill="#151a2e"/></svg></div>
+      <p class="eyebrow">A network by Rob Brizzi</p>
       <h1>Where <em>your people</em> are.</h1>
       <p>A network of real, verified people — where you share, stay close, and actually show up for each other.</p>
       <ul class="hero-points">
@@ -515,7 +518,7 @@ textarea{resize:vertical}
 <div class="modal-overlay" id="supportModal" hidden>
   <div class="modal support-modal card" role="dialog" aria-modal="true" aria-labelledby="supportTitle">
     <button class="modal-x" id="supportClose" aria-label="Close">✕</button>
-    <div class="support-mark"><svg viewBox="0 0 260 240" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="#7a1f35" d="M40 94 L70 72 C65 57 67 41 77 31 C81 43 88 44 92 38 C93 52 90 62 99 70 C120 82 142 100 154 122 C161 137 166 150 170 150 C182 158 197 178 214 208 C190 196 171 181 155 164 C133 177 107 173 90 158 C74 150 64 132 62 112 L44 98 Z"/><circle cx="64" cy="88" r="4" fill="#151a2e"/></svg></div>
+    <div class="support-mark"><svg viewBox="0 0 260 240" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="#a51c2a" d="M40 94 L70 72 C65 57 67 41 77 31 C81 43 88 44 92 38 C93 52 90 62 99 70 C120 82 142 100 154 122 C161 137 166 150 170 150 C182 158 197 178 214 208 C190 196 171 181 155 164 C133 177 107 173 90 158 C74 150 64 132 62 112 L44 98 Z"/><circle cx="64" cy="88" r="4" fill="#151a2e"/></svg></div>
     <h2 id="supportTitle">It's okay to need people.</h2>
     <p class="support-sub">Only <b>your circle</b> will see this — no feed, no algorithm. Just the people who care about you.</p>
     <div class="support-chips" id="supportChips">
