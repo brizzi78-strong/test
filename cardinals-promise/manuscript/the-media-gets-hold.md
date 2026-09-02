@@ -4,10 +4,11 @@
 
 > **Draft chapter — for Rob's review.** Distinct lane from "The Weight Loss
 > Craze": that chapter is the jokes and the status; this one is the news
-> machine — the scare-to-miracle whiplash — watched by a man who'd spent
-> years legally forbidden to say an unvetted sentence about the same drug.
-> The personal scenes (the segment on TV, the text exchange) are stand-ins;
-> swap in yours. Panel-reviewed; report in
+> machine — the scare-to-miracle whiplash. **Vantage re-pointed per your
+> Aug 2021 start:** the muzzle and the megaphone ran on the same nights —
+> you watched unregulated coverage while legally bound to pre-approved
+> sentences the next morning. The personal scenes (the segment on TV, the
+> text exchange) are stand-ins; swap in yours. Panel-reviewed; report in
 > `reviews/media-panel-report.md`. Details to confirm at the bottom.
 
 ---
@@ -16,13 +17,13 @@ I was not allowed to say anything. Not anything false — *anything*. Every sent
 
 The rules existed because the industry had earned them, the hard way, before my time. Neurontin. OxyContin. Reps like me helped write those rules by breaking the old ones.
 
-Years after I turned in my bag, I watched a morning show spend four minutes on that same drug. A chyron, a worried host, one terrifying anecdote, and a doctor who had never treated the patient in the anecdote.
+One night in those years — the drug still in my bag, calls on it the next morning — I watched a morning-show clip spend four minutes on it. A chyron, a worried host, one terrifying anecdote, and a doctor who had never treated the patient in the anecdote.
 
-Four minutes. I couldn't have legally said any of it, in either direction.
+Four minutes. I couldn't have legally said any of it, in either direction. At nine the next morning I'd be standing in a hallway, cleared to speak only sentences the FDA had seen first, while the television in the office waiting room said whatever it wanted about the boxes in my trunk.
 
 That was the era when the media got hold of Ozempic, and the coverage came in waves that contradicted each other on a weekly cycle. Miracle drug. Dangerous shortcut. Hollywood's secret. Stomach paralysis. Fountain of youth. Suicide risk. Each wave true somewhere in it, or partly true, or being investigated — and each one arriving at full volume into the phone of somebody's mother.
 
-I got the texts. Once you've worked in pharma you get them forever — you're the friend who used to sell it, which makes you the help desk. This one came on a Tuesday night, from a guy I've known twenty years: a screenshot of a headline, and under it, *should my dad stop taking this?* Then, before I could type anything: *he already skipped tuesdays dose.*
+I got the texts. Once you work in pharma you get them forever — you're the friend who sells it, which makes you the help desk. This one came on a Tuesday night, from a guy I've known twenty years: a screenshot of a headline, and under it, *should my dad stop taking this?* Then, before I could type anything: *he already skipped tuesdays dose.*
 
 His father. Sixty-eight. Two years on the drug, the best numbers of his adult life, and one headline had already cost him a dose.
 

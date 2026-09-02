@@ -4,21 +4,24 @@
 
 > **Draft chapter — for Rob's review.** The anchor is cultural and public
 > (the 2022–2024 GLP-1 craze); the two personal scenes — the awards-show
-> joke on your couch, the dinner-table moment — are stand-ins. Swap in the
-> real moment you first heard the drug's name used as a punchline, and the
-> real person you watched go quiet. Details to confirm at the bottom.
+> joke on your couch, the dinner-table moment — are stand-ins. **Vantage
+> re-pointed per your Aug 2021 start:** you were in the field for the
+> entire craze — the couch scene now happens mid-territory, the drug still
+> in your trunk the next morning. Swap in the real moment you first heard
+> the name used as a punchline, and the real person you watched go quiet.
+> Details to confirm at the bottom.
 
 ---
 
-For years, the word was mine. I said it forty times a day in hallways. I spelled it for receptionists. I watched doctors write it and patients learn to pronounce it. It was a medicine. It was, on the best days of my working life, a door out of a room somebody had been locked in for nine years.
+The word was mine. I said it forty times a day in hallways. I spelled it for receptionists. I watched doctors write it and patients learn to pronounce it. It was a medicine. It was, on the best days of my working life, a door out of a room somebody had been locked in for nine years.
 
 Then one night I was on my couch watching an awards show, and a man in a tuxedo said the word, and an entire theater full of famous people laughed.
 
-I didn't laugh. I sat there doing the math on how the word had gotten from a New Jersey exam table to that stage.
+I didn't laugh. The drug was in my trunk in the driveway. I had calls on it in the morning. I sat there doing the math on how the word had gotten from an exam table in my territory to that stage.
 
 You know the story of those years even if you lived somewhere else. The internet found the drug. A billionaire tweeted about it. There was a hashtag with more views than the drug had ever had patients. Tabloids ran before-and-after covers and ran with a phrase — a face, named after the drug — for what famous people's cheeks looked like now. For a while it was the punchline in every monologue and the whisper at every reunion: *is she on it? He's definitely on it.*
 
-The company I used to carry a bag for became, on paper, worth more than the entire yearly economy of Denmark — its own home country. I read that in the news like everybody else and tried to connect it to anything I had ever touched. The bag. The samples fridge. The hallway. You can't. Numbers that size don't mean anything at the level where the work happens, which is a sentence I would have taken as an insult in my quota years and take as plain fact now.
+The company whose logo was on my paycheck became, on paper, worth more than the entire yearly economy of Denmark — its own home country. I read that in the news and tried to connect it to anything I touched in a workday. The bag. The samples fridge. The hallway. You can't. Numbers that size don't mean anything at the level where the work happens — a sentence I would have taken as an insult in my quota years and take as plain fact now.
 
 Somewhere under all of that, it was still Tuesday morning for a few million people with diabetes.
 
@@ -32,7 +35,7 @@ The woman in the hallway chapter feared the needle because it said *you failed.*
 
 And the people taking it for weight — the craze was not kind to them either, whatever the monologues implied. Obesity had finally gotten a drug that worked, and the culture's response was to declare the treatment a scandal. Take the drug, you're vain and cheating. Don't take it, stay heavy, and be the punchline the other way. There was no way to sit at that dinner table and be right.
 
-I don't have a hero for this chapter. Hope was behind a counter watching the same story as inventory. I was in hospice rooms where nobody cares what anyone weighs. I have never once heard a dying person or their family mention anybody's body the way that dinner table did. Not once. At the end, the questions are: was she comfortable, did he know we were there, did we say it in time.
+I don't have a hero for this chapter. Hope was behind a counter watching the same story as inventory. I was in the hallways, selling the word everyone was joking about. It was only later, in hospice rooms, that I learned where the measuring ends: I have never once heard a dying person or their family mention anybody's body the way that dinner table did. Not once. At the end, the questions are: was she comfortable, did he know we were there, did we say it in time.
 
 The woman at the table with the water glass — I keep thinking someone should have said it into that laughter: *she's not a joke, and neither is the other thing, and pass the bread.* Nobody said it. I didn't say it. I was still on the couch, doing the math.
 
