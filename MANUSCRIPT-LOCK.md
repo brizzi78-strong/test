@@ -1,15 +1,15 @@
 # Manuscript Lock — The Cardinal's Promise
 
-**Locked:** 2026-08-31 (lock 2, after the line-edit pass) · **Manuscript text at commit** `e6c4a73` (branch `claude/david-sheff-clone-writing-06i30q`)
+**Locked:** 2026-08-31 (lock 3, after fact fixes and the goalpost scene) · **Manuscript text at commit** `1770fd0` (branch `claude/david-sheff-clone-writing-06i30q`)
 
 *A git tag `v1-lock-2026-08-31` exists in the working clone but could not be pushed to GitHub from this session; on GitHub, use the commit hashes above as the reference.*
 
 | | |
 |---|---|
 | Chapters | 34 (Prologue, six Parts, three Drives interludes, Epilogue, back matter) |
-| Words | 51,598 |
-| KDP interior | The_Cardinals_Promise_KDP_Interior.pdf — **189 pages**, 6" × 9", B&W |
-| Spine (white paper) | 0.426" — full wrap 12.676" × 9.25" (see KDP-COVER-SPECS.md) |
+| Words | 51,688 |
+| KDP interior | The_Cardinals_Promise_KDP_Interior.pdf — **190 pages**, 6" × 9", B&W |
+| Spine (white paper) | 0.428" — full wrap 12.678" × 9.25" (see KDP-COVER-SPECS.md) |
 | Source of record | The_Cardinals_Promise_sheff_pass.md (mirrored in styled-sections/) |
 
 ## What "locked" means
