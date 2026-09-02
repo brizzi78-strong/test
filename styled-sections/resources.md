@@ -2,7 +2,7 @@
 
 This book argues that there is a solution. Here is where to find help putting it into practice. These are the organizations I trust and point people to. All of it is free or low cost.
 
-988 Suicide and Crisis Lifeline. Call or text 988. Twenty-four hours a day, free and confidential. For anyone reading this in a dark place — the addiction pages, the grief pages, any of it.
+988 Suicide & Crisis Lifeline. Call or text 988. Twenty-four hours a day, free and confidential. For anyone reading this in a dark place — the addiction pages, the grief pages, any of it.
 
 ### *If You or Someone You Love Is Struggling With Addiction*
 
@@ -18,7 +18,7 @@ National Alliance for Care at Home. allianceforcareathome.org. The national orga
 
 CaringInfo. caringinfo.org. A free program of the Alliance. Plain-language guides to hospice and palliative care, caregiving, and grief, plus advance directive forms for every state in English and Spanish. The place to start when you do not know where to start.
 
-Hospice Foundation of America. hospicefoundation.org. 800-854-3402. Help understanding hospice, starting the conversation, and finding grief support after a loss.
+Hospice Foundation of America. hospicefoundation.org. 1-800-854-3402. Help understanding hospice, starting the conversation, and finding grief support after a loss.
 
 Get Palliative Care. getpalliativecare.org. From the Center to Advance Palliative Care. It explains palliative care, which is not the same thing as hospice, and helps you find it near you.
 

@@ -1,6 +1,6 @@
 # **ACKNOWLEDGMENTS**
 
-Hope. You tilted your head, said "We?", and never stopped meaning it. You read every page of this book and told me you were proud of me. That's the only review I'll ever need.
+Hope. You tilted your head, said "We?" and never stopped meaning it. You read every page of this book and told me you were proud of me. That's the only review I'll ever need.
 
 My mother, who carried two boys out of Mexico City and then checked more of these memories than anyone. This book is half hers.
 
