@@ -726,7 +726,7 @@ The hazel-eyed baby my mother carried out of Mexico is silver-haired now, a fath
 
 ### *The Lesson and the Exception*
 
-Coach Oberki met me before school to run the track. He invested in me. At the year-end gathering he said, Brizzi went down a legend. But when I was struggling, he wasn't around much. When I excelled, everyone wanted to be attached to it.
+Coach Oberky met me before school to run the track. He invested in me. At the year-end gathering he said, Brizzi went down a legend. But when I was struggling, he wasn't around much. When I excelled, everyone wanted to be attached to it.
 
 Lou was the exception. Through all of it, the nineteen seconds, the weight cuts, the throwing up, the bad ankle, the losses that hurt more than the wins, he was there. Not because I was becoming a legend. Because I was his son.
 
