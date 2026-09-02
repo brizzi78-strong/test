@@ -32,7 +32,7 @@
 9. **The Shortage** — Hope's side of the counter; the Mounjaro musical chairs
 10. **The Weight Loss Craze** — the word leaves medicine; Denmark; the dinner table
 11. **The Media Gets Hold of Ozempic** — the rules he lived under, the coverage that lived under none
-12. **We Can't Sample Here Anymore** — anchored in Rob's voice note: flat scripts, the staff getting skinnier, the cutoff *(timeline: proves Rob was in the field during the Wegovy shortage — reconcile the craze/media/Wild West vantage points to his real departure date)*
+12. **We Can't Sample Here Anymore** — anchored: flat scripts, the staff getting skinnier, the self-injecting doctor, the cutoff *(timeline resolved: Aug 2021 start, in the field through Q3 2024; the craze/media/Wild West chapters are re-pointed to the in-the-field vantage — only the departure date remains open)*
 13. **Like the Wild West Come the Compounding Pharmacies** — the cookout vial; ten minutes
 14. **Ozempic Babies** — the one wave made of good news; the sonogram at the party; the turn toward Part III
 
