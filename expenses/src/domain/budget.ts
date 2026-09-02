@@ -69,6 +69,11 @@ export function rolloverInto(
   if (!budget.rollover) return 0;
   const target = monthIndex(month);
   const anchor = monthIndex(budget.carryFromMonth);
+  // The frozen balance is what was carried *into* the anchor month, so it
+  // applies from the anchor onward. Earlier months predate this budget's
+  // current settings entirely and have no carry to show.
+  if (target < anchor) return 0;
+  if (target === anchor) return budget.carryFromCents;
   // Bound the walk; if the anchor is older than the window, its frozen
   // balance falls outside what we replay and the window starts flat.
   const earliest = Math.max(anchor, target - ROLLOVER_MAX_MONTHS);

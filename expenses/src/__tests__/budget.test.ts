@@ -136,6 +136,16 @@ describe('budget progress', () => {
     assert.equal(p.availableCents, 50_000);
   });
 
+  it('shows no carry for months before the anchor', () => {
+    // Paging back past the anchor must not display a balance that only
+    // accumulated afterwards.
+    const b = budget({ rollover: true, carryFromMonth: '2026-03', carryFromCents: 20_000 });
+    const feb = budgetProgress(b, '2026-02', spent({ '2026-02': 10_000 }));
+    assert.equal(feb.rolloverCents, 0);
+    assert.equal(feb.availableCents, 50_000);
+    assert.equal(feb.remainingCents, 40_000);
+  });
+
   it('accumulates from the carry anchor, not from the start month', () => {
     // Anchor set in March holding $200 frozen from the old limit; only
     // March onward is replayed at the current limit.

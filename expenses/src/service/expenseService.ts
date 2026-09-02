@@ -23,6 +23,7 @@ import {
   summarize,
 } from '../domain/budget.ts';
 import { findMatchingTransaction } from '../domain/matching.ts';
+import { summarizeScheduleC, type ScheduleCSummary } from '../domain/scheduleC.ts';
 import {
   CATEGORIES,
   type Budget,
@@ -424,6 +425,27 @@ export class ExpenseService {
     };
     this.store.putBudget(budget);
     return budget;
+  }
+
+  /**
+   * A tax year's filed expenses rolled up by Schedule C line, with each
+   * category's deductible share applied. `totalDeductibleCents` is the figure
+   * the return in `taxfile/` takes as `businessExpenses`, from which it
+   * derives net profit and self-employment tax.
+   *
+   * Counts every expense dated in the year except those on rejected reports —
+   * the money was spent whether or not the report is still a draft. Company
+   * card spend counts too: the business paid it either way.
+   */
+  scheduleC(userId: string, year: number): ScheduleCSummary {
+    if (!Number.isInteger(year) || year < 2000 || year > 2100) {
+      throw new DomainError('year must be a four-digit year between 2000 and 2100');
+    }
+    const prefix = `${year}-`;
+    const expenses = this.query((r) => r.ownerId === userId && r.status !== 'rejected')
+      .flatMap((r) => r.expenses)
+      .filter((e) => e.date.startsWith(prefix));
+    return summarizeScheduleC(year, expenses);
   }
 
   /** Spend per category per month across this user's non-rejected reports. */

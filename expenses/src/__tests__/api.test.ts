@@ -570,6 +570,44 @@ describe('Expenses API', () => {
     assert.ok(Array.isArray(summary.json.budgets));
   });
 
+  it('summarizes a tax year for Schedule C, scoped to the year and the filer', async () => {
+    const { json: created } = await call('POST', '/reports', { title: 'Tax year', approverId: 'tax-mgr' }, 'tax-user');
+    const id = created.report.id;
+    const add = (date: string, category: string, amountCents: number) =>
+      call('POST', `/reports/${id}/expenses`,
+        { date, category, merchant: `${category} co`, amountCents, receipt: { name: 'r.pdf' } }, 'tax-user');
+    await add('2025-03-04', 'airfare', 40_000);       // fully deductible
+    await add('2025-03-05', 'meals', 10_000);         // half
+    await add('2025-03-06', 'entertainment', 20_000); // none
+    await add('2024-12-31', 'airfare', 99_000);       // a different tax year
+
+    const y2025 = await call('GET', '/tax/schedule-c?year=2025', undefined, 'tax-user');
+    assert.equal(y2025.status, 200);
+    assert.equal(y2025.json.totalSpentCents, 70_000);
+    assert.equal(y2025.json.totalDeductibleCents, 45_000);
+    assert.equal(y2025.json.disallowedCents, 25_000);
+    assert.deepEqual(y2025.json.lines.map((l: any) => l.line), ['24a', '24b', 'none']);
+
+    const y2024 = await call('GET', '/tax/schedule-c?year=2024', undefined, 'tax-user');
+    assert.equal(y2024.json.totalDeductibleCents, 99_000, 'the prior year stands on its own');
+
+    // Rejected reports are not deductible business expenses here.
+    const { json: rej } = await call('POST', '/reports', { title: 'Rejected', approverId: 'tax-mgr' }, 'tax-user');
+    await call('POST', `/reports/${rej.report.id}/expenses`,
+      { date: '2025-03-07', category: 'software', merchant: 'X', amountCents: 5_000, receipt: { name: 'r.pdf' } }, 'tax-user');
+    await call('POST', `/reports/${rej.report.id}/submit`, undefined, 'tax-user');
+    await call('POST', `/reports/${rej.report.id}/reject`, { reason: 'personal' }, 'tax-mgr');
+    const afterReject = await call('GET', '/tax/schedule-c?year=2025', undefined, 'tax-user');
+    assert.equal(afterReject.json.totalDeductibleCents, 45_000);
+
+    // Another filer's expenses never appear in this one's return.
+    const stranger = await call('GET', '/tax/schedule-c?year=2025', undefined, 'someone-else');
+    assert.equal(stranger.json.totalSpentCents, 0);
+
+    const badYear = await call('GET', '/tax/schedule-c?year=25', undefined, 'tax-user');
+    assert.equal(badYear.status, 400);
+  });
+
   it('exports expenses as CSV for the filer and the approver, neutralizing formula injection', async () => {
     const { json: createdJson } = await call('POST', '/reports', { title: 'CSV run', approverId: 'csv-fin' }, 'csv-user');
     const id = createdJson.report.id;

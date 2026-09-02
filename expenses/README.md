@@ -24,6 +24,13 @@ know about every exception *while typing*, not days later in a rejection email.
   that carries an unused (or overspent) balance into the next month. Spend
   counts every expense you file that month — card and out-of-pocket alike —
   except rejected reports.
+- **Tax-ready, not just spend-ready.** `GET /tax/schedule-c` rolls a year up by
+  Schedule C line with the real federal treatment applied: business meals at
+  50%, entertainment at nothing since the TCJA, travel and office in full, and
+  mileage recomputed at the IRS standard rate rather than at whatever the
+  company reimbursed. A purchase filed on two reports is deducted once. The
+  total is what `taxfile/` takes as `businessExpenses` to derive net profit and
+  self-employment tax. Ordinary-case rules and a starting point, not tax advice.
 - **Card feed without reconciliation.** Import corporate card charges; a
   charge auto-matches when you enter the expense (same amount, ±3 days),
   or becomes an expense in one click with date/merchant/amount prefilled.
@@ -87,6 +94,7 @@ draft ──submit──▶ approved (auto, when compliant ≤ ceiling)
 | POST | `/reports/:id/reimburse` | Mark approved report paid |
 | GET | `/analytics` | My spend by category/status, card vs out-of-pocket split |
 | GET | `/export.csv` | My expenses as CSV (`?scope=approvals` for my queue) |
+| GET | `/tax/schedule-c` | A year's deductible spend by Schedule C line (`?year=YYYY`, default this year) |
 | GET | `/budgets` | My monthly category budgets |
 | PUT | `/budgets/:category` | Set/replace a budget `{ amountCents, rollover?, startMonth? }` |
 | DELETE | `/budgets/:category` | Remove a budget |

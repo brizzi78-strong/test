@@ -21,6 +21,7 @@
  *   POST   /reports/:id/reimburse
  *   GET    /analytics                          -> my spend by category/status
  *   GET    /export.csv[?scope=approvals]       -> my expenses (or my queue) as CSV
+ *   GET    /tax/schedule-c[?year=YYYY]         -> deductible spend by Schedule C line
  *   GET    /budgets                            -> my monthly category budgets
  *   PUT    /budgets/:category                  -> { amountCents, rollover?, startMonth? }
  *   DELETE /budgets/:category
@@ -69,6 +70,9 @@ interface Route {
   segments: string[];
   handler: Handler;
 }
+
+/** Comfortably above the ~500 KB receipt cap and a 500-row card import. */
+const MAX_BODY_BYTES = 2_000_000;
 
 const ok = (body: unknown): RouteResult => ({ status: 200, body });
 const created = (body: unknown): RouteResult => ({ status: 201, body });
@@ -126,6 +130,13 @@ export function createRequestListener(
     ok(service.reimburseReport(ctx.userId, ctx.params.id!)),
   );
   route('GET', '/analytics', (ctx) => ok(service.analytics(ctx.userId)));
+  route('GET', '/tax/schedule-c', (ctx) => {
+    const given = ctx.query.get('year');
+    if (given !== null && !/^\d{4}$/.test(given)) {
+      return { status: 400, body: { error: 'year must be a four-digit year' } };
+    }
+    return ok(service.scheduleC(ctx.userId, given ? Number(given) : new Date().getFullYear()));
+  });
   // Registered before /budgets/:category so "summary" is never read as a category.
   route('GET', '/budgets/summary', (ctx) =>
     ok(service.budgetSummary(ctx.userId, ctx.query.get('month') ?? undefined)),
@@ -168,8 +179,18 @@ export function createRequestListener(
       let matched = true;
       for (let i = 0; i < r.segments.length; i++) {
         const pattern = r.segments[i]!;
-        if (pattern.startsWith(':')) params[pattern.slice(1)] = decodeURIComponent(pathSegments[i]!);
-        else if (pattern !== pathSegments[i]) {
+        if (pattern.startsWith(':')) {
+          // A malformed percent-escape must not throw out of routing and take
+          // the process down; treat it as simply not matching this route.
+          let decoded: string;
+          try {
+            decoded = decodeURIComponent(pathSegments[i]!);
+          } catch {
+            matched = false;
+            break;
+          }
+          params[pattern.slice(1)] = decoded;
+        } else if (pattern !== pathSegments[i]) {
           matched = false;
           break;
         }
@@ -218,9 +239,25 @@ export function createRequestListener(
       return;
     }
 
+    // Cap the body before buffering it: the receipt and batch limits only
+    // apply once it is parsed, which is too late to stop a huge upload.
     const chunks: Buffer[] = [];
-    req.on('data', (chunk: Buffer) => chunks.push(chunk));
+    let received = 0;
+    let overflowed = false;
+    req.on('data', (chunk: Buffer) => {
+      received += chunk.length;
+      if (received > MAX_BODY_BYTES) {
+        if (!overflowed) {
+          overflowed = true;
+          send(413, { error: 'request body is too large' });
+          req.destroy();
+        }
+        return;
+      }
+      chunks.push(chunk);
+    });
     req.on('end', () => {
+      if (overflowed) return;
       let body: unknown = undefined;
       const raw = Buffer.concat(chunks).toString('utf8');
       if (raw.length > 0) {
