@@ -292,7 +292,7 @@ Compared to Mexico City, West Paterson sounded like a monastery where all the mo
 
 Before long I made friends on the street, Frank and Jason, and I'd run to find them and be outside all day.
 
-School confused me. I understood more than I could say, so I watched the other kids for cues, when to talk, when to laugh, how to stand. I quickly learned it was safer to take a room in than to announce myself. With a name like Claudio Horacio Balderas in a class of John Smiths and Erik Thomases, I stuck out. Nobody could pronounce any of it. They landed on Cloudio, which was better than some of the intentional mispronunciations, like Balder-Ass.
+School confused me. I understood more than I could say, so I watched the other kids for cues, when to talk, when to laugh, how to stand. I quickly learned it was safer to take a room in than to announce myself. With a name like Claudio Horacio Balderas in a class of John Smiths and Erik Thomases, I stuck out. Nobody could pronounce any of it. They landed on Cloudio, which was better than some of the intentional mispronunciations, like Badder-Ass.
 
 "What do you want to be when you grow up?" No grown-up ever asked me that. Which is good, because I would have had no answer. I couldn't have named a job if I'd tried. But I knew what I hoped to do as I got older. One word: survive. Get through the day, stay small, don't give anyone a reason to look twice.
 
