@@ -55,6 +55,55 @@ services:
     staticPublishPath: ./cardinal-care-bridge
     autoDeploy: true
 
+  # Cardinal Expenses — the landing page for the expense app (cardinal-expenses/).
+  # Static, like the care-bridge site: no build step, no server, no disk, free on
+  # Render. Before pointing real traffic at it, swap the hero's "Run it yourself"
+  # button for the URL of the cardinal-expenses-app service below — see that
+  # folder's README.
+  #
+  # Served at expenses.thecardinalspromise.com — a subdomain, deliberately, so
+  # the apex keeps serving the book. To put this on the apex instead, replace
+  # the domain below with thecardinalspromise.com and www.thecardinalspromise.com
+  # and give Render the A record it asks for rather than the CNAME.
+  - type: web
+    name: cardinal-expenses
+    runtime: static
+    branch: main
+    staticPublishPath: ./cardinal-expenses
+    autoDeploy: true
+    domains:
+      - expenses.thecardinalspromise.com
+
+  # Cardinal Expenses (app) — the expense reporting service (expenses/): policy
+  # checks at entry time, auto-approval of compliant reports, corporate card
+  # feed, Mint-style budgets, and an approver queue. Password-gated
+  # (EXPENSES_USER / EXPENSES_PASSWORD — set the password when Render prompts;
+  # reports carry receipt images and card data, so do not run this ungated).
+  # Reports, budgets and the card feed persist in SQLite on the mounted disk.
+  - type: web
+    name: cardinal-expenses-app
+    runtime: docker
+    branch: main
+    plan: starter            # a persistent disk requires a paid instance
+    dockerfilePath: ./deploy/Dockerfile
+    dockerContext: .
+    dockerCommand: node expenses/src/index.ts
+    healthCheckPath: /health
+    autoDeploy: true
+    disk:
+      name: expenses-data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: BRAND_NAME
+        value: Cardinal Expenses
+      - key: EXPENSES_DB
+        value: /data/expenses.db
+      - key: EXPENSES_USER
+        value: admin
+      - key: EXPENSES_PASSWORD
+        sync: false            # Render prompts you to set this on first deploy
+
   # Memory Care Music Program demo — an interactive, client-side walkthrough of
   # the program that runs on the Sing Along app (singalong/PROGRAM.md): sample
   # residents, the public-domain song kit with lyrics, the weekly playlists, a

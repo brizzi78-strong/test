@@ -33,6 +33,7 @@ COPY gateway ./gateway
 COPY trading ./trading
 COPY invest ./invest
 COPY taxfile ./taxfile
+COPY expenses ./expenses
 # The Render all-in-one trading service starts both trading/ and invest/ from
 # this small entrypoint. Keep it in the shared image alongside those modules.
 COPY deploy/allinone-trading.ts ./deploy/allinone-trading.ts
