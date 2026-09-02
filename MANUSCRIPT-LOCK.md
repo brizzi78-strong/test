@@ -1,15 +1,15 @@
 # Manuscript Lock — The Cardinal's Promise
 
-**Locked:** 2026-08-31 · **Manuscript text at commit** `4bc42ea` · **Lock record at commit** `d99e427` (branch `claude/david-sheff-clone-writing-06i30q`)
+**Locked:** 2026-08-31 (lock 2, after the line-edit pass) · **Manuscript text at commit** `e6c4a73` (branch `claude/david-sheff-clone-writing-06i30q`)
 
 *A git tag `v1-lock-2026-08-31` exists in the working clone but could not be pushed to GitHub from this session; on GitHub, use the commit hashes above as the reference.*
 
 | | |
 |---|---|
 | Chapters | 34 (Prologue, six Parts, three Drives interludes, Epilogue, back matter) |
-| Words | 51,585 |
-| KDP interior | The_Cardinals_Promise_KDP_Interior.pdf — **188 pages**, 6" × 9", B&W |
-| Spine (white paper) | 0.423" — full wrap 12.673" × 9.25" (see KDP-COVER-SPECS.md) |
+| Words | 51,598 |
+| KDP interior | The_Cardinals_Promise_KDP_Interior.pdf — **189 pages**, 6" × 9", B&W |
+| Spine (white paper) | 0.426" — full wrap 12.676" × 9.25" (see KDP-COVER-SPECS.md) |
 | Source of record | The_Cardinals_Promise_sheff_pass.md (mirrored in styled-sections/) |
 
 ## What "locked" means
@@ -21,7 +21,7 @@ text) was built from this exact source.
 ## What is still expected to touch the text
 
 - Scott's edit from "My Brother's Keeper" onward.
-- Jocelyn's line edit, then the proofread.
+- The proofread (the line-edit pass was completed 2026-08-31 — 62 verified fixes; Jocelyn may still review).
 - Permission checks for real names newly added in the back matter ("The Rooms").
 
 Any of those changes reopens the lock: apply the edit to both files, rebuild,

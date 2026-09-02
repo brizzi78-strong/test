@@ -1,27 +1,27 @@
 # KDP Cover-Wrap Specs — The Cardinal's Promise
 
-Trim size: 6" x 9". Interior page count: 188 (LOCKED 2026-08-31, commit in MANUSCRIPT-LOCK.md; the
-spine math below is computed for 188 pages — rerun only if the lock is reopened).
+Trim size: 6" x 9". Interior page count: 189 (LOCKED 2026-08-31, lock 2 after the line-edit pass, commit in MANUSCRIPT-LOCK.md; the
+spine math below is computed for 189 pages — rerun only if the lock is reopened).
 
 ## Spine width
 
-| Paper | Formula | 188 pages |
+| Paper | Formula | 189 pages |
 |---|---|---|
-| White (recommended for text-only) | pages × 0.002252" | 0.423" |
-| Cream | pages × 0.0025" | 0.470" |
+| White (recommended for text-only) | pages × 0.002252" | 0.426" |
+| Cream | pages × 0.0025" | 0.473" |
 
 ## Full wrap dimensions (includes 0.125" bleed on all outside edges)
 
 | Paper | Width | Height |
 |---|---|---|
-| White | 0.125 + 6 + 0.423 + 6 + 0.125 = **12.673"** | 9 + 0.25 = **9.25"** |
-| Cream | 0.125 + 6 + 0.470 + 6 + 0.125 = **12.720"** | **9.25"** |
+| White | 0.125 + 6 + 0.426 + 6 + 0.125 = **12.676"** | 9 + 0.25 = **9.25"** |
+| Cream | 0.125 + 6 + 0.473 + 6 + 0.125 = **12.723"** | **9.25"** |
 
-At 300 DPI (white): 3802 × 2775 px.
+At 300 DPI (white): 3803 × 2775 px.
 
 Notes for the designer:
 - Keep text 0.25" inside trim edges; nothing critical in the 0.125" bleed zone.
-- Spine is 0.423" on white paper: title + author still fit reading top-to-bottom, but set them
+- Spine is 0.426" on white paper: title + author still fit reading top-to-bottom, but set them
   small and centered — this is narrower than the earlier 0.5" estimate.
 - KDP prints its barcode bottom-right of the back cover (2" × 1.2") — leave that
   zone clear or upload your own ISBN barcode.
