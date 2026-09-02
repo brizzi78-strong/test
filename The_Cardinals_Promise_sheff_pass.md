@@ -642,15 +642,15 @@ We got in the car and he drove. An hour in, I didn't ask. Two hours in, I did.
 
 He looked over, smiling a little. "Cooperstown."
 
-It was five hours from our house, the Baseball Hall of Fame, and he kept driving like it was nothing.
+It was three and a half hours from our house, the Baseball Hall of Fame, and he kept driving like it was nothing.
 
-We got there a little after one and walked up together. Inside it was dim and cool, glass cases everywhere, bats and gloves and jerseys worn by men I'd only ever seen on television. Dad walked me through it case by case, in no hurry. He stopped at a baseball.
+We got there before lunch and walked up together. Inside it was dim and cool, glass cases everywhere, bats and gloves and jerseys worn by men I'd only ever seen on television. Dad walked me through it case by case, in no hurry. He stopped at a baseball.
 
 "That's a ball from Babe Ruth."
 
 We stood there a long time, both of us looking at it.
 
-We got back in the car a little before five, and I was asleep before long. When I woke up we were home. Ten hours of driving for a building full of gloves and a ball Babe Ruth once touched. He never said why.
+We got back in the car a little before five, and I was asleep before long. When I woke up we were home. Seven hours of driving for a building full of gloves and a ball Babe Ruth once touched. He never said why.
 
 ### *Dave Meyer*
 
@@ -662,7 +662,7 @@ That was where I met Dave.
 
 Dave seemed to possess naturally what I was fighting to earn. He was confident, athletic, grounded in his faith, and accepted wherever he went. Yet he never made me prove I belonged beside him.
 
-Junior prom was the first warning. Someone asked what I wanted to drink. I knew my parents drank Absolut Citron, so I answered confidently. "Don't mix it. Just bring the fifth."
+Junior prom was the first warning. Whitey and I were in the same limo, and someone asked what I wanted to drink. I knew my parents drank Absolut Citron, so I answered confidently. "Don't mix it. Just bring the fifth."
 
 Two hours later, I was throwing up in the limousine. Four hours later, my friends carried me into prom like *Weekend at Bernie's*.
 
