@@ -1,8 +1,8 @@
 // Checklist step 6: renounce ownership. ⚠️ POINT OF NO RETURN.
 //
 // Before sending anything this script re-checks every abort criterion it can
-// verify on-chain (treasury holds exactly 50M, deployer holds 0, pool holds
-// ~200M) and makes you confirm the ones it can't (source verified, test swap
+// verify on-chain (treasury holds exactly 200M, deployer holds exactly the 400M
+// founder hold, pool holds ~400M) and makes you confirm the ones it can't (source verified, test swap
 // done, LP locked) by typing "renounce forever". If any check fails it stops
 // without sending.
 //

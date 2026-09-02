@@ -12,7 +12,7 @@ for Telegram/Discord/blog. Nothing goes out until every box in sections 1–6 of
 | `{{RENOUNCE_TX_URL}}` | Etherscan link to the renounce transaction | 6 |
 | `{{LOCK_URL}}` | Public Team Finance / UNCX lock page | 5 |
 | `{{TREASURY_ADDRESS}}` | The treasury wallet address | 3 |
-| `{{TREASURY_TX_URL}}` | Etherscan link to the 50M treasury transfer | 3 |
+| `{{TREASURY_TX_URL}}` | Etherscan link to the 200M treasury transfer | 3 |
 | `{{PAIR_URL}}` | DexScreener/Uniswap link to the CARD/ETH pool | 4 |
 
 Before posting, search each file for `{{` to make sure no blank was missed.
@@ -25,7 +25,7 @@ Before posting, search each file for `{{` to make sure no blank was missed.
 
 > Cardinals Promise (CARD) is live.
 >
-> Fixed supply: 250,000,000. No mint. No tax. No blacklist. Ownership renounced — nobody, including us, can ever change the contract.
+> Fixed supply: 1,000,000,000. No mint. No tax. No blacklist. Ownership renounced — nobody, including us, can ever change the contract.
 >
 > Contract: `{{TOKEN_ADDRESS}}`
 >
@@ -45,8 +45,9 @@ Before posting, search each file for `{{` to make sure no blank was missed.
 
 > Supply breakdown:
 >
-> • 80% (200M) → Uniswap pool, LP locked 12 months
-> • 20% (50M) → treasury for development, listings, and liquidity top-ups
+> • 40% (400M) → Uniswap pool, LP locked 12 months
+> • 40% (400M) → founder, unlocked, in a disclosed wallet
+> • 20% (200M) → treasury for development, listings, and liquidity top-ups
 >
 > Every treasury spend will be announced before or as it happens.
 >
@@ -65,7 +66,7 @@ Before posting, search each file for `{{` to make sure no blank was missed.
 >
 > ## What CARD is
 >
-> A fixed-supply ERC-20 on Ethereum. 250,000,000 tokens were minted once at
+> A fixed-supply ERC-20 on Ethereum. 1,000,000,000 tokens were minted once at
 > deployment. There is no mint function, no transfer tax, no fee, no
 > blacklist, no pause switch. The contract is built on OpenZeppelin's audited
 > ERC-20 and the full source is verified on Etherscan for anyone to read.
@@ -83,7 +84,7 @@ Before posting, search each file for `{{` to make sure no blank was missed.
 >    {{LOCK_URL}}
 >
 > 3. **The team allocation is public, not hidden.**
->    20% (50,000,000 CARD) sits in a disclosed treasury wallet:
+>    20% (200,000,000 CARD) sits in a disclosed treasury wallet:
 >    `{{TREASURY_ADDRESS}}`
 >    (funded during setup, before the pool existed: {{TREASURY_TX_URL}})
 >
@@ -91,8 +92,9 @@ Before posting, search each file for `{{` to make sure no blank was missed.
 >
 > | Where | Amount | Share |
 > |---|---|---|
-> | Uniswap pool (LP locked 12 months) | 200,000,000 | 80% |
-> | Treasury (disclosed) | 50,000,000 | 20% |
+> | Uniswap pool (LP locked 12 months) | 400,000,000 | 40% |
+> | Founder (disclosed, unlocked) | 400,000,000 | 40% |
+> | Treasury (disclosed) | 200,000,000 | 20% |
 > | Team wallets, hidden allocations | 0 | 0% |
 >
 > ## Treasury policy

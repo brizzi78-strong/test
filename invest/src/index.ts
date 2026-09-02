@@ -1,0 +1,20 @@
+/**
+ * Entry point: start the Cardinal Trading UI (BFF over the Trading service).
+ *
+ * Run with:  node src/index.ts   (or `npm start`)
+ * Config:
+ *   PORT                 HTTP port (default 5000)
+ *   TRADING_URL          Trading base URL (default http://trading:4900)
+ *   INVEST_DB            SQLite path so users/sessions survive restarts (unset → in-memory)
+ *   STARTING_CASH_CENTS  Starting buying power for each new signup (Trading defaults to $10,000)
+ */
+
+import { createApp } from './api/server.ts';
+
+const port = Number(process.env.PORT ?? 5000);
+const { server } = createApp();
+
+server.listen(port, () => {
+  // eslint-disable-next-line no-console
+  console.log(`Cardinal Trading listening on http://localhost:${port}`);
+});

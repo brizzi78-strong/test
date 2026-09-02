@@ -30,7 +30,12 @@ COPY timeclock ./timeclock
 COPY runpay ./runpay
 COPY portal ./portal
 COPY gateway ./gateway
+COPY trading ./trading
+COPY invest ./invest
 COPY taxfile ./taxfile
+# The Render all-in-one trading service starts both trading/ and invest/ from
+# this small entrypoint. Keep it in the shared image alongside those modules.
+COPY deploy/allinone-trading.ts ./deploy/allinone-trading.ts
 
 # Durable SQLite databases live here; mounted as a volume per service.
 RUN mkdir -p /data && addgroup -S app && adduser -S app -G app && chown -R app /app /data

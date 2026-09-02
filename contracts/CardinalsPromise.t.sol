@@ -35,20 +35,20 @@ contract CardinalsPromiseTest is Test {
     }
 
     function test_FullSupplyMintedToDeployer() public view {
-        assertEq(token.totalSupply(), 250_000_000e18);
+        assertEq(token.totalSupply(), 1_000_000_000e18);
         assertEq(token.balanceOf(address(this)), token.totalSupply());
     }
 
     function test_Transfer() public {
         token.transfer(alice, 1_000e18);
         assertEq(token.balanceOf(alice), 1_000e18);
-        assertEq(token.balanceOf(address(this)), 250_000_000e18 - 1_000e18);
+        assertEq(token.balanceOf(address(this)), 1_000_000_000e18 - 1_000e18);
     }
 
     function testFuzz_TransferPreservesTotalSupply(uint256 amount) public {
         amount = bound(amount, 0, token.totalSupply());
         token.transfer(alice, amount);
-        assertEq(token.totalSupply(), 250_000_000e18);
+        assertEq(token.totalSupply(), 1_000_000_000e18);
         assertEq(
             token.balanceOf(alice) + token.balanceOf(address(this)),
             token.totalSupply()
