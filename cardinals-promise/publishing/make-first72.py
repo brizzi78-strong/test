@@ -78,11 +78,13 @@ body {{ max-width: 7.2in; }}
   &middot; TheCardinalsPromise.com</div>
 </div>
 
-<p><strong>Nobody picks the day they become a caregiver.</strong> It arrives as a fall, a diagnosis,
-or a discharge planner asking where your parent is going next &mdash; as if you&rsquo;re supposed
-to already know. You&rsquo;re not. Almost no family is handed a map. These pages are the first
-piece of one: what to do in the first three days, the questions that protect you, and the numbers
-to call. You don&rsquo;t have to know everything today. You just have to know the next right step.</p>
+<p><strong>Nobody picks the day they become a caregiver.</strong> The phone rings, or a doctor says
+a word you weren&rsquo;t ready for, or a discharge planner asks where your parent is going next
+&mdash; as if you&rsquo;re supposed to already know. You&rsquo;re not. You are an ordinary person
+being handed an extraordinary job: no training, no map, no time. These pages are the first piece
+of the map &mdash; what to do in the first three days, the questions that protect you, and the
+numbers to call. You don&rsquo;t have to know everything today. You just have to know the next
+right step.</p>
 {emergency}
 {first24}
 {robnote}
@@ -140,12 +142,16 @@ and keep a copy with you.</p>
 </div>
 
 <div class="mag-page">
-<div class="mh">This Was the First 72 Hours. The Guide Covers the Next Two Years.</div>
+<div class="mh">Someone Had to Pay Attention. It Turned Out to Be You.</div>
+<p style="font-size:12.5pt">Nobody applauds this work. There is no job title, no training day, no
+pay &mdash; just an ordinary person at a kitchen table at 2 a.m., trying to learn Medicare,
+medicine, and the truth about their own family all at once. You are not failing at this. You were
+never given the map. <strong>These pages were the first piece of it. The book is the rest.</strong></p>
 <div class="bookpromo">
   <img src="data:image/jpeg;base64,{cover}">
   <div>
     <p><strong>It&rsquo;s Not Your Fault: Helping Caregivers with Aging Loved Ones</strong> picks up
-    where these pages stop: every care option compared honestly, how families actually pay
+    where this handout stops: every care option compared honestly, how families actually pay
     (Medicare, Medicaid, VA, long-term care insurance), the documents that protect the people you
     love, word-for-word scripts for the hardest conversations, and hospice explained by someone
     who has spent a career beside it &mdash; with a complete fill-in workbook bound into the back.</p>
@@ -153,7 +159,8 @@ and keep a copy with you.</p>
     <strong style="color:#6b21a8">PURPLE: Watch Closely</strong> &middot;
     <strong style="color:#1d4e89">BLUE: Plan Ahead</strong> &mdash; so you can find the right page
     on the worst day.</p>
-    <p><strong>Find it on Amazon</strong> or at <strong>TheCardinalsPromise.com</strong>.</p>
+    <p style="font-size:12.5pt"><strong>Get the book today &mdash; on Amazon, or at
+    TheCardinalsPromise.com.</strong> The worst day is easier with the map already on the shelf.</p>
   </div>
 </div>
 <div class="fbox gobox">
