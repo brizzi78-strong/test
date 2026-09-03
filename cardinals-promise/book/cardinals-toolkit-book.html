@@ -282,6 +282,36 @@
   .bmchip.u-r { background:#f7dfe2; border-color:#e6b3bc; color:#7d1524; }
   .bmchip.u-p { background:#f3e8ff; border-color:#dbc4f2; color:#4c1d95; }
   .bmchip.u-b { background:#eaf1f8; border-color:#c1d4e9; color:#143a67; }
+
+  /* ==== v2 recurring feature boxes (task #3) ====
+     Color discipline: gold = money, navy = structure/insider (ink, not urgency),
+     rule-neutrals for chrome. The red/purple/blue urgency triad is NOT used here,
+     so the chapter color code keeps its one meaning. */
+  .fbox { margin: 18px 0; page-break-inside: avoid; }
+  .ftag { display:block; font-family: Helvetica, Arial, sans-serif; font-weight: bold;
+    font-size: 9.5pt; letter-spacing: 0.09em; text-transform: uppercase; margin-bottom: 8px; }
+  .savebox { border: 2px solid #b08d2e; border-radius: 8px; background: #fdf9ee;
+    padding: 15px 20px 13px; }
+  .savebox .ftag { color: #8a6a1c; }
+  .savebox .ftag::before { content: "$ "; }
+  .callbox { border-left: 4px solid #1f3d7a; background: #f2f5fa; padding: 13px 20px 11px;
+    border-radius: 0 8px 8px 0; }
+  .callbox .ftag { color: #1f3d7a; }
+  .callbox ul { margin: 0 0 0 18px; }
+  .callbox li { margin-bottom: 6px; }
+  .insiderbox { background: #16233f; color: #f5f2ec; border-radius: 8px; padding: 15px 20px 13px; }
+  .insiderbox .ftag { color: #e7c86a; }
+  .insiderbox p { color: #f5f2ec; margin-bottom: 6px; }
+  .beenbox { border-left: 4px solid #b08d2e; padding: 6px 20px 6px; font-style: italic; }
+  .beenbox .ftag { color: #8a6a1c; font-style: normal; }
+  .beenbox .fattr { display: block; font-style: normal; font-family: Helvetica, Arial, sans-serif;
+    font-size: 9.5pt; letter-spacing: 0.05em; color: #7d1524; margin-top: 8px; }
+  .gobox { display: flex; align-items: center; gap: 18px; border-top: 2px solid #1f3d7a;
+    border-bottom: 2px solid #1f3d7a; padding: 12px 6px; margin: 24px 0 0; page-break-inside: avoid; }
+  .gobox .ftag { color: #1f3d7a; margin-bottom: 4px; }
+  .gobox .gotext p { margin: 0; font-size: 10.5pt; }
+  .gobox .gourl { font-family: Helvetica, Arial, sans-serif; font-weight: bold; color: #a51c30; }
+  .gobox img.goqr { width: 0.82in; height: 0.82in; flex: 0 0 auto; }
 </style>
 </head>
 <body>
