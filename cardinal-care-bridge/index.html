@@ -70,6 +70,13 @@
   .svc p{margin:0;color:var(--muted);font-size:.92rem;}
   .svc .num{font-size:.72rem;font-weight:800;color:var(--brand);letter-spacing:.08em;}
 
+  /* credentials */
+  .creds-band{padding:clamp(1.4rem,3vw,2rem) 0;background:var(--surface-2);}
+  .creds{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;}
+  @media(max-width:700px){.creds{grid-template-columns:1fr;gap:1rem;}}
+  .creds div strong{display:block;font-family:var(--serif);font-size:1.02rem;margin-bottom:.15rem;}
+  .creds div p{margin:0;color:var(--muted);font-size:.88rem;}
+
   /* why us */
   blockquote.pull{font-family:var(--serif);font-size:clamp(1.3rem,3vw,1.7rem);line-height:1.35;margin:0 0 1.2rem;font-weight:600;color:var(--ink);}
   .principles{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.2rem;}
@@ -130,6 +137,23 @@
   </div>
 </section>
 
+<section class="creds-band">
+  <div class="wrap creds">
+    <div>
+      <strong>Certified Dementia Practitioner</strong>
+      <p>Formal dementia care training behind every memory care recommendation.</p>
+    </div>
+    <div>
+      <strong>A nurse on staff</strong>
+      <p>Clinical assessment of your loved one's actual level of care — not a guess from a brochure.</p>
+    </div>
+    <div>
+      <strong>25+ years in healthcare</strong>
+      <p>Combined experience across the team, on both sides of these decisions.</p>
+    </div>
+  </div>
+</section>
+
 <section id="guide">
   <div class="wrap guide-grid">
     <div>
@@ -181,7 +205,7 @@
     <p class="lede">No obligation at any point, and you can stop at any step.</p>
     <div class="services-grid">
       <div class="svc"><div class="num">01</div><h3>We listen first</h3><p>A conversation about your loved one — health needs, budget, location, routines, what matters to them. No forms to fill out before we talk.</p></div>
-      <div class="svc"><div class="num">02</div><h3>We assess the level of care</h3><p>An honest read on what kind of setting actually fits: independent living, assisted living, or memory care. Getting this wrong is the most expensive mistake families make.</p></div>
+      <div class="svc"><div class="num">02</div><h3>Our nurse assesses the level of care</h3><p>A clinical read on what kind of setting actually fits: independent living, assisted living, or memory care. Getting this wrong is the most expensive mistake families make — and most referral services never look closely enough to get it right.</p></div>
       <div class="svc"><div class="num">03</div><h3>We shortlist real options</h3><p>Communities we have visited, with current availability and pricing — matched to your budget and your loved one's needs, not to whoever pays us most.</p></div>
       <div class="svc"><div class="num">04</div><h3>We tour with you</h3><p>We schedule the visits and go with you, so you have someone in the room who knows what questions to ask and what to look for.</p></div>
       <div class="svc"><div class="num">05</div><h3>We help you land</h3><p>Paperwork, clinical documentation, move logistics — and a check-in after move-in day, because the first month is when families need us most.</p></div>
