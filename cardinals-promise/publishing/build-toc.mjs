@@ -84,6 +84,7 @@ html += `  <div class="tocpart">Back of the Book</div>
     <li>Find Your Worry${P}${pg('bm:worry')}</li>
     <li>Glossary${P}${pg('bm:gloss')}</li>
     <li>Index${P}${pg('bm:index')}</li>
+    <li>The Workbook${P}${pg('bm:workbook')}</li>
     <li>Numbers That Matter${P}${pg('bm:numbers')}</li>
   </ul>\n</div>\n\n`;
 
@@ -106,7 +107,7 @@ const fmKey = {
   'How to Use This Guide':'fm:howto', 'What Are You Facing?':'fm:starthere',
   'Find Your Situation':'fm:pathways', 'For the Future Planners':'fm:future',
   'About the Author':'bm:author', 'Your State Guide':'bm:state', 'Find Your Worry':'bm:worry',
-  'Glossary':'bm:gloss', 'Index':'bm:index', 'Numbers That Matter':'bm:numbers',
+  'Glossary':'bm:gloss', 'Index':'bm:index', 'The Workbook':'bm:workbook', 'Numbers That Matter':'bm:numbers',
 };
 async function renderPages(inputHtml) {
   const anchors = [];

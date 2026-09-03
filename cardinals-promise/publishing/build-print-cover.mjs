@@ -22,10 +22,10 @@ async function rasterToPdf(pngPath, wIn, hIn, outPath) {
 
 // =====================================================================
 // 1) FULL WRAP — flatten kdp-cover-wrap.html to an exact-size PDF
-//    Target: 17.8086 x 11.25 in @ 300 DPI  ->  5369 x 3375 px
+//    Target: 17.9236 x 11.25 in @ 300 DPI  ->  5369 x 3375 px
 // =====================================================================
 {
-  const WIN = 17.8086, HIN = 11.25;
+  const WIN = 17.9236, HIN = 11.25;
   // Render at the design's NATURAL CSS size (96px/in) and scale up with deviceScaleFactor.
   // Forcing body to a pixel width breaks the inch-based absolute layout (content ends up
   // in the left third with white space to the right) — this keeps the wrap filling the page.
