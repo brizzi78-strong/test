@@ -1,6 +1,6 @@
 # Care Home Web Presence Screening — Outreach Targets
 
-A web-presence screening of licensed family care and adult care homes across
+A web-presence screening of 51 licensed family care and adult care homes across
 Franklin, Alamance, Durham and Wake counties — identifying which operators are
 hardest for families to find online, and therefore the most receptive first
 calls for the placement service described in
@@ -23,68 +23,98 @@ wrong in the room:
 | Pioneer Healthcare | Unresolved — a `pioneer-healthcare.com` exists but could not be confirmed as this Louisburg operator. Treat as unknown, not as a win |
 
 Only **McCullers Home** and **House of Blessings** survive from the original
-list as genuinely hard to find.
+list as genuinely hard to find — and, now that the full roster is screened,
+37 more like them.
 
 ## Where the 51 stand
 
 | Status | Count | Meaning |
 | --- | --- | --- |
-| Weak or no presence | 11 | Call these first — both halves of the pitch apply |
-| Own a real website | 9 | Placement pitch only |
+| Weak or no presence | 39 | Both halves of the pitch apply |
+| Own a real website | 11 | Placement pitch only |
 | Basic page only | 1 | Real but improvable (Heart to Heart) |
-| Identified, not yet screened | 30 | Licensed and located; presence unchecked |
 
-Only 21 of the 51 have been individually screened. The remaining 30 are a
-worklist, not a finding.
+Every home has now been individually screened. Three in four small care homes
+in these counties have no web presence of their own — nothing beyond
+third-party directory listings they don't control. That is the market the
+web-presence half of the pitch exists for.
 
-## Priority targets — confirmed weak presence
+## Priority targets — confirmed weak presence (39)
 
-| Home | Address | Status |
-| --- | --- | --- |
-| McCullers Home | 90 EF Cottrell Rd, Louisburg 27549 | Directory only |
-| House of Blessings at Sutton Rd | 1359 Sutton Rd, Louisburg 27549 | Unclaimed |
-| Alston Family Care Home | 476 Leonard Rd, Louisburg 27549 | Directory only |
-| Pioneer Healthcare #1 | 306 Lumpkin Blvd, Louisburg 27549 | Directory only |
-| Pioneer Healthcare #2 | 113 Justice St, Louisburg 27549 | Directory only |
-| Bountiful Blessings FCH | 208 Gilmer St, Burlington 27217 | Directory only |
-| Ashley Family Care Home | 220 Hall Ave, Burlington 27217 | Directory only |
-| Anthony's Street Family Care Home | 123 S. Anthony St, Burlington 27215 | Directory only |
-| Alvarado's Family Care | 646 Country Club Dr, Burlington 27215 | Directory only |
-| Mebane's Family Care Home 2 | 939 Lakeside Ave, Burlington | Directory only |
-| Gracie Sturdivant Care Home | 1004 Edenburghs Keep Dr, Knightdale 27545 | Facebook only |
+Directory-only unless noted.
 
-## Screened out — these operators run their own sites
+**Franklin County (9)**
+
+| Home | Address |
+| --- | --- |
+| McCullers Home | 90 EF Cottrell Rd, Louisburg 27549 |
+| House of Blessings at Sutton Rd | 1359 Sutton Rd, Louisburg 27549 — *unclaimed* |
+| Alston Family Care Home | 476 Leonard Rd, Louisburg 27549 |
+| Pioneer Healthcare #1 | 306 Lumpkin Blvd, Louisburg 27549 |
+| Pioneer Healthcare #2 | 113 Justice St, Louisburg 27549 |
+| Louisburg Senior Village | Louisburg — street to confirm |
+| Pinewood Manor Assisted Living | 100 Sunset Dr — Louisburg or Youngsville, city disputed |
+| Giselle's Family Care Home | 21 Hawthorne Ln, Youngsville 27596 |
+| The Zion | 2173 Fort Creek Rd, Franklinton 27525 (4 beds) |
+
+**Alamance County (16)**
+
+| Home | Address |
+| --- | --- |
+| Bountiful Blessings FCH | 208 Gilmer St, Burlington 27217 |
+| Ashley Family Care Home | 220 Hall Ave, Burlington 27217 |
+| Anthony's Street Family Care Home | 123 S. Anthony St, Burlington 27215 |
+| Alvarado's Family Care | 646 Country Club Dr, Burlington 27215 |
+| Mebane's Family Care Home 2 | 939 Lakeside Ave, Burlington |
+| C & M Adult Care Home | 422 N. Main St, Burlington 27217 |
+| Above and Beyond Adult Care Home | 1616 E. Webb Ave, Burlington 27217 |
+| B and N Family Care Home | 301 Homewood Ave, Burlington 27217 |
+| D & M Family Care Home | 4327 Burch Bridge Rd, Burlington |
+| Favor and Faith Adult Care Home | 217 N. Gurney St, Burlington |
+| Lane Street Retirement Home | 625 Lane St, Burlington 27217 — *now trading as Making Visions Come True ALF; 12 beds, outside the family-care profile* |
+| We Care Family Care | Burlington — street to confirm |
+| A True Vision Family Care | 3814 Cherry Grove Rd, Elon 27244 |
+| Humphrey Family Care | 6245 Burton Chapel Rd, Mebane 27302 |
+| Creekview Family Care Home | 3524 Dickey Mill Rd, Mebane 27302 |
+| Eastway Family Care | 108 Eastway Ln, Graham 27253 |
+
+**Durham County (6)**
+
+| Home | Address |
+| --- | --- |
+| Nucare Family Care Home | 713 Eva St, Durham 27701 |
+| Richardson Family Care Home II | 1913 Haverford St, Durham |
+| Jones Family Care Home | 2122 Overland Dr, Durham |
+| Jua Valley Family Care Home | 6 Jua Valley, Durham |
+| Jua Valley Family Care Home 2 | 2 Jua Valley, Durham |
+| Princess Pine Family Care Home | 3811 Wake Forest Rd, Durham 27703 |
+
+**Wake County (8)**
+
+| Home | Address |
+| --- | --- |
+| Gracie Sturdivant Care Home | 1004 Edenburghs Keep Dr, Knightdale 27545 — *Facebook only* |
+| Elsie's Place Family Care Home | 10916 Raven Rock Dr, Raleigh 27615 — *Facebook only* |
+| Coventry House of Zebulon | 1205 W. Gannon Ave, Zebulon 27597 — *larger ALF, outside the family-care profile* |
+| Jackson Family Care Home | Zebulon — may be listed under Coventry House; identity to confirm |
+| North Pointe Assisted Living of Garner | 1437 Aversboro Rd, Garner 27529 — *126 beds, outside the family-care profile* |
+| A Good Life Family Care Home | 4013 Tryon Rd, Raleigh 27606 |
+| Living Well Family Care Home | 5932 Sandy Forks Rd, Raleigh 27609 |
+| Linda's Family Care Home | 816 Peyton St, Raleigh 27610 |
+
+## Screened out — these operators run their own sites (11)
 
 Divine Family Care (Cannady Way, Mason St, Hillsboro St), Grace Castle,
-Jolie's, Agape Family Care Home (120 Carriage Loop, Burlington), LiveWell @
-Hope Valley (Durham), North Hills Senior Living (110 Dartmouth Rd, Raleigh),
+Jolie's, Agape Family Care Home (120 Carriage Loop, Burlington), Our Promise
+Care Homes (4811 Bay Point Dr, Durham — `ourpromisech.com`), LiveWell @ Hope
+Valley (Durham), North Hills Senior Living (110 Dartmouth Rd, Raleigh), Miss
+Bell's Assisted Living (1008 Flower Round Ct, Raleigh — `missbellcares.com`;
+multi-home operator across Raleigh, Garner, Fuquay-Varina and Smithfield),
 Zebulon House (551 Pony Rd, Zebulon).
 
-Still worth placement calls. The web-presence offer does not apply.
-
-## Unscreened worklist
-
-**Franklin** — Louisburg Senior Village; Pinewood Manor (100 Sunset Dr,
-Youngsville); Giselle's FCH (Youngsville); The Zion (Franklinton).
-
-**Alamance** — C & M Adult Care Home (422 N. Main St); Above and Beyond (1616
-E. Webb Ave); B and N FCH (301 Homewood Ave — address disputed); D & M FCH
-(4327 Burch Bridge Rd); Favor and Faith (217 N. Gurney St); Lane Street
-Retirement Home (625 Lane St); We Care Family Care — all Burlington. Plus A
-True Vision Family Care (3814 Cherry Grove Rd, Elon); Humphrey Family Care
-(6245 Burton Chapel Rd, Mebane); Creekview FCH (3524 Dickey Mill Rd, Mebane);
-Eastway Family Care (108 Eastway Ln, Graham).
-
-**Durham** — Nucare FCH (713 Eva St); Richardson FCH II (1913 Haverford St);
-Jones FCH (2122 Overland Dr); Jua Valley FCH (6 Jua Valley); Jua Valley FCH 2
-(2 Jua Valley); Princess Pine FCH (3811 Wake Forest Rd); Our Promise Care
-Homes (4811 Bay Point Dr).
-
-**Wake** — Coventry House of Zebulon (1205 W. Gannon Ave); Jackson FCH
-(Zebulon); North Pointe Assisted Living (1437 Aversboro Rd, Garner); Elsie's
-Place (1944 Wilton Cir, Raleigh); A Good Life FCH (4013 Tryon Rd, Raleigh);
-Living Well FCH (5932 Sandy Forks Rd, Raleigh); Linda's FCH (816 Peyton St,
-Raleigh); Miss Bell's at Waterford Landing (Raleigh).
+Still worth placement calls. The web-presence offer does not apply. Miss
+Bell's and Divine are multi-home operators — one relationship, several
+placement destinations.
 
 ## The two-part pitch
 
@@ -93,8 +123,8 @@ Raleigh); Miss Bell's at Waterford Landing (Raleigh).
 
 The placement offer opens the door; the web-presence offer separates this call
 from every other referral source phoning the same homes. **Check the status
-column before dialing** — leading with the web offer at a home that already
-runs its own site reads as a pitch that didn't do its homework.
+before dialing** — leading with the web offer at a home that already runs its
+own site reads as a pitch that didn't do its homework.
 
 ## Limits of this screening
 
@@ -106,8 +136,9 @@ address and phone number across those platforms.
 Addresses come from public directory and NC licensure listings, and those
 sources contradicted each other repeatedly during this pass — a transposed
 phone number, a home listed at two different streets, one address attributed
-to the wrong facility entirely. Confirm every detail against the state
-licensure record before mailing or visiting.
+to the wrong facility entirely, one home whose name has changed twice at the
+same address. Confirm every detail against the state licensure record before
+mailing or visiting.
 
 The roster is not exhaustive: Alamance County alone lists roughly 100 care
 homes, and Wake and Durham far more. This is the set that could be named and
