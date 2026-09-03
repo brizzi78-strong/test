@@ -44,9 +44,9 @@ the answer is the conversation.
 
 ### What families commonly miss
 
-The lobby is not the care plan. The staffing, the medication process, and
-the fall response are the care plan — and none of them are on the tour
-unless you ask.
+Do your research. The tour shows you the lobby — but the staffing, the
+medication process, and the fall response are what you're actually buying,
+and none of them are on the tour unless you ask.
 
 And the price on the website is not the price. The base rent is where the
 cost *starts*. Care is priced in levels on top of it, and the level can
@@ -131,10 +131,13 @@ tomorrow and book a tour. Not a commitment. A look.
 | Testimonial | None | Slot built, awaiting your real quote |
 | Ends with | "What to Do This Week" (6 tasks) | One next move (1 task) |
 
-**Kept, word for word:** the daughter going back to being a daughter · the
-lobby is not the care plan · get the numbers in writing before you fall in
-love with a place · who is with them at the key times · a community that
-answers honestly is telling you something good about itself.
+**Kept, word for word:** the daughter going back to being a daughter · get
+the numbers in writing before you fall in love with a place · who is with
+them at the key times · a community that answers honestly is telling you
+something good about itself.
+**Changed at Rob's direction:** "the lobby is not the care plan" → "do your
+research," with the concrete list (staffing, medication process, fall
+response) kept right behind it so the advice stays actionable.
 
 **Open questions for you:**
 1. Does Margaret's kitchen opening feel right, or do you have a real
