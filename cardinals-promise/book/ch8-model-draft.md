@@ -89,10 +89,8 @@ the next step — not the whole future.
 > didn't ask about.
 
 > **[BOX: WHO TO CALL]**
-> - **Not sure what level of care fits** → **Cardinal Care Bridge** —
->   placement and care navigation at **no cost to you** (the community pays
->   the referral fee if you move in; families never pay) →
->   TheCardinalsPromise.com — or any local placement advisor you trust
+> - **Not sure what level of care fits** → a local placement advisor, or
+>   **Cardinal Care Bridge** at TheCardinalsPromise.com — no cost to you
 > - **Paying for it** → elder law attorney (protecting assets, Medicaid
 >   timelines — Ch. 14); your SHIP office for insurance questions (Ch. 13)
 > - **Veteran or surviving spouse** → a Veterans Service Officer about Aid &
