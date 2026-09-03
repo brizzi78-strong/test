@@ -25,6 +25,7 @@ tools, and the operational reference they're built on.
 | `docs/gap-analysis.md` | Honest distance between these artifacts and a fundable company |
 | `docs/audit-2026-08.md` | Independent 20-agent audit, with remediation status |
 | `docs/rules-registry.md` | What a production plan-rules registry requires — and why it is the moat |
+| `docs/vs-managed-care-consultants.md` | Positioning against the human-services alternative — honest comparison, objection handling, sources |
 | `docs/test-report-2026-08.md` | Ten-agent test pass: 17 defects found, all fixed |
 | `tests/` | Executable suite — 179 tests, sandboxed logic + real-browser E2E |
 
@@ -81,6 +82,7 @@ Built directly from the messaging framework in
 | The Problem | Step 1 (pain) + Step 2 (reflect their experience — the inbox, the spreadsheet, the late deadline, the invisible exposure) |
 | The Dashboard | Step 3 (future picture) made literal: an illustrative authorization board with status, covered days, deadlines, and exposure |
 | How It Works | Step 4 (the bridge): admission → stay → deadlines → discharge |
+| Compare | Consultant vs. in-house coordinator vs. the system under either — honest about what consultants do better; no invented fees |
 | What Changes | Step 5 (outcome-focused language), all six outcomes |
 | Request a Demo | Lead capture — mailto-based form to Robert@thecardinalspromise.com, no backend, nothing stored |
 

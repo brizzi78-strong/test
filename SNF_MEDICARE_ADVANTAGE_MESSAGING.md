@@ -124,6 +124,25 @@ revenue cycle. That's the honest emotional core; use it.
 
 ---
 
+## Objection handling: "We have a consultant"
+
+The most common alternative a buyer is weighing is not another software
+product. It is a managed care consultant — or the memory of one. Handle it by
+pacing what the consultant genuinely does well, then leading to what hours
+cannot do. Never disparage the consultant; the buyer may owe them a rescue.
+
+| They say | Pace (agree with what is true) | Lead (what only a system does) |
+| --- | --- | --- |
+| "We already have a consultant." | Keep them. Their judgment is the point. | What runs on the Friday a plan issues a 3-day reauth? This does — and it makes their hours go to judgment instead of tracking. |
+| "Our consultant does the appeals." | Then these letters are a template they can improve. | What they can't give you is the dated record of what each plan required *at the time of the stay*. That wins the argument three months later. |
+| "We'll just hire a managed care coordinator." | You should. That role exists for a reason. | This is what that person opens every morning. A coordinator with a spreadsheet carries the caseload in their head; with this, it survives their vacation and their resignation. |
+| "A consultant knows the plans." | True. That's real. | The rules registry is how you keep what the consultant knows after the engagement ends. Ask what happens to it otherwise. |
+
+The line that closes: **"Hours don't compound. Records do."**
+
+Full positioning, sources, and the signal that the consultants themselves are
+moving to software: `cardinal-coverage/docs/vs-managed-care-consultants.md`.
+
 ## Where each layer goes
 
 | Asset | Layer to lead with |

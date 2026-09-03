@@ -84,6 +84,18 @@
   .step h3{margin:.2rem 0 .4rem;font-size:1rem;}
   .step p{margin:0;color:var(--muted);font-size:.88rem;}
 
+  /* compare */
+  .compare{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.4rem;}
+  @media(max-width:820px){.compare{grid-template-columns:1fr;}}
+  .cmp{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:1.3rem 1.4rem;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:.55rem;}
+  .cmp.us{border-color:var(--brand);border-width:2px;}
+  .cmp h3{margin:0;font-size:1.05rem;}
+  .cmp .who{font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--brand);}
+  .cmp p{margin:0;color:var(--muted);font-size:.92rem;}
+  .cmp ul{margin:.2rem 0 0;padding-left:1.05rem;color:var(--muted);font-size:.9rem;}
+  .cmp li{margin:.2rem 0;}
+  .cmp li b{color:var(--ink);font-weight:700;}
+  .cmp-note{color:var(--muted);font-size:.78rem;margin-top:1rem;max-width:70ch;}
   /* outcomes */
   ul.outcomes{list-style:none;margin:1.2rem 0 0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:.7rem 1.4rem;}
   @media(max-width:640px){ul.outcomes{grid-template-columns:1fr;}}
@@ -121,6 +133,7 @@
       <a href="#pain">The Problem</a>
       <a href="#dashboard">The Dashboard</a>
       <a href="#how">How It Works</a>
+      <a href="#compare">Compare</a>
       <a href="#demo" class="cta">Request a Demo</a>
     </nav>
     <button class="theme" id="themeBtn" title="Toggle theme" aria-label="Toggle theme">◐</button>
@@ -220,6 +233,47 @@
   </div>
 </section>
 
+<section id="compare">
+  <div class="wrap">
+    <p class="kicker">Consultant, new hire, or system?</p>
+    <h2>You have three ways to fight this. Only one of them is still there at 6 a.m.</h2>
+    <p class="lede">Managed care consultants are good at judgment, plan relationships, and taking the work off your desk. That is worth paying for. But hours do not compound, the engagement ends, and the noon fast-track deadline does not wait for the next site visit.</p>
+    <div class="compare">
+      <div class="cmp">
+        <span class="who">Option one</span>
+        <h3>Managed care consultant</h3>
+        <p>Expert judgment and someone to call. Priced for chains, quoted per engagement.</p>
+        <ul>
+          <li><b>Strong:</b> appeals expertise, relationships with plan reps</li>
+          <li><b>Weak:</b> episodic — not on the floor when the clock runs</li>
+          <li><b>When it ends:</b> the knowledge leaves with them</li>
+        </ul>
+      </div>
+      <div class="cmp">
+        <span class="who">Option two</span>
+        <h3>In-house coordinator alone</h3>
+        <p>The person who actually files. Roughly $55K–$74K a year on average, and worth it.</p>
+        <ul>
+          <li><b>Strong:</b> there every day, knows the residents</li>
+          <li><b>Weak:</b> the caseload lives in a spreadsheet and their head</li>
+          <li><b>When it ends:</b> the spreadsheet leaves with them</li>
+        </ul>
+      </div>
+      <div class="cmp us">
+        <span class="who">The system under either</span>
+        <h3>Cardinal Coverage</h3>
+        <p>Every deadline computed. Every plan rule dated and sourced. Every outcome logged.</p>
+        <ul>
+          <li><b>With a coordinator:</b> what they open every morning</li>
+          <li><b>With a consultant:</b> their hours go to judgment, not tracking</li>
+          <li><b>When people leave:</b> the record and the discipline stay</li>
+        </ul>
+      </div>
+    </div>
+    <p class="cmp-note">If you have a consultant, keep them — and give them a system. If you can't afford one, this is how an independent building competes with a chain that has a firm on retainer. Salary figures are national averages for managed care coordinators (Glassdoor, Salary.com, 2026); consultant fees are quoted per engagement and not published.</p>
+  </div>
+</section>
+
 <section id="outcomes">
   <div class="wrap">
     <p class="kicker">What Changes</p>
@@ -281,7 +335,7 @@
   <div class="wrap">
     <div class="fgrid">
       <span>© <span id="yr"></span> Cardinal Coverage</span>
-      <span><a href="#pain">Problem</a> · <a href="#dashboard">Dashboard</a> · <a href="#how">How It Works</a> · <a href="#demo">Demo</a></span>
+      <span><a href="#pain">Problem</a> · <a href="#dashboard">Dashboard</a> · <a href="#how">How It Works</a> · <a href="#compare">Compare</a> · <a href="#demo">Demo</a></span>
     </div>
     <p class="disclaimer">Cardinal Coverage is a case-management tool for skilled nursing facility teams. It does not provide clinical, legal, or billing advice, and it does not guarantee any authorization, payment, or appeal outcome. Dashboard shown above uses illustrative sample data only.</p>
   </div>
