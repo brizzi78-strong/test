@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Cardinal Coverage — Medicare Advantage Management for Skilled Nursing Facilities</title>
+<meta name="description" content="One dashboard for every resident's Medicare Advantage authorization status, covered days, documentation deadlines, and appeals — from admission through discharge. Fewer denials, faster authorizations, and the reimbursement your facility already earned.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23A31B33'/%3E%3Ctext x='16' y='23' font-family='system-ui' font-size='20' font-weight='900' text-anchor='middle' fill='white'%3EC%3C/text%3E%3C/svg%3E">
+<style>
+  :root{--paper:#F7F2E6;--surface:#FFFDF7;--surface-2:#EFE7D3;--ink:#17233F;--muted:#6B6350;--line:#E2D9C3;
+    --brand:#A31B33;--brand-strong:#7E1226;--good:#2E7D4F;--good-bg:#E4F0E8;--warn:#9A6410;--warn-bg:#F6ECD6;
+    --crit:#B23A3A;--crit-bg:#F6E1DE;--shadow:0 1px 2px rgba(23,35,63,.07),0 10px 26px -14px rgba(23,35,63,.24);
+    --font:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --serif:ui-serif,Georgia,"Iowan Old Style","Times New Roman",serif;
+    --maxw:1080px;--r:14px;}
+  @media (prefers-color-scheme:dark){:root{--paper:#101627;--surface:#172033;--surface-2:#1F2A42;--ink:#F3EEE1;
+    --muted:#A9A28F;--line:#2B3855;--brand:#E2586B;--brand-strong:#F27A8B;--good:#4FBE86;--good-bg:#12321f;
+    --warn:#D6A24A;--warn-bg:#33280f;--crit:#E07B6E;--crit-bg:#3a1d1a;--shadow:0 1px 2px rgba(0,0,0,.45),0 12px 32px -14px rgba(0,0,0,.65);}}
+  :root[data-theme="light"]{--paper:#F7F2E6;--surface:#FFFDF7;--surface-2:#EFE7D3;--ink:#17233F;--muted:#6B6350;--line:#E2D9C3;--brand:#A31B33;--brand-strong:#7E1226;--good:#2E7D4F;--good-bg:#E4F0E8;--warn:#9A6410;--warn-bg:#F6ECD6;--crit:#B23A3A;--crit-bg:#F6E1DE;}
+  :root[data-theme="dark"]{--paper:#101627;--surface:#172033;--surface-2:#1F2A42;--ink:#F3EEE1;--muted:#A9A28F;--line:#2B3855;--brand:#E2586B;--brand-strong:#F27A8B;--good:#4FBE86;--good-bg:#12321f;--warn:#D6A24A;--warn-bg:#33280f;--crit:#E07B6E;--crit-bg:#3a1d1a;}
+  *{box-sizing:border-box;} html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);line-height:1.55;}
+  .wrap{max-width:var(--maxw);margin-inline:auto;padding:0 clamp(1rem,4vw,2rem);}
+  header.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+  .top-in{max-width:var(--maxw);margin-inline:auto;padding:.7rem clamp(1rem,4vw,2rem);display:flex;align-items:center;gap:.6rem;}
+  .logo{width:32px;height:32px;border-radius:9px;background:var(--brand);color:#fff;font-weight:900;display:grid;place-items:center;font-size:1.05rem;flex:none;}
+  .brandname{font-size:1.05rem;margin:0;font-weight:800;letter-spacing:-.01em;}
+  .brandname small{display:block;font-weight:600;font-size:.68rem;color:var(--muted);}
+  nav.primary{margin-left:auto;display:flex;gap:1.1rem;align-items:center;}
+  nav.primary a{color:var(--muted);text-decoration:none;font-weight:700;font-size:.86rem;}
+  nav.primary a:hover{color:var(--brand);}
+  nav.primary a.cta{background:var(--brand);color:#fff;padding:.45rem .85rem;border-radius:999px;}
+  nav.primary a.cta:hover{background:var(--brand-strong);color:#fff;}
+  @media(max-width:760px){nav.primary a:not(.cta){display:none;}}
+  .theme{background:transparent;border:1px solid var(--line);border-radius:8px;color:var(--ink);padding:.35rem .55rem;cursor:pointer;margin-left:.6rem;}
+
+  section{padding:clamp(2.4rem,6vw,4.4rem) 0;}
+  section + section{border-top:1px solid var(--line);}
+  h2{font-size:clamp(1.4rem,3vw,1.9rem);margin:0 0 .3rem;font-weight:800;letter-spacing:-.01em;}
+  .kicker{font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--brand);margin:0 0 .5rem;}
+  .lede{color:var(--muted);font-size:1.05rem;max-width:680px;margin:.3rem 0 1.6rem;}
+
+  .hero{padding-top:clamp(3rem,8vw,5.5rem);text-align:center;}
+  .hero h1{font-family:var(--serif);font-size:clamp(2rem,5vw,3.1rem);line-height:1.15;margin:0 0 .8rem;font-weight:700;}
+  .hero p.sub{max-width:680px;margin:0 auto 1.8rem;color:var(--muted);font-size:1.08rem;}
+  .hero .ctas{display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap;margin-bottom:.6rem;}
+  .hero .tagline{font-weight:700;color:var(--brand);letter-spacing:.02em;}
+
+  .btn{display:inline-block;background:var(--brand);color:#fff;border:0;border-radius:11px;padding:.75rem 1.3rem;font:inherit;font-weight:700;cursor:pointer;text-decoration:none;}
+  .btn:hover{background:var(--brand-strong);}
+  .btn.ghost{background:transparent;color:var(--brand);border:1px solid var(--line);}
+  .btn.ghost:hover{border-color:var(--brand);}
+  .btn.block{width:100%;text-align:center;}
+
+  blockquote.pull{font-family:var(--serif);font-size:clamp(1.3rem,3vw,1.7rem);line-height:1.35;margin:0 0 1.2rem;font-weight:600;color:var(--ink);}
+
+  /* dashboard preview */
+  .board{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden;margin-top:1.4rem;}
+  .board table{width:100%;border-collapse:collapse;font-size:.88rem;}
+  .board th{font-size:.7rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);text-align:left;padding:.7rem .9rem;border-bottom:1px solid var(--line);background:var(--surface-2);}
+  .board td{padding:.65rem .9rem;border-bottom:1px solid var(--line);}
+  .board tr:last-child td{border-bottom:0;}
+  .chip{display:inline-block;border-radius:999px;padding:.14rem .6rem;font-size:.74rem;font-weight:800;white-space:nowrap;}
+  .chip.ok{background:var(--good-bg);color:var(--good);}
+  .chip.due{background:var(--warn-bg);color:var(--warn);}
+  .chip.risk{background:var(--crit-bg);color:var(--crit);}
+  .board-scroll{overflow-x:auto;}
+  .boardnote{color:var(--muted);font-size:.8rem;margin:.7rem 0 0;}
+
+  /* pain cards */
+  .pain-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;}
+  @media(max-width:700px){.pain-grid{grid-template-columns:1fr;}}
+  .pain{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:1.3rem 1.4rem;box-shadow:var(--shadow);}
+  .pain h3{margin:.2rem 0 .4rem;font-size:1.05rem;}
+  .pain p{margin:0;color:var(--muted);font-size:.92rem;}
+
+  /* bridge steps */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:1.4rem;}
+  @media(max-width:900px){.steps{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:560px){.steps{grid-template-columns:1fr;}}
+  .step{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:1.2rem 1.3rem;box-shadow:var(--shadow);}
+  .step .num{font-size:.72rem;font-weight:800;color:var(--brand);letter-spacing:.08em;}
+  .step h3{margin:.2rem 0 .4rem;font-size:1rem;}
+  .step p{margin:0;color:var(--muted);font-size:.88rem;}
+
+  /* compare */
+  .compare{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.4rem;}
+  @media(max-width:820px){.compare{grid-template-columns:1fr;}}
+  .cmp{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:1.3rem 1.4rem;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:.55rem;}
+  .cmp.us{border-color:var(--brand);border-width:2px;}
+  .cmp h3{margin:0;font-size:1.05rem;}
+  .cmp .who{font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--brand);}
+  .cmp p{margin:0;color:var(--muted);font-size:.92rem;}
+  .cmp ul{margin:.2rem 0 0;padding-left:1.05rem;color:var(--muted);font-size:.9rem;}
+  .cmp li{margin:.2rem 0;}
+  .cmp li b{color:var(--ink);font-weight:700;}
+  .cmp-note{color:var(--muted);font-size:.78rem;margin-top:1rem;max-width:70ch;}
+  /* outcomes */
+  ul.outcomes{list-style:none;margin:1.2rem 0 0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:.7rem 1.4rem;}
+  @media(max-width:640px){ul.outcomes{grid-template-columns:1fr;}}
+  ul.outcomes li{display:flex;gap:.55rem;align-items:flex-start;font-size:1rem;font-weight:600;}
+  ul.outcomes li::before{content:"✓";color:var(--good);font-weight:900;flex:none;}
+  ul.outcomes li small{display:block;font-weight:500;color:var(--muted);font-size:.85rem;}
+
+  /* demo form */
+  .demo-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:start;}
+  @media(max-width:820px){.demo-grid{grid-template-columns:1fr;}}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:1.3rem 1.4rem;}
+  form.demo{display:grid;gap:.3rem .9rem;}
+  .g2{display:grid;grid-template-columns:1fr 1fr;gap:.3rem .9rem;}
+  @media(max-width:600px){.g2{grid-template-columns:1fr;}}
+  label{display:block;font-size:.74rem;font-weight:700;color:var(--muted);margin:.6rem 0 .22rem;letter-spacing:.02em;}
+  input,select,textarea{width:100%;padding:.65rem .7rem;border:1px solid var(--line);border-radius:10px;background:var(--paper);color:var(--ink);font:inherit;}
+  textarea{resize:vertical;min-height:5rem;}
+  input:focus,select:focus,textarea:focus{outline:2px solid var(--brand);outline-offset:1px;}
+  .formnote{color:var(--muted);font-size:.8rem;margin-top:.9rem;}
+  .banner{display:none;padding:.7rem .9rem;border-radius:10px;margin:.8rem 0;font-size:.88rem;}
+  .banner.show{display:block;background:var(--good-bg);border:1px solid var(--good);color:var(--ink);}
+
+  footer{color:var(--muted);font-size:.8rem;padding:2.4rem 0 3rem;}
+  footer .fgrid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+  footer a{color:var(--muted);}
+  footer .disclaimer{margin-top:1.2rem;line-height:1.6;max-width:760px;}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <span class="logo" aria-hidden="true">C</span>
+    <h1 class="brandname">Cardinal Coverage<small>Medicare Advantage management for SNFs</small></h1>
+    <nav class="primary">
+      <a href="#pain">The Problem</a>
+      <a href="#dashboard">The Dashboard</a>
+      <a href="#how">How It Works</a>
+      <a href="#compare">Compare</a>
+      <a href="#demo" class="cta">Request a Demo</a>
+    </nav>
+    <button class="theme" id="themeBtn" title="Toggle theme" aria-label="Toggle theme">◐</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>Every Medicare Advantage day your team can't confirm is a day you may never get paid for.</h1>
+    <p class="sub">Cardinal Coverage gives your facility one place to see every resident's authorization status, covered days, documentation deadlines, and appeals — from admission through discharge — so your team stops chasing plans by phone and spreadsheet, and starts capturing the reimbursement you already earned.</p>
+    <div class="ctas">
+      <a class="btn" href="#demo">Request a Demo</a>
+      <a class="btn ghost" href="#dashboard">See the Dashboard</a>
+    </div>
+    <p class="tagline">Know every covered day. Keep every earned dollar.</p>
+  </div>
+</section>
+
+<section id="pain">
+  <div class="wrap">
+    <p class="kicker">The Problem</p>
+    <h2>Medicare Advantage is creating unpaid work for the work you already did</h2>
+    <p class="lede">More authorizations. More denials. More documentation requirements. More administrative labor nobody reimburses. You should not need spreadsheets, sticky notes, and repeated phone calls just to determine whether a resident's stay is authorized.</p>
+    <div class="pain-grid">
+      <div class="pain">
+        <h3>The auth lives in someone's inbox</h3>
+        <p>Approval came by fax or portal message, got printed or forwarded, and now the one person who knows the covered-through date is off today.</p>
+      </div>
+      <div class="pain">
+        <h3>The spreadsheet is always one day behind</h3>
+        <p>By the time the tracker is updated, the plan has issued a cut letter, the covered days changed, and the census moved on.</p>
+      </div>
+      <div class="pain">
+        <h3>Deadlines surface after they pass</h3>
+        <p>Documentation windows, appeal deadlines, and NOMNC timing get discovered in the denial letter — when it costs the most to find out.</p>
+      </div>
+      <div class="pain">
+        <h3>Nobody can see the exposure</h3>
+        <p>How many residents are in-house right now without confirmed coverage? If the answer takes a meeting to produce, the risk is already on the books.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="dashboard">
+  <div class="wrap">
+    <p class="kicker">The Future Picture</p>
+    <h2>Imagine opening one dashboard and knowing</h2>
+    <p class="lede">Every resident's authorization status, covered days, documentation deadlines, appeals, and financial exposure — at a glance, current, and shared by the whole team.</p>
+    <div class="board">
+      <div class="board-scroll">
+        <table>
+          <thead>
+            <tr><th>Resident</th><th>Plan</th><th>Auth Status</th><th>Covered Through</th><th>Next Deadline</th><th>Exposure</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Resident A</td><td>MA Plan 1</td><td><span class="chip ok">Authorized</span></td><td>Day 14 of 20</td><td>Progress notes due in 3 days</td><td>$0</td></tr>
+            <tr><td>Resident B</td><td>MA Plan 2</td><td><span class="chip due">Recert pending</span></td><td>Day 19 of 20</td><td>Clinical update due tomorrow</td><td>$1,240</td></tr>
+            <tr><td>Resident C</td><td>MA Plan 1</td><td><span class="chip risk">Denied — appeal open</span></td><td>Cut letter day 12</td><td>Appeal filing due in 2 days</td><td>$4,980</td></tr>
+            <tr><td>Resident D</td><td>MA Plan 3</td><td><span class="chip ok">Authorized</span></td><td>Day 6 of 15</td><td>Therapy re-eval in 5 days</td><td>$0</td></tr>
+            <tr><td>Resident E</td><td>MA Plan 2</td><td><span class="chip due">Awaiting initial auth</span></td><td>Admitted yesterday</td><td>Plan response window: 48 hrs</td><td>$830</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <p class="boardnote">Illustrative view with sample data — not real residents or plans.</p>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <p class="kicker">How It Works</p>
+    <h2>Admission through discharge, one case at a time</h2>
+    <p class="lede">Cardinal Coverage manages each Medicare Advantage case end to end — reducing missed deadlines, preventing avoidable denials, and helping your team capture the reimbursement it earned.</p>
+    <div class="steps">
+      <div class="step">
+        <span class="num">01 · ADMISSION</span>
+        <h3>Start the case clean</h3>
+        <p>Capture the plan, the initial authorization request, and the response clock the day the resident arrives.</p>
+      </div>
+      <div class="step">
+        <span class="num">02 · STAY</span>
+        <h3>Track every covered day</h3>
+        <p>Authorization status, covered-through dates, and recert windows stay current and visible to nursing, therapy, MDS, and the business office at once.</p>
+      </div>
+      <div class="step">
+        <span class="num">03 · DEADLINES</span>
+        <h3>Get ahead of the cut</h3>
+        <p>Documentation deadlines, peer-to-peer windows, NOMNC timing, and appeal clocks surface before they pass — not in the denial letter.</p>
+      </div>
+      <div class="step">
+        <span class="num">04 · DISCHARGE</span>
+        <h3>Close with nothing left on the table</h3>
+        <p>Appeals tracked to resolution, exposure reconciled, and a defensible record of every authorization decision on the stay.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="compare">
+  <div class="wrap">
+    <p class="kicker">Consultant, new hire, or system?</p>
+    <h2>You have three ways to fight this. Only one of them is still there at 6 a.m.</h2>
+    <p class="lede">Managed care consultants are good at judgment, plan relationships, and taking the work off your desk. That is worth paying for. But hours do not compound, the engagement ends, and the noon fast-track deadline does not wait for the next site visit.</p>
+    <div class="compare">
+      <div class="cmp">
+        <span class="who">Option one</span>
+        <h3>Managed care consultant</h3>
+        <p>Expert judgment and someone to call. Priced for chains, quoted per engagement.</p>
+        <ul>
+          <li><b>Strong:</b> appeals expertise, relationships with plan reps</li>
+          <li><b>Weak:</b> episodic — not on the floor when the clock runs</li>
+          <li><b>When it ends:</b> the knowledge leaves with them</li>
+        </ul>
+      </div>
+      <div class="cmp">
+        <span class="who">Option two</span>
+        <h3>In-house coordinator alone</h3>
+        <p>The person who actually files. Roughly $55K–$74K a year on average, and worth it.</p>
+        <ul>
+          <li><b>Strong:</b> there every day, knows the residents</li>
+          <li><b>Weak:</b> the caseload lives in a spreadsheet and their head</li>
+          <li><b>When it ends:</b> the spreadsheet leaves with them</li>
+        </ul>
+      </div>
+      <div class="cmp us">
+        <span class="who">The system under either</span>
+        <h3>Cardinal Coverage</h3>
+        <p>Every deadline computed. Every plan rule dated and sourced. Every outcome logged.</p>
+        <ul>
+          <li><b>With a coordinator:</b> what they open every morning</li>
+          <li><b>With a consultant:</b> their hours go to judgment, not tracking</li>
+          <li><b>When people leave:</b> the record and the discipline stay</li>
+        </ul>
+      </div>
+    </div>
+    <p class="cmp-note">If you have a consultant, keep them — and give them a system. If you can't afford one, this is how an independent building competes with a chain that has a firm on retainer. Salary figures are national averages for managed care coordinators (Glassdoor, Salary.com, 2026); consultant fees are quoted per engagement and not published.</p>
+  </div>
+</section>
+
+<section id="outcomes">
+  <div class="wrap">
+    <p class="kicker">What Changes</p>
+    <blockquote class="pull">We don't sell software. We sell the reimbursement you already earned, arriving without the fight.</blockquote>
+    <ul class="outcomes">
+      <li>Fewer denials<small>Deadlines and documentation surfaced before the plan can use them against you.</small></li>
+      <li>Faster authorizations<small>Requests, responses, and follow-ups tracked on a clock the whole team can see.</small></li>
+      <li>Better interdisciplinary communication<small>Nursing, therapy, MDS, and the business office read the same case, live.</small></li>
+      <li>Reduced administrative labor<small>Retire the spreadsheet, the sticky notes, and the third call to the plan this week.</small></li>
+      <li>Clearer revenue forecasting<small>Financial exposure by resident and by plan, current as of this morning.</small></li>
+      <li>No resident without confirmed coverage<small>Anyone in-house without an active authorization is visible, flagged, and being worked.</small></li>
+    </ul>
+  </div>
+</section>
+
+<section id="demo">
+  <div class="wrap">
+    <div class="demo-grid">
+      <div>
+        <p class="kicker">See It on Your Census</p>
+        <h2>Request a demo</h2>
+        <p class="lede">Thirty minutes, your Medicare Advantage caseload as the example. If the dashboard doesn't show you something your current process can't, that's worth knowing too — no pressure either way.</p>
+        <ul class="outcomes" style="grid-template-columns:1fr;">
+          <li>Walk through the dashboard with your own scenarios</li>
+          <li>See how authorizations, deadlines, and appeals are tracked</li>
+          <li>Get straight answers on setup, workflow fit, and pricing</li>
+        </ul>
+      </div>
+      <div class="card">
+        <form class="demo" id="demoForm">
+          <div class="g2">
+            <div><label for="dName">Your name</label><input id="dName" required autocomplete="name"></div>
+            <div><label for="dRole">Role</label>
+              <select id="dRole">
+                <option>Administrator</option><option>Business Office Manager</option>
+                <option>MDS Coordinator</option><option>Case Manager</option>
+                <option>Regional / Revenue Cycle</option><option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="g2">
+            <div><label for="dEmail">Work email</label><input id="dEmail" type="email" required autocomplete="email"></div>
+            <div><label for="dPhone">Phone (optional)</label><input id="dPhone" type="tel" autocomplete="tel"></div>
+          </div>
+          <div><label for="dFacility">Facility / organization</label><input id="dFacility" required></div>
+          <div><label for="dNotes">Which part of the Medicare Advantage process costs you most? (optional)</label>
+            <textarea id="dNotes" placeholder="e.g. short reauthorization cycles, chasing plan portals, appeal deadlines"></textarea>
+            <p class="formnote" style="margin-top:.25rem;"><b>Please don't include any resident information</b> — no names, dates of birth, member IDs or clinical details. Tell us about your process, not a case.</p></div>
+          <div class="banner" id="demoBanner" role="status"></div>
+          <button class="btn block" type="submit">Request a Demo</button>
+          <p class="formnote">This opens your email client — nothing is sent or stored by this page, and it is ordinary email, not a secure channel. We reply within one business day.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <span>© <span id="yr"></span> Cardinal Coverage</span>
+      <span><a href="#pain">Problem</a> · <a href="#dashboard">Dashboard</a> · <a href="#how">How It Works</a> · <a href="#compare">Compare</a> · <a href="#demo">Demo</a></span>
+    </div>
+    <p class="disclaimer">Cardinal Coverage is a case-management tool for skilled nursing facility teams. It does not provide clinical, legal, or billing advice, and it does not guarantee any authorization, payment, or appeal outcome. Dashboard shown above uses illustrative sample data only.</p>
+  </div>
+</footer>
+
+<script>
+const $ = (id) => document.getElementById(id);
+$("yr").textContent = new Date().getFullYear();
+const esc = (s) => s.trim();
+const mailtoHref = (to, subject, lines) =>
+  `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join("\n"))}`;
+const showBanner = (el, msg) => { el.textContent = msg; el.classList.add("show"); };
+
+$("demoForm").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const name = esc($("dName").value), email = esc($("dEmail").value), facility = esc($("dFacility").value);
+  if (!name || !email || !facility) return;
+  const phone = esc($("dPhone").value);
+  const notes = esc($("dNotes").value);
+  const href = mailtoHref(
+    "Robert@thecardinalspromise.com",
+    "Demo request — " + facility,
+    [
+      `Name: ${name}`, `Role: ${$("dRole").value}`, `Email: ${email}`,
+      phone ? `Phone: ${phone}` : null,
+      `Facility: ${facility}`,
+      "", "Costliest part of the MA process:", notes || "(not provided)",
+      "", "(Sent from the Cardinal Coverage site. Please do not include resident information in this email.)",
+      "", "Requested via the Cardinal Coverage website demo form.",
+    ].filter(Boolean)
+  );
+  window.location.href = href;
+  showBanner($("demoBanner"), "Opening your email client to send the request — we'll reach out within one business day.");
+  $("demoForm").reset();
+});
+
+$("themeBtn").addEventListener("click", () => {
+  const cur = document.documentElement.getAttribute("data-theme");
+  const next = cur === "dark" ? "light" : cur === "light" ? "" : "dark";
+  if (next) document.documentElement.setAttribute("data-theme", next); else document.documentElement.removeAttribute("data-theme");
+});
+</script>
+</body>
+</html>

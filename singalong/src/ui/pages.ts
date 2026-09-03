@@ -19,10 +19,10 @@ export const APP_PAGE: string = /* html */ `<!doctype html>
     --font:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
     --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;--maxw:980px;--r:13px;}
   @media (prefers-color-scheme:dark){:root{--paper:#101627;--surface:#172033;--surface-2:#1F2A42;--ink:#F3EEE1;
-    --muted:#A9A28F;--line:#2B3855;--brand:#E2586B;--brand-strong:#F27A8B;--good:#4FBE86;--good-bg:#12321f;
+    --muted:#A9A28F;--line:#2B3855;--brand:#D8394A;--brand-strong:#E85562;--good:#4FBE86;--good-bg:#12321f;
     --warn:#D6A24A;--warn-bg:#33280f;--crit:#E07B6E;--crit-bg:#3a1d1a;--shadow:0 1px 2px rgba(0,0,0,.45),0 12px 32px -14px rgba(0,0,0,.65);}}
   :root[data-theme="light"]{--paper:#F7F2E6;--surface:#FFFDF7;--surface-2:#EFE7D3;--ink:#17233F;--muted:#6B6350;--line:#E2D9C3;--brand:#A31B33;--brand-strong:#7E1226;--good:#2E7D4F;--good-bg:#E4F0E8;--warn:#9A6410;--warn-bg:#F6ECD6;--crit:#B23A3A;--crit-bg:#F6E1DE;}
-  :root[data-theme="dark"]{--paper:#101627;--surface:#172033;--surface-2:#1F2A42;--ink:#F3EEE1;--muted:#A9A28F;--line:#2B3855;--brand:#E2586B;--brand-strong:#F27A8B;--good:#4FBE86;--good-bg:#12321f;--warn:#D6A24A;--warn-bg:#33280f;--crit:#E07B6E;--crit-bg:#3a1d1a;}
+  :root[data-theme="dark"]{--paper:#101627;--surface:#172033;--surface-2:#1F2A42;--ink:#F3EEE1;--muted:#A9A28F;--line:#2B3855;--brand:#D8394A;--brand-strong:#E85562;--good:#4FBE86;--good-bg:#12321f;--warn:#D6A24A;--warn-bg:#33280f;--crit:#E07B6E;--crit-bg:#3a1d1a;}
   *{box-sizing:border-box;} body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);line-height:1.45;}
   .wrap{max-width:var(--maxw);margin-inline:auto;padding:0 clamp(.8rem,3vw,1.4rem) 3rem;}
   header.top{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
@@ -37,7 +37,7 @@ export const APP_PAGE: string = /* html */ `<!doctype html>
   label{display:block;font-size:.72rem;font-weight:700;color:var(--muted);margin:.5rem 0 .18rem;}
   input,select,textarea{width:100%;padding:.5rem .55rem;border:1px solid var(--line);border-radius:9px;background:var(--paper);color:var(--ink);font:inherit;}
   textarea{resize:vertical;min-height:4.5rem;}
-  input:focus,select:focus,textarea:focus{outline:2px solid var(--brand);outline-offset:1px;}
+  input:focus-visible,select:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--brand);outline-offset:2px;}
   .grid{display:grid;gap:.3rem .7rem;} .g3{grid-template-columns:1fr 1fr 1fr;} .g2{grid-template-columns:1fr 1fr;}
   @media(max-width:560px){.g3,.g2{grid-template-columns:1fr;}}
   .btn{background:var(--brand);color:#fff;border:0;border-radius:9px;padding:.55rem .9rem;font:inherit;font-weight:700;cursor:pointer;}
@@ -56,11 +56,13 @@ export const APP_PAGE: string = /* html */ `<!doctype html>
   .empty{color:var(--muted);font-size:.85rem;padding:.5rem 0;} .muted{color:var(--muted);}
   select.inline{width:auto;display:inline-block;padding:.3rem .4rem;font-size:.8rem;}
   .prompter{text-align:center;padding:2rem 1rem;}
-  .prompter .song{font-size:1.5rem;font-weight:800;margin:0 0 .2rem;}
+  .prompter .song{font-size:clamp(1.6rem,4vw,3rem);font-weight:800;margin:0 0 .2rem;}
   .prompter .artist{color:var(--muted);margin:0 0 1rem;}
-  .prompter .lyrics{white-space:pre-wrap;font-size:1.3rem;line-height:1.7;max-width:640px;margin:0 auto 1.2rem;}
+  .prompter .lyrics{white-space:pre-wrap;font-size:clamp(1.35rem,3.2vw,2.8rem);line-height:1.6;font-weight:600;max-width:24em;margin:0 auto 1.2rem;}
   .prompter .progress{font-size:.8rem;color:var(--muted);margin-bottom:.6rem;}
-  .engage-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:.4rem;max-width:640px;margin:0 auto;}
+  .engage-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem;max-width:720px;margin:.8rem auto 0;}
+  .engage-grid .btn{min-height:56px;font-size:1rem;}
+  .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
   @media(max-width:640px){.engage-grid{grid-template-columns:repeat(2,1fr);}}
   .insight-row{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding:.4rem 0;}
   .insight-row:last-child{border-bottom:0;}
@@ -72,11 +74,11 @@ export const APP_PAGE: string = /* html */ `<!doctype html>
 <header class="top"><div class="top-in">
   <span class="logo" aria-hidden="true">♪</span>
   <h1>Sing Along<small id="facName">— set up your facility below</small></h1>
-  <button class="theme" id="themeBtn" title="Theme">◐</button>
+  <button class="theme" id="themeBtn" type="button" aria-label="Switch color theme">◐</button>
 </div></header>
 
 <div class="wrap">
-  <div id="banner" class="banner"></div>
+  <div id="banner" class="banner" role="status" aria-live="polite" aria-atomic="true"></div>
 
   <section class="card" id="setupCard">
     <h2>Your facility</h2>
@@ -326,20 +328,28 @@ function renderPlayerStep(){
     return;
   }
   const song=list[currentSongIndex];
+  // The lyrics view may be on a shared screen residents read. The response
+  // buttons stay collapsed behind a neutral "Log response" control, and no
+  // resident state is rendered in red — dignity over dashboard.
   el.innerHTML='<div class="prompter">'+
-    '<div class="progress">Song '+(currentSongIndex+1)+' of '+list.length+'</div>'+
-    '<div class="song">'+esc(song.title)+'</div>'+
+    '<div class="progress" role="status" aria-live="polite">Song '+(currentSongIndex+1)+' of '+list.length+'</div>'+
+    '<h3 class="song" tabindex="-1">'+esc(song.title)+'</h3>'+
     (song.artist?'<div class="artist">'+esc(song.artist)+'</div>':'')+
-    (song.audioUrl?'<p><a class="btn ghost small" href="'+esc(song.audioUrl)+'" target="_blank" rel="noopener">Open audio ▶</a></p>':'<p class="hint">No audio source on file — sing from the lyrics, or play from the facility\\'s own device.</p>')+
+    (song.audioUrl?'<p><a class="btn ghost small" href="'+esc(song.audioUrl)+'" target="_blank" rel="noopener">Open audio ▶<span class="sr-only"> (opens in a new tab)</span></a></p>':'<p class="hint">No audio source on file — sing from the lyrics, or play from the facility\\'s own device.</p>')+
     (song.lyrics?'<div class="lyrics">'+esc(song.lyrics)+'</div>':'<p class="hint">No lyrics on file for this song.</p>')+
-    '<div class="engage-grid">'+
-      '<button class="btn good small" data-e="sang_along">Sang along</button>'+
-      '<button class="btn small" data-e="listened_attentively">Listened attentively</button>'+
-      '<button class="btn small" data-e="moved_or_tapped">Moved / tapped</button>'+
-      '<button class="btn mut small" data-e="no_visible_response">No response</button>'+
-      '<button class="btn crit small" data-e="agitated">Agitated</button>'+
+    '<div style="margin-top:1rem"><button class="btn ghost" type="button" id="revealLog">Log response…</button></div>'+
+    '<div class="engage-grid" id="engageGrid" hidden>'+
+      '<button class="btn good" type="button" data-e="sang_along">Sang along</button>'+
+      '<button class="btn ghost" type="button" data-e="listened_attentively">Listened quietly</button>'+
+      '<button class="btn ghost" type="button" data-e="moved_or_tapped">Hummed or tapped along</button>'+
+      '<button class="btn ghost" type="button" data-e="moved_to_tears">Tears — it reached them</button>'+
+      '<button class="btn mut" type="button" data-e="no_visible_response">Nothing visible</button>'+
+      '<button class="btn mut" type="button" data-e="agitated">Upset — pause and settle</button>'+
     '</div></div>';
+  const grid=el.querySelector("#engageGrid");
+  el.querySelector("#revealLog").onclick=(ev)=>{grid.hidden=false;ev.target.hidden=true;grid.querySelector("button").focus();};
   el.querySelectorAll("button[data-e]").forEach(b=>{b.onclick=()=>logSong(song.id,b.dataset.e);});
+  el.querySelector(".song").focus({preventScroll:true});
 }
 
 async function logSong(songId,engagement){

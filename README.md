@@ -28,6 +28,8 @@ This repository holds several projects. Jump to the one you need:
 | **Admin Portal — the usable HR app** | `portal/` | Single-page HR console (register a company, hire employees, see one record resolve into every service) backed by a backend-for-frontend that proxies to the orchestrator server-side, keeping credentials off the browser (see `portal/README.md`) |
 | **Live Schedule — day-view UI** | `schedule/` | A usable day-view scheduling app (book, assign a therapist, work the schedule) backed by a backend-for-frontend that proxies to the Booking service (see `schedule/README.md`) |
 | **Client Booking Site — public self-book** | `book/` | A public page where customers self-book an appointment, backed by a narrow BFF that only lists services and creates *requested* appointments for one configured business — no schedule or admin access (see `book/README.md`) |
+| **Trading — brokerage engine** | `trading/` | Standalone Robinhood-style trading engine: accounts with paper buying power, a deterministic mock market feed, market/limit orders, positions with average-cost basis, and a watchlist (see `trading/README.md`) |
+| **Cardinal Trading — trading app** | `invest/` | A usable multi-user trading app: sign up / log in, then your own paper portfolio, watchlist, orders, and buy/sell — a backend-for-frontend over the Trading service with every call scoped server-side to the logged-in user's account (see `invest/README.md`) |
 | **Cardinal HR — platform website** | `cardinal-hr/` | Self-contained, cross-linked marketing site: Home (`index.html`), Features (`features.html`), Pricing (`pricing.html`), and Security (`security.html`) |
 | **API Gateway** | `gateway/` | Authenticated front door: API-key auth, per-key rate limiting, and reverse-proxy routing to the services with an injected trusted tenant. Each service enforces that tenant (`src/api/tenancy.ts`) for real multi-tenant data isolation (see `gateway/README.md`) |
 | **Deployment scaffolding** | `deploy/` | Run the gateway + all services + website together: `docker compose -f deploy/docker-compose.yml up --build` (see `deploy/README.md`) |
@@ -124,7 +126,7 @@ This app supports organization and caregiver self-care. It is not medical, legal
 [![verify-claims](https://github.com/brizzi78-strong/test/actions/workflows/verify.yml/badge.svg)](https://github.com/brizzi78-strong/test/actions/workflows/verify.yml)
 
 **Cardinals Promise (CARD)** — a fixed-supply ERC-20 on Ethereum. The full
-250,000,000 supply is minted to the deployer at construction; there is **no
+1,000,000,000 supply is minted to the deployer at construction; there is **no
 mint function, no burn, no transfer tax, no blacklist, and no pausing** —
 the supply can never change. `Ownable` is inherited solely so
 `renounceOwnership()` can be executed as a public, verifiable launch step;
@@ -211,7 +213,7 @@ exists), then:
 
 ```bash
 npx hardhat run scripts/launch-check.ts       # read-only: which step you're on + abort-criteria check
-npx hardhat run scripts/transfer-treasury.ts  # step 3: sends exactly 50M to the treasury, once
+npx hardhat run scripts/transfer-treasury.ts  # step 3: sends exactly 200M to the treasury, once
 npx hardhat run scripts/renounce.ts           # step 6: guarded renounce — verifies state, asks for confirmation
 ```
 

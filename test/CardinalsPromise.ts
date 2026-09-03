@@ -4,7 +4,7 @@ import { parseEther } from "viem";
 
 import { network } from "hardhat";
 
-const TOTAL_SUPPLY = parseEther("250000000");
+const TOTAL_SUPPLY = parseEther("1000000000");
 
 describe("CardinalsPromise", async function () {
   const { viem } = await network.create();

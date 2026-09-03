@@ -102,7 +102,7 @@ Sanity-check it worked:
 npx hardhat run scripts/launch-check.ts
 ```
 
-Expected: supply 250,000,000, deployer holds all of it, stage says
+Expected: supply 1,000,000,000, deployer holds all of it, stage says
 "next: transfer-treasury", and `✅ No problems detected`.
 
 Also look at it like a buyer would: open
@@ -133,14 +133,14 @@ needs it.
 npx hardhat run scripts/transfer-treasury.ts
 ```
 
-It sends exactly 50,000,000 CARD and prints the transaction link — open it,
+It sends exactly 200,000,000 CARD and prints the transaction link — open it,
 this is what a "proof link" looks like. Then:
 
 ```bash
 npx hardhat run scripts/launch-check.ts
 ```
 
-Expected: deployer 200M, treasury 50M, stage "next: create the Uniswap pool".
+Expected: deployer 800M, treasury 200M, stage "next: create the Uniswap pool".
 
 **Bonus lesson:** run `scripts/transfer-treasury.ts` a second time on
 purpose. It should refuse with "treasury already holds…". That refusal is
@@ -148,7 +148,7 @@ the guardrail doing its job.
 
 ## Step 4 — The pool (10 min, simulated)
 
-On the real day you'll do this in the Uniswap website (pair 200M CARD with
+On the real day you'll do this in the Uniswap website (pair 400M CARD with
 your ETH). For practice, simulate it with the third wallet from step 0a:
 put the **pool** address into `launch.json` under `"pool"`, then:
 
@@ -156,7 +156,7 @@ put the **pool** address into `launch.json` under `"pool"`, then:
 npx hardhat run scripts/fund-pool-sim.ts
 ```
 
-It sends the remaining 200M to the practice pool wallet, so the balances
+It sends the pool’s 400M to the practice pool wallet, so the balances
 look exactly like a real funded pool to the other scripts. (You already
 watched a *real* Uniswap pool get created and traded against in step -1's
 rehearsal, so nothing is lost by simulating here.)
@@ -167,7 +167,7 @@ Finish with:
 npx hardhat run scripts/launch-check.ts
 ```
 
-Expected: deployer 0, treasury 50M, pool ~200M, stage "test swap, lock LP,
+Expected: deployer 400M (the founder hold), treasury 200M, pool ~400M, stage "test swap, lock LP,
 then renounce".
 
 ## Step 5 — Renounce (5 min) 🔒

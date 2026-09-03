@@ -1,4 +1,4 @@
-// Checklist step 3: send exactly 50,000,000 CARD (20%) from the deployer to
+// Checklist step 3: send exactly 200,000,000 CARD (20%) from the deployer to
 // the treasury wallet. Refuses to run if anything has already moved, so it
 // cannot double-send.
 //
