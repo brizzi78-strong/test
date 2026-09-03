@@ -7,12 +7,15 @@
 <title>Cardinal Care Bridge — Senior Living Advisory for Triangle Families</title>
 <meta name="description" content="Free senior living placement for Triangle-area families — no cost to you. Personalized guidance on Independent Living, Assisted Living, and Memory Care, with care navigation, accompanied tours, move coordination, and support that doesn't end on move-in day.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23A31B33'/%3E%3Ctext x='16' y='23' font-family='system-ui' font-size='20' font-weight='900' text-anchor='middle' fill='white'%3EC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
   :root{--paper:#F7F2E6;--surface:#FFFDF7;--surface-2:#EFE7D3;--ink:#17233F;--muted:#6B6350;--line:#E2D9C3;
     --brand:#A31B33;--brand-strong:#7E1226;--good:#2E7D4F;--good-bg:#E4F0E8;--warn:#9A6410;--warn-bg:#F6ECD6;
     --crit:#B23A3A;--crit-bg:#F6E1DE;--shadow:0 1px 2px rgba(23,35,63,.07),0 10px 26px -14px rgba(23,35,63,.24);
-    --font:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    --serif:ui-serif,Georgia,"Iowan Old Style","Times New Roman",serif;
+    --font:"Source Sans 3",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --serif:"Fraunces",ui-serif,Georgia,"Iowan Old Style","Times New Roman",serif;
     --maxw:1080px;--r:14px;}
   @media (prefers-color-scheme:dark){:root{--paper:#101627;--surface:#172033;--surface-2:#1F2A42;--ink:#F3EEE1;
     --muted:#A9A28F;--line:#2B3855;--brand:#E2586B;--brand-strong:#F27A8B;--good:#4FBE86;--good-bg:#12321f;
@@ -20,7 +23,8 @@
   :root[data-theme="light"]{--paper:#F7F2E6;--surface:#FFFDF7;--surface-2:#EFE7D3;--ink:#17233F;--muted:#6B6350;--line:#E2D9C3;--brand:#A31B33;--brand-strong:#7E1226;--good:#2E7D4F;--good-bg:#E4F0E8;--warn:#9A6410;--warn-bg:#F6ECD6;--crit:#B23A3A;--crit-bg:#F6E1DE;}
   :root[data-theme="dark"]{--paper:#101627;--surface:#172033;--surface-2:#1F2A42;--ink:#F3EEE1;--muted:#A9A28F;--line:#2B3855;--brand:#E2586B;--brand-strong:#F27A8B;--good:#4FBE86;--good-bg:#12321f;--warn:#D6A24A;--warn-bg:#33280f;--crit:#E07B6E;--crit-bg:#3a1d1a;}
   *{box-sizing:border-box;} html{scroll-behavior:smooth;}
-  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);line-height:1.55;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);font-size:1.05rem;line-height:1.6;}
+  h1,h2,h3{font-optical-sizing:auto;}
   .wrap{max-width:var(--maxw);margin-inline:auto;padding:0 clamp(1rem,4vw,2rem);}
   header.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
   .top-in{max-width:var(--maxw);margin-inline:auto;padding:.7rem clamp(1rem,4vw,2rem);display:flex;align-items:center;gap:.6rem;}
@@ -33,20 +37,26 @@
   nav.primary a.cta{background:var(--brand);color:#fff;padding:.45rem .85rem;border-radius:999px;}
   nav.primary a.cta:hover{background:var(--brand-strong);color:#fff;}
   @media(max-width:760px){nav.primary a:not(.cta){display:none;}}
+  @media(max-width:600px){.brandname small{display:none;}.brandname{font-size:.98rem;}}
   .theme{background:transparent;border:1px solid var(--line);border-radius:8px;color:var(--ink);padding:.35rem .55rem;cursor:pointer;margin-left:.6rem;}
 
   section{padding:clamp(2.4rem,6vw,4.4rem) 0;}
   section + section{border-top:1px solid var(--line);}
-  h2{font-size:clamp(1.4rem,3vw,1.9rem);margin:0 0 .3rem;font-weight:800;letter-spacing:-.01em;}
+  h2{font-family:var(--serif);font-size:clamp(1.7rem,3.4vw,2.35rem);margin:0 0 .3rem;font-weight:600;letter-spacing:-.01em;line-height:1.15;text-wrap:balance;}
+  h3{font-family:var(--serif);font-weight:600;letter-spacing:-.005em;}
   .kicker{font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--brand);margin:0 0 .5rem;}
   .lede{color:var(--muted);font-size:1.05rem;max-width:640px;margin:.3rem 0 1.6rem;}
 
   /* hero */
-  .hero{padding-top:clamp(3rem,8vw,5.5rem);text-align:center;}
-  .hero h1{font-family:var(--serif);font-size:clamp(2rem,5vw,3.1rem);line-height:1.15;margin:0 0 .8rem;font-weight:700;}
-  .hero p.sub{max-width:640px;margin:0 auto 1.8rem;color:var(--muted);font-size:1.08rem;}
-  .hero .ctas{display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap;margin-bottom:.6rem;}
-  .hero .tagline{font-weight:700;color:var(--brand);letter-spacing:.02em;}
+  .hero{padding-top:clamp(3.5rem,9vw,6.5rem);}
+  .hero .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(2rem,5vw,4rem);align-items:end;}
+  @media(max-width:860px){.hero .wrap{grid-template-columns:1fr;gap:2.4rem;}}
+  .hero h1{font-family:var(--serif);font-size:clamp(2.4rem,5.6vw,4rem);line-height:1.04;letter-spacing:-.015em;margin:0 0 1.1rem;font-weight:600;text-wrap:balance;}
+  .hero p.sub{max-width:36rem;margin:0 0 1.8rem;color:var(--muted);font-size:1.12rem;}
+  .hero .ctas{display:flex;gap:.7rem;flex-wrap:wrap;}
+  .hero .facts{border-left:2px solid var(--brand);padding-left:1.25rem;display:grid;gap:1.05rem;margin:0;}
+  .hero .facts div strong{display:block;font-family:var(--serif);font-size:1.12rem;font-weight:600;line-height:1.2;}
+  .hero .facts div span{color:var(--muted);font-size:.92rem;line-height:1.45;display:block;margin-top:.1rem;}
 
   .btn{display:inline-block;background:var(--brand);color:#fff;border:0;border-radius:11px;padding:.75rem 1.3rem;font:inherit;font-weight:700;cursor:pointer;text-decoration:none;}
   .btn:hover{background:var(--brand-strong);}
@@ -68,19 +78,25 @@
   .svc{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:1.3rem 1.4rem;box-shadow:var(--shadow);}
   .svc h3{margin:.2rem 0 .4rem;font-size:1.05rem;}
   .svc p{margin:0;color:var(--muted);font-size:.92rem;}
-  .svc .num{font-size:.72rem;font-weight:800;color:var(--brand);letter-spacing:.08em;}
 
-  /* credentials */
-  .creds-band{padding:clamp(1.4rem,3vw,2rem) 0;background:var(--surface-2);}
-  .creds{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;}
-  @media(max-width:700px){.creds{grid-template-columns:1fr;gap:1rem;}}
-  .creds div strong{display:block;font-family:var(--serif);font-size:1.02rem;margin-bottom:.15rem;}
-  .creds div p{margin:0;color:var(--muted);font-size:.88rem;}
+  /* process stepper */
+  .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:1.4rem;}
+  @media(max-width:1000px){.steps{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:600px){.steps{grid-template-columns:1fr;}}
+  .step{border-top:2px solid var(--line);padding-top:1rem;}
+  .step .num{font-family:var(--serif);font-size:2.1rem;line-height:1;font-weight:600;color:var(--brand);margin-bottom:.55rem;font-variant-numeric:tabular-nums;}
+  .step h3{margin:0 0 .4rem;font-size:1.08rem;}
+  .step p{margin:0;color:var(--muted);font-size:.92rem;}
 
   /* why us */
-  blockquote.pull{font-family:var(--serif);font-size:clamp(1.3rem,3vw,1.7rem);line-height:1.35;margin:0 0 1.2rem;font-weight:600;color:var(--ink);}
-  .principles{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.2rem;}
-  .principles span{background:var(--surface-2);border:1px solid var(--line);border-radius:999px;padding:.4rem .9rem;font-size:.85rem;font-weight:700;}
+  blockquote.pull{font-family:var(--serif);font-size:clamp(1.5rem,3.4vw,2.1rem);line-height:1.25;margin:0 0 1.2rem;font-weight:600;color:var(--ink);text-wrap:balance;}
+  .compare-wrap{overflow-x:auto;margin-top:1.6rem;}
+  .compare{width:100%;min-width:34rem;border-collapse:collapse;font-size:.96rem;}
+  .compare th,.compare td{text-align:left;padding:.85rem .9rem;border-bottom:1px solid var(--line);vertical-align:top;}
+  .compare th{font-size:.72rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:700;}
+  .compare th.us{color:var(--brand);}
+  .compare td:first-child{color:var(--muted);width:24%;}
+  .compare td.us{font-weight:600;}
 
   /* promise */
   .promise{background:var(--surface-2);border-radius:var(--r);padding:clamp(1.6rem,4vw,2.4rem);}
@@ -112,7 +128,7 @@
 <header class="top">
   <div class="top-in">
     <span class="logo" aria-hidden="true">C</span>
-    <h1 class="brandname">Cardinal Care Bridge<small>Senior living advisory, Triangle NC</small></h1>
+    <p class="brandname">Cardinal Care Bridge<small>Senior living advisory, Triangle NC</small></p>
     <nav class="primary">
       <a href="#guide">The Guide</a>
       <a href="#services">How We Help</a>
@@ -126,31 +142,21 @@
 
 <section class="hero">
   <div class="wrap">
-    <p class="kicker">Peace of Mind Starts Here</p>
-    <h1>Whether you're planning ahead or facing an urgent decision today, we're ready to help.</h1>
-    <p class="sub">Cardinal Care Bridge helps Triangle families compare senior living options, navigate healthcare transitions, and move forward with a plan built around your loved one — not a list of communities. <strong>Our guidance is free to families.</strong></p>
-    <div class="ctas">
-      <a class="btn" href="#guide">Read the Guide</a>
-      <a class="btn ghost" href="#consult">Schedule Your Consultation</a>
-    </div>
-    <p class="tagline">Move Forward with Confidence.</p>
-  </div>
-</section>
-
-<section class="creds-band">
-  <div class="wrap creds">
     <div>
-      <strong>Certified Dementia Practitioner</strong>
-      <p>Formal dementia care training behind every memory care recommendation.</p>
+      <p class="kicker">Senior living advisory · Triangle, NC</p>
+      <h1>The right place for your parent, chosen with a nurse — not a call center.</h1>
+      <p class="sub">Cardinal Care Bridge helps Triangle families find independent living, assisted living, and memory care. A nurse assesses the real level of care, we tour with you, and we stay after move-in. Families never pay us.</p>
+      <div class="ctas">
+        <a class="btn" href="#consult">Talk to us — it's free</a>
+        <a class="btn ghost" href="#guide">Read the family guide</a>
+      </div>
     </div>
-    <div>
-      <strong>A nurse on staff</strong>
-      <p>Clinical assessment of your loved one's actual level of care — not a guess from a brochure.</p>
-    </div>
-    <div>
-      <strong>25+ years in healthcare</strong>
-      <p>Combined experience across the team, on both sides of these decisions.</p>
-    </div>
+    <aside class="facts" aria-label="Why families trust us">
+      <div><strong>Free to families</strong><span>The community your loved one chooses pays us — and only if a move happens.</span></div>
+      <div><strong>A nurse on staff</strong><span>Clinical assessment of the actual level of care, not a guess from a brochure.</span></div>
+      <div><strong>Certified Dementia Practitioner</strong><span>Formal dementia care training behind every memory care recommendation.</span></div>
+      <div><strong>25+ years in healthcare</strong><span>Combined experience across the team, on both sides of these decisions.</span></div>
+    </aside>
   </div>
 </section>
 
@@ -190,10 +196,10 @@
     <h2>Four ways we walk with your family</h2>
     <p class="lede">From the first conversation through the months after move-in.</p>
     <div class="services-grid">
-      <div class="svc"><div class="num">01</div><h3>Senior Living Advisory</h3><p>Helping families compare Independent Living, Assisted Living, and Memory Care communities with confidence.</p></div>
-      <div class="svc"><div class="num">02</div><h3>Care Navigation</h3><p>Clear guidance through healthcare transitions, hospital discharges, rehabilitation stays, and changing care needs.</p></div>
-      <div class="svc"><div class="num">03</div><h3>Move Coordination</h3><p>Helping make one of life's biggest transitions organized, thoughtful, and less stressful.</p></div>
-      <div class="svc"><div class="num">04</div><h3>Ongoing Family Support</h3><p>Because guidance shouldn't end on move-in day.</p></div>
+      <div class="svc"><h3>Senior Living Advisory</h3><p>Helping families compare Independent Living, Assisted Living, and Memory Care communities with confidence.</p></div>
+      <div class="svc"><h3>Care Navigation</h3><p>Clear guidance through healthcare transitions, hospital discharges, rehabilitation stays, and changing care needs.</p></div>
+      <div class="svc"><h3>Move Coordination</h3><p>Helping make one of life's biggest transitions organized, thoughtful, and less stressful.</p></div>
+      <div class="svc"><h3>Ongoing Family Support</h3><p>Because guidance shouldn't end on move-in day.</p></div>
     </div>
   </div>
 </section>
@@ -203,12 +209,12 @@
     <p class="kicker">What Happens When You Call</p>
     <h2>Five steps, start to settled</h2>
     <p class="lede">No obligation at any point, and you can stop at any step.</p>
-    <div class="services-grid">
-      <div class="svc"><div class="num">01</div><h3>We listen first</h3><p>A conversation about your loved one — health needs, budget, location, routines, what matters to them. No forms to fill out before we talk.</p></div>
-      <div class="svc"><div class="num">02</div><h3>Our nurse assesses the level of care</h3><p>A clinical read on what kind of setting actually fits: independent living, assisted living, or memory care. Getting this wrong is the most expensive mistake families make — and most referral services never look closely enough to get it right.</p></div>
-      <div class="svc"><div class="num">03</div><h3>We shortlist real options</h3><p>Communities we have visited, with current availability and pricing — matched to your budget and your loved one's needs, not to whoever pays us most.</p></div>
-      <div class="svc"><div class="num">04</div><h3>We tour with you</h3><p>We schedule the visits and go with you, so you have someone in the room who knows what questions to ask and what to look for.</p></div>
-      <div class="svc"><div class="num">05</div><h3>We help you land</h3><p>Paperwork, clinical documentation, move logistics — and a check-in after move-in day, because the first month is when families need us most.</p></div>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><h3>We listen first</h3><p>A conversation about your loved one — health needs, budget, location, routines, what matters to them. No forms before we talk.</p></div>
+      <div class="step"><div class="num">2</div><h3>Our nurse assesses the level of care</h3><p>A clinical read on what setting actually fits. Getting this wrong is the most expensive mistake families make — and most referral services never look closely enough to get it right.</p></div>
+      <div class="step"><div class="num">3</div><h3>We shortlist real options</h3><p>Communities we have visited, with current availability and pricing — matched to your loved one's needs and budget, not to whoever pays us most.</p></div>
+      <div class="step"><div class="num">4</div><h3>We tour with you</h3><p>We schedule the visits and go with you, so someone in the room knows what to ask and what to look for.</p></div>
+      <div class="step"><div class="num">5</div><h3>We help you land</h3><p>Paperwork, clinical documentation, move logistics — and check-ins through the first month, when families need us most.</p></div>
     </div>
   </div>
 </section>
@@ -229,11 +235,19 @@
   <div class="wrap">
     <p class="kicker">Why Families Choose Cardinal Care Bridge</p>
     <blockquote class="pull">We don't start with communities.<br>We start with people.</blockquote>
-    <p class="lede" style="margin-bottom:.4rem">We take time to understand your loved one's story, goals, health needs, budget, and preferences before making recommendations.</p>
-    <div class="principles">
-      <span>Every plan is personalized.</span>
-      <span>Every recommendation is thoughtful.</span>
-      <span>Every family is treated with compassion and respect.</span>
+    <p class="lede" style="margin-bottom:0">We take time to understand your loved one's story, goals, health needs, budget, and preferences before making a single recommendation. Here is what that means in practice.</p>
+    <div class="compare-wrap">
+      <table class="compare">
+        <thead>
+          <tr><th></th><th>Referral websites</th><th class="us">Cardinal Care Bridge</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>How level of care is decided</td><td>A phone questionnaire</td><td class="us">A nurse's clinical assessment</td></tr>
+          <tr><td>Who you talk to</td><td>A call center; your details are often shared with several agents</td><td class="us">One local advisor, start to finish</td></tr>
+          <tr><td>Touring</td><td>You go alone with a list</td><td class="us">We schedule it and go with you</td></tr>
+          <tr><td>After move-in</td><td>The file closes</td><td class="us">Check-ins through the first month</td></tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </section>
@@ -258,7 +272,7 @@
 
 <section id="consult">
   <div class="wrap">
-    <p class="kicker">Peace of Mind Starts Here</p>
+    <p class="kicker">Talk to us</p>
     <h2>Schedule your complimentary consultation</h2>
     <p class="lede">30 minutes, no cost, no obligation — just a conversation about your family's situation.</p>
     <div class="card" style="max-width:680px">
