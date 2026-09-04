@@ -358,6 +358,24 @@ export const SONG_KIT: KitSong[] = [
     ].join('\n'),
   },
   {
+    title: 'Cielito Lindo',
+    artist: 'Quirino Mendoza y Cortés',
+    era: '1880s',
+    published: 1882,
+    tags: ['spanish', 'rancheras', 'love', 'waltz'],
+    lyrics: [
+      'De la Sierra Morena,',
+      'cielito lindo, vienen bajando,',
+      'Un par de ojitos negros,',
+      'cielito lindo, de contrabando.',
+      '',
+      'Ay, ay, ay, ay,',
+      'canta y no llores,',
+      'Porque cantando se alegran,',
+      'cielito lindo, los corazones.',
+    ].join('\n'),
+  },
+  {
     title: 'When the Saints Go Marching In',
     // African American spiritual central to the New Orleans jazz funeral —
     // a dirge on the way to the cemetery, swung on the way back. Sung here

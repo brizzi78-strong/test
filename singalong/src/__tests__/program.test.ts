@@ -12,9 +12,9 @@ function freshService(): { service: SingAlongService; facilityId: string } {
 }
 
 describe('song kit integrity', () => {
-  it('is exactly 21 songs, each publishable: pre-1931, credited, tagged, with lyrics', () => {
+  it('is exactly 22 songs, each publishable: pre-1931, credited, tagged, with lyrics', () => {
     // The exact count is claimed in README.md, PROGRAM.md, and the demo page.
-    assert.equal(SONG_KIT.length, 21);
+    assert.equal(SONG_KIT.length, 22);
     const titles = new Set<string>();
     for (const song of SONG_KIT) {
       assert.ok(song.title.trim(), 'song must have a title');
