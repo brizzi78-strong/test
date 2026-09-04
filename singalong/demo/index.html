@@ -5,13 +5,16 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="light dark">
 <meta name="description" content="Interactive demo of the Memory Care Music Program — personalized sing-along circles for dementia and memory care, built on public-domain music.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23A31B33'/%3E%3Ctext x='16' y='23' font-family='system-ui' font-size='20' font-weight='900' text-anchor='middle' fill='white'%3E%E2%99%AA%3C/text%3E%3C/svg%3E">
+<meta property="og:title" content="The Memory Care Music Program">
+<meta property="og:description" content="Sing-along circles for memory care built on public-domain songs — no music licensing fees, one tap of logging per song, and every word on the screen.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%231E3D63'/%3E%3Cg fill='%23FFF9F0'%3E%3Cellipse cx='11' cy='22.4' rx='3.1' ry='2.4' transform='rotate(-16 11 22.4)'/%3E%3Cellipse cx='21.6' cy='20.6' rx='3.1' ry='2.4' transform='rotate(-16 21.6 20.6)'/%3E%3Crect x='12.9' y='7' width='1.5' height='15.4'/%3E%3Crect x='23.5' y='4.8' width='1.5' height='15.8'/%3E%3Cpolygon points='12.9,6.6 25,4.4 25,7.6 12.9,9.8'/%3E%3C/g%3E%3C/svg%3E">
 <title>Memory Care Music Program — Demo</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&display=swap');
   :root{
     --paper:#F7F3E8;--surface:#FFFEFA;--surface-2:#F1EAD8;--ink:#26221A;--muted:#6C6452;
-    --line:#E3DBC6;--hair:#D8CFB6;--ctl:#A79C82;--brand:#A31B33;--brand-strong:#7E1226;--on-accent:#FFF9F0;
+    --line:#E3DBC6;--hair:#D8CFB6;--ctl:#8E836A;--brand:#1E3D63;--brand-strong:#152C49;--brand-bg:#E2E9F2;--on-accent:#F5F8FC;--scrim:rgba(24,28,36,.5);
     --good:#25663F;--good-bg:#E4F0E8;--warn:#7F5008;--warn-bg:#F6ECD6;--crit:#B23A3A;--crit-bg:#F6E1DE;
     --tears:#26637A;--tears-bg:#E1EDF1;
     --shadow:0 1px 2px rgba(38,34,26,.04),0 18px 44px -28px rgba(38,34,26,.28);
@@ -20,20 +23,20 @@
     --maxw:1020px;--r:14px;
   }
   @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-    --paper:#161310;--surface:#1E1A14;--surface-2:#282217;--ink:#F1EBDD;--muted:#A89F8A;
-    --line:#332D20;--hair:#403927;--ctl:#6F654E;--brand:#D8394A;--brand-strong:#E85562;--on-accent:#1A0D0F;
+    --paper:#10141B;--surface:#161B24;--surface-2:#1D2430;--ink:#EDF0F5;--muted:#9AA3B2;
+    --line:#262E3B;--hair:#2F3947;--ctl:#5C6B80;--brand:#7EA5D8;--brand-strong:#94B6E3;--brand-bg:#16283E;--on-accent:#0E1826;--scrim:rgba(0,0,0,.62);
     --good:#4FBE86;--good-bg:#12321F;--warn:#D6A24A;--warn-bg:#33280F;--crit:#E07B6E;--crit-bg:#3A1D1A;
     --tears:#7FC0D2;--tears-bg:#14303A;
     --shadow:0 1px 2px rgba(0,0,0,.5),0 18px 44px -22px rgba(0,0,0,.7);}}
   :root[data-theme="dark"]{
-    --paper:#161310;--surface:#1E1A14;--surface-2:#282217;--ink:#F1EBDD;--muted:#A89F8A;
-    --line:#332D20;--hair:#403927;--ctl:#6F654E;--brand:#D8394A;--brand-strong:#E85562;--on-accent:#1A0D0F;
+    --paper:#10141B;--surface:#161B24;--surface-2:#1D2430;--ink:#EDF0F5;--muted:#9AA3B2;
+    --line:#262E3B;--hair:#2F3947;--ctl:#5C6B80;--brand:#7EA5D8;--brand-strong:#94B6E3;--brand-bg:#16283E;--on-accent:#0E1826;--scrim:rgba(0,0,0,.62);
     --good:#4FBE86;--good-bg:#12321F;--warn:#D6A24A;--warn-bg:#33280F;--crit:#E07B6E;--crit-bg:#3A1D1A;
     --tears:#7FC0D2;--tears-bg:#14303A;
     --shadow:0 1px 2px rgba(0,0,0,.5),0 18px 44px -22px rgba(0,0,0,.7);}
 
   *{box-sizing:border-box}
-  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);line-height:1.6;font-size:16.5px;-webkit-font-smoothing:antialiased}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);line-height:1.6;font-size:1.03125rem;-webkit-font-smoothing:antialiased}
   ::selection{background:color-mix(in srgb,var(--brand) 20%,transparent)}
   a{color:var(--brand)}
   .wrap{max-width:var(--maxw);margin-inline:auto;padding:0 clamp(1rem,4vw,2rem) 4rem}
@@ -45,15 +48,18 @@
   .logo{width:38px;height:38px;border-radius:50%;background:var(--brand);color:var(--on-accent);display:grid;place-items:center;font-size:1.2rem;flex:none;font-family:var(--serif)}
   h1{font-family:var(--serif);font-style:italic;font-weight:600;font-size:1.35rem;margin:0;letter-spacing:-.01em;line-height:1.15}
   .subtitle{margin:.05rem 0 0;font-weight:700;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
-  .demo-flag{margin-left:auto;font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--warn);border:1px solid color-mix(in srgb,var(--warn) 45%,transparent);border-radius:999px;padding:.3rem .75rem;white-space:nowrap}
-  @media(max-width:520px){.subtitle,.demo-flag{display:none}}
+  .demo-flag{margin-left:auto;font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border:1px solid color-mix(in srgb,var(--muted) 45%,transparent);border-radius:999px;padding:.3rem .75rem;white-space:nowrap}
+  @media(max-width:520px){.demo-flag{display:none}.subtitle{font-size:.58rem;letter-spacing:.1em}}
 
   /* ---- hero ---- */
-  .hero{padding:clamp(2.4rem,7vw,4.2rem) 0 0}
+  .hero{padding:clamp(2.4rem,7vw,4.2rem) 0 0;position:relative}
+  .hero-orn{position:absolute;right:0;top:clamp(2rem,6vw,4rem);width:clamp(140px,20vw,260px);height:auto;color:var(--ink);opacity:.06;pointer-events:none}
+  @media(max-width:900px){.hero-orn{display:none}}
   .kicker{font-size:.72rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--brand);margin:0}
   .hero h2{font-family:var(--serif);font-weight:550;font-size:clamp(2.15rem,5.4vw,3.6rem);line-height:1.06;letter-spacing:-.02em;margin:.5rem 0 1.05rem;max-width:15.5em;text-wrap:balance}
-  .hero .deck{font-size:clamp(1.04rem,1.6vw,1.2rem);line-height:1.65;color:var(--muted);max-width:44em;margin:0}
+  .hero .deck{font-size:clamp(1.04rem,1.6vw,1.2rem);line-height:1.65;color:var(--muted);max-width:36em;margin:0}
   .hero .note{font-size:.9rem;font-style:italic;color:var(--muted);margin:.8rem 0 0}
+  .hero-cta{display:flex;gap:.7rem;flex-wrap:wrap;margin:1.5rem 0 0}
   .stats{display:flex;flex-wrap:wrap;gap:1rem 0;margin:2.1rem 0 0;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);padding:1.15rem 0}
   .stat{flex:1 1 160px;min-width:0;padding:0 1.3rem;border-left:1px solid var(--hair)}
   .stat:first-child{border-left:0;padding-left:0}
@@ -62,36 +68,41 @@
   @media(max-width:600px){.stats{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem 1.5rem}.stat{border-left:0;padding:0}}
 
   /* ---- tab bar ---- */
-  .tabs{display:flex;gap:.1rem .5rem;flex-wrap:wrap;margin:2.4rem 0 0;border-bottom:1px solid var(--hair)}
-  .tab{background:none;border:0;border-bottom:3px solid transparent;border-radius:0;padding:.55rem .8rem;min-height:44px;font:inherit;font-weight:650;font-size:.92rem;color:var(--muted);cursor:pointer;margin-bottom:-1px;white-space:nowrap}
+  .tabs{display:flex;gap:0 .5rem;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;margin:2.4rem 0 0;border-bottom:1px solid var(--line)}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{background:none;border:0;border-bottom:3px solid transparent;border-radius:0;padding:.55rem .8rem;min-height:44px;font:inherit;font-weight:600;font-size:.92rem;color:var(--muted);cursor:pointer;margin-bottom:-1px;white-space:nowrap;flex:none}
+  .tab:first-child{padding-left:0}
+  .tab:focus-visible{outline-offset:-3px;border-radius:8px 8px 0 0}
   .tab:hover{color:var(--ink)}
   .tab[aria-selected="true"]{color:var(--brand);border-bottom-color:var(--brand)}
 
   /* ---- panels / cards ---- */
-  .card{background:var(--surface);border:1px solid var(--line);border-top:0;border-radius:0 0 var(--r) var(--r);box-shadow:var(--shadow);padding:clamp(1.3rem,3vw,2.1rem) clamp(1.1rem,3.5vw,2.3rem) clamp(1.5rem,3vw,2.3rem);margin:0 0 1.2rem}
+  .card{background:var(--surface);border:1px solid var(--line);border-top:0;border-radius:0 0 var(--r) var(--r);box-shadow:var(--shadow);padding:clamp(1.3rem,3vw,2.1rem) clamp(1rem,4vw,2rem) clamp(1.5rem,3vw,2.3rem);margin:0 0 1.2rem}
   h2{font-family:var(--serif);font-weight:600;font-size:1.5rem;letter-spacing:-.01em;margin:.1rem 0 .55rem}
   h3{font-size:.76rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--brand);margin:1.7rem 0 .45rem}
   p{margin:.35rem 0}
-  .hint{color:var(--muted);font-size:.97rem}
+  .hint{color:var(--muted);font-size:.97rem;max-width:66ch}
+  .hint.lg{font-size:1.04rem}
 
   /* ---- lists / rows ---- */
   .row{border:0;border-bottom:1px solid var(--line);padding:.85rem .1rem;margin:0;background:transparent}
   .row:last-child{border-bottom:0}
   .row .t{font-family:var(--serif);font-weight:600;font-size:1.08rem}
-  .row .t .s{font-family:var(--font)}
+  .row .t .s{font-family:var(--font);font-weight:400}
   .row .s{color:var(--muted);font-size:.88rem}
+  .row.now{box-shadow:inset 3px 0 0 var(--brand);padding-left:.8rem}
   .chips{display:flex;flex-wrap:wrap;gap:.35rem;margin:.4rem 0 0}
   .chip{background:var(--surface-2);border:1px solid var(--line);border-radius:999px;padding:.2rem .65rem;font-size:.78rem;font-weight:600;color:var(--muted)}
   .pill{display:inline-block;font-size:.66rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;padding:.18rem .55rem;border-radius:999px;vertical-align:middle}
-  .pill.pd{background:var(--good-bg);color:var(--good)}
-  .pill.done{background:var(--good-bg);color:var(--good)}
+  .pill.pd,.pill.done{background:var(--good-bg);color:var(--good)}
   .pill.live{background:var(--warn-bg);color:var(--warn)}
-  .pill.now{background:var(--brand);color:var(--on-accent)}
+  .pill.now{background:var(--brand-bg);color:var(--brand)}
   .pill.rest{background:var(--crit-bg);color:var(--crit)}
 
   /* ---- forms ---- */
   label{display:block;font-size:.74rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:.6rem 0 .25rem}
   select,input[type="search"]{width:100%;padding:.6rem .7rem;min-height:44px;border:1px solid var(--ctl);border-radius:10px;background:var(--surface);color:var(--ink);font:inherit}
+  input[type="search"]{max-width:26em}
   .grid{display:grid;gap:.3rem .9rem}
   .g3{grid-template-columns:1fr 1fr 1fr}
   @media(max-width:640px){.g3{grid-template-columns:1fr}}
@@ -99,6 +110,7 @@
   /* ---- buttons ---- */
   .btn{background:var(--brand);color:var(--on-accent);border:1px solid transparent;border-radius:999px;padding:.65rem 1.3rem;min-height:46px;font:inherit;font-weight:700;cursor:pointer;transition:background .15s ease}
   .btn:hover{background:var(--brand-strong)}
+  a.btn{text-decoration:none;display:inline-flex;align-items:center;justify-content:center}
   .btn.ghost{background:transparent;color:var(--brand);border-color:color-mix(in srgb,var(--brand) 45%,transparent)}
   .btn.ghost:hover{background:color-mix(in srgb,var(--brand) 8%,transparent)}
   .btn.mut{background:transparent;color:var(--muted);border-color:var(--ctl)}
@@ -109,8 +121,9 @@
   .arc{list-style:none;margin:.6rem 0 0;padding:0}
   .arc li{display:flex;gap:.9rem;padding:.6rem 0;border-bottom:1px dotted var(--hair)}
   .arc li:last-child{border-bottom:0}
-  .arc .k{flex:0 0 7.5em;font-weight:800;font-size:.74rem;color:var(--brand);text-transform:uppercase;letter-spacing:.1em;padding-top:.25rem}
-  .weeks{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.7rem;margin-top:.7rem}
+  .arc .k{flex:0 0 7.5em;font-weight:800;font-size:.74rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;padding-top:.25rem}
+  .weeks{display:grid;grid-template-columns:1fr;gap:.7rem;margin-top:.7rem}
+  @media(min-width:560px){.weeks{grid-template-columns:1fr 1fr}}
   .week{border:1px solid var(--line);border-radius:12px;background:var(--surface);padding:.75rem .85rem}
   .week.now{border-color:var(--brand);box-shadow:inset 3px 0 0 var(--brand)}
   .week b{display:block;font-family:var(--serif);font-weight:600;font-size:1rem;margin-bottom:.15rem}
@@ -129,7 +142,7 @@
   .insight .v.hi{color:var(--good)}
   .insight .v.lo{color:var(--muted)}
   .insight .v.neg{color:var(--crit)}
-  .bar{height:7px;border-radius:99px;background:var(--surface-2);flex:0 0 90px;overflow:hidden}
+  .bar{height:7px;border-radius:99px;background:var(--line);flex:0 0 90px;overflow:hidden}
   .bar i{display:block;height:100%;background:var(--good)}
   .bar i.neg{background:var(--crit)}
   @media(max-width:420px){.bar{display:none}}
@@ -153,47 +166,52 @@
   body.in-session header.top,body.in-session main.wrap,body.in-session .foot{display:none}
   .stage{display:none}
   body.in-session .stage{display:flex;flex-direction:column;height:100dvh}
-  .stage-top{display:flex;align-items:center;gap:.8rem;padding:.6rem clamp(.9rem,2vw,1.5rem);border-bottom:1px solid var(--line);background:var(--surface)}
+  .stage-top{display:flex;align-items:center;gap:.8rem;padding:.6rem clamp(.9rem,2vw,1.5rem);border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--paper) 92%,transparent)}
   .stage-top .who{font-family:var(--serif);font-weight:600;font-size:1.02rem}
   .stage-top .prog{color:var(--muted);font-weight:700;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase}
   .stage-top .spacer{flex:1}
-  .stage-main{flex:1;min-height:0;display:grid;place-items:center;padding:1rem clamp(.8rem,3vw,2rem);text-align:center;overflow:auto}
+  .stage-main{flex:1;min-height:0;display:grid;place-items:start center;padding:clamp(1.2rem,8vh,4rem) clamp(.8rem,3vw,2rem) 1rem;text-align:center;overflow:auto}
   .stage-main .song{font-family:var(--serif);font-weight:600;font-size:clamp(1.7rem,4.5vw,3.6rem);letter-spacing:-.015em;margin:0 0 .1em;text-wrap:balance}
   .stage-main .artist{color:var(--muted);margin:0 0 .6em;font-size:clamp(.95rem,1.6vw,1.25rem);font-style:italic}
   .stage-main .lyrics{font-family:var(--serif);font-size:clamp(1.35rem,3.4vw,3.2rem);line-height:1.6;white-space:pre-line;max-width:24em;margin-inline:auto;font-weight:500}
-  .stage-cue{font-size:.95rem;color:var(--muted);max-width:44em;margin:1rem auto 0}
-  .logdock{position:sticky;bottom:0;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:.7rem clamp(.8rem,2vw,1.4rem) max(0.7rem, env(safe-area-inset-bottom))}
+  .dock-note{color:var(--muted);font-size:.88rem;margin:0 0 .6rem;text-align:center}
+  .dock-note b{color:var(--ink);font-weight:700}
+  #stCue:not(:empty)::before{content:" — "}
+  .logdock{background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:.7rem clamp(.8rem,2vw,1.4rem) max(0.7rem, env(safe-area-inset-bottom))}
   .logdock-inner{max-width:900px;margin-inline:auto}
   .respgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.7rem}
-  .resp{min-height:56px;font:inherit;font-weight:700;font-size:1rem;border-radius:14px;border:1px solid var(--ctl);cursor:pointer;background:var(--surface);color:var(--ink);padding:.6rem .5rem;line-height:1.2}
+  .resp{min-height:56px;font:inherit;font-weight:700;font-size:1rem;border-radius:14px;border:1px solid var(--ctl);cursor:pointer;background:var(--surface);color:var(--ink);padding:.6rem .5rem;line-height:1.2;transition:border-color .15s ease}
+  .resp:hover{border-color:var(--brand)}
+  .resp:active{transform:scale(.98)}
   .resp.sang{background:var(--good);color:var(--on-accent);border-color:transparent}
   .resp.tears{background:var(--tears-bg);color:var(--tears);border-color:var(--tears)}
   .resp.upset{background:var(--warn-bg);color:var(--warn);border-color:var(--warn);width:100%;max-width:360px;margin:.8rem auto 0;display:block}
   .dock-row{display:flex;gap:.7rem;align-items:center;justify-content:center;flex-wrap:wrap;margin-top:.6rem}
-  .overlay{position:fixed;inset:0;background:color-mix(in srgb,var(--ink) 45%,transparent);display:grid;place-items:center;z-index:20;padding:1rem}
-  .sheet{background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);max-width:34rem;width:100%;padding:1.4rem 1.5rem}
+  .overlay{position:fixed;inset:0;background:var(--scrim);display:flex;z-index:20;padding:1rem;overflow:auto}
+  .sheet{background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);max-width:34rem;width:100%;padding:1.4rem 1.5rem;margin:auto}
   .sheet h2{margin-top:0}
   .sheet .opts{display:flex;flex-direction:column;gap:.6rem;margin-top:.8rem}
-  .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:max(6.5rem,env(safe-area-inset-bottom));z-index:30;background:var(--ink);color:var(--paper);border-radius:14px;padding:.6rem .95rem;display:flex;gap:.8rem;align-items:center;box-shadow:var(--shadow);font-weight:700}
+  .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:max(6.5rem,env(safe-area-inset-bottom));z-index:30;background:var(--ink);color:var(--paper);border-radius:14px;padding:.6rem .95rem;display:flex;gap:.8rem;align-items:center;box-shadow:var(--shadow);font-weight:700;width:max-content;max-width:min(92vw,34rem)}
   .toast button{background:transparent;border:1px solid color-mix(in srgb,var(--paper) 55%,transparent);color:var(--paper);border-radius:9px;font:inherit;font-weight:800;padding:.25rem .6rem;cursor:pointer;min-height:36px}
   @media print{header.top,.tabs,.hero,.foot,.logdock{display:none}}
   /* ---- Printable circle sheet ---- */
   #sheetHost{display:none}
   body.sheet-mode #sheetHost{display:block}
+  body.sheet-mode header.top,body.sheet-mode main.wrap,body.sheet-mode .foot,body.sheet-mode .stage{display:none}
   @media print{
     body.sheet-mode header.top,body.sheet-mode main.wrap,body.sheet-mode .foot,body.sheet-mode .stage{display:none}
     body.sheet-mode{background:#fff}
     @page{margin:.55in .6in}
   }
   #sheetHost{color:#1C2030;background:#fff;font-size:15px;line-height:1.45;padding:1rem}
-  #sheetHost .sh-head{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;border-bottom:3px solid #A31B33;padding-bottom:.35rem;margin-bottom:.6rem}
+  #sheetHost .sh-head{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;border-bottom:3px solid #1E3D63;padding-bottom:.35rem;margin-bottom:.6rem}
   #sheetHost h2{font-family:Georgia,serif;font-weight:400;font-size:1.6rem;margin:0;border:0;color:#1C2030}
   #sheetHost .k{font-size:.7rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:#5C5646}
   #sheetHost h3{font-family:Georgia,serif;font-weight:400;font-size:1.02rem;margin:.8rem 0 .25rem;border-bottom:1px solid #C9BFA8;padding-bottom:.12rem;color:#1C2030;letter-spacing:0;text-transform:none}
   #sheetHost .sh-cols{display:grid;grid-template-columns:1.5fr 1fr;gap:0 1.5rem}
   #sheetHost ol{list-style:none;margin:.25rem 0 0;padding:0;counter-reset:st}
   #sheetHost ol li{display:flex;gap:.55rem;padding:.28rem 0;border-bottom:1px dotted #C9BFA8;align-items:baseline}
-  #sheetHost ol li::before{counter-increment:st;content:counter(st);font-family:Georgia,serif;color:#A31B33;min-width:1.1em;text-align:right}
+  #sheetHost ol li::before{counter-increment:st;content:counter(st);font-family:Georgia,serif;color:#1E3D63;min-width:1.1em;text-align:right}
   #sheetHost .st{font-weight:700}
   #sheetHost .sc{color:#5C5646;font-size:.84rem;font-style:italic}
   #sheetHost ul{margin:.2rem 0 0;padding-left:1rem}
@@ -210,7 +228,7 @@
 <body>
 
 <header class="top"><div class="top-in">
-  <div class="logo" aria-hidden="true">♪</div>
+  <div class="logo" aria-hidden="true"><svg viewBox="0 0 32 32" width="20" height="20" fill="currentColor"><ellipse cx="11" cy="22.4" rx="3.1" ry="2.4" transform="rotate(-16 11 22.4)"/><ellipse cx="21.6" cy="20.6" rx="3.1" ry="2.4" transform="rotate(-16 21.6 20.6)"/><rect x="12.9" y="7" width="1.5" height="15.4"/><rect x="23.5" y="4.8" width="1.5" height="15.8"/><polygon points="12.9,6.6 25,4.4 25,7.6 12.9,9.8"/></svg></div>
   <div>
     <h1>Sing Along</h1>
     <p class="subtitle">The Memory Care Music Program · Willow Grove (sample community)</p>
@@ -226,11 +244,16 @@
     whole generation learned at school, at church, and around one radio. Between circles, each resident’s own music,
     one to one.</p>
     <p class="note">This page is a working demo with sample residents — nothing here is real data, and nothing you do is saved.</p>
+    <div class="hero-cta">
+      <a class="btn" href="mailto:robertbrizzi@gmail.com?subject=Memory%20Care%20Music%20Program%20walkthrough">Book a 20-minute walkthrough</a>
+      <button class="btn ghost" id="heroTry" type="button">Try the sing-along screen</button>
+    </div>
+    <svg class="hero-orn" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><ellipse cx="11" cy="22.4" rx="3.1" ry="2.4" transform="rotate(-16 11 22.4)"/><ellipse cx="21.6" cy="20.6" rx="3.1" ry="2.4" transform="rotate(-16 21.6 20.6)"/><rect x="12.9" y="7" width="1.5" height="15.4"/><rect x="23.5" y="4.8" width="1.5" height="15.8"/><polygon points="12.9,6.6 25,4.4 25,7.6 12.9,9.8"/></svg>
     <div class="stats">
-      <div class="stat"><b>21</b><span>songs with the words included</span></div>
-      <div class="stat"><b>2×/wk</b><span>circles, 30–40 minutes, 4–10 residents</span></div>
-      <div class="stat"><b>1 aide</b><span>runs it — one tap per song</span></div>
-      <div class="stat"><b id="statWeek">—</b><span>this week’s theme</span></div>
+      <div class="stat"><b>22</b><span>songs with the words included</span></div>
+      <div class="stat"><b>$0</b><span>music licensing — every song is public domain</span></div>
+      <div class="stat"><b>2×/wk</b><span>circles, <span style="white-space:nowrap">30–40 minutes</span> each</span></div>
+      <div class="stat"><b id="statWeek">—</b><span>this week in the rotation</span></div>
     </div>
   </section>
 
@@ -238,7 +261,7 @@
     <button class="tab" role="tab" id="tab-program"   aria-controls="panel-program"   data-tab="program"   type="button">The program</button>
     <button class="tab" role="tab" id="tab-residents" aria-controls="panel-residents" data-tab="residents" type="button">The people we sing with</button>
     <button class="tab" role="tab" id="tab-songbook"  aria-controls="panel-songbook"  data-tab="songbook"  type="button">Songbook</button>
-    <button class="tab" role="tab" id="tab-weeks"     aria-controls="panel-weeks"     data-tab="weeks"     type="button">This week's songs</button>
+    <button class="tab" role="tab" id="tab-weeks"     aria-controls="panel-weeks"     data-tab="weeks"     type="button">This week’s songs</button>
     <button class="tab" role="tab" id="tab-session"   aria-controls="panel-session"   data-tab="session"   type="button">Start the sing-along</button>
     <button class="tab" role="tab" id="tab-history"   aria-controls="panel-history"   data-tab="history"   type="button">Past sing-alongs</button>
     <button class="tab" role="tab" id="tab-families"  aria-controls="panel-families"  data-tab="families"  type="button">For families</button>
@@ -247,18 +270,18 @@
   <section class="card panel" id="panel-program" role="tabpanel" aria-labelledby="tab-program" tabindex="-1">
     <h2>How a circle runs</h2>
     <p class="hint">Every circle follows the same 30–40 minute arc. In memory care the routine <em>is</em> the program —
-    residents who can't keep track of "Tuesday at 2" can still feel "this is the singing time" when the gathering song starts.</p>
+    residents who can’t keep track of “Tuesday at 2” can still feel “this is the singing time” when the gathering song starts.</p>
     <ol class="arc">
-      <li><span class="k">Gather</span><span><b>Hail, Hail, the Gang's All Here</b> — the same opener every session, sung while everyone settles.</span></li>
+      <li><span class="k">Gather</span><span><b>Hail, Hail, the Gang’s All Here</b> — the same opener every session, sung while everyone settles.</span></li>
       <li><span class="k">Greet</span><span>Around the circle, each resident greeted by name.</span></li>
-      <li><span class="k">Core songs</span><span>Familiar songs on the week's theme, words on the shared screen. Slower and lower than the recordings — leave room for residents' voices.</span></li>
+      <li><span class="k">Core songs</span><span>Familiar songs on the week’s theme, words on the shared screen. Slower and lower than the recordings — leave room for residents’ voices.</span></li>
       <li><span class="k">Move</span><span>One up-tempo number with a simple motion: clap, sway, shakers and scarves in hand.</span></li>
       <li><span class="k">Close</span><span><b>Till We Meet Again</b> — a real goodbye song that promises return. End calm, not on a peak, and serve coffee in the same room after.</span></li>
     </ol>
     <h3>How we treat people in the room</h3>
-    <p class="hint"><b>Invite, never quiz.</b> "I love this one" — not "Do you remember this?" Recognition without the test.<br>
+    <p class="hint"><b>Invite, never quiz.</b> “I love this one” — not “Do you remember this?” Recognition without the test.<br>
     <b>Every response counts.</b> Humming, tapping, a look up — being in the room while the music plays is the point.<br>
-    <b>Tears are usually the music reaching someone.</b> We don't stop the song; we move closer, and we sit with them after.</p>
+    <b>Tears are usually the music reaching someone.</b> We don’t stop the song; we move closer, and we sit with them after.</p>
     <h3>The four-week cycle</h3>
     <div class="weeks" id="weekCards"></div>
     <h3>What this asks of a team</h3>
@@ -268,8 +291,8 @@
     <h3>Why these songs are free to use</h3>
     <p class="hint">Every song in the shared songbook was published before 1931, so the music and these lyrics are public
     domain — no licensing fees, no per-site subscription. Recordings stay whatever the facility already has the right to
-    play. That rule costs us the 1940s hits this generation danced to — those live in each resident's one-to-one
-    listening, from the facility's own music, where no lyric sheet is needed.</p>
+    play. That rule costs us the 1940s hits this generation danced to — those live in each resident’s one-to-one
+    listening, from the facility’s own music, where no lyric sheet is needed.</p>
   </section>
 
   <section class="card panel" id="panel-residents" role="tabpanel" aria-labelledby="tab-residents" tabindex="-1" hidden>
@@ -282,17 +305,17 @@
 
   <section class="card panel" id="panel-songbook" role="tabpanel" aria-labelledby="tab-songbook" tabindex="-1" hidden>
     <h2>Songbook</h2>
-    <p class="hint">All 21 shared songs, A to Z, with their words. Tap a song to read them.</p>
+    <p class="hint">All 22 shared songs, A to Z, with their words. Tap a song to read them.</p>
     <label for="songSearch">Find a song</label>
     <input type="search" id="songSearch" placeholder="Type a title, like Amazing Grace">
     <div id="songList"></div>
   </section>
 
   <section class="card panel" id="panel-weeks" role="tabpanel" aria-labelledby="tab-weeks" tabindex="-1" hidden>
-    <h2>This week's songs</h2>
+    <h2>This week’s songs</h2>
     <p class="hint" id="weekNowLine"></p>
-    <p class="hint">The circle songs are shared on purpose — they're the ones a whole generation can still sing together.
-    Each resident's personal music has its own time, one to one.</p>
+    <p class="hint">The circle songs are shared on purpose — they’re the ones a whole generation can still sing together.
+    Each resident’s personal music has its own time, one to one.</p>
     <div id="planList"></div>
     <button class="btn ghost" id="printSheet" type="button" style="margin-top:.6rem">Print this week’s circle sheet</button>
     <h3>Their own music, one to one</h3>
@@ -303,12 +326,13 @@
 
   <section class="card panel" id="panel-session" role="tabpanel" aria-labelledby="tab-session" tabindex="-1" hidden>
     <h2>Start the sing-along</h2>
-    <p class="hint">Pick who you're singing with and this week's list is already chosen. One tap logs each song —
-    after the singing, never instead of it. Try it: nothing here is saved past a page reload.</p>
+    <p class="hint">Pick who you’re singing with and this week’s list is already chosen. On a shared TV the room
+    sees only the words — the resident’s name and notes stay tucked behind the Log button. One tap logs each song,
+    after the singing, never instead of it.</p>
     <div class="grid g3">
       <div><label for="pvResident">Resident</label><select id="pvResident"></select></div>
       <div><label for="pvPlaylist">Week</label><select id="pvPlaylist"></select></div>
-      <div><label for="pvMood">How do they seem right now?</label>
+      <div><label for="pvMood">Mood right now</label>
         <select id="pvMood"><option>bright</option><option>calm</option><option selected>quiet</option><option>restless</option><option>upset</option></select></div>
     </div>
     <button class="btn" id="startBtn" type="button" style="margin-top:.8rem">Start the sing-along</button>
@@ -319,7 +343,7 @@
     <label for="hResident">Resident</label>
     <select id="hResident"></select>
     <p class="hint">Songs that reach this resident float to the top; a song that upset someone is flagged and rested.
-    These are activity notes for choosing next week's songs — not medical records, and never a score on a person.</p>
+    These are activity notes for choosing next week’s songs — not medical records, and never a score on a person.</p>
     <div id="insightsBox"></div>
     <h3>Sessions</h3>
     <div id="sessionList"></div>
@@ -327,14 +351,14 @@
 
   <section class="card panel" id="panel-families" role="tabpanel" aria-labelledby="tab-families" tabindex="-1" hidden>
     <h2>For families</h2>
-    <p class="hint" style="font-size:1.02rem"><b>Can I come?</b> Yes. Family are welcome in the circle, and a daughter who
+    <p class="hint lg"><b>Can I come?</b> Yes. Family are welcome in the circle, and a daughter who
     knows all the words is the best co-facilitator there is.</p>
-    <p class="hint" style="font-size:1.02rem"><b>Can I bring their music?</b> Please. Their records, the songs from their
-    wedding, the hymn their mother sang — that's exactly what the one-to-one listening is made of, and there's a
-    conversation we'd love to have with you about it.</p>
-    <p class="hint" style="font-size:1.02rem"><b>Will you tell me how it went?</b> That's what the notes are for: so
-    someone can tell you "she came in restless and left calm, and she sang every word of Danny Boy."</p>
-    <p class="hint" style="font-size:1.02rem"><b>What if they say no, or cry?</b> Then they say no — nobody is made to
+    <p class="hint lg"><b>Can I bring their music?</b> Please. Their records, the songs from their
+    wedding, the hymn their mother sang — that’s exactly what the one-to-one listening is made of, and there’s a
+    conversation we’d love to have with you about it.</p>
+    <p class="hint lg"><b>Will you tell me how it went?</b> That’s what the notes are for: so
+    someone can tell you “she came in restless and left calm, and she sang every word of Danny Boy.”</p>
+    <p class="hint lg"><b>What if they say no, or cry?</b> Then they say no — nobody is made to
     participate, and sitting near the music counts. Tears usually mean a song reached them; we stay close, let it finish,
     and sit with them after.</p>
     <h3>What we write down, plainly</h3>
@@ -347,7 +371,7 @@
 <!-- In-session presentation mode -->
 <div class="stage" id="stage">
   <div class="stage-top">
-    <span class="who" id="stWho"></span>
+    <span class="who">Sing-Along Circle</span>
     <span class="prog" id="stProg" role="status" aria-live="polite"></span>
     <span class="spacer"></span>
     <button class="btn mut small" id="stEnd" type="button">End or pause</button>
@@ -357,14 +381,14 @@
       <h2 class="song" id="stSong" tabindex="-1"></h2>
       <p class="artist" id="stArtist"></p>
       <div class="lyrics" id="stLyrics"></div>
-      <p class="stage-cue" id="stCue"></p>
     </div>
   </div>
   <div class="logdock"><div class="logdock-inner">
     <div id="dockClosed">
-      <div class="dock-row"><button class="btn" id="dockOpen" type="button" style="min-width:min(100%,360px)">Log this song's response</button></div>
+      <div class="dock-row"><button class="btn" id="dockOpen" type="button" style="min-width:min(100%,360px)">Log this song’s response</button></div>
     </div>
     <div id="dockOpenGrid" hidden>
+      <p class="dock-note"><b id="stWho"></b><span id="stCue"></span></p>
       <div class="respgrid" id="respGrid"></div>
       <button class="resp upset" id="respUpset" type="button">Upset — pause the music</button>
     </div>
@@ -380,7 +404,7 @@
     <div>
       <p class="kicker">A Cardinal Care Bridge program</p>
       <p class="foot-contact"><b>Questions, or want to pilot this at your community?</b><br>
-      Rob Brizzi — <a href="mailto:robertbrizzi@gmail.com">robertbrizzi@gmail.com</a> · <a href="tel:+18502217443">(850) 221‑7443</a></p>
+      Rob Brizzi, founder — <a href="mailto:robertbrizzi@gmail.com">robertbrizzi@gmail.com</a> · <a href="tel:+18502217443">(850) 221‑7443</a></p>
     </div>
     <p class="foot-note">This demo runs entirely in your browser with sample residents and saves nothing — reload and it
     resets. The real program runs on the facility’s own equipment and database, inside the facility’s privacy obligations.</p>
@@ -431,6 +455,8 @@ const SONGS = [
    l:"Swing low, sweet chariot, comin' for to carry me home,\nSwing low, sweet chariot, comin' for to carry me home.\n\nI looked over Jordan, and what did I see,\nComin' for to carry me home?\nA band of angels comin' after me,\nComin' for to carry me home."},
   {t:"Danny Boy",a:"Frederic Weatherly (words, 1913), to the Londonderry Air",e:"1910s",g:["comfort","gentle","irish"],
    l:"Oh Danny boy, the pipes, the pipes are calling\nFrom glen to glen, and down the mountain side.\nThe summer's gone, and all the roses falling,\n'Tis you, 'tis you must go, and I must bide."},
+  {t:"Cielito Lindo",a:"Quirino Mendoza y Cortés",e:"1880s",g:["spanish","rancheras","love","waltz"],
+   l:"De la Sierra Morena,\ncielito lindo, vienen bajando,\nUn par de ojitos negros,\ncielito lindo, de contrabando.\n\nAy, ay, ay, ay,\ncanta y no llores,\nPorque cantando se alegran,\ncielito lindo, los corazones."},
   {t:"When the Saints Go Marching In",a:"Traditional African American spiritual (New Orleans)",e:"1900s",g:["comfort","spiritual","upbeat"],
    l:"Oh, when the saints go marching in,\nOh, when the saints go marching in,\nOh Lord, I want to be in that number,\nWhen the saints go marching in."},
   {t:"Pack Up Your Troubles in Your Old Kit-Bag",a:"Felix Powell & George Asaf",e:"1910s",g:["movement","upbeat","comfort"],
@@ -484,7 +510,8 @@ sessions[0].entries[3].note = "Talked about her husband afterward — a good ten
 
 /* ---------- helpers ---------- */
 const $ = (id) => document.getElementById(id);
-const esc = (s) => String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+const tq = (s) => String(s).replace(/(^|[\s(—])"(\S)/g,"$1\u201C$2").replace(/"/g,"\u201D").replace(/'/g,"\u2019");
+const esc = (s) => tq(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
 const song = (t) => SONGS.find(s=>s.t===t);
 const resOptions = RESIDENTS.map(r=>'<option>'+esc(r.name)+'</option>').join("");
 
@@ -514,6 +541,11 @@ tabs.forEach((t,i)=>{
   });
 });
 selectTab(tabs[0], false);
+$("heroTry").addEventListener("click", ()=>{
+  const t = tabs.find(x=>x.dataset.tab==="session");
+  selectTab(t, false);
+  $("panel-session").scrollIntoView({behavior:"smooth", block:"start"});
+});
 
 /* ---------- program tab ---------- */
 $("statWeek").textContent = "Week " + (WEEK+1);
@@ -545,7 +577,7 @@ renderSongbook();
 /* ---------- this week's songs + own music ---------- */
 $("weekNowLine").innerHTML = '<b>This week: '+esc(PLANS[WEEK].name)+'.</b> The cycle rotates automatically; any week can still be chosen when starting a circle.';
 $("planList").innerHTML = PLANS.map((p,i) =>
-  '<div class="row'+(i===WEEK?'" style="border-color:var(--brand)':'')+'"><div class="t">'+esc(p.name)+(i===WEEK?' <span class="pill now">this week</span>':'')+'</div>'+
+  '<div class="row'+(i===WEEK?' now':'')+'"><div class="t">'+esc(p.name)+(i===WEEK?' <span class="pill now">this week</span>':'')+'</div>'+
   '<div class="chips">'+planSongs(p).map(t=>'<span class="chip">'+esc(t)+'</span>').join("")+'</div></div>').join("");
 $("ownResident").innerHTML = resOptions;
 $("ownResident").addEventListener("change", renderOwnMusic);
@@ -605,9 +637,9 @@ function step(){
   const s = song(live.list[live.i]);
   $("stWho").textContent = live.resident;
   $("stProg").textContent = "Song "+(live.i+1)+" of "+live.list.length;
-  $("stSong").textContent = s.t;
-  $("stArtist").textContent = s.a;
-  $("stLyrics").textContent = s.l;
+  $("stSong").textContent = tq(s.t);
+  $("stArtist").textContent = tq(s.a);
+  $("stLyrics").textContent = tq(s.l);
   $("stCue").textContent = live.i===0 ? residentCue(live.resident) : "";
   $("stSong").focus({preventScroll:true});
   window.scrollTo({top:0});
@@ -632,8 +664,8 @@ function showToast(text, onUndo){
 }
 function clearToast(){ clearTimeout(toastTimer); $("toastHost").innerHTML = ""; }
 
-function overlay(html){
-  $("overlayHost").innerHTML = '<div class="overlay"><div class="sheet" role="dialog" aria-modal="true">'+html+'</div></div>';
+function overlay(html, name){
+  $("overlayHost").innerHTML = '<div class="overlay"><div class="sheet" role="dialog" aria-modal="true" aria-label="'+esc(name||"Session dialog")+'">'+html+'</div></div>';
   $("overlayHost").querySelector(".sheet button")?.focus();
 }
 function closeOverlay(){ $("overlayHost").innerHTML = ""; }
@@ -649,7 +681,7 @@ function interventionCard(songTitle){
     '<button class="btn ghost" type="button" data-act="break">Take a break, stay on this screen</button>'+
     '<button class="btn ghost" type="button" data-act="continue">They’re settled — keep singing</button>'+
     '<button class="btn mut" type="button" data-act="undo">I tapped this by mistake</button>'+
-    '</div>');
+    '</div>', 'Someone is upset');
   $("overlayHost").addEventListener("click", function handler(ev){
     const b = ev.target.closest("button[data-act]");
     if (!b) return;
@@ -662,7 +694,7 @@ function interventionCard(songTitle){
     if (act === "calm"){ live.i = live.list.length - 1; step(); return; }
     if (act === "break"){
       overlay('<h2>Taking a break</h2><p class="hint">Sit with them. The circle can hum along without the screen for a minute.</p>'+
-        '<div class="opts"><button class="btn" type="button" id="resumeBtn">We’re ready — back to the singing</button></div>');
+        '<div class="opts"><button class="btn" type="button" id="resumeBtn">We’re ready — back to the singing</button></div>', 'Taking a break');
       $("resumeBtn").addEventListener("click", ()=>{ closeOverlay(); if (live){ live.i++; step(); } });
     }
   });
@@ -677,7 +709,7 @@ $("stEnd").addEventListener("click", ()=>{
     '<button class="btn ghost" type="button" data-end="keep">Keep singing</button>'+
     '<button class="btn" type="button" data-end="stop">Stop here and save</button>'+
     '<button class="btn mut" type="button" data-end="discard">Discard this session</button>'+
-    '</div>');
+    '</div>', 'Stop the sing-along?');
   $("overlayHost").addEventListener("click", function handler(ev){
     const b = ev.target.closest("button[data-end]");
     if (!b) return;
@@ -693,12 +725,12 @@ $("stEnd").addEventListener("click", ()=>{
 function finishScreen(early){
   const sung = live.entries.length, total = live.list.length;
   overlay('<h2>'+(early ? 'Stopping after song '+sung+' of '+total : 'That was the last one')+'</h2>'+
-    '<label for="moodAfter">How does '+esc(live.resident.split(" ")[0])+' seem now?</label>'+
+    '<label for="moodAfter">Mood now for '+esc(live.resident.split(" ")[0])+'</label>'+
     '<select id="moodAfter"><option>bright</option><option selected>calm</option><option>quiet</option><option>restless</option><option>upset</option></select>'+
     '<div class="opts">'+
     '<button class="btn" type="button" id="saveBtn">Finish up</button>'+
     '<button class="btn mut" type="button" id="discardBtn">Discard this session</button>'+
-    '</div>');
+    '</div>', 'Finish the session');
   $("saveBtn").addEventListener("click", ()=>{
     if (!live) return;
     const rec = { resident: live.resident, playlist: live.plan.name, status:"completed",
