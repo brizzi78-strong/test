@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cardinal Care Bridge — Community Flyer (print, tear-off tabs)</title>
+<style>
+  /* One page, US Letter, tear-off tabs along the bottom. Print backgrounds ON. */
+  :root{
+    --brand:#A31B33; --ink:#17233F; --muted:#5C5647; --line:#D8CFBA; --surface:#FAF6EC;
+    --font:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --serif:ui-serif,Georgia,"Iowan Old Style","Times New Roman",serif;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:#e8e4d8;font-family:var(--font);color:var(--ink);line-height:1.5;}
+  .sheet{background:#fff;width:8.5in;min-height:11in;margin:1rem auto;padding:.55in .6in .25in;box-shadow:0 8px 30px rgba(0,0,0,.2);display:flex;flex-direction:column;}
+  @page{size:letter;margin:0;}
+  @media print{
+    body{background:#fff;}
+    .sheet{margin:0;box-shadow:none;width:auto;min-height:100vh;}
+    .no-print{display:none;}
+  }
+  .no-print{max-width:8.5in;margin:1rem auto 0;font-size:.85rem;color:#444;background:#fff8dd;border:1px solid #e2d59a;border-radius:8px;padding:.6rem .8rem;}
+
+  .mast{text-align:center;margin-bottom:.4rem;}
+  .logo{width:44px;height:44px;border-radius:11px;background:var(--brand);color:#fff;font-weight:900;display:inline-grid;place-items:center;font-size:1.5rem;}
+  .mast .name{font-weight:800;font-size:1.05rem;margin:.3rem 0 0;}
+  .mast .name small{display:block;font-weight:600;font-size:.72rem;color:var(--muted);}
+
+  h1{font-family:var(--serif);text-align:center;font-size:1.85rem;line-height:1.2;margin:.6rem 0 .4rem;font-weight:700;}
+  p.center{text-align:center;color:var(--muted);max-width:36rem;margin:.2rem auto .9rem;font-size:1rem;}
+
+  .free{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin:.4rem 0 .9rem;}
+  .free .box{border:1.5px solid var(--brand);border-radius:12px;padding:.75rem .9rem;background:var(--surface);}
+  .free .box h3{margin:0 0 .3rem;font-size:1.02rem;color:var(--brand);}
+  .free .box p{margin:0;font-size:.9rem;color:var(--ink);}
+
+  ul.helps{max-width:36rem;margin:0 auto 1rem;padding:0;list-style:none;font-size:.95rem;}
+  ul.helps li{padding-left:1.4rem;position:relative;margin:.3rem 0;}
+  ul.helps li::before{content:"✓";position:absolute;left:.3rem;color:var(--brand);font-weight:900;}
+
+  .quote{text-align:center;font-family:var(--serif);font-size:1.15rem;font-weight:600;margin:.3rem 0 .9rem;}
+
+  .big-contact{text-align:center;margin:.2rem 0 .9rem;}
+  .big-contact .phone{font-size:1.6rem;font-weight:900;color:var(--brand);}
+  .big-contact div{font-size:.92rem;color:var(--muted);}
+
+  .tabs{margin-top:auto;display:grid;grid-template-columns:repeat(8,1fr);border-top:1.5px dashed var(--line);}
+  .tab{border-left:1.5px dashed var(--line);padding:.45rem .15rem;text-align:center;}
+  .tab:first-child{border-left:0;}
+  .tab span{display:inline-block;writing-mode:vertical-rl;transform:rotate(180deg);font-size:.72rem;font-weight:700;letter-spacing:.02em;white-space:nowrap;}
+  .tab span b{color:var(--brand);}
+</style>
+</head>
+<body>
+<p class="no-print"><strong>Print me:</strong> one page, US Letter, backgrounds on. Cut along the dashed lines so the tabs tear off. Good homes: senior centers, library community boards, church bulletin boards, YMCA lobbies, county resource fairs — always ask the front desk first. (Ctrl/Cmd+P to print.)</p>
+
+<div class="sheet">
+  <div class="mast">
+    <span class="logo" aria-hidden="true">C</span>
+    <p class="name">Cardinal Care Bridge<small>Senior living advisory · Triangle NC</small></p>
+  </div>
+
+  <h1>Looking at senior living options<br>for someone you love?</h1>
+  <p class="center">Independent Living, Assisted Living, Memory Care — the choices are confusing, and most families are making them for the first time. You don't have to figure it out alone.</p>
+
+  <div class="free">
+    <div class="box">
+      <h3>Free family guide</h3>
+      <p><em>The Cardinal's Promise Family Guide</em> — how to compare communities, what to ask on a tour, and clear next steps. No cost, no obligation.</p>
+    </div>
+    <div class="box">
+      <h3>Free 30-minute consultation</h3>
+      <p>A conversation about your family's situation with a local advisor. No pressure, no sales pitch — just a plan.</p>
+    </div>
+  </div>
+
+  <ul class="helps">
+    <li>Compare communities across Wake, Durham, Orange, Chatham, Johnston, Lee &amp; Moore counties</li>
+    <li>Help through hospital discharges, rehab stays, and changing care needs</li>
+    <li>Tour scheduling, move coordination, and support after move-in day</li>
+    <li>Free to families — our fee is paid by communities, and we say so up front</li>
+  </ul>
+
+  <p class="quote">"We don't start with communities. We start with people."</p>
+
+  <div class="big-contact">
+    <div class="phone">(850) 221-7443</div>
+    <div>Call or text Rob · robertbrizzi@gmail.com</div>
+  </div>
+
+  <div class="tabs" aria-hidden="true">
+    <div class="tab"><span>Cardinal Care Bridge · <b>(850) 221-7443</b></span></div>
+    <div class="tab"><span>Cardinal Care Bridge · <b>(850) 221-7443</b></span></div>
+    <div class="tab"><span>Cardinal Care Bridge · <b>(850) 221-7443</b></span></div>
+    <div class="tab"><span>Cardinal Care Bridge · <b>(850) 221-7443</b></span></div>
+    <div class="tab"><span>Cardinal Care Bridge · <b>(850) 221-7443</b></span></div>
+    <div class="tab"><span>Cardinal Care Bridge · <b>(850) 221-7443</b></span></div>
+    <div class="tab"><span>Cardinal Care Bridge · <b>(850) 221-7443</b></span></div>
+    <div class="tab"><span>Cardinal Care Bridge · <b>(850) 221-7443</b></span></div>
+  </div>
+</div>
+</body>
+</html>
