@@ -1,0 +1,123 @@
+# The Cardinal's Promise — Back Cover Copy (draft)
+
+## Comp line (top of back cover, small caps)
+
+For readers of *Beautiful Boy* and *Tuesdays with Morrie*
+
+## Hook
+
+Fifteen days after his father died, a cardinal landed on the driver's side mirror
+of Rob Brizzi's car. He was seventeen years sober, to the day, sitting outside a
+nursing facility where he had just helped a family decide how to say goodbye. He
+took one picture. Then he started telling the truth.
+
+*The Cardinal's Promise* is the story of two fathers: Horacio, who stayed behind
+in Mexico City and never stopped calling, and Lou, the New Jersey landscaper who
+married Rob's mother, adopted her two boys, and spent forty years proving that
+love is not a speech. From Mexico City to New Jersey, from wrestling mats to
+prison cells, from the depths of addiction to the U-Haul rescue that kept him
+alive long enough to be saved — this is a son's account of the love that would
+not quit.
+
+And it is the story of what came after: seventeen years of sobriety, a marriage
+that began with a dating profile that said *don't write to me*, and the hospice
+work that taught Rob what his father had been teaching him all along — that the
+most anyone can do at the edge of a life is refuse to leave the room.
+
+One father kept calling. The other one kept coming. This is a book about
+chosen love — the kind that isn't owed, doesn't quit, and has to be decided
+again every single day. This book is the promise they were both making.
+
+## Author bio
+
+Rob Brizzi is a hospice liaison and Certified Dementia Practitioner. Born in
+Mexico City and raised in New Jersey, he is in long-term recovery and has made
+it his mission to sit with families in their hardest rooms. He lives in Raleigh,
+North Carolina, with his wife, Hope. *The Cardinal's Promise* is his first book.
+
+## Alternate: StoryBrand / Donald Miller style
+
+Someone you love is dying, or using, or waiting to be chosen. You don't know
+what to say. You're afraid you'll get it wrong.
+
+Rob Brizzi didn't know either — until a man named Lou taught him that showing
+up is the whole thing.
+
+Rob was adopted at eight. He nearly died of addiction in his twenties. Today
+he's a hospice liaison who sits with dying strangers for a living. This book
+is what he learned along the way, from the man who never had to love him and
+never let him doubt that he did.
+
+Read this book and you will:
+
+- Know what to say when someone is dying — or know it's okay to say nothing
+- Stop trying to fix people, and start staying with them instead
+- Break a cycle in your own family instead of repeating it
+- Believe you can still be chosen, no matter what you've already done
+
+You can walk away and wonder for the rest of your life if you could have
+stayed. Or you can read this book, and know.
+
+You don't need the right words. You just need to be in the room.
+
+*(Keyword categories for backend/discoverability: caregiving, adoption,
+addiction and recovery, end-of-life care, hospice, chosen family, fatherhood.)*
+
+## Elevator pitch (spoken one-liner, Donald Miller style)
+
+**Lead with this one — "chosen love" is the anchor phrase:**
+
+> "It's about chosen love — a father who had no reason to love me and chose
+> to anyway, every single day, for forty years."
+
+Tighter version of the same line:
+
+> "It's about a love that was chosen, not owed — and what that did to me."
+
+"Chosen love" is the book's own phrase for its central idea (it's the exact
+words the Epilogue and the Reader's Guide use), so leading with it means
+you're handing people the same phrase the book hands them — if they read it
+later, the pitch and the page rhyme.
+
+**Close second — "saying what needs to be said":**
+
+> "It's about learning to say the things that need saying before it's too
+> late — I learned it from my father, and now I help other families do it
+> at the bedside."
+
+This ties directly to Ch. 29 ("We were not unfinished") and the Epilogue's
+closing charge ("Say the great things while they can still hear you"). Use
+this one when the conversation is already about grief or aging parents;
+lead with "chosen love" everywhere else.
+
+**Alternates, by angle — use whichever fits the room:**
+
+- Father/adoption: "It's about the man who adopted me and never once made
+  me feel like I had to earn my place."
+- Addiction/recovery: "It's about the father who pulled me out of
+  addiction, and how I learned to do the same thing for other people."
+- Hospice/showing up: "It's about what I learned from my dad about showing
+  up — I use it now sitting with people while they die."
+- Cardinal/title: "It's about a promise my father kept his whole life, and
+  a cardinal that showed up the day I finally understood it."
+- Shortest/most repeatable: "It's about a dad who chose me, and what that
+  taught me about staying in the room."
+- Best icebreaker with strangers: "It's about how a father saved my life
+  from addiction — and how I've spent my career doing that for dying
+  strangers ever since."
+
+**If they lean in for more (30-second version):**
+
+> "I was born in Mexico, adopted at eight by a guy named Lou who had every
+> reason to walk away and never did. I ended up an addict, he pulled me out
+> of it, and now I sit with dying people for a living. The book's about
+> what he taught me, without ever saying a word about it."
+
+## Notes
+
+- Comp line is standard nominative use; do not imply endorsement by David Sheff
+  or Mitch Albom, and keep cover design distinct from both books.
+- Strongest possible upgrade: an actual blurb — send an advance copy to David
+  Sheff and to hospice-world authors (Hospice Foundation of America circles).
+- Alternate comp line if the hospice angle should lead: "For readers of
+  *Tuesdays with Morrie* and *Beautiful Boy*."
