@@ -47,7 +47,7 @@ You need Node.js 22.18 or newer (`node --version` to check), then:
 ```bash
 cd singalong
 npm install                                     # once; needed for typecheck/dev tooling
-SINGALONG_DB=./data.db npm run seed:program     # new facility + the 21-song kit
+SINGALONG_DB=./data.db npm run seed:program     # new facility + the 22-song kit
 SINGALONG_DB=./data.db npm start                # open http://localhost:4900
 ```
 
