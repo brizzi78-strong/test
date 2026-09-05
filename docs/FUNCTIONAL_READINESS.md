@@ -6,10 +6,10 @@ is not a launch approval; mainnet remains blocked until every external gate is c
 | System | Repository status | Production status |
 |---|---|---|
 | Contract identity | Cardinals Promise / CARD only | Not deployed |
-| Supply | 1B fixed; no transfer fee of any kind | Requires independent audit |
-| Treasury | Funded by an explicit launch-step transfer (checklist step 3) | Safe and signers not recorded here |
-| Distribution | 400M founder / 400M pool / 200M treasury | Not executed |
-| Pool rehearsal | Separate treasury, buy and sell exercised | Sepolia evidence required |
+| Supply | 1B fixed; immutable 2% transfer fee to an immutable treasury (treasury-exempt) | Requires independent audit |
+| Treasury | Single founder-held wallet, set as the constructor argument; funded by an explicit 600M launch-step transfer (checklist step 3), then seeds the pool fee-free | Address published on cp17.org; key custody not recorded here |
+| Distribution | 400M founder (deployer wallet, unlocked) / 400M pool (seeded from the treasury) / 200M treasury | Not executed |
+| Pool rehearsal | Pool seeded from the treasury signer; fee-aware buy and sell exercised from a separate buyer wallet | Sepolia evidence required |
 | Verification ledger | Claims mapped to tests and ABI checks | Regenerate artifact for deployed commit |
 | cp17.org | Static, no JavaScript, disclosure-first | Publish only with final proof links |
 | Cardinal Trading | Paper accounts; live links explicitly disabled | Hosting/security/counsel gates remain |
@@ -19,11 +19,12 @@ is not a launch approval; mainnet remains blocked until every external gate is c
 
 1. Qualified legal review of issuance, marketing, founder holding, Uniswap
    links, jurisdictions, and any future integrated purchase flow.
-2. CPA review of founder, treasury, compensation, vesting, and reporting.
+2. CPA review of founder, treasury, fee income, compensation, and reporting.
 3. Independent contract review or audit of the exact deployment commit.
-4. Sepolia seed, buy, sell, source verification, balance checks, and renouncement
-   rehearsal with public transaction links.
-5. Treasury Safe, signer policy, LP-lock provider, incident plan, and final public copy.
+4. Sepolia seed from the treasury, fee-aware buy and sell, source verification, balance
+   checks, and renouncement rehearsal with public transaction links.
+5. Treasury key custody, LP-lock provider, incident plan, and final public copy that states
+   the 2% fee and the ~4.5% round-trip cost plainly.
 
 ## Evidence standard
 
