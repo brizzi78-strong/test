@@ -1,13 +1,14 @@
 // Exercises the launch-day helpers end-to-end on the in-process simulated
 // network: deploy → check → fund treasury → simulate pool funding → check →
 // renounce → check. Also proves the guardrails fire (double-send blocked,
-// renounce blocked while the deployer still holds tokens). Runs with no real
+// renounce blocked until the staged pool inventory moves). Runs with no real
 // network and no real money:
 //
 //   npx hardhat run scripts/smoke-test-local.ts
 
 import assert from "node:assert/strict";
 import { network } from "hardhat";
+import { parseEther } from "viem";
 
 import {
   describeStage,
@@ -19,13 +20,13 @@ import {
 
 const { viem } = await network.create("hardhatMainnet");
 const publicClient = await viem.getPublicClient();
-const [deployerWallet, treasuryWallet, poolWallet] = await viem.getWalletClients();
+const [deployerWallet, treasuryWallet, poolWallet, buyerWallet] = await viem.getWalletClients();
 const deployer = deployerWallet.account.address;
 const treasury = treasuryWallet.account.address;
 const pool = poolWallet.account.address; // stands in for the Uniswap pair
 
-const token = await viem.deployContract("CardinalsPromise");
-console.log("deployed CardinalsPromise at", token.address);
+const token = await viem.deployContract("CardinalsPromise", [treasury]);
+console.log("deployed CARD at", token.address);
 
 // Fresh deploy → stage 1, no problems
 let state = await readState(token, deployer, treasury, pool);
@@ -53,8 +54,7 @@ console.log("✔ treasury funded:", verdict.stage);
 await assert.rejects(transferTreasury(token, publicClient, deployer, treasury), /already holds/);
 console.log("✔ second treasury transfer correctly blocked");
 
-// Renounce still blocked (deployer still holds the 400M pool inventory on
-// top of the 400M founder hold)
+// Renounce still blocked (the pool inventory is still in the treasury)
 await assert.rejects(
   renounce(token, publicClient, deployer, { treasury, pool }, { confirm: async () => true }),
   /ABORT/,
@@ -62,11 +62,20 @@ await assert.rejects(
 console.log("✔ renounce correctly blocked before pool is funded");
 
 // "Create the pool" via the practice helper
-await fundPoolSim(token, publicClient, deployer, treasury, pool);
+await fundPoolSim(token, publicClient, deployer, treasury, pool, treasury);
 
 // Running it twice must be blocked
-await assert.rejects(fundPoolSim(token, publicClient, deployer, treasury, pool), /already holds/);
+await assert.rejects(fundPoolSim(token, publicClient, deployer, treasury, pool, treasury), /already holds/);
 console.log("✔ second pool-sim transfer correctly blocked");
+
+// Simulate the token leg of a test buy. The pair loses the gross amount, the
+// buyer receives 98%, and treasury rises above its retained 200M. Launch guards
+// must accept this expected, disclosed fee delta.
+await token.write.transfer([buyerWallet.account.address, parseEther("1000")], {
+  account: poolWallet.account,
+});
+assert.equal(await token.read.balanceOf([buyerWallet.account.address]), parseEther("980"));
+assert.equal(await token.read.balanceOf([treasury]), parseEther("200000020"));
 
 state = await readState(token, deployer, treasury, pool);
 verdict = describeStage(state, deployer);
