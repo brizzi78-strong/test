@@ -1,0 +1,736 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Household net worth statement for September 5, 2026 — confirmed working total, the itemized account ledger behind it, property position, allocation and milestones.">
+<title>Household Ledger</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root {
+    --paper: #f6f7f2;
+    --paper-2: #edefe8;
+    --paper-3: #e2e7dd;
+    --ink: #131a16;
+    --ink-2: #525f57;
+    --ink-3: #83918a;
+    --rule: #d8ded3;
+    --rule-strong: #bcc5b8;
+    --accent: #1f6b4c;
+    --accent-soft: #dfeee6;
+    --pos: #1c7a55;
+    --brass: #8a6a1f;
+    --brass-soft: #f1e8d4;
+    --warn: #9a5a12;
+    /* Allocation ramp: one green, five steps of light. */
+    --a1: #0f4a33;
+    --a2: #1f6b4c;
+    --a3: #3f8e6a;
+    --a4: #6fb192;
+    --a5: #a6cebb;
+    /* The masthead stays a green-black in both themes: it is the identity. */
+    --band: #0d1512;
+    --band-ink: #f1f4ef;
+    --band-ink-2: #93a49a;
+    --band-rule: #23302a;
+    --band-accent: #63c79a;
+    --band-brass: #d3ac5b;
+    --shadow: 0 1px 2px rgba(13, 21, 18, .06);
+
+    --sp: clamp(20px, 4vw, 40px);
+    --measure: 62ch;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #0d1210;
+      --paper-2: #141a17;
+      --paper-3: #1c2420;
+      --ink: #e7ebe7;
+      --ink-2: #97a49c;
+      --ink-3: #6b7972;
+      --rule: #232c27;
+      --rule-strong: #37423b;
+      --accent: #58bd91;
+      --accent-soft: #142520;
+      --pos: #58bd91;
+      --brass: #cfa955;
+      --brass-soft: #262115;
+      --warn: #d0913c;
+      --a1: #1d7a55;
+      --a2: #2f966b;
+      --a3: #4cb287;
+      --a4: #77c9a5;
+      --a5: #a8ddc4;
+      --band: #070b09;
+      --band-rule: #1e2823;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .4);
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #0d1210;
+    --paper-2: #141a17;
+    --paper-3: #1c2420;
+    --ink: #e7ebe7;
+    --ink-2: #97a49c;
+    --ink-3: #6b7972;
+    --rule: #232c27;
+    --rule-strong: #37423b;
+    --accent: #58bd91;
+    --accent-soft: #142520;
+    --pos: #58bd91;
+    --brass: #cfa955;
+    --brass-soft: #262115;
+    --warn: #d0913c;
+    --a1: #1d7a55;
+    --a2: #2f966b;
+    --a3: #4cb287;
+    --a4: #77c9a5;
+    --a5: #a8ddc4;
+    --band: #070b09;
+    --band-rule: #1e2823;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .4);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Public Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 15px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  .wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 var(--sp);
+  }
+  .num { font-variant-numeric: tabular-nums; letter-spacing: -0.01em; }
+  .lab {
+    font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 10.5px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+
+  /* Hide-amounts mode ------------------------------------------------ */
+  .money { transition: filter .12s ease; }
+  html.private .money {
+    filter: blur(7px);
+    user-select: none;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; animation: none !important; }
+  }
+
+  /* Masthead --------------------------------------------------------- */
+  .masthead {
+    background: var(--band);
+    color: var(--band-ink);
+    border-bottom: 1px solid var(--band-rule);
+  }
+  .masthead .wrap { padding-top: 26px; padding-bottom: 34px; }
+  .mast-top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px 24px;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--band-rule);
+  }
+  .mark {
+    font-family: "Newsreader", Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    letter-spacing: .04em;
+    color: var(--band-ink);
+  }
+  .mark span { color: var(--band-ink-2); }
+  .mast-tools { display: flex; align-items: center; gap: 18px; }
+  .mast-date { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--band-ink-2); }
+
+  .figure {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px 40px;
+    padding-top: 28px;
+  }
+  .figure-main .lab { color: var(--band-ink-2); }
+  .headline {
+    font-family: "Newsreader", Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    font-size: clamp(3.4rem, 11vw, 5.6rem);
+    line-height: .95;
+    margin: 10px 0 0;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+  .headline .cur { font-size: .44em; vertical-align: .52em; color: var(--band-ink-2); margin-right: .06em; }
+  .headline-sub {
+    margin: 12px 0 0;
+    max-width: 46ch;
+    color: var(--band-ink-2);
+    font-size: 14px;
+  }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+  .chip {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 10.5px;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--band-ink-2);
+    border: 1px solid var(--band-rule);
+    border-radius: 2px;
+    padding: 4px 8px;
+  }
+  .chip.on { color: var(--band-accent); border-color: color-mix(in srgb, var(--band-accent) 40%, var(--band-rule)); }
+
+  .toggle {
+    display: inline-flex;
+    flex: none;
+    align-items: center;
+    gap: 9px;
+    background: transparent;
+    border: 1px solid var(--band-rule);
+    border-radius: 2px;
+    color: var(--band-ink-2);
+    font: inherit;
+    font-size: 12.5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .toggle:hover { color: var(--band-ink); border-color: var(--band-ink-2); }
+  .toggle .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--band-accent);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--band-accent) 22%, transparent);
+  }
+  html.private .toggle .dot { background: var(--band-brass); box-shadow: 0 0 0 3px color-mix(in srgb, var(--band-brass) 22%, transparent); }
+
+  /* Reconciliation strip --------------------------------------------- */
+  .recon { border-bottom: 1px solid var(--rule); background: var(--paper-2); }
+  .recon .wrap { padding-top: 22px; padding-bottom: 22px; }
+  .recon-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+  .recon-cell { background: var(--paper-2); padding: 14px 18px; }
+  .recon-cell .v {
+    font-family: "Newsreader", Georgia, serif;
+    font-size: 26px;
+    line-height: 1.2;
+    margin-top: 6px;
+    display: block;
+  }
+  .recon-cell .n { display: block; margin-top: 4px; font-size: 12.5px; color: var(--ink-2); }
+  .recon-cell.is-total .v { color: var(--accent); }
+  .recon-cell.is-gap .v { color: var(--ink-2); }
+  @media (max-width: 720px) { .recon-grid { grid-template-columns: 1fr; } }
+
+  /* Body layout ------------------------------------------------------- */
+  main .wrap {
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
+    gap: clamp(28px, 5vw, 56px);
+    padding-top: 40px;
+    padding-bottom: 16px;
+    align-items: start;
+  }
+  @media (max-width: 900px) { main .wrap { grid-template-columns: minmax(0, 1fr); } }
+
+  section + section { margin-top: 38px; }
+  .sec-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1.5px solid var(--ink);
+  }
+  .sec-head h2 {
+    font-family: "Newsreader", Georgia, serif;
+    font-weight: 500;
+    font-size: 22px;
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+  .sec-note { margin: 10px 0 0; color: var(--ink-2); font-size: 13px; max-width: var(--measure); }
+
+  /* Ledger ------------------------------------------------------------ */
+  .group-label {
+    display: block;
+    margin: 22px 0 6px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .row {
+    display: grid;
+    grid-template-columns: 26px minmax(0, 1fr) 84px minmax(0, auto);
+    align-items: center;
+    gap: 14px;
+    padding: 11px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .row:hover { background: color-mix(in srgb, var(--accent) 4%, transparent); }
+  .row .sigil {
+    width: 26px; height: 26px;
+    display: grid; place-items: center;
+    border: 1px solid var(--rule-strong);
+    border-radius: 2px;
+    font-family: "Newsreader", Georgia, serif;
+    font-size: 13px;
+    color: var(--ink-2);
+    background: var(--paper);
+  }
+  .row .name { font-weight: 500; }
+  .row .kind { display: block; font-size: 12px; color: var(--ink-3); }
+  .row .kind .tag {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 10px;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    color: var(--brass);
+    background: var(--brass-soft);
+    border-radius: 2px;
+    padding: 1px 5px;
+    margin-left: 6px;
+  }
+  .row .amt {
+    text-align: right;
+    font-family: "Newsreader", Georgia, serif;
+    font-size: 19px;
+    min-width: 8ch;
+  }
+  .bar { height: 6px; background: var(--paper-3); border-radius: 1px; overflow: hidden; }
+  .bar > i { display: block; height: 100%; background: var(--accent); opacity: .78; }
+  .row:hover .bar > i { opacity: 1; }
+  @media (max-width: 560px) {
+    .row { grid-template-columns: 26px minmax(0, 1fr) minmax(0, auto); }
+    .row .bar { display: none; }
+  }
+  .row.subtotal { border-bottom: 1.5px solid var(--ink); border-top: 1px solid var(--rule-strong); }
+  .row.subtotal .bar { visibility: hidden; }
+  .row.subtotal .name { font-weight: 600; }
+  .row.subtotal .amt { font-size: 21px; }
+
+  .memo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px 20px;
+    margin-top: 16px;
+    padding: 12px 14px;
+    background: var(--paper-2);
+    border-left: 2px solid var(--brass);
+  }
+  .memo .t { font-weight: 500; }
+  .memo .d { display: block; font-size: 12.5px; color: var(--ink-2); max-width: 52ch; }
+  .memo .amt { font-family: "Newsreader", Georgia, serif; font-size: 19px; color: var(--ink-2); text-decoration: line-through; text-decoration-color: var(--brass); }
+
+  /* Property ----------------------------------------------------------- */
+  .stack { display: grid; gap: 0; margin-top: 14px; }
+  .line {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 9px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .line .k { color: var(--ink-2); font-size: 13.5px; }
+  .line .v { font-family: "Newsreader", Georgia, serif; font-size: 19px; }
+  .line.is-equity { border-bottom: 1.5px solid var(--ink); }
+  .line.is-equity .k { color: var(--ink); font-weight: 600; }
+  .line.is-equity .v { color: var(--pos); font-size: 22px; }
+  .line .v.debt { color: var(--ink-2); }
+
+  .ltv { margin-top: 16px; }
+  .ltv-bar { display: flex; height: 14px; border: 1px solid var(--rule-strong); border-radius: 2px; overflow: hidden; }
+  .ltv-bar .mortgage {
+    background: repeating-linear-gradient(135deg, var(--paper-3) 0 5px, var(--paper-2) 5px 10px);
+    border-right: 1px solid var(--rule-strong);
+  }
+  .ltv-bar .equity { background: var(--pos); }
+  .ltv-key { display: flex; justify-content: space-between; gap: 12px; margin-top: 7px; }
+
+  /* Allocation --------------------------------------------------------- */
+  .alloc-band {
+    display: flex;
+    height: 30px;
+    margin-top: 16px;
+    border-radius: 2px;
+    overflow: hidden;
+    border: 1px solid var(--rule-strong);
+  }
+  .alloc-band .seg { transition: filter .12s ease; }
+  .alloc-band .seg + .seg { border-left: 1px solid var(--paper); }
+  .alloc-band .seg.is-active { filter: brightness(1.18) saturate(1.1); }
+  .legend { list-style: none; margin: 14px 0 0; padding: 0; }
+  .legend li {
+    display: grid;
+    grid-template-columns: 10px minmax(0, 1fr) auto auto;
+    gap: 12px;
+    align-items: baseline;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .legend li.is-active { background: color-mix(in srgb, var(--accent) 5%, transparent); }
+  .legend .swatch { width: 10px; height: 10px; border-radius: 2px; align-self: center; }
+  .legend .pct { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 12px; color: var(--ink-2); }
+  .legend .val { font-family: "Newsreader", Georgia, serif; font-size: 16px; text-align: right; min-width: 7ch; }
+
+  /* Milestones --------------------------------------------------------- */
+  .meter { padding: 14px 0; border-bottom: 1px solid var(--rule); }
+  .meter-top { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; }
+  .meter-top .t { font-weight: 500; }
+  .meter-top .p { font-family: "Newsreader", Georgia, serif; font-size: 20px; }
+  .meter-track {
+    position: relative;
+    height: 8px;
+    margin-top: 10px;
+    background: var(--paper-3);
+    border-radius: 1px;
+  }
+  .meter-track > i { display: block; height: 100%; background: var(--accent); border-radius: 1px; }
+  .meter-track.done > i { background: var(--a1); }
+  .meter-track .tick {
+    position: absolute;
+    top: 0; bottom: 0;
+    width: 2px;
+    background: var(--paper);
+  }
+  .meter .foot { display: flex; justify-content: space-between; gap: 12px; margin-top: 7px; }
+  .meter .status {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 10.5px;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+  }
+  .meter .status.passed { color: var(--brass); }
+  .meter .status.open { color: var(--ink-3); }
+
+  /* Footnotes ---------------------------------------------------------- */
+  .notes { border-top: 1px solid var(--rule); margin-top: 44px; }
+  .notes .wrap { padding-top: 26px; padding-bottom: 48px; }
+  .notes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 22px 44px; }
+  .note p { margin: 8px 0 0; font-size: 13px; color: var(--ink-2); max-width: var(--measure); }
+  .note sup { color: var(--brass); font-weight: 600; }
+  .colophon {
+    margin-top: 30px;
+    padding-top: 16px;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    justify-content: space-between;
+    color: var(--ink-3);
+    font-size: 12px;
+  }
+
+  @media print {
+    .toggle { display: none; }
+    body { background: #fff; color: #000; font-size: 11pt; }
+    .masthead { background: #fff; color: #000; border-bottom: 1.5pt solid #000; }
+    .mark, .headline, .figure-main .lab, .headline-sub, .chip { color: #000; }
+    main .wrap { grid-template-columns: 1fr; }
+    html.private .money { filter: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="mast-top">
+      <div class="mark">Household Ledger <span>· Brizzi</span></div>
+      <div class="mast-tools">
+        <span class="mast-date">Statement of September 5, 2026</span>
+        <button class="toggle" id="privacy" type="button" aria-pressed="false">
+          <span class="dot" aria-hidden="true"></span>
+          <span id="privacy-label">Hide amounts</span>
+        </button>
+      </div>
+    </div>
+    <div class="figure">
+      <div class="figure-main">
+        <span class="lab">Net worth · confirmed working total</span>
+        <p class="headline num money"><span class="cur">$</span>1,175,000</p>
+        <p class="headline-sub">Home equity included. Tesla sale proceeds are treated as already sitting in cash or brokerage and are not counted a second time.<sup>†</sup></p>
+        <div class="chips">
+          <span class="chip on">Home equity included</span>
+          <span class="chip">Tesla proceeds embedded</span>
+          <span class="chip">Manual + linked accounts</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="recon">
+  <div class="wrap">
+    <div class="recon-grid">
+      <div class="recon-cell is-total">
+        <span class="lab">Confirmed working total</span>
+        <span class="v num money">$1,175,000</span>
+        <span class="n">The household number of record.</span>
+      </div>
+      <div class="recon-cell">
+        <span class="lab">Itemized on this page</span>
+        <span class="v num money">$588,000</span>
+        <span class="n">Nine accounts, listed below.</span>
+      </div>
+      <div class="recon-cell is-gap">
+        <span class="lab">Held elsewhere, not itemized</span>
+        <span class="v num money">$587,000</span>
+        <span class="n">Balances inside the working total that this page does not break out yet.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="wrap">
+
+    <div class="col-main">
+      <section>
+        <div class="sec-head">
+          <h2>Accounts &amp; holdings</h2>
+          <span class="lab">Snapshot · manual</span>
+        </div>
+        <p class="sec-note">Balances entered by hand and last confirmed on the statement date. Bars show relative size within this list, not share of net worth.</p>
+
+        <span class="lab group-label">Major tracked balances</span>
+
+        <div class="row">
+          <span class="sigil" aria-hidden="true">F</span>
+          <span class="name">Fidelity retirement<span class="kind">Retirement</span></span>
+          <span class="bar" aria-hidden="true"><i style="width:94.1%"></i></span>
+          <span class="amt num money">$143,000</span>
+        </div>
+        <div class="row">
+          <span class="sigil" aria-hidden="true">I</span>
+          <span class="name">Other investments<span class="kind">Taxable investment account</span></span>
+          <span class="bar" aria-hidden="true"><i style="width:100%"></i></span>
+          <span class="amt num money">$152,000</span>
+        </div>
+        <div class="row">
+          <span class="sigil" aria-hidden="true">R</span>
+          <span class="name">Robinhood cash<span class="kind">Cash equivalent</span></span>
+          <span class="bar" aria-hidden="true"><i style="width:68.4%"></i></span>
+          <span class="amt num money">$104,000</span>
+        </div>
+        <div class="row">
+          <span class="sigil" aria-hidden="true">W</span>
+          <span class="name">Wells Fargo cash<span class="kind">Checking &amp; savings<span class="tag">counted once</span></span></span>
+          <span class="bar" aria-hidden="true"><i style="width:53.3%"></i></span>
+          <span class="amt num money">$81,000</span>
+        </div>
+        <div class="row">
+          <span class="sigil" aria-hidden="true">₿</span>
+          <span class="name">Crypto<span class="kind">Cryptocurrency</span></span>
+          <span class="bar" aria-hidden="true"><i style="width:15.8%"></i></span>
+          <span class="amt num money">$24,000</span>
+        </div>
+        <div class="row">
+          <span class="sigil" aria-hidden="true">P</span>
+          <span class="name">Publix stock<span class="kind">Private-company stock<span class="tag">estimate</span></span></span>
+          <span class="bar" aria-hidden="true"><i style="width:13.2%"></i></span>
+          <span class="amt num money">$20,000</span>
+        </div>
+
+        <span class="lab group-label">Other household accounts</span>
+
+        <div class="row">
+          <span class="sigil" aria-hidden="true">M</span>
+          <span class="name">Merrill Lynch Roth IRA<span class="kind">Retirement</span></span>
+          <span class="bar" aria-hidden="true"><i style="width:11.8%"></i></span>
+          <span class="amt num money">$18,000</span>
+        </div>
+        <div class="row">
+          <span class="sigil" aria-hidden="true">H</span>
+          <span class="name">HSA<span class="kind">Health savings account</span></span>
+          <span class="bar" aria-hidden="true"><i style="width:3.9%"></i></span>
+          <span class="amt num money">$6,000</span>
+        </div>
+        <div class="row">
+          <span class="sigil" aria-hidden="true">⌂</span>
+          <span class="name">Primary home equity<span class="kind">$650,000 value less $610,000 mortgage</span></span>
+          <span class="bar" aria-hidden="true"><i style="width:26.3%"></i></span>
+          <span class="amt num money">$40,000</span>
+        </div>
+        <div class="row subtotal">
+          <span class="sigil" aria-hidden="true">Σ</span>
+          <span class="name">Itemized total<span class="kind">Nine accounts</span></span>
+          <span class="bar" aria-hidden="true"></span>
+          <span class="amt num money">$588,000</span>
+        </div>
+
+        <div class="memo">
+          <span class="t">Tesla sale proceeds<span class="d">Sold July 30, 2026. Disclosed here for the record and deliberately not added again — the money is assumed to be inside the cash and brokerage balances above.<sup>†</sup></span></span>
+          <span class="amt num money">$37,500</span>
+        </div>
+      </section>
+    </div>
+
+    <div class="col-side">
+      <section>
+        <div class="sec-head">
+          <h2>The house</h2>
+          <span class="lab">Primary residence</span>
+        </div>
+        <div class="stack">
+          <div class="line"><span class="k">Estimated value</span><span class="v num money">$650,000</span></div>
+          <div class="line"><span class="k">Mortgage balance</span><span class="v num debt money">−$610,000</span></div>
+          <div class="line is-equity"><span class="k">Equity</span><span class="v num money">$40,000</span></div>
+        </div>
+        <div class="ltv">
+          <div class="ltv-bar" role="img" aria-label="Mortgage covers 93.8 percent of the home's value; equity is 6.2 percent.">
+            <span class="mortgage" style="width:93.8%"></span>
+            <span class="equity" style="width:6.2%"></span>
+          </div>
+          <div class="ltv-key">
+            <span class="lab">Financed 93.8%</span>
+            <span class="lab" style="color:var(--pos)">Owned 6.2%</span>
+          </div>
+        </div>
+        <p class="sec-note">Equity is thin against a 93.8% loan-to-value, so most of the house is still the bank's. It moves with the mortgage payoff, not with the market.</p>
+      </section>
+
+      <section>
+        <div class="sec-head">
+          <h2>Where it sits</h2>
+          <span class="lab">Of $588,000 itemized</span>
+        </div>
+        <div class="alloc-band" id="band" role="img" aria-label="Allocation of the itemized total: cash and equivalents 31.5 percent, retirement and tax-advantaged 28.4 percent, taxable investments 25.9 percent, crypto and private stock 7.5 percent, home equity 6.8 percent.">
+          <span class="seg" data-cat="cash" style="width:31.5%;background:var(--a1)"></span>
+          <span class="seg" data-cat="retire" style="width:28.4%;background:var(--a2)"></span>
+          <span class="seg" data-cat="taxable" style="width:25.9%;background:var(--a3)"></span>
+          <span class="seg" data-cat="risk" style="width:7.5%;background:var(--a4)"></span>
+          <span class="seg" data-cat="home" style="width:6.8%;background:var(--a5)"></span>
+        </div>
+        <ul class="legend" id="legend">
+          <li data-cat="cash"><span class="swatch" style="background:var(--a1)"></span><span>Cash &amp; equivalents</span><span class="pct num">31.5%</span><span class="val num money">$185,000</span></li>
+          <li data-cat="retire"><span class="swatch" style="background:var(--a2)"></span><span>Retirement &amp; tax-advantaged</span><span class="pct num">28.4%</span><span class="val num money">$167,000</span></li>
+          <li data-cat="taxable"><span class="swatch" style="background:var(--a3)"></span><span>Taxable investments</span><span class="pct num">25.9%</span><span class="val num money">$152,000</span></li>
+          <li data-cat="risk"><span class="swatch" style="background:var(--a4)"></span><span>Crypto &amp; private stock</span><span class="pct num">7.5%</span><span class="val num money">$44,000</span></li>
+          <li data-cat="home"><span class="swatch" style="background:var(--a5)"></span><span>Home equity</span><span class="pct num">6.8%</span><span class="val num money">$40,000</span></li>
+        </ul>
+        <p class="sec-note">Computed from the nine accounts above, not estimated. Nearly a third of the itemized money is sitting in cash.</p>
+      </section>
+
+      <section>
+        <div class="sec-head">
+          <h2>Milestones</h2>
+          <span class="lab">Against $1,175,000</span>
+        </div>
+
+        <div class="meter">
+          <div class="meter-top"><span class="t">$1M net worth</span><span class="p num">117.5%</span></div>
+          <div class="meter-track done"><i style="width:100%"></i><span class="tick" style="left:85.1%"></span></div>
+          <div class="foot"><span class="status passed">Passed · $175,000 over</span><span class="lab">Tick marks $1M</span></div>
+        </div>
+
+        <div class="meter">
+          <div class="meter-top"><span class="t">$1.5M next milestone</span><span class="p num">78.3%</span></div>
+          <div class="meter-track"><i style="width:78.3%"></i></div>
+          <div class="foot"><span class="status open">$325,000 to go</span><span class="lab">Full track = $1.5M</span></div>
+        </div>
+
+        <div class="meter">
+          <div class="meter-top"><span class="t">Equity in the home</span><span class="p num">6.2%</span></div>
+          <div class="meter-track"><i style="width:6.2%"></i></div>
+          <div class="foot"><span class="status open">$40,000 of $650,000 value</span><span class="lab">Full track = paid off</span></div>
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer class="notes">
+  <div class="wrap">
+    <div class="notes-grid">
+      <div class="note">
+        <span class="lab"><sup>†</sup> Accounting note</span>
+        <p>The Tesla sold on July 30, 2026 for $37,500. The proceeds are disclosed but not added to net worth, because they are assumed to have landed in the cash and brokerage balances already listed. Adding them again would double-count the same $37,500.</p>
+      </div>
+      <div class="note">
+        <span class="lab">Reconciliation</span>
+        <p>The nine itemized accounts total $588,000. The confirmed working total is $1,175,000, so $587,000 of the household position is not broken out on this page. Item those accounts here when you want the ledger to tie out.</p>
+      </div>
+      <div class="note">
+        <span class="lab">Method</span>
+        <p>Values are approximate and entered by hand. Publix stock is a private-company estimate. Percentages are rounded and may not add to exactly 100.</p>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>Personal planning dashboard · approximate values</span>
+      <span>Not a statement from any financial institution.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    var btn = document.getElementById("privacy");
+    var label = document.getElementById("privacy-label");
+
+    function apply(on) {
+      root.classList.toggle("private", on);
+      btn.setAttribute("aria-pressed", on ? "true" : "false");
+      label.textContent = on ? "Show amounts" : "Hide amounts";
+    }
+
+    var saved = false;
+    try { saved = localStorage.getItem("ledger-private") === "1"; } catch (e) {}
+    apply(saved);
+
+    btn.addEventListener("click", function () {
+      var on = !root.classList.contains("private");
+      apply(on);
+      try { localStorage.setItem("ledger-private", on ? "1" : "0"); } catch (e) {}
+    });
+
+    // Allocation band and legend highlight each other.
+    var band = document.getElementById("band");
+    var legend = document.getElementById("legend");
+    function highlight(cat, on) {
+      [band, legend].forEach(function (host) {
+        Array.prototype.forEach.call(host.children, function (el) {
+          if (el.dataset.cat === cat) el.classList.toggle("is-active", on);
+        });
+      });
+    }
+    [band, legend].forEach(function (host) {
+      host.addEventListener("mouseover", function (e) {
+        var el = e.target.closest("[data-cat]");
+        if (el) highlight(el.dataset.cat, true);
+      });
+      host.addEventListener("mouseout", function (e) {
+        var el = e.target.closest("[data-cat]");
+        if (el) highlight(el.dataset.cat, false);
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>
