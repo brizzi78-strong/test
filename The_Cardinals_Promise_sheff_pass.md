@@ -1051,7 +1051,7 @@ They held me until I was sober enough to leave. There was no pleading this one d
 
 For years I told the story as a joke — the nachos, the parking lot, the absurdity. The joke was armor. The truth was two DUIs and a Tijuana jail in four years. That was the real scorecard.
 
-The elevator was still going down.
+The problem with hitting rock bottom is that sometimes you bounce. And then you have to hit again. And again. My elevator hadn't yet reached bottom.
 
 **CHAPTER 13**
 
