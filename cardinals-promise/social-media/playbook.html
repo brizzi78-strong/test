@@ -4,57 +4,26 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
 <style>
   :root {
-    --ground: #F7F4F3;
-    --surface: #FFFFFF;
-    --surface-sunk: #F1ECEA;
-    --ink: #22191A;
-    --ink-muted: #6E6260;
-    --ink-faint: #948682;
-    --rule: #E2DAD8;
-    --rule-strong: #CFC4C1;
-    --accent: #A8281E;
-    --accent-soft: #F3E2DF;
-    --urgent-red: #A8281E;
-    --urgent-purple: #6B4C7A;
-    --urgent-blue: #2E5B7A;
+    /* One committed world: deep navy ground, warm off-white ink,
+       cardinal red as the single accent — a red bird against night. */
+    --ground: #0F1B2D;
+    --surface: #16243A;
+    --surface-sunk: #0A1421;
+    --ink: #EDE8E2;
+    --ink-muted: #AAB4C3;
+    --ink-faint: #8A97AA;
+    --rule: #26364F;
+    --rule-strong: #3B4D69;
+    --accent: #E4675A;
+    --accent-soft: #2E1F27;
+    --accent-line: #7C3D35;
+    --urgent-red: #E4675A;
+    --urgent-purple: #B79AD0;
+    --urgent-blue: #7FB6DD;
     --serif: "Newsreader", Georgia, "Times New Roman", serif;
     --sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     --measure: 34rem;
     --shell: 68rem;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --ground: #191313;
-      --surface: #221B1B;
-      --surface-sunk: #150F10;
-      --ink: #EFE7E5;
-      --ink-muted: #A89996;
-      --ink-faint: #7E706D;
-      --rule: #362C2C;
-      --rule-strong: #4A3D3D;
-      --accent: #E4695C;
-      --accent-soft: #37211F;
-      --urgent-red: #E4695C;
-      --urgent-purple: #B191C2;
-      --urgent-blue: #74A8CC;
-    }
-  }
-
-  :root[data-theme="dark"] {
-    --ground: #191313;
-    --surface: #221B1B;
-    --surface-sunk: #150F10;
-    --ink: #EFE7E5;
-    --ink-muted: #A89996;
-    --ink-faint: #7E706D;
-    --rule: #362C2C;
-    --rule-strong: #4A3D3D;
-    --accent: #E4695C;
-    --accent-soft: #37211F;
-    --urgent-red: #E4695C;
-    --urgent-purple: #B191C2;
-    --urgent-blue: #74A8CC;
   }
 
   * { box-sizing: border-box; }
@@ -269,7 +238,7 @@
     line-height: 1.5;
     margin: 0;
     padding: 0.75rem 0 0.75rem 1rem;
-    border-left: 2px solid var(--accent-soft);
+    border-left: 2px solid var(--accent-line);
     color: var(--ink);
   }
 
