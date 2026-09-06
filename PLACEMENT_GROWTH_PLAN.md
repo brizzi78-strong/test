@@ -207,6 +207,17 @@ smaller, less gatekept, and their discharge volume is steady.
 - [ ] **Elder law attorneys, geriatric care managers, financial advisors** —
       5–10 introductions. Slower to convert, but they catch families
       *pre-crisis* and those referrals skew private-pay.
+- [ ] **Care managers specifically** (Aging Life Care Professionals — RNs and
+      social workers families hire at ~$150–250/hr): the best second-ring
+      channel for a memory-care, $6,500-floor business, because their clients
+      are private-pay by definition. They refer out the tours they don't want
+      to bill for, and only to agencies they trust not to steer — the
+      disclosure line wins them. **Never pay them per referral** (licensed
+      clinicians; ALCA ethics forbid it). Earn it with placements that stick
+      and by sending them the complex families who need oversight after
+      move-in. Find them in the ALCA directory by zip and through elder law
+      attorneys. Not a service line to add — it conflicts with taking
+      community fees and reintroduces clinical liability; partner instead.
 - [ ] **Triangle J Area Agency on Aging** — get known. Senior centers, county
       resource fairs.
 - [ ] **Google Business Profile** claimed and complete. Free, and it's how a
