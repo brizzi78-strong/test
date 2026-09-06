@@ -971,7 +971,7 @@ I took a sales job in 2002. For a while it felt like proof California hadn't bro
 
 The job was selling uniform services to businesses: cold calls, presentations, lunches in parking lots while I ran the next hour in my head. The quota was real. Your manager knew your numbers before breakfast. I loved the structure — clear rules, clear targets, a scoreboard that updated every day. Lou had raised me in the language of milestones and metrics, where doing the work would show up in the results.
 
-For the first six months I wasn't using. I called Lou on Sundays and gave him the numbers. He never sounded as impressed as I wanted him to.
+For the first six months I was managing it. I called Lou on Sundays and gave him the numbers. He never sounded as impressed as I wanted him to.
 
 "You doing okay out there?" he'd ask.
 
@@ -981,7 +981,7 @@ For the first six months I wasn't using. I called Lou on Sundays and gave him th
 
 *What's happiness got to do with it? I'm successful. Isn't that enough?*
 
-### *Started Using*
+### *The Pills*
 
 The pills came slowly. There was no single decision, just a long week, a rough stretch of no's, a body tired of being on all day and a brain that didn't know how to shut off at night. Once I started, I didn't stop.
 
