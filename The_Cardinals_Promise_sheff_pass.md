@@ -922,8 +922,6 @@ Lou could have sent me to community college, a local school, a hundred cheaper o
 
 He worked two jobs in those years, and one of them was at a garden center, planting trees, a man in his fifties down on his knees in the dirt. And I was selfish with it. I'd call him for more money, not for books or rent but for drinking and going out, and he sent it every time. I didn't think twice about where it came from or what it cost him. It was the first time in my life I'd felt accepted by people my own age, and next to that, nothing else registered.
 
-If he was in pain he wouldn't use the word.
-
 The man who made it possible was sharing a rental in Mahwah, paying back loans for years, never once making the cost feel like something I owed him. I graduated in May 2000, Lou and my mom in the crowd, tracking the sea of identical caps until they found mine. I pointed my car west. California beckoned.
 
 PART THREE
@@ -1409,7 +1407,7 @@ When the recruiter asked what I'd been doing for the last five years, I didn't o
 
 A recruiter. Someone who knew someone, the way it happens in a town like Pensacola. We're looking for someone to build relationships for a home health company, nursing, PT, OT, patients who can't get to clinics. We need someone who can develop referral sources. Healthcare. The word landed with weight. Not excitement. Something quieter.
 
-"I have medical sales experience," I said. "But it's been a while." "How long?" "About five years." "And what have you been doing since? There it was. I didn't spin it, and I didn't tell the whole story either. "Some bumps in the road," I said. "I've been rebuilding." Silence, not uncomfortable, just space. "Can you come in for an interview?"
+"I have medical sales experience," I said. "But it's been a while." "How long?" "About five years." "And what have you been doing since?" There it was. I didn't spin it, and I didn't tell the whole story either. "Some bumps in the road," I said. "I've been rebuilding." Silence, not uncomfortable, just space. "Can you come in for an interview?"
 
 Caroline, the home health leader who would hire me, didn't waste time. She read my résumé the way people do when they're not looking to be impressed, following the rise all the way to where it stopped. She didn't ask about the gaps. She asked about trust. How do you build it with people who don't know you? What do you do when the territory's cold and the numbers aren't there? How do you stay consistent when results don't come? I talked about discipline without ego, doing the work because it's right, not because someone's watching. Rejection as information, not a verdict. I talked about the pool, scanning the water when nothing was happening, how the job was the same whether anyone needed saving or not. She listened. Wrote. Looked up only when something mattered.
 
