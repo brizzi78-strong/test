@@ -345,3 +345,90 @@ await test("the calendar button produces a downloadable file", async () => {
   expect(dl.suggestedFilename()).toMatch(/^cardinal-deadlines-\d{4}-\d{2}-\d{2}\.ics$/);
   await p.__ctx.close();
 });
+
+/* ------------------------------------------------- plan defaults from registry */
+
+suite("automation · plan defaults");
+
+await test("planRoute surfaces a structured auth cycle when the rule has one", () => {
+  const { planRoute } = load({ "cc-rules-v1": [RULE({ cycle: 3 })] });
+  expect(planRoute("Aetna MA").cycle).toBe(3);
+});
+
+await test("no cycle on the rule means no cycle suggested", () => {
+  const { planRoute } = load({ "cc-rules-v1": [RULE()] });
+  expect(planRoute("Aetna MA").cycle).toBe(null);
+  const { planRoute: pr2 } = load({ "cc-rules-v1": [RULE({ cycle: 0 })] });
+  expect(pr2("Aetna MA").cycle).toBe(null);
+});
+
+await test("choosing a plan fills the cycle and shows where to file", async () => {
+  const p = await open("tracker.html", {
+    storage: { "cc-rules-v1": [RULE({ cycle: 3, value: "Submit through Availity." })] },
+  });
+  await p.click("#addBtn");
+  await p.fill("#fCycle", "7");                 // a stale prior value must be replaced
+  await p.fill("#fPlan", "Aetna MA");
+  expect(await p.inputValue("#fCycle")).toBe("3");
+  expect(await p.isVisible("#planHint")).toBeTruthy();
+  expect(await p.textContent("#planHint")).toContain("Availity");
+  expect(p.__errors).toEqual([]);
+  await p.__ctx.close();
+});
+
+await test("an unknown plan leaves the cycle alone and hides the hint", async () => {
+  const p = await open("tracker.html", { storage: { "cc-rules-v1": [RULE({ cycle: 3 })] } });
+  await p.click("#addBtn");
+  await p.fill("#fCycle", "5");
+  await p.fill("#fPlan", "Some Other Plan");
+  expect(await p.inputValue("#fCycle")).toBe("5");
+  expect(await p.isVisible("#planHint")).toBeFalsy();
+  await p.__ctx.close();
+});
+
+await test("a stale registry rule is flagged in the dialog", async () => {
+  const p = await open("tracker.html", {
+    storage: { "cc-rules-v1": [RULE({ cycle: 3, verified: dayFromToday(-400) })] },
+  });
+  await p.click("#addBtn");
+  await p.fill("#fPlan", "Aetna MA");
+  expect(await p.textContent("#planHint")).toContain("unverified");
+  await p.__ctx.close();
+});
+
+await test("the plan list is fed from the registry, deduplicated", async () => {
+  const p = await open("tracker.html", {
+    storage: { "cc-rules-v1": [RULE({ plan: "Brand New Plan MA" }), RULE({ id: "r2", plan: "Aetna MA" })] },
+  });
+  await p.click("#addBtn");
+  const opts = await p.$$eval("#planList option", (els) => els.map((e) => e.textContent));
+  expect(opts.includes("Brand New Plan MA")).toBeTruthy();
+  expect(opts.filter((o) => o === "Aetna MA").length).toBe(1);
+  await p.__ctx.close();
+});
+
+await test("opening an existing case does not silently overwrite its cycle", async () => {
+  // Autofill runs on a plan *change*, never on merely opening the dialog.
+  const p = await open("tracker.html", {
+    storage: {
+      "ma-case-tracker-v1": [aCase({ id: "k1", cid: "K-1", plan: "Aetna MA", cycle: 14 })],
+      "cc-rules-v1": [RULE({ cycle: 3 })],
+    },
+  });
+  await p.click('[data-edit="k1"]');
+  expect(await p.inputValue("#fCycle")).toBe("14");
+  await p.__ctx.close();
+});
+
+await test("registry rule with a cycle round-trips through the rules editor", async () => {
+  const p = await open("rules.html", { storage: { "cc-rules-v1": [RULE()] } });
+  await p.click('[data-edit="r1"]');
+  await p.fill("#rCycle", "3");
+  await p.click('#dlg button[type="submit"]');
+  await p.waitForTimeout(150);
+  const saved = await p.evaluate(() => JSON.parse(localStorage.getItem("cc-rules-v1")));
+  expect(saved.find((r) => r.id === "r1").cycle).toBe(3);
+  expect(await p.textContent("body")).toContain("3-day auth cycle");
+  expect(p.__errors).toEqual([]);
+  await p.__ctx.close();
+});

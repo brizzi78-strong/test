@@ -195,6 +195,14 @@ is deliberately no second copy of the deadline math anywhere.
   date and the covered-through date **as the NOMNC effective date**, which is
   the field most often mistyped. The letter page reads these from the URL and
   never persists them — `saveFac()` still writes facility fields only.
+- **Plan defaults** — the plan list in the case dialog is fed from the rules
+  registry (deduplicated against the built-in list), so names typed here match
+  the names rules are filed under. Choosing a plan fills its authorization
+  cycle from the registry's optional *Auth cycle (days)* field and shows the
+  submission route inline under the field, with the same due/stale flag. This
+  runs on a plan *change* only — opening an existing case never overwrites
+  what was saved. The seed rules ship with no cycle set; enter the interval a
+  plan actually uses rather than assuming one.
 
 **Demo data.** The *Demo data* button loads a five-case anonymised caseload dated
 relative to today: **two red, two amber, one green**, at $7,050 exposure. The two
@@ -259,7 +267,7 @@ file is safe to email to billing.
 
 ## Tests
 
-`node cardinal-coverage/tests/run.mjs` — **215 tests, 12 lanes, currently green.**
+`node cardinal-coverage/tests/run.mjs` — **223 tests, 12 lanes, currently green.**
 Exits non-zero on failure. Two styles: `sandbox()` pulls pure helpers out of a
 page's inline `<script>` and exercises them with no DOM; `open()` drives the real
 `file://` page in Chromium via Playwright with seedable `localStorage`, collecting

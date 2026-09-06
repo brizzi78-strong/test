@@ -181,6 +181,8 @@
       <div><label for="rBy">Confirmed by</label><input id="rBy" placeholder="Initials"></div>
       <div><label for="rEffective">Rule effective date (optional)</label><input id="rEffective" type="date"></div>
     </div>
+    <div><label for="rCycle">Auth cycle (days) — optional</label><input id="rCycle" type="number" min="1" max="120" placeholder="e.g. 3">
+      <p class="hint">Only for a fixed reauthorization interval. The tracker fills this in automatically when the plan is chosen.</p></div>
     <div><label for="rNote">Note / caveat</label><textarea id="rNote" placeholder="Applies to NC only — the 2026 EviCore post-acute program covers NJ, NY, PA, WV."></textarea></div>
     <div class="dlg-actions">
       <button type="button" class="btn ghost sm del" id="delBtn">Delete</button>
@@ -346,7 +348,7 @@ function render(){
         return `<article class="rule ${f.k}">
           <div class="rhead">
             <span class="rtype">${esc(r.type)}</span>
-            <span class="rscope">${esc(r.state)} · ${esc(r.product)}${r.effective?` · effective ${fmtD(parseD(r.effective))}`:""}</span>
+            <span class="rscope">${esc(r.state)} · ${esc(r.product)}${r.effective?` · effective ${fmtD(parseD(r.effective))}`:""}${+r.cycle>0?` · ${+r.cycle}-day auth cycle`:""}</span>
             <span class="spacer"></span>
             <span class="badge ${f.k}">${f.k==="fresh"?"fresh":f.k==="due"?"due for review":"STALE"}</span>
             <button class="btn ghost sm" data-edit="${esc(r.id)}">Edit</button>
@@ -379,6 +381,7 @@ function openDlg(id){
   $("rState").value = r?.state ?? "NC";
   $("rProduct").value = r?.product ?? "Medicare Advantage";
   $("rType").value = r?.type ?? "Authorization submission route";
+  $("rCycle").value = r?.cycle ?? "";
   $("rValue").value = r?.value ?? "";
   $("rSource").value = r?.source ?? "";
   $("rVerified").value = r?.verified ?? toISO(today());
@@ -398,6 +401,7 @@ $("ruleForm").addEventListener("submit", () => {
     product: $("rProduct").value, type: $("rType").value,
     value: $("rValue").value.trim(), source: $("rSource").value.trim(),
     verified: $("rVerified").value, interval: +$("rInterval").value || 90,
+    cycle: +$("rCycle").value > 0 ? +$("rCycle").value : null,
     by: $("rBy").value.trim(), effective: $("rEffective").value,
     note: $("rNote").value.trim(),
     history: prev?.history ? [...prev.history] : [],
