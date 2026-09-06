@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="light dark">
+<title>Outcomes Log — Cardinal Coverage</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23A31B33'/%3E%3Ctext x='16' y='23' font-family='system-ui' font-size='20' font-weight='900' text-anchor='middle' fill='white'%3EC%3C/text%3E%3C/svg%3E">
+<style>
+  :root{--paper:#F7F2E6;--surface:#FFFDF7;--surface-2:#EFE7D3;--ink:#17233F;--muted:#6B6350;--line:#E2D9C3;
+    --brand:#A31B33;--brand-strong:#7E1226;--good:#2E7D4F;--good-bg:#E4F0E8;--warn:#9A6410;--warn-bg:#F6ECD6;
+    --crit:#B23A3A;--crit-bg:#F6E1DE;--shadow:0 1px 2px rgba(23,35,63,.07),0 10px 26px -14px rgba(23,35,63,.24);
+    --font:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --serif:ui-serif,Georgia,"Times New Roman",serif;--r:14px;}
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#101627;--surface:#172033;--surface-2:#1F2A42;--ink:#F3EEE1;
+    --muted:#A9A28F;--line:#2B3855;--brand:#E2586B;--brand-strong:#F27A8B;--good:#4FBE86;--good-bg:#12321f;
+    --warn:#D6A24A;--warn-bg:#33280f;--crit:#E07B6E;--crit-bg:#3a1d1a;--shadow:0 1px 2px rgba(0,0,0,.45),0 12px 32px -14px rgba(0,0,0,.65);}}
+  :root[data-theme="dark"]{--paper:#101627;--surface:#172033;--surface-2:#1F2A42;--ink:#F3EEE1;--muted:#A9A28F;--line:#2B3855;--brand:#E2586B;--brand-strong:#F27A8B;--good:#4FBE86;--good-bg:#12321f;--warn:#D6A24A;--warn-bg:#33280f;--crit:#E07B6E;--crit-bg:#3a1d1a;}
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);line-height:1.5;}
+  .wrap{max-width:1180px;margin-inline:auto;padding:0 clamp(.8rem,3vw,1.6rem);}
+  header.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+  .top-in{max-width:1180px;margin-inline:auto;padding:.7rem clamp(.8rem,3vw,1.6rem);display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;}
+  .logo{width:32px;height:32px;border-radius:9px;background:var(--brand);color:#fff;font-weight:900;display:grid;place-items:center;flex:none;}
+  h1{font-size:1.02rem;margin:0;font-weight:800;}
+  h1 small{display:block;font-weight:600;font-size:.68rem;color:var(--muted);}
+  .toolnav{display:flex;gap:.15rem;margin-left:.4rem;}
+  .toolnav a{font-size:.78rem;font-weight:700;color:var(--muted);text-decoration:none;padding:.3rem .6rem;border-radius:8px;}
+  .toolnav a:hover{color:var(--brand);background:var(--surface-2);}
+  .toolnav a[aria-current]{background:var(--brand);color:#fff;}
+  .spacer{margin-left:auto;}
+  .btn{background:var(--brand);color:#fff;border:0;border-radius:10px;padding:.5rem .9rem;font:inherit;font-weight:700;cursor:pointer;}
+  .btn:hover{background:var(--brand-strong);}
+  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line);}
+  .btn.ghost:hover{border-color:var(--brand);color:var(--brand);}
+  .btn.sm{padding:.28rem .55rem;font-size:.76rem;border-radius:8px;}
+
+  .phi{background:var(--warn-bg);border:1px solid var(--warn);border-radius:10px;padding:.6rem .85rem;font-size:.83rem;margin:1rem 0;}
+  .phi b{color:var(--warn);}
+
+  .streak{display:flex;align-items:center;gap:1rem;background:var(--surface);border:1px solid var(--line);
+    border-left:5px solid var(--brand);border-radius:var(--r);padding:.9rem 1.1rem;margin:1rem 0;box-shadow:var(--shadow);flex-wrap:wrap;}
+  .streak .big{font-size:2rem;font-weight:900;color:var(--brand);line-height:1;letter-spacing:-.02em;}
+  .streak .txt{font-size:.9rem;}
+  .streak .txt b{font-weight:800;}
+  .streak .sub{font-size:.78rem;color:var(--muted);}
+  .dots{display:flex;gap:3px;margin-left:auto;}
+  .dots i{width:11px;height:22px;border-radius:3px;background:var(--surface-2);border:1px solid var(--line);}
+  .dots i.on{background:var(--good);border-color:var(--good);}
+  .dots i.today{outline:2px solid var(--brand);outline-offset:1px;}
+
+  .period{display:flex;gap:.4rem;margin:1.2rem 0 .8rem;flex-wrap:wrap;align-items:center;}
+  .period button{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:.32rem .8rem;font:inherit;font-size:.8rem;font-weight:700;cursor:pointer;color:var(--muted);}
+  .period button[aria-pressed="true"]{background:var(--brand);border-color:var(--brand);color:#fff;}
+
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:.8rem;margin-bottom:1.2rem;}
+  .c{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:.85rem 1rem;box-shadow:var(--shadow);}
+  .c .k{font-size:.63rem;font-weight:900;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);}
+  .c .v{font-size:1.75rem;font-weight:800;letter-spacing:-.025em;line-height:1.15;margin-top:.2rem;}
+  .c .d{font-size:.72rem;color:var(--muted);margin-top:.15rem;}
+  .c.good .v{color:var(--good);} .c.bad .v{color:var(--crit);} .c.money .v{color:var(--brand);}
+
+  .sentence{background:var(--surface-2);border:1px solid var(--line);border-radius:var(--r);padding:1.1rem 1.2rem;margin-bottom:1.4rem;}
+  .sentence .k{font-size:.63rem;font-weight:900;letter-spacing:.09em;text-transform:uppercase;color:var(--brand);margin-bottom:.4rem;}
+  .sentence p{margin:0;font-family:var(--serif);font-size:1.02rem;line-height:1.55;}
+  .sentence .note{font-size:.75rem;color:var(--muted);margin-top:.6rem;font-family:var(--font);}
+
+  table{width:100%;border-collapse:collapse;font-size:.86rem;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;}
+  .tw{overflow-x:auto;border-radius:var(--r);box-shadow:var(--shadow);margin-bottom:2.5rem;}
+  th{font-size:.63rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);text-align:left;padding:.6rem .8rem;background:var(--surface-2);border-bottom:1px solid var(--line);white-space:nowrap;}
+  td{padding:.55rem .8rem;border-bottom:1px solid var(--line);vertical-align:top;}
+  tr:last-child td{border-bottom:0;}
+  .pill{display:inline-block;border-radius:999px;padding:.12rem .55rem;font-size:.71rem;font-weight:800;white-space:nowrap;background:var(--surface-2);}
+  .pill.win{background:var(--good-bg);color:var(--good);}
+  .pill.loss{background:var(--crit-bg);color:var(--crit);}
+  .pill.late{background:var(--warn-bg);color:var(--warn);}
+  .num{font-variant-numeric:tabular-nums;white-space:nowrap;}
+
+  dialog{border:1px solid var(--line);border-radius:var(--r);background:var(--surface);color:var(--ink);padding:0;max-width:560px;width:calc(100% - 2rem);box-shadow:0 24px 60px -20px rgba(0,0,0,.5);}
+  dialog::backdrop{background:rgba(10,14,26,.55);}
+  .dlg-in{padding:1.2rem 1.3rem 1.3rem;}
+  dialog h2{margin:0 0 .8rem;font-size:1.12rem;}
+  label{display:block;font-size:.68rem;font-weight:800;letter-spacing:.04em;color:var(--muted);margin:.6rem 0 .18rem;text-transform:uppercase;}
+  input,select,textarea{width:100%;padding:.5rem .6rem;border:1px solid var(--line);border-radius:9px;background:var(--paper);color:var(--ink);font:inherit;font-size:.9rem;}
+  textarea{resize:vertical;min-height:3.4rem;}
+  input:focus,select:focus,textarea:focus{outline:2px solid var(--brand);outline-offset:1px;}
+  .g2{display:grid;grid-template-columns:1fr 1fr;gap:0 .8rem;}
+  @media(max-width:520px){.g2{grid-template-columns:1fr;}}
+  .hint{font-size:.71rem;color:var(--muted);margin:.2rem 0 0;}
+  .dlg-actions{display:flex;gap:.6rem;justify-content:flex-end;margin-top:1rem;flex-wrap:wrap;}
+  .dlg-actions .del{margin-right:auto;color:var(--crit);border-color:var(--crit);}
+
+  .empty{text-align:center;color:var(--muted);padding:2.6rem 1rem;font-size:.93rem;}
+  footer{color:var(--muted);font-size:.75rem;padding:.5rem 0 3rem;line-height:1.6;}
+
+  @media print{ header.top,.btn,.phi,.period,dialog{display:none!important;} body{background:#fff;} .tw{box-shadow:none;} }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <span class="logo" aria-hidden="true">C</span>
+    <h1>Outcomes Log<small>The number that sets your price and fixes your traction slide</small></h1>
+    <nav class="toolnav">
+      <a href="index.html">Home</a>
+      <a href="tracker.html">Tracker</a>
+      <a href="appeal-letters.html">Letters</a>
+      <a href="outcomes.html" aria-current="page">Outcomes</a>
+      <a href="rules.html">Rules</a>
+    </nav>
+    <span class="spacer"></span>
+    <button class="btn" id="addBtn">+ Log event</button>
+    <button class="btn ghost" id="csvBtn">Export CSV</button>
+    <button class="btn ghost" id="printBtn">Print</button>
+    <button class="btn ghost" id="themeBtn" aria-label="Toggle theme">◐</button>
+  </div>
+</header>
+
+<div class="wrap">
+  <p class="phi"><b>Keep PHI out of this log.</b> Use the same case ID, initials, or room number you use in the tracker — not full names. Data is stored only in this browser and never transmitted. Reconcile dollar figures against your remittance advice before quoting them to anyone; a number you cannot source is worse than no number.</p>
+
+  <div class="streak" id="streak"></div>
+
+  <div class="period" id="period">
+    <span style="font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-right:.3rem;">Period</span>
+    <button data-d="30" aria-pressed="false">Last 30 days</button>
+    <button data-d="90" aria-pressed="true">Last 90 days</button>
+    <button data-d="365" aria-pressed="false">Last year</button>
+    <button data-d="0" aria-pressed="false">All time</button>
+  </div>
+
+  <div class="cards" id="cards"></div>
+  <div class="sentence" id="sentence"></div>
+  <div class="tw" id="tableWrap"></div>
+
+  <footer>
+    <p><b>How the metrics are computed.</b> On-time rate counts authorization submissions logged on time against all submissions logged. Appeal win rate counts decided appeals only — pending appeals are excluded from both numerator and denominator, so the rate is not diluted by open cases. Covered days recovered and dollars protected sum only won-appeal and recovered-days events; the fields are disabled on every other event type. Pending appeals are counted per case across all events, not just the selected window, and a win rate is withheld below five decided appeals. Future-dated or unreadable entries are excluded from every total and flagged.</p>
+    <p>This is a working measurement aid, not an accounting system. Before any figure is used in an investor conversation or a price negotiation, reconcile it against remittance advice and your billing system.</p>
+  </footer>
+</div>
+
+<dialog id="dlg">
+  <form method="dialog" class="dlg-in" id="evForm">
+    <h2 id="dlgTitle">Log event</h2>
+    <div class="g2">
+      <div><label for="fDate">Date</label><input id="fDate" type="date" required></div>
+      <div><label for="fCase">Case ID / initials</label><input id="fCase" required maxlength="40" placeholder="214-B">
+        <p class="hint">No full names.</p></div>
+    </div>
+    <div class="g2">
+      <div><label for="fPlan">Plan</label><input id="fPlan" list="planL" placeholder="Aetna MA">
+        <datalist id="planL"><option>Aetna MA</option><option>WellCare MA</option><option>Humana MA</option><option>UnitedHealthcare MA</option><option>Blue Cross NC MA</option><option>Cigna MA</option><option>Traditional Medicare</option></datalist></div>
+      <div><label for="fType">Event</label>
+        <select id="fType">
+          <optgroup label="Authorization">
+            <option>Auth submitted — on time</option>
+            <option>Auth submitted — late</option>
+            <option>Auth approved</option>
+          </optgroup>
+          <optgroup label="Adverse">
+            <option>Denial received</option>
+            <option>NOMNC issued</option>
+          </optgroup>
+          <optgroup label="Appeal">
+            <option>Appeal filed — QIO</option>
+            <option>Appeal filed — plan</option>
+            <option>Appeal won</option>
+            <option>Appeal lost</option>
+          </optgroup>
+          <optgroup label="Recovery">
+            <option>Covered days recovered</option>
+          </optgroup>
+        </select>
+      </div>
+    </div>
+    <div class="g2">
+      <div><label for="fDays">Covered days recovered</label><input id="fDays" type="number" min="0" step="1" value="0">
+        <p class="hint">Only on won appeals / recovery events.</p></div>
+      <div><label for="fAmt">Dollars protected ($)</label><input id="fAmt" type="number" min="0" step="1" value="0">
+        <p class="hint">Reconcile against remittance.</p></div>
+    </div>
+    <div><label for="fNote">Note</label><textarea id="fNote" maxlength="500" placeholder="Plan cited plateau; Jimmo rebuttal filed."></textarea></div>
+    <div class="dlg-actions">
+      <button type="button" class="btn ghost sm del" id="delBtn">Delete</button>
+      <button type="button" class="btn ghost" id="cancelBtn">Cancel</button>
+      <button type="submit" class="btn">Save</button>
+    </div>
+  </form>
+</dialog>
+
+<script>
+const KEY = "cc-outcomes-v1";
+const $ = (id) => document.getElementById(id);
+const parseD = (s) => { if(!s) return null; const p = s.split("-").map(Number); if (p.length!==3||p.some(isNaN)) return null; return new Date(p[0],p[1]-1,p[2]); };
+const toISO = (d) => `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
+const today = () => { const n = new Date(); return new Date(n.getFullYear(),n.getMonth(),n.getDate()); };
+const addD = (d,n) => { const r = new Date(d.getFullYear(),d.getMonth(),d.getDate()); r.setDate(r.getDate()+n); return r; };
+const diffD = (a,b) => Math.round((a-b)/86400000);
+const fmtD = (d) => d ? d.toLocaleDateString(undefined,{month:"short",day:"numeric",year:"numeric"}) : "—";
+const esc = (s) => String(s).replace(/[&<>"']/g, m => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[m]));
+
+const uid = () => (self.crypto && crypto.randomUUID)
+  ? crypto.randomUUID()
+  : "id-" + Date.now().toString(36) + "-" + Math.random().toString(36).slice(2,10);
+
+let events = [], editingId = null, periodDays = 90;
+
+function load(){ try { events = JSON.parse(localStorage.getItem(KEY)) || []; } catch { events = []; }
+  if (!Array.isArray(events)) events = []; }
+function save(){ try { localStorage.setItem(KEY, JSON.stringify(events)); }
+  catch { alert("Could not save — browser storage may be full or blocked."); } }
+
+function inPeriod(e){
+  const d = parseD(e.date); if (!d) return false;
+  const age = diffD(today(), d);
+  if (age < 0) return false;                 // future-dated: a typo, not data
+  return !periodDays || age < periodDays;
+}
+function isExcluded(e){ const d = parseD(e.date); return !d || diffD(today(), d) < 0; }
+function excludedCount(){ return events.filter(isExcluded).length; }
+
+const RECOVERY = new Set(["Appeal won","Covered days recovered"]);
+const FILED    = new Set(["Appeal filed — QIO","Appeal filed — plan"]);
+const DECIDED  = new Set(["Appeal won","Appeal lost"]);
+
+function metrics(list){
+  const n = (t) => list.filter(e => e.type === t).length;
+  const onTime = n("Auth submitted — on time"), late = n("Auth submitted — late");
+  const subs = onTime + late;
+  const won = n("Appeal won"), lost = n("Appeal lost");
+  const decided = won + lost;
+  const filed = list.filter(e => FILED.has(e.type)).length;
+  // Only recovery events carry recovered days and protected dollars.
+  const days = list.reduce((s,e) => s + (RECOVERY.has(e.type) ? (+e.days||0) : 0), 0);
+  const amt  = list.reduce((s,e) => s + (RECOVERY.has(e.type) ? (+e.amt ||0) : 0), 0);
+  const cases = new Set(list.map(e => e.case)).size;
+
+  // Appeals span periods, so pending is computed per case across ALL events.
+  let pending = 0, orphanDecisions = 0;
+  const byCase = {};
+  for (const e of events){
+    if (!FILED.has(e.type) && !DECIDED.has(e.type)) continue;
+    if (isExcluded(e)) continue;          // flagged for correction — not real activity yet
+    (byCase[e.case] = byCase[e.case] || {f:0,d:0})[FILED.has(e.type) ? "f" : "d"]++;
+  }
+  for (const k in byCase){
+    const {f,d} = byCase[k];
+    if (f > d) pending += f - d; else if (d > f) orphanDecisions += d - f;
+  }
+  return { onTime, late, subs, won, lost, decided, filed,
+    denials: n("Denial received"), nomnc: n("NOMNC issued"), days, amt, cases,
+    onTimeRate: subs ? Math.round(onTime/subs*100) : null,
+    winRate: decided ? Math.round(won/decided*100) : null,
+    pending, orphanDecisions };
+}
+
+function streakInfo(){
+  const days = new Set(events.map(e => e.date));
+  let streak = 0, cur = today();
+  if (!days.has(toISO(cur))) cur = addD(cur, -1);   // today not logged yet doesn't break it
+  while (days.has(toISO(cur))) { streak++; cur = addD(cur, -1); }
+  const last14 = [];
+  for (let i = 13; i >= 0; i--) { const d = addD(today(), -i); last14.push({on: days.has(toISO(d)), today: i === 0}); }
+  return { streak, last14, loggedToday: days.has(toISO(today())) };
+}
+
+function render(){
+  const { streak, last14, loggedToday } = streakInfo();
+  $("streak").innerHTML = `
+    <div class="big">${streak}</div>
+    <div class="txt">
+      <b>${streak === 1 ? "day" : "days"} logged in a row</b>
+      <div class="sub">${loggedToday
+        ? "Logged today. The compounding is the habit, not the feature list."
+        : "Nothing logged today yet — one entry keeps the streak alive."}</div>
+    </div>
+    <div class="dots">${last14.map(d => `<i class="${d.on?"on":""} ${d.today?"today":""}"></i>`).join("")}</div>`;
+
+  const list = events.filter(inPeriod);
+  const m = metrics(list);
+  const dropped = excludedCount();
+  const label = periodDays ? `last ${periodDays} days` : "all time";
+
+  $("cards").innerHTML = `
+    <div class="c"><div class="k">Cases touched</div><div class="v">${m.cases}</div><div class="d">${label}</div></div>
+    <div class="c ${m.onTimeRate!==null && m.onTimeRate<90 ? "bad":"good"}"><div class="k">On-time submission</div>
+      <div class="v">${m.onTimeRate===null ? "—" : m.onTimeRate+"%"}</div><div class="d">${m.onTime} on time · ${m.late} late</div></div>
+    <div class="c"><div class="k">Denials &amp; NOMNCs</div><div class="v">${m.denials + m.nomnc}</div><div class="d">${m.denials} denials · ${m.nomnc} NOMNCs</div></div>
+    <div class="c ${m.winRate!==null && m.decided>=5 && m.winRate>=50 ? "good":""}"><div class="k">Appeal win rate</div>
+      <div class="v">${m.winRate===null ? "—" : (m.decided < 5 ? `${m.won}/${m.decided}` : m.winRate+"%")}</div>
+      <div class="d">${m.won}W · ${m.lost}L${m.pending?` · ${m.pending} pending`:""}${m.decided&&m.decided<5?" · too few to rate":""}${m.orphanDecisions?` · ⚠ ${m.orphanDecisions} decision${m.orphanDecisions===1?"":"s"} with no logged filing`:""}</div></div>
+    <div class="c good"><div class="k">Covered days recovered</div><div class="v">${m.days}</div><div class="d">from won appeals</div></div>
+    <div class="c money"><div class="k">Dollars protected</div><div class="v">$${m.amt.toLocaleString()}</div><div class="d">reconcile vs remittance</div></div>`;
+
+  if (dropped){
+    $("cards").insertAdjacentHTML("beforeend",
+      `<div class="c bad" style="grid-column:1/-1;"><div class="k">Excluded from every total</div>
+       <div class="v">${dropped}</div><div class="d">event${dropped===1?"":"s"} with a future or unreadable date — open and correct them</div></div>`);
+  }
+  $("sentence").innerHTML = `
+    <div class="k">Your traction sentence — generated from the log above</div>
+    <p>${list.length
+      ? `Across the ${label}, we tracked <b>${m.cases}</b> Medicare Advantage case${m.cases===1?"":"s"}, submitted <b>${m.onTimeRate===null?"—":m.onTimeRate+"%"}</b> of authorizations on time${m.subs?` (${m.onTime} of ${m.subs})`:""}, absorbed <b>${m.denials + m.nomnc}</b> denial${m.denials+m.nomnc===1?"":"s"} or termination notice${m.denials+m.nomnc===1?"":"s"}, filed <b>${m.filed}</b> appeal${m.filed===1?"":"s"} and won <b>${m.decided ? `${m.won} of ${m.decided}` : "—"}</b> decided${m.decided>=5?` (${m.winRate}%)`:""} — recovering <b>${m.days}</b> covered day${m.days===1?"":"s"} and <b>$${m.amt.toLocaleString()}</b> in protected revenue.`
+      : `Log a few events and this becomes the sentence you put on the traction slide — generated from real cases instead of estimated.`}</p>
+    <p class="note">Copy this only once the dollar figure reconciles against remittance advice. An unsourced number in an investor meeting is worse than admitting you are pre-traction.</p>`;
+
+  // Excluded rows are pinned on top: the banner tells the user to correct them,
+  // so they must have a reachable Edit button even though they count for nothing.
+  const bad = events.filter(isExcluded);
+  const rows = bad.concat([...list].sort((a,b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0)));
+  $("tableWrap").innerHTML = !rows.length
+    ? `<div class="empty">No events in this period. Choose <b>+ Log event</b> after each authorization, denial, or appeal — it takes about thirty seconds.</div>`
+    : `<table><thead><tr><th>Date</th><th>Case</th><th>Plan</th><th>Event</th><th>Days</th><th>Dollars</th><th>Note</th><th></th></tr></thead><tbody>
+       ${rows.map(e => {
+         const cls = e.type === "Appeal won" ? "win" : (e.type === "Appeal lost" || e.type === "Denial received") ? "loss"
+                   : e.type === "Auth submitted — late" ? "late" : "";
+         const flagged = isExcluded(e);
+         return `<tr${flagged ? ' style="background:var(--crit-bg);"' : ""}>
+           <td class="num">${flagged ? `<span class="pill loss">needs fixing</span> ` : ""}${esc(e.date) && parseD(e.date) ? fmtD(parseD(e.date)) : esc(e.date || "—")}</td>
+           <td><b>${esc(e.case)}</b></td>
+           <td>${esc(e.plan||"—")}</td>
+           <td><span class="pill ${cls}">${esc(e.type)}</span></td>
+           <td class="num">${+e.days ? e.days : ""}</td>
+           <td class="num">${+e.amt ? "$"+(+e.amt).toLocaleString() : ""}</td>
+           <td>${esc(e.note||"")}</td>
+           <td><button class="btn ghost sm" data-edit="${esc(e.id)}">Edit</button></td>
+         </tr>`;
+       }).join("")}</tbody></table>`;
+
+  $("tableWrap").querySelectorAll("[data-edit]").forEach(b =>
+    b.addEventListener("click", () => openDlg(b.getAttribute("data-edit"))));
+}
+
+function openDlg(id){
+  editingId = id || null;
+  const e = id ? events.find(x => x.id === id) : null;
+  $("dlgTitle").textContent = e ? "Edit event" : "Log event";
+  $("delBtn").style.display = e ? "" : "none";
+  $("fDate").value = e?.date ?? toISO(today());
+  $("fCase").value = e?.case ?? "";
+  $("fPlan").value = e?.plan ?? "";
+  $("fType").value = e?.type ?? "Auth submitted — on time";
+  syncRecoveryFields();
+  $("fDays").value = e?.days ?? 0;
+  $("fAmt").value  = e?.amt ?? 0;
+  $("fNote").value = e?.note ?? "";
+  $("dlg").showModal();
+}
+
+$("evForm").addEventListener("submit", () => {
+  if (!parseD($("fDate").value)) { alert("Enter a valid date."); return; }
+  const rec = { id: editingId || uid(), date: $("fDate").value,
+    case: $("fCase").value.trim() || "—", plan: $("fPlan").value.trim(),
+    type: $("fType").value, days: +$("fDays").value || 0, amt: +$("fAmt").value || 0,
+    note: $("fNote").value.trim() };
+  const i = events.findIndex(x => x.id === rec.id);
+  if (i >= 0) events[i] = rec; else events.push(rec);
+  save(); render();
+});
+function syncRecoveryFields(){
+  const on = RECOVERY.has($("fType").value);
+  ["fDays","fAmt"].forEach(id => {
+    $(id).disabled = !on;
+    $(id).title = on ? "" : "Only recorded on won appeals and recovery events";
+    if (!on) $(id).value = 0;
+  });
+}
+$("fType").addEventListener("change", syncRecoveryFields);
+$("cancelBtn").addEventListener("click", () => $("dlg").close());
+$("delBtn").addEventListener("click", () => {
+  if (!editingId || !confirm("Delete this event?")) return;
+  events = events.filter(x => x.id !== editingId);
+  save(); render(); $("dlg").close();
+});
+
+$("addBtn").addEventListener("click", () => openDlg(null));
+$("printBtn").addEventListener("click", () => window.print());
+$("csvBtn").addEventListener("click", () => {
+  // Neutralise spreadsheet formula injection — these files get emailed to billing.
+  const q = (s) => { let v = String(s ?? ""); if (/^[=+\-@\t\r]/.test(v)) v = "'" + v;
+                     return `"${v.replace(/"/g,'""')}"`; };
+  const rows = events.filter(e => inPeriod(e) || (!periodDays && isExcluded(e)))
+                     .sort((a,b) => a.date < b.date ? -1 : a.date > b.date ? 1 : 0);
+  const csv = ["Date,Case,Plan,Event,DaysRecovered,DollarsProtected,Note"]
+    .concat(rows.map(e => [e.date,e.case,e.plan,e.type,e.days||0,e.amt||0,e.note].map(q).join(",")))
+    .join("\r\n");
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob(["\uFEFF" + csv], {type:"text/csv;charset=utf-8"}));
+  a.download = `cc-outcomes-${periodDays ? periodDays+"d" : "all"}-${toISO(today())}.csv`;
+  a.click(); URL.revokeObjectURL(a.href);
+});
+$("period").querySelectorAll("button").forEach(b => b.addEventListener("click", () => {
+  $("period").querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed","false"));
+  b.setAttribute("aria-pressed","true"); periodDays = +b.dataset.d; render();
+}));
+$("themeBtn").addEventListener("click", () => {
+  const cur = document.documentElement.getAttribute("data-theme");
+  const next = cur === "dark" ? "light" : cur === "light" ? "" : "dark";
+  if (next) document.documentElement.setAttribute("data-theme", next);
+  else document.documentElement.removeAttribute("data-theme");
+});
+
+load(); render();
+
+// Handoff from the tracker: outcomes.html?case=214-B&plan=Aetna%20MA&suggest=Appeal%20won
+(function fromTracker(){
+  const q = new URLSearchParams(location.search);
+  const c = q.get("case");
+  if (!c) return;
+  openDlg(null);
+  $("fCase").value = c;
+  if (q.get("plan")) $("fPlan").value = q.get("plan");
+  const sug = q.get("suggest");
+  if (sug && [...$("fType").options].some(o => o.value === sug)) $("fType").value = sug;
+  syncRecoveryFields();
+  $("fNote").focus();
+  history.replaceState(null, "", location.pathname);   // don't re-fire on reload
+})();
+</script>
+</body>
+</html>

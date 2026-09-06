@@ -71,12 +71,24 @@ export interface Playlist {
   updatedAt: string;
 }
 
-/** How a resident responded to one song during a session. */
-export type EngagementLevel = 'sang_along' | 'listened_attentively' | 'moved_or_tapped' | 'no_visible_response' | 'agitated';
+/**
+ * How a resident responded to one song during a session. `moved_to_tears`
+ * is deliberately distinct from `agitated`: tears are the most common
+ * strong response to memory music and usually mean the song *reached*
+ * someone, so they score positively (see PROGRAM.md's "hard moments").
+ */
+export type EngagementLevel =
+  | 'sang_along'
+  | 'listened_attentively'
+  | 'moved_or_tapped'
+  | 'moved_to_tears'
+  | 'no_visible_response'
+  | 'agitated';
 export const ENGAGEMENT_LEVELS: readonly EngagementLevel[] = [
   'sang_along',
   'listened_attentively',
   'moved_or_tapped',
+  'moved_to_tears',
   'no_visible_response',
   'agitated',
 ];

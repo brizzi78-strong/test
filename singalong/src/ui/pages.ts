@@ -11,23 +11,23 @@ export const APP_PAGE: string = /* html */ `<!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
 <title>Sing Along — guided music for memory care</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23A31B33'/%3E%3Ctext x='16' y='23' font-family='system-ui' font-size='20' font-weight='900' text-anchor='middle' fill='white'%3E%E2%99%AA%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231E3D63'/%3E%3Ctext x='16' y='23' font-family='system-ui' font-size='20' font-weight='900' text-anchor='middle' fill='white'%3E%E2%99%AA%3C/text%3E%3C/svg%3E">
 <style>
   :root{--paper:#F7F2E6;--surface:#FFFDF7;--surface-2:#EFE7D3;--ink:#17233F;--muted:#6B6350;--line:#E2D9C3;
-    --brand:#A31B33;--brand-strong:#7E1226;--good:#2E7D4F;--good-bg:#E4F0E8;--warn:#9A6410;--warn-bg:#F6ECD6;
+    --brand:#1E3D63;--brand-strong:#152C49;--on-accent:#F5F8FC;--good:#2E7D4F;--good-bg:#E4F0E8;--warn:#9A6410;--warn-bg:#F6ECD6;
     --crit:#B23A3A;--crit-bg:#F6E1DE;--shadow:0 1px 2px rgba(23,35,63,.07),0 10px 26px -14px rgba(23,35,63,.24);
     --font:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
     --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;--maxw:980px;--r:13px;}
   @media (prefers-color-scheme:dark){:root{--paper:#101627;--surface:#172033;--surface-2:#1F2A42;--ink:#F3EEE1;
-    --muted:#A9A28F;--line:#2B3855;--brand:#D8394A;--brand-strong:#E85562;--good:#4FBE86;--good-bg:#12321f;
+    --muted:#A9A28F;--line:#2B3855;--brand:#7EA5D8;--brand-strong:#94B6E3;--on-accent:#0E1826;--good:#4FBE86;--good-bg:#12321f;
     --warn:#D6A24A;--warn-bg:#33280f;--crit:#E07B6E;--crit-bg:#3a1d1a;--shadow:0 1px 2px rgba(0,0,0,.45),0 12px 32px -14px rgba(0,0,0,.65);}}
-  :root[data-theme="light"]{--paper:#F7F2E6;--surface:#FFFDF7;--surface-2:#EFE7D3;--ink:#17233F;--muted:#6B6350;--line:#E2D9C3;--brand:#A31B33;--brand-strong:#7E1226;--good:#2E7D4F;--good-bg:#E4F0E8;--warn:#9A6410;--warn-bg:#F6ECD6;--crit:#B23A3A;--crit-bg:#F6E1DE;}
-  :root[data-theme="dark"]{--paper:#101627;--surface:#172033;--surface-2:#1F2A42;--ink:#F3EEE1;--muted:#A9A28F;--line:#2B3855;--brand:#D8394A;--brand-strong:#E85562;--good:#4FBE86;--good-bg:#12321f;--warn:#D6A24A;--warn-bg:#33280f;--crit:#E07B6E;--crit-bg:#3a1d1a;}
+  :root[data-theme="light"]{--paper:#F7F2E6;--surface:#FFFDF7;--surface-2:#EFE7D3;--ink:#17233F;--muted:#6B6350;--line:#E2D9C3;--brand:#1E3D63;--brand-strong:#152C49;--on-accent:#F5F8FC;--good:#2E7D4F;--good-bg:#E4F0E8;--warn:#9A6410;--warn-bg:#F6ECD6;--crit:#B23A3A;--crit-bg:#F6E1DE;}
+  :root[data-theme="dark"]{--paper:#101627;--surface:#172033;--surface-2:#1F2A42;--ink:#F3EEE1;--muted:#A9A28F;--line:#2B3855;--brand:#7EA5D8;--brand-strong:#94B6E3;--on-accent:#0E1826;--good:#4FBE86;--good-bg:#12321f;--warn:#D6A24A;--warn-bg:#33280f;--crit:#E07B6E;--crit-bg:#3a1d1a;}
   *{box-sizing:border-box;} body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);line-height:1.45;}
   .wrap{max-width:var(--maxw);margin-inline:auto;padding:0 clamp(.8rem,3vw,1.4rem) 3rem;}
   header.top{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
   .top-in{max-width:var(--maxw);margin-inline:auto;padding:.7rem clamp(.8rem,3vw,1.4rem);display:flex;align-items:center;gap:.6rem;}
-  .logo{width:30px;height:30px;border-radius:8px;background:var(--brand);color:#fff;font-weight:900;display:grid;place-items:center;}
+  .logo{width:30px;height:30px;border-radius:8px;background:var(--brand);color:var(--on-accent);font-weight:900;display:grid;place-items:center;}
   h1{font-size:1.05rem;margin:0;font-weight:800;} h1 small{display:block;font-weight:600;font-size:.7rem;color:var(--muted);}
   .theme{margin-left:auto;background:transparent;border:1px solid var(--line);border-radius:8px;color:var(--ink);padding:.35rem .55rem;cursor:pointer;}
   .banner{display:none;padding:.6rem .8rem;border-radius:10px;margin:.7rem 0;font-size:.86rem;}
@@ -37,16 +37,16 @@ export const APP_PAGE: string = /* html */ `<!doctype html>
   label{display:block;font-size:.72rem;font-weight:700;color:var(--muted);margin:.5rem 0 .18rem;}
   input,select,textarea{width:100%;padding:.5rem .55rem;border:1px solid var(--line);border-radius:9px;background:var(--paper);color:var(--ink);font:inherit;}
   textarea{resize:vertical;min-height:4.5rem;}
-  input:focus,select:focus,textarea:focus{outline:2px solid var(--brand);outline-offset:1px;}
+  input:focus-visible,select:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--brand);outline-offset:2px;}
   .grid{display:grid;gap:.3rem .7rem;} .g3{grid-template-columns:1fr 1fr 1fr;} .g2{grid-template-columns:1fr 1fr;}
   @media(max-width:560px){.g3,.g2{grid-template-columns:1fr;}}
-  .btn{background:var(--brand);color:#fff;border:0;border-radius:9px;padding:.55rem .9rem;font:inherit;font-weight:700;cursor:pointer;}
+  .btn{background:var(--brand);color:var(--on-accent);border:0;border-radius:9px;padding:.55rem .9rem;font:inherit;font-weight:700;cursor:pointer;}
   .btn:hover{background:var(--brand-strong);} .btn.ghost{background:transparent;color:var(--brand);border:1px solid var(--line);}
   .btn.small{padding:.3rem .6rem;font-size:.78rem;} .btn.good{background:var(--good);} .btn.mut{background:transparent;color:var(--muted);border:1px solid var(--line);}
   .btn.warn{background:var(--warn);} .btn.crit{background:var(--crit);} .btn[disabled]{opacity:.5;cursor:not-allowed;}
   .tabs{display:flex;gap:.35rem;flex-wrap:wrap;margin:.6rem 0;}
   .tab{background:transparent;border:1px solid var(--line);border-radius:999px;padding:.35rem .8rem;font:inherit;font-weight:700;font-size:.82rem;color:var(--muted);cursor:pointer;}
-  .tab.active{background:var(--brand);color:#fff;border-color:var(--brand);}
+  .tab.active{background:var(--brand);color:var(--on-accent);border-color:var(--brand);}
   .row{border:1px solid var(--line);border-radius:10px;padding:.55rem .7rem;margin:.35rem 0;background:var(--surface);}
   .row .t{font-weight:700;} .row .s{color:var(--muted);font-size:.82rem;}
   .pill{display:inline-block;font-size:.64rem;font-weight:800;text-transform:uppercase;letter-spacing:.04em;padding:.12rem .45rem;border-radius:999px;margin:0 .2rem .2rem 0;}
@@ -56,11 +56,13 @@ export const APP_PAGE: string = /* html */ `<!doctype html>
   .empty{color:var(--muted);font-size:.85rem;padding:.5rem 0;} .muted{color:var(--muted);}
   select.inline{width:auto;display:inline-block;padding:.3rem .4rem;font-size:.8rem;}
   .prompter{text-align:center;padding:2rem 1rem;}
-  .prompter .song{font-size:1.5rem;font-weight:800;margin:0 0 .2rem;}
+  .prompter .song{font-size:clamp(1.6rem,4vw,3rem);font-weight:800;margin:0 0 .2rem;}
   .prompter .artist{color:var(--muted);margin:0 0 1rem;}
-  .prompter .lyrics{white-space:pre-wrap;font-size:1.3rem;line-height:1.7;max-width:640px;margin:0 auto 1.2rem;}
+  .prompter .lyrics{white-space:pre-wrap;font-size:clamp(1.35rem,3.2vw,2.8rem);line-height:1.6;font-weight:600;max-width:24em;margin:0 auto 1.2rem;}
   .prompter .progress{font-size:.8rem;color:var(--muted);margin-bottom:.6rem;}
-  .engage-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:.4rem;max-width:640px;margin:0 auto;}
+  .engage-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem;max-width:720px;margin:.8rem auto 0;}
+  .engage-grid .btn{min-height:56px;font-size:1rem;}
+  .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
   @media(max-width:640px){.engage-grid{grid-template-columns:repeat(2,1fr);}}
   .insight-row{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding:.4rem 0;}
   .insight-row:last-child{border-bottom:0;}
@@ -72,11 +74,11 @@ export const APP_PAGE: string = /* html */ `<!doctype html>
 <header class="top"><div class="top-in">
   <span class="logo" aria-hidden="true">♪</span>
   <h1>Sing Along<small id="facName">— set up your facility below</small></h1>
-  <button class="theme" id="themeBtn" title="Theme">◐</button>
+  <button class="theme" id="themeBtn" type="button" aria-label="Switch color theme">◐</button>
 </div></header>
 
 <div class="wrap">
-  <div id="banner" class="banner"></div>
+  <div id="banner" class="banner" role="status" aria-live="polite" aria-atomic="true"></div>
 
   <section class="card" id="setupCard">
     <h2>Your facility</h2>
@@ -326,20 +328,28 @@ function renderPlayerStep(){
     return;
   }
   const song=list[currentSongIndex];
+  // The lyrics view may be on a shared screen residents read. The response
+  // buttons stay collapsed behind a neutral "Log response" control, and no
+  // resident state is rendered in red — dignity over dashboard.
   el.innerHTML='<div class="prompter">'+
-    '<div class="progress">Song '+(currentSongIndex+1)+' of '+list.length+'</div>'+
-    '<div class="song">'+esc(song.title)+'</div>'+
+    '<div class="progress" role="status" aria-live="polite">Song '+(currentSongIndex+1)+' of '+list.length+'</div>'+
+    '<h3 class="song" tabindex="-1">'+esc(song.title)+'</h3>'+
     (song.artist?'<div class="artist">'+esc(song.artist)+'</div>':'')+
-    (song.audioUrl?'<p><a class="btn ghost small" href="'+esc(song.audioUrl)+'" target="_blank" rel="noopener">Open audio ▶</a></p>':'<p class="hint">No audio source on file — sing from the lyrics, or play from the facility\\'s own device.</p>')+
+    (song.audioUrl?'<p><a class="btn ghost small" href="'+esc(song.audioUrl)+'" target="_blank" rel="noopener">Open audio ▶<span class="sr-only"> (opens in a new tab)</span></a></p>':'<p class="hint">No audio source on file — sing from the lyrics, or play from the facility\\'s own device.</p>')+
     (song.lyrics?'<div class="lyrics">'+esc(song.lyrics)+'</div>':'<p class="hint">No lyrics on file for this song.</p>')+
-    '<div class="engage-grid">'+
-      '<button class="btn good small" data-e="sang_along">Sang along</button>'+
-      '<button class="btn small" data-e="listened_attentively">Listened attentively</button>'+
-      '<button class="btn small" data-e="moved_or_tapped">Moved / tapped</button>'+
-      '<button class="btn mut small" data-e="no_visible_response">No response</button>'+
-      '<button class="btn crit small" data-e="agitated">Agitated</button>'+
+    '<div style="margin-top:1rem"><button class="btn ghost" type="button" id="revealLog">Log response…</button></div>'+
+    '<div class="engage-grid" id="engageGrid" hidden>'+
+      '<button class="btn good" type="button" data-e="sang_along">Sang along</button>'+
+      '<button class="btn ghost" type="button" data-e="listened_attentively">Listened quietly</button>'+
+      '<button class="btn ghost" type="button" data-e="moved_or_tapped">Hummed or tapped along</button>'+
+      '<button class="btn ghost" type="button" data-e="moved_to_tears">Tears — it reached them</button>'+
+      '<button class="btn mut" type="button" data-e="no_visible_response">Nothing visible</button>'+
+      '<button class="btn mut" type="button" data-e="agitated">Upset — pause and settle</button>'+
     '</div></div>';
+  const grid=el.querySelector("#engageGrid");
+  el.querySelector("#revealLog").onclick=(ev)=>{grid.hidden=false;ev.target.hidden=true;grid.querySelector("button").focus();};
   el.querySelectorAll("button[data-e]").forEach(b=>{b.onclick=()=>logSong(song.id,b.dataset.e);});
+  el.querySelector(".song").focus({preventScroll:true});
 }
 
 async function logSong(songId,engagement){

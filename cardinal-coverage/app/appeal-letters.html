@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="light dark">
+<title>MA Appeal Letter Builder — SNF Medicare Advantage</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23A31B33'/%3E%3Ctext x='16' y='23' font-family='system-ui' font-size='20' font-weight='900' text-anchor='middle' fill='white'%3EC%3C/text%3E%3C/svg%3E">
+<style>
+  :root{--paper:#F7F2E6;--surface:#FFFDF7;--surface-2:#EFE7D3;--ink:#17233F;--muted:#6B6350;--line:#E2D9C3;
+    --brand:#A31B33;--brand-strong:#7E1226;--good:#2E7D4F;--good-bg:#E4F0E8;--warn:#9A6410;--warn-bg:#F6ECD6;
+    --crit:#B23A3A;--crit-bg:#F6E1DE;
+    --shadow:0 1px 2px rgba(23,35,63,.07),0 10px 26px -14px rgba(23,35,63,.24);
+    --font:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --serif:ui-serif,Georgia,"Times New Roman",serif;--r:14px;}
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#101627;--surface:#172033;--surface-2:#1F2A42;--ink:#F3EEE1;
+    --muted:#A9A28F;--line:#2B3855;--brand:#E2586B;--brand-strong:#F27A8B;--good:#4FBE86;--good-bg:#12321f;
+    --warn:#D6A24A;--warn-bg:#33280f;--crit:#E07B6E;--crit-bg:#3a1d1a;--shadow:0 1px 2px rgba(0,0,0,.45),0 12px 32px -14px rgba(0,0,0,.65);}}
+  :root[data-theme="dark"]{--paper:#101627;--surface:#172033;--surface-2:#1F2A42;--ink:#F3EEE1;--muted:#A9A28F;--line:#2B3855;--brand:#E2586B;--brand-strong:#F27A8B;--good:#4FBE86;--good-bg:#12321f;--warn:#D6A24A;--warn-bg:#33280f;--crit:#E07B6E;--crit-bg:#3a1d1a;}
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);line-height:1.5;}
+  header.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+  .top-in{max-width:1300px;margin-inline:auto;padding:.7rem clamp(.8rem,3vw,1.6rem);display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;}
+  .logo{width:32px;height:32px;border-radius:9px;background:var(--brand);color:#fff;font-weight:900;display:grid;place-items:center;flex:none;}
+  h1{font-size:1.02rem;margin:0;font-weight:800;}
+  h1 small{display:block;font-weight:600;font-size:.68rem;color:var(--muted);}
+  .toolnav{display:flex;gap:.15rem;margin-left:.4rem;}
+  .toolnav a{font-size:.78rem;font-weight:700;color:var(--muted);text-decoration:none;padding:.3rem .6rem;border-radius:8px;}
+  .toolnav a:hover{color:var(--brand);background:var(--surface-2);}
+  .toolnav a[aria-current]{background:var(--brand);color:#fff;}
+  .spacer{margin-left:auto;}
+  .btn{background:var(--brand);color:#fff;border:0;border-radius:10px;padding:.5rem .9rem;font:inherit;font-weight:700;cursor:pointer;}
+  .btn:hover{background:var(--brand-strong);}
+  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line);}
+  .btn.ghost:hover{border-color:var(--brand);color:var(--brand);}
+
+  .wrap{max-width:1300px;margin-inline:auto;padding:0 clamp(.8rem,3vw,1.6rem);}
+  .phi{background:var(--warn-bg);border:1px solid var(--warn);border-radius:10px;padding:.6rem .85rem;font-size:.83rem;margin:1rem 0;}
+  .phi b{color:var(--warn);}
+
+  .tabs{display:flex;gap:.5rem;flex-wrap:wrap;margin:1.1rem 0 1rem;}
+  .tab{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:.45rem 1rem;font:inherit;font-weight:700;font-size:.85rem;cursor:pointer;color:var(--muted);}
+  .tab[aria-selected="true"]{background:var(--brand);border-color:var(--brand);color:#fff;}
+  .tabdesc{color:var(--muted);font-size:.88rem;margin:0 0 1.2rem;max-width:70ch;}
+
+  .cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:1.4rem;align-items:start;padding-bottom:3rem;}
+  @media(max-width:980px){.cols{grid-template-columns:1fr;}}
+  .panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:1.1rem 1.2rem;}
+  .panel h2{margin:0 0 .2rem;font-size:1rem;}
+  .panel .sub{color:var(--muted);font-size:.8rem;margin:0 0 .6rem;}
+  fieldset{border:0;padding:0;margin:0 0 .4rem;}
+  legend{font-size:.68rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--brand);padding:0;margin:1rem 0 .1rem;}
+  label{display:block;font-size:.7rem;font-weight:800;letter-spacing:.03em;color:var(--muted);margin:.55rem 0 .18rem;text-transform:uppercase;}
+  input,select,textarea{width:100%;padding:.5rem .6rem;border:1px solid var(--line);border-radius:9px;background:var(--paper);color:var(--ink);font:inherit;font-size:.9rem;}
+  textarea{resize:vertical;min-height:4.2rem;}
+  input:focus,select:focus,textarea:focus{outline:2px solid var(--brand);outline-offset:1px;}
+  .g2{display:grid;grid-template-columns:1fr 1fr;gap:0 .8rem;}
+  @media(max-width:520px){.g2{grid-template-columns:1fr;}}
+  .hint{font-size:.71rem;color:var(--muted);margin:.2rem 0 0;}
+
+  .out{position:sticky;top:4.4rem;}
+  .letter{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:1.6rem 1.7rem;font-family:var(--serif);font-size:.92rem;line-height:1.6;white-space:pre-wrap;max-height:70vh;overflow:auto;}
+  .outbar{display:flex;gap:.5rem;margin-bottom:.7rem;flex-wrap:wrap;align-items:center;}
+  .copied{color:var(--good);font-weight:700;font-size:.82rem;opacity:0;transition:opacity .2s;}
+  .copied.show{opacity:1;}
+
+  @media print{
+    header.top,.tabs,.tabdesc,.phi,.panel,.outbar{display:none!important;}
+    .cols{grid-template-columns:1fr;} .out{position:static;}
+    .letter{border:0;box-shadow:none;max-height:none;overflow:visible;padding:0;font-size:11.5pt;}
+    body{background:#fff;color:#000;}
+  }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <span class="logo" aria-hidden="true">C</span>
+    <h1>MA Appeal Letter Builder<small>SNF Medicare Advantage · North Carolina</small></h1>
+    <nav class="toolnav">
+      <a href="index.html">Home</a>
+      <a href="tracker.html">Tracker</a>
+      <a href="appeal-letters.html" aria-current="page">Letters</a>
+      <a href="outcomes.html">Outcomes</a>
+      <a href="rules.html">Rules</a>
+    </nav>
+    <span class="spacer"></span>
+    <button class="btn ghost" id="themeBtn" title="Toggle theme" aria-label="Toggle theme">◐</button>
+  </div>
+</header>
+
+<div class="wrap">
+  <p class="phi"><b>PHI stays in this browser.</b> Resident fields — name, member ID, dates and every clinical field — are held in memory only and cleared on reload. Nothing case-specific is saved or transmitted. What persists is your reusable letterhead: facility details <i>and</i> the plan name and appeals fax, since those are the same on every letter. Avoid entering resident data on a shared machine. Review every generated letter before sending; the regulatory language is boilerplate, the clinical argument is yours.</p>
+
+  <p class="phi" style="background:var(--crit-bg);border-color:var(--crit);"><b style="color:var(--crit);">Have counsel review before first use.</b> An independent audit flagged two issues these drafts do not yet resolve. <b>Standing:</b> parties to a plan reconsideration under 42 CFR 422.574 are the enrollee, an appointed representative (Form CMS-1696), or a non-contracted provider acting as assignee with a signed waiver of liability — a facility signature alone may be dismissed without reaching the merits. <b>Expedited handling:</b> under 42 CFR 422.584(c)(2) the plan must expedite when a <i>physician</i> indicates the standard is met, and may decline when an enrollee asks; an "expedited review requested" header over a nursing signature secures nothing. Confirm filing capacity and add physician support before sending Letter B.</p>
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" data-t="qio" aria-selected="true">A · Fast-track QIO appeal</button>
+    <button class="tab" role="tab" data-t="recon" aria-selected="false">B · Plan reconsideration</button>
+    <button class="tab" role="tab" data-t="short" aria-selected="false">C · Short-auth challenge</button>
+  </div>
+  <p class="tabdesc" id="tabdesc"></p>
+
+  <div class="cols">
+    <div class="panel">
+      <h2>Letter details</h2>
+      <p class="sub">Fields marked with clinical prompts are the part that decides the outcome — write specifics, not adjectives.</p>
+
+      <fieldset>
+        <legend>Facility (saved)</legend>
+        <div class="g2">
+          <div><label for="fFac">Facility name</label><input id="fFac" placeholder="Example Skilled Nursing & Rehabilitation"></div>
+          <div><label for="fPhone">Phone</label><input id="fPhone" placeholder="(919) 555-0100"></div>
+        </div>
+        <div><label for="fAddr">Facility address</label><input id="fAddr" placeholder="100 Example Rd., Raleigh, NC 27601"></div>
+        <div class="g2">
+          <div><label for="fPrep">Prepared by</label><input id="fPrep" placeholder="Jordan Ellis, RN"></div>
+          <div><label for="fTitle">Title</label><input id="fTitle" placeholder="Director of Nursing"></div>
+        </div>
+        <div class="g2">
+          <div><label for="fFax">Facility fax</label><input id="fFax" placeholder="(919) 555-0101"></div>
+          <div><label for="fNPI">Facility NPI (optional)</label><input id="fNPI"></div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Plan (saved) &amp; case</legend>
+        <div class="g2">
+          <div><label for="fPlan">Plan name</label><input id="fPlan" list="planL" placeholder="Aetna Medicare Advantage">
+            <datalist id="planL"><option>Aetna MA</option><option>WellCare MA</option><option>Humana MA</option><option>UnitedHealthcare MA</option><option>Blue Cross NC MA</option><option>Cigna MA</option><option>Traditional Medicare</option></datalist></div>
+          <div><label for="fPlanFax">Plan fax / appeals address</label><input id="fPlanFax"></div>
+        </div>
+        <div class="g2">
+          <div><label for="fMember">Member name</label><input id="fMember" placeholder="Resident name"></div>
+          <div><label for="fMemberId">Member / plan ID</label><input id="fMemberId"></div>
+        </div>
+        <div class="g2">
+          <div><label for="fAuth">Authorization / reference #</label><input id="fAuth"></div>
+          <div><label for="fAdmit">Admission date</label><input id="fAdmit" type="date"></div>
+        </div>
+        <div class="g2">
+          <div><label for="fDenial">Date of denial / notice</label><input id="fDenial" type="date"></div>
+          <div><label for="fEffective">Effective date of non-coverage</label><input id="fEffective" type="date"></div>
+        </div>
+        <div><label for="fReason">Reason the plan gave, quoted</label><textarea id="fReason" placeholder='"Member has reached maximum functional potential and no longer requires skilled intervention."'></textarea>
+          <p class="hint">Quote it verbatim — the letter rebuts this specific language.</p></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Clinical argument</legend>
+        <div><label for="fOrder">Ordered plan of care (frequency × duration)</label><input id="fOrder" placeholder="PT 5x/week × 21 days, certified [date]"></div>
+        <div><label for="fPlof">Prior level of function</label><textarea id="fPlof" placeholder="Lived alone in a two-story home, drove, negotiated stairs without a rail, ambulated in the community without a device."></textarea></div>
+        <div><label for="fCurrent">Current objective status</label><textarea id="fCurrent" placeholder="Ambulates 45 ft with RW, min assist. Berg 32/56. TUG 28 sec. Section GG mobility 3/6."></textarea></div>
+        <div><label for="fSkilled">Skilled services and why they require a therapist</label><textarea id="fSkilled" placeholder="Gait training with real-time correction of L trunk lean; therapist grading assist and modifying task demand within session in response to fatigue and BP response."></textarea></div>
+        <div><label for="fRisk">Risk if skilled services stop</label><textarea id="fRisk" placeholder="Fall risk at current Berg score; unsafe for planned discharge to a home requiring stair negotiation."></textarea></div>
+        <div>
+          <label for="fJimmo">Maintenance / Jimmo rationale (use if plan cites plateau)</label>
+          <textarea id="fJimmo" placeholder="Skilled therapy remains necessary to maintain current transfer safety and prevent contracture and deconditioning; an unskilled program is unsafe given impaired standing balance and cognitive inconsistency."></textarea>
+          <p class="hint">Include whenever the denial mentions plateau, maximum potential, or lack of progress.</p>
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="out">
+      <div class="outbar">
+        <button class="btn" id="copyBtn">Copy letter</button>
+        <button class="btn ghost" id="printBtn">Print</button>
+        <button class="btn ghost" id="txtBtn">Download .txt</button>
+        <span class="copied" id="copied">Copied</span>
+      </div>
+      <div class="letter" id="letter"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+const $ = (id) => document.getElementById(id);
+const FACKEYS = ["fFac","fPhone","fAddr","fPrep","fTitle","fFax","fNPI","fPlan","fPlanFax"];
+const ALL = FACKEYS.concat(["fMember","fMemberId","fAuth","fAdmit","fDenial","fEffective","fReason",
+  "fOrder","fPlof","fCurrent","fSkilled","fRisk","fJimmo"]);
+let tab = "qio";
+
+const DESC = {
+  qio:"Submit to Acentra Health (NC's BFCC-QIO) once the resident or representative has requested a fast-track appeal of a NOMNC. Under 42 CFR 422.626 the burden of proof is on the plan — this letter puts your clinical record in front of the reviewer.",
+  recon:"Use for a plan-level appeal of an initial authorization denial or a mid-stay denial. Anchors on the CMS-4201-F requirement that the plan apply Traditional Medicare criteria and demands the specific criteria it relied on.",
+  short:"Use when a plan is issuing 3-day or other short-interval authorizations. Argues under 42 CFR 422.112(b)(8) that approval duration must track the certified plan of care, and under 42 CFR 422.138(c) that approved determinations cannot be reopened. Note 42 CFR 422.624(a)(2) expressly contemplates increment preauthorization — the stronger line is that each increment is itself a termination requiring valid notice.",
+};
+
+const v = (id) => ($(id).value || "").trim();
+const fmt = (iso) => { if(!iso) return "[date]"; const p=iso.split("-").map(Number);
+  return new Date(p[0],p[1]-1,p[2]).toLocaleDateString(undefined,{month:"long",day:"numeric",year:"numeric"}); };
+const or = (s, fb) => s || fb;
+const today = () => new Date().toLocaleDateString(undefined,{month:"long",day:"numeric",year:"numeric"});
+
+function block(label, text, fallback){
+  return `${label}\n${or(text, fallback)}\n`;
+}
+
+function header(to){
+  const L = [];
+  L.push(or(v("fFac"),"[Facility name]"));
+  if (v("fAddr")) L.push(v("fAddr"));
+  const line = [v("fPhone") && `Phone ${v("fPhone")}`, v("fFax") && `Fax ${v("fFax")}`,
+                v("fNPI") && `NPI ${v("fNPI")}`].filter(Boolean).join("  ·  ");
+  if (line) L.push(line);
+  L.push("", today(), "", to, "",
+    `RE:  ${or(v("fMember"),"[Member name]")}`,
+    `     Member ID: ${or(v("fMemberId"),"[member ID]")}`,
+    `     Plan: ${or(v("fPlan"),"[plan name]")}`,
+    `     Authorization/reference: ${or(v("fAuth"),"[reference #]")}`,
+    `     SNF admission date: ${fmt(v("fAdmit"))}`);
+  return L.join("\n");
+}
+
+function clinical(){
+  let s = "\nCLINICAL BASIS FOR CONTINUED SKILLED COVERAGE\n\n";
+  s += block("Certified plan of care.", v("fOrder"), "[Ordered frequency and duration — e.g. PT 5x/week × 21 days]") + "\n";
+  s += block("Prior level of function.", v("fPlof"), "[Concrete prior function — living situation, mobility, devices, community access]") + "\n";
+  s += block("Current objective status.", v("fCurrent"), "[Standardized measures and assist levels — Berg, TUG, gait speed, distance, Section GG]") + "\n";
+  s += block("Why these services require the skills of a qualified therapist.", v("fSkilled"),
+    "[Clinical decision-making within the session — assessment, cueing type, parameters modified, safety judgment]") + "\n";
+  s += block("Risk if skilled services are terminated.", v("fRisk"),
+    "[Safety, readmission, and discharge-environment risk at current functional level]");
+  if (v("fJimmo")) {
+    s += "\n" + block("Continued skilled need on a maintenance basis.", v("fJimmo"));
+    s += "\nUnder the settlement in Jimmo v. Sebelius, No. 5:11-cv-17 (D. Vt. 2013), coverage of skilled nursing and skilled therapy \"does not turn on the presence or absence of a beneficiary's potential for improvement, but rather on the beneficiary's need for skilled care.\" CMS revised the Medicare Benefit Policy Manual, Chapter 8, accordingly. A plateau in measurable progress is not a lawful basis for terminating skilled coverage where skilled services remain necessary to maintain function or to prevent or slow deterioration.\n";
+  }
+  return s;
+}
+
+function sign(){
+  return `\n\nEnclosures: certified plan of care; physical therapy evaluation; daily treatment notes; weekly progress notes; physician certification; nursing notes; Section GG documentation.\n\n\nRespectfully submitted,\n\n\n_________________________________\n${or(v("fPrep"),"[Name]")}, ${or(v("fTitle"),"[Title]")}\n${or(v("fFac"),"[Facility name]")}\n${v("fPhone") ? "Phone " + v("fPhone") : ""}`;
+}
+
+function letterQIO(){
+  return header("Acentra Health — BFCC-QIO\nBeneficiary Helpline: 1-888-317-0751  ·  Fax: 1-844-878-7921\n5201 W. Kennedy Blvd., Suite 900\nTampa, FL 33609")
+  + `\n\nRE: Provider statement in support of fast-track appeal of service termination\n    Notice of Medicare Non-Coverage dated ${fmt(v("fDenial"))}\n    Effective date of non-coverage: ${fmt(v("fEffective"))}\n\n`
+  + `To the Reviewing Physician:\n\n`
+  + `${or(v("fFac"),"[Facility name]")} submits this statement in support of the enrollee's fast-track appeal of ${or(v("fPlan"),"[plan name]")}'s decision to terminate Medicare-covered skilled services. Skilled care continues to be reasonable and necessary, and the termination is not supported by the clinical record.\n\n`
+  + `BURDEN OF PROOF\n\nUnder 42 CFR 422.626, the burden of proof rests with the Medicare Advantage organization to demonstrate that termination of coverage is the correct decision, on the basis of medical necessity or other Medicare coverage policies. The plan is required to supply a specific and detailed explanation of why services are no longer reasonable and necessary. To date the stated basis is:\n\n     ${or(v("fReason"),"[Quote the plan's stated reason verbatim]")}\n\nThat explanation is not supported by the contemporaneous clinical record set out below.\n\n`
+  + `APPLICABLE COVERAGE STANDARD\n\nEffective January 1, 2024, under CMS-4201-F and 42 CFR 422.101(b), a Medicare Advantage organization must apply Traditional Medicare coverage criteria and may not apply internal criteria more restrictive than those criteria where they are fully established. The governing SNF standard is set out at 42 CFR 409.31 through 409.35 and the Medicare Benefit Policy Manual, Chapter 8.\n`
+  + clinical()
+  + `\nRELIEF REQUESTED\n\n${or(v("fFac"),"The facility")} respectfully requests that the QIO find continued skilled coverage reasonable and necessary and overturn the termination, so that Medicare-covered services continue for the duration set out in the certified plan of care.\n`
+  + sign();
+}
+
+function letterRecon(){
+  return header(`${or(v("fPlan"),"[Plan name]")} — Appeals and Grievances\n${or(v("fPlanFax"),"[Plan appeals fax or address]")}`)
+  + `\n\nRE: Request for reconsideration — denial dated ${fmt(v("fDenial"))}\n    EXPEDITED REVIEW REQUESTED\n\n`
+  + `To the Medical Director:\n\n`
+  + `${or(v("fFac"),"[Facility name]")} appeals the above denial of Medicare-covered skilled services and requests expedited reconsideration. The enrollee remains in the facility and a delay would seriously jeopardize the enrollee's health and ability to regain maximum function.\n\n`
+  + `THE STATED BASIS FOR DENIAL\n\n     ${or(v("fReason"),"[Quote the plan's stated reason verbatim]")}\n\n`
+  + `THE PLAN MUST APPLY TRADITIONAL MEDICARE CRITERIA\n\nEffective January 1, 2024, 42 CFR 422.101(b) and CMS-4201-F require a Medicare Advantage organization to comply with Traditional Medicare coverage criteria — national and local coverage determinations and the general coverage and benefit conditions in Medicare statute, regulation, and manuals. Where those criteria are fully established, the plan may not apply internal clinical criteria that are more restrictive. The applicable SNF criteria appear at 42 CFR 409.31 through 409.35 and in the Medicare Benefit Policy Manual, Chapter 8.\n\n`
+  + `REQUEST FOR THE CRITERIA RELIED UPON\n\nThe facility requests that the plan identify, in writing, the specific coverage criterion relied upon for this determination, and whether that criterion derives from Traditional Medicare coverage rules or from an internal guideline. If an internal guideline was applied, the facility requests the guideline itself and the basis on which the plan concluded it is no more restrictive than Traditional Medicare criteria.\n`
+  + clinical()
+  + `\nRELIEF REQUESTED\n\nThe facility requests that the plan overturn the denial and authorize skilled services for the duration set out in the certified plan of care. Should the plan uphold the denial in whole or in part, the facility requests written notice identifying the specific criteria applied, and asks that the matter be forwarded to the Independent Review Entity as required.\n`
+  + sign();
+}
+
+function letterShort(){
+  return header(`${or(v("fPlan"),"[Plan name]")} — Utilization Management / Medical Director\n${or(v("fPlanFax"),"[Plan fax or address]")}`)
+  + `\n\nRE: Request for authorization coterminous with the certified plan of care\n    Objection to short-interval reauthorization\n\n`
+  + `To the Medical Director:\n\n`
+  + `${or(v("fFac"),"[Facility name]")} requests that ${or(v("fPlan"),"the plan")} issue authorization for the above enrollee for the full duration of the certified plan of care, rather than in short increments requiring repeated reauthorization.\n\n`
+  + `THE CERTIFIED PLAN OF CARE\n\n     ${or(v("fOrder"),"[Ordered frequency and duration — e.g. PT 5x/week × 21 days]")}\n\n`
+  + `AUTHORIZATION DURATION IS GOVERNED BY 42 CFR 422.112(b)(8)\n\nUnder 42 CFR 422.112(b)(8)(i)(A), an approval of a prior authorization request for a course of treatment must be valid for as long as medically reasonable and necessary to avoid disruptions in care, in accordance with applicable coverage criteria, the enrollee's medical history, and the treating provider's recommendation.\n\nThe treating provider's recommendation is the certified plan of care quoted above. Short-interval authorization is not keyed to any clinical milestone in that plan of care, and repeated reauthorization at intervals shorter than the certified course of treatment creates precisely the disruption in care the regulation directs plans to avoid.\n\n`
+  + `APPROVED DETERMINATIONS MAY NOT BE REOPENED\n\n42 CFR 422.138(c) provides that where the organization has approved furnishing of a covered service through a prior authorization, a pre-service determination, or a concurrent determination made during the enrollee's receipt of services, it may not subsequently deny coverage on the basis of lack of medical necessity, and may not reopen that determination except for good cause or on reliable evidence of fraud or similar fault. Each concurrent approval issued in this case is such a determination.\n`
+  + clinical()
+  + `\nRELIEF REQUESTED\n\nThe facility requests that the plan (1) issue authorization coterminous with the certified plan of care; (2) if it declines, state in writing the specific coverage criterion and clinical rationale supporting an authorization period shorter than the treating provider's recommendation; and (3) confirm that no previously approved concurrent determination in this case will be reopened absent good cause under 42 CFR 422.138(c).\n\nThe facility further notes that where coverage is to end, the enrollee is entitled to a Notice of Medicare Non-Coverage delivered at least two calendar days before the effective date of non-coverage, with fast-track appeal rights, under 42 CFR 422.624 and 422.626. The expiration of a short authorization interval does not substitute for that notice.\n`
+  + sign();
+}
+
+function build(){
+  const t = tab === "qio" ? letterQIO() : tab === "recon" ? letterRecon() : letterShort();
+  $("letter").textContent = t;
+}
+
+/* persistence: facility fields only, never case/PHI fields */
+function saveFac(){
+  const o = {}; FACKEYS.forEach(k => o[k] = v(k));
+  try { localStorage.setItem("ma-appeal-facility", JSON.stringify(o)); } catch {}
+}
+function loadFac(){
+  try {
+    const o = JSON.parse(localStorage.getItem("ma-appeal-facility") || "{}");
+    FACKEYS.forEach(k => { if (o[k]) $(k).value = o[k]; });
+  } catch {}
+}
+
+ALL.forEach(k => $(k).addEventListener("input", () => {
+  if (FACKEYS.includes(k)) saveFac();
+  build();
+}));
+
+document.querySelectorAll(".tab").forEach(b => b.addEventListener("click", () => {
+  document.querySelectorAll(".tab").forEach(x => x.setAttribute("aria-selected","false"));
+  b.setAttribute("aria-selected","true");
+  tab = b.dataset.t; $("tabdesc").textContent = DESC[tab]; build();
+}));
+
+$("copyBtn").addEventListener("click", async () => {
+  try {
+    await navigator.clipboard.writeText($("letter").textContent);
+    $("copied").classList.add("show"); setTimeout(()=>$("copied").classList.remove("show"), 1600);
+  } catch { alert("Copy failed — select the letter text and copy manually."); }
+});
+$("printBtn").addEventListener("click", () => window.print());
+$("txtBtn").addEventListener("click", () => {
+  const blob = new Blob([$("letter").textContent], {type:"text/plain"});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = `appeal-${tab}.txt`; a.click(); URL.revokeObjectURL(a.href);
+});
+$("themeBtn").addEventListener("click", () => {
+  const cur = document.documentElement.getAttribute("data-theme");
+  const next = cur === "dark" ? "light" : cur === "light" ? "" : "dark";
+  if (next) document.documentElement.setAttribute("data-theme", next);
+  else document.documentElement.removeAttribute("data-theme");
+});
+
+loadFac(); $("tabdesc").textContent = DESC[tab]; build();
+</script>
+</body>
+</html>

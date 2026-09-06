@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="light dark">
+<title>Plan Rules Registry — Cardinal Coverage</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23A31B33'/%3E%3Ctext x='16' y='23' font-family='system-ui' font-size='20' font-weight='900' text-anchor='middle' fill='white'%3EC%3C/text%3E%3C/svg%3E">
+<style>
+  :root{--paper:#F7F2E6;--surface:#FFFDF7;--surface-2:#EFE7D3;--ink:#17233F;--muted:#6B6350;--line:#E2D9C3;
+    --brand:#A31B33;--brand-strong:#7E1226;--good:#2E7D4F;--good-bg:#E4F0E8;--warn:#9A6410;--warn-bg:#F6ECD6;
+    --crit:#B23A3A;--crit-bg:#F6E1DE;--shadow:0 1px 2px rgba(23,35,63,.07),0 10px 26px -14px rgba(23,35,63,.24);
+    --font:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--r:14px;}
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#101627;--surface:#172033;--surface-2:#1F2A42;--ink:#F3EEE1;
+    --muted:#A9A28F;--line:#2B3855;--brand:#E2586B;--brand-strong:#F27A8B;--good:#4FBE86;--good-bg:#12321f;
+    --warn:#D6A24A;--warn-bg:#33280f;--crit:#E07B6E;--crit-bg:#3a1d1a;--shadow:0 1px 2px rgba(0,0,0,.45),0 12px 32px -14px rgba(0,0,0,.65);}}
+  :root[data-theme="dark"]{--paper:#101627;--surface:#172033;--surface-2:#1F2A42;--ink:#F3EEE1;--muted:#A9A28F;--line:#2B3855;--brand:#E2586B;--brand-strong:#F27A8B;--good:#4FBE86;--good-bg:#12321f;--warn:#D6A24A;--warn-bg:#33280f;--crit:#E07B6E;--crit-bg:#3a1d1a;}
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);line-height:1.5;}
+  .wrap{max-width:1240px;margin-inline:auto;padding:0 clamp(.8rem,3vw,1.6rem);}
+  header.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+  .top-in{max-width:1240px;margin-inline:auto;padding:.7rem clamp(.8rem,3vw,1.6rem);display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;}
+  .logo{width:32px;height:32px;border-radius:9px;background:var(--brand);color:#fff;font-weight:900;display:grid;place-items:center;flex:none;}
+  h1{font-size:1.02rem;margin:0;font-weight:800;}
+  h1 small{display:block;font-weight:600;font-size:.68rem;color:var(--muted);}
+  .toolnav{display:flex;gap:.15rem;margin-left:.4rem;}
+  .toolnav a{font-size:.78rem;font-weight:700;color:var(--muted);text-decoration:none;padding:.3rem .6rem;border-radius:8px;}
+  .toolnav a:hover{color:var(--brand);background:var(--surface-2);}
+  .toolnav a[aria-current]{background:var(--brand);color:#fff;}
+  .spacer{margin-left:auto;}
+  .btn{background:var(--brand);color:#fff;border:0;border-radius:10px;padding:.5rem .9rem;font:inherit;font-weight:700;cursor:pointer;}
+  .btn:hover{background:var(--brand-strong);}
+  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line);}
+  .btn.ghost:hover{border-color:var(--brand);color:var(--brand);}
+  .btn.sm{padding:.28rem .55rem;font-size:.76rem;border-radius:8px;}
+
+  .phi{background:var(--warn-bg);border:1px solid var(--warn);border-radius:10px;padding:.7rem .9rem;font-size:.84rem;margin:1rem 0;}
+  .phi b{color:var(--warn);}
+
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:1rem 0 1.2rem;}
+  @media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr);}}
+  .stat{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:.8rem 1rem;box-shadow:var(--shadow);}
+  .stat .k{font-size:.63rem;font-weight:900;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);}
+  .stat .v{font-size:1.7rem;font-weight:800;letter-spacing:-.02em;line-height:1.15;margin-top:.15rem;}
+  .stat.ok .v{color:var(--good);} .stat.due .v{color:var(--warn);} .stat.stale .v{color:var(--crit);}
+
+  .filters{display:flex;gap:.4rem;flex-wrap:wrap;align-items:center;margin:.4rem 0 1rem;}
+  .filters select,.filters input{padding:.4rem .6rem;border:1px solid var(--line);border-radius:9px;background:var(--surface);color:var(--ink);font:inherit;font-size:.84rem;}
+  .filters .lbl{font-size:.66rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);}
+
+  .grp{margin-bottom:1.6rem;}
+  .grp h2{font-size:.95rem;margin:0 0 .5rem;display:flex;align-items:baseline;gap:.5rem;}
+  .grp h2 .sub{font-size:.72rem;font-weight:600;color:var(--muted);}
+
+  .rule{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--line);border-radius:var(--r);
+    padding:.8rem 1rem;margin-bottom:.6rem;box-shadow:var(--shadow);}
+  .rule.fresh{border-left-color:var(--good);}
+  .rule.due{border-left-color:var(--warn);}
+  .rule.stale{border-left-color:var(--crit);}
+  .rhead{display:flex;align-items:baseline;gap:.5rem;flex-wrap:wrap;}
+  .rtype{font-size:.63rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:var(--brand);}
+  .rscope{font-size:.72rem;color:var(--muted);}
+  .rhead .spacer{margin-left:auto;}
+  .rval{margin:.35rem 0 0;font-size:.95rem;white-space:pre-wrap;}
+  .rmeta{margin-top:.45rem;font-size:.72rem;color:var(--muted);display:flex;gap:.9rem;flex-wrap:wrap;align-items:center;}
+  .badge{border-radius:999px;padding:.1rem .5rem;font-size:.66rem;font-weight:900;letter-spacing:.03em;}
+  .badge.fresh{background:var(--good-bg);color:var(--good);}
+  .badge.due{background:var(--warn-bg);color:var(--warn);}
+  .badge.stale{background:var(--crit-bg);color:var(--crit);}
+  .rmeta a{color:var(--brand);}
+  .hist{margin-top:.45rem;font-size:.73rem;color:var(--muted);border-top:1px dashed var(--line);padding-top:.4rem;}
+  .hist b{color:var(--ink);}
+
+  dialog{border:1px solid var(--line);border-radius:var(--r);background:var(--surface);color:var(--ink);padding:0;max-width:620px;width:calc(100% - 2rem);box-shadow:0 24px 60px -20px rgba(0,0,0,.5);}
+  dialog::backdrop{background:rgba(10,14,26,.55);}
+  .dlg-in{padding:1.2rem 1.3rem 1.3rem;}
+  dialog h2{margin:0 0 .8rem;font-size:1.12rem;}
+  label{display:block;font-size:.68rem;font-weight:800;letter-spacing:.04em;color:var(--muted);margin:.6rem 0 .18rem;text-transform:uppercase;}
+  input,select,textarea{width:100%;padding:.5rem .6rem;border:1px solid var(--line);border-radius:9px;background:var(--paper);color:var(--ink);font:inherit;font-size:.9rem;}
+  textarea{resize:vertical;min-height:3.6rem;}
+  input:focus,select:focus,textarea:focus{outline:2px solid var(--brand);outline-offset:1px;}
+  .g2{display:grid;grid-template-columns:1fr 1fr;gap:0 .8rem;}
+  @media(max-width:520px){.g2{grid-template-columns:1fr;}}
+  .hint{font-size:.71rem;color:var(--muted);margin:.2rem 0 0;}
+  .dlg-actions{display:flex;gap:.6rem;justify-content:flex-end;margin-top:1rem;flex-wrap:wrap;}
+  .dlg-actions .del{margin-right:auto;color:var(--crit);border-color:var(--crit);}
+
+  .empty{text-align:center;color:var(--muted);padding:2.6rem 1rem;font-size:.93rem;}
+  footer{color:var(--muted);font-size:.76rem;padding:1rem 0 3rem;line-height:1.65;}
+  footer b{color:var(--ink);}
+
+  @media print{ header.top,.btn,.filters,dialog,.phi{display:none!important;} body{background:#fff;} .rule{break-inside:avoid;box-shadow:none;} }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <span class="logo" aria-hidden="true">C</span>
+    <h1>Plan Rules Registry<small>What each plan requires — dated, sourced, and set to expire</small></h1>
+    <nav class="toolnav">
+      <a href="index.html">Home</a>
+      <a href="tracker.html">Tracker</a>
+      <a href="appeal-letters.html">Letters</a>
+      <a href="outcomes.html">Outcomes</a>
+      <a href="rules.html" aria-current="page">Rules</a>
+    </nav>
+    <span class="spacer"></span>
+    <button class="btn" id="addBtn">+ Add rule</button>
+    <button class="btn ghost" id="exportBtn">Export</button>
+    <button class="btn ghost" id="importBtn">Import</button>
+    <button class="btn ghost" id="printBtn">Print</button>
+    <button class="btn ghost" id="themeBtn" aria-label="Toggle theme">◐</button>
+    <input type="file" id="fileIn" accept="application/json" hidden>
+  </div>
+</header>
+
+<div class="wrap">
+  <p class="phi"><b>A stale rule is more dangerous than no rule.</b> Every entry carries the source it came from, the date a human last confirmed it, and a review-by date. Entries past review turn amber, then red — treat those as unverified until someone re-checks the source. Nothing here is scraped or inferred; each seeded rule was read off the cited source on the date shown. Plan operational details change without notice and vary by state, product line, and contract year, so confirm anything load-bearing against the current provider manual before you act on it.</p>
+
+  <div class="stats" id="stats"></div>
+
+  <div class="filters">
+    <span class="lbl">Filter</span>
+    <select id="fPlanSel" aria-label="Filter by plan"><option value="">All plans</option></select>
+    <select id="fStateSel" aria-label="Filter by state"><option value="">All states</option></select>
+    <select id="fTypeSel" aria-label="Filter by rule type"><option value="">All rule types</option></select>
+    <select id="fFreshSel" aria-label="Filter by freshness">
+      <option value="">Any freshness</option>
+      <option value="stale">Stale only</option>
+      <option value="due">Due for review</option>
+      <option value="fresh">Fresh only</option>
+    </select>
+    <input id="fSearch" aria-label="Search rules" type="search" placeholder="Search rules…" style="min-width:180px;">
+  </div>
+
+  <div id="list"></div>
+
+  <footer>
+    <p><b>How freshness works.</b> Each rule has a review interval — 90 days by default, shorter for things that change often like fax numbers and portal routes, longer for codified federal regulation. Past the review date a rule is <i>due</i>; at twice the interval it is <i>stale</i>. The badge reflects the last human confirmation, not the last edit, so correcting a typo does not reset the clock.</p>
+    <p><b>Change history is kept.</b> When a rule's value changes, the previous value is retained with the date it was superseded. That history is the point: it is how you show a plan that its own requirement moved, and how a new hire learns what the rules were during a stay they are appealing months later.</p>
+    <p><b>This is a local prototype.</b> Data lives in this browser only. A production registry needs a shared backend, per-source monitoring, and a named owner for each plan — see <i>docs/rules-registry.md</i> for what that would take. Not clinical, legal, or billing advice.</p>
+  </footer>
+</div>
+
+<dialog id="dlg">
+  <form method="dialog" class="dlg-in" id="ruleForm">
+    <h2 id="dlgTitle">Add rule</h2>
+    <div class="g2">
+      <div><label for="rPlan">Plan / payer</label><input id="rPlan" required list="planL" placeholder="Aetna Medicare Advantage">
+        <datalist id="planL"></datalist></div>
+      <div><label for="rState">State / scope</label><input id="rState" list="stateL" placeholder="NC" value="NC">
+        <datalist id="stateL"><option>NC</option><option>Federal</option><option>All states</option></datalist></div>
+    </div>
+    <div class="g2">
+      <div><label for="rProduct">Product line</label>
+        <select id="rProduct"><option>Medicare Advantage</option><option>Medicaid managed care</option><option>Traditional Medicare</option><option>All</option></select></div>
+      <div><label for="rType">Rule type</label>
+        <select id="rType">
+          <option>Authorization submission route</option>
+          <option>Decision turnaround</option>
+          <option>Reauthorization cadence</option>
+          <option>Clinical criteria used</option>
+          <option>Appeal route</option>
+          <option>Peer-to-peer process</option>
+          <option>Notice requirement</option>
+          <option>Contact</option>
+          <option>Delegated vendor</option>
+          <option>Other</option>
+        </select></div>
+    </div>
+    <div><label for="rValue">The rule</label><textarea id="rValue" required placeholder="Submit SNF prior authorization through the Availity provider portal or the EDI Precertification Request transaction."></textarea></div>
+    <div><label for="rSource">Source (URL or document name)</label><input id="rSource" required placeholder="https://…  or  '2026 Participating Provider Precertification List, p.4'">
+      <p class="hint">Required. A rule without a source is a rumour.</p></div>
+    <div class="g2">
+      <div><label for="rVerified">Last confirmed by a human</label><input id="rVerified" type="date" required></div>
+      <div><label for="rInterval">Review every (days)</label><input id="rInterval" type="number" min="7" max="1095" value="90"></div>
+    </div>
+    <div class="g2">
+      <div><label for="rBy">Confirmed by</label><input id="rBy" placeholder="Initials"></div>
+      <div><label for="rEffective">Rule effective date (optional)</label><input id="rEffective" type="date"></div>
+    </div>
+    <div><label for="rNote">Note / caveat</label><textarea id="rNote" placeholder="Applies to NC only — the 2026 EviCore post-acute program covers NJ, NY, PA, WV."></textarea></div>
+    <div class="dlg-actions">
+      <button type="button" class="btn ghost sm del" id="delBtn">Delete</button>
+      <button type="button" class="btn ghost" id="cancelBtn">Cancel</button>
+      <button type="submit" class="btn">Save</button>
+    </div>
+  </form>
+</dialog>
+
+<script>
+const KEY = "cc-rules-v1";
+const $ = (id) => document.getElementById(id);
+const uid = () => (self.crypto && crypto.randomUUID) ? crypto.randomUUID()
+  : "id-" + Date.now().toString(36) + "-" + Math.random().toString(36).slice(2,10);
+const parseD = (s) => { if(!s) return null; const p=s.split("-").map(Number);
+  if (p.length!==3||p.some(isNaN)) return null; return new Date(p[0],p[1]-1,p[2]); };
+const toISO = (d) => `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
+const today = () => { const n=new Date(); return new Date(n.getFullYear(),n.getMonth(),n.getDate()); };
+const addD = (d,n) => { const r=new Date(d.getFullYear(),d.getMonth(),d.getDate()); r.setDate(r.getDate()+n); return r; };
+const diffD = (a,b) => Math.round((a-b)/86400000);
+const fmtD = (d) => d ? d.toLocaleDateString(undefined,{month:"short",day:"numeric",year:"numeric"}) : "—";
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, m => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[m]));
+
+let rules = [], editingId = null;
+
+/* Seed: ONLY rules confirmed against a named source during research on the date
+   shown. Federal regulation gets a long review interval; plan operational
+   details get a short one because they move without notice. */
+const SEED = [
+  { plan:"Aetna Medicare Advantage", state:"NC", product:"Medicare Advantage",
+    type:"Authorization submission route", interval:90, verified:"2026-08-13", by:"research",
+    value:"Submit SNF prior authorization through the Availity provider portal, or via an EDI vendor using the existing Precertification Request transaction. Provider line 888-632-3862.",
+    source:"Aetna 2026 Participating Provider Precertification List; Aetna Availity provider page",
+    note:"Do NOT route North Carolina through EviCore. The post-acute EviCore/MedSolutions program effective 1 Jan 2026 covers New Jersey, New York, Pennsylvania and West Virginia only (excluding NJ FIDE)." },
+
+  { plan:"WellCare Medicare Advantage", state:"NC", product:"Medicare Advantage",
+    type:"Authorization submission route", interval:90, verified:"2026-08-13", by:"research",
+    value:"Submit through the secure Provider Portal: Care Management tab → Create New Authorization. Fax and phone accepted for expedited/urgent requests only. Check requirements first in the NC authorization lookup tool and the NC Prior Authorization Guide.",
+    source:"wellcare.com/en/north-carolina/providers/medicare/authorizations; WellCare 2026 Medicare Advantage Provider Manual",
+    note:"WellCare runs both a Medicaid Standard Plan and Medicare Advantage in NC on different sites. marketplace.wellcarenc.com is the Medicaid path, not MA." },
+
+  { plan:"All Medicare Advantage", state:"Federal", product:"Medicare Advantage",
+    type:"Decision turnaround", interval:365, verified:"2026-08-13", by:"research",
+    value:"Standard prior authorization decisions within 7 calendar days; expedited within 72 hours. A specific reason must accompany every denial.",
+    source:"CMS-0057-F Interoperability and Prior Authorization Final Rule", effective:"2026-01-01",
+    note:"Operational provisions took effect 1 Jan 2026. Payers must also publicly report prior-authorization metrics." },
+
+  { plan:"All Medicare Advantage", state:"Federal", product:"Medicare Advantage",
+    type:"Reauthorization cadence", interval:365, verified:"2026-08-13", by:"research",
+    value:"Approval of a prior authorization for a course of treatment must remain valid as long as medically necessary to avoid disruptions in care — judged against applicable coverage criteria, the patient's medical history, and the treating provider's recommendation.",
+    source:"42 CFR 422.112(b)(8), added by CMS-4201-F", effective:"2024-01-01",
+    note:"Verify exact codified wording on eCFR before quoting inside a letter. Note 42 CFR 422.624(a)(2) separately contemplates preauthorization in discrete increments — each increment is itself a termination requiring valid notice." },
+
+  { plan:"All Medicare Advantage", state:"Federal", product:"Medicare Advantage",
+    type:"Clinical criteria used", interval:365, verified:"2026-08-13", by:"research",
+    value:"Plans must apply Traditional Medicare coverage criteria and may not substitute internal or proprietary criteria where Traditional Medicare criteria are fully established. SNF conditions of coverage sit at 42 CFR 409.31–409.35.",
+    source:"42 CFR 422.101(b)(6); CMS-4201-F", effective:"2024-01-01",
+    note:"Whether SNF criteria are 'fully established' is the contested question — plans argue they are not. Ask the plan to state its position in writing and name the subparagraph it relies on." },
+
+  { plan:"All Medicare Advantage", state:"Federal", product:"Medicare Advantage",
+    type:"Notice requirement", interval:365, verified:"2026-08-13", by:"research",
+    value:"NOMNC (CMS-10123) must be delivered at least 2 calendar days before the effective date. CMS defines the Effective Date as the LAST day of covered services, not the first uncovered day. Fast-track request to the BFCC-QIO by noon of the day before that date; 42 CFR 422.626 separately runs the clock from noon of the first day after the notice was delivered.",
+    source:"CMS-10123 NOMNC form instructions; 42 CFR 422.624, 422.626",
+    note:"Where the two deadlines differ — because the notice went out earlier than the two-day minimum — act on the earlier one." },
+
+  { plan:"All Medicare Advantage", state:"Federal", product:"Medicare Advantage",
+    type:"Appeal route", interval:365, verified:"2026-08-13", by:"research",
+    value:"On a fast-track appeal of a service termination, the burden of proof rests with the MA organization to show the termination is correct, and the plan must supply a specific and detailed explanation of why services are no longer reasonable and necessary.",
+    source:"42 CFR 422.626",
+    note:"Since 1 Jan 2025 (CMS-4205-F) the BFCC-QIO must also review UNTIMELY fast-track requests, and an enrollee no longer forfeits the appeal by leaving the facility. A late filing loses the guaranteed decision timeframe and automatic liability protection — not the review." },
+
+  { plan:"Acentra Health (BFCC-QIO)", state:"NC", product:"All",
+    type:"Contact", interval:90, verified:"2026-08-13", by:"research",
+    value:"North Carolina's BFCC-QIO is Acentra Health. Beneficiary helpline 1-888-317-0751; fax 1-844-878-7921; TTY 711. Serves CMS Region 4: AL, FL, GA, KY, MS, NC, SC, TN.",
+    source:"acentraqio.com North Carolina state page; CMS BFCC-QIO directory",
+    note:"Region-specific. 1-888-305-6759 is Region 10 (AK, ID, OR, WA) — do not confuse them. Always prefer the entity and number printed on the NOMNC actually delivered to the resident." },
+];
+
+function load(){
+  // An absent key means first ever visit. An explicit [] means the user emptied
+  // the registry on purpose — re-seeding it would resurrect deleted rules.
+  const raw = localStorage.getItem(KEY);
+  const firstVisit = raw === null;
+  try { rules = JSON.parse(raw) || []; } catch { rules = []; }
+  if (!Array.isArray(rules)) rules = [];
+  rules = rules.filter(r => r && typeof r === "object" && !Array.isArray(r));
+  // Seed once, ever. Re-seeding an intentionally emptied registry silently
+  // resurrects eight rules the user deleted.
+  if (firstVisit) { rules = SEED.map(r => ({ id: uid(), history: [], ...r })); save(); }
+}
+function save(){ try { localStorage.setItem(KEY, JSON.stringify(rules)); } catch {
+  alert("Could not save — browser storage may be full or blocked. Export before closing."); } }
+
+function freshness(r){
+  const v = parseD(r.verified); if (!v) return {k:"stale", age:null, due:null};
+  const iv = +r.interval || 90;
+  const age = diffD(today(), v);
+  const due = addD(v, iv);
+  if (age >= iv*2) return {k:"stale", age, due};
+  if (age >= iv)   return {k:"due",   age, due};
+  return {k:"fresh", age, due};
+}
+
+function opts(sel, values, keep){
+  const cur = keep ?? sel.value;
+  sel.innerHTML = `<option value="">${sel.dataset.all}</option>` +
+    values.map(v => `<option${v===cur?" selected":""}>${esc(v)}</option>`).join("");
+}
+
+function render(){
+  const uniq = (f) => [...new Set(rules.map(f).filter(Boolean))].sort();
+  $("fPlanSel").dataset.all  = "All plans";
+  $("fStateSel").dataset.all = "All states";
+  $("fTypeSel").dataset.all  = "All rule types";
+  opts($("fPlanSel"),  uniq(r => r.plan));
+  opts($("fStateSel"), uniq(r => r.state));
+  opts($("fTypeSel"),  uniq(r => r.type));
+  $("planL").innerHTML = uniq(r => r.plan).map(v => `<option>${esc(v)}</option>`).join("");
+
+  const counts = {fresh:0, due:0, stale:0};
+  rules.forEach(r => counts[freshness(r).k]++);
+  $("stats").innerHTML = `
+    <div class="stat"><div class="k">Rules tracked</div><div class="v">${rules.length}</div></div>
+    <div class="stat ok"><div class="k">Fresh</div><div class="v">${counts.fresh}</div></div>
+    <div class="stat due"><div class="k">Due for review</div><div class="v">${counts.due}</div></div>
+    <div class="stat stale"><div class="k">Stale — do not rely on</div><div class="v">${counts.stale}</div></div>`;
+
+  const q = ($("fSearch").value || "").toLowerCase();
+  const shown = rules.filter(r =>
+      (!$("fPlanSel").value  || r.plan  === $("fPlanSel").value) &&
+      (!$("fStateSel").value || r.state === $("fStateSel").value) &&
+      (!$("fTypeSel").value  || r.type  === $("fTypeSel").value) &&
+      (!$("fFreshSel").value || freshness(r).k === $("fFreshSel").value) &&
+      (!q || [r.plan,r.state,r.type,r.value,r.source,r.note].join(" ").toLowerCase().includes(q)))
+    .sort((a,b) => {
+      const rank = {stale:0, due:1, fresh:2};
+      const d = rank[freshness(a).k] - rank[freshness(b).k];
+      return d || a.plan.localeCompare(b.plan) || a.type.localeCompare(b.type);
+    });
+
+  const host = $("list");
+  if (!shown.length){ host.innerHTML = `<p class="empty">No rules match. Adjust the filters, or choose <b>+ Add rule</b>.</p>`; return; }
+
+  // Group by plan, but order the groups by their worst freshness so a stale rule
+  // is never pushed below a fresh one by alphabetical plan order.
+  const rank = {stale:0, due:1, fresh:2};
+  const needsReview = shown.filter(r => freshness(r).k !== "fresh")
+                           .sort((a,b) => rank[freshness(a).k] - rank[freshness(b).k]);
+  const groups = {};
+  shown.filter(r => freshness(r).k === "fresh")
+       .forEach(r => (groups[r.plan] = groups[r.plan] || []).push(r));
+  const ordered = Object.entries(groups).sort((a,b) => a[0].localeCompare(b[0]));
+  if (needsReview.length) ordered.unshift(["⚠ Needs review — do not rely on these", needsReview]);
+  host.innerHTML = ordered.map(([plan, rs]) => `
+    <section class="grp">
+      <h2>${esc(plan)} <span class="sub">${rs.length} rule${rs.length===1?"":"s"}</span></h2>
+      ${rs.map(r => {
+        const f = freshness(r);
+        // Only http(s) becomes a link — javascript:/data: sources render as text.
+        const src = /^https?:\/\//i.test(r.source||"")
+          ? `<a href="${esc(r.source)}" target="_blank" rel="noopener noreferrer">source</a>`
+          : `source: ${esc(r.source)}`;
+        return `<article class="rule ${f.k}">
+          <div class="rhead">
+            <span class="rtype">${esc(r.type)}</span>
+            <span class="rscope">${esc(r.state)} · ${esc(r.product)}${r.effective?` · effective ${fmtD(parseD(r.effective))}`:""}</span>
+            <span class="spacer"></span>
+            <span class="badge ${f.k}">${f.k==="fresh"?"fresh":f.k==="due"?"due for review":"STALE"}</span>
+            <button class="btn ghost sm" data-edit="${esc(r.id)}">Edit</button>
+          </div>
+          <p class="rval">${esc(r.value)}</p>
+          ${r.note ? `<p class="rval" style="font-size:.85rem;color:var(--muted);">${esc(r.note)}</p>` : ""}
+          <div class="rmeta">
+            <span>confirmed ${fmtD(parseD(r.verified))}${r.by?` by ${esc(r.by)}`:""}</span>
+            <span>${f.age!==null?`${f.age}d ago`:""} · review by ${fmtD(f.due)}</span>
+            <span>${src}</span>
+          </div>
+          ${(r.history||[]).length ? `<div class="hist"><b>Previously:</b> ${
+            r.history.slice(-3).reverse().map(h =>
+              `${esc(h.value.slice(0,120))}${h.value.length>120?"…":""} <i>(until ${fmtD(parseD(h.until))})</i>`
+            ).join("<br>")}</div>` : ""}
+        </article>`;
+      }).join("")}
+    </section>`).join("");
+
+  host.querySelectorAll("[data-edit]").forEach(b =>
+    b.addEventListener("click", () => openDlg(b.getAttribute("data-edit"))));
+}
+
+function openDlg(id){
+  editingId = id || null;
+  const r = id ? rules.find(x => x.id === id) : null;
+  $("dlgTitle").textContent = r ? "Edit rule" : "Add rule";
+  $("delBtn").style.display = r ? "" : "none";
+  $("rPlan").value = r?.plan ?? "";
+  $("rState").value = r?.state ?? "NC";
+  $("rProduct").value = r?.product ?? "Medicare Advantage";
+  $("rType").value = r?.type ?? "Authorization submission route";
+  $("rValue").value = r?.value ?? "";
+  $("rSource").value = r?.source ?? "";
+  $("rVerified").value = r?.verified ?? toISO(today());
+  $("rInterval").value = r?.interval ?? 90;
+  $("rBy").value = r?.by ?? "";
+  $("rEffective").value = r?.effective ?? "";
+  $("rNote").value = r?.note ?? "";
+  $("dlg").showModal();
+}
+
+$("ruleForm").addEventListener("submit", () => {
+  if (!parseD($("rVerified").value)) { alert("Enter a valid confirmation date."); return; }
+  const prev = editingId ? rules.find(x => x.id === editingId) : null;
+  const rec = {
+    id: editingId || uid(),
+    plan: $("rPlan").value.trim(), state: $("rState").value.trim() || "—",
+    product: $("rProduct").value, type: $("rType").value,
+    value: $("rValue").value.trim(), source: $("rSource").value.trim(),
+    verified: $("rVerified").value, interval: +$("rInterval").value || 90,
+    by: $("rBy").value.trim(), effective: $("rEffective").value,
+    note: $("rNote").value.trim(),
+    history: prev?.history ? [...prev.history] : [],
+  };
+  // Keep the superseded value — the change history is the point of the registry.
+  if (prev && prev.value !== rec.value){
+    rec.history.push({ value: prev.value, until: toISO(today()), source: prev.source });
+  }
+  const i = rules.findIndex(x => x.id === rec.id);
+  if (i >= 0) rules[i] = rec; else rules.push(rec);
+  save(); render();
+});
+$("cancelBtn").addEventListener("click", () => $("dlg").close());
+$("delBtn").addEventListener("click", () => {
+  if (!editingId) return;
+  const r = rules.find(x => x.id === editingId);
+  if (!confirm(`Delete this ${r?.type} rule for ${r?.plan}?`)) return;
+  rules = rules.filter(x => x.id !== editingId); save(); render(); $("dlg").close();
+});
+
+$("addBtn").addEventListener("click", () => openDlg(null));
+$("printBtn").addEventListener("click", () => window.print());
+$("exportBtn").addEventListener("click", () => {
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([JSON.stringify(rules,null,2)], {type:"application/json"}));
+  a.download = `cc-plan-rules-${toISO(today())}.json`; a.click(); URL.revokeObjectURL(a.href);
+});
+$("importBtn").addEventListener("click", () => $("fileIn").click());
+$("fileIn").addEventListener("change", async (e) => {
+  const f = e.target.files[0]; if (!f) return;
+  try {
+    const incoming = JSON.parse(await f.text());
+    if (!Array.isArray(incoming)) throw new Error("not an array");
+    const byId = new Map(rules.map(r => [r.id, r]));
+    let added = 0, updated = 0;
+    for (const r of incoming){
+      // Whitelist the id: it lands in an HTML attribute and is used for identity,
+      // so a crafted one can both inject and collide with an existing rule.
+      if (!r || !r.value) continue;
+      // The id lands in an HTML attribute and drives identity. Anything that is
+      // not a plain token gets re-keyed rather than dropped.
+      if (typeof r.id !== "string" || !/^[A-Za-z0-9_-]{1,64}$/.test(r.id)) r.id = uid();
+      if (byId.has(r.id)) { Object.assign(byId.get(r.id), r); updated++; }
+      else { rules.push(r); added++; }
+    }
+    save(); render();
+    alert(`Imported: ${added} new, ${updated} updated.`);
+  } catch (err) { alert("Could not read that file — expected a rules export (JSON array)."); }
+  e.target.value = "";
+});
+["fPlanSel","fStateSel","fTypeSel","fFreshSel"].forEach(id => $(id).addEventListener("change", render));
+$("fSearch").addEventListener("input", render);
+$("themeBtn").addEventListener("click", () => {
+  const cur = document.documentElement.getAttribute("data-theme");
+  const next = cur === "dark" ? "light" : cur === "light" ? "" : "dark";
+  if (next) document.documentElement.setAttribute("data-theme", next);
+  else document.documentElement.removeAttribute("data-theme");
+});
+
+try { load(); } catch (e) { console.error("bootstrap", e); }
+render();
+</script>
+</body>
+</html>

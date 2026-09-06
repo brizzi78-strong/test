@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="light dark">
+<title>Cardinal Coverage — Investor Presentation</title>
+<meta name="description" content="Medicare Advantage now covers 55% of Medicare. Skilled nursing facilities are absorbing the authorization burden — and the denials do not survive appeal. Cardinal Coverage is the system of record for SNF Medicare Advantage cases.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23A31B33'/%3E%3Ctext x='16' y='23' font-family='system-ui' font-size='20' font-weight='900' text-anchor='middle' fill='white'%3EC%3C/text%3E%3C/svg%3E">
+<style>
+  :root{--paper:#F7F2E6;--surface:#FFFDF7;--surface-2:#EFE7D3;--ink:#17233F;--muted:#6B6350;--line:#E2D9C3;
+    --brand:#A31B33;--brand-strong:#7E1226;--good:#2E7D4F;--good-bg:#E4F0E8;--warn:#9A6410;--warn-bg:#F6ECD6;
+    --crit:#B23A3A;--crit-bg:#F6E1DE;--shadow:0 1px 2px rgba(23,35,63,.07),0 10px 26px -14px rgba(23,35,63,.24);
+    --font:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --serif:ui-serif,Georgia,"Iowan Old Style","Times New Roman",serif;--r:16px;}
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#101627;--surface:#172033;--surface-2:#1F2A42;--ink:#F3EEE1;
+    --muted:#A9A28F;--line:#2B3855;--brand:#E2586B;--brand-strong:#F27A8B;--good:#4FBE86;--good-bg:#12321f;
+    --warn:#D6A24A;--warn-bg:#33280f;--crit:#E07B6E;--crit-bg:#3a1d1a;--shadow:0 1px 2px rgba(0,0,0,.45),0 12px 32px -14px rgba(0,0,0,.65);}}
+  :root[data-theme="dark"]{--paper:#101627;--surface:#172033;--surface-2:#1F2A42;--ink:#F3EEE1;--muted:#A9A28F;--line:#2B3855;--brand:#E2586B;--brand-strong:#F27A8B;--good:#4FBE86;--good-bg:#12321f;--warn:#D6A24A;--warn-bg:#33280f;--crit:#E07B6E;--crit-bg:#3a1d1a;}
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;scroll-snap-type:y mandatory;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);line-height:1.5;}
+
+  .bar{position:fixed;inset:0 0 auto 0;height:3px;background:transparent;z-index:50;}
+  .bar i{display:block;height:100%;background:var(--brand);width:0;transition:width .2s;}
+  .hud{position:fixed;right:1rem;bottom:1rem;z-index:50;display:flex;gap:.4rem;align-items:center;
+    background:color-mix(in srgb,var(--surface) 92%,transparent);border:1px solid var(--line);
+    border-radius:999px;padding:.3rem .5rem;backdrop-filter:blur(8px);box-shadow:var(--shadow);}
+  .hud button{background:transparent;border:0;color:var(--ink);font:inherit;font-size:.85rem;cursor:pointer;padding:.2rem .45rem;border-radius:8px;}
+  .hud button:hover{background:var(--surface-2);}
+  .hud .count{font-size:.75rem;font-weight:800;color:var(--muted);font-variant-numeric:tabular-nums;padding:0 .3rem;}
+
+  section.slide{min-height:100vh;scroll-snap-align:start;display:flex;flex-direction:column;justify-content:center;
+    padding:clamp(2.5rem,7vh,5rem) clamp(1.2rem,6vw,5rem);position:relative;border-bottom:1px solid var(--line);}
+  .inner{max-width:1000px;margin-inline:auto;width:100%;}
+  .kicker{font-size:.72rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:var(--brand);margin:0 0 .8rem;}
+  h2{font-size:clamp(1.6rem,4.2vw,2.9rem);line-height:1.12;margin:0 0 1rem;font-weight:800;letter-spacing:-.02em;}
+  h2 em{font-style:normal;color:var(--brand);}
+  p.lede{font-size:clamp(1rem,1.7vw,1.22rem);color:var(--muted);max-width:60ch;margin:0 0 1.4rem;}
+  .slideno{position:absolute;top:1.1rem;left:clamp(1.2rem,6vw,5rem);font-size:.7rem;font-weight:800;color:var(--muted);letter-spacing:.1em;}
+
+  /* title slide */
+  .title{text-align:center;}
+  .title h1{font-family:var(--serif);font-size:clamp(2.4rem,7vw,4.6rem);line-height:1.08;margin:0 0 .6rem;font-weight:700;}
+  .title .tag{color:var(--brand);font-weight:800;font-size:clamp(1rem,2vw,1.3rem);letter-spacing:.01em;}
+  .title .mark{width:76px;height:76px;border-radius:20px;background:var(--brand);color:#fff;font-weight:900;
+    display:grid;place-items:center;font-size:2.4rem;margin:0 auto 1.6rem;}
+
+  /* big stats */
+  .figs{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1rem;margin:1.4rem 0;}
+  .fig{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:1.2rem 1.3rem;box-shadow:var(--shadow);}
+  .fig .n{font-size:clamp(2.1rem,4.6vw,3.1rem);font-weight:800;letter-spacing:-.03em;line-height:1;color:var(--brand);}
+  .fig .l{font-size:.93rem;margin-top:.5rem;font-weight:600;}
+  .fig .s{font-size:.76rem;color:var(--muted);margin-top:.3rem;}
+  .fig.dark{background:var(--brand);border-color:var(--brand);}
+  .fig.dark .n,.fig.dark .l,.fig.dark .s{color:#fff;} .fig.dark .s{opacity:.85;}
+
+  ul.pts{list-style:none;padding:0;margin:1rem 0 0;display:grid;gap:.75rem;max-width:64ch;}
+  ul.pts li{display:flex;gap:.7rem;align-items:flex-start;font-size:1.02rem;}
+  ul.pts li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--brand);flex:none;margin-top:.55em;}
+  ul.pts li b{font-weight:800;}
+
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem;align-items:start;}
+  @media(max-width:820px){.two{grid-template-columns:1fr;}}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:1.2rem 1.3rem;box-shadow:var(--shadow);}
+  .card h3{margin:0 0 .5rem;font-size:1.05rem;}
+  .card p{margin:0;color:var(--muted);font-size:.93rem;}
+
+  blockquote.pull{font-family:var(--serif);font-size:clamp(1.3rem,3.1vw,2rem);line-height:1.3;margin:0;font-weight:600;border-left:4px solid var(--brand);padding-left:1.2rem;}
+
+  .src{font-size:.72rem;color:var(--muted);margin-top:1.5rem;line-height:1.6;}
+  .src a{color:var(--muted);}
+
+  /* fill-in placeholders */
+  .todo{border:2px dashed var(--brand);border-radius:var(--r);padding:1.1rem 1.2rem;background:color-mix(in srgb,var(--brand) 7%,transparent);margin:.7rem 0;}
+  .todo .tag{display:inline-block;background:var(--brand);color:#fff;font-size:.63rem;font-weight:900;letter-spacing:.12em;
+    text-transform:uppercase;padding:.18rem .55rem;border-radius:999px;margin-bottom:.55rem;}
+  .todo p{margin:0;font-size:.92rem;color:var(--ink);}
+  .todo p + p{margin-top:.45rem;}
+  .todo ul{margin:.4rem 0 0;padding-left:1.1rem;font-size:.9rem;}
+  .todo li{margin:.22rem 0;}
+
+  .notes{display:none;background:var(--surface-2);border-left:4px solid var(--muted);border-radius:0 10px 10px 0;
+    padding:.8rem 1rem;margin-top:1.4rem;font-size:.88rem;color:var(--ink);max-width:70ch;}
+  body.shownotes .notes{display:block;}
+  .notes b{color:var(--brand);}
+
+  @media print{
+    html{scroll-snap-type:none;}
+    .hud,.bar{display:none!important;}
+    section.slide{min-height:auto;page-break-after:always;break-after:page;border-bottom:0;padding:1.2rem 0;}
+    body{background:#fff;}
+    .notes{display:none!important;}
+  }
+</style>
+</head>
+<body>
+<div class="bar"><i id="bar"></i></div>
+
+<section class="slide title" id="s1">
+  <div class="inner">
+    <div class="mark" aria-hidden="true">C</div>
+    <h1>Cardinal Coverage</h1>
+    <p class="tag">Know every covered day. Keep every earned dollar.</p>
+    <div class="todo" style="max-width:520px;margin:2rem auto 0;text-align:left;">
+      <span class="tag">Fill in before presenting</span>
+      <p>Presenter name and title · Date · Company entity name · Contact email</p>
+    </div>
+    <p class="src">Use ← → or space to advance. Press <b>N</b> for speaker notes, <b>P</b> to print to PDF.</p>
+  </div>
+</section>
+
+<section class="slide" id="s2">
+  <span class="slideno" data-title="The shift"></span>
+  <div class="inner">
+    <p class="kicker">The shift</p>
+    <h2>Medicare stopped being a government program and became <em>an insurance market</em>.</h2>
+    <div class="figs">
+      <div class="fig dark"><div class="n">55%</div><div class="l">of eligible Medicare beneficiaries are now in Medicare Advantage</div><div class="s">Up from 19% in 2007</div></div>
+      <div class="fig"><div class="n">35M</div><div class="l">people enrolled in MA as of February 2026</div><div class="s">+1.1M year over year</div></div>
+      <div class="fig"><div class="n">95%</div><div class="l">of MA enrollees are in plans requiring prior authorization for a skilled nursing stay</div><div class="s">Not an edge case — the default</div></div>
+    </div>
+    <p class="lede">Every one of those 35 million people is a potential skilled nursing resident whose stay must be authorized, re-authorized, documented, and defended — by the facility, at the facility's expense.</p>
+    <p class="src">Source: KFF, <i>Medicare Advantage in 2026: Enrollment Update and Key Trends</i>. The 95% figure is SNF-specific; the widely-quoted 99% covers prior authorization for <i>any</i> service.</p>
+    <div class="notes"><b>Say:</b> Don't open with the product. Open with the market structure change. Everything downstream — the denials, the admin burden, the software need — follows from more than half of Medicare moving to private plans that each run their own utilization management.</div>
+  </div>
+</section>
+
+<section class="slide" id="s3">
+  <span class="slideno" data-title="The problem"></span>
+  <div class="inner">
+    <p class="kicker">The problem</p>
+    <h2>Skilled nursing facilities are absorbing the cost of that shift <em>as unpaid labor</em>.</h2>
+    <div class="figs">
+      <div class="fig"><div class="n">29%</div><div class="l">of nursing homes report Medicare Advantage denials <b>every day</b></div><div class="s">Another 37% weekly</div></div>
+      <div class="fig"><div class="n">67%</div><div class="l">had a resident's coverage pulled too soon during the stay</div><div class="s">Often against medical advice</div></div>
+      <div class="fig"><div class="n">3 days</div><div class="l">typical reauthorization interval imposed by some plans</div><div class="s">~7 submissions on a 20-day stay</div></div>
+    </div>
+    <p class="lede">The work is real, skilled, and already delivered. The fight is over whether it gets paid for — and it is fought with spreadsheets, sticky notes, and phone calls.</p>
+    <p class="src">Source: AHCA/NCAL provider survey of 363 nursing home providers, May 2025, reported by Skilled Nursing News.</p>
+    <div class="notes"><b>Say:</b> This is where a SNF operator in the room starts nodding. If you have your own facility's numbers — hours per week on auth work, denied days last quarter — say them here. Lived detail beats a survey statistic.</div>
+  </div>
+</section>
+
+<section class="slide" id="s4">
+  <span class="slideno" data-title="The insight"></span>
+  <div class="inner">
+    <p class="kicker">The insight</p>
+    <h2>What makes this a <em>software problem</em> and not just a hard job: when these denials are appealed, they mostly fall apart.</h2>
+    <div class="figs">
+      <div class="fig dark"><div class="n">12→18→95</div><div class="l">% of SNF requests denied → % of denials appealed → % of appeals won</div><div class="s">HHS OIG OEI-09-24-00331, 19 largest MAOs, June 2024</div></div>
+      <div class="fig"><div class="n">48%</div><div class="l">of <b>appealed</b> SNF denials were rejected by independent QIO physician reviewers</div><div class="s">vs. 42% in the smaller Traditional Medicare appeal pool · Acentra service regions</div></div>
+      <div class="fig"><div class="n">77%</div><div class="l">reviewer disagreement rate on <b>repeat appeals</b></div><div class="s">27% of notices are repeats — avg 2.7 per resident · Acentra service regions</div></div>
+    </div>
+    <p class="lede">The opportunity is not only the 95% that get overturned — it is the <b>82% of denials nobody ever appeals</b>. OIG says as much: the overturn rate raises concerns about the denials that were never challenged. That is a workflow the facility can win, if it can see the deadline before it passes.</p>
+    <p class="src">Sources: HHS OIG (2026), <i>MA Organizations Overturned Nearly All Appealed Prior Authorization Denials for SNF Admission</i>; Acentra Health BFCC-QIO CMS-approved focused study, reported by McKnight's.</p>
+    <div class="notes"><b>Say:</b> This is the slide that turns a sob story into an investment thesis. Money is being left on the table for a procedural reason, not a clinical one. Procedural problems are exactly what software fixes. Pause here.</div>
+  </div>
+</section>
+
+<section class="slide" id="s5">
+  <span class="slideno" data-title="Why now"></span>
+  <div class="inner">
+    <p class="kicker">Why now</p>
+    <h2>Regulation just handed facilities a <em>legal floor</em> — and is about to hand us <em>the data pipe</em>.</h2>
+    <div class="two">
+      <div>
+        <h3 style="font-size:.95rem;margin:0 0 .5rem;color:var(--brand);">The leverage — already in force</h3>
+        <ul class="pts" style="gap:.55rem;">
+          <li><b>CMS-4201-F (Jan 2024).</b> MA plans must apply Traditional Medicare coverage criteria; no more restrictive internal guidelines.</li>
+          <li><b>42 CFR 422.112(b)(8).</b> An approved course of treatment must stay authorized as long as medically necessary to avoid disruptions in care — judged against applicable coverage criteria, the patient's history, and the treating provider's recommendation.</li>
+          <li><b>42 CFR 422.626.</b> On a termination appeal, the burden of proof sits with the plan.</li>
+          <li><b>CMS-4205-F (Jan 1, 2025).</b> The BFCC-QIO must now review <i>untimely</i> fast-track appeals, and enrollees no longer forfeit the appeal by leaving the facility. Revised NOMNC/DENC forms carry the new language.</li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="font-size:.95rem;margin:0 0 .5rem;color:var(--brand);">The clock — CMS-0057-F</h3>
+        <ul class="pts" style="gap:.55rem;">
+          <li><b>Jan 1, 2026 (now).</b> MA plans must decide in 72 hours expedited / 7 calendar days standard, with a specific reason on every denial.</li>
+          <li><b>Mar 31, 2026.</b> Plans must publicly report prior-authorization metrics — denial rates become public data.</li>
+          <li><b>Jan 1, 2027.</b> Every MA plan must run a production <b>Prior Authorization FHIR API</b>, plus Provider Access and Patient Access APIs.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="lede" style="margin-top:1.3rem;">The rules changed in the facility's favor; the facility's workflow did not. And in twelve months the manual portal-chasing that makes this hard becomes an API integration — which rewards whoever already owns the facility-side workflow when the pipe opens.</p>
+    <p class="src">Sources: CMS-4201-F; CMS-0057-F Interoperability and Prior Authorization Final Rule; 42 CFR §§ 422.101(b), 422.112(b)(8), 422.138(c), 422.624, 422.626; CMS-4205-F; AHCA/NCAL on the Medicare Advantage Improvement Act of 2026.</p>
+    <div class="notes"><b>Say:</b> This is the timing slide — spend real time here. Two arguments: the legal leverage exists today and nobody has tooling for it, and the 2027 API mandate turns our hardest technical problem (getting status out of payer portals) into a solved integration. <b>If asked "why hasn't PointClickCare done this":</b> the leverage is two years old, the appeal data is months old, and their auth tracking is a billing field, not a deadline engine — next slide.</div>
+  </div>
+</section>
+
+<section class="slide" id="s6">
+  <span class="slideno" data-title="The product"></span>
+  <div class="inner">
+    <p class="kicker">The product</p>
+    <h2>One dashboard. Every resident. <em>Admission through discharge.</em></h2>
+    <div class="two">
+      <div>
+        <ul class="pts">
+          <li><b>Authorization status and covered days</b> for every resident, current, in one view</li>
+          <li><b>Deadline engine</b> — next submission, NOMNC deliver-by, QIO fast-track cutoff, physician recertification, weekly progress note</li>
+          <li><b>Appeal workflow</b> that assembles the regulatory argument around the facility's clinical record</li>
+          <li><b>Financial exposure</b> by resident and by plan, current as of this morning</li>
+          <li><b>Shared across the team</b> — nursing, therapy, MDS, and the business office read the same case</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>The wedge</h3>
+        <p>Not another EHR. The EHR holds the clinical record; it does not run the payer fight. Cardinal Coverage is the system of record for the <b>authorization lifecycle</b> — the layer between the chart and the plan, which today lives in a spreadsheet that one person maintains.</p>
+      </div>
+    </div>
+    <p class="src">Live prototype: <b>tracker.html</b> (deadline engine) and <b>appeal-letters.html</b> (appeal workflow) in this repository.</p>
+    <div class="notes"><b>Say:</b> Resist feature-listing. The one sentence that matters: the EHR is the chart, we are the payer fight. Then open the tracker live — a working artifact in the room is worth more than a roadmap slide.</div>
+  </div>
+</section>
+
+<section class="slide" id="s7">
+  <span class="slideno" data-title="Proof"></span>
+  <div class="inner">
+    <p class="kicker">Proof it is real</p>
+    <h2>Working software, not a mockup.</h2>
+    <div class="two">
+      <div class="card">
+        <h3>Authorization tracker</h3>
+        <p>Computes covered-through, next submission due, NOMNC deliver-by, QIO fast-track deadline, physician recertification, and weekly progress note — colour-coded by urgency, sorted most-urgent-first. Date arithmetic is verified against the CMS notice conventions and is DST-safe. Defaults to a 3-day authorization cycle.</p>
+      </div>
+      <div class="card">
+        <h3>Appeal letter builder</h3>
+        <p>Generates three letters from one clinical spine: fast-track QIO appeal built on the plan's burden of proof, plan reconsideration built on the Traditional Medicare criteria floor, and a short-authorization challenge built on authorization-duration rules.</p>
+      </div>
+    </div>
+    <div class="todo">
+      <span class="tag">Fill in before presenting</span>
+      <p><b>Demo plan.</b> Decide whether you are opening the live tracker in the room. If yes, pre-load two anonymised cases with realistic dates so a deadline is visibly inside 48 hours.</p>
+    </div>
+    <div class="notes"><b>Say:</b> The credibility move is opening the tool, not describing it. Show a red 48-hour clock and say: this is the day that gets missed today.</div>
+  </div>
+</section>
+
+<section class="slide" id="s8">
+  <span class="slideno" data-title="Market"></span>
+  <div class="inner">
+    <p class="kicker">Market</p>
+    <h2>Roughly <em>15,000</em> certified nursing facilities nationally. <em>419</em> in the beachhead.</h2>
+    <div class="figs">
+      <div class="fig"><div class="n">~15,000</div><div class="l">CMS-certified nursing facilities in the United States</div><div class="s">Total addressable</div></div>
+      <div class="fig"><div class="n">419</div><div class="l">certified skilled nursing facilities in North Carolina</div><div class="s">~43,900 certified beds — the beachhead</div></div>
+      <div class="fig"><div class="n">95%</div><div class="l">of MA enrollees sit in plans that require SNF prior authorization</div><div class="s">KFF, Medicare Advantage in 2026</div></div>
+    </div>
+    <div class="todo">
+      <span class="tag">Fill in before presenting</span>
+      <p><b>Do the TAM math on stage with your real pricing.</b> Facilities × annual contract value = TAM. State the assumption out loud rather than showing a number you cannot defend.</p>
+      <ul>
+        <li>Target annual contract value per facility: <b>$____</b></li>
+        <li>NC beachhead (419 facilities) at that ACV: <b>$____</b></li>
+        <li>National (≈15,000 facilities) at that ACV: <b>$____</b></li>
+        <li>Serviceable near-term segment and why: <b>____</b></li>
+      </ul>
+    </div>
+    <p class="src">Sources: CMS certified nursing home counts; North Carolina facility and bed counts from state SNF directories.</p>
+    <div class="notes"><b>Say:</b> Do not inflate. A defensible bottoms-up number from 419 NC facilities lands better than a hand-waved national figure. Investors punish TAM you cannot derive.</div>
+  </div>
+</section>
+
+<section class="slide" id="s8b">
+  <span class="slideno" data-title="Competition"></span>
+  <div class="inner">
+    <p class="kicker">Competition</p>
+    <h2>Everyone works the claim <em>after</em> it is denied. Nobody works the stay <em>while it is happening</em>.</h2>
+    <div class="two">
+      <div class="card">
+        <h3>EHR platforms — PointClickCare, MatrixCare</h3>
+        <p>Do record authorization numbers, coverage dates, and authorized service types against a resident, and can surface an expired auth before a claim goes out. That is a <b>billing data field</b>: it catches the gap at claim time. It does not run a NOMNC clock, a QIO fast-track deadline, or an appeal.</p>
+      </div>
+      <div class="card">
+        <h3>RCM analytics — SNF Metrics, primeCLAIMS, Inovalon</h3>
+        <p>Aggregate reimbursement and AR data across facilities, report on denials and collections. Retrospective by design: they tell you how much you lost last quarter. They do not help you keep it during the stay.</p>
+      </div>
+      <div class="card">
+        <h3>Consultants &amp; outsourced services</h3>
+        <p>Managed care consultants (Polaris, Proactive LTC) and billing BPOs prove the demand — facilities pay humans to do this today. But hours don't compound, the knowledge leaves with the engagement, and retainers fit chains, not the 419 North Carolina independents. Telling: <b>Zimmet Healthcare is converting its consulting into software.</b> The consultants themselves are saying the durable asset is the system.</p>
+      </div>
+      <div class="card" style="border-color:var(--brand);border-width:2px;">
+        <h3 style="color:var(--brand);">Cardinal Coverage</h3>
+        <p>Prospective, during the stay: the deadline engine and the appeal workflow. The layer between the chart and the plan — where the money is actually won or lost, and where no one currently sits.</p>
+      </div>
+    </div>
+    <p class="lede" style="margin-top:1.2rem;"><b>The category boundary:</b> everyone else is downstream of the denial. We are upstream of it. And against the consultant model specifically: hours don't compound — records do.</p>
+    <p class="lede" style="margin-top:-.6rem;"><b>Not competitors — the counterparty.</b> Elevance's Carelon Post Acute Solutions runs facility-based post-acute utilization management for SNF, and Elevance has been expanding it as a growth business. That is the mirror image of this product: same workflow, opposite side of the table. Payers will not build the provider-side counterweight — a tool that helps facilities win appeals works directly against their medical loss ratio. Their investment in systematising the denial <em>is</em> the demand signal for systematising the defence.</p>
+    <p class="src">Sources: vendor product documentation for PointClickCare, MatrixCare, SNF Metrics, and primeCLAIMS; Carelon Medical Benefits Management facility care capabilities; Fierce Healthcare on Carelon post-acute expansion.</p>
+    <div class="notes"><b>Say:</b> Name PointClickCare first and concede what it genuinely does — investors already know it and hedging here costs you the room. Then draw the line: billing field versus deadline engine, retrospective versus prospective. <b>The follow-up will be "what stops PCC building this."</b> Honest answer: nothing structural, but it is a specialist workflow with regulatory depth inside a platform that serves dozens of workflows, and our beachhead speed plus the 2027 API shift is the window. <b>If Carelon or a payer-side UM vendor comes up:</b> be precise that they are the counterparty, not a competitor — getting that distinction wrong in front of someone who knows managed care is costly. Their growth is our market evidence, and payer-side UM veterans are our best advisor hires.</div>
+  </div>
+</section>
+
+<section class="slide" id="s9">
+  <span class="slideno" data-title="Go to market"></span>
+  <div class="inner">
+    <p class="kicker">Go to market</p>
+    <h2>Start where the operator already has <em>standing</em>.</h2>
+    <ul class="pts">
+      <li><b>Beachhead: North Carolina.</b> 419 facilities, one QIO region, and a small number of dominant MA plans — so plan-specific workflow built once serves the whole state.</li>
+      <li><b>Buyer:</b> administrator, business office manager, and regional revenue cycle director — the people who feel the denial in their own numbers.</li>
+      <li><b>Wedge motion:</b> land on the deadline engine, which produces visible value in the first week, then expand into appeals and reporting.</li>
+      <li><b>Proof loop:</b> denied days recovered is a number the buyer can verify against their own remittances.</li>
+    </ul>
+    <div class="todo">
+      <span class="tag">Fill in before presenting</span>
+      <p><b>Your unfair advantage.</b> Operating a facility while building this is the strongest thing in the deck — the domain access most founders in this category do not have. State it explicitly: your facility, your role, your reference customers.</p>
+    </div>
+    <div class="notes"><b>Say:</b> Lead with the operator advantage. You are not a software team guessing at SNF workflow; you are living it. That is the answer to "why you."</div>
+  </div>
+</section>
+
+<section class="slide" id="s10">
+  <span class="slideno" data-title="Business model"></span>
+  <div class="inner">
+    <p class="kicker">Business model</p>
+    <h2>Priced against recovered revenue, <em>not seats</em>.</h2>
+    <p class="lede">A single avoidable denial on a twenty-day stay can exceed a year of software cost. That is the pricing conversation — and it is why this category tolerates per-facility SaaS pricing rather than per-user.</p>
+    <div class="todo">
+      <span class="tag">Fill in before presenting</span>
+      <ul>
+        <li>Pricing model (per facility / per bed / per case): <b>____</b></li>
+        <li>Annual contract value and expected gross margin: <b>____</b></li>
+        <li>Implementation time and cost to onboard a facility: <b>____</b></li>
+        <li>Expansion path within multi-facility operators: <b>____</b></li>
+      </ul>
+      <p>Anchor the price against a defensible unit: average denied-day revenue at your facility × avoidable denials per year.</p>
+    </div>
+    <div class="notes"><b>Say:</b> If pricing is not settled, say it is being validated in pilot rather than inventing a number. Investors accept "not yet priced"; they do not forgive a made-up one.</div>
+  </div>
+</section>
+
+<section class="slide" id="s11">
+  <span class="slideno" data-title="Traction"></span>
+  <div class="inner">
+    <p class="kicker">Traction</p>
+    <h2>Where we actually are.</h2>
+    <div class="todo">
+      <span class="tag">Fill in before presenting — do not present blank</span>
+      <p>This is the slide investors scrutinise hardest. Report only what is true; early and honest beats padded.</p>
+      <ul>
+        <li>Facilities live or in pilot: <b>____</b></li>
+        <li>Cases tracked to date and denials overturned: <b>____</b></li>
+        <li>Dollars recovered or protected, with method of measurement: <b>____</b></li>
+        <li>Letters of intent, design partners, or paid pilots: <b>____</b></li>
+        <li>If pre-traction, say so plainly and show the working prototype instead.</li>
+      </ul>
+    </div>
+    <div class="notes"><b>Say:</b> If the honest answer is "one facility, my own, two active cases" — say exactly that. Then pivot to the prototype and the appeal data. Overstating here is the fastest way to lose the room, and it is checkable.</div>
+  </div>
+</section>
+
+<section class="slide" id="s12">
+  <span class="slideno" data-title="Team"></span>
+  <div class="inner">
+    <p class="kicker">Team</p>
+    <h2>Operators who live inside the problem.</h2>
+    <div class="todo">
+      <span class="tag">Fill in before presenting</span>
+      <ul>
+        <li>Founder name, role, and years in skilled nursing / post-acute: <b>____</b></li>
+        <li>Clinical leadership — DON, MDS, or therapy expertise on the team: <b>____</b></li>
+        <li>Technical leadership and who builds the product: <b>____</b></li>
+        <li>Advisors: revenue cycle, health-plan-side utilization management, or regulatory counsel: <b>____</b></li>
+        <li>Named gaps and the first hires the raise funds: <b>____</b></li>
+      </ul>
+    </div>
+    <div class="notes"><b>Say:</b> Name the gap yourself before they find it. "We need a technical co-founder and that is the first use of funds" reads as self-aware; being caught without one reads as naive.</div>
+  </div>
+</section>
+
+<section class="slide" id="s13">
+  <span class="slideno" data-title="Risks"></span>
+  <div class="inner">
+    <p class="kicker">What we are watching</p>
+    <h2>The honest risk list.</h2>
+    <div class="two">
+      <div class="card">
+        <h3>EHR incumbents move first</h3>
+        <p>PointClickCare and MatrixCare could add authorization tracking. Mitigation: depth of the appeal workflow and regulatory argument, which is not a checkbox feature, plus speed in the beachhead.</p>
+      </div>
+      <div class="card">
+        <h3>Regulation eases the pain</h3>
+        <p>If CMS forces plans to stop short-interval reauthorization, urgency drops. Mitigation: the documentation and deadline burden persists regardless, and enforcement historically lags rulemaking by years.</p>
+      </div>
+      <div class="card">
+        <h3>SNF margins limit budget</h3>
+        <p>Facilities are financially strained. Mitigation: price against recovered revenue so the product funds itself, and sell to the person who owns the denial number.</p>
+      </div>
+      <div class="card">
+        <h3>Compliance burden</h3>
+        <p>Handling PHI requires BAAs, encryption at rest, audit logging, and access control. Mitigation: budget it as a first-class line item in the raise, not an afterthought.</p>
+      </div>
+    </div>
+    <div class="notes"><b>Say:</b> Volunteering the risk list buys credibility and takes the adversarial edge off the Q&amp;A. The compliance point especially — showing you know the HIPAA cost signals you have thought past the demo.</div>
+  </div>
+</section>
+
+<section class="slide" id="s14">
+  <span class="slideno" data-title="The ask"></span>
+  <div class="inner">
+    <p class="kicker">The ask</p>
+    <h2>What we are raising, and what it buys.</h2>
+    <div class="todo">
+      <span class="tag">Fill in before presenting</span>
+      <ul>
+        <li>Amount raising and instrument (SAFE, priced round): <b>____</b></li>
+        <li>Runway purchased, in months: <b>____</b></li>
+        <li>Use of funds — engineering, HIPAA infrastructure, first sales hire: <b>____</b></li>
+        <li>The specific milestones this round reaches: <b>____</b></li>
+        <li>What those milestones make true for the next round: <b>____</b></li>
+      </ul>
+      <p>Tie every dollar to a milestone. "18 months to 25 paying NC facilities and a measured denial-overturn rate" is an ask; a number alone is not.</p>
+    </div>
+    <div class="notes"><b>Say:</b> Close on the milestone, not the money. The question in their head is "what does this round prove" — answer it before they ask.</div>
+  </div>
+</section>
+
+<section class="slide" id="s15">
+  <span class="slideno" data-title="Close"></span>
+  <div class="inner">
+    <p class="kicker">In one sentence</p>
+    <blockquote class="pull">Every Medicare Advantage day a facility can't confirm is a day it may never get paid for. We give skilled nursing one place to see every resident's authorization status, covered days, deadlines, and appeals — from admission through discharge — so teams stop chasing plans by phone and spreadsheet, and start capturing the reimbursement they already earned.</blockquote>
+    <p class="lede" style="margin-top:1.8rem;font-weight:700;color:var(--brand);font-size:1.2rem;">Know every covered day. Keep every earned dollar.</p>
+    <div class="todo" style="max-width:520px;">
+      <span class="tag">Fill in before presenting</span>
+      <p>Contact name · email · phone · data room link</p>
+    </div>
+    <p class="src"><b>Appendix available:</b> North Carolina filing routes and PT documentation standards (<i>docs/nc-snf-ma-reference.md</i>), live deadline tracker (<i>tracker.html</i>), and appeal letter builder (<i>appeal-letters.html</i>).</p>
+  </div>
+</section>
+
+<div class="hud">
+  <button id="prev" title="Previous (←)" aria-label="Previous slide">‹</button>
+  <span class="count" id="count">1 / 15</span>
+  <button id="next" title="Next (→)" aria-label="Next slide">›</button>
+  <button id="notesBtn" title="Speaker notes (N)" aria-label="Toggle speaker notes">N</button>
+  <button id="themeBtn" title="Theme" aria-label="Toggle theme">◐</button>
+</div>
+
+<script>
+const slides = Array.from(document.querySelectorAll("section.slide"));
+const $ = (id) => document.getElementById(id);
+let idx = 0;
+
+function goto(i){
+  idx = Math.max(0, Math.min(slides.length - 1, i));
+  slides[idx].scrollIntoView({behavior:"smooth", block:"start"});
+  sync();
+}
+function sync(){
+  $("count").textContent = `${idx+1} / ${slides.length}`;
+  $("bar").style.width = ((idx)/(slides.length-1)*100) + "%";
+}
+
+/* number the slide labels from document order so inserting a slide can't desync them */
+slides.forEach((s, i) => {
+  const tag = s.querySelector(".slideno");
+  if (tag) tag.textContent = `${String(i).padStart(2,"0")} · ${tag.dataset.title || ""}`;
+});
+
+/* keep the counter honest when the user scrolls manually */
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting){ idx = slides.indexOf(e.target); sync(); }
+  });
+}, {threshold:0.55});
+slides.forEach(s => io.observe(s));
+
+document.addEventListener("keydown", (e) => {
+  if (["INPUT","TEXTAREA"].includes(e.target.tagName)) return;
+  if (e.key === "ArrowRight" || e.key === "PageDown" || e.key === " ") { e.preventDefault(); goto(idx+1); }
+  else if (e.key === "ArrowLeft" || e.key === "PageUp") { e.preventDefault(); goto(idx-1); }
+  else if (e.key === "Home") { e.preventDefault(); goto(0); }
+  else if (e.key === "End") { e.preventDefault(); goto(slides.length-1); }
+  else if (e.key.toLowerCase() === "n") document.body.classList.toggle("shownotes");
+  else if (e.key.toLowerCase() === "p") window.print();
+});
+
+$("prev").addEventListener("click", () => goto(idx-1));
+$("next").addEventListener("click", () => goto(idx+1));
+$("notesBtn").addEventListener("click", () => document.body.classList.toggle("shownotes"));
+$("themeBtn").addEventListener("click", () => {
+  const cur = document.documentElement.getAttribute("data-theme");
+  const next = cur === "dark" ? "light" : cur === "light" ? "" : "dark";
+  if (next) document.documentElement.setAttribute("data-theme", next);
+  else document.documentElement.removeAttribute("data-theme");
+});
+
+sync();
+</script>
+</body>
+</html>
