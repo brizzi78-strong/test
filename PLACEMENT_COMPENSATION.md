@@ -155,6 +155,49 @@ talk to families.
 
 ---
 
+## The founders — how Linda gets paid
+
+Linda is a co-founder, the RN, and the public face: on every tour, the FL-2,
+the check-ins, the advocate line, the podcast. During the period the other
+founder is employed elsewhere, she is doing most of the visible work. Her
+compensation has three layers, and the order matters.
+
+| Layer | What | Number |
+| --- | --- | --- |
+| **1. Ownership** | Equity in the LLC, in the operating agreement, with roles and a buy-sell | 50/50 if the founders are one household; otherwise 40–50% to Linda for the RN, the face, and the daytime, against brand, book, supply, back office, and capital on the other side |
+| **2. Working draw on placements** | Paid on **collected** fees, for placements she works, before profit distributions | 35% of the collected fee — the part-time-advisor rate, because she is doing that job on top of owning the company |
+| **3. The advocate line** | Her labor, her clients | 75% to Linda, 25% to the company for insurance, admin, and the brand |
+
+Profit distributions on top, by ownership share, once the company is
+cash-positive (month 4–6 at the earliest).
+
+**What it pays, year one:**
+
+| | Conservative | Base | Strong |
+| --- | --- | --- | --- |
+| Placements she works | 30 | 45 | 65 |
+| Draw at 35% | ~$68K | ~$110K | ~$170K |
+| Advocate share (5 → 10 families, part-year) | ~$8K | ~$18K | ~$27K |
+| **Linda, before distributions** | **~$76K** | **~$128K** | **~$197K** |
+
+A Raleigh RN earns roughly $75–95K salaried. Base case puts her above that
+by month twelve, with equity on top, which is what taking the risk of the
+first quarter — when nobody is paid — should earn.
+
+**Rules:**
+- Nothing is paid until fees are collected. The first check lands in month
+  3–4; the day job is the runway for both founders.
+- The draw and the advocate share are in writing in the operating agreement
+  alongside the equity — roles, what each founder owes the company in hours,
+  what happens if either steps away, and how the equity is bought out.
+  ⚖ Attorney agenda item.
+- If Linda later takes a salary (month 6+, when cash flow supports it), the
+  draw converts to salary plus a smaller bonus per placement; equity is
+  unchanged.
+- If the founders are one household, layers 2 and 3 are bookkeeping between
+  the same pocket — still write them down. They set the precedent for the
+  first advisor who isn't family.
+
 ## Quick reference
 
 | Question | Answer |
