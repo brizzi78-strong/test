@@ -178,6 +178,25 @@ care in NC' evening — you on Medicaid, VA, and asset protection, us on
 placement?"* Bar rules mean no fees either way, which is why the workshop is
 the relationship.
 
+## The other top five — referral sources by ROI, with names
+
+Ranked by value per hour of relationship effort: how few doors, how many
+memory care families behind each, how early they see them. Named targets are
+search-surfaced; confirm the contact on the first visit.
+
+| # | Source | Named targets | Why the ROI is highest |
+| --- | --- | --- | --- |
+| 1 | **Memory clinic social workers** | Duke Memory Disorders Clinic (Duke Neurology); UNC Memory and Cognitive Disorders Clinic (UNC Neurology); families in the joint Duke–UNC Alzheimer's Disease Research Center | Two doors. Every new dementia diagnosis in the Triangle passes through them, months before any discharge. All memory care, all pre-crisis |
+| 2 | **Short-term rehab / SNF discharge desks** | UNC REX Rehab & Nursing Care Center (Raleigh, Apex); Hillcrest Raleigh at Crabtree Valley; Sunnybrook Rehabilitation Center; Tower Nursing & Rehab; Raleigh Rehabilitation Center; PruittHealth Raleigh; Swift Creek Health Center and Glenaire (Cary); Southpoint Rehabilitation (Durham); Bellarose (Garner); Hillside (Wake Forest) | Less gatekept than hospitals, steady volume, and the rehab stay is where "she can't go home" gets said out loud. The liaison's weekly route |
+| 3 | **Home care agencies beyond the partner** | The franchise brands with Triangle offices — Home Instead, Visiting Angels, Right at Home, Comfort Keepers, BrightStar — and the independents | Every one has the same leak the physician-owner described: clients lost when money tightens or needs exceed aides. The private duty pilot, repeated. Their aides are the earliest warning system there is |
+| 4 | **Care managers (Aging Life Care)** | Aging Care Matters (Carla Payne); Aging Family Services (Triangle's first, since 1993); Raleigh Geriatric Care Management; Dignified Living NC | Private-pay by definition, pre-crisis, and they refer out the tours they don't bill for — to agencies they trust not to steer. Four practices to know by name |
+| 5 | **Hospital case management** | Duke Raleigh, UNC REX, WakeMed Raleigh and Cary, Duke Regional, Duke University Hospital, UNC Medical Center | The highest volume and the hardest doors — which is why it ranks fifth on ROI *per hour* early, and first on volume once the relationships exist. Worked by the liaison; won by one-hour response |
+
+**The two you can spend money on:** the Alzheimer's Association's Eastern NC
+chapter and the Dementia Alliance of NC (Raleigh). Sponsor the support-group
+coffee and a Walk team; show up monthly. It's the only paid marketing in the
+plan and it costs a few hundred dollars a year.
+
 ## The six-week sequence
 
 Chains first — one conversation can paper several buildings:
