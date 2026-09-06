@@ -226,6 +226,38 @@ smaller, less gatekept, and their discharge volume is steady.
       days this is the difference between "call more hospitals" and "Duke Rehab
       sent 6, we placed 4; WakeMed sent 2, placed 0 — find out why."
 
+### Where to market — the memory-care map
+
+In person, ranked by value per drive. Half of these meet after hours, which
+is the half the founder can work personally.
+
+| Place | Why | Fronted by |
+| --- | --- | --- |
+| Memory clinic social workers (Duke Memory Disorders Clinic, UNC memory & cognitive disorders clinic) | Every new dementia diagnosis in the Triangle passes through these rooms — the discharge planners of memory care, months earlier | Liaison; founder by email |
+| SNF / short-term rehab discharge desks | Steady volume, less gatekept; where "she can't go home" gets said | Liaison |
+| Hospital case management (Duke Raleigh, UNC REX, WakeMed, Duke Regional), geropsych units | The 72-hour cases | Liaison |
+| Alzheimer's Association, Eastern NC chapter — support groups, education, the Walk | Memory care families in one room, pre-crisis; sponsor the coffee, show up monthly | Founder, evenings |
+| Dementia Alliance of NC (Raleigh) — memory cafés, caregiver classes | Local, memory-specific, under-marketed to; a home for the book | Founder |
+| Adult day programs for dementia | Families 6–12 months from placement; staff know when | Liaison |
+| **Independent living and 55+ communities *without* their own memory care** (Overture Crabtree, Preston Pointe, the rental IL operators) | Residents decline in place — a fall, a wandering incident — and the community has nowhere to move them. The executive director is managing "we can't keep her here safely" with no partner. Offer to be the graceful exit at no cost to anyone; it's the private duty seam again | Founder by intro; liaison for the visit |
+| Care managers | The private-pay second ring (see above) | Founder, coffee |
+| **Elder law attorneys** (NC NAELA chapter, NC Bar elder law section) | They meet families at the exact moment money and care collide — "how do we pay for memory care without losing the house" — and get asked "where should Mom go?" daily without wanting to answer it. Bar rules forbid referral fees either direction, so it's earned: every memory care family you place needs a POA, healthcare directive, and often Special Assistance or Medicaid planning — you're a lead source for them first. The concrete play: a monthly **"Paying for memory care in NC" workshop** — attorney covers Medicaid, VA, asset protection; Cardinal covers placement — at a church, library, or senior center | Founder for the relationship; Linda or the liaison presents |
+| **Churches** — the congregational-care pastor, parish nurse, Stephen Ministers, the deacons who visit shut-ins, the senior adult Sunday school class | The care pastor gets the 2am call from a member whose mother fell — and has a printed list and nothing else. Never sell in a church; be the resource. The book is the door: *The Cardinal's Promise* is about presence at the end of life, which is church-native, and it earns the invitation to speak to a class or a Wednesday night. Bring the elder law workshop here. Large Triangle churches have paid care staff — start with those | Founder (his own story is the door-opener; a room, not a broadcast) |
+| Senior centers, Triangle J resource fairs | Broad, slow, cheap | Founder, weekends |
+
+Digital, all evening work, no face required: **Google Business Profile**
+(the map pack for "memory care placement Raleigh" — highest-value digital
+asset, free) · memory-care-specific site pages (cost in Raleigh, when it's
+time, AL vs MC in NC, Special Assistance) · listings in the directories
+families and social workers actually use (Resources for Seniors, Triangle J
+AAA, Alzheimer's Association resource lists) · **Nextdoor** (neighborhood
+trust, older-skewing) · Facebook local and caregiver groups · Google reviews
+from placed families.
+
+**Don't spend on:** Google Ads (the lead mills outbid you a thousand to one),
+paid listings on Caring.com and its cousins (that's paying to feed your
+competitor), billboards, print, radio, TikTok as anything but a trust layer.
+
 ### 90-day scorecard
 
 | Metric | Target |
