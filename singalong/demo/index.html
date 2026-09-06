@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<meta name="description" content="Interactive demo of the Memory Care Music Program — personalized sing-along circles for dementia and memory care, built on public-domain music.">
+<meta name="description" content="Interactive preview of the Memory Care Music Program — personalized sing-along circles for dementia and memory care, built on public-domain music.">
 <meta property="og:title" content="The Memory Care Music Program">
 <meta property="og:description" content="Sing-along circles for memory care built on public-domain songs — no music licensing fees, one tap of logging per song, and every word on the screen.">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%231E3D63'/%3E%3Cg fill='%23FFF9F0'%3E%3Cellipse cx='11' cy='22.4' rx='3.1' ry='2.4' transform='rotate(-16 11 22.4)'/%3E%3Cellipse cx='21.6' cy='20.6' rx='3.1' ry='2.4' transform='rotate(-16 21.6 20.6)'/%3E%3Crect x='12.9' y='7' width='1.5' height='15.4'/%3E%3Crect x='23.5' y='4.8' width='1.5' height='15.8'/%3E%3Cpolygon points='12.9,6.6 25,4.4 25,7.6 12.9,9.8'/%3E%3C/g%3E%3C/svg%3E">
-<title>Memory Care Music Program — Demo</title>
+<title>Memory Care Music Program</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&display=swap');
   :root{
@@ -48,8 +48,8 @@
   .logo{width:38px;height:38px;border-radius:50%;background:var(--brand);color:var(--on-accent);display:grid;place-items:center;font-size:1.2rem;flex:none;font-family:var(--serif)}
   h1{font-family:var(--serif);font-style:italic;font-weight:600;font-size:1.35rem;margin:0;letter-spacing:-.01em;line-height:1.15}
   .subtitle{margin:.05rem 0 0;font-weight:700;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
-  .demo-flag{margin-left:auto;font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border:1px solid color-mix(in srgb,var(--muted) 45%,transparent);border-radius:999px;padding:.3rem .75rem;white-space:nowrap}
-  @media(max-width:520px){.demo-flag{display:none}.subtitle{font-size:.58rem;letter-spacing:.1em}}
+  .program-flag{margin-left:auto;font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border:1px solid color-mix(in srgb,var(--muted) 45%,transparent);border-radius:999px;padding:.3rem .75rem;white-space:nowrap}
+  @media(max-width:520px){.program-flag{display:none}.subtitle{font-size:.58rem;letter-spacing:.1em}}
 
   /* ---- hero ---- */
   .hero{padding:clamp(2.4rem,7vw,4.2rem) 0 0;position:relative}
@@ -233,7 +233,7 @@
     <h1>Sing Along</h1>
     <p class="subtitle">The Memory Care Music Program · Willow Grove (sample community)</p>
   </div>
-  <span class="demo-flag">Interactive demo</span>
+  <span class="program-flag">Program preview</span>
 </div></header>
 
 <main class="wrap">
@@ -243,7 +243,7 @@
     <p class="deck">A sing-along circle twice a week — same time, same room, same opening song — built from songs a
     whole generation learned at school, at church, and around one radio. Between circles, each resident’s own music,
     one to one.</p>
-    <p class="note">This page is a working demo with sample residents — nothing here is real data, and nothing you do is saved.</p>
+    <p class="note">This public preview uses sample residents — nothing here is real data, and nothing you do is saved.</p>
     <div class="hero-cta">
       <a class="btn" href="mailto:robertbrizzi@gmail.com?subject=Memory%20Care%20Music%20Program%20walkthrough">Book a 20-minute walkthrough</a>
       <button class="btn ghost" id="heroTry" type="button">Try the sing-along screen</button>
@@ -406,11 +406,11 @@
       <p class="foot-contact"><b>Questions, or want to pilot this at your community?</b><br>
       Rob Brizzi, founder — <a href="mailto:robertbrizzi@gmail.com">robertbrizzi@gmail.com</a> · <a href="tel:+18502217443">(850) 221‑7443</a></p>
     </div>
-    <p class="foot-note">This demo runs entirely in your browser with sample residents and saves nothing — reload and it
+    <p class="foot-note">This preview runs entirely in your browser with sample residents and saves nothing — reload and it
     resets. The real program runs on the facility’s own equipment and database, inside the facility’s privacy obligations.</p>
   </div>
 </footer>
-<noscript><div class="wrap"><p class="hint">This interactive demo needs JavaScript. The program itself is a paper-friendly
+<noscript><div class="wrap"><p class="hint">This interactive preview needs JavaScript. The program itself is a paper-friendly
 routine — contact us for the printed program guide.</p></div></noscript>
 
 <script>
