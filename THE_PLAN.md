@@ -164,6 +164,24 @@ an "estate and care planning evening" co-hosted with a wealth manager and an
 elder law attorney; podcast guests drawn from the table above. The founder's
 role is the introductions and the follow-through, which needs no face.
 
+## Beyond the Triangle — where North Carolina's private-pay wealth is
+
+Ranked for placement, not by income. The rule still holds: markets follow
+trusted people.
+
+| Pocket | The money | For placement |
+| --- | --- | --- |
+| **Pinehurst / Southern Pines** | Golf-retiree capital; dense affluent 70-plus households; an hour from Raleigh; FirstHealth Moore Regional | **The sleeper** — transplant retirees, kids elsewhere, private-pay memory care demand. Strongest territory-2 candidate after South Florida; worth finding a person for on purpose |
+| **Charlotte** — Myers Park, SouthPark, Lake Norman | The state's largest wealth pool | Big, competitive, the lead mills' strongest NC market; needs its own operator |
+| **Wilmington** — Landfall, Figure Eight | Coastal retiree wealth | Fast-growing, thin competition, two hours out |
+| **Asheville** — Biltmore Forest | Retiree and lifestyle wealth | Isolated; strong CCRCs; hard to serve remotely |
+| **Winston-Salem / Greensboro** | Old money, deep CCRC tradition | Moderate; deliberately pulled back from |
+
+Portable gatekeepers: CAPTRUST and First Citizens Wealth (Raleigh
+headquarters, statewide books), Truist wealth (Charlotte), the NC NAELA
+chapter, the Alzheimer's Association's Eastern NC and Western Carolina
+chapters.
+
 ## The numbers
 
 | | Conservative | Base | Strong |
