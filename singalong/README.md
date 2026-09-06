@@ -52,9 +52,11 @@ a four-week themed cycle, personalized listening between them, and a weekly
 by-song review of the logs. `npm run seed:program` loads its 22-song
 public-domain kit (words included) into a facility's library.
 
-[`demo/index.html`](demo/index.html) is a self-contained, client-side
-walkthrough of the program with sample data — open it in any browser, or let
-the repo's `../render.yaml` blueprint serve it as a free static site.
+The public entrypoint is [`index.html`](index.html), served by
+[`publish-server.mjs`](publish-server.mjs). It frames the self-contained
+program preview with honest sample data, stable production routes, security
+headers, and a `/health` endpoint. The repo's `../render.yaml` blueprint matches
+that production service.
 
 ## Run it
 
