@@ -164,6 +164,38 @@ calendar days, which this tool cannot yet express.
 
 Built for short-interval plans — the auth cycle defaults to 3 days.
 
+**Automation.** The tracker now feeds the other tools instead of asking you to
+retype. Every derived output below reads the same `clocksFor()` engine — there
+is deliberately no second copy of the deadline math anywhere.
+
+- **Today's work** — a second view (toggle beside the stats bar, remembered
+  across reloads) that flattens the caseload into a flat to-do list: overdue,
+  due today, tomorrow, later this week, plus a *Missing dates* group for clocks
+  that cannot run because a date was never entered. Context lines (stay day,
+  covered-through, the quiet cross-check clocks) are excluded — only things a
+  person must *do* appear. Print it for the morning stand-up; each row has a
+  tick box.
+- **Where to file** — each *Submit continued-stay authorization* row pulls the
+  plan's submission route from the rules registry (`cc-rules-v1`, matched on the
+  plan's first word so "Aetna MA" finds "Aetna Medicare Advantage"). If that
+  rule is past its re-verification interval the row says so, and if it is
+  outright stale it says to confirm before filing. The registry stays the one
+  place a rule is edited.
+- **Calendar** — downloads every dated action as an RFC 5545 `.ics` file with
+  reminders, so deadlines chase the coordinator rather than the reverse. Noon
+  cutoffs (QIO) are timed events at 12:00 local with alarms the day before and
+  four hours out; everything else is an all-day event with a next-morning alarm.
+  Event UIDs are stable on case + clock, so re-importing after a date changes
+  *moves* the event instead of duplicating it. Text is escaped and lines folded
+  per the spec.
+- **Draft appeal** — cases in an appeal posture get a button that opens the
+  letter builder pre-filled: *NOMNC issued* → fast-track QIO letter, *Denied —
+  appeal open* → reconsideration, and any cycle of five days or fewer → the
+  short-authorization challenge. It carries the case label, plan, admission
+  date and the covered-through date **as the NOMNC effective date**, which is
+  the field most often mistyped. The letter page reads these from the URL and
+  never persists them — `saveFac()` still writes facility fields only.
+
 **Demo data.** The *Demo data* button loads a five-case anonymised caseload dated
 relative to today: **two red, two amber, one green**, at $7,050 exposure. The two
 reds fail for different reasons on purpose — one has a QIO fast-track deadline at
@@ -227,7 +259,7 @@ file is safe to email to billing.
 
 ## Tests
 
-`node cardinal-coverage/tests/run.mjs` — **179 tests, 11 lanes, currently green.**
+`node cardinal-coverage/tests/run.mjs` — **215 tests, 12 lanes, currently green.**
 Exits non-zero on failure. Two styles: `sandbox()` pulls pure helpers out of a
 page's inline `<script>` and exercises them with no DOM; `open()` drives the real
 `file://` page in Chromium via Playwright with seedable `localStorage`, collecting
@@ -237,8 +269,11 @@ Coverage: the deadline engine (including DST, leap day and year boundaries, and
 regression tests pinning the NOMNC effective-date convention), tracker state and
 persistence, outcomes metrics and CSV, the rules registry's freshness discipline,
 letter generation and the PHI-persistence promise, two end-to-end browser lanes,
-output escaping against injection payloads in every field, and
-accessibility/print/responsive.
+output escaping against injection payloads in every field,
+accessibility/print/responsive, and an automation lane covering the today's-work
+list, the registry route lookup, the `.ics` export (structure, escaping, folding,
+stable UIDs, alarms) and the tracker → letters handoff including the URL-prefill
+privacy promise.
 
 Tests resolve pages against `app/` (see `APP` in `harness.mjs`), since that is the
 gated deploy root.

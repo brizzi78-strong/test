@@ -96,9 +96,41 @@
   .empty{text-align:center;color:var(--muted);padding:3rem 1rem;font-size:.95rem;}
   footer{color:var(--muted);font-size:.75rem;padding:1rem 0 3rem;line-height:1.6;}
 
+  /* today's work brief */
+  .viewbar{display:flex;gap:.4rem;align-items:center;margin:0 0 1rem;}
+  .viewbar .seg{display:inline-flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;}
+  .viewbar .seg button{background:var(--surface);border:0;border-right:1px solid var(--line);color:var(--muted);
+    font:inherit;font-weight:700;font-size:.82rem;padding:.42rem .85rem;cursor:pointer;}
+  .viewbar .seg button:last-child{border-right:0;}
+  .viewbar .seg button[aria-pressed="true"]{background:var(--brand);color:#fff;}
+  .bsum{color:var(--muted);font-size:.85rem;margin:.2rem 0 1rem;}
+  .bsum b{color:var(--ink);}
+  .bgroup{margin:0 0 1.4rem;}
+  .bhead{font-size:.7rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--brand);
+    margin:0 0 .5rem;display:flex;align-items:baseline;gap:.5rem;}
+  .bhead .n{color:var(--muted);letter-spacing:0;font-weight:700;}
+  .brow{display:grid;grid-template-columns:auto 1fr auto;gap:.2rem .7rem;align-items:baseline;
+    background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--line);
+    border-radius:10px;padding:.6rem .8rem;margin-bottom:.4rem;box-shadow:var(--shadow);}
+  .brow.crit{border-left-color:var(--crit,#B3261E);}
+  .brow.warn{border-left-color:var(--warn,#9A6410);}
+  .brow.ok{border-left-color:var(--ok,#2E6B4F);}
+  .brow .tick{width:15px;height:15px;border:1.5px solid var(--line);border-radius:4px;grid-row:1;}
+  .brow .bverb{font-weight:700;grid-row:1;}
+  .brow .bwhen{grid-row:1;text-align:right;font-variant-numeric:tabular-nums;font-size:.85rem;font-weight:700;}
+  .brow.crit .bwhen{color:var(--crit,#B3261E);}
+  .brow.warn .bwhen{color:var(--warn,#9A6410);}
+  .brow .bwho{grid-column:2;grid-row:2;color:var(--muted);font-size:.84rem;}
+  .brow .broute{grid-column:2/4;grid-row:3;font-size:.82rem;color:var(--muted);
+    border-top:1px dashed var(--line);margin-top:.4rem;padding-top:.4rem;}
+  .brow .broute b{color:var(--ink);}
+  .brow .broute .flag{color:var(--warn);font-weight:700;}
+  .bempty{color:var(--muted);background:var(--surface);border:1px dashed var(--line);
+    border-radius:10px;padding:1.4rem;text-align:center;}
   @media print{
-    header.top{position:static;} .btn,.phi,details.ref,.chead .spacer,.toolnav{display:none!important;}
+    header.top{position:static;} .btn,.phi,details.ref,.chead .spacer,.toolnav,.viewbar{display:none!important;}
     body{background:#fff;} .case{break-inside:avoid;box-shadow:none;}
+    .brow{break-inside:avoid;box-shadow:none;} .bgroup{break-inside:avoid;}
   }
 </style>
 </head>
@@ -117,6 +149,7 @@
     <span class="spacer"></span>
     <button class="btn" id="addBtn">+ Add case</button>
     <button class="btn ghost" id="printBtn">Print</button>
+    <button class="btn ghost" id="icsBtn" title="Download every deadline as calendar events with reminders">Calendar</button>
     <button class="btn ghost" id="exportBtn">Export</button>
     <button class="btn ghost" id="demoBtn" title="Load anonymised demo caseload">Demo data</button>
     <button class="btn ghost" id="themeBtn" title="Toggle theme" aria-label="Toggle theme">◐</button>
@@ -127,6 +160,15 @@
   <p class="phi"><b>Keep PHI out of this tool.</b> Use initials, a room number, or an internal case ID — not full names or dates of birth. Data is stored only in this browser (localStorage), is never transmitted anywhere, and is lost if you clear site data. This is a personal working aid for tracking deadlines; your EHR and medical record remain the system of record.</p>
 
   <div class="stats" id="stats"></div>
+
+  <div class="viewbar">
+    <span class="seg" role="group" aria-label="View">
+      <button type="button" id="vCases" aria-pressed="true">Caseload</button>
+      <button type="button" id="vBrief" aria-pressed="false">Today's work</button>
+    </span>
+  </div>
+
+  <section id="briefView" hidden aria-label="Today's work"></section>
   <div id="cases"></div>
 
   <details class="ref">
@@ -381,7 +423,208 @@ function clocksFor(c){
   return out;
 }
 
+/* ---------- automation: today's work, plan routes, calendar ---------- */
+// Everything below reads clocksFor() rather than recomputing dates. The deadline
+// math has exactly one home; a second copy would drift, and drift here is a
+// missed appeal.
+
+// Which clocks are things a person must DO, as opposed to context lines.
+const ACTIONS = {
+  "Next submission due":      "Submit continued-stay authorization",
+  "NOMNC deliver by":         "Deliver NOMNC (CMS-10123) to the resident",
+  "Physician recert due":     "Obtain physician recertification",
+  "Weekly progress note due": "Complete weekly progress note",
+};
+function actionVerb(lab){
+  if (ACTIONS[lab]) return ACTIONS[lab];
+  // Every QIO variant ("per NOMNC", "earlier of two", "from delivery") is the same act.
+  if (lab.indexOf("QIO deadline") === 0) return "File fast-track QIO appeal";
+  return null;
+}
+
+/** Flatten the caseload into dated, actionable tasks, most urgent first. */
+function actionList(){
+  const t = today(), out = [];
+  for (const c of cases){
+    let clocks;
+    try { clocks = clocksFor(c); } catch { continue; }
+    for (const x of clocks){
+      if (x.quiet || x.plain) continue;          // context, not an action
+      const verb = actionVerb(x.lab);
+      if (!verb) continue;
+      if (x.none){ out.push({ c, lab:x.lab, verb, missing:true }); continue; }
+      out.push({ c, lab:x.lab, verb, date:x.date, days:diffD(x.date,t), noon:!!x.noon });
+    }
+  }
+  out.sort((a,b) => (a.missing?1:0) - (b.missing?1:0) || (a.days - b.days));
+  return out;
+}
+
+/**
+ * Pull the submission route for a plan out of the rules registry, so the brief
+ * says where to file, not just that filing is due. Same-origin localStorage;
+ * the registry stays the one place a rule is edited.
+ */
+function planRoute(planName){
+  if (!planName) return null;
+  let rules;
+  try { rules = JSON.parse(localStorage.getItem("cc-rules-v1") || "[]"); } catch { return null; }
+  if (!Array.isArray(rules)) return null;
+  // Case plans are shorthand ("Aetna MA"); registry plans are formal
+  // ("Aetna Medicare Advantage"). Match on the distinctive first word.
+  const key = String(planName).trim().toLowerCase().split(/[^a-z0-9]+/)[0];
+  if (!key || key.length < 3) return null;
+  const hit = rules.find(r => r && typeof r.plan === "string" && typeof r.type === "string"
+    && r.plan.toLowerCase().indexOf(key) === 0
+    && /submission route/i.test(r.type));
+  if (!hit) return null;
+  const v = parseD(hit.verified), iv = +hit.interval || 0;
+  let stale = false, due = false;
+  if (v && iv > 0){ const age = diffD(today(), v); stale = age >= iv*2; due = !stale && age >= iv; }
+  return { value:String(hit.value||""), verified:hit.verified||"", stale, due };
+}
+
+function renderBrief(){
+  const host = $("briefView");
+  if (!host) return;
+  const all = actionList();
+  const dated = all.filter(a => !a.missing);
+  const missing = all.filter(a => a.missing);
+  const n = (f) => dated.filter(f).length;
+  const overdue = n(a => a.days < 0), todayN = n(a => a.days === 0);
+
+  const groups = [
+    ["Overdue",           (a) => a.days < 0],
+    ["Due today",         (a) => a.days === 0],
+    ["Due tomorrow",      (a) => a.days === 1],
+    ["Later this week",   (a) => a.days > 1 && a.days <= 7],
+  ];
+
+  const row = (a) => {
+    const cls = sev(a.days, a.noon);
+    const route = a.lab === "Next submission due" ? planRoute(a.c.plan) : null;
+    const routeHTML = route
+      ? `<div class="broute"><b>Where:</b> ${esc(route.value)}${
+          route.stale ? ` <span class="flag">⚠ rule unverified since ${esc(route.verified)} — confirm before filing</span>`
+          : route.due ? ` <span class="flag">⚠ due for re-verification</span>` : ""}</div>`
+      : "";
+    return `<div class="brow ${cls}">
+      <span class="tick" aria-hidden="true"></span>
+      <div class="bverb">${esc(a.verb)}</div>
+      <div class="bwhen">${esc(relText(a.days, a.noon))}</div>
+      <div class="bwho"><b>${esc(a.c.cid)}</b> · ${esc(a.c.plan||"—")} · ${fmtD(a.date)}</div>
+      ${routeHTML}
+    </div>`;
+  };
+
+  let html = `<p class="bsum">Generated ${fmtD(today())} from ${cases.length} case${cases.length===1?"":"s"}. `
+    + `<b>${overdue}</b> overdue, <b>${todayN}</b> due today. `
+    + `Print this for the morning stand-up; tick each line as it is done.</p>`;
+
+  let shown = 0;
+  for (const [title, pick] of groups){
+    const rows = dated.filter(pick);
+    if (!rows.length) continue;
+    shown += rows.length;
+    html += `<section class="bgroup"><h2 class="bhead">${esc(title)} <span class="n">${rows.length}</span></h2>`
+          + rows.map(row).join("") + `</section>`;
+  }
+  if (!shown){
+    html += `<p class="bempty">Nothing due in the next seven days. Deadlines further out stay on the caseload view.</p>`;
+  }
+  if (missing.length){
+    html += `<section class="bgroup"><h2 class="bhead">Missing dates <span class="n">${missing.length}</span></h2>`
+      + missing.map(a => `<div class="brow">
+          <span class="tick" aria-hidden="true"></span>
+          <div class="bverb">${esc(a.lab)} — no date recorded</div>
+          <div class="bwhen">unknown</div>
+          <div class="bwho"><b>${esc(a.c.cid)}</b> · ${esc(a.c.plan||"—")}</div>
+        </div>`).join("") + `</section>`;
+  }
+  host.innerHTML = html;
+}
+
+/* ---------- calendar export (RFC 5545) ---------- */
+const icsEsc = (s) => String(s).replace(/\\/g,"\\\\").replace(/;/g,"\\;").replace(/,/g,"\\,").replace(/\r?\n/g,"\\n");
+// RFC 5545 caps a content line at 75 octets; continuation lines start with a space.
+function icsFold(line){
+  if (line.length <= 74) return line;
+  const parts = [];
+  let s = line;
+  parts.push(s.slice(0,74)); s = s.slice(74);
+  while (s.length > 73){ parts.push(" " + s.slice(0,73)); s = s.slice(73); }
+  if (s) parts.push(" " + s);
+  return parts.join("\r\n");
+}
+const p2 = (n) => String(n).padStart(2,"0");
+const icsDate = (d) => `${d.getFullYear()}${p2(d.getMonth()+1)}${p2(d.getDate())}`;
+
+function buildICS(){
+  const now = new Date();
+  const stamp = `${now.getUTCFullYear()}${p2(now.getUTCMonth()+1)}${p2(now.getUTCDate())}`
+              + `T${p2(now.getUTCHours())}${p2(now.getUTCMinutes())}${p2(now.getUTCSeconds())}Z`;
+  const L = ["BEGIN:VCALENDAR","VERSION:2.0",
+             "PRODID:-//Cardinal Coverage//MA Case Tracker//EN",
+             "CALSCALE:GREGORIAN","METHOD:PUBLISH",
+             "X-WR-CALNAME:Cardinal Coverage deadlines"];
+
+  for (const a of actionList()){
+    if (a.missing) continue;
+    // UID is stable on case + clock, so re-importing MOVES an event rather than
+    // duplicating it when a date changes.
+    const kind = a.lab.indexOf("QIO deadline") === 0 ? "qio" : a.lab.toLowerCase().replace(/[^a-z]+/g,"-");
+    L.push("BEGIN:VEVENT");
+    L.push(`UID:cc-${icsEsc(a.c.id)}-${kind}@cardinal-coverage.local`);
+    L.push(`DTSTAMP:${stamp}`);
+    L.push(`LAST-MODIFIED:${stamp}`);
+    if (a.noon){
+      // Floating local time: a noon cutoff is noon where the facility is.
+      L.push(`DTSTART:${icsDate(a.date)}T120000`);
+      L.push(`DTEND:${icsDate(a.date)}T121500`);
+    } else {
+      L.push(`DTSTART;VALUE=DATE:${icsDate(a.date)}`);
+      L.push(`DTEND;VALUE=DATE:${icsDate(addD(a.date,1))}`);
+    }
+    L.push(`SUMMARY:${icsEsc(a.verb + " — " + a.c.cid)}`);
+    L.push(`DESCRIPTION:${icsEsc(
+      `Case: ${a.c.cid}\n` + (a.c.plan ? `Plan: ${a.c.plan}\n` : "") + `Clock: ${a.lab}\n\n` +
+      "From the Cardinal Coverage MA Case Tracker. Verify against the medical record before acting.")}`);
+    L.push("TRANSP:TRANSPARENT");
+    if (a.noon){
+      L.push("BEGIN:VALARM","TRIGGER:-P1D","ACTION:DISPLAY",
+             `DESCRIPTION:${icsEsc("Tomorrow by noon: " + a.verb + " — " + a.c.cid)}`,"END:VALARM");
+      L.push("BEGIN:VALARM","TRIGGER:-PT4H","ACTION:DISPLAY",
+             `DESCRIPTION:${icsEsc("Noon cutoff in 4 hours: " + a.verb + " — " + a.c.cid)}`,"END:VALARM");
+    } else {
+      L.push("BEGIN:VALARM","TRIGGER:-PT15H","ACTION:DISPLAY",
+             `DESCRIPTION:${icsEsc("Tomorrow: " + a.verb + " — " + a.c.cid)}`,"END:VALARM");
+    }
+    L.push("END:VEVENT");
+  }
+  L.push("END:VCALENDAR");
+  return L.map(icsFold).join("\r\n") + "\r\n";
+}
+
 /* ---------- render ---------- */
+/**
+ * Hand a case straight to the letter builder, choosing the letter that matches
+ * where the case stands. Carries the dates that get mistyped most — note that
+ * the NOMNC effective date is the LAST covered day, not the first uncovered one.
+ */
+function appealHref(c){
+  const cyc = Number.isFinite(+c.cycle) ? +c.cycle : 0;
+  let letter = null, label = "";
+  if (c.status === "NOMNC issued"){ letter = "qio";   label = "Draft QIO appeal"; }
+  else if (c.status === "Denied — appeal open"){ letter = "recon"; label = "Draft reconsideration"; }
+  else if (cyc > 0 && cyc <= 5 && c.covered){ letter = "short"; label = "Challenge short auth"; }
+  if (!letter) return "";
+  const q = new URLSearchParams({ letter, case: c.cid || "", plan: c.plan || "" });
+  if (c.admit)   q.set("admit", c.admit);
+  if (c.covered) q.set("effective", c.covered);   // NOMNC effective = last covered day
+  return `<a class="btn ghost sm" style="text-decoration:none;" title="Open the letter builder with this case filled in"
+           href="appeal-letters.html?${q.toString()}">${label}</a>`;
+}
+
 // Pre-select the likeliest outcome event from where the case already stands.
 function suggestEvent(c){
   switch (c.status){
@@ -412,6 +655,10 @@ function render(){
     <div class="stat ${overdue?"alert":""}"><div class="k">Overdue</div><div class="v">${overdue}</div></div>
     <div class="stat money"><div class="k">Exposure at risk</div><div class="v">$${totalExp.toLocaleString()}</div></div>`;
 
+  // Both views derive from the same pass; the brief must render even when the
+  // caseload is empty, so it runs before the early return below.
+  renderBrief();
+
   // cases
   const host = $("cases");
   if (!cases.length){ host.innerHTML = `<p class="empty">No cases yet. Choose <b>+ Add case</b> to start.</p>`; return; }
@@ -439,6 +686,7 @@ function render(){
         <span class="spacer"></span>
         <a class="btn ghost sm" style="text-decoration:none;" title="Record what happened on this case"
            href="outcomes.html?case=${encodeURIComponent(c.cid)}&plan=${encodeURIComponent(c.plan||"")}&suggest=${encodeURIComponent(suggestEvent(c))}">Log outcome</a>
+        ${appealHref(c)}
         <button class="btn ghost sm" data-edit="${esc(c.id)}">Edit</button>
       </div>
       <div class="clocks">${clockHTML}</div>
@@ -527,6 +775,23 @@ function loadDemo(){
 $("addBtn").addEventListener("click", () => openDlg(null));
 $("demoBtn").addEventListener("click", loadDemo);
 $("printBtn").addEventListener("click", () => window.print());
+$("icsBtn").addEventListener("click", () => {
+  const list = actionList().filter(a => !a.missing);
+  if (!list.length){ alert("No dated deadlines to export yet."); return; }
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([buildICS()], {type:"text/calendar;charset=utf-8"}));
+  a.download = `cardinal-deadlines-${toISO(today())}.ics`;
+  a.click(); URL.revokeObjectURL(a.href);
+});
+function setView(brief){
+  $("briefView").hidden = !brief;
+  $("cases").hidden = brief;
+  $("vBrief").setAttribute("aria-pressed", String(brief));
+  $("vCases").setAttribute("aria-pressed", String(!brief));
+  try { localStorage.setItem("cc-tracker-view", brief ? "brief" : "cases"); } catch {}
+}
+$("vBrief").addEventListener("click", () => setView(true));
+$("vCases").addEventListener("click", () => setView(false));
 $("exportBtn").addEventListener("click", () => {
   const blob = new Blob([JSON.stringify(cases,null,2)], {type:"application/json"});
   const a = document.createElement("a");
@@ -557,6 +822,7 @@ try { render(); } catch (e) {
     `<p class="empty">Could not render the saved caseload. Use <b>Export</b> to recover the raw data, then clear it and re-enter.</p>`;
 }
 banner();
+try { setView(localStorage.getItem("cc-tracker-view") === "brief"); } catch { setView(false); }
 </script>
 </body>
 </html>

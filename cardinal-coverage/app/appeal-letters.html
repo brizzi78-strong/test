@@ -318,7 +318,28 @@ $("themeBtn").addEventListener("click", () => {
   else document.documentElement.removeAttribute("data-theme");
 });
 
-loadFac(); $("tabdesc").textContent = DESC[tab]; build();
+/**
+ * Accept a case handed over from the tracker. Only non-PHI identifiers travel:
+ * the case label the facility already chose, the plan, and two dates. Nothing
+ * from the URL is persisted — saveFac() still writes facility fields only.
+ */
+function prefillFromURL(){
+  let q;
+  try { q = new URLSearchParams(location.search); } catch { return; }
+  const want = q.get("letter");
+  if (want && DESC[want]){
+    tab = want;
+    document.querySelectorAll(".tab").forEach(x =>
+      x.setAttribute("aria-selected", String(x.dataset.t === tab)));
+  }
+  const map = { case:"fMember", plan:"fPlan", admit:"fAdmit", effective:"fEffective", auth:"fAuth" };
+  for (const [param, id] of Object.entries(map)){
+    const val = q.get(param);
+    if (val && $(id)) $(id).value = val.slice(0, 120);
+  }
+}
+
+loadFac(); prefillFromURL(); $("tabdesc").textContent = DESC[tab]; build();
 </script>
 </body>
 </html>
