@@ -16,6 +16,31 @@ XLSX, filter to Wake / Durham / Orange, and this doc becomes the complete
 ranked sheet. Bed counts and care types below come from directory listings
 and should be confirmed on the first call.
 
+## Memory care first — the buildings to call before any other
+
+With a $6,500 floor and a memory-care focus, these lead the sequence. Every
+one clears the floor on a memory care move-in; the dedicated buildings are
+where a family with a dementia diagnosis and a discharge date actually ends up.
+
+| Building | Town | Why first |
+| --- | --- | --- |
+| Brookdale Cary | Cary | Memory-care dedicated |
+| Seasons at Southpoint (Phoenix) | Durham | Memory-care dedicated |
+| Senter's Memory Care | Fuquay-Varina | Memory-care dedicated, ~50 beds |
+| Falls River Court | Raleigh | Memory-care-specific building |
+| Brookdale Meadowmont | Chapel Hill | ~64 memory care units |
+| Carillon of Knightdale / Durham / Hillsborough / North Raleigh | — | Memory-care specialized chain; up to 96 per building |
+| Brookdale Wake Forest (Clare Bridge) | Wake Forest | Dedicated secure wing |
+| Sunrise at North Hills / Cary / Raleigh; Brighton Gardens | — | Large secure neighborhoods, top-rated MC |
+| Cadence North Raleigh / Garner | — | Award-cited MC programming |
+| Waltonwood Lake Boone | Raleigh | Secure MC neighborhood, upscale (clears the floor easily) |
+| Zebulon House | Zebulon | MC + respite, east Wake coverage |
+
+CCRCs (Springmoor, Croasdaile, Carol Woods, Carolina Meadows, The Cardinal,
+Templeton) stay Tier 2: they fill memory care from their own residents and
+mostly don't pay placement fees. Ask, don't assume — and use them as a demand
+source: families on their waitlists whose parent needs care now.
+
 ## How to rank the calls
 
 | Tier | Who | Why they're first / later |

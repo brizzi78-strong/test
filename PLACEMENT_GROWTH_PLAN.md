@@ -62,14 +62,49 @@ real, gettable rate — not the outlier.
 | Assisted living, Durham / NC avg | ~$6,350 | ~$4,760 | ~$6,350 |
 | Assisted living, Charlotte | ~$4,400–5,800 | ~$3,300–4,350 | ~$4,400–5,800 |
 
-**Policy: 100% of the total first-month charges (base rent plus care-level
-fees), or walk.** See [`REFERRAL_AGREEMENTS.md`](REFERRAL_AGREEMENTS.md) for
-the precise definition and the clawback floor that has to travel with it.
+**Policy: $6,500 minimum per move-in.** Implemented as two lines — 100% of
+total first-month charges in every agreement, and no agreement with a
+building whose total rate is under $6,500 — so the minimum is enforced by
+which buildings you sign, not by a clause a community can refuse. See
+[`REFERRAL_AGREEMENTS.md`](REFERRAL_AGREEMENTS.md) for the definition and the
+clawback floor that has to travel with it.
 
-**Planning number: $6,000 per placement.** The risk under this policy isn't a
-lower fee — it's fewer signed buildings, since some chains fix rates at
-corporate. Buildings that won't reach 100% stay on the call sheet as "not
-yet" and get revisited at month 4 with move-ins behind you.
+**Planning number: $6,500 per placement.** The risk under this policy isn't a
+lower fee — it's fewer signed buildings: chains that fix rates at corporate,
+and the value tier below the rate floor. Buildings that won't reach 100% stay
+on the call sheet as "not yet" for a month-4 return; the value tier serves
+the money-gone families you help at no fee anyway.
+
+## Focus: memory care first
+
+Memory care is the segment where every part of this business points the same
+way, so it leads:
+
+| Why | What it means |
+| --- | --- |
+| **Every memory care placement clears the $6,500 floor** | Raleigh MC runs ~$7,036 base plus care fees; fees land $7,000–8,500 without negotiating |
+| **Families are least prepared for it** | A dementia diagnosis plus a discharge date is the worst week of a family's life; the call center is at its most useless here and a person in the room at their most valuable |
+| **It's the credential** | CDP® on the team, the book, the dedication to Lou — the brand already says memory care |
+| **Discharge planners remember specialists** | "The memory care placement people" is a sharper thing to be than "a placement agency" |
+
+**What changes:** the first calls are the memory-care-dedicated buildings and
+the AL communities with large secure wings (see the memory-care tier in
+[`PLACEMENT_TARGET_LIST.md`](PLACEMENT_TARGET_LIST.md)); the positioning line
+becomes *memory care placement, Wake County*; and two contract terms become
+non-negotiable rather than merely preferred — **no clawback on death or
+hospitalization** (both are far more common in memory care) and **an explicit
+list of behaviors the community will and won't accept**, so a family is never
+toured somewhere that will decline their mother at assessment.
+
+**CCRCs are not a fee source — treat them as a demand source.** Life-plan
+communities (Springmoor, Croasdaile, Carol Woods, Carolina Meadows, The
+Cardinal) fill memory care from their own independent-living residents first,
+market through their own sales teams, and mostly don't pay placement fees.
+Ask each one anyway — some accept direct admits to memory care when they have
+a bed and a few will pay on those — but don't build inventory on them. What
+they *do* produce: families on a CCRC waitlist whose parent needs care now.
+Those families are your clients, and the CCRC's sales director is glad to
+have somewhere to send them.
 
 ### Cash flow reality — read this twice
 
@@ -238,7 +273,7 @@ Treat it as the authority engine, not a revenue line.
 | Placements/month | **2–4** |
 | Cumulative placements | **10–18** |
 | Cumulative revenue | **$45K–80K** |
-| Avg fee | $6,000+ (100% of total first-month charges) |
+| Avg fee | $6,500+ (100% of total first-month charges; $6,500 building floor) |
 | 90-day retention | >85% |
 
 ---
@@ -298,8 +333,8 @@ The software door only opens with the frustration log. Keep it.
 | --- | --- | --- | --- |
 | Placements/month (exit rate) | 3–4 | 5–6 | 8+ |
 | Cumulative placements | 30 | 45 | 65 |
-| Avg fee (100% policy) | $6,000 | $6,500 | $7,000 |
-| **Year 1 revenue** | **~$180K** | **~$290K** | **~$455K** |
+| Avg fee ($6,500 floor) | $6,500 | $7,000 | $7,500 |
+| **Year 1 revenue** | **~$195K** | **~$315K** | **~$490K** |
 
 ---
 

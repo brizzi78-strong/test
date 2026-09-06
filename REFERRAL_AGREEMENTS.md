@@ -48,7 +48,24 @@ you the fee band before you've seen the paper.
 | Attribution | 90–180 days | 6–12 months from registration |
 | Exclusivity | Sometimes requested | Never grant it |
 
-**Policy: 100% is the number. Walk from 75%.** Defined precisely, or it leaks:
+**Policy: $6,500 minimum per move-in — enforced by which buildings you sign,
+not by a clause.** A flat fee in the contract dies on the cheaper half of the
+market (on a $4,800 room, $6,500 is 135% of the first month, and no sales
+director can pay more than the resident pays them). So the policy is two lines:
+
+1. **Every agreement: 100% of total first-month charges.**
+2. **No agreement with a building whose total monthly rate is under $6,500.**
+
+| Building | Total first-month charges | Collected at 100% | Sign? |
+| --- | --- | --- | --- |
+| Value AL, $4,800 base + $900 care | $5,700 | $5,700 | No |
+| Mid AL, $5,600 base + $1,200 care | $6,800 | $6,800 | Yes |
+| Triangle AL average | ~$6,350 + care fees | ~$6,500–7,500 | Yes |
+| Memory care | ~$7,036 + care fees | $7,000–8,500 | Yes |
+
+The value tier serves the money-gone families you already help at no fee;
+your paid inventory tilts to mid-market AL and memory care. Defined precisely,
+or it leaks:
 
 - 100% means **100% of the total first-month charges — base rent plus
   care-level fees.** "100% of base rent" on a memory care resident paying
