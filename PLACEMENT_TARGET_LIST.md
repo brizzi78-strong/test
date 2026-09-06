@@ -150,6 +150,34 @@ faster than any directory.
 
 ---
 
+## Second ring — elder law attorneys to start with
+
+Search-surfaced practices with a Medicaid / long-term-care planning focus,
+ordered by credential first (NC State Bar board certification in elder law
+and the national CELA designation), then by geographic spread. Not a verified
+ranking; a starting list for the "paying for memory care" workshop invitation.
+The NC State Bar's specialist directory and the NC NAELA chapter complete it.
+
+| Practice | Where | Why on the list |
+| --- | --- | --- |
+| McPherson, Rocamora, Nicholson & Hinkle — Anthony D. Nicholson | Durham / Chapel Hill | NC board-certified elder law specialist *and* CELA; practicing locally since 1998 |
+| Strauss Attorneys — Larry S. Hartley (CELA) | Raleigh and Durham offices | CELA on staff; Medicaid and long-term care planning is the practice |
+| Walker Lambe — Rupe Gill | Durham | 27+ years; Medicaid, **Special Assistance**, and VA Aid & Attendance planning — the exact benefits your Tier B families need |
+| Clarity Legal Group | Chapel Hill, serving Durham, Wake | Elder law, Medicaid, special needs; multi-county reach |
+| Pierce Law Group | Durham | Elder law and Medicaid planning, veterans benefits |
+| Trusts and Estates Law Group | Raleigh | Estate planning, Medicaid planning, guardianship exclusively |
+| Oak City Estate Planning | Raleigh | Medicaid planning, long-term care, guardianship in Wake County |
+| Eldreth Law Firm | Raleigh | Medicaid, VA benefits, long-term care focus |
+| NC Planning | Raleigh | Plans built around Medicaid, VA pension, and PACE — a good workshop partner for the money-tight families |
+| Cranfill Sumner / Ward and Smith (elder law practices) | Raleigh | Larger firms with elder law groups; slower to engage, deeper bench |
+| NC Estate Planning | Wake Forest | Northern Wake coverage |
+
+The ask to each is the same: *"We place memory care families; every one of
+them needs what you do. Would you co-present a monthly 'Paying for memory
+care in NC' evening — you on Medicaid, VA, and asset protection, us on
+placement?"* Bar rules mean no fees either way, which is why the workshop is
+the relationship.
+
 ## The six-week sequence
 
 Chains first — one conversation can paper several buildings:
