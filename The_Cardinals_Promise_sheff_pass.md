@@ -967,7 +967,7 @@ Then it stacked — performance on performance, year after year — until I forg
 
 ### *Sales*
 
-I took a sales job in 2002. For a while it felt like proof California hadn't broken me. The salary was fifty thousand dollars, and at twenty-three it felt like solid ground for the first time in years.
+I took a sales job in 2002. Abercrombie paid me thirty thousand a year. The uniform company offered fifty base, thirty more in commission, and a car package, and it looked like the next step up, into business-to-business sales. For a while it felt like proof California hadn't broken me. At twenty-three it felt like solid ground for the first time in years.
 
 The job was selling uniform services to businesses: cold calls, presentations, lunches in parking lots while I ran the next hour in my head. The quota was real. Your manager knew your numbers before breakfast. I loved the structure — clear rules, clear targets, a scoreboard that updated every day. Lou had raised me in the language of milestones and metrics, where doing the work would show up in the results.
 
