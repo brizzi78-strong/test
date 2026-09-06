@@ -100,7 +100,9 @@ export function sandbox(src, names, extra = {}) {
       get: (t,k) => (k === Symbol.toPrimitive ? () => "" : __proxy),
       set: () => true, apply: () => __proxy, construct: () => __proxy,
     });
-    var document = __proxy, window = __proxy, localStorage = __proxy,
+    // localStorage is left alone when a test pre-seeds one through extra, so
+    // storage-reading helpers can be exercised against real records.
+    var document = __proxy, window = __proxy, localStorage = localStorage || __proxy,
         location = { search: "", pathname: "/" }, history = __proxy,
         self = { crypto: undefined }, alert = __noop, confirm = () => true,
         navigator = __proxy, IntersectionObserver = function(){ return __proxy; },
