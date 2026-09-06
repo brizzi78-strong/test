@@ -96,6 +96,8 @@
   .empty{text-align:center;color:var(--muted);padding:3rem 1rem;font-size:.95rem;}
   footer{color:var(--muted);font-size:.75rem;padding:1rem 0 3rem;line-height:1.6;}
 
+  .planHint{margin:.35rem 0 0;font-size:.78rem;color:var(--muted);line-height:1.45;}
+  .planHint b{color:var(--ink);} .planHint .flag{color:var(--warn);font-weight:700;}
   /* today's work brief */
   .viewbar{display:flex;gap:.4rem;align-items:center;margin:0 0 1rem;}
   .viewbar .seg{display:inline-flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;}
@@ -219,7 +221,8 @@
       </div>
       <div>
         <label for="fPlan">Plan</label>
-        <input id="fPlan" list="planList" placeholder="Aetna MA">
+        <input id="fPlan" list="planList" placeholder="Aetna MA" autocomplete="off">
+        <p class="planHint" id="planHint" hidden></p>
         <datalist id="planList"><option>Aetna MA</option><option>WellCare MA</option><option>Humana MA</option><option>UnitedHealthcare MA</option><option>Blue Cross NC MA</option><option>Cigna MA</option><option>Traditional Medicare</option></datalist>
       </div>
     </div>
@@ -481,7 +484,8 @@ function planRoute(planName){
   const v = parseD(hit.verified), iv = +hit.interval || 0;
   let stale = false, due = false;
   if (v && iv > 0){ const age = diffD(today(), v); stale = age >= iv*2; due = !stale && age >= iv; }
-  return { value:String(hit.value||""), verified:hit.verified||"", stale, due };
+  return { value:String(hit.value||""), verified:hit.verified||"", stale, due,
+           cycle: (+hit.cycle > 0 ? +hit.cycle : null) };
 }
 
 function renderBrief(){
@@ -706,7 +710,9 @@ function openDlg(id){
   $("dlgTitle").textContent = c ? "Edit case" : "Add case";
   $("delBtn").style.display = c ? "" : "none";
   $("fId").value = c?.cid ?? "";
+  refreshPlanList();
   $("fPlan").value = c?.plan ?? "";
+  $("planHint").hidden = true;
   $("fAdmit").value = c?.admit ?? toISO(today());
   $("fCycle").value = c?.cycle ?? 3;
   $("fCovered").value = c?.covered ?? "";
@@ -791,6 +797,36 @@ function setView(brief){
   try { localStorage.setItem("cc-tracker-view", brief ? "brief" : "cases"); } catch {}
 }
 $("vBrief").addEventListener("click", () => setView(true));
+
+/* ---------- plan defaults from the registry ---------- */
+const STATIC_PLANS = ["Aetna MA","WellCare MA","Humana MA","UnitedHealthcare MA","Blue Cross NC MA","Cigna MA","Traditional Medicare"];
+// The plan list is seeded from the registry so names typed here match the
+// names rules are filed under — that is what makes the route lookup land.
+function refreshPlanList(){
+  let names = [];
+  try {
+    const rules = JSON.parse(localStorage.getItem("cc-rules-v1") || "[]");
+    if (Array.isArray(rules))
+      names = rules.filter(r => r && typeof r.plan === "string" && /submission route/i.test(r.type||""))
+                   .map(r => r.plan.trim()).filter(Boolean);
+  } catch {}
+  const all = [...new Set([...names, ...STATIC_PLANS])];
+  $("planList").innerHTML = all.map(n => `<option>${esc(n)}</option>`).join("");
+}
+// On a plan change, fill what the registry knows: the auth cycle, and where to file.
+function applyPlanDefaults(){
+  const r = planRoute($("fPlan").value);
+  const hint = $("planHint");
+  if (!r){ hint.hidden = true; return; }
+  if (r.cycle){ $("fCycle").value = r.cycle; }
+  hint.innerHTML = (r.cycle ? `<b>${r.cycle}-day cycle</b> set from the registry. ` : "")
+    + `<b>Where:</b> ${esc(r.value)}`
+    + (r.stale ? ` <span class="flag">⚠ unverified since ${esc(r.verified)}</span>`
+       : r.due ? ` <span class="flag">⚠ due for re-verification</span>` : "");
+  hint.hidden = false;
+}
+$("fPlan").addEventListener("input", applyPlanDefaults);
+$("fPlan").addEventListener("change", applyPlanDefaults);
 $("vCases").addEventListener("click", () => setView(false));
 $("exportBtn").addEventListener("click", () => {
   const blob = new Blob([JSON.stringify(cases,null,2)], {type:"application/json"});
