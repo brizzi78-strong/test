@@ -947,7 +947,7 @@ My friend Angela called from Chicago.
 
 Validation. For about a minute, I told myself that I'd made it. People recognized me, accepted me, and loved me for who I was. Or they loved the idea of me and who I pretended to be. Then the feeling passed, and the hunger underneath was still there.
 
-Once in California, I drove straight at the only thing I knew how to do: win. My first real job was managing an Abercrombie & Fitch in San Diego. I brought the same speed I had taken into weight cuts and 6 a.m. practices. I outworked everyone, learned the inventory cold, found problems before anyone asked me to. Put up a scoreboard and I wanted my name at the top.
+I had no clue what I wanted to do out of college. In Cincinnati I'd worked part-time as an Abercrombie & Fitch manager while I was still in school, and a transfer was the one lever I had. It wasn't a plan. It was a way to get to San Diego. Once in California, I drove straight at the only thing I knew how to do: win. My first real job was managing an Abercrombie & Fitch in San Diego. I brought the same speed I had taken into weight cuts and 6 a.m. practices. I outworked everyone, learned the inventory cold, found problems before anyone asked me to. Put up a scoreboard and I wanted my name at the top.
 
 Nesser filmed a bio of me wakeboarding in Islamorada, Florida. The tape brought an A&F talent scout to the store, and I got picked for Abercrombie & Fitch TV, the in-store channel playing across the country. That was the commercial Angela had seen. The kid from Mexico City who had needed speech therapy for a lisp was now on a loop in one of the biggest retail brands in America.
 
