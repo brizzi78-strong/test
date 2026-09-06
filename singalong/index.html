@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="The Memory Care Music Program — guided sing-along circles and personalized music for dementia and memory-care communities, built around a four-week public-domain song program.">
+  <meta property="og:title" content="The Memory Care Music Program">
+  <meta property="og:description" content="A facility-ready four-week memory-care music program with guided sing-along circles, personalized listening, staff prompts, and simple response logging.">
+  <meta property="og:type" content="website">
+  <title>Memory Care Music Program</title>
+  <style>
+    html,body{width:100%;height:100%;margin:0;background:#f7f3e8;overflow:hidden}
+    iframe{display:block;width:100%;height:100dvh;border:0;background:#f7f3e8}
+    .fallback{position:absolute;inset:0;display:grid;place-items:center;padding:2rem;font:16px/1.5 system-ui,sans-serif;text-align:center}
+    .fallback a{color:#1e3d63;font-weight:700}
+    iframe+.fallback{display:none}
+  </style>
+</head>
+<body>
+  <iframe id="program" src="./demo/index.html" title="Memory Care Music Program" loading="eager"></iframe>
+  <div class="fallback"><p>The Memory Care Music Program could not load here. <a href="./demo/index.html">Open the program</a>.</p></div>
+  <script>
+    const frame = document.getElementById('program');
+    frame.addEventListener('load', () => {
+      try {
+        const doc = frame.contentDocument;
+        if (!doc) return;
+        doc.title = 'Memory Care Music Program';
+        const badge = doc.querySelector('.demo-flag');
+        if (badge) badge.textContent = 'Program';
+        const description = doc.querySelector('meta[name="description"]');
+        if (description) description.setAttribute('content', 'The Memory Care Music Program — guided sing-along circles and personalized music for dementia and memory-care communities, built around a four-week public-domain song program.');
+      } catch (_) {
+        // Same-origin on the published static site. If a browser blocks access,
+        // the underlying program still loads unchanged inside the frame.
+      }
+    });
+  </script>
+</body>
+</html>
