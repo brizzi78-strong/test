@@ -53,8 +53,10 @@ by-song review of the logs. `npm run seed:program` loads its 22-song
 public-domain kit (words included) into a facility's library.
 
 [`demo/index.html`](demo/index.html) is a self-contained, client-side
-walkthrough of the program with sample data — open it in any browser, or let
-the repo's `../render.yaml` blueprint serve it as a free static site.
+walkthrough of the program with sample data. It is live at
+<https://memory-care-music-program.onrender.com/> (served from `main` by the
+repo's `../render.yaml` blueprint, auto-deployed on every merge), or open the
+file in any browser.
 
 ## Run it
 
