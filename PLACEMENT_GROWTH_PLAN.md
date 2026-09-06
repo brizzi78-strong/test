@@ -62,9 +62,14 @@ real, gettable rate — not the outlier.
 | Assisted living, Durham / NC avg | ~$6,350 | ~$4,760 | ~$6,350 |
 | Assisted living, Charlotte | ~$4,400–5,800 | ~$3,300–4,350 | ~$4,400–5,800 |
 
-**Planning number: $4,500 per placement** (conservative — assumes a mix, and
-some agreements below 100%). Upside to ~$6,000 as you negotiate up and as
-memory care becomes a larger share.
+**Policy: 100% of the total first-month charges (base rent plus care-level
+fees), or walk.** See [`REFERRAL_AGREEMENTS.md`](REFERRAL_AGREEMENTS.md) for
+the precise definition and the clawback floor that has to travel with it.
+
+**Planning number: $6,000 per placement.** The risk under this policy isn't a
+lower fee — it's fewer signed buildings, since some chains fix rates at
+corporate. Buildings that won't reach 100% stay on the call sheet as "not
+yet" and get revisited at month 4 with move-ins behind you.
 
 ### Cash flow reality — read this twice
 
@@ -196,10 +201,11 @@ smaller, less gatekept, and their discharge volume is steady.
 
 - [ ] Grow to **40–60 community agreements**; add Johnston, Chatham as families
       pull you there.
-- [ ] **Renegotiate the first agreements.** By month 4 you have proof — track
-      record, move-ins that *stuck*. Communities you've filled beds for will go
-      to 100% who wouldn't at month zero. This is the single highest-ROI hour
-      you'll spend all year.
+- [ ] **Go back to the buildings that said "not yet."** By month 4 you have
+      proof — track record, move-ins that *stuck*, and an inventory of
+      buildings already paying 100%. Communities that wouldn't reach 100% at
+      month zero will now. This is the single highest-ROI hour you'll spend
+      all year.
 - [ ] Watch **30/60/90-day retention**. Placements that stick are worth more
       than placements that close; they're also what gets you the full rate.
 - [ ] Formalize the follow-up: 30-day and 90-day check-ins with every family.
@@ -232,7 +238,7 @@ Treat it as the authority engine, not a revenue line.
 | Placements/month | **2–4** |
 | Cumulative placements | **10–18** |
 | Cumulative revenue | **$45K–80K** |
-| Avg fee (should be rising) | $4,500 → $5,000+ |
+| Avg fee | $6,000+ (100% of total first-month charges) |
 | 90-day retention | >85% |
 
 ---
@@ -292,8 +298,8 @@ The software door only opens with the frustration log. Keep it.
 | --- | --- | --- | --- |
 | Placements/month (exit rate) | 3–4 | 5–6 | 8+ |
 | Cumulative placements | 30 | 45 | 65 |
-| Avg fee | $4,500 | $5,200 | $6,000 |
-| **Year 1 revenue** | **~$135K** | **~$235K** | **~$390K** |
+| Avg fee (100% policy) | $6,000 | $6,500 | $7,000 |
+| **Year 1 revenue** | **~$180K** | **~$290K** | **~$455K** |
 
 ---
 

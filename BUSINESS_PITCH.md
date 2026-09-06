@@ -40,11 +40,12 @@ already pay the lead mills, for referrals that actually convert.**
 
 ## The model
 
-- **Fee:** 50–100% of first month's rent, paid by the community. Planning
-  number **$4,500/placement** (Triangle AL ~$6,350/mo, memory care ~$7,036/mo)
+- **Fee:** 100% of the first month's total charges, paid by the community —
+  the top of the standard band, which we hold to. Planning number
+  **$6,000/placement** (Triangle AL ~$6,350/mo, memory care ~$7,036/mo)
 - **Cost structure:** near zero — no inventory, no payroll at launch,
   commission-only growth
-- **Year-one revenue:** ~$135K conservative / ~$235K base / ~$390K strong
+- **Year-one revenue:** ~$180K conservative / ~$290K base / ~$455K strong
 - **The honest hard part:** 2–4 months from first inquiry to first collected
   check. Runway, not leads, is what kills placement agencies.
 

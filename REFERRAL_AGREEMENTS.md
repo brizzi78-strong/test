@@ -48,9 +48,24 @@ you the fee band before you've seen the paper.
 | Attribution | 90–180 days | 6–12 months from registration |
 | Exclusivity | Sometimes requested | Never grant it |
 
-A new agency has little leverage. Take their standard if they won't move and
-**renegotiate at month 4 with move-ins behind you.** Signed at 75% beats
-unsigned at 100%.
+**Policy: 100% is the number. Walk from 75%.** Defined precisely, or it leaks:
+
+- 100% means **100% of the total first-month charges — base rent plus
+  care-level fees.** "100% of base rent" on a memory care resident paying
+  $5,000 base and $2,000 in care fees is 71%. Hold the definition, not the
+  percentage.
+- Pair it with the clawback floor — **30 days, voluntary move-out only.**
+  Communities that concede 100% often try to recover it with a 90-day
+  clawback; 100% with a 90-day window is worth less than 85% with a 30-day one.
+- **"No" means "not yet."** Log every building that won't reach 100%, keep it
+  on the call sheet as called-not-signed, and return at month 4 with move-ins
+  behind you and a full inventory of buildings that did sign.
+
+What this costs: some chains set placement rates at corporate and the local
+sales director can't move them. If their standard is 75–85%, the policy means
+walking from those buildings for now — and never touring a family somewhere
+you aren't papered. The communities that do pay 100% are the ones with real
+census pressure, which is who needs you most.
 
 ## 5. Register every family, before they tour — the step that makes it pay
 
