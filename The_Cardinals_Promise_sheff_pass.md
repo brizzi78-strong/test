@@ -949,7 +949,7 @@ Validation. For about a minute, I told myself that I'd made it. People recognize
 
 I had no clue what I wanted to do out of college. In Cincinnati I'd worked part-time as an Abercrombie & Fitch manager while I was still in school, and a transfer was the one lever I had. It wasn't a plan. It was a way to get to San Diego. Once in California, I drove straight at the only thing I knew how to do: win. My first real job was managing an Abercrombie & Fitch in San Diego. I brought the same speed I had taken into weight cuts and 6 a.m. practices. I outworked everyone, learned the inventory cold, found problems before anyone asked me to. Put up a scoreboard and I wanted my name at the top.
 
-Nesser filmed a bio of me wakeboarding in Islamorada, Florida. The tape brought an A&F talent scout to the store, and I got picked for Abercrombie & Fitch TV, the in-store channel playing across the country. That was the commercial Angela had seen. The kid from Mexico City who had needed speech therapy for a lisp was now on a loop in one of the biggest retail brands in America.
+Nesser filmed a bio of me wakeboarding in Islamorada, Florida. The tape brought an A&F talent scout to the store, and I got picked for Abercrombie & Fitch TV, the in-store channel playing across the country. That was the commercial Angela had seen. I was the kid from Mexico City who had needed speech therapy for a lisp, and now I was on a loop in one of the biggest retail brands in America.
 
 The hunger stayed. I transferred to the highest-grossing Abercrombie in the country, in Newport Beach. Then came sales. Then medical devices, the job I'd always wanted, pharma or devices, where the top guys made upwards of three hundred thousand. Every move felt like a rung on the ladder. By twenty-four, I was clearing six figures.
 
@@ -1015,7 +1015,7 @@ The next morning, I called my boss from a payphone, my hands still shaking.
 
 I sobbed, picturing everything I'd built on sand getting washed away.
 
-He kept me. A good attorney and ten thousand dollars got the DUI pled down to a wet reckless, with one condition: another DUI within ten years and the wet reckless would count as the first. The next arrest would be treated as my second. I should have heard the warning. Instead, I kept going.
+He kept me. A good attorney and ten thousand dollars got the DUI pled down to what the lawyers call a wet reckless: reckless driving with alcohol involved, the lesser charge you get when a DUI is bargained down. It came with one condition: another DUI within ten years and the wet reckless would count as the first. The next arrest would be treated as my second. I should have heard the warning. Instead, I kept going.
 
 I made it four years, just six years short of the ten I needed to take advantage of the reduced sentence. In the four years between those two arrests were stellar ones for me, at least on paper —rankings, president's clubs, money, my face on screens across the country. I needed ten clean years for the wet reckless to stay a wet reckless. I made it just four.
 
@@ -1118,7 +1118,7 @@ I moved to Pensacola in 2007 with no active license, still drinking, still convi
 
 One night before Lou and Donna made it down, I went out alone, and I drove myself home drunk in my BMW, the car my mother had driven across the country for me.
 
-I stopped at a red light and looked left. A cop. I looked right. Another cop. A man with a suspended license and liquor on his breath, boxed in on both sides, in a town where nobody knew him yet. I put both hands on the wheel and held my breath. I did not look at either of them. The light took forever.
+I stopped at a red light and looked left. A cop. I looked right. Another cop. I was a man with a suspended license and liquor on my breath, boxed in on both sides, in a town where nobody knew me yet. I put both hands on the wheel and held my breath. I did not look at either of them. The light took forever.
 
 It changed. They rolled on. I drove home.
 
