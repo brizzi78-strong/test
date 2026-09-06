@@ -172,6 +172,19 @@ The NC State Bar's specialist directory and the NC NAELA chapter complete it.
 | Cranfill Sumner / Ward and Smith (elder law practices) | Raleigh | Larger firms with elder law groups; slower to engage, deeper bench |
 | NC Estate Planning | Wake Forest | Northern Wake coverage |
 
+**Expensive vs. in-workflow.** The highest-fee lawyers — the private-wealth
+groups at Smith Anderson (the state's only Band 1 firm in Chambers' High Net
+Worth guide), TrustCounsel in Chapel Hill, the trusts-and-estates partners at
+Walker Lambe — serve the clients who pay for memory care without blinking, but
+they see few crisis placements and refer rarely; they're not in the eldercare
+workflow. The best referrers are the **boutique elder law practices with
+flat-fee asset-protection packages** (typically $8–15K in this market): their
+clients hold roughly $500K–2M, are private-pay for years, and arrive through
+the "how do we pay for memory care without losing the house" conversation.
+Court the private-wealth firms for Linda's RN advocacy (their clients have
+kids in other cities and money for a nurse); court the boutiques for
+placements.
+
 The ask to each is the same: *"We place memory care families; every one of
 them needs what you do. Would you co-present a monthly 'Paying for memory
 care in NC' evening — you on Medicaid, VA, and asset protection, us on
