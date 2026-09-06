@@ -1,0 +1,597 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Cardinal Expenses checks every expense against policy as it is typed and approves the compliant reports itself, so approvers only ever see the exceptions.">
+<meta name="color-scheme" content="light dark">
+<title>Cardinal Expenses</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+  :root {
+    --paper: #fbfbf8;
+    --paper-2: #f2f3ef;
+    --ink: #14181d;
+    --ink-2: #4b5560;
+    --rule: #dde0dc;
+    --accent: #0d6b46;
+    --accent-soft: #e2efe8;
+    --flag: #a8611a;
+    --flag-soft: #f7eddf;
+    --alert: #a32836;
+    --alert-soft: #f7e4e5;
+    /* The hero band stays ink-dark in both themes: it is the identity. */
+    --band: #14181d;
+    --band-ink: #f4f5f2;
+    --band-ink-2: #98a3ac;
+    --band-rule: #2b323a;
+    /* The ledger green lifts on the ink band, where the deep tone goes muddy. */
+    --band-accent: #4cba8c;
+    --band-accent-ink: #08160f;
+    --shadow: 0 1px 2px rgba(20, 24, 29, .07), 0 8px 24px -16px rgba(20, 24, 29, .3);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #0f1317;
+      --paper-2: #171c22;
+      --ink: #e8ebe6;
+      --ink-2: #98a3ac;
+      --rule: #262d34;
+      --accent: #46b287;
+      --accent-soft: #14291f;
+      --flag: #d59a4e;
+      --flag-soft: #2a2113;
+      --alert: #e0737e;
+      --alert-soft: #2c1619;
+      --band: #090c0f;
+      --band-ink: #f4f5f2;
+      --band-ink-2: #8d98a1;
+      --band-rule: #232930;
+      --band-accent: #4cba8c;
+      --band-accent-ink: #08160f;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .5), 0 8px 24px -16px rgba(0, 0, 0, .8);
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #0f1317;
+    --paper-2: #171c22;
+    --ink: #e8ebe6;
+    --ink-2: #98a3ac;
+    --rule: #262d34;
+    --accent: #46b287;
+    --accent-soft: #14291f;
+    --flag: #d59a4e;
+    --flag-soft: #2a2113;
+    --alert: #e0737e;
+    --alert-soft: #2c1619;
+    --band: #090c0f;
+    --band-ink: #f4f5f2;
+    --band-ink-2: #8d98a1;
+    --band-rule: #232930;
+    --band-accent: #4cba8c;
+    --band-accent-ink: #08160f;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .5), 0 8px 24px -16px rgba(0, 0, 0, .8);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font: 400 17px/1.6 Archivo, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .mono, .label, .fig {
+    font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+  .label {
+    font-size: 11.5px; font-weight: 500; letter-spacing: .13em; text-transform: uppercase;
+    color: var(--ink-2);
+  }
+  h1, h2, h3 { text-wrap: balance; margin: 0; font-weight: 700; letter-spacing: -.022em; }
+  h1 { font-size: clamp(34px, 4.5vw, 57px); line-height: 1.05; }
+  h2 { font-size: clamp(27px, 3.4vw, 39px); line-height: 1.1; }
+  h3 { font-size: 19px; line-height: 1.3; letter-spacing: -.01em; }
+  p { margin: 0; }
+  a { color: inherit; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 28px; }
+  .prose { max-width: 62ch; }
+
+  /* Statement grid: a monospace label in the margin, content beside it. */
+  .row { display: grid; grid-template-columns: 158px minmax(0, 1fr); gap: 40px; }
+  @media (max-width: 860px) { .row { grid-template-columns: 1fr; gap: 16px; } }
+
+  section { border-top: 1px solid var(--rule); padding: 74px 0; }
+  section:first-of-type { border-top: 0; }
+
+  /* ---------- Hero band ---------- */
+  .band { background: var(--band); color: var(--band-ink); padding: 34px 0 78px; }
+  .masthead {
+    display: flex; align-items: center; justify-content: space-between; gap: 20px;
+    padding-bottom: 54px; flex-wrap: wrap;
+  }
+  .wordmark { display: flex; align-items: baseline; gap: 10px; }
+  .wordmark b { font-size: 19px; font-weight: 700; letter-spacing: -.02em; }
+  .wordmark span { color: var(--band-ink-2); }
+  .masthead .label { color: var(--band-ink-2); }
+
+  .hero { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr); gap: 56px; align-items: center; }
+  @media (max-width: 940px) { .hero { grid-template-columns: 1fr; gap: 44px; } }
+  .hero h1 { color: var(--band-ink); }
+  .hero h1 em { font-style: normal; color: var(--band-accent); }
+  .kicker { color: var(--band-ink-2); margin-top: 22px; font-size: 19px; max-width: 46ch; }
+  .cta { display: flex; gap: 12px; margin-top: 34px; flex-wrap: wrap; }
+  .btn {
+    font: 500 15px/1 Archivo, sans-serif; text-decoration: none;
+    padding: 14px 22px; border-radius: 3px; display: inline-flex; align-items: center; gap: 9px;
+    border: 1px solid transparent; transition: transform .15s ease, background .15s ease;
+  }
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn-primary:hover { transform: translateY(-1px); }
+  /* On the ink band the deep green goes muddy; use the lifted tone. */
+  .band .btn-primary, .close .btn-primary { background: var(--band-accent); color: var(--band-accent-ink); font-weight: 600; }
+  .btn-ghost { border-color: var(--band-rule); color: var(--band-ink); }
+  .btn-ghost:hover { border-color: var(--band-ink-2); }
+
+  /* ---------- Hero demo: a report clearing policy ---------- */
+  .demo {
+    background: var(--paper); color: var(--ink); border-radius: 5px;
+    box-shadow: 0 24px 60px -28px rgba(0, 0, 0, .7); overflow: hidden;
+  }
+  .demo-top {
+    display: flex; align-items: center; justify-content: space-between; gap: 14px;
+    padding: 15px 18px; border-bottom: 1px solid var(--rule);
+  }
+  .demo-title { font-weight: 600; font-size: 15px; }
+  .demo-total { font-size: 17px; font-weight: 600; }
+  .lines { list-style: none; margin: 0; padding: 0; }
+  .lines li {
+    display: grid; grid-template-columns: 22px minmax(0, 1fr) auto;
+    gap: 12px; align-items: center;
+    padding: 12px 18px; border-bottom: 1px solid var(--rule); font-size: 14px;
+  }
+  .tick {
+    width: 18px; height: 18px; border-radius: 50%; border: 1.5px solid var(--rule);
+    display: grid; place-items: center; color: #fff; font-size: 11px; line-height: 1;
+    transition: background .28s ease, border-color .28s ease;
+  }
+  .lines li.ok .tick { background: var(--accent); border-color: var(--accent); }
+  .tick svg { opacity: 0; transition: opacity .2s ease .1s; }
+  .lines li.ok .tick svg { opacity: 1; }
+  .line-what { color: var(--ink-2); font-size: 13.5px; }
+  .line-what b { color: var(--ink); font-weight: 500; font-size: 14px; display: block; }
+  .demo-foot { padding: 15px 18px; display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+  .verdict { display: flex; align-items: center; gap: 10px; opacity: 0; transform: translateY(4px);
+    transition: opacity .4s ease, transform .4s ease; }
+  .verdict.on { opacity: 1; transform: none; }
+  .stamp {
+    border: 1.5px solid var(--accent); color: var(--accent); border-radius: 3px;
+    padding: 5px 10px; font-size: 11.5px; font-weight: 600; letter-spacing: .1em;
+  }
+  .verdict small { color: var(--ink-2); font-size: 12.5px; }
+  .scanning { color: var(--ink-2); font-size: 12.5px; white-space: nowrap; }
+  .stamp { white-space: nowrap; }
+
+  /* ---------- Argument ---------- */
+  .lede { font-size: clamp(20px, 2.3vw, 25px); line-height: 1.42; letter-spacing: -.012em; }
+  .lede + p { margin-top: 20px; color: var(--ink-2); }
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 42px; border: 1px solid var(--rule); }
+  @media (max-width: 720px) { .split { grid-template-columns: 1fr; } }
+  .split > div { padding: 26px 24px; }
+  .split > div + div { border-left: 1px solid var(--rule); }
+  @media (max-width: 720px) { .split > div + div { border-left: 0; border-top: 1px solid var(--rule); } }
+  .split .label { margin-bottom: 12px; }
+  .split p { color: var(--ink-2); font-size: 15.5px; }
+  .split.now { background: var(--accent-soft); }
+  .split.now p { color: var(--ink); }
+
+  /* ---------- Steps ---------- */
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--rule);
+    border: 1px solid var(--rule); margin-top: 8px; }
+  @media (max-width: 800px) { .steps { grid-template-columns: 1fr; } }
+  .step { background: var(--paper); padding: 26px 24px; display: flex; flex-direction: column; gap: 10px; }
+  .step .num { font-size: 12px; font-weight: 600; color: var(--accent); letter-spacing: .1em; }
+  .step p { color: var(--ink-2); font-size: 15.5px; }
+
+  /* ---------- Features ---------- */
+  .features { display: grid; grid-template-columns: repeat(2, 1fr); gap: 34px 44px; }
+  @media (max-width: 800px) { .features { grid-template-columns: 1fr; } }
+  .feature { display: flex; flex-direction: column; gap: 9px; padding-top: 18px; border-top: 2px solid var(--ink); }
+  .feature p { color: var(--ink-2); font-size: 15.5px; }
+  .feature .spec { color: var(--ink); font-size: 13px; }
+
+  /* ---------- Budget meters ---------- */
+  .budget { display: grid; grid-template-columns: 152px minmax(0, 1fr) 176px; gap: 18px; align-items: center;
+    padding: 15px 0; border-bottom: 1px solid var(--rule); }
+  @media (max-width: 700px) { .budget { grid-template-columns: 1fr auto; } .budget .meter { grid-column: 1 / -1; } }
+  .budget .cat { font-weight: 500; }
+  .budget .roll { font-size: 11.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2); white-space: nowrap; }
+  .meter { height: 11px; background: var(--paper-2); border-radius: 6px; overflow: hidden; }
+  .meter i { display: block; height: 100%; width: 0; border-radius: 6px; transition: width 1s cubic-bezier(.2,.7,.3,1); }
+  .meter i.under { background: var(--accent); }
+  .meter i.warning { background: var(--flag); }
+  .meter i.over { background: var(--alert); }
+  .budget .figs { text-align: right; font-size: 13.5px; }
+  .budget .figs .left { font-weight: 600; }
+  .budget .figs .left.under { color: var(--accent); }
+  .budget .figs .left.warning { color: var(--flag); }
+  .budget .figs .left.over { color: var(--alert); }
+
+  /* ---------- Trust ---------- */
+  .facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--rule);
+    border: 1px solid var(--rule); }
+  @media (max-width: 800px) { .facts { grid-template-columns: repeat(2, 1fr); } }
+  .fact { background: var(--paper); padding: 22px 20px; display: flex; flex-direction: column; gap: 5px; }
+  .fact .n { font-size: 27px; font-weight: 600; letter-spacing: -.02em; }
+  .fact .t { font-size: 13px; color: var(--ink-2); line-height: 1.4; }
+  .checks { list-style: none; margin: 26px 0 0; padding: 0; display: flex; flex-direction: column; gap: 13px; }
+  .checks li { display: grid; grid-template-columns: 18px minmax(0, 1fr); gap: 13px; align-items: start;
+    font-size: 15.5px; color: var(--ink-2); }
+  .checks svg { color: var(--accent); margin-top: 5px; }
+  .checks b { color: var(--ink); font-weight: 500; }
+
+  /* ---------- Close ---------- */
+  .close { background: var(--band); color: var(--band-ink); padding: 74px 0; }
+  .close h2 { color: var(--band-ink); }
+  .close p { color: var(--band-ink-2); margin-top: 16px; max-width: 54ch; }
+  .code {
+    margin-top: 30px; border: 1px solid var(--band-rule); border-radius: 4px; padding: 16px 18px;
+    font-size: 13.5px; color: var(--band-ink); overflow-x: auto; background: rgba(255,255,255,.02);
+  }
+  .code span { color: var(--band-ink-2); }
+  footer { padding: 28px 0 44px; color: var(--ink-2); font-size: 13px;
+    display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+    .meter i { width: var(--w) !important; }
+  }
+</style>
+</head>
+<body>
+<div class="band">
+  <div class="wrap">
+    <div class="masthead">
+      <div class="wordmark">
+        <b>Cardinal Expenses</b>
+        <span class="label">Expense reporting</span>
+      </div>
+      <div class="label">Self-hosted · Zero dependencies</div>
+    </div>
+
+    <div class="hero">
+      <div>
+        <h1>Most expense reports are&nbsp;fine. <em>Stop reviewing them.</em></h1>
+        <p class="kicker">
+          Cardinal checks every expense against policy the moment it is typed, then approves
+          the compliant ones itself. Your approvers only ever see the exceptions — with the
+          reason already written out.
+        </p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#run">
+            Run it yourself
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="#inside">What's inside</a>
+        </div>
+      </div>
+
+      <div class="demo" id="demo" aria-label="A report clearing policy checks">
+        <div class="demo-top">
+          <div>
+            <div class="demo-title">Portland customer visit</div>
+            <div class="label" style="margin-top:3px">Filed by ada · 4 line items</div>
+          </div>
+          <div class="demo-total fig">$182.40</div>
+        </div>
+        <ul class="lines">
+          <li data-i="0">
+            <span class="tick"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg></span>
+            <span class="line-what"><b>Alaska Airlines</b>receipt attached</span>
+            <span class="fig">$104.00</span>
+          </li>
+          <li data-i="1">
+            <span class="tick"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg></span>
+            <span class="line-what"><b>Lyft</b>under the $150 ground cap</span>
+            <span class="fig">$31.90</span>
+          </li>
+          <li data-i="2">
+            <span class="tick"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg></span>
+            <span class="line-what"><b>Nong's Khao Man Gai</b>under the $75 meal cap</span>
+            <span class="fig">$28.50</span>
+          </li>
+          <li data-i="3">
+            <span class="tick"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg></span>
+            <span class="line-what"><b>Personal car · 26 mi</b>IRS rate, no receipt needed</span>
+            <span class="fig">$18.00</span>
+          </li>
+        </ul>
+        <div class="demo-foot">
+          <span class="scanning label" id="scanning">Checking policy…</span>
+          <span class="verdict" id="verdict">
+            <span class="stamp mono">APPROVED ON SUBMIT</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <section>
+    <div class="row">
+      <div class="label">The argument</div>
+      <div>
+        <p class="lede prose">
+          An approval queue is a tax you pay on the reports that were never going to be a problem.
+        </p>
+        <p class="prose">
+          The work worth a person's attention is the missing receipt, the double-charged hotel,
+          the dinner that ran past the cap. Everything else is a rubber stamp with a two-day
+          wait attached. Cardinal draws that line automatically — and tells the filer which side
+          they are on before they ever hit submit.
+        </p>
+        <div class="split">
+          <div>
+            <div class="label">The usual way</div>
+            <p>
+              File the report. Wait. A manager opens every line, finds the one problem, and sends
+              it back. Fix it, resubmit, wait again. Finance reconciles the card statement by hand
+              in a spreadsheet.
+            </p>
+          </div>
+          <div class="now">
+            <div class="label">With Cardinal</div>
+            <p>
+              Flags appear as you type, with the exact rule and amount. Compliant reports under the
+              ceiling approve themselves on submit. Card charges match their expense automatically.
+              Nobody reconciles anything.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="row">
+      <div class="label">How it works</div>
+      <div>
+        <h2>Three steps, and two of them are automatic.</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="num mono">STEP 1</div>
+            <h3>The charge arrives</h3>
+            <p>
+              Corporate card charges land in a feed. Enter the expense yourself and the matching
+              charge links itself — same amount, within three days. Or file it straight from the
+              feed in one click, with date, merchant and amount already filled in.
+            </p>
+          </div>
+          <div class="step">
+            <div class="num mono">STEP 2</div>
+            <h3>Policy checks itself</h3>
+            <p>
+              Receipt thresholds, per-category caps, stale and future dates, and duplicates across
+              every report you have filed — all evaluated as you type, each flag written in plain
+              language with the rule and the amount.
+            </p>
+          </div>
+          <div class="step">
+            <div class="num mono">STEP 3</div>
+            <h3>It settles</h3>
+            <p>
+              Clean reports under the ceiling approve on submit, stamped by the policy engine in the
+              audit trail. Anything flagged goes to one approver with the reasons attached, then on
+              to a ready-to-pay queue.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="row" id="inside">
+      <div class="label">What's inside</div>
+      <div>
+        <div class="features">
+          <div class="feature">
+            <h3>A policy engine that talks</h3>
+            <p>
+              Receipts required from $25. Caps at $75 meals, $350 lodging, $150 ground transport,
+              $100 entertainment. Every violation names the rule and the number.
+            </p>
+            <p class="spec mono">CONFIGURABLE PER DEPLOYMENT</p>
+          </div>
+          <div class="feature">
+            <h3>Instant approval</h3>
+            <p>
+              A fully compliant report at or under $200 is approved the second it is submitted, with
+              a policy-engine entry in its history. No queue, no waiting, no manager.
+            </p>
+            <p class="spec mono">CEILING SET BY YOU</p>
+          </div>
+          <div class="feature">
+            <h3>Card feed, no reconciliation</h3>
+            <p>
+              Charges import from the bank feed and match themselves to expenses. Personal spend is
+              dismissed in a click. Card-paid items drop out of what you are owed.
+            </p>
+            <p class="spec mono">±3 DAY MATCH WINDOW</p>
+          </div>
+          <div class="feature">
+            <h3>Budgets that carry over</h3>
+            <p>
+              A monthly limit per category, amber at 80%, red past the line — and unused money rolls
+              into next month instead of evaporating.
+            </p>
+            <p class="spec mono">MONTH BY MONTH</p>
+          </div>
+          <div class="feature">
+            <h3>Real receipts</h3>
+            <p>
+              Attach the actual photo or PDF. Approvers open it in place, next to the flag it
+              answers, instead of hunting through an email thread.
+            </p>
+            <p class="spec mono">IMAGE OR PDF</p>
+          </div>
+          <div class="feature">
+            <h3>Mileage without arithmetic</h3>
+            <p>
+              Enter the miles. The amount is computed at the current IRS standard rate, and no
+              receipt is demanded for something you never got one for.
+            </p>
+            <p class="spec mono">70¢ / MILE · 2025</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="row">
+      <div class="label">Budgets</div>
+      <div>
+        <h2>You can see the month before it gets away from you.</h2>
+        <p class="prose" style="margin-top:16px; color:var(--ink-2)">
+          Every expense counts against its category the day it is filed — company card and
+          out-of-pocket alike. Rejected reports never count. Spend in a category you never
+          budgeted shows up as exactly that, rather than quietly disappearing.
+        </p>
+        <div style="margin-top:26px" id="budgets">
+          <div class="budget">
+            <div><div class="cat">airfare</div></div>
+            <div class="meter"><i class="warning" style="--w:83.6%"></i></div>
+            <div class="figs fig"><div>$418.00 of $500.00</div><div class="left warning">$82.00 left</div></div>
+          </div>
+          <div class="budget">
+            <div><div class="cat">lodging</div><div class="roll mono">Rollover +$700.00</div></div>
+            <div class="meter"><i class="under" style="--w:17%"></i></div>
+            <div class="figs fig"><div>$289.00 of $1,700.00</div><div class="left under">$1,411.00 left</div></div>
+          </div>
+          <div class="budget">
+            <div><div class="cat">meals</div></div>
+            <div class="meter"><i class="over" style="--w:100%"></i></div>
+            <div class="figs fig"><div>$96.60 of $90.00</div><div class="left over">$6.60 over</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="row">
+      <div class="label">Built to be trusted</div>
+      <div>
+        <h2>It holds money data. It is built like it.</h2>
+        <div class="facts" style="margin-top:26px">
+          <div class="fact"><div class="n fig">58</div><div class="t">tests covering policy, matching and budget arithmetic</div></div>
+          <div class="fact"><div class="n fig">0</div><div class="t">runtime dependencies to audit or patch</div></div>
+          <div class="fact"><div class="n fig">100%</div><div class="t">of amounts held as integer cents, never floats</div></div>
+          <div class="fact"><div class="n fig">1</div><div class="t">binary to run: Node, and your own machine</div></div>
+        </div>
+        <ul class="checks">
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>
+            <span><b>Receipts can't carry an attack.</b> Uploads are validated end to end and rendered
+            through the DOM, so nothing a filer submits can execute in an approver's browser.</span>
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>
+            <span><b>Exports are safe to open.</b> CSV cells that a spreadsheet would execute as a
+            formula are neutralised before they reach finance.</span>
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>
+            <span><b>Nobody approves their own spend.</b> Owner and approver are separate by
+            construction, and every decision is written to an audit trail that cannot be edited away.</span>
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>
+            <span><b>Changing a budget never rewrites the past.</b> Raising a limit applies from the
+            month you raise it — it cannot retroactively invent money you never had.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="close" id="run">
+  <div class="wrap">
+    <div class="row">
+      <div class="label" style="color:var(--band-ink-2)">Run it</div>
+      <div>
+        <h2>On your own box, in about a minute.</h2>
+        <p>
+          No account, no vendor, no per-seat licence. Node 22 and a directory. Point
+          <span class="mono">EXPENSES_DB</span> at a file when you want it to persist.
+        </p>
+        <div class="code mono">
+          <span>$</span> cd expenses &amp;&amp; npm start<br>
+          <span># Expenses listening on http://localhost:3900</span>
+        </div>
+        <div class="cta">
+          <a class="btn btn-primary" href="https://github.com/brizzi78-strong/test/tree/main/expenses">
+            Read the source
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <footer>
+    <span>Cardinal Expenses</span>
+    <span class="label">Filed, checked, and settled</span>
+  </footer>
+</div>
+
+<script>
+  'use strict';
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Hero: the report clears its checks one line at a time, then stamps itself.
+  const lines = Array.from(document.querySelectorAll('.lines li'));
+  const verdict = document.getElementById('verdict');
+  const scanning = document.getElementById('scanning');
+
+  function settle() {
+    lines.forEach((li) => li.classList.add('ok'));
+    verdict.classList.add('on');
+    scanning.textContent = 'Cleared 4 of 4 checks';
+  }
+
+  if (reduced) {
+    settle();
+  } else {
+    lines.forEach((li, i) => setTimeout(() => li.classList.add('ok'), 420 + i * 260));
+    setTimeout(() => {
+      verdict.classList.add('on');
+      scanning.textContent = 'Cleared 4 of 4 checks';
+    }, 420 + lines.length * 260 + 180);
+  }
+
+  // Budget meters fill once they are actually on screen.
+  const meters = Array.from(document.querySelectorAll('.meter i'));
+  const fill = (el) => { el.style.width = el.style.getPropertyValue('--w'); };
+  if (reduced || !('IntersectionObserver' in window)) {
+    meters.forEach(fill);
+  } else {
+    const io = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) { fill(entry.target); io.unobserve(entry.target); }
+      }
+    }, { threshold: 0.4 });
+    meters.forEach((m) => io.observe(m));
+  }
+</script>
+</body>
+</html>

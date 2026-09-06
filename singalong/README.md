@@ -49,12 +49,14 @@ instead of competing on them.
 The app is the tooling; [`PROGRAM.md`](PROGRAM.md) is the ready-to-run
 **Memory Care Music Program** built on it: twice-weekly sing-along circles on
 a four-week themed cycle, personalized listening between them, and a weekly
-by-song review of the logs. `npm run seed:program` loads its 21-song
+by-song review of the logs. `npm run seed:program` loads its 22-song
 public-domain kit (words included) into a facility's library.
 
-[`demo/index.html`](demo/index.html) is a self-contained, client-side
-walkthrough of the program with sample data — open it in any browser, or let
-the repo's `../render.yaml` blueprint serve it as a free static site.
+The public entrypoint is [`index.html`](index.html), served by
+[`publish-server.mjs`](publish-server.mjs). It frames the self-contained
+program preview with honest sample data, stable production routes, security
+headers, and a `/health` endpoint. The repo's `../render.yaml` blueprint matches
+that production service.
 
 ## Run it
 
@@ -64,7 +66,7 @@ app itself runs dependency-free). A warning that *"SQLite is an experimental
 feature"* will print on every run; it's harmless.
 
 ```bash
-SINGALONG_DB=./data.db npm run seed:program     # once: new facility + 21-song kit (prints the fac_… ID — save it)
+SINGALONG_DB=./data.db npm run seed:program     # once: new facility + 22-song kit (prints the fac_… ID — save it)
 SINGALONG_DB=./data.db npm start                # serve the console on http://localhost:4900
 npm test
 npm run typecheck

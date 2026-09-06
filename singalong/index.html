@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="The Memory Care Music Program — guided sing-along circles and personalized music for dementia and memory-care communities, built around a four-week public-domain song program.">
+  <meta property="og:title" content="The Memory Care Music Program">
+  <meta property="og:description" content="A facility-ready four-week memory-care music program with guided sing-along circles, personalized listening, staff prompts, and simple response logging.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%231E3D63'/%3E%3Cg fill='%23FFF9F0'%3E%3Cellipse cx='11' cy='22.4' rx='3.1' ry='2.4' transform='rotate(-16 11 22.4)'/%3E%3Cellipse cx='21.6' cy='20.6' rx='3.1' ry='2.4' transform='rotate(-16 21.6 20.6)'/%3E%3Crect x='12.9' y='7' width='1.5' height='15.4'/%3E%3Crect x='23.5' y='4.8' width='1.5' height='15.8'/%3E%3Cpolygon points='12.9,6.6 25,4.4 25,7.6 12.9,9.8'/%3E%3C/g%3E%3C/svg%3E">
+  <title>Memory Care Music Program</title>
+  <style>
+    html,body{width:100%;height:100%;margin:0;background:#f7f3e8;overflow:hidden}
+    iframe{display:block;width:100%;height:100dvh;border:0;background:#f7f3e8}
+    .fallback{position:absolute;inset:0;display:none;place-items:center;padding:2rem;font:16px/1.5 system-ui,sans-serif;text-align:center}
+    .fallback a{color:#1e3d63;font-weight:700}
+    body.failed iframe{display:none}
+    body.failed .fallback{display:grid}
+  </style>
+</head>
+<body>
+  <iframe id="program" src="/program" title="Memory Care Music Program" loading="eager"></iframe>
+  <div class="fallback" role="alert"><p>The Memory Care Music Program could not load here. <a href="/program">Open the program</a>.</p></div>
+  <script>
+    const frame = document.getElementById('program');
+    let settled = false;
+
+    function showFallback() {
+      if (settled) return;
+      document.body.classList.add('failed');
+    }
+
+    frame.addEventListener('load', () => {
+      try {
+        const doc = frame.contentDocument;
+        if (!doc || !doc.querySelector('header.top')) return showFallback();
+        doc.title = 'Memory Care Music Program';
+        const badge = doc.querySelector('.program-flag');
+        if (badge) badge.textContent = 'Program preview';
+        const description = doc.querySelector('meta[name="description"]');
+        if (description) description.setAttribute('content', 'The Memory Care Music Program — guided sing-along circles and personalized music for dementia and memory-care communities, built around a four-week public-domain song program.');
+        settled = true;
+        document.body.classList.remove('failed');
+      } catch (_) {
+        // The program can still render if a browser prevents the shell from
+        // reading the otherwise same-origin frame.
+        settled = true;
+      }
+    });
+    frame.addEventListener('error', showFallback);
+    setTimeout(showFallback, 10000);
+  </script>
+</body>
+</html>
