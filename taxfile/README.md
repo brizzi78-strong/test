@@ -95,6 +95,17 @@ Optional environment:
 - `STRIPE_SECRET_KEY`, `STRIPE_PRICE_ID`, `STRIPE_WEBHOOK_SECRET`,
   `PUBLIC_BASE_URL` — enable real Stripe Checkout for the Pro plan. Leave
   unset for instant dev-mode upgrades.
+- `LEGAL_ENTITY`, `LEGAL_EMAIL`, `LEGAL_STATE`, `LEGAL_UPDATED` — operator
+  details substituted into `/terms` and `/privacy`. **Set these before making a
+  deployment public**, or the pages will name a placeholder support address.
+
+### Before publishing the legal pages
+
+`src/web/legal.ts` holds drafts written to describe what this software actually
+does — no SSNs, no trackers, browser-local data when signed out, Stripe for
+payments, estimate-not-advice. They are a starting point, not legal advice:
+have counsel review them, and re-check them whenever the app's data handling
+changes.
 
 ## Deploy (Render)
 
@@ -120,6 +131,7 @@ npm install && npm run typecheck
 | `POST /auth/register`, `/auth/login`, `/auth/logout`, `GET /auth/me` | accounts and sessions |
 | `POST /billing/upgrade` | Stripe Checkout URL, or instant upgrade in dev mode |
 | `POST /billing/webhook` | Stripe events (signature-verified; exempt from the Basic gate) |
+| `GET /terms`, `GET /privacy` | legal pages (public; readable even when the Basic gate is on) |
 | `POST /returns` | start a return (`{"taxYear": 2025 or 2026}`, default 2025) |
 | `GET /returns` | list your returns |
 | `GET /returns/:id` | return + live computation |

@@ -4,6 +4,7 @@
  * Routes:
  *   GET    /health
  *   GET    /                              -> web app (src/web/index.html)
+ *   GET    /terms, /privacy               -> legal pages (open, gate-exempt)
  *   POST   /auth/register                 -> create account, returns session token
  *   POST   /auth/login
  *   POST   /auth/logout
@@ -31,6 +32,7 @@
 import { timingSafeEqual } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 import type { IncomingMessage, ServerResponse } from 'node:http';
+import { legalConfigFromEnv, privacyPage, termsPage } from '../web/legal.ts';
 import { DomainError } from '../service/errors.ts';
 import type { AccountService } from '../service/accountService.ts';
 import type { BillingService } from '../service/billingService.ts';
@@ -195,7 +197,11 @@ export function createRequestListener(
     // Health stays open for the platform probe; the Stripe webhook cannot
     // send Basic credentials, so it is gate-exempt and relies on its own
     // signature verification instead.
-    const gateExempt = url.pathname === '/health' || url.pathname === '/billing/webhook';
+    const gateExempt =
+      url.pathname === '/health' ||
+      url.pathname === '/billing/webhook' ||
+      url.pathname === '/terms' ||
+      url.pathname === '/privacy';
     if (opts.gate && !gateExempt && !authorized(req, opts.gate)) {
       // A Bearer session from /auth/login also passes the gate.
       const bearer = (req.headers.authorization ?? '').replace(/^Bearer\s+/i, '');
@@ -207,6 +213,12 @@ export function createRequestListener(
         res.end(JSON.stringify({ error: 'authentication required' }));
         return;
       }
+    }
+
+    if (req.method === 'GET' && (url.pathname === '/terms' || url.pathname === '/privacy')) {
+      const cfg = legalConfigFromEnv();
+      send(200, url.pathname === '/terms' ? termsPage(cfg) : privacyPage(cfg), 'text/html');
+      return;
     }
 
     if (req.method === 'GET' && (url.pathname === '/' || url.pathname === '/index.html')) {

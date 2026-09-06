@@ -221,3 +221,47 @@ describe('SSN-free estimates', () => {
     assert.match(bad.json.error, /ssn/);
   });
 });
+
+describe('legal pages', () => {
+  it('serves terms and privacy, and keeps them open behind the auth gate', async () => {
+    const terms = await fetch(base + '/terms');
+    assert.equal(terms.status, 200);
+    assert.match(terms.headers.get('content-type') ?? '', /text\/html/);
+    const termsHtml = await terms.text();
+    assert.match(termsHtml, /Terms of Service/);
+    assert.match(termsHtml, /not tax, legal, or accounting advice/);
+
+    const privacy = await fetch(base + '/privacy');
+    assert.equal(privacy.status, 200);
+    const privacyHtml = await privacy.text();
+    assert.match(privacyHtml, /Privacy Policy/);
+    assert.match(privacyHtml, /No Social Security numbers/);
+
+    // A gated deployment must still serve the legal pages to anonymous visitors.
+    const gated = createApp(createInMemoryStore(), { user: 'admin', password: 'hunter2222' });
+    await new Promise<void>((resolve) => gated.server.listen(0, resolve));
+    const gatedBase = `http://localhost:${(gated.server.address() as AddressInfo).port}`;
+    try {
+      assert.equal((await fetch(gatedBase + '/terms')).status, 200);
+      assert.equal((await fetch(gatedBase + '/privacy')).status, 200);
+      assert.equal((await fetch(gatedBase + '/returns')).status, 401);
+    } finally {
+      gated.server.close();
+    }
+  });
+
+  it('substitutes operator details rather than shipping placeholders', async () => {
+    const { legalConfigFromEnv, termsPage } = await import('../web/legal.ts');
+    const cfg = legalConfigFromEnv({
+      BRAND_NAME: 'Blue Ridge Tax',
+      LEGAL_ENTITY: 'Blue Ridge Tax LLC',
+      LEGAL_EMAIL: 'hello@blueridgetax.example',
+      LEGAL_STATE: 'North Carolina',
+    } as NodeJS.ProcessEnv);
+    const html = termsPage(cfg);
+    assert.match(html, /Blue Ridge Tax LLC/);
+    assert.match(html, /hello@blueridgetax\.example/);
+    assert.match(html, /State of North Carolina/);
+    assert.ok(!html.includes('support@example.com'));
+  });
+});
