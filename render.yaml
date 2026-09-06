@@ -142,16 +142,18 @@ services:
       - key: CC_PASSWORD
         sync: false            # Render prompts you to set this on first deploy
 
-  # Memory Care Music Program demo — an interactive, client-side walkthrough of
-  # the program that runs on the Sing Along app (singalong/PROGRAM.md): sample
-  # residents, the public-domain song kit with lyrics, the weekly playlists, a
-  # working sing-along prompter, and live engagement insights. Static and free,
-  # like Cardinal Care Bridge; sample data only, nothing is stored.
+  # Memory Care Music Program — public program entrypoint backed by a
+  # dependency-free Node server. The interactive walkthrough uses sample
+  # residents only and stores nothing; the production shell supplies public
+  # metadata, stable routes, security headers, and a health endpoint.
   - type: web
-    name: music-program-demo
-    runtime: static
+    name: memory-care-music-program
+    runtime: node
     branch: main
-    staticPublishPath: ./singalong/demo
+    plan: free
+    buildCommand: node --version
+    startCommand: node singalong/publish-server.mjs
+    healthCheckPath: /health
     autoDeploy: true
 
   # Blue Ridge Tax — the TaxFile app (taxfile/): guided federal tax estimator

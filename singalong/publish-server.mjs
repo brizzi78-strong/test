@@ -10,9 +10,9 @@ const port = Number(process.env.PORT || 10000);
 const routes = new Map([
   ['/', 'index.html'],
   ['/index.html', 'index.html'],
-  ['/demo', 'demo/index.html'],
-  ['/demo/', 'demo/index.html'],
-  ['/demo/index.html', 'demo/index.html'],
+  ['/program', 'demo/index.html'],
+  ['/program/', 'demo/index.html'],
+  ['/program/index.html', 'demo/index.html'],
 ]);
 
 const headers = {
@@ -28,11 +28,20 @@ function send(res, status, body, contentType = 'text/plain; charset=utf-8') {
   res.end(body);
 }
 
+function redirect(res, location) {
+  res.writeHead(308, { ...headers, Location: location, 'Cache-Control': 'no-cache' });
+  res.end();
+}
+
 const server = createServer(async (req, res) => {
   const url = new URL(req.url || '/', 'http://localhost');
 
   if (url.pathname === '/health') {
     return send(res, 200, 'ok\n');
+  }
+
+  if (url.pathname === '/demo' || url.pathname === '/demo/' || url.pathname === '/demo/index.html') {
+    return redirect(res, '/');
   }
 
   const relative = routes.get(url.pathname);
