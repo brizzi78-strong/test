@@ -22,7 +22,13 @@ building:
 | Hospitalization navigation: ER, discharge back to the community, or not | The moment memory care families fall apart, and the moment the community may quietly decline readmission |
 | Hospice and end-of-life planning conversations, when the time comes | The founder's whole reason for being — presence at the end |
 
-**Price.** $300–450/month, or ~$150/hour for one-off help. Ten advocate
+**Price.** $300–450/month, or ~$150/hour for one-off help. Benchmark: the
+Triangle's care managers don't publish rates, but the category runs
+$100–250/hour with initial assessments of $500–1,500 (some sources say up to
+$2,000), and Aging Care Matters describes a typical engagement at roughly
+$300–600 with a free 30-minute consult. Linda's subscription sits below a
+care manager's hourly economics on purpose: it's a narrower, building-specific
+service, priced so a family says yes at the 30-day check-in. Ten advocate
 families is $36–54K/year of recurring revenue on Linda's time, with no
 community dependency and no cash-flow gap.
 
