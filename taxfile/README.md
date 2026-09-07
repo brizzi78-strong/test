@@ -112,10 +112,23 @@ changes.
 The repo's `render.yaml` blueprint includes a `blue-ridge-tax` web service:
 Docker runtime running `node taxfile/src/index.ts`, a 1 GB disk mounted at
 `/data` for the SQLite store, and the Basic-auth gate enabled. Apply the
-blueprint at Render (New + → Blueprint → this repo → Apply), set
-`TAXFILE_PASSWORD` when prompted, and the app comes up at
-`https://blue-ridge-tax-*.onrender.com`. If the blueprint was already applied
-for the other services, sync it (or re-Apply) to pick up the new service.
+blueprint at Render (New + → Blueprint → this repo → Apply) and set
+`TAXFILE_PASSWORD`, `LEGAL_ENTITY`, and `LEGAL_EMAIL` when prompted. If the
+blueprint was already applied for the other services, sync it (or re-Apply) to
+pick up changes.
+
+**Custom domain.** The blueprint claims `tax.blueridgellc.com` — a subdomain
+deliberately, so whatever the apex serves keeps serving it. One DNS record is
+needed at the registrar: a `CNAME` for `tax` pointing at the service's
+`onrender.com` hostname, which Render shows under Settings → Custom Domains.
+HTTPS is issued automatically once it resolves. To use the apex instead, swap
+the domain for `blueridgellc.com` plus `www.blueridgellc.com`, update
+`PUBLIC_BASE_URL`, and add the `A` record Render asks for.
+
+**Going public.** The service ships gated. To open it, remove `TAXFILE_USER`
+and `TAXFILE_PASSWORD` from the service's environment — the app collects no
+SSNs or addresses, and `/health`, `/terms`, and `/privacy` are reachable
+either way.
 
 Test and typecheck:
 
