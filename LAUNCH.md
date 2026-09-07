@@ -63,7 +63,12 @@ steps 2–6 cannot execute from it. Run them either:
 ## 🔑 Step 1 — Keys and wallets (owner)
 
 - [ ] The deployer wallet is the founder wallet (hardware wallet or offline-generated key). It
-      keeps the 400M founder hold, unlocked.
+      keeps the 400M founder hold, unlocked. To generate one on the launch machine without the
+      key ever being displayed, run `node scripts/new-deployer.mjs` — it prints the address and
+      puts the private key on the clipboard for a single paste into
+      `npx hardhat keystore set MAINNET_PRIVATE_KEY`. The keystore is then the only copy, so
+      make a second copy (import it into a phone wallet, or move the holding to a hardware
+      wallet) before the wallet holds anything that matters.
 - [ ] The treasury wallet is a separate single-key wallet held by the founder — not the
       deployer, not a multisig. Its address is the constructor argument and can never change,
       so confirm it (and that you control its key) before deploying anything.
