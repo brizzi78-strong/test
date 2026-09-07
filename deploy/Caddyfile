@@ -1,0 +1,12 @@
+# Cardinal Books — Caddy reverse proxy (automatic HTTPS).
+#
+# EDIT ONE THING: replace  books.example.com  with your real domain (its DNS A
+# record must point at this server's IP). Caddy fetches and renews a free
+# Let's Encrypt certificate automatically.
+#
+# The app password-protects itself (BOOKS_USER / BOOKS_PASSWORD, set in
+# deploy/books-stack.yml), so no auth config is needed here.
+
+books.example.com {
+	reverse_proxy books:4500
+}

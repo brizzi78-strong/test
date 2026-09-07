@@ -1,0 +1,10 @@
+{
+  "name": "books",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Cardinal Books UI — a simple bookkeeping app (invoices, payments, expenses, P&L / A-R aging) backed by a backend-for-frontend that proxies to the Accounting service",
+  "type": "module",
+  "engines": { "node": ">=22.18" },
+  "scripts": { "start": "node src/index.ts", "test": "node --test", "typecheck": "tsc --noEmit" },
+  "devDependencies": { "@types/node": "^22.8.5", "typescript": "~5.8.0" }
+}

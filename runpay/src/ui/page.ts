@@ -1,0 +1,374 @@
+/**
+ * Cardinal Payroll — a self-contained single-page app served by the BFF.
+ *
+ * Talks to the same-origin BFF: /api/app for the business + tax metadata,
+ * /api/employees to add and list people, /api/run-batch to run a pay period
+ * across everyone with company totals, and /api/payslips for pay-stub history.
+ * No framework, no external assets. Cardinal palette, light/dark aware.
+ */
+
+export const PAGE = `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cardinal Payroll</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23A31B33'/%3E%3Cpath d='M8 22V10h4l4 6 4-6h4v12' stroke='white' stroke-width='2.5' fill='none' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{--paper:#F7F2E6;--card:#fff;--ink:#17233F;--muted:#5b6472;--brand:#A31B33;--line:#e7e0cf;--ok:#1c7c4c;--okbg:#e7f4ec;--errbg:#fbe9ec;--shadow:0 1px 3px rgba(23,35,63,.08),0 1px 2px rgba(23,35,63,.06)}
+@media (prefers-color-scheme:dark){:root{--paper:#0f1523;--card:#161f33;--ink:#e8ecf5;--muted:#93a0b8;--brand:#e0566e;--line:#243049;--ok:#54c98a;--okbg:#12301f;--errbg:#3a1620;--shadow:0 1px 3px rgba(0,0,0,.4)}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.45}
+.wrap{max-width:1040px;margin:0 auto;padding:20px 18px 64px}
+header{display:flex;align-items:center;gap:12px;margin:8px 0 20px}
+.logo{width:38px;height:38px;border-radius:9px;background:var(--brand);display:grid;place-items:center;color:#fff;font-weight:800;flex:0 0 auto}
+h1{font-size:1.35rem;margin:0}
+.sub{color:var(--muted);font-size:.85rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:18px;margin-bottom:18px}
+.card h2{margin:0 0 4px;font-size:1.05rem}
+.lead{color:var(--muted);font-size:.87rem;margin:0 0 14px}
+label{display:block;font-size:.78rem;font-weight:600;color:var(--muted);margin:10px 0 4px}
+input,select{width:100%;padding:.5rem .55rem;border:1px solid var(--line);border-radius:8px;background:var(--paper);color:var(--ink);font-size:.9rem}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+@media(max-width:620px){.row,.row3{grid-template-columns:1fr}}
+.btn{background:var(--brand);color:#fff;border:0;border-radius:8px;padding:.6rem 1rem;font-size:.9rem;font-weight:600;cursor:pointer}
+.btn:disabled{opacity:.55;cursor:default}
+.btn.ghost{background:transparent;color:var(--brand);border:1px solid var(--brand)}
+.btn.sm{padding:.35rem .6rem;font-size:.8rem}
+table{width:100%;border-collapse:collapse;font-size:.86rem}
+th,td{text-align:left;padding:.5rem .5rem;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--muted);font-weight:600;font-size:.74rem;text-transform:uppercase;letter-spacing:.03em}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+.pill{display:inline-block;padding:.1rem .5rem;border-radius:999px;font-size:.72rem;font-weight:600}
+.pill.ok{background:var(--okbg);color:var(--ok)}
+.pill.err{background:var(--errbg);color:var(--brand)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:6px}
+.tile{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:12px}
+.tile .k{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.03em}
+.tile .v{font-size:1.25rem;font-weight:700;font-variant-numeric:tabular-nums;margin-top:2px}
+.tile.remit{border-color:var(--brand)}
+.tile.remit .v{color:var(--brand)}
+.muted{color:var(--muted)}.dim{color:var(--muted);font-size:.8rem}
+.banner{padding:.6rem .7rem;border-radius:8px;font-size:.85rem;margin:8px 0}
+.banner.err{background:var(--errbg);color:var(--brand)}
+.banner.note{background:var(--okbg);color:var(--ok)}
+.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:var(--ink);color:var(--paper);padding:.6rem 1rem;border-radius:8px;font-size:.85rem;opacity:0;transition:opacity .2s;pointer-events:none}
+.toast.show{opacity:1}
+.foot{color:var(--muted);font-size:.75rem;text-align:center;margin-top:10px}
+.hidden{display:none}
+details summary{cursor:pointer;font-size:.8rem;color:var(--brand)}
+.bd{font-size:.82rem;margin-top:8px}
+.bd div{display:flex;justify-content:space-between;padding:.15rem 0;border-bottom:1px dotted var(--line)}
+.bd .net{font-weight:700;border-bottom:0}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="logo">CP</div>
+  <div>
+    <h1>Cardinal Payroll</h1>
+    <div class="sub" id="bizline">Run payroll &middot; loading&hellip;</div>
+  </div>
+</header>
+
+<div id="disclaimer" class="banner note">Withholding calculator — computes every paycheck and the exact tax to remit. It does not move money or file returns (see the README).</div>
+
+<div class="card">
+  <h2>Add an employee</h2>
+  <p class="lead">Their pay setup drives the real gross-to-net math (federal + NC, FICA, employer taxes).</p>
+  <div class="row">
+    <div><label>First name</label><input id="fn"></div>
+    <div><label>Last name</label><input id="ln"></div>
+  </div>
+  <div class="row3">
+    <div><label>Pay type</label><select id="ptype"><option value="salary">Salary</option><option value="hourly">Hourly</option></select></div>
+    <div id="salWrap"><label>Annual salary ($)</label><input id="salary" inputmode="decimal" placeholder="52000"></div>
+    <div id="rateWrap" class="hidden"><label>Hourly rate ($)</label><input id="rate" inputmode="decimal" placeholder="24.00"></div>
+    <div><label>Pay frequency</label><select id="freq"></select></div>
+  </div>
+  <div class="row3">
+    <div><label>Filing status</label><select id="filing"></select></div>
+    <div><label>NC-4 allowances</label><input id="allow" inputmode="numeric" value="0"></div>
+    <div><label>Extra federal w/h per check ($)</label><input id="extra" inputmode="decimal" value="0"></div>
+  </div>
+  <label style="margin-top:14px">Benefits &amp; deductions <span class="dim" style="font-weight:400">— per paycheck, optional</span></label>
+  <div class="row3">
+    <div><label>401(k) contribution ($)</label><input id="d401k" inputmode="decimal" placeholder="0"><div class="dim" style="font-size:.72rem">Pre-tax for income tax; still FICA-taxed.</div></div>
+    <div><label>Health / HSA premium ($)</label><input id="dhealth" inputmode="decimal" placeholder="0"><div class="dim" style="font-size:.72rem">Section&nbsp;125 — pre-tax for income tax <b>and</b> FICA.</div></div>
+    <div><label>Other post-tax ($)</label><input id="dpost" inputmode="decimal" placeholder="0"><input id="dpostName" placeholder="e.g. garnishment" style="margin-top:4px"></div>
+  </div>
+  <div id="addErr"></div>
+  <div style="margin-top:14px"><button class="btn" id="addBtn">Add employee</button></div>
+</div>
+
+<div class="card">
+  <h2>Run payroll</h2>
+  <p class="lead">Pick the check date and pay period; every employee is run through the engine and totaled. For hourly staff, logged hours are pulled from the timeclock for the period (or enter them below to override).</p>
+  <div class="row3">
+    <div><label>Pay period start</label><input id="periodStart" type="date"></div>
+    <div><label>Pay period end</label><input id="periodEnd" type="date"></div>
+    <div><label>Check date</label><input id="payDate" type="date"></div>
+  </div>
+  <div id="hoursWrap"></div>
+  <div style="margin-top:12px"><button class="btn" id="runBtn">Run this pay period</button></div>
+  <div id="runErr"></div>
+  <div id="runOut"></div>
+</div>
+
+<div class="card">
+  <h2>Timesheets</h2>
+  <p class="lead">Log hours for hourly staff. Employees can also log their own via their self-service link.</p>
+  <div class="row3">
+    <div><label>Employee</label><select id="tsEmp"></select></div>
+    <div><label>Date</label><input id="tsDate" type="date"></div>
+    <div><label>Hours</label><input id="tsHours" inputmode="decimal" placeholder="8"></div>
+  </div>
+  <div id="tsErr"></div>
+  <div style="margin-top:12px"><button class="btn ghost" id="tsAdd">Log hours</button></div>
+  <div id="tsOut"></div>
+</div>
+
+<div class="card">
+  <h2>Employees</h2>
+  <div id="empList"><p class="dim">No employees yet.</p></div>
+</div>
+
+<div class="card">
+  <h2>Payroll register &amp; tax liability</h2>
+  <p class="lead">Every paycheck in a period, totaled into the figures you file (Form 941 federal deposit + NC withholding). Export the register as CSV for your accountant.</p>
+  <div class="row3">
+    <div><label>From</label><input id="regFrom" type="date"></div>
+    <div><label>To</label><input id="regTo" type="date"></div>
+    <div style="display:flex;align-items:flex-end;gap:8px"><button class="btn" id="regRun">Build report</button><a class="btn ghost" id="regCsv" href="#" style="text-decoration:none">CSV</a></div>
+  </div>
+  <div id="regErr"></div>
+  <div id="regOut"></div>
+</div>
+
+<div class="foot">Cardinal Payroll &middot; Blue Ridge Press LLC &middot; withholding figures must be verified for your tax year</div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+var META=null, APP=null, EMPLOYEES=[];
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+function fmt(c){var n=(c||0)/100;return '$'+n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});}
+function toast(m){var t=document.getElementById('toast');t.textContent=m;t.className='toast show';setTimeout(function(){t.className='toast';},1900);}
+function dollarsToCents(v){var n=parseFloat(String(v).replace(/[^0-9.]/g,''));return isNaN(n)?0:Math.round(n*100);}
+function api(method,path,body){return fetch(path,{method:method,headers:{'content-type':'application/json'},body:body===undefined?undefined:JSON.stringify(body)}).then(function(r){return r.text().then(function(t){var j=t?JSON.parse(t):null;if(r.status>=300){throw new Error((j&&j.error&&j.error.message)||('HTTP '+r.status));}return j;});});}
+
+function fillSelect(el,items,labeler){el.innerHTML=items.map(function(x){return '<option value="'+esc(x)+'">'+esc(labeler?labeler(x):x)+'</option>';}).join('');}
+function prettyFreq(f){return {weekly:'Weekly',biweekly:'Biweekly',semimonthly:'Semi-monthly',monthly:'Monthly'}[f]||f;}
+function prettyFiling(s){return {single:'Single',married_joint:'Married filing jointly',head_of_household:'Head of household'}[s]||s;}
+
+function boot(){
+  api('GET','/api/app').then(function(app){
+    APP=app; META=app.meta||{};
+    document.getElementById('bizline').textContent='Run payroll for '+app.businessName;
+    document.getElementById('bizline').title=app.jurisdiction||'';
+    fillSelect(document.getElementById('freq'),(META.payFrequencies||['weekly','biweekly','semimonthly','monthly']),prettyFreq);
+    document.getElementById('freq').value='biweekly';
+    fillSelect(document.getElementById('filing'),(META.filingStatuses||['single','married_jointly','head_of_household']),prettyFiling);
+    var today=new Date().toISOString().slice(0,10);
+    ['payDate','periodEnd','tsDate'].forEach(function(id){var el=document.getElementById(id);if(el&&!el.value)el.value=today;});
+    var ps=document.getElementById('periodStart');if(ps&&!ps.value){var d0=new Date();d0.setDate(d0.getDate()-13);ps.value=d0.toISOString().slice(0,10);}
+    regDefaults();
+    loadEmployees();
+  }).catch(function(e){document.getElementById('bizline').textContent='Payroll service unreachable: '+e.message;});
+}
+
+document.getElementById('ptype').onchange=function(){
+  var salary=this.value==='salary';
+  document.getElementById('salWrap').className=salary?'':'hidden';
+  document.getElementById('rateWrap').className=salary?'hidden':'';
+};
+
+document.getElementById('addBtn').onclick=function(){
+  var errEl=document.getElementById('addErr');errEl.innerHTML='';
+  var payType=document.getElementById('ptype').value;
+  var emp={companyId:APP.companyId,firstName:document.getElementById('fn').value.trim(),lastName:document.getElementById('ln').value.trim(),payType:payType,payFrequency:document.getElementById('freq').value,filingStatus:document.getElementById('filing').value,ncAllowances:parseInt(document.getElementById('allow').value||'0',10)||0,federalExtraWithholdingCents:dollarsToCents(document.getElementById('extra').value)};
+  if(payType==='salary'){emp.annualSalaryCents=dollarsToCents(document.getElementById('salary').value);}else{emp.hourlyRateCents=dollarsToCents(document.getElementById('rate').value);}
+  var pre=[];var post=[];
+  var c401k=dollarsToCents(document.getElementById('d401k').value);
+  if(c401k>0)pre.push({name:'401(k)',amountCents:c401k,reducesFederalTaxable:true,reducesStateTaxable:true,reducesFica:false});
+  var chealth=dollarsToCents(document.getElementById('dhealth').value);
+  if(chealth>0)pre.push({name:'Health / HSA',amountCents:chealth,reducesFederalTaxable:true,reducesStateTaxable:true,reducesFica:true});
+  var cpost=dollarsToCents(document.getElementById('dpost').value);
+  if(cpost>0)post.push({name:document.getElementById('dpostName').value.trim()||'Post-tax deduction',amountCents:cpost});
+  if(pre.length)emp.preTaxDeductions=pre;
+  if(post.length)emp.postTaxDeductions=post;
+  if(!emp.firstName||!emp.lastName){errEl.innerHTML='<div class="banner err">First and last name are required.</div>';return;}
+  if(payType==='salary'&&!emp.annualSalaryCents){errEl.innerHTML='<div class="banner err">Enter an annual salary.</div>';return;}
+  if(payType==='hourly'&&!emp.hourlyRateCents){errEl.innerHTML='<div class="banner err">Enter an hourly rate.</div>';return;}
+  this.disabled=true;var btn=this;
+  api('POST','/api/employees',emp).then(function(){
+    ['fn','ln','salary','rate','d401k','dhealth','dpost','dpostName'].forEach(function(id){document.getElementById(id).value='';});
+    document.getElementById('allow').value='0';document.getElementById('extra').value='0';
+    toast('Employee added');loadEmployees();
+  }).catch(function(e){errEl.innerHTML='<div class="banner err">'+esc(e.message)+'</div>';}).then(function(){btn.disabled=false;});
+};
+
+function loadEmployees(){
+  return api('GET','/api/employees?companyId='+encodeURIComponent(APP.companyId)).then(function(list){
+    EMPLOYEES=list||[];renderEmployees();renderHoursInputs();renderTsEmployees();
+  });
+}
+
+function renderTsEmployees(){
+  var sel=document.getElementById('tsEmp');if(!sel)return;
+  var hourly=EMPLOYEES.filter(function(e){return e.payType==='hourly';});
+  if(!hourly.length){sel.innerHTML='<option value="">(no hourly employees)</option>';return;}
+  sel.innerHTML=hourly.map(function(e){return '<option value="'+esc(e.id)+'">'+esc(e.firstName+' '+e.lastName)+'</option>';}).join('');
+}
+
+document.getElementById('tsAdd').onclick=function(){
+  var err=document.getElementById('tsErr');err.innerHTML='';
+  var employeeId=document.getElementById('tsEmp').value;
+  var date=document.getElementById('tsDate').value;
+  var hours=parseFloat(document.getElementById('tsHours').value);
+  if(!employeeId){err.innerHTML='<div class="banner err">Add an hourly employee first.</div>';return;}
+  if(!date||isNaN(hours)||hours<=0){err.innerHTML='<div class="banner err">Enter a date and positive hours.</div>';return;}
+  this.disabled=true;var btn=this;
+  api('POST','/api/time/entries',{companyId:APP.companyId,employeeId:employeeId,date:date,hours:hours}).then(function(){
+    document.getElementById('tsHours').value='';toast('Logged '+hours+'h');
+    document.getElementById('tsOut').innerHTML='<div class="banner note">Logged '+esc(hours)+'h on '+esc(date)+'. It will be pulled into the next run for this pay period.</div>';
+  }).catch(function(e){err.innerHTML='<div class="banner err">'+esc(e.message)+'</div>';}).then(function(){btn.disabled=false;});
+};
+
+function compLine(e){
+  var base=e.payType==='salary'?(fmt(e.annualSalaryCents)+'/yr'):(fmt(e.hourlyRateCents)+'/hr');
+  var ded=[].concat(e.preTaxDeductions||[],e.postTaxDeductions||[]);
+  if(ded.length){base+=' &middot; '+ded.map(function(d){return esc(d.name)+' '+fmt(d.amountCents);}).join(', ');}
+  return base;
+}
+function renderEmployees(){
+  var box=document.getElementById('empList');
+  if(!EMPLOYEES.length){box.innerHTML='<p class="dim">No employees yet.</p>';return;}
+  var rows=EMPLOYEES.map(function(e){
+    return '<tr><td><b>'+esc(e.firstName+' '+e.lastName)+'</b><div class="dim">'+prettyFreq(e.payFrequency)+' &middot; '+prettyFiling(e.filingStatus)+'</div></td><td>'+compLine(e)+'</td><td style="white-space:nowrap"><button class="btn ghost sm" data-stub="'+esc(e.id)+'">Pay stubs</button> <button class="btn ghost sm" data-self="'+esc(e.id)+'">Self-service link</button></td></tr>';
+  }).join('');
+  box.innerHTML='<table><thead><tr><th>Employee</th><th>Pay</th><th></th></tr></thead><tbody>'+rows+'</tbody></table><div id="stubs"></div>';
+  var btns=box.querySelectorAll('[data-stub]');
+  for(var i=0;i<btns.length;i++){btns[i].onclick=function(){showStubs(this.dataset.stub);};}
+  var sbtns=box.querySelectorAll('[data-self]');
+  for(var s=0;s<sbtns.length;s++){sbtns[s].onclick=function(){selfLink(this.dataset.self);};}
+}
+
+function selfLink(empId){
+  var host=document.getElementById('stubs');
+  host.innerHTML='<p class="dim">Generating link&hellip;</p>';
+  api('GET','/api/employees/'+encodeURIComponent(empId)+'/selflink').then(function(r){
+    var full=location.origin+r.path;
+    host.innerHTML='<div class="card"><h2 style="margin:0 0 4px;font-size:1rem">Employee self-service link</h2><p class="lead" style="margin:0 0 8px">Send this to the employee. They can view their own pay stubs and YTD &mdash; no login, and only their own pay.</p><div style="display:flex;gap:8px"><input readonly value="'+esc(full)+'" style="font-family:ui-monospace,monospace;font-size:.78rem"><button class="btn sm" onclick="copyLink(this.previousElementSibling.value)">Copy</button></div></div>';
+  }).catch(function(e){host.innerHTML='<div class="banner err">'+esc(e.message)+'</div>';});
+}
+
+function renderHoursInputs(){
+  var hourly=EMPLOYEES.filter(function(e){return e.payType==='hourly';});
+  var wrap=document.getElementById('hoursWrap');
+  if(!hourly.length){wrap.innerHTML='';return;}
+  wrap.innerHTML='<label>Hours this period (hourly staff)</label><div class="row3">'+hourly.map(function(e){
+    return '<div><span class="dim">'+esc(e.firstName+' '+e.lastName)+'</span><input data-hours="'+esc(e.id)+'" inputmode="decimal" placeholder="80"></div>';
+  }).join('')+'</div>';
+}
+
+document.getElementById('runBtn').onclick=function(){
+  var errEl=document.getElementById('runErr');errEl.innerHTML='';
+  var payDate=document.getElementById('payDate').value;
+  if(!payDate){errEl.innerHTML='<div class="banner err">Pick a check date.</div>';return;}
+  var hours={};var hs=document.querySelectorAll('[data-hours]');
+  for(var i=0;i<hs.length;i++){var v=parseFloat(hs[i].value);if(!isNaN(v))hours[hs[i].dataset.hours]=v;}
+  var periodStart=document.getElementById('periodStart').value;
+  var periodEnd=document.getElementById('periodEnd').value;
+  this.disabled=true;var btn=this;document.getElementById('runOut').innerHTML='<p class="dim">Running&hellip;</p>';
+  api('POST','/api/run-batch',{payDate:payDate,hours:hours,periodStart:periodStart,periodEnd:periodEnd}).then(function(res){renderRun(res);}).catch(function(e){document.getElementById('runOut').innerHTML='';errEl.innerHTML='<div class="banner err">'+esc(e.message)+'</div>';}).then(function(){btn.disabled=false;loadEmployees();});
+};
+
+function renderRun(res){
+  var t=res.totals;
+  var tiles='<div class="tiles">'
+    +tile('Employees paid',t.employees,false)
+    +tile('Total gross',fmt(t.grossCents),false)
+    +tile('Employee withholding',fmt(t.employeeWithholdingCents),false)
+    +tile('Net pay (take-home)',fmt(t.netCents),false)
+    +tile('Employer taxes',fmt(t.employerTaxCents),false)
+    +tile('Total to remit',fmt(t.totalRemittanceCents),true)
+    +'</div>';
+  var rows=res.lines.map(function(l){
+    if(!l.ok){return '<tr><td>'+esc(l.name)+'</td><td colspan="4"><span class="pill err">skipped</span> <span class="dim">'+esc(l.error)+'</span></td></tr>';}
+    var p=l.payslip;var wh=(p.socialSecurityCents+p.medicareCents+(p.additionalMedicareCents||0)+p.federalIncomeTaxCents+p.stateIncomeTaxCents);
+    var src=l.hoursSource==='timeclock'?' <span class="pill ok" title="pulled from the timeclock">'+esc(l.hours)+'h</span>':(l.hoursSource==='entered'?' <span class="dim">'+esc(l.hours)+'h</span>':'');
+    return '<tr><td>'+esc(l.name)+src+'</td><td class="num">'+fmt(p.grossCents)+'</td><td class="num">'+fmt(wh)+'</td><td class="num"><b>'+fmt(p.netCents)+'</b></td><td class="num">'+fmt(p.employer.socialSecurityCents+p.employer.medicareCents+p.employer.futaCents+p.employer.sutaCents)+'</td></tr>';
+  }).join('');
+  document.getElementById('runOut').innerHTML='<div class="banner note">Ran payroll for '+esc(res.payDate)+' &mdash; '+t.employees+' employee(s).</div>'+tiles
+    +'<table style="margin-top:12px"><thead><tr><th>Employee</th><th class="num">Gross</th><th class="num">Withheld</th><th class="num">Net</th><th class="num">Employer tax</th></tr></thead><tbody>'+rows+'</tbody></table>';
+}
+function tile(k,v,remit){return '<div class="tile'+(remit?' remit':'')+'"><div class="k">'+esc(k)+'</div><div class="v">'+esc(v)+'</div></div>';}
+
+function regDefaults(){
+  // Default to the current calendar quarter.
+  var now=new Date();var q=Math.floor(now.getMonth()/3);var y=now.getFullYear();
+  var start=new Date(Date.UTC(y,q*3,1));var end=new Date(Date.UTC(y,q*3+3,0));
+  var f=document.getElementById('regFrom');var t=document.getElementById('regTo');
+  if(f&&!f.value)f.value=start.toISOString().slice(0,10);
+  if(t&&!t.value)t.value=end.toISOString().slice(0,10);
+}
+function regParams(){return 'from='+encodeURIComponent(document.getElementById('regFrom').value)+'&to='+encodeURIComponent(document.getElementById('regTo').value);}
+document.getElementById('regCsv').onclick=function(){this.href='/api/register.csv?'+regParams();};
+document.getElementById('regRun').onclick=function(){
+  var err=document.getElementById('regErr');err.innerHTML='';
+  document.getElementById('regOut').innerHTML='<p class="dim">Building&hellip;</p>';
+  api('GET','/api/register?'+regParams()).then(function(reg){renderRegister(reg);}).catch(function(e){document.getElementById('regOut').innerHTML='';err.innerHTML='<div class="banner err">'+esc(e.message)+'</div>';});
+};
+function renderRegister(reg){
+  var l=reg.taxLiability;var t=reg.totals;
+  if(!t.paychecks){document.getElementById('regOut').innerHTML='<div class="banner note">No paychecks in this period.</div>';return;}
+  var tiles='<div class="tiles">'
+    +tile('Paychecks',t.paychecks,false)
+    +tile('Total gross',fmt(t.grossCents),false)
+    +tile('Federal income tax w/h',fmt(l.federalIncomeTaxWithheldCents),false)
+    +tile('Social Security (both halves)',fmt(l.socialSecurityTaxCents),false)
+    +tile('Medicare (both halves)',fmt(l.medicareTaxCents),false)
+    +tile('NC state tax w/h',fmt(l.stateIncomeTaxWithheldCents),false)
+    +tile('Federal deposit (941)',fmt(l.federalDepositCents),true)
+    +tile('FUTA + NC SUTA',fmt(l.futaCents+l.sutaCents),false)
+    +'</div>';
+  var rows=reg.rows.map(function(r){
+    return '<tr><td>'+esc(r.payDate)+'</td><td>'+esc(r.employeeName)+'</td><td class="num">'+fmt(r.grossCents)+'</td><td class="num">'+fmt(r.federalIncomeTaxCents)+'</td><td class="num">'+fmt(r.socialSecurityCents)+'</td><td class="num">'+fmt(r.medicareCents)+'</td><td class="num">'+fmt(r.stateIncomeTaxCents)+'</td><td class="num"><b>'+fmt(r.netCents)+'</b></td></tr>';
+  }).join('');
+  document.getElementById('regOut').innerHTML=tiles
+    +'<table style="margin-top:12px"><thead><tr><th>Pay date</th><th>Employee</th><th class="num">Gross</th><th class="num">Fed tax</th><th class="num">SS</th><th class="num">Medicare</th><th class="num">NC tax</th><th class="num">Net</th></tr></thead><tbody>'+rows+'</tbody></table>'
+    +'<p class="dim" style="margin-top:8px">These are the figures to file — Form 941 (federal) uses the deposit total; NC withholding is filed separately. Cardinal Payroll computes; it does not file or remit.</p>';
+}
+
+function showStubs(empId){
+  var host=document.getElementById('stubs');
+  host.innerHTML='<p class="dim">Loading pay stubs&hellip;</p>';
+  api('GET','/api/payslips?employeeId='+encodeURIComponent(empId)).then(function(slips){
+    var emp=EMPLOYEES.filter(function(e){return e.id===empId;})[0]||{};
+    if(!slips||!slips.length){host.innerHTML='<div class="card"><b>'+esc(emp.firstName+' '+emp.lastName)+'</b><p class="dim">No pay stubs yet — run a payroll.</p></div>';return;}
+    slips.sort(function(a,b){return a.payDate<b.payDate?1:-1;});
+    var ytdNet=slips.reduce(function(s,p){return s+p.netCents;},0);
+    var ytdGross=slips.reduce(function(s,p){return s+p.grossCents;},0);
+    var cards=slips.map(function(p){
+      var wh=p.socialSecurityCents+p.medicareCents+(p.additionalMedicareCents||0)+p.federalIncomeTaxCents+p.stateIncomeTaxCents;
+      return '<details><summary>'+esc(p.payDate)+' &mdash; net '+fmt(p.netCents)+'</summary><div class="bd">'
+        +'<div><span>Gross</span><span>'+fmt(p.grossCents)+'</span></div>'
+        +'<div><span>Social Security</span><span>-'+fmt(p.socialSecurityCents)+'</span></div>'
+        +'<div><span>Medicare</span><span>-'+fmt(p.medicareCents+(p.additionalMedicareCents||0))+'</span></div>'
+        +'<div><span>Federal income tax</span><span>-'+fmt(p.federalIncomeTaxCents)+'</span></div>'
+        +'<div><span>NC state income tax</span><span>-'+fmt(p.stateIncomeTaxCents)+'</span></div>'
+        +(p.preTaxDeductionsCents?'<div><span>Pre-tax deductions</span><span>-'+fmt(p.preTaxDeductionsCents)+'</span></div>':'')
+        +(p.postTaxDeductionsCents?'<div><span>Post-tax deductions</span><span>-'+fmt(p.postTaxDeductionsCents)+'</span></div>':'')
+        +'<div class="net"><span>Net pay</span><span>'+fmt(p.netCents)+'</span></div></div></details>';
+    }).join('');
+    host.innerHTML='<div class="card"><b>'+esc(emp.firstName+' '+emp.lastName)+'</b> <span class="dim">&middot; YTD gross '+fmt(ytdGross)+' &middot; YTD net '+fmt(ytdNet)+'</span><div style="margin-top:8px">'+cards+'</div></div>';
+  }).catch(function(e){host.innerHTML='<div class="banner err">'+esc(e.message)+'</div>';});
+}
+
+boot();
+</script>
+</body>
+</html>`;

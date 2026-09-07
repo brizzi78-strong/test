@@ -1,0 +1,63 @@
+# Cardinal Books — minimal production stack (just the bookkeeping app).
+#
+# Runs only what Cardinal Books needs — the Accounting service (private) + the
+# Books app (private) — behind Caddy, which terminates HTTPS automatically and
+# password-protects the app (the books have no login of their own).
+#
+#   cd <repo root>
+#   # 1) edit deploy/Caddyfile: set your domain, username, and password hash
+#   # 2) bring it up:
+#   docker compose -f deploy/books-stack.yml up --build -d
+#
+# Point an A record (e.g. books.blueridgepressllc.com) at the server's IP first;
+# Caddy fetches a Let's Encrypt certificate on start. Data persists in the
+# accounting-data volume. See deploy/DEPLOY-BOOKS.md for the full walkthrough.
+name: cardinal-books
+
+x-service: &service
+  build:
+    context: ..
+    dockerfile: deploy/Dockerfile
+  image: cardinalhr/services:local
+  restart: unless-stopped
+
+services:
+  # The books/ledger service. Durable SQLite; not exposed publicly.
+  accounting:
+    <<: *service
+    command: node accounting/src/index.ts
+    environment:
+      PORT: "4400"
+      ACCOUNTING_DB: /data/accounting.db
+    volumes: ["accounting-data:/data"]
+    expose: ["4400"]
+
+  # The Cardinal Books app (BFF). Opens to one company's books.
+  books:
+    <<: *service
+    command: node books/src/index.ts
+    environment:
+      PORT: "4500"
+      ACCOUNTING_URL: http://accounting:4400
+      BUSINESS_NAME: ${BUSINESS_NAME:-Blue Ridge Press LLC}
+      # Password gate (set these in a .env file next to this compose file).
+      BOOKS_USER: ${BOOKS_USER:-admin}
+      BOOKS_PASSWORD: ${BOOKS_PASSWORD:?set BOOKS_PASSWORD in deploy/.env}
+    depends_on: ["accounting"]
+    expose: ["4500"]
+
+  # HTTPS + password gate + reverse proxy. Reads deploy/Caddyfile.
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    ports: ["80:80", "443:443"]
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+    depends_on: ["books"]
+
+volumes:
+  accounting-data:
+  caddy-data:
+  caddy-config:

@@ -6,7 +6,33 @@ This repository holds several projects. Jump to the one you need:
 |---|---|---|
 | **The Cardinal's Toolkit — iPhone app** | `CardinalPress/` + `CardinalPress.xcodeproj` | Companion app to the NC Family Caregiver Handbook ([below](#the-cardinals-toolkit--iphone-app)) |
 | **The Cardinal's Promise / Toolkit book** | `cardinals-promise/` | Manuscript, samples, and marketing for the book |
-| **Cardinals Promise (CARD) token** | `contracts/`, `test/`, `verification/`, `site/` | Fixed-supply ERC-20 with a complete launch kit ([below](#cardinals-promise-card-token)) |
+| **Cardinals Promise (CARD) token** | `contracts/`, `test/`, `verification/`, `site/` | Fixed-supply ERC-20 with an immutable 2% transfer fee and a complete launch kit ([below](#cardinals-promise-card-token)) |
+| **HireCheck — background screening service** | `hirecheck/` | Standalone service for running FCRA-aware pre-employment background checks on new hires (see `hirecheck/README.md`) |
+| **Cardinal Verify — consent-based checks** | `verify/` | A working site for consent-first reference / employment / education verification: the candidate e-signs a disclosure, then each source confirms via a private link. No CRA vendor, no criminal/credit data. Employer console + candidate-consent + verifier pages (see `verify/README.md`) |
+| **MyHR — new-hire paperwork service** | `myhr/` | Standalone onboarding service: e-signed new-hire forms (I-9, W-4, consent, etc.) with HR review and an audit trail (see `myhr/README.md`) |
+| **Recruiting — job requisitions & applicant tracking** | `recruiting/` | Standalone ATS: post requisitions and move applications through a hiring pipeline; reaching `hired` hands off to screening + onboarding (see `recruiting/README.md`) |
+| **Training — online training portal** | `training/` | Standalone LMS: customizable course catalog (e.g. Sexual Harassment Prevention), lesson tracking, and scored assessments (see `training/README.md`) |
+| **Benefits — benefits election / enrollment** | `benefits/` | Standalone service: plan catalog with coverage tiers, dependents, elections/waivers, and computed monthly premiums (see `benefits/README.md`) |
+| **Payroll — gross-to-net engine (Raleigh, NC)** | `payroll/` | Standalone withholding calculator: federal + NC-flat taxes, FICA, deductions, net pay, and employer taxes. Not filing-ready payroll (see `payroll/README.md`) |
+| **Employee Directory — HRIS core** | `directory/` | Standalone system of record: employees, department tree, managers, employment status, and org-chart queries with cycle-safe invariants (see `directory/README.md`) |
+| **Time Off (PTO)** | `timeoff/` | Standalone leave management: policies, accrual balances, and requests (pending → approved/denied/cancelled) with balance deduction and refund (see `timeoff/README.md`) |
+| **Offboarding** | `offboarding/` | Standalone separation cases: a checklist (return equipment, revoke access, final pay, COBRA, exit interview…) with per-task done/N-A and derived status (see `offboarding/README.md`) |
+| **Orchestrator — shared employee identity** | `orchestrator/` | The layer that makes "one employee record" real: a canonical company/person that cascades a hire into every service and records the id each assigned, so one record resolves everywhere (see `orchestrator/README.md`) |
+| **Accounting — small-business bookkeeping** | `accounting/` | QuickBooks-style books: chart of accounts, customers, invoices (line items + tax) with a draft→open→paid/void lifecycle, payments, expenses, and P&L / A-R aging reports. Wired into the gateway and provisioned per company by the orchestrator (see `accounting/README.md`) |
+| **TaxFile — simple online tax prep** | `taxfile/` | A TurboTax-style guided federal return without the sprawl: five plain-language steps, a live refund tracker, a tested 2025 Form 1040 engine (brackets, LTCG/qualified-dividend worksheet, SE tax + QBI, child tax credit, OBBBA standard deduction and SALT cap), and a mock e-file. Demo engine, not tax advice (see `taxfile/README.md`) |
+| **Cardinal Books — bookkeeping UI** | `books/` | A usable single-page bookkeeping app (dashboard, invoices, payments, expenses, customers, P&L / A-R aging) backed by a backend-for-frontend that proxies to the Accounting service and opens to one company's books — Blue Ridge Press LLC by default (see `books/README.md`) |
+| **Cardinal Payroll — Run Payroll console (ADP-style)** | `runpay/` | An employer Run Payroll app: add employees, run a whole pay period in one click, and see every paycheck gross-to-net plus company totals — gross, employee withholding, net, employer taxes, and total cash to remit. Employee self-service links (own pay stubs + YTD), and hourly hours pulled from the timeclock. A backend-for-frontend over the Payroll engine (real federal + NC / FICA math); withholding calculator, not a tax filer (see `runpay/README.md`) |
+| **Timeclock — time & attendance** | `timeclock/` | Hourly timesheet entries that total per pay period and feed straight into a Run Payroll batch. Record hours (manager or employee self-service), summarize a date range; hours stored as integer minutes (see `timeclock/README.md`) |
+| **Booking — scheduling & references** | `booking/` | Appointment scheduling for a service business (e.g. massage): services, workers, a live schedule with worker double-booking prevention, employment references, and masked vetting credentials (see `booking/README.md`) |
+| **HomeSafe — in-home visit safety** | `homesafe/` | A private, offline single-page app for in-home service safety: vet who comes to your home, or (as a worker) share your plan and check in. No people-search; data stays on the device (see `homesafe/README.md`) |
+| **Admin Portal — the usable HR app** | `portal/` | Single-page HR console (register a company, hire employees, see one record resolve into every service) backed by a backend-for-frontend that proxies to the orchestrator server-side, keeping credentials off the browser (see `portal/README.md`) |
+| **Live Schedule — day-view UI** | `schedule/` | A usable day-view scheduling app (book, assign a therapist, work the schedule) backed by a backend-for-frontend that proxies to the Booking service (see `schedule/README.md`) |
+| **Client Booking Site — public self-book** | `book/` | A public page where customers self-book an appointment, backed by a narrow BFF that only lists services and creates *requested* appointments for one configured business — no schedule or admin access (see `book/README.md`) |
+| **Trading — brokerage engine** | `trading/` | Standalone Robinhood-style trading engine: accounts with paper buying power, a deterministic mock market feed, market/limit orders, positions with average-cost basis, and a watchlist (see `trading/README.md`) |
+| **Cardinal Trading — trading app** | `invest/` | A usable multi-user trading app: sign up / log in, then your own paper portfolio, watchlist, orders, and buy/sell — a backend-for-frontend over the Trading service with every call scoped server-side to the logged-in user's account (see `invest/README.md`) |
+| **Cardinal HR — platform website** | `cardinal-hr/` | Self-contained, cross-linked marketing site: Home (`index.html`), Features (`features.html`), Pricing (`pricing.html`), and Security (`security.html`) |
+| **API Gateway** | `gateway/` | Authenticated front door: API-key auth, per-key rate limiting, and reverse-proxy routing to the services with an injected trusted tenant. Each service enforces that tenant (`src/api/tenancy.ts`) for real multi-tenant data isolation (see `gateway/README.md`) |
+| **Deployment scaffolding** | `deploy/` | Run the gateway + all services + website together: `docker compose -f deploy/docker-compose.yml up --build` (see `deploy/README.md`) |
 
 ---
 
@@ -99,13 +125,25 @@ This app supports organization and caregiver self-care. It is not medical, legal
 
 [![verify-claims](https://github.com/brizzi78-strong/test/actions/workflows/verify.yml/badge.svg)](https://github.com/brizzi78-strong/test/actions/workflows/verify.yml)
 
-**Cardinals Promise (CARD)** — a fixed-supply ERC-20 on Ethereum. The full
-250,000,000 supply is minted to the deployer at construction; there is **no
-mint function, no burn, no transfer tax, no blacklist, and no pausing** —
-the supply can never change. `Ownable` is inherited solely so
+**Cardinals Promise (CARD)** — a fixed-supply ERC-20 on Ethereum with an
+immutable 2% transfer fee. The full 1,000,000,000 supply is minted to the
+deployer at construction; there is **no mint function, no burn, no
+blacklist, and no pausing** — the supply can never change. On every transfer
+between two non-treasury addresses, 2% of the amount (`FEE_BPS = 200`) goes
+to the `treasury` address fixed in the constructor and the recipient gets
+98%; transfers to or from the treasury are fee-exempt, self-transfers are
+no-ops, and the fee rounds down (amounts under 50 wei pay nothing). The fee
+rate and destination can never change — there is no setter. The fee moves
+coins; it never creates or destroys them. `Ownable` is inherited solely so
 `renounceOwnership()` can be executed as a public, verifiable launch step;
 no function is owner-gated, so ownership grants no power even before it is
 renounced.
+
+What a buyer pays: 2% CARD fee on the buy (to the treasury), 2% on the
+sell, plus Uniswap's 0.3% each way — a simple round trip costs about 4.5%
+before gas, slippage and price impact. The fee is the project's only
+built-in revenue; at 2% it covers small fixed costs (LLC, website) if there
+is trading, and does not come close to funding professionals.
 
 **Launching for real? Follow the step-by-step [launch runbook](LAUNCH.md)**
 (parameters and rationale in [TOKEN_LAUNCH_STRATEGY.md](TOKEN_LAUNCH_STRATEGY.md),
@@ -114,20 +152,22 @@ launch-day sequence in [LAUNCH_DAY_CHECKLIST.md](LAUNCH_DAY_CHECKLIST.md)).
 ## Layout
 
 ```
-contracts/CardinalsPromise.sol             # the token (OpenZeppelin ERC20 + Ownable)
+contracts/CardinalsPromise.sol             # the token (OpenZeppelin ERC20 + Ownable, 2% fee to an immutable treasury)
 contracts/CardinalsPromise.t.sol           # Foundry-style Solidity tests (forge-std)
 contracts/CardinalsPromiseInvariants.t.sol # stateful fuzz/invariant suite (handler-based)
 test/CardinalsPromise.ts                   # TypeScript tests (node:test + viem)
 verification/claims.json                   # launch-claims registry (claim → evidence)
 scripts/verify-claims.mjs                  # claims verifier (run via `npm run verify`)
 scripts/rehearse-launch.ts                 # full local launch rehearsal (real Uniswap V2 stack)
-scripts/add-liquidity.ts                   # create/seed the Uniswap V2 CARD/ETH pool
-ignition/modules/CardinalsPromise.ts       # Hardhat Ignition deployment module
+scripts/add-liquidity.ts                   # create/seed the Uniswap V2 CARD/ETH pool (run from the treasury signer)
+scripts/test-swap-sepolia.ts               # fee-aware buy + sell round trip from a separate buyer wallet
+ignition/modules/CardinalsPromise.ts       # Hardhat Ignition deployment module (constructor arg: treasury)
+ignition/parameters.example.json           # template for the treasury parameter
 docs/AUDIT-SCOPE.md                        # cold-start package for an auditor
 docs/LEGAL-BRIEFING.md                     # cited research briefing for counsel (US + EU)
 docs/AI_VERIFICATION_GAP.md                # why the claims ledger exists
 site/index.html                            # one-page launch site; assets/ has the logo
-hardhat.config.ts                          # Hardhat 3 config (solc from npm — no downloads)
+hardhat.config.ts                          # Hardhat 3 config (native solc; HARDHAT_BUNDLED_SOLC=1 for offline)
 foundry.toml + remappings.txt              # Foundry config (deps resolved from node_modules)
 ```
 
@@ -141,12 +181,23 @@ npm run verify            # verify every launch claim against executable evidenc
 npm run rehearse          # full local launch rehearsal: deploy → pool → swap → renounce
 ```
 
-Every trust claim (fixed supply, no tax, no blacklist, no pause, ownership
-grants no power, renounce works) is recorded in `verification/claims.json`
-and mapped to ABI-level structural checks, example tests, and stateful fuzz
-invariants. CI runs the verifier on every push. With
+Every trust claim (fixed supply, supply immutable, no pause, no blacklist,
+fixed 2% fee to the immutable treasury with the treasury exempt, fee
+immutable — no setter and no exemption list, ownership grants no power,
+renounce works, balances enforced — 9 claims) is recorded in
+`verification/claims.json` and mapped to ABI-level structural checks,
+example tests, and stateful fuzz invariants. CI runs the verifier on every push. With
 [Foundry](https://getfoundry.sh) installed, the same Solidity tests also run
 natively via `forge test`.
+
+On first build Hardhat downloads the native `solc` binary from
+`binaries.soliditylang.org`. If that host is unreachable (restricted/offline
+networks), compile with the WASM build bundled in the `solc` npm package
+instead — same compiler version, identical bytecode:
+
+```bash
+HARDHAT_BUNDLED_SOLC=1 npx hardhat test
+```
 
 ## Deployment
 
@@ -156,13 +207,78 @@ nothing sensitive lives in the repo:
 ```bash
 npx hardhat keystore set SEPOLIA_RPC_URL
 npx hardhat keystore set SEPOLIA_PRIVATE_KEY
-npm run deploy:sepolia
-npx hardhat verify --network sepolia <deployed-address>
+cp ignition/parameters.example.json ignition/parameters.json   # then put the treasury address in it
+npx hardhat ignition deploy ignition/modules/CardinalsPromise.ts --network sepolia --parameters ignition/parameters.json
+npx hardhat verify --network sepolia <token-address> <treasury-address>
 ```
 
-A `mainnet` network is pre-wired the same way (`MAINNET_RPC_URL`,
-`MAINNET_PRIVATE_KEY`); `npm run deploy:mainnet` executes it when the launch
-checklist is ready.
+The constructor takes one argument — the treasury address — supplied via
+`ignition/parameters.json` as `{"CardinalsPromiseModule":{"treasury":"0x..."}}`.
+It must be a real, non-zero address that is not the deployer; it is baked
+into the contract forever, so choose it once and carefully. A `mainnet`
+network is pre-wired the same way (`MAINNET_RPC_URL`, `MAINNET_PRIVATE_KEY`);
+`npm run deploy:mainnet` executes it when the launch checklist is ready
+(pass the same `--parameters` file).
+
+## Sepolia dry run
+
+`SEPOLIA_DRY_RUN.md` is a copy-paste walkthrough of the whole launch sequence
+on the Sepolia testnet — deploy, verify, fund the treasury, seed the pool
+from the treasury, fee-aware test swap, renounce — so the real launch day
+has no first-time steps in it.
+
+## Launch-day scripts
+
+Helpers for the transaction steps in `LAUNCH_DAY_CHECKLIST.md`. Fill in
+`launch.json` (network, deployer, token address, treasury address; pool
+address once it exists), then:
+
+```bash
+npx hardhat run scripts/launch-check.ts       # read-only: which step you're on + abort-criteria check
+npx hardhat run scripts/transfer-treasury.ts  # step 3: sends exactly 600M to the treasury, once (200M it keeps + 400M staged for the pool)
+npx hardhat run scripts/add-liquidity.ts      # step 4: seeds the pool — run from the TREASURY signer (CARD_TREASURY_ADDRESS required)
+npx hardhat run scripts/test-swap-sepolia.ts  # step 4: fee-aware buy + sell from a separate buyer wallet (Sepolia only)
+npx hardhat run scripts/renounce.ts           # step 6: guarded renounce from the deployer — verifies state, asks for confirmation
+```
+
+The 600M goes in one transfer because a transfer *from* the treasury is
+fee-exempt: the treasury can seed the pool with the full 400M without paying
+the 2%, which the deployer could not. `scripts/fund-pool-sim.ts` is practice
+only (it also runs from the treasury signer).
+
+Each script verifies the on-chain state before doing anything and stops with
+an explanation instead of proceeding when something doesn't match the plan.
+`scripts/smoke-test-local.ts` runs the whole sequence against the in-process
+network to prove the guardrails work — no real network or funds involved.
+
+## Etherscan verification
+
+Source verification (step 2 of `LAUNCH_DAY_CHECKLIST.md`) goes through
+`hardhat-verify`, which ships with the toolbox. Store an
+[Etherscan API key](https://etherscan.io/apis) the same way as the RPC
+secrets, then verify the deployed address — `CardinalsPromise` takes one
+constructor argument, the treasury address:
+
+```bash
+npx hardhat keystore set ETHERSCAN_API_KEY
+npx hardhat verify --network sepolia <token-address> <treasury-address>
+```
+
+Deployments made with Ignition can be verified in one step from the recorded
+deployment instead:
+
+```bash
+npx hardhat ignition verify chain-11155111   # sepolia deployment id
+```
+
+Verification submits the sources to `etherscan.io`; compilation beforehand
+fetches the compiler from `binaries.soliditylang.org` (unless using the
+bundled fallback above), so those are the two hosts the toolchain needs to
+reach.
+
+If the API route isn't available, `verification/` contains a ready-to-upload
+standard JSON input and instructions for verifying manually through
+Etherscan's web form — see [verification/README.md](verification/README.md).
 
 ## Disclaimer
 

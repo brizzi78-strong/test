@@ -1,0 +1,19 @@
+{
+  "name": "gateway",
+  "private": true,
+  "version": "0.1.0",
+  "description": "API gateway — API-key authentication, per-key rate limiting, and reverse-proxy routing to the Cardinal HR services with an injected trusted tenant",
+  "type": "module",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "start": "node src/index.ts",
+    "test": "node --test",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.8.5",
+    "typescript": "~5.8.0"
+  }
+}

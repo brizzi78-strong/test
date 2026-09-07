@@ -1,0 +1,19 @@
+{
+  "name": "portal",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Cardinal HR admin portal — a usable web UI (single-page app) backed by a backend-for-frontend that proxies to the orchestrator, so a human can register a company and hire employees and watch one record resolve into every service",
+  "type": "module",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "start": "node src/index.ts",
+    "test": "node --test",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.8.5",
+    "typescript": "~5.8.0"
+  }
+}

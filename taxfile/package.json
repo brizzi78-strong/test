@@ -1,0 +1,19 @@
+{
+  "name": "taxfile",
+  "private": true,
+  "version": "0.1.0",
+  "description": "TaxFile — TurboTax-style online tax prep: guided interview, 2025 federal 1040 engine (brackets, LTCG/qualified-dividend worksheet, SE tax, CTC, QBI), refund tracker, and mock e-file",
+  "type": "module",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "start": "node src/index.ts",
+    "test": "node --test",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.8.5",
+    "typescript": "~5.8.0"
+  }
+}
