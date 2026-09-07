@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#0d1726">
 <title>Cardinals Promise</title>
-<meta name="description" content="CARD is the Cardinals Promise coin — a souvenir, not an investment. Launch preparation is underway. The treasury wallet is public; the official token contract will be published here only after it is independently confirmed.">
+<meta name="description" content="CARD is the Cardinals Promise coin — a souvenir, not an investment. Launch is planned for Saturday, October 4. The treasury wallet is public; the official token contract will be published here only after it is independently confirmed.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -20,7 +20,7 @@
     <span class="monogram">C</span>
     <span class="wordmark">Card</span>
   </a>
-  <span class="status">Launch prep underway</span>
+  <span class="status">Launch planned: Sat, Oct 4</span>
 </header>
 
 <nav>
@@ -50,7 +50,7 @@
   <p>This is the treasury address already recorded in the public ledger. It is <strong>not being represented as the CARD token contract</strong>. The official token contract address will be published separately here only after the network, deployed code, token metadata, and contract identity are confirmed.</p>
 </div>
 
-<p><strong>We are in launch preparation, not public trading.</strong> Do not buy, swap, send funds to, or interact with a token merely because it uses the CARD name. The official CARD token contract is still listed as pending on this site.</p>
+<p><strong>We are in launch preparation, not public trading.</strong> Launch is planned for <strong>Saturday, October 4</strong>. Until then there is no CARD token on the blockchain and nothing is for sale. Do not buy, swap, send funds to, or interact with a token merely because it uses the CARD name. The official contract address will be published on this page first, and nowhere else.</p>
 
 <div class="note alerts">
   <p><strong>Want to know when it launches?</strong> Leave an email address and we'll write once when the contract address is published here, and once when trading opens. Nothing else.</p>
@@ -98,22 +98,32 @@
 
 <h2>What the code is intended to do</h2>
 
-<p>The items below describe the planned CARD mechanics. Each claim must be checked against the final deployed contract and its verified source before anyone relies on it. We will replace intention with proof links as each launch step is completed.</p>
+<p>The contract is written and tested but not yet deployed, so today these are intentions. On launch day each one becomes a thing you can check yourself, and we will replace every line below with a proof link as it happens. If a line never gets its proof link, treat it as untrue.</p>
 
 <ul>
-  <li><strong>A fixed supply.</strong> The planned supply is 1,000,000,000 CARD.</li>
-  <li><strong>No special powers.</strong> The intended design has no pause switch, blacklist, or sell trap. Ownership status must be confirmed from the deployed contract before this is treated as final.</li>
-  <li><strong>A 2% fee.</strong> The intended design applies the same 2% CARD fee in both directions and routes it to the treasury. The deployed contract must be inspected to confirm the exact implementation and whether those settings are immutable.</li>
-  <li><strong>Public liquidity.</strong> Liquidity allocations and any lock must be proven with the pool and lock transactions before they are treated as complete.</li>
-  <li><strong>Founder allocation.</strong> Any founder allocation will be disclosed on the ledger with the actual wallet address and on-chain balance.</li>
-  <li><strong>Treasury.</strong> The current published treasury / launch wallet is <code>0xDAE63eBEe60A691e1538D480AE3F6509068ab300</code>. Any final token allocation and fee flow will be confirmed from the deployed contract and on-chain balances.</li>
+  <li><strong>A fixed supply.</strong> 1,000,000,000 CARD. No more can ever be created. The code does not contain a way to do it.</li>
+  <li><strong>No special powers.</strong> No pause switch. No blacklist. No trap that stops you selling. And on launch day, ownership of the contract is given up permanently — after that, no one can change the rules. Not even us.</li>
+  <li><strong>A 2% fee, fixed forever.</strong> On every trade between ordinary wallets, 2% of the CARD goes to the treasury wallet and the other side gets 98%. It applies to buys and sells equally. It does not apply to coins sent to or from the treasury itself, so a gift to the treasury arrives whole. The rate and the destination are written into the contract. There is no switch. No one can raise it, lower it, turn it off, or point it somewhere else — not even us, not ever.</li>
+  <li><strong>40% goes into the public pool.</strong> 400,000,000 CARD enters the public trading pool at launch, and the pool is locked for 12 months with a public lock anyone can inspect. We could not pull it out if we wanted to.</li>
+  <li><strong>40% is the founder's, and it is not locked.</strong> 400,000,000 CARD is held by the founder in an ordinary wallet. It is the largest single holding, it is roughly the same size as the entire trading pool, and there is no code stopping it from being sold. We considered locking it and chose not to. You should weigh that against everything else on this page. The address is published on the ledger page so you can watch it yourself, and we've committed in writing to announcing any sale before it happens — but that is a promise, not a lock, and you should treat the two differently.</li>
+  <li><strong>20% is visible.</strong> 200,000,000 CARD sits in the treasury wallet above, <code>0xDAE63eBEe60A691e1538D480AE3F6509068ab300</code>. Every trade also sends 2% of the coins traded to this wallet. That is the treasury's income and the project's only revenue. Today it is a single wallet held by the founder — one key, not a multi-signature wallet, and you should read it that way. The fee's destination is baked into the contract, so even if the keys move, the fee keeps flowing to this same address forever.</li>
 </ul>
 
-<h2>What it may cost to buy one</h2>
+<h2>What it will cost to buy one</h2>
 
-<p>Do not rely on this section until public trading is actually live and the pool is linked here. Network gas, exchange fees, any contract fee, slippage, liquidity depth, and price impact can all materially affect what a buyer receives and what a seller can recover.</p>
+<p>Every trade costs 2%. That's a fee, and we're not going to call it anything softer. It is built into the coin, it goes to the treasury wallet, and it applies in both directions: when you buy, 2% of the CARD the pool sends you goes to the treasury and you get 98%; when you sell, 2% of the CARD you send goes to the treasury and the pool prices the other 98%. It is the only money this project makes.</p>
 
-<p><strong>The bigger risk is not the fee — it is liquidity and concentration.</strong> A new token can move sharply on small buys or sells. Until the live pool and holder distribution are public, there is no responsible way to characterize CARD as liquid or readily tradable.</p>
+<p>On top of that, Uniswap charges its own 0.3% each way. That one isn't ours, and it stays in the locked pool rather than going to a wallet we can reach into. Put together, a round trip — buy, then sell — costs about 4.5% before network gas, slippage, and price impact. We would rather you read that number here than discover it in your wallet.</p>
+
+<p>There is no fee that only sellers pay, and none that gets steeper if you leave early. The 2% is flat and the same in both directions. The other kinds exist elsewhere. They're how people get trapped, and we'd rather you be able to walk away at any hour of any day without a penalty for changing your mind.</p>
+
+<p><strong>The bigger cost is usually the network, not us.</strong> Ethereum charges a few dollars to process any transaction, and it's a flat amount rather than a percentage — so a very small purchase loses a large share of itself to it. Worth knowing before you spend $20 and watch a quarter of it disappear.</p>
+
+<p><strong>And the pool is small.</strong> At launch there are only a few thousand dollars behind this coin, which means even a modest buy moves the price a lot, and so does a modest sell. That is not a feature. It is what a coin this size actually looks like, and you should know it before you spend anything.</p>
+
+<div class="note">
+  <p><strong>The plainest risk here, said once, plainly.</strong> The founder holds 400,000,000 CARD, unlocked, against a pool holding a few thousand dollars. If he sold even a fraction of it, the price would collapse. Nothing in the code prevents that. What exists instead is a published address you can watch, and a written commitment to announce any sale in advance. If that isn't enough for you, it shouldn't be — don't buy.</p>
+</div>
 
 <div class="note">
   <p><strong>No proof, no claim.</strong> We will not call liquidity locked, ownership renounced, source verified, or trading live until the corresponding on-chain evidence is linked from this site.</p>
@@ -123,7 +133,11 @@
 
 <p>The treasury is not a charitable donation account and buying CARD is not a donation. The treasury / launch wallet is now public so anyone can monitor its activity: <code>0xDAE63eBEe60A691e1538D480AE3F6509068ab300</code>.</p>
 
-<p>Some treasury resources may eventually cover legitimate project costs. Any charitable giving remains an intention unless and until a completed gift and its evidence are published. Receipts, not pledges.</p>
+<p>200,000,000 CARD — 20% of everything — will sit there at launch, and every trade adds 2% of the coins traded. That is the treasury's income and the project's only revenue. Honestly, at 2% it might cover the small fixed costs — the LLC, the website — if people trade. If they don't, it covers nothing. It does not fund lawyers or accountants.</p>
+
+<p>It is also coins, not money. Turning any of it into dollars would mean selling into the same small pool everyone else trades in. So do not read the treasury as a budget we are sitting on. Nothing gets spent from it quietly, and anything that does gets posted here first.</p>
+
+<p>What remains after real costs, we'd like to give — to the kinds of places listed above, and given widely rather than in one place. That's an intention, not a promise. Any charitable giving remains an intention unless and until a completed gift and its evidence are published. Receipts, not pledges.</p>
 
 <h2>Launch proof board</h2>
 
@@ -154,7 +168,7 @@
     <hr class="rule">
   </div>
 
-  <p class="legal">CARD is not an investment, not a security offering, and not a fundraising campaign, and buying it is not a charitable donation. Nothing on this page is a contract, a guarantee, or a promise of any financial outcome, and none of it is financial, legal, or tax advice. Statements about future treasury use or project mechanics describe present intentions unless specifically backed by linked on-chain proof. Cryptocurrency prices are volatile and can go to zero. Newly deployed tokens may have little or no liquidity. Verify the official token contract and every relevant transaction independently before interacting with any token. Never spend money you cannot afford to lose entirely.</p>
+  <p class="legal">CARD is not an investment, not a security offering, and not a fundraising campaign, and buying it is not a charitable donation. Nothing on this page is a contract, a guarantee, or a promise of any financial outcome, and none of it is financial, legal, or tax advice. Statements about future treasury use or project mechanics describe present intentions unless specifically backed by linked on-chain proof. The 2% fee is a feature of the contract, not a payment to any person; its proceeds belong to the treasury described above. Cryptocurrency prices are volatile and can go to zero. Newly deployed tokens may have little or no liquidity. Verify the official token contract and every relevant transaction independently before interacting with any token. Never spend money you cannot afford to lose entirely.</p>
 </footer>
 
 </div>
