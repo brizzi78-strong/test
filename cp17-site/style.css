@@ -122,6 +122,11 @@ a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-ra
 
 .cta:hover { background: var(--ink); color: var(--paper); }
 
+/* The alerts block: the one place the site asks for anything, so the
+   button gets room and the caveat underneath stays small but readable. */
+.alerts .cta { margin: 0.4rem 0 0.9rem; }
+.alerts .fine { font-size: 0.86rem; color: var(--muted); }
+
 /* ---------- framed cards ---------- */
 /* The keepsake-card treatment: a thin gold frame around a slightly
    lifted navy panel, like an engraved certificate. */
