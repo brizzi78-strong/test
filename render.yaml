@@ -43,11 +43,13 @@ services:
   # A static site: no build step, no server, no disk, and free on Render (no `plan`
   # needed). Same one-time setup as above (Blueprint -> connect repo -> Apply) gives
   # you an https://cardinal-care-bridge-*.onrender.com URL; add a custom domain like
-  # www.cardinalcarebridge.com the same way, in Settings -> Custom Domains.
+  # www.cardinalscarebridge.com the same way, in Settings -> Custom Domains.
   #
-  # Before pointing real traffic at it: replace the placeholder email
-  # (hello@cardinalcarebridge.example) and phone number in cardinal-care-bridge/index.html
-  # with real contact details — see that folder's README for the full launch checklist.
+  # Careful with that domain: cardinalscarebridge.com already serves a live
+  # WordPress.com site for the same business, on WordPress nameservers. Pointing
+  # the apex here replaces it, so use a subdomain unless replacing it is the
+  # intent. The contact details on this page are real (a phone number and a
+  # mailto built in the page's own script) — no placeholders left to swap.
   - type: web
     name: cardinal-care-bridge
     runtime: static
