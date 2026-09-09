@@ -42,7 +42,7 @@ plan, no disk, no build step needed):
 
 Render provisions it alongside Cardinal Books and gives it its own
 `https://cardinal-care-bridge-*.onrender.com` URL with automatic HTTPS. Add a
-custom domain (e.g. `www.cardinalcarebridge.com`) in that service's Settings
+custom domain (e.g. `www.cardinalscarebridge.com`) in that service's Settings
 -> Custom Domains, then point a DNS CNAME at Render.
 
 ## Before this goes live
