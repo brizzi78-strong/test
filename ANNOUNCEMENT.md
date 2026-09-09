@@ -1,4 +1,7 @@
 # CARD Launch Announcement (draft)
+> **⚠️ PAUSED — do not execute.** The CARD token is on hold; see
+> [`CRYPTO_ON_HOLD.md`](CRYPTO_ON_HOLD.md) for the decision and what would have
+> to be true to revisit it. Nothing is deployed and no money is at risk.
 
 Two ready-to-post versions: a short thread for X/Twitter and a long-form post
 for Telegram/Discord/blog. Nothing goes out until every box in sections 1–6 of
