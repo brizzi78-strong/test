@@ -33,6 +33,7 @@ This repository holds several projects. Jump to the one you need:
 | **Cardinal HR — platform website** | `cardinal-hr/` | Self-contained, cross-linked marketing site: Home (`index.html`), Features (`features.html`), Pricing (`pricing.html`), and Security (`security.html`) |
 | **API Gateway** | `gateway/` | Authenticated front door: API-key auth, per-key rate limiting, and reverse-proxy routing to the services with an injected trusted tenant. Each service enforces that tenant (`src/api/tenancy.ts`) for real multi-tenant data isolation (see `gateway/README.md`) |
 | **Deployment scaffolding** | `deploy/` | Run the gateway + all services + website together: `docker compose -f deploy/docker-compose.yml up --build` (see `deploy/README.md`) |
+| **AWS deployment (alternative to Render)** | `deploy/aws/` | CloudFormation + GitHub Actions for every render.yaml service — S3+CloudFront for static sites, App Runner for stateless containers, ECS Fargate+EFS for stateful ones. Dormant until you wire it up (see `deploy/aws/README.md`) |
 
 ---
 

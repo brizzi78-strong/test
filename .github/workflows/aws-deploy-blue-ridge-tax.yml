@@ -1,0 +1,116 @@
+name: deploy-blue-ridge-tax-aws
+
+# Builds blue-ridge-tax and deploys it to ECS Fargate behind its own load balancer,
+# with an EFS volume standing in for Render's persistent disk. Same OIDC
+# pattern as the other AWS workflows: no AWS access keys stored in GitHub.
+# Stays dormant until AWS_DEPLOY_ROLE_TAX is set — see deploy/aws/README.md.
+#
+# One-time before this can run: deploy deploy/aws/fargate-service.yml with
+# ServiceReady=no to create the ECR repo, EFS volume, and load balancer, then
+# set the secrets this service needs with `aws ssm put-parameter --type
+# SecureString` under /cardinal/blue-ridge-tax/. Both are one-off, documented in
+# deploy/aws/README.md.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "taxfile/**"
+      - "deploy/Dockerfile"
+      - ".github/workflows/aws-deploy-blue-ridge-tax.yml"
+      - "deploy/aws/ecs-register-taskdef.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+concurrency:
+  group: aws-deploy-blue-ridge-tax
+  cancel-in-progress: true
+
+env:
+  SERVICE_NAME: blue-ridge-tax
+  AWS_REGION: us-east-1
+
+jobs:
+  deploy:
+    name: Build and deploy blue-ridge-tax
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check whether AWS is configured yet
+        id: check
+        run: |
+          if [ -n "${{ vars.AWS_DEPLOY_ROLE_TAX }}" ]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "AWS_DEPLOY_ROLE_TAX is not set — skipping. Render still serves this service."
+          fi
+
+      - name: Assume the deploy role
+        if: steps.check.outputs.ready == 'true'
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_TAX }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Log in to ECR
+        if: steps.check.outputs.ready == 'true'
+        id: ecr
+        run: |
+          ACCOUNT_ID="$(aws sts get-caller-identity --query Account --output text)"
+          echo "account-id=$ACCOUNT_ID" >> "$GITHUB_OUTPUT"
+          echo "uri=$ACCOUNT_ID.dkr.ecr.${{ env.AWS_REGION }}.amazonaws.com/${{ env.SERVICE_NAME }}" >> "$GITHUB_OUTPUT"
+          aws ecr get-login-password --region "${{ env.AWS_REGION }}" \
+            | docker login --username AWS --password-stdin "$ACCOUNT_ID.dkr.ecr.${{ env.AWS_REGION }}.amazonaws.com"
+
+      - name: Build and push the image
+        if: steps.check.outputs.ready == 'true'
+        run: |
+          docker build -f deploy/Dockerfile -t "${{ steps.ecr.outputs.uri }}:${{ github.sha }}" .
+          docker push "${{ steps.ecr.outputs.uri }}:${{ github.sha }}"
+
+      - name: Deploy the Fargate stack
+        if: steps.check.outputs.ready == 'true'
+        run: |
+          aws cloudformation deploy \
+            --stack-name "${{ env.SERVICE_NAME }}" \
+            --template-file deploy/aws/fargate-service.yml \
+            --capabilities CAPABILITY_IAM \
+            --parameter-overrides \
+              ServiceName="${{ env.SERVICE_NAME }}" \
+              DomainName="${{ vars.AWS_DOMAIN_TAX }}" \
+              VpcId="${{ vars.AWS_VPC_ID }}" \
+              SubnetIds="${{ vars.AWS_SUBNET_IDS }}" \
+              ImageTag="${{ github.sha }}" \
+              ServiceReady=yes
+
+      - name: Register the task definition and update the service
+        if: steps.check.outputs.ready == 'true'
+        run: |
+          OUT="$(aws cloudformation describe-stacks --stack-name "${{ env.SERVICE_NAME }}" --query 'Stacks[0].Outputs' --output json)"
+          get() { echo "$OUT" | python3 -c "import json,sys; print(next(o['OutputValue'] for o in json.load(sys.stdin) if o['OutputKey']=='$1'))"; }
+
+          TASK_DEF_ARN="$(python3 deploy/aws/ecs-register-taskdef.py \
+            "${{ env.SERVICE_NAME }}" \
+            "${{ steps.ecr.outputs.uri }}" \
+            "${{ github.sha }}" \
+            "8080" "256" "512" \
+            "$(get ExecutionRoleArn)" \
+            "$(get TaskRoleArn)" \
+            "$(get FileSystemId)" \
+            "$(get AccessPointId)" \
+            "$(get LogGroupName)" \
+            "${{ env.AWS_REGION }}" \
+            '{"BRAND_NAME": "Blue Ridge Tax", "TAXFILE_DB": "/data/taxfile.db", "TAXFILE_USER": "admin"}' \
+            'TAXFILE_PASSWORD' \
+            '["node", "taxfile/src/index.ts"]' \
+            "${{ steps.ecr.outputs.account-id }}")"
+
+          aws ecs update-service \
+            --cluster "$(get ClusterName)" \
+            --service "${{ env.SERVICE_NAME }}" \
+            --task-definition "$TASK_DEF_ARN" \
+            --force-new-deployment
