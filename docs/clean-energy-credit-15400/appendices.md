@@ -1,0 +1,125 @@
+# Appendices
+
+## Appendix A. Form 15400 data elements and their legal function
+
+| Reported element | Immediate purpose | Downstream legal function |
+|---|---|---|
+| Seller name, TIN, registration identifier | Identifies the filer | Establishes authority to file and eligibility for advance payment; supports suspension or revocation of registration |
+| Buyer name and TIN | Identifies the claimant | Fixes the single taxpayer permitted to claim with respect to the VIN; matching key against the return |
+| Vehicle identification number | Identifies the asset | Register key; prevents duplicate claims on one vehicle |
+| Make, model, model year | Vehicle identification | Model-level eligibility; §25E two-model-year age test |
+| Battery capacity (kWh) | Technical specification | Legacy of the ARRA credit formula; supports credit computation |
+| Sale price | Transaction value | §30D MSRP cap testing; §25E $25,000 ceiling and 30% computation |
+| Date of sale | Transaction timing | Acquisition date, decisive under the September 30, 2025 cutoff; starts the three-day filing clock |
+| Date placed in service | Service timing | Determines the taxable year in which the credit is claimed |
+| Maximum credit allowable | Benefit amount | Amount claimable on Form 8936 or transferable to the dealer |
+| Buyer attestations | Eligibility declarations | AGI eligibility, personal-use intent, transfer election; basis for later recapture if false |
+
+Two versions exist, one for new vehicles under §30D and one for previously-owned vehicles under §25E. The IRS published samples of both.
+
+## Appendix B. Timeline
+
+| Date | Event |
+|---|---|
+| Oct 2008 | Energy Improvement and Extension Act of 2008 enacts §30D |
+| Feb 2009 | American Recovery and Reinvestment Act restructures §30D: $2,500 base plus $417 per kWh above 5 kWh, $7,500 maximum, 200,000-vehicle per-manufacturer phase-out |
+| Aug 16, 2022 | Inflation Reduction Act enacted; North American final assembly requirement effective immediately |
+| Dec 2022 | Rev. Proc. 2022-42 sets manufacturer certification and seller report procedures |
+| Jan 1, 2023 | IRA §30D structure takes effect: AGI caps, MSRP caps, two $3,750 halves for critical minerals and battery components; per-manufacturer cap repealed; §25E and §45W begin |
+| Oct 2023 | Rev. Proc. 2023-33 and proposed regulations: ECO registration, unified seller report, transfer election and advance payment mechanics, three-calendar-day filing rule, fifteen-day registration period before advance payment eligibility |
+| Jan 1, 2024 | Transfer election effective; Form 15400 filed through IRS Energy Credits Online; foreign-entity-of-concern exclusion applies to battery components |
+| 2024 | Final §30D regulations, including Treas. Reg. §1.30D-5 on transfer of the credit |
+| Dec 13, 2024 | More than 600,000 clean vehicle credit claims processed on returns filed in CY2024; 12,200 sellers registered for advance payments, 3,400 for reporting only |
+| Jan 1, 2025 | Foreign-entity-of-concern exclusion applies to critical minerals |
+| Early 2025 | Filing season: buyers denied credits because dealers had not successfully filed time-of-sale reports |
+| Mar 25, 2025 | NADA reports the reporting portal reopened and will remain open indefinitely for 2024 transactions |
+| Jul 4, 2025 | One Big Beautiful Bill Act, Pub. L. No. 119-21, 139 Stat. 72, signed |
+| Sep 30, 2025 | Last day to acquire a vehicle qualifying for §30D, §25E, or §45W; new ECO registration for the program closes |
+| Sep 2025 | Battery-electric share reaches a record 11.3%; unadjusted EV sales 98,289 units |
+| Oct 2025 | Share falls to 5.9%; unadjusted sales 74,897 units, down 24% month over month; NADA measure down 46.7%; average EV discounts about $13,161 |
+| Q1 2026 | New EV sales down about 28% year over year; used EV demand at record levels |
+| Q2 2026 | 247,226 units, up 14.2% sequentially, down 20.5% year over year |
+| H1 2026 | 462,892 units, down 23.8% year over year; share about 6% |
+
+## Appendix C. Comparison of the three credits as they stood before termination
+
+| Feature | §30D new clean vehicle | §25E previously-owned | §45W commercial |
+|---|---|---|---|
+| Maximum credit | $7,500 ($3,750 + $3,750) | Lesser of $4,000 or 30% of sale price | $7,500 under 14,000 lbs GVWR; $40,000 above |
+| Credit formula | Two independent halves on sourcing tests | 30% of sale price | Lesser of 15% of basis (30% if not gas or diesel powered) or incremental cost |
+| Buyer AGI limits | $300k joint / $225k HoH / $150k other | $150k joint / $112.5k HoH / $75k other | None |
+| Price cap | MSRP $80k vans, SUVs, pickups; $55k other | Sale price $25,000 or less | None |
+| Final assembly in North America | Required | Not applicable | Not required |
+| Critical minerals threshold | Required for $3,750 | Not applicable | Not required |
+| Battery components threshold | Required for $3,750 | Not applicable | Not required |
+| Foreign entity of concern exclusion | Components 2024, minerals 2025 | Not applicable | Not applicable |
+| Vehicle age | New | Model year at least two years prior | Either |
+| Seller | Any qualifying seller | Licensed dealer | Any |
+| Form 15400 required | Yes | Yes | No |
+| Point-of-sale transfer | Yes, §30D(g) | Yes, §25E(f) | No; pass-through discretionary with the lessor |
+| Frequency limit | None stated | Once per taxpayer per three years | None |
+| Terminated for vehicles acquired after | Sep 30, 2025 | Sep 30, 2025 | Sep 30, 2025 |
+
+## Appendix D. Glossary
+
+**Acquisition date.** The date used by the One Big Beautiful Bill Act termination rule. IRS guidance treats a vehicle as acquired when a written binding contract is in place and a payment has been made, which may precede delivery.
+
+**Advance payment program.** The mechanism under which a registered dealer that has paid a transferred credit to a buyer receives reimbursement from the Treasury, on a cycle contemporaneously reported as seventy-two hours.
+
+**Energy Credits Online (ECO).** The IRS portal for dealer and seller registration, seller report submission, and advance payment administration, also used for the business-side elective pay and transferability registrations.
+
+**Inframarginal recipient.** A recipient whose behavior the subsidy did not change; they would have made the same purchase without it.
+
+**Pass-through.** The share of a subsidy that reaches the buyer rather than being captured by the seller through a higher price.
+
+**Placed in service.** The date determining the taxable year in which a credit is claimed, distinct from the acquisition date and from the sale date.
+
+**Recapture.** Repayment of a credit or advance payment where a condition fails. Under the vehicle regime, recapture did not apply merely because the buyer's tax liability was insufficient to absorb a transferred credit.
+
+**Time-of-sale report.** Form 15400; the seller report required as a condition of the vehicle qualifying for §30D or §25E.
+
+**Transfer election.** The buyer's election under §30D(g) or §25E(f) to transfer the credit to a registered dealer in exchange for immediate payment or price reduction.
+
+## Appendix E. Claims resting on secondary sources
+
+The research environment for this dissertation had restricted access to primary-source websites, including irs.gov. The following categories of factual claim were obtained from search summaries, professional commentary, trade association reporting, or the automotive press rather than from the primary text, and should be verified before the document is relied upon in practice or submitted for academic examination.
+
+**Verify against the Code and the amending acts:** all section numbers, credit amounts, AGI and MSRP thresholds, sourcing threshold structures, effective dates, and the text of the One Big Beautiful Bill Act termination provisions including the public law and Statutes at Large citation.
+
+**Verify against published guidance:** the contents and dates of Rev. Proc. 2022-42 and Rev. Proc. 2023-33; the three-calendar-day filing rule and the period for furnishing the buyer's copy; the fifteen-day registration period preceding advance payment eligibility; the seventy-two hour reimbursement cycle; the identifying number and contents of the final §30D regulations, cited here as Treas. Reg. §1.30D-5; and the post-enactment IRS FAQ position on the meaning of "acquired," which as an FAQ is not authority and may have been superseded.
+
+**Verify against IRS releases and news:** the figure of more than 600,000 claims processed on returns filed in calendar year 2024 as of December 13, 2024; the 12,200 advance-payment registrants and 3,400 reporting-only registrants; and the March 25, 2025 portal reopening as reported by NADA.
+
+**Verify against the original series:** all market statistics for September 2025 through the first half of 2026, including the 11.3% and 5.9% share figures, the 98,289 and 74,897 unit figures, the 46.7% NADA month-over-month decline, the $13,161 average discount, the 462,892 first-half 2026 units and 23.8% year-over-year decline attributed to Cox Automotive, the Q2 2026 figures of 247,226 units, up 14.2% sequentially and down 20.5% year over year, and the Q1 2026 decline of about 28%. Note that these series are constructed differently and are not directly comparable to one another.
+
+**Verify against the published papers:** the empirical findings attributed to Sallee (2011), Xing, Leard and Li (2021), Muehlegger and Rapson (2022), Borenstein and Davis (2016), and Roberson and Helveston, including the 70% inframarginal share, the 70–100% pass-through range, and the finding that the top income quintile received roughly 90% of vehicle credit dollars. The inframarginality and pass-through figures as stated here are drawn from the Congressional Research Service's summary rather than from the papers directly.
+
+**Verify independently:** the leasing statistics, specifically the rise in the leased share of new EVs from roughly 12% in 2023 to roughly 35% in the first quarter of 2024, attributed to Experian.
+
+**Now verified against the issuing court's record, no longer secondary.** A later research pass reached a legal database indexing federal and state case law, and the following are drawn from the opinion text rather than from reporting about it: *Moon v. Commissioner*, 165 T.C. No. 4, Docket No. 21998-21 (Sept. 10, 2025), including the Chevrolet Volt, the 2013 through 2019 claim sequence, the May 18, 2021 notice of deficiency, and the holding; *Trout v. Commissioner*, T.C. Summary Op. 2015-66, Docket No. 10576-13S (Nov. 19, 2015), including the $6,497 deficiency for 2009, the Spark NEV-48 EX manufactured by Zone Electric Car, LLC, the October 1, 2009 certification request under Notice 2009-54, and entry of decision for respondent; and the existence and disposition of *Barry v. Arrow Pontiac* and *Virachack v. University Ford*. Remaining case entries in the references are marked partially verified, meaning the citation and subject were confirmed from the database index but the holding was not read in full.
+
+**Verify against the case reporters, agency releases, and a litigation database (Chapter 11):** the citation, date, and holding of *Podraza v. Commissioner*, T.C. Summary Op. 2015-67, which is treated in the text as a companion to *Trout* on the strength of its date and docket proximity rather than a reading of the opinion; the disposition convention of the Oklahoma Tax Commission's "Sustained" entries, which may refer to the assessment rather than the protest; the January 2025 Fifth Circuit vacatur of the FTC's CARS Rule and its procedural ground; the FTC's March 13, 2026 warning letters to 97 auto dealership groups and the accompanying discussion of stacked "$7,500 OFF" incentive advertising; the TIGTA findings of 7,547 returns claiming approximately $23 million above the allowable threshold in processing years 2019–2022 and the earlier 20% error rate for alternative fuel motor vehicle credits; the June 2024 National Taxpayer Advocate blog post on electric vehicle credit pitfalls; the 2020 congressional oversight letter to the IRS Commissioner; and the prevalence of arbitration clauses with class waivers in retail installment contracts.
+
+**Verify against the state codes and the advertising record (Chapter 11 §11.4):** the substance of the state motor vehicle advertising rules summarized there, including the Washington formulation that a rebate be generally available, combinable, and expressed as a component of the advertised price, and the parallel provisions in Oregon, Virginia, Ohio, Texas, and Mississippi; the Consumer Leasing Act and Regulation M disclosure obligations for capitalized cost reduction in lease advertising; and the Hyundai "$7,500 EV Lease Bonus" example on a non-North-American-assembled Ioniq 5, which is drawn from secondary reporting and should be confirmed against the advertisement itself before being named in a submitted version.
+
+**Verify against archived captures and the primary record (Chapter 11 §11.4.6, the Tesla case study).** The entire subsection rests on secondary reporting and none of it has been confirmed against a capture. Specifically: the 2019 Wettbewerbszentrale action on gas-savings pricing, its March 20 deadline, the reported March 8 adjustment of the German site, and Tesla's retention of the practice in the United States; the July 2023 configurator note that a credit reduction was "likely" after December 31; the advertised figures of $47,240 (2023 Model Y), $40,490 (2024 Model Y), and $48,490 less $7,500 presented as $37,080, together with the exact qualifying language "for qualified buyers" and "for qualifying buyers"; the November 2024 characterization of the credit-inclusive price as displayed front and center in bold on the inventory page; the September 2025 "Order by September 30 to Qualify" homepage banner and the no-delivery-required clarification; the October 7, 2025 Model Y Standard price of $39,990 and the specific content deletions listed; Tesla's lease-end purchase policy by model and period, which is asserted only tentatively in the text; the March 2026 removal of the gas savings display; and Tesla's dealer licensing status by state. The suggested causal link between the FTC's March 13, 2026 letters and Tesla's March 2026 change is expressly disclaimed in the text and must not be asserted without confirming whether Tesla received a letter.
+
+Wayback targets for confirmation: `tesla.com/modely` for January 2024 and November 2024, and `tesla.com` for late September 2025. Preserve captures with URL and archive timestamp visible in frame.
+
+**Negative findings requiring independent confirmation.** Chapter 11 §11.6 reports that no published decision on entitlement where the seller report went unfiled, no certified buyer class action, no state attorney general action specific to EV credit advertising, no decision on §45W lease pass-through, and no publicized enforcement action for fraudulent seller reports could be located. These are absences in the sources reachable from this research environment, not confirmed absences in the litigation record. Each should be re-run against a full-text litigation database before any submitted version relies on them.
+
+## Appendix F. Evidence retrieval status
+
+The advertising material in Chapter 11 §11.4 rests on secondary reporting. No archived capture was retrieved, because the research environment's network policy blocked outbound HTTP to `web.archive.org`, `archive.ph`, `timetravel.mementoweb.org`, `tesla.com`, and every other general host attempted; only a search tool was available, returning summaries rather than page content or images.
+
+`evidence/RETRIEVAL.md` sets out a claim-by-claim confirmation checklist in six groups, and `evidence/fetch-captures.sh` retrieves nineteen target captures from the Wayback availability API when run on a machine with ordinary internet access. Until that is done, every specific advertising claim in §11.4.6 should be read as reported rather than established.
+
+Three items in that checklist are load-bearing for arguments that now run through other chapters, and should be confirmed first:
+
+1. **Group B2**, the February 2023 MSRP reclassification and Tesla's price increase, which supplies the seller-capture counter-evidence in Chapter 6 §6.2 and the multi-episode caution in Chapter 9 research item 4.
+2. **Group C3**, the October 15, 2018 order deadline, which supplies the low-salience control event in Chapter 7 Design 3b.
+3. **Group D3**, the Model Y Standard content deletions, which supply the quality-adjustment argument running through Chapters 6, 7, and 9.
+
+If any of the three cannot be confirmed, the dependent passages in those chapters must be revised rather than merely footnoted.
+
+A further correction is recorded here for transparency. An earlier draft of §11.4.6 asserted that Tesla headlined the credit-inclusive price and relegated the eligibility qualification to a footnote. Further research showed the picture to be mixed: the configurator displayed the actual price first, larger and bolded, with the savings figure smaller and greyed beneath it, while the landing and inventory pages led with the credit-inclusive figure. The section was rewritten accordingly, and the resulting claim, that a single seller ran different prominence conventions on different surfaces simultaneously, is both more defensible and more interesting than the original. Checklist rows B2, B3, and B7 exist to settle it.
