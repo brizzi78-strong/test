@@ -1,9 +1,11 @@
 /**
- * HTTP server wiring: assemble a TaxReturnService with a store and expose it
+ * HTTP server wiring: assemble the services with a store and expose them
  * over HTTP alongside the single-page web app.
  */
 
 import { createServer, type Server } from 'node:http';
+import { AccountService } from '../service/accountService.ts';
+import { BillingService, billingConfigFromEnv, type BillingConfig } from '../service/billingService.ts';
 import { TaxReturnService } from '../service/taxReturnService.ts';
 import { createInMemoryStore, type Store } from '../store/store.ts';
 import { createSqliteStore } from '../store/sqliteStore.ts';
@@ -12,6 +14,8 @@ import { createRequestListener, type ListenerOptions } from './router.ts';
 export interface AppServer {
   server: Server;
   service: TaxReturnService;
+  accounts: AccountService;
+  billing: BillingService;
 }
 
 export interface AppOptions {
@@ -20,6 +24,8 @@ export interface AppOptions {
   password?: string;
   /** Site display name (BRAND_NAME), e.g. "Blue Ridge Tax". */
   brandName?: string;
+  /** Billing config; defaults to environment (STRIPE_* variables). */
+  billing?: BillingConfig;
 }
 
 /**
@@ -44,6 +50,10 @@ export function createApp(store: Store = storeFromEnv(), opts: AppOptions = {}):
     brandName: opts.brandName ?? process.env.BRAND_NAME,
   };
   const service = new TaxReturnService({ store });
-  const server = createServer(createRequestListener(service, WEB_INDEX, listenerOpts));
-  return { server, service };
+  const accounts = new AccountService({ store });
+  const billing = new BillingService(accounts, opts.billing ?? billingConfigFromEnv());
+  const server = createServer(
+    createRequestListener({ returns: service, accounts, billing }, WEB_INDEX, listenerOpts),
+  );
+  return { server, service, accounts, billing };
 }
