@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  @page { size: 12.709in 9.25in; margin: 0; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    width: 12.709in; height: 9.25in; position: relative;
+    background: #0f1c33;
+    font-family: Georgia, "Times New Roman", serif;
+    color: #f2efe8;
+  }
+  /* ---- FRONT (right panel) ---- */
+  .front {
+    position: absolute; top: 0; left: 6.5844in;
+    width: 6.1246in; height: 9.25in;
+    padding: 0.75in 0.6in;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center;
+  }
+  .front .mark { color: #b3271e; font-size: 26pt; line-height: 1; margin-bottom: 0.35in; }
+  .front .title {
+    font-size: 33pt; line-height: 1.06; letter-spacing: 0.01em;
+    color: #f5f2ea; margin: 0 0 0.28in;
+  }
+  .front .subtitle {
+    font-style: italic; font-size: 15pt; color: #c9a24a; margin: 0 0 1.5in;
+  }
+  .front .author {
+    font-size: 14pt; letter-spacing: 0.16em; color: #e6e1d6;
+  }
+  /* ---- SPINE ---- */
+  .spine {
+    position: absolute; top: 0; left: 6.125in;
+    width: 0.4594in; height: 9.25in;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .spine .txt {
+    transform: rotate(90deg); white-space: nowrap;
+    font-size: 13.5pt; letter-spacing: 0.03em; color: #f2efe8;
+  }
+  .spine .txt .dot { color: #b3271e; }
+  /* ---- BACK (left panel) ---- */
+  .back {
+    position: absolute; top: 0; left: 0;
+    width: 6.125in; height: 9.25in;
+    padding: 0.85in 0.6in 0.6in 0.7in;
+    display: flex; flex-direction: column;
+  }
+  .back .quote { font-style: italic; font-size: 12.5pt; line-height: 1.5; color: #f2efe8; text-align: center; }
+  .back .quote .cite { display: block; font-style: normal; font-size: 9.5pt; letter-spacing: 0.12em; color: #c9a24a; margin-top: 0.12in; }
+  .back .rule { width: 1.4in; height: 1px; background: #c9a24a; opacity: .6; margin: 0.35in auto; }
+  .back .body { font-size: 10.5pt; line-height: 1.5; color: #e4dfd4; }
+  .back .body p { margin: 0 0 0.14in; }
+  .back .body .lead { font-weight: bold; color: #f2efe8; }
+  .back .imprint { margin-top: auto; font-size: 9pt; letter-spacing: 0.18em; color: #b9b3a5; }
+  /* barcode clear zone (KDP prints its own): keep bottom-right of back clear */
+  .back .barcode-clear { position: absolute; right: 0.35in; bottom: 0.35in; width: 2in; height: 1.2in; }
+</style>
+</head>
+<body>
+
+  <!-- BACK -->
+  <div class="back">
+    <div class="quote">
+      &ldquo;I&rsquo;ve known Rob for 35 years, and you can trust what you are about to read.&rdquo;
+      <span class="cite">DAVE MEYER, NFL QB</span>
+    </div>
+    <div class="rule"></div>
+    <div class="body">
+      <p class="lead">The cardinal landed on his mirror fifteen days after his father died. This book is what it took to understand why.</p>
+      <p>Rob Brizzi was four years old when his mother carried him out of Mexico City to start over with nothing. He was thirty when his adoptive father, Lou, rented a U-Haul and drove to West Palm Beach to bring home a son who was dying by inches. And he was seventeen years sober, sitting in a parking lot between hospice visits, when a red bird landed on his driver&rsquo;s-side mirror and refused to leave.</p>
+      <p><em>The Cardinal&rsquo;s Promise</em> is a memoir of addiction and recovery, of two fathers &mdash; one who kept calling and one who kept coming &mdash; and of the work Rob does now: sitting with families in the last chapter, showing up the way Lou taught him. It is a book about the love that doesn&rsquo;t send a bill.</p>
+    </div>
+    <div class="imprint">CARDINAL PROMISE PRESS</div>
+    <div class="barcode-clear"></div>
+  </div>
+
+  <!-- SPINE -->
+  <div class="spine">
+    <div class="txt">THE CARDINAL&rsquo;S PROMISE&nbsp;&nbsp;<span class="dot">&bull;</span>&nbsp;&nbsp;ROB BRIZZI</div>
+  </div>
+
+  <!-- FRONT -->
+  <div class="front">
+    <div class="mark">&#10047;</div>
+    <div class="title">THE CARDINAL&rsquo;S PROMISE</div>
+    <div class="subtitle">A Memoir of the Father Who Stayed</div>
+    <div class="author">ROB BRIZZI</div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+/* Web-reading stylesheet for The Cardinal's Promise (single-file HTML). */
+:root {
+  --ink: #1a1a1a;
+  --bg: #faf8f4;
+  --muted: #6b6b6b;
+  --rule: #e3ded4;
+  --accent: #8c1c13;      /* cardinal red, used sparingly */
+  --navy: #0f1c33;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #e8e4dc;
+    --bg: #12151c;
+    --muted: #9a9488;
+    --rule: #2a2f3a;
+    --accent: #e0554a;
+    --navy: #0b1424;
+  }
+}
+html { font-size: 18px; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--bg);
+  margin: 0;
+}
+.wrap, #TOC, header#title-block-header, main, body > h1, body > h2, body > p {
+  max-width: 38rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+header#title-block-header {
+  text-align: center;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 2.5rem;
+}
+header#title-block-header .title {
+  font-size: 2.4rem;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  text-wrap: balance;
+  margin: 0 0 0.6rem;
+}
+header#title-block-header .subtitle {
+  font-style: italic;
+  color: var(--muted);
+  font-size: 1.15rem;
+  margin: 0 0 1.2rem;
+}
+header#title-block-header .author {
+  font-variant: small-caps;
+  letter-spacing: 0.08em;
+  color: var(--ink);
+}
+h1, h2, h3 { font-weight: 600; line-height: 1.2; text-wrap: balance; }
+h1 {
+  font-size: 1.9rem;
+  margin: 3.5rem auto 1.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--rule);
+}
+h2 { font-size: 1.4rem; margin: 2.5rem auto 1rem; }
+h3 { font-size: 1.1rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; margin: 2rem auto 0.8rem; }
+p { margin: 0 0 1.1rem; }
+blockquote {
+  border-left: 3px solid var(--accent);
+  margin: 1.4rem auto;
+  color: var(--muted);
+  font-style: italic;
+}
+a { color: var(--accent); }
+hr { border: none; border-top: 1px solid var(--rule); margin: 2.5rem auto; max-width: 38rem; }
+#TOC ul { list-style: none; padding-left: 0; }
+#TOC li { margin: 0.3rem 0; }
+#TOC a { text-decoration: none; }
+img { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+.cover-img { max-width: 22rem; margin: 0 auto 3rem; box-shadow: 0 10px 40px rgba(0,0,0,0.35); border-radius: 2px; }
