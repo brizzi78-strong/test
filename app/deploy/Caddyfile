@@ -1,0 +1,6 @@
+# Caddy automatically obtains and renews a free HTTPS certificate for this domain
+# (via Let's Encrypt) and forwards traffic to the Cardinal app on port 3000.
+__DOMAIN__ {
+	encode gzip
+	reverse_proxy 127.0.0.1:3000
+}

@@ -1,0 +1,24 @@
+[Unit]
+Description=The Cardinal social network
+After=network.target
+
+[Service]
+Type=simple
+User=cardinal-social
+Group=cardinal-social
+WorkingDirectory=__APP_DIR__
+Environment=PORT=4000
+Environment=NEST_DB=__DATA_DIR__/cardinal.db
+ExecStart=/usr/bin/node __APP_DIR__/server.mjs
+Restart=always
+RestartSec=3
+
+# Hardening — the service can only touch its own data directory.
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=__DATA_DIR__
+
+[Install]
+WantedBy=multi-user.target
