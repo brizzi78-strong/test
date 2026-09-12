@@ -1,0 +1,1081 @@
+<title>Cardinal's Promise Playbook</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+  :root {
+    /* One committed world: deep navy ground, warm off-white ink,
+       cardinal red as the single accent — a red bird against night. */
+    --ground: #0F1B2D;
+    --surface: #16243A;
+    --surface-sunk: #0A1421;
+    --ink: #EDE8E2;
+    --ink-muted: #AAB4C3;
+    --ink-faint: #8A97AA;
+    --rule: #26364F;
+    --rule-strong: #3B4D69;
+    --accent: #E4675A;
+    --accent-soft: #2E1F27;
+    --accent-line: #7C3D35;
+    --urgent-red: #E4675A;
+    --urgent-purple: #B79AD0;
+    --urgent-blue: #7FB6DD;
+    --serif: "Newsreader", Georgia, "Times New Roman", serif;
+    --sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --measure: 34rem;
+    --shell: 68rem;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .shell {
+    max-width: var(--shell);
+    margin: 0 auto;
+    padding: 0 1.5rem 6rem;
+  }
+
+  /* ---------- masthead ---------- */
+
+  .masthead {
+    padding: 4.5rem 0 2.5rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--accent);
+    margin: 0 0 1.25rem;
+  }
+
+  h1 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(2.4rem, 6vw, 3.6rem);
+    line-height: 1.08;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+    margin: 0 0 1.25rem;
+  }
+
+  .standfirst {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    line-height: 1.55;
+    color: var(--ink-muted);
+    max-width: var(--measure);
+    margin: 0;
+  }
+
+  .creed {
+    margin: 2.5rem 0 0;
+    padding-left: 1.15rem;
+    border-left: 2px solid var(--accent);
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    line-height: 1.5;
+    max-width: var(--measure);
+  }
+
+  .creed p { margin: 0; }
+  .creed p + p { margin-top: 0.4rem; }
+
+  /* ---------- sections ---------- */
+
+  section { padding: 3.5rem 0 0; }
+
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    gap: 0.9rem;
+    margin-bottom: 1.75rem;
+    flex-wrap: wrap;
+  }
+
+  h2 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 1.85rem;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+
+  .section-note {
+    font-size: 0.85rem;
+    color: var(--ink-faint);
+    max-width: 30rem;
+  }
+
+  .lede {
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    color: var(--ink-muted);
+    max-width: var(--measure);
+    margin: 0 0 2rem;
+  }
+
+  /* ---------- week strip ---------- */
+
+  .week {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+
+  .day {
+    background: var(--surface);
+    padding: 1rem 0.85rem 1.15rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .day-name {
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--ink-faint);
+  }
+
+  .day-act {
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    line-height: 1.2;
+    font-weight: 500;
+  }
+
+  .day-detail {
+    font-size: 0.78rem;
+    line-height: 1.4;
+    color: var(--ink-muted);
+    margin-top: auto;
+  }
+
+  .day.is-post .day-act { color: var(--accent); }
+  .day.is-rest { background: var(--surface-sunk); }
+  .day.is-rest .day-act { color: var(--ink-faint); font-style: italic; }
+
+  /* ---------- rules ---------- */
+
+  .rules {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0;
+    max-width: 46rem;
+  }
+
+  .rules li {
+    display: grid;
+    grid-template-columns: 1.6rem 1fr;
+    gap: 0.85rem;
+    padding: 0.95rem 0;
+    border-top: 1px solid var(--rule);
+    align-items: start;
+  }
+
+  .rules li:last-child { border-bottom: 1px solid var(--rule); }
+
+  .rules .mark {
+    color: var(--accent);
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    line-height: 1.35;
+  }
+
+  .rules strong { font-weight: 600; }
+  .rules span.body { color: var(--ink-muted); }
+
+  /* ---------- pillars ---------- */
+
+  .pillar {
+    border-top: 1px solid var(--rule);
+    padding: 1.5rem 0;
+    display: grid;
+    grid-template-columns: minmax(0, 13rem) minmax(0, 1fr);
+    gap: 1.5rem 2rem;
+    align-items: start;
+  }
+
+  .pillar:last-of-type { border-bottom: 1px solid var(--rule); }
+
+  .pillar-name {
+    font-family: var(--serif);
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  .pillar-what { margin: 0 0 0.9rem; color: var(--ink-muted); font-size: 0.94rem; }
+
+  .pillar-test {
+    font-size: 0.82rem;
+    color: var(--ink-faint);
+    margin: 0 0 0.9rem;
+  }
+  .pillar-test em { font-style: italic; color: var(--ink-muted); }
+
+  .seed {
+    font-family: var(--serif);
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0.75rem 0 0.75rem 1rem;
+    border-left: 2px solid var(--accent-line);
+    color: var(--ink);
+  }
+
+  /* ---------- platforms ---------- */
+
+  .platforms {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+
+  .platform {
+    background: var(--surface);
+    padding: 1.4rem 1.4rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .platform-top {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .platform-name {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .platform-tag {
+    font-family: var(--serif);
+    font-style: italic;
+    color: var(--accent);
+    font-size: 0.95rem;
+  }
+
+  .platform dl { margin: 0; display: grid; gap: 0.55rem; }
+  .platform dt {
+    font-size: 0.66rem;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--ink-faint);
+    margin-bottom: 0.15rem;
+  }
+  .platform dd { margin: 0; font-size: 0.9rem; color: var(--ink-muted); line-height: 1.5; }
+
+  .cadence {
+    margin-top: auto;
+    padding-top: 0.85rem;
+    border-top: 1px dotted var(--rule-strong);
+    font-size: 0.8rem;
+    color: var(--ink);
+    font-variant-numeric: tabular-nums;
+  }
+  .cadence b { font-weight: 600; }
+
+  /* ---------- reddit ---------- */
+
+  .reddit {
+    background: var(--surface);
+    border: 1px solid var(--rule-strong);
+    padding: 2rem 1.75rem 2.25rem;
+    margin-top: 0.5rem;
+  }
+
+  .warn {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin: 0 0 1.75rem;
+    padding: 1rem 1.15rem;
+    background: var(--accent-soft);
+    color: var(--ink);
+    max-width: 44rem;
+  }
+  .warn b { color: var(--accent); font-weight: 600; }
+
+  .sub-head {
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--ink-faint);
+    margin: 2rem 0 1rem;
+  }
+  .sub-head:first-of-type { margin-top: 0; }
+
+  .table-scroll { overflow-x: auto; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+    min-width: 36rem;
+  }
+
+  th {
+    text-align: left;
+    font-size: 0.66rem;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--ink-faint);
+    padding: 0 0.9rem 0.6rem 0;
+    border-bottom: 1px solid var(--rule-strong);
+  }
+
+  td {
+    padding: 0.75rem 0.9rem 0.75rem 0;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+    color: var(--ink-muted);
+  }
+
+  td.subs { color: var(--ink); font-weight: 500; }
+  td.subs span { display: block; }
+
+  .tier-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .tier-1 { color: var(--urgent-red); }
+  .tier-2 { color: var(--urgent-purple); }
+  .tier-3 { color: var(--urgent-blue); }
+
+  .never {
+    display: inline-block;
+    margin-top: 0.35rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 2px;
+    padding: 0.1rem 0.4rem;
+  }
+
+  .routine {
+    list-style: none;
+    counter-reset: step;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.7rem;
+    max-width: 40rem;
+  }
+  .routine li {
+    counter-increment: step;
+    display: grid;
+    grid-template-columns: 1.5rem 1fr;
+    gap: 0.8rem;
+    font-size: 0.92rem;
+    color: var(--ink-muted);
+  }
+  .routine li::before {
+    content: counter(step);
+    font-family: var(--serif);
+    font-size: 0.95rem;
+    color: var(--accent);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* ---------- library ---------- */
+
+  .week-head {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--rule-strong);
+  }
+  .week-head span {
+    font-size: 0.72rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--accent);
+  }
+  .week-head em {
+    font-family: var(--serif);
+    font-style: italic;
+    color: var(--ink-faint);
+    font-size: 0.95rem;
+  }
+
+  .posts { display: grid; gap: 1px; background: var(--rule); border: 1px solid var(--rule); }
+
+  .post {
+    background: var(--surface);
+    padding: 1.35rem 1.4rem 1.4rem;
+    display: grid;
+    gap: 0.85rem;
+  }
+
+  .post-top {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    flex-wrap: wrap;
+  }
+
+  .post-day {
+    font-size: 0.68rem;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--ink-faint);
+  }
+
+  .chip {
+    font-size: 0.68rem;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    padding: 0.12rem 0.45rem;
+    border-radius: 2px;
+    border: 1px solid currentColor;
+  }
+  .chip.map { color: var(--urgent-red); }
+  .chip.words { color: var(--urgent-purple); }
+  .chip.hospice { color: var(--urgent-blue); }
+  .chip.story { color: var(--ink-muted); }
+  .chip.work { color: var(--ink-muted); }
+
+  .post-actions { margin-left: auto; display: flex; align-items: center; gap: 0.5rem; }
+
+  button {
+    font-family: var(--sans);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--ink-muted);
+    background: transparent;
+    border: 1px solid var(--rule-strong);
+    border-radius: 2px;
+    padding: 0.28rem 0.6rem;
+    cursor: pointer;
+    transition: color 0.15s, border-color 0.15s, background 0.15s;
+  }
+  button:hover { color: var(--accent); border-color: var(--accent); }
+  button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  button.done { color: var(--accent); border-color: var(--accent); background: var(--accent-soft); }
+  button.copied { color: var(--accent); border-color: var(--accent); }
+
+  .post-body {
+    font-family: var(--serif);
+    font-size: 1.08rem;
+    line-height: 1.55;
+    max-width: 42rem;
+    margin: 0;
+    white-space: pre-wrap;
+  }
+
+  .variants {
+    display: grid;
+    gap: 0.6rem;
+    padding-top: 0.85rem;
+    border-top: 1px dotted var(--rule-strong);
+    max-width: 42rem;
+  }
+
+  .variant { display: grid; grid-template-columns: minmax(0, 6.5rem) minmax(0, 1fr); gap: 1rem; }
+
+  .variant dt {
+    font-size: 0.66rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--ink-faint);
+    padding-top: 0.15rem;
+  }
+  .variant dd { margin: 0; font-size: 0.88rem; color: var(--ink-muted); line-height: 1.5; }
+
+  /* ---------- closing ---------- */
+
+  .closing {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--accent);
+    max-width: var(--measure);
+  }
+  .closing p {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    line-height: 1.5;
+    margin: 0 0 0.85rem;
+  }
+  .closing p:last-child { color: var(--ink-muted); font-size: 0.95rem; margin-bottom: 0; }
+
+  @media (max-width: 860px) {
+    .week { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .platforms { grid-template-columns: minmax(0, 1fr); }
+    .pillar { grid-template-columns: minmax(0, 1fr); gap: 0.75rem; }
+  }
+
+  @media (max-width: 560px) {
+    .shell { padding: 0 1.1rem 4rem; }
+    .masthead { padding-top: 3rem; }
+    .variant { grid-template-columns: minmax(0, 1fr); gap: 0.2rem; }
+    .reddit { padding: 1.5rem 1.15rem 1.75rem; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; animation: none !important; }
+  }
+</style>
+
+<div class="shell">
+
+  <header class="masthead">
+    <p class="eyebrow">The Cardinal's Promise · Rob Brizzi</p>
+    <h1>The Social Playbook</h1>
+    <p class="standfirst">A system for putting the mission in front of the people who need it — families mid-crisis, someone sitting at a bedside tonight, the providers who make the call.</p>
+    <div class="creed">
+      <p>Take actions.</p>
+      <p>Say the unspoken words.</p>
+      <p>Think of what's best and most comfortable for those at the end of life.</p>
+    </div>
+  </header>
+
+  <section>
+    <div class="section-head">
+      <h2>The week</h2>
+      <p class="section-note">Fifteen to forty-five minutes a day. Sustainable beats impressive.</p>
+    </div>
+    <div class="week">
+      <div class="day is-post">
+        <p class="day-name">Mon</p>
+        <p class="day-act">The Map</p>
+        <p class="day-detail">One practical caregiver post. All platforms.</p>
+      </div>
+      <div class="day">
+        <p class="day-name">Tue</p>
+        <p class="day-act">Reddit</p>
+        <p class="day-detail">15 min answering questions. No links.</p>
+      </div>
+      <div class="day is-post">
+        <p class="day-name">Wed</p>
+        <p class="day-act">Unspoken Words</p>
+        <p class="day-detail">One bedside script or permission phrase.</p>
+      </div>
+      <div class="day">
+        <p class="day-name">Thu</p>
+        <p class="day-act">Reddit</p>
+        <p class="day-detail">15 min. Same rule.</p>
+      </div>
+      <div class="day is-post">
+        <p class="day-name">Fri</p>
+        <p class="day-act">The Story</p>
+        <p class="day-detail">One true moment. Lou, the mat, the window, the work.</p>
+      </div>
+      <div class="day">
+        <p class="day-name">Sat</p>
+        <p class="day-act">Reply</p>
+        <p class="day-detail">Every comment from the week. Every one.</p>
+      </div>
+      <div class="day is-rest">
+        <p class="day-name">Sun</p>
+        <p class="day-act">Off</p>
+        <p class="day-detail">Presence starts at home.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <h2>The rules</h2>
+      <p class="section-note">Non-negotiable. If a post breaks one, it doesn't go out.</p>
+    </div>
+    <ul class="rules">
+      <li><span class="mark">—</span><span><strong>Never perform grief. Witness it.</strong> <span class="body">If a post feels like it's selling Lou's death, kill it.</span></span></li>
+      <li><span class="mark">—</span><span><strong>One moment, one truth, one action.</strong> <span class="body">Every post. No listicles of feelings.</span></span></li>
+      <li><span class="mark">—</span><span><strong>Reply to everyone.</strong> <span class="body">A comment from a stranded caregiver at 2am is the whole point. The post is the door; the reply is the room.</span></span></li>
+      <li><span class="mark">—</span><span><strong>The book is mentioned, not pushed.</strong> <span class="body">Link in bio, link on the site, mention when asked. The content has to be worth something on its own.</span></span></li>
+      <li><span class="mark">—</span><span><strong>Reddit is different.</strong> <span class="body">Read the Reddit rules before posting anything there. Plugging gets you banned — and worse, it breaks trust with the exact people this exists for.</span></span></li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <h2>Five pillars</h2>
+      <p class="section-note">Every post comes from one. If an idea doesn't fit a pillar, it probably doesn't fit the mission.</p>
+    </div>
+
+    <div class="pillar">
+      <h3 class="pillar-name">The Map</h3>
+      <div>
+        <p class="pillar-what">One concrete thing a family can do this week. Pulled from the Toolkit — the Important Documents Folder, the observation-status trap, the questions for a discharge planner.</p>
+        <p class="pillar-test">Test: <em>could a stranded caregiver screenshot this and use it tomorrow?</em></p>
+        <p class="seed">Before the crisis, one folder. POA. Insurance cards. Med list. Doctor names. That folder is worth more than every pamphlet the hospital will hand you.</p>
+      </div>
+    </div>
+
+    <div class="pillar">
+      <h3 class="pillar-name">The Unspoken Words</h3>
+      <div>
+        <p class="pillar-what">The exact words for the moment nobody prepares you for. The daughter who hasn't said "I forgive you." The wife who doesn't know it's okay to say "you can go."</p>
+        <p class="pillar-test">Test: <em>does this give someone words they didn't have an hour ago?</em></p>
+        <p class="seed">If someone you love is holding on and suffering, they may be waiting for permission. It sounds like this: "We're going to be okay. You did your job. You can rest."</p>
+      </div>
+    </div>
+
+    <div class="pillar">
+      <h3 class="pillar-name">Hospice Is Not Giving Up</h3>
+      <div>
+        <p class="pillar-what">Dismantling the fear, one myth at a time. Hospice is the most active form of love available: I will not let you be in pain. I will not let you die alone. I will show up every day until the last one.</p>
+        <p class="pillar-test">Test: <em>does this remove fear and install courage?</em></p>
+        <p class="seed">"We're not ready for hospice" usually means "we're not ready for death." Nobody is. Hospice isn't the thing that makes death real. It's the thing that makes the time left livable.</p>
+      </div>
+    </div>
+
+    <div class="pillar">
+      <h3 class="pillar-name">The Story</h3>
+      <div>
+        <p class="pillar-what">One true moment from the memoir. The wrestling mat. January 9, 2009. The last week with Lou. Christmas Day. The cardinal on January 9, 2026 — seventeen years sober, fifteen days after Lou died.</p>
+        <p class="pillar-test">Show the moment, don't explain it. The cardinal is never decoded. The number 17 is never turned into a lesson. Test: <em>would Lou recognize this as true?</em></p>
+        <p class="seed">Lou didn't say much that last week. Neither did I. We didn't need to. I just stayed.</p>
+      </div>
+    </div>
+
+    <div class="pillar">
+      <h3 class="pillar-name">Behind the Promise</h3>
+      <div>
+        <p class="pillar-what">What it's actually like to walk into rooms most people avoid. Hospice work. Sobriety as daily practice. What the dying teach you. Love as a verb.</p>
+        <p class="pillar-test">No hero framing — the families are the heroes. Test: <em>is this witnessed, not performed?</em></p>
+        <p class="seed">People ask how I do this work. Wrong question. The question is how the families do it — and the answer is one day, one visit, one hard sentence at a time.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <h2>Where to stand</h2>
+      <p class="section-note">Same mission everywhere. Different room, different way of sitting in it.</p>
+    </div>
+    <div class="platforms">
+
+      <article class="platform">
+        <div class="platform-top">
+          <h3 class="platform-name">Facebook</h3>
+          <p class="platform-tag">the living room</p>
+        </div>
+        <dl>
+          <div><dt>Who's there</dt><dd>The actual audience. Sons and daughters, 45–70, caring for a parent right now. Caregiver groups with tens of thousands of members.</dd></div>
+          <div><dt>How to show up</dt><dd>Longer posts, 150–300 words. A real photo — the folder, the trifold, a cardinal — beats a graphic every time. In groups: join as a helper, never a promoter. Most ban links; respect it. The profile does that work.</dd></div>
+        </dl>
+        <p class="cadence"><b>3 posts/week</b> + daily group participation when a question fits</p>
+      </article>
+
+      <article class="platform">
+        <div class="platform-top">
+          <h3 class="platform-name">Instagram</h3>
+          <p class="platform-tag">the window</p>
+        </div>
+        <dl>
+          <div><dt>Who's there</dt><dd>Younger caregivers, hospice nurses, social workers, the sandwich generation.</dd></div>
+          <div><dt>How to show up</dt><dd>Carousels for the Unspoken Words — one phrase per slide, plain type, white space. Quote cards for Map tips in the book's RED / PURPLE / BLUE. Reels 30–60s, no music over bedside content, captions always on.</dd></div>
+        </dl>
+        <p class="cadence"><b>3 feed posts/week</b> · Reels when there's something true to say</p>
+      </article>
+
+      <article class="platform">
+        <div class="platform-top">
+          <h3 class="platform-name">LinkedIn</h3>
+          <p class="platform-tag">the referral floor</p>
+        </div>
+        <dl>
+          <div><dt>Who's there</dt><dd>The people who make the call. Discharge planners, social workers, DONs, senior living operators, home health and hospice colleagues.</dd></div>
+          <div><dt>How to show up</dt><dd>Plain text outperforms graphics; the first two lines carry everything. Behind the Promise lands hardest here. Every post is a quiet audition for a keynote.</dd></div>
+        </dl>
+        <p class="cadence"><b>2 posts/week</b> · comment genuinely on hospice posts daily</p>
+      </article>
+
+      <article class="platform">
+        <div class="platform-top">
+          <h3 class="platform-name">X / Threads</h3>
+          <p class="platform-tag">the single sentence</p>
+        </div>
+        <dl>
+          <div><dt>Who's there</dt><dd>Fast scrollers, plus the hospice and palliative medicine community (#hpm).</dd></div>
+          <div><dt>How to show up</dt><dd>One line at a time. A single Unspoken Words phrase is a complete post here. Threads for Map content. Same text to both platforms — effort stays low.</dd></div>
+        </dl>
+        <p class="cadence"><b>3–5/week</b>, mostly recycled from the day's main post</p>
+      </article>
+
+      <article class="platform">
+        <div class="platform-top">
+          <h3 class="platform-name">TikTok &amp; Shorts</h3>
+          <p class="platform-tag">the kitchen table</p>
+        </div>
+        <dl>
+          <div><dt>Who's there</dt><dd>An enormous, underserved caregiver audience. "Nobody told me this about hospice" reaches millions because almost nobody with real experience is making it.</dd></div>
+          <div><dt>How to show up</dt><dd>Face to camera, kitchen table or car, no production. One video, one truth, 45 seconds. End with silence, not a call to action. The book comes up when commenters ask — they will.</dd></div>
+        </dl>
+        <p class="cadence"><b>1–2/week</b> · one video posted to TikTok, Reels and Shorts</p>
+      </article>
+
+      <article class="platform">
+        <div class="platform-top">
+          <h3 class="platform-name">YouTube</h3>
+          <p class="platform-tag">the archive</p>
+        </div>
+        <dl>
+          <div><dt>Who's there</dt><dd>People searching at 2am: "how do I know when it's time for hospice," "what to say to someone who is dying."</dd></div>
+          <div><dt>How to show up</dt><dd>5–10 minute talks, one per Toolkit chapter theme. Title them in the exact words of the 2am question. The one platform where linking is expected and welcome.</dd></div>
+        </dl>
+        <p class="cadence"><b>1–2/month</b> · these compound for years</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <h2>Reddit</h2>
+      <p class="section-note">Where the most desperate caregivers actually are at 2am — and the one platform where plugging destroys everything.</p>
+    </div>
+
+    <div class="reddit">
+      <p class="warn">The system here is simple: <b>be the hospice guy who shows up in the comments and actually helps.</b> No links unless asked or allowed. The book follows the trust; it never leads. This isn't a workaround — answering a stranger's hospice question at 2am <i>is</i> keeping the promise. Reddit just happens to be where the question got asked.</p>
+
+      <h3 class="sub-head">Rules of engagement</h3>
+      <ul class="rules" style="max-width:44rem;">
+        <li><span class="mark">—</span><span><strong>90/10 at minimum.</strong> <span class="body">For every mention of the book where allowed, at least nine contributions that give and ask nothing. In practice it'll be closer to 99/1.</span></span></li>
+        <li><span class="mark">—</span><span><strong>One account, real identity.</strong> <span class="body">Bio says who he is: hospice professional, Certified Dementia Practitioner, author. That's where the book lives on Reddit — in the profile, not the comments.</span></span></li>
+        <li><span class="mark">—</span><span><strong>Read the sub's rules first.</strong> <span class="body">Many caregiver subs ban all promotion, including "I wrote a book about this." In those subs the book does not exist; only the knowledge does.</span></span></li>
+        <li><span class="mark">—</span><span><strong>Never link-drop.</strong> <span class="body">If asked for a book recommendation, answer honestly, disclose that he wrote it, and only where rules allow.</span></span></li>
+        <li><span class="mark">—</span><span><strong>Disclose, always.</strong> <span class="body">"I work in hospice" up front. Reddit rewards credentials worn honestly and destroys credentials discovered later.</span></span></li>
+        <li><span class="mark">—</span><span><strong>Short, specific, first person.</strong> <span class="body">One story or one concrete step beats five paragraphs of advice.</span></span></li>
+      </ul>
+
+      <h3 class="sub-head">Where to be</h3>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr><th style="width:9rem;">Tier</th><th style="width:14rem;">Subreddits</th><th>Posture</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="tier-label tier-1">Daily presence</span></td>
+              <td class="subs"><span>r/AgingParents</span><span>r/CaregiverSupport</span><span>r/hospice</span><span>r/dementia</span><span>r/eldercare</span></td>
+              <td>The Map lives here — observation status, POA, discharge questions, comparing care options. r/hospice regularly asks "what do I say to her": that's the Unspoken Words, given freely. Occasional original posts where rules allow, with the whole answer in the body and no link.</td>
+            </tr>
+            <tr>
+              <td><span class="tier-label tier-2">Weekly check-in</span></td>
+              <td class="subs"><span>r/PalliativeCare</span><span>r/Alzheimers</span><span>r/nursing</span><span>r/socialwork</span><span>r/CNA</span><span>r/medicare</span></td>
+              <td>Provider side and benefits questions. Stay in lane — answer only what a hospice and home-health career actually qualifies him to answer. Never recruit, never promote.</td>
+            </tr>
+            <tr>
+              <td><span class="tier-label tier-3">Personal only</span></td>
+              <td class="subs"><span>r/GriefSupport</span><span>r/ChildrenofDeadParents</span><span>r/stopdrinking</span><span>r/Adoption</span><span class="never">No book, ever</span></td>
+              <td>Sacred ground. Comment as a fellow griever, a person 17 years sober, a man who was adopted — never as an author. r/stopdrinking gave him something; he gives back and takes nothing.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="sub-head">The routine — 15 minutes, Tuesday and Thursday</h3>
+      <ol class="routine">
+        <li>Open the Tier 1 subs, sort by New.</li>
+        <li>Find two or three unanswered questions he genuinely knows the answer to.</li>
+        <li>Answer them completely, like a comment to a friend. Disclose the hospice background.</li>
+        <li>Log the notable threads. Whatever families kept asking this month becomes next month's Monday posts — Reddit is the best listening post in the system, because the words people use to ask are the words the next post should use to answer.</li>
+      </ol>
+
+      <h3 class="sub-head">What success looks like</h3>
+      <p style="max-width:40rem;margin:0;color:var(--ink-muted);font-size:0.92rem;">Not karma. A comment history that reads like a hospice chaplain's visit log — and a slow, steady trickle of people who click the profile on their own, find the site, and get the map. That trickle converts better than any ad, because it was earned in the room.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <h2>Four weeks, ready to post</h2>
+      <p class="section-note">Copy, adjust if something real happened that day, post. Mark it off as you go — the check stays on this device.</p>
+    </div>
+    <div id="library"></div>
+  </section>
+
+  <div class="closing">
+    <p>When the four weeks run out, rotate back with fresh specifics. The pillars don't wear out, because the questions don't stop.</p>
+    <p>Every time he finds the words nobody else said, the promise is kept again. This is just how more people find the room.</p>
+  </div>
+
+</div>
+
+<script>
+  var LIBRARY = [
+    {
+      week: 1, note: "the folder, the permission, the silence",
+      posts: [
+        {
+          day: "Monday", pillar: "The Map", cls: "map",
+          body: "Nobody picks the day they become a caregiver. It arrives as a fall, a diagnosis, a discharge planner asking where your mom is going next — as if you're supposed to already know.\n\nYou're not. But here's the one thing you can do this week, before any of it: make one folder.\n\nPOA. Insurance cards. Medication list. Doctor names and numbers. Last hospital paperwork. One folder. One place. Everyone in the family knows where it is.\n\nOn the worst day, that folder is worth more than every pamphlet the hospital will hand you.",
+          variants: [
+            ["X / Threads", "One folder: POA, insurance cards, med list, doctor numbers. One place. Everyone knows where. Make it before the crisis picks the date for you."],
+            ["Video", "Hold up an actual folder. “This is the most important thing in my parents' house.” List the contents. End: “Make it this week.”"]
+          ]
+        },
+        {
+          day: "Wednesday", pillar: "Unspoken Words", cls: "words",
+          body: "Some people hold on longer than their body wants to. Not because of medicine. Because of love. They're worried about you.\n\nIf someone you love is at the end and suffering, they may be waiting for permission. It sounds like this:\n\n“We're going to be okay. You did your job. You can rest.”\n\nYou won't regret saying it. You may regret not.",
+          variants: [
+            ["Instagram", "Carousel — 1: “Some people hold on because of love.” 2: “They're worried about you.” 3: the three sentences. 4: “You won't regret saying it.”"],
+            ["X / Threads", "“We're going to be okay. You did your job. You can rest.” If you've been looking for the words — those are the words."]
+          ]
+        },
+        {
+          day: "Friday", pillar: "The Story", cls: "story",
+          body: "Lou didn't say much that last week. Neither did I.\n\nTwenty years earlier that silence would have scared me. I'd have filled it with anything. Weather. Scores. Noise.\n\nBut I'd spent years in rooms like that one by then. I knew what the silence was. It wasn't empty. It was full.\n\nWe didn't need words. I just stayed.",
+          variants: [
+            ["X / Threads", "Lou didn't say much that last week. Neither did I. We didn't need to. I just stayed."]
+          ]
+        }
+      ]
+    },
+    {
+      week: 2, note: "the question, the reframe, the wrong question",
+      posts: [
+        {
+          day: "Monday", pillar: "The Map", cls: "map",
+          body: "If your parent is in a hospital bed right now, ask this question today:\n\n“Is she admitted as an inpatient, or under observation status?”\n\nSame bed. Same gown. Same IV pole. Completely different Medicare coverage. Observation status can quietly void the rehab benefit — and families find out at discharge, when it's too late to fix.\n\nAsk today. Write down who answered and what they said.",
+          variants: [
+            ["X / Threads", "Hospital question that saves families thousands: “Inpatient, or observation status?” Same bed, different Medicare rules. Ask today, not at discharge."],
+            ["Video", "“The question every discharge planner hopes you'll ask — and most families don't know exists.”"]
+          ]
+        },
+        {
+          day: "Wednesday", pillar: "Hospice Reframe", cls: "hospice",
+          body: "“We're not ready for hospice.”\n\nI hear it every week. And I understand it, because what it usually means is: we're not ready for death. Nobody is.\n\nBut hospice isn't the thing that makes death real. The disease did that. Hospice is the thing that makes the time left livable. It says: no pain we can prevent. No dying alone. Somebody shows up — every day, until the last one.\n\nThat's not giving up. That's the most active form of love available.",
+          variants: [
+            ["X / Threads", "Hospice doesn't make death real. The disease did that. Hospice makes the time left livable. That's not giving up — it's love with a schedule."]
+          ]
+        },
+        {
+          day: "Friday", pillar: "Behind the Promise", cls: "work",
+          body: "People ask how I do this work. Walking into those rooms. Sitting with those families.\n\nWrong question.\n\nThe question is how the families do it. And the answer is: one day, one visit, one hard sentence at a time. The daughter who moves in. The husband who learns to give meds at 80. The son who drives four hours every Friday.\n\nMy job is smaller than people think. It's making sure none of them do it alone.",
+          variants: [
+            ["LinkedIn", "Post as-is. This is the pillar that lands with providers and referral partners."]
+          ]
+        }
+      ]
+    },
+    {
+      week: 3, note: "the three colors, the burden, January 9",
+      posts: [
+        {
+          day: "Monday", pillar: "The Map", cls: "map",
+          body: "Everything in a caregiving crisis sorts into three piles.\n\nRED — act today. The fall, the discharge, the coverage question with a deadline.\n\nPURPLE — watch closely. The weight loss. The confusion that comes and goes. The bills piling up unopened.\n\nBLUE — plan ahead. The POA. The folder. The conversation you keep postponing.\n\nFamilies drown when everything feels RED. It isn't. Sort the piles, and the week gets survivable.",
+          variants: [
+            ["Instagram", "Three-slide carousel, one color per slide, using the book's color system."]
+          ]
+        },
+        {
+          day: "Wednesday", pillar: "Unspoken Words", cls: "words",
+          body: "“I don't want to be a burden.”\n\nIf you love someone at the end of life, you will probably hear this. Here is one way to answer:\n\n“You carried me. Carrying you back isn't a burden. It's my turn.”\n\nThey may argue. Say it again. They're not asking to be talked out of it — they're asking whether it's true. Show them it is.",
+          variants: [
+            ["X / Threads", "“I don't want to be a burden.” → “You carried me. It's my turn.” They're not arguing. They're asking if it's true."]
+          ]
+        },
+        {
+          day: "Friday", pillar: "The Story", cls: "story",
+          body: "January 9, 2009. The day everything started over.\n\nI've never been casual about that date. You don't get to be, when the first years were that hard.\n\nSeventeen years later, on that same date, I was standing at the window. Fifteen days after we buried my father.\n\nA cardinal landed on the branch.\n\nI'm not going to explain it. I just know what I saw, and I know what date it was.",
+          variants: [
+            ["Rule", "Never decode the cardinal. Never turn 17 into a lesson. Post it plain and let the comments carry it."]
+          ]
+        }
+      ]
+    },
+    {
+      week: 4, note: "the five questions, calling sooner, love as a verb",
+      posts: [
+        {
+          day: "Monday", pillar: "The Map", cls: "map",
+          body: "Discharge day moves fast on purpose. Here are five questions to slow it down:\n\n1. What exactly is the diagnosis going home with her?\n2. What changed in her medications — and who reconciles the old list?\n3. Who is responsible for her care starting tonight — name and number?\n4. What would make you readmit her? What do we watch for?\n5. What services is she eligible for — home health, palliative, hospice — and who orders them?\n\nWrite the answers down. The person taking notes gets treated differently. That's not cynicism. That's twenty years of watching it happen.",
+          variants: [
+            ["Video", "Read the five questions straight to camera. No intro. Title it with the words people search: “what to ask before my mom is discharged.”"]
+          ]
+        },
+        {
+          day: "Wednesday", pillar: "Hospice Reframe", cls: "hospice",
+          body: "The sentence I hear most from hospice families isn't about death.\n\nIt's: “We wish we'd called sooner.”\n\nMonths of pain that could have been managed. Nights of fear with no number to call. Conversations that ran out of time.\n\nHospice isn't for the last week. It's for the last chapter. And the families who get the most from it are the ones who let it start while there was still time to live inside it.",
+          variants: [
+            ["X / Threads", "The most common thing hospice families say: “We wish we'd called sooner.” Hospice isn't for the last week. It's for the last chapter."]
+          ]
+        },
+        {
+          day: "Friday", pillar: "Behind the Promise", cls: "work",
+          body: "I used to think love was a feeling you waited to have.\n\nWrestling taught me otherwise first: you don't feel like practicing. You practice. Sobriety taught me second: you don't feel like showing up to the meeting. You show up.\n\nAnd then hospice taught me for good. The daughter doesn't feel ready to sit in that room. She sits in it anyway. That's not the absence of love. That's the whole thing.\n\nLove is a verb. It's what you do when the feeling isn't enough.",
+          variants: [
+            ["X / Threads", "Love is a verb. It's what you do when the feeling isn't enough."]
+          ]
+        }
+      ]
+    }
+  ];
+
+  function readDone() {
+    try {
+      var raw = localStorage.getItem("cp-posted");
+      return raw ? JSON.parse(raw) : {};
+    } catch (e) { return {}; }
+  }
+
+  function writeDone(state) {
+    try { localStorage.setItem("cp-posted", JSON.stringify(state)); } catch (e) { /* private mode */ }
+  }
+
+  var done = readDone();
+  var root = document.getElementById("library");
+
+  LIBRARY.forEach(function (wk) {
+    var head = document.createElement("div");
+    head.className = "week-head";
+    var label = document.createElement("span");
+    label.textContent = "Week " + wk.week;
+    var note = document.createElement("em");
+    note.textContent = wk.note;
+    head.appendChild(label);
+    head.appendChild(note);
+    root.appendChild(head);
+
+    var group = document.createElement("div");
+    group.className = "posts";
+
+    wk.posts.forEach(function (p, i) {
+      var id = "w" + wk.week + "p" + i;
+
+      var card = document.createElement("article");
+      card.className = "post";
+
+      var top = document.createElement("div");
+      top.className = "post-top";
+
+      var day = document.createElement("p");
+      day.className = "post-day";
+      day.textContent = p.day;
+
+      var chip = document.createElement("span");
+      chip.className = "chip " + p.cls;
+      chip.textContent = p.pillar;
+
+      var actions = document.createElement("div");
+      actions.className = "post-actions";
+
+      var copy = document.createElement("button");
+      copy.type = "button";
+      copy.textContent = "Copy";
+      copy.addEventListener("click", function () {
+        var text = p.body;
+        var finish = function () {
+          copy.textContent = "Copied";
+          copy.classList.add("copied");
+          setTimeout(function () {
+            copy.textContent = "Copy";
+            copy.classList.remove("copied");
+          }, 1600);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(finish, function () { fallback(text, finish); });
+        } else {
+          fallback(text, finish);
+        }
+      });
+
+      var mark = document.createElement("button");
+      mark.type = "button";
+      var setMark = function () {
+        mark.textContent = done[id] ? "Posted" : "Mark posted";
+        mark.classList.toggle("done", !!done[id]);
+        mark.setAttribute("aria-pressed", done[id] ? "true" : "false");
+      };
+      mark.addEventListener("click", function () {
+        done[id] = !done[id];
+        writeDone(done);
+        setMark();
+      });
+      setMark();
+
+      actions.appendChild(copy);
+      actions.appendChild(mark);
+
+      top.appendChild(day);
+      top.appendChild(chip);
+      top.appendChild(actions);
+
+      var body = document.createElement("p");
+      body.className = "post-body";
+      body.textContent = p.body;
+
+      card.appendChild(top);
+      card.appendChild(body);
+
+      if (p.variants && p.variants.length) {
+        var dl = document.createElement("dl");
+        dl.className = "variants";
+        p.variants.forEach(function (v) {
+          var row = document.createElement("div");
+          row.className = "variant";
+          var dt = document.createElement("dt");
+          dt.textContent = v[0];
+          var dd = document.createElement("dd");
+          dd.textContent = v[1];
+          row.appendChild(dt);
+          row.appendChild(dd);
+          dl.appendChild(row);
+        });
+        card.appendChild(dl);
+      }
+
+      group.appendChild(card);
+    });
+
+    root.appendChild(group);
+  });
+
+  function fallback(text, done) {
+    var ta = document.createElement("textarea");
+    ta.value = text;
+    ta.setAttribute("readonly", "");
+    ta.style.position = "fixed";
+    ta.style.opacity = "0";
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand("copy"); done(); } catch (e) { /* nothing to do */ }
+    document.body.removeChild(ta);
+  }
+</script>
