@@ -59,10 +59,13 @@ const P = '<span class="lead"></span>';
 const pg = key => `<span class="tocpg" data-key="${key}">000</span>`;
 let html = `<h2 class="fm">Contents</h2>\n<div class="toc">\n`;
 html += `  <ul>
+    <li>Why I Wrote This Book${P}${pg('fm:why')}</li>
     <li>How to Use This Guide${P}${pg('fm:howto')}</li>
     <li>Start Here: What Are You Facing? — The First 24–72 Hours${P}${pg('fm:starthere')}</li>
     <li>Find Your Situation: Five Pathways${P}${pg('fm:pathways')}</li>
     <li><span class="tocdot d-blue"></span>For the Future Planners${P}${pg('fm:future')}</li>
+    <li>You Are Not Alone${P}${pg('fm:notalone')}</li>
+    <li>Aging Whispers Before It Shouts${P}${pg('fm:begin')}</li>
   </ul>\n`;
 for (const part of parts) {
   html += `  <div class="tocpart">${part.title}</div>\n`;

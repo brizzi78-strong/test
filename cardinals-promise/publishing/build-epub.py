@@ -17,7 +17,7 @@ doc = open(SRC).read()
 body = re.search(r'<body>(.*)</body>', doc, re.S).group(1)
 
 # ---- split on section markers ----
-parts = re.split(r'<!-- =+ ([A-Z0-9 \']+?) =+ -->', body)
+parts = re.split(r'<!-- =+ ([A-Z0-9 ()\'-]+?) =+ -->', body)
 # parts: [pre, NAME, chunk, NAME, chunk, ...]
 chunks = {}
 order = []
@@ -35,7 +35,7 @@ FILEMAP = [
     ('HOW TO READ THE COLORS', 'colors', 'How to Read the Colors'),
     ('CONTENTS', 'contents', 'Contents'),
     ('COPYRIGHT', 'copyright', None),
-    ("AUTHOR'S NOTE", 'authors-note', 'Why I Wrote This Toolkit'),
+    ('WHY I WROTE (FRONT)', 'why-i-wrote', 'Why I Wrote This Book'),
     ('YOU ARE NOT ALONE', 'notalone', 'You Are Not Alone'),
     ('BEFORE YOU BEGIN', 'before', 'Before You Begin: Aging Whispers Before It Shouts'),
     ('HOW TO USE', 'howto', 'How to Use This Handbook'),
