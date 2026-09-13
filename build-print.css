@@ -303,3 +303,8 @@ p.partno + h1 + p:not(.chapno) + p.chapno {
 
 /* 2026-09-13: author asked for black ink throughout (was navy/slate). Cardinal red accent kept. */
 body, p, h1, h2, h3, h4, blockquote, li, .titlepage p, .dateline, .epigraph { color: #000 !important; }
+
+/* 2026-09-13: author asked for beige pages and a more classical face (reading proof only; the KDP interior keeps white pages via build-print-kdp.css). */
+@page { background: #f4ecdb; }
+body, p, h1, h2, h3, h4, blockquote, li, .titlepage p { font-family: "EB Garamond", "Linux Libertine O", Georgia, "Liberation Serif", serif !important; }
+body { font-size: 12pt; }
