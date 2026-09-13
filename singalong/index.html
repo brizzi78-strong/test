@@ -1,57 +1,305 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="color-scheme" content="light dark">
-  <meta name="description" content="The Memory Care Music Program — guided sing-along circles and personalized music for dementia and memory-care communities, built around a four-week public-domain song program.">
-  <meta property="og:title" content="The Memory Care Music Program">
-  <meta property="og:description" content="A facility-ready four-week memory-care music program with guided sing-along circles, personalized listening, staff prompts, and simple response logging.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://memory-care-music-program.onrender.com/">
-  <link rel="canonical" href="https://memory-care-music-program.onrender.com/">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%231E3D63'/%3E%3Cg fill='%23FFF9F0'%3E%3Cellipse cx='11' cy='22.4' rx='3.1' ry='2.4' transform='rotate(-16 11 22.4)'/%3E%3Cellipse cx='21.6' cy='20.6' rx='3.1' ry='2.4' transform='rotate(-16 21.6 20.6)'/%3E%3Crect x='12.9' y='7' width='1.5' height='15.4'/%3E%3Crect x='23.5' y='4.8' width='1.5' height='15.8'/%3E%3Cpolygon points='12.9,6.6 25,4.4 25,7.6 12.9,9.8'/%3E%3C/g%3E%3C/svg%3E">
-  <title>Memory Care Music Program</title>
-  <style>
-    html,body{width:100%;height:100%;margin:0;background:#f7f3e8;overflow:hidden}
-    iframe{display:block;width:100%;height:100dvh;border:0;background:#f7f3e8}
-    .fallback{position:absolute;inset:0;display:none;place-items:center;padding:2rem;font:16px/1.5 system-ui,sans-serif;text-align:center}
-    .fallback a{color:#1e3d63;font-weight:700}
-    body.failed iframe{display:none}
-    body.failed .fallback{display:grid}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="The Memory Care Music Program — twice-weekly sing-along circles for memory care, built on 22 public-domain songs, run by the people already in the room. No music licensing, one tap of logging per song.">
+<meta property="og:title" content="The Memory Care Music Program">
+<meta property="og:description" content="Sing-along circles for memory care, built on songs a whole generation learned at school and church. No licensing fees, a one-page run sheet, and every word on the screen.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://memory-care-music-program.onrender.com/">
+<link rel="canonical" href="https://memory-care-music-program.onrender.com/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%231E3D63'/%3E%3Cg fill='%23FFF9F0'%3E%3Cellipse cx='11' cy='22.4' rx='3.1' ry='2.4' transform='rotate(-16 11 22.4)'/%3E%3Cellipse cx='21.6' cy='20.6' rx='3.1' ry='2.4' transform='rotate(-16 21.6 20.6)'/%3E%3Crect x='12.9' y='7' width='1.5' height='15.4'/%3E%3Crect x='23.5' y='4.8' width='1.5' height='15.8'/%3E%3Cpolygon points='12.9,6.6 25,4.4 25,7.6 12.9,9.8'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&display=swap">
+<title>The Memory Care Music Program</title>
+<style>
+  :root{
+    --paper:#F7F3E8;--surface:#FFFEFA;--surface-2:#F1EAD8;--ink:#26221A;--muted:#6C6452;
+    --line:#E3DBC6;--hair:#D8CFB6;--brand:#1E3D63;--brand-strong:#152C49;--brand-bg:#E2E9F2;--on-accent:#F5F8FC;
+    --good:#25663F;--good-bg:#E4F0E8;
+    --shadow:0 1px 2px rgba(38,34,26,.04),0 18px 44px -28px rgba(38,34,26,.28);
+    --font:system-ui,-apple-system,"Segoe UI","Helvetica Neue",sans-serif;
+    --serif:"Fraunces","Iowan Old Style",Georgia,"Times New Roman",serif;
+    --maxw:1060px;--gutter:clamp(1rem,4vw,2rem);
+  }
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+    --paper:#161310;--surface:#1E1A14;--surface-2:#282217;--ink:#F1EBDD;--muted:#A89F8A;
+    --line:#332D20;--hair:#403927;--brand:#7EA5D8;--brand-strong:#94B6E3;--brand-bg:#16283E;--on-accent:#0E1826;
+    --good:#4FBE86;--good-bg:#12321F;
+    --shadow:0 1px 2px rgba(0,0,0,.5),0 18px 44px -22px rgba(0,0,0,.7);}}
+  :root[data-theme="dark"]{
+    --paper:#161310;--surface:#1E1A14;--surface-2:#282217;--ink:#F1EBDD;--muted:#A89F8A;
+    --line:#332D20;--hair:#403927;--brand:#7EA5D8;--brand-strong:#94B6E3;--brand-bg:#16283E;--on-accent:#0E1826;
+    --good:#4FBE86;--good-bg:#12321F;
+    --shadow:0 1px 2px rgba(0,0,0,.5),0 18px 44px -22px rgba(0,0,0,.7);}
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);font-size:1.03125rem;line-height:1.6;-webkit-font-smoothing:antialiased}
+  ::selection{background:color-mix(in srgb,var(--brand) 20%,transparent)}
+  a{color:var(--brand)}
+  :focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+  .wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gutter)}
+  h1,h2,h3{text-wrap:balance}
+
+  /* ---- masthead ---- */
+  header.top{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--paper) 86%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .top-in{display:flex;align-items:center;gap:.85rem;padding-block:.75rem}
+  .logo{width:38px;height:38px;border-radius:50%;background:var(--brand);color:var(--on-accent);display:grid;place-items:center;flex:none}
+  .wordmark{font-family:var(--serif);font-style:italic;font-weight:600;font-size:1.35rem;margin:0;letter-spacing:-.01em;line-height:1.15}
+  .subtitle{margin:.05rem 0 0;font-weight:700;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+  nav.site{margin-left:auto;display:flex;gap:.2rem 1.1rem;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+  nav.site a{color:var(--muted);text-decoration:none;font-weight:650;font-size:.9rem;padding:.4rem 0}
+  nav.site a:hover{color:var(--ink)}
+  nav.site .btn{color:var(--on-accent)}
+  @media(max-width:720px){nav.site a:not(.btn){display:none}.subtitle{font-size:.58rem;letter-spacing:.1em}}
+
+  /* ---- type & buttons ---- */
+  .kicker{font-size:.72rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--brand);margin:0}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;background:var(--brand);color:var(--on-accent);border:1px solid transparent;border-radius:999px;padding:.65rem 1.3rem;min-height:46px;font:inherit;font-weight:700;text-decoration:none;cursor:pointer;transition:background .15s ease}
+  .btn:hover{background:var(--brand-strong)}
+  .btn.ghost{background:transparent;color:var(--brand);border-color:color-mix(in srgb,var(--brand) 45%,transparent)}
+  .btn.ghost:hover{background:color-mix(in srgb,var(--brand) 8%,transparent)}
+  .btn.small{min-height:40px;padding:.4rem .95rem;font-size:.88rem}
+
+  /* ---- hero ---- */
+  .hero{position:relative;padding-block:clamp(2.6rem,7vw,4.6rem) 0}
+  .hero h1{font-family:var(--serif);font-weight:550;font-size:clamp(2.3rem,5.6vw,3.9rem);line-height:1.05;letter-spacing:-.02em;margin:.5rem 0 1.1rem;max-width:14.5em}
+  .hero .deck{font-size:clamp(1.06rem,1.6vw,1.22rem);line-height:1.65;color:var(--muted);max-width:36em;margin:0}
+  .hero .deck b{color:var(--ink);font-weight:650}
+  .hero-cta{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1.5rem}
+  .hero-orn{position:absolute;right:var(--gutter);top:clamp(2rem,6vw,4rem);width:clamp(140px,20vw,260px);height:auto;color:var(--ink);opacity:.06;pointer-events:none}
+  @media(max-width:900px){.hero-orn{display:none}}
+  .stats{display:flex;flex-wrap:wrap;gap:1rem 0;margin-top:2.2rem;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);padding-block:1.15rem}
+  .stat{flex:1 1 160px;min-width:0;padding-inline:1.3rem;border-left:1px solid var(--hair)}
+  .stat:first-child{border-left:0;padding-left:0}
+  .stat b{display:block;font-family:var(--serif);font-weight:520;font-size:2rem;line-height:1.15;font-variant-numeric:tabular-nums;color:var(--brand);letter-spacing:-.01em}
+  .stat span{display:block;font-size:.8rem;color:var(--muted);font-weight:600;margin-top:.1rem}
+  @media(max-width:600px){.stats{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem 1.5rem}.stat{border-left:0;padding:0}}
+
+  /* ---- sections ---- */
+  section.block{padding-block:clamp(2.4rem,6vw,4rem)}
+  section.block+section.block{border-top:1px solid var(--line)}
+  .block h2{font-family:var(--serif);font-weight:600;font-size:clamp(1.55rem,3vw,2.15rem);letter-spacing:-.015em;line-height:1.15;margin:.4rem 0 .9rem}
+  .block .lede{color:var(--muted);font-size:1.05rem;max-width:62ch;margin:0 0 1.6rem}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem 3rem;align-items:start}
+  @media(max-width:760px){.two{grid-template-columns:1fr}}
+  .prose p{margin:0 0 .9rem;max-width:62ch}
+  .prose p:last-child{margin-bottom:0}
+  h3.mini{font-size:.76rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--brand);margin:0 0 .5rem}
+
+  /* principles */
+  .principles{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem 2rem;margin-top:.4rem}
+  @media(max-width:760px){.principles{grid-template-columns:1fr}}
+  .principle h3{font-family:var(--serif);font-weight:600;font-size:1.25rem;margin:0 0 .35rem;letter-spacing:-.01em}
+  .principle p{margin:0;color:var(--muted);font-size:.95rem}
+  .principle q{font-style:italic;color:var(--ink)}
+
+  /* the arc — a real sequence */
+  .arc{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:0 1.1rem;counter-reset:st}
+  @media(max-width:900px){.arc{grid-template-columns:repeat(2,1fr);gap:1.2rem 1.5rem}}
+  @media(max-width:520px){.arc{grid-template-columns:1fr}}
+  .arc li{border-top:2px solid var(--brand);padding-top:.6rem}
+  .arc li::before{counter-increment:st;content:counter(st);font-family:var(--serif);font-weight:600;color:var(--brand);font-size:1rem;display:block}
+  .arc b{display:block;font-family:var(--serif);font-weight:600;font-size:1.1rem;margin:.05rem 0 .25rem}
+  .arc p{margin:0;color:var(--muted);font-size:.9rem}
+
+  /* weeks */
+  .weeks{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem;margin-top:.4rem}
+  @media(max-width:600px){.weeks{grid-template-columns:1fr}}
+  .week{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:.9rem 1rem}
+  .week b{display:block;font-family:var(--serif);font-weight:600;font-size:1.05rem}
+  .week p{margin:.15rem 0 .5rem;color:var(--muted);font-size:.9rem}
+  .chips{display:flex;flex-wrap:wrap;gap:.35rem}
+  .chip{background:var(--surface-2);border:1px solid var(--line);border-radius:999px;padding:.2rem .65rem;font-size:.78rem;font-weight:600;color:var(--muted)}
+  .pill{display:inline-block;font-size:.64rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;padding:.16rem .55rem;border-radius:999px;background:var(--brand-bg);color:var(--brand);vertical-align:middle;margin-left:.35rem}
+
+  /* team / honesty */
+  .facts{list-style:none;margin:0;padding:0;display:grid;gap:.55rem}
+  .facts li{display:flex;gap:.8rem;align-items:baseline;padding-bottom:.55rem;border-bottom:1px dotted var(--hair)}
+  .facts li:last-child{border-bottom:0}
+  .facts .k{flex:0 0 8.5em;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding-top:.25rem}
+  .callout{background:var(--brand-bg);border-left:3px solid var(--brand);padding:.85rem 1rem;margin-top:1.2rem;color:var(--muted);font-size:.95rem;max-width:62ch}
+  .callout b{color:var(--ink)}
+
+  /* families */
+  .faq{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem 2.5rem}
+  @media(max-width:760px){.faq{grid-template-columns:1fr}}
+  .faq h3{font-family:var(--serif);font-weight:600;font-size:1.15rem;margin:0 0 .3rem;letter-spacing:-.01em}
+  .faq p{margin:0;color:var(--muted);font-size:.95rem}
+
+  /* closing CTA */
+  .cta-band{background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:clamp(1.4rem,4vw,2.4rem);display:grid;grid-template-columns:1.3fr 1fr;gap:1.4rem 2.5rem;align-items:center}
+  @media(max-width:760px){.cta-band{grid-template-columns:1fr}}
+  .cta-band h2{margin:.3rem 0 .5rem}
+  .cta-band p{margin:0;color:var(--muted)}
+  .cta-band .actions{display:flex;flex-direction:column;gap:.7rem}
+  .cta-band .actions .btn{width:100%}
+  .cta-band .who{font-size:.9rem;color:var(--muted);text-align:center}
+  .cta-band .who b{color:var(--ink)}
+
+  footer.foot{color:var(--muted);font-size:.85rem;padding-block:1.6rem 3rem;border-top:1px solid var(--hair);margin-top:clamp(2.4rem,6vw,4rem);display:flex;justify-content:space-between;gap:1rem 2rem;flex-wrap:wrap}
+  footer.foot b{color:var(--ink)}
+  footer.foot a{white-space:nowrap}
+</style>
 </head>
 <body>
-  <iframe id="program" src="/program" title="Memory Care Music Program" loading="eager"></iframe>
-  <div class="fallback" role="alert"><p>The Memory Care Music Program could not load here. <a href="/program">Open the program</a>.</p></div>
-  <script>
-    const frame = document.getElementById('program');
-    let settled = false;
 
-    function showFallback() {
-      if (settled) return;
-      document.body.classList.add('failed');
-    }
+<header class="top"><div class="wrap top-in">
+  <div class="logo" aria-hidden="true"><svg viewBox="0 0 32 32" width="20" height="20" fill="currentColor"><ellipse cx="11" cy="22.4" rx="3.1" ry="2.4" transform="rotate(-16 11 22.4)"/><ellipse cx="21.6" cy="20.6" rx="3.1" ry="2.4" transform="rotate(-16 21.6 20.6)"/><rect x="12.9" y="7" width="1.5" height="15.4"/><rect x="23.5" y="4.8" width="1.5" height="15.8"/><polygon points="12.9,6.6 25,4.4 25,7.6 12.9,9.8"/></svg></div>
+  <div>
+    <p class="wordmark">Sing Along</p>
+    <p class="subtitle">The Memory Care Music Program</p>
+  </div>
+  <nav class="site" aria-label="Sections">
+    <a href="#how">How a circle runs</a>
+    <a href="#songs">The songs</a>
+    <a href="#team">What it asks</a>
+    <a href="#families">For families</a>
+    <a class="btn small" href="/program">Try the sing-along screen</a>
+  </nav>
+</div></header>
 
-    frame.addEventListener('load', () => {
-      try {
-        const doc = frame.contentDocument;
-        if (!doc || !doc.querySelector('header.top')) return showFallback();
-        doc.title = 'Memory Care Music Program';
-        const badge = doc.querySelector('.program-flag');
-        if (badge) badge.textContent = 'Program preview';
-        const description = doc.querySelector('meta[name="description"]');
-        if (description) description.setAttribute('content', 'The Memory Care Music Program — guided sing-along circles and personalized music for dementia and memory-care communities, built around a four-week public-domain song program.');
-        settled = true;
-        document.body.classList.remove('failed');
-      } catch (_) {
-        // The program can still render if a browser prevents the shell from
-        // reading the otherwise same-origin frame.
-        settled = true;
-      }
-    });
-    frame.addEventListener('error', showFallback);
-    setTimeout(showFallback, 10000);
-  </script>
+<main>
+  <section class="wrap hero">
+    <p class="kicker">A Cardinal Care Bridge program</p>
+    <h1>The music they already know by heart</h1>
+    <p class="deck">Every memory-care community runs a music hour. The ones with a budget buy a licensed platform. The rest put on a
+    CD and hope. <b>This is the program for the buildings that will never sign that contract</b> — twenty-two songs a whole
+    generation learned at school and at church, all public domain, run by the people already in the room.</p>
+    <div class="hero-cta">
+      <a class="btn" href="mailto:robertbrizzi@gmail.com?subject=Memory%20Care%20Music%20Program%20walkthrough">Book a 20-minute walkthrough</a>
+      <a class="btn ghost" href="/program">Try the sing-along screen</a>
+    </div>
+    <svg class="hero-orn" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><ellipse cx="11" cy="22.4" rx="3.1" ry="2.4" transform="rotate(-16 11 22.4)"/><ellipse cx="21.6" cy="20.6" rx="3.1" ry="2.4" transform="rotate(-16 21.6 20.6)"/><rect x="12.9" y="7" width="1.5" height="15.4"/><rect x="23.5" y="4.8" width="1.5" height="15.8"/><polygon points="12.9,6.6 25,4.4 25,7.6 12.9,9.8"/></svg>
+    <div class="stats">
+      <div class="stat"><b>$0</b><span>music licensing — every song is public domain</span></div>
+      <div class="stat"><b>22</b><span>songs with every word on the screen</span></div>
+      <div class="stat"><b>2×/wk</b><span>circles of 30–40 minutes, same room, same opening song</span></div>
+      <div class="stat"><b>1 page</b><span>the run sheet an aide holds in her hand</span></div>
+    </div>
+  </section>
+
+  <section class="wrap block" id="why">
+    <p class="kicker">Built for the memory-care neighborhood</p>
+    <h2>Not an activity-room quiz. A room full of people singing.</h2>
+    <p class="lede">Licensed platforms are built for the assisted-living activity room — trivia, reminiscence prompts, a recorded voice.
+    In late-stage memory care a trivia question is a failure waiting to happen. This program is built on three rules instead.</p>
+    <div class="principles">
+      <div class="principle"><h3>Invite, never quiz.</h3><p><q>I love this one</q> — not <q>Do you remember this?</q> Recognition without the test.</p></div>
+      <div class="principle"><h3>Every response counts.</h3><p>Humming, tapping, a look up. Being in the room while the music plays is the point.</p></div>
+      <div class="principle"><h3>Tears are the music reaching someone.</h3><p>We don’t stop the song. We move closer, let it finish, and sit with them after.</p></div>
+    </div>
+    <p class="callout"><b>Dignity on the shared screen.</b> The TV shows only the words. A resident’s name, history, and how they
+    responded stay on the facilitator’s tablet — never in front of the room or a visiting family.</p>
+  </section>
+
+  <section class="wrap block" id="how">
+    <p class="kicker">How a circle runs</p>
+    <h2>The same arc every time, because in memory care the routine <em>is</em> the program.</h2>
+    <p class="lede">Residents who can’t keep track of “Tuesday at 2” can still feel “this is the singing time” when the gathering song
+    starts. Thirty to forty minutes, four to ten residents, coffee in the same room after.</p>
+    <ol class="arc">
+      <li><b>Gather</b><p>“Hail, Hail, the Gang’s All Here” — the same opener every session, sung while everyone settles.</p></li>
+      <li><b>Greet</b><p>Around the circle, each person greeted by name. Never re-greet latecomers from the front.</p></li>
+      <li><b>Core songs</b><p>Four songs on the week’s theme, words on the screen. Slower and lower than the record — leave room for their voices.</p></li>
+      <li><b>Move</b><p>One up-tempo number with one motion: clap, sway, shakers and scarves.</p></li>
+      <li><b>Close</b><p>“Till We Meet Again” — a goodbye that promises return. End calm, not on a peak.</p></li>
+    </ol>
+  </section>
+
+  <section class="wrap block" id="songs">
+    <div class="two">
+      <div>
+        <p class="kicker">The songs</p>
+        <h2>A four-week cycle, then it turns over</h2>
+        <div class="weeks">
+          <div class="week"><b>Week 1 — Songs of Home &amp; Heart</b><p>Belonging and warmth.</p><div class="chips"><span class="chip">Home on the Range</span><span class="chip">Home! Sweet Home!</span><span class="chip">My Wild Irish Rose</span><span class="chip">Down by the Old Mill Stream</span></div></div>
+          <div class="week"><b>Week 2 — Out &amp; About</b><p>Energy and fun — the crowd-pleasers.</p><div class="chips"><span class="chip">Take Me Out to the Ball Game</span><span class="chip">Daisy Bell</span><span class="chip">In the Good Old Summertime</span><span class="chip">I’ve Been Working on the Railroad</span></div></div>
+          <div class="week"><b>Week 3 — Moon &amp; Stars</b><p>Winding down, sung softer and slower.</p><div class="chips"><span class="chip">Shine On, Harvest Moon</span><span class="chip">By the Light of the Silvery Moon</span><span class="chip">Beautiful Dreamer</span><span class="chip">Let Me Call You Sweetheart</span></div></div>
+          <div class="week"><b>Week 4 — Comfort &amp; Joy<span class="pill">opt-in</span></b><p>Hymns and spirituals, sung as the sacred music they are.</p><div class="chips"><span class="chip">Amazing Grace</span><span class="chip">Swing Low, Sweet Chariot</span><span class="chip">When the Saints Go Marching In</span><span class="chip">Danny Boy</span></div></div>
+        </div>
+      </div>
+      <div class="prose">
+        <h3 class="mini">Why the songs are free</h3>
+        <p>Every song in the shared songbook was published before 1931, so the music and the words are public domain in the
+        United States. No licensing fees, no per-site subscription, and the words can be printed and copied freely.</p>
+        <h3 class="mini">What that rule costs — and how the program answers it</h3>
+        <p>It costs the 1940s and ’50s hits this generation danced to. Those aren’t missing; they have their own time. The shared
+        circle uses the songs a whole room can sing together — school songs, church songs. Each resident’s <em>own</em> era —
+        the Sinatra, the Hank Williams, the boleros — happens one to one, from the facility’s own library, where no lyric
+        sheet is needed and no license is triggered.</p>
+        <h3 class="mini">The words are on the screen</h3>
+        <p>Every song ships with its lyrics, sized for a TV across the room, plus a printable one-page circle sheet with the run
+        order, the first line of each song as a cue, and the words overleaf — so the circle still happens when the Wi-Fi doesn’t.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap block" id="team">
+    <div class="two">
+      <div>
+        <p class="kicker">What it asks of a team</p>
+        <h2>Honest about the staffing, honest about the evidence</h2>
+        <ul class="facts">
+          <li><span class="k">Who leads</span><span>One facilitator who can carry a tune and never leaves the front — a cappella or with the building’s own recordings.</span></li>
+          <li><span class="k">Who helps</span><span>One aide for every four or five residents. The aide watches faces; a CNA is reachable.</span></li>
+          <li><span class="k">Time</span><span>Two circles a week plus a twenty-minute weekly review — about 1.5 staff-hours.</span></li>
+          <li><span class="k">Equipment</span><span>The TV already in the room and any tablet. Nothing to install, nothing to license.</span></li>
+          <li><span class="k">Logging</span><span>One tap per song, after the singing, never instead of it. Participation lands in the activity record as the circle runs.</span></li>
+        </ul>
+        <p class="callout"><b>If your building doesn’t have someone who can lead a song,</b> a recorded-lead platform like SingFit
+        is the right answer — and we’ll tell you so.</p>
+      </div>
+      <div class="prose">
+        <h3 class="mini">What the evidence actually says</h3>
+        <p>Music is one of the most widely used non-drug approaches in dementia care, and the best current evidence — a 2025
+        Cochrane review — finds that music-based sessions reliably improve engagement and pleasure, and likely help depressive
+        symptoms. The same evidence says they likely do <em>not</em> reduce agitation.</p>
+        <p>So this program doesn’t promise agitation reduction. It promises forty minutes twice a week where residents are
+        present and singing, a record of who responded to what, and something specific to tell a family afterward.</p>
+        <h3 class="mini">What we write down, plainly</h3>
+        <p>Which songs were sung and how each person responded, plus how they seemed before and after. Musical background
+        only — never diagnoses, medications, or care-plan notes. Activity notes, not a chart, and never a score on a person.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap block" id="families">
+    <p class="kicker">For families</p>
+    <h2>Come. Bring their music. Ask how it went.</h2>
+    <div class="faq">
+      <div><h3>Can I come?</h3><p>Yes. Family are welcome in the circle, and a daughter who knows all the words is the best co-facilitator there is.</p></div>
+      <div><h3>Can I bring their music?</h3><p>Please. Their records, the songs from their wedding, the hymn their mother sang — that’s exactly what the one-to-one listening is made of.</p></div>
+      <div><h3>Will you tell me how it went?</h3><p>That’s what the notes are for: so someone can tell you “she came in restless and left calm, and she sang every word of Danny Boy.”</p></div>
+      <div><h3>What if they say no, or cry?</h3><p>Then they say no — nobody is made to participate, and sitting near the music counts. Tears usually mean a song reached them; we stay close.</p></div>
+    </div>
+  </section>
+
+  <section class="wrap block">
+    <div class="cta-band">
+      <div>
+        <p class="kicker">Pilot it at your community</p>
+        <h2>Twenty minutes is enough to see whether this fits your building.</h2>
+        <p>We’ll walk through the circle, the run sheet, and what the first ninety days look like — and if a licensed platform is
+        the better fit for you, we’ll say that too.</p>
+      </div>
+      <div class="actions">
+        <a class="btn" href="mailto:robertbrizzi@gmail.com?subject=Memory%20Care%20Music%20Program%20walkthrough">Book a 20-minute walkthrough</a>
+        <a class="btn ghost" href="/program">Try the sing-along screen</a>
+        <p class="who"><b>Rob Brizzi</b>, founder · <a href="tel:+18502217443">(850) 221‑7443</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  <span><b>A Cardinal Care Bridge program.</b> The interactive preview at <a href="/program">/program</a> uses sample residents and saves nothing.</span>
+  <span>memory-care-music-program.onrender.com</span>
+</footer>
 </body>
 </html>
