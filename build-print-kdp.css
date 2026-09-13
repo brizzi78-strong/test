@@ -193,3 +193,8 @@ p.partno + h1 + p:not(.chapno) + p.chapno {
   page-break-before: avoid;
   margin-top: 0.55in;
 }
+
+/* 2026-09-13: author chose EB Garamond for the printed book. White pages, black ink. */
+* { font-family: "EB Garamond", "Linux Libertine O", Georgia, "Liberation Serif", serif !important; color: #000 !important; }
+body { font-size: 12pt; }
+@page { font-family: "EB Garamond", Georgia, serif; @top-center { color: #000; } @bottom-center { color: #000; } }

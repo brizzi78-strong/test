@@ -1,6 +1,6 @@
 # Manuscript Lock — The Cardinal's Promise
 
-**Locked:** 2026-09-13 (lock 7, after Scott's second batch: The Line through Sobriety Meets Hospice) · **Manuscript text at commit** `e2970fd` (branch `claude/david-sheff-clone-writing-06i30q`)
+**Locked:** 2026-09-13 (lock 8: text unchanged from lock 7; interior reset in EB Garamond 12pt) · **Manuscript text at commit** `e2970fd` (branch `claude/david-sheff-clone-writing-06i30q`)
 
 *A git tag `v1-lock-2026-08-31` exists in the working clone but could not be pushed to GitHub from this session; on GitHub, use the commit hashes above as the reference.*
 
@@ -8,8 +8,8 @@
 |---|---|
 | Chapters | 34 (Prologue, six Parts, three Drives interludes, Epilogue, back matter) |
 | Words | 54,352 |
-| KDP interior | The_Cardinals_Promise_KDP_Interior.pdf — **198 pages**, 6" × 9", B&W |
-| Spine (white paper) | 0.446" — full wrap 12.696" × 9.25" (see KDP-COVER-SPECS.md) |
+| KDP interior | The_Cardinals_Promise_KDP_Interior.pdf — **200 pages**, 6" × 9", B&W, EB Garamond 12pt |
+| Spine (white paper) | 0.450" — full wrap 12.700" × 9.25" (see KDP-COVER-SPECS.md) |
 | Source of record | The_Cardinals_Promise_sheff_pass.md (mirrored in styled-sections/) |
 
 ## What "locked" means
