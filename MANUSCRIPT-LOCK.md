@@ -1,6 +1,6 @@
 # Manuscript Lock — The Cardinal's Promise
 
-**Locked:** 2026-09-13 (lock 7, after Scott's second batch: The Line through Sobriety Meets Hospice) · **Manuscript text at commit** `pending` (branch `claude/david-sheff-clone-writing-06i30q`)
+**Locked:** 2026-09-13 (lock 7, after Scott's second batch: The Line through Sobriety Meets Hospice) · **Manuscript text at commit** `1532d6d` (branch `claude/david-sheff-clone-writing-06i30q`)
 
 *A git tag `v1-lock-2026-08-31` exists in the working clone but could not be pushed to GitHub from this session; on GitHub, use the commit hashes above as the reference.*
 
