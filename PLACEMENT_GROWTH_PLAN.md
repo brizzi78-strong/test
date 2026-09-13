@@ -1,0 +1,425 @@
+# Cardinal Promise Care Bridge — 90 day / 6 month / 1 year plan
+
+Operating plan for the placement business and the book. Everything else is
+parked: see [`CRYPTO_ON_HOLD.md`](CRYPTO_ON_HOLD.md).
+
+Builds on [`SENIOR_CARE_PLACEMENT_STRATEGY.md`](SENIOR_CARE_PLACEMENT_STRATEGY.md)
+(why placement first) and [`LEAD_GENERATION_STRATEGY.md`](LEAD_GENERATION_STRATEGY.md)
+(which channels, ranked). This is the calendar.
+
+---
+
+## The thing to understand before anything else
+
+**This is a two-sided business, and the side everyone forgets is supply.**
+
+A referral fee is only payable if you have a **signed referral agreement with
+the community the family moves into**. Place a family somewhere you have no
+agreement with and you earn nothing — you did the work for free.
+
+So there are two build-outs running at once, and supply has to lead demand:
+
+| Side | What it is | Without it |
+| --- | --- | --- |
+| **Supply** | Signed referral agreements with communities | A placement earns $0 |
+| **Demand** | Referral relationships sending you families | Nobody to place |
+
+Most new agents chase demand first because it feels like selling, then lose
+their first placement to a community they never papered. Don't be that.
+
+**Target ~25–40 signed community agreements across the Triangle before you
+expect steady revenue.** That's your inventory.
+
+## The structure — who does what
+
+The founder is W-2 employed in the industry, so the demand channel is fronted
+by partners until the transition. That constraint shaped the whole structure,
+and it turned out to be a feature: everyone works where their trust and their
+daylight already are.
+
+| Person | Where | Role |
+| --- | --- | --- |
+| **Rob** | Triangle, nights + weekends | Supply (community agreements), brand, book, site, back office, the pilot log |
+| **Private duty partner's liaison** | Triangle, business hours | Demand — already walking into SNFs and hospitals weekly; placement rides the existing route |
+| **Charles** | South Florida | CDP® credibility now, phone consults; territory 2 operator when the Triangle machine proves out |
+| **Clinical advisors** (Dr. Huet-type) | — | Care-level judgment, introductions. Flat fee or equity, never per referral |
+
+The private duty partnership runs on
+[`PRIVATE_DUTY_PILOT.md`](PRIVATE_DUTY_PILOT.md): 90 days, no money either
+direction, everything logged, a JV priced on the data. The partner's confirmed
+pain — losing clients when funds run out — is the seam: a family paying
+$5–7K/mo for in-home hours can usually afford $6,350 assisted living, and
+nobody has told them.
+
+## The money, restated
+
+Referral fees run **50–100% of the first month's rent**, and a full month is a
+real, gettable rate — not the outlier.
+
+| Placement type | Typical monthly rent | Fee at 75% | Fee at 100% |
+| --- | --- | --- | --- |
+| Memory care, Raleigh | ~$7,036 | ~$5,275 | ~$7,036 |
+| Assisted living, Durham / NC avg | ~$6,350 | ~$4,760 | ~$6,350 |
+| Assisted living, Charlotte | ~$4,400–5,800 | ~$3,300–4,350 | ~$4,400–5,800 |
+
+**Policy: $6,500 minimum per move-in.** Implemented as two lines — 100% of
+total first-month charges in every agreement, and no agreement with a
+building whose total rate is under $6,500 — so the minimum is enforced by
+which buildings you sign, not by a clause a community can refuse. See
+[`REFERRAL_AGREEMENTS.md`](REFERRAL_AGREEMENTS.md) for the definition and the
+clawback floor that has to travel with it.
+
+**Planning number: $6,500 per placement.** The risk under this policy isn't a
+lower fee — it's fewer signed buildings: chains that fix rates at corporate,
+and the value tier below the rate floor. Buildings that won't reach 100% stay
+on the call sheet as "not yet" for a month-4 return; the value tier serves
+the money-gone families you help at no fee anyway.
+
+## Focus: memory care first
+
+Memory care is the segment where every part of this business points the same
+way, so it leads:
+
+| Why | What it means |
+| --- | --- |
+| **Every memory care placement clears the $6,500 floor** | Raleigh MC runs ~$7,036 base plus care fees; fees land $7,000–8,500 without negotiating |
+| **Families are least prepared for it** | A dementia diagnosis plus a discharge date is the worst week of a family's life; the call center is at its most useless here and a person in the room at their most valuable |
+| **It's the credential** | CDP® on the team, the book, the dedication to Lou — the brand already says memory care |
+| **Discharge planners remember specialists** | "The memory care placement people" is a sharper thing to be than "a placement agency" |
+
+**What changes:** the first calls are the memory-care-dedicated buildings and
+the AL communities with large secure wings (see the memory-care tier in
+[`PLACEMENT_TARGET_LIST.md`](PLACEMENT_TARGET_LIST.md)); the positioning line
+becomes *memory care placement, Wake County*; and two contract terms become
+non-negotiable rather than merely preferred — **no clawback on death or
+hospitalization** (both are far more common in memory care) and **an explicit
+list of behaviors the community will and won't accept**, so a family is never
+toured somewhere that will decline their mother at assessment.
+
+**CCRCs are not a fee source — treat them as a demand source.** Life-plan
+communities (Springmoor, Croasdaile, Carol Woods, Carolina Meadows, The
+Cardinal) fill memory care from their own independent-living residents first,
+market through their own sales teams, and mostly don't pay placement fees.
+Ask each one anyway — some accept direct admits to memory care when they have
+a bed and a few will pay on those — but don't build inventory on them. What
+they *do* produce: families on a CCRC waitlist whose parent needs care now.
+Those families are your clients, and the CCRC's sales director is glad to
+have somewhere to send them.
+
+### Cash flow reality — read this twice
+
+You will work for **two to four months before the first check clears.**
+
+```
+Family inquiry ──▶ tours ──▶ move-in ──▶ you invoice ──▶ community pays (net 30–60)
+   week 1           wks 2-4     wk 4-8        wk 8            wk 12-16
+```
+
+Plan runway accordingly. This single fact kills more placement agencies than
+lack of leads.
+
+---
+
+# Phase 1 — First 90 days: build the machine
+
+**Goal: 25+ signed community agreements, 20 live referral relationships, 1–3
+placements. Revenue is a bonus, not the measure.**
+
+### Weeks 1–2 — Foundation (do not skip)
+
+- [ ] **Verify the licensing question.** No NC-specific placement/referral
+      agency license surfaced in research, but a handful of states do regulate
+      this category and a few require fee disclosure to families. One call to a
+      NC healthcare/elder-law attorney settles it. Cheap question, expensive
+      surprise.
+- [ ] **Get your referral agreement reviewed** — the template you'll sign with
+      every community. See the negotiation checklist below. Have an attorney
+      look at the clawback clause specifically.
+- [ ] **Insurance:** general liability + professional liability (E&O). Some
+      communities and hospital systems require proof before they'll work with
+      you.
+- [ ] **Entity + banking** clean and separate.
+- [ ] **Decide the disclosure line you'll use with families** — "communities
+      pay our fee, never you." Say it early and unprompted; it's a trust asset,
+      not a liability.
+
+### Weeks 2–6 — Supply: sign the communities
+
+This is unglamorous and it's the whole foundation. It's also entirely
+night-and-weekend work, and it's the moat: **start signing before the private
+duty coffee happens.** Walking into that conversation with 10–15 agreements
+already inked means any partner who's tempted to go it alone is months behind
+a grind you've already finished.
+
+- [ ] Build the target list: every AL and memory care community in **Wake,
+      Durham, Orange** counties. Expect 100+. Rank by (a) memory care capacity,
+      (b) known occupancy softness, (c) proximity.
+- [ ] **Contact 10/week.** Ask for the sales/marketing director, not the
+      administrator.
+- [ ] **Sign 25–40 agreements by week 6.** Negotiate each — see checklist.
+- [ ] Build a one-page profile per community: price bands, care levels
+      accepted, memory care yes/no, current census, admissions contact,
+      what makes it *good* (you'll answer "would Lou call this home?" for real).
+
+**Why this many:** you need enough range to match any family's budget and care
+level. Twelve agreements means turning families away or placing them somewhere
+that doesn't fit.
+
+### Weeks 2–6, in parallel — Demand source #0: the private duty pilot
+
+Before any hospital work, launch the referral pilot per
+[`PRIVATE_DUTY_PILOT.md`](PRIVATE_DUTY_PILOT.md). The partner's aides are the
+earliest warning system in the industry — they see "it's time" weeks before a
+crisis discharge — and the flow runs both ways, so it costs nothing to test.
+
+### Weeks 4–12 — Demand: the discharge planners
+
+Your #1 channel long-term — you speak the language. Until the employment
+transition, this channel is worked by the **partner's liaison** (placement
+added to their existing route) and by the collateral: the one-page referral
+sheet does the introduction when nobody's in the room.
+
+**Triangle hospital systems (start here):**
+
+| System | Sites |
+| --- | --- |
+| Duke Health | Duke University Hospital, Duke Regional (Durham), Duke Raleigh |
+| UNC Health | UNC Medical Center (Chapel Hill), UNC REX (Raleigh) |
+| WakeMed | Raleigh Campus, Cary Hospital |
+| Johnston Health | Smithfield, Clayton |
+
+Plus **short-term rehab SNFs** — often better than hospitals for a new agent:
+smaller, less gatekept, and their discharge volume is steady.
+
+- [ ] **20 in-person introductions in 90 days.** Case managers, social workers,
+      rehab discharge coordinators.
+- [ ] Leave the **one-page referral sheet** (build this first — it's the
+      artifact that does the work when you're not in the room). It should
+      answer, in 10 seconds: who you are, what you do, what it costs the
+      family ($0), how fast you respond, and your phone number.
+- [ ] **Respond within one hour, always.** A discharge planner on a 24–72 hour
+      clock will use whoever answers. This is the entire competitive dynamic —
+      you win this channel on reliability, not marketing.
+- [ ] Follow up every 3–4 weeks. Relationship maintenance, not a one-time pitch.
+
+### Weeks 6–12 — Second ring + foundation for later
+
+- [ ] **Elder law attorneys, geriatric care managers, financial advisors** —
+      5–10 introductions. Slower to convert, but they catch families
+      *pre-crisis* and those referrals skew private-pay.
+- [ ] **Care managers specifically** (Aging Life Care Professionals — RNs and
+      social workers families hire at ~$150–250/hr): the best second-ring
+      channel for a memory-care, $6,500-floor business, because their clients
+      are private-pay by definition. They refer out the tours they don't want
+      to bill for, and only to agencies they trust not to steer — the
+      disclosure line wins them. **Never pay them per referral** (licensed
+      clinicians; ALCA ethics forbid it). Earn it with placements that stick
+      and by sending them the complex families who need oversight after
+      move-in. Find them in the ALCA directory by zip and through elder law
+      attorneys. Not a service line to add — it conflicts with taking
+      community fees and reintroduces clinical liability; partner instead.
+- [ ] **Triangle J Area Agency on Aging** — get known. Senior centers, county
+      resource fairs.
+- [ ] **Google Business Profile** claimed and complete. Free, and it's how a
+      family at 11pm finds you.
+- [ ] **Track referral source on every single inquiry.** Non-negotiable. In 90
+      days this is the difference between "call more hospitals" and "Duke Rehab
+      sent 6, we placed 4; WakeMed sent 2, placed 0 — find out why."
+
+### Where to market — the memory-care map
+
+In person, ranked by value per drive. Half of these meet after hours, which
+is the half the founder can work personally.
+
+| Place | Why | Fronted by |
+| --- | --- | --- |
+| Memory clinic social workers (Duke Memory Disorders Clinic, UNC memory & cognitive disorders clinic) | Every new dementia diagnosis in the Triangle passes through these rooms — the discharge planners of memory care, months earlier | Liaison; founder by email |
+| SNF / short-term rehab discharge desks | Steady volume, less gatekept; where "she can't go home" gets said | Liaison |
+| Hospital case management (Duke Raleigh, UNC REX, WakeMed, Duke Regional), geropsych units | The 72-hour cases | Liaison |
+| Alzheimer's Association, Eastern NC chapter — support groups, education, the Walk | Memory care families in one room, pre-crisis; sponsor the coffee, show up monthly | Founder, evenings |
+| Dementia Alliance of NC (Raleigh) — memory cafés, caregiver classes | Local, memory-specific, under-marketed to; a home for the book | Founder |
+| Adult day programs for dementia | Families 6–12 months from placement; staff know when | Liaison |
+| **Independent living and 55+ communities *without* their own memory care** (Overture Crabtree, Preston Pointe, the rental IL operators) | Residents decline in place — a fall, a wandering incident — and the community has nowhere to move them. The executive director is managing "we can't keep her here safely" with no partner. Offer to be the graceful exit at no cost to anyone; it's the private duty seam again | Founder by intro; liaison for the visit |
+| Care managers | The private-pay second ring (see above) | Founder, coffee |
+| **Elder law attorneys** (NC NAELA chapter, NC Bar elder law section) | They meet families at the exact moment money and care collide — "how do we pay for memory care without losing the house" — and get asked "where should Mom go?" daily without wanting to answer it. Bar rules forbid referral fees either direction, so it's earned: every memory care family you place needs a POA, healthcare directive, and often Special Assistance or Medicaid planning — you're a lead source for them first. The concrete play: a monthly **"Paying for memory care in NC" workshop** — attorney covers Medicaid, VA, asset protection; Cardinal covers placement — at a church, library, or senior center | Founder for the relationship; Linda or the liaison presents |
+| **Churches** — the congregational-care pastor, parish nurse, Stephen Ministers, the deacons who visit shut-ins, the senior adult Sunday school class | The care pastor gets the 2am call from a member whose mother fell — and has a printed list and nothing else. Never sell in a church; be the resource. The book is the door: *The Cardinal's Promise* is about presence at the end of life, which is church-native, and it earns the invitation to speak to a class or a Wednesday night. Bring the elder law workshop here. Large Triangle churches have paid care staff — start with those | Founder (his own story is the door-opener; a room, not a broadcast) |
+| Senior centers, Triangle J resource fairs | Broad, slow, cheap | Founder, weekends |
+
+Digital, all evening work, no face required: **Google Business Profile**
+(the map pack for "memory care placement Raleigh" — highest-value digital
+asset, free) · memory-care-specific site pages (cost in Raleigh, when it's
+time, AL vs MC in NC, Special Assistance) · listings in the directories
+families and social workers actually use (Resources for Seniors, Triangle J
+AAA, Alzheimer's Association resource lists) · **Nextdoor** (neighborhood
+trust, older-skewing) · Facebook local and caregiver groups · Google reviews
+from placed families.
+
+**Don't spend on:** Google Ads (the lead mills outbid you a thousand to one),
+paid listings on Caring.com and its cousins (that's paying to feed your
+competitor), billboards, print, radio, TikTok as anything but a trust layer.
+
+### 90-day scorecard
+
+| Metric | Target |
+| --- | --- |
+| Signed community agreements | **25–40** |
+| Discharge-planner relationships | **20** |
+| Second-ring professional contacts | **5–10** |
+| Family inquiries | 8–15 |
+| Placements | **1–3** |
+| Revenue (may land in month 4) | $4,500–13,500 |
+
+---
+
+# Phase 2 — Months 4–6: make it repeatable
+
+**Goal: 2–4 placements/month, predictable pipeline, the book working for you.**
+
+### Placement operations
+
+- [ ] Grow to **40–60 community agreements**; add Johnston, Chatham as families
+      pull you there.
+- [ ] **Go back to the buildings that said "not yet."** By month 4 you have
+      proof — track record, move-ins that *stuck*, and an inventory of
+      buildings already paying 100%. Communities that wouldn't reach 100% at
+      month zero will now. This is the single highest-ROI hour you'll spend
+      all year.
+- [ ] Watch **30/60/90-day retention**. Placements that stick are worth more
+      than placements that close; they're also what gets you the full rate.
+- [ ] Formalize the follow-up: 30-day and 90-day check-ins with every family.
+      Costs an hour, generates referrals, and prevents clawbacks.
+
+### The book
+
+Treat it as the authority engine, not a revenue line.
+
+- [ ] **Finish / publish** if it isn't out.
+- [ ] Copies in the hands of every discharge planner you've met. "I wrote the
+      book on this" is the cheapest credibility purchase available.
+- [ ] Add it to the website as the guide download — it's already the lead
+      magnet the site is built around.
+- [ ] **First speaking slot**: senior center, church group, hospital lunch-and-
+      learn, Triangle J event. One talk a month.
+
+### Systems
+
+- [ ] Referral-source data reviewed monthly. Kill what doesn't work.
+- [ ] Start the **frustration log** — every repetitive thing you do by hand.
+      This is the seed corn for the software decision at month 12, and it's
+      worthless if you reconstruct it from memory later.
+
+### 6-month scorecard
+
+| Metric | Target |
+| --- | --- |
+| Community agreements | **40–60** |
+| Placements/month | **2–4** |
+| Cumulative placements | **10–18** |
+| Cumulative revenue | **$45K–80K** |
+| Avg fee | $6,500+ (100% of total first-month charges; $6,500 building floor) |
+| 90-day retention | >85% |
+
+---
+
+# Phase 3 — Months 7–12: scale, then choose
+
+**Goal: 4–8 placements/month, and an evidence-based decision about what this
+becomes.**
+
+### Focus decision — the territory sequence
+
+The rule that settled weeks of map-shopping (Pensacola, South Florida, South
+Carolina, Charlotte): **markets follow trusted people, never the other way
+around.** Ranked by that test:
+
+1. **Triangle now** — the partner's liaison fronts demand, Rob builds supply
+   in person; the highest fees of any market considered ($4,500–7,000)
+2. **South Florida at months 4–6** — Charles is there and trusted; he gets a
+   proven playbook instead of a cold start; fees ~$3,500–6,000
+3. **South Carolina / Pensacola — only when a trusted operator exists.** The
+   Grand Strand's transplant retirees (kids in Ohio, no local knowledge) are
+   ideal clients, but a good market with no trusted person is just a place to
+   lose money slowly. The 60–70% affiliate structure in
+   [`PLACEMENT_COMPENSATION.md`](PLACEMENT_COMPENSATION.md) is written for
+   exactly this moment.
+
+Depth in one market beats presence in three — depth is what gets you to 100%
+fees and inbound referrals.
+
+### Growth levers, in order
+
+1. **Deepen the hospital channel.** Move from "a name they know" to "the name
+   on the unit's list." Ask to present at a case management team meeting.
+2. **Referral compounding.** Placed families refer other families. Ask. At
+   month 9+ this should be 15–25% of inquiries.
+3. **Content/SEO** starts paying. The pages seeded in month 3 mature around
+   month 9 — "how to choose memory care in Raleigh," "what Medicaid covers for
+   assisted living in NC."
+4. **Consider a second placement advisor** at a sustained 8+/month. Not before —
+   you can personally handle ~8–10/month, and hiring early burns the margin.
+   Rates, structures, and the referral-fee legal line are in
+   [`PLACEMENT_COMPENSATION.md`](PLACEMENT_COMPENSATION.md).
+
+### The three doors at month 12
+
+| Path | When it's right | What it looks like |
+| --- | --- | --- |
+| **Stay solo, optimize** | 4–6/month, you like the work | $250–350K, low overhead, no payroll |
+| **Add advisors** | 8+/month, demand exceeds you | Hire 1–2, systematize, $500K+ |
+| **Build the software** | You have 12 months of frustration-log data | Per the original strategy: interview **20 independent agents**, get paid commitments, *then* build |
+
+The software door only opens with the frustration log. Keep it.
+
+### 12-month scorecard
+
+| Metric | Conservative | Base | Strong |
+| --- | --- | --- | --- |
+| Placements/month (exit rate) | 3–4 | 5–6 | 8+ |
+| Cumulative placements | 30 | 45 | 65 |
+| Avg fee ($6,500 floor) | $6,500 | $7,000 | $7,500 |
+| **Year 1 revenue** | **~$195K** | **~$315K** | **~$490K** |
+
+---
+
+## Referral agreement — negotiate these before you sign
+
+The percentage is a **contract term, not a posted price.** Most new agents
+accept the community's standard form. Don't.
+
+| Term | What to push for | Why |
+| --- | --- | --- |
+| **Fee %** | 100% of first month's rent | It's the top of the standard band and it's gettable |
+| **Base for the %** | Full monthly rate **including care-level fees**, not base rent | Care fees can be $500–2,000/mo of it |
+| **Clawback window** | 30 days max; none if possible | 90-day clawbacks put your income at the mercy of things you don't control |
+| **Clawback trigger** | Voluntary move-out only | Never accept clawback on death or hospitalization |
+| **Payment terms** | Net 30 | Net 60 doubles your cash-flow gap |
+| **Attribution window** | 6–12 months from your introduction | Family tours in March, moves in July — you're still owed |
+| **Exclusivity** | Don't grant it | Never limit which communities you can recommend |
+| **Termination** | 30-day notice, either side | Keeps you free |
+
+**Your leverage points:** occupancy softness (ask about census), move-in speed
+(you come from discharge planning — you can fill a bed in days), and retention
+(your placements stick because you actually match, not push).
+
+## What kills placement agencies — watch for these
+
+1. **Working before papering.** Placement at a community with no agreement =
+   $0. Check before you tour a family anywhere.
+2. **Cash-flow gap.** 2–4 months to first check. Have runway.
+3. **Slow response.** One missed Friday-afternoon discharge call can end a
+   referral relationship permanently.
+4. **Chasing three metros with two people.** Depth beats breadth.
+5. **Not tracking referral source.** You'll spend a year unable to answer which
+   channel works.
+6. **Pushing families toward the highest fee.** Ends the business. Also fails
+   the only test that matters: *would Lou call this place home?*
+
+## Metrics worth tracking from day one
+
+- Inquiries **by referral source** (the one that matters most)
+- Inquiry → tour rate
+- Tour → move-in rate
+- Days from inquiry to move-in
+- Average fee per placement
+- 30/60/90-day retention
+- Response time to referral partners
