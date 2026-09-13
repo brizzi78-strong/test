@@ -15,6 +15,8 @@ And then it lands, the cardinal, on the mirror, close enough to touch through th
 
 Seventeen years from West Palm Beach, from the apartment with the blinds drawn and the extension cord running to the hallway, from the morning I opened the door and found Lou standing there. Seventeen, the age I was when I won the county championship. He'd been in the third row that day. He was always in the third row.
 
+The last time a cardinal landed on something I was riding in, he was at the wheel of a U-Haul and I was in no shape to notice. Grandma's looking out for us. He'd said it the way he said most true things, lightly, and moved on.
+
 Dad, I say out loud. Alone in the car. Just his name. And then the words he and I mostly lived instead of spoke. I love you. Not because it went unsaid between us — it didn't. Before the end he'd looked at me and told me, Rob, don't worry about me. We're good. When my father said we're good, that was the whole of it: I love you, and I have closure with you. He never needed the sentence. But you don't run out of wanting to say it to a man you can't call anymore. I love you. The cardinal doesn't move. Dad, I love you. I know you're watching out for me.
 
 It sits there. Turns its head slightly. Still looking. I don't know how long we stay like that. The parking lot goes away. Just me and the cardinal. Just me and Lou. Tears running down my face, not sobbing, the kind that comes from grief and relief colliding. Dad is gone. Dad is here.
@@ -25,4 +27,4 @@ I stand in the parking lot, phone in my hand, tears on my face, and feel peace. 
 
 The cardinal wasn't a miracle. What I believe is simpler. The message had been delivered my whole life, in wrestling rooms and church basements and holding cells and U-Hauls, in boundaries that felt harsh and second chances I hadn't earned and ordinary Tuesday afternoons nobody wrote down. The cardinal was a reminder that the message is still being sent. That Lou, in whatever form love takes when the person carrying it is gone, is still here, in the work I do in his name without ever saying his name, in the steadiness I bring to someone else's hardest day that was built by his hands.
 
-The cardinal flew off into the gray. It has never landed on my car again. The promise remains. It was never in the bird. It was in what Lou built in me, across forty years of chosen love and stubborn presence. Now it's my turn. Keep showing up. Keep choosing love.
+The cardinal flew off into the gray. It has never landed on my car again. The promise remains. He made it on a U-Haul out of West Palm Beach without knowing he was making one: the people who loved you don't stop looking out for you. It was never in the bird. It was in what Lou built in me, across forty years of chosen love and stubborn presence. Now it's my turn. Keep showing up. Keep choosing love.

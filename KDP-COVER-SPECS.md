@@ -1,20 +1,24 @@
 # KDP Cover-Wrap Specs — The Cardinal's Promise
 
-Trim size: 6" x 9". Interior page count: 208 (LOCKED 2026-09-13, lock 9: EB Garamond, trade layout with top-outside folios) | pages × 0.002252" | 0.428" |
-| Cream | pages × 0.0025" | 0.520" |
+Trim size: 6" x 9". Interior page count: **206** (LOCKED 2026-09-13, lock 10: EB Garamond, trade layout with top-outside folios).
+
+| Paper | Formula | Spine |
+|---|---|---|
+| White | pages × 0.002252" | 0.464" |
+| Cream | pages × 0.0025" | 0.515" |
 
 ## Full wrap dimensions (includes 0.125" bleed on all outside edges)
 
 | Paper | Width | Height |
 |---|---|---|
-| White | 0.125 + 6 + 0.468 + 6 + 0.125 = **12.718"** | 9 + 0.25 = **9.25"** |
-| Cream | 0.125 + 6 + 0.520 + 6 + 0.125 = **12.770"** | **9.25"** |
+| White | 0.125 + 6 + 0.464 + 6 + 0.125 = **12.714"** | 9 + 0.25 = **9.25"** |
+| Cream | 0.125 + 6 + 0.515 + 6 + 0.125 = **12.765"** | **9.25"** |
 
-At 300 DPI (white): 3815 × 2775 px.
+At 300 DPI (white): 3814 × 2775 px.
 
 Notes for the designer:
 - Keep text 0.25" inside trim edges; nothing critical in the 0.125" bleed zone.
-- Spine is 0.468" on white paper: title + author still fit reading top-to-bottom, but set them
+- Spine is 0.464" on white paper: title + author still fit reading top-to-bottom, but set them
   small and centered — this is narrower than the earlier 0.5" estimate.
 - KDP prints its barcode bottom-right of the back cover (2" × 1.2") — leave that
   zone clear or upload your own ISBN barcode.

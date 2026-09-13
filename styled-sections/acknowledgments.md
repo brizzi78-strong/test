@@ -10,7 +10,7 @@ Jon, Lisa, and Joel — we shared him. I know what we lost.
 
 The men God put in front of me: Andy, Bob, Mager, Matt, and Quint. You walked into the room. So did I.
 
-Dave Meyer, for thirty-five years of friendship and for the words that close this book.
+Dave Meyer, for thirty-five years of friendship and for the words that open this book.
 
 Brenda Jahn, one of the best managers I ever worked for. She believed in me and pushed me, and it prepared me for everything that came after.
 

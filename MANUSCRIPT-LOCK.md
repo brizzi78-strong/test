@@ -1,15 +1,15 @@
 # Manuscript Lock — The Cardinal's Promise
 
-**Locked:** 2026-09-13 (lock 9: text unchanged from lock 7; EB Garamond 12pt, 1.5 leading, folios top-outside, running heads in caps) · **Manuscript text at commit** `e2970fd` (branch `claude/david-sheff-clone-writing-06i30q`)
+**Locked:** 2026-09-13 (lock 10: reader-panel five moves — Part Six in chronological order, Foreword moved to the front, back matter ends on Lou's Way, no-speech/truth-oath pass, the promise named in the Epilogue) · **Manuscript text at commit** `PENDING` (branch `claude/david-sheff-clone-writing-06i30q`)
 
 *A git tag `v1-lock-2026-08-31` exists in the working clone but could not be pushed to GitHub from this session; on GitHub, use the commit hashes above as the reference.*
 
 | | |
 |---|---|
-| Chapters | 34 (Prologue, six Parts, three Drives interludes, Epilogue, back matter) |
-| Words | 54,352 |
-| KDP interior | The_Cardinals_Promise_KDP_Interior.pdf — **208 pages**, 6" × 9", B&W, EB Garamond 12pt |
-| Spine (white paper) | 0.468" — full wrap 12.718" × 9.25" (see KDP-COVER-SPECS.md) |
+| Chapters | 34 (Foreword, Prologue, six Parts, three Drives interludes, Epilogue, The Rooms, A Note to the One Who Loves an Addict, Lou's Way, apparatus) |
+| Words | 53,510 |
+| KDP interior | The_Cardinals_Promise_KDP_Interior.pdf — **206 pages**, 6" × 9", B&W, EB Garamond 12pt |
+| Spine (white paper) | 0.464" — full wrap 12.714" × 9.25" (see KDP-COVER-SPECS.md) |
 | Source of record | The_Cardinals_Promise_sheff_pass.md (mirrored in styled-sections/) |
 
 ## What "locked" means

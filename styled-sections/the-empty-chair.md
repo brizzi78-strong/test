@@ -8,14 +8,14 @@ Dale is a licensed clinical therapist and an alcoholic, and he is the least judg
 
 Back in 2011 he had a cough that wouldn't quit. They told him it was allergies.
 
-I got the call last week. Dale is on hospice with mesothelioma, and they don't think he has a month. It knocked me down, and not because of what he did for me. Because of who he is.
+As I was finishing this book, I got the call. Dale is on hospice with mesothelioma, and they don't think he has a month. It knocked me down, and not because of what he did for me. Because of who he is.
 
 I called him. I cried, and I told him I loved him, and he said it back. That's the power of the program.
 
-There's another seat in those rooms. Cardascia and I had been friends since we were seventeen years old. He lost his fight with addiction last year. He never quit trying, and that's the part I won't let anyone forget. The disease tells you a man who goes back out is a failure. The rooms know better. He kept walking back in, every time, wanting to stop. That's not weakness. That's a fighter losing to something that kills fighters.
+There's another seat in those rooms. Cardascia and I had been friends since we were seventeen years old. He lost his fight with addiction in 2025. He never quit trying, and that's the part I won't let anyone forget. The disease tells you a man who goes back out is a failure. The rooms know better. He kept walking back in, every time, wanting to stop. That's not weakness. That's a fighter losing to something that kills fighters.
 
 I'm seventeen years sober and I'm not one bit safer than he was. None of us are. The only difference between his seat and mine is one day at a time.
 
-One chair is empty and one won't be for long, and the only thing any of us can do about either is what the two of them did: show up. Go to a meeting this week, even if you're good. Especially if you're not. Call somebody. If today's got you scared, say it out loud to one of us. That's what the rooms are for.
+One chair is empty and one won't be for long, and the only thing any of us can do about either is what the two of them did: show up. Go to a meeting this week, even if you're good. Especially if you're not. Call somebody. If today's got you scared, say it out loud to one of us. That's what the rooms are for. If you're the one in the fight and nobody is coming for you: the rooms are full of men like Lou. Mine found me there. Walk in and let yours find you.
 
 Rest easy, Cardascia. We'll keep the seat warm and the coffee bad.

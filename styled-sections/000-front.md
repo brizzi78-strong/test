@@ -4,12 +4,6 @@
 
 **ROB BRIZZI**
 
-**PRAISE FOR THE CARDINAL'S PROMISE**
-
-*"Thirty-five years of friendship, and I can tell you: you can trust what you're about to read."*
-
-*— Dave Meyer, former Virginia Tech captain and NFL quarterback*
-
 Copyright © 2026 by Rob Brizzi. All rights reserved. No part of this book may be reproduced in any form without written permission from the publisher, except for brief quotations in reviews.
 
 Published by Cardinal Promise Press, Raleigh, North Carolina.
@@ -32,6 +26,8 @@ This is a work of memoir. It reflects the author's present recollections of expe
 *For Hope, who tilted her head and said "We?"*
 
 **CONTENTS**
+
+Foreword
 
 Prologue
 
@@ -89,15 +85,11 @@ Prologue
 
 Epilogue: The Cardinal's Promise
 
-**For Those Walking This Road**
+The Rooms
 
 A Note to the One Who Loves an Addict
 
-The Rooms
-
 Lou's Way
-
-Afterword
 
 Author's Note
 
@@ -108,4 +100,3 @@ A Reader's Guide
 Resources
 
 About the Author
-

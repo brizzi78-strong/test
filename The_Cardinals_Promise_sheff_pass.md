@@ -4,12 +4,6 @@
 
 **ROB BRIZZI**
 
-**PRAISE FOR THE CARDINAL'S PROMISE**
-
-*"Thirty-five years of friendship, and I can tell you: you can trust what you're about to read."*
-
-*— Dave Meyer, former Virginia Tech captain and NFL quarterback*
-
 Copyright © 2026 by Rob Brizzi. All rights reserved. No part of this book may be reproduced in any form without written permission from the publisher, except for brief quotations in reviews.
 
 Published by Cardinal Promise Press, Raleigh, North Carolina.
@@ -32,6 +26,8 @@ This is a work of memoir. It reflects the author's present recollections of expe
 *For Hope, who tilted her head and said "We?"*
 
 **CONTENTS**
+
+Foreword
 
 Prologue
 
@@ -89,15 +85,11 @@ Prologue
 
 Epilogue: The Cardinal's Promise
 
-**For Those Walking This Road**
+The Rooms
 
 A Note to the One Who Loves an Addict
 
-The Rooms
-
 Lou's Way
-
-Afterword
 
 Author's Note
 
@@ -108,6 +100,22 @@ A Reader's Guide
 Resources
 
 About the Author
+
+# **FOREWORD**
+
+There is a kind of wisdom that can only be earned by living through what most people spend their lives trying to avoid. Rob Brizzi has that kind of wisdom, and this book is the evidence of it.
+
+I have known Rob for thirty-five years, and a friendship like that gives you a long view of a man's life. Over those years we bonded over faith, character, and a shared belief in showing up and doing right by people. I knew him long before this book, long before the wisdom in these pages had taken shape, long enough to remember the younger version of him, full of energy and loyalty, the guy who hauled a buddy's Jeep doors around Long Beach Island in ninety-five-degree heat, no shade, just because somebody needed help moving. That was Rob being Rob. He has a servant's heart, and he has had it from the beginning. What I did not know back then was everything going on underneath: the battles he was fighting, the identity he was trying to find, the long road that would bring him to the writing of this book.
+
+When I reconnected with Rob, it was as if no time had passed. Within minutes our conversation left both of us in tears. As I heard him talk about his father, I understood that this man has an irreplaceable calling. For years Rob has been of service to those in recovery, and he has continued that service through his work in hospice. He sits with families in what he calls the last chapter. He has been there for people in their most vulnerable moments, guiding families through conversations most of us spend a lifetime avoiding, and he does it with the full weight of his own experience as a son who was himself guided through the darkness by the steady, unconditional presence of a father who was all in.
+
+Lou was a father like that. He hit a hundred fly balls at Finch Park in Ramsey, drove Rob and his brother Chris to wrestling practice three nights a week, and leaned in at every turn because he wanted his boys to be the best version of themselves in every part of life. That love left a mark on Rob, and he carries it forward now, offering families the same presence his father once gave him.
+
+Every page of this book sounds like the man I know. Rob does not have a long list of titles after his name, and he has never needed one. He has done the harder thing. He has lived it. I am grateful this book exists, and I am grateful you are holding it.
+
+*Sincerely,*
+
+*Dave Meyer, former Virginia Tech captain and NFL quarterback*
 
 # **PROLOGUE**
 
@@ -420,7 +428,7 @@ Then I asked him something he hadn't planned for.
 
 Nobody had suggested it. I just wanted to carry it. That day Claudio Horacio Balderas became Robert Louis Brizzi. I had carried one father's name in the middle of mine my whole life. Now I would carry the other's. I've never once wished it back.
 
-When I was six, Lou taught me to swim by carrying me to the edge of the pool and throwing me in. I came up coughing and furious, my arms going the way arms go when a body fights drowning. I reached the wall and pulled myself out. Lou stood there watching, not laughing, just paying attention the way a man does when he's handed his kid something he'll need. He didn't make a speech. I got back in the water the next time, and the time after that.
+When I was six, Lou taught me to swim by carrying me to the edge of the pool and throwing me in. I came up coughing and furious, my arms going the way arms go when a body fights drowning. I reached the wall and pulled myself out. Lou stood there watching, not laughing, just paying attention the way a man does when he's handed his kid something he'll need. I got back in the water the next time, and the time after that.
 
 Some dads spend their weekends chasing hobbies like golf, manicuring their lawns, or sleeping on the couch. Not Lou. His whole hobby was us. Saturday mornings at the batting cages in Woodridge, his hands on my shoulders fixing my stance, not because I was ever going to play ball but because he believed doing a thing right was a habit worth building. Soccer fields in the New Jersey cold, Lou on the sideline in a coat he didn't need to be wearing, watching me play a sport I was actually pretty good at. I took it all for granted, the way a child is supposed to do with childhood.
 
@@ -522,7 +530,7 @@ There was one thing they couldn't change, and I held onto it. Brizzi still start
 
 **New Jersey, 1986–2000**
 
-I carried his name before I understood what was behind it. What Lou taught me about being a man came down to a few things, none of them speeches.
+I carried his name before I understood what was behind it. What Lou taught me about being a man came down to a few things.
 
 Don't complain. Don't play the victim. Show up.
 
@@ -596,7 +604,7 @@ Before any championships or newspaper headlines, he took me to the Bergen County
 
 "Maybe someday you could win a match here," he told me.
 
-That was Lou. He didn't make grand speeches. He showed his love in carpools, tournament weekends, church on Sundays, and thousands of hours sitting beside wrestling mats.
+He showed his love in carpools, tournament weekends, church on Sundays, and thousands of hours sitting beside wrestling mats.
 
 Years later, I returned to that same tournament and left as Bergen County champion.
 
@@ -730,7 +738,7 @@ Coach Oberky met me before school to run the track. He invested in me. At the ye
 
 Lou was the exception. Through all of it, the nineteen seconds, the weight cuts, the throwing up, the bad ankle, the losses that hurt more than the wins, he was there. Not because I was becoming a legend. Because I was his son.
 
-One moment at the Counties: I was about to wrestle for the title and my Walkman got stolen. I needed it to warm up. Lou didn't lecture me. He drove to Best Buy and bought me a new one. Years later I said, "Dad, you always did whatever I asked." He paused the way he paused before something true. "Rob. There were times that was the last twenty dollars I had in my pocket. And I gave it to you." No resentment. Just a fact. I didn't know what to say. I still don't.
+One moment at the Counties: I was about to wrestle for the title and my Walkman got stolen. I needed it to warm up. He drove to Best Buy and bought me a new one. Years later I said, "Dad, you always did whatever I asked." He paused the way he paused before something true. "Rob. There were times that was the last twenty dollars I had in my pocket. And I gave it to you." No resentment. Just a fact. I didn't know what to say. I still don't.
 
 When I threw up in a match, he didn't see weakness. When I got pinned in nineteen seconds, he didn't see failure. He saw his kid. He was in the third row for all of it, and I never once asked what it had cost him to be there.
 
@@ -752,7 +760,7 @@ From the outside, our life looked stable. A house. Cars in the driveway. Dinner 
 
 He had a good job, meaning the lights stayed on, the mortgage got paid, and we had the things kids never stop to think about — shoes, gas, food, wrestling lessons. Then he got laid off.
 
-Nobody sat me down and explained it. No family meeting, no speech, no panic I can remember. That wasn't him. But I felt it. The house got quieter. My mother's voice got softer. Adults paused half a second too long before answering simple questions. My dad got more focused, not less. Deliberate. Like a switch had been thrown and every move mattered now.
+Nobody sat me down and explained it. No family meeting, no panic I can remember. That wasn't him. But I felt it. The house got quieter. My mother's voice got softer. Adults paused half a second too long before answering simple questions. My dad got more focused, not less. Deliberate. Like a switch had been thrown and every move mattered now.
 
 He'd taken on a family that didn't start with him. A wife who waited tables. Two boys who weren't his by blood. Endless bills. He never acted like any of it was somebody else's problem. He owned all of it.
 
@@ -764,7 +772,7 @@ I don't know how many interviews there were. In my memory it felt endless — do
 
 They told him no, and the next morning he knotted the tie again. He wasn't loud about what he carried. He carried it. Eventually, he found work. No one could keep a man like Lou down.
 
-I can still see him at the front door. Dyed hair, pressed shirt, tie pulled tight, shoes shined. That's what he did while he waited. He kept showing up.
+I can still see him at the front door. Dyed hair, pressed shirt, tie pulled tight, shoes shined.
 
 **CHAPTER 9**
 ## **They'll Teach You**
@@ -987,9 +995,7 @@ And success was the trap. If every time I took a pill, I threw up my guts, blew 
 
 By then I had my own prescription in California. Easy access didn't satisfy the chase; it amplified it. The arithmetic was simple: more to get the same effect, then more again. When California ran dry, I crossed into Tijuana to resupply. One of those runs resulted in where I started my story: in a jail wishing I could disappear against the wall.
 
-Did the experience of a fellow cellmate scaring the living crap out of me change my behavior? Sure. Until I got out.
-
-I crossed again the next day. Which wasn't logical behavior. But addiction doesn't listen to logic. Six figures a year, crossing a border for pills because the machine I had built couldn't run without fuel.
+I crossed again the next day. Six figures a year, crossing a border for pills because the machine I had built couldn't run without fuel.
 
 Alcohol came alongside it. Pills to ramp up, drinks to come down. I wasn't a two-beer, loosen-up drinker. I blacked out. Four nights a week, I'd wake up piecing the night together from other people's faces. Outside, the confidence read as arrogance. Inside, I was still the scared kid trying to prove he belonged.
 
@@ -1124,7 +1130,7 @@ It changed. They rolled on. I drove home.
 
 Florida gave me a loophole. Its computers didn't talk to California's. I passed the test, smiled for the camera, and walked out with a clean license. Laminated proof that I had beaten the system. Same man, new card.
 
-People in the rooms talk about the moment of clarity. That red light was mine, and I want to be honest about what I did with it. Nothing. I didn't get sober that night. I didn't slow down for long. The late nights came back, the mornings that turned into afternoons, the résumé I kept updating and never sent. I would drive past Dad's house and see him in the driveway washing his car and think about pulling in. Pulling in meant questions about interviews I hadn't gone to. So I waved and kept driving.
+People in the rooms talk about the moment of clarity. That red light was mine, and what I did with it was nothing. I didn't get sober that night. I didn't slow down for long. The late nights came back, the mornings that turned into afternoons, the résumé I kept updating and never sent. I would drive past Dad's house and see him in the driveway washing his car and think about pulling in. Pulling in meant questions about interviews I hadn't gone to. So I waved and kept driving.
 
 Pensacola without work started to feel like a place I was hiding. When Aunt Nancey called and said come stay with me, I went.
 
@@ -1228,7 +1234,7 @@ Then Chris called. I was on the couch at my dad's house, the house the U-Haul ha
 
 What I remember most is that I didn't feel judged. My brother had just handed me the two hardest sentences of my life, and there wasn't an ounce of verdict in either one. That's what left me nowhere to stand. Anger I could have fought.
 
-My surrender wasn't clean. I want to tell it the way it happened.
+My surrender wasn't clean.
 
 After Chris hung up, the first thing I did was go to the pharmacy and fill my last Adderall script. Not to use it. That's what I told myself. I filled it because a bottle in my hand felt better than no bottle.
 
@@ -1401,7 +1407,7 @@ Eventually the truth slipped out. "I still want to drink," I said.
 
 The words just hung there. I said them and then held my breath.
 
-Lou didn't react the way I expected. No anger, no speech, no disappointment. He looked at me the way he had when I was losing badly on a mat, the same look he gave me when he was deciding whether I could recover.
+Lou didn't react the way I expected. No anger, no disappointment. He looked at me the way he had when I was losing badly on a mat, the same look he gave me when he was deciding whether I could recover.
 
 "Rob, if you relapse, I'm going to have to wash my hands of you."
 
@@ -1557,7 +1563,7 @@ Mager stopped me. "No. Use the money you actually have. That's how trust gets re
 
 My mother's money never went on that legal pad. What I owed her had no number on it. The lies I'd told her went into my fourth step and my fifth, and for years I told myself the rest was paid in the only currency she ever wanted — her son, alive and honest. Writing this book made me stop on that sentence. Sober and alive is a start. It isn't a settlement. She's the last parent I have, down in South Florida, and I am not there enough. I've come to think this isn't an amends you finish — not a letter, not a line in a book. It's the trips, my time, which is the one thing she always wanted and the one thing I kept for myself.
 
-I love her, and I haven't shown it the way she showed me. I'm booking a trip to South Florida to see her — to start being a better son while I still have the time to be one. The debt on the pad didn't disappear fast. But I stopped flinching when bills came. I started answering calls from numbers I didn't recognize. My past stopped feeling like it was following me, not because it was gone, but because it was being addressed. Not redemption. Nothing was being erased. Responsibility. One payment, one opened envelope, one answered call at a time.
+The debt on the pad didn't disappear fast. But I stopped flinching when bills came. I started answering calls from numbers I didn't recognize. My past stopped feeling like it was following me, not because it was gone, but because it was being addressed. Not redemption. Nothing was being erased. Responsibility. One payment, one opened envelope, one answered call at a time.
 
 My amends to Chris had nothing to do with money. I'm the older brother. On paper the job was mine, look out for him, go first, take the hit. My addiction handed that job to him instead. He drove me to detox. He called me with the ultimatum. He watched the whole family bend around a crisis I kept making, and somewhere in it he became the big brother, a promotion he never asked for.
 
@@ -1693,7 +1699,11 @@ So we got close. We'd go to the diner together after meetings, me at thirty-one,
 
 One afternoon he looked at me and said it straight out, the way he said everything. "I am so proud of the man I have seen you grow into over the past seven years. You have really blossomed. And sober looks good on you." Bob did not hand out lines like that. I have carried it ever since.
 
-Near the end, I went to see him, and it was nothing like the nursing-home room of my boyhood — this was a grown man actively dying, and everyone in the house knew it. The place was full. People he'd carried in the rooms, people who'd carried him, a steady stream coming to sit with him and say what they needed to say while he could still hear it. My first thought was a small, honest panic: how was I supposed to feel all of this without anything to take the edge off? I had never done grief without a buffer. The panic didn't last, and what replaced it wasn't sadness. It was gratitude, and a level calm, the plain fact of being there and not needing to be anywhere else. He told me once that sobriety wasn't something he fought every morning; it was a decision he had made a single time and never went back to revisit, and he carried it all the way to the edge of his life. Decades older than me, and still showing me how it was done.
+Bob wasn't the only man I loved who got cancer that year. Lou was diagnosed with stomach and esophageal cancer in the spring of 2015. He was seventy-three. He called me on a Tuesday, no preamble. "Got some news," he said. "Surgery. And holistic stuff. No chemo. I'm not doing chemo." I knew better than to argue. "Okay," I said, which meant, I hear you, and I'll show up for whatever comes next. The surgery was brutal. Donna was there every day. I believe it's because of Donna that my father lived another ten years. She was a nurse; she understood his body in ways the rest of us didn't. She loved him completely and he loved her. He told me straight, more than once: Donna was the love of his life. My relationship with Donna was always centered on my dad. She was good to me, always. She's a complex person, with a controlling nature expressed in the sweetest, most Southern way imaginable. I don't mean that as criticism. Who she is was exactly what Lou needed. The season she is in now is hard, because her life was organized entirely around his. I worry about her. I pray for her.
+
+Lou came through the surgery. By December the scans were clean. The cancer stayed away for eight years — one scare in 2018, something on his liver, and nothing was ever done about it; it held. He was at my wedding in April 2019. Years that looked, from the inside, like a permanent gift. They weren't.
+
+Bob didn't get that kind of time. Near the end, I went to see him, and it was nothing like the nursing-home room of my boyhood — this was a grown man actively dying, and everyone in the house knew it. The place was full. People he'd carried in the rooms, people who'd carried him, a steady stream coming to sit with him and say what they needed to say while he could still hear it. My first thought was a small, honest panic: how was I supposed to feel all of this without anything to take the edge off? I had never done grief without a buffer. The panic didn't last, and what replaced it wasn't sadness. It was gratitude, and a level calm, the plain fact of being there and not needing to be anywhere else. He told me once that sobriety wasn't something he fought every morning; it was a decision he had made a single time and never went back to revisit, and he carried it all the way to the edge of his life. Decades older than me, and still showing me how it was done.
 
 I was in the room when he passed, in 2016. I had been around a lot by then, but not that, not the actual leaving. I watched it happen, and afterward I stayed for his wife, a woman I loved, because there was nothing left to do but be there and not go. That was when it finally landed. Bob was gone. There was no fixing it, no deal to close, no right answer that would have bought him one more minute.
 
@@ -1805,7 +1815,7 @@ The first three years we laughed all the time, the real kind that takes her all 
 
 ### *The Hundred Thousand*
 
-In a short time we worked like a team. We paid off over a hundred thousand dollars in student loans and built a life with margin in it instead of debt, a home, a little security I'd never had back when I looked successful. We moved to Raleigh. We never had children, and we never planned to. What we built was the two of us, and a life with room in it for other people. These days that includes Hope's mother. Rhonda lives under our roof now, which is not a sentence anyone says lightly, and getting to know her and love her has been one of the quiet gifts of this stretch. She hasn't had the easiest life. What I didn't see coming was watching Hope and her mom grow close, slowly, over years, until Hope started calling Rhonda her best friend. None of the good things happen overnight. Hope is my rock. It isn't always smooth, no honest marriage is, but she's never stopped believing in what we're building. That's my love story. It started with a stubborn message on Match.com to a girl who told me not to write. Best rule I ever broke.
+In a short time we worked like a team. We paid off over a hundred thousand dollars in student loans and built a life with margin in it instead of debt, a home, a little security I'd never had back when I looked successful. We moved to Raleigh. We never had children, and we never planned to. What we built was the two of us, and a life with room in it for other people. These days that includes Hope's mother. Rhonda lives under our roof now, which is not a sentence anyone says lightly, and getting to know her and love her has been one of the quiet gifts of this stretch. She hasn't had the easiest life. What I didn't see coming was watching Hope and her mom grow close, slowly, over years, until Hope started calling Rhonda her best friend. None of the good things happen overnight. That's my love story. It started with a stubborn message on Match.com to a girl who told me not to write. Best rule I ever broke.
 
 ### *The Pictures Never Tell the Whole Story*
 
@@ -1854,6 +1864,8 @@ They have a picture for it in the program. The addict moves through life like a 
 
 So the other day, on one of our daily calls, I told her the truth it had forced up in me. "Mom," I said, "I'm only now seeing how much I put you through. I'm truly sorry." I meant it as a promise to be better. She didn't make me sit in it. She didn't list the nights, or the money she spent, or the strain it put on everything around her. She said, "I'm just glad you're okay now."
 
+I love her, and I haven't shown it the way she showed me. I'm booking a trip to South Florida to see her, to start being a better son while I still have the time to be one.
+
 There is one more thing I need to say to her in print, because I don't say it enough out loud. It was my mother who first walked me into a church, who made faith the one thing that wasn't up for debate. The first time it stopped being hers and started being mine, I was thirteen, on a mission trip in Nashville. I don't remember a word of the preaching. I remember the room, some current moving through all of us, and my fear going quiet for the first time I can recall. That faith became the floor I stood on when everything else gave way. Mom, if it weren't for you, I would not be the person I am today. Not the sober one, not the one who can sit in a stranger's last room, not the one who finally learned how to stay. All of it traces back to you. My mother will be taken care of for the rest of her life. Whatever care she needs, we will provide it. She picked us once. She never stopped.
 
 PART SIX
@@ -1868,7 +1880,7 @@ PART SIX
 *"My thoughts are not your thoughts, neither are your ways my ways."*
 *— Isaiah 55:8*
 
-**Pensacola, 2021**
+**Pensacola, 2021–2025**
 
 The recognition I'd stopped chasing had a way of finding me anyway. After ten years in home health, one of the reps for the company that sells Ozempic started noticing me in offices, asking around about who'd make a good partner. When a position opened she kept calling. "You want to apply?" "No," I said, "I'm happy where I'm at." But a friend told me, "Give it a shot." So I interviewed, and I got the job. It was hard to leave. Ten years. Brenda Jahn, my manager there, had been amazing. But I saw it as a chance to learn. When I started at Novo Nordisk I didn't know the difference between type 1 and type 2 diabetes. Through the training and the home study I got good at it. Really good.
 
@@ -1883,6 +1895,42 @@ About a year in, Dave lost his son. He was twenty-one, working at a pizza shop, 
 About two years in, we had a national sales convention in Las Vegas. Dave and I had a routine when we traveled, breakfast, a little prayer, a mini Bible study, talk. One morning he started talking about his son. He said, sometimes I wonder. I know he was in the church. I know he had a relationship with Christ. But I worried about whether he was saved. And then he said, one day a bird landed. His son's favorite bird. And he knew. It was a sign. His boy was okay. Later that trip Dave and I went to the Bellagio, played a couple of slot machines, then got ice cream. I got cookie dough, and opened up. I told him about the DUIs, about the path I'd traveled. He shared some of his, and I'll keep that between us. We prayed right there, ice cream melting in the cups, slot machines going off in the distance.
 
 I didn't know then what Christmas would take from me two years later, or what would land on my driver's side mirror two weeks after that. But when it came, I would recognize it. Dave had taught me the language.
+
+### *The Right Place*
+
+I want you to see him whole first, because the man who was about to start dying had never stopped living.
+
+Lou was a man of places. He could seem simple if you only caught the surface, but he carried a private map of the world inside him — the best restaurants, the best bagels, the streets worth taking, the shop worth passing twenty other shops to reach. New York wasn't an idea to him. It was muscle memory. He kept returning to the places he'd known since childhood, as if tradition were something you kept alive by visiting it. At Clyde's in Lodi he had a lemonade rule: two scoops, one always lemon, the other your choice. Flexible inside a fixed tradition — there was room for choice, but only after the lemon was settled. He never wanted to be rushed at a meal. A restaurant wasn't a place to consume food; it was a place to be recognized, to settle in, to let the thing unfold. He liked career waiters, professionals who remembered him and knew their craft, and he tipped twenty dollars like a man paying respect to people who knew how to do their job. He wasn't a picky eater; the food itself almost never lost him. What lost him was bad service, and paying for a meal done badly. It offended the same thing in him that the twenty-dollar tips honored.
+
+Yankee games had their own liturgy. Leave the house at five, catch batting practice, soak in the park. A hot dog or chicken fingers, done the same way every time. He watched almost every game of a season — the blowouts, the lost years, the Septembers that meant nothing in the standings. I asked him once why. "I just enjoy the game," he said. I understand it differently now. He wasn't only watching baseball. He was practicing loyalty — staying with a thing because it was his, not because it was winning.
+
+And he never stopped wanting to be useful. He'd retired on paper and kept working anyway, into his eighties, answering phones and untangling computer problems. The pay was almost nothing, and one day he called me like he'd won a sweepstakes because his boss had doubled it. What I remember isn't the money. It's an eighty-year-old man beaming over a good performance review. At eighty, he did a 5K with Hope and me — beanie, glasses, a finisher's medal — finished dead last, and took home the tortoise award, which somehow made the whole thing better. After the 2015 surgery — they took about half of his esophagus and half of his stomach — he ate less, weighed less, took his vitamins, saw his holistic doctor. He won himself years. He spent them wanting things. Strength. Respect. A good review. Proof he wasn't finished. There is dignity in still wanting, and my father had it to the last.
+
+### *Don't Go Dying on Me*
+
+In January 2024 the cancer came back. Stage 4. Lungs and lymph nodes. Lou was eighty-two. He told Donna. He told Lisa. He told no one else.
+
+I noticed it before I knew what I was noticing, his mood a little off, something in the quality of him I couldn't name. Chris was getting married in February, and Lou had decided, quietly and completely, that his son's wedding wasn't going to be about his diagnosis. So he showed up. He danced. He celebrated. Nisha's father had passed the year before, and the wedding was a big Indian celebration in Fort Lauderdale, joyful and carrying grief as well as love. Lou understood that. He held it inside and let the day be what it was supposed to be.
+
+My mother was there too, her Parkinson's flaring hard that month. She'd taken a fall in the days before and came anyway, patched with a Band-Aid that wasn't fooling anybody. At the end of the night she found Lou and said, "Don't go dying on me." And my father — the cancer already back inside him, the secret already sealed — looked at her and said, "You don't go dying on me." She didn't know what he was carrying. He did. He kept the secret until March or April. "The cancer's back," he said. "January. I didn't want to say anything because of Chris's wedding."
+
+Lisa and I talked. We knew he had to do something. Chris was the one who got through to him, researched, found a surgeon in Birmingham using connections from a previous job, got him an appointment. The surgeon looked at him and said, stage 4, your age, no surgeon is going to operate on you. We were distraught. Surgery had worked the first time; we thought it was the answer again. Immunotherapy came up, usually not as hard on the body as chemo or radiation, we were told. Lou agreed to try. He was choosing to try. Not for himself. For us.
+
+### *The Treatment*
+
+The immunotherapy started in summer 2024. At first, impossibly, it worked. The tumor in his lung nearly dissolved. The oncologist used the word encouraging. Then the side effects came, rashes all over his body. Lou never complained. His heart rate and blood pressure started going off and he ended up in the hospital. I was there when they put the pacemaker in. He was upbeat about it, ready to keep fighting. A pacemaker at eighty-three and he came out looking for the next round. He did a second round of immunotherapy, then a third, trying to clear the lymph nodes. The third round was what finally took a toll. He got weak. By mid-2025 the phone calls had changed, and he stopped asking about my work. Not because he didn't care. Because asking took focus that was going to the basic maintenance of existing. And in July 2025, a year and a half into the fight, he was there when Chris and Nisha's daughter, Priya, was born. He held her.
+
+### *He Wouldn't Say Pain*
+
+Lou would not say he was in pain. He came up in a world where pain wasn't something men announced. You swallowed it, walked it off, worked through it, or hid it badly enough that everyone around you had to become a detective. His discomfort came out sideways — restlessness instead of language, a man who couldn't settle in a chair he'd sat in for twenty years.
+
+It was Hope who found the doorway. "Are you in pain?" got a flat no, every time. Then she tried it another way. "Are you uncomfortable in this area?" Yes. That question gave him a way to tell the truth without feeling like he'd surrendered something. Hospice taught me that words matter. Lou taught me that pride matters too. Sometimes care isn't forcing someone to admit what hurts. Sometimes care is learning the doorway a person is willing to walk through.
+
+I respected the toughness. I also saw the loneliness inside it. It kept him going. It also kept us from helping him.
+
+There was a stretch in late 2024, about a year before the end, when I was sure we were losing him. He could barely walk. He was barely coherent, and he was in a lot of pain. I called the family and told everyone they needed to come to town. I didn't think he was going to make it. Joel flew in, and I picked him up at the airport. He told me he didn't know how to do this, how to be in the room with our father like that, with all of it right there on the surface. Joel wears his humor like armor; he's the funny one. Seeing him without it was something else entirely. "Just grab his hand," I told him, "and tell him you love him." That's all. Two grown men in an airport pickup lane, working out how to go say goodbye to our dad. Lou rallied after that. He gave us most of another year. But that was the first time I rehearsed losing him.
+
+That spring, Hope and I told him we were moving to Raleigh. I could tell he was disappointed. I'd lived close to him in Pensacola for eighteen years, almost nineteen. But he understood, and he told me to go. That was always his way, even at the end, more concerned about whether we were okay than whether we were close. The last time I saw him before the move we went to McGuire's. He looked fine. He said he wasn't worried, said as long as Donna was there he was okay. Part of me looks back and wonders if I should have stayed longer. I couldn't have known that five weeks into my new job he'd take a turn and go downhill fast.
 
 ### *The In-Between*
 
@@ -1904,6 +1952,8 @@ I told people I was going to take some time off. Be there for my dad. Be there f
 
 Five weeks after I started the hospice job, my father started to die. We moved to Raleigh because life was expanding. Hope had been a pharmacist for eight years. Raleigh made sense: jobs, community, a church that felt like ours. Leaving Pensacola meant leaving roots. Hope never wavered. That's who she is. Not blindly optimistic; she sees clearly and asks hard questions. But under all of it is a bedrock belief that God has a plan for us to be of service. When the hospice opportunity came, it felt like a room I'd been circling for years with the door finally open. No debate. No spreadsheet. This was where I was most needed.
 
+After the move, Hope and I went down for a visit. We went to church that morning and ate with Dad before the drive back up to Raleigh. There was an opening in hospice, at a company I had already given ten years to, and at the table that morning Dad told me what he always told me. "Listen to your boss. Work hard." He had put that in me a long time ago, and he said it again like it was the first time. With him, miracles had started to feel ordinary. It was the last time I saw him.
+
 ### *The Rooms*
 
 Hospice didn't arrive all at once. It came the way hard things usually do, a little at a time, like a knock I kept deciding I hadn't heard.
@@ -1922,51 +1972,7 @@ And there was a pastor I'll call Melvin, surrounded near the end by his wife, hi
 
 I wasn't there for the very end. I saw him close to it, and a single thought went through me that I couldn't take back: I never want to see my own dad like that. I had no idea how few weeks were left before that stopped being a fear and became a choice in front of me.
 
-### *Five Weeks*
-
 The decline wasn't dramatic at first, less energy in his voice on the phone, conversations that used to run long wrapping up faster, with less of the texture that made them his. I knew how to read it. I'd just spent five weeks learning to read exactly this. I was walking into strangers' homes explaining what hospice was and wasn't, and the whole time my own father was crossing the same line I'd been describing to families all week. I didn't tell them my dad was dying too. I didn't need to.
-
-### *We Said Everything*
-
-The relationship between my father and me was not perfect. Nothing in this story has been. But in the years of my sobriety, the real years, the years of staying, we said everything that needed saying. Not in one conversation. Not in a deathbed scene. In the ordinary: Sunday phone calls, the back porch in Pensacola, the moment at my wedding when my mother's toast reached him and his fist went up, the moment at the business conference when Quint said his name in a room full of leaders. I made amends to him. Not with a speech, Lou would have hated a speech. With years of behavior that said: I know what you did, I know what it cost, I'm not going to waste it. He told me. Four words on a phone call. "I'm proud of you." And somewhere in that last stretch we traded our two lines one more time, the ones we'd been trading since a car ride to Ohio half a lifetime ago. Dad, thank you for saving my life. You saved mine. His answer never changed, not even at the end. We were not unfinished. That is not a small thing.
-
-### *The Right Place*
-
-I want you to see him whole first, because the man who was about to start dying had never stopped living.
-
-Lou was a man of places. He could seem simple if you only caught the surface, but he carried a private map of the world inside him — the best restaurants, the best bagels, the streets worth taking, the shop worth passing twenty other shops to reach. New York wasn't an idea to him. It was muscle memory. He kept returning to the places he'd known since childhood, as if tradition were something you kept alive by visiting it. At Clyde's in Lodi he had a lemonade rule: two scoops, one always lemon, the other your choice. Flexible inside a fixed tradition — there was room for choice, but only after the lemon was settled. He never wanted to be rushed at a meal. A restaurant wasn't a place to consume food; it was a place to be recognized, to settle in, to let the thing unfold. He liked career waiters, professionals who remembered him and knew their craft, and he tipped twenty dollars like a man paying respect to people who knew how to do their job. He wasn't a picky eater; the food itself almost never lost him. What lost him was bad service, and paying for a meal done badly. It offended the same thing in him that the twenty-dollar tips honored.
-
-Yankee games had their own liturgy. Leave the house at five, catch batting practice, soak in the park. A hot dog or chicken fingers, done the same way every time. He watched almost every game of a season — the blowouts, the lost years, the Septembers that meant nothing in the standings. I asked him once why. "I just enjoy the game," he said. I understand it differently now. He wasn't only watching baseball. He was practicing loyalty — staying with a thing because it was his, not because it was winning.
-
-And he never stopped wanting to be useful. He'd retired on paper and kept working anyway, into his eighties, answering phones and untangling computer problems. The pay was almost nothing, and one day he called me like he'd won a sweepstakes because his boss had doubled it. What I remember isn't the money. It's an eighty-year-old man beaming over a good performance review. At eighty, he did a 5K with Hope and me — beanie, glasses, a finisher's medal — finished dead last, and took home the tortoise award, which somehow made the whole thing better. After the 2015 surgery — they took about half of his esophagus and half of his stomach — he ate less, weighed less, took his vitamins, saw his holistic doctor. He won himself years. He spent them wanting things. Strength. Respect. A good review. Proof he wasn't finished. There is dignity in still wanting, and my father had it to the last.
-
-### *Vigils*
-
-Lou was diagnosed with stomach and esophageal cancer in the spring of 2015. He was seventy-three. He called me on a Tuesday, no preamble. "Got some news," he said. "Surgery. And holistic stuff. No chemo. I'm not doing chemo." I knew better than to argue. "Okay," I said, which meant, I hear you, and I'll show up for whatever comes next. The surgery was brutal. Donna was there every day. I believe it's because of Donna that my father lived another ten years. She was a nurse; she understood his body in ways the rest of us didn't. She loved him completely and he loved her. He told me straight, more than once: Donna was the love of his life. My relationship with Donna was always centered on my dad. She was good to me, always. She's a complex person, with a controlling nature expressed in the sweetest, most Southern way imaginable. I don't mean that as criticism. Who she is was exactly what Lou needed. The season ahead will be hard for her, because her life was organized entirely around his. I worry about her. I pray for her.
-
-Lou came through the surgery. By December the scans were clean. The cancer stayed away for eight years — one scare in 2018, something on his liver, and nothing was ever done about it; it held. He was at my wedding in April 2019. Years that looked, from the inside, like a permanent gift. They weren't.
-
-In January 2024 the cancer came back. Stage 4. Lungs and lymph nodes. Lou was eighty-two. He told Donna. He told Lisa. He told no one else. I noticed it before I knew what I was noticing, his mood a little off, something in the quality of him I couldn't name. Chris was getting married in February, and Lou had decided, quietly and completely, that his son's wedding wasn't going to be about his diagnosis. So he showed up. He danced. He celebrated. Nisha's father had passed the year before, and the wedding was a big Indian celebration in Fort Lauderdale, joyful and carrying grief as well as love. Lou understood that. He held it inside and let the day be what it was supposed to be. My mother was there too, her Parkinson's flaring hard that month. She'd taken a fall in the days before and came anyway, patched with a Band-Aid that wasn't fooling anybody. At the end of the night she found Lou and said, "Don't go dying on me." And my father — the cancer already back inside him, the secret already sealed — looked at her and said, "You don't go dying on me." She didn't know what he was carrying. He did. He kept the secret until March or April. "The cancer's back," he said. "January. I didn't want to say anything because of Chris's wedding." And in July 2025, a year and a half into the fight, he was there when Chris and Nisha's daughter, Priya, was born. He held her.
-
-Lisa and I talked. We knew he had to do something. Chris was the one who got through to him, researched, found a surgeon in Birmingham using connections from a previous job, got him an appointment. The surgeon looked at him and said, stage 4, your age, no surgeon is going to operate on you. We were distraught. Surgery had worked the first time; we thought it was the answer again. Immunotherapy came up, usually not as hard on the body as chemo or radiation, we were told. Lou agreed to try. He was choosing to try. Not for himself. For us.
-
-### *The Treatment*
-
-The immunotherapy started in summer 2024. At first, impossibly, it worked. The tumor in his lung nearly dissolved. The oncologist used the word encouraging. Then the side effects came, rashes all over his body. Lou never complained. His heart rate and blood pressure started going off and he ended up in the hospital. I was there when they put the pacemaker in. He was upbeat about it, ready to keep fighting. A pacemaker at eighty-three and he came out looking for the next round. He did a second round of immunotherapy, then a third, trying to clear the lymph nodes. The third round was what finally took a toll. He got weak. By mid-2025 the phone calls had changed, and he stopped asking about my work. Not because he didn't care. Because asking took focus that was going to the basic maintenance of existing.
-
-### *He Wouldn't Say Pain*
-
-Lou would not say he was in pain. He came up in a world where pain wasn't something men announced. You swallowed it, walked it off, worked through it, or hid it badly enough that everyone around you had to become a detective. His discomfort came out sideways — restlessness instead of language, a man who couldn't settle in a chair he'd sat in for twenty years.
-
-It was Hope who found the doorway. "Are you in pain?" got a flat no, every time. Then she tried it another way. "Are you uncomfortable in this area?" Yes. That question gave him a way to tell the truth without feeling like he'd surrendered something. Hospice taught me that words matter. Lou taught me that pride matters too. Sometimes care isn't forcing someone to admit what hurts. Sometimes care is learning the doorway a person is willing to walk through.
-
-I respected the toughness. I also saw the loneliness inside it. It kept him going. It also kept us from helping him.
-
-There was a stretch in late 2024, about a year before the end, when I was sure we were losing him. He could barely walk. He was barely coherent, and he was in a lot of pain. I called the family and told everyone they needed to come to town. I didn't think he was going to make it. Joel flew in, and I picked him up at the airport. He told me he didn't know how to do this, how to be in the room with our father like that, with all of it right there on the surface. Joel wears his humor like armor; he's the funny one. Seeing him without it was something else entirely. "Just grab his hand," I told him, "and tell him you love him." That's all. Two grown men in an airport pickup lane, working out how to go say goodbye to our dad. Lou rallied after that. He gave us most of another year. But that was the first time I rehearsed losing him.
-
-That spring, Hope and I told him we were moving to Raleigh. I could tell he was disappointed. I'd lived close to him in Pensacola for eighteen years, almost nineteen. But he understood, and he told me to go. That was always his way, even at the end, more concerned about whether we were okay than whether we were close. The last time I saw him before the move we went to McGuire's. He looked fine. He said he wasn't worried, said as long as Donna was there he was okay. Part of me looks back and wonders if I should have stayed longer. I couldn't have known that five weeks into my new job he'd take a turn and go downhill fast.
-
-After the move, Hope and I went down for a visit. We went to church that morning and ate with Dad before the drive back up to Raleigh. There was an opening in hospice, at a company I had already given ten years to, and at the table that morning Dad told me what he always told me. "Listen to your boss. Work hard." He had put that in me a long time ago, and he said it again like it was the first time. With him, miracles had started to feel ordinary.
 
 He got pneumonia on December 23. His immune system had nothing left to fight with. Donna had been calling, and I could hear in her voice what she was trying to tell me without saying it. My mother was in Raleigh visiting. She'd made the trip from Lantana, where she'd lived since 2019, with Parkinson's making every mile harder than it used to be. So I did the math the way I'd done it for ten years. He had come back from the surgery. He had come back from the pacemaker, from three rounds of immunotherapy, from the year we all flew in because I was sure we were losing him. He always came back. We would drive down Friday, I told myself, and I would have a day with my mother first, and he would still be there.
 
@@ -1982,19 +1988,19 @@ My father died on Christmas Day, 2025. A Thursday.
 
 Something in me shut down before he was gone. I couldn't pick up when my stepmom called. I went somewhere I had gone as a little boy when I was scared, that same quiet, far-off place, the dissociation I had learned before I had a word for it.
 
-Part of it was that my mother was in town. She has Parkinson's now, and getting to me had cost her every ounce of energy she had. Part of it was simpler, and harder to admit. I did not want my last memory of my father to be tubes in his nose. He had been bigger than two cancers and a scare. I couldn't let the man in that bed become the last picture I kept of him.
-
-It was selfish. I'm sorry it was that way. But I can only tell you the truth of it. The week before, I had told my sponsor that I'd said everything to my dad that needed saying. I had. There was no unfinished sentence between us. And it still didn't spare me what came next.
+Part of it was that my mother was in town. She has Parkinson's now, and getting to me had cost her every ounce of energy she had. Part of it was simpler, and harder to admit. I did not want my last memory of my father to be tubes in his nose. He had been bigger than two cancers and a scare. I couldn't let the man in that bed become the last picture I kept of him. It was selfish. I'm sorry it was that way.
 
 The night before Christmas, they put him on a morphine drip. He was in the hospital, on comfort care — not hospice; it went that fast. I knew what the drip meant — it's my work. Morphine at the end doesn't take anyone. It eases the pain and the hunger for air while the dying does what it was already doing. The drip didn't tell me what was coming. It told me where he already was. Comfort was the assignment now. Christmas morning, I didn't need anyone to tell me. The texting had stopped, and the silence had a shape. Then the phone rang. Chris, confirming what I already knew. Our father was gone.
 
-I didn't feel guilty at first, and that's the truth. I had been at his bedside every other time — the surgeries, the pacemaker — and I had lived close to him for eighteen years. The guilt came later, and it came from outside: people in the family who love me and who gave me a very hard time about not being there. I understand it. Grief needs somewhere to go. But the conversation with my sponsor still rings true, and I hold it like a railing: I said everything that needed to be said. Being absent from the last hour is not the same as being absent from the life.
+I didn't feel guilty at first. I had been at his bedside every other time — the surgeries, the pacemaker — and I had lived close to him for eighteen years. The guilt came later, and it came from outside: people in the family who love me and who gave me a very hard time about not being there. I understand it. Grief needs somewhere to go. The week before, I had told my sponsor that I'd said everything to my dad that needed saying, and I hold that like a railing. Being absent from the last hour is not the same as being absent from the life.
 
-There's more to that week than I've told you. It's still too painful to talk about, and I'm not going to pretend otherwise. Maybe someday, further down this road, I'll be able to write it. For now, this is what I can give you, and every word of it is true.
+The relationship between my father and me was not perfect. Nothing in this story has been. But in the years of my sobriety, the real years, the years of staying, we said what needed saying. Not in one conversation. Not in a deathbed scene. In the ordinary: Sunday phone calls, the back porch in Pensacola, the moment at my wedding when my mother's toast reached him and his fist went up, the moment at the business conference when Quint said his name in a room full of leaders. I made amends to him with years of behavior that said: I know what you did, I know what it cost, I'm not going to waste it. He told me. Four words on a phone call. "I'm proud of you." And somewhere in that last stretch we traded our two lines one more time, the ones we'd been trading since a car ride to Ohio half a lifetime ago. Dad, thank you for saving my life. You saved mine. His answer never changed, not even at the end. We were not unfinished. That is not a small thing.
 
 When he was gone, something landed on me that I had never felt before, not over anyone. I had lost people I loved before him. Nothing came close to this. I had been around death for years — I knew the word. I did not know the thing. Now I did. Grief. People think it's a constant, a gray you live under. It isn't. It's an overwhelming sadness that comes and goes through the day, and beneath all of it, all the time, a deep heartache that never fully lifts. What took me a while to understand about mine: underneath, it wasn't guilt. It was simpler and heavier than that. The most amazing man I've ever known wasn't alive anymore, and I wanted him here. That's what I carry.
 
 I went back to work almost immediately. I don't know how to explain that except to say the body keeps doing what it knows how to do.
+
+There's more to that week than I've told you. It's still too painful to talk about, and I'm not going to pretend otherwise. Maybe someday, further down this road, I'll be able to write it.
 
 When the time came, Hope and I made the drive to Pensacola. We talked the whole way about Lou, not the saint version, the real one. The complicated man. The hard parts and the funny parts and the parts only family knows. By the time we got there I had cried and laughed and gone quiet a dozen times. That's grief too. Hope let me cry, and she cried some herself, partly for Lou, mostly for the pain she knew I was in.
 
@@ -2060,7 +2066,7 @@ I took one day off after my father died, then put on a tie and went back. He'd w
 
 The tie made it look like I was fine. I wasn't.
 
-I never wanted a drink. That's the truth, and it surprised me. What I wanted was to be gone. I let the routines slip. The gym went first, and I still haven't found my way back to it very often. I haven't watched a Yankees game since he died. Some things are still too closely connected to him. He was always the one who told me he was proud of me. I let the phone ring, sat in rooms without being in them. I'd get in the car and drive with no destination, park somewhere and cry, then drive some more. Sometimes I'd end up asleep on a couch in the lobby of a hotel where I wasn't a guest. Numb. When I wasn't driving the car I was working on it, hours at a time, jobs it didn't need. What I needed, I kept telling myself, was to be alone. I'd write some and sleep. Some of the pages in this book come from those weeks, and I look back at them now and I'm not sure how I managed any of it. These chapters were the hardest for me to write. I was there, and it was so painful that writing it meant living it twice. The hospice job was still new, I was still learning it, and I kept going to it anyway through all of this. I couldn't tell you how. Hope never knew where I was. When I came home she'd ask, and the honest answer was nowhere. Disappearing, on a woman whose oldest wound is being left.
+I never wanted a drink. That surprised me. What I wanted was to be gone. I let the routines slip. The gym went first, and I still haven't found my way back to it very often. I haven't watched a Yankees game since he died. Some things are still too closely connected to him. He was always the one who told me he was proud of me. I let the phone ring, sat in rooms without being in them. I'd get in the car and drive with no destination, park somewhere and cry, then drive some more. Sometimes I'd end up asleep on a couch in the lobby of a hotel where I wasn't a guest. Numb. When I wasn't driving the car I was working on it, hours at a time, jobs it didn't need. What I needed, I kept telling myself, was to be alone. I'd write some and sleep. Some of the pages in this book come from those weeks, and I look back at them now and I'm not sure how I managed any of it. These chapters were the hardest for me to write. I was there, and it was so painful that writing it meant living it twice. The hospice job was still new, I was still learning it, and I kept going to it anyway through all of this. I couldn't tell you how. Hope never knew where I was. When I came home she'd ask, and the honest answer was nowhere. Disappearing, on a woman whose oldest wound is being left.
 
 She watched it get worse before I did. I got into a couple of fender benders, my head somewhere else at stop signs and in parking lots. Then I hit a guardrail. Twenty-two thousand dollars of damage. Hope and her mom were worried, and said so. I got defensive. I didn't want to look weak. They were right, which was the part I couldn't stand. It was like cutting weight again. You're starving, you won't eat, and nobody at the table understands why, because from the inside it makes perfect sense. Hope started watching me the way you watch someone after a fall, and finally asked, seriously, whether I might have a concussion. That's what grief looked like on me. Enough like a head injury that the person who knows me best couldn't tell the difference. Then she said the thing that cut through. "I have you here, but I feel like you don't care. Like you're not here." She wasn't wrong. The body was in the house. The rest of me was out on those roads somewhere.
 
@@ -2153,6 +2159,8 @@ And then it lands, the cardinal, on the mirror, close enough to touch through th
 
 Seventeen years from West Palm Beach, from the apartment with the blinds drawn and the extension cord running to the hallway, from the morning I opened the door and found Lou standing there. Seventeen, the age I was when I won the county championship. He'd been in the third row that day. He was always in the third row.
 
+The last time a cardinal landed on something I was riding in, he was at the wheel of a U-Haul and I was in no shape to notice. Grandma's looking out for us. He'd said it the way he said most true things, lightly, and moved on.
+
 Dad, I say out loud. Alone in the car. Just his name. And then the words he and I mostly lived instead of spoke. I love you. Not because it went unsaid between us — it didn't. Before the end he'd looked at me and told me, Rob, don't worry about me. We're good. When my father said we're good, that was the whole of it: I love you, and I have closure with you. He never needed the sentence. But you don't run out of wanting to say it to a man you can't call anymore. I love you. The cardinal doesn't move. Dad, I love you. I know you're watching out for me.
 
 It sits there. Turns its head slightly. Still looking. I don't know how long we stay like that. The parking lot goes away. Just me and the cardinal. Just me and Lou. Tears running down my face, not sobbing, the kind that comes from grief and relief colliding. Dad is gone. Dad is here.
@@ -2163,33 +2171,7 @@ I stand in the parking lot, phone in my hand, tears on my face, and feel peace. 
 
 The cardinal wasn't a miracle. What I believe is simpler. The message had been delivered my whole life, in wrestling rooms and church basements and holding cells and U-Hauls, in boundaries that felt harsh and second chances I hadn't earned and ordinary Tuesday afternoons nobody wrote down. The cardinal was a reminder that the message is still being sent. That Lou, in whatever form love takes when the person carrying it is gone, is still here, in the work I do in his name without ever saying his name, in the steadiness I bring to someone else's hardest day that was built by his hands.
 
-The cardinal flew off into the gray. It has never landed on my car again. The promise remains. It was never in the bird. It was in what Lou built in me, across forty years of chosen love and stubborn presence. Now it's my turn. Keep showing up. Keep choosing love.
-
-# **FOR THOSE WALKING THIS ROAD**
-
-*The story ends with the cardinal. What follows are extended reflections for the road still ahead — for anyone loving an addict, anyone sitting with someone near the end, and anyone learning how to stay. Take what serves you. Leave the rest.*
-
-If you're the one in the fight and nobody is coming for you: the rooms are full of men like Lou. Mine found me there. Walk in and let yours find you.
-
-If you're reading this in recovery, from addiction, from loss, from a version of yourself that no longer serves the life you're trying to build, the broken parts of your story don't disqualify you from purpose. They prepare you for it. If you're grieving someone you lost: if the important things were said before the end required them, you were present. And if you're sitting with an aging parent right now, putting off the hard conversation, waiting for a better time: there's no better time. Say the great things while they can still hear you. On a Tuesday. At dinner. On a phone call that feels ordinary. Presence is built across years.
-
-# **A NOTE TO THE ONE WHO LOVES AN ADDICT**
-
-If you picked up this book because you love someone who is using, or you lost someone who did, I want to say something to you now that the story is done.
-
-It isn't your fault.
-
-There's an old line they teach in the rooms where families go, and only from the other side of it did I see how true it is. You didn't cause it. You can't control it. You can't cure it. Three sentences, every one of them a mercy, because all three say the same thing: this was never yours to fix.
-
-I know you've tried. I know you've lain awake turning someone else's life over and over, looking for the thing you missed. I was the person on the other end of those nights. My mother wired me money she told herself was for rent. My father drove a truck across the state to haul me home. None of it made me stop. Not because they failed. Because it wasn't theirs to win. But hear the other half, because it's just as true: none of it was wasted either. Every one of those rescues bought time, and time was the only thing that could still help me. You cannot make them stop. You can help them live until they do.
-
-I have been on both sides of this. I did not understand addiction as a disease at first. I understood it as a disappearance. One day the person you love is still there, sitting across from you, using the same voice, wearing the same face, and somehow already slipping away. You keep reaching for the version of them you remember. You keep thinking love should be enough. Then life teaches you, slowly and brutally, that love is not a cure. It won't make them stop. What it does is keep you from leaving.
-
-Years later I would learn that this is also the whole of hospice. You cannot cure the thing in the room. You can only refuse to leave it.
-
-What you can do is stay. Not fix, not control, not cure. Stay. Set the boundary that keeps you whole, leave the door open a crack, and be there in the ways that don't cost you your own life. If you are not safe, the boundary is distance — my mother saved two boys by leaving.
-
-So now you know how I know. One promise was all I had to offer — to tell you the truth the whole way through — and I've kept it as well as I know how. There's one more page, and it belongs to the rooms.
+The cardinal flew off into the gray. It has never landed on my car again. The promise remains. He made it on a U-Haul out of West Palm Beach without knowing he was making one: the people who loved you don't stop looking out for you. It was never in the bird. It was in what Lou built in me, across forty years of chosen love and stubborn presence. Now it's my turn. Keep showing up. Keep choosing love.
 
 # **THE ROOMS**
 
@@ -2201,17 +2183,31 @@ Dale is a licensed clinical therapist and an alcoholic, and he is the least judg
 
 Back in 2011 he had a cough that wouldn't quit. They told him it was allergies.
 
-I got the call last week. Dale is on hospice with mesothelioma, and they don't think he has a month. It knocked me down, and not because of what he did for me. Because of who he is.
+As I was finishing this book, I got the call. Dale is on hospice with mesothelioma, and they don't think he has a month. It knocked me down, and not because of what he did for me. Because of who he is.
 
 I called him. I cried, and I told him I loved him, and he said it back. That's the power of the program.
 
-There's another seat in those rooms. Cardascia and I had been friends since we were seventeen years old. He lost his fight with addiction last year. He never quit trying, and that's the part I won't let anyone forget. The disease tells you a man who goes back out is a failure. The rooms know better. He kept walking back in, every time, wanting to stop. That's not weakness. That's a fighter losing to something that kills fighters.
+There's another seat in those rooms. Cardascia and I had been friends since we were seventeen years old. He lost his fight with addiction in 2025. He never quit trying, and that's the part I won't let anyone forget. The disease tells you a man who goes back out is a failure. The rooms know better. He kept walking back in, every time, wanting to stop. That's not weakness. That's a fighter losing to something that kills fighters.
 
 I'm seventeen years sober and I'm not one bit safer than he was. None of us are. The only difference between his seat and mine is one day at a time.
 
-One chair is empty and one won't be for long, and the only thing any of us can do about either is what the two of them did: show up. Go to a meeting this week, even if you're good. Especially if you're not. Call somebody. If today's got you scared, say it out loud to one of us. That's what the rooms are for.
+One chair is empty and one won't be for long, and the only thing any of us can do about either is what the two of them did: show up. Go to a meeting this week, even if you're good. Especially if you're not. Call somebody. If today's got you scared, say it out loud to one of us. That's what the rooms are for. If you're the one in the fight and nobody is coming for you: the rooms are full of men like Lou. Mine found me there. Walk in and let yours find you.
 
 Rest easy, Cardascia. We'll keep the seat warm and the coffee bad.
+
+# **A NOTE TO THE ONE WHO LOVES AN ADDICT**
+
+If you picked up this book because you love someone who is using, or you lost someone who did, I want to say something to you now that the story is done.
+
+It isn't your fault.
+
+I know you've tried. I know you've lain awake turning someone else's life over and over, looking for the thing you missed. I was the person on the other end of those nights. My mother wired me money she told herself was for rent. My father drove a truck across the state to haul me home. None of it made me stop. Not because they failed. Because it wasn't theirs to win. But hear the other half, because it's just as true: none of it was wasted either. Every one of those rescues bought time, and time was the only thing that could still help me. You cannot make them stop. You can help them live until they do.
+
+I have been on both sides of this. I did not understand addiction as a disease at first. I understood it as a disappearance. One day the person you love is still there, sitting across from you, using the same voice, wearing the same face, and somehow already slipping away. You keep reaching for the version of them you remember. You keep thinking love should be enough. Then life teaches you, slowly and brutally, that love is not a cure. It won't make them stop. What it does is keep you from leaving.
+
+Years later I would learn that this is also the whole of hospice. You cannot cure the thing in the room. You can only refuse to leave it.
+
+What you can do is stay. Not fix, not control, not cure. Stay. Set the boundary that keeps you whole, leave the door open a crack, and be there in the ways that don't cost you your own life. If you are not safe, the boundary is distance — my mother saved two boys by leaving.
 
 # **LOU'S WAY**
 
@@ -2235,34 +2231,6 @@ He found the doorway you were willing to walk through.
 
 He stayed.
 
-# **AFTERWORD**
-
-There is a kind of wisdom that can only be earned by living through what most people spend their lives trying to avoid. Rob Brizzi has that kind of wisdom, and this book is the evidence of it.
-
-I have known Rob for thirty-five years, and a friendship like that gives you a long view of a man's life. Over those years we bonded over faith, character, and a shared belief in showing up and doing right by people. I knew him long before this book, long before the wisdom in these pages had taken shape, long enough to remember the younger version of him, full of energy and loyalty, the guy who hauled a buddy's Jeep doors around Long Beach Island in ninety-five-degree heat, no shade, just because somebody needed help moving. That was Rob being Rob. He has a servant's heart, and he has had it from the beginning. What I did not know back then was everything going on underneath: the battles he was fighting, the identity he was trying to find, the long road that would bring him to the writing of this book.
-
-Rob was a serious competitor. As a wrestler in high school and college he learned something most people never do, that at the highest levels the physical is only the beginning, and the real contest is internal. He learned that hard work separates the people who merely want something from the people willing to pay the price for it. Formation like that does not leave a man. It shapes the way he meets every challenge that comes after.
-
-And the challenges kept coming. Rob spent years in business, where his success came from his authenticity and his ability to become an expert in whatever he was doing. He learned to listen for what people need beneath what they say they want. Those skills are foundational to this book.
-
-The credential that mattered most is the one that cost him the most to earn. Rob walked through the valley himself. He battled addiction. He knows what it is to be lost, to reach for something that promises relief and gives you nothing back, to hit the bottom that forces a man to look honestly at who he is. He came through that fire transformed. He stopped trying to build his worth on performance, and what he found on the other side was steadier, a deeper sense of who he was and what mattered.
-
-When I reconnected with Rob, it was as if no time had passed. Within minutes our conversation left both of us in tears. As I heard him talk about his father, I understood that this man has an irreplaceable calling. For years Rob has been of service to those in recovery, and he has continued that service through his work in hospice. He sits with families in what he calls the last chapter. He has been there for people in their most vulnerable moments, guiding families through conversations most of us spend a lifetime avoiding, and he does it with the full weight of his own experience as a son who was himself guided through the darkness by the steady, unconditional presence of a father who was all in.
-
-Lou was a father like that. He hit a hundred fly balls at Finch Park in Ramsey, drove Rob and his brother Chris to wrestling practice three nights a week, and leaned in at every turn because he wanted his boys to be the best version of themselves in every part of life. That love left a mark on Rob, and he carries it forward now, offering families the same presence his father once gave him.
-
-This book was written to honor that legacy. It connects Rob's father's story to the larger story of how we live, how we love, and how we face the end of life with honesty and grace. It takes on the conversations most people find too painful to begin, and it does so with the earned authority of a man who has had those conversations hundreds of times, with real families, at the hardest moments of a human life.
-
-You can trust what you have just read. Every page of this book sounds like the man I know. Rob does not have a long list of titles after his name, and he has never needed one. He has done the harder thing. He has lived it. He has wrestled, literally and figuratively, with the hardest questions of identity, suffering, and meaning. He has served in the places most people are afraid to go, and he has come out of them with something worth saying.
-
-So here is the invitation Rob extends to you in these pages. What would it look like if your life were not just for yourself? What would it look like to give your life to the people around you, especially in their hardest moments? This is not a call to perfection. It is a call to show up for the people who are yours to love, with everything you have. Rob is the first to tell you he is a work in progress, moving closer every day to the man he wants to be.
-
-This book will help you do exactly that. I am grateful it exists, and I am grateful you are holding it.
-
-*Sincerely,*
-
-*Dave Meyer, former Virginia Tech captain and NFL quarterback*
-
 # **AUTHOR'S NOTE**
 
 For most of my life I wore a mask. Moving as much as I did as a kid — Mexico to New Jersey, town to town, later across the country — taught me one trick I used everywhere: read the room, become what it wanted, and hope that version got to stay. I got good at it. I performed a life that looked like success and kept the real inventory hidden. Even sober, even happy, I managed a careful image, online and off, and I called it protection.
@@ -2283,7 +2251,7 @@ Jon, Lisa, and Joel — we shared him. I know what we lost.
 
 The men God put in front of me: Andy, Bob, Mager, Matt, and Quint. You walked into the room. So did I.
 
-Dave Meyer, for thirty-five years of friendship and for the words that close this book.
+Dave Meyer, for thirty-five years of friendship and for the words that open this book.
 
 Brenda Jahn, one of the best managers I ever worked for. She believed in me and pushed me, and it prepared me for everything that came after.
 
