@@ -311,3 +311,18 @@ body { font-size: 12pt; }
 * { font-family: "EB Garamond", "Linux Libertine O", Georgia, "Liberation Serif", serif !important; }
 @page { font-family: "EB Garamond", Georgia, serif; }
 @page { @top-center { color: #000; } @bottom-center { color: #000; } @top-left { color: #000; } @top-right { color: #000; } @bottom-left { color: #000; } @bottom-right { color: #000; } }
+
+/* 2026-09-13: classic trade layout (model: Dugdale, The Lost Art of Dying) — folios top-outside, running heads in letter-spaced caps. */
+@page { @bottom-center { content: none; } @top-center { content: none; } }
+@page :left {
+  @top-left { content: counter(page); font-family: "EB Garamond", Georgia, serif; font-size: 10pt; color: #000; vertical-align: bottom; padding-bottom: 0.14in; }
+  @top-center { content: "THE CARDINAL'S PROMISE"; font-family: "EB Garamond", Georgia, serif; font-size: 8.5pt; letter-spacing: 0.16em; color: #000; vertical-align: bottom; padding-bottom: 0.14in; }
+}
+@page :right {
+  @top-right { content: counter(page); font-family: "EB Garamond", Georgia, serif; font-size: 10pt; color: #000; vertical-align: bottom; padding-bottom: 0.14in; }
+  @top-center { content: string(runhead); text-transform: uppercase; font-style: normal; font-family: "EB Garamond", Georgia, serif; font-size: 8.5pt; letter-spacing: 0.16em; color: #000; vertical-align: bottom; padding-bottom: 0.14in; }
+}
+@page :first { @top-left { content: none; } @top-right { content: none; } @top-center { content: none; } }
+body { line-height: 1.5; }
+
+@page :left { @top-center { font-style: normal; } }
