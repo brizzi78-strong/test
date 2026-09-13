@@ -1,6 +1,6 @@
 # Manuscript Lock — The Cardinal's Promise
 
-**Locked:** 2026-09-13 (lock 10: reader-panel five moves — Part Six in chronological order, Foreword moved to the front, back matter ends on Lou's Way, no-speech/truth-oath pass, the promise named in the Epilogue) · **Manuscript text at commit** `PENDING` (branch `claude/david-sheff-clone-writing-06i30q`)
+**Locked:** 2026-09-13 (lock 10: reader-panel five moves — Part Six in chronological order, Foreword moved to the front, back matter ends on Lou's Way, no-speech/truth-oath pass, the promise named in the Epilogue) · **Manuscript text at commit** `bd927e6` (branch `claude/david-sheff-clone-writing-06i30q`)
 
 *A git tag `v1-lock-2026-08-31` exists in the working clone but could not be pushed to GitHub from this session; on GitHub, use the commit hashes above as the reference.*
 
