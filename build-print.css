@@ -308,3 +308,5 @@ body, p, h1, h2, h3, h4, blockquote, li, .titlepage p, .dateline, .epigraph { co
 @page { background: #f4ecdb; }
 body, p, h1, h2, h3, h4, blockquote, li, .titlepage p { font-family: "EB Garamond", "Linux Libertine O", Georgia, "Liberation Serif", serif !important; }
 body { font-size: 12pt; }
+* { font-family: "EB Garamond", "Linux Libertine O", Georgia, "Liberation Serif", serif !important; }
+@page { font-family: "EB Garamond", Georgia, serif; }
