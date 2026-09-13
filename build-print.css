@@ -310,3 +310,4 @@ body, p, h1, h2, h3, h4, blockquote, li, .titlepage p { font-family: "EB Garamon
 body { font-size: 12pt; }
 * { font-family: "EB Garamond", "Linux Libertine O", Georgia, "Liberation Serif", serif !important; }
 @page { font-family: "EB Garamond", Georgia, serif; }
+@page { @top-center { color: #000; } @bottom-center { color: #000; } @top-left { color: #000; } @top-right { color: #000; } @bottom-left { color: #000; } @bottom-right { color: #000; } }
