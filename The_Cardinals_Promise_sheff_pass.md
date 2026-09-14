@@ -2053,11 +2053,11 @@ Something in me shut down before he was gone. I couldn't pick up when my stepmom
 
 [Donna called Tuesday afternoon. I was in the car outside a facility in Cary, between one visit and the next, and I watched her name light up and let it go. I told myself I'd call her from the house. What I did at the house was help my mother up the front steps, one at a time, her hand on my forearm and the tremor coming through it, and by the time she was settled in the good chair the phone was on the counter face down and I had a reason to leave it there.]{.mark}
 
-[I called Donna back after nine, from the garage, with the door down.]{.mark}
+[I didn't call her back. I called Chris after nine, from the garage, with the door down. He was already down there.]{.mark}
 
-["They admitted him this afternoon," she said. "It's pneumonia, Rob. It's in both lungs." She told me his oxygen number. I knew what the number meant. "He's tired, honey. He's real tired." Then she said the thing I've heard wives say in living rooms for ten years, and I had never once heard it aimed at me. "You don't have to come tonight."]{.mark}
+["They admitted him this afternoon," he said. "It's pneumonia, Rob. It's in both lungs." I knew what that meant in a man with nothing left to fight with. "He's tired. He's real tired." Then my brother said the thing I've heard families say in living rooms for ten years, and I had never once heard it aimed at me. "You don't have to come tonight."]{.mark}
 
-[I asked her the questions I ask strangers. Is he comfortable. Is he eating. Who's there. Lisa was on her way. Chris was coming Wednesday. I said we'd be down Friday, that Mom was here and needed a day. Donna said okay. She did not say it the way you say okay when you agree. She said it the way you say it when you've decided not to fight a man about his own father.]{.mark}
+[I asked him the questions I ask strangers. Is he comfortable. Is he eating. Who's there. Donna hadn't left the room. Lisa was on her way. I said we'd be down Friday, that Mom was here and needed a day. Chris said okay. He did not say it the way you say okay when you agree. He said it the way you say it when you've decided not to fight a man about his own father.]{.mark}
 
 [I came back in and Hope looked up from the stove and asked me with her face. "Friday," I said. She needs a plan, and I had given her one. She didn't ask whether it was the right one.]{.mark}
 
@@ -2075,7 +2075,7 @@ Something in me shut down before he was gone. I couldn't pick up when my stepmom
 
 [Mager called at his usual time. We prayed the way we always do, a few plain sentences, thank you and help. I told him about the drip. He didn't say anything about God. He said, "Then you already know, brother." I said I did.]{.mark}
 
-[The call came at twenty to nine. Chris. "Rob." Then a breath. "He's gone. About a half hour ago. Donna was with him." I asked if it was peaceful. I don't know why that was my first question. It's the question families ask me. He said yes. He said Dad had not woken up since the night before. I said okay. I said I'd call him back. Then I called Donna, before anyone else. Neither of us said much. She said he hadn't been alone. I said thank you, which was not enough, and she knew it and let it be.]{.mark}
+[The call came at twenty to nine. Chris. "Rob." Then a breath. "He's gone. About a half hour ago. Donna was with him." I asked if it was peaceful. I don't know why that was my first question. It's the question families ask me. He said yes. He said Dad had not woken up since the night before. I said okay. I said I'd call him back.]{.mark}
 
 [I went and told my mother. She was in the good chair with her tea. I said, "Mom, Dad died." She looked at me for a long time and then she said, "Oh, Louie." Just that. She had known him forty years, married him, left him, and toasted him at my wedding, and what she had left for him was his name. Hope had come in behind me and put a hand on my back and left it there.]{.mark}
 
