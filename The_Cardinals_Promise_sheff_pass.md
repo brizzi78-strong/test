@@ -262,7 +262,7 @@ Papa stood in the hallway with a folded newspaper under his arm. "I'll see you i
 
 Chris was about a year and a half when we left Mexico. Hazel eyes, light skin. Not like me.
 
-Then the airport. My mother carried a suitcase and Chris while I dragged a little red one behind me. I'd flown once before, to Houston, when I was two and a half, the trip to see Aunt Terry when Kevin was born, but I didn't remember any of it. As far as I knew, I'd never seen a plane up close. The engines came up through the floor and the seat and into me. When we started down the runway something pushed me back into my seat. I looked out the window. The houses and the streets slid by, slow and then fast, until they ran together and dropped away under the clouds.
+Then the airport. My mother carried a suitcase and Chris while I dragged a little red one behind me. I'd flown once before, when I was two and a half, the trip to see Aunt Terry when Kevin was born, but I didn't remember any of it. As far as I knew, I'd never seen a plane up close. The engines came up through the floor and the seat and into me. When we started down the runway something pushed me back into my seat. I looked out the window. The houses and the streets slid by, slow and then fast, until they ran together and dropped away under the clouds.
 
 The only world I'd ever known was gone. I didn't know that's what I was watching. I thought I'd see it again in two weeks.
 
@@ -382,18 +382,6 @@ I liked Lou. But Mom never knew how I'd stand at the window most nights watching
 
 It wasn't until much later that I learned the rest of Horacio's story. He'd hit a breaking point and gone back to Mexico because he couldn't carry his own life and ours at the same time. I've come to believe he left so we could have something he couldn't give us. That's the generous version. It's the one I keep.
 
-Lou was no saint, and I won't pretend he was. He had a temper that showed up at the wrong moments, and he knew that about himself. Once a mood had him, it was hard to pull him out of it.
-
-[*[PLACEHOLDER. One evening of the temper, drafted to hold the place until Rob replaces it with a true one.]*]{.mark}
-
-[The night I remember, he'd come in late from the city, eaten standing up, and gone down on the couch with the television going. He had told us to keep it down. Chris and I got into something upstairs, a game, an argument, I don't remember which, and it got loud, and it woke him.]{.mark}
-
-[He came up off that couch already yelling, and this time it was at me. "What did I tell you? What did I tell you?" He said it more than once, louder each time, coming up the stairs. My mother came out of the bedroom and said his name, and he didn't answer her. Chris was behind me in the doorway, not moving. I stood there and took it.]{.mark}
-
-[In the morning he was at the counter in a pressed shirt making our lunches. He didn't say anything about it, and neither did I. He drove us to school.]{.mark}
-
-[*[END PLACEHOLDER.]*]{.mark}
-
 Lou's upbringing explained some of it. His father sold produce. When men in suits walked into his market, his father went out back to discuss things in private. When relatives came over from Italy, Lou was the boy who lost his bed to them and slept in the attic. He carried that longer than anybody knew. Years later, during a stretch when he was going to therapy, he recalled a family Christmas and an old man yelling at his uncle about a boy who had to sleep in the attic. The temper was the Italian kind you see in the movies. It was older than any of us, and it was never about us.
 
 He had three kids before he was twenty-five. His first wife, Judy, was a couple of years younger and fighting postpartum depression in an era that had no name for it and no help. To avoid her moods, he stayed out late some nights, partying. The marriage couldn't hold, and the kids spent most of their time with his mother, Mag.
@@ -448,6 +436,20 @@ And there was my neighbor Rich, a fellow member of the school's wrestling team. 
 
 The year I left for college my mother told Lou she was done. He didn't take it well. He wanted the unit held together — that was the thing he had built, and he wasn't ready to watch it come apart.
 
+Lou was no saint, and I won't pretend he was. He had a temper that showed up at the wrong moments, and he knew that about himself. Once a mood had him, it was hard to pull him out of it.
+
+[*[PLACEHOLDER. One evening of the temper, reconstructed. Rob replaces it with the night he remembers.]*]{.mark}
+
+[The night I remember, the Yankees were on and we were told to keep it down. Chris and I got into something upstairs, the kind of fight two boys have over nothing, and it got loud, and it got loud right when the game got close. I heard the recliner. I heard him on the stairs. By the time the door opened I was already where I went, knees up on the far side of the bed, small, the hallway light coming in around him.]{.mark}
+
+["Whatsa matter with the two of yous? I got a game on and I gotta hear you through the ceiling." Then louder, at me, because I was the older one. "Every night. Every night with this." He wasn't done, and none of the rest of it was anything I'd repeat, and none of it was anything I hadn't heard a grown man say before. That was the part that scared me. Not the words. That I knew the shape of it from another house.]{.mark}
+
+[My mother said his name from the hall, once, and he didn't answer her. He shut the door harder than he meant to. Chris didn't say anything, and I didn't, and downstairs the game came back up.]{.mark}
+
+[In the morning he was at the counter in a pressed shirt making our lunches. He didn't say anything about it, and neither did I. He drove us to school. I left the lunch in the bag that day and threw it out behind the gym, which is the only way I had of saying anything back. He never knew. I've never told him. I'm telling him now.]{.mark}
+
+[*[END PLACEHOLDER.]*]{.mark}
+
 My mother and Lou divorced in 1996, the year I turned eighteen. The divorce handed him an easy way out. We were grown, or close to it, and the marriage that had tied him to us was finished. He could have walked away clean. He never did. The first time he chose us, it was a handful of Tootsie Rolls at my grandparents' dinner table. This time it was a divorce. The same decision, made twelve years apart.
 
 I get it now. I didn't back then. For me, it started on a Saturday. With a bucket of baseballs.
@@ -459,6 +461,18 @@ I get it now. I didn't back then. For me, it started on a Saturday. With a bucke
 *— Isaiah 43:1*
 
 **New Jersey, 1986**
+
+[*[PLACEHOLDER. The first Saturday, reconstructed. Rob replaces it with the one he remembers.]*]{.mark}
+
+[He came by on a Saturday morning before he lived with us, in the tan car, and there was a white plastic bucket on the passenger seat with a lid on it. I thought it was paint. It was baseballs, most of them scuffed gray, a few with the stitching gone soft, and a glove that was too big for me that he'd gotten from somebody at work.]{.mark}
+
+[We went to the field behind the school. He didn't explain anything. He walked out to the middle of the grass with the bucket and a bat and said, "Go stand out there," and pointed, and I went and stood out there. Then he hit me a ball. It went over my head. He hit me another one. I got my glove on it and it fell out. He didn't say anything about that either. He reached into the bucket and hit me another one.]{.mark}
+
+[I don't know how many. The bucket got empty and he walked out with me to pick them all up, and we filled it, and he walked back and did it again. Somewhere in the second bucket I caught one and held it, and I looked up, and he was already reaching for the next ball. That was the whole reaction. He hit me a hundred, then a hundred more, and when the sun got on top of us he said, "That's enough for today," which meant there would be another day.]{.mark}
+
+[My mother had lunch on the table when we got back. He didn't stay for it. He set the bucket down inside our door like it lived there now, and I understood, without anyone saying it, that it did.]{.mark}
+
+[*[END PLACEHOLDER.]*]{.mark}
 
 Overnight, I gained a big sister and two big brothers I hadn't even known to hope for. Lou had three children of his own long before he ever met my mother: Jon, Lisa, and Joel, thirteen to seventeen years older than me and grown or nearly grown by the time he met her. When he chose us, we inherited his existing family. Chris and I were thrilled. We felt blessed. His other children didn't have to accept us, though. They already had their own lives and never expected they'd need to make room for two boys from Mexico City who showed up attached to their father's new marriage. But they did. They treated us like brothers.
 
@@ -804,7 +818,7 @@ I had no idea. I was seven. They were my dad's friends with shiny things on the 
 
 But that was Lou. The Rascals — Rock and Roll Hall of Famers, one of the biggest bands of the sixties — were his buddies. They came to his eightieth birthday.
 
-Years later we're at my sister Lisa's place in Sarasota, walking into breakfast at Another Broken Egg, and my dad spots a guy outside. His face lights up. Dickie V! The guy turns, and it's Dick Vitale — the actual Dick Vitale. They'd been friends back in the same part of Jersey, and my dad had been telling me about it for years. Me and Dickie V. I'd nod the way you nod at a man who also swore the lawn was being handled by a goat. Then one morning there's Dickie V himself, turning around at the sound of my father's voice and lighting up right back at him.
+Years later we're at my sister Lisa's place in Sarasota, walking into breakfast at Another Broken Egg, and my dad spots a guy outside. His face lights up. Dickie V! The guy turns, and it's Dick Vitale — the actual Dick Vitale. They'd been friends back in the same part of Jersey, and my dad had been telling me about it for years. Me and Dickie V. I'd nod the way you nod at a man who also swore the lawn was being handled by somebody who worked for free. Then one morning there's Dickie V himself, turning around at the sound of my father's voice and lighting up right back at him.
 
 That was Lou. He could not help mentioning the people he knew — the Rascals, Dickie V, a guy from the union hall — all in the same easy tone. It should have been insufferable. It wasn't, because every name was true. He name-dropped the way a kid spreads out his baseball cards, tickled you were finally looking.
 
@@ -1145,6 +1159,24 @@ I had stopped paying for things. Condo fees. Utilities. The power went off, so I
 
 My mother sent me money, intending me to use it for rent, food, getting back on my feet. Instead, I bought drugs and alcohol, and blew it at strip clubs. I can barely stand to write that. The lie I told her was that I wasn't abusing my medication. The lie I lived was letting her believe her money kept me fed.
 
+[*[PLACEHOLDER. One of the calls, reconstructed. Rob replaces it with a call he remembers.]*]{.mark}
+
+[I can give you one of the calls. It was a Tuesday, because Tuesday was when the pharmacy would fill it, and I called her from the balcony so she'd hear traffic and think I was out.]{.mark}
+
+["Ma. Hey. Listen, rent's due Friday and they moved the commission checks to the fifteenth." I had rehearsed the sentence. I had the number ready, four hundred, which was rent minus what I'd already spent of it.]{.mark}
+
+["Are you eating?"]{.mark}
+
+["I'm eating." I was not eating. There were two yogurts in the refrigerator and I don't know how old they were.]{.mark}
+
+["Are you taking your medicine right? Like the doctor said?"]{.mark}
+
+["Like the doctor said." That one I said fast. It was the only question I could not stand to hear her ask, and she asked it every time, in the same voice, and every time I answered it the same way, and she wired the money. She said she'd go to Western Union at lunch. She said she loved me. I said it back, and I meant it, which is the part I have never been able to explain to anyone who hasn't done this. I meant it while I was lying to her. I meant it while I was already putting my shoes on.]{.mark}
+
+[The wire landed at 1:40. By 2:15 I had the bottle. By dark the rest of the four hundred was gone, and I was in a place with no windows telling a girl whose name I never got that my father was a big deal in New Jersey.]{.mark}
+
+[*[END PLACEHOLDER.]*]{.mark}
+
 She kept sending it. Hope can look a lot like enabling from the outside. From inside a mother, I think it looked like keeping her son alive.
 
 I was down to about a hundred and forty-five pounds. I hadn't eaten in days. I wasn't drinking water. I wasn't sleeping in any way that counted. I had stopped looking in mirrors. I had stopped answering most calls.
@@ -1333,7 +1365,7 @@ The shape of those years was small on purpose. Up at five thirty. Coffee. A litt
 
 **Pensacola, 2009–present**
 
-One of the men I got sober alongside had been homeless with a tenth-grade education, and a few years later he had a Hollywood actor sleeping in his guest room, which is his story to tell and not mine. His name is Matt. The men God put in front of me weren't the ones I would have picked, and the first of them came early, when I couldn't yet see any of it.
+One of the men I got sober alongside had been homeless with a tenth-grade education, and a few years later he had a Hollywood actor sleeping in his guest room. His name is Matt. The men God put in front of me weren't the ones I would have picked, and the first of them came early, when I couldn't yet see any of it.
 
 Early in sobriety, your brain is rewiring itself. You walk around in a fog, not drunk, not high, just flat. I was depressed, living with my parents, going to meetings, trying to figure out what came next, and I kept landing on the same thought: I'd never build something real again. Not somebody like me. Somewhere in there I heard people say how few stay sober. I never looked it up. When you're new, you don't hear that as information. You look around the room and wonder which one of you it's going to be. I was a long shot.
 
@@ -1647,7 +1679,7 @@ Nothing in hospice is harder than a parent losing a child. The only reason I can
 
 The very first time I was in a room with someone dying, I was too young to know that was what it was. My grandfather's mother was in a nursing home, near the end. I was a little boy, barely talking, and the only language I had yet was Spanish. She lay against the pillows, white-haired and round-faced, and to me she looked like exactly one thing. Santa Claus. So I told her so. Ho, ho, ho. My mother said, Stop. I didn't understand the hush in the room, or that the woman in the bed was leaving, or that I would spend my life walking into rooms just like it. I only remember her face, and my mother's hand steering me out.
 
-The first death that stayed with me wasn't a patient, and it came years before hospice was ever my job. It was Detroit Bob.
+The first death I was in the room for wasn't a patient, and it came years before hospice was ever my job. It was Detroit Bob.
 
 I met him at Courage at Noon during my first year sober. About eighty, bald, a scratchy voice, a face that looked permanently annoyed, like the world had let him down personally and he hadn't decided yet whether to forgive it. He smelled like Old Spice, just enough, never too much. His favorite line, and I heard it a hundred times: I'm not here to help any of you. I'm here to save my own butt. And you're listening to me? That's just a fringe benefit. People figured he was cynical. Not Bob. Bob had done the work. He just wasn't going to perform it for an audience. And he had the one thing I could not stop staring at: decades sober, old, and at peace with all of it. I needed to understand how a person did that.
 
@@ -1663,7 +1695,17 @@ Lou came through the surgery. By December the scans were clean. The cancer staye
 
 Bob didn't get that kind of time. Near the end, I went to see him, and it was nothing like the nursing-home room of my boyhood — this was a grown man actively dying, and everyone in the house knew it. The place was full. People he'd carried in the rooms, people who'd carried him, a steady stream coming to sit with him and say what they needed to say while he could still hear it. My first thought was a small, honest panic: how was I supposed to feel all of this without anything to take the edge off? I had never done grief without a buffer. The panic didn't last. What replaced it was gratitude, and a level calm, the plain fact of being there and not needing to be anywhere else. He told me once that sobriety wasn't something he fought every morning; it was a decision he had made a single time and never went back to revisit, and he carried it all the way to the edge of his life. Decades older than me, and still showing me how it was done.
 
-I was in the room when he passed, in 2016. I had been around a lot by then, but not that, not the actual leaving. I watched it happen, and afterward I stayed for his wife, a woman I loved, because there was nothing left to do but be there and not go. That was when it finally landed. Bob was gone. There was no fixing it, no deal to close, no right answer that would have bought him one more minute.
+I was in the room when he passed, in 2016. I had been around a lot by then, but not that, not the actual leaving.
+
+[*[PLACEHOLDER. The hour itself, reconstructed. Rob replaces it with what he saw.]*]{.mark}
+
+[It was a Sunday afternoon and the room had thinned out to four of us. His breathing had changed that morning, the nurse said, and once she said it I could hear it. Long pulls, and then a space, and then another pull. The spaces got longer. Every time one came, the four of us stopped breathing too, and every time he started again, somebody let out a little laugh, the kind you're ashamed of. His wife sat on the bed with her hand under his. Nobody talked. The Old Spice was still there. I had my hands folded in my lap like I was in church, and I remember noticing that and not knowing what else to do with them.]{.mark}
+
+[At some point the space didn't end. His wife knew before the nurse did. She said his name, not loud, and then she said, "Okay," and that was all. I looked at the clock because I'd seen people do that on television. Four twenty. Then I went and stood in the kitchen until she called me back in.]{.mark}
+
+[*[END PLACEHOLDER.]*]{.mark}
+
+Afterward I stayed for his wife, a woman I loved, because there was nothing left to do but be there and not go. That was when it finally landed. Bob was gone. There was no fixing it, no deal to close, no right answer that would have bought him one more minute.
 
 Around that same stretch, the recognition I'd chased my whole life finally showed up at work, and it barely registered. Someone forwarded an internal article. A colleague congratulated me in passing. I skimmed it once and closed the screen. Lou noticed the change in me, the way he noticed everything. "You're successful again," he said. "I guess," I said. "You don't sound like it matters." "That's because it doesn't," I said. "Not the way it used to." He nodded.
 
@@ -1767,7 +1809,7 @@ When she gets off work, my phone rings, because she doesn't like the walk to her
 
 When we first met I was dealing with a health issue. It was private then and it stays private now — a man who has put this much of himself on the page gets to keep one more thing off it. What matters is what she did. It could have scared her off early, before she'd invested anything, and I gave her the out without saying so. She didn't take it. "It doesn't faze me," she said. "I'll go to every appointment with you, no matter how much it costs." The woman who tightens at an unexpected expense told me up front she'd spend whatever it took on me, before she had a single reason to.
 
-The first three years we laughed all the time, the real kind that takes her all the way over and pulls the whole room in with her. Then the heavy years came, the ones this book is mostly about, and the laughing got rare without either of us deciding it should. It's coming back, a little more each month. We are safe with each other, and because we're safe we are sometimes harder on each other than we should be. That's the cost of letting your guard all the way down with the one person you're sure won't leave.
+The first three years we laughed all the time, the real kind that takes her all the way over and pulls the whole room in with her. Then the heavy years came, the ones the last part of this book is about, and the laughing got rare without either of us deciding it should. It's coming back, a little more each month. We are safe with each other, and because we're safe we are sometimes harder on each other than we should be. That's the cost of letting your guard all the way down with the one person you're sure won't leave.
 
 ### *The Hundred Thousand*
 
@@ -1863,6 +1905,20 @@ Yankee games had their own liturgy. Leave the house at five, catch batting pract
 
 And he never stopped wanting to be useful. He'd retired on paper and kept working anyway, into his eighties, answering phones and untangling computer problems. The pay was almost nothing, and one day he called me like he'd won a sweepstakes because his boss had doubled it. What I remember isn't the money. It's an eighty-year-old man beaming over a good performance review. At eighty, he did a 5K with Hope and me — beanie, glasses, a finisher's medal — finished dead last, and took home the tortoise award, which somehow made the whole thing better. After the 2015 surgery — they took about half of his esophagus and half of his stomach — he ate less, weighed less, took his vitamins, saw his holistic doctor. He won himself years. He spent them wanting things. Strength. Respect. A good review. Proof he wasn't finished.
 
+[*[PLACEHOLDER. One ordinary evening, reconstructed. Rob replaces it with one he remembers.]*]{.mark}
+
+[I'll give you one evening, because the years were made of them. A Tuesday in 2019, Hope working late, me on his back porch in Pensacola with a plate Donna had handed me through the door without asking whether I'd eaten. The Yankees were on the television inside with the sound up, and he was outside with me, watching it through the screen, because he had decided that was where we were sitting.]{.mark}
+
+["Who's pitching?" I said.]{.mark}
+
+["Who's pitching. You don't know who's pitching." He told me who was pitching. He told me the man's ERA and where he went to high school and what his father did for a living, and none of it was in the newspaper, and I have never known where he got it.]{.mark}
+
+[He asked about work the way he always asked about work, which was completely. He wanted the names. Who was the manager, what was she like, was I listening to her. He'd tell me what to do about a problem I hadn't told him I had. Then somebody hit one, and he said, "There it is," and put his hand flat on the arm of the chair, which for him was standing up and cheering.]{.mark}
+
+[Nothing happened. Around nine he said, "Alright," which meant the evening was over, and he walked me to the door, which he did every time, and stood in it while I backed out, which he did every time. I drove home. I can't tell you a single thing that was said that mattered, and I can tell you it was one of the best nights of my life, and I could tell you the same about two hundred more.]{.mark}
+
+[*[END PLACEHOLDER.]*]{.mark}
+
 ### *Don't Go Dying on Me*
 
 In January 2024 the cancer came back. Stage 4. Lungs and lymph nodes. Lou was eighty-two. He told Donna. He told Lisa. He told no one else.
@@ -1887,7 +1943,7 @@ I respected the toughness. I also saw the loneliness inside it. It kept him goin
 
 There was a stretch in late 2024, about a year before the end, when I was sure we were losing him. He could barely walk. He was barely coherent, and he was in a lot of pain. I called the family and told everyone they needed to come to town. I didn't think he was going to make it. Joel flew in, and I picked him up at the airport. He told me he didn't know how to do this, how to be in the room with our father like that, with all of it right there on the surface. Joel wears his humor like armor; he's the funny one. Seeing him without it was something else entirely. "Just grab his hand," I told him, "and tell him you love him." That's all. Two grown men in an airport pickup lane, working out how to go say goodbye to our dad. Lou rallied after that. He gave us most of another year. But that was the first time I rehearsed losing him.
 
-That spring, Hope and I told him we were moving to Raleigh. I could tell he was disappointed. I'd lived close to him in Pensacola for eighteen years, almost nineteen. But he understood, and he told me to go. The last time I saw him before the move we went to McGuire's. He looked fine. He said he wasn't worried, said as long as Donna was there he was okay. Part of me looks back and wonders if I should have stayed longer.
+That spring, Hope and I told him we were moving to Raleigh. I could tell he was disappointed. I'd lived close to him in Pensacola for eighteen years, almost nineteen. But he understood, and he told me to go. The last time I saw him before the move we went to McGuire's. He looked fine. He said he wasn't worried. Part of me looks back and wonders if I should have stayed longer.
 
 We were moving because life was expanding. Hope had been a pharmacist for eight years. Raleigh made sense: jobs, community, a church that felt like ours. Hope never wavered. She sees clearly and asks hard questions, and under all of it is a bedrock belief that God has a plan for us to be of service.
 
@@ -1911,11 +1967,11 @@ After the move, Hope and I went down for a visit. We went to church that morning
 
 [*[PLACEHOLDER. The breakfast, drafted from what the book already says about him. Rob replaces the details with what happened.]*]{.mark}
 
-[He'd dressed for it. Pressed shirt, the collar standing a little off his neck now, the hair done. Donna had driven. He walked in on his own. He asked me twice what time we were leaving, and the second time I answered him short, and I've had months to wish I hadn't. Eggs, toast, coffee he stirred and didn't drink much of. He ate about a third of it and pushed the plate an inch away from himself, which was as close as he came to saying he was full.]{.mark}
+[Another Broken Egg on Bayfront, because it was his, and because the girl at the register said "Where you been, Mr. Brizzi?" before we sat down, which was the point of going there. He'd dressed for it. Pressed shirt, the collar standing a little off his neck now, the hair done. Donna had driven. He walked in on his own. He asked me twice what time we were leaving, and the second time I answered him short, and I've had months to wish I hadn't. Eggs, toast, coffee he stirred and didn't drink much of. He ate about a third of it and pushed the plate an inch away from himself, which was as close as he came to saying he was full.]{.mark}
 
 [There was an opening in hospice, at a company I had already given ten years to, and I told him about it. He listened the way he listened to anything about work, which was completely. Then he told me what he always told me. "Listen to your boss. Work hard." He had put that in me a long time ago, and he said it again like it was the first time. Later, while Hope was up at the counter, he looked at me and said, "Rob, don't worry about me. We're good."]{.mark}
 
-[When we got up he didn't walk us to the car. He stood inside the door and watched us go. It was the last time I saw him.]{.mark}
+[He left a twenty on a thirty-dollar check. When we got up he didn't walk us to the car. He stood inside the door and watched us go.]{.mark}
 
 [*[END PLACEHOLDER.]*]{.mark}
 
@@ -1988,6 +2044,8 @@ Something in me shut down before he was gone. I couldn't pick up when my stepmom
 [I went out to the driveway. The bicycle with the bow was still across the street. A kid came out in pajamas and got on it and rode it to the corner and back, and I stood there with the phone in my hand and watched him do it four times.]{.mark}
 
 [*[END PLACEHOLDER.]*]{.mark}
+
+[Nobody said the word hospice about my father. Not Donna, who is a nurse. Not Chris. Not me, who says it for a living. It went that fast, and that is true, and it is also the sentence I hear from families every week, and I have never once believed it was the whole reason.]{.mark}
 
 I had been at his bedside every other time — the surgeries, the pacemaker — and I had lived close to him for eighteen years. Being absent from the last hour is not the same as being absent from the life.
 
@@ -2107,7 +2165,7 @@ Lou spent eighty-four years showing up without needing to know exactly where he 
 
 **Raleigh, January 2026**
 
-A few days after we buried my father, grief caught me somewhere I didn't expect it.
+Before the guardrail, before I went back to the rooms, a few days after we buried my father, grief caught me somewhere I didn't expect it.
 
 One morning that week I walked into one of the assisted-living communities I call on for a routine visit. Linda was at the round table near the nurses' station. She'd been a nurse a long time. You could see it in how she carried herself. Compassionate, but not someone who let everybody in. A steadiness I recognized. We started talking. She was from the Buffalo area, upstate New York. We joked. It felt easy in a way things hadn't in days.
 
