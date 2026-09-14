@@ -191,6 +191,7 @@ PART ONE
 # **THE ESCAPE**
 
 **CHAPTER 1**
+
 ## **Mexico City — The Escape**
 
 *"The LORD shall preserve thy going out and thy coming in from this time forth, and even for evermore."*
@@ -283,6 +284,7 @@ She sat awake. The whole flight she was waiting for someone to stop her, at the 
 We landed in New Jersey at the start of winter. The airport felt like home at first. Same crowds, same noise, everyone rushing. Then I started listening. The words were wrong, not Spanish, something else. Everybody around me knew something I didn't.
 
 **CHAPTER 2**
+
 ## **New Jersey: Survival**
 
 *"Strength and honour are her clothing; and she shall rejoice in time to come."*
@@ -375,6 +377,7 @@ He went back to Mexico. It would be years before I saw him again.
 A year later, my mother told us there was someone she wanted us to meet.
 
 **CHAPTER 3**
+
 ## **The Man Who Didn't Have To**
 
 *"A father of the fatherless... is God in his holy habitation."*
@@ -461,6 +464,7 @@ My mother and Lou divorced in 1996, the year I turned eighteen. The divorce hand
 I get it now. I didn't back then. For me, it started on a Saturday. With a bucket of baseballs.
 
 **CHAPTER 4**
+
 ## **Chosen**
 
 *"I have called thee by thy name; thou art mine."*
@@ -541,6 +545,7 @@ He got the white-out and painted over the word, let it dry, and ran a fresh phot
 There was one thing they couldn't change, and I held onto it. Brizzi still started with a B. When the teacher lined us up alphabetically, I landed near the front, right about where Balderas used to put me. My country was gone. My first father was gone. My name was gone. But I still stood in the same place in that line, and some mornings that one small thing was the only proof I had that any part of the old me had made the trip.
 
 **CHAPTER 5**
+
 ## **The Man Who Raised Me**
 
 *"Let us not love in word, neither in tongue; but in deed and in truth."*
@@ -587,6 +592,7 @@ PART TWO
 *Love came free at home. Everywhere else, I thought you had to win it.*
 
 **CHAPTER 6**
+
 ## **The Wrestler**
 
 *"And Jacob was left alone; and there wrestled a man with him until the breaking of the day."*
@@ -695,6 +701,7 @@ Dave's football plans eventually changed. His character did not. Mine was beginn
 Dave went on to play in the NFL, then became a missionary in China, and years later we found our way back to each other. He's the one who wrote the foreword to this book.
 
 **CHAPTER 7**
+
 ## **What the Mat Left**
 
 *"And every man that striveth for the mastery is temperate in all things."*
@@ -755,6 +762,7 @@ One moment at the Counties: I was about to wrestle for the title and my Walkman 
 The wrestling years left marks I still feel. For a long time my body didn't feel like my own. It was something to manage, a number to beat, proof I deserved my place. Food stayed complicated: some meals were cheat meals, others I ate lean. When life felt out of control, drop the pounds was still the first thought that came back. The same drive that cut nineteen pounds to make weight later went looking for other ways to numb everything. It took years to make peace with my body, and it wasn't discipline that got me there. It was my mother's quiet meals. Some days I still have to choose that peace on purpose. It gets easier every year.
 
 **CHAPTER 8**
+
 ## **The Suit**
 
 *"Drudgery is the touchstone of character."*
@@ -783,6 +791,7 @@ They told him no, and the next morning he knotted the tie again. He wasn't loud 
 I can still see him at the front door. Dyed hair, pressed shirt, tie pulled tight, shoes shined.
 
 **CHAPTER 9**
+
 ## **They'll Teach You**
 
 *"A good name is rather to be chosen than great riches."*
@@ -847,6 +856,7 @@ And everything was a surprise. "What are we watching, Dad?" It's a surprise. Whe
 My brother and I called him the most interesting man in the world. It started as a joke, the guy from the Dos Equis commercials. Stay thirsty, my friends. Then we realized we weren't joking. He really was. Not for the people he knew, but for who he'd be in a kitchen on an ordinary night, keeping a straight face, waiting for you to fall for it.
 
 **CHAPTER 10**
+
 ## **Oxford**
 
 *"The LORD is nigh unto them that are of a broken heart."*
@@ -915,6 +925,7 @@ New Jersey to Ohio, ten hours, no call ahead to confirm I needed him. He took me
 On the way out, a waitress ran into the parking lot after us and handed me her phone number. I looked at Lou. He kept walking, eyes straight ahead. I asked if he'd said something, left a big tip, set the whole thing up. He denied it flat. Didn't miss a beat. I never believed him. He took it to the grave. That might be my favorite thing about him.
 
 **CHAPTER 11**
+
 ## **MTV**
 
 *"All is vanity and vexation of spirit."*
@@ -945,6 +956,7 @@ PART THREE
 *Everything I'd built was borrowed. This is what the repo man looks like.*
 
 **CHAPTER 12**
+
 ## **The Performance Trap**
 
 *"Selfishness — self-centeredness! That, we think, is the root of our troubles."*
@@ -1049,6 +1061,7 @@ For years I told the story as a joke — the nachos, the parking lot, the absurd
 The problem with hitting rock bottom is that sometimes you bounce. And then you have to hit again. And again. My elevator hadn't yet reached bottom.
 
 **CHAPTER 13**
+
 ## **My Brother's Keeper**
 
 *"Am I my brother's keeper?"*
@@ -1088,6 +1101,7 @@ At some point in that stretch, after years of barely leaning on my faith at all,
 Years later, and I still don't know what I prayed for.
 
 **CHAPTER 14**
+
 ## **Checking Boxes**
 
 *"Man looketh on the outward appearance, but the LORD looketh on the heart."*
@@ -1144,6 +1158,7 @@ I left for an apartment in West Palm Beach, and I can't hand you a clean reason.
 Boca was the last soft place. West Palm Beach was where the disease finally got me alone.
 
 **CHAPTER 15**
+
 ## **West Palm Beach**
 
 *"His father saw him, and had compassion, and ran."*
@@ -1200,6 +1215,7 @@ I slept most of the drive. When I was awake, we talked baseball — the Yankees,
 The U-Haul wasn't the turn. Lou got me back to Pensacola, and I kept using. The rescue didn't get me sober. It kept me alive.
 
 **CHAPTER 16**
+
 ## **New Orleans**
 
 *"Out of the belly of hell cried I, and thou heardest my voice."*
@@ -1270,6 +1286,7 @@ PART FOUR
 *You can't pay back a man who never sent a bill. You can pass it on.*
 
 **CHAPTER 17**
+
 ## **Chumuckla**
 
 *"Half measures availed us nothing. We stood at the turning point."*
@@ -1308,6 +1325,7 @@ Lou picked me up. Same truck, same calm. He didn't ask me to prove anything or e
 What came next was a long line of ordinary mornings I had to learn how to fill.
 
 **CHAPTER 18**
+
 ## **The Quiet Years**
 
 *"Prayer changes me, and I change things."*
@@ -1356,6 +1374,7 @@ I sat beside a lot of unwell people in those years, many of them still in rehab.
 The shape of those years was small on purpose. Up at five thirty. Coffee. A little notebook by the bed where I wrote down whatever was in my head, sometimes a sentence, sometimes just a list of things I was grateful for. A walk along the bay in Gulf Breeze before the sun came up. Breakfast at home, and the morning news with the sound off and the captions on. Nobody would make a movie out of it.
 
 **CHAPTER 19**
+
 ## **The People You Meet When You Stop Drinking**
 
 *"Two are better than one... for if they fall, the one will lift up his fellow."*
@@ -1390,6 +1409,7 @@ The morning after my father died, all these years later, Quint was the first per
 The best one didn't come from a meeting at all. You'll meet her.
 
 **CHAPTER 20**
+
 ## **The Line**
 
 *"Keep thy heart with all diligence; for out of it are the issues of life."*
@@ -1420,6 +1440,7 @@ I left shaken. That line forced a choice I couldn't hand off. Go back to that wo
 The payoff came quietly, months later on a Tuesday morning in 2011, on my walk along the bay, coffee in a paper cup, the sun just coming up over the water. I wasn't thinking about anything in particular, and then I knew, the way you know your own name. I didn't want a drink. I hadn't wanted one in a long time, and it wasn't a fight anymore. I took another sip of coffee and kept walking.
 
 **CHAPTER 21**
+
 ## **They Gave Me a Chance**
 
 *"Old things are passed away; behold, all things are become new."*
@@ -1518,6 +1539,7 @@ The days were long, doctors' offices, nursing homes, assisted livings, back road
 Someone had given me one chance, and I stayed ten years.
 
 **CHAPTER 22**
+
 ## **Making Amends**
 
 *"First be reconciled to thy brother, and then come and offer thy gift."*
@@ -1564,6 +1586,7 @@ The courts came last. In 2013, four years sober, I wrote to the court myself and
 The court granted the dismissals.
 
 **CHAPTER 23**
+
 ## **The Salmon Palace**
 
 *"Except the LORD build the house, they labour in vain that build it."*
@@ -1606,6 +1629,7 @@ Nobody applauded. I no longer needed them to.
 Years later, when Hope walked through that door the first time, she didn't say a word about the size. She noticed how it felt. We'd take a devotional out to the pool, or down to the dock, and read it together. The habit we still fall back into, the one that's just part of the house now, started there. We sold it in 2019, a hundred thousand in equity, and put it down on the home Hope and I built together in East Hill, the kind I'd never let myself imagine from across the street. From a one-bedroom salmon castle to a house we built from the ground up.
 
 **CHAPTER 24**
+
 ## **Horacio**
 
 *"For if ye forgive men their trespasses, your heavenly Father will also forgive you."*
@@ -1664,6 +1688,7 @@ PART FIVE
 *She said, I will love you no matter what. I'd heard that sentence once before — proved, not spoken.*
 
 **CHAPTER 25**
+
 ## **Sobriety Meets Hospice**
 
 *"I have fought a good fight, I have finished my course, I have kept the faith."*
@@ -1706,6 +1731,7 @@ Around then, the recognition I'd chased at work finally came, and it barely regi
 I talked to Lou about Bob one evening. "I don't know why this is hitting me so hard," I said. "I did everything right." He didn't hesitate. "That's not why it's bothering you." He was right. Bob hadn't needed me to fix anything. He'd needed me in the room. I was being let into places where presence was the only thing left to offer, and something in me already knew how to do that. Years later, that became the whole job.
 
 **CHAPTER 26**
+
 ## **Hope for Rob**
 
 *"Hope deferred maketh the heart sick: but when the desire cometh, it is a tree of life."*
@@ -1772,6 +1798,7 @@ Rhonda had rented an old fifties car to take us from the ceremony to the recepti
 When everything else in my life had sunk, Hope floated.
 
 **CHAPTER 27**
+
 ## **What We Built**
 
 *"Beareth all things, believeth all things, hopeth all things, endureth all things."*
@@ -1832,6 +1859,7 @@ Ireland was the one I couldn't fully meet her on. We'd planned it long before, b
 The pictures never tell the whole story. They only catch the second we were smiling. Everything that earned the smile happened off camera, and most of it was Hope.
 
 **CHAPTER 28**
+
 ## **Wonderwoman**
 
 *"Her children arise up, and call her blessed."*
@@ -1876,6 +1904,7 @@ PART SIX
 *Presence, repeated, until the end. His, then mine.*
 
 **CHAPTER 29**
+
 ## **The Detour**
 
 *"My thoughts are not your thoughts, neither are your ways my ways."*
@@ -1962,6 +1991,7 @@ Hospice brought me back to the rooms I'd been thinking about since the home heal
 *September 2025. Our car pointed north out of Pensacola, eighteen years of living near him somewhere back in the mirrors. He had told me to go — that was always his way, more concerned that we were okay than that we were close. I didn't know it was the last of the old kind of drive, the kind where he was still at the other end of the road. This time, I drove.*
 
 **CHAPTER 30**
+
 ## **Five Weeks**
 
 *"They shall mount up with wings as eagles."*
@@ -2004,6 +2034,7 @@ He got pneumonia on December 23. His immune system had nothing left to fight wit
 My father died on Christmas Day, 2025. A Thursday.
 
 **CHAPTER 31**
+
 ## **The Days After**
 
 *"Jesus wept."*
@@ -2110,6 +2141,7 @@ In January we went through his things. His gray suit was hanging on the right si
 *December 24, 2025. Our car in the driveway in Raleigh, engine off, eleven hours of interstate between me and a hospital bed in Pensacola. Hope asked once. I said he always comes back. He had driven to Ohio for me, to West Palm Beach, to Chumuckla and back. This time, I didn't.*
 
 **CHAPTER 32**
+
 ## **The First Honest Mile**
 
 *"Blessed are they that mourn: for they shall be comforted."*
@@ -2130,6 +2162,7 @@ And I was mean. That scared me more than a craving would have. I lashed out at t
 Seventeen years sober, and I had hit a rock bottom again, an emotional one this time. The disease doesn't need a bottle to run the old plays: isolation, anger, the closed door. The difference was that this time I had to feel it all the way through. And this time I knew what to do with a bottom. I went back to meetings, more of them than I'd been to in years. I got a therapist. The morning calls with Mager got longer. I said out loud, in the rooms and on the phone, that I was not okay. I went back to the people I'd been sharp with and said sorry, plainly. Seventeen years in, I was back on the first honest mile.
 
 **CHAPTER 33**
+
 ## **What Grief Taught the Job**
 
 *"Weeping may endure for a night, but joy cometh in the morning."*
@@ -2160,6 +2193,7 @@ And some rooms stay with me whole. There was a couple I'll call Ed and Eva. Ed s
 Lou spent eighty-four years showing up without needing to know exactly where he was going. I'm trying to do the same.
 
 **CHAPTER 34**
+
 ## **The Table**
 
 *"Thou preparest a table before me in the presence of mine enemies."*
