@@ -7,18 +7,18 @@
 | | |
 |---|---|
 | Chapters | 34 (Foreword, Prologue, six Parts, four Drives interludes, Epilogue, The Rooms, A Note to the One Who Loves an Addict, Lou's Way, apparatus) |
-| Words | 52,016 |
+| Words | 51,866 |
 | KDP interior | The_Cardinals_Promise_KDP_Interior.pdf — **201 pages**, 6" × 9", B&W, EB Garamond 12pt |
 | Spine (white paper) | 0.453" — full wrap 12.703" × 9.25" (see KDP-COVER-SPECS.md) |
 | Source of record | The_Cardinals_Promise_sheff_pass.md (mirrored in styled-sections/) |
 
-## Lock 15 notes
+## Lock 16 notes
 
-- The locked text includes thirteen reconstructed passages (chapters 3, 4, 15, 25, 27, 29, 30, 31, 33), disclosed on the copyright page and in the Author's Note. They remain yellow-highlighted in every build. **Strip the highlight before KDP upload** (remove the `{.mark}` spans and the bracketed markers; one command) — the interior cannot print with them.
-- Lock 10 (`bd927e6`, 206 pages) is the last text with no reconstructions.
+- Print lock. The thirteen scenes that were drafted as reconstructions were read and confirmed by Rob on 2026-09-14 with three corrections (calls that week were with Chris, not Donna; Lou was never on oxygen; Rob and Lisa never went through Lou's things together). Highlights and bracket markers are gone from the source and every build.
+- The copyright page and Author's Note still disclose that some events have been changed or reconstructed. That stays; it is true.
+- Lock 10 (`bd927e6`, 206 pages) remains the last text with none of those scenes in it.
 - Reader panels five through ten averaged 8.0, 8.3, 8.5, 8.7, 8.8, 9.0.
-- Confirmed by Rob 2026-09-14: Caroline (ch. 21) and Brenda Jahn (ch. 29) are two different people; his mother did say "Oh, Louie."
-- Confirmed by Rob 2026-09-14: the week Lou died, Rob's calls were with Chris, who was already in Pensacola, not with Donna; Lou was never on oxygen; Rob and Lisa never went through Lou's things together (Lisa's line now sits in a January phone call, still a reconstruction). Lou said "Rob, don't worry about me. We're good." The line is now unhighlighted; the breakfast around it remains a reconstruction.
+- Still to do before upload: Grace's cover at 201 pages (spine 0.453" white, wrap 12.703" × 9.25", 3811 × 2775 px); Scott has not seen the book since his 09.12 batch; Dave should see his trimmed Foreword.
 
 ## What "locked" means
 

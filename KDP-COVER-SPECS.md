@@ -1,6 +1,6 @@
 # KDP Cover-Wrap Specs — The Cardinal's Promise
 
-Trim size: 6" x 9". Interior page count: **201** (2026-09-14, working draft with reconstructed scenes; see MANUSCRIPT-LOCK.md).
+Trim size: 6" x 9". Interior page count: **201** (LOCKED 2026-09-14, lock 16, print lock).
 
 | Paper | Formula | Spine |
 |---|---|---|
