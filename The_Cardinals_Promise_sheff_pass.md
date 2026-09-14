@@ -119,7 +119,7 @@ I have known Rob for thirty-five years, and a friendship like that gives you a l
 
 When I reconnected with Rob, it was as if no time had passed. Within minutes our conversation left both of us in tears. As I heard him talk about his father, I understood that this man has an irreplaceable calling. For years Rob has been of service to those in recovery, and he has continued that service through his work in hospice. He sits with families in what he calls the last chapter. He has been there for people in their most vulnerable moments, guiding families through conversations most of us spend a lifetime avoiding, and he does it with the full weight of his own experience as a son who was himself guided through the darkness by the steady, unconditional presence of a father who was all in.
 
-Lou was a father like that. He hit a hundred fly balls at Finch Park in Ramsey, drove Rob and his brother Chris to wrestling practice three nights a week, and leaned in at every turn because he wanted his boys to be the best version of themselves in every part of life. That love left a mark on Rob, and he carries it forward now, offering families the same presence his father once gave him.
+Lou was a father like that. He hit a hundred fly balls at Finch Park in Ramsey, drove Rob and his brother Chris to wrestling practice four nights a week, and leaned in at every turn because he wanted his boys to be the best version of themselves in every part of life. That love left a mark on Rob, and he carries it forward now, offering families the same presence his father once gave him.
 
 Every page of this book sounds like the man I know. Rob does not have a long list of titles after his name, and he has never needed one. He has done the harder thing. He has lived it. I am grateful this book exists, and I am grateful you are holding it.
 
@@ -488,7 +488,7 @@ Overnight, I gained a big sister and two big brothers I hadn't even known to hop
 
 It could not have been easy for them. Their dad spent Saturdays hitting fly balls to me and driving me to every wrestling match. They hadn't grown up with an attentive, hands-on dad, so they had every reason to resent this new version of their father who seemed to be doing it all right. Instead of punishing me or Chris, they folded us in.
 
-Lisa served as our babysitter when we were not the easiest to look after. She did it without making it out to be a sacrifice. She still hosts Thanksgiving every year, and keeps the table set the way our nana did. You'll meet her again later, at that table.
+Lisa served as our babysitter when we were not the easiest to look after. She did it without making it out to be a sacrifice. She still hosts Thanksgiving every year, and keeps the table set the way it has always been set. You'll meet her again later, at that table.
 
 Joel treated us well from the start. Steady. He was there, and didn't need credit for it. Whatever Chris and I needed growing up, Joel jumped in to help. The jokester of the family, Joel's the class clown who never really grew out of it. And I hope he never does.
 
@@ -502,7 +502,7 @@ The moment I felt closest to Jon came years later, both of us grown. He was succ
 
 That's the part that still gets me. Jon, Lisa, and Joel could have kept us at the edge of the family, at a small distance that never quite closes. They never drew that line. We were siblings. We still are.
 
-We lived on Woodridge Street, and Domino's was our pizza. Back then they ran the promise: thirty minutes or it's free. What they didn't account for was that our town had a Woodridge Street and a Woodridge Avenue, and the driver went to the Avenue every single time. He'd turn up at our door late and apologizing, and he'd hand us the pizza and our money back. Free Domino's, over and over, because a guy couldn't tell a street from an avenue. Chris and I were sure we'd beaten the system.
+We lived on Woodridge Street, and Domino's was our pizza. Back then they ran the promise: thirty minutes or it's free. What they didn't account for was that Woodridge had both a Woodridge Street and a Woodridge Avenue, and the driver went to the Avenue every single time. He'd turn up at our door late and apologizing, and he'd hand us the pizza and our money back. Free Domino's, over and over, because a guy couldn't tell a street from an avenue. Chris and I were sure we'd beaten the system.
 
 ### *Claudio and Rob*
 
@@ -1629,7 +1629,7 @@ My biological father never remarried. No second family, no one after my mother.
 
 When I was small, he'd called me his good luck charm. I think about that now. Whatever luck I was, it got on a plane when I was four, and he stayed where it left him.
 
-The first time I heard from him after Mexico, I was fifteen. Just his voice undid me, tears before I could get a word out. He was gentle about it. "It's okay," he said. "Don't cry. Be happy." There was a hole in me where he had been, an ache carried so long I'd stopped noticing it, and his voice opened it right back up. Years of something close to hatred had grown in that empty space, and even so, I can't lay it at anyone's feet. It was nobody's fault.
+The first time I heard from him after he went back, I was fifteen. Just his voice undid me, tears before I could get a word out. He was gentle about it. "It's okay," he said. "Don't cry. Be happy." There was a hole in me where he had been, an ache carried so long I'd stopped noticing it, and his voice opened it right back up. Years of something close to hatred had grown in that empty space, and even so, I can't lay it at anyone's feet. It was nobody's fault.
 
 The next time I saw him in person was in Ensenada, in 2006, right after the first rehab. I was in active addiction myself by then, though I wouldn't have said those words. I went back to the man who had been at the center of my first life, and I wasn't a boy looking up at him anymore. I could see him as he was, his circumstance, the things that had made him the father who locked the door. Maybe I saw it so clearly because I was closer to it than I wanted to know. Up close, the anger I had carried for so long started to turn into pity, and pity is harder to hold onto.
 
@@ -1687,7 +1687,7 @@ I saw things in the rooms that never leave you. Young people dying from drugs an
 
 Nothing in hospice is harder than a parent losing a child. The only reason I can stay in that room without flinching is that I've already sat with losses like that in recovery.
 
-The very first time I was in a room with someone dying, I was too young to know that was what it was. My grandfather's mother was in a nursing home, near the end. I was a little boy, barely talking, and the only language I had yet was Spanish. She lay against the pillows, white-haired and round-faced, and to me she looked like exactly one thing. Santa Claus. So I told her so. Ho, ho, ho. My mother said, Stop. I didn't understand the hush in the room, or that the woman in the bed was leaving, or that I would spend my life walking into rooms just like it. I only remember her face, and my mother's hand steering me out.
+The very first time I was in a room with someone dying, I was too young to know that was what it was. My grandfather's mother was in a nursing home, near the end. I was a little boy with almost no English yet, Spanish still the only language I trusted. She lay against the pillows, white-haired and round-faced, and to me she looked like exactly one thing. Santa Claus. So I told her so. Ho, ho, ho. My mother said, Stop. I didn't understand the hush in the room, or that the woman in the bed was leaving, or that I would spend my life walking into rooms just like it. I only remember her face, and my mother's hand steering me out.
 
 The first death I was in the room for wasn't a patient, and it came years before hospice was ever my job. It was Detroit Bob.
 
@@ -2217,7 +2217,7 @@ Two people at a round table, one of them grieving and the other choosing to stay
 
 My father was the gravity that held the family together. When he died, that gravity went with him, and I waited for everything to fly apart. We haven't. The reason is my sister Lisa, and a table she has been setting for as long as I can remember.
 
-A stranger had set a place for me at one table. There was another, older one waiting back home. Lisa has Thanksgiving at her house every year. Every year. She sets the table, cooks the meal, opens the door, the way my nana did it, same recipes, same dishes. There's a stubbornness required to keep a tradition alive when the person who started it is gone.
+A stranger had set a place for me at one table. There was another, older one waiting back home. Lisa has Thanksgiving at her house every year. Every year. She sets the table, cooks the meal, opens the door, the way it was always done, same recipes, same dishes. There's a stubbornness required to keep a tradition alive when the person who started it is gone.
 
 Hope and I can't make it every year. We come from two divorced families, and splitting the holidays is brutal. But the table is always there.
 
@@ -2254,7 +2254,7 @@ Seventeen years from West Palm Beach, from the apartment with the blinds drawn a
 
 My father always made a big deal of my sobriety anniversary. Every January 9. My first year, he came to Gulf Breeze Hospital to hear me speak, sat in that room and listened to his son talk about staying sober for one year. He told me once, quietly, that whenever he mentioned my name to someone who knew me, they'd say the same thing: "He's the best."
 
-The last time a cardinal landed on something I was riding in, he was at the wheel of a U-Haul and I was in no shape to notice. Grandma's looking out for us. He'd said it the way he said most true things, lightly, and moved on.
+The last time a cardinal landed on something I was riding in, he was at the wheel of a U-Haul and I was in no shape to notice. Grandma's looking out for us. He'd said it the way he said most true things, lightly, and moved on. That was the promise, and he never called it one. The people who love you don't stop looking out for you. He believed it about his mother. I am sitting in a parking lot in Raleigh believing it about him.
 
 Dad, I say out loud. Alone in the car. Just his name. And then the words he and I mostly lived instead of spoke. I love you. Not because it went unsaid between us — it didn't. Before the end he'd looked at me and told me, Rob, don't worry about me. We're good. When my father said we're good, that was the whole of it: I love you, and I have closure with you. He never needed the sentence. But you don't run out of wanting to say it to a man you can't call anymore. I love you. The cardinal doesn't move. Dad, I love you. I know you're watching out for me.
 

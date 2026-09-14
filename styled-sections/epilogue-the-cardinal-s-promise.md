@@ -17,7 +17,7 @@ Seventeen years from West Palm Beach, from the apartment with the blinds drawn a
 
 My father always made a big deal of my sobriety anniversary. Every January 9. My first year, he came to Gulf Breeze Hospital to hear me speak, sat in that room and listened to his son talk about staying sober for one year. He told me once, quietly, that whenever he mentioned my name to someone who knew me, they'd say the same thing: "He's the best."
 
-The last time a cardinal landed on something I was riding in, he was at the wheel of a U-Haul and I was in no shape to notice. Grandma's looking out for us. He'd said it the way he said most true things, lightly, and moved on.
+The last time a cardinal landed on something I was riding in, he was at the wheel of a U-Haul and I was in no shape to notice. Grandma's looking out for us. He'd said it the way he said most true things, lightly, and moved on. That was the promise, and he never called it one. The people who love you don't stop looking out for you. He believed it about his mother. I am sitting in a parking lot in Raleigh believing it about him.
 
 Dad, I say out loud. Alone in the car. Just his name. And then the words he and I mostly lived instead of spoke. I love you. Not because it went unsaid between us — it didn't. Before the end he'd looked at me and told me, Rob, don't worry about me. We're good. When my father said we're good, that was the whole of it: I love you, and I have closure with you. He never needed the sentence. But you don't run out of wanting to say it to a man you can't call anymore. I love you. The cardinal doesn't move. Dad, I love you. I know you're watching out for me.
 
