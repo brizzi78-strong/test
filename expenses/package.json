@@ -1,0 +1,19 @@
+{
+  "name": "expenses",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Expenses — Concur-style expense reporting without the pain: instant policy checks at entry time, auto-approval of compliant reports, duplicate detection, mileage at the IRS rate, and a one-screen approval queue",
+  "type": "module",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "start": "node src/index.ts",
+    "test": "node --test",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.8.5",
+    "typescript": "~5.8.0"
+  }
+}

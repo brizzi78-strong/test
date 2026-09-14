@@ -1,6 +1,7 @@
-// PRACTICE ONLY — Sepolia dry run, step 4 (simulated pool).
+// OPTIONAL PRACTICE ONLY — balance-guard simulation, not the canonical
+// Sepolia DEX rehearsal (which uses add-liquidity.ts + test-swap-sepolia.ts).
 //
-// Sends the remaining 200,000,000 CARD from the deployer to the practice
+// Sends the staged 400,000,000 CARD from the treasury to the practice
 // "pool" wallet named in launch.json, so the balances look like a funded
 // Uniswap pool to launch-check and renounce. On the real launch day you do
 // NOT run this — you create an actual Uniswap pool instead.
@@ -21,16 +22,19 @@ if (config.network === "mainnet") {
 
 const { viem } = await network.create(config.network);
 const [wallet] = await viem.getWalletClients();
-const deployer = wallet.account.address;
+const connected = wallet.account.address;
+if (connected.toLowerCase() !== config.treasury.toLowerCase()) {
+  throw new Error(`connected wallet ${connected} is not launch.json treasury ${config.treasury}`);
+}
 const token = await viem.getContractAt("CardinalsPromise", config.token);
 const publicClient = await viem.getPublicClient();
 
 console.log(`network:  ${config.network} (practice)`);
 console.log(`sending   ${fmt(POOL_AMOUNT)}`);
-console.log(`from      ${deployer} (deployer)`);
+console.log(`from      ${connected} (treasury)`);
 console.log(`to        ${config.pool} (simulated pool)\n`);
 
-const hash = await fundPoolSim(token, publicClient, deployer, config.treasury, config.pool);
+const hash = await fundPoolSim(token, publicClient, config.deployer, config.treasury, config.pool);
 
 console.log(`✅ done: ${explorerTxUrl(config.network, hash)}`);
 console.log("Balances now look like a funded pool — run launch-check to confirm.");

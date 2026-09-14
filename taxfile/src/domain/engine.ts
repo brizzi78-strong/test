@@ -10,8 +10,12 @@
  * taxfile/README.md (no EITC, no AMT, non-refundable-only CTC, etc.).
  */
 
-import * as P from './taxYear2025.ts';
+import * as Y2025 from './taxYear2025.ts';
+import { paramsForYear, type TaxYearParams } from './params.ts';
 import type { FilingStatus, IncomeSection, TaxComputation, TaxReturn } from './types.ts';
+
+/** Helpers default to 2025 parameters; computeReturn passes the return's year. */
+const DEFAULT_PARAMS: TaxYearParams = Y2025;
 
 export function round2(n: number): number {
   return Math.round(n * 100) / 100;
@@ -20,7 +24,11 @@ export function round2(n: number): number {
 const clampMin0 = (n: number): number => Math.max(0, n);
 
 /** Tax on ordinary income using the bracket schedule for the status. */
-export function ordinaryTax(taxable: number, status: FilingStatus): number {
+export function ordinaryTax(
+  taxable: number,
+  status: FilingStatus,
+  P: TaxYearParams = DEFAULT_PARAMS,
+): number {
   let tax = 0;
   let lower = 0;
   for (const bracket of P.ORDINARY_BRACKETS[status]) {
@@ -33,7 +41,11 @@ export function ordinaryTax(taxable: number, status: FilingStatus): number {
 }
 
 /** Top ordinary bracket rate reached at the given taxable income. */
-export function marginalRate(taxable: number, status: FilingStatus): number {
+export function marginalRate(
+  taxable: number,
+  status: FilingStatus,
+  P: TaxYearParams = DEFAULT_PARAMS,
+): number {
   const brackets = P.ORDINARY_BRACKETS[status];
   for (const bracket of brackets) {
     if (taxable <= bracket.upTo) return bracket.rate;
@@ -49,6 +61,7 @@ export function taxWithPreferentialRates(
   taxableIncome: number,
   preferentialIncome: number,
   status: FilingStatus,
+  P: TaxYearParams = DEFAULT_PARAMS,
 ): number {
   const pref = Math.min(clampMin0(preferentialIncome), clampMin0(taxableIncome));
   const ordinary = clampMin0(taxableIncome) - pref;
@@ -60,13 +73,17 @@ export function taxWithPreferentialRates(
   const twentyBand = pref - zeroBand - fifteenBand;
 
   const prefTax = fifteenBand * 0.15 + twentyBand * 0.2;
-  const worksheetTax = round2(ordinaryTax(ordinary, status) + prefTax);
+  const worksheetTax = round2(ordinaryTax(ordinary, status, P) + prefTax);
   // The worksheet never produces more tax than all-ordinary treatment.
-  return Math.min(worksheetTax, ordinaryTax(taxableIncome, status));
+  return Math.min(worksheetTax, ordinaryTax(taxableIncome, status, P));
 }
 
 /** Standard deduction incl. additional amounts for age 65+ and blindness. */
-export function standardDeduction(ret: TaxReturn, status: FilingStatus): number {
+export function standardDeduction(
+  ret: TaxReturn,
+  status: FilingStatus,
+  P: TaxYearParams = DEFAULT_PARAMS,
+): number {
   let extras = 0;
   const people = [ret.personal?.taxpayer, status === 'married-joint' ? ret.personal?.spouse : undefined];
   for (const person of people) {
@@ -84,7 +101,10 @@ export interface SeTaxResult {
 }
 
 /** Schedule SE: self-employment tax on 1099-NEC income less expenses. */
-export function selfEmploymentTax(income: IncomeSection): SeTaxResult {
+export function selfEmploymentTax(
+  income: IncomeSection,
+  P: TaxYearParams = DEFAULT_PARAMS,
+): SeTaxResult {
   const gross = income.nec1099s.reduce((sum, f) => sum + f.compensation, 0);
   const netProfit = round2(gross - income.businessExpenses);
   const netEarnings = round2(netProfit * P.SE_NET_EARNINGS_FACTOR);
@@ -102,6 +122,7 @@ export function studentLoanInterestDeduction(
   paid: number,
   magi: number,
   status: FilingStatus,
+  P: TaxYearParams = DEFAULT_PARAMS,
 ): number {
   const phaseout = P.STUDENT_LOAN_PHASEOUT[status];
   if (!phaseout || paid <= 0) return 0;
@@ -113,7 +134,12 @@ export function studentLoanInterestDeduction(
 }
 
 /** SALT deduction: OBBBA cap with the high-income phase-down. */
-export function saltDeduction(paid: number, magi: number, status: FilingStatus): number {
+export function saltDeduction(
+  paid: number,
+  magi: number,
+  status: FilingStatus,
+  P: TaxYearParams = DEFAULT_PARAMS,
+): number {
   let cap = P.SALT_CAP[status];
   const start = P.SALT_PHASEDOWN_START[status];
   if (magi > start) {
@@ -135,6 +161,7 @@ export function childTaxCredit(
   others: number,
   agi: number,
   status: FilingStatus,
+  P: TaxYearParams = DEFAULT_PARAMS,
 ): CtcResult {
   const gross =
     children * P.CHILD_TAX_CREDIT_PER_CHILD + others * P.OTHER_DEPENDENT_CREDIT;
@@ -156,6 +183,7 @@ export function childTaxCredit(
 export function computeReturn(ret: TaxReturn): TaxComputation {
   const status = ret.filingStatus;
   if (!status) throw new Error('filing status must be set before computing');
+  const P = paramsForYear(ret.taxYear);
   const income = ret.income;
   const deductions = ret.deductions;
 
@@ -170,7 +198,7 @@ export function computeReturn(ret: TaxReturn): TaxComputation {
     income.div1099s.reduce((s, f) => s + f.capitalGainDistributions, 0),
   );
 
-  const se = selfEmploymentTax(income);
+  const se = selfEmploymentTax(income, P);
 
   // Net capital gain/loss; losses offset ordinary income only up to the limit.
   const longTerm = income.capitalGainLongTerm + capGainDistributions;
@@ -197,16 +225,16 @@ export function computeReturn(ret: TaxReturn): TaxComputation {
     Math.min(clampMin0(adj.hsaContributions), P.HSA_CONTRIBUTION_LIMIT) +
     Math.min(clampMin0(adj.educatorExpenses), P.EDUCATOR_EXPENSE_LIMIT);
   const magiForStudentLoan = totalIncome - fixedAdjustments;
-  const studentLoan = studentLoanInterestDeduction(adj.studentLoanInterest, magiForStudentLoan, status);
+  const studentLoan = studentLoanInterestDeduction(adj.studentLoanInterest, magiForStudentLoan, status, P);
   const totalAdjustments = round2(fixedAdjustments + studentLoan);
   const agi = round2(totalIncome - totalAdjustments);
 
   // --- Deduction: standard vs itemized ---------------------------------
-  const std = standardDeduction(ret, status);
+  const std = standardDeduction(ret, status, P);
   const item = deductions.itemized;
   const itemized = round2(
     clampMin0(item.medicalExpenses - agi * P.MEDICAL_AGI_FLOOR) +
-      saltDeduction(item.stateLocalTaxes, agi, status) +
+      saltDeduction(item.stateLocalTaxes, agi, status, P) +
       clampMin0(item.mortgageInterest) +
       clampMin0(item.charitableContributions),
   );
@@ -225,7 +253,7 @@ export function computeReturn(ret: TaxReturn): TaxComputation {
 
   // --- Tax --------------------------------------------------------------
   const preferentialIncome = qualifiedDividends + preferentialGains;
-  const incomeTax = taxWithPreferentialRates(taxableIncome, preferentialIncome, status);
+  const incomeTax = taxWithPreferentialRates(taxableIncome, preferentialIncome, status, P);
 
   // Additional Medicare tax on earned income (wages + net SE earnings).
   const seEarnings = clampMin0(round2(se.netProfit * P.SE_NET_EARNINGS_FACTOR));
@@ -245,7 +273,7 @@ export function computeReturn(ret: TaxReturn): TaxComputation {
     (d) => d.relationship === 'child' && ret.taxYear - d.birthYear <= P.CTC_MAX_CHILD_AGE,
   ).length;
   const otherDeps = ret.dependents.length - eligibleChildren;
-  const ctc = childTaxCredit(eligibleChildren, otherDeps, agi, status);
+  const ctc = childTaxCredit(eligibleChildren, otherDeps, agi, status, P);
   // Non-refundable: cannot reduce regular income tax below zero.
   const totalCredits = Math.min(ctc.childTaxCredit + ctc.creditForOtherDependents, incomeTax);
 
@@ -312,7 +340,7 @@ export function computeReturn(ret: TaxReturn): TaxComputation {
     refund: clampMin0(balance),
     amountOwed: clampMin0(-balance),
     effectiveRate: agi > 0 ? round2((totalTax / agi) * 10000) / 10000 : 0,
-    marginalRate: marginalRate(taxableIncome, status),
+    marginalRate: marginalRate(taxableIncome, status, P),
     lines,
   };
 }
