@@ -326,3 +326,6 @@ body { font-size: 12pt; }
 body { line-height: 1.5; }
 
 @page :left { @top-center { font-style: normal; } }
+
+/* Placeholder (drafted, not remembered) passages stay highlighted until replaced */
+mark { background: #fff2a8; color: inherit; padding: 0 0.1em; }

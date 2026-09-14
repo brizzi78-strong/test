@@ -80,3 +80,6 @@ hr { border: none; border-top: 1px solid var(--rule); margin: 2.5rem auto; max-w
 #TOC a { text-decoration: none; }
 img { max-width: 100%; height: auto; display: block; margin: 0 auto; }
 .cover-img { max-width: 22rem; margin: 0 auto 3rem; box-shadow: 0 10px 40px rgba(0,0,0,0.35); border-radius: 2px; }
+
+/* Placeholder (drafted, not remembered) passages stay highlighted until replaced */
+mark { background: #fff2a8; color: inherit; padding: 0 0.1em; }

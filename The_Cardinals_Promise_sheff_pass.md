@@ -390,17 +390,17 @@ It wasn't until much later that I learned the rest of Horacio's story. He'd hit 
 
 Lou was no saint, and I won't pretend he was. He had a temper that showed up at the wrong moments, and he knew that about himself. Most of it wasn't even anger; it was how he processed things he didn't like, out loud and with heat. Once a mood had him, it was hard to pull him out of it. Then he could turn around and produce a warmth so unexpected it changed the temperature of a room. Some moments were hard. He was worth it.
 
-*[PLACEHOLDER. One evening of the temper, drafted to hold the place until Rob replaces it with a true one.]*
+[*[PLACEHOLDER. One evening of the temper, drafted to hold the place until Rob replaces it with a true one.]*]{.mark}
 
-The night I remember, Chris and I had the one job we always had, which was to make sure he was up for the eleven o'clock shift. He'd come in from the lawns, eaten standing up, and gone down on the couch with the television going. We got into something upstairs. A game, an argument, I don't remember which. When I came down for water the clock on the stove said ten to eleven, and he was still on the couch.
+[The night I remember, Chris and I had the one job we always had, which was to make sure he was up for the eleven o'clock shift. He'd come in from the lawns, eaten standing up, and gone down on the couch with the television going. We got into something upstairs. A game, an argument, I don't remember which. When I came down for water the clock on the stove said ten to eleven, and he was still on the couch.]{.mark}
 
-I woke him. He came up off that couch already yelling. Not at me, exactly. At the clock, at the drive into the city, at the whole arrangement of his life that ran on an hour and a half of sleep and two boys remembering to look at a clock. He was loud. He knocked a chair over getting to his boots, and he didn't pick it up. My mother came to the top of the stairs and said his name once, quietly, the way she did, and he didn't answer her. Chris was behind me in the doorway, not moving. I stood there and took it, and I remember thinking that I had done this, that the whole night was mine.
+[I woke him. He came up off that couch already yelling. Not at me, exactly. At the clock, at the drive into the city, at the whole arrangement of his life that ran on an hour and a half of sleep and two boys remembering to look at a clock. He was loud. He knocked a chair over getting to his boots, and he didn't pick it up. My mother came to the top of the stairs and said his name once, quietly, the way she did, and he didn't answer her. Chris was behind me in the doorway, not moving. I stood there and took it, and I remember thinking that I had done this, that the whole night was mine.]{.mark}
 
-He was out the door in four minutes. The truck went down the street too fast. My mother picked up the chair.
+[He was out the door in four minutes. The truck went down the street too fast. My mother picked up the chair.]{.mark}
 
-In the morning he was at the counter in a pressed shirt making our lunches. He didn't say anything about it, and neither did I. He drove us to school. That was how it went with him. The heat came, and then it was gone, and what was left was a man packing sandwiches. I learned early that the yelling wasn't the truth about him. The lunches were. But I also learned to read a room for the temperature before I walked into it, and I've never stopped.
+[In the morning he was at the counter in a pressed shirt making our lunches. He didn't say anything about it, and neither did I. He drove us to school. That was how it went with him. The heat came, and then it was gone, and what was left was a man packing sandwiches. I learned early that the yelling wasn't the truth about him. The lunches were. But I also learned to read a room for the temperature before I walked into it, and I've never stopped.]{.mark}
 
-*[END PLACEHOLDER.]*
+[*[END PLACEHOLDER.]*]{.mark}
 
 Once he decided you were his, that settled it. Lou was there early mornings and late nights, school conferences, wrestling matches, hospital waiting rooms, and church basements. He never kept a ledger of it, and he never talked about sacrifice. He just lived it.
 
@@ -1966,15 +1966,15 @@ Five weeks after I started the hospice job, my father started to die. We moved t
 
 After the move, Hope and I went down for a visit. We went to church that morning and ate with Dad before the drive back up to Raleigh.
 
-*[PLACEHOLDER. The breakfast, drafted from what the book already says about him. Rob replaces the details with what happened.]*
+[*[PLACEHOLDER. The breakfast, drafted from what the book already says about him. Rob replaces the details with what happened.]*]{.mark}
 
-He'd dressed for it. Pressed shirt, the collar standing a little off his neck now, the hair done. Donna had driven. He walked in on his own and made sure we saw that he did. The waitress knew him. She called him Mr. Lou and asked if he wanted the usual, and he said she knew he did, and for a minute he was the man who liked to be recognized in a restaurant more than he liked the food. Eggs, toast, coffee he stirred and didn't drink much of. He ate about a third of it and pushed the plate an inch away from himself, which was as close as he came to saying he was full.
+[He'd dressed for it. Pressed shirt, the collar standing a little off his neck now, the hair done. Donna had driven. He walked in on his own and made sure we saw that he did. The waitress knew him. She called him Mr. Lou and asked if he wanted the usual, and he said she knew he did, and for a minute he was the man who liked to be recognized in a restaurant more than he liked the food. Eggs, toast, coffee he stirred and didn't drink much of. He ate about a third of it and pushed the plate an inch away from himself, which was as close as he came to saying he was full.]{.mark}
 
-There was an opening in hospice, at a company I had already given ten years to, and I told him about it. He listened the way he listened to anything about work, which was completely. Then he told me what he always told me. "Listen to your boss. Work hard." He had put that in me a long time ago, and he said it again like it was the first time.
+[There was an opening in hospice, at a company I had already given ten years to, and I told him about it. He listened the way he listened to anything about work, which was completely. Then he told me what he always told me. "Listen to your boss. Work hard." He had put that in me a long time ago, and he said it again like it was the first time.]{.mark}
 
-He left a twenty on the table. When we got up he didn't walk us to the car. He stood inside the door with his hand flat on the glass and watched us go, and I watched him in the mirror until the turn. With him, miracles had started to feel ordinary. It was the last time I saw him.
+[He left a twenty on the table. When we got up he didn't walk us to the car. He stood inside the door with his hand flat on the glass and watched us go, and I watched him in the mirror until the turn. With him, miracles had started to feel ordinary. It was the last time I saw him.]{.mark}
 
-*[END PLACEHOLDER.]*
+[*[END PLACEHOLDER.]*]{.mark}
 
 ### *The Rooms*
 
@@ -2010,23 +2010,23 @@ My father died on Christmas Day, 2025. A Thursday.
 
 Something in me shut down before he was gone. I couldn't pick up when my stepmom called. I went somewhere I had gone as a little boy when I was scared, that same quiet, far-off place, the dissociation I had learned before I had a word for it.
 
-*[PLACEHOLDER. The scene that follows holds the shape of December 23 to 25 until Rob replaces it with what happened. The details in it are drafted from what the book already says, not from memory.]*
+[*[PLACEHOLDER. The scene that follows holds the shape of December 23 to 25 until Rob replaces it with what happened. The details in it are drafted from what the book already says, not from memory.]*]{.mark}
 
-I called Donna back that Tuesday night, after my mother had gone to bed. I asked her the questions I ask strangers. Is he comfortable. Is he eating. Who's with him. She answered every one, and then she went quiet, and the quiet was the part she'd been calling to say. I told her we'd be down Friday. "Okay, honey," she said. I put the phone face down on the kitchen counter, and that is more or less where it stayed for two days.
+[I called Donna back that Tuesday night, after my mother had gone to bed. I asked her the questions I ask strangers. Is he comfortable. Is he eating. Who's with him. She answered every one, and then she went quiet, and the quiet was the part she'd been calling to say. I told her we'd be down Friday. "Okay, honey," she said. I put the phone face down on the kitchen counter, and that is more or less where it stayed for two days.]{.mark}
 
-My mother was in town. She has Parkinson's now, and getting to me had cost her every ounce of energy she had. Christmas Eve she sat on a stool in our kitchen with a cup of tea she'd let go cold, both hands around it to keep them still, and told Hope how my nana made the sauce. I stood there and let her. Twice she asked how Dad was doing. "Resting," I said. It was the kind of word I hear families use, and I heard myself use it.
+[My mother was in town. She has Parkinson's now, and getting to me had cost her every ounce of energy she had. Christmas Eve she sat on a stool in our kitchen with a cup of tea she'd let go cold, both hands around it to keep them still, and told Hope how my nana made the sauce. I stood there and let her. Twice she asked how Dad was doing. "Resting," I said. It was the kind of word I hear families use, and I heard myself use it.]{.mark}
 
-Around four I went out to the car in the driveway and sat in it with the engine off. Eighteen years earlier, in the worst of it, I used to drive past his house in Pensacola, see him out front washing his car, and wave and keep going, because pulling in meant questions. I knew how to do that. I was doing it from seven hundred miles away, with a hospice badge in my bag. Hope came out and stood by the window and didn't knock. She just stayed until I came in.
+[Around four I went out to the car in the driveway and sat in it with the engine off. Eighteen years earlier, in the worst of it, I used to drive past his house in Pensacola, see him out front washing his car, and wave and keep going, because pulling in meant questions. I knew how to do that. I was doing it from seven hundred miles away, with a hospice badge in my bag. Hope came out and stood by the window and didn't knock. She just stayed until I came in.]{.mark}
 
-That night, they put him on a morphine drip. Chris texted it, four words and a time. He was in the hospital, on comfort care — not hospice; it went that fast. I knew what the drip meant — it's my work. Morphine at the end doesn't take anyone. It eases the pain and the hunger for air while the dying does what it was already doing. The drip didn't tell me what was coming. It told me where he already was. Comfort was the assignment now. I did not say any of that out loud in my own kitchen. I put the phone back face down. Part of the reason was simpler than I've made it sound, and harder to admit. I did not want my last memory of my father to be tubes in his nose. He had been bigger than two cancers and a scare. I couldn't let the man in that bed become the last picture I kept of him. It was selfish. I'm sorry it was that way.
+[That night, they put him on a morphine drip. Chris texted it, four words and a time. He was in the hospital, on comfort care — not hospice; it went that fast. I knew what the drip meant — it's my work. Morphine at the end doesn't take anyone. It eases the pain and the hunger for air while the dying does what it was already doing. The drip didn't tell me what was coming. It told me where he already was. Comfort was the assignment now. I did not say any of that out loud in my own kitchen. I put the phone back face down. Part of the reason was simpler than I've made it sound, and harder to admit. I did not want my last memory of my father to be tubes in his nose. He had been bigger than two cancers and a scare. I couldn't let the man in that bed become the last picture I kept of him. It was selfish. I'm sorry it was that way.]{.mark}
 
-Christmas morning I was up before it was light. Mager called at the usual time, and we prayed the way we always do, a few plain sentences, and I did not tell him. I looked at the phone. Nothing from Chris since the night before. The texting had stopped, and the silence had a shape. I made coffee I didn't drink. I heard my mother's door.
+[Christmas morning I was up before it was light. Mager called at the usual time, and we prayed the way we always do, a few plain sentences, and I did not tell him. I looked at the phone. Nothing from Chris since the night before. The texting had stopped, and the silence had a shape. I made coffee I didn't drink. I heard my mother's door.]{.mark}
 
-Then the phone rang. Chris. "Rob." He didn't have to finish it, and he did anyway, because he's the one who finishes things. Our father was gone.
+[Then the phone rang. Chris. "Rob." He didn't have to finish it, and he did anyway, because he's the one who finishes things. Our father was gone.]{.mark}
 
-I don't know how long I stood there. I went and told my mother. She reached for my hand, and hers was shaking, and for once it wasn't the Parkinson's. Hope had come in behind me. I went back out to the car, and this time I didn't sit in it. I stood in the driveway on Christmas morning with the phone in my hand and nowhere to drive.
+[I don't know how long I stood there. I went and told my mother. She reached for my hand, and hers was shaking, and for once it wasn't the Parkinson's. Hope had come in behind me. I went back out to the car, and this time I didn't sit in it. I stood in the driveway on Christmas morning with the phone in my hand and nowhere to drive.]{.mark}
 
-*[END PLACEHOLDER.]*
+[*[END PLACEHOLDER.]*]{.mark}
 
 I didn't feel guilty at first. I had been at his bedside every other time — the surgeries, the pacemaker — and I had lived close to him for eighteen years. The guilt came later, and it came from outside: people in the family who love me and who gave me a very hard time about not being there. I understand it. Grief needs somewhere to go. The week before, I had told my sponsor that I'd said everything to my dad that needed saying, and I hold that like a railing. Being absent from the last hour is not the same as being absent from the life.
 
