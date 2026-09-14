@@ -10,7 +10,7 @@ Back in 2011 he had a cough that wouldn't quit. They told him it was allergies.
 
 As I was finishing this book, I got the call. Dale is on hospice with mesothelioma, and they don't think he has a month. It knocked me down, and not because of what he did for me. Because of who he is.
 
-I called him. I cried, and I told him I loved him, and he said it back. That's the power of the program.
+I called him. I cried, and I told him I loved him, and he said it back.
 
 There's another seat in those rooms. Cardascia and I had been friends since we were seventeen years old. He lost his fight with addiction in 2025. He never quit trying, and that's the part I won't let anyone forget. The disease tells you a man who goes back out is a failure. The rooms know better. He kept walking back in, every time, wanting to stop. That's not weakness. That's a fighter losing to something that kills fighters.
 

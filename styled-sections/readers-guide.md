@@ -14,7 +14,7 @@
 
 6. "The rescue didn't get me sober. It kept me alive." What is the difference, in this book, between rescuing someone and saving them — and who else lives inside that difference?
 
-7. Rob's mother wired money she told herself was for rent. "The lie I lived was letting her believe her money was keeping her son fed." Where is the line between loving an addict and enabling one? Did the book change where you'd draw it?
+7. Rob's mother wired money she told herself was for rent. "The lie I lived was letting her believe her money kept me fed." Where is the line between loving an addict and enabling one? Did the book change where you'd draw it?
 
 8. After seventeen years sober, grief drove Rob into an emotional rock bottom, the first one he ever had to feel all the way through. How is the sober breakdown after Lou's death different from his using-era bottoms? How is it the same?
 
@@ -26,4 +26,4 @@
 
 12. Rob writes that the cardinal "wasn't a miracle... the message is still being sent." What do you make of signs after loss? Has the book changed how you would receive one?
 
-13. The book ends with instructions: keep showing up, say the great things while they can still hear you, walk in and let yours find you. Which instruction is yours — and when will you follow it?
+13. The last pages of the book are set in the rooms: "Go to a meeting this week, even if you're good. Especially if you're not. Call somebody." Who would you call — and when?

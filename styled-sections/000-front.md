@@ -87,13 +87,13 @@ Epilogue: The Cardinal's Promise
 
 The Rooms
 
-A Note to the One Who Loves an Addict
-
-Lou's Way
-
 Author's Note
 
 Acknowledgments
+
+A Note to the One Who Loves an Addict
+
+Lou's Way
 
 A Reader's Guide
 
