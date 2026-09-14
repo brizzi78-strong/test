@@ -25,6 +25,6 @@ It sits there. Turns its head slightly. Still looking. I don't know how long we 
 
 I pull out my phone, slow and careful. I think I'm recording video. I press the button. The cardinal sits. Two minutes, maybe less, maybe more. Finally I say, Dad, I have to go. And it flies, not startled, not sudden. Lifts off the mirror to a nearby tree, sits a moment, then is gone.
 
-I stand in the parking lot, phone in my hand, tears on my face, and feel peace. Not the absence of grief. Grief is still there, always will be. But peace underneath it. I look at my phone. The camera had been in photo mode. One picture. The cardinal on the mirror. I send it to Hope. To Chris. To Jon, Lisa, Joel. To Donna. The text: Dad came to see me. I told him I loved him.
+I stand in the parking lot, phone in my hand, tears on my face, and feel peace. It wasn't the absence of grief. Grief is still there, always will be. But peace underneath it. I look at my phone. The camera had been in photo mode. One picture. The cardinal on the mirror. I send it to Hope. To Chris. To Jon, Lisa, Joel. To Donna. The text: Dad came to see me. I told him I loved him.
 
 It has never landed on my car again.
