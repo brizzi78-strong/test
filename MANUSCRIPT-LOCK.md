@@ -1,18 +1,24 @@
 # Manuscript Lock — The Cardinal's Promise
 
-> **Working copy warning:** this is a WORKING COPY, not a lock. It carries thirteen bracketed, highlighted PLACEHOLDER scenes (chapters 3, 4, 15, 25, 27, 29, 30, 31, 33) that were drafted, not remembered. The copyright page and Author's Note disclose that some events have been changed or reconstructed. Current working text: commit `892f6d6`, 52,042 words, 201 KDP pages, spine 0.453". Lock 10 (commit `bd927e6`, 206 pages) is the last text with no reconstructions in it. Reader panels five through ten averaged 8.0, 8.3, 8.5, 8.7, 8.8, 9.0. Do not send to KDP or to Grace as final until Rob has confirmed or replaced the highlighted scenes.
-
-**Locked:** 2026-09-13 (lock 10: reader-panel five moves — Part Six in chronological order, Foreword moved to the front, back matter ends on Lou's Way, no-speech/truth-oath pass, the promise named in the Epilogue) · **Manuscript text at commit** `bd927e6` (branch `claude/david-sheff-clone-writing-06i30q`)
+**Locked:** 2026-09-14 (lock 11: post-panel-ten text; thirteen disclosed reconstructed passages, still highlighted; editor pass, cadence pass, copyedit, selective merge of the tightened draft) · **Manuscript text at commit** `892f6d6` (branch `claude/david-sheff-clone-writing-06i30q`)
 
 *A git tag `v1-lock-2026-08-31` exists in the working clone but could not be pushed to GitHub from this session; on GitHub, use the commit hashes above as the reference.*
 
 | | |
 |---|---|
-| Chapters | 34 (Foreword, Prologue, six Parts, three Drives interludes, Epilogue, The Rooms, A Note to the One Who Loves an Addict, Lou's Way, apparatus) |
-| Words | 53,510 |
-| KDP interior | The_Cardinals_Promise_KDP_Interior.pdf — **206 pages**, 6" × 9", B&W, EB Garamond 12pt |
-| Spine (white paper) | 0.464" — full wrap 12.714" × 9.25" (see KDP-COVER-SPECS.md) |
+| Chapters | 34 (Foreword, Prologue, six Parts, four Drives interludes, Epilogue, The Rooms, A Note to the One Who Loves an Addict, Lou's Way, apparatus) |
+| Words | 52,042 |
+| KDP interior | The_Cardinals_Promise_KDP_Interior.pdf — **201 pages**, 6" × 9", B&W, EB Garamond 12pt |
+| Spine (white paper) | 0.453" — full wrap 12.703" × 9.25" (see KDP-COVER-SPECS.md) |
 | Source of record | The_Cardinals_Promise_sheff_pass.md (mirrored in styled-sections/) |
+
+## Lock 11 notes
+
+- The locked text includes thirteen reconstructed passages (chapters 3, 4, 15, 25, 27, 29, 30, 31, 33), disclosed on the copyright page and in the Author's Note. They remain yellow-highlighted in every build. **Strip the highlight before KDP upload** (remove the `{.mark}` spans and the bracketed markers; one command) — the interior cannot print with them.
+- Lock 10 (`bd927e6`, 206 pages) is the last text with no reconstructions.
+- Reader panels five through ten averaged 8.0, 8.3, 8.5, 8.7, 8.8, 9.0.
+- Confirmed by Rob 2026-09-14: Caroline (ch. 21) and Brenda Jahn (ch. 29) are two different people; his mother did say "Oh, Louie."
+- Still open: "Rob, don't worry about me. We're good" sits inside the breakfast reconstruction and the Epilogue rests on it.
 
 ## What "locked" means
 
