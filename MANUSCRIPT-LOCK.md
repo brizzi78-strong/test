@@ -1,6 +1,6 @@
 # Manuscript Lock — The Cardinal's Promise
 
-**Locked:** 2026-09-14 (lock 14: lock 13 with Rob's corrections to Christmas week: calls with Chris, not Donna; no oxygen) · **Manuscript text at commit** `d318407``0d12e41` (branch `claude/david-sheff-clone-writing-06i30q`)
+**Locked:** 2026-09-14 (lock 14: lock 13 with Rob's corrections to Christmas week: calls with Chris, not Donna; no oxygen) · **Manuscript text at commit** `d318407` (branch `claude/david-sheff-clone-writing-06i30q`)
 
 *A git tag `v1-lock-2026-08-31` exists in the working clone but could not be pushed to GitHub from this session; on GitHub, use the commit hashes above as the reference.*
 
