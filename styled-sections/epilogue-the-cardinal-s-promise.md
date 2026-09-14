@@ -11,6 +11,8 @@ Let me tell you how I got to this parking lot.
 
 January 9, 2026. Seventeen years sober to the day, and fifteen days after my father died. I'm in my car in the parking lot of a skilled nursing facility in Raleigh, coffee in my hand, just out of a visit with a family still deciding whether to start hospice for their mother. I'd sat with them, answered their questions, stayed until the staying was done. A gray January morning, the coffee going cold, the space between one call and the next.
 
+My father always made a big deal of my sobriety anniversary. Every January 9. My first year, he came to Gulf Breeze Hospital to hear me speak, sat in that room and listened to his son talk about staying sober for one year. He told me once, quietly, that whenever he mentioned my name to someone who knew me, they'd say the same thing: "He's the best."
+
 And then it lands, the cardinal, on the mirror, close enough to touch through the glass.
 
 Seventeen years from West Palm Beach, from the apartment with the blinds drawn and the extension cord running to the hallway, from the morning I opened the door and found Lou standing there. Seventeen, the age I was when I won the county championship. He'd been in the third row that day. He was always in the third row.
@@ -25,6 +27,4 @@ I pull out my phone, slow and careful. I think I'm recording video. I press the 
 
 I stand in the parking lot, phone in my hand, tears on my face, and feel peace. Not the absence of grief. Grief is still there, always will be. But peace underneath it. I look at my phone. The camera had been in photo mode. One picture. The cardinal on the mirror. I send it to Hope. To Chris. To Jon, Lisa, Joel. To Donna. The text: Dad came to see me. I told him I loved him.
 
-The cardinal wasn't a miracle. What I believe is simpler. The message had been delivered my whole life, in wrestling rooms and church basements and holding cells and U-Hauls, in boundaries that felt harsh and second chances I hadn't earned and ordinary Tuesday afternoons nobody wrote down. The cardinal was a reminder that the message is still being sent. That Lou, in whatever form love takes when the person carrying it is gone, is still here, in the work I do in his name without ever saying his name, in the steadiness I bring to someone else's hardest day that was built by his hands.
-
-The cardinal flew off into the gray. It has never landed on my car again. The promise remains. He made it on a U-Haul out of West Palm Beach without knowing he was making one: the people who loved you don't stop looking out for you. It was never in the bird. It was in what Lou built in me, across forty years of chosen love and stubborn presence.
+It has never landed on my car again.

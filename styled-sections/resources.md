@@ -1,6 +1,6 @@
 # **RESOURCES**
 
-This book argues that there is a solution. Here is where to find help putting it into practice. These are the organizations I trust and point people to. All of it is free or low cost.
+If this book says anything, it is that help exists. Here is where to find it. These are the organizations I trust and point people to. All of it is free or low cost.
 
 988 Suicide & Crisis Lifeline. Call or text 988. Twenty-four hours a day, free and confidential. For anyone reading this in a dark place — the addiction pages, the grief pages, any of it.
 

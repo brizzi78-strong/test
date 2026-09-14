@@ -16,6 +16,4 @@ He could enjoy the game even when the season was lost.
 
 He still wanted to be useful, all the way to the end.
 
-He found the doorway you were willing to walk through.
-
 He stayed.
