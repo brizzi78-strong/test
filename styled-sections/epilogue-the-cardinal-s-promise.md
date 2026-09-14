@@ -1,0 +1,30 @@
+# **EPILOGUE: THE CARDINAL'S PROMISE**
+
+*"You will surely meet some of us as you trudge the Road of Happy Destiny."*
+*— Bill Wilson, Alcoholics Anonymous*
+
+A cardinal lands on the driver's side mirror of my car.
+
+Close. So close I can see individual feathers. It looks at me through the glass like it arrived with a purpose and is content to wait. It doesn't move. Bright red against the gray.
+
+Let me tell you how I got to this parking lot.
+
+January 9, 2026. Seventeen years sober to the day, and fifteen days after my father died. I'm in my car in the parking lot of a skilled nursing facility in Raleigh, coffee in my hand, just out of a visit with a family still deciding whether to start hospice for their mother. I'd sat with them, answered their questions, stayed until the staying was done. A gray January morning, the coffee going cold, the space between one call and the next.
+
+And then it lands, the cardinal, on the mirror, close enough to touch through the glass.
+
+Seventeen years from West Palm Beach, from the apartment with the blinds drawn and the extension cord running to the hallway, from the morning I opened the door and found Lou standing there. Seventeen, the age I was when I won the county championship. He'd been in the third row that day. He was always in the third row.
+
+My father always made a big deal of my sobriety anniversary. Every January 9. My first year, he came to Gulf Breeze Hospital to hear me speak, sat in that room and listened to his son talk about staying sober for one year. He told me once, quietly, that whenever he mentioned my name to someone who knew me, they'd say the same thing: "He's the best."
+
+The last time a cardinal landed on something I was riding in, he was at the wheel of a U-Haul and I was in no shape to notice. Grandma's looking out for us. He'd said it the way he said most true things, lightly, and moved on. That was the promise, and he never called it one. The people who love you don't stop looking out for you. He believed it about his mother. I am sitting in a parking lot in Raleigh believing it about him.
+
+Dad, I say out loud. Alone in the car. Just his name. And then the words he and I mostly lived instead of spoke. I love you. Not because it went unsaid between us — it didn't. Before the end he'd looked at me and told me, Rob, don't worry about me. We're good. When my father said we're good, that was the whole of it: I love you, and I have closure with you. He never needed the sentence. But you don't run out of wanting to say it to a man you can't call anymore. I love you. The cardinal doesn't move. Dad, I love you. I know you're watching out for me.
+
+It sits there. Turns its head slightly. Still looking. I don't know how long we stay like that. The parking lot goes away. Just me and the cardinal. Just me and Lou. Tears running down my face, not sobbing, the kind that comes from grief and relief colliding. Dad is gone. Dad is here.
+
+I pull out my phone, slow and careful. I think I'm recording video. I press the button. The cardinal sits. Two minutes, maybe less, maybe more. Finally I say, Dad, I have to go. And it flies, not startled, not sudden. Lifts off the mirror to a nearby tree, sits a moment, then is gone.
+
+I stand in the parking lot, phone in my hand, tears on my face, and feel peace. It wasn't the absence of grief. Grief is still there, always will be. But peace underneath it. I look at my phone. The camera had been in photo mode. One picture. The cardinal on the mirror. I send it to Hope. To Chris. To Jon, Lisa, Joel. To Donna. The text: Dad came to see me. I told him I loved him.
+
+It has never landed on my car again.
