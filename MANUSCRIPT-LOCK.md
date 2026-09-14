@@ -1,5 +1,7 @@
 # Manuscript Lock — The Cardinal's Promise
 
+> **Working copy warning:** chapter 31 currently carries a bracketed PLACEHOLDER scene for December 23–25 (drafted, not from memory). It is not part of lock 10 and must be replaced with Rob's account before any proof goes to Scott or KDP.
+
 **Locked:** 2026-09-13 (lock 10: reader-panel five moves — Part Six in chronological order, Foreword moved to the front, back matter ends on Lou's Way, no-speech/truth-oath pass, the promise named in the Epilogue) · **Manuscript text at commit** `bd927e6` (branch `claude/david-sheff-clone-writing-06i30q`)
 
 *A git tag `v1-lock-2026-08-31` exists in the working clone but could not be pushed to GitHub from this session; on GitHub, use the commit hashes above as the reference.*
