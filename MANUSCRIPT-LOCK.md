@@ -1,6 +1,6 @@
 # Manuscript Lock — The Cardinal's Promise
 
-**Locked:** 2026-09-14 (lock 12: lock 11 plus nine proofreader seam fixes after the tightened-draft merge; text otherwise identical) · **Manuscript text at commit** `310c123` (branch `claude/david-sheff-clone-writing-06i30q`)
+**Locked:** 2026-09-14 (lock 13: lock 12 with "We're good" confirmed and unhighlighted; words unchanged) · **Manuscript text at commit** `0d12e41` (branch `claude/david-sheff-clone-writing-06i30q`)
 
 *A git tag `v1-lock-2026-08-31` exists in the working clone but could not be pushed to GitHub from this session; on GitHub, use the commit hashes above as the reference.*
 
@@ -12,7 +12,7 @@
 | Spine (white paper) | 0.453" — full wrap 12.703" × 9.25" (see KDP-COVER-SPECS.md) |
 | Source of record | The_Cardinals_Promise_sheff_pass.md (mirrored in styled-sections/) |
 
-## Lock 12 notes
+## Lock 13 notes
 
 - The locked text includes thirteen reconstructed passages (chapters 3, 4, 15, 25, 27, 29, 30, 31, 33), disclosed on the copyright page and in the Author's Note. They remain yellow-highlighted in every build. **Strip the highlight before KDP upload** (remove the `{.mark}` spans and the bracketed markers; one command) — the interior cannot print with them.
 - Lock 10 (`bd927e6`, 206 pages) is the last text with no reconstructions.
