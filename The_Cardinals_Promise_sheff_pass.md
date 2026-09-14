@@ -1803,7 +1803,21 @@ She has watched me leave things undone and start things I don't finish, and she 
 
 Our first fight wasn't about money or the future. It was crab meat. We were in Orange Beach, at a seafood and bar place, on our way to a Matchbox Twenty concert. Hope wanted me to try it. I wouldn't take a bite. Not one. It turned into a real argument right there at the table, and it ended with me drawing a line. "Hope, I said no, and I'm not going to bring it up again." She let it go. We've never fought about food since.
 
-The hardest stretch we hit came with the move to Raleigh. We were carrying two mortgages, the East Hill house wouldn't sell until this year, 2026, and money became the thing we kept circling back to. Part of that was on me. Early on I'd make a big decision on my own and tell her after it was already done. For a woman who needs to see the pieces before they move, it was never really about the money. It was about being left out of something that was ours. Hope isn't a fighter, and she didn't yell. She went quiet, and the quiet lasted, which was harder than being yelled at. When she finally came to me she wasn't cruel about it. She said the only thing she needed to: no more impulse decisions. I haven't made one on my own since. The big calls are ours, not mine.
+The hardest stretch we hit came with the move to Raleigh. We were carrying two mortgages, the East Hill house wouldn't sell until this year, 2026, and money became the thing we kept circling back to. Part of that was on me. Early on I'd make a big decision on my own and tell her after it was already done. For a woman who needs to see the pieces before they move, it was never really about the money. It was about being left out of something that was ours. Hope isn't a fighter, and she didn't yell. She went quiet, and the quiet lasted, which was harder than being yelled at.
+
+[*[PLACEHOLDER. The evening she came to me, reconstructed.]*]{.mark}
+
+[It was nine days. I counted, the way you count days. On the ninth night she came into the room where I was pretending to read and sat on the end of the bed with her planner, the paper one she still keeps, and opened it to a page with two columns on it. My handwriting was in neither of them. She had done the math on both houses by herself, because I'd made her feel like she had to.]{.mark}
+
+["I'm not mad about the money," she said. "I can fix money. I'm mad that I found out from the bank."]{.mark}
+
+[I started to explain, and she put her hand flat on the page.]{.mark}
+
+["No more impulse decisions," she said. "That's it. That's the whole thing I need."]{.mark}
+
+[*[END PLACEHOLDER.]*]{.mark}
+
+She wasn't cruel about it. She said the only thing she needed to say. I haven't made one on my own since. The big calls are ours, not mine.
 
 When she gets off work, my phone rings, because she doesn't like the walk to her car alone. I stay on the line until she's in and the doors are locked. It is the smallest job I have. It might be my favorite.
 
@@ -1949,7 +1963,15 @@ We were moving because life was expanding. Hope had been a pharmacist for eight 
 
 ### *The In-Between*
 
-I told people I was going to take some time off. Be there for my dad. Be there for my mom. Be present the way I'd spent years telling families to be present, while there was still time. That was the plan. It's not what happened. What happened was I retreated into myself. The time I'd set aside became something else, a depression I didn't see coming and couldn't recognize from the inside. I was grieving what was already happening and what was coming, and it kept me from doing the thing I'd left my career to do. I know the name for it now. The grief showed up before the loss did, and it froze me. I wasn't working. I wasn't fully showing up for my parents. I was stuck in a version of myself that couldn't move in any direction. Hospice, when it came, was a return, to the rooms I'd been thinking about since the home health years. It pulled me out of that in-between place.
+I told people I was going to take some time off. Be there for my dad. Be there for my mom. Be present the way I'd spent years telling families to be present, while there was still time. That was the plan. It's not what happened. What happened was I retreated into myself. The time I'd set aside became something else, a depression I didn't see coming and couldn't recognize from the inside. I was grieving what was already happening and what was coming, and it kept me from doing the thing I'd left my career to do. I know the name for it now. The grief showed up before the loss did, and it froze me. I wasn't working. I wasn't fully showing up for my parents. I was stuck in a version of myself that couldn't move in any direction.
+
+[*[PLACEHOLDER. One afternoon of it, reconstructed.]*]{.mark}
+
+[Here is what it looked like. A Thursday in June, no job to go to, Dad twenty minutes away and expecting me for lunch, because I'd said Thursday. I got as far as the driveway. I sat in the car with the keys in my hand and the air conditioning not on yet and I watched the clock on the dash go from 11:40 to 12:10, and at 12:10 I texted him that something had come up with the house. He wrote back, No problem. Next week. He always wrote back like that. I went inside and lay down on top of the made bed in my clothes, and Hope found me there at six.]{.mark}
+
+[I did that more than once that summer. I have sat across from families and explained anticipatory grief in a calm voice, and I did not know I was in it. I thought I was tired. I thought I was being a bad son on purpose. It was neither. It was a man who could feel the weight coming and had lain down under it early.]{.mark}
+
+[*[END PLACEHOLDER.]*]{.mark} Hospice, when it came, was a return, to the rooms I'd been thinking about since the home health years. It pulled me out of that in-between place.
 
 # **THE DRIVES · III**
 
@@ -1991,6 +2013,12 @@ In one room I was talking with the patient, an easy back-and-forth, and somewher
 
 And there was a pastor I'll call Melvin, surrounded near the end by his wife, his son, his grandson, all of them knowing he could go at any moment, all of them staying.
 
+[*[PLACEHOLDER. What Rob saw in that room, reconstructed.]*]{.mark}
+
+[He had been a big man. You could tell from the suits in the open closet and from the way the bed didn't fit him anymore, the way a bed doesn't fit a man who has lost sixty pounds in a season. His mouth was open. The oxygen was on and it wasn't doing much, and every breath had a catch at the top of it, like a door on a bad hinge. His grandson was reading him the sports page, all of it, the box scores, because somebody had told the boy that hearing goes last and he had decided to believe it.]{.mark}
+
+[*[END PLACEHOLDER.]*]{.mark}
+
 I wasn't there for the very end. I saw him close to it, and a single thought went through me that I couldn't take back: I never want to see my own dad like that. I had no idea how few weeks were left before that stopped being a fear and became a choice in front of me.
 
 Dad's decline wasn't dramatic at first, less energy in his voice on the phone, conversations that used to run long wrapping up faster, with less of the texture that made them his. I'd just spent five weeks learning to read exactly this. I was walking into strangers' homes explaining what hospice was and wasn't, and the whole time my own father was crossing the same line I'd been describing to families all week. I didn't tell them my dad was dying too. I didn't need to.
@@ -2025,7 +2053,7 @@ Something in me shut down before he was gone. I couldn't pick up when my stepmom
 
 [We went to the candlelight service at seven. My mother wanted to, and I wanted her to have it. We sat near the back so she wouldn't have to stand long. Somewhere in "Silent Night," with the little candle in my hand, the phone buzzed against my leg. I read it under the hymnal. Chris. They'd started a morphine drip. Comfort care. He was in the hospital, not hospice; it went that fast.]{.mark}
 
-[I know what a drip is. I explain it to families in their living rooms. It doesn't take anyone. It eases the pain and the hunger for air while the dying does what it was already doing. I have said that sentence to strangers with a steady voice. I stood in a church holding a candle and could not say it to myself. I put the phone back in my pocket and sang the last verse with my mother, who didn't know, and Hope, who did.]{.mark}
+[I know what a drip is. I explain it to families in their living rooms. It doesn't take anyone. It eases the pain and the hunger for air while the dying does what it was already doing. I have said that sentence to strangers with a steady voice. I stood in a church holding a candle and could not say it to myself. I put the phone back in my pocket and sang the last verse with my mother, who didn't know, and Hope, who did. I didn't tell her because she had come seven hundred miles to have a Christmas, and because if I said it out loud in that pew it would be true.]{.mark}
 
 [In the car she asked me if I wanted to drive down that night. It's eleven hours. I said no. I said he always comes back. I said it out loud, in the car, to my wife, on Christmas Eve, and she let me.]{.mark}
 
@@ -2101,7 +2129,7 @@ Grief changed my tolerance. Comments that used to roll past me landed wrong now.
 
 I sat in my car one afternoon thinking, am I becoming someone else? The answer came back quiet. No. You're becoming someone who can't pretend anymore.
 
-In January we went through his things. His gray suit was hanging on the right side of the closet, between two work shirts. Always be the best-dressed person in the room. I pulled it off the rack and held it up, and I couldn't put it back. I took it home in a garment bag with no plan. It hangs in my closet now, next to mine. It isn't my size and it isn't my style and I will never wear it. But some mornings I open the closet door and it's there, and I know what it is, and I know who wore it, and I leave it alone. I tell families sometimes, when they're clearing out a closet of their own: keep one thing. You'll know which one. It will tell you.
+In January we went through his things. [Lisa and I did the closet. Somewhere in the second box of shoes she said, without looking up, "You know you got the good one, right?" I said I knew. "We got the one who had to work. You got the one who got to stay." She said it plain, no edge on it, the way you say a thing you've had thirty years to get used to. Then she handed me a shoe box and we kept going, and I've thought about that sentence more than anything anybody said at the funeral.]{.mark} His gray suit was hanging on the right side of the closet, between two work shirts. Always be the best-dressed person in the room. I pulled it off the rack and held it up, and I couldn't put it back. I took it home in a garment bag with no plan. It hangs in my closet now, next to mine. It isn't my size and it isn't my style and I will never wear it. But some mornings I open the closet door and it's there, and I know what it is, and I know who wore it, and I leave it alone. I tell families sometimes, when they're clearing out a closet of their own: keep one thing. You'll know which one. It will tell you.
 
 # **THE DRIVES · IV**
 
@@ -2153,7 +2181,7 @@ The room changes. The husband starts talking, and the daughter in the coat final
 
 They don't sign anything that day. Sometimes they don't. But when I stand to go, the husband walks me to the door, which costs him something with his knees, and shakes my hand at the threshold. That's how I know. Not ready isn't a no. It's a doorway, and somebody has to be willing to stand in it first.
 
-And some rooms stay with me whole. There was a couple I'll call Ed and Eva. Ed sold medical equipment. Eva was a respiratory therapist. Between the two of them, healthcare was not a foreign language. They knew the words, the systems, what illness looked like from the professional side. And Ed was twelve years sober, a man who had already done the hardest thing most people can imagine, one day at a time, for over a decade. Recovery had taught him how to live. It had not taught him how to let go. I sat with them near the end. He understood medicine, but medicine did not tell him how to say goodbye. She had spent her working life at other people's bedsides, and it did not make her less human in her own. Ed loved Eva. That was never in question. Love just needed help becoming a plan: who speaks when she cannot, what comfort means now, what matters most today. The room did not feel good at the end. It wasn't supposed to. But Ed stayed in it, and the two of them got through it together. I watched them do it.
+And some rooms stay with me whole. There was a couple I'll call Ed and Eva. Ed sold medical equipment. Eva was a respiratory therapist. Between the two of them, healthcare was not a foreign language. They knew the words, the systems, what illness looked like from the professional side. And Ed was twelve years sober, a man who had already done the hardest thing most people can imagine, one day at a time, for over a decade. Recovery had taught him how to live. It had not taught him how to let go. I sat with them near the end. He understood medicine, but medicine did not tell him how to say goodbye. She had spent her working life at other people's bedsides, and it did not make her less human in her own. Ed loved Eva. That was never in question. Love just needed help becoming a plan: who speaks when she cannot, what comfort means now, what matters most today. The room did not feel good at the end. It wasn't supposed to. [What I remember is Ed at the kitchen table with her medication list, the one she had written herself in a therapist's block capitals, going down it with a pen the way he'd once gone down a sales sheet, crossing off what she didn't need anymore. He got to the bottom of the page and there was nothing left on it. He sat there with the pen. Then he went back into the bedroom and sat down and took her hand, and that was the plan.]{.mark} Ed stayed in it, and the two of them got through it together.
 
 Lou spent eighty-four years showing up without needing to know exactly where he was going. I'm trying to do the same.
 
