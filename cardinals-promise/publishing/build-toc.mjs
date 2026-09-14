@@ -105,7 +105,7 @@ fs.writeFileSync(`${SCR}/book-expanded.html`, newHtml);
 
 // ---- 5. Pager: instrument headings, render, read sheets ----
 const fmKey = {
-  'Why I Wrote This Guide':'fm:why', 'You Are Not Alone':'fm:notalone',
+  'Why I Wrote This Book':'fm:why', 'You Are Not Alone':'fm:notalone',
   'Aging Whispers Before It Shouts':'fm:begin',
   'How to Use This Guide':'fm:howto', 'What Are You Facing?':'fm:starthere',
   'Find Your Situation':'fm:pathways', 'For the Future Planners':'fm:future',
@@ -134,6 +134,7 @@ async function renderPages(inputHtml) {
   const browser = await chromium.launch({ executablePath: EXE });
   const page = await browser.newPage();
   await page.setContent(inst, { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
   const pdf = `${SCR}/_probe.pdf`;
   await page.pdf({ path: pdf, preferCSSPageSize: true, printBackground: true });
   await browser.close();

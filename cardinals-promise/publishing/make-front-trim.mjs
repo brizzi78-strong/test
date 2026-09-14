@@ -54,6 +54,7 @@ const html = `<!DOCTYPE html><html><head><meta charset="utf-8"><style>
 const b = await chromium.launch({ executablePath: EXE });
 const p = await b.newPage({ viewport:{ width:850, height:1100 }, deviceScaleFactor:3 });
 await p.setContent(html, { waitUntil:'networkidle' });
+  await p.evaluate(() => document.fonts.ready);
 await p.screenshot({ path:`${SCR}/front-trim.png` });   // 2550 x 3300
 await b.close();
 

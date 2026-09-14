@@ -15,6 +15,7 @@ const html = fs.readFileSync(BOOK, 'utf8');
 const b = await chromium.launch({ executablePath: EXE });
 const p = await b.newPage();
 await p.setContent(html, { waitUntil: 'networkidle' });
+await p.evaluate(() => document.fonts.ready);
 await p.pdf({ path: TMP, preferCSSPageSize: true, printBackground: true });
 await b.close();
 

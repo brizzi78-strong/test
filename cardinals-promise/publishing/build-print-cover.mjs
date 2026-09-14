@@ -102,6 +102,7 @@ async function rasterToPdf(pngPath, wIn, hIn, outPath) {
   fs.writeFileSync(`${SCR}/front-bleed.html`, html);
   const p = await browser.newPage({ viewport: { width: 875, height: 1125 }, deviceScaleFactor: 3 });
   await p.setContent(html, { waitUntil: 'networkidle' });
+  await p.evaluate(() => document.fonts.ready);
   await p.screenshot({ path: `${SCR}/front-bleed.png` });                       // 2625 x 3375 (PDF embed)
   await p.screenshot({ path: `${PUB}/front-cover-print.jpeg`, type: 'jpeg', quality: 92 }); // Cover Creator
   await p.close();
