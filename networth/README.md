@@ -1,4 +1,4 @@
-# Household Ledger
+# Your Life
 
 A single-page net worth statement for the household, as of September 5, 2026.
 One self-contained `index.html` — no build step, no dependencies, no data leaves
