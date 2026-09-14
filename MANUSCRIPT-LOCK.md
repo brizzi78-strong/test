@@ -1,6 +1,6 @@
 # Manuscript Lock — The Cardinal's Promise
 
-> **Working copy warning:** chapters 3, 30 and 31 currently carry bracketed PLACEHOLDER scenes (Lou's temper, the last breakfast, December 23–25), drafted rather than remembered. It is not part of lock 10 and must be replaced with Rob's account before any proof goes to Scott or KDP.
+> **Working copy warning:** the manuscript currently carries thirteen bracketed, highlighted PLACEHOLDER scenes (chapters 3, 4, 15, 25, 27, 29, 30, 31, 33), drafted rather than remembered, plus a few single highlighted paragraphs. The copyright page and Author's Note disclose that some events have been changed or reconstructed. Lock 10 (commit bd927e6) is the last text without reconstructions; the current working text is commit 0fe6bb4 at 204 KDP pages. Reader panels five through ten: 8.0, 8.3, 8.5, 8.7, 8.8, and 9.0 (five of seven readers in). Loop stopped at Rob's request 2026-09-14.
 
 **Locked:** 2026-09-13 (lock 10: reader-panel five moves — Part Six in chronological order, Foreword moved to the front, back matter ends on Lou's Way, no-speech/truth-oath pass, the promise named in the Epilogue) · **Manuscript text at commit** `bd927e6` (branch `claude/david-sheff-clone-writing-06i30q`)
 
