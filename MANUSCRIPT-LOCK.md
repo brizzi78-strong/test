@@ -18,7 +18,7 @@
 - Lock 10 (`bd927e6`, 206 pages) is the last text with no reconstructions.
 - Reader panels five through ten averaged 8.0, 8.3, 8.5, 8.7, 8.8, 9.0.
 - Confirmed by Rob 2026-09-14: Caroline (ch. 21) and Brenda Jahn (ch. 29) are two different people; his mother did say "Oh, Louie."
-- Still open: "Rob, don't worry about me. We're good" sits inside the breakfast reconstruction and the Epilogue rests on it.
+- Confirmed by Rob 2026-09-14: Lou said "Rob, don't worry about me. We're good." The line is now unhighlighted; the breakfast around it remains a reconstruction.
 
 ## What "locked" means
 

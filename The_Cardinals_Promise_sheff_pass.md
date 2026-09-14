@@ -2003,7 +2003,7 @@ After the move, Hope and I went down for a visit. We went to church that morning
 
 [Another Broken Egg on Bayfront, because it was his, and because the girl at the register said "Where you been, Mr. Brizzi?" before we sat down, which was the point of going there. He'd dressed for it. Pressed shirt, the collar standing a little off his neck now, the hair done. Donna had driven. He walked in on his own. He asked me twice what time we were leaving, and the second time I answered him short, and I've had months to wish I hadn't. Eggs, toast, coffee he stirred and didn't drink much of. He ate about a third of it and pushed the plate an inch away from himself, which was as close as he came to saying he was full.]{.mark}
 
-[There was an opening in hospice, at a company I had already given ten years to, and I told him about it. He listened to all of it. Then he told me what he always told me. "Listen to your boss. Work hard." He had put that in me a long time ago, and he said it again like it was the first time. Later, while Hope was up at the counter, he looked at me and said, "Rob, don't worry about me. We're good."]{.mark}
+[There was an opening in hospice, at a company I had already given ten years to, and I told him about it. He listened to all of it. Then he told me what he always told me. "Listen to your boss. Work hard." He had put that in me a long time ago, and he said it again like it was the first time. Later, while Hope was up at the counter,]{.mark} he looked at me and said, "Rob, don't worry about me. We're good."
 
 [He left a twenty on a thirty-dollar check. When we got up he didn't walk us to the car. He stood inside the door and watched us go.]{.mark}
 
