@@ -454,7 +454,7 @@ The year I left for college my mother told Lou she was done. He didn't take it w
 
 My mother and Lou divorced in 1996, the year I turned eighteen. The divorce handed him an easy way out. We were grown, or close to it, and the marriage that had tied him to us was finished. He could have walked away clean. He never did. The first time he chose us, it was a handful of Tootsie Rolls at my grandparents' dinner table. This time it was a divorce. The same decision, made twelve years apart.
 
-I get it now. I didn't back then.
+I get it now. I didn't back then. For me, it started on a Saturday. With a bucket of baseballs.
 
 **CHAPTER 4**
 ## **Chosen**
@@ -832,7 +832,7 @@ He got a goat. Somebody was hauling it off to the slaughterhouse, and my dad tol
 
 And everything was a surprise. "What are we watching, Dad?" It's a surprise. Where are we going? It's a surprise. It was usually Clint Eastwood on the screen. He loved Eastwood — the squint, the quiet, the man who didn't say much and didn't have to. That was Lou's hero, and a fair description of Lou himself. He got more joy out of the not-telling than the telling.
 
-My brother and I called him the most interesting man in the world. It started as a joke, the guy from the Dos Equis commercials. Stay thirsty, my friends. Then we realized we weren't joking. Not for the people he knew, but for who he'd be in a kitchen on an ordinary night, keeping a straight face, waiting for you to fall for it.
+My brother and I called him the most interesting man in the world. It started as a joke, the guy from the Dos Equis commercials. Stay thirsty, my friends. Then we realized we weren't joking. He really was. Not for the people he knew, but for who he'd be in a kitchen on an ordinary night, keeping a straight face, waiting for you to fall for it.
 
 **CHAPTER 10**
 ## **Oxford**
@@ -924,7 +924,7 @@ Lou could have sent me to community college, a local school, a hundred cheaper o
 
 He worked two jobs in those years, and one of them was at a garden center, planting trees, a man in his fifties down on his knees in the dirt. And I was selfish with it. I'd call him for more money, not for books or rent but for drinking and going out, and he sent it every time. I didn't think twice about where it came from or what it cost him. It was the first time in my life I'd felt accepted by people my own age, and next to that, nothing else registered.
 
-The man who made it possible was sharing a rental and paying back loans for years. I graduated in May 2000, Lou and my mom in the crowd, tracking the sea of identical caps until they found mine. I pointed my car west.
+The man who made it possible was sharing a rental and paying back loans for years. I graduated in May 2000, Lou and my mom in the crowd, tracking the sea of identical caps until they found mine. I pointed my car west. California beckoned.
 
 PART THREE
 
@@ -1034,7 +1034,7 @@ They held me until I was sober enough to leave. There was no pleading this one d
 
 For years I told the story as a joke — the nachos, the parking lot, the absurdity. The joke was armor. The truth was two DUIs and a Tijuana jail in four years.
 
-The problem with hitting rock bottom is that sometimes you bounce. And then you have to hit again. And again.
+The problem with hitting rock bottom is that sometimes you bounce. And then you have to hit again. And again. My elevator hadn't yet reached bottom.
 
 **CHAPTER 13**
 ## **My Brother's Keeper**
@@ -1577,7 +1577,7 @@ When I got the keys, I stood in the middle of that small living room and looked 
 
 Nobody applauded. I no longer needed them to.
 
-Years later, when Hope walked through that door the first time, she didn't say a word about the size. She noticed how it felt. We'd take a devotional out to the pool, or down to the dock, and read it together. The habit we still fall back into, the one that's just part of the house now, started there. We sold it in 2019, a hundred thousand in equity, and put it down on the home Hope and I built together in East Hill, the kind I'd never let myself imagine from across the street.
+Years later, when Hope walked through that door the first time, she didn't say a word about the size. She noticed how it felt. We'd take a devotional out to the pool, or down to the dock, and read it together. The habit we still fall back into, the one that's just part of the house now, started there. We sold it in 2019, a hundred thousand in equity, and put it down on the home Hope and I built together in East Hill, the kind I'd never let myself imagine from across the street. From a one-bedroom salmon castle to a house we built from the ground up.
 
 **CHAPTER 24**
 ## **Horacio**
@@ -1671,7 +1671,7 @@ I was in the room when he passed, in 2016. I had been around a lot by then, but 
 
 Around that same stretch, the recognition I'd chased my whole life finally showed up at work, and it barely registered. Someone forwarded an internal article. A colleague congratulated me in passing. I skimmed it once and closed the screen. Lou noticed the change in me, the way he noticed everything. "You're successful again," he said. "I guess," I said. "You don't sound like it matters." "That's because it doesn't," I said. "Not the way it used to." He nodded.
 
-I talked to Lou about Bob one evening. "I don't know why this is hitting me so hard," I said. "I did everything right." He didn't hesitate. "That's not why it's bothering you." He was right. Bob hadn't needed me to fix anything. He'd needed me in the room.
+I talked to Lou about Bob one evening. "I don't know why this is hitting me so hard," I said. "I did everything right." He didn't hesitate. "That's not why it's bothering you." He was right. Bob hadn't needed me to fix anything. He'd needed me in the room. I was being let into places where presence was the only thing left to offer, and something in me already knew how to do that. Years later, that became the whole job.
 
 **CHAPTER 26**
 ## **Hope for Rob**
@@ -2097,6 +2097,8 @@ They don't sign anything that day. Sometimes they don't. But when I stand to go,
 
 And some rooms stay with me whole. There was a couple I'll call Ed and Eva. Ed sold medical equipment. Eva was a respiratory therapist. Between the two of them, healthcare was not a foreign language. They knew the words, the systems, what illness looked like from the professional side. And Ed was twelve years sober, a man who had already done the hardest thing most people can imagine, one day at a time, for over a decade. Recovery had taught him how to live. It had not taught him how to let go. I sat with them near the end. He understood medicine, but medicine did not tell him how to say goodbye. She had spent her working life at other people's bedsides, and it did not make her less human in her own. Ed loved Eva. That was never in question. Love just needed help becoming a plan: who speaks when she cannot, what comfort means now, what matters most today. The room did not feel good at the end. It wasn't supposed to. But Ed stayed in it, and the two of them got through it together. I watched them do it.
 
+Lou spent eighty-four years showing up without needing to know exactly where he was going. I'm trying to do the same.
+
 **CHAPTER 34**
 ## **The Table**
 
@@ -2133,7 +2135,7 @@ I think about a night long ago when she cooked meatloaf for two boys who didn't 
 
 ### *The Floor*
 
-Almost every morning for fifteen years, my phone has rung early and it's Mager, or I've called him first, and we pray. A few plain sentences to start the day pointed the right way. Nothing eloquent. Two sober men on a phone line, saying thank you, asking for help, hanging up, going to work. People ask me where God was in all of it, and the honest answer is that He was never the one who left. I was. I still can't explain God on paper, and I've stopped trying. What I can tell you is that every time I hit the bottom of myself, something I had not put there was holding the floor. Today my faith doesn't look like certainty. It looks like that morning call. Walking into a dying stranger's room with nothing useful in my hands and trusting that presence is its own kind of prayer. I stopped needing the theology airtight. I just needed to stay in the room, and to let myself be shown up for.
+Almost every morning for fifteen years, my phone has rung early and it's Mager, or I've called him first, and we pray. A few plain sentences to start the day pointed the right way. Nothing eloquent. Two sober men on a phone line, saying thank you, asking for help, hanging up, going to work. People ask me where God was in all of it, and the honest answer is that He was never the one who left. I was. I still can't explain God on paper, and I've stopped trying. What I can tell you is that every time I hit the bottom of myself, something I had not put there was holding the floor. Today my faith doesn't look like certainty. It looks like that morning call. Walking into a dying stranger's room with nothing useful in my hands and trusting that presence is its own kind of prayer. I stopped needing the theology airtight. I just needed to stay in the room, and to let myself be shown up for. That, as much as anything, is what got me here.
 
 # **EPILOGUE: THE CARDINAL'S PROMISE**
 
