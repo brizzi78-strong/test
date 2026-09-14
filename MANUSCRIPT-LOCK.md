@@ -1,24 +1,24 @@
 # Manuscript Lock — The Cardinal's Promise
 
-**Locked:** 2026-09-14 (lock 13: lock 12 with "We're good" confirmed and unhighlighted; words unchanged) · **Manuscript text at commit** `0d12e41` (branch `claude/david-sheff-clone-writing-06i30q`)
+**Locked:** 2026-09-14 (lock 14: lock 13 with Rob's corrections to Christmas week: calls with Chris, not Donna; no oxygen) · **Manuscript text at commit** `d318407``0d12e41` (branch `claude/david-sheff-clone-writing-06i30q`)
 
 *A git tag `v1-lock-2026-08-31` exists in the working clone but could not be pushed to GitHub from this session; on GitHub, use the commit hashes above as the reference.*
 
 | | |
 |---|---|
 | Chapters | 34 (Foreword, Prologue, six Parts, four Drives interludes, Epilogue, The Rooms, A Note to the One Who Loves an Addict, Lou's Way, apparatus) |
-| Words | 52,051 |
+| Words | 52,029 |
 | KDP interior | The_Cardinals_Promise_KDP_Interior.pdf — **201 pages**, 6" × 9", B&W, EB Garamond 12pt |
 | Spine (white paper) | 0.453" — full wrap 12.703" × 9.25" (see KDP-COVER-SPECS.md) |
 | Source of record | The_Cardinals_Promise_sheff_pass.md (mirrored in styled-sections/) |
 
-## Lock 13 notes
+## Lock 14 notes
 
 - The locked text includes thirteen reconstructed passages (chapters 3, 4, 15, 25, 27, 29, 30, 31, 33), disclosed on the copyright page and in the Author's Note. They remain yellow-highlighted in every build. **Strip the highlight before KDP upload** (remove the `{.mark}` spans and the bracketed markers; one command) — the interior cannot print with them.
 - Lock 10 (`bd927e6`, 206 pages) is the last text with no reconstructions.
 - Reader panels five through ten averaged 8.0, 8.3, 8.5, 8.7, 8.8, 9.0.
 - Confirmed by Rob 2026-09-14: Caroline (ch. 21) and Brenda Jahn (ch. 29) are two different people; his mother did say "Oh, Louie."
-- Confirmed by Rob 2026-09-14: Lou said "Rob, don't worry about me. We're good." The line is now unhighlighted; the breakfast around it remains a reconstruction.
+- Confirmed by Rob 2026-09-14: the week Lou died, Rob's calls were with Chris, who was already in Pensacola, not with Donna; Lou was never on oxygen. Lou said "Rob, don't worry about me. We're good." The line is now unhighlighted; the breakfast around it remains a reconstruction.
 
 ## What "locked" means
 
