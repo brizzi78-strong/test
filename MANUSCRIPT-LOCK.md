@@ -1,6 +1,6 @@
 # Manuscript Lock — The Cardinal's Promise
 
-**Locked:** 2026-09-14 (lock 12: lock 11 plus nine proofreader seam fixes after the tightened-draft merge; text otherwise identical) · **Manuscript text at commit** `310c123``892f6d6` (branch `claude/david-sheff-clone-writing-06i30q`)
+**Locked:** 2026-09-14 (lock 12: lock 11 plus nine proofreader seam fixes after the tightened-draft merge; text otherwise identical) · **Manuscript text at commit** `310c123` (branch `claude/david-sheff-clone-writing-06i30q`)
 
 *A git tag `v1-lock-2026-08-31` exists in the working clone but could not be pushed to GitHub from this session; on GitHub, use the commit hashes above as the reference.*
 
