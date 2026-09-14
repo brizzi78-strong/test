@@ -24,6 +24,6 @@
 
 11. "Do I have closure? I don't know." Why do you think the book refuses a tidy ending with Horacio? What does it offer in place of closure?
 
-12. Rob writes that the cardinal "wasn't a miracle... the message is still being sent." What do you make of signs after loss? Has the book changed how you would receive one?
+12. The book ends on one photograph and one line: "It has never landed on my car again." What do you make of signs after loss? Has the book changed how you would receive one?
 
 13. The last pages of the book are set in the rooms: "Go to a meeting this week, even if you're good. Especially if you're not. Call somebody." Who would you call — and when?

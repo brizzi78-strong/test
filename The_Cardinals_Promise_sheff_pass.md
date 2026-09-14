@@ -388,15 +388,13 @@ Lou was no saint, and I won't pretend he was. He had a temper that showed up at 
 
 [The night I remember, Chris and I had the one job we always had, which was to make sure he was up for the eleven o'clock shift. He'd come in from the lawns, eaten standing up, and gone down on the couch with the television going. We got into something upstairs. A game, an argument, I don't remember which. When I came down for water the clock on the stove said ten to eleven, and he was still on the couch.]{.mark}
 
-[I woke him. He came up off that couch already yelling, and this time it was at me. "One job. You had one job." He said it more than once, louder each time, getting his boots on. My mother came to the top of the stairs and said his name, and he didn't answer her. Chris was behind me in the doorway, not moving. I stood there and took it.]{.mark}
+[I woke him. He came up off that couch already yelling, and this time it was at me. "What did I tell you? What did I tell you?" He said it more than once, louder each time, getting his boots on. My mother came to the top of the stairs and said his name, and he didn't answer her. Chris was behind me in the doorway, not moving. I stood there and took it.]{.mark}
 
 [The truck went down the street too fast.]{.mark}
 
 [In the morning he was at the counter in a pressed shirt making our lunches. He didn't say anything about it, and neither did I. He drove us to school.]{.mark}
 
 [*[END PLACEHOLDER.]*]{.mark}
-
-Some moments were hard. He was worth it.
 
 Lou's upbringing explained some of it. His father sold produce. When men in suits walked into his market, his father went out back to discuss things in private. When relatives came over from Italy, Lou was the boy who lost his bed to them and slept in the attic. He carried that longer than anybody knew. Years later, during a stretch when he was going to therapy, he recalled a family Christmas and an old man yelling at his uncle about a boy who had to sleep in the attic. The temper was the Italian kind you see in the movies. It was older than any of us, and it was never about us.
 
@@ -1305,7 +1303,7 @@ Asking a man to sponsor me was one of the hardest things I had ever done, and on
 
 That year I understood why people go back out. The first year asked the most of me when I had the least. They say it takes about a year for the brain to learn to produce its own rewards again, and I believe it, because mine wasn't making any. Nothing felt good on its own yet. And that is precisely when the program hands you a pen and asks you to take an honest inventory of the wreckage, the people you owe, the trust you burned, the years you can't give back, and start walking toward all of it. You're asked to clean up after the flood while the water is still going down. Some mornings the meeting, the phone call, the amends I wasn't ready to make felt like climbing a hill with nothing in the tank. I watched good people go back out that year, and I never once called it weakness. I knew exactly how far over their heads the water was.
 
-Somewhere in that year I learned what sobriety was actually asking of me. It was not about feeling better. I had spent twenty years chasing feeling better, relief, escape, approval, the next thing that would make the pressure quiet down, and feelings move around like weather. Sobriety was about learning to function differently. Going when I did not feel like it. Telling the truth when hiding would have been easier. Calling someone instead of isolating. Making the apology. Going to the meeting. Staying useful while I was hurting. Living by values instead of moods. That was the discovery that carried me through the year the feelings couldn't.
+Somewhere in that year I learned what sobriety was actually asking of me. It was not about feeling better. I had spent twenty years chasing feeling better, and feelings move around like weather. It was about going when I did not feel like it.
 
 They say you become the five people you spend the most time with. Who you stand next to decides more than people admit. The rooms have their own pecking order, old-timers, big personalities, sponsors who collect sponsees like merit badges, and if you attach yourself to the wrong people, the rooms themselves can walk you back out the door. I got lucky, or I got guided. The handful I stood next to wanted me sober more than they wanted an audience.
 
@@ -1337,7 +1335,7 @@ The shape of those years was small on purpose. Up at five thirty. Coffee. A litt
 
 **Pensacola, 2009–present**
 
-One of the men I got sober alongside had been homeless with a tenth-grade education, and a few years later he had a Hollywood actor sleeping in his guest room. His name is Matt. The men God put in front of me weren't the ones I would have picked, and the first of them came early, when I couldn't yet see any of it.
+One of the men I got sober alongside had been homeless with a tenth-grade education, and a few years later he had a Hollywood actor sleeping in his guest room, which is his story to tell and not mine. His name is Matt. The men God put in front of me weren't the ones I would have picked, and the first of them came early, when I couldn't yet see any of it.
 
 Early in sobriety, your brain is rewiring itself. You walk around in a fog, not drunk, not high, just flat. I was depressed, living with my parents, going to meetings, trying to figure out what came next, and I kept landing on the same thought: I'd never build something real again. Not somebody like me. Somewhere in there I heard people say how few stay sober. I never looked it up. When you're new, you don't hear that as information. You look around the room and wonder which one of you it's going to be. I was a long shot.
 
@@ -1349,7 +1347,7 @@ Mager was about ten years older than me. I met him at a meeting called Harbor To
 
 Mager became my sponsor and taught me more than I could list, but one thing stuck hardest. You want to know what kind of program somebody's working? Don't listen to them at the podium. Talk to the people in their life. Their wife, their kids, their boss. The person at the podium is performing. The people at home are telling the truth. Mager and I talk on the phone every morning. Every single one. We do a short prayer together, a way to start the day right. Going on fifteen years of that.
 
-And there's Matt Campbell, the man from the top of this chapter. When I met him he was at Jason's Deli making ten dollars an hour, calling me about life on ten dollars an hour, the same calls I'd made to Andy. He had nothing but the program, and I think that's exactly what he needed. You already know where it went. We all went to church together on Sundays, a pew full of lives rebuilt from wreckage, sitting there like the most normal thing in the world.
+And there's Matt Campbell, the man from the top of this chapter. When I met him he was at Jason's Deli making ten dollars an hour, calling me about life on ten dollars an hour, the same calls I'd made to Andy. He had nothing but the program, and I think that's exactly what he needed. It went where it goes when a man works it: he got his life back, and then some. We all went to church together on Sundays, a pew full of lives rebuilt from wreckage, sitting there like the most normal thing in the world.
 
 And then there was Quint Studer. I was thirty-three, sober long enough to know I wasn't going back, and I couldn't shake the feeling there was something left in the tank. Not ego. A quiet sense that maybe God hadn't kept me alive just to sit in meetings the rest of my life trying not to mess up again. I wanted to do more. I just hadn't seen many examples of what that looked like.
 
@@ -1425,7 +1423,7 @@ Silence, not uncomfortable, just space. "Can you come in for an interview?"
 
 Caroline, the home health leader who would hire me, didn't waste time. She read my résumé the way people do when they're not looking to be impressed, following the rise all the way to where it stopped. She didn't ask about the gaps. She asked about trust.
 
-"How do you build trust and relationships with strangers? What do you do when the territory's cold and the numbers aren't there? How do you stay consistent when results don't come?"
+"How do you build trust with strangers?"
 
 I talked about discipline without ego, doing the work because it's right, not because someone's watching. Rejection as information, not a verdict. I talked about the pool, scanning the water when nothing was happening, how the job was the same whether anyone needed saving or not. She listened. Wrote. Looked up only when something mattered.
 
@@ -1467,7 +1465,7 @@ Caroline stayed patient with me as I learned how things worked. "This is a long 
 
 That's what I needed to hear. Caroline gave me permission to view the people I called on as loved ones. How do you know what they need? You get to know them.
 
-Home health wasn't selling, not the way I'd done it. The people I called on spent their days in living rooms and nights in musty bedrooms, oxygen tanks humming in the corner, family members exhausted in ways sleep doesn't fix. Time had slowed down in those houses.
+Home health wasn't selling, not the way I'd done it. The people I called on spent their days in living rooms and nights in musty bedrooms, oxygen concentrators humming in the corner, family members exhausted in ways sleep doesn't fix. Time had slowed down in those houses.
 
 Miss Jane was seventy-eight, recovering from hip surgery, and she apologized for the mess in a spotless house. She told me she used to dance, every Friday night for forty years, like it was a confession, and she was terrified she'd never walk without a walker again. I didn't rush past it. I asked about the dancing, and her face changed when she talked about it.
 
@@ -1523,7 +1521,7 @@ At one point I reached for the future. "Okay, once I make more—"
 
 Mager stopped me. "No. Use the money you actually have. That's how trust gets rebuilt."
 
-My mother's money never went on that legal pad. What I owed her had no number on it. The lies I'd told her went into my fourth step and my fifth, and for years I told myself the rest was paid in the only currency she ever wanted — her son, alive and honest. Sober and alive is a start. It isn't a settlement. She's the last parent I have, down in South Florida, and I am not there enough. I've come to think this isn't an amends you finish — not a letter, not a line in a book. It's the trips, my time, which is the one thing she always wanted and the one thing I kept for myself.
+My mother's money never went on that legal pad. What I owed her had no number on it. The lies I'd told her went into my fourth step and my fifth, and for years I told myself the rest was paid in the only currency she ever wanted — her son, alive and honest. Sober and alive is a start. It isn't a settlement. Of the two parents who raised me, she's the one I have left, down in South Florida, and I am not there enough. I've come to think this isn't an amends you finish — not a letter, not a line in a book. It's the trips, my time, which is the one thing she always wanted and the one thing I kept for myself.
 
 The debt on the pad didn't disappear fast. But I stopped flinching when bills came. I started answering calls from numbers I didn't recognize. My past stopped feeling like it was following me. It was being addressed. One payment, one opened envelope, one answered call at a time.
 
@@ -1753,9 +1751,9 @@ Lou never took to the plan. When he heard us talking budgets and cutting back, s
 
 ### *Who She Is*
 
-Hope's parents divorced when she was twelve, and she carries some abandonment from it, the quiet kind that doesn't announce itself. It wasn't one big leaving, either. She once rode to the movies with friends and got left in the backseat, on the hump, forgotten while everybody else walked in. Small things like that stack in a person. She needs a plan — the trip, the week, the grocery run — and when something moves the pieces she feels it in her body. At first I tried to talk her out of it. Now I help her rebuild the plan instead. Hope was left once. She needs to know what's coming.
+Hope's parents divorced when she was twelve. It wasn't one big leaving. She once rode to the movies with friends and got left in the backseat, on the hump, forgotten while everybody else walked in. Small things like that stack in a person. She needs a plan — the trip, the week, the grocery run — and when something moves the pieces she feels it in her body. At first I tried to talk her out of it. Now I help her rebuild the plan instead. Hope was left once. She needs to know what's coming.
 
-Early on she was a little codependent, and I'll be honest, it felt good. I'd spent my whole life trying to feel chosen, trying to be enough for somebody. Here was a person who needed me. Two people with the same wound from opposite ends, hers being left, mine wondering if I was worth keeping, and for a while we filled each other's empty places. We've both grown past the worst of it. But I understand now why we fit so fast.
+I'd spent my whole life trying to feel chosen, trying to be enough for somebody. Here was a person who needed me. She had been left. I had spent my life wondering if I was worth keeping. I understand now why we fit so fast.
 
 When we met she was twenty-nine, just finishing her doctorate, and she had never worked a full-time job in her life. Part of it is that she was a late bloomer, acne all through high school, the kind of pretty nobody spotted until later. A Savage Garden song came on the radio once and she said, quiet, "Nobody asked me to dance." Middle school, the slow songs, a girl waiting at the edge of the gym. Everybody who overlooked her did me the favor of my life. And she can laugh about all of it herself. Somebody once asked her whether Alabama was a good place to raise kids. "Yes," she said, "if you want them sheltered."
 
@@ -1915,7 +1913,7 @@ After the move, Hope and I went down for a visit. We went to church that morning
 
 [*[PLACEHOLDER. The breakfast, drafted from what the book already says about him. Rob replaces the details with what happened.]*]{.mark}
 
-[He'd dressed for it. Pressed shirt, the collar standing a little off his neck now, the hair done. Donna had driven. He walked in on his own. He asked me twice what time we were leaving, and the second time I answered him short, and I've had a year to wish I hadn't. Eggs, toast, coffee he stirred and didn't drink much of. He ate about a third of it and pushed the plate an inch away from himself, which was as close as he came to saying he was full.]{.mark}
+[He'd dressed for it. Pressed shirt, the collar standing a little off his neck now, the hair done. Donna had driven. He walked in on his own. He asked me twice what time we were leaving, and the second time I answered him short, and I've had months to wish I hadn't. Eggs, toast, coffee he stirred and didn't drink much of. He ate about a third of it and pushed the plate an inch away from himself, which was as close as he came to saying he was full.]{.mark}
 
 [There was an opening in hospice, at a company I had already given ten years to, and I told him about it. He listened the way he listened to anything about work, which was completely. Then he told me what he always told me. "Listen to your boss. Work hard." He had put that in me a long time ago, and he said it again like it was the first time.]{.mark}
 
@@ -1963,13 +1961,13 @@ Something in me shut down before he was gone. I couldn't pick up when my stepmom
 
 [I called Donna back after nine, from the garage, with the door down.]{.mark}
 
-["They admitted him this afternoon," she said. "It's pneumonia, Rob. It's in both lungs." She told me his oxygen number. I knew what the number meant. I ask about that number for a living. "He's tired, honey. He's real tired." Then she said the thing I've heard a hundred wives say, and I had never once heard it aimed at me. "You don't have to come tonight."]{.mark}
+["They admitted him this afternoon," she said. "It's pneumonia, Rob. It's in both lungs." She told me his oxygen number. I knew what the number meant. "He's tired, honey. He's real tired." Then she said the thing I've heard wives say in living rooms for ten years, and I had never once heard it aimed at me. "You don't have to come tonight."]{.mark}
 
 [I asked her the questions I ask strangers. Is he comfortable. Is he eating. Who's there. Lisa was on her way. Chris was coming Wednesday. I said we'd be down Friday, that Mom was here and needed a day. Donna said okay. She did not say it the way you say okay when you agree. She said it the way you say it when you've decided not to fight a man about his own father.]{.mark}
 
 [I came back in and Hope looked up from the stove and asked me with her face. "Friday," I said. She needs a plan, and I had given her one. She didn't ask whether it was the right one.]{.mark}
 
-[Christmas Eve my mother sat on a stool at the kitchen island and told Hope how to cut the peppers. Hope let her. That is something I love about my wife, that she can be told how to cut a pepper by a woman whose hands can't hold the knife, and make it look like she needed the help. Twice my mother asked how Dad was doing. "Resting," I said. It's a word I hear families use. I heard myself use it.]{.mark}
+[Christmas Eve my mother sat on a stool at the kitchen island and told Hope how to cut the peppers. Hope let her. That is something I love about my wife, that she can be told how to cut a pepper by a woman whose hands can't be trusted with the knife anymore, and make it look like she needed the help. Twice my mother asked how Dad was doing. "Resting," I said. It's a word I hear families use. I heard myself use it.]{.mark}
 
 [We went to the candlelight service at seven. My mother wanted to, and I wanted her to have it. We sat near the back so she wouldn't have to stand long. Somewhere in "Silent Night," with the little candle in my hand, the phone buzzed against my leg. I read it under the hymnal. Chris. They'd started a morphine drip. Comfort care. He was in the hospital, not hospice; it went that fast.]{.mark}
 
@@ -1981,19 +1979,19 @@ Something in me shut down before he was gone. I couldn't pick up when my stepmom
 
 [Christmas morning I was up at five. I did not turn the phone over. I made coffee and stood at the window. The neighbors across the street had put a bicycle with a bow on it in the driveway sometime in the night. I looked at the phone at six. Nothing from Chris since the church. The texting had stopped, and the silence had a shape.]{.mark}
 
-[Mager called at his usual time. We prayed the way we always do, a few plain sentences, thank you and help. I told him. He didn't say anything about God. He said, "Then you already know, brother." I said I did.]{.mark}
+[Mager called at his usual time. We prayed the way we always do, a few plain sentences, thank you and help. I told him about the drip. He didn't say anything about God. He said, "Then you already know, brother." I said I did.]{.mark}
 
 [The call came at twenty to nine. Chris. "Rob." Then a breath. "He's gone. About a half hour ago. Donna was with him." I asked if it was peaceful. I don't know why that was my first question. It's the question families ask me. He said yes. He said Dad had not woken up since the night before. I said okay. I said I'd call him back.]{.mark}
 
 [I went and told my mother. She was in the good chair with her tea. I said, "Mom, Dad died." She looked at me for a long time and then she said, "Oh, Louie." Just that. She had known him forty years, married him, left him, and toasted him at my wedding, and what she had left for him was his name. Hope had come in behind me and put her hand flat on my back and left it there.]{.mark}
 
-[Then my mother got up, which costs her something now, and went to the stove and started eggs. Nobody ate them. In our family that's what you do. You cook it.]{.mark}
+[Then my mother got up, which costs her something now, and went to the stove and started eggs, Hope's hand under her elbow the whole time. Nobody ate them. In our family that's what you do. You cook it.]{.mark}
 
 [I went out to the driveway. The bicycle with the bow was still across the street. A kid came out in pajamas and got on it and rode it to the corner and back, and I stood there with the phone in my hand and watched him do it four times.]{.mark}
 
 [*[END PLACEHOLDER.]*]{.mark}
 
-I didn't feel guilty at first. I had been at his bedside every other time — the surgeries, the pacemaker — and I had lived close to him for eighteen years. The guilt came later. Being absent from the last hour is not the same as being absent from the life.
+Knowing it and feeling it turned out to be two different things. I didn't feel guilty at first. I had been at his bedside every other time — the surgeries, the pacemaker — and I had lived close to him for eighteen years. The guilt came later. Being absent from the last hour is not the same as being absent from the life.
 
 When he was gone, something landed on me that I had never felt before, not over anyone. I had been around death for years — I knew the word. I did not know the thing. Now I did. Grief. People think it's a constant, a gray you live under. It isn't. It's an overwhelming sadness that comes and goes through the day, and beneath all of it, all the time, a deep heartache that never fully lifts. What took me a while to understand about mine: underneath, it wasn't guilt. It was simpler and heavier than that. The most amazing man I've ever known wasn't alive anymore, and I wanted him here. That's what I carry.
 
@@ -2081,9 +2079,9 @@ Before I lost him, I was good at this job, but there was a gap in it, one I can 
 
 Families would say, I'm terrified I won't be there when it happens. What I offered was what I knew to be true: presence is cumulative. You build it in the ordinary.
 
-I could tell you a dozen versions of the same room. The details change. The room doesn't. A husband answering every question directed at his wife, because he has been her voice since the diagnosis, going quiet only when I ask what he'll do with his mornings. A daughter who flew in from three time zones away and won't sit down, because sitting down feels like agreeing to it. A Bible on the nightstand with a rubber band around it, fat with decades of funeral programs pressed inside. And at some point, out in the hallway, the question underneath every other question: how long? What they're really asking is how long they have to say the thing they've been saving. I used to point them to the nurses and the ranges. Now I answer the real question. Don't wait. Then I go back into the room with them, and we stay.
+I could tell you a dozen versions of the same room. The details change. The room doesn't. A husband answering every question directed at his wife, because he has been her voice since the diagnosis, going quiet only when I ask what he'll do with his mornings. A daughter who flew in from three time zones away and won't sit down, because sitting down feels like agreeing to it. A Bible on the nightstand with a rubber band around it, fat with decades of funeral programs pressed inside. And at some point, out in the hallway, the question underneath every other question: how long? What they're really asking is how long they have to say the thing they've been saving. I used to point them to the nurses and the ranges. Now I answer the real question. Don't wait.
 
-The mechanics of it are simple. The first thing I do in any room is pull a chair up close, because distance reads as hurry and I am never in a hurry there. I remember an older woman with one framed photograph beside her bed, her daughter, a whole life narrowed down to the one face she wanted near her. I remember a man who told me his single regret, and there was nothing material in it. Nobody at the end talks about the things they bought. He wished he had traveled outside the country, just once. That was the whole confession. A woman with dementia once asked me to go to prom with her. People ask how I can stand this work. Some days the work asks you to prom. And once, after my father died, I sat with a man who reminded me so much of Lou that when he passed I had to step out of the room and stand there awhile before I could be useful to anybody. People ask what those rooms smell like, too, expecting something terrible. They smell clean. Hospital clean. That scrubbed-blank smell is to me now what rubber and sweat were to the wrestling room.
+The mechanics of it are simple. The first thing I do in any room is pull a chair up close. I remember an older woman with one framed photograph beside her bed, her daughter, a whole life narrowed down to the one face she wanted near her. I remember a man who told me his single regret, and there was nothing material in it. Nobody at the end talks about the things they bought. He wished he had traveled outside the country, just once. That was the whole confession. A woman with dementia once asked me to go to prom with her. People ask how I can stand this work. Some days the work asks you to prom. And once, after my father died, I sat with a man who reminded me so much of Lou that when he passed I had to step out of the room and stand there awhile before I could be useful to anybody. People ask what those rooms smell like, too, expecting something terrible. They smell clean. Hospital clean. That scrubbed-blank smell is to me now what rubber and sweat were to the wrestling room.
 
 Put one of those rooms together and it goes like this. A living room with a hospital bed where the dining table used to be. The husband's chair has been turned to face the bed. Three grown kids: one on the couch, one standing in the kitchen doorway, one who flew in last night and hasn't taken her coat off. The television is on with the sound down. Nobody has eaten. I introduce myself, and nobody really hears the name, because to them I'm not a name. I'm the word hospice, standing in their mother's living room in a tie.
 
@@ -2284,7 +2282,7 @@ He stayed.
 
 11. "Do I have closure? I don't know." Why do you think the book refuses a tidy ending with Horacio? What does it offer in place of closure?
 
-12. Rob writes that the cardinal "wasn't a miracle... the message is still being sent." What do you make of signs after loss? Has the book changed how you would receive one?
+12. The book ends on one photograph and one line: "It has never landed on my car again." What do you make of signs after loss? Has the book changed how you would receive one?
 
 13. The last pages of the book are set in the rooms: "Go to a meeting this week, even if you're good. Especially if you're not. Call somebody." Who would you call — and when?
 
