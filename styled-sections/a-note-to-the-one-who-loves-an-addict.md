@@ -1,6 +1,6 @@
 # **A NOTE TO THE ONE WHO LOVES AN ADDICT**
 
-If you picked up this book because you love someone who is using, or you lost someone who did, I want to say something to you now that the story is done.
+If you love someone who is using, or lost someone who did, this is for you.
 
 It isn't your fault.
 
