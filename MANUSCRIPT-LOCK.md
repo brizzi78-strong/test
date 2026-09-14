@@ -1,18 +1,18 @@
 # Manuscript Lock — The Cardinal's Promise
 
-**Locked:** 2026-09-14 (lock 11: post-panel-ten text; thirteen disclosed reconstructed passages, still highlighted; editor pass, cadence pass, copyedit, selective merge of the tightened draft) · **Manuscript text at commit** `892f6d6` (branch `claude/david-sheff-clone-writing-06i30q`)
+**Locked:** 2026-09-14 (lock 12: lock 11 plus nine proofreader seam fixes after the tightened-draft merge; text otherwise identical) · **Manuscript text at commit** `310c123``892f6d6` (branch `claude/david-sheff-clone-writing-06i30q`)
 
 *A git tag `v1-lock-2026-08-31` exists in the working clone but could not be pushed to GitHub from this session; on GitHub, use the commit hashes above as the reference.*
 
 | | |
 |---|---|
 | Chapters | 34 (Foreword, Prologue, six Parts, four Drives interludes, Epilogue, The Rooms, A Note to the One Who Loves an Addict, Lou's Way, apparatus) |
-| Words | 52,042 |
+| Words | 52,051 |
 | KDP interior | The_Cardinals_Promise_KDP_Interior.pdf — **201 pages**, 6" × 9", B&W, EB Garamond 12pt |
 | Spine (white paper) | 0.453" — full wrap 12.703" × 9.25" (see KDP-COVER-SPECS.md) |
 | Source of record | The_Cardinals_Promise_sheff_pass.md (mirrored in styled-sections/) |
 
-## Lock 11 notes
+## Lock 12 notes
 
 - The locked text includes thirteen reconstructed passages (chapters 3, 4, 15, 25, 27, 29, 30, 31, 33), disclosed on the copyright page and in the Author's Note. They remain yellow-highlighted in every build. **Strip the highlight before KDP upload** (remove the `{.mark}` spans and the bracketed markers; one command) — the interior cannot print with them.
 - Lock 10 (`bd927e6`, 206 pages) is the last text with no reconstructions.
