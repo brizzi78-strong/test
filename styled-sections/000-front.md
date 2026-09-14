@@ -56,6 +56,8 @@ Prologue
 15. West Palm Beach
 16. New Orleans
 
+*The Drives · I*
+
 **Part Four — Getting Square**
 
 17. Chumuckla
@@ -67,6 +69,8 @@ Prologue
 23. The Salmon Palace
 24. Horacio
 
+*The Drives · II*
+
 **Part Five — Hope**
 
 25. Sobriety Meets Hospice
@@ -77,8 +81,14 @@ Prologue
 **Part Six — The Last Chapter**
 
 29. The Detour
+
+*The Drives · III*
+
 30. Five Weeks
 31. The Days After
+
+*The Drives · IV*
+
 32. The First Honest Mile
 33. What Grief Taught the Job
 34. The Table
