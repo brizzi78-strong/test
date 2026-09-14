@@ -8,7 +8,7 @@ If this book says anything, it is that help exists. Here is where to find it. Th
 
 SAMHSA National Helpline. 1-800-662-HELP (4357). Free, confidential, twenty-four hours a day, 365 days a year, in English and Spanish. Treatment referrals and information for people and families facing substance use or mental health disorders. TTY 1-800-487-4889. Or text your ZIP code to 435748 (HELP4U). samhsa.gov/find-help
 
-Alcoholics Anonymous. aa.org. Meetings, in person and online, almost everywhere. The chapter that gave this book its spine is called "There Is a Solution." It is the second chapter of the book they call the Big Book.
+Alcoholics Anonymous. aa.org. Meetings, in person and online, almost everywhere.
 
 Al-Anon Family Groups. al-anon.org. For the families and friends of alcoholics. If you love someone who drinks, this one is for you, whether or not they ever get help themselves.
 
