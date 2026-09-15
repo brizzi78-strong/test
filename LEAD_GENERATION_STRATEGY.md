@@ -40,6 +40,48 @@ as above: introductions, usefulness before ask, consistent follow-up. This
 network compounds slower than hospital relationships but is stickier once
 built, since it isn't tied to a single discharge event.
 
+### Home health and hospice — the strongest thread in that network
+
+Home health and hospice agencies belong in Priority #2 but deserve calling
+out separately, because they see something no hospital discharge planner
+does: the patient at home, repeatedly, over months. Their clinicians are
+usually the first people to know that home has stopped being safe — often
+weeks before the family is ready to say it out loud. That is the exact
+moment a placement conversation should start.
+
+Treat it as a two-way channel: their clinicians meet families who need
+placement, and residents we place go on to need home health, hospice, and
+palliative services. That reciprocity is what makes the relationship stick
+where a one-way referral ask does not.
+
+### What North Star's structure reveals
+
+[North Star Senior Advisors](https://northstarsa.com/about-senior-living-placement/),
+the Central Florida agency whose site we modeled our own on, is worth
+studying for more than its page layout. Its co-owner and managing partner,
+Ignacio Quiñones, is simultaneously VP of Hospice Outreach at Amedisys —
+one of the largest home health and hospice providers in the country
+(~465,000 patients a year across 38 states), and an Optum/UnitedHealth
+company since the $3.3B acquisition closed in August 2025.
+
+That is not incidental to how the agency works. A placement business whose
+principal spends his working week in hospice outreach has the referral
+channel described above built directly into its foundation. The polished
+website is the visible half; the hospice relationship is the engine.
+
+The transferable lesson is not to copy the arrangement — it is that the
+home health and hospice channel is worth building deliberately and early,
+because it is what the model we are borrowing from actually runs on. North
+Star operates in Central Florida and is no competitive threat here; it is
+purely a case study.
+
+Worth noting for our own positioning: Quiñones is an Army veteran and a
+former LPN who cared for soldiers at Walter Reed, with roughly 15 years
+working with older adults. North Star leads with that clinical and service
+background because it is the kind of credibility families and discharge
+planners respond to — a reminder to lead with ours rather than with
+marketing language.
+
 ## Priority #3 — Local presence
 
 The [Triangle J Area Agency on Aging](https://www.tjcog.org) covers the
