@@ -1,0 +1,260 @@
+# Chapter 11. The documented record: litigation, complaints, and enforcement
+
+## 11.1 Why this chapter is shorter than it should be
+
+A program that moved billions of dollars through fifteen thousand intermediaries, denied credits to thousands of blameless buyers, and was terminated by statute inside three years has generated almost no case law. That absence is itself a finding, and this chapter treats it as one.
+
+Three structural reasons explain it, and they compound.
+
+**The amounts are too small to litigate.** The maximum exposure in any individual dispute is $7,500, and for used vehicles $4,000. Federal tax litigation costs more than that before anyone reaches the merits. Even the Tax Court's small case procedure, designed for exactly this range, presumes a taxpayer willing to spend time rather than money.
+
+**The claims are individualized.** A class action would have to establish that each member bought a qualifying vehicle, satisfied the income and use conditions, and lost the credit through the dealer's failure rather than their own ineligibility. Those are individual questions, and they sit badly with the commonality and predominance requirements for certification.
+
+**Arbitration clauses stand in the way.** Retail installment contracts in automotive sales commonly contain arbitration provisions with class-action waivers. A buyer whose dispute is with the selling dealer is likely to find the forum already chosen and aggregation already foreclosed. This is well-established as a feature of the industry's contracting practice and should be verified against the specific documents in any individual case.
+
+The one adjacent precedent found is not encouraging. In *Virachack v. University Ford*, 259 F. Supp. 2d 1089 (S.D. Cal. 2003), consumers brought a putative class action against a dealer over advertising practices; the court granted the dealer summary judgment and denied the plaintiffs' cross-motion. Dealer-advertising class actions are brought. They are also lost.
+
+The result is a body of harm with no judicial record. What exists instead is a complaint record, and the complaint record is where the program's failures were actually surfaced and, in one significant instance, fixed.
+
+## 11.2 The case law
+
+Searching the federal and state case databases produces three lines of authority. None addresses the seller report directly. Two of them bear on it closely, and one of them is bad news for the arguments in Chapter 10.
+
+### 11.2.1 Moon v. Commissioner: the only precedential decision, and an accidental argument for the register
+
+*Moon v. Commissioner*, 165 T.C. No. 4 (Sept. 10, 2025), Docket No. 21998-21 (Foley, J.), is the sole precedential Tax Court opinion on §30D located by this research. The facts, taken from the opinion, are more striking than the holding.
+
+In 2013 the petitioners bought a new Chevrolet Volt. On their returns for 2013 **through 2019** they claimed the maximum $7,500 §30D credit for that vehicle, every year, seven years running. In a notice of deficiency dated May 18, 2021, the Commissioner disallowed the credit **relating to 2019**. The case was submitted fully stipulated under Rule 122, the petitioners appearing pro se. The court held they were not entitled to the credit for 2019 because the vehicle had been placed in service in 2013, §30D providing a one-time credit for a vehicle placed in service during the taxable year.
+
+Two things follow, and the second is more important than the first.
+
+**On doctrine**, the court read the placed-in-service condition as a hard statutory limit, not a formality open to equitable adjustment. That posture is unfavorable to the arguments sketched in Chapter 10. A buyer contending that a missing seller report should be excused because they personally did everything right is asking a court to treat a statutory condition as directory. Moon does not decide that question and concerns a different condition. But it is the only precedential signal available on how this court approaches §30D's eligibility architecture, and the signal does not favor flexibility.
+
+**On administration**, notice what the timeline shows. A taxpayer claimed a one-time credit seven consecutive times on a single vehicle, and the Service disallowed the seventh. Whatever happened to the first six, the case is documentary evidence of exactly the detection gap that TIGTA identified across processing years 2019 through 2022, when 7,547 returns claiming roughly $23 million above the allowable threshold passed through the filters.
+
+That makes Moon an unintentional argument for the apparatus this dissertation is about. A VIN-keyed register in which each vehicle is matched to one named buyer, of the kind Form 15400 created from 2024, makes a repeat claim on the same vehicle structurally detectable rather than dependent on a filter catching an anomaly. Chapter 3 identifies anti-duplication as the second of the form's four legal functions and counts it as a genuine administrative gain. Moon is what the absence of that function looked like in practice, litigated.
+
+### 11.2.2 The 2015 neighborhood-electric-vehicle line: the closest analogue, decided against the buyer
+
+Two summary opinions issued the same day are the nearest thing in the case law to the Form 15400 problem, and they should temper any optimism about how that problem would have been resolved.
+
+In *Trout v. Commissioner*, T.C. Summary Op. 2015-66 (Nov. 19, 2015), Docket No. 10576-13S (Paris, J.), the Service determined a $6,497 deficiency for 2009, the issue being the petitioners' eligibility for the §30D plug-in electric drive motor vehicle credit. The vehicle was a Spark NEV-48 EX, a neighborhood electric vehicle manufactured by Zone Electric Car, LLC. Under Notice 2009-54, Zone Electric had submitted a request to the IRS on October 1, 2009 to certify its vehicles as qualifying for §30D. The case was submitted fully stipulated under Rule 122, the petitioners pro se and resident in Nebraska, and decision was entered for the Commissioner. *Podraza v. Commissioner*, T.C. Summary Op. 2015-67, Docket No. 9461-13S, was issued the same day on what appears to be the same issue; its facts should be confirmed independently.
+
+Note the structure, because it is the structure of this entire dissertation. A consumer bought a vehicle. Whether the credit was available turned on a **certification obtained by a third party from the government**, in that instance the manufacturer's request under Notice 2009-54 rather than a dealer's report under §30D(d)(1)(H). The third party's certification did not carry the vehicle across the line. The buyer, who had no control over the certification and no ability to cure it, lost the credit.
+
+That is the seller-report problem in its earlier form, and the courts resolved it against the buyer. The mechanism differs, the outcome does not, and anyone advancing the substantial-compliance argument in Chapter 10 should reckon with the fact that the closest available analogue failed.
+
+Two qualifications are essential. Under §7463(b) a summary opinion is not reviewable by any other court and **may not be treated as precedent for any other case**, so these decisions have no authoritative weight. And a certification that a vehicle qualifies is a statement about the vehicle, whereas a seller report is a statement about a transaction that indisputably occurred, which is a materially stronger position for a buyer. The analogy is instructive, not controlling.
+
+### 11.2.3 State analogues
+
+The state records show the same administrative pattern playing out below the federal level, and they are worth mining by anyone extending this work.
+
+The Oklahoma Tax Commission decided a cluster of electric-vehicle income tax credit protests on May 5, 2011, docketed as a manufacturer's "test case" series for Ruff & Tuff low-speed vehicles across several models, all recorded as non-precedential and disposed of as "SUSTAINED." An earlier precedential decision, 2006-09-05-05, addressed the qualified electric motor vehicle credit. The disposition convention should be confirmed before the outcomes are characterized, since "sustained" in that forum may refer to the assessment rather than the protest.
+
+West Virginia produced a substantial body of alternative fuel tax credit decisions before its Office of Tax Appeals, including dockets 12-443, 12-452, 12-453, 12-488, 12-490, 12-491 and 12-502, decided together and delayed pending calculation settlements, and a later consolidated matter spanning 2014 to 2017 dockets. Several were appealed, producing *Martin Distributing Co. v. Matkovich*, 238 W. Va. 300, 794 S.E.2d 21 (2016).
+
+The federal clean vehicle credits generated almost no litigation. The state alternative-fuel credits generated a great deal. The likely explanation is amount: state credits in these programs could run to five and six figures per claimant, which crosses the threshold at which litigation is rational, whereas $7,500 does not. That is the same economic point made in §11.1, confirmed from the other direction.
+
+### 11.2.4 What no court has decided
+
+As far as this research could determine, **no decision anywhere addresses whether a taxpayer may claim the clean vehicle credit where the dealer failed to file Form 15400.** The central legal question raised by the program's principal failure mode has never been answered, and now probably never will be, because the credit was terminated before the volume of disputes could produce a test case worth funding.
+
+## 11.3 The complaint record
+
+Where litigation is absent, the record runs through oversight bodies, the trade press, and consumer journalism. Four channels matter, and they divide along a revealing line.
+
+**The Taxpayer Advocate Service.** The National Taxpayer Advocate published a blog post in June 2024 titled *Electric Vehicle Tax Credits Issues and Pitfalls*, along with a taxpayer-facing tip on clean vehicle credits. TAS is the institutional channel through which individual taxpayer harm reaches the agency's leadership, and it was engaged on this problem while the 2024 sales year was still running. The clean vehicle reporting failures do not appear to have been elevated to a Most Serious Problem in the annual reports to Congress, which is a defensible triage judgment given the competing candidates and also a measure of how invisible a dispersed $7,500 harm remains even to the office designed to see it.
+
+**The Treasury Inspector General for Tax Administration.** TIGTA has audited this credit repeatedly, and the orientation of its work is the point. One report found that in processing years 2019 through 2022 the IRS failed to catch 7,547 returns claiming approximately $23 million in credits above the allowable threshold. An earlier review found that roughly 20% of credits claimed for alternative fuel motor vehicles were erroneous. A later report recommended changes to clean vehicle credit implementation.
+
+**Congress.** Oversight correspondence has followed the same line, including a 2020 letter from Senator Ron Johnson and colleagues to the IRS Commissioner concerning unchecked misuse of the electric vehicle credit.
+
+**The trade associations and the press.** NADA maintained a standing regulatory-compliance position on time-of-sale reporting issues and pressed the IRS publicly to reopen the filing window for 2024 sales, joined by state associations including NHADA. Consumer coverage followed in early 2025, including NPR's reporting on denied returns in February 2025 and consumer-affairs segments such as WRAL's.
+
+The line that divides these channels is worth stating plainly. **The formal oversight apparatus, TIGTA and Congress, examined this program almost exclusively for overclaiming — taxpayers getting credits they should not have.** The opposite failure, eligible buyers being denied credits they were entitled to because a third party did not file a form, was surfaced by the Taxpayer Advocate, by a dealer trade association acting on its members' reimbursement interests, and by consumer journalism. It was not the subject of the audits.
+
+That asymmetry is not a criticism of TIGTA, whose statutory mandate runs to revenue protection and program integrity. It is an observation about where institutional attention is structurally directed in a tax expenditure. Overclaiming costs the Treasury money and generates an audit trail. Underdelivery costs individual citizens money and generates nothing at all, unless someone with an organized interest happens to be harmed alongside them. Here, someone was: dealers who had already advanced the credit lost their reimbursement, and their association's lobbying is what produced the reopened portal. The buyers' remedy arrived as a byproduct of the sellers' complaint.
+
+## 11.4 Deceptive marketing: the live enforcement front
+
+The one area with genuine, current enforcement activity is advertising, and it lands directly on the credit. It also, unusually for this dissertation, required no new law: the regulatory grammar that governs deceptive incentive advertising already fit the clean vehicle credit exactly, because the credit behaved like a factory rebate with eligibility strings.
+
+### 11.4.1 Why this credit was structurally prone to deceptive advertising
+
+The point made in Chapter 4 returns here in a consumer-protection register. Point-of-sale transfer simplified the *payment* of the credit and did nothing whatsoever to simplify *eligibility*. Four independent qualification axes determined what any given reader of an advertisement would actually receive:
+
+1. **The buyer's income.** Adjusted gross income above $300,000 joint, $225,000 head of household, or $150,000 otherwise disqualified the buyer entirely, and the test could be satisfied by the current or prior year, so even the buyer often did not know the answer at the moment of purchase.
+2. **The vehicle's price.** Above $80,000 for vans, SUVs, and pickups, or $55,000 for everything else, the credit was zero. Whether a given crossover counted as an SUV moved the cap by $25,000 and was itself contested.
+3. **Where it was built and sourced.** Final assembly outside North America disqualified the vehicle. The two $3,750 halves turned on critical-mineral and battery-component thresholds that escalated every January, with foreign-entity exclusions phasing in for components in 2024 and minerals in 2025.
+4. **Purchase versus lease.** A lease routed the benefit through §45W to the lessor, with no consumer eligibility conditions and no obligation to pass anything through.
+
+The outcome for any individual was therefore $7,500, $3,750, or nothing, determined by facts the advertisement could not know and the buyer often could not either. An advertisement quoting a price "after the $7,500 federal tax credit" was consequently false as to a substantial share of the people who read it. This is not incidental to the credit's design. A subsidy with four independent eligibility axes and a headline number is an advertising problem waiting to happen, and it duly happened.
+
+### 11.4.2 The federal standard
+
+**The FTC's March 2026 warning letters.** On March 13, 2026 the Federal Trade Commission sent warning letters to 97 auto dealership groups concerning deceptive pricing and advertising. The letters restate the total-price principle: an advertised price must reflect what the consumer will actually be required to pay, including mandatory dealer-imposed fees, excluding only government charges such as taxes. The scale of the action, 97 groups in a single wave, indicates a systematic review rather than complaint-driven investigation.
+
+The commentary accompanying that sweep names the EV credit specifically. Advertising that promotes "$7,500 OFF" by stacking incentives that no single buyer can simultaneously claim is deceptive, and clean vehicle credit eligibility appears in the enforcement discussion alongside conquest, loyalty, military, and college-graduate incentives as exactly this kind of ingredient. The underlying rule is long-standing: an incentive that is not available to everyone, or that is mutually exclusive with another, may not be folded into an advertised price as though it were universally available.
+
+**The CARS Rule is gone, and the standard is not.** The Combating Auto Retail Scams Rule, which would have codified offering-price disclosure, add-on consent, and related requirements, was vacated by the Fifth Circuit in January 2025 on procedural grounds: the Commission had not issued an advance notice of proposed rulemaking. The court made no finding that the conduct the rule addressed was lawful. Section 5 of the FTC Act continues to reach deceptive dealer advertising, as the 2026 letters demonstrate and as earlier sweeps against auto dealers, including a ten-dealer action in January 2014 and a 2015 Ohio settlement, had already established.
+
+For a private buyer this matters less than it appears, because §5 carries no private right of action. The federal standard sets the norm; it does not give the individual a remedy.
+
+### 11.4.3 The state layer, which is the enforceable one
+
+State motor vehicle advertising regulation is where this becomes actionable for an individual, and the fit is close enough to be striking.
+
+**These rules are real, enforced, and have survived constitutional challenge.** That matters, because an argument resting on state advertising regulation is worth little if the regulations are dead letters. They are not.
+
+The anchor is *Barry v. Arrow Pontiac, Inc.*, 100 N.J. 57 (1985), affirming in relevant part 193 N.J. Super. 613 (App. Div. 1984). The Director of Consumer Affairs proceeded against a dealer under the New Jersey Consumer Fraud Act and its implementing motor vehicle advertising regulation, N.J.A.C. 13:45A-2.2(a)(7)(iv). The Supreme Court upheld the regulation over vigorous dissents in both courts, which argued that it suppressed truthful and useful price information and so restricted legitimate competition. The case establishes both that these regulations are enforceable instruments of consumer protection and that the objection a seller would raise against applying them to credit-inclusive pricing, namely that the information is true and the consumer benefits from having it, has been made and rejected.
+
+Enforcement is not theoretical either. *Adams Ford Belton, Inc. v. Missouri Motor Vehicle Commission*, 946 S.W.2d 199 (Mo. banc 1997), concerns dealer discipline arising from advertising. State tax and licensing bodies pursue the same conduct administratively, as in the Utah State Tax Commission's consolidated decision in appeals 00-1539 and 01-0170 (June 4, 2002), captioned "Advertisement Violations" against a motor vehicle dealer. Attorneys general issue interpretive guidance on dealer price advertising, and have done so for decades.
+
+These rules were written for factory rebates: loyalty cash, military discounts, college-graduate programs, captive-finance incentives. Their consistent structure is that an incentive may be built into an advertised price only if it is generally available, and that any eligibility limitation must be separately and conspicuously disclosed. Washington's formulation requires that a rebate be available to the general public, available in combination with other advertised rebates, and expressed as a component part of the advertised price. The broader principle across jurisdictions is that a dealer may not represent that a discount, rebate, bonus, incentive, or price is available unless it is available to all consumers or every qualification and restriction is disclosed. Comparable provisions appear in Oregon's administrative rule on motor vehicle advertising, Virginia's statutory regulation of advertising practices, the Ohio Attorney General's motor vehicle advertising guidelines, the Texas DMV's advertising rules, and the Mississippi Motor Vehicle Commission's advertising chapter.
+
+The clean vehicle credit slotted into that template without modification. It was an incentive not available to all consumers, subject to disclosed-or-not eligibility restrictions, frequently advertised as a component of price. Every element the state rules were built to police was present.
+
+Two consequences follow. First, no new consumer-protection legislation was needed, and none was passed, because the existing regime already covered the conduct. Second, and more usefully for an individual buyer, these state rules are typically enforceable through the state's UDAP statute, which means private suit with fee-shifting rather than a complaint to an agency that may or may not act. This is the concrete content of the recommendation in Chapter 10 that the state route is the real one.
+
+### 11.4.4 The lease channel, where the label itself was wrong
+
+The sharpest deceptive-marketing question in the whole area arises on leases, and it is a labeling problem rather than an eligibility problem.
+
+Under §45W the *lessor* was the taxpayer and the credit was the lessor's. Nothing required any of it to reach the lessee. Where a lessor chose to pass value through, it appeared as capitalized cost reduction, usually marketed under a name like "EV lease bonus" or, less accurately, as "the $7,500 federal tax credit."
+
+The reported example that makes the point cleanly is Hyundai's advertised "$7,500 EV Lease Bonus" on an Ioniq 5 that was not manufactured in North America. The vehicle was categorically ineligible for the consumer credit under §30D. The money was real, and it was not the consumer's tax credit; it was the lessor's commercial credit, passed through at the lessor's discretion, on a vehicle the consumer could not have claimed a cent for by buying it.
+
+Three features compound the problem.
+
+**The consumer never had the tax attribute.** Describing the pass-through as the consumer's "tax credit" misstates whose credit it is and implies an entitlement the consumer does not hold. If the lessor had reduced or withdrawn the pass-through, the consumer would have had no claim to it.
+
+**Pass-through was discretionary and unverifiable.** Capitalized cost reduction is a negotiated figure inside a lease. A consumer cannot readily determine whether the full $7,500 reached them, some fraction did, or the number was absorbed into a residual or money-factor adjustment that gave back part of it. Chapter 6 notes that pass-through appears to have been common because lease markets are competitive; common is not verifiable, and the advertising asserted a specific number.
+
+**The disclosure regime long predates the credit.** Consumer lease advertising is governed by the Consumer Leasing Act and Regulation M, which require disclosure of amounts due at lease inception, including any capitalized cost reduction. The FTC has enforced this repeatedly, including coordinated actions in the late 1990s against dealers and national advertising agencies over lease advertising that obscured inception costs. A lease advertisement that headlines a $7,500 credit while leaving the actual capitalized cost reduction unstated engages a disclosure obligation that has existed for thirty years.
+
+The lease channel therefore combined a discretionary benefit, a misleading label, a figure the consumer could not verify, and an established disclosure regime. It is the most promising unexplored enforcement target in this area and, as §11.6 records, no reported action has addressed it.
+
+### 11.4.5 The live 2026 exposure
+
+After September 30, 2025 there is no federal clean vehicle credit for a new purchase or a new lease. Advertising that continues to quote a price net of the federal credit, or that implies the credit remains available, is now straightforwardly false rather than merely conditional on the reader's circumstances.
+
+This is the most tractable deceptive-marketing problem in the entire area, for three reasons. The falsity is objective and requires no inquiry into any individual buyer's income or the vehicle's sourcing. The evidence is public and archived, since it sits on dealer websites, third-party listing feeds, and social accounts. And the harm falls disproportionately on buyers who do not follow tax legislation, which is to say the population least equipped to detect the error themselves.
+
+Stale creative persists. Listing feeds propagate old incentive data through syndication, and a dealer that updated its own site may still appear elsewhere with a credit-inclusive price. State enforcers with existing motor vehicle advertising authority could address this with a sweep modeled on the FTC's March 2026 letters, and none appears to have done so.
+
+### 11.4.6 Case study: Tesla and the Model Y
+
+The single best-documented instance of credit-inclusive advertising in the United States is Tesla's, and it repays close attention for reasons that go beyond volume. Every claim in this subsection is drawn from secondary reporting; none has been confirmed against an archived capture, and Appendix E flags the whole subsection accordingly.
+
+**Why Tesla is the decisive test case.** Three features make it so.
+
+First, Tesla sells directly. Manufacturer and seller are the same legal person, which inverts the information asymmetry described in §11.4.7 below. A franchised dealer running a credit-inclusive advertisement depends on manufacturer representations about assembly and battery sourcing that change every January. Tesla knew where its vehicles were assembled, knew its battery supply chain, and set its own prices against the MSRP cap. On three of the four eligibility axes, the accuracy of Tesla's advertising was entirely within Tesla's knowledge. That isolates the fourth axis, the buyer's income, more cleanly than any other seller in the market.
+
+Second, the Model Y was the volume vehicle. It sold 163,454 units in the first half of 2026 alone, and Tesla held roughly half the U.S. electric vehicle market. Tesla's advertising conventions were, to a first approximation, the market's advertising conventions.
+
+Third, Tesla has the longest continuous record of net-of-subsidy price display of any seller in the industry, and that record includes a prior adverse regulatory finding.
+
+**The prior finding: gas-savings pricing, 2019.** Long before the Inflation Reduction Act, Tesla's website displayed vehicle prices net of estimated future fuel savings and government incentives, which made the cars appear thousands of dollars cheaper than their actual purchase price. In March 2019 Germany's fair competition body, the Wettbewerbszentrale, told Tesla to stop including projected fuel savings in displayed cost, giving a deadline of March 20. Tesla's German site was reported as adjusted to show only the base purchase price by March 8. Tesla retained the gas-savings pricing on its U.S. site.
+
+This episode is the strongest comparative evidence in the chapter and deserves to be stated as such. The same firm ran the same pricing display in two jurisdictions. One regulator identified it as misleading and stopped it within weeks, using ordinary competition law and no new rulemaking. The other did not act, and the practice continued in the United States for years afterward. Whatever explains the divergence, it is not that the practice was analytically difficult to characterize.
+
+It also establishes the baseline into which the clean vehicle credit arrived. By 2023 Tesla was operating a price display that already netted out one contested category of hypothetical consumer savings. The federal credit was inserted as an additional deduction into a presentation format whose premise had been rejected elsewhere.
+
+**The credit-inclusive display, 2022 to 2025, and a necessary correction.**
+
+An earlier draft of this section asserted that Tesla headlined the credit-inclusive price and relegated the qualification to a footnote. That is too simple, and the sources do not support it as a general claim. What the record shows is more interesting: **Tesla ran different prominence conventions on different surfaces at the same time.** The correction matters, because prominence is the legal question, and a claim about prominence has to be specific about which page.
+
+The documented sequence:
+
+*Before 2023: savings-inclusive display.* Tesla's landing pages showed prices net of a bundled figure variously labeled "probable savings" or "potential savings." Clicking through produced a dialog breaking the figure into Tesla's estimated six-year gasoline savings **and** the full $7,500 federal credit. This is the direct link between the 2019 German finding and the Inflation Reduction Act: the credit was not introduced into a neutral price display, it was added as a second ingredient to a savings bundle whose first ingredient a European regulator had already ordered removed.
+
+*2023: the landing pages retreat, then advance.* Tesla's US site was reported to begin showing the actual purchase price up front. Then, on June 8, 2023, InsideEVs reported that the Model 3 and Model Y pages had again begun displaying prices after the federal tax credit, while the configurator continued to display the price normally with the detail in the payment section. The contemporaneous assessment in that reporting is worth quoting for what it shows about how obvious the issue was at the time: because not everyone can qualify, the presentation "might be considered a bit misleading."
+
+*The configurator hierarchy ran the other way.* On the order pages, the actual price was listed first, larger and bolded, with the potential-savings figure below it, smaller and greyed out. That is the opposite of the structure the state advertising rules are aimed at, and Tesla should be given credit for it.
+
+*July 2023: a forward-looking disclosure.* The configurator carried a note that a reduction in the credit was "likely" after December 31, reflecting the tightening sourcing thresholds. This is a real disclosure and a reasonably forthright one, and it is also evidence that Tesla understood vehicle-side eligibility to be volatile while continuing to feature the full credit elsewhere.
+
+*2024: the point-of-sale era and the operative language.* From early 2024 Tesla applied the credit at the point of sale under the transfer election. Its own disclosure text read: "Eligible customers who take delivery of a qualified new Tesla and meet all federal requirements are eligible to receive $7,500 off the purchase price," applied at time of delivery. Contemporaneous listings preserve the advertised framing and figures: a 2023 Model Y at $47,240 "for qualifying buyers"; a 2024 Model Y at $40,490 "for qualified buyers"; a Long Range All-Wheel Drive at $48,490 less $7,500, presented as $37,080; and all new 2024 Model Y at $43,990 with "$7,500 off the purchase price, applied at time of delivery."
+
+*November 2024: the inventory page.* With the credit under political threat, Tesla was reported to be putting incentives "on blast," with the credit-inclusive price front and centre in bold on the inventory page, ahead of the click-through.
+
+Three observations survive the correction, in sharpened form.
+
+*Prominence varied by surface, and that is itself the finding.* The same seller, in the same period, put the actual price first on the configurator and the credit-inclusive price first on the landing and inventory pages. A prominence-based standard applied surface by surface would reach different answers about the same company on the same day. Enforcement regimes built for a printed newspaper advertisement or a lot banner have no clean way to handle a seller whose funnel presents the price three different ways at three different depths. This is a better criticism of the regulatory framework than of Tesla.
+
+*Tesla's own disclosure language is more careful than the shorthand.* "Eligible customers ... who meet all federal requirements" is a materially better disclosure than "for qualified buyers," and the phrase reappears with "applied at time of delivery," which is accurate about the mechanism. Whether either satisfies a standard demanding that every qualification and restriction be disclosed, against three income thresholds testable in either of two years, an MSRP cap turning on vehicle classification, an assembly requirement, and two annually escalating sourcing thresholds, remains the cleanest never-litigated test case in the record. But the question should be put against the actual words, not against a paraphrase, and the actual words are better than the paraphrase.
+
+*Tesla's exposure is narrower than a franchised dealer's, and not zero.* Because Tesla controlled assembly, sourcing, and price, its claims on those axes were within its own knowledge and, for the Model Y across most of 2024 and 2025, substantially accurate. The income axis was knowable to neither Tesla nor any other seller, and the governing framework confirmed the point: the seller was not required to verify buyer eligibility at the time of sale, and the responsibility to meet the buyer requirements sat with the buyer. So the residual misdescription attributable to Tesla approaches a pure income-eligibility problem, uncontaminated by the sourcing volatility that muddies every franchised-dealer example. For a researcher, that is a feature.
+
+**September 2025: the deadline banner, and its 2018 dry run.** As termination approached, Tesla added "Order by September 30 to Qualify" to the federal tax advertisement on its homepage, and published a clarification that orders placed on September 30 would qualify with no delivery required.
+
+This was the second time Tesla ran this play on this credit, and the first time is analytically valuable. Tesla's cumulative sales passed the 200,000-vehicle threshold in the quarter ending September 30, 2018, triggering the per-manufacturer phase-out from January 1, 2019. Tesla told customers to **order by October 15, 2018** in order to take delivery by December 31 and secure the full $7,500, with the credit stepping down to $3,750 and then $1,875 across 2019. The press coverage at the time was framed in the same terms as 2025: buyers had days to order or lose the credit, and the deadline was widely expected to pull sales forward.
+
+The parallel gives Chapter 7 something it otherwise lacks. The September 2025 termination is a single event, which makes it hard to separate the behavioral response to a credit deadline from whatever else was happening in 2025. The October 2018 deadline is a structurally similar event, affecting one manufacturer rather than the whole market, seven years earlier, under the pre-Inflation Reduction Act regime, with no point-of-sale transfer and therefore far lower salience. Comparing the two bunching episodes isolates the effect of salience on deadline response: if the 2025 pile-up is proportionally larger than the 2018 pile-up, the difference is attributable to the credit having been made visible and immediate in the interim. That is close to a direct test of this dissertation's central claim, and both events are observable in monthly delivery data.
+
+A caution attaches. In 2018 the running variable was Tesla's own order deadline, self-imposed to manage production and delivery logistics against a December 31 in-service requirement. In 2025 it was a statutory acquisition date. The 2018 deadline was therefore softer and partly promotional, and the comparison needs to handle that asymmetry rather than assume it away.
+
+That clarification is the statutory acquisition rule, written binding contract plus payment, translated into marketing copy and pushed to consumers at national scale. Chapter 7 argues that a conventional regression discontinuity at September 30 is invalid because the running variable was deliberately manipulated, and that the bunching is therefore the estimand rather than the nuisance. The Tesla homepage is documentary proof of that manipulation. The pile-up of contracts against the deadline was not an artifact of consumer behavior discovered after the fact; it was actively produced by sellers advertising the boundary.
+
+There is an irony worth recording. The most consequential credit advertising Tesla ran was also its most precise. The deadline was objective, knowable, and identical for every reader, so the copy could be exact. Eligibility was subjective, buyer-specific, and unknowable, so the copy could not be. The advertising was accurate in inverse proportion to how much it mattered to any individual buyer's actual entitlement.
+
+**October 2025: the response, and what it reveals about incidence.** On October 7, 2025, one week after termination, Tesla introduced "Standard" versions of the Model 3 and Model Y. The Model Y Standard was priced at $39,990, roughly $5,000 below the renamed "Premium" trim.
+
+The price reduction was achieved by removing content. Reported deletions include vegan leather seats replaced by textile and leather-look materials, the fifteen-speaker audio system replaced by seven speakers, no AM/FM radio, no rear entertainment touchscreen, manual rather than automatic rear air vents, no front seat ventilation, no rear seat heating, manual steering wheel adjustment, and manual folding mirrors.
+
+This is the most analytically valuable event in the case study, and its significance is easy to miss because it was reported as a price cut. It is not a price cut. It is a quality-adjusted price increase presented as one.
+
+Consider what it does to the incidence analysis in Chapter 6. Standard estimation holds the product constant and measures how the transaction price moves when the subsidy is withdrawn. Tesla instead held the price approximately constant and removed content. The $7,500 withdrawal was therefore absorbed through three channels, not two: some by manufacturer margin, some by consumers paying more, and some by consumers receiving less for the same money. The third channel is invisible to any specification that regresses price on subsidy without hedonic controls, and it will bias the estimated pass-through and the implied elasticity in ways that are not obviously signed.
+
+Chapter 7's research agenda should be amended accordingly: any estimate of the termination's effect must control for content, because at least one major manufacturer responded on the content margin rather than the price margin, and did so within a week.
+
+The episode also speaks to the direction of incidence, and it points the same way as the discount evidence in Chapter 6. A firm that had been capturing the subsidy as producer surplus would have had no need to restructure its product line when the subsidy vanished. Restructuring within seven days is the behavior of a firm that had been passing the money through and now had to find $7,500 of consumer-facing value somewhere else.
+
+**The lease channel at Tesla.** Tesla's captive finance entity claimed the §45W commercial credit on consumer leases and reflected it in advertised lease pricing, in the ordinary industry pattern described in §11.4.4. The credit belonged to the Tesla lessor entity, never to the lessee, and the pass-through was Tesla's to set.
+
+Tesla's lease-end purchase policy sharpens the labeling problem, subject to verification. Tesla is reported to have prohibited lease-end buyouts on certain models for a period, later reinstating them. Where that policy applied, a consumer was paying a monthly rate reduced by a credit attached to a vehicle they were contractually barred from ever owning, advertised to them as a tax credit. The exact models and dates should be confirmed against Tesla's lease agreements before this is asserted in a submitted version, and it is flagged in Appendix E.
+
+**March 2026: the practice ends.** Reports in March 2026 indicate Tesla removed the estimated gas savings element from its U.S. website, seven years after the German regulator ordered the equivalent practice stopped there.
+
+The timing invites an inference that should be resisted without more. The FTC's warning letters went to 97 auto dealership groups on March 13, 2026. Tesla is not a franchised dealership group, and there is no evidence in the sources consulted that Tesla received a letter. The coincidence is consistent with a general chill on net-of-savings pricing across the industry rather than with direct causation, and it may be partly mechanical in any event, since by March 2026 there was no federal credit left to include. Anyone developing this point should confirm whether Tesla was among the recipients before drawing a line between the two events.
+
+**The jurisdictional wrinkle, which is a genuine gap.** State motor vehicle advertising regulations bind licensed dealers. Tesla's status under them varies by state in a way no franchised dealer's does. Tesla holds dealer licenses in some states, has been blocked from direct sales in others including Texas, South Carolina, and New Jersey, has litigated the question in Louisiana, and has operated through structures such as out-of-state transaction processing, lease-only arrangements, and stores on tribal land.
+
+The consequence is that a single national website advertised a credit-inclusive price into fifty states from a seller that was a licensed dealer in some, prohibited from selling in others, and operating through a workaround in the rest. The state advertising regimes assume a locally licensed dealer running local advertising, and they have no clean answer to that configuration.
+
+This is worth stating as a finding rather than an aside. The most consequential credit advertising in the market was run by the seller least clearly subject to the regulatory regime that governs credit advertising. The federal standard under §5 reaches it but gives individuals no remedy; the state standards give individuals a remedy but bind dealers, and whether they bind this seller depends on which state the reader was sitting in. That is a structural enforcement gap, and it has nothing to do with the clean vehicle credit specifically. The credit merely made it visible.
+
+**What to obtain.** The following captures would convert this subsection from secondary reporting into documented evidence: the Model Y configurator and inventory pages for January 2024, the first month of point-of-sale transfer; November 2024, when the credit-inclusive display was reported as most prominent; and the homepage for late September 2025, carrying the order-by-deadline banner. Captures should be preserved with the URL and the archive timestamp visible in frame, since the timestamp is what makes them citable.
+
+### 11.4.7 The recurring asymmetry
+
+One structural observation ties this back to the dissertation's argument.
+
+Enforcement lands on the dealer. The dealer is the party that ran the advertisement, and under the state rules it is the dealer's obligation to disclose the eligibility limitations. But the dealer could not know the buyer's adjusted gross income, could not resolve a contested SUV classification with certainty, and depended on manufacturer representations for sourcing compliance that changed every January. The party legally exposed for the accuracy of the disclosure was, on several of the four axes, not the party with the information.
+
+That is the same pattern identified in Chapter 5 for the seller report, arriving through a different door. In both cases the retail intermediary was made to carry a compliance obligation whose inputs it did not control, and in both cases the consumer's protection depended on that intermediary getting right something it was poorly positioned to get right. A credit with four independent eligibility axes and a single headline number distributes risk this way by construction, whatever the enforcement posture.
+
+The Tesla case in §11.4.6 is the exception that confirms the mechanism. A direct seller holds the sourcing, assembly, and pricing facts itself, so three of the four axes collapse into a single party's knowledge and the asymmetry largely disappears. What remains is the income axis, which no seller can know. That residual is the irreducible floor: even a perfectly informed, vertically integrated seller advertising in complete good faith could not state what any particular reader would actually receive. A subsidy conditioned on the recipient's tax position cannot be accurately advertised at the point of sale by anyone. That is a design fact, not an enforcement failure, and it deserves to sit alongside the recommendations in Chapter 8.
+
+## 11.5 The complaint that worked
+
+One episode deserves separate notice, because it is the only instance in this history of a complaint changing an outcome at scale.
+
+Dealers who had applied the credit at the point of sale and then missed the three-day filing window lost their advance payments. Their customers, in parallel, lost their credits. The dealer associations pressed the IRS publicly and persistently to reopen the reporting window. In March 2025 the IRS did so, waiving the three-day deadline for 2024 sales and keeping the portal open on an open-ended basis.
+
+Note the mechanism. The buyers had no forum, no aggregation, no cause of action, and no organization. The dealers had a trade association, a direct financial injury, an existing regulatory relationship, and a channel to the agency. The buyers were made whole because their interests happened to run parallel to the dealers' on this particular question. Where the two diverged — a dealer that never registered, a dealer that had gone out of business, a dealer simply unwilling to bother for a customer whose money was already collected — nothing was fixed, because nobody with standing to be heard was harmed.
+
+That is the clearest available demonstration of the risk-allocation argument in Chapter 5. When a public benefit is delivered through a private intermediary, the beneficiary's protection depends on whether the intermediary happens to be injured by the same failure. It is a poor foundation for a statutory entitlement.
+
+## 11.6 What the record does not contain
+
+The searches behind §11.2 ran against a legal database covering federal and state case law, including the Tax Court, CourtListener, the Caselaw Access Project, and state tax tribunals. The following were searched for and not found. Each should still be re-verified before any submitted version relies on the negative, since a semantic search over a large corpus can miss a case that uses different vocabulary.
+
+- Any decision addressing entitlement to the credit where the seller report was not filed.
+- Any certified class action by buyers against dealers arising from time-of-sale reporting failures. Note that dealer-advertising class actions are brought and lost on other facts, as in *Virachack*.
+- Any reported state attorney general enforcement action specifically directed at EV tax credit advertising, as distinct from the general dealer-pricing enforcement described in §11.4.3.
+- Any decision on the §45W leasing structure or on pass-through of the commercial credit to lessees.
+- Any prosecution or civil enforcement action against a dealer for fraudulent seller reports or improper advance payment claims.
+
+The last of these is the most surprising. A system that advanced money to fifteen thousand registered sellers on the strength of self-reported attestations, on a seventy-two hour cycle, with verification deferred to a later return, is a system with obvious fraud exposure, and TIGTA's earlier findings on erroneous claims suggest the exposure was not theoretical. Whether enforcement occurred and was simply not publicized, or did not occur, cannot be determined from public sources. Both answers would be interesting.
