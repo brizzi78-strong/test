@@ -1,0 +1,67 @@
+name: deploy-cardinal-care-bridge-aws
+
+# Publishes cardinal-care-bridge to S3 + CloudFront. Same pattern as deploy-cp17-aws: a
+# short-lived OIDC token, no AWS access keys stored in GitHub. Stays dormant
+# until AWS_DEPLOY_ROLE_CARE_BRIDGE is set, so it is safe to merge before AWS
+# exists — see deploy/aws/README.md.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "cardinal-care-bridge/**"
+      - ".github/workflows/aws-deploy-cardinal-care-bridge.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+concurrency:
+  group: aws-deploy-cardinal-care-bridge
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    name: Publish cardinal-care-bridge to AWS
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check whether AWS is configured yet
+        id: check
+        run: |
+          if [ -n "${{ vars.AWS_DEPLOY_ROLE_CARE_BRIDGE }}" ]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "AWS_DEPLOY_ROLE_CARE_BRIDGE is not set — skipping. Render still serves this site."
+          fi
+
+      - name: Assume the deploy role
+        if: steps.check.outputs.ready == 'true'
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_CARE_BRIDGE }}
+          aws-region: us-east-1
+
+      - name: Sync the site to S3
+        if: steps.check.outputs.ready == 'true'
+        run: |
+          aws s3 sync cardinal-care-bridge "s3://${{ vars.AWS_SITE_BUCKET_CARE_BRIDGE }}" \
+            --delete \
+            --exclude "README.md" \
+            --exclude "BRAND.md" \
+            --cache-control "public,max-age=300"
+
+          aws s3 cp "s3://${{ vars.AWS_SITE_BUCKET_CARE_BRIDGE }}" "s3://${{ vars.AWS_SITE_BUCKET_CARE_BRIDGE }}" \
+            --recursive --exclude "*" --include "*.html" \
+            --metadata-directive REPLACE \
+            --content-type "text/html; charset=utf-8" \
+            --cache-control "no-cache"
+
+      - name: Invalidate the CloudFront cache
+        if: steps.check.outputs.ready == 'true'
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id "${{ vars.AWS_DISTRIBUTION_ID_CARE_BRIDGE }}" \
+            --paths "/*"

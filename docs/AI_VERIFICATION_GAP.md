@@ -17,8 +17,9 @@ npm run verify
 ```
 
 runs a **claims ledger** (`verification/claims.json`) that maps every trust
-claim from `TOKEN_LAUNCH_STRATEGY.md` — "no mint function", "no transfer tax",
-"ownership grants no power" — to executable evidence: ABI-level structural
+claim from `TOKEN_LAUNCH_STRATEGY.md` — "no mint function", "exactly 2% to the
+treasury, never more, never changeable", "ownership grants no power" — to
+executable evidence: ABI-level structural
 proofs, example tests, and stateful fuzz invariants. If any claim loses its
 backing, the build fails.
 
@@ -123,15 +124,18 @@ the review bottleneck: shrink what requires judgment, mechanize the rest.
 ## Part 3: What Was Built in This Repo
 
 The CARD launch strategy is explicitly trust-first: its pitch to buyers and
-token scanners is "no mint, no tax, no blacklist, no pause, renounced
-ownership." Those are exactly the kind of claims that are cheap to make and
-expensive to verify by eye — which makes this repo a perfect testbed.
+token scanners is "no mint, no blacklist, no pause, a fixed 2% fee that
+nobody can raise or redirect, renounced ownership." Those are exactly the
+kind of claims that are cheap to make and expensive to verify by eye — a
+fee that is *supposed* to exist is harder to verify than one that isn't,
+because the check is "exactly this much, to exactly this address, and no
+way to change it" — which makes this repo a perfect testbed.
 
 ### The pieces
 
 | File | Role |
 |---|---|
-| `verification/claims.json` | The claims registry: 8 launch-critical claims, each citing its source (strategy doc / natspec) and mapped to evidence |
+| `verification/claims.json` | The claims registry: 9 launch-critical claims (fixed-supply, supply-immutable, no-pause, no-blacklist, fixed-fee, fee-immutable, owner-powerless, renounce-works, balance-enforced), each citing its source (strategy doc / natspec) and mapped to evidence |
 | `scripts/verify-claims.mjs` | The verifier: builds, inspects the compiled ABI, runs the full test suite, and checks every piece of evidence; nonzero exit on any gap |
 | `contracts/CardTokenInvariants.t.sol` | Stateful evidence: a fuzz handler drives random transfer / approve / transferFrom / renounce sequences across 9 actors; three invariants are re-checked after every sequence |
 | `contracts/CardToken.t.sol`, `test/CardToken.ts` | Behavioral evidence (pre-existing example tests, now referenced by the registry) |
@@ -141,7 +145,9 @@ expensive to verify by eye — which makes this repo a perfect testbed.
 
 - **`abi-absent`** — structural proof that a forbidden capability does not
   exist: no function whose name matches `mint`, `burn`, `pause`, `freeze`,
-  `blacklist`, … appears in the compiled ABI.
+  `blacklist`, `setFee`, `setTreasury`, `exclude`, … appears in the compiled
+  ABI. This is what backs `fee-immutable`: there is no setter and no
+  exemption list, so the 2% and its destination cannot change.
 - **`abi-write-surface`** — the exact allowlist of state-changing functions.
   The contract's write surface must be *precisely*
   `approve, transfer, transferFrom, renounceOwnership, transferOwnership`.
@@ -154,8 +160,10 @@ expensive to verify by eye — which makes this repo a perfect testbed.
 - **`invariant`** — same, for the stateful suite: properties like
   "total supply never changes" and "balances always sum to supply" are checked
   after 256 randomized multi-call sequences, and the fuzz handler additionally
-  asserts exact-amount deltas (the no-tax property) inside every fuzzed
-  transfer.
+  asserts exact-amount deltas inside every fuzzed transfer (the `fixed-fee`
+  property: the recipient gets exactly 98%, the treasury exactly 2%, or the
+  full amount when either side is the treasury — and supply is unchanged
+  either way).
 
 ### Proof that it catches what it claims to catch
 

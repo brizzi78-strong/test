@@ -1,0 +1,411 @@
+AWSTemplateFormatVersion: "2010-09-09"
+
+Description: >-
+  Reusable stateful container service: ECS Fargate task behind an
+  Application Load Balancer, with a persistent EFS volume standing in for
+  Render's mounted disk (this is what lets a SQLite file on /data survive a
+  redeploy). Secrets are read from SSM Parameter Store at runtime. Deploy
+  once per service under its own stack name — see deploy/aws/README.md.
+  Run in any region; unlike the static-site stack this one is not pinned to
+  us-east-1.
+
+Parameters:
+  ServiceName:
+    Type: String
+    Description: Short name, e.g. blue-ridge-tax. Used to name every resource.
+
+  DomainName:
+    Type: String
+    Default: ""
+    Description: >-
+      Domain this service answers on, e.g. taxfile.example.com. Leave blank
+      to serve plain HTTP off the load balancer's own DNS name only — no
+      certificate can be issued without a real domain to validate against.
+      Add a real domain later by updating the stack; nothing else changes.
+
+  ContainerPort:
+    Type: Number
+    Default: 8080
+  HealthCheckPath:
+    Type: String
+    Default: /health
+
+  VpcId:
+    Type: AWS::EC2::VPC::Id
+    Description: >-
+      Get with: aws ec2 describe-vpcs --filters Name=isDefault,Values=true
+      --query "Vpcs[0].VpcId" --output text
+
+  SubnetIds:
+    Type: List<AWS::EC2::Subnet::Id>
+    Description: >-
+      Two or more PUBLIC subnets in different AZs (avoids needing a NAT
+      gateway). Get with: aws ec2 describe-subnets --filters
+      Name=vpc-id,Values=<VpcId> --query "Subnets[].SubnetId" --output text
+
+  Cpu:
+    Type: String
+    Default: "256"
+    AllowedValues: ["256", "512", "1024"]
+  Memory:
+    Type: String
+    Default: "512"
+    AllowedValues: ["512", "1024", "2048"]
+
+  ImageTag:
+    Type: String
+    Default: bootstrap
+    Description: Set by CI to the git SHA of the image it just pushed.
+
+  ServiceReady:
+    Type: String
+    Default: "no"
+    AllowedValues: ["yes", "no"]
+    Description: >-
+      Stays "no" until the first image has been pushed to the ECR repo this
+      stack creates. The ECS service is only created once this flips to
+      "yes" (CI does this automatically after its first push).
+
+  GitHubRepo:
+    Type: String
+    Default: brizzi78-strong/test
+  GitHubBranch:
+    Type: String
+    Default: main
+  CreateOidcProvider:
+    Type: String
+    Default: "no"
+    AllowedValues: ["yes", "no"]
+    Description: >-
+      Set to "yes" only on the very first stack of this kind in the account.
+
+Conditions:
+  MakeOidcProvider: !Equals [!Ref CreateOidcProvider, "yes"]
+  IsReady: !Equals [!Ref ServiceReady, "yes"]
+  HasDomain: !Not [!Equals [!Ref DomainName, ""]]
+
+Resources:
+  # ---------- image ----------
+  Repository:
+    Type: AWS::ECR::Repository
+    Properties:
+      RepositoryName: !Ref ServiceName
+      ImageScanningConfiguration: { ScanOnPush: true }
+      LifecyclePolicy:
+        LifecyclePolicyText: >-
+          {"rules":[{"rulePriority":1,"description":"Keep the last 15 images",
+          "selection":{"tagStatus":"any","countType":"imageCountMoreThan","countNumber":15},
+          "action":{"type":"expire"}}]}
+
+  # ---------- persistent disk ----------
+  # The AWS analog of Render's mounted disk: a SQLite file under /data
+  # survives task restarts and redeploys because it lives here, not in the
+  # container's ephemeral filesystem.
+  FileSystem:
+    Type: AWS::EFS::FileSystem
+    Properties:
+      Encrypted: true
+      LifecyclePolicies:
+        - TransitionToIA: AFTER_30_DAYS
+      FileSystemTags:
+        - { Key: Name, Value: !Sub "${ServiceName}-data" }
+
+  AccessPoint:
+    Type: AWS::EFS::AccessPoint
+    Properties:
+      FileSystemId: !Ref FileSystem
+      PosixUser: { Uid: "1000", Gid: "1000" }
+      RootDirectory:
+        Path: /data
+        CreationInfo: { OwnerUid: "1000", OwnerGid: "1000", Permissions: "0755" }
+
+  EfsSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: !Sub "NFS access to ${ServiceName}'s EFS volume"
+      VpcId: !Ref VpcId
+      SecurityGroupIngress:
+        - { IpProtocol: tcp, FromPort: 2049, ToPort: 2049, SourceSecurityGroupId: !Ref TaskSecurityGroup }
+
+  MountTargetA:
+    Type: AWS::EFS::MountTarget
+    Properties:
+      FileSystemId: !Ref FileSystem
+      SubnetId: !Select [0, !Ref SubnetIds]
+      SecurityGroups: [!Ref EfsSecurityGroup]
+
+  MountTargetB:
+    Type: AWS::EFS::MountTarget
+    Properties:
+      FileSystemId: !Ref FileSystem
+      SubnetId: !Select [1, !Ref SubnetIds]
+      SecurityGroups: [!Ref EfsSecurityGroup]
+
+  # ---------- networking ----------
+  AlbSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: !Sub "Public HTTPS ingress for ${ServiceName}"
+      VpcId: !Ref VpcId
+      SecurityGroupIngress:
+        - { IpProtocol: tcp, FromPort: 443, ToPort: 443, CidrIp: 0.0.0.0/0 }
+        - { IpProtocol: tcp, FromPort: 80, ToPort: 80, CidrIp: 0.0.0.0/0 }
+
+  TaskSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: !Sub "${ServiceName} task — only reachable from its ALB"
+      VpcId: !Ref VpcId
+      SecurityGroupIngress:
+        - { IpProtocol: tcp, FromPort: !Ref ContainerPort, ToPort: !Ref ContainerPort, SourceSecurityGroupId: !Ref AlbSecurityGroup }
+
+  Certificate:
+    Type: AWS::CertificateManager::Certificate
+    Condition: HasDomain
+    Properties:
+      DomainName: !Ref DomainName
+      ValidationMethod: DNS
+
+  LoadBalancer:
+    Type: AWS::ElasticLoadBalancingV2::LoadBalancer
+    Properties:
+      Type: application
+      Scheme: internet-facing
+      SecurityGroups: [!Ref AlbSecurityGroup]
+      Subnets: !Ref SubnetIds
+
+  TargetGroup:
+    Type: AWS::ElasticLoadBalancingV2::TargetGroup
+    Properties:
+      TargetType: ip
+      Port: !Ref ContainerPort
+      Protocol: HTTP
+      VpcId: !Ref VpcId
+      HealthCheckPath: !Ref HealthCheckPath
+      HealthCheckIntervalSeconds: 15
+      HealthyThresholdCount: 2
+      UnhealthyThresholdCount: 5
+
+  # With a domain: HTTPS on 443, plain HTTP on 80 redirects to it. Without
+  # one yet: HTTP on 80 forwards directly — there is no cert to redirect to.
+  HttpsListener:
+    Type: AWS::ElasticLoadBalancingV2::Listener
+    Condition: HasDomain
+    Properties:
+      LoadBalancerArn: !Ref LoadBalancer
+      Port: 443
+      Protocol: HTTPS
+      Certificates: [{ CertificateArn: !Ref Certificate }]
+      DefaultActions: [{ Type: forward, TargetGroupArn: !Ref TargetGroup }]
+
+  HttpListener:
+    Type: AWS::ElasticLoadBalancingV2::Listener
+    Properties:
+      LoadBalancerArn: !Ref LoadBalancer
+      Port: 80
+      Protocol: HTTP
+      DefaultActions: !If
+        - HasDomain
+        - [{ Type: redirect, RedirectConfig: { Protocol: HTTPS, Port: "443", StatusCode: HTTP_301 } }]
+        - [{ Type: forward, TargetGroupArn: !Ref TargetGroup }]
+
+  # ---------- compute ----------
+  Cluster:
+    Type: AWS::ECS::Cluster
+    Properties:
+      ClusterName: !Ref ServiceName
+
+  LogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub "/ecs/${ServiceName}"
+      RetentionInDays: 30
+
+  # Pulls the image and writes logs. Standard, not scoped further — every
+  # Fargate task needs this regardless of which service it runs.
+  ExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal: { Service: ecs-tasks.amazonaws.com }
+            Action: sts:AssumeRole
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy
+      Policies:
+        - PolicyName: ReadOwnSecrets
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action: ssm:GetParameters
+                Resource: !Sub "arn:${AWS::Partition}:ssm:${AWS::Region}:${AWS::AccountId}:parameter/cardinal/${ServiceName}/*"
+
+  # Assumed by the running container. Only what it needs to use its own EFS
+  # volume — nothing else in the account.
+  TaskRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal: { Service: ecs-tasks.amazonaws.com }
+            Action: sts:AssumeRole
+      Policies:
+        - PolicyName: UseOwnVolume
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - elasticfilesystem:ClientMount
+                  - elasticfilesystem:ClientWrite
+                Resource: !GetAtt FileSystem.Arn
+
+  # The task definition's real container spec (image, exact env vars,
+  # secrets) is registered by the deploy workflow via
+  # `aws ecs register-task-definition` — CFN can't expand a variable-length
+  # list of per-service secrets/env vars without a custom resource, so this
+  # placeholder exists only long enough for the ECS Service resource below
+  # to reference a family name before CI takes over. See deploy/aws/README.md.
+  TaskDefinition:
+    Type: AWS::ECS::TaskDefinition
+    Condition: IsReady
+    Properties:
+      Family: !Ref ServiceName
+      RequiresCompatibilities: [FARGATE]
+      NetworkMode: awsvpc
+      Cpu: !Ref Cpu
+      Memory: !Ref Memory
+      ExecutionRoleArn: !GetAtt ExecutionRole.Arn
+      TaskRoleArn: !GetAtt TaskRole.Arn
+      Volumes:
+        - Name: data
+          EFSVolumeConfiguration:
+            FilesystemId: !Ref FileSystem
+            TransitEncryption: ENABLED
+            AuthorizationConfig: { AccessPointId: !Ref AccessPoint, IAM: DISABLED }
+      ContainerDefinitions:
+        - Name: !Ref ServiceName
+          Image: !Sub "${Repository.RepositoryUri}:${ImageTag}"
+          PortMappings: [{ ContainerPort: !Ref ContainerPort }]
+          MountPoints: [{ SourceVolume: data, ContainerPath: /data }]
+          Environment:
+            - { Name: PORT, Value: !Ref ContainerPort }
+          LogConfiguration:
+            LogDriver: awslogs
+            Options:
+              awslogs-group: !Ref LogGroup
+              awslogs-region: !Ref AWS::Region
+              awslogs-stream-prefix: !Ref ServiceName
+
+  Service:
+    Type: AWS::ECS::Service
+    Condition: IsReady
+    DependsOn: [HttpListener]
+    Properties:
+      ServiceName: !Ref ServiceName
+      Cluster: !Ref Cluster
+      TaskDefinition: !Ref TaskDefinition
+      DesiredCount: 1
+      LaunchType: FARGATE
+      NetworkConfiguration:
+        AwsvpcConfiguration:
+          AssignPublicIp: ENABLED
+          Subnets: !Ref SubnetIds
+          SecurityGroups: [!Ref TaskSecurityGroup]
+      LoadBalancers:
+        - { ContainerName: !Ref ServiceName, ContainerPort: !Ref ContainerPort, TargetGroupArn: !Ref TargetGroup }
+      HealthCheckGracePeriodSeconds: 30
+
+  # ---------- deploy identity ----------
+  GitHubOidcProvider:
+    Type: AWS::IAM::OIDCProvider
+    Condition: MakeOidcProvider
+    Properties:
+      Url: https://token.actions.githubusercontent.com
+      ClientIdList: [sts.amazonaws.com]
+      ThumbprintList: [6938fd4d98bab03faadb97b34396831e3780aea1]
+
+  DeployRole:
+    Type: AWS::IAM::Role
+    Properties:
+      Description: !Sub "Lets ${GitHubRepo}@${GitHubBranch} build and deploy ${ServiceName}"
+      MaxSessionDuration: 3600
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Federated: !Sub "arn:${AWS::Partition}:iam::${AWS::AccountId}:oidc-provider/token.actions.githubusercontent.com"
+            Action: sts:AssumeRoleWithWebIdentity
+            Condition:
+              StringEquals: { token.actions.githubusercontent.com:aud: sts.amazonaws.com }
+              StringLike: { token.actions.githubusercontent.com:sub: !Sub "repo:${GitHubRepo}:ref:refs/heads/${GitHubBranch}" }
+      Policies:
+        - PolicyName: BuildAndDeploy
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action: ecr:GetAuthorizationToken
+                Resource: "*"
+              - Effect: Allow
+                Action:
+                  - ecr:BatchCheckLayerAvailability
+                  - ecr:PutImage
+                  - ecr:InitiateLayerUpload
+                  - ecr:UploadLayerPart
+                  - ecr:CompleteLayerUpload
+                  - ecr:BatchGetImage
+                Resource: !GetAtt Repository.Arn
+              - Effect: Allow
+                # ecs:RegisterTaskDefinition has no resource-level scoping.
+                Action: ecs:RegisterTaskDefinition
+                Resource: "*"
+              - Effect: Allow
+                Action:
+                  - ecs:UpdateService
+                  - ecs:DescribeServices
+                # Constructed rather than !Ref Service: the Service resource
+                # is Condition: IsReady and does not exist on the very first
+                # deploy, but this role is created unconditionally. ECS
+                # service ARNs are predictable, so this is valid before the
+                # service exists and matches it once CI creates it.
+                Resource: !Sub "arn:${AWS::Partition}:ecs:${AWS::Region}:${AWS::AccountId}:service/${ServiceName}/${ServiceName}"
+              - Effect: Allow
+                Action: cloudformation:*
+                Resource: !Sub "arn:${AWS::Partition}:cloudformation:${AWS::Region}:${AWS::AccountId}:stack/${AWS::StackName}/*"
+              - Effect: Allow
+                Action: iam:PassRole
+                Resource: [!GetAtt ExecutionRole.Arn, !GetAtt TaskRole.Arn]
+
+Outputs:
+  RepositoryUri:
+    Value: !GetAtt Repository.RepositoryUri
+  ClusterName:
+    Value: !Ref Cluster
+  LogGroupName:
+    Value: !Ref LogGroup
+  ExecutionRoleArn:
+    Description: Consumed by the deploy workflow when it registers task definitions.
+    Value: !GetAtt ExecutionRole.Arn
+  TaskRoleArn:
+    Description: Consumed by the deploy workflow when it registers task definitions.
+    Value: !GetAtt TaskRole.Arn
+  DeployRoleArn:
+    Description: Store as this service's AWS_DEPLOY_ROLE_* repository variable.
+    Value: !GetAtt DeployRole.Arn
+  LoadBalancerDnsName:
+    Description: Point the domain's DNS at this hostname (CNAME/ALIAS).
+    Value: !GetAtt LoadBalancer.DNSName
+  CertificateArn:
+    Condition: HasDomain
+    Value: !Ref Certificate
+  FileSystemId:
+    Value: !Ref FileSystem
+  AccessPointId:
+    Value: !Ref AccessPoint

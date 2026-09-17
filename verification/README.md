@@ -23,7 +23,13 @@ deployed bytecode. It has been checked to compile standalone with solc
 3. Upload `CardinalsPromise.solc-input.json`.
 4. If asked which contract, pick
    `project/contracts/CardinalsPromise.sol:CardinalsPromise`.
-5. Constructor arguments: **none** — leave empty.
+5. Constructor arguments: the contract takes one, the treasury address.
+   Etherscan wants it ABI-encoded — a 32-byte left-padded address with no
+   `0x` prefix, i.e. 24 zeros followed by the 40 hex characters of the
+   address (for the launch treasury `0xDAE63eBEe60A691e1538D480AE3F6509068ab300`:
+   `000000000000000000000000dae63ebee60a691e1538d480ae3f6509068ab300`).
+   Etherscan usually pre-fills this from the deployment transaction; check
+   it matches.
 6. Submit and confirm the Contract tab shows the green check
    (launch checklist step 2).
 
