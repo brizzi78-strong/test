@@ -1,7 +1,7 @@
-# The Caregiver's Cardinal Toolkit — Trifold Crisis Companion
+# It's Not Your Fault — Trifold Crisis Companion
 
 A laminated, fridge-worthy quick-reference companion to the full handbook
-(*The Caregiver's Cardinal Toolkit*, Cardinal's Promise Series). It is the
+(*It's Not Your Fault*, Cardinal's Promise Series). It is the
 bird's-eye map; the full toolkit is the deep woods guide.
 
 **Format:** US Letter (11" × 8.5"), landscape, trifold (roll fold), printed
@@ -29,7 +29,7 @@ land exactly where a reader flips to.
 
 ## Front cover
 
-**The Caregiver's Cardinal Toolkit**
+**It's Not Your Fault**
 
 *The First Steps When a Parent Suddenly Needs Help*
 
