@@ -32,18 +32,25 @@ via the header's theme toggle).
 
 ## Deploy it
 
-Wired into the repo's `../render.yaml` blueprint as a free static site (no
-plan, no disk, no build step needed):
+Hosted on AWS as a private S3 bucket behind CloudFront — no server, no build
+step, under a dollar a month. Everything is defined in
+`../deploy/aws/care-bridge-stack.yml` and applied by one script:
 
 ```bash
-# One-time, at https://render.com:
-#   New + -> Blueprint -> connect this GitHub repo -> Apply.
+# From the repo root, with the AWS CLI signed in:
+./deploy/aws/deploy-care-bridge.sh
 ```
 
-Render provisions it alongside Cardinal Books and gives it its own
-`https://cardinal-care-bridge-*.onrender.com` URL with automatic HTTPS. Add a
-custom domain (e.g. `www.cardinalcarebridge.com`) in that service's Settings
--> Custom Domains, then point a DNS CNAME at Render.
+Pushes to `main` that touch this folder deploy automatically via
+`.github/workflows/deploy-care-bridge.yml` once the OIDC role is set up. Full
+instructions, custom-domain setup, and rollback are in
+[`../deploy/DEPLOY-CARE-BRIDGE.md`](../deploy/DEPLOY-CARE-BRIDGE.md).
+
+Note: the live `cardinalscarebridge.com` is a separate WordPress.com site.
+This static site is deployed alongside it, on its own hostname.
+
+`README.md` and `BRAND.md` in this folder are internal and are never
+uploaded; `404.html` is the CloudFront error page.
 
 ## Before this goes live
 

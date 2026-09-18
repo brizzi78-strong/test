@@ -39,21 +39,10 @@ services:
       - key: BOOKS_PASSWORD
         sync: false            # Render prompts you to set this on first deploy
 
-  # Cardinal Care Bridge — the placement-business landing page (cardinal-care-bridge/).
-  # A static site: no build step, no server, no disk, and free on Render (no `plan`
-  # needed). Same one-time setup as above (Blueprint -> connect repo -> Apply) gives
-  # you an https://cardinal-care-bridge-*.onrender.com URL; add a custom domain like
-  # www.cardinalcarebridge.com the same way, in Settings -> Custom Domains.
-  #
-  # Before pointing real traffic at it: replace the placeholder email
-  # (hello@cardinalcarebridge.example) and phone number in cardinal-care-bridge/index.html
-  # with real contact details — see that folder's README for the full launch checklist.
-  - type: web
-    name: cardinal-care-bridge
-    runtime: static
-    branch: main
-    staticPublishPath: ./cardinal-care-bridge
-    autoDeploy: true
+  # Cardinal Care Bridge (cardinal-care-bridge/) no longer deploys from Render.
+  # It is hosted on AWS (S3 + CloudFront) — see deploy/DEPLOY-CARE-BRIDGE.md.
+  # If a "cardinal-care-bridge" static service still exists in the Render
+  # dashboard, delete it there once the AWS URL is confirmed working.
 
   # Cardinal Expenses — the landing page for the expense app (cardinal-expenses/).
   # Static, like the care-bridge site: no build step, no server, no disk, free on
