@@ -1,0 +1,48 @@
+name: deploy-care-bridge
+
+# Deploys cardinal-care-bridge/ to S3 + CloudFront whenever the site or its
+# infrastructure changes on main. Also runnable by hand from the Actions tab.
+#
+# One-time setup (see deploy/DEPLOY-CARE-BRIDGE.md):
+#   1. Create an IAM role that trusts GitHub's OIDC provider for this repo and
+#      can manage CloudFormation, S3, CloudFront, ACM and Route 53.
+#   2. Add its ARN as the repository secret AWS_DEPLOY_ROLE_ARN.
+#   3. Optionally set repository variables CARE_BRIDGE_DOMAIN_NAME and
+#      CARE_BRIDGE_HOSTED_ZONE_ID (or CARE_BRIDGE_CERTIFICATE_ARN).
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "cardinal-care-bridge/**"
+      - "deploy/aws/**"
+      - ".github/workflows/deploy-care-bridge.yml"
+  workflow_dispatch:
+
+permissions:
+  id-token: write # for OIDC to AWS
+  contents: read
+
+concurrency:
+  group: deploy-care-bridge
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Deploy to S3 + CloudFront
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_DEPLOY_ROLE_ARN }}
+          aws-region: us-east-1
+
+      - name: Deploy
+        env:
+          DOMAIN_NAME: ${{ vars.CARE_BRIDGE_DOMAIN_NAME }}
+          HOSTED_ZONE_ID: ${{ vars.CARE_BRIDGE_HOSTED_ZONE_ID }}
+          CERTIFICATE_ARN: ${{ vars.CARE_BRIDGE_CERTIFICATE_ARN }}
+        run: bash deploy/aws/deploy-care-bridge.sh
