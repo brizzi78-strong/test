@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SquareFare — a square deal on every ride</title>
+<style>
+  :root {
+    --bg: #0e1116; --panel: #171c24; --panel-2: #1e2530; --line: #2a3342;
+    --text: #e8edf4; --muted: #8b98ab; --accent: #34d399; --accent-2: #60a5fa;
+    --warn: #fbbf24; --radius: 12px;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg); color: var(--text); min-height: 100vh;
+  }
+  header {
+    display: flex; align-items: baseline; gap: 14px; padding: 16px 22px;
+    border-bottom: 1px solid var(--line);
+  }
+  header h1 { margin: 0; font-size: 20px; letter-spacing: 0.5px; }
+  header h1 span { color: var(--accent); }
+  header p { margin: 0; color: var(--muted); font-size: 13px; }
+  main {
+    display: grid; grid-template-columns: minmax(320px, 1fr) 360px; gap: 18px;
+    padding: 18px 22px; max-width: 1100px; margin: 0 auto;
+  }
+  @media (max-width: 780px) { main { grid-template-columns: 1fr; } }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; }
+  .card h2 { margin: 0 0 10px; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); }
+  #map { width: 100%; aspect-ratio: 1; border-radius: var(--radius); background: var(--panel-2); cursor: crosshair; display: block; }
+  .hint { color: var(--muted); font-size: 13px; margin: 10px 0 0; }
+  .offers { display: flex; flex-direction: column; gap: 8px; margin: 10px 0; }
+  .offer {
+    border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px;
+    background: var(--panel-2); display: flex; flex-direction: column; gap: 6px;
+  }
+  .offer.best { border-color: var(--accent); }
+  .offer-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+  .offer-head .name { font-weight: 700; font-size: 14px; }
+  .offer-head .price { font-weight: 700; font-size: 16px; }
+  .offer-meta { display: flex; gap: 8px; align-items: center; color: var(--muted); font-size: 12px; flex-wrap: wrap; }
+  .badge { border-radius: 20px; padding: 2px 8px; font-size: 11px; font-weight: 700; }
+  .badge.best { background: var(--accent); color: #05261a; }
+  .badge.exact { border: 1px solid var(--accent); color: var(--accent); }
+  .badge.est { border: 1px solid var(--line); color: var(--muted); }
+  .offer button, .offer a.book {
+    padding: 8px; border-radius: 8px; border: 0; background: var(--accent); color: #05261a;
+    font-weight: 700; font-size: 13px; cursor: pointer; text-align: center; text-decoration: none;
+  }
+  .offer a.book.ext { background: transparent; border: 1px solid var(--line); color: var(--text); }
+  .offer details { font-size: 12.5px; color: var(--muted); }
+  .offer details summary { cursor: pointer; }
+  .fare-lines { margin: 10px 0; border-top: 1px solid var(--line); }
+  .fare-lines div { display: flex; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid var(--line); font-size: 13px; }
+  .fare-lines .total { font-weight: 700; font-size: 15px; }
+  .fare-lines .split { color: var(--muted); }
+  .fare-lines .split b { color: var(--accent); }
+  button.primary {
+    width: 100%; padding: 12px; border: 0; border-radius: 8px; background: var(--accent);
+    color: #05261a; font-weight: 700; font-size: 15px; cursor: pointer; margin-top: 8px;
+  }
+  button.primary:disabled { opacity: 0.4; cursor: default; }
+  button.ghost {
+    width: 100%; padding: 10px; border-radius: 8px; border: 1px solid var(--line);
+    background: transparent; color: var(--muted); cursor: pointer; margin-top: 8px;
+  }
+  .status-line { display: flex; align-items: center; gap: 10px; margin: 8px 0; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--accent-2); }
+  .pulse { animation: pulse 1.2s infinite; }
+  @keyframes pulse { 50% { opacity: 0.3; } }
+  .stars { display: flex; gap: 6px; font-size: 26px; cursor: pointer; user-select: none; }
+  .stars span { color: #3b475a; } .stars span.lit { color: var(--warn); }
+  .tip-row { display: flex; gap: 8px; margin: 10px 0; }
+  .tip-row button { flex: 1; padding: 8px; border-radius: 8px; border: 1px solid var(--line); background: var(--panel-2); color: var(--text); cursor: pointer; }
+  .tip-row button.active { border-color: var(--warn); color: var(--warn); }
+  .pledge { font-size: 12.5px; color: var(--muted); line-height: 1.6; }
+  .pledge b { color: var(--text); }
+  .error { color: #f87171; font-size: 13px; margin-top: 8px; }
+  footer { text-align: center; color: var(--muted); font-size: 12px; padding: 12px 0 24px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Square<span>Fare</span></h1>
+  <p>One search, every ride — Uber, Lyft, taxis, and SquareFare's own drivers, ranked by what you'll actually pay.</p>
+</header>
+<main>
+  <section class="card">
+    <h2>Meridian City</h2>
+    <canvas id="map" width="640" height="640"></canvas>
+    <p class="hint" id="mapHint">Click the map to set your <b>pickup</b>, then click again for your <b>dropoff</b>.</p>
+  </section>
+  <section>
+    <div class="card" id="panel"></div>
+    <div class="card" style="margin-top: 14px">
+      <h2>The SquareFare pledge</h2>
+      <p class="pledge">
+        <b>We show every option</b> — Uber, Lyft, and taxi estimates ranked honestly beside our own network, cheapest first.<br>
+        <b>SquareFare-network prices are exact and itemized</b> — base, distance, time, any demand multiplier, line by line.<br>
+        <b>Our drivers keep 90%</b> of every fare and <b>100% of tips</b>. Uber keeps 25–30% — that's why we're usually cheapest.<br>
+        <b>Surge on our network is capped at 1.5×</b> and shown as its own line. No hidden booking fees, ever.
+      </p>
+    </div>
+  </section>
+</main>
+<footer>SquareFare demo — simulated city, simulated fleet, real pricing engine.</footer>
+<script>
+(() => {
+  const $ = (sel) => document.querySelector(sel);
+  const canvas = $('#map'), ctx = canvas.getContext('2d');
+  const panel = $('#panel');
+
+  const state = {
+    config: null, drivers: [], pickup: null, dropoff: null,
+    offers: null, trip: null, tipPct: 0, stars: 0, error: '',
+    receipt: null,
+  };
+
+  const money = (n) => '$' + n.toFixed(2);
+
+  // --- geometry: lat/lng <-> canvas px ---
+  const toPx = (p) => {
+    const c = state.config.city;
+    return {
+      x: ((p.lng - (c.center.lng - c.span.lng)) / (2 * c.span.lng)) * canvas.width,
+      y: (1 - (p.lat - (c.center.lat - c.span.lat)) / (2 * c.span.lat)) * canvas.height,
+    };
+  };
+  const toLatLng = (x, y) => {
+    const c = state.config.city;
+    return {
+      lat: c.center.lat - c.span.lat + (1 - y / canvas.height) * 2 * c.span.lat,
+      lng: c.center.lng - c.span.lng + (x / canvas.width) * 2 * c.span.lng,
+    };
+  };
+
+  function drawMap() {
+    if (!state.config) return;
+    const w = canvas.width, h = canvas.height;
+    ctx.clearRect(0, 0, w, h);
+    ctx.fillStyle = '#1e2530'; ctx.fillRect(0, 0, w, h);
+    ctx.strokeStyle = '#2a3342'; ctx.lineWidth = 1;
+    for (let i = 1; i < 12; i++) {
+      const t = (i / 12) * w;
+      ctx.beginPath(); ctx.moveTo(t, 0); ctx.lineTo(t, h); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(0, t); ctx.lineTo(w, t); ctx.stroke();
+    }
+    for (const d of state.drivers) {
+      const p = toPx(d.location);
+      ctx.fillStyle = d.status === 'available' ? '#60a5fa' : '#3b475a';
+      ctx.beginPath(); ctx.arc(p.x, p.y, 5, 0, Math.PI * 2); ctx.fill();
+    }
+    if (state.trip && state.trip.driverLocation) {
+      const p = toPx(state.trip.driverLocation);
+      ctx.fillStyle = '#fbbf24';
+      ctx.beginPath(); ctx.arc(p.x, p.y, 7, 0, Math.PI * 2); ctx.fill();
+    }
+    const mark = (pt, color, label) => {
+      const p = toPx(pt);
+      ctx.fillStyle = color;
+      ctx.beginPath(); ctx.arc(p.x, p.y, 7, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = '#e8edf4'; ctx.font = 'bold 12px sans-serif';
+      ctx.fillText(label, p.x + 10, p.y + 4);
+    };
+    if (state.pickup) mark(state.pickup, '#34d399', 'Pickup');
+    if (state.dropoff) mark(state.dropoff, '#f87171', 'Dropoff');
+    if (state.pickup && state.dropoff) {
+      const a = toPx(state.pickup), b = toPx(state.dropoff);
+      ctx.strokeStyle = '#34d399'; ctx.setLineDash([6, 6]); ctx.lineWidth = 2;
+      ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+      ctx.setLineDash([]);
+    }
+  }
+
+  async function api(path, opts) {
+    const res = await fetch(path, opts);
+    const body = await res.json();
+    if (!res.ok) throw new Error(body.error || res.statusText);
+    return body;
+  }
+
+  async function getOffers() {
+    if (!state.pickup || !state.dropoff) { state.offers = null; render(); return; }
+    state.error = '';
+    try {
+      state.offers = (await api('/api/compare', {
+        method: 'POST', headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ pickup: state.pickup, dropoff: state.dropoff }),
+      })).offers;
+    } catch (e) { state.error = e.message; }
+    render();
+  }
+
+  async function requestRide(quoteId) {
+    state.error = '';
+    try {
+      state.trip = await api('/api/trips', {
+        method: 'POST', headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ quoteId, riderName: 'Demo Rider' }),
+      });
+      state.offers = null;
+      pollTrip();
+    } catch (e) { state.error = e.message; }
+    render();
+  }
+
+  let pollTimer = null;
+  function pollTrip() {
+    clearInterval(pollTimer);
+    pollTimer = setInterval(async () => {
+      try {
+        const [trip, driversRes] = await Promise.all([
+          api('/api/trips/' + state.trip.id), api('/api/drivers'),
+        ]);
+        state.trip = trip; state.drivers = driversRes.drivers;
+        if (trip.status === 'completed' || trip.status === 'cancelled') {
+          clearInterval(pollTimer);
+          if (trip.status === 'completed') state.receipt = trip;
+        }
+        render();
+      } catch { /* transient poll errors: keep trying */ }
+    }, 800);
+  }
+
+  async function cancelRide() {
+    try { state.trip = await api('/api/trips/' + state.trip.id + '/cancel', { method: 'POST' }); }
+    catch (e) { state.error = e.message; }
+    clearInterval(pollTimer);
+    render();
+  }
+
+  async function submitRating() {
+    const tip = state.tipPct ? Math.round(state.receipt.quote.total * state.tipPct) / 100 * 100 / 100 : 0;
+    try {
+      state.receipt = await api('/api/trips/' + state.receipt.id + '/rate', {
+        method: 'POST', headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ stars: state.stars, tip: Math.round(state.receipt.quote.total * state.tipPct * 100) / 100 }),
+      });
+    } catch (e) { state.error = e.message; }
+    render();
+  }
+
+  function reset() {
+    state.pickup = state.dropoff = state.offers = state.trip = state.receipt = null;
+    state.stars = 0; state.tipPct = 0; state.error = '';
+    clearInterval(pollTimer);
+    render();
+  }
+
+  const STATUS_TEXT = {
+    matched: 'is on the way to you',
+    arriving: 'is arriving now',
+    in_progress: 'Trip in progress — enjoy the ride',
+  };
+
+  function render() {
+    drawMap();
+    const t = state.trip, r = state.receipt;
+
+    if (r) {
+      const rated = r.rating !== undefined;
+      panel.innerHTML = `
+        <h2>Trip complete</h2>
+        <div class="fare-lines">
+          ${r.quote.lines.map((l) => `<div><span>${l.label}</span><span>${money(l.amount)}</span></div>`).join('')}
+          <div class="total"><span>You paid</span><span>${money(r.quote.total)}</span></div>
+          <div class="split"><span>${r.driver.name} received${r.tip ? ' (incl. tip)' : ''}</span><b>${money(r.quote.driverEarnings + (r.tip || 0))}</b></div>
+          <div class="split"><span>SquareFare kept (10%)</span><span>${money(r.quote.platformFee)}</span></div>
+        </div>
+        ${rated ? `<p class="hint">Thanks! You rated this trip ${r.rating}★${r.tip ? ' and tipped ' + money(r.tip) : ''}.</p>` : `
+          <p class="hint">Rate ${r.driver.name}:</p>
+          <div class="stars" id="stars">${[1,2,3,4,5].map((i) => `<span data-s="${i}" class="${i <= state.stars ? 'lit' : ''}">★</span>`).join('')}</div>
+          <p class="hint">Tip — 100% goes to ${r.driver.name}:</p>
+          <div class="tip-row" id="tips">
+            ${[0, 0.1, 0.15, 0.2].map((p) => `<button data-p="${p}" class="${state.tipPct === p ? 'active' : ''}">${p === 0 ? 'No tip' : (p * 100) + '%'}</button>`).join('')}
+          </div>
+          <button class="primary" id="rateBtn" ${state.stars ? '' : 'disabled'}>Submit rating</button>`}
+        <button class="ghost" id="resetBtn">Book another ride</button>
+        ${state.error ? `<p class="error">${state.error}</p>` : ''}`;
+      if (!rated) {
+        $('#stars').addEventListener('click', (e) => { const s = e.target.dataset.s; if (s) { state.stars = +s; render(); } });
+        $('#tips').addEventListener('click', (e) => { const p = e.target.dataset.p; if (p !== undefined) { state.tipPct = +p; render(); } });
+        $('#rateBtn')?.addEventListener('click', submitRating);
+      }
+      $('#resetBtn').addEventListener('click', reset);
+      return;
+    }
+
+    if (t && t.status !== 'cancelled') {
+      panel.innerHTML = `
+        <h2>Your ride</h2>
+        <div class="status-line"><span class="dot pulse"></span>
+          <span>${t.status === 'in_progress' ? STATUS_TEXT.in_progress : `<b>${t.driver.name}</b> ${STATUS_TEXT[t.status] || t.status}`}</span>
+        </div>
+        <p class="hint">${t.driver.vehicle} · ${t.driver.plate} · ${t.driver.rating.toFixed(2)}★</p>
+        <div class="fare-lines">
+          <div class="total"><span>Locked-in fare</span><span>${money(t.quote.total)}</span></div>
+          <div class="split"><span>Driver's share</span><b>${money(t.quote.driverEarnings)}</b></div>
+        </div>
+        ${t.status !== 'in_progress' ? '<button class="ghost" id="cancelBtn">Cancel ride</button>' : ''}
+        ${state.error ? `<p class="error">${state.error}</p>` : ''}`;
+      $('#cancelBtn')?.addEventListener('click', cancelRide);
+      return;
+    }
+
+    if (t && t.status === 'cancelled') {
+      panel.innerHTML = `
+        <h2>Ride cancelled</h2>
+        <p class="hint">${t.cancellationFee > 0
+          ? `A ${money(t.cancellationFee)} fee was charged and paid to ${t.driver.name} for the time already spent.`
+          : 'No charge — you cancelled within the free window.'}</p>
+        <button class="ghost" id="resetBtn">Book another ride</button>`;
+      $('#resetBtn').addEventListener('click', reset);
+      return;
+    }
+
+    const offerRow = (o, i) => `
+      <div class="offer ${i === 0 ? 'best' : ''}">
+        <div class="offer-head">
+          <span class="name">${o.provider} · ${o.product}</span>
+          <span class="price">${o.kind === 'estimate' ? '~' : ''}${money(o.total)}</span>
+        </div>
+        <div class="offer-meta">
+          ${i === 0 ? '<span class="badge best">Best price</span>' : ''}
+          <span class="badge ${o.kind === 'exact' ? 'exact' : 'est'}">${o.kind === 'exact' ? 'Exact, locked in' : 'Estimate'}</span>
+          <span>~${o.etaMinutes} min pickup · ${o.seats} seats</span>
+        </div>
+        ${o.lines ? `<details><summary>Fare breakdown</summary>${o.lines.map((l) => `<div class="offer-meta"><span>${l.label}</span><span>${money(l.amount)}</span></div>`).join('')}</details>` : ''}
+        ${o.quoteId
+          ? `<button data-q="${o.quoteId}">Book now — ${money(o.total)}</button>`
+          : o.bookingLink
+            ? `<a class="book ext" href="${o.bookingLink}" target="_blank" rel="noopener">Open in ${o.provider}</a>`
+            : '<span class="offer-meta">Hail on the street or call dispatch</span>'}
+      </div>`;
+
+    panel.innerHTML = `
+      <h2>Compare every ride</h2>
+      ${state.offers ? `
+        <div class="offers" id="offers">${state.offers.map(offerRow).join('')}</div>
+        <p class="hint">SquareFare prices are exact and itemized. Uber, Lyft, and taxi prices are
+        estimates from published city rates — their live surge can be higher.</p>`
+      : '<p class="hint">Set pickup and dropoff on the map to compare Uber, Lyft, taxi, and SquareFare prices side by side.</p>'}
+      ${state.pickup ? '<button class="ghost" id="clearBtn">Clear pins</button>' : ''}
+      ${state.error ? `<p class="error">${state.error}</p>` : ''}`;
+    $('#offers')?.addEventListener('click', (e) => {
+      const q = e.target.dataset.q;
+      if (q) requestRide(q);
+    });
+    $('#clearBtn')?.addEventListener('click', () => { state.pickup = state.dropoff = state.offers = null; render(); });
+  }
+
+  canvas.addEventListener('click', (e) => {
+    if (state.trip && state.trip.status !== 'cancelled' && !state.receipt) return;
+    const rect = canvas.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * canvas.width;
+    const y = ((e.clientY - rect.top) / rect.height) * canvas.height;
+    const p = toLatLng(x, y);
+    if (!state.pickup || (state.pickup && state.dropoff)) {
+      state.pickup = p; state.dropoff = null; state.offers = null;
+    } else {
+      state.dropoff = p;
+      getOffers();
+    }
+    render();
+  });
+
+  async function boot() {
+    state.config = await api('/api/config');
+    state.drivers = (await api('/api/drivers')).drivers;
+    render();
+    setInterval(async () => {
+      if (state.trip) return; // trip poller already refreshes drivers
+      try { state.drivers = (await api('/api/drivers')).drivers; drawMap(); } catch {}
+    }, 3000);
+  }
+  boot();
+})();
+</script>
+</body>
+</html>
