@@ -279,3 +279,38 @@ services:
         value: admin
       - key: CHAT_PASSWORD
         sync: false            # Render prompts you to set this on first deploy
+
+  # The Cardinal — the social network (social/): profiles, feed, reactions,
+  # photos, groups, messages, and the "Reach out" support signal. Node 22 with
+  # no third-party dependencies (node:http + node:sqlite). Members' accounts and
+  # posts persist in SQLite on the mounted disk, so a restart does not wipe the
+  # network — that is why this runs on a paid instance rather than the free tier.
+  #
+  # SEED_EMAIL / SEED_PASSWORD are prompted rather than committed: they create
+  # the founder account on first boot and must not be public repo defaults.
+  #
+  # To serve this at thecardinalpromise.com, add the domain in Settings ->
+  # Custom Domains and point DNS at Render as it instructs.
+  - type: web
+    name: cardinal-social
+    runtime: node
+    branch: main
+    rootDir: social
+    plan: starter            # a persistent disk requires a paid instance
+    buildCommand: node --version
+    startCommand: node server.mjs
+    healthCheckPath: /
+    autoDeploy: true
+    disk:
+      name: cardinal-data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: NEST_DB
+        value: /data/nest.db
+      - key: SEED_EMAIL
+        sync: false            # Render prompts you to set this on first deploy
+      - key: SEED_PASSWORD
+        sync: false            # Render prompts you to set this on first deploy
