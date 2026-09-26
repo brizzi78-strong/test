@@ -15,6 +15,25 @@
 # Cardinal Care Bridge is a public static site with no login.
 
 services:
+  # Blue Ridge Press LLC — the company homepage (site/): wordmark, Publishing
+  # (The Cardinal's Promise, The Cardinal's Toolkit) and Software (CARD ->
+  # cp17.org, Cardinal HR, Cardinal Verify) cards, contact. Static, like the
+  # other marketing sites below: no build step, no server, no disk, free on
+  # Render.
+  #
+  # This is the apex for the whole company, so add the custom domain as an A
+  # record, not a CNAME: in Settings -> Custom Domains, add both
+  # blueridgepressllc.com and www.blueridgepressllc.com and follow the DNS
+  # instructions Render shows for each (an ALIAS/ANAME record at the
+  # registrar for the apex, where supported, or the A record Render gives
+  # you). HTTPS is issued automatically once the records resolve.
+  - type: web
+    name: blue-ridge-press
+    runtime: static
+    branch: main
+    staticPublishPath: ./site
+    autoDeploy: true
+
   - type: web
     name: cardinal-books
     runtime: docker
