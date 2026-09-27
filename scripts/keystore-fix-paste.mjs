@@ -46,6 +46,15 @@ if (key === "MAINNET_PRIVATE_KEY" && !/^0x[0-9a-fA-F]{64}$/.test(value)) {
   console.error(
     `That doesn't look like a private key (got ${value.length} characters, expected 66 starting with 0x).`,
   );
+  // Safe to show: a handful of characters out of 64 hex digits doesn't
+  // meaningfully weaken the key, and this is enough to see where a
+  // character is being dropped without ever printing the real thing.
+  const startsWith0x = value.startsWith("0x");
+  const preview =
+    value.length >= 8 ? `${value.slice(0, 6)}...${value.slice(-4)}` : "(too short to preview)";
+  console.error(`  starts with "0x": ${startsWith0x}`);
+  console.error(`  preview: ${preview}`);
+  console.error(`  byte length (utf8): ${Buffer.byteLength(value, "utf8")}`);
   console.error("Copy the key again (run node scripts/new-deployer.mjs, or re-copy from wherever it's saved) and try again.");
   process.exit(1);
 }
