@@ -1,0 +1,251 @@
+AWSTemplateFormatVersion: "2010-09-09"
+
+Description: >-
+  Reusable stateless container service: ECR repository + AWS App Runner,
+  fronted by App Runner's own managed HTTPS endpoint (custom domains are
+  attached afterward via `aws apprunner associate-custom-domain`, which is
+  not yet a CloudFormation resource type). Secrets are read from SSM
+  Parameter Store at runtime — never passed through this template or CI.
+  Deploy once per service under its own stack name (see deploy/aws/README.md).
+
+Parameters:
+  ServiceName:
+    Type: String
+    Description: Short name, e.g. cardinal-coverage-app. Used to name every resource.
+
+  Port:
+    Type: Number
+    Default: 8080
+    Description: Port the container listens on (matches the app's own PORT env var).
+
+  HealthCheckPath:
+    Type: String
+    Default: /health
+
+  Cpu:
+    Type: String
+    Default: "256"
+    AllowedValues: ["256", "512", "1024"]
+  Memory:
+    Type: String
+    Default: "512"
+    AllowedValues: ["512", "1024", "2048"]
+
+  SecretParameterNames:
+    Type: CommaDelimitedList
+    Default: ""
+    Description: >-
+      Names of SSM SecureString parameters (under /cardinal/<ServiceName>/)
+      to expose as env vars of the same uppercased name, e.g.
+      "CC_PASSWORD,ANTHROPIC_API_KEY". Set each value once with:
+      aws ssm put-parameter --type SecureString --name /cardinal/<ServiceName>/<NAME> --value ...
+      Leave blank for a service with no secrets.
+
+  PlainEnvJson:
+    Type: String
+    Default: "{}"
+    Description: >-
+      Non-secret env vars as a JSON object string, e.g. '{"CC_USER":"cardinal"}'.
+
+  ImageTag:
+    Type: String
+    Default: bootstrap
+    Description: Set by CI to the git SHA of the image it just pushed.
+
+  ServiceReady:
+    Type: String
+    Default: "no"
+    AllowedValues: ["yes", "no"]
+    Description: >-
+      Stays "no" until the first image has been pushed to the ECR repo this
+      stack creates. The App Runner service itself is only created once this
+      flips to "yes" (CI does this automatically after its first push).
+
+  GitHubRepo:
+    Type: String
+    Default: brizzi78-strong/test
+  GitHubBranch:
+    Type: String
+    Default: main
+  CreateOidcProvider:
+    Type: String
+    Default: "no"
+    AllowedValues: ["yes", "no"]
+    Description: >-
+      Set to "yes" only on the very first stack of this kind in the account.
+
+Conditions:
+  MakeOidcProvider: !Equals [!Ref CreateOidcProvider, "yes"]
+  IsReady: !Equals [!Ref ServiceReady, "yes"]
+  HasSecrets: !Not [!Equals [!Join ["", !Ref SecretParameterNames], ""]]
+
+Resources:
+  Repository:
+    Type: AWS::ECR::Repository
+    Properties:
+      RepositoryName: !Ref ServiceName
+      ImageScanningConfiguration:
+        ScanOnPush: true
+      LifecyclePolicy:
+        LifecyclePolicyText: >-
+          {"rules":[{"rulePriority":1,"description":"Keep the last 15 images",
+          "selection":{"tagStatus":"any","countType":"imageCountMoreThan","countNumber":15},
+          "action":{"type":"expire"}}]}
+
+  # Lets App Runner itself pull the image from this repo.
+  ECRAccessRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal: { Service: build.apprunner.amazonaws.com }
+            Action: sts:AssumeRole
+      Policies:
+        - PolicyName: PullImage
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - ecr:GetDownloadUrlForLayer
+                  - ecr:BatchGetImage
+                  - ecr:BatchCheckLayerAvailability
+                Resource: !GetAtt Repository.Arn
+              - Effect: Allow
+                Action: ecr:GetAuthorizationToken
+                Resource: "*"   # ECR's token API has no resource-level scoping.
+
+  # Assumed by the running container. Only grants what the container needs at
+  # runtime: reading its own named secrets, nothing else in the account.
+  InstanceRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal: { Service: tasks.apprunner.amazonaws.com }
+            Action: sts:AssumeRole
+      Policies:
+        - !If
+          - HasSecrets
+          - PolicyName: ReadOwnSecrets
+            PolicyDocument:
+              Version: "2012-10-17"
+              Statement:
+                - Effect: Allow
+                  Action: ssm:GetParameters
+                  Resource: !Sub "arn:${AWS::Partition}:ssm:${AWS::Region}:${AWS::AccountId}:parameter/cardinal/${ServiceName}/*"
+          - !Ref "AWS::NoValue"
+
+  Service:
+    Type: AWS::AppRunner::Service
+    Condition: IsReady
+    Properties:
+      ServiceName: !Ref ServiceName
+      SourceConfiguration:
+        AutoDeploymentsEnabled: false   # CI drives deploys explicitly via stack update.
+        AuthenticationConfiguration:
+          AccessRoleArn: !GetAtt ECRAccessRole.Arn
+        ImageRepository:
+          ImageRepositoryType: ECR
+          ImageIdentifier: !Sub "${Repository.RepositoryUri}:${ImageTag}"
+          ImageConfiguration:
+            Port: !Ref Port
+            RuntimeEnvironmentVariables:
+              - Name: PORT
+                Value: !Ref Port
+            # CFN can't turn PlainEnvJson or SecretParameterNames into a
+            # property list at synth time (no map-over-list without a custom
+            # resource), so both are applied by the deploy workflow via
+            # `aws apprunner update-service --source-configuration ...`
+            # right after this stack settles. See deploy/aws/README.md.
+      InstanceConfiguration:
+        Cpu: !Ref Cpu
+        Memory: !Ref Memory
+        InstanceRoleArn: !GetAtt InstanceRole.Arn
+      HealthCheckConfiguration:
+        Protocol: HTTP
+        Path: !Ref HealthCheckPath
+        Interval: 10
+        Timeout: 5
+        HealthyThreshold: 1
+        UnhealthyThreshold: 5
+
+  GitHubOidcProvider:
+    Type: AWS::IAM::OIDCProvider
+    Condition: MakeOidcProvider
+    Properties:
+      Url: https://token.actions.githubusercontent.com
+      ClientIdList: [sts.amazonaws.com]
+      ThumbprintList: [6938fd4d98bab03faadb97b34396831e3780aea1]
+
+  DeployRole:
+    Type: AWS::IAM::Role
+    Properties:
+      Description: !Sub "Lets ${GitHubRepo}@${GitHubBranch} build and deploy ${ServiceName}"
+      MaxSessionDuration: 3600
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Federated: !Sub "arn:${AWS::Partition}:iam::${AWS::AccountId}:oidc-provider/token.actions.githubusercontent.com"
+            Action: sts:AssumeRoleWithWebIdentity
+            Condition:
+              StringEquals: { token.actions.githubusercontent.com:aud: sts.amazonaws.com }
+              StringLike: { token.actions.githubusercontent.com:sub: !Sub "repo:${GitHubRepo}:ref:refs/heads/${GitHubBranch}" }
+      Policies:
+        - PolicyName: BuildAndDeploy
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action: ecr:GetAuthorizationToken
+                Resource: "*"
+              - Effect: Allow
+                Action:
+                  - ecr:BatchCheckLayerAvailability
+                  - ecr:PutImage
+                  - ecr:InitiateLayerUpload
+                  - ecr:UploadLayerPart
+                  - ecr:CompleteLayerUpload
+                  - ecr:BatchGetImage
+                Resource: !GetAtt Repository.Arn
+              - Effect: Allow
+                Action:
+                  - apprunner:DescribeService
+                  - apprunner:UpdateService
+                  - apprunner:StartDeployment
+                  - apprunner:TagResource
+                Resource: !Sub "arn:${AWS::Partition}:apprunner:${AWS::Region}:${AWS::AccountId}:service/${ServiceName}/*"
+              - Effect: Allow
+                Action: cloudformation:*
+                Resource: !Sub "arn:${AWS::Partition}:cloudformation:${AWS::Region}:${AWS::AccountId}:stack/${AWS::StackName}/*"
+              - Effect: Allow
+                Action: iam:PassRole
+                Resource:
+                  - !GetAtt ECRAccessRole.Arn
+                  - !GetAtt InstanceRole.Arn
+
+Outputs:
+  RepositoryUri:
+    Value: !GetAtt Repository.RepositoryUri
+  DeployRoleArn:
+    Description: Store as this service's AWS_DEPLOY_ROLE_* repository variable.
+    Value: !GetAtt DeployRole.Arn
+  ECRAccessRoleArn:
+    Description: Consumed by the deploy workflow when it re-applies env vars/secrets.
+    Value: !GetAtt ECRAccessRole.Arn
+  InstanceRoleArn:
+    Description: Consumed by the deploy workflow when it re-applies env vars/secrets.
+    Value: !GetAtt InstanceRole.Arn
+  ServiceArn:
+    Condition: IsReady
+    Value: !GetAtt Service.ServiceArn
+  ServiceUrl:
+    Condition: IsReady
+    Description: The App Runner HTTPS endpoint, once the service exists.
+    Value: !GetAtt Service.ServiceUrl

@@ -1,0 +1,105 @@
+name: deploy-memory-care-music-program-aws
+
+# Builds memory-care-music-program and deploys it to AWS App Runner. Same OIDC pattern as the
+# static-site workflows: no AWS access keys stored in GitHub. Stays dormant
+# until AWS_DEPLOY_ROLE_MUSIC_PROGRAM is set — see deploy/aws/README.md.
+#
+# One-time before this can run: deploy deploy/aws/app-runner-service.yml with
+# ServiceReady=no to create the ECR repo, then set the secrets this service
+# needs with `aws ssm put-parameter --type SecureString` under
+# /cardinal/memory-care-music-program/. Both are one-off, documented in deploy/aws/README.md.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "singalong/**"
+      - ".github/workflows/aws-deploy-memory-care-music-program.yml"
+      - "deploy/aws/apprunner-source-config.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+concurrency:
+  group: aws-deploy-memory-care-music-program
+  cancel-in-progress: true
+
+env:
+  SERVICE_NAME: memory-care-music-program
+  AWS_REGION: us-east-1
+
+jobs:
+  deploy:
+    name: Build and deploy memory-care-music-program
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check whether AWS is configured yet
+        id: check
+        run: |
+          if [ -n "${{ vars.AWS_DEPLOY_ROLE_MUSIC_PROGRAM }}" ]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "AWS_DEPLOY_ROLE_MUSIC_PROGRAM is not set — skipping. Render still serves this service."
+          fi
+
+      - name: Assume the deploy role
+        if: steps.check.outputs.ready == 'true'
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_MUSIC_PROGRAM }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Log in to ECR
+        if: steps.check.outputs.ready == 'true'
+        id: ecr
+        run: |
+          ACCOUNT_ID="$(aws sts get-caller-identity --query Account --output text)"
+          echo "account-id=$ACCOUNT_ID" >> "$GITHUB_OUTPUT"
+          echo "uri=$ACCOUNT_ID.dkr.ecr.${{ env.AWS_REGION }}.amazonaws.com/${{ env.SERVICE_NAME }}" >> "$GITHUB_OUTPUT"
+          aws ecr get-login-password --region "${{ env.AWS_REGION }}" \
+            | docker login --username AWS --password-stdin "$ACCOUNT_ID.dkr.ecr.${{ env.AWS_REGION }}.amazonaws.com"
+
+      - name: Build and push the image
+        if: steps.check.outputs.ready == 'true'
+        run: |
+          docker build -f singalong/Dockerfile -t "${{ steps.ecr.outputs.uri }}:${{ github.sha }}" .
+          docker push "${{ steps.ecr.outputs.uri }}:${{ github.sha }}"
+
+      - name: Deploy the App Runner stack
+        if: steps.check.outputs.ready == 'true'
+        run: |
+          aws cloudformation deploy \
+            --stack-name "${{ env.SERVICE_NAME }}" \
+            --template-file deploy/aws/app-runner-service.yml \
+            --capabilities CAPABILITY_IAM \
+            --parameter-overrides \
+              ServiceName="${{ env.SERVICE_NAME }}" \
+              ImageTag="${{ github.sha }}" \
+              ServiceReady=yes \
+              Port=10000 \
+              HealthCheckPath=/health
+
+      - name: Apply env vars and secrets
+        if: steps.check.outputs.ready == 'true'
+        run: |
+          OUT="$(aws cloudformation describe-stacks --stack-name "${{ env.SERVICE_NAME }}" --query 'Stacks[0].Outputs' --output json)"
+          get() { echo "$OUT" | python3 -c "import json,sys; print(next(o['OutputValue'] for o in json.load(sys.stdin) if o['OutputKey']=='$1'))"; }
+
+          CONFIG="$(python3 deploy/aws/apprunner-source-config.py \
+            '{}' \
+            '' \
+            "${{ steps.ecr.outputs.uri }}" \
+            "${{ github.sha }}" \
+            "${{ steps.ecr.outputs.account-id }}" \
+            "${{ env.AWS_REGION }}" \
+            "${{ env.SERVICE_NAME }}" \
+            "10000" \
+            "$(get ECRAccessRoleArn)")"
+
+          aws apprunner update-service \
+            --service-arn "$(get ServiceArn)" \
+            --source-configuration "$CONFIG"

@@ -1,0 +1,57 @@
+name: deploy-cp17-site
+
+# Publishes cp17-site to the gh-pages branch. This repo's Pages is in
+# legacy branch mode (serves the gh-pages branch root), and its
+# github-pages environment only allows deployments from gh-pages — so the
+# artifact/deploy-pages flow can never run from main. Pushing the folder
+# to gh-pages triggers the automatic Pages build instead, and the CNAME
+# file in the folder keeps the custom domain (cp17.org) set.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "cp17-site/**"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    name: Publish cp17-site to gh-pages
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Push cp17-site to gh-pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin gh-pages
+          git worktree add /tmp/site origin/gh-pages
+          cd /tmp/site
+          git rm -rq .
+          cp -r "$GITHUB_WORKSPACE/cp17-site/." .
+          rm -f README.md
+          touch .nojekyll
+          git add -A
+          if git diff --cached --quiet; then
+            echo "gh-pages already matches cp17-site — nothing to publish"
+            exit 0
+          fi
+          git commit -m "Publish cp17-site from ${GITHUB_SHA::7}"
+          git push origin HEAD:gh-pages
+
+      - name: Report Pages status
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          sleep 30
+          curl -sS -H "Authorization: Bearer $GH_TOKEN" \
+               -H "Accept: application/vnd.github+json" \
+               "https://api.github.com/repos/${{ github.repository }}/pages"

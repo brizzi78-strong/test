@@ -1,0 +1,709 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Expenses — expense reports without the pain</title>
+<style>
+  :root {
+    --bg: #f6f7f9; --card: #ffffff; --ink: #1c2430; --muted: #66707d;
+    --accent: #175ddc; --accent-ink: #ffffff; --line: #e3e7ec;
+    --ok: #157347; --warn: #b45309; --bad: #b02a37;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; background: var(--bg); color: var(--ink); }
+  header { background: var(--card); border-bottom: 1px solid var(--line); padding: 14px 24px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+  h1 { font-size: 20px; margin: 0; }
+  h1 small { color: var(--muted); font-weight: 400; font-size: 13px; margin-left: 8px; }
+  main { max-width: 980px; margin: 24px auto; padding: 0 16px; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; }
+  .tabs button { border: 1px solid var(--line); background: var(--card); padding: 8px 14px; border-radius: 999px; cursor: pointer; font: inherit; }
+  .tabs button.active { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; margin-bottom: 16px; }
+  .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: end; }
+  label { display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: var(--muted); }
+  input, select { font: inherit; padding: 7px 9px; border: 1px solid var(--line); border-radius: 6px; background: var(--card); color: var(--ink); }
+  button.primary { background: var(--accent); color: var(--accent-ink); border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font: inherit; }
+  button.ghost { background: none; border: 1px solid var(--line); padding: 7px 12px; border-radius: 6px; cursor: pointer; font: inherit; color: var(--ink); }
+  button.danger { border-color: var(--bad); color: var(--bad); }
+  table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+  th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
+  td.amount, th.amount { text-align: right; }
+  .chip { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; }
+  .chip.draft { background: #eef1f5; color: var(--muted); }
+  .chip.submitted { background: #fff4e0; color: var(--warn); }
+  .chip.approved { background: #e2f4ea; color: var(--ok); }
+  .chip.rejected { background: #fbe3e5; color: var(--bad); }
+  .chip.reimbursed { background: #e3ecfc; color: var(--accent); }
+  .flag { color: var(--warn); font-size: 13px; }
+  .flag.dup { color: var(--bad); }
+  .autobadge { color: var(--ok); font-size: 13px; font-weight: 600; }
+  .muted { color: var(--muted); font-size: 13px; }
+  .clickable { cursor: pointer; }
+  .clickable:hover { background: #f2f5f9; }
+  .total { font-size: 17px; font-weight: 700; }
+  .error { color: var(--bad); margin: 8px 0; min-height: 1em; font-size: 14px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+  .stat { border: 1px solid var(--line); border-radius: 8px; padding: 12px; }
+  .stat .n { font-size: 22px; font-weight: 700; }
+  .policy-hint { background: #f0f5ff; border: 1px solid #d5e2fa; border-radius: 8px; padding: 10px 14px; font-size: 13px; color: #2a4a8c; margin-bottom: 12px; }
+  .receipt-link { cursor: pointer; color: var(--accent); text-decoration: underline; background: none; border: none; padding: 0; font: inherit; }
+  /* Budgets: a meter per category, coloured by how close the month is to its limit. */
+  .budget-row { display: grid; grid-template-columns: 150px 1fr 210px auto; gap: 14px;
+    align-items: center; padding: 11px 0; border-bottom: 1px solid var(--line); }
+  .meter { height: 12px; border-radius: 6px; background: var(--line); overflow: hidden; }
+  .meter .fill { display: block; height: 100%; border-radius: 6px; }
+  .meter .fill.under { background: var(--ok); }
+  .meter .fill.warning { background: var(--warn); }
+  .meter .fill.over { background: var(--bad); }
+  .meter.big { height: 18px; border-radius: 9px; }
+  .meter.big .fill { border-radius: 9px; }
+  .budget-figures { text-align: right; font-variant-numeric: tabular-nums; font-size: 13px; }
+  .budget-figures .left { font-weight: 600; }
+  .budget-figures .left.over { color: var(--bad); }
+  .budget-figures .left.warning { color: var(--warn); }
+  .budget-figures .left.under { color: var(--ok); }
+  .month-nav { display: flex; align-items: center; gap: 10px; }
+  .month-nav strong { min-width: 160px; text-align: center; }
+  .rollover-tag { font-size: 11.5px; text-transform: uppercase; letter-spacing: .05em;
+    color: var(--muted); }
+  @media (max-width: 780px) {
+    .budget-row { grid-template-columns: 1fr auto; }
+    .budget-row .meter { grid-column: 1 / -1; }
+  }
+  .history { margin-top: 12px; border-top: 1px solid var(--line); padding-top: 8px; }
+  .history div { font-size: 13px; color: var(--muted); padding: 2px 0; }
+  #modal { position: fixed; inset: 0; background: rgba(0,0,0,.55); display: none; align-items: center; justify-content: center; padding: 24px; z-index: 10; }
+  #modal.open { display: flex; }
+  #modal .box { background: var(--card); border-radius: 10px; padding: 14px; max-width: min(720px, 92vw); max-height: 90vh; display: flex; flex-direction: column; gap: 8px; }
+  #modal img, #modal embed { max-width: 100%; max-height: 74vh; object-fit: contain; }
+  #toast { position: fixed; left: 50%; bottom: 26px; transform: translateX(-50%);
+    background: var(--ink); color: var(--bg); padding: 10px 18px; border-radius: 8px;
+    font-size: 14px; opacity: 0; transition: opacity .25s; pointer-events: none; }
+  #toast.show { opacity: 1; }
+  @media (prefers-reduced-motion: reduce) { #toast { transition: none; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>Expenses<small>policy checks up front, approvals in seconds</small></h1>
+  <label style="margin-left:auto">Acting as
+    <input id="user" value="ada" size="10" title="x-user-id — switch to an approver id (e.g. manager) to see their queue">
+  </label>
+</header>
+<main>
+  <div class="tabs">
+    <button id="tab-reports" class="active">My reports</button>
+    <button id="tab-cards">Card feed</button>
+    <button id="tab-budgets">Budgets</button>
+    <button id="tab-approvals">Approvals</button>
+    <button id="tab-analytics">Analytics</button>
+  </div>
+  <div class="error" id="error"></div>
+  <div id="view"></div>
+</main>
+<div id="toast" role="status"></div>
+<div id="modal" role="dialog" aria-modal="true">
+  <div class="box">
+    <div style="display:flex; justify-content:space-between; align-items:center; gap:12px">
+      <strong id="modal-title"></strong>
+      <button class="ghost" id="modal-close">Close</button>
+    </div>
+    <div id="modal-body"></div>
+  </div>
+</div>
+<script>
+const $ = (id) => document.getElementById(id);
+const view = $('view');
+// Single client-side copy of the server's category list (types.ts CATEGORIES).
+const CATEGORIES = ['meals','lodging','airfare','ground_transport','mileage','office_supplies','software','entertainment','other'];
+let tab = 'reports';
+let openReportId = null;
+let policy = null;
+
+const money = (c) => '$' + (c / 100).toLocaleString('en-US', { minimumFractionDigits: 2 });
+const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (ch) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
+const today = () => new Date().toISOString().slice(0, 10);
+
+async function api(method, path, body) {
+  const res = await fetch(path, {
+    method,
+    headers: { 'content-type': 'application/json', 'x-user-id': $('user').value.trim() || 'demo' },
+    body: body === undefined ? undefined : JSON.stringify(body),
+  });
+  const json = await res.json();
+  if (!res.ok) throw new Error(json.error || res.statusText);
+  return json;
+}
+
+function setError(message) { $('error').textContent = message || ''; }
+
+function toastMsg(message) {
+  const t = $('toast');
+  t.textContent = message;
+  t.classList.add('show');
+  clearTimeout(toastMsg._t);
+  toastMsg._t = setTimeout(() => t.classList.remove('show'), 2600);
+}
+
+async function render() {
+  setError('');
+  try {
+    if (!policy) policy = (await api('GET', '/policy')).policy;
+    if (tab === 'reports') await renderReports();
+    else if (tab === 'cards') await renderCardFeed();
+    else if (tab === 'budgets') await renderBudgets();
+    else if (tab === 'approvals') await renderApprovals();
+    else await renderAnalytics();
+  } catch (err) { setError(err.message); }
+}
+
+// ---------- My reports ----------
+
+async function renderReports() {
+  if (openReportId) return renderReportDetail(openReportId);
+  const { reports } = await api('GET', '/reports');
+  view.innerHTML = `
+    <div class="card">
+      <div class="row">
+        <label>Report title <input id="new-title" placeholder="e.g. NYC client trip"></label>
+        <label>Approver <input id="new-approver" value="manager" size="10"></label>
+        <button class="primary" id="new-report">New report</button>
+        <button class="ghost" id="csv-mine" style="margin-left:auto">Download CSV</button>
+      </div>
+    </div>
+    <div class="card">
+      ${reports.length === 0 ? '<p class="muted">No reports yet — create one above.</p>' : `
+      <table><thead><tr><th>Title</th><th>Status</th><th>Flags</th><th class="amount">Total</th></tr></thead>
+      <tbody>${reports.map(({ report, evaluation }) => `
+        <tr class="clickable" data-id="${report.id}">
+          <td>${esc(report.title)}<div class="muted">${report.expenses.length} expense(s) · created ${report.createdAt.slice(0, 10)}</div></td>
+          <td><span class="chip ${report.status}">${report.status}</span>${report.autoApproved ? '<div class="autobadge">auto-approved</div>' : ''}</td>
+          <td>${evaluation.violations.length === 0 ? '<span class="muted">none</span>' : `<span class="flag">${evaluation.violations.length} flag(s)</span>`}</td>
+          <td class="amount">${money(evaluation.totalCents)}</td>
+        </tr>`).join('')}
+      </tbody></table>`}
+    </div>`;
+  $('new-report').onclick = async () => {
+    try {
+      const { report } = await api('POST', '/reports', {
+        title: $('new-title').value, approverId: $('new-approver').value.trim() || 'manager',
+      });
+      openReportId = report.id;
+      render();
+    } catch (err) { setError(err.message); }
+  };
+  $('csv-mine').onclick = () => downloadCsv('mine');
+  view.querySelectorAll('tr.clickable').forEach((tr) => {
+    tr.onclick = () => { openReportId = tr.dataset.id; render(); };
+  });
+}
+
+function flagsFor(evaluation, expenseId) {
+  return evaluation.violations.filter((v) => v.expenseId === expenseId)
+    .map((v) => `<div class="flag ${v.code === 'DUPLICATE' ? 'dup' : ''}">⚠ ${esc(v.message)}</div>`).join('');
+}
+
+function receiptCell(reportId, e) {
+  if (!e.receipt) return '<span class="muted">—</span>';
+  if (e.receipt.dataUrl || e.receipt.hasData) {
+    return `<button class="receipt-link" data-view-receipt="${reportId}:${e.id}">📎 ${esc(e.receipt.name)}</button>`;
+  }
+  return '📎 ' + esc(e.receipt.name);
+}
+
+// Modal content is built with DOM APIs, never innerHTML — receipt names and
+// data URLs are user-controlled and cross the filer→approver trust boundary.
+function openModal(title, node) {
+  $('modal-title').textContent = title;
+  $('modal-body').replaceChildren(node);
+  $('modal').classList.add('open');
+}
+$('modal-close').onclick = () => $('modal').classList.remove('open');
+$('modal').onclick = (ev) => { if (ev.target === $('modal')) $('modal').classList.remove('open'); };
+
+async function viewReceipt(reportId, expenseId) {
+  try {
+    const { report } = await api('GET', `/reports/${reportId}`);
+    const e = report.expenses.find((x) => x.id === expenseId);
+    if (!e?.receipt?.dataUrl) return setError('No receipt attachment on file for that expense.');
+    let node;
+    if (e.receipt.dataUrl.startsWith('data:application/pdf')) {
+      node = document.createElement('embed');
+      node.type = 'application/pdf';
+      node.style.cssText = 'width:70vw;height:74vh';
+    } else {
+      node = document.createElement('img');
+      node.alt = e.receipt.name;
+    }
+    node.src = e.receipt.dataUrl;
+    openModal(e.receipt.name, node);
+  } catch (err) { setError(err.message); }
+}
+
+function wireReceiptLinks() {
+  view.querySelectorAll('[data-view-receipt]').forEach((btn) => {
+    btn.onclick = () => {
+      const [reportId, expenseId] = btn.dataset.viewReceipt.split(':');
+      viewReceipt(reportId, expenseId);
+    };
+  });
+}
+
+async function downloadCsv(scope) {
+  try {
+    const res = await fetch('/export.csv' + (scope === 'approvals' ? '?scope=approvals' : ''), {
+      headers: { 'x-user-id': $('user').value.trim() || 'demo' },
+    });
+    if (!res.ok) throw new Error('export failed');
+    const blob = await res.blob();
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = scope === 'approvals' ? 'expenses-queue.csv' : 'expenses.csv';
+    a.click();
+    URL.revokeObjectURL(a.href);
+  } catch (err) { setError(err.message); }
+}
+
+async function renderReportDetail(id) {
+  const { report, evaluation } = await api('GET', `/reports/${id}`);
+  const editable = report.status === 'draft';
+  const limits = Object.entries(policy.categoryLimitCents)
+    .map(([cat, cap]) => `${cat} ≤ ${money(cap)}`).join(' · ');
+  view.innerHTML = `
+    <button class="ghost" id="back">← All reports</button>
+    <div class="card" style="margin-top:12px">
+      <div class="row" style="justify-content:space-between; align-items:center">
+        <div><strong style="font-size:18px">${esc(report.title)}</strong>
+          <span class="chip ${report.status}">${report.status}</span>
+          ${report.autoApproved ? '<span class="autobadge">auto-approved by policy engine</span>' : ''}
+        </div>
+        <div style="text-align:right">
+          <div class="total">${money(evaluation.totalCents)}</div>
+          ${evaluation.reimbursableCents !== evaluation.totalCents
+            ? `<div class="muted">reimbursable ${money(evaluation.reimbursableCents)} · rest on company card</div>` : ''}
+        </div>
+      </div>
+      ${report.rejectionReason ? `<p class="flag dup">Rejected: ${esc(report.rejectionReason)}</p>` : ''}
+      <p class="muted">Approver: ${esc(report.approverId)} · Receipts required from ${money(policy.receiptRequiredCents)} · ${limits} · mileage ${policy.mileageRateCentsPerMile}¢/mi · auto-approval up to ${money(policy.autoApproveCeilingCents)}</p>
+      ${evaluation.autoApprovable && editable && report.expenses.length ? '<div class="policy-hint">✔ Fully compliant and under the ceiling — this report will be <strong>approved instantly</strong> on submit.</div>' : ''}
+      <table><thead><tr><th>Date</th><th>Category</th><th>Merchant / notes</th><th>Receipt</th><th class="amount">Amount</th>${editable ? '<th></th>' : ''}</tr></thead>
+      <tbody>${report.expenses.map((e) => `
+        <tr>
+          <td>${e.date}</td>
+          <td>${e.category}${e.miles ? ` <span class="muted">(${e.miles} mi)</span>` : ''}${e.paymentMethod === 'card' ? ' <span title="Company card — not reimbursed to you">💳</span>' : ''}</td>
+          <td>${esc(e.merchant)}${e.description ? `<div class="muted">${esc(e.description)}</div>` : ''}${flagsFor(evaluation, e.id)}</td>
+          <td>${receiptCell(report.id, e)}</td>
+          <td class="amount">${money(e.amountCents)}</td>
+          ${editable ? `<td><button class="ghost danger" data-del="${e.id}">✕</button></td>` : ''}
+        </tr>`).join('')}
+      </tbody></table>
+      ${report.expenses.length === 0 ? '<p class="muted">No expenses yet.</p>' : ''}
+      ${report.history.length ? `<div class="history">${report.history.map((h) =>
+        `<div>${h.at.slice(0, 10)} · ${esc(h.by)} ${esc(h.action)}${h.note ? ` — ${esc(h.note)}` : ''}</div>`).join('')}</div>` : ''}
+    </div>
+    ${editable ? `
+    <div class="card">
+      <strong>Add expense</strong>
+      <div class="row" style="margin-top:8px">
+        <label>Date <input type="date" id="x-date" value="${today()}"></label>
+        <label>Category <select id="x-cat">
+          ${CATEGORIES.map((c) => `<option>${c}</option>`).join('')}
+        </select></label>
+        <label>Paid with <select id="x-pay">
+          <option value="">Auto (match card feed)</option>
+          <option value="personal">Out of pocket</option>
+          <option value="card">Company card</option>
+        </select></label>
+        <label>Merchant <input id="x-merchant" placeholder="e.g. Delta"></label>
+        <label id="amount-label">Amount ($) <input id="x-amount" type="number" step="0.01" min="0"></label>
+        <label id="miles-label" style="display:none">Miles <input id="x-miles" type="number" step="0.1" min="0"></label>
+        <label>Receipt <input id="x-receipt" type="file" accept="image/*,application/pdf"></label>
+        <label>Notes <input id="x-desc" placeholder="optional"></label>
+        <button class="primary" id="x-add">Add</button>
+      </div>
+    </div>
+    <div class="row">
+      <button class="primary" id="submit">Submit report</button>
+      <button class="ghost danger" id="delete">Delete draft</button>
+    </div>` : `
+    <div class="row">
+      ${report.status === 'submitted' || report.status === 'rejected' ? '<button class="ghost" id="reopen">Reopen as draft</button>' : ''}
+    </div>`}
+  `;
+  $('back').onclick = () => { openReportId = null; render(); };
+  const catSelect = $('x-cat');
+  if (catSelect) {
+    catSelect.onchange = () => {
+      const isMiles = catSelect.value === 'mileage';
+      $('miles-label').style.display = isMiles ? '' : 'none';
+      $('amount-label').style.display = isMiles ? 'none' : '';
+    };
+    $('x-add').onclick = async () => {
+      const body = {
+        date: $('x-date').value, category: catSelect.value,
+        merchant: $('x-merchant').value, description: $('x-desc').value,
+        paymentMethod: $('x-pay').value || undefined,
+      };
+      if (catSelect.value === 'mileage') body.miles = Number($('x-miles').value);
+      else body.amountCents = Math.round(Number($('x-amount').value) * 100);
+      const file = $('x-receipt').files[0];
+      if (file) {
+        if (file.size > 500_000) return setError('Receipt file is too large (max 500 KB).');
+        body.receipt = { name: file.name, dataUrl: await new Promise((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onload = () => resolve(reader.result);
+          reader.onerror = () => reject(new Error('could not read receipt file'));
+          reader.readAsDataURL(file);
+        }) };
+      }
+      try { await api('POST', `/reports/${id}/expenses`, body); render(); } catch (err) { setError(err.message); }
+    };
+    $('submit').onclick = async () => {
+      try {
+        const { report: r } = await api('POST', `/reports/${id}/submit`);
+        setError('');
+        if (r.autoApproved) alert('Approved instantly — no human review needed. 🎉');
+        render();
+      } catch (err) { setError(err.message); }
+    };
+    $('delete').onclick = async () => {
+      try { await api('DELETE', `/reports/${id}`); openReportId = null; render(); } catch (err) { setError(err.message); }
+    };
+    view.querySelectorAll('[data-del]').forEach((btn) => {
+      btn.onclick = async () => {
+        try { await api('DELETE', `/reports/${id}/expenses/${btn.dataset.del}`); render(); } catch (err) { setError(err.message); }
+      };
+    });
+  }
+  const reopen = $('reopen');
+  if (reopen) reopen.onclick = async () => {
+    try { await api('POST', `/reports/${id}/reopen`); render(); } catch (err) { setError(err.message); }
+  };
+  wireReceiptLinks();
+}
+
+// ---------- Card feed ----------
+
+async function renderCardFeed() {
+  const [{ transactions }, { reports }] = await Promise.all([
+    api('GET', '/card-transactions'),
+    api('GET', '/reports'),
+  ]);
+  const unmatched = transactions.filter((t) => t.status === 'unmatched');
+  const matched = transactions.filter((t) => t.status === 'matched');
+  const dismissed = transactions.filter((t) => t.status === 'dismissed');
+  const drafts = reports.filter((r) => r.report.status === 'draft').map((r) => r.report);
+  const reportOptions = drafts.map((r) => `<option value="${r.id}">${esc(r.title)}</option>`).join('');
+  const categoryOptions = CATEGORIES.filter((c) => c !== 'mileage')
+    .map((c) => `<option>${c}</option>`).join('');
+  view.innerHTML = `
+    <div class="card">
+      <strong>Import charges</strong>
+      <p class="muted">One line per charge: <code>date,merchant,amount,last4</code> — e.g. <code>2026-08-05,Delta,418.00,4242</code>. A real deployment would take the bank feed instead.</p>
+      <div class="row">
+        <textarea id="feed-input" rows="3" style="flex:1; min-width:260px; font:13px/1.5 ui-monospace,monospace; padding:8px; border:1px solid var(--line); border-radius:6px"></textarea>
+        <button class="primary" id="feed-import">Import</button>
+      </div>
+    </div>
+    <div class="card">
+      <strong>Needs attention (${unmatched.length})</strong>
+      <p class="muted">Each charge auto-matches when you enter the expense yourself, or becomes an expense with one click here. Dismiss personal spend.</p>
+      ${unmatched.length === 0 ? '<p class="muted">Nothing waiting. ✨</p>' : unmatched.map((t) => `
+        <div class="row" style="align-items:center; padding:7px 0; border-bottom:1px solid var(--line)">
+          <div style="min-width:200px">${t.date} · <strong>${esc(t.merchant)}</strong> <span class="muted">····${esc(t.last4)}</span></div>
+          <div class="total" style="min-width:90px">${money(t.amountCents)}</div>
+          ${drafts.length ? `
+            <select data-report="${t.id}">${reportOptions}</select>
+            <select data-category="${t.id}">${categoryOptions}</select>
+            <button class="ghost" data-expense="${t.id}">Add to report</button>`
+            : '<span class="muted">Create a draft report to file this</span>'}
+          <button class="ghost danger" data-dismiss="${t.id}">Dismiss</button>
+        </div>`).join('')}
+    </div>
+    ${matched.length ? `<div class="card"><strong>Matched (${matched.length})</strong>
+      ${matched.map((t) => `<div class="muted" style="padding:3px 0">✔ ${t.date} · ${esc(t.merchant)} · ${money(t.amountCents)} — filed</div>`).join('')}
+    </div>` : ''}
+    ${dismissed.length ? `<div class="card"><strong>Dismissed (${dismissed.length})</strong>
+      ${dismissed.map((t) => `<div class="row" style="align-items:center; padding:3px 0">
+        <span class="muted">${t.date} · ${esc(t.merchant)} · ${money(t.amountCents)}</span>
+        <button class="ghost" data-restore="${t.id}">Restore</button>
+      </div>`).join('')}
+    </div>` : ''}`;
+  $('feed-import').onclick = async () => {
+    const lines = $('feed-input').value.split('\n').map((l) => l.trim()).filter(Boolean);
+    if (!lines.length) return setError('Paste at least one charge line first.');
+    const parsed = [];
+    for (const line of lines) {
+      // Anchor from both ends so merchants containing commas still parse:
+      // first field is the date, last is last4, second-to-last the amount.
+      const parts = line.split(',').map((p) => p.trim());
+      const date = parts[0];
+      const last4 = parts[parts.length - 1];
+      const amountCents = Math.round(Number((parts[parts.length - 2] ?? '').replace(/[$\s]/g, '')) * 100);
+      const merchant = parts.slice(1, -2).join(', ');
+      if (parts.length < 4 || !date || !merchant || !(amountCents > 0) || !last4) {
+        return setError(`Could not read line: "${line}" — expected date,merchant,amount,last4`);
+      }
+      parsed.push({ date, merchant, amountCents, last4 });
+    }
+    try {
+      const result = await api('POST', '/card-transactions/import', { transactions: parsed });
+      toastMsg(`Imported ${result.imported.length} charge(s)` +
+        (result.duplicateCount ? `, skipped ${result.duplicateCount} duplicate(s)` : ''));
+      render();
+    } catch (err) { setError(err.message); }
+  };
+  view.querySelectorAll('[data-expense]').forEach((btn) => {
+    btn.onclick = async () => {
+      const id = btn.dataset.expense;
+      const reportId = view.querySelector(`[data-report="${id}"]`).value;
+      const category = view.querySelector(`[data-category="${id}"]`).value;
+      try { await api('POST', `/card-transactions/${id}/expense`, { reportId, category }); render(); }
+      catch (err) { setError(err.message); }
+    };
+  });
+  view.querySelectorAll('[data-dismiss]').forEach((btn) => {
+    btn.onclick = async () => {
+      try { await api('POST', `/card-transactions/${btn.dataset.dismiss}/dismiss`); render(); }
+      catch (err) { setError(err.message); }
+    };
+  });
+  view.querySelectorAll('[data-restore]').forEach((btn) => {
+    btn.onclick = async () => {
+      try { await api('POST', `/card-transactions/${btn.dataset.restore}/restore`); render(); }
+      catch (err) { setError(err.message); }
+    };
+  });
+}
+
+// ---------- Budgets ----------
+
+let budgetMonth = null;
+
+const monthLabel = (m) => new Date(`${m}-01T00:00:00Z`)
+  .toLocaleDateString('en-US', { month: 'long', year: 'numeric', timeZone: 'UTC' });
+
+function stepMonth(m, delta) {
+  const [y, mo] = m.split('-').map(Number);
+  const i = y * 12 + (mo - 1) + delta;
+  return `${String(Math.floor(i / 12)).padStart(4, '0')}-${String(i % 12 + 1).padStart(2, '0')}`;
+}
+
+/** Bar width: clamped so an overspend fills the meter rather than overflowing it. */
+const meterWidth = (ratio) => `${Math.min(100, Math.max(0, ratio * 100)).toFixed(1)}%`;
+
+async function renderBudgets() {
+  if (!budgetMonth) budgetMonth = new Date().toISOString().slice(0, 10).slice(0, 7);
+  const [summary, { budgets }] = await Promise.all([
+    api('GET', `/budgets/summary?month=${budgetMonth}`),
+    api('GET', '/budgets'),
+  ]);
+  const totalRatio = summary.totalAvailableCents > 0
+    ? summary.totalSpentCents / summary.totalAvailableCents
+    : (summary.totalSpentCents > 0 ? 1 : 0);
+  const totalStatus = summary.totalRemainingCents < 0 ? 'over' : (totalRatio >= 0.8 ? 'warning' : 'under');
+  const unbudgeted = CATEGORIES.filter((c) => !budgets.some((b) => b.category === c));
+
+  view.innerHTML = `
+    <div class="card">
+      <div class="row" style="justify-content:space-between; align-items:center">
+        <div class="month-nav">
+          <button class="ghost" id="month-prev" aria-label="Previous month">←</button>
+          <strong>${monthLabel(budgetMonth)}</strong>
+          <button class="ghost" id="month-next" aria-label="Next month">→</button>
+        </div>
+        <div style="text-align:right">
+          <div class="total">${money(summary.totalSpentCents)} <span class="muted">of ${money(summary.totalAvailableCents)}</span></div>
+          <div class="muted">${summary.totalRemainingCents < 0
+            ? `<strong style="color:var(--bad)">${money(-summary.totalRemainingCents)} over budget</strong>`
+            : `${money(summary.totalRemainingCents)} left to spend`}</div>
+        </div>
+      </div>
+      <div class="meter big" style="margin-top:10px"><span class="fill ${totalStatus}" style="width:${meterWidth(totalRatio)}"></span></div>
+      ${summary.overCount > 0 ? `<div class="policy-hint" style="margin:10px 0 0">${summary.overCount} categor${summary.overCount === 1 ? 'y is' : 'ies are'} over budget this month.</div>` : ''}
+      ${summary.unbudgetedCents > 0 ? `<p class="muted" style="margin-bottom:0">${money(summary.unbudgetedCents)} spent in categories with no budget set.</p>` : ''}
+    </div>
+
+    <div class="card">
+      ${summary.budgets.length === 0
+        ? '<p class="muted">No budgets yet. Set one below to start tracking a category month by month.</p>'
+        : summary.budgets.map((b) => `
+        <div class="budget-row">
+          <div>
+            <strong>${b.category}</strong>
+            ${b.rollover ? `<div class="rollover-tag">rollover ${b.rolloverCents >= 0 ? '+' : '−'}${money(Math.abs(b.rolloverCents))}</div>` : ''}
+          </div>
+          <div class="meter"><span class="fill ${b.status}" style="width:${meterWidth(b.ratio)}"></span></div>
+          <div class="budget-figures">
+            <div>${money(b.spentCents)} of ${money(b.availableCents)}</div>
+            <div class="left ${b.status}">${b.remainingCents < 0
+              ? `${money(-b.remainingCents)} over`
+              : `${money(b.remainingCents)} left`}</div>
+          </div>
+          <button class="ghost danger" data-budget-del="${b.category}" aria-label="Remove ${b.category} budget">✕</button>
+        </div>`).join('')}
+    </div>
+
+    <div class="card">
+      <strong id="b-heading">Set a monthly budget</strong>
+      <div class="row" style="margin-top:10px">
+        <label>Category <select id="b-cat">
+          ${CATEGORIES.map((c) => `<option${c === (unbudgeted[0] ?? CATEGORIES[0]) ? ' selected' : ''}>${c}</option>`).join('')}
+        </select></label>
+        <label>Monthly limit ($) <input id="b-amount" type="number" step="0.01" min="0" size="9"></label>
+        <label style="flex-direction:row; align-items:center; gap:6px; text-transform:none; letter-spacing:0; font-size:14px; color:var(--ink)">
+          <input type="checkbox" id="b-rollover" style="min-width:auto"> Roll unused money into next month
+        </label>
+        <button class="primary" id="b-save">Save budget</button>
+      </div>
+      <p class="muted" style="margin-bottom:0">Budgets track every expense you file in the month, card and out-of-pocket alike. Rejected reports don't count.</p>
+    </div>`;
+
+  $('month-prev').onclick = () => { budgetMonth = stepMonth(budgetMonth, -1); render(); };
+  $('month-next').onclick = () => { budgetMonth = stepMonth(budgetMonth, 1); render(); };
+
+  // Saving a category that already has a budget must edit it, not silently
+  // reset its rollover — so the form always mirrors what is already stored.
+  const syncForm = () => {
+    const existing = budgets.find((b) => b.category === $('b-cat').value);
+    $('b-amount').value = existing ? (existing.amountCents / 100).toFixed(2) : '';
+    $('b-rollover').checked = existing ? existing.rollover : false;
+    $('b-heading').textContent = existing
+      ? `Edit the ${existing.category} budget`
+      : 'Set a monthly budget';
+  };
+  $('b-cat').onchange = syncForm;
+  syncForm();
+
+  $('b-save').onclick = async () => {
+    const amount = Math.round(Number($('b-amount').value) * 100);
+    if (!(amount > 0)) return setError('Enter a monthly limit greater than zero.');
+    try {
+      await api('PUT', `/budgets/${$('b-cat').value}`, { amountCents: amount, rollover: $('b-rollover').checked });
+      render();
+    } catch (err) { setError(err.message); }
+  };
+  view.querySelectorAll('[data-budget-del]').forEach((btn) => {
+    btn.onclick = async () => {
+      try { await api('DELETE', `/budgets/${btn.dataset.budgetDel}`); render(); }
+      catch (err) { setError(err.message); }
+    };
+  });
+}
+
+// ---------- Approvals ----------
+
+async function renderApprovals() {
+  const [{ reports }, { reports: payable }] = await Promise.all([
+    api('GET', '/approvals'),
+    api('GET', '/reimbursements'),
+  ]);
+  view.innerHTML = `
+    <div class="card">
+      <strong>Waiting on you</strong>
+      <p class="muted">Only flagged or over-ceiling reports reach this queue — compliant ones were approved automatically.</p>
+      ${reports.length === 0 ? '<p class="muted">Queue is empty. ✨</p>' : reports.map(({ report, evaluation }) => `
+        <div class="card" style="margin-bottom:10px">
+          <div class="row" style="justify-content:space-between; align-items:center">
+            <div><strong>${esc(report.title)}</strong> <span class="muted">from ${esc(report.ownerId)} · submitted ${report.submittedAt.slice(0, 10)}</span></div>
+            <div style="text-align:right">
+              <div class="total">${money(evaluation.totalCents)}</div>
+              ${evaluation.reimbursableCents !== evaluation.totalCents
+                ? `<div class="muted">reimbursable ${money(evaluation.reimbursableCents)}</div>` : ''}
+            </div>
+          </div>
+          ${report.expenses.map((e) => `
+            <div style="padding:4px 0; border-bottom:1px solid var(--line)">
+              ${e.date} · ${e.category}${e.paymentMethod === 'card' ? ' 💳' : ''} · ${esc(e.merchant)} · <strong>${money(e.amountCents)}</strong>
+              ${e.receipt ? ' · ' + receiptCell(report.id, e) : ''}
+              ${flagsFor(evaluation, e.id)}
+            </div>`).join('')}
+          <div class="row" style="margin-top:10px">
+            <button class="primary" data-approve="${report.id}">Approve</button>
+            <input placeholder="Rejection reason" data-reason="${report.id}" size="30">
+            <button class="ghost danger" data-reject="${report.id}">Reject</button>
+          </div>
+        </div>`).join('')}
+    </div>
+    <div class="card">
+      <div class="row" style="justify-content:space-between; align-items:center">
+        <strong>Approved — ready to pay</strong>
+        <button class="ghost" id="csv-queue">Download queue CSV</button>
+      </div>
+      ${payable.length === 0 ? '<p class="muted">Nothing awaiting reimbursement.</p>' : payable.map(({ report, evaluation }) => `
+        <div class="row" style="justify-content:space-between; align-items:center; padding:7px 0; border-bottom:1px solid var(--line)">
+          <div>${esc(report.title)} <span class="muted">from ${esc(report.ownerId)}${report.autoApproved ? ' · auto-approved' : ''} · approved ${(report.decidedAt ?? '').slice(0, 10)}</span></div>
+          <div class="row" style="align-items:center">
+            <span class="total">${money(evaluation.totalCents)}</span>
+            <button class="ghost" data-pay="${report.id}">Mark reimbursed</button>
+          </div>
+        </div>`).join('')}
+    </div>`;
+  view.querySelectorAll('[data-approve]').forEach((btn) => {
+    btn.onclick = async () => {
+      try { await api('POST', `/reports/${btn.dataset.approve}/approve`); render(); } catch (err) { setError(err.message); }
+    };
+  });
+  view.querySelectorAll('[data-reject]').forEach((btn) => {
+    btn.onclick = async () => {
+      const reason = view.querySelector(`[data-reason="${btn.dataset.reject}"]`).value;
+      try { await api('POST', `/reports/${btn.dataset.reject}/reject`, { reason }); render(); } catch (err) { setError(err.message); }
+    };
+  });
+  view.querySelectorAll('[data-pay]').forEach((btn) => {
+    btn.onclick = async () => {
+      try { await api('POST', `/reports/${btn.dataset.pay}/reimburse`); render(); } catch (err) { setError(err.message); }
+    };
+  });
+  $('csv-queue').onclick = () => downloadCsv('approvals');
+  wireReceiptLinks();
+}
+
+// ---------- Analytics ----------
+
+async function renderAnalytics() {
+  const a = await api('GET', '/analytics');
+  const cats = Object.entries(a.byCategory).sort((x, y) => y[1] - x[1]);
+  const statuses = Object.entries(a.byStatus);
+  view.innerHTML = `
+    <div class="grid">
+      <div class="stat"><div class="muted">Total spend</div><div class="n">${money(a.totalCents)}</div></div>
+      <div class="stat"><div class="muted">Out of pocket</div><div class="n">${money(a.reimbursableCents)}</div></div>
+      <div class="stat"><div class="muted">Company card</div><div class="n">${money(a.cardCents)}</div></div>
+      <div class="stat"><div class="muted">Reports</div><div class="n">${a.reportCount}</div></div>
+      <div class="stat"><div class="muted">Auto-approved</div><div class="n">${a.autoApprovedCount}</div></div>
+      <div class="stat"><div class="muted">Open flags</div><div class="n">${a.violationCount}</div></div>
+      <div class="stat"><div class="muted">Unfiled card charges</div><div class="n">${a.unmatchedTransactionCount}</div></div>
+    </div>
+    <div class="card" style="margin-top:16px">
+      <strong>Spend by category</strong>
+      ${cats.length === 0 ? '<p class="muted">Nothing yet.</p>' : `
+      <table><tbody>${cats.map(([cat, cents]) => `
+        <tr><td>${cat}</td>
+        <td><div style="background:var(--accent); height:10px; border-radius:5px; width:${Math.max(2, Math.round((cents / cats[0][1]) * 100))}%"></div></td>
+        <td class="amount">${money(cents)}</td></tr>`).join('')}
+      </tbody></table>`}
+    </div>
+    <div class="card"><strong>Reports by status</strong>
+      <p>${statuses.map(([s, n]) => `<span class="chip ${s}">${s}: ${n}</span>`).join(' ') || '<span class="muted">Nothing yet.</span>'}</p>
+    </div>`;
+}
+
+// ---------- Wiring ----------
+
+for (const name of ['reports', 'cards', 'budgets', 'approvals', 'analytics']) {
+  $('tab-' + name).onclick = () => {
+    tab = name;
+    openReportId = null;
+    document.querySelectorAll('.tabs button').forEach((b) => b.classList.remove('active'));
+    $('tab-' + name).classList.add('active');
+    render();
+  };
+}
+$('user').onchange = () => { openReportId = null; render(); };
+render();
+</script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+name: CARD Sepolia deploy
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: "Type DEPLOY_CARD_TO_SEPOLIA to continue"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    name: Deploy CARD to Sepolia
+    runs-on: ubuntu-latest
+    if: ${{ github.event.inputs.confirm == 'DEPLOY_CARD_TO_SEPOLIA' }}
+    env:
+      HARDHAT_BUNDLED_SOLC: "1"
+      SEPOLIA_RPC_URL: ${{ secrets.SEPOLIA_RPC_URL }}
+      SEPOLIA_PRIVATE_KEY: ${{ secrets.SEPOLIA_PRIVATE_KEY }}
+      ETHERSCAN_API_KEY: ${{ secrets.ETHERSCAN_API_KEY }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Require deployment secrets
+        shell: bash
+        run: |
+          test -n "$SEPOLIA_RPC_URL" || { echo "Missing SEPOLIA_RPC_URL secret"; exit 1; }
+          test -n "$SEPOLIA_PRIVATE_KEY" || { echo "Missing SEPOLIA_PRIVATE_KEY secret"; exit 1; }
+
+      - run: npm ci
+
+      - name: Verify launch claims before deployment
+        run: npm run verify
+
+      - name: Deploy Cardinals Promise to Sepolia
+        run: npm run deploy:sepolia
+
+      - name: Capture deployed CARD address
+        id: address
+        shell: bash
+        run: |
+          FILE="ignition/deployments/chain-11155111/deployed_addresses.json"
+          test -f "$FILE" || { echo "Deployment address file not found"; exit 1; }
+          cat "$FILE"
+          ADDRESS=$(node -e "const j=require('./$FILE'); const v=Object.values(j).find(x=>/^0x[0-9a-fA-F]{40}$/.test(x)); if(!v) process.exit(1); process.stdout.write(v)")
+          echo "CARD_ADDRESS=$ADDRESS" >> "$GITHUB_ENV"
+          echo "card_address=$ADDRESS" >> "$GITHUB_OUTPUT"
+          echo "## CARD Sepolia deployment" >> "$GITHUB_STEP_SUMMARY"
+          echo "Contract: \`$ADDRESS\`" >> "$GITHUB_STEP_SUMMARY"
+          echo "Treasury: \`0xDAE63eBEe60A691e1538D480AE3F6509068ab300\`" >> "$GITHUB_STEP_SUMMARY"
+          echo "Explorer: https://sepolia.etherscan.io/address/$ADDRESS" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Verify source on Sepolia Etherscan
+        if: ${{ env.ETHERSCAN_API_KEY != '' }}
+        run: npx hardhat verify --network sepolia "$CARD_ADDRESS" 0xDAE63eBEe60A691e1538D480AE3F6509068ab300
+
+      - name: Upload deployment record
+        uses: actions/upload-artifact@v4
+        with:
+          name: card-sepolia-deployment
+          path: ignition/deployments/chain-11155111/
+          if-no-files-found: error

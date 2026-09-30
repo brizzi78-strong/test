@@ -8,9 +8,13 @@
 
 import { randomUUID } from 'node:crypto';
 import { computeReturn } from '../domain/engine.ts';
+import { isSupportedTaxYear, SUPPORTED_TAX_YEARS } from '../domain/params.ts';
+import { buildScenarios, type Scenario } from '../domain/scenarios.ts';
+import { screenReturn, type ScopeReport } from '../domain/scope.ts';
 import {
   FILING_STATUSES,
   RELATIONSHIPS,
+  SITUATIONS,
   TAX_YEAR,
   emptyDeductions,
   emptyIncome,
@@ -23,6 +27,7 @@ import type {
   PersonalSection,
   Person,
   Section,
+  Situation,
   TaxComputation,
   TaxReturn,
 } from '../domain/types.ts';
@@ -35,8 +40,13 @@ const ZIP_PATTERN = /^\d{5}(-\d{4})?$/;
 
 export interface ReturnWithComputation {
   taxReturn: TaxReturn;
-  /** Present once a filing status is chosen; null before that. */
+  /**
+   * Present once a filing status is chosen AND the return is within what this
+   * engine can compute. Null when the scope screen says otherwise — an
+   * unsupported return gets no number at all, rather than a wrong one.
+   */
   computation: TaxComputation | null;
+  scope: ScopeReport;
 }
 
 export class TaxReturnService {
@@ -48,16 +58,29 @@ export class TaxReturnService {
     this.now = opts.now ?? (() => new Date());
   }
 
-  createReturn(ownerId: string): ReturnWithComputation {
+  createReturn(ownerId: string, input?: unknown): ReturnWithComputation {
+    let taxYear: number = TAX_YEAR;
+    if (input !== undefined && input !== null) {
+      const requested = asObject(input).taxYear;
+      if (requested !== undefined) {
+        if (typeof requested !== 'number' || !isSupportedTaxYear(requested)) {
+          throw new ValidationError(
+            `taxYear must be one of: ${SUPPORTED_TAX_YEARS.join(', ')}`,
+          );
+        }
+        taxYear = requested;
+      }
+    }
     const timestamp = this.now().toISOString();
     const ret: TaxReturn = {
       id: randomUUID(),
       ownerId,
-      taxYear: TAX_YEAR,
+      taxYear,
       status: 'in-progress',
       createdAt: timestamp,
       updatedAt: timestamp,
       completedSections: [],
+      situations: [],
       dependents: [],
       income: emptyIncome(),
       deductions: emptyDeductions(),
@@ -100,6 +123,20 @@ export class TaxReturnService {
     return this.save(ret, 'filing-status');
   }
 
+  /** Record the declared situations that drive the scope screen. */
+  updateSituations(ownerId: string, id: string, input: unknown): ReturnWithComputation {
+    const ret = this.editable(ownerId, id);
+    const declared = asObject(input).situations;
+    if (!Array.isArray(declared)) throw new ValidationError('situations must be an array');
+    for (const value of declared) {
+      if (typeof value !== 'string' || !SITUATIONS.includes(value as Situation)) {
+        throw new ValidationError(`unknown situation: ${String(value)}`);
+      }
+    }
+    ret.situations = [...new Set(declared as Situation[])];
+    return this.save(ret, 'situations');
+  }
+
   updateDependents(ownerId: string, id: string, input: unknown): ReturnWithComputation {
     const ret = this.editable(ownerId, id);
     const deps = asObject(input).dependents;
@@ -120,7 +157,7 @@ export class TaxReturnService {
     return this.save(ret, 'deductions');
   }
 
-  /** Problems that must be fixed before the return can be e-filed. */
+  /** Problems that must be fixed before the estimate can be finalized. */
   fileBlockers(ret: TaxReturn): string[] {
     const blockers: string[] = [];
     if (!ret.personal) blockers.push('complete the About You section');
@@ -128,24 +165,38 @@ export class TaxReturnService {
     if (ret.filingStatus === 'married-joint' && ret.personal && !ret.personal.spouse) {
       blockers.push('married filing jointly requires spouse information');
     }
+    if (!ret.completedSections.includes('situations')) {
+      blockers.push('answer the situation check');
+    }
     if (!ret.completedSections.includes('income')) {
       blockers.push('complete the Income section (enter $0 amounts if none)');
+    }
+    // A return the engine cannot compute must never be finalized.
+    const scope = screenReturn(ret, ret.filingStatus ? computeReturn(ret) : null);
+    for (const finding of scope.findings) {
+      if (finding.severity === 'blocking') {
+        blockers.push(`out of scope: ${finding.title.toLowerCase()}`);
+      }
     }
     return blockers;
   }
 
   /**
-   * Mock e-file: validates the return, stamps a submission id, and simulates
-   * IRS acceptance. A real product would transmit via IRS MeF here.
+   * Finalize the estimate: validate completeness and scope, then freeze the
+   * return with a reference id.
+   *
+   * This transmits NOTHING. Nothing is sent to the IRS, and the result is not
+   * a filed return — a real product would need an EFIN, MeF integration, and
+   * IRS assurance testing (see taxfile/README.md).
    */
   fileReturn(ownerId: string, id: string): ReturnWithComputation {
     const ret = this.load(ownerId, id);
-    if (ret.status === 'accepted') throw new ConflictError('return has already been filed and accepted');
+    if (ret.status === 'accepted') throw new ConflictError('this estimate has already been finalized');
     const blockers = this.fileBlockers(ret);
     if (blockers.length > 0) {
-      throw new ValidationError(`return is not ready to file: ${blockers.join('; ')}`);
+      throw new ValidationError(`estimate is not ready to finalize: ${blockers.join('; ')}`);
     }
-    computeReturn(ret); // must compute cleanly before we transmit
+    computeReturn(ret); // must compute cleanly before we record it
     ret.status = 'accepted';
     ret.efile = {
       submissionId: `TF-${ret.taxYear}-${randomUUID().slice(0, 8).toUpperCase()}`,
@@ -155,9 +206,27 @@ export class TaxReturnService {
     return this.save(ret);
   }
 
+  /**
+   * Planning scenarios (Pro tier — the router enforces the entitlement).
+   * Only available when the return is computable and in scope.
+   */
+  scenarios(ownerId: string, id: string): Scenario[] {
+    const { taxReturn, computation, scope } = this.getReturn(ownerId, id);
+    if (!computation) {
+      throw new ValidationError(
+        scope.status === 'unsupported'
+          ? 'scenarios are unavailable: this return is outside what the estimator supports'
+          : 'choose a filing status before running scenarios',
+      );
+    }
+    return buildScenarios(taxReturn, computation);
+  }
+
   private load(ownerId: string, id: string): TaxReturn {
     const ret = this.store.get(id);
     if (!ret || ret.ownerId !== ownerId) throw new NotFoundError(`no return with id ${id}`);
+    // Returns stored before the scope screen existed have no situations array.
+    if (!Array.isArray(ret.situations)) ret.situations = [];
     return ret;
   }
 
@@ -179,9 +248,14 @@ export class TaxReturnService {
   }
 
   private withComputation(ret: TaxReturn): ReturnWithComputation {
+    const computation = ret.filingStatus ? computeReturn(ret) : null;
+    const scope = screenReturn(ret, computation);
     return {
       taxReturn: ret,
-      computation: ret.filingStatus ? computeReturn(ret) : null,
+      // Withholding the number is the point: an out-of-scope return should show
+      // no estimate rather than a confident wrong one.
+      computation: scope.status === 'unsupported' ? null : computation,
+      scope,
     };
   }
 }
@@ -214,8 +288,12 @@ function money(obj: Record<string, unknown>, field: string, label: string, allow
   return Math.round(value * 100) / 100;
 }
 
-function parseSsn(obj: Record<string, unknown>, label: string): string {
-  const raw = requireString(obj, 'ssn', label).replace(/[^\d]/g, '');
+/** SSN is optional everywhere — an estimate never needs one. Validate if given. */
+function parseOptionalSsn(obj: Record<string, unknown>, label: string): string | undefined {
+  const value = obj.ssn;
+  if (value === undefined || value === null || value === '') return undefined;
+  if (typeof value !== 'string') throw new ValidationError(`${label}.ssn must be a string`);
+  const raw = value.replace(/[^\d]/g, '');
   const formatted = `${raw.slice(0, 3)}-${raw.slice(3, 5)}-${raw.slice(5)}`;
   if (!SSN_PATTERN.test(formatted)) {
     throw new ValidationError(`${label}.ssn must be 9 digits (e.g. 123-45-6789)`);
@@ -236,7 +314,7 @@ function parsePerson(input: unknown, label: string): Person {
   return {
     firstName: requireString(obj, 'firstName', label),
     lastName: requireString(obj, 'lastName', label),
-    ssn: parseSsn(obj, label),
+    ssn: parseOptionalSsn(obj, label),
     birthYear: parseBirthYear(obj, label),
     blind: obj.blind === true,
   };
@@ -244,20 +322,24 @@ function parsePerson(input: unknown, label: string): Person {
 
 function parsePersonal(input: unknown): PersonalSection {
   const obj = asObject(input);
-  const address = asObject(obj.address ?? {});
-  const state = requireString(address, 'state', 'address').toUpperCase();
-  if (!STATE_PATTERN.test(state)) throw new ValidationError('address.state must be a 2-letter code');
-  const zip = requireString(address, 'zip', 'address');
-  if (!ZIP_PATTERN.test(zip)) throw new ValidationError('address.zip must be a 5-digit ZIP code');
+  let address: PersonalSection['address'];
+  if (obj.address != null) {
+    const addr = asObject(obj.address);
+    const state = requireString(addr, 'state', 'address').toUpperCase();
+    if (!STATE_PATTERN.test(state)) throw new ValidationError('address.state must be a 2-letter code');
+    const zip = requireString(addr, 'zip', 'address');
+    if (!ZIP_PATTERN.test(zip)) throw new ValidationError('address.zip must be a 5-digit ZIP code');
+    address = {
+      street: requireString(addr, 'street', 'address'),
+      city: requireString(addr, 'city', 'address'),
+      state,
+      zip,
+    };
+  }
   return {
     taxpayer: parsePerson(obj.taxpayer, 'taxpayer'),
     spouse: obj.spouse == null ? undefined : parsePerson(obj.spouse, 'spouse'),
-    address: {
-      street: requireString(address, 'street', 'address'),
-      city: requireString(address, 'city', 'address'),
-      state,
-      zip,
-    },
+    address,
     email: requireString(obj, 'email', 'personal'),
   };
 }
@@ -272,7 +354,7 @@ function parseDependent(input: unknown, index: number): Dependent {
   return {
     firstName: requireString(obj, 'firstName', label),
     lastName: requireString(obj, 'lastName', label),
-    ssn: parseSsn(obj, label),
+    ssn: parseOptionalSsn(obj, label),
     birthYear: parseBirthYear(obj, label),
     relationship: relationship as Dependent['relationship'],
   };

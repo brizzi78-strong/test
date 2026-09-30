@@ -8,6 +8,20 @@
 
 export const TAX_YEAR = 2025;
 
+/** Account plans; 'pro' unlocks the planning tools (scenarios). */
+export const PLANS = ['free', 'pro'] as const;
+export type Plan = (typeof PLANS)[number];
+
+export interface User {
+  id: string;
+  email: string;
+  passwordHash: string; // scrypt, hex
+  salt: string; // hex
+  plan: Plan;
+  createdAt: string;
+  stripeCustomerId?: string;
+}
+
 export const FILING_STATUSES = [
   'single',
   'married-joint',
@@ -23,11 +37,33 @@ export type ReturnStatus = (typeof RETURN_STATUSES)[number];
 export const SECTIONS = [
   'personal',
   'filing-status',
+  'situations',
   'dependents',
   'income',
   'deductions',
 ] as const;
 export type Section = (typeof SECTIONS)[number];
+
+/**
+ * Situations the filer declares up front. Each one puts the return outside
+ * what this engine can compute — see domain/scope.ts.
+ */
+export const SITUATIONS = [
+  'retirement-income',
+  'social-security',
+  'marketplace-insurance',
+  'rental-or-royalty',
+  'k1-partnership-s-corp',
+  'farm-income',
+  'education-expenses',
+  'child-care-expenses',
+  'digital-assets',
+  'foreign-income-or-accounts',
+  'household-employer',
+  'prior-year-carryover',
+  'multi-state',
+] as const;
+export type Situation = (typeof SITUATIONS)[number];
 
 export interface Address {
   street: string;
@@ -39,7 +75,11 @@ export interface Address {
 export interface Person {
   firstName: string;
   lastName: string;
-  ssn: string; // formatted 000-00-0000
+  /**
+   * Optional by design: an estimate never needs an SSN, and not collecting it
+   * keeps taxpayer identity data out of the system entirely.
+   */
+  ssn?: string; // formatted 000-00-0000 when present
   birthYear: number;
   blind: boolean;
 }
@@ -47,7 +87,7 @@ export interface Person {
 export interface PersonalSection {
   taxpayer: Person;
   spouse?: Person; // required for married-joint
-  address: Address;
+  address?: Address; // optional: not needed for an estimate
   email: string;
 }
 
@@ -57,7 +97,7 @@ export type Relationship = (typeof RELATIONSHIPS)[number];
 export interface Dependent {
   firstName: string;
   lastName: string;
-  ssn: string;
+  ssn?: string; // optional: only a real filing needs it
   birthYear: number;
   relationship: Relationship;
 }
@@ -140,6 +180,8 @@ export interface TaxReturn {
   completedSections: Section[];
   filingStatus?: FilingStatus;
   personal?: PersonalSection;
+  /** Declared out-of-scope situations; empty means "none of these apply". */
+  situations: Situation[];
   dependents: Dependent[];
   income: IncomeSection;
   deductions: DeductionsSection;

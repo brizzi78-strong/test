@@ -23,6 +23,7 @@ function baseReturn(overrides: Partial<TaxReturn> = {}): TaxReturn {
     updatedAt: '2026-01-15T00:00:00.000Z',
     completedSections: [],
     filingStatus: 'single',
+    situations: [],
     dependents: [],
     income: emptyIncome(),
     deductions: emptyDeductions(),
