@@ -1,7 +1,7 @@
 # Moving the fleet to AWS
 
 Everything in `render.yaml` currently deploys to Render with one click
-(Blueprint → Apply). This directory is the AWS alternative for all ten of
+(Blueprint → Apply). This directory is the AWS alternative for all eleven of
 those services, kept ready the same way `cp17-site.yml` already was for
 `cp17-site` — so the move is a decision, not a project, and it is safe to
 merge before any of it is applied.
@@ -23,7 +23,7 @@ rather than through a command run by hand in a chat session.
 
 | Pattern | Used by | AWS pieces | Template |
 |---|---|---|---|
-| Static site | cardinal-care-bridge, cardinal-expenses, cardinal-coverage | S3 (private) + CloudFront + ACM | `static-site.yml` |
+| Static site | cardinal-care-bridge, cardinal-expenses, cardinal-coverage, blue-ridge-press | S3 (private) + CloudFront + ACM | `static-site.yml` |
 | Stateless container | cardinal-coverage-app, memory-care-music-program, cardinal-chat | ECR + App Runner | `app-runner-service.yml` |
 | Stateful container | cardinal-books, cardinal-expenses-app, blue-ridge-tax, cardinal-trading | ECR + ECS Fargate + EFS (the disk) + ALB + ACM | `fargate-service.yml` |
 
@@ -130,6 +130,7 @@ Static sites (per service, from `static-site.yml`'s outputs):
 | cardinal-care-bridge | `AWS_DEPLOY_ROLE_CARE_BRIDGE` | `AWS_SITE_BUCKET_CARE_BRIDGE` | `AWS_DISTRIBUTION_ID_CARE_BRIDGE` |
 | cardinal-expenses | `AWS_DEPLOY_ROLE_EXPENSES` | `AWS_SITE_BUCKET_EXPENSES` | `AWS_DISTRIBUTION_ID_EXPENSES` |
 | cardinal-coverage | `AWS_DEPLOY_ROLE_COVERAGE` | `AWS_SITE_BUCKET_COVERAGE` | `AWS_DISTRIBUTION_ID_COVERAGE` |
+| blue-ridge-press | `AWS_DEPLOY_ROLE_BLUE_RIDGE_PRESS` | `AWS_SITE_BUCKET_BLUE_RIDGE_PRESS` | `AWS_DISTRIBUTION_ID_BLUE_RIDGE_PRESS` |
 
 Stateless containers (App Runner) — each needs only its deploy role; the
 workflow reads everything else from the stack's own outputs at deploy time:

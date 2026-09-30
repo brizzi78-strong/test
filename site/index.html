@@ -3,19 +3,211 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Cardinals Promise (CARD)</title>
-  <meta name="description" content="The canonical Cardinals Promise token site is cp17.org.">
-  <meta http-equiv="refresh" content="0; url=https://cp17.org/">
-  <link rel="canonical" href="https://cp17.org/">
+  <title>Blue Ridge Press LLC</title>
+  <meta name="description" content="Blue Ridge Press LLC is a North Carolina publisher and software studio: The Cardinal's Promise, The Cardinal's Toolkit, and the Cardinal small-business tools.">
+  <link rel="canonical" href="https://blueridgepressllc.com/">
   <style>
-    body { max-width: 42rem; margin: 5rem auto; padding: 0 1.25rem; font: 18px/1.6 system-ui, sans-serif; color: #202027; }
-    a { color: #b42334; }
+    :root {
+      --bg: #faf7f2;
+      --card: #ffffff;
+      --ink: #241c18;
+      --muted: #6b615a;
+      --cardinal: #c41e3a;
+      --rule: #e7ded4;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #17130f;
+        --card: #201a15;
+        --ink: #ece5dd;
+        --muted: #a99e93;
+        --cardinal: #e5566b;
+        --rule: #35291f;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    a { color: var(--cardinal); }
+    .wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+
+    header {
+      border-bottom: 1px solid var(--rule);
+      background: var(--card);
+    }
+    header .wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+    .brand {
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+    .brand span { color: var(--cardinal); }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 15px;
+    }
+    nav a:hover { color: var(--cardinal); }
+
+    .hero { padding: 56px 0 40px; }
+    .eyebrow {
+      color: var(--cardinal);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      margin: 0 0 10px;
+    }
+    h1 { font-size: 2.1rem; line-height: 1.15; margin: 0 0 14px; }
+    .lede {
+      font-size: 19px;
+      color: var(--muted);
+      margin: 0;
+      max-width: 40rem;
+    }
+
+    section { padding: 32px 0; border-top: 1px solid var(--rule); }
+    h2 { font-size: 1.35rem; margin: 0 0 6px; }
+    .sub { color: var(--muted); margin: 0 0 20px; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 14px;
+      padding: 20px;
+    }
+    .card h3 { margin: 0 0 6px; font-size: 1.05rem; }
+    .card p { margin: 0 0 10px; color: var(--muted); font-size: 15.5px; }
+    .card p:last-child { margin-bottom: 0; }
+    .card .link { font-weight: 600; text-decoration: none; }
+    .card .link:hover { text-decoration: underline; }
+    .card .soon { color: var(--muted); font-size: 14px; }
+
+    .note {
+      font-size: 14px;
+      color: var(--muted);
+      background: color-mix(in srgb, var(--cardinal) 8%, transparent);
+      border-left: 3px solid var(--cardinal);
+      padding: 12px 14px;
+      border-radius: 8px;
+      margin-top: 18px;
+    }
+
+    footer {
+      border-top: 1px solid var(--rule);
+      padding: 28px 0 40px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    footer p { margin: 0 0 6px; }
   </style>
 </head>
 <body>
-  <main>
-    <h1>Cardinals Promise (CARD)</h1>
-    <p>The canonical token site and disclosures are at <a href="https://cp17.org/">cp17.org</a>.</p>
+  <header>
+    <div class="wrap">
+      <a class="brand" href="#top">Blue Ridge <span>Press</span> LLC</a>
+      <nav aria-label="Sections">
+        <ul>
+          <li><a href="#publishing">Publishing</a></li>
+          <li><a href="#software">Software</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="wrap hero">
+      <p class="eyebrow">Blue Ridge Press LLC · North Carolina</p>
+      <h1>A small press and software studio built around one promise: show up.</h1>
+      <p class="lede">We publish <em>The Cardinal's Promise</em> and the caregiver tools that grew out of it, and we build plain, honest software for families and small businesses.</p>
+    </div>
+
+    <section id="publishing">
+      <div class="wrap">
+        <h2>Publishing</h2>
+        <p class="sub">The book, and the companion built for the people it was written for.</p>
+        <div class="grid">
+          <div class="card">
+            <h3>The Cardinal's Promise</h3>
+            <p>A memoir by Rob Brizzi about hospice, family, and being there at the end. The book's own site carries the story, the chapters, and where to buy.</p>
+            <p><a class="link" href="https://thecardinalspromise.com">thecardinalspromise.com →</a></p>
+          </div>
+          <div class="card">
+            <h3>The Cardinal's Toolkit</h3>
+            <p>An offline iPhone companion to the NC Family Caregiver Handbook: checklists, a journal, a medication list, and resources. No account, nothing leaves your phone.</p>
+            <p class="soon">Coming to the App Store.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="software">
+      <div class="wrap">
+        <h2>Software</h2>
+        <p class="sub">Small tools, each doing one job, built and run by the same company.</p>
+        <div class="grid">
+          <div class="card">
+            <h3>Cardinals Promise (CARD)</h3>
+            <p>A fixed-supply ERC-20 token on Ethereum. The token's page, its disclosures, and its risk notes live only at cp17.org and are not repeated here.</p>
+            <p><a class="link" href="https://cp17.org/">cp17.org →</a></p>
+          </div>
+          <div class="card">
+            <h3>Cardinal HR</h3>
+            <p>Hiring, onboarding, time off, payroll math, and books for a small company, run as a set of small services behind one door.</p>
+            <p class="soon">In development.</p>
+          </div>
+          <div class="card">
+            <h3>Cardinal Verify</h3>
+            <p>Consent-first reference and employment checks: the candidate signs first, each source confirms through a private link, no data broker in between.</p>
+            <p class="soon">In development.</p>
+          </div>
+        </div>
+        <p class="note">Blue Ridge Press LLC is a publisher and software company. Nothing on this page is legal, tax, medical, or financial advice.</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <h2>Contact</h2>
+        <p class="sub">Questions about the book, the apps, or the company.</p>
+        <p><a href="mailto:brizzi78@icloud.com">brizzi78@icloud.com</a></p>
+      </div>
+    </section>
   </main>
+
+  <footer>
+    <div class="wrap">
+      <p>Blue Ridge Press LLC · North Carolina</p>
+      <p><a href="https://thecardinalspromise.com">The Cardinal's Promise</a> · <a href="https://cp17.org/">Cardinals Promise (CARD)</a></p>
+    </div>
+  </footer>
 </body>
 </html>
