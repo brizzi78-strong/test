@@ -1,0 +1,34 @@
+name: GitHub Actions security
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: macaron-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  macaron:
+    name: Check GitHub Actions security
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
+
+      - name: Check GitHub Actions security
+        uses: oracle/macaron@794eec32782979f577efb5ff71d585f683a3550f # v0.25.0
+        with:
+          repo_path: ./
+          policy_file: check-github-actions
+          policy_purl: 'pkg:github.com/brizzi78-strong/test@.*'
+          output_dir: macaron-output
+          retention_days: 7
