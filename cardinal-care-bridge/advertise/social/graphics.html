@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cardinal Care Bridge — Social Graphics (screenshot, 1080×1080)</title>
+<style>
+  :root{
+    --brand:#A31B33; --brand-strong:#7E1226; --ink:#17233F; --muted:#6B6350;
+    --paper:#F7F2E6; --surface:#FFFDF7; --surface-2:#EFE7D3; --line:#E2D9C3;
+    --font:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --serif:ui-serif,Georgia,"Iowan Old Style","Times New Roman",serif;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:#dcd6c4;font-family:var(--font);color:var(--ink);}
+  .instructions{max-width:1080px;margin:1.2rem auto;font-size:.9rem;color:#444;background:#fff8dd;border:1px solid #e2d59a;border-radius:8px;padding:.8rem 1rem;}
+  .instructions code{background:#00000010;padding:.1em .35em;border-radius:4px;}
+  @media print{.instructions{display:none;} body{background:#fff;}}
+
+  .rail{display:flex;flex-direction:column;align-items:center;gap:2rem;padding:0 0 3rem;}
+  .card{
+    width:1080px;height:1080px;flex:none;position:relative;overflow:hidden;
+    background:var(--paper);box-shadow:0 10px 40px -12px rgba(0,0,0,.35);
+    display:flex;flex-direction:column;
+  }
+  @media (max-width:1140px){
+    .card{transform:scale(calc((100vw - 40px)/1080));transform-origin:top center;margin-bottom:calc(-1080px + (100vw - 40px));}
+  }
+  .cardlabel{max-width:1080px;width:100%;text-align:center;font-size:.85rem;color:#555;font-weight:700;}
+
+  /* shared bits */
+  .mast{display:flex;align-items:center;gap:16px;padding:56px 64px 0;}
+  .logo{width:56px;height:56px;border-radius:16px;background:var(--brand);color:#fff;font-weight:900;display:grid;place-items:center;font-size:1.7rem;font-family:var(--serif);}
+  .mast .name{font-weight:800;font-size:1.3rem;}
+  .mast .name small{display:block;font-weight:600;font-size:.85rem;color:var(--muted);}
+
+  /* card 1: guide offer */
+  #offer .fill{flex:1;display:flex;flex-direction:column;justify-content:center;padding:0 90px;}
+  #offer h1{font-family:var(--serif);font-size:4.6rem;line-height:1.08;font-weight:700;margin:0 0 28px;letter-spacing:-.01em;}
+  #offer .accent{color:var(--brand);}
+  #offer p{font-size:1.6rem;color:var(--muted);max-width:20ch;margin:0 0 44px;line-height:1.4;}
+  #offer .pill{display:inline-flex;align-self:flex-start;background:var(--brand);color:#fff;font-weight:800;font-size:1.35rem;padding:18px 34px;border-radius:999px;}
+  #offer .foot{padding:0 90px 64px;color:var(--muted);font-size:1.15rem;font-weight:700;}
+
+  /* card 2: pull quote */
+  #quote{background:var(--brand);color:#fff;justify-content:center;align-items:center;text-align:center;}
+  #quote .mast{position:absolute;top:56px;left:64px;padding:0;}
+  #quote .logo{background:#fff;color:var(--brand);}
+  #quote .name{color:#fff;}
+  #quote .name small{color:#ffffffb0;}
+  #quote blockquote{font-family:var(--serif);font-size:3.7rem;line-height:1.25;font-weight:600;max-width:16ch;margin:0 0 40px;letter-spacing:-.01em;}
+  #quote .sub{font-size:1.3rem;font-weight:600;opacity:.92;max-width:26ch;}
+
+  /* card 3: four pillars */
+  #pillars .fill{flex:1;display:flex;flex-direction:column;justify-content:center;padding:24px 90px 0;}
+  #pillars h2{font-family:var(--serif);font-size:3.2rem;font-weight:700;margin:0 0 48px;letter-spacing:-.01em;}
+  #pillars .grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;}
+  #pillars .svc{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:34px 32px;}
+  #pillars .num{color:var(--brand);font-weight:800;font-size:1.1rem;letter-spacing:.06em;}
+  #pillars .svc h3{margin:.4rem 0 .5rem;font-size:1.5rem;}
+  #pillars .svc p{margin:0;color:var(--muted);font-size:1.15rem;line-height:1.4;}
+  #pillars .foot{padding:36px 90px 64px;color:var(--muted);font-size:1.15rem;font-weight:700;}
+</style>
+</head>
+<body>
+<div class="instructions">
+  <strong>How to use:</strong> each card below is a true 1080×1080 square (the standard Instagram/Facebook post size). On a screen ≥1140px wide, right-click → <em>Save image as…</em> doesn't work on plain HTML, so instead use your browser's screenshot tool at 100% zoom, or a device-toolbar screenshot in DevTools set to <code>1080×1080</code>. On a narrower screen the cards preview scaled down — resize the window past 1140px before capturing. No design tool needed either way.
+</div>
+
+<div class="rail">
+  <p class="cardlabel">1 · Guide offer — feed post</p>
+  <div class="card" id="offer">
+    <div class="mast">
+      <span class="logo" aria-hidden="true">C</span>
+      <span class="name">Cardinal Care Bridge<small>Senior living advisory · Triangle NC</small></span>
+    </div>
+    <div class="fill">
+      <h1>Weighing senior living options <span class="accent">for someone you love?</span></h1>
+      <p>A free family guide, plus a complimentary 30-minute consultation. No cost, no pressure.</p>
+      <span class="pill">Get the free guide →</span>
+    </div>
+    <div class="foot">(850) 221-7443 &nbsp;·&nbsp; Wake · Durham · Orange · Chatham · Johnston · Lee · Moore</div>
+  </div>
+
+  <p class="cardlabel">2 · Brand quote — engagement post</p>
+  <div class="card" id="quote">
+    <div class="mast">
+      <span class="logo" aria-hidden="true">C</span>
+      <span class="name">Cardinal Care Bridge<small>Senior living advisory · Triangle NC</small></span>
+    </div>
+    <blockquote>&ldquo;We don&rsquo;t start with communities.<br>We start with people.&rdquo;</blockquote>
+    <p class="sub">Every plan personalized. Every family treated with compassion and respect.</p>
+  </div>
+
+  <p class="cardlabel">3 · How we help — informational post</p>
+  <div class="card" id="pillars">
+    <div class="mast">
+      <span class="logo" aria-hidden="true">C</span>
+      <span class="name">Cardinal Care Bridge<small>Senior living advisory · Triangle NC</small></span>
+    </div>
+    <div class="fill">
+      <h2>Four ways we walk with your family</h2>
+      <div class="grid">
+        <div class="svc"><div class="num">01</div><h3>Senior Living Advisory</h3><p>Compare Independent, Assisted &amp; Memory Care with confidence.</p></div>
+        <div class="svc"><div class="num">02</div><h3>Care Navigation</h3><p>Guidance through discharges, rehab stays &amp; changing needs.</p></div>
+        <div class="svc"><div class="num">03</div><h3>Move Coordination</h3><p>Making a big transition organized and less stressful.</p></div>
+        <div class="svc"><div class="num">04</div><h3>Ongoing Support</h3><p>Because guidance doesn&rsquo;t end on move-in day.</p></div>
+      </div>
+    </div>
+    <div class="foot">Free to families · (850) 221-7443</div>
+  </div>
+</div>
+</body>
+</html>

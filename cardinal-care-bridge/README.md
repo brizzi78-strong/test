@@ -45,6 +45,16 @@ Render provisions it alongside Cardinal Books and gives it its own
 custom domain (e.g. `www.cardinalcarebridge.com`) in that service's Settings
 -> Custom Domains, then point a DNS CNAME at Render.
 
+## Advertise it (free)
+
+The [`advertise/`](advertise/) folder is the free-advertising kit for this
+business: a print-ready referral one-pager for hospital discharge planners
+(the lead-gen strategy's Priority #1 channel), a bulletin-board flyer with
+tear-off tabs for senior centers and community boards, and a copy-paste
+kit for every free listing — Google Business Profile, Nextdoor, Facebook,
+and the TJCOG / NC 211 community directories. See
+[`advertise/README.md`](advertise/README.md) for the run order.
+
 ## Before this goes live
 
 Both forms currently open the visitor's email client via a `mailto:` link
