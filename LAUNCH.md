@@ -1,5 +1,9 @@
 # Cardinals Promise (CARD) — Launch Runbook
 
+> **⚠️ PAUSED — do not execute.** The CARD token is on hold; see
+> [`CRYPTO_ON_HOLD.md`](CRYPTO_ON_HOLD.md) for the decision and what would have
+> to be true to revisit it. Nothing is deployed and no money is at risk.
+
 ## Decided launch parameters
 
 | Decision | Value |
