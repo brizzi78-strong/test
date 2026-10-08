@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Cardinal Cover Studio</title>
+<title>Foxglove Covers</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..700&family=Figtree:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Bebas+Neue&family=Cinzel:wght@500;700&family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap">
@@ -15,8 +15,8 @@
   --ink: #16191D;
   --muted: #5A6260;
   --rule: #C9CEC8;
-  --cardinal: #A8142C;
-  --cardinal-ink: #FFFFFF;
+  --accent: #7A2F6B;
+  --accent-ink: #FFFFFF;
   --field: #FFFFFF;
   --display: "Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
   --body: "Figtree", "Segoe UI", system-ui, sans-serif;
@@ -30,13 +30,13 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --paper: #121517; --sheet: #1A1E21; --ink: #E9ECE7; --muted: #9AA39F;
-    --rule: #2E3437; --cardinal: #E0435A; --cardinal-ink: #14070A; --field: #0E1113;
+    --rule: #2E3437; --accent: #D58AC2; --accent-ink: #1E0B19; --field: #0E1113;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --paper: #121517; --sheet: #1A1E21; --ink: #E9ECE7; --muted: #9AA39F;
-  --rule: #2E3437; --cardinal: #E0435A; --cardinal-ink: #14070A; --field: #0E1113;
+  --rule: #2E3437; --accent: #D58AC2; --accent-ink: #1E0B19; --field: #0E1113;
   color-scheme: dark;
 }
 *, *::before, *::after { box-sizing: border-box; }
@@ -48,7 +48,7 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.05; t
 h2 { font-size: var(--step-3); }
 p { margin: 0; }
 a { color: inherit; }
-:focus-visible { outline: 2px solid var(--cardinal); outline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .label { font-family: var(--mono); font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
 
 /* Nav */
@@ -57,17 +57,17 @@ nav { display: flex; align-items: center; justify-content: space-between; gap: 1
 .mark svg { width: 26px; height: 26px; }
 nav ul { display: flex; gap: 22px; list-style: none; margin: 0; padding: 0; flex-wrap: wrap; }
 nav ul a { text-decoration: none; font-weight: 500; font-size: .95rem; }
-nav ul a:hover { color: var(--cardinal); }
+nav ul a:hover { color: var(--accent); }
 
 /* Hero */
 .hero { display: grid; grid-template-columns: 1.05fr 1fr; gap: 48px; align-items: center; padding-block: 64px 72px; }
 .hero > div { min-width: 0; }
 .hero h1 { font-size: var(--step-4); font-weight: 500; letter-spacing: -.01em; }
-.hero h1 em { font-style: italic; color: var(--cardinal); }
+.hero h1 em { font-style: italic; color: var(--accent); }
 .hero p.lede { margin-top: 22px; font-size: var(--step-1); max-width: 34ch; color: var(--muted); }
 .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 30px; }
 .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 22px; font: 600 .95rem var(--body); border-radius: 2px; text-decoration: none; cursor: pointer; border: 1px solid var(--ink); background: transparent; color: var(--ink); }
-.btn.primary { background: var(--cardinal); border-color: var(--cardinal); color: var(--cardinal-ink); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
 .btn:hover { transform: translateY(-1px); }
 
 .shelf { position: relative; height: 420px; display: flex; align-items: flex-end; justify-content: center; }
@@ -88,7 +88,7 @@ nav ul a:hover { color: var(--cardinal); }
 .c-memoir { background: #F6F4EF; color: #1B1B1B; }
 .c-memoir .t { font: 600 1.55rem/1.02 var(--display); }
 .c-memoir .bird { position: relative; width: 38%; align-self: center; }
-.c-memoir .a { color: #A8142C; }
+.c-memoir .a { color: #7A2F6B; }
 
 .c-thriller { background: radial-gradient(120% 70% at 50% 100%, #3B0A12, #07080A 70%); color: #F2F2F2; }
 .c-thriller .t { font: 400 2.6rem/.9 "Bebas Neue", Impact, sans-serif; letter-spacing: .02em; }
@@ -135,23 +135,23 @@ figcaption span { font-family: var(--mono); font-size: .75rem; color: var(--mute
 .price small { font-family: var(--mono); font-size: .75rem; color: var(--muted); letter-spacing: .08em; margin-right: 6px; }
 .svc ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; font-size: .95rem; }
 .svc li { padding-left: 18px; position: relative; }
-.svc li::before { content: ""; position: absolute; left: 0; top: .62em; width: 8px; height: 1px; background: var(--cardinal); }
+.svc li::before { content: ""; position: absolute; left: 0; top: .62em; width: 8px; height: 1px; background: var(--accent); }
 .svc .spec { margin-top: auto; font-family: var(--mono); font-size: .75rem; color: var(--muted); }
-.svc.feature { outline: 2px solid var(--cardinal); outline-offset: -2px; }
-.svc .tag { align-self: flex-start; font: 500 .7rem var(--mono); letter-spacing: .1em; text-transform: uppercase; background: var(--cardinal); color: var(--cardinal-ink); padding: 3px 8px; }
+.svc.feature { outline: 2px solid var(--accent); outline-offset: -2px; }
+.svc .tag { align-self: flex-start; font: 500 .7rem var(--mono); letter-spacing: .1em; text-transform: uppercase; background: var(--accent); color: var(--accent-ink); padding: 3px 8px; }
 
 /* Calculator */
 .calc { display: grid; grid-template-columns: minmax(0, 340px) minmax(0, 1fr); gap: 40px; align-items: start; }
 .fields { display: grid; gap: 18px; }
 .fields label { display: grid; gap: 6px; font-size: .85rem; font-weight: 600; }
 input, select, textarea { font: 400 1rem var(--body); color: var(--ink); background: var(--field); border: 1px solid var(--rule); border-radius: 2px; padding: 11px 12px; width: 100%; }
-input:focus, select:focus, textarea:focus { outline: 2px solid var(--cardinal); outline-offset: 0; border-color: transparent; }
+input:focus, select:focus, textarea:focus { outline: 2px solid var(--accent); outline-offset: 0; border-color: transparent; }
 .result { display: grid; gap: 20px; min-width: 0; }
 .diagram-box { overflow-x: auto; background: var(--sheet); border: 1px solid var(--rule); padding: 20px; }
 .diagram { display: flex; height: 190px; min-width: 420px; position: relative; }
 .diagram > div { border: 1.5px solid var(--ink); display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: .72rem; color: var(--muted); text-align: center; }
 .diagram .back, .diagram .front { flex: 1 1 0; }
-.diagram .spine { border-inline: none; background: var(--cardinal); color: var(--cardinal-ink); writing-mode: vertical-rl; min-width: 18px; }
+.diagram .spine { border-inline: none; background: var(--accent); color: var(--accent-ink); writing-mode: vertical-rl; min-width: 18px; }
 .diagram .front { border-left: none; }
 .diagram .back { border-right: none; }
 .readout { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--rule); }
@@ -160,12 +160,12 @@ input:focus, select:focus, textarea:focus { outline: 2px solid var(--cardinal); 
 .readout dd { margin: 4px 0 0; font-family: var(--display); font-size: 1.7rem; font-variant-numeric: tabular-nums; }
 .readout dd small { font-family: var(--mono); font-size: .75rem; color: var(--muted); }
 .warn { font-size: .88rem; color: var(--muted); }
-.warn strong { color: var(--cardinal); }
+.warn strong { color: var(--accent); }
 
 /* Process */
 .steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; counter-reset: s; }
 .steps li { counter-increment: s; display: grid; gap: 10px; align-content: start; min-width: 0; }
-.steps li::before { content: "Step " counter(s); font-family: var(--mono); font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--cardinal); border-bottom: 1px solid var(--rule); padding-bottom: 10px; }
+.steps li::before { content: "Step " counter(s); font-family: var(--mono); font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); border-bottom: 1px solid var(--rule); padding-bottom: 10px; }
 .steps h3 { font-size: 1.35rem; }
 .steps p { color: var(--muted); font-size: .95rem; }
 
@@ -173,7 +173,7 @@ input:focus, select:focus, textarea:focus { outline: 2px solid var(--cardinal); 
 .faq { display: grid; gap: 0; max-width: 760px; }
 .faq details { border-bottom: 1px solid var(--rule); padding-block: 18px; }
 .faq summary { cursor: pointer; font-weight: 600; font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
-.faq summary::after { content: "+"; font-family: var(--mono); color: var(--cardinal); }
+.faq summary::after { content: "+"; font-family: var(--mono); color: var(--accent); }
 .faq details[open] summary::after { content: "–"; }
 .faq p { margin-top: 10px; color: var(--muted); max-width: 64ch; }
 
@@ -215,8 +215,8 @@ footer { border-top: 1px solid var(--rule); padding-block: 28px 40px; display: f
 <div class="wrap">
   <nav aria-label="Main">
     <a class="mark" href="#top">
-      <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="5" y="3" width="20" height="26" fill="var(--cardinal)"/><rect x="5" y="3" width="3" height="26" fill="var(--ink)" opacity=".35"/><rect x="11" y="9" width="10" height="1.5" fill="var(--cardinal-ink)"/><rect x="11" y="12.5" width="7" height="1.5" fill="var(--cardinal-ink)"/></svg>
-      Cardinal Cover Studio
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="5" y="3" width="20" height="26" fill="var(--accent)"/><rect x="5" y="3" width="3" height="26" fill="var(--ink)" opacity=".35"/><rect x="11" y="9" width="10" height="1.5" fill="var(--accent-ink)"/><rect x="11" y="12.5" width="7" height="1.5" fill="var(--accent-ink)"/></svg>
+      Foxglove Covers
     </a>
     <ul>
       <li><a href="#work">Work</a></li>
@@ -239,8 +239,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 28px 40px; display: f
     <div class="shelf" aria-label="Three sample covers">
       <div class="cover c-thriller"><div class="t">The<br>Quiet<br><span>Hour</span></div><div class="slash"></div><div class="a">A. M. Reyes</div></div>
       <div class="cover c-memoir">
-        <div class="t">The Rabbit in the Moon</div>
-        <svg class="bird" viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="26" fill="#A8142C"/><ellipse cx="32" cy="38" rx="9" ry="12" fill="#F6F4EF"/><ellipse cx="25" cy="22" rx="3.5" ry="7" fill="#F6F4EF"/><ellipse cx="33" cy="21" rx="3.5" ry="7.5" fill="#F6F4EF"/><circle cx="30" cy="31" r="6" fill="#F6F4EF"/></svg>
+        <div class="t">The Salt Road Home</div><svg class="bird" viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="28" r="16" fill="#7A2F6B"/><rect x="4" y="40" width="52" height="2" fill="#1B1B1B"/><rect x="12" y="46" width="36" height="1.5" fill="#1B1B1B"/></svg>
         <div class="a">A memoir</div>
       </div>
       <div class="cover c-fantasy"><div class="t">Crown of<br>Salt</div><div class="ring"></div><div class="a">Book One</div></div>
@@ -253,7 +252,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 28px 40px; display: f
       <p>Every genre has its own visual language. Readers decide in under a second whether a book is "for them," so the cover has to speak that language before it says anything original.</p>
     </div>
     <div class="grid-covers">
-      <figure><div class="cover c-memoir"><div class="t">The Rabbit in the Moon</div><svg class="bird" viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="26" fill="#A8142C"/><ellipse cx="32" cy="38" rx="9" ry="12" fill="#F6F4EF"/><ellipse cx="25" cy="22" rx="3.5" ry="7" fill="#F6F4EF"/><ellipse cx="33" cy="21" rx="3.5" ry="7.5" fill="#F6F4EF"/><circle cx="30" cy="31" r="6" fill="#F6F4EF"/></svg><div class="a">A memoir</div></div><figcaption><b>Memoir</b><span>Quiet type, one symbol</span></figcaption></figure>
+      <figure><div class="cover c-memoir"><div class="t">The Salt Road Home</div><svg class="bird" viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="28" r="16" fill="#7A2F6B"/><rect x="4" y="40" width="52" height="2" fill="#1B1B1B"/><rect x="12" y="46" width="36" height="1.5" fill="#1B1B1B"/></svg><div class="a">A memoir</div></div><figcaption><b>Memoir</b><span>Quiet type, one symbol</span></figcaption></figure>
       <figure><div class="cover c-thriller"><div class="t">The<br>Quiet<br><span>Hour</span></div><div class="slash"></div><div class="a">A. M. Reyes</div></div><figcaption><b>Thriller</b><span>Condensed caps, high contrast</span></figcaption></figure>
       <figure><div class="cover c-fantasy"><div class="t">Crown of<br>Salt</div><div class="ring"></div><div class="a">Book One</div></div><figcaption><b>Epic fantasy</b><span>Series system, book 1 of 3</span></figcaption></figure>
       <figure><div class="cover c-romance"><div class="t">Every<br>Summer<br>After</div><div class="a">J. Calloway</div></div><figcaption><b>Romance</b><span>Script serif, warm gradient</span></figcaption></figure>
@@ -299,23 +298,23 @@ footer { border-top: 1px solid var(--rule); padding-block: 28px 40px; display: f
     <div class="calc">
       <div class="fields">
         <label for="pages">Page count
-          <input id="pages" type="number" min="24" max="828" step="2" value="208" inputmode="numeric">
+          <input id="pages" type="number" min="24" max="828" step="2" value="300" inputmode="numeric">
         </label>
         <label for="paper">Paper and ink
           <select id="paper">
             <option value="0.002252">Black &amp; white, white paper</option>
-            <option value="0.0025">Black &amp; white, cream paper</option>
+            <option value="0.0025" selected>Black &amp; white, cream paper</option>
             <option value="0.002252">Standard color, white paper</option>
-            <option value="0.002347" selected>Premium color, white paper</option>
+            <option value="0.002347">Premium color, white paper</option>
           </select>
         </label>
         <label for="trim">Trim size
           <select id="trim">
             <option value="5x8">5 × 8 in</option>
             <option value="5.5x8.5">5.5 × 8.5 in</option>
-            <option value="6x9">6 × 9 in</option>
+            <option value="6x9" selected>6 × 9 in</option>
             <option value="7x10">7 × 10 in</option>
-            <option value="8.5x11" selected>8.5 × 11 in</option>
+            <option value="8.5x11">8.5 × 11 in</option>
           </select>
         </label>
       </div>
@@ -328,9 +327,9 @@ footer { border-top: 1px solid var(--rule); padding-block: 28px 40px; display: f
           </div>
         </div>
         <dl class="readout">
-          <div><dt>Spine</dt><dd id="outSpine">0.4882 <small>in</small></dd></div>
-          <div><dt>Full wrap width</dt><dd id="outW">17.7382 <small>in</small></dd></div>
-          <div><dt>Full wrap height</dt><dd id="outH">11.25 <small>in</small></dd></div>
+          <div><dt>Spine</dt><dd id="outSpine">0.75 <small>in</small></dd></div>
+          <div><dt>Full wrap width</dt><dd id="outW">13 <small>in</small></dd></div>
+          <div><dt>Full wrap height</dt><dd id="outH">9.25 <small>in</small></dd></div>
         </dl>
         <p class="warn" id="warn">Includes 0.125 in bleed on every outside edge. Always confirm against KDP's own cover calculator before you upload.</p>
       </div>
@@ -369,7 +368,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 28px 40px; display: f
         <h2 style="margin-top:12px">Tell me about your book.</h2>
         <p style="margin-top:16px;color:var(--muted);max-width:40ch">Fill in the brief, copy it and paste it into an email. I reply within two business days with availability and a quote.</p>
         <div class="email-row">
-          <code id="email">hello@cardinalcovers.com</code>
+          <code id="email">hello@foxglovecovers.com</code>
           <button class="btn" type="button" id="copyEmail">Copy email</button>
         </div>
         <p class="status" id="emailStatus" aria-live="polite"></p>
@@ -397,7 +396,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 28px 40px; display: f
   </section>
 
   <footer>
-    <span>© 2026 Cardinal Cover Studio</span>
+    <span>© 2026 Foxglove Covers · Sample site</span>
     <span>Covers for KDP, IngramSpark, Apple Books, Kobo and Audible</span>
   </footer>
 </div>
